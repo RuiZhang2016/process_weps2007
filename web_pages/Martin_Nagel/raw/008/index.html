@@ -1,0 +1,1501 @@
+<html>
+	<head>
+	<title>OTC Bulletin Board - S & P Company Insight for TRANSMERIDIAN EXPLOR</title>
+	<meta name="Sym_ID"		content="TMXN">		
+	<meta name="Issue_Nm"		content="TRANSMERIDIAN EXPLOR">		
+	
+	<link rel="stylesheet" href="/library/mystyle.inc">
+
+	<style>
+		/***** NavBar Styles *****/
+
+		#tblNavBar {
+			font-family: Verdana, Arial, Helvetica, sans-serif; font-size: 10px;
+			background-color:#666699; color:white;
+			cursor:default;
+		}
+		#tblNavBar TD {
+			text-align:center;
+			padding:2px; padding-top:4px;
+		}
+		#tblNavBar TD.clsSBNLogo {
+			padding:0px;
+		}
+		#tblNavBar TD.clsNavBarItem {
+			color:white; cursor:hand;
+		}
+		#tblNavBar TD.clsNavBarItemOver {
+			color:#CCCCFF; cursor:hand;
+		}
+		#tblNavBar TD.clsNavBarItemShown {
+			color:#666699; background-color:#CCCCFF; cursor:hand;
+		}
+		#tblNavBar TD.clsNavBarItem IMG,
+		#tblNavBar TD.clsNavBarItemOver IMG,
+		#tblNavBar TD.clsNavBarItemShown IMG,  {
+			position:relative; top:5px;
+		}
+		
+		#List0ListContent {
+			font-family: Verdana, Arial, Helvetica, sans-serif; font-size: 10px;
+			line-height:8pt; cursor:default;
+			color:#000000; background-color:#CCCCFF;
+			padding:1px; text-align:left;
+			position:absolute; top:180px; left:224px; width:552px; visibility:show; overflow:hide;
+		}
+
+		#List1ListContent {
+			font-family: Verdana, Arial, Helvetica, sans-serif; font-size: 10px;
+			line-height:8pt; cursor:default;
+			color:#000000; background-color:#CCCCFF;
+			padding:1px; text-align:left;
+			position:absolute; top:180px; left:224px; width:552px; visibility:hide; overflow:hide; 
+		}
+
+		#List2ListContent {
+			font-family: Verdana, Arial, Helvetica, sans-serif; font-size: 10px;
+			line-height:8pt; cursor:default;
+			color:#000000; background-color:#CCCCFF;
+			padding:1px; text-align:left;
+			position:absolute; top:180px; left:224px; width:552px; visibility:hide; overflow:hide; 
+		}
+
+		#List3ListContent {
+			font-family: Verdana, Arial, Helvetica, sans-serif; font-size: 10px;
+			line-height:8pt; cursor:default;
+			color:#000000; background-color:#CCCCFF;
+			padding:1px; text-align:left;
+			position:absolute; top:180px; left:224px; width:552px; visibility:hide; overflow:hide; 
+		}
+
+		#List4ListContent {
+			font-family: Verdana, Arial, Helvetica, sans-serif; font-size: 10px;
+			line-height:8pt; cursor:default;
+			color:#000000; background-color:#CCCCFF;
+			padding:1px; text-align:left;
+			position:absolute; top:180px; left:224px; width:552px; visibility:hide; overflow:hide; 
+		}	
+
+		#List5ListContent {
+			font-family: Verdana, Arial, Helvetica, sans-serif; font-size: 10px;
+			line-height:8pt; cursor:default;
+			color:#000000; background-color:#CCCCFF;
+			padding:1px; text-align:left;
+			position:absolute; top:180px; left:224px; width:552px; visibility:hide; overflow:hide; 
+		}	
+
+		#List6ListContent {
+			font-family: Verdana, Arial, Helvetica, sans-serif; font-size: 10px;
+			line-height:8pt; cursor:default;
+			color:#000000; background-color:#CCCCFF;
+			padding:1px; text-align:left;
+			position:absolute; top:180px; left:224px; width:552px; visibility:hide; overflow:hide; 
+		}	
+
+		#List7ListContent {
+			font-family: Verdana, Arial, Helvetica, sans-serif; font-size: 10px;
+			line-height:8pt; cursor:default;
+			color:#000000; background-color:#CCCCFF;
+			padding:1px; text-align:left;
+			position:absolute; top:180px; left:224px; width:552px; visibility:hide; overflow:hide; 
+		}	
+
+		.clsMenu {
+			font-family: Verdana, Arial, Helvetica, sans-serif; font-size: 10px;
+			line-height:8pt; cursor:default;
+			color:#000000; background-color:#CCCCFF;
+			padding:1px; text-align:left;
+			/*** position:absolute; top:150px; visibility:hidden; overflow:hidden; ***/
+			visibility:hidden; overflow:hidden;
+					
+		}
+		.clsMenu DIV {
+			width:100%; padding:3px; padding-left:5px;
+			color:#000000; background-color:#CCCCFF;
+		}
+		.clsMenu DIV.clsMenuItemOver {
+			color:white; background-color:#CCCCFF;
+		}
+		
+		
+
+		.#pBackTop { display:none; }
+
+		#idTransDiv {
+			position:relative;
+			width:90%; top:20;
+		  filter:revealTrans(duration=1.0, transition=23);
+		}
+
+
+		/*** INDEX-SPECIFIC ***/
+
+		A.clsDisabled {
+		  text-decoration:none;
+		  color:#CCCCFF;
+		  cursor:text;
+		}
+
+		A.clsEnabled { cursor:auto; }
+
+		/*** SDK, IE4 ONLY ***/
+
+		DIV.clsExpanded, A.clsExpanded { display:inline; color:#CCCCFF; }
+		DIV.clsCollapsed, A.clsCollapsed { display:none; }
+		SPAN.clsPropattr { font-weight:bold; }
+
+		#pStyles,	#pCode, #pSyntax, #pEvents, #pStyles {display:none; text-decoration:underline; cursor:hand; }	
+	</style>
+
+<SCRIPT LANGUAGE="JavaScript"><!--
+
+	// -----------------------------------------------------------
+	// Client-side BrowserData constructor
+	// Populated using data from server-side oBD object to avoid redundancy
+	// -----------------------------------------------------------
+
+
+	var browserVersion = parseInt(navigator.appVersion);
+		var browserType = "Unknown";
+		var ie = false;
+		var ns4 = false;
+		var ns6 = false;
+		var MenuSelected = 'List0List'
+		var ContentSelected = 'List0ListContent'
+
+		if (navigator.appName.indexOf("Microsoft") != -1)
+		{
+			browserType = "ie";
+			ie = true;
+			//IE Versions 5.0 and above
+			if (browserVersion >= 4)
+			{
+				if (navigator.appVersion.indexOf('MSIE 5.') != -1)
+				{
+					var browserSubVersion = navigator.appVersion.substr(navigator.appVersion.indexOf('MSIE 5.'))
+					browserSubVersion = navigator.appVersion.substr(navigator.appVersion.indexOf('MSIE 5.')).substr(browserSubVersion.indexOf('.')+1)
+					browserSubVersion = parseInt(browserSubVersion)
+					browserVersion = 5 + (browserSubVersion/10)
+				}
+			}
+		}
+		else if (navigator.appName.indexOf("Netscape") != -1)
+		{	//Netscape 4 Versions
+			if (browserVersion == 4)
+				{
+					browserType = "ns4";
+					ns4 = true;
+				}
+			//Netscape 6 versions	
+			if (browserVersion == 5)
+				{
+					browserType = "ns6";
+					ns6 = true;
+				}
+
+		}
+
+		if (browserType == "Unknown")
+		{
+
+			browserVersion = 0;
+
+		}
+
+		if (browserVersion < 4)
+		{
+			event = " ";
+		}
+//--></SCRIPT>
+
+	<SCRIPT LANGUAGE="JavaScript"><!--
+
+		// -----------------------------------------------------------
+		// Client-side BrowserData constructor
+		// Populated using data from server-side oBD object to avoid redundancy
+		// -----------------------------------------------------------
+
+	var MenuSelected = 'List0List'
+	var ContentSelected = 'List0ListContent'
+
+	if ((ns4) || (ns6))
+		{
+	////////////////  If Netscape Browser /////////////////////////////
+			function showMenu(menu)
+			{
+				if (browserVersion >= 4)
+				{
+			//		HideAllMenus();
+					menu.showMenu();
+				}
+
+			}
+
+			function hideMenu(menu, e)
+			{
+				if (browserVersion >= 4)
+				{
+					menu.hideMenu(e);
+				}
+
+			}
+
+			function writeAllMenus()
+			{
+							
+				if (browserVersion >= 4)
+				{
+					for (var i=1;i<List.Menus.length;i++) 
+					{
+						document.write(List.Menus[i].div);
+					}
+				}
+			}
+
+			//Nasdaq_Menu object
+			//Based on a generic list object 
+
+			function List(x,y,width,itemH,overstate,outstate,shade) {
+				if (browserVersion >= 4)
+				{
+					this.name = "List"+(List.count++)
+					this.id = this.name+'List'
+					this.x = x
+					this.left = x
+					this.y = y
+					this.top = y
+					this.w = width
+					this.width = width
+					this.right = this.left + this.width
+					this.bottom = this.top
+					this.overstate = overstate
+					this.outstate = outstate
+					this.shade = shade
+
+							
+					if (arguments.length==7) 
+					{
+						this.itemH = itemH
+						this.itemHset = true
+						this.h = -1
+					}
+					else 
+					{
+						this.itemH = null
+						this.itemHset = false
+						if (ie)
+						{
+							this.h = 1000
+						}
+						else
+						{
+							this.h =  -1 
+						}
+					}
+
+					this.itemSpacing = 1
+					this.fontname = 'Verdana'
+					this.fontsize = 10
+					this.visibility = 'inherit'
+
+					this.color = new Object()
+					this.color.textNormal = '#000000'
+					this.color.textSelected = '#666699'
+					this.color.textRollover = '#CCCCFF'
+					this.color.bgNormal = '#666699'
+					this.color.bgSelected = '#CCCCFF'
+					this.color.bg = '#666699'
+					this.color.bgRollover = '#CCCCFF'
+
+					this.allowDeselect = false
+					this.multiSelect = false
+					this.preSelect = null
+					this.autohide = true
+					this.submenuOnSelect = false
+
+					this.items = new Array()
+					this.obj = this.name + "ListObject"
+					eval(this.obj + "=this")
+					List.Menus[List.count] = this
+
+					this.add = ListAdd
+					this.build = ListBuild
+					this.activate = ListActivate
+					this.over = ListOver
+					this.out = ListOut
+					this.down = ListDown
+				}
+			}
+			
+			function ListAdd(value,text,handcursor,submenu,Rollover) 
+			{
+				if (browserVersion >= 4)
+				{
+					var i = this.items.length
+					this.items[i] = new Array()
+					this.items[i].selected = false
+					this.items[i].value = value
+					this.items[i].submenu = submenu
+					this.items[i].handcursor = handcursor
+					this.items[i].text = text
+					if (this.items[i].text == "&nbsp;")
+					{
+						this.items[i].Rollover = false;
+					}
+					else
+					{
+						if (Rollover == false)
+						{
+							this.items[i].Rollover = false;
+						}
+						else
+						{
+							this.items[i].Rollover = true;
+						}
+					}
+					this.items[i].textNormal = 'class="'+this.name+'TextNormal">'+text
+
+					if (this.itemH) 
+					{
+						this.h += this.itemH+this.itemSpacing
+						this.items[i].y = i*this.itemH+i*this.itemSpacing
+						this.bottom = this.bottom + this.itemH
+					}
+					else this.items[i].y = 0
+				}
+			}
+			
+			function ListBuild() 
+			{
+				if (browserVersion >= 4)
+				{
+					this.css = ''
+					this.css += css(this.name+'List',this.x,this.y,this.w,this.h,this.color.bg,(this.itemHset)?this.visibility:'hidden',0)
+					for (var i=0;i<this.items.length;i++) 
+					{
+						this.css += css(this.name+'ListItem'+i,0,this.items[i].y,this.w,this.itemH,this.color.bgNormal)
+						if (this.items[i].handcursor != true)
+						{
+								this.css += css(this.name+'ListItemC'+i,0,this.items[i].y,this.w,this.itemH)
+						}
+					}
+
+
+					if (browserVersion >= 5)
+					{
+							this.css += '.'+this.name+'TextNormal {font-family:"'+this.fontname+'"; font-size:'+this.fontsize+'pt; color:'+this.color.textNormal+'; }\n'+
+							'.'+this.name+'TextSelected {font-family:"'+this.fontname+'"; font-size:'+this.fontsize+'pt; color:'+this.color.textSelected+'; }\n'
+					}
+					else
+					{
+						this.css += '.'+this.name+'TextNormal {font-family:"'+this.fontname+'"; font-size:'+this.fontsize+'pt; color:'+this.color.textNormal+'; background-color:transparent;}\n'+
+						'.'+this.name+'TextSelected {font-family:"'+this.fontname+'"; font-size:'+this.fontsize+'pt; color:'+this.color.textSelected+'; background-color:transparent;}\n'
+					}
+
+					writeCSS(this.css)
+
+					this.div = '<div align="center" id="'+this.name+'List" '
+					for (var i=0;i<this.items.length;i++) 
+					{
+						this.div += this.items[i].textNormal+'</div>\n'
+
+					}
+
+				}
+			}
+
+			//function to activate the Menu buttons
+			function ListActivate(me,parent,parent_element) 
+			{	
+				if (browserVersion >= 4)
+				{
+					for (var i=0;i<this.items.length;i++) 
+					{
+						this.items[i].setbg = ListSetbg
+						//setup the events and various pointers for the individual menu items
+						
+						//Netscape version
+						if (browserVersion >= 5)
+						{
+							if (this.items[i].handcursor != true)
+							{
+								this.items[i].e = document.getElementById(this.id)
+							}
+							else
+							{
+								this.items[i].e = document.getElementById(this.id)
+							}
+							this.items[i].layer = document.getElementById(this.id)
+							this.items[i].doc = document.getElementById(this.id).style
+
+							if (this.id != MenuSelected)
+							{
+								this.items[i].setbg(this.color.bgNormal)
+							}
+							else
+							{
+								this.items[i].setbg(this.color.bgRollover)
+							}	
+					
+
+						}
+						else
+						{
+									if (this.items[i].handcursor != true)
+									{
+										this.items[i].e = eval('document.'+this.id)					
+									}
+									else
+									{
+										this.items[i].e = eval('document.'+this.id)					
+									}
+									this.items[i].e.captureEvents(Event.MOUSEDOWN)
+									this.items[i].layer = eval('document.'+this.id)
+									this.items[i].doc = eval('document.'+this.id)				
+						}
+						this.items[i].e.onmouseover = new Function(this.obj+'.over('+i+');')
+						this.items[i].e.onmouseout =  new Function(this.obj+'.out('+i+'); ')
+						this.items[i].e.onmousedown = new Function(this.obj+'.down('+i+'); return false;')
+					}
+				}
+			}
+
+			//Function when you rollover the menu button
+			function ListOver(i)
+			{
+				if (browserVersion >= 4)
+				{	//alert('list over');
+						this.items[i].setbg(this.color.bgRollover)
+				}
+			}
+			
+			//Function when you rollout of the menu button
+			function ListOut(i) 
+			{
+				if (browserVersion >= 4)
+				{		
+					if (this.id != MenuSelected)
+					{
+						this.items[i].setbg(this.color.bgNormal)
+					}
+					else
+					{
+						this.items[i].setbg(this.color.bgRollover)
+					}
+				}
+							
+			}
+			//Function when you click one of the eight buttons.
+			function ListDown(i) 
+			{	
+				if (browserVersion >= 5)
+				{
+					//if netscape 6.2 use the display function to hide the 'divs'
+					if (this.id != MenuSelected)
+					{
+						divs = document.getElementsByTagName("div");
+						divs[this.id].style.backgroundColor=this.color.bgSelected;
+						divs[MenuSelected].style.backgroundColor=this.color.bgNormal;
+						divs[this.id+'Content'].style.display = '';
+						divs[ContentSelected].style.display = 'none';
+						MenuSelected = this.id
+						ContentSelected = this.id+'Content'
+					}
+				}
+				else
+				{	//otherwise use the visibility function to hide the 'divs'
+					if (this.id != MenuSelected)
+					{	document.layers[MenuSelected].bgColor = this.color.bgNormal
+						document.layers[this.id+'Content'].visibility = 'show'
+						document.layers[ContentSelected].visibility = 'hide'
+						MenuSelected = this.id
+						ContentSelected = this.id+'Content'
+					}				
+				}
+			}
+
+
+			//function to set the background color
+			function ListSetbg(color) 
+			{
+				if (browserVersion >= 4)
+				{
+					if (browserVersion >= 5)
+					{
+						this.doc.backgroundColor = color
+					}
+					else
+					{
+						this.doc.bgColor = color
+					}
+				}
+
+			}
+
+			//Build the CSS  based on your parameters
+			function css(id,left,top,width,height,color,vis,z,other) 
+			{
+				if (browserVersion >= 4)
+				{
+					if (id=="START")
+					{
+						 return '<STYLE TYPE="text/css">\n'
+					}
+					else if (id=="END") 
+					{
+						return '</STYLE>'
+					}
+					var str = (left!=null && top!=null)? '#'+id+' {position:absolute; left:'+left+'px; top:'+top+'px;' : '#'+id+' {position:relative;'
+					if (arguments.length>=4 && width!=null) str += ' width:'+width+'px;'
+					if (arguments.length>=5 && height!=null) 
+					{
+						str += ' height:'+height+'px;'
+						if (arguments.length<9 || other.indexOf('clip')==-1) 
+						{
+							str += ' clip:rect(0px '+width+'px '+height+'px 0px);'
+						}
+					}
+
+					if ((browserVersion >= 5.5) && id.indexOf('ListItemC') != -1)
+					{
+						str += ' background-color: white;'
+						str	+= ' FILTER: alpha(opacity=0);'
+					}
+					else
+					{
+						if (arguments.length>=6 && color!=null)
+						{
+							if (ie)
+							{
+								str += ' background-color:'+color+';'
+							}
+							else	
+							{
+								if (browserVersion >= 5)
+								{
+									//Netscpae 6 
+									str += ' backgroundColor:'+color+';'
+								}
+								else
+								{
+									//Older Netscape
+									str += ' layer-background-color:'+color+';'
+								}
+							}
+						}
+					}
+							
+							
+					if (arguments.length>=7 && vis!=null)
+					{
+						 str += ' visibility:'+vis+';'
+					}
+					if (arguments.length>=8 && z!=null)
+					{
+						 str += ' z-index:'+z+';'
+					}
+					if (arguments.length==9 && other!=null)
+					{
+						 str += ' '+other
+					}
+					str += '}\n'
+					return str
+				}
+			}
+			
+			//Write the CSS for the stylesheet
+			function writeCSS(str,showAlert) 
+			{
+				if (browserVersion >= 4)
+				{
+					str = css('START')+str+css('END')
+					document.write(str)
+					if (showAlert) alert(str)
+				}
+			}
+			if (browserVersion >= 4)
+			{
+				List.count = 0
+				List.Menus = new Array()
+			}
+
+			var Menu_Item_Height = 14;
+			var Menu_Item_Font_Size = 8;
+			var Menu_Item_Color = '#000000';
+			var Menu_Item_Font_Name = 'Verdana'
+			var Menu_Item_bg_color = '#666699'
+
+			var Sel_Menu_Item_rollover_font_color = '#CCCCFF'
+			var Sel_Menu_Item_Selected_bg_color = '#CCCCFF'
+			var Sel_Menu_Item_Selected_font_color = '#666699'
+
+			var Profile_Menu_Width = 140;
+			var Profile_Menu_Top = 150;
+			var Profile_Menu_Left = 224;
+
+			var Background_Menu_Width = 140;
+			var Background_Menu_Top = 150;
+			var Background_Menu_Left = 365;
+
+			var Management_Menu_Width = 140;
+			var Management_Menu_Top = 150;
+			var Management_Menu_Left = 506;
+
+			var Stock_Data_Menu_Width = 130;
+			var Stock_Data_Menu_Top = 150;
+			var Stock_Data_Menu_Left = 647;
+
+			var Annual_Report_Menu_Width = 140;
+			var Annual_Report_Menu_Top = 165;
+			var Annual_Report_Menu_Left = 224;
+
+			var Interim_Report_Menu_Width = 140;
+			var Interim_Report_Menu_Top = 165;
+			var Interim_Report_Menu_Left = 365;
+
+			var Pro_Forma_Report_Menu_Width = 140;
+			var Pro_Forma_Report_Menu_Top = 165;
+			var Pro_Forma_Report_Menu_Left = 506;
+
+			var Quarterly_Menu_Width = 130;
+			var Quarterly_Menu_Top = 165;
+			var Quarterlyt_Menu_Left = 647;
+
+		//Build the menus 
+			if (browserVersion >= 4)
+			{
+				Profile_menu = new List(Profile_Menu_Left,Profile_Menu_Top,Profile_Menu_Width,Menu_Item_Height,'back','front','dark')
+				Profile_menu.add('#','&nbsp;<B>Profile</B>',true)
+				Profile_menu.fontsize = Menu_Item_Font_Size;
+				Profile_menu.fontname = Menu_Item_Font_Name
+				Profile_menu.color.textNormal  = Menu_Item_Color
+				Profile_menu.backgroundColor  = Menu_Item_Color
+				Profile_menu.visibility = 'show'
+				Profile_menu.build()
+							
+				Background_Menu = new List(Background_Menu_Left,Background_Menu_Top,Background_Menu_Width,Menu_Item_Height,'back','front','dark')			
+				Background_Menu.add('#','&nbsp;<B>Background</B>',true)
+				Background_Menu.fontsize = Menu_Item_Font_Size;
+				Background_Menu.fontname = Menu_Item_Font_Name
+				Background_Menu.color.textNormal  = Menu_Item_Color
+				Background_Menu.visibility = 'show'
+				Background_Menu.build()	
+								
+				Management_Menu = new List(Management_Menu_Left,Management_Menu_Top,Management_Menu_Width,Menu_Item_Height,'back','front','dark')			
+				Management_Menu.add('#','&nbsp;<B>Management</B>',true)
+				Management_Menu.fontsize = Menu_Item_Font_Size;
+				Management_Menu.fontname = Menu_Item_Font_Name
+				Management_Menu.color.textNormal  = Menu_Item_Color
+				Management_Menu.visibility = 'show'
+				Management_Menu.build()			
+							
+				Stock_Data_Menu = new List(Stock_Data_Menu_Left,Stock_Data_Menu_Top,Stock_Data_Menu_Width,Menu_Item_Height,'back','front','dark')			
+				Stock_Data_Menu.add('#','&nbsp;<B>Stock Data</B>',true)
+				Stock_Data_Menu.fontsize = Menu_Item_Font_Size;
+				Stock_Data_Menu.fontname = Menu_Item_Font_Name
+				Stock_Data_Menu.color.textNormal  = Menu_Item_Color
+				Stock_Data_Menu.visibility = 'show'
+				Stock_Data_Menu.build()	
+								
+				Annual_Report_Menu = new List(Annual_Report_Menu_Left,Annual_Report_Menu_Top,Annual_Report_Menu_Width,Menu_Item_Height,'back','front','dark')			
+				Annual_Report_Menu.add('#','&nbsp;<B>Annual Report</B>',true)
+				Annual_Report_Menu.fontsize = Menu_Item_Font_Size;
+				Annual_Report_Menu.fontname = Menu_Item_Font_Name
+				Annual_Report_Menu.color.textNormal  = Menu_Item_Color
+				Annual_Report_Menu.visibility = 'show'
+				Annual_Report_Menu.build()	
+					
+				Interim_Report_Menu = new List(Interim_Report_Menu_Left,Interim_Report_Menu_Top,Interim_Report_Menu_Width,Menu_Item_Height,'back','front','dark')			
+				Interim_Report_Menu.add('#','&nbsp;<B>Interim Report</B>',true)
+				Interim_Report_Menu.fontsize = Menu_Item_Font_Size;
+				Interim_Report_Menu.fontname = Menu_Item_Font_Name
+				Interim_Report_Menu.color.textNormal  = Menu_Item_Color
+				Interim_Report_Menu.visibility = 'show'
+				Interim_Report_Menu.build()	
+
+				Pro_Forma_Report_Menu = new List(Pro_Forma_Report_Menu_Left,Pro_Forma_Report_Menu_Top,Pro_Forma_Report_Menu_Width,Menu_Item_Height,'back','front','dark')			
+				Pro_Forma_Report_Menu.add('#','&nbsp;<B>Pro Forma Report</B>',true)
+				Pro_Forma_Report_Menu.fontsize = Menu_Item_Font_Size;
+				Pro_Forma_Report_Menu.fontname = Menu_Item_Font_Name
+				Pro_Forma_Report_Menu.color.textNormal  = Menu_Item_Color
+				Pro_Forma_Report_Menu.visibility = 'show'
+				Pro_Forma_Report_Menu.build()	
+
+				Quarterly_Menu = new List(Quarterlyt_Menu_Left,Quarterly_Menu_Top,Quarterly_Menu_Width,Menu_Item_Height,'back','front','dark')			
+				Quarterly_Menu.add('#','&nbsp;<B>Quarterly Info.</B>',true)
+				Quarterly_Menu.fontsize = Menu_Item_Font_Size;
+				Quarterly_Menu.fontname = Menu_Item_Font_Name
+				Quarterly_Menu.color.textNormal  = Menu_Item_Color
+				Quarterly_Menu.visibility = 'show'
+				Quarterly_Menu.build()
+			}
+			else
+			{
+				Profile_menu = " ";
+				Background_Menu = " ";
+				Management_Menu = " ";
+				Stock_Data_Menu = " ";
+				Annual_Report_Menu = " ";
+				Interim_Report_Menu = " ";
+				Pro_Forma_Report_Menu = " ";
+				Quarterly_Menu = " ";
+								
+			}
+		}
+	//--></SCRIPT>
+
+	<SCRIPT LANGUAGE="Javascript"><!--
+
+	// -----------------------------------------------------------
+	// window_load()
+	// Container function for load.
+	// -----------------------------------------------------------
+
+	function init()
+	{
+		if (browserType == "ie")
+		{
+			if ("function" == typeof(InitNavLinks)) InitNavLinks();
+			if ("function" == typeof(CheckToTop)) CheckToTop();
+
+			 div1.style.display = "none";
+			 div2.style.display = "none";
+			 div3.style.display = "none";			 
+			 div4.style.display = "none";
+			 div5.style.display = "none";
+			 div6.style.display = "none";
+			 div7.style.display = "none";
+			 div8.style.display = "none";
+			 div1.style.visibility = "visible";
+			 div2.style.visibility = "visible";			 
+			 div3.style.visibility = "visible";	
+			 div4.style.visibility = "visible";			 
+			 div5.style.visibility = "visible";	
+			 div6.style.visibility = "visible";	
+			 div7.style.visibility = "visible";	
+			 div8.style.visibility = "visible";	
+			 eMenuShown = document.all["div1"];
+			 eMenuShown.style.display = "";
+			 eNavBarItemShown = document.all["Nav1"];
+			 eNavBarItemShown.className = "clsNavBarItemShown";	
+			 CacheAndBind();
+
+		}
+
+		else		
+		{	
+			Profile_menu.activate(Profile_menu)
+			Background_Menu.activate(Background_Menu)
+			Management_Menu.activate(Management_Menu)
+			Stock_Data_Menu.activate(Stock_Data_Menu)
+			Annual_Report_Menu.activate(Annual_Report_Menu)		
+			Interim_Report_Menu.activate(Interim_Report_Menu)		
+			Pro_Forma_Report_Menu.activate(Pro_Forma_Report_Menu)		
+			Quarterly_Menu.activate(Quarterly_Menu)	
+				
+				
+
+			if (browserVersion >= 5)
+			{//hide all divs except for the first one in Netscape 6.2
+				divs = document.getElementsByTagName("div");
+
+				divs['List0ListContent'].style.visibility = 'hidden';
+				divs['List1ListContent'].style.visibility = 'hidden';
+				divs['List2ListContent'].style.visibility = 'hidden';
+				divs['List3ListContent'].style.visibility = 'hidden';
+				divs['List4ListContent'].style.visibility = 'hidden';
+				divs['List5ListContent'].style.visibility = 'hidden';
+				divs['List6ListContent'].style.visibility = 'hidden';
+				divs['List7ListContent'].style.visibility = 'hidden';
+
+				divs['List0ListContent'].style.display = '';
+				divs['List1ListContent'].style.display = 'none';
+				divs['List2ListContent'].style.display = 'none';
+				divs['List3ListContent'].style.display = 'none';
+				divs['List4ListContent'].style.display = 'none';
+				divs['List5ListContent'].style.display = 'none';
+				divs['List6ListContent'].style.display = 'none';
+				divs['List7ListContent'].style.display = 'none';
+
+				divs['List0ListContent'].style.visibility = 'visible';
+				divs['List1ListContent'].style.visibility = 'visible';
+				divs['List2ListContent'].style.visibility = 'visible';
+				divs['List3ListContent'].style.visibility = 'visible';
+				divs['List4ListContent'].style.visibility = 'visible';
+				divs['List5ListContent'].style.visibility = 'visible';
+				divs['List6ListContent'].style.visibility = 'visible';
+				divs['List7ListContent'].style.visibility = 'visible';
+
+			}
+			else
+			{	//Set the Profile menu button to the selected color for initial load
+				document.layers[MenuSelected].bgColor = '#CCCCFF';
+			}
+
+		}		
+	}
+	//--></SCRIPT>
+</head>
+<!--#include file="..\..\system\config\config.inc"-->
+<!--#include file="..\..\system\includes\Func_CheckNull.inc"-->
+
+<body bgcolor="#FFFFFF" leftmargin="0" topmargin="0" marginwidth="0" marginheight="0" onLoad="init()">
+<script language="JavaScript1.2" >
+	if ((ns4) || (ns6))
+	{
+	writeAllMenus();
+	}
+</script>
+<table width="100%" border="0" cellspacing="0" cellpadding="0">
+  <tr>
+        <td>
+
+<!-- This file should be used only with files outside of the Content Management areas, any file that is outside of the standard directories should use the virtual version instead. -->
+<link rel="stylesheet" href="/library/mystyle.inc">
+<a name="top">
+<table width="100%" border="0" cellspacing="0" cellpadding="0">
+	<tr>
+		<td background="/images/banner_cell_bg.gif">
+			<table border=0 cellpadding=0 cellspacing=0>
+				<tr>
+					<td colspan="5"><a 
+						href="/"><img src="/images/top_home.gif" width=41 height=18 border="0"></a><a 
+						href="/help/contacts.stm"><img src="/images/top_contacts.gif" width=59 height=18 border="0"></a><a 
+						href="/asp/email.asp"><img src="/images/top_email.gif" width=39 height=18 border="0"></a><a 
+						href="/help/sitemap.stm"><img src="/images/top_map.gif" width=54 height=18 border="0"></a><a 
+						href="/help/help.stm"><img src="/images/top_help.gif" width=34 height=18 border="0"></a></td>
+				<!--Add/Remove banner ad by replacing image Banner_numbers.gif and aligning it LEFT -->
+				<td rowspan=3 background="/images/banner_stripes.gif" valign="bottom" width="500"><img src="/images/banner_numbers.gif" width="460" height="80"></td>
+				</tr>
+				<tr>
+					<td colspan=5><img src="/images/banner_otcbb.gif" width=227 height=39></td>
+				</tr>
+				<tr>
+					<td colspan=5 background="/images/banner_time_bg.gif" align="right" valign="top"><span class="copy">&nbsp;
+					</span><img src="/images/spacer.gif" width="43" height="20"></td>
+				</tr></table></td>
+</tr>
+</table>
+  </tr>
+</table>
+<table width="100%" border="0" cellspacing="0" cellpadding="0" height="100%">
+<tr> 
+        <td width="180" valign="top" rowspan="2" bgcolor="#999999">
+<!-- ************* Important **************** -->
+<!-- This file should NEVER be edited manually.  These MENU files are generated from the MENU_GEN file in the Processing Scripts. -->
+<form action="/asp/quotes.asp">
+	<TABLE BORDER=0 CELLPADDING=0 CELLSPACING=0 bgcolor="#666666" width="150">
+		<TR> 
+			<TD valign="middle" height="25" colspan="2" align="center">
+				<input type="text" name="Quotes" size="25" value="Enter Symbols" onfocus="javascript:this.value='';">
+			</TD>
+				
+		</TR>
+		<TR valign="middle"> 
+			<TD COLSPAN=2 height="55" align="center" valign="center">
+			<input type="image" src="/images/sidenav_bullet_quote.gif" width=165 height=24 border="0" name="Bullet"><BR>
+			<input type="image" src="/images/sidenav_symbol_dir.gif" width=165 height=24 border="0" name="Symbol"><BR></TD>
+		</TR>
+	    
+		<TR bgcolor="#999999"> 
+			<TD COLSPAN=2 valign="top">
+			<a href="/dynamic/tradeact.htm"><img src="/images/menu/menu_1.gif" WIDTH=180 HEIGHT=15 alt="Trading Activities Reports" border="0"></a><br>
+				<a href="/dynamic/news_2004.htm"><img src="/images/menu/menu_2.gif" width="180" height="15" alt="OTCBB News" border="0"></a><br>
+				<a href="/dynamic/marketstats.htm"><img src="/images/menu/menu_3.gif" width="180" height="15" alt="OTCBB News" border="0"></a><br>
+	    	    <a href="/investorinformation/investorinfo.stm"><img src="/images/menu/menu_4.gif" width="180" height="15" alt="Investor Info." border="0"></a><br>
+				<a href="/issuerinformation/issuerinfo.stm"><img src="/images/menu/menu_5.gif" width="180" height="15" alt="Issuer Info." border="0"></a><br>
+	    	    <a href="/vendorinformation/vendorpage.stm"><img src="/images/menu/menu_6.gif" width="180" height="15" alt="Vendor Info." border="0"></a><br>
+				<a href="/aboutOTCBB/rulesindex.stm"><img src="/images/menu/menu_8.gif" width="180" height="15" alt="OTCBB Rules" border="0"></a><br>
+			<a href="/AboutOTCBB/about.stm"><img src="/images/menu/menu_7.gif" width="180" height="15" alt="About OTCBB" border="0"></a><br>
+				<center><img src="/images/transparent.jpg" WIDTH=1 HEIGHT=30 border="0"><a href="/faqs/otcbb_faq.stm"><img src="/images/FAQs_Light_Green.gif" WIDTH=93 HEIGHT=24 border="0"></a></center><BR>
+				<center><a href="/asp/SP_Search.asp"><img src="/images/S_P_Sidenav.jpg" WIDTH=180 HEIGHT=50 border="0"></a></center><br>
+			</TD>
+		</TR>
+	</TABLE>
+</form>
+    
+		<td valign="top" height="30">
+<a name="top">
+	<table width="100%" border="0" cellspacing="0" cellpadding="0" height="20" background="/images/nav_bar_bg.gif">
+		<tr bgcolor="#666699" > 
+			<td background="/images/nav_bar_bg.gif"> 
+				<table border=0 cellpadding=0 cellspacing=0 height="20">
+					<tr> 
+						<td width="410" valign="top"><img 
+							src="/images/white_spacer.gif" width="30" height="20"><img 
+							src="/images/nav_corner.gif" width=19 height=20><img
+							src="/images/navbar_spacer.gif" width=12 height=20><a href="/dailylist/"><img 
+							src="/images/nav_dailylist.gif" width=60 height=20 border="0"></a><img
+							src="/images/nav_spacer.gif" width="40" height="20"><a href="/dynamic/update_2004.htm"><img 
+							src="/images/nav_changes.gif" width=100 height=20 border="0"></a><img
+							src="/images/nav_spacer.gif" width="40" height="20"><a href="/marketwatch/"><img 
+							src="/images/nav_halts.gif" width=74 height=20 border="0"></a><img
+							src="/images/nav_spacer.gif" width="30" height="20"></td>
+						<form action="/asp/SiteSearch.asp">
+						<td width="55" bgcolor="#666699" background="/images/nav_bar_bg.gif"><font face="Verdana, Arial, Helvetica, sans-serif" size="1"> 
+							<input type="text" name="Criteria" size="8" maxlength="100">
+							</font></td>
+						<td  width="94" valign="top"><INPUT type=image src="/images/nav_search.gif" width=55 height=20 border=0 id=image1 name=image1><img
+							src="/images/nav_spacer.gif" width="38" height="20"></td>
+						</form>
+					</tr>
+				</table>
+			</td>
+		</tr>
+	</table>
+<SCRIPT LANGUAGE="Javascript"><!--
+
+if ((ns4) || (ns6))
+	{
+		document.write('<form action="/asp/SP_Search.asp"><table valign="top" border="0" width="585"><tr>');
+		document.write('<td align="right" valign="top" width="140" class="copy" cellpadding="1">');
+		document.write('<b><font color="DarkGreen">S & P Company Insights Search:  </font></b><font face="Verdana, Arial, Helvetica, sans-serif" size="1"><input type="text" name="Criteria" size="8" maxlength="100" /><input type="hidden" name="searcharea" value="a" /></font><input type="image" src="/images/button_search.gif" width="72" height="15" border="0" id="image1" name="image1" />');
+		document.write('</td></tr></table></form>');
+
+	}	
+//--></SCRIPT>	
+  </tr>
+  <tr>
+    <td valign="top" width="100%"> 
+      
+			<table width="585" border="0" cellspacing="0" cellpadding="0" height="80%">
+				<tr> 
+					<td width="30"><img src="/images/spacer.gif" width="30" height="1"></td>
+					<td width="380" valign="TOP">
+<SCRIPT LANGUAGE="Javascript"><!--
+
+if (browserType == "ie")		
+	{					
+		document.write('<table border="0" cellspacing="0" cellpadding="0" bgcolor="#CCCCFF" width="562" height="400" VALIGN="top">');
+		document.write('	<tr VALIGN="top">');
+		document.write('		<td colspan="2" width="100%">');
+		document.write('<TABLE ID="tblNavBar" BORDER="1" Bordercolor="#CCCCFF" CELLPADDING="0" CELLSPACING="0" width="100%">');
+		document.write('	<TR VALIGN="top">');
+		document.write('		<TD CLASS="clsNavBarItem" ID="Nav1" expItemNum="1"><b>Profile</b></TD>');
+		document.write('		<TD CLASS="clsNavBarItem" ID="Nav2" expItemNum="2"><b>Background</b></TD>');
+		document.write('		<TD CLASS="clsNavBarItem" ID="Nav3" expItemNum="3"><b>Management</b></TD>');
+		document.write('		<TD CLASS="clsNavBarItem" ID="Nav4" expItemNum="4"><b>Stock Data</b></TD>');
+		document.write('	</TR>');
+		document.write('	<TR VALIGN="top">');
+		document.write('		<TD CLASS="clsNavBarItem" ID="Nav5" expItemNum="5"><b>Annual Report</b></TD>');
+		document.write('		<TD CLASS="clsNavBarItem" ID="Nav6" expItemNum="6"><b>Interim Report</b></TD>');
+		document.write('		<TD CLASS="clsNavBarItem" ID="Nav7" expItemNum="7"><b>Pro Forma Report</b></TD>');
+		document.write('		<TD CLASS="clsNavBarItem" ID="Nav8" expItemNum="8"><b>Quarterly Info.</b></TD>');
+		document.write('	</TR>');
+		document.write('</TABLE>');
+		document.write('<DIV CLASS="clsDocBody">');
+	}		
+//--></SCRIPT>	
+
+
+<!-- DOCUMENT CONTENT START -->
+
+
+<SCRIPT LANGUAGE="JavaScript">
+
+	if (ie)
+	{
+		// -----------------------------------------------------------------------
+		// 	NAVIGATION FOR MENUBAR AND MENUITEMS
+		// -----------------------------------------------------------------------
+
+		// -----------------------------------------------------------------------
+		// 	Global variables to track menu state
+		// -----------------------------------------------------------------------
+
+		var eNavBarItemShown = null;
+		var eMenuShown = null;
+
+		// -----------------------------------------------------------------------
+		// 	Conditional global event-handlers
+		// -----------------------------------------------------------------------
+
+		function document_click()
+		{
+			//if ("clsNavBarItemShown" != window.event.srcElement.className && null != eMenuShown) HideMenu();
+		}
+
+		function document_keypress()
+		{
+			//if ("27" == window.event.keyCode && null != eMenuShown) HideMenu();
+		}
+
+		function window_blur()
+		{
+			//if (null != eMenuShown) HideMenu();
+		}
+
+		// -----------------------------------------------------------------------
+		// 	Cache/Uncache functions to store and bind if menu shown
+		// -----------------------------------------------------------------------
+
+		function CacheAndBind()
+		{
+			window.CachedClick = document.onclick;
+			window.CachedKeypress = document.onkeypress;
+			window.CachedBlur = window.onblur;
+			document.onclick = document_click;
+			document.onkeypress = document_keypress;
+			window.onblur = window_blur;
+		}
+
+		function UncacheAndRebind()
+		{
+			document.onclick = window.CachedClick;
+			document.onkeypress = window.CachedKeypress;
+			window.onblur = window.CachedBlur;
+		}
+
+		// -----------------------------------------------------------------------
+		// 	HideMenu and ShowMenu functions
+		// -----------------------------------------------------------------------
+
+		function HideMenu()
+		{
+	//		eMenuShown.style.visibility = "hidden";
+			eMenuShown.style.display = "none";
+			eMenuShown = null;
+			eNavBarItemShown.className = "clsNavBarItem";
+			eNavBarItemShown = null;
+			UncacheAndRebind();
+		}
+
+		function ShowMenu(eSrc)
+		{
+			eMenuShown = document.all["div"+eSrc.expItemNum];
+			eNavBarItemShown = eSrc;
+			eNavBarItemShown.className = "clsNavBarItemShown";
+	//		if (null != eMenuShown) eMenuShown.style.visibility = "visible";
+			if (null != eMenuShown) eMenuShown.style.display = "";		
+			CacheAndBind();
+		}
+
+		// -----------------------------------------------------------------------
+		// 	FindTD function used in NavBar event-handlers to determine TD ancestor
+		// -----------------------------------------------------------------------
+
+		function FindTD(eSrc,eContainer)
+		{
+			while (eContainer.contains(eSrc))
+			{
+				if ("TD" == eSrc.tagName) return eSrc;
+				eSrc = eSrc.parentElement;
+			}
+			return false;
+		}
+
+		// -----------------------------------------------------------------------
+		// 	NavBar event-handlers (bound below)
+		// -----------------------------------------------------------------------
+
+		function NavBar_mouseover(eContainer)
+		{
+			var eSrc = FindTD(window.event.srcElement,eContainer);
+	//		alert(eSrc.id)
+			if (FindTD(window.event.fromElement,eContainer) != eSrc)
+			{
+				if ("clsNavBarItem" == eSrc.className)
+				{
+					eSrc.className = "clsNavBarItemOver";
+				}
+			}
+		}
+
+		function NavBar_mouseout(eContainer)
+		{
+			var eSrc = FindTD(window.event.srcElement,eContainer);
+			if (FindTD(window.event.toElement,eContainer) != eSrc)
+			{
+				if ("clsNavBarItemOver" == eSrc.className) eSrc.className = "clsNavBarItem";
+			}
+		}
+
+		function NavBar_click(eContainer)
+		{
+			window.event.cancelBubble = true;
+			var eSrc = FindTD(window.event.srcElement,eContainer);
+			if ("clsNavBarItemOver" == eSrc.className)
+			{
+				if (null != eMenuShown) HideMenu();
+				ShowMenu(eSrc);
+			}
+			else if ("clsNavBarItemShown" == eSrc.className)
+			{
+				if (null != eMenuShown) HideMenu();
+				eSrc.className = "clsNavBarItemOver";
+			}
+		}
+
+		// -----------------------------------------------------------------------
+		// 	HackURL function used in Menu_click to create unique c-frame frameset in Menu_click
+		// -----------------------------------------------------------------------
+
+		function HackURL(sURL)
+		{
+			var dDate = new Date().getTime();
+			var sFrameURL = sURL.substring(0,sURL.indexOf("#"));
+			var sHash = sURL.substring(sURL.indexOf("#"));
+			if ("" != sFrameURL)
+			{
+				if (-1 < location.protocol.indexOf("file:")) return sHash.substring(1);
+				else return sFrameURL + "?" + dDate + sHash;
+			}
+			else return sURL;
+		}
+
+		// -----------------------------------------------------------------------
+		// 	Menu event-handlers (bound inline at time of menu creation)
+		// -----------------------------------------------------------------------
+
+		function Menu_hover()
+		{
+			var eSrc = window.event.srcElement;
+			if ("clsMenu" != eSrc.className) eSrc.className = ("" == eSrc.className ? "clsMenuItemOver" : "");
+		}
+
+		function Menu_click()
+		{
+			//HideMenu();
+			top.location.href = HackURL(window.event.srcElement.expURL);
+		}
+
+		// -----------------------------------------------------------------------
+		// 	NavBar event binding
+		// -----------------------------------------------------------------------
+
+		if ("object" == typeof(tblNavBar))
+		{
+			tblNavBar.onmouseover = new Function("NavBar_mouseover(this);");
+			tblNavBar.onmouseout = new Function("NavBar_mouseout(this);");
+			tblNavBar.onselectstart = new Function("return false;");
+			tblNavBar.onclick = new Function("NavBar_click(this);");
+		}
+	}
+
+</SCRIPT> 
+<SCRIPT LANGUAGE="Javascript"><!--
+
+if (browserType == "ie")		
+	{	
+		document.write('</DIV>');
+		document.write('</td>');
+		document.write('	</tr>');
+		document.write('	<tr valign="top"> ');
+		document.write('		<td colspan="2" height="100%"> ');
+		document.write('			<table border="0" cellspacing="0" cellpadding="0" width="562">');
+		document.write('				<tr> ');
+		document.write('					<td rowspan="3" bgcolor="#CCCCFF" height="14" valign="top" width="562">');
+		}
+
+
+if (browserType == "ie")		
+	{
+		document.write('<DIV ID="div1" CLASS="clsMenu">');
+	}		
+else
+	{
+		document.write('<DIV ID="List0ListContent" bgcolor="#CCCCFF" width="552">');
+	}			
+//--></SCRIPT>	
+							
+<table border="0" cellspacing="0" cellpadding="2" bgcolor="#CCCCFF" width="550"><tbody><tr><td><form action="/asp/SP_Search.asp"><table width="100%"><tr><td align="left" valign="top" class="PageHeads"><img src="/images/a_sp_logo.gif"/> 
+										<BR><BR><u>Transmeridian Exploration Inc.</u><BR><font class="copy"><b>Symbol:</b>  TMXN</font></td><td align="center" valign="top" width="140" class="copy" cellpadding="1">
+<SCRIPT LANGUAGE="Javascript"><!--
+if (browserType == "ie")		
+	{
+		document.write('<b>S & P Company Insights Search</b><br/><font face="Verdana, Arial, Helvetica, sans-serif" size="1"><input type="text" name="Criteria" size="8" maxlength="100" /><input type="hidden" name="searcharea" value="a" />&#160;</font><input type="image" src="/images/button_search.gif" width="72" height="15" border="0" id="image1" name="image1" />');
+	}		
+else
+	{
+		document.write('&nbsp;&nbsp;&nbsp;&nbsp;');
+	}	
+//--></SCRIPT>	
+<br><br><font class="comment">Click <a href="/sandp/TMXN_print.htm">here</a> for a printable version</font>
+</td></tr></table></form></td></tr><tr><td class="copy"><b>Business Summary:</b> Develops and produces oil and gas properties and its activities are primarily focused on the Caspian Sea region of the former Soviet Union and its principal property, the South Alibek Field, is located in Kazakhstan.</td></tr><tr><td align="Center" class="copy"> </td></tr><tr><td class="copy"><b><u>Address</u></b><BR>  397 N. Sam Houston Parkway E.<BR>
+								  Suite 300<BR>
+								  Houston
+							, TX 77060<BR>
+								  Phone:  281-999-9091<BR></td></tr><tr><th class="copy" align="left"><u>Auditor</u></th></tr><tr><td class="copy">
+					  John A. Braden &amp; Company<BR></td></tr><tr><th class="copy" align="left"><u>Transfer Agent</u></th></tr><tr><td class="copy">
+					  OTC Stock Transfer, Inc.<BR></td></tr><tr><td class="copy"><b>Employees:  </b>34<BR><b>ShareHolders:  </b>350</td></tr><tr><td class="copy"><b>Founded:  </b>2000<BR><b>Domicile:  </b>Delaware</td></tr><tr><td align="Center" class="copy"> </td></tr><tr><td align="Left" class="copy"><table><tr align="right"><td width="32" align="left">
+										  <a href="#top"><img src="/images/button_top.gif" border="0"/></a></td><td align="left" valign="bottom" class="comment"><a href="javascript:window.open('/help/SPDisclaimer.stm','' ,'toolbar=no,scrollbars=no,width=380,height=150');void(0)"><font color="#000000" class="comment">S &amp; P Disclaimer</font></a></td></tr></table></td></tr></tbody></table>
+						</DIV>
+<SCRIPT LANGUAGE="Javascript"><!--
+
+if (browserType == "ie")		
+	{
+		document.write('<DIV ID="div2" CLASS="clsMenu">');
+	}		
+else
+	{
+		document.write('<DIV ID="List1ListContent" bgcolor="#CCCCFF" width="552">');
+	}	
+//--></SCRIPT>							
+							
+<table border="0" cellspacing="0" cellpadding="2" bgcolor="#CCCCFF" width="550"><tbody><tr><td><form action="/asp/SP_Search.asp"><table width="100%"><tr><td align="left" valign="top" class="PageHeads"><img src="/images/a_sp_logo.gif"/> 
+										<BR><BR><u>Transmeridian Exploration Inc.</u><BR><font class="copy"><b>Symbol:</b>  TMXN</font></td><td align="center" valign="top" width="140" class="copy" cellpadding="1">
+<SCRIPT LANGUAGE="Javascript"><!--
+if (browserType == "ie")		
+	{
+		document.write('<b>S & P Company Insights Search</b><br/><font face="Verdana, Arial, Helvetica, sans-serif" size="1"><input type="text" name="Criteria" size="8" maxlength="100" /><input type="hidden" name="searcharea" value="a" />&#160;</font><input type="image" src="/images/button_search.gif" width="72" height="15" border="0" id="image1" name="image1" />');
+	}		
+else
+	{
+		document.write('&nbsp;&nbsp;&nbsp;&nbsp;');
+	}	
+//--></SCRIPT>	
+<br><br><font class="comment">Click <a href="/sandp/TMXN_print.htm">here</a> for a printable version</font>
+</td></tr></table></form></td></tr><tr><td class="copy">Transmeridian Exploration Inc. (TMXN), a development stage company as of Mar. 31, 2003, develops and produces oil and gas properties. The company's activities are primarily focused on the Caspian Sea region of the former Soviet Union and its principal property, the South Alibek Field, is located in Kazakhstan.
+
+TMXN conducts its operations in Kazakhstan through a wholly-owned subsidiary, Caspi Neft TME. Caspi Neft is an open joint stock company organized under the laws of Kazakhstan. The company has also started a new venture to develop natural gas properties in South Texas and the Gulf Coast regions of the U.S.
+
+TMXN has not yet commenced its primary revenue-generating operations, which are the production and sales of oil and gas. The ability of the company to realize the carrying value of its assets is dependent on being able to produce and sell oil from the South Alibek Field. The company's primary emphasis since inception has been the exploration and development of the Field, and TMXN has invested apx. $23.2 million through Mar. 31, 2003. This amount includes the initial costs of acquiring the Field, workover and drilling costs, and the costs of support equipment.
+
+The Field has one existing well which has proved reserves, but this well is not capable of production until further workover procedures are performed. TMXN is drilling a second well in the Field approximately 900 meters from the existing well and which is outside the present boundaries of its proved reserves. This well and subsequent wells will delineate the extent and reserve potential of the Field. The economic success of the Field is dependent on finding and developing sufficient reserves and rates of production to generate positive cash flow and provide an economic rate of return on the investment in the Field. In order to sell significant quantities of oil from the Field, TMXN must obtain a production contract from the government of Kazakhstan.
+
+The company's business strategy is focused on the acquisition and development of oil and gas reserves. TMXN prefers to target oil and gas properties with proved or probable reserves and avoid significant exploration risk. Through the contacts, technical knowledge and experience of its management team, TMXN believes it can successfully identify and acquire additional properties in Kazakhstan and the Caspian Sea region. The execution of the business strategy is largely dependent on the successful development of the South Alibek Field, which is intended to provide a base of production, operations and cash flow to exploit future opportunities.</td></tr><tr><td class="copy"><b>History:  </b>INCORPORATED in Delaware Apr. 18, 2000.</td></tr><tr><td align="Center" class="copy"> </td></tr><tr><th align="left" class="copy"><u>Subsidiaries:</u></th></tr><tr><td class="copy">SOJSC Caspi Neft TME<BR>SOJSC Transmeridian Caspian Petroleum<BR>TMEI Operating, Inc.<BR>Transmeridian (Kazakhstan), Inc.<BR>Transmeridian Exploration, Inc. (BVI)<BR></td></tr><tr><td align="Center" class="copy"> </td></tr><tr><td align="Center" class="copy"> </td></tr><tr><td align="left"><table border="0" cellspacing="0" cellpadding="0" width="480"><tr><th align="left" class="copy" colspan="2">Capital Expenditures, thousand. US Dollar</th></tr><tr><td class="copy" width="20%">  <u>Year</u></td><td class="copy" align="left">  <u>Amount</u></td></tr><tr><td class="copy" width="20%">  2002</td><td class="copy" align="left">  11,486</td></tr></table></td></tr><tr><td align="left"><table border="0" cellspacing="0" cellpadding="0" width="480"><tr><td class="copy" width="20%">  2001</td><td class="copy" align="left">  43</td></tr></table></td></tr><tr><td align="left"><table border="0" cellspacing="0" cellpadding="0" width="480"><tr><td class="copy" width="20%">  2000</td><td class="copy" align="left">  8</td></tr></table></td></tr><tr><td align="Center" class="copy"> </td></tr><tr><td align="Center" class="copy"> </td></tr><tr><td align="Left" class="copy"><table><tr align="right"><td width="32" align="left">
+										  <a href="#top"><img src="/images/button_top.gif" border="0"/></a></td><td align="left" valign="bottom" class="comment"><a href="javascript:window.open('/help/SPDisclaimer.stm','' ,'toolbar=no,scrollbars=no,width=380,height=150');void(0)"><font color="#000000" class="comment">S &amp; P Disclaimer</font></a></td></tr></table></td></tr></tbody></table>
+						</DIV>
+<SCRIPT LANGUAGE="Javascript"><!--
+
+if (browserType == "ie")		
+	{
+		document.write('<DIV ID="div3" CLASS="clsMenu">');
+	}		
+else
+	{
+		document.write('<DIV ID="List2ListContent" bgcolor="#CCCCFF" width="552">');
+	}	
+//--></SCRIPT>							
+							
+<table border="0" cellspacing="0" cellpadding="2" bgcolor="#CCCCFF" width="550"><tbody><tr><td colspan="2"><form action="/asp/SP_Search.asp"><table width="100%"><tr><td align="left" valign="top" class="PageHeads"><img src="/images/a_sp_logo.gif"/> 
+										<BR><BR><u>Transmeridian Exploration Inc.</u><BR><font class="copy"><b>Symbol:</b>  TMXN</font></td><td align="center" valign="top" width="140" class="copy" cellpadding="1">
+<SCRIPT LANGUAGE="Javascript"><!--
+if (browserType == "ie")		
+	{
+		document.write('<b>S & P Company Insights Search</b><br/><font face="Verdana, Arial, Helvetica, sans-serif" size="1"><input type="text" name="Criteria" size="8" maxlength="100" /><input type="hidden" name="searcharea" value="a" />&#160;</font><input type="image" src="/images/button_search.gif" width="72" height="15" border="0" id="image1" name="image1" />');
+	}		
+else
+	{
+		document.write('&nbsp;&nbsp;&nbsp;&nbsp;');
+	}	
+//--></SCRIPT>	
+<br><br><font class="comment">Click <a href="/sandp/TMXN_print.htm">here</a> for a printable version</font>
+</td></tr></table></form></td></tr><tr><th colspan="2" align="left" class="copy"><BR>
+							Management
+						</th></tr><tr><th class="copy" align="Left">Officers</th><th class="copy" align="Left">Position</th></tr><tr><td class="copy"> Lorrie T. Olivier</td><td class="copy">Chairman, President &amp; Chief Executive Officer</td></tr><tr><td class="copy"> Randall D. Keys</td><td class="copy">Chief Financial Officer</td></tr><tr><td class="copy"> Bruce A. Falkenstein</td><td class="copy">VP</td></tr><tr><td class="copy"> Mike Della Donna</td><td class="copy">Investor Relations Contact</td></tr><tr><td colspan="2"><BR></td></tr><tr><th class="copy" align="Left" colspan="2">Directors</th></tr><tr><td class="copy" bgcolor="#CCCCFF" colspan="2"> James H. Dorman</td></tr><tr><td class="copy" bgcolor="#CCCCFF" colspan="2"> Philip J. McCauley</td></tr><tr><td class="copy" bgcolor="#CCCCFF" colspan="2"> Lorrie T. Olivier</td></tr><tr><td class="copy" bgcolor="#CCCCFF" colspan="2"> Angus  Simpson</td></tr><tr><td align="Center" bgcolor="#CCCCFF" class="copy" colspan="2"> </td></tr><tr><td align="Left" class="copy" colspan="2"><table><tr align="right"><td width="32" align="left">
+										  <a href="#top"><img src="/images/button_top.gif" border="0"/></a></td><td align="left" valign="bottom" class="comment"><a href="javascript:window.open('/help/SPDisclaimer.stm','' ,'toolbar=no,scrollbars=no,width=380,height=150');void(0)"><font color="#000000" class="comment">S &amp; P Disclaimer</font></a></td></tr></table></td></tr></tbody></table>
+						</DIV>
+<SCRIPT LANGUAGE="Javascript"><!--
+
+if (browserType == "ie")		
+	{
+		document.write('<DIV ID="div4" CLASS="clsMenu">');
+	}		
+else
+	{
+		document.write('<DIV ID="List3ListContent" bgcolor="#CCCCFF" width="552">');
+	}		
+//--></SCRIPT>							
+							
+<table border="0" cellspacing="0" cellpadding="2" bgcolor="#CCCCFF" width="550"><tbody><tr><td><form action="/asp/SP_Search.asp"><table width="100%"><tr><td align="left" valign="top" class="PageHeads"><img src="/images/a_sp_logo.gif"/> 
+										<BR><BR><u>Transmeridian Exploration Inc.</u><BR><font class="copy"><b>Symbol:</b>  TMXN</font></td><td align="center" valign="top" width="140" class="copy" cellpadding="1">
+<SCRIPT LANGUAGE="Javascript"><!--
+if (browserType == "ie")		
+	{
+		document.write('<b>S & P Company Insights Search</b><br/><font face="Verdana, Arial, Helvetica, sans-serif" size="1"><input type="text" name="Criteria" size="8" maxlength="100" /><input type="hidden" name="searcharea" value="a" />&#160;</font><input type="image" src="/images/button_search.gif" width="72" height="15" border="0" id="image1" name="image1" />');
+	}		
+else
+	{
+		document.write('&nbsp;&nbsp;&nbsp;&nbsp;');
+	}	
+//--></SCRIPT>	
+<br><br><font class="comment">Click <a href="/sandp/TMXN_print.htm">here</a> for a printable version</font>
+</td></tr></table></form></td></tr><tr><td class="copy"> </td></tr><tr><td align="Left" class="copy"><b>Capitalization as of 03/31/2003:</b></td></tr><tr><td class="copy"> </td></tr><tr><td align="left"><table border="0" cellspacing="0" cellpadding="0" width="480"><tr><th> </th><th class="copy" align="left">Authorized Shares</th><th class="copy" align="left">Outstanding Shares</th></tr><tr><td class="copy"><b>Preferred $0.0006 par</b></td><td class="copy" width="25%">5,000,000</td><td class="copy" width="25%">3,000,000<sup>so1</sup></td></tr><tr><td class="copy"><b>Common $0.0006 par</b></td><td class="copy" width="25%">200,000,000</td><td class="copy" width="25%">62,393,000</td></tr></table></td></tr><tr><td class="copy"> </td></tr><tr><td align="Left" class="copy"><b>LONG TERM DEBT: $15,250,987.</b></td></tr><tr><td class="copy"> </td></tr><tr><td align="left"><table border="0" cellspacing="0" cellpadding="0" width="480"><tr><td class="copy"><b>Common $0.0006 par</b></td></tr><tr><td class="copy"> </td></tr><tr><td class="copy">COMMON OFFERED: November 7, 2001, the company offered up to 8,809,500 Common shares at $2.00 per share. Offering was not underwritten.</td></tr><tr><td class="copy"> </td></tr><tr><td class="copy">
+											Stockholders: 
+										12/31/2002,
+										350.
+										</td></tr><tr><td class="copy">PRINCIPAL STOCKHOLDERS: February 22, 2003, Lorrie T. Olivier owned or controlled 24.2% of the Common, JMJC Investments, Inc. 10.0%, Kornerstone Investment Group, Ltd. 7.9%, Peter L. Holstein 7.1% and Carl Martin Nagel 5.2%.</td></tr><tr><td class="copy"> </td></tr><tr><td class="copy">
+											Transfer Agent:  OTC Stock Transfer, Inc.
+											  Salt Lake City
+											, UT</td></tr><tr><td class="copy"> </td></tr><tr><td class="copy">OTC Bulletin Board( Primary): TMXN</td></tr><tr><td class="copy"> </td></tr><tr><td align="left"><table border="0" cellspacing="0" cellpadding="0" width="480"><tr><th class="copy" align="left">Exchange</th><th class="copy" align="left">Year</th><th class="copy" align="left">High</th><th class="copy" align="left">Low</th></tr><tr><td class="copy">OTC Bulletin Board</td><td class="copy">2002</td><td class="copy">2.2000</td><td class="copy">0.1300</td></tr></table></td></tr></table></td></tr><tr><td class="copy" bgcolor="#CCCCFF"> </td></tr><tr><td class="copy">DIVIDENDS: Common $0.0006 par: None.
+
+</td></tr><tr><td class="copy"> </td></tr><tr><td class="copy"> </td></tr><tr><td class="copy" bgcolor="#CCCCFF"> 
+								<sup>so1</sup>Closely held. Shares are convertible by the company at the rate of 85% of the average bid price of the Common stock 5 days prior to conversion.</td></tr><tr><td align="Left" class="copy"><table><tr align="right"><td width="32" align="left">
+										  <a href="#top"><img src="/images/button_top.gif" border="0"/></a></td><td align="left" valign="bottom" class="comment"><a href="javascript:window.open('/help/SPDisclaimer.stm','' ,'toolbar=no,scrollbars=no,width=380,height=150');void(0)"><font color="#000000" class="comment">S &amp; P Disclaimer</font></a></td></tr></table></td></tr></tbody></table>
+						</DIV>
+<SCRIPT LANGUAGE="Javascript"><!--
+
+if (browserType == "ie")		
+	{
+		document.write('<DIV ID="div5" CLASS="clsMenu">');
+	}		
+else
+	{
+		document.write('<DIV ID="List4ListContent" bgcolor="#CCCCFF" width="552">');
+	}			
+//--></SCRIPT>							
+							
+<table border="0" cellspacing="0" cellpadding="2" bgcolor="#CCCCFF" width="550"><tbody><tr><td><form action="/asp/SP_Search.asp"><table width="100%"><tr><td align="left" valign="top" class="PageHeads"><img src="/images/a_sp_logo.gif"/> 
+										<BR><BR><u>Transmeridian Exploration Inc.</u><BR><font class="copy"><b>Symbol:</b>  TMXN</font></td><td align="center" valign="top" width="140" class="copy" cellpadding="1">
+<SCRIPT LANGUAGE="Javascript"><!--
+if (browserType == "ie")		
+	{
+		document.write('<b>S & P Company Insights Search</b><br/><font face="Verdana, Arial, Helvetica, sans-serif" size="1"><input type="text" name="Criteria" size="8" maxlength="100" /><input type="hidden" name="searcharea" value="a" />&#160;</font><input type="image" src="/images/button_search.gif" width="72" height="15" border="0" id="image1" name="image1" />');
+	}		
+else
+	{
+		document.write('&nbsp;&nbsp;&nbsp;&nbsp;');
+	}	
+//--></SCRIPT>	
+<br><br><font class="comment">Click <a href="/sandp/TMXN_print.htm">here</a> for a printable version</font>
+</td></tr></table></form></td></tr><tr><th align="Center" class="copy">Annual Report</th></tr><tr><td align="Center" class="copy"> </td></tr><tr><td align="Center" class="copy"><b>Income Statement</b></td></tr><tr><td align="right"><table border="0" cellspacing="0" cellpadding="1" width="100%"><tr><th>
+												 
+											</th><th class="copy" align="left">2002</th><th class="copy" align="left">2001</th></tr><tr><td class="copy"><b> Oil revenues                                                              </b></td><td class="copy" width="20%">--</td><td class="copy" width="20%">51,289</td></tr><tr><td class="copy"><b> Operating and administrative expenses</b></td><td class="copy" width="20%">2,936,603</td><td class="copy" width="20%">1,975,534</td></tr><tr><td class="copy"><b> Interest income</b></td><td class="copy" width="20%">3,929</td><td class="copy" width="20%">--</td></tr><tr><td class="copy"><b> Interest expense</b></td><td class="copy" width="20%">338,229</td><td class="copy" width="20%">188,645</td></tr><tr><td class="copy"><b> Net income</b></td><td class="copy" width="20%">(3,270,903)</td><td class="copy" width="20%">(2,112,890)</td></tr><tr><td class="copy"><b> Preferred dividends</b></td><td class="copy" width="20%">37,520</td><td class="copy" width="20%">123,271</td></tr><tr><td class="copy"><b> Net income attributable to common stockholders</b></td><td class="copy" width="20%">(3,308,423)</td><td class="copy" width="20%">(2,236,161)</td></tr><tr><td class="copy"><b>Net income per share basic</b></td><td class="copy" width="20%">($0.06)</td><td class="copy" width="20%">($0.04)</td></tr><tr><td class="copy"><b>Net income per share diluted</b></td><td class="copy" width="20%">($0.06)</td><td class="copy" width="20%">($0.04)</td></tr><tr><td class="copy"><b>Average shares   </b></td><td class="copy" width="20%">58,142,461</td><td class="copy" width="20%">59,621,255</td></tr><tr><td class="copy"><b>Operating Income As Calculated</b></td><td class="copy" width="20%">(2,884,744)</td><td class="copy" width="20%">(1,966,053)</td></tr><tr><td class="copy"><b>Depr. and Amort.</b></td><td class="copy" width="20%">51,859</td><td class="copy" width="20%">9,481</td></tr></table></td></tr><tr><td align="Center" class="copy"> </td></tr><tr><td align="Center" class="copy"><b>Balance Sheet</b></td></tr><tr><td align="right"><table border="0" cellspacing="0" cellpadding="1" width="100%"><tr><th>
+												 
+											</th><th class="copy" align="left">2002</th><th class="copy" align="left">2001</th></tr><tr><td class="copy"><b> ASSETS</b></td><td class="copy" width="20%"></td><td class="copy" width="20%"></td></tr><tr><td class="copy"><b> Current assets:</b></td><td class="copy" width="20%"></td><td class="copy" width="20%"></td></tr><tr><td class="copy"><b> Cash and cash equivalents</b></td><td class="copy" width="20%">624,807</td><td class="copy" width="20%">107,276</td></tr><tr><td class="copy"><b> Receivables</b></td><td class="copy" width="20%">5,527</td><td class="copy" width="20%">270,112</td></tr><tr><td class="copy"><b> Prepaid expenses</b></td><td class="copy" width="20%">183,391</td><td class="copy" width="20%">--</td></tr><tr><td class="copy"><b> Total current assets</b></td><td class="copy" width="20%">813,725</td><td class="copy" width="20%">377,388</td></tr><tr><td class="copy"><b> Net property and equipment</b></td><td class="copy" width="20%">24,396,599</td><td class="copy" width="20%">13,105,859</td></tr><tr><td class="copy"><b> Other assets</b></td><td class="copy" width="20%">1,061,090</td><td class="copy" width="20%">400,000</td></tr><tr><td class="copy"><b> Total assets</b></td><td class="copy" width="20%">26,271,414</td><td class="copy" width="20%">13,883,247</td></tr><tr><td class="copy"><b> LIABILITIES AND STOCKHOLDERS' EQUITY</b></td><td class="copy" width="20%"></td><td class="copy" width="20%"></td></tr><tr><td class="copy"><b> Current liabilities:</b></td><td class="copy" width="20%"></td><td class="copy" width="20%"></td></tr><tr><td class="copy"><b> Accounts payable and accrued liabilities</b></td><td class="copy" width="20%">1,419,004</td><td class="copy" width="20%">1,021,739</td></tr><tr><td class="copy"><b> Current maturities of long-term debt</b></td><td class="copy" width="20%">3,842,992</td><td class="copy" width="20%">1,431,204</td></tr><tr><td class="copy"><b> Interest payable</b></td><td class="copy" width="20%">1,127,106</td><td class="copy" width="20%">22,726</td></tr><tr><td class="copy"><b> Notes payable to related parties</b></td><td class="copy" width="20%">248,025</td><td class="copy" width="20%">--</td></tr><tr><td class="copy"><b> Total current liabilities</b></td><td class="copy" width="20%">6,637,127</td><td class="copy" width="20%">2,475,669</td></tr><tr><td class="copy"><b> Long-term debt</b></td><td class="copy" width="20%">13,752,304</td><td class="copy" width="20%">3,368,796</td></tr><tr><td class="copy"><b>Total long-term debt</b></td><td class="copy" width="20%">13,752,304</td><td class="copy" width="20%">3,368,796</td></tr><tr><td class="copy"><b> Redeemable common stock</b></td><td class="copy" width="20%">2,000,000</td><td class="copy" width="20%">2,000,000</td></tr><tr><td class="copy"><b> Stockholders' Equity:</b></td><td class="copy" width="20%"></td><td class="copy" width="20%"></td></tr><tr><td class="copy"><b>Preferred stock, $0.0006 par value</b></td><td class="copy" width="20%">2</td><td class="copy" width="20%">62</td></tr><tr><td class="copy"><b> Common stock, $0.0006 par value</b></td><td class="copy" width="20%">35,488</td><td class="copy" width="20%">33,448</td></tr><tr><td class="copy"><b> Additional paid-in capital</b></td><td class="copy" width="20%">10,201,625</td><td class="copy" width="20%">9,051,981</td></tr><tr><td class="copy"><b> Deficit accumulated during development stage</b></td><td class="copy" width="20%">(6,355,132)</td><td class="copy" width="20%">(3,046,709)</td></tr><tr><td class="copy"><b> Total stockholders' Equity</b></td><td class="copy" width="20%">3,881,983</td><td class="copy" width="20%">6,038,782</td></tr><tr><td class="copy"><b> Total liabilities</b></td><td class="copy" width="20%">26,271,414</td><td class="copy" width="20%">13,883,247</td></tr><tr><td class="copy"><b>Equity per Share</b></td><td class="copy" width="20%">$0.07</td><td class="copy" width="20%">$0.11</td></tr><tr><td class="copy"><b>Depr. and Amort. Reserve</b></td><td class="copy" width="20%">205,790</td><td class="copy" width="20%">10,430</td></tr><tr><td class="copy"><b>Capital Expenditures</b></td><td class="copy" width="20%">11,486,100</td><td class="copy" width="20%">1,813,713</td></tr><tr><td class="copy"><b>Preferred Shares</b></td><td class="copy" width="20%">3,000</td><td class="copy" width="20%">103,000</td></tr><tr><td class="copy"><b>Common Shares </b></td><td class="copy" width="20%">59,147,000</td><td class="copy" width="20%">55,747,000</td></tr></table></td></tr><tr><td align="Center" class="copy"> </td></tr><tr><td class="copy" align="left" bgcolor="#CCCCFF">
+											 * The financial statements were reported by Standard &amp; Poor's prior to 2002 year end in Thou. $</td></tr><tr><td align="Center" class="copy"> </td></tr><tr><td align="Left" class="copy"><table><tr align="right"><td width="32" align="left">
+										  <a href="#top"><img src="/images/button_top.gif" border="0"/></a></td><td align="left" valign="bottom" class="comment"><a href="javascript:window.open('/help/SPDisclaimer.stm','' ,'toolbar=no,scrollbars=no,width=380,height=150');void(0)"><font color="#000000" class="comment">S &amp; P Disclaimer</font></a></td></tr></table></td></tr></tbody></table>
+								
+						</DIV>
+<SCRIPT LANGUAGE="Javascript"><!--
+
+if (browserType == "ie")		
+	{
+		document.write('<DIV ID="div6" CLASS="clsMenu">');
+	}		
+else
+	{
+		document.write('<DIV ID="List5ListContent" bgcolor="#CCCCFF" width="552">');
+	}			
+//--></SCRIPT>							
+							
+<table border="0" cellspacing="0" cellpadding="2" bgcolor="#CCCCFF" width="550"><tbody><tr><td><form action="/asp/SP_Search.asp"><table width="100%"><tr><td align="left" valign="top" class="PageHeads"><img src="/images/a_sp_logo.gif"/> 
+										<BR><BR><u>Transmeridian Exploration Inc.</u><BR><font class="copy"><b>Symbol:</b>  TMXN</font></td><td align="center" valign="top" width="140" class="copy" cellpadding="1">
+<SCRIPT LANGUAGE="Javascript"><!--
+if (browserType == "ie")		
+	{
+		document.write('<b>S & P Company Insights Search</b><br/><font face="Verdana, Arial, Helvetica, sans-serif" size="1"><input type="text" name="Criteria" size="8" maxlength="100" /><input type="hidden" name="searcharea" value="a" />&#160;</font><input type="image" src="/images/button_search.gif" width="72" height="15" border="0" id="image1" name="image1" />');
+	}		
+else
+	{
+		document.write('&nbsp;&nbsp;&nbsp;&nbsp;');
+	}	
+//--></SCRIPT>	
+<br><br><font class="comment">Click <a href="/sandp/TMXN_print.htm">here</a> for a printable version</font>
+</td></tr></table></form></td></tr><tr><th align="Center" class="copy">Interim Report    
+	               </th></tr><tr><td align="Center" bgcolor="#CCCCFF" class="copy"> </td></tr><tr><td align="Center" class="copy"><i>Data Not Available</i></td></tr><tr><td align="Center" bgcolor="#CCCCFF" class="copy"> </td></tr><tr><td align="Center" bgcolor="#CCCCFF" class="copy"> </td></tr><tr><td align="Center" bgcolor="#CCCCFF" class="copy"> </td></tr><tr><td align="Center" bgcolor="#CCCCFF" class="copy"> </td></tr><tr><td align="Left" class="copy"><table><tr align="right"><td width="32" align="left">
+										  <a href="#top"><img src="/images/button_top.gif" border="0"/></a></td><td align="left" valign="bottom" class="comment"><a href="javascript:window.open('/help/SPDisclaimer.stm','' ,'toolbar=no,scrollbars=no,width=380,height=150');void(0)"><font color="#000000" class="comment">S &amp; P Disclaimer</font></a></td></tr></table></td></tr></tbody></table>
+								
+						</DIV>
+						<SCRIPT LANGUAGE="Javascript"><!--
+
+if (browserType == "ie")		
+	{
+		document.write('<DIV ID="div7" CLASS="clsMenu">');
+	}		
+else
+	{
+		document.write('<DIV ID="List6ListContent" bgcolor="#CCCCFF" width="552">');
+	}			
+//--></SCRIPT>							
+							
+<table border="0" cellspacing="0" cellpadding="2" bgcolor="#CCCCFF" width="550"><tbody><tr><td><form action="/asp/SP_Search.asp"><table width="100%"><tr><td align="left" valign="top" class="PageHeads"><img src="/images/a_sp_logo.gif"/> 
+										<BR><BR><u>Transmeridian Exploration Inc.</u><BR><font class="copy"><b>Symbol:</b>  TMXN</font></td><td align="center" valign="top" width="140" class="copy" cellpadding="1">
+<SCRIPT LANGUAGE="Javascript"><!--
+if (browserType == "ie")		
+	{
+		document.write('<b>S & P Company Insights Search</b><br/><font face="Verdana, Arial, Helvetica, sans-serif" size="1"><input type="text" name="Criteria" size="8" maxlength="100" /><input type="hidden" name="searcharea" value="a" />&#160;</font><input type="image" src="/images/button_search.gif" width="72" height="15" border="0" id="image1" name="image1" />');
+	}		
+else
+	{
+		document.write('&nbsp;&nbsp;&nbsp;&nbsp;');
+	}	
+//--></SCRIPT>	
+<br><br><font class="comment">Click <a href="/sandp/TMXN_print.htm">here</a> for a printable version</font>
+</td></tr></table></form></td></tr><tr><th align="Center" class="copy">Pro Forma Report    
+	               </th></tr><tr><td align="Center" class="copy"> </td></tr><tr><td align="Center" class="copy"><i>Data Not Available</i></td></tr><tr><td align="Center" bgcolor="#CCCCFF" class="copy"> </td></tr><tr><td align="Center" bgcolor="#CCCCFF" class="copy"> </td></tr><tr><td align="Center" bgcolor="#CCCCFF" class="copy"> </td></tr><tr><td align="Center" bgcolor="#CCCCFF" class="copy"> </td></tr><tr><td align="Left" class="copy"><table><tr align="right"><td width="32" align="left">
+										  <a href="#top"><img src="/images/button_top.gif" border="0"/></a></td><td align="left" valign="bottom" class="comment"><a href="javascript:window.open('/help/SPDisclaimer.stm','' ,'toolbar=no,scrollbars=no,width=380,height=150');void(0)"><font color="#000000" class="comment">S &amp; P Disclaimer</font></a></td></tr></table></td></tr></tbody></table>
+								
+						</DIV>
+<SCRIPT LANGUAGE="Javascript"><!--
+
+if (browserType == "ie")		
+	{
+		document.write('<DIV ID="div8" CLASS="clsMenu">');
+	}		
+else
+	{
+		document.write('<DIV ID="List7ListContent" bgcolor="#CCCCFF" width="552">');
+	}			
+//--></SCRIPT>							
+							
+<table border="0" cellspacing="0" cellpadding="2" bgcolor="#CCCCFF" width="550"><tbody><tr><td><form action="/asp/SP_Search.asp"><table width="100%"><tr><td align="left" valign="top" class="PageHeads"><img src="/images/a_sp_logo.gif"/> 
+										<BR><BR><u>Transmeridian Exploration Inc.</u><BR><font class="copy"><b>Symbol:</b>  TMXN</font></td><td align="center" valign="top" width="140" class="copy" cellpadding="1">
+<SCRIPT LANGUAGE="Javascript"><!--
+if (browserType == "ie")		
+	{
+		document.write('<b>S & P Company Insights Search</b><br/><font face="Verdana, Arial, Helvetica, sans-serif" size="1"><input type="text" name="Criteria" size="8" maxlength="100" /><input type="hidden" name="searcharea" value="a" />&#160;</font><input type="image" src="/images/button_search.gif" width="72" height="15" border="0" id="image1" name="image1" />');
+	}		
+else
+	{
+		document.write('&nbsp;&nbsp;&nbsp;&nbsp;');
+	}	
+//--></SCRIPT>	
+<br><br><font class="comment">Click <a href="/sandp/TMXN_print.htm">here</a> for a printable version</font>
+</td></tr></table></form></td></tr><tr><th align="Center" class="copy">Quarterly Report Information    
+					</th></tr><tr><td align="Left" class="copy"> </td></tr><tr><th align="Left" class="copy">Quarterly Revenue, US$</th></tr><tr><td align="right"><table border="0" cellspacing="0" cellpadding="1" width="100%"><tr><td class="copy" width="25%"><u>Year</u></td><td class="copy" width="25%"><u>Quarter</u></td><td class="copy" width="50%"><u>Revenue</u></td></tr><tr><td class="copy" align="left">  2003</td><td class="copy" align="left">
+													  1</td><td class="copy" align="Left">Nil</td></tr><tr><td class="copy" align="left">  2003</td><td class="copy" align="left">
+													  2</td><td class="copy" align="Left">Nil</td></tr><tr><td class="copy" align="left">  2003</td><td class="copy" align="left">
+													  3</td><td class="copy" align="Left">160,000</td></tr><tr><td class="copy" align="left">  2002</td><td class="copy" align="left">
+													  Full Year
+												</td><td class="copy" align="Left">Nil</td></tr><tr><td class="copy" align="left">  2001</td><td class="copy" align="left">
+													  Full Year
+												</td><td class="copy" align="Left">50,000</td></tr></table></td></tr><tr><td align="Center" class="copy"> </td></tr><tr><td align="Left" class="copy"> </td></tr><tr><th align="Left" class="copy">Quarterly Net Income, US$</th></tr><tr><td align="right"><table border="0" cellspacing="0" cellpadding="1" width="100%"><tr><td class="copy" width="25%"><u>Year</u></td><td class="copy" width="25%"><u>Quarter</u></td><td class="copy" width="50%"><u>Revenue</u></td></tr><tr><td class="copy" align="left">  2003</td><td class="copy" align="left">
+													  1</td><td class="copy" align="Left">(1,080,000)</td></tr><tr><td class="copy" align="left">  2003</td><td class="copy" align="left">
+													  2</td><td class="copy" align="Left">(1,290,000)</td></tr><tr><td class="copy" align="left">  2003</td><td class="copy" align="left">
+													  3</td><td class="copy" align="Left">(1,590,000)</td></tr><tr><td class="copy" align="left">  2002</td><td class="copy" align="left">
+													  Full Year
+												</td><td class="copy" align="Left">(3,270,900)</td></tr></table></td></tr><tr><td align="Center" class="copy"> </td></tr><tr><td align="Left" class="copy"> </td></tr><tr><th align="Left" class="copy">Quarterly EPS, US$</th></tr><tr><td align="right"><table border="0" cellspacing="0" cellpadding="1" width="100%"><tr><td class="copy" width="25%"><u>Year</u></td><td class="copy" width="25%"><u>Quarter</u></td><td class="copy" width="50%"><u>Revenue</u></td></tr><tr><td class="copy" align="left">  2003</td><td class="copy" align="left">
+													  1</td><td class="copy" align="Left">(.02)</td></tr><tr><td class="copy" align="left">  2003</td><td class="copy" align="left">
+													  2</td><td class="copy" align="Left">(.02)</td></tr><tr><td class="copy" align="left">  2003</td><td class="copy" align="left">
+													  3</td><td class="copy" align="Left">(.02)</td></tr><tr><td class="copy" align="left">  2002</td><td class="copy" align="left">
+													  Full Year
+												</td><td class="copy" align="Left">(.06)</td></tr><tr><td class="copy" align="left">  2001</td><td class="copy" align="left">
+													  Full Year
+												</td><td class="copy" align="Left">(.04)</td></tr></table></td></tr><tr><td align="Left" class="copy"> </td></tr><tr><td align="Left" class="copy"><table><tr align="right"><td width="32" align="left">
+										  <a href="#top"><img src="/images/button_top.gif" border="0"/></a></td><td align="left" valign="bottom" class="comment"><a href="javascript:window.open('/help/SPDisclaimer.stm','' ,'toolbar=no,scrollbars=no,width=380,height=150');void(0)"><font color="#000000" class="comment">S &amp; P Disclaimer</font></a></td></tr></table></td></tr></tbody></table>
+	
+					
+						</DIV>
+<SCRIPT LANGUAGE="Javascript"><!--
+
+if (browserType == "ie")		
+	{						
+		document.write('</td>');
+		document.write('				</tr>');
+		document.write('			</table>');
+		document.write('		</td>');
+		document.write('	</tr>');
+		document.write('	<tr align="right"> ');
+		document.write('	<td width="32" align="left" valign="bottom"><img src="/images/shp_cart_left.gif" width="12" height="8" align="absbottom"></td> ');
+		document.write('		<td align="left" valign="bottom" height="10" width="532" class="comment"></td>');
+		document.write('		<td  align="right" valign="bottom" height="10" width="10"><img src="/images/shp_cart_right.gif" width="12" height="8"></td>');
+		document.write('	</tr>');
+		document.write('</table>');
+	}			
+
+//--></SCRIPT>		
+			<td>&nbsp;</td>
+
+		</tr>
+		</table>
+		
+		
+    </td>
+  </tr>
+</table>
+
+</body>
+</html>
+<!--#include file="..\..\system\config\end.inc"-->

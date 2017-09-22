@@ -1,0 +1,355 @@
+/* mac hide\*/
+html, body {height:100%}
+/* end hide */
+body {
+	padding:0;
+	margin:0;
+	min-width:996px;/* for mozilla main width + 2 ie. 1 pixel border around*/
+	text-align:left; 
+	font-size:small;
+	color:#284051;
+	font-family:Arial, Helvetica, sans-serif; 
+}
+#outer{
+	height:100%;
+	min-height:100%;
+	width:994px; /* main width (insider page border) */
+	border-left:1px solid #000;
+	border-right:1px solid #000;
+	color: #000000;
+	text-align:left;
+	margin:auto;
+	position:relative;
+	background:  url(/images/background.gif) repeat-y center center;
+	position:relative;
+}
+ 
+html>body #outer{height:auto;} /*for mozilla as IE treats height as min-height anyway*/
+#innerwrap {/* enables content first */
+	float:left;
+	width:829px;  /*827px;*/
+}
+#header{
+	position:absolute;
+	top:0;
+	left:-1px;
+	width:994px;
+	height:210px;
+	border:1px solid #000;
+	overflow:hidden;
+	color: #000000;
+	z-index:100;
+		background-color:white;
+}
+#left {
+	position:relative;/*ie needs this to show float */
+	width:174px;
+	float:left;
+	padding-top:212px;/*needed to make room for header*/
+	padding-bottom:32px;/* needed to make room for footer */
+}
+#left p {padding-left:3px;padding-right:2px}
+#ctl00_right p {padding-left:4px;padding-right:2px}
+
+#ctl00_right {
+	position:relative;/*ie needs this to show float */
+	width:156px;
+	float:right;
+	padding-left:9px;
+	padding-top:212px;/*needed to make room for header*/
+	padding-bottom:32px;/* needed to make room for footer */
+}
+
+#footer {
+	width:655px;
+	clear:both;
+	height:50px;
+	border-top:1px solid #000;
+	border-bottom:1px solid #000;
+	
+	border-left: 174px solid #28526f;
+    border-right: 165px solid #28526f;
+	background-color: #284051;
+	text-align:center;
+	color:white;
+	left:0;
+	bottom:0;
+	position: absolute;
+}
+	
+* html #footer {/*only ie gets this style*/
+	\height:52px;/* for ie5 */
+	he\ight:50px;/* for ie6 */
+}
+div,p  {margin-top:0}/*clear top margin for mozilla*/
+#centrecontent {
+	width:655px;
+	float:right;
+	padding-top:212px;
+	padding-bottom:32px;/* needed to make room for footer */
+}
+#centrecontent p {padding-left:3px}
+
+#clearfooter {width:100%;height:52px;clear:both} /* to clear footer */
+
+
+
+
+
+
+
+#topbanner 
+{
+  text-align:center;
+  border-bottom: 3px solid #28526f;
+}
+
+#marqueediv
+{
+	height:22px;
+	border-bottom: 8px solid #28526f;
+	font-size:medium;
+	font-family:Arial, Helvetica, sans-serif; 
+}
+
+
+
+
+#menu
+{
+ height:330px;
+
+}
+#bottom
+{
+	color:white;
+	background-color: #284051;
+	border-left: 174px solid #28526f;
+    border-right: 165px solid #28526f;
+}
+
+#bottomborder
+{
+	background-image: url(/images/Diagonal_White.gif);
+	background-repeat:no-repeat;
+
+	height:14px;
+	border-left: 174px solid #ced4ea;
+	border-right: 165px solid #ced4ea;
+}
+
+#left #SearchForm
+{
+  color:white;
+  height:113px;
+  background-color: #b8230c;
+  width:163px;
+  margin-top:15px;
+  margin-bottom:10px;
+}
+
+
+#innersearch
+{
+  padding:10px;
+}
+
+
+#fontbox
+{
+	padding-top:56px;
+	padding-left:5px;
+	width:158px;
+	height:40px;
+	background-image: url(/images/font_bg.jpg);
+}
+
+#contactbox
+{
+	margin-top:10px;
+	width:163px;
+	height:95px;
+
+}
+
+#audiocasts
+{
+  background-color: #3c3939;
+  min-height:220px;
+  height:auto;
+  width:156px;
+  color:white;
+  padding-bottom:10px
+}
+
+#audiocasts ul
+{
+	padding-left:5px; margin-left:15px;
+}
+
+#audiocasts a  {
+	color: White;
+	text-decoration: none;
+}
+
+#audiocasts a:active {
+	color: White;
+	text-decoration: none;
+}
+
+#audiocasts a:visited {
+	color: White;
+	text-decoration: none;
+}
+
+#audiocasts a:link 
+{
+	color: White;
+	text-decoration: none;
+
+}
+
+#audiocasts a:hover {
+	color: White;
+	text-decoration: underline;
+}
+
+#poll
+{
+
+  margin-top:26px;
+  margin-bottom:39px;
+  background-color: #28526f;
+  width:156px;
+  color:white;
+  padding-bottom:10px
+
+}
+
+#poll p
+{
+ padding-left:10px; padding-right:10px;
+}
+
+#featured
+{
+	float:left;width:200px; margin: 10px; padding: 0 6px 6px 6px; background-color: #ced4ea; border:1px solid #28526f; 
+}
+
+#featured img
+{
+  border:1px solid black;
+  margin-top:4px;
+  margin-bottom:4px;
+}
+
+
+#media
+{
+}
+
+#media h2
+{
+  margin-bottom:0px;
+}
+
+#featured h2
+{
+  margin-bottom:6px;
+}
+
+#bottomicons
+{
+  clear:left;
+}
+#bottomicons div
+{
+	width:190px; padding:10px; float:left; 
+}
+
+#bottomicons a 
+{
+  text-decoration: none;
+  color: #284051;
+}
+
+
+#bottomicons a:hover {
+	text-decoration: underline;
+	color: #284051;
+}
+
+h1
+{
+  	margin-top: 10px;
+	font-size:large;
+	color: #284051;
+}
+
+h2 
+{
+  	margin-top: 10px;
+  	font-size:small;
+	color: #284051;
+}
+
+.headtitle,a.headtitle,a.headtitle:link,a.headtitle:visited,a.headtitle:active {
+  	font-size:small;
+	color: #284051;
+	font-family: Arial, Helvetica, sans-serif;
+	text-decoration: none;
+}
+a.headtitle:hover {font-family: Arial, Helvetica, sans-serif;
+  	font-size:small;
+	color: #284051;
+	text-decoration: underline;
+}
+
+.scroll,a.scroll,a.scroll:link,a.scroll:visited,a.scroll:active {
+	text-decoration: none;
+	color: #284051;
+}
+a.scroll:hover {font-family: Verdana, Arial, Helvetica, sans-serif;
+	text-decoration: underline;
+	color: #284051;
+}
+
+
+/* news editor */
+.toplinks { text-align:right; } 
+
+.ld1 { width: 100px; float:left; text-align:right}
+.lh1 { margin-left:110px}
+.lr1 { clear:both }
+
+#footer a
+{ 
+	text-decoration:none;	
+	color:White;
+	font-size:smaller;
+}
+
+.basenav
+{
+	font-size:smaller;
+}
+#footer a:hover 
+{ 
+	text-decoration:underline;
+	color:White;
+}
+#xmas06 {
+			/* Make element float in the center */
+		position: absolute;
+		left: 50%;
+		top: 179px;
+
+			/* Set the width and height */
+		width: 400px;
+		height: 400px;
+
+			/* Set margin to half the values of width/height */
+		margin-left: -273px;
+		margin-top: 0px;
+		z-index: 110;
+}

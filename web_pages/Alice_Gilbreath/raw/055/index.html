@@ -1,0 +1,1017 @@
+<html>
+<head>
+<title>Ring of Fire: books on Ring of Fire</title>
+<meta name="keywords" content="Ring of Fire, Ring of Fire books, title Ring of Fire ">
+<meta name="description" content="Search results for Ring of Fire, books on Ring of Fire ">
+<meta name="robots" content="index,follow">
+<meta name="classification" content="books">
+<meta name="rating" content="general">
+<script language="javascript" src="/bookFind/js/generalUtil.js">
+</script>
+
+<SCRIPT LANGUAGE="JavaScript">
+<!--
+var	siteHm			= 'http://www.campusi.com';
+
+var	emailHm			= 'http://www3.campusi.com/email';
+var	bookFindHm		= '/bookFind';
+var	bookBuybackHm		= '/bookBuyback';
+var	musicFindHm		= '/music';
+var	videoFindHm		= '/movie';
+var	creditFindHm		= '/creditFind';
+var	cashInHm		= '/cashIn';
+var	gameHm                  = '/game';
+var	computerHm              = '/computer';
+var	electronicHm            = '/electronic';
+
+function gotoSiteHm() {
+
+	var     f = document.forms[0];
+
+	f.action		= 'http://www.campusi.com' + '/default.asp';
+	f.method		= 'post';
+	f.target		= '_self';
+	f.submit();
+
+	return 0;
+}
+
+function gotoEmail() {
+
+	var     f = document.forms[0];
+	var	actionLnk='default.asp';
+
+	if (trim(f.emailKey.value) != '')	actionLnk	= 'asp/emailWelcome.asp';
+
+	f.action		= emailHm + '/' + actionLnk;
+	f.method		= 'post';
+	f.target		= '_self';
+	f.submit();
+
+	return 0;
+}
+
+function gotoBookFind() {
+
+	var     f = document.forms[0];
+
+	f.action		= 'http://www.campusi.com' + bookFindHm + '/default.asp';
+	f.method		= 'post';
+	f.target		= '_self';
+	f.submit();
+
+	return 0;
+}
+
+function gotoRareBook() {
+
+	var     f = document.forms[0];
+
+	f.action		= bookFindHm + '/asp/rareBookHome.asp';
+	f.method		= 'post';
+	f.target		= '_self';
+	f.submit();
+
+	return 0;
+}
+
+function gotoBookBuyback() {
+
+	var     f = document.forms[0];
+
+	f.action		= 'http://www.campusi.com' + bookBuybackHm + '/default.asp';
+	f.method		= 'post';
+	f.target		= '_self';
+	f.submit();
+
+	return 0;
+}
+
+function gotoMusicFind() {
+
+	var     f = document.forms[0];
+
+	f.action		= 'http://www.campusi.com' + musicFindHm + '/default.asp';
+	f.method		= 'post';
+	f.target		= '_self';
+	f.submit();
+
+	return 0;
+}
+
+function gotoVideoFind() {
+
+	var     f = document.forms[0];
+
+	f.action		= 'http://www.campusi.com' + videoFindHm + '/default.asp';
+	f.method		= 'post';
+	f.target		= '_self';
+	f.submit();
+
+	return 0;
+}
+
+function gotoCreditFind(sort, desc) {
+
+	var     f = document.forms[0];
+
+	if (f.sort && f.desc) {
+		sort	= trim(sort);
+		desc	= trim(desc);
+		if (sort == '') {
+			sort	= 'rankApproval';
+			desc	= '1';
+		}
+
+		f.sort.value		= sort;
+		f.desc.value		= desc;
+	}
+
+	f.action		= 'http://www.campusi.com' + creditFindHm + '/asp/creditFindProdLst.asp';
+	f.method		= 'post';
+	f.target		= '_self';
+	f.submit();
+
+	return 0;
+}
+
+function gotoCashIn() {
+
+	var     f = document.forms[0];
+
+	f.action		= 'http://www.campusi.com' + cashInHm + '/asp/default.asp';
+	f.method		= 'post';
+	f.target		= '_self';
+	f.submit();
+
+	return 0;
+}
+
+function gotoGame() {
+
+	var     f = document.forms[0];
+
+	f.action		= 'http://www.campusi.com' + gameHm + '/default.asp';
+	f.method		= 'post';
+	f.target		= '_self';
+	f.submit();
+
+	return 0;
+}
+
+function gotoComputer() {
+
+	var     f = document.forms[0];
+
+	f.action		= 'http://www.campusi.com' + computerHm + '/default.asp';
+	f.method		= 'post';
+	f.target		= '_self';
+	f.submit();
+
+	return 0;
+}
+
+function gotoElectronic() {
+
+	var     f = document.forms[0];
+
+	f.action		= 'http://www.campusi.com' + electronicHm + '/default.asp';
+	f.method		= 'post';
+	f.target		= '_self';
+	f.submit();
+
+	return 0;
+}
+
+// -->
+</SCRIPT>
+<SCRIPT LANGUAGE="JavaScript">
+<!--
+var	siteHm			= 'http://www.campusi.com';
+
+var	aspDir			= '/bookFind/asp';
+var	cgiDir			= '/bookFind/cgi-bin';
+var	htmlDir			= '/bookFind/htdocs';
+var	imgDir			= '/bookFind/images';
+
+var	thisModule		= 'bookFindPrefindLst.asp';
+
+var	lnk_prefindLst		= 'bookFindPrefindLoad.asp';
+var	lnk_info		= 'bookFindInfo.asp';
+var	lnk_recommend		= 'bookFindRecommendUs.asp';
+var	lnk_linkToUs		= 'bookFindLinkToUs.asp';
+var	lnk_powerSearch		= 'bookFindPowerSearch.asp';
+
+function getFormObj() {
+
+	return	document.forms[0];
+}
+
+function quickSearch() {
+
+	var	f = getFormObj();
+	var	srchTxt = trim(f.srchTxt.value);
+
+	if (srchTxt == '')	return 0;
+
+	var	i, srchBy, len, cnt, c;
+        var idx
+
+        idx = f.srchBy.selectedIndex;
+        srchBy = f.srchBy.options[idx].value.toLowerCase();
+
+	if (srchBy == 'isbn') {
+		len	= srchTxt.length;
+		if (len < 10) {
+			alert(sepLn + '\n\nInvalid ISBN# "' + srchTxt + '"\n'
+				+ 'Minimum length required is 10\n\n'
+				+ sepLn)
+			return	-1;
+		}
+
+		srchTxt	= srchTxt.toUpperCase();
+		cnt	= 0;
+		for (i=0; i<len; i++) {
+			c	= srchTxt.charAt(i);
+			if (!(c >= '0' && c <= '9' || i > 0 && i < len-1 && c == '-' ||
+				i == len-1 && c == 'X')) {
+				alert(sepLn + '\n\nInvalid ISBN#\n\n'
+					+ sepLn)
+				return	-1;
+			}
+
+			if (c != '-')	cnt++;
+		}
+
+		if (cnt != 10) {
+			alert(sepLn + '\n\nInvalid ISBN#\n\n'
+				+ sepLn)
+			return	-1;
+		}
+	}
+
+	f.action		= aspDir+'/'+lnk_prefindLst;
+	f.target		= '_top';
+	f.submit();
+
+	return 0;
+}
+
+function prefind() {
+
+	var	f = getFormObj();
+	var	isbn = trim(f.srchTxtIsbn.value), len, i, cnt;
+
+	if (trim(f.srchTxtTitle.value) == '' &&
+		trim(f.srchTxtAuthor.value) == '' &&
+		trim(f.srchTxtKeyword.value) == '' &&
+		isbn == '')	return	0;
+
+	len	= isbn.length;
+	if (len > 0) {
+		if (len < 10) {
+			alert(sepLn + '\n\nInvalid ISBN# "' + isbn + '"\n'
+				+ 'Minimum length required is 10\n\n'
+				+ sepLn)
+			return	-1;
+		}
+
+		isbn	= isbn.toUpperCase();
+		cnt	= 0;
+		for (i=0; i<len; i++) {
+			c	= isbn.charAt(i);
+			if (c != '-')	cnt++;
+		}
+
+		if (cnt != 10) {
+			alert(sepLn + '\n\nInvalid ISBN#\n\n'
+				+ sepLn)
+			return	-1;
+		}
+	}
+        /** set the quick search fields to be blank ***/
+        f.srchTxt.value = '';
+        f.srchBy.value = '';
+
+	f.action		= aspDir+'/'+lnk_prefindLst;
+	f.target		= '_top';
+	f.submit();
+
+	return 0;
+}
+
+function info(prodId, target) {
+
+	isbn	= trim(prodId);
+        target  = trim(target);
+
+	if (prodId == '')	return	-1;
+	if (target == '')       target = '_top';
+
+	var	f = getFormObj();
+
+	f.prodId.value		= prodId;
+
+	f.action		= aspDir+'/'+lnk_info;
+	f.target		= target;
+	f.submit();
+
+	return	0;	
+}
+
+function recommendUs() {
+	var	f = getFormObj();
+
+	f.action		= aspDir+'/'+lnk_recommend;
+	f.target		= '_blank';
+	f.submit();
+
+        return 0;
+}
+
+function linkToUs() {
+	var	f = getFormObj();
+
+	f.action		= aspDir+'/'+lnk_linkToUs;
+	f.target		= '_blank';
+	f.submit();
+
+        return 0;
+}
+
+function powerSearch() {
+	var	f = getFormObj();
+
+	f.action		= aspDir+'/'+lnk_powerSearch;
+	f.target		= '_top';
+	f.submit();
+
+        return 0;
+}
+
+
+// -->
+</SCRIPT>
+
+
+<script language="javascript">
+<!--
+var	lnk_priceLst		= 'bookFindPriceLoad.asp';
+
+function srchPrice(idxPrefind, prodId) {
+
+	isbn	= trim(prodId);
+	if (prodId == '')	return	-1;
+
+	var	f = getFormObj();
+
+	f.idxPrefind.value	= trim(idxPrefind);
+	f.prodId.value		= prodId;
+
+	f.action		= aspDir+'/'+lnk_priceLst;
+	f.target		= '_top';
+	f.submit();
+
+	return	0;	
+}
+// -->
+</script>
+</head>
+
+<body bgcolor=white>
+<form name=form_lst method=post action="" onSubmit="quickSearch(); return false;">
+<INPUT TYPE=hidden NAME=sessionKey VALUE="">
+<INPUT TYPE=hidden NAME=sessionId VALUE="">
+<INPUT TYPE=hidden NAME=emailKey VALUE="">
+<INPUT TYPE=hidden NAME=cashInKey VALUE="">
+
+<INPUT TYPE=hidden NAME=sort VALUE="">
+<INPUT TYPE=hidden NAME=desc VALUE="">
+
+<INPUT TYPE=hidden NAME=usrId VALUE="0">
+<INPUT TYPE=hidden NAME=emailAcctId VALUE="">
+
+<INPUT TYPE=hidden NAME=idxPrefind VALUE="">
+<INPUT TYPE=hidden NAME=prodId VALUE="0373707703">
+
+<INPUT TYPE=hidden NAME=r VALUE="2004922112921-11F0">
+
+</form>
+<form name=fm_srch action="/bookFind/asp/bookFindPrefindLoad.asp" method=get>
+<table border=0 cellpadding=0 cellspacing=0>
+<tr>
+<td rowspan=3 valign=top><a href="http://www.campusi.com/"><img border=0 src="/images/cilogo_large.gif" width=206 height=81 alt="Go to Campusi Home"></a>
+</td>
+<td rowspan=3 width=40>&nbsp;</td>
+</td>
+<td colspan=4 nowrap><font face=arial color=#297851><b>Find the best price on books.</b> (with coupons)</font></td>
+</tr>
+<tr>
+<td><font face=arial size=-1>Search by:</font></td>
+<td valign=top>
+<select name=srchBy>
+<option value=kwd >Keyword
+<option value=title selected>Title
+<option value=author >Author
+<option value=isbn >ISBN
+
+</select>
+</td>
+<td valign=top>
+<input type=text name=srchTxt size=35 maxlength=250 value="Ring of Fire"></td>
+<td valign=top><input type=submit value="Search">
+</font></td></tr>
+<tr><td colspan=4><font face=arial size=-1><a href="" onClick="powerSearch(); return false;">Advanced Search</a>&nbsp;&nbsp;
+<a href="" onClick="gotoRareBook(); return false;">Rare Book Search</a>&nbsp;&nbsp;
+<a target=_blank href="/bookFind/htdocs/bookFindHelp.htm">Search&nbsp;Tips</a>&nbsp;&nbsp;
+<a href="/browse_default.htm">Browse</a>
+</font>
+</td></tr>
+</table>
+</form>
+<table border=0 cellspacing=0 cellpadding=0>
+<tr align=center height=23>
+<td bgcolor=#1d5c9c nowrap>&nbsp;<font face=arial color=white size=-1><b>Book</b></font>&nbsp;</td>
+<td width=1 bgcolor=#808080><img width=1 height=23 alt=""></td>
+<td width=1 bgcolor=#ffffff><img width=1 height=1 alt=""></td>
+<td bgcolor=#eeeeee nowrap>&nbsp;<a href="" onClick="gotoVideoFind(); return false;"><font face=arial size=-1 color=blue>Movie</font></a>&nbsp;</td>
+<td width=1 bgcolor=#808080><img width=1 height=1 alt=""></td>
+<td width=1 bgcolor=#ffffff><img width=1 height=1 alt=""></td>
+<td bgcolor=#eeeeee nowrap>&nbsp;<a href="" onClick="gotoMusicFind(); return false;"><font face=arial size=-1 color=blue>Music</font></a>&nbsp;</td>
+<td width=1 bgcolor=#808080><img width=1 height=23 alt=""></td>
+<td width=1 bgcolor=#ffffff><img width=1 height=1 alt=""></td>
+<td bgcolor=#eeeeee nowrap>&nbsp;<a href="" onClick="gotoGame(); return false;"><font face=arial size=-1 color=blue>Video Game</font></a>&nbsp;</td>
+<td width=1 bgcolor=#808080><img width=1 height=1 alt=""></td>
+<td width=1 bgcolor=#ffffff><img width=1 height=1 alt=""></td>
+<td bgcolor=#eeeeee nowrap>&nbsp;<a href="" onClick="gotoEmail(); return false;"><font face=arial size=-1 color=blue>Email</font></a>&nbsp;</td>
+<td width=1 bgcolor=#808080><img width=1 height=1 alt=""></td>
+<td width=1 bgcolor=#ffffff><img width=1 height=1 alt=""></td>
+<td bgcolor=#eeeeee nowrap>&nbsp;<a href="" onClick="gotoCreditFind(); return false;"><font face=arial size=-1 color=blue>Credit Card</font></a>&nbsp;</td>
+<td width=1 bgcolor=#808080><img width=1 height=1 alt=""></td>
+<td width=1 bgcolor=#ffffff><img width=1 height=1 alt=""></td>
+<td bgcolor=#eeeeee nowrap>&nbsp;<a href="" onClick="gotoBookBuyback(); return false;"><font face=arial size=-1 color=blue>Sell Books</font></a>&nbsp;</td>
+<td width=1 bgcolor=#808080><img width=1 height=1 alt=""></td>
+</tr>
+</table>
+
+
+<TABLE BORDER=0 CellPadding=1 CellSpacing=0 width="100%">
+<tr bgcolor=#1d5c9c>
+<td nowrap><font face=arial color=#ffffff size=-1>Search results for <strong><em> Title: Ring of Fire</em></strong></font></td>
+<td nowrap align=right><font face=arial color=#ffffff size=-1>Total Results: <b>35</b></font></td>
+</TR>
+<tr><td colspan=2 align=right><font face=arial size=-1>Cannot find your book?<br> Try <a href="" onClick="gotoRareBook(); return false;">Rare Book Search</a> <br> or free <a href="mailto:locatebook@campusi.com">Locate book</a> service</font></td></tr>
+</table>
+
+<br>
+<table border=0 cellpadding=0 cellspacing=0>
+<tr valign=top>
+<td nowrap align=right><font face=arial size=2>1.</td>
+<td nowrap valign=top><a href="/bookFind/asp/bookFindPriceLoad.asp?prodId=1569714827"><img src=http://a1055.g.akamai.net/f/1055/1401/5h/images.barnesandnoble.com/images/4460000/4468087.gif border=0 alt="Buffy the Vampire Slayer: Ring of Fire ISBN: 1569714827 - compare prices"></a>&nbsp;</td>
+<td><font face=arial><h3><font size=3><a href="/bookFind/asp/bookFindPriceLoad.asp?prodId=1569714827" title="Buffy the Vampire Slayer: Ring of Fire ISBN: 1569714827 - compare prices">Buffy the Vampire Slayer: Ring of Fire</a></font></h3>
+<font size=-1>ISBN: <a href="/isbn_1569714827.htm" title="Buffy the Vampire Slayer: Ring of Fire ISBN: 1569714827 - book detail"><font color=black><b>1569714827</b></font></a>
+<br>Author: <b><a href=/author_Ryan_Sook.htm target=_top title="Ryan Sook - search by author">Ryan Sook</a>&nbsp;&nbsp;</b><br>Publisher: Dark Hourse Comics<br>Format: Paperback<br>
+<font size=-2>
+<a href=/ta_Buffy_the_Vampire_Slayer_by_Sook.htm target=_top title="Buffy the Vampire Slayer: Ring of Fire by Sook - search by title and author">All Editions</a>&nbsp;&nbsp;
+<a href=/title_Buffy_the_Vampire_Slayer.htm target=_top title="Buffy the Vampire Slayer: Ring of Fire - search by title">Similar Books</a>&nbsp;&nbsp;
+</font>
+<br>
+<br>
+</font></font></td>
+<td align=right><a href="/bookFind/asp/bookFindPriceLoad.asp?prodId=1569714827" title="Buffy the Vampire Slayer: Ring of Fire ISBN: 1569714827 - compare prices"><font face=arial size=2 color=crimson><b>compare<br>prices</b></font></a></td>
+</TR>
+<tr valign=top>
+<td nowrap align=right><font face=arial size=2>2.</td>
+<td nowrap valign=top><a href="/bookFind/asp/bookFindPriceLoad.asp?prodId=0613509927"><img src=http://a1055.g.akamai.net/f/1055/1401/5h/images.barnesandnoble.com/images/6330000/6331326.gif border=0 alt="Ring of Fire ISBN: 0613509927 - compare prices"></a>&nbsp;</td>
+<td><font face=arial><h3><font size=3><a href="/bookFind/asp/bookFindPriceLoad.asp?prodId=0613509927" title="Ring of Fire ISBN: 0613509927 - compare prices">Ring of Fire</a></font></h3>
+<font size=-1>ISBN: <a href="/isbn_0613509927.htm" title="Ring of Fire ISBN: 0613509927 - book detail"><font color=black><b>0613509927</b></font></a>
+<br>Author: <b><a href=/author_Doug_Petrie.htm target=_top title="Doug Petrie - search by author">Doug Petrie</a>&nbsp;&nbsp;<a href=/author_Tim_Goodyear.htm target=_top title="Tim Goodyear (Illustrator) - search by author">Tim Goodyear (Illustrator)</a>&nbsp;&nbsp;<a href=/author_Ryan_Sook.htm target=_top title="Ryan Sook - search by author">Ryan Sook</a>&nbsp;&nbsp;</b><br>Format: Hardcover<br>
+<font size=-2>
+<a href=/ta_Ring_of_Fire_by_Petrie.htm target=_top title="Ring of Fire by Petrie - search by title and author">All Editions</a>&nbsp;&nbsp;
+<a href=/title_Ring_of_Fire.htm target=_top title="Ring of Fire - search by title">Similar Books</a>&nbsp;&nbsp;
+</font>
+<br>
+<br>
+</font></font></td>
+<td align=right><a href="/bookFind/asp/bookFindPriceLoad.asp?prodId=0613509927" title="Ring of Fire ISBN: 0613509927 - compare prices"><font face=arial size=2 color=crimson><b>compare<br>prices</b></font></a></td>
+</TR>
+<tr valign=top>
+<td nowrap align=right><font face=arial size=2>3.</td>
+<td nowrap valign=top><a href="/bookFind/asp/bookFindPriceLoad.asp?prodId=0738849774"><img src=http://a1055.g.akamai.net/f/1055/1401/5h/images.barnesandnoble.com/images/4330000/4335046.gif border=0 alt="Ring of Fire ISBN: 0738849774 - compare prices"></a>&nbsp;</td>
+<td><font face=arial><h3><font size=3><a href="/bookFind/asp/bookFindPriceLoad.asp?prodId=0738849774" title="Ring of Fire ISBN: 0738849774 - compare prices">Ring of Fire</a></font></h3>
+<font size=-1>ISBN: <a href="/isbn_0738849774.htm" title="Ring of Fire ISBN: 0738849774 - book detail"><font color=black><b>0738849774</b></font></a>
+<br>Author: <b><a href=/author_Lee_Shaw_Morrison.htm target=_top title="Lee Shaw Morrison - search by author">Lee Shaw Morrison</a>&nbsp;&nbsp;</b><br>Format: Paperback<br>
+<font size=-2>
+<a href=/ta_Ring_of_Fire_by_Morrison.htm target=_top title="Ring of Fire by Morrison - search by title and author">All Editions</a>&nbsp;&nbsp;
+<a href=/title_Ring_of_Fire.htm target=_top title="Ring of Fire - search by title">Similar Books</a>&nbsp;&nbsp;
+</font>
+<br>
+<br>
+</font></font></td>
+<td align=right><a href="/bookFind/asp/bookFindPriceLoad.asp?prodId=0738849774" title="Ring of Fire ISBN: 0738849774 - compare prices"><font face=arial size=2 color=crimson><b>compare<br>prices</b></font></a></td>
+</TR>
+<tr valign=top>
+<td nowrap align=right><font face=arial size=2>4.</td>
+<td nowrap valign=top><a href="/bookFind/asp/bookFindPriceLoad.asp?prodId=0741402068"><img src=http://a1055.g.akamai.net/f/1055/1401/5h/images.barnesandnoble.com/images/2310000/2314693.gif border=0 alt="Ring of Fire ISBN: 0741402068 - compare prices"></a>&nbsp;</td>
+<td><font face=arial><h3><font size=3><a href="/bookFind/asp/bookFindPriceLoad.asp?prodId=0741402068" title="Ring of Fire ISBN: 0741402068 - compare prices">Ring of Fire</a></font></h3>
+<font size=-1>ISBN: <a href="/isbn_0741402068.htm" title="Ring of Fire ISBN: 0741402068 - book detail"><font color=black><b>0741402068</b></font></a>
+<br>Author: <b><a href=/author_Cecelia_G._Davis.htm target=_top title="Cecelia G. Davis - search by author">Cecelia G. Davis</a>&nbsp;&nbsp;</b><br>Format: Paperback<br>
+<font size=-2>
+<a href=/ta_Ring_of_Fire_by_Davis.htm target=_top title="Ring of Fire by Davis - search by title and author">All Editions</a>&nbsp;&nbsp;
+<a href=/title_Ring_of_Fire.htm target=_top title="Ring of Fire - search by title">Similar Books</a>&nbsp;&nbsp;
+</font>
+<br>
+<br>
+</font></font></td>
+<td align=right><a href="/bookFind/asp/bookFindPriceLoad.asp?prodId=0741402068" title="Ring of Fire ISBN: 0741402068 - compare prices"><font face=arial size=2 color=crimson><b>compare<br>prices</b></font></a></td>
+</TR>
+<tr valign=top>
+<td nowrap align=right><font face=arial size=2>5.</td>
+<td nowrap valign=top><a href="/bookFind/asp/bookFindPriceLoad.asp?prodId=0791074315"></a>&nbsp;</td>
+<td><font face=arial><h3><font size=3><a href="/bookFind/asp/bookFindPriceLoad.asp?prodId=0791074315" title="Ring of Fire ISBN: 0791074315 - compare prices">Ring of Fire</a></font></h3>
+<font size=-1>ISBN: <a href="/isbn_0791074315.htm" title="Ring of Fire ISBN: 0791074315 - book detail"><font color=black><b>0791074315</b></font></a>
+<br>Author: <b><a href=/author_Leonard_Hort.htm target=_top title="Leonard Hort - search by author">Leonard Hort</a>&nbsp;&nbsp;</b><br>Format: Hardcover<br>
+<font size=-2>
+<a href=/ta_Ring_of_Fire_by_Hort.htm target=_top title="Ring of Fire by Hort - search by title and author">All Editions</a>&nbsp;&nbsp;
+<a href=/title_Ring_of_Fire.htm target=_top title="Ring of Fire - search by title">Similar Books</a>&nbsp;&nbsp;
+</font>
+<br>
+<br>
+</font></font></td>
+<td align=right><a href="/bookFind/asp/bookFindPriceLoad.asp?prodId=0791074315" title="Ring of Fire ISBN: 0791074315 - compare prices"><font face=arial size=2 color=crimson><b>compare<br>prices</b></font></a></td>
+</TR>
+<tr valign=top>
+<td nowrap align=right><font face=arial size=2>6.</td>
+<td nowrap valign=top><a href="/bookFind/asp/bookFindPriceLoad.asp?prodId=0743488156"><img src=http://images.amazon.com/images/P/0743488156.01.THUMBZZZ.jpg border=0 alt="1634 : The Galileo Affair (The Ring of Fire) ISBN: 0743488156 - compare prices"></a>&nbsp;</td>
+<td><font face=arial><h3><font size=3><a href="/bookFind/asp/bookFindPriceLoad.asp?prodId=0743488156" title="1634 : The Galileo Affair (The Ring of Fire) ISBN: 0743488156 - compare prices">1634 : The Galileo Affair (The Ring of Fire)</a></font></h3>
+<font size=-1>ISBN: <a href="/isbn_0743488156.htm" title="1634 : The Galileo Affair (The Ring of Fire) ISBN: 0743488156 - book detail"><font color=black><b>0743488156</b></font></a>
+<br>Author: <b><a href=/author_Andrew_Dennis.htm target=_top title="Andrew Dennis - search by author">Andrew Dennis</a>&nbsp;&nbsp;<a href=/author_Eric_Flint.htm target=_top title="Eric Flint - search by author">Eric Flint</a>&nbsp;&nbsp;</b><br>Publisher: New York, NY, U.S.A.: Baen Books,<br>Format: Hardcover<br>
+<font size=-2>
+<a href=/ta_1634_by_Dennis.htm target=_top title="1634 : The Galileo Affair (The Ring of Fire) by Dennis - search by title and author">All Editions</a>&nbsp;&nbsp;
+<a href=/title_1634.htm target=_top title="1634 : The Galileo Affair (The Ring of Fire) - search by title">Similar Books</a>&nbsp;&nbsp;
+</font>
+<br>
+<br>
+</font></font></td>
+<td align=right><a href="/bookFind/asp/bookFindPriceLoad.asp?prodId=0743488156" title="1634 : The Galileo Affair (The Ring of Fire) ISBN: 0743488156 - compare prices"><font face=arial size=2 color=crimson><b>compare<br>prices</b></font></a></td>
+</TR>
+<tr valign=top>
+<td nowrap align=right><font face=arial size=2>7.</td>
+<td nowrap valign=top><a href="/bookFind/asp/bookFindPriceLoad.asp?prodId=0743488601"><img src=http://images.amazon.com/images/P/0743488601.01.THUMBZZZ.jpg border=0 alt="The Grantville Gazette (The Ring of Fire) ISBN: 0743488601 - compare prices"></a>&nbsp;</td>
+<td><font face=arial><h3><font size=3><a href="/bookFind/asp/bookFindPriceLoad.asp?prodId=0743488601" title="The Grantville Gazette (The Ring of Fire) ISBN: 0743488601 - compare prices">The Grantville Gazette (The Ring of Fire)</a></font></h3>
+<font size=-1>ISBN: <a href="/isbn_0743488601.htm" title="The Grantville Gazette (The Ring of Fire) ISBN: 0743488601 - book detail"><font color=black><b>0743488601</b></font></a>
+<br>Author: <b><a href=/author_Eric_Flint.htm target=_top title="Eric Flint (Editor) - search by author">Eric Flint (Editor)</a>&nbsp;&nbsp;</b><br>Format: Paperback<br>
+<font size=-2>
+<a href=/ta_The_Grantville_Gazette_by_Flint.htm target=_top title="The Grantville Gazette (The Ring of Fire) by Flint - search by title and author">All Editions</a>&nbsp;&nbsp;
+<a href=/title_The_Grantville_Gazette.htm target=_top title="The Grantville Gazette (The Ring of Fire) - search by title">Similar Books</a>&nbsp;&nbsp;
+</font>
+<br>
+<br>
+</font></font></td>
+<td align=right><a href="/bookFind/asp/bookFindPriceLoad.asp?prodId=0743488601" title="The Grantville Gazette (The Ring of Fire) ISBN: 0743488601 - compare prices"><font face=arial size=2 color=crimson><b>compare<br>prices</b></font></a></td>
+</TR>
+<tr valign=top>
+<td nowrap align=right><font face=arial size=2>8.</td>
+<td nowrap valign=top><a href="/bookFind/asp/bookFindPriceLoad.asp?prodId=0553052322"></a>&nbsp;</td>
+<td><font face=arial><h3><font size=3><a href="/bookFind/asp/bookFindPriceLoad.asp?prodId=0553052322" title="Ring of Fire ISBN: 0553052322 - compare prices">Ring of Fire</a></font></h3>
+<font size=-1>ISBN: <a href="/isbn_0553052322.htm" title="Ring of Fire ISBN: 0553052322 - book detail"><font color=black><b>0553052322</b></font></a>
+<br>Author: <b><a href=/author_Lawrence_Blair.htm target=_top title="Lawrence Blair - search by author">Lawrence Blair</a>&nbsp;&nbsp;<a href=/author_Lorne_Blair.htm target=_top title="Lorne Blair - search by author">Lorne Blair</a>&nbsp;&nbsp;</b><br>Publisher: New York, NY, U.S.A.: Bantam Books,<br>Format: hardcover<br>
+<font size=-2>
+<a href=/ta_Ring_of_Fire_by_Blair.htm target=_top title="Ring of Fire by Blair - search by title and author">All Editions</a>&nbsp;&nbsp;
+<a href=/title_Ring_of_Fire.htm target=_top title="Ring of Fire - search by title">Similar Books</a>&nbsp;&nbsp;
+</font>
+<br>
+<br>
+</font></font></td>
+<td align=right><a href="/bookFind/asp/bookFindPriceLoad.asp?prodId=0553052322" title="Ring of Fire ISBN: 0553052322 - compare prices"><font face=arial size=2 color=crimson><b>compare<br>prices</b></font></a></td>
+</TR>
+<tr valign=top>
+<td nowrap align=right><font face=arial size=2>9.</td>
+<td nowrap valign=top><a href="/bookFind/asp/bookFindPriceLoad.asp?prodId=074347175X"><img src=http://images.amazon.com/images/P/074347175X.01.THUMBZZZ.jpg border=0 alt="Ring of Fire (Assiti Shards (Hardcover)) ISBN: 074347175X - compare prices"></a>&nbsp;</td>
+<td><font face=arial><h3><font size=3><a href="/bookFind/asp/bookFindPriceLoad.asp?prodId=074347175X" title="Ring of Fire (Assiti Shards (Hardcover)) ISBN: 074347175X - compare prices">Ring of Fire (Assiti Shards (Hardcover))</a></font></h3>
+<font size=-1>ISBN: <a href="/isbn_074347175X.htm" title="Ring of Fire (Assiti Shards (Hardcover)) ISBN: 074347175X - book detail"><font color=black><b>074347175X</b></font></a>
+<br>Author: <b><a href=/author_Eric_Flint.htm target=_top title="Eric Flint - search by author">Eric Flint</a>&nbsp;&nbsp;</b><br>Publisher: New York, NY, U.S.A.: Baen Books,<br>Format: Hardcover<br>
+<font size=-2>
+<a href=/ta_Ring_of_Fire_by_Flint.htm target=_top title="Ring of Fire (Assiti Shards (Hardcover)) by Flint - search by title and author">All Editions</a>&nbsp;&nbsp;
+<a href=/title_Ring_of_Fire.htm target=_top title="Ring of Fire (Assiti Shards (Hardcover)) - search by title">Similar Books</a>&nbsp;&nbsp;
+</font>
+<br>
+<br>
+</font></font></td>
+<td align=right><a href="/bookFind/asp/bookFindPriceLoad.asp?prodId=074347175X" title="Ring of Fire (Assiti Shards (Hardcover)) ISBN: 074347175X - compare prices"><font face=arial size=2 color=crimson><b>compare<br>prices</b></font></a></td>
+</TR>
+<tr valign=top>
+<td nowrap align=right><font face=arial size=2>10.</td>
+<td nowrap valign=top><a href="/bookFind/asp/bookFindPriceLoad.asp?prodId=1401601375"><img src=http://images.amazon.com/images/P/1401601375.01.THUMBZZZ.jpg border=0 alt="Ring Of Fire : A Tribute to Johnny Cash ISBN: 1401601375 - compare prices"></a>&nbsp;</td>
+<td><font face=arial><h3><font size=3><a href="/bookFind/asp/bookFindPriceLoad.asp?prodId=1401601375" title="Ring Of Fire : A Tribute to Johnny Cash ISBN: 1401601375 - compare prices">Ring Of Fire : A Tribute to Johnny Cash</a></font></h3>
+<font size=-1>ISBN: <a href="/isbn_1401601375.htm" title="Ring Of Fire : A Tribute to Johnny Cash ISBN: 1401601375 - book detail"><font color=black><b>1401601375</b></font></a>
+<br>Author: <b><a href=/author_Brian_Mansfield.htm target=_top title="Brian Mansfield - search by author">Brian Mansfield</a>&nbsp;&nbsp;<a href=/author_Les_Leverett.htm target=_top title="Les Leverett - search by author">Les Leverett</a>&nbsp;&nbsp;</b><br>Publisher: Rutledge Hill Press.<br>Format: Hardcover<br>
+<font size=-2>
+<a href=/ta_Ring_Of_Fire_by_Mansfield.htm target=_top title="Ring Of Fire : A Tribute to Johnny Cash by Mansfield - search by title and author">All Editions</a>&nbsp;&nbsp;
+<a href=/title_Ring_Of_Fire.htm target=_top title="Ring Of Fire : A Tribute to Johnny Cash - search by title">Similar Books</a>&nbsp;&nbsp;
+</font>
+<br>
+<br>
+</font></font></td>
+<td align=right><a href="/bookFind/asp/bookFindPriceLoad.asp?prodId=1401601375" title="Ring Of Fire : A Tribute to Johnny Cash ISBN: 1401601375 - compare prices"><font face=arial size=2 color=crimson><b>compare<br>prices</b></font></a></td>
+</TR>
+<tr valign=top>
+<td nowrap align=right><font face=arial size=2>11.</td>
+<td nowrap valign=top><a href="/bookFind/asp/bookFindPriceLoad.asp?prodId=0396072275"></a>&nbsp;</td>
+<td><font face=arial><h3><font size=3><a href="/bookFind/asp/bookFindPriceLoad.asp?prodId=0396072275" title="POLYNESIA'S SACRED ISLE: The Ring of Fire, Volume III ISBN: 0396072275 - compare prices">POLYNESIA'S SACRED ISLE: The Ring of Fire, Volume III</a></font></h3>
+<font size=-1>ISBN: <a href="/isbn_0396072275.htm" title="POLYNESIA'S SACRED ISLE: The Ring of Fire, Volume III ISBN: 0396072275 - book detail"><font color=black><b>0396072275</b></font></a>
+<br>Author: <b><a href=/author_Dodd%2C_Edward.htm target=_top title="Dodd, Edward - search by author">Dodd, Edward</a>&nbsp;&nbsp;</b><br>Publisher: Dodd Mead and Company, New York. . 1st ed.<br>Format: hardcover<br>
+<font size=-2>
+<a href=/ta_POLYNESIA'S_SACRED_ISLE_by_Dodd.htm target=_top title="POLYNESIA'S SACRED ISLE: The Ring of Fire, Volume III by Dodd - search by title and author">All Editions</a>&nbsp;&nbsp;
+<a href=/title_POLYNESIA'S_SACRED_ISLE.htm target=_top title="POLYNESIA'S SACRED ISLE: The Ring of Fire, Volume III - search by title">Similar Books</a>&nbsp;&nbsp;
+</font>
+<br>
+<br>
+</font></font></td>
+<td align=right><a href="/bookFind/asp/bookFindPriceLoad.asp?prodId=0396072275" title="POLYNESIA'S SACRED ISLE: The Ring of Fire, Volume III ISBN: 0396072275 - compare prices"><font face=arial size=2 color=crimson><b>compare<br>prices</b></font></a></td>
+</TR>
+<tr valign=top>
+<td nowrap align=right><font face=arial size=2>12.</td>
+<td nowrap valign=top><a href="/bookFind/asp/bookFindPriceLoad.asp?prodId=055328584X"></a>&nbsp;</td>
+<td><font face=arial><h3><font size=3><a href="/bookFind/asp/bookFindPriceLoad.asp?prodId=055328584X" title="Ring of Fire (Eagle Force #5) ISBN: 055328584X - compare prices">Ring of Fire (Eagle Force #5)</a></font></h3>
+<font size=-1>ISBN: <a href="/isbn_055328584X.htm" title="Ring of Fire (Eagle Force #5) ISBN: 055328584X - book detail"><font color=black><b>055328584X</b></font></a>
+<br>Author: <b><a href=/author_Schmidt%2C_Dan.htm target=_top title="Schmidt, Dan - search by author">Schmidt, Dan</a>&nbsp;&nbsp;</b><br>Publisher: Bantam,<br>Format: softcover<br>
+<font size=-2>
+<a href=/ta_Ring_of_Fire_by_Schmidt.htm target=_top title="Ring of Fire (Eagle Force #5) by Schmidt - search by title and author">All Editions</a>&nbsp;&nbsp;
+<a href=/title_Ring_of_Fire.htm target=_top title="Ring of Fire (Eagle Force #5) - search by title">Similar Books</a>&nbsp;&nbsp;
+</font>
+<br>
+<br>
+</font></font></td>
+<td align=right><a href="/bookFind/asp/bookFindPriceLoad.asp?prodId=055328584X" title="Ring of Fire (Eagle Force #5) ISBN: 055328584X - compare prices"><font face=arial size=2 color=crimson><b>compare<br>prices</b></font></a></td>
+</TR>
+<tr valign=top>
+<td nowrap align=right><font face=arial size=2>13.</td>
+<td nowrap valign=top><a href="/bookFind/asp/bookFindPriceLoad.asp?prodId=1844710076"><img src=http://a1055.g.akamai.net/f/1055/1401/5h/images.barnesandnoble.com/images/7170000/7171228.gif border=0 alt="Ring of Fire ISBN: 1844710076 - compare prices"></a>&nbsp;</td>
+<td><font face=arial><h3><font size=3><a href="/bookFind/asp/bookFindPriceLoad.asp?prodId=1844710076" title="Ring of Fire ISBN: 1844710076 - compare prices">Ring of Fire</a></font></h3>
+<font size=-1>ISBN: <a href="/isbn_1844710076.htm" title="Ring of Fire ISBN: 1844710076 - book detail"><font color=black><b>1844710076</b></font></a>
+<br>Author: <b><a href=/author_Lisa_Jarnot.htm target=_top title="Lisa Jarnot - search by author">Lisa Jarnot</a>&nbsp;&nbsp;</b><br>Format: Paperback<br>
+<font size=-2>
+<a href=/ta_Ring_of_Fire_by_Jarnot.htm target=_top title="Ring of Fire by Jarnot - search by title and author">All Editions</a>&nbsp;&nbsp;
+<a href=/title_Ring_of_Fire.htm target=_top title="Ring of Fire - search by title">Similar Books</a>&nbsp;&nbsp;
+</font>
+<br>
+<br>
+</font></font></td>
+<td align=right><a href="/bookFind/asp/bookFindPriceLoad.asp?prodId=1844710076" title="Ring of Fire ISBN: 1844710076 - compare prices"><font face=arial size=2 color=crimson><b>compare<br>prices</b></font></a></td>
+</TR>
+<tr valign=top>
+<td nowrap align=right><font face=arial size=2>14.</td>
+<td nowrap valign=top><a href="/bookFind/asp/bookFindPriceLoad.asp?prodId=0892814306"><img src=http://a1055.g.akamai.net/f/1055/1401/5h/images.barnesandnoble.com/images/2450000/2454352.gif border=0 alt="Ring of Fire: An Indonesian Odyssey ISBN: 0892814306 - compare prices"></a>&nbsp;</td>
+<td><font face=arial><h3><font size=3><a href="/bookFind/asp/bookFindPriceLoad.asp?prodId=0892814306" title="Ring of Fire: An Indonesian Odyssey ISBN: 0892814306 - compare prices">Ring of Fire: An Indonesian Odyssey</a></font></h3>
+<font size=-1>ISBN: <a href="/isbn_0892814306.htm" title="Ring of Fire: An Indonesian Odyssey ISBN: 0892814306 - book detail"><font color=black><b>0892814306</b></font></a>
+<br>Author: <b><a href=/author_Lawrence_Blair.htm target=_top title="Lawrence Blair - search by author">Lawrence Blair</a>&nbsp;&nbsp;<a href=/author_Lorne_Blair.htm target=_top title="Lorne Blair - search by author">Lorne Blair</a>&nbsp;&nbsp;</b><br>Publisher: Rochester: Inner Traditions International, Limited,<br>Format: Paperback - REPRINT<br>
+<font size=-2>
+<a href=/ta_Ring_of_Fire_by_Blair.htm target=_top title="Ring of Fire: An Indonesian Odyssey by Blair - search by title and author">All Editions</a>&nbsp;&nbsp;
+<a href=/title_Ring_of_Fire.htm target=_top title="Ring of Fire: An Indonesian Odyssey - search by title">Similar Books</a>&nbsp;&nbsp;
+</font>
+<br>
+<br>
+</font></font></td>
+<td align=right><a href="/bookFind/asp/bookFindPriceLoad.asp?prodId=0892814306" title="Ring of Fire: An Indonesian Odyssey ISBN: 0892814306 - compare prices"><font face=arial size=2 color=crimson><b>compare<br>prices</b></font></a></td>
+</TR>
+<tr valign=top>
+<td nowrap align=right><font face=arial size=2>15.</td>
+<td nowrap valign=top><a href="/bookFind/asp/bookFindPriceLoad.asp?prodId=0306811227"><img src=http://a1055.g.akamai.net/f/1055/1401/5h/images.barnesandnoble.com/images/7060000/7065084.gif border=0 alt="Ring of Fire: The Johnny Cash Reader ISBN: 0306811227 - compare prices"></a>&nbsp;</td>
+<td><font face=arial><h3><font size=3><a href="/bookFind/asp/bookFindPriceLoad.asp?prodId=0306811227" title="Ring of Fire: The Johnny Cash Reader ISBN: 0306811227 - compare prices">Ring of Fire: The Johnny Cash Reader</a></font></h3>
+<font size=-1>ISBN: <a href="/isbn_0306811227.htm" title="Ring of Fire: The Johnny Cash Reader ISBN: 0306811227 - book detail"><font color=black><b>0306811227</b></font></a>
+<br>Author: <b><a href=/author_Michael_Streissguth.htm target=_top title="Michael Streissguth (Editor) - search by author">Michael Streissguth (Editor)</a>&nbsp;&nbsp;</b><br>Publisher: Cambridge, MA, U.S.A.: Da Capo Press, Incorporated,<br>Format: Hardcover<br>
+<font size=-2>
+<a href=/ta_Ring_of_Fire_by_Streissguth.htm target=_top title="Ring of Fire: The Johnny Cash Reader by Streissguth - search by title and author">All Editions</a>&nbsp;&nbsp;
+<a href=/title_Ring_of_Fire.htm target=_top title="Ring of Fire: The Johnny Cash Reader - search by title">Similar Books</a>&nbsp;&nbsp;
+</font>
+<br>
+<br>
+</font></font></td>
+<td align=right><a href="/bookFind/asp/bookFindPriceLoad.asp?prodId=0306811227" title="Ring of Fire: The Johnny Cash Reader ISBN: 0306811227 - compare prices"><font face=arial size=2 color=crimson><b>compare<br>prices</b></font></a></td>
+</TR>
+<tr valign=top>
+<td nowrap align=right><font face=arial size=2>16.</td>
+<td nowrap valign=top><a href="/bookFind/asp/bookFindPriceLoad.asp?prodId=0306812258"><img src=http://a1055.g.akamai.net/f/1055/1401/5h/images.barnesandnoble.com/images/7920000/7921339.gif border=0 alt="Ring of Fire: The Johnny Cash Reader ISBN: 0306812258 - compare prices"></a>&nbsp;</td>
+<td><font face=arial><h3><font size=3><a href="/bookFind/asp/bookFindPriceLoad.asp?prodId=0306812258" title="Ring of Fire: The Johnny Cash Reader ISBN: 0306812258 - compare prices">Ring of Fire: The Johnny Cash Reader</a></font></h3>
+<font size=-1>ISBN: <a href="/isbn_0306812258.htm" title="Ring of Fire: The Johnny Cash Reader ISBN: 0306812258 - book detail"><font color=black><b>0306812258</b></font></a>
+<br>Author: <b><a href=/author_Michael_Streisguth.htm target=_top title="Michael Streisguth (Editor) - search by author">Michael Streisguth (Editor)</a>&nbsp;&nbsp;</b><br>Format: Paperback<br>
+<font size=-2>
+<a href=/ta_Ring_of_Fire_by_Streisguth.htm target=_top title="Ring of Fire: The Johnny Cash Reader by Streisguth - search by title and author">All Editions</a>&nbsp;&nbsp;
+<a href=/title_Ring_of_Fire.htm target=_top title="Ring of Fire: The Johnny Cash Reader - search by title">Similar Books</a>&nbsp;&nbsp;
+</font>
+<br>
+<br>
+</font></font></td>
+<td align=right><a href="/bookFind/asp/bookFindPriceLoad.asp?prodId=0306812258" title="Ring of Fire: The Johnny Cash Reader ISBN: 0306812258 - compare prices"><font face=arial size=2 color=crimson><b>compare<br>prices</b></font></a></td>
+</TR>
+<tr valign=top>
+<td nowrap align=right><font face=arial size=2>17.</td>
+<td nowrap valign=top><a href="/bookFind/asp/bookFindPriceLoad.asp?prodId=0966769708"><img src=http://a1055.g.akamai.net/f/1055/1401/5h/images.barnesandnoble.com/images/6010000/6016416.gif border=0 alt="Ring of Fire: Writers of the Yellowstone Region ISBN: 0966769708 - compare prices"></a>&nbsp;</td>
+<td><font face=arial><h3><font size=3><a href="/bookFind/asp/bookFindPriceLoad.asp?prodId=0966769708" title="Ring of Fire: Writers of the Yellowstone Region ISBN: 0966769708 - compare prices">Ring of Fire: Writers of the Yellowstone Region</a></font></h3>
+<font size=-1>ISBN: <a href="/isbn_0966769708.htm" title="Ring of Fire: Writers of the Yellowstone Region ISBN: 0966769708 - book detail"><font color=black><b>0966769708</b></font></a>
+<br>Author: <b><a href=/author_Bill_Hoagland.htm target=_top title="Bill Hoagland (Editor) - search by author">Bill Hoagland (Editor)</a>&nbsp;&nbsp;</b><br>Format: Paperback<br>
+<font size=-2>
+<a href=/ta_Ring_of_Fire_by_Hoagland.htm target=_top title="Ring of Fire: Writers of the Yellowstone Region by Hoagland - search by title and author">All Editions</a>&nbsp;&nbsp;
+<a href=/title_Ring_of_Fire.htm target=_top title="Ring of Fire: Writers of the Yellowstone Region - search by title">Similar Books</a>&nbsp;&nbsp;
+</font>
+<br>
+<br>
+</font></font></td>
+<td align=right><a href="/bookFind/asp/bookFindPriceLoad.asp?prodId=0966769708" title="Ring of Fire: Writers of the Yellowstone Region ISBN: 0966769708 - compare prices"><font face=arial size=2 color=crimson><b>compare<br>prices</b></font></a></td>
+</TR>
+<tr valign=top>
+<td nowrap align=right><font face=arial size=2>18.</td>
+<td nowrap valign=top><a href="/bookFind/asp/bookFindPriceLoad.asp?prodId=1572434120"><img src=http://images.amazon.com/images/P/1572434120.01.THUMBZZZ.jpg border=0 alt="Ring of Fire : The Guts and Glory of the Professional Bull Riding Tour ISBN: 1572434120 - compare prices"></a>&nbsp;</td>
+<td><font face=arial><h3><font size=3><a href="/bookFind/asp/bookFindPriceLoad.asp?prodId=1572434120" title="Ring of Fire : The Guts and Glory of the Professional Bull Riding Tour ISBN: 1572434120 - compare prices">Ring of Fire : The Guts and Glory of the Professional Bull Riding Tour</a></font></h3>
+<font size=-1>ISBN: <a href="/isbn_1572434120.htm" title="Ring of Fire : The Guts and Glory of the Professional Bull Riding Tour ISBN: 1572434120 - book detail"><font color=black><b>1572434120</b></font></a>
+<br>Author: <b><a href=/author_Kendra_Santos.htm target=_top title="Kendra Santos (Editor) - search by author">Kendra Santos (Editor)</a>&nbsp;&nbsp;et al&nbsp;&nbsp;</b><br>Format: Hardcover<br>
+<font size=-2>
+<a href=/ta_Ring_of_Fire_by_Santos.htm target=_top title="Ring of Fire : The Guts and Glory of the Professional Bull Riding Tour by Santos - search by title and author">All Editions</a>&nbsp;&nbsp;
+<a href=/title_Ring_of_Fire.htm target=_top title="Ring of Fire : The Guts and Glory of the Professional Bull Riding Tour - search by title">Similar Books</a>&nbsp;&nbsp;
+</font>
+<br>
+<br>
+</font></font></td>
+<td align=right><a href="/bookFind/asp/bookFindPriceLoad.asp?prodId=1572434120" title="Ring of Fire : The Guts and Glory of the Professional Bull Riding Tour ISBN: 1572434120 - compare prices"><font face=arial size=2 color=crimson><b>compare<br>prices</b></font></a></td>
+</TR>
+<tr valign=top>
+<td nowrap align=right><font face=arial size=2>19.</td>
+<td nowrap valign=top><a href="/bookFind/asp/bookFindPriceLoad.asp?prodId=1902309138"></a>&nbsp;</td>
+<td><font face=arial><h3><font size=3><a href="/bookFind/asp/bookFindPriceLoad.asp?prodId=1902309138" title="DEGREES OF FEAR - Tales from Usher College: Call of the Tentacle; The Dentures of Count Usher; The Montague Fragment; The Winkle Inheritance; King Solomon's Sinkplunger; The Phantom Pudding; The Bogle Ring; Egwisc's Fire ISBN: 1902309138 - compare prices">DEGREES OF FEAR - Tales from Usher College: Call of the Tentacle; The Dentures of Count Usher; The Montague Fragment; The Winkle Inheritance; King Solomon's Sinkplunger; The Phantom Pudding; The Bogle Ring; Egwisc's Fire</a></font></h3>
+<font size=-1>ISBN: <a href="/isbn_1902309138.htm" title="DEGREES OF FEAR - Tales from Usher College: Call of the Tentacle; The Dentures of Count Usher; The Montague Fragment; The Winkle Inheritance; King Solomon's Sinkplunger; The Phantom Pudding; The Bogle Ring; Egwisc's Fire ISBN: 1902309138 - book detail"><font color=black><b>1902309138</b></font></a>
+<br>Author: <b><a href=/author_Read.htm target=_top title="Read - search by author">Read</a>&nbsp;&nbsp;<a href=/author_William_I._I.htm target=_top title="William I. I. - search by author">William I. I.</a>&nbsp;&nbsp;<a href=/author_Nick_Maloret.htm target=_top title="Illustrated by Nick Maloret - search by author">Illustrated by Nick Maloret</a>&nbsp;&nbsp;</b><br>Publisher: Mountain Ash, Wales: Sarob Press,<br>Format: hardcover<br>
+<font size=-2>
+<a href=/ta_DEGREES_OF_FEAR_%2D_Tales_from_Usher_College_by_Read.htm target=_top title="DEGREES OF FEAR - Tales from Usher College: Call of the Tentacle; The Dentures of Count Usher; The Montague Fragment; The Winkle Inheritance; King Solomon's Sinkplunger; The Phantom Pudding; The Bogle Ring; Egwisc's Fire by Read - search by title and author">All Editions</a>&nbsp;&nbsp;
+<a href=/title_DEGREES_OF_FEAR_%2D_Tales_from_Usher_College.htm target=_top title="DEGREES OF FEAR - Tales from Usher College: Call of the Tentacle; The Dentures of Count Usher; The Montague Fragment; The Winkle Inheritance; King Solomon's Sinkplunger; The Phantom Pudding; The Bogle Ring; Egwisc's Fire - search by title">Similar Books</a>&nbsp;&nbsp;
+</font>
+<br>
+<br>
+</font></font></td>
+<td align=right><a href="/bookFind/asp/bookFindPriceLoad.asp?prodId=1902309138" title="DEGREES OF FEAR - Tales from Usher College: Call of the Tentacle; The Dentures of Count Usher; The Montague Fragment; The Winkle Inheritance; King Solomon's Sinkplunger; The Phantom Pudding; The Bogle Ring; Egwisc's Fire ISBN: 1902309138 - compare prices"><font face=arial size=2 color=crimson><b>compare<br>prices</b></font></a></td>
+</TR>
+<tr valign=top>
+<td nowrap align=right><font face=arial size=2>20.</td>
+<td nowrap valign=top><a href="/bookFind/asp/bookFindPriceLoad.asp?prodId=0823302733"></a>&nbsp;</td>
+<td><font face=arial><h3><font size=3><a href="/bookFind/asp/bookFindPriceLoad.asp?prodId=0823302733" title="Ring of Fire ISBN: 0823302733 - compare prices">Ring of Fire</a></font></h3>
+<font size=-1>ISBN: <a href="/isbn_0823302733.htm" title="Ring of Fire ISBN: 0823302733 - book detail"><font color=black><b>0823302733</b></font></a>
+<br>Author: <b><a href=/author_Iorio%2C_James.htm target=_top title="Iorio, James - search by author">Iorio, James</a>&nbsp;&nbsp;</b><br>Publisher: Francestown: Golden Quill Press,<br>Format: hardcover<br>
+<font size=-2>
+<a href=/ta_Ring_of_Fire_by_Iorio.htm target=_top title="Ring of Fire by Iorio - search by title and author">All Editions</a>&nbsp;&nbsp;
+<a href=/title_Ring_of_Fire.htm target=_top title="Ring of Fire - search by title">Similar Books</a>&nbsp;&nbsp;
+</font>
+<br>
+<br>
+</font></font></td>
+<td align=right><a href="/bookFind/asp/bookFindPriceLoad.asp?prodId=0823302733" title="Ring of Fire ISBN: 0823302733 - compare prices"><font face=arial size=2 color=crimson><b>compare<br>prices</b></font></a></td>
+</TR>
+<tr valign=top>
+<td nowrap align=right><font face=arial size=2>21.</td>
+<td nowrap valign=top><a href="/bookFind/asp/bookFindPriceLoad.asp?prodId=0936666056"></a>&nbsp;</td>
+<td><font face=arial><h3><font size=3><a href="/bookFind/asp/bookFindPriceLoad.asp?prodId=0936666056" title="Northwest Wine: Winegrowing Alchemy Along the Pacific Ring of Fire ISBN: 0936666056 - compare prices">Northwest Wine: Winegrowing Alchemy Along the Pacific Ring of Fire</a></font></h3>
+<font size=-1>ISBN: <a href="/isbn_0936666056.htm" title="Northwest Wine: Winegrowing Alchemy Along the Pacific Ring of Fire ISBN: 0936666056 - book detail"><font color=black><b>0936666056</b></font></a>
+<br>Author: <b><a href=/author_Ted_J_Meredith.htm target=_top title="Ted J Meredith - search by author">Ted J Meredith</a>&nbsp;&nbsp;</b><br>Publisher: Kirkland, Washington, U.S.A.: Nexus Pr,<br>Format: softcover<br>
+<font size=-2>
+<a href=/ta_Northwest_Wine_by_Meredith.htm target=_top title="Northwest Wine: Winegrowing Alchemy Along the Pacific Ring of Fire by Meredith - search by title and author">All Editions</a>&nbsp;&nbsp;
+<a href=/title_Northwest_Wine.htm target=_top title="Northwest Wine: Winegrowing Alchemy Along the Pacific Ring of Fire - search by title">Similar Books</a>&nbsp;&nbsp;
+</font>
+<br>
+<br>
+</font></font></td>
+<td align=right><a href="/bookFind/asp/bookFindPriceLoad.asp?prodId=0936666056" title="Northwest Wine: Winegrowing Alchemy Along the Pacific Ring of Fire ISBN: 0936666056 - compare prices"><font face=arial size=2 color=crimson><b>compare<br>prices</b></font></a></td>
+</TR>
+<tr valign=top>
+<td nowrap align=right><font face=arial size=2>22.</td>
+<td nowrap valign=top><a href="/bookFind/asp/bookFindPriceLoad.asp?prodId=068930594X"></a>&nbsp;</td>
+<td><font face=arial><h3><font size=3><a href="/bookFind/asp/bookFindPriceLoad.asp?prodId=068930594X" title="The Ring of Fire (The Children of Ynell 1) ISBN: 068930594X - compare prices">The Ring of Fire (The Children of Ynell 1)</a></font></h3>
+<font size=-1>ISBN: <a href="/isbn_068930594X.htm" title="The Ring of Fire (The Children of Ynell 1) ISBN: 068930594X - book detail"><font color=black><b>068930594X</b></font></a>
+<br>Author: <b><a href=/author_Shirley_Rousseau_Murphy.htm target=_top title="Shirley Rousseau Murphy - search by author">Shirley Rousseau Murphy</a>&nbsp;&nbsp;</b><br>Publisher: New York Atheneum .<br>Format: hardcover<br>
+<font size=-2>
+<a href=/ta_The_Ring_of_Fire_by_Murphy.htm target=_top title="The Ring of Fire (The Children of Ynell 1) by Murphy - search by title and author">All Editions</a>&nbsp;&nbsp;
+<a href=/title_The_Ring_of_Fire.htm target=_top title="The Ring of Fire (The Children of Ynell 1) - search by title">Similar Books</a>&nbsp;&nbsp;
+</font>
+<br>
+<br>
+</font></font></td>
+<td align=right><a href="/bookFind/asp/bookFindPriceLoad.asp?prodId=068930594X" title="The Ring of Fire (The Children of Ynell 1) ISBN: 068930594X - compare prices"><font face=arial size=2 color=crimson><b>compare<br>prices</b></font></a></td>
+</TR>
+<tr valign=top>
+<td nowrap align=right><font face=arial size=2>23.</td>
+<td nowrap valign=top><a href="/bookFind/asp/bookFindPriceLoad.asp?prodId=0945134754"></a>&nbsp;</td>
+<td><font face=arial><h3><font size=3><a href="/bookFind/asp/bookFindPriceLoad.asp?prodId=0945134754" title="Ring of Fire (Northwest Pocket Books Series) ISBN: 0945134754 - compare prices">Ring of Fire (Northwest Pocket Books Series)</a></font></h3>
+<font size=-1>ISBN: <a href="/isbn_0945134754.htm" title="Ring of Fire (Northwest Pocket Books Series) ISBN: 0945134754 - book detail"><font color=black><b>0945134754</b></font></a>
+<br>Author: <b><a href=/author_Rick_Steber.htm target=_top title="Rick Steber - search by author">Rick Steber</a>&nbsp;&nbsp;</b><br>Format: Paperback<br>
+<font size=-2>
+<a href=/ta_Ring_of_Fire_by_Steber.htm target=_top title="Ring of Fire (Northwest Pocket Books Series) by Steber - search by title and author">All Editions</a>&nbsp;&nbsp;
+<a href=/title_Ring_of_Fire.htm target=_top title="Ring of Fire (Northwest Pocket Books Series) - search by title">Similar Books</a>&nbsp;&nbsp;
+</font>
+<br>
+<br>
+</font></font></td>
+<td align=right><a href="/bookFind/asp/bookFindPriceLoad.asp?prodId=0945134754" title="Ring of Fire (Northwest Pocket Books Series) ISBN: 0945134754 - compare prices"><font face=arial size=2 color=crimson><b>compare<br>prices</b></font></a></td>
+</TR>
+<tr valign=top>
+<td nowrap align=right><font face=arial size=2>24.</td>
+<td nowrap valign=top><a href="/bookFind/asp/bookFindPriceLoad.asp?prodId=0491021909"></a>&nbsp;</td>
+<td><font face=arial><h3><font size=3><a href="/bookFind/asp/bookFindPriceLoad.asp?prodId=0491021909" title="Ring of Fire ISBN: 0491021909 - compare prices">Ring of Fire</a></font></h3>
+<font size=-1>ISBN: <a href="/isbn_0491021909.htm" title="Ring of Fire ISBN: 0491021909 - book detail"><font color=black><b>0491021909</b></font></a>
+<br>Author: <b><a href=/author_Gavin%2C_Bernard.htm target=_top title="Gavin, Bernard - search by author">Gavin, Bernard</a>&nbsp;&nbsp;</b><br>Publisher: London: W.H.Allen,<br>Format: hardcover<br>
+<font size=-2>
+<a href=/ta_Ring_of_Fire_by_Gavin.htm target=_top title="Ring of Fire by Gavin - search by title and author">All Editions</a>&nbsp;&nbsp;
+<a href=/title_Ring_of_Fire.htm target=_top title="Ring of Fire - search by title">Similar Books</a>&nbsp;&nbsp;
+</font>
+<br>
+<br>
+</font></font></td>
+<td align=right><a href="/bookFind/asp/bookFindPriceLoad.asp?prodId=0491021909" title="Ring of Fire ISBN: 0491021909 - compare prices"><font face=arial size=2 color=crimson><b>compare<br>prices</b></font></a></td>
+</TR>
+<tr valign=top>
+<td nowrap align=right><font face=arial size=2>25.</td>
+<td nowrap valign=top><a href="/bookFind/asp/bookFindPriceLoad.asp?prodId=0380471914"></a>&nbsp;</td>
+<td><font face=arial><h3><font size=3><a href="/bookFind/asp/bookFindPriceLoad.asp?prodId=0380471914" title="THE RING OF FIRE ISBN: 0380471914 - compare prices">THE RING OF FIRE</a></font></h3>
+<font size=-1>ISBN: <a href="/isbn_0380471914.htm" title="THE RING OF FIRE ISBN: 0380471914 - book detail"><font color=black><b>0380471914</b></font></a>
+<br>Author: <b><a href=/author_Murphy%2C_Shirley_Rousseau.htm target=_top title="Murphy, Shirley Rousseau - search by author">Murphy, Shirley Rousseau</a>&nbsp;&nbsp;</b><br>Publisher: NY: Avon,<br>Format: softcover<br>
+<font size=-2>
+<a href=/ta_THE_RING_OF_FIRE_by_Murphy.htm target=_top title="THE RING OF FIRE by Murphy - search by title and author">All Editions</a>&nbsp;&nbsp;
+<a href=/title_THE_RING_OF_FIRE.htm target=_top title="THE RING OF FIRE - search by title">Similar Books</a>&nbsp;&nbsp;
+</font>
+<br>
+<br>
+</font></font></td>
+<td align=right><a href="/bookFind/asp/bookFindPriceLoad.asp?prodId=0380471914" title="THE RING OF FIRE ISBN: 0380471914 - compare prices"><font face=arial size=2 color=crimson><b>compare<br>prices</b></font></a></td>
+</TR>
+<tr valign=top>
+<td nowrap align=right><font face=arial size=2>26.</td>
+<td nowrap valign=top><a href="/bookFind/asp/bookFindPriceLoad.asp?prodId=1892718480"></a>&nbsp;</td>
+<td><font face=arial><h3><font size=3><a href="/bookFind/asp/bookFindPriceLoad.asp?prodId=1892718480" title="Ring of Fire: A Novel of the Delphi Oracle ISBN: 1892718480 - compare prices">Ring of Fire: A Novel of the Delphi Oracle</a></font></h3>
+<font size=-1>ISBN: <a href="/isbn_1892718480.htm" title="Ring of Fire: A Novel of the Delphi Oracle ISBN: 1892718480 - book detail"><font color=black><b>1892718480</b></font></a>
+<br>Author: <b><a href=/author_Marline_Haleff.htm target=_top title="Marline Haleff - search by author">Marline Haleff</a>&nbsp;&nbsp;</b><br>Format: Paperback<br>
+<font size=-2>
+<a href=/ta_Ring_of_Fire_by_Haleff.htm target=_top title="Ring of Fire: A Novel of the Delphi Oracle by Haleff - search by title and author">All Editions</a>&nbsp;&nbsp;
+<a href=/title_Ring_of_Fire.htm target=_top title="Ring of Fire: A Novel of the Delphi Oracle - search by title">Similar Books</a>&nbsp;&nbsp;
+</font>
+<br>
+<br>
+</font></font></td>
+<td align=right><a href="/bookFind/asp/bookFindPriceLoad.asp?prodId=1892718480" title="Ring of Fire: A Novel of the Delphi Oracle ISBN: 1892718480 - compare prices"><font face=arial size=2 color=crimson><b>compare<br>prices</b></font></a></td>
+</TR>
+<tr valign=top>
+<td nowrap align=right><font face=arial size=2>27.</td>
+<td nowrap valign=top><a href="/bookFind/asp/bookFindPriceLoad.asp?prodId=0971909202"></a>&nbsp;</td>
+<td><font face=arial><h3><font size=3><a href="/bookFind/asp/bookFindPriceLoad.asp?prodId=0971909202" title="From the Bedtime Stories Series, "Ring of Fire" ISBN: 0971909202 - compare prices">From the Bedtime Stories Series, "Ring of Fire"</a></font></h3>
+<font size=-1>ISBN: <a href="/isbn_0971909202.htm" title="From the Bedtime Stories Series, "Ring of Fire" ISBN: 0971909202 - book detail"><font color=black><b>0971909202</b></font></a>
+<br>Author: <b><a href=/author_Danielle_Seats.htm target=_top title="Danielle Seats - search by author">Danielle Seats</a>&nbsp;&nbsp;</b><br>Format: Paperback<br>
+<font size=-2>
+<a href=/ta_From_the_Bedtime_Stories_Series_"Ring_of_Fire"_by_Seats.htm target=_top title="From the Bedtime Stories Series, "Ring of Fire" by Seats - search by title and author">All Editions</a>&nbsp;&nbsp;
+<a href=/title_From_the_Bedtime_Stories_Series_"Ring_of_Fire".htm target=_top title="From the Bedtime Stories Series, "Ring of Fire" - search by title">Similar Books</a>&nbsp;&nbsp;
+</font>
+<br>
+<br>
+</font></font></td>
+<td align=right><a href="/bookFind/asp/bookFindPriceLoad.asp?prodId=0971909202" title="From the Bedtime Stories Series, "Ring of Fire" ISBN: 0971909202 - compare prices"><font face=arial size=2 color=crimson><b>compare<br>prices</b></font></a></td>
+</TR>
+<tr valign=top>
+<td nowrap align=right><font face=arial size=2>28.</td>
+<td nowrap valign=top><a href="/bookFind/asp/bookFindPriceLoad.asp?prodId=0875183026"></a>&nbsp;</td>
+<td><font face=arial><h3><font size=3><a href="/bookFind/asp/bookFindPriceLoad.asp?prodId=0875183026" title="Ring of Fire: And the Hawaiian Islands and Iceland (Ocean World Science Library) ISBN: 0875183026 - compare prices">Ring of Fire: And the Hawaiian Islands and Iceland (Ocean World Science Library)</a></font></h3>
+<font size=-1>ISBN: <a href="/isbn_0875183026.htm" title="Ring of Fire: And the Hawaiian Islands and Iceland (Ocean World Science Library) ISBN: 0875183026 - book detail"><font color=black><b>0875183026</b></font></a>
+<br>Author: <b><a href=/author_Alice_Gilbreath.htm target=_top title="Alice Gilbreath - search by author">Alice Gilbreath</a>&nbsp;&nbsp;</b><br>
+<font size=-2>
+<a href=/ta_Ring_of_Fire_by_Gilbreath.htm target=_top title="Ring of Fire: And the Hawaiian Islands and Iceland (Ocean World Science Library) by Gilbreath - search by title and author">All Editions</a>&nbsp;&nbsp;
+<a href=/title_Ring_of_Fire.htm target=_top title="Ring of Fire: And the Hawaiian Islands and Iceland (Ocean World Science Library) - search by title">Similar Books</a>&nbsp;&nbsp;
+</font>
+<br>
+<br>
+</font></font></td>
+<td align=right><a href="/bookFind/asp/bookFindPriceLoad.asp?prodId=0875183026" title="Ring of Fire: And the Hawaiian Islands and Iceland (Ocean World Science Library) ISBN: 0875183026 - compare prices"><font face=arial size=2 color=crimson><b>compare<br>prices</b></font></a></td>
+</TR>
+<tr valign=top>
+<td nowrap align=right><font face=arial size=2>29.</td>
+<td nowrap valign=top><a href="/bookFind/asp/bookFindPriceLoad.asp?prodId=0153231580"></a>&nbsp;</td>
+<td><font face=arial><h3><font size=3><a href="/bookFind/asp/bookFindPriceLoad.asp?prodId=0153231580" title="RING OF FIRE ISBN: 0153231580 - compare prices">RING OF FIRE</a></font></h3>
+<font size=-1>ISBN: <a href="/isbn_0153231580.htm" title="RING OF FIRE ISBN: 0153231580 - book detail"><font color=black><b>0153231580</b></font></a>
+<br>Author: <b><a href=/author_Martinson%2C_Sonia.htm target=_top title="Martinson, Sonia - search by author">Martinson, Sonia</a>&nbsp;&nbsp;</b><br>Publisher: Harcourt.<br>Format: softcover<br>
+<font size=-2>
+<a href=/ta_RING_OF_FIRE_by_Martinson.htm target=_top title="RING OF FIRE by Martinson - search by title and author">All Editions</a>&nbsp;&nbsp;
+<a href=/title_RING_OF_FIRE.htm target=_top title="RING OF FIRE - search by title">Similar Books</a>&nbsp;&nbsp;
+</font>
+<br>
+<br>
+</font></font></td>
+<td align=right><a href="/bookFind/asp/bookFindPriceLoad.asp?prodId=0153231580" title="RING OF FIRE ISBN: 0153231580 - compare prices"><font face=arial size=2 color=crimson><b>compare<br>prices</b></font></a></td>
+</TR>
+<tr valign=top>
+<td nowrap align=right><font face=arial size=2>30.</td>
+<td nowrap valign=top><a href="/bookFind/asp/bookFindPriceLoad.asp?prodId=1562791001"></a>&nbsp;</td>
+<td><font face=arial><h3><font size=3><a href="/bookFind/asp/bookFindPriceLoad.asp?prodId=1562791001" title="In the Ring of Fire: A Pacific Basin Journey ISBN: 1562791001 - compare prices">In the Ring of Fire: A Pacific Basin Journey</a></font></h3>
+<font size=-1>ISBN: <a href="/isbn_1562791001.htm" title="In the Ring of Fire: A Pacific Basin Journey ISBN: 1562791001 - book detail"><font color=black><b>1562791001</b></font></a>
+<br>Author: <b><a href=/author_James_D._Houston.htm target=_top title="James D. Houston - search by author">James D. Houston</a>&nbsp;&nbsp;</b><br>Publisher: Mercury House,<br>Format: Paperback<br>
+<font size=-2>
+<a href=/ta_In_the_Ring_of_Fire_by_Houston.htm target=_top title="In the Ring of Fire: A Pacific Basin Journey by Houston - search by title and author">All Editions</a>&nbsp;&nbsp;
+<a href=/title_In_the_Ring_of_Fire.htm target=_top title="In the Ring of Fire: A Pacific Basin Journey - search by title">Similar Books</a>&nbsp;&nbsp;
+</font>
+<br>
+<br>
+</font></font></td>
+<td align=right><a href="/bookFind/asp/bookFindPriceLoad.asp?prodId=1562791001" title="In the Ring of Fire: A Pacific Basin Journey ISBN: 1562791001 - compare prices"><font face=arial size=2 color=crimson><b>compare<br>prices</b></font></a></td>
+</TR>
+<tr valign=top>
+<td nowrap align=right><font face=arial size=2>31.</td>
+<td nowrap valign=top><a href="/bookFind/asp/bookFindPriceLoad.asp?prodId=0962250503"></a>&nbsp;</td>
+<td><font face=arial><h3><font size=3><a href="/bookFind/asp/bookFindPriceLoad.asp?prodId=0962250503" title="Island World of Polynesia: A Survey of the Racial Family and It's Many Far-Flung Cultures (The Ring of fire) ISBN: 0962250503 - compare prices">Island World of Polynesia: A Survey of the Racial Family and It's Many Far-Flung Cultures (The Ring of fire)</a></font></h3>
+<font size=-1>ISBN: <a href="/isbn_0962250503.htm" title="Island World of Polynesia: A Survey of the Racial Family and It's Many Far-Flung Cultures (The Ring of fire) ISBN: 0962250503 - book detail"><font color=black><b>0962250503</b></font></a>
+<br>Author: <b><a href=/author_Edward_Dodd.htm target=_top title="Edward Dodd - search by author">Edward Dodd</a>&nbsp;&nbsp;</b><br>Format: Hardcover<br>
+<font size=-2>
+<a href=/ta_Island_World_of_Polynesia_by_Dodd.htm target=_top title="Island World of Polynesia: A Survey of the Racial Family and It's Many Far-Flung Cultures (The Ring of fire) by Dodd - search by title and author">All Editions</a>&nbsp;&nbsp;
+<a href=/title_Island_World_of_Polynesia.htm target=_top title="Island World of Polynesia: A Survey of the Racial Family and It's Many Far-Flung Cultures (The Ring of fire) - search by title">Similar Books</a>&nbsp;&nbsp;
+</font>
+<br>
+<br>
+</font></font></td>
+<td align=right><a href="/bookFind/asp/bookFindPriceLoad.asp?prodId=0962250503" title="Island World of Polynesia: A Survey of the Racial Family and It's Many Far-Flung Cultures (The Ring of fire) ISBN: 0962250503 - compare prices"><font face=arial size=2 color=crimson><b>compare<br>prices</b></font></a></td>
+</TR>
+<tr valign=top>
+<td nowrap align=right><font face=arial size=2>32.</td>
+<td nowrap valign=top><a href="/bookFind/asp/bookFindPriceLoad.asp?prodId=0396065228"></a>&nbsp;</td>
+<td><font face=arial><h3><font size=3><a href="/bookFind/asp/bookFindPriceLoad.asp?prodId=0396065228" title="Polynesian seafaring;: A disquisition on prehistoric celestial navigation and the nature of seagoing double canoes, with illustrations reproducing ori ... -scene observers (His The ring of fire, v. 2) ISBN: 0396065228 - compare prices">Polynesian seafaring;: A disquisition on prehistoric celestial navigation and the nature of seagoing double canoes, with illustrations reproducing ori ... -scene observers (His The ring of fire, v. 2)</a></font></h3>
+<font size=-1>ISBN: <a href="/isbn_0396065228.htm" title="Polynesian seafaring;: A disquisition on prehistoric celestial navigation and the nature of seagoing double canoes, with illustrations reproducing ori ... -scene observers (His The ring of fire, v. 2) ISBN: 0396065228 - book detail"><font color=black><b>0396065228</b></font></a>
+<br>Author: <b><a href=/author_Edward_Dodd.htm target=_top title="Edward Dodd - search by author">Edward Dodd</a>&nbsp;&nbsp;</b><br>
+<font size=-2>
+<a href=/ta_Polynesian_seafaring%3B_by_Dodd.htm target=_top title="Polynesian seafaring;: A disquisition on prehistoric celestial navigation and the nature of seagoing double canoes, with illustrations reproducing ori ... -scene observers (His The ring of fire, v. 2) by Dodd - search by title and author">All Editions</a>&nbsp;&nbsp;
+<a href=/title_Polynesian_seafaring%3B.htm target=_top title="Polynesian seafaring;: A disquisition on prehistoric celestial navigation and the nature of seagoing double canoes, with illustrations reproducing ori ... -scene observers (His The ring of fire, v. 2) - search by title">Similar Books</a>&nbsp;&nbsp;
+</font>
+<br>
+<br>
+</font></font></td>
+<td align=right><a href="/bookFind/asp/bookFindPriceLoad.asp?prodId=0396065228" title="Polynesian seafaring;: A disquisition on prehistoric celestial navigation and the nature of seagoing double canoes, with illustrations reproducing ori ... -scene observers (His The ring of fire, v. 2) ISBN: 0396065228 - compare prices"><font face=arial size=2 color=crimson><b>compare<br>prices</b></font></a></td>
+</TR>
+<tr valign=top>
+<td nowrap align=right><font face=arial size=2>33.</td>
+<td nowrap valign=top><a href="/bookFind/asp/bookFindPriceLoad.asp?prodId=0396081142"></a>&nbsp;</td>
+<td><font face=arial><h3><font size=3><a href="/bookFind/asp/bookFindPriceLoad.asp?prodId=0396081142" title="The rape of Tahiti: A typical Nineteenth-Century colonial venture wherein several European powers with their iron, pox, creed, commerce, and cannon vi ... in the South Pacific Ocean (The Ring of fire) ISBN: 0396081142 - compare prices">The rape of Tahiti: A typical Nineteenth-Century colonial venture wherein several European powers with their iron, pox, creed, commerce, and cannon vi ... in the South Pacific Ocean (The Ring of fire)</a></font></h3>
+<font size=-1>ISBN: <a href="/isbn_0396081142.htm" title="The rape of Tahiti: A typical Nineteenth-Century colonial venture wherein several European powers with their iron, pox, creed, commerce, and cannon vi ... in the South Pacific Ocean (The Ring of fire) ISBN: 0396081142 - book detail"><font color=black><b>0396081142</b></font></a>
+<br>Author: <b><a href=/author_Edward_Dodd.htm target=_top title="Edward Dodd - search by author">Edward Dodd</a>&nbsp;&nbsp;</b><br>
+<font size=-2>
+<a href=/ta_The_rape_of_Tahiti_by_Dodd.htm target=_top title="The rape of Tahiti: A typical Nineteenth-Century colonial venture wherein several European powers with their iron, pox, creed, commerce, and cannon vi ... in the South Pacific Ocean (The Ring of fire) by Dodd - search by title and author">All Editions</a>&nbsp;&nbsp;
+<a href=/title_The_rape_of_Tahiti.htm target=_top title="The rape of Tahiti: A typical Nineteenth-Century colonial venture wherein several European powers with their iron, pox, creed, commerce, and cannon vi ... in the South Pacific Ocean (The Ring of fire) - search by title">Similar Books</a>&nbsp;&nbsp;
+</font>
+<br>
+<br>
+</font></font></td>
+<td align=right><a href="/bookFind/asp/bookFindPriceLoad.asp?prodId=0396081142" title="The rape of Tahiti: A typical Nineteenth-Century colonial venture wherein several European powers with their iron, pox, creed, commerce, and cannon vi ... in the South Pacific Ocean (The Ring of fire) ISBN: 0396081142 - compare prices"><font face=arial size=2 color=crimson><b>compare<br>prices</b></font></a></td>
+</TR>
+<tr valign=top>
+<td nowrap align=right><font face=arial size=2>34.</td>
+<td nowrap valign=top><a href="/bookFind/asp/bookFindPriceLoad.asp?prodId=0373612117"></a>&nbsp;</td>
+<td><font face=arial><h3><font size=3><a href="/bookFind/asp/bookFindPriceLoad.asp?prodId=0373612117" title="5 Rings Fire (Able Team No 11) ISBN: 0373612117 - compare prices">5 Rings Fire (Able Team No 11)</a></font></h3>
+<font size=-1>ISBN: <a href="/isbn_0373612117.htm" title="5 Rings Fire (Able Team No 11) ISBN: 0373612117 - book detail"><font color=black><b>0373612117</b></font></a>
+<br>Author: <b><a href=/author_Dick_Stivers.htm target=_top title="Dick Stivers - search by author">Dick Stivers</a>&nbsp;&nbsp;</b><br>Format: Paperback<br>
+<font size=-2>
+<a href=/ta_5_Rings_Fire_by_Stivers.htm target=_top title="5 Rings Fire (Able Team No 11) by Stivers - search by title and author">All Editions</a>&nbsp;&nbsp;
+<a href=/title_5_Rings_Fire.htm target=_top title="5 Rings Fire (Able Team No 11) - search by title">Similar Books</a>&nbsp;&nbsp;
+</font>
+<br>
+<br>
+</font></font></td>
+<td align=right><a href="/bookFind/asp/bookFindPriceLoad.asp?prodId=0373612117" title="5 Rings Fire (Able Team No 11) ISBN: 0373612117 - compare prices"><font face=arial size=2 color=crimson><b>compare<br>prices</b></font></a></td>
+</TR>
+<tr valign=top>
+<td nowrap align=right><font face=arial size=2>35.</td>
+<td nowrap valign=top><a href="/bookFind/asp/bookFindPriceLoad.asp?prodId=0373707703"></a>&nbsp;</td>
+<td><font face=arial><h3><font size=3><a href="/bookFind/asp/bookFindPriceLoad.asp?prodId=0373707703" title="Ring of Fire ISBN: 0373707703 - compare prices">Ring of Fire</a></font></h3>
+<font size=-1>ISBN: <a href="/isbn_0373707703.htm" title="Ring of Fire ISBN: 0373707703 - book detail"><font color=black><b>0373707703</b></font></a>
+<br>Author: <b><a href=/author_Way%2C_Margaret.htm target=_top title="Way, Margaret - search by author">Way, Margaret</a>&nbsp;&nbsp;</b><br>Publisher: Harlequin Presents,<br>Format: softcover<br>
+<font size=-2>
+<a href=/ta_Ring_of_Fire_by_Way.htm target=_top title="Ring of Fire by Way - search by title and author">All Editions</a>&nbsp;&nbsp;
+<a href=/title_Ring_of_Fire.htm target=_top title="Ring of Fire - search by title">Similar Books</a>&nbsp;&nbsp;
+</font>
+<br>
+<br>
+</font></font></td>
+<td align=right><a href="/bookFind/asp/bookFindPriceLoad.asp?prodId=0373707703" title="Ring of Fire ISBN: 0373707703 - compare prices"><font face=arial size=2 color=crimson><b>compare<br>prices</b></font></a></td>
+</TR>
+
+</table>
+
+<BR>
+<hr size=1>
+<FONT FACE="Arial,Helvetica" SIZE=2>
+<center>
+Dissatisfied with the search results? <A Href="mailTo:support@campusI.com"><FONT Color=blue>Report an error.</FONT></A><br><br>
+<a href="" onClick="linkToUs(); return false;"><FONT Color=blue>Link to us</FONT></A> |
+<a target=_blank href="/affiliate/asp/affiliateLogin.asp"><FONT Color=blue>Affiliate</FONT></A> |
+<A Href="" onClick="recommendUs(); return false;"><FONT Color=blue>Recommend us</FONT></A> |
+<A target=_blank Href="/bookFind/htdocs/bookFindHelp.htm"><FONT Color=blue>Help</FONT></A> |
+<A Href="mailTo:support@campusI.com"><FONT Color=blue>Support</FONT></A>
+
+<P Align=center>
+<FONT SIZE=1>
+<I>&copy; 2004 CampusI, Inc. &nbsp; All rights reserved.</I>
+</FONT><BR>
+</P>
+</FONT>
+
+ 
+
+</body>
+</html>

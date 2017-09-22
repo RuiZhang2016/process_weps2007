@@ -1,0 +1,1324 @@
+
+
+
+
+
+	
+
+
+
+
+
+
+
+
+
+ 		
+  
+
+
+
+		
+<style>
+.note-header-text {font-family: Times, Times New Roman, serif;
+		color:#ff0000; font-size: .95em;
+		margin-left: .75em; margin-right: .75em;}
+</style>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ 	
+	
+		
+		
+		
+					
+			
+				
+				  	
+				
+			
+				
+		    
+		
+		
+		
+		
+		
+		
+		
+	 
+
+
+
+	
+	
+	
+	
+	
+	
+	
+		
+  
+
+
+	
+	
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ 	
+ 	
+	
+
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+   "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+<head>
+<LINK REL=STYLESHEET TYPE="text/css" HREF="http://portal.acm.org/css/dl.css">
+<title>An experimental study of factors important in document ranking</title>
+<style type="text/css"><!--
+    body {margin-left: 0em; margin-top: 0}
+    a:link {text-decoration: underline; 	Color: #006699;}
+    a:visited  { color: #990033; text-decoration: underline;}
+    a:hover {color: red; text-decoration: none}
+    a.dLink1:link {color:#336699}
+    a.dLink1:visited {color:#666666}
+	a.isblack:link {text-decoration: underline; 	Color: #000000;}
+    a.isblack:visited  { color: #000000; text-decoration: underline;}
+    a.isblack:hover {color: #000000; text-decoration: none}
+    h1 {font-size: 140%; margin-bottom: 0}
+	ul {margin-top: .25em; list-style-type: disc}
+	ol {margin-top: .25em;}
+	li {padding-bottom: .25em}
+    h2 {color: white; background-color: #069; 
+        font-size: 100%; padding-left: 1em;
+		margin: 0}
+	h3 {color: black; background-color: yellow; 
+    	font-size: 100%;
+		margin: 0}
+	 h4 {color: black; background-color: #99c5e8; 
+        font-size: 100%;
+		margin: 0}
+    hr {color: #39176d;}
+    form {margin-top: 10}
+    form.xrs {margin-top: 0}
+	
+	a {text-decoration: none; }
+	
+	input {font-size: 1em;}
+	.chevron {color: #ff0000;}
+	.light-blue {color:#336699;}
+	.black {color:#000000;}
+	
+	/* ### standard text styles, smallest to largest ### */
+	
+	.footer-link-text {font-family: Arial, Helvetica, sans-serif;
+		color:#336699; font-size: .75em; line-height: 1.33em;
+		text-indent: -.75 em; margin-left: 2em; margin-right: .75em;}
+		
+	.footer-copy-text {font-family: Arial, Helvetica, sans-serif;
+		color:#000000; font-size: .75em; line-height: 1.3em;
+		margin-left: .75em; margin-right: .75em;}
+		
+	.small-link-text {font-family: Arial, Helvetica, sans-serif;
+		color:#000000; font-size: .83em; padding-bottom : 2px;
+	  	padding-top : 2px;}
+
+	.smaller-text {font-family: Arial, Helvetica, sans-serif;
+		color:#000000; font-size: .75em;}		
+	.small-text {font-family: Arial, Helvetica, sans-serif;
+		color:#000000; font-size: .83em;}
+	.medium-text {font-family: Arial, Helvetica, sans-serif;
+		color:#000000; font-size: 1em;}
+	.mediumb-text {font-family: Arial, Helvetica, sans-serif;
+		color:#000000; font-size: 1em; font-weight: bold;}
+	.large-text {font-family: Arial, Helvetica, sans-serif;
+		color:#000000; font-size: 1.3em;}		
+	
+	.list-link-text {font-family: Arial, Helvetica, sans-serif;
+		color:#336699; font-size: .83em; line-height: 1.3em;}
+	.list-link-btext {font-family: Arial, Helvetica, sans-serif;
+		color:#000000; font-size: .83em; line-height: 1.3em;}
+	
+	.searchbox-text {font-family: Arial, Helvetica, sans-serif;
+		color:#000066; font-size: 1em; font-weight: bold;}
+	.footer-header-text {font-family: Arial, Helvetica, sans-serif;
+		color:#000066; font-size: 1em; font-weight: bold;
+		margin-left: .75em; margin-right: .75em;}
+	.medium-link-text {font-family: Arial, Helvetica, sans-serif;
+		color:#000066; font-size: 1em; font-weight: bold; line-height: 1em;
+		text-indent: -1.25em; margin-left: 2em; margin-right: .75em;}
+	
+	
+	.small-copy-text {font-family: Times, Times New Roman, serif;
+		color:#000066; font-size: .75em; line-height: 1.2em;
+		margin-left: .75em; margin-right: .75em;}
+
+	.medium-copy-text {font-family: Times, Times New Roman, serif;
+		color:#000066; font-size: 1em; line-height: 1.2em;
+		margin-left: .75em; margin-right: .75em;}
+	
+	.large-copy-text {font-family: Times, Times New Roman, serif;
+		color:#000066; font-size: 1.3em; line-height: 1.5em;
+		margin-left: .75em; margin-right: .75em;}
+	
+	.medium-header-text {font-family: Times, Times New Roman, serif;
+		color:#ff0000; font-size: 1em;
+		margin-left: .75em; margin-right: .75em;}
+	
+	.large-header-text {font-family: Times, Times New Roman, serif;
+		color:#ff0000; font-size: 1.5em;
+		margin-left: .75em; margin-right: .75em;}
+
+  --></style>
+ 
+<SCRIPT LANGUAGE="JavaScript">
+ /* <!-- Begin
+	if(document.layers || document.all) {
+	a = 1;
+	setInterval("Jump()", 10);
+	}
+	function Jump() {
+	a = a + 1;
+	//self.moveBy((Math.random() * a * 2 - a), (Math.random() * a * 2) - a);
+	}
+//  End --> */
+</script>
+<script type="text/javascript" src="http://portal.acm.org/CFIDE/scripts/cfform.js"></script>
+<script type="text/javascript" src="http://portal.acm.org/CFIDE/scripts/masks.js"></script>
+<script type="text/javascript">
+<!--
+    function  _CF_checkqiksearch(_CF_this)
+    {
+        //reset on submit
+        _CF_error_exists = false;
+        _CF_error_messages = new Array();
+        _CF_error_fields = new Object();
+        _CF_FirstErrorField = null;
+
+        //form element query required check
+        if( !_CF_hasValue(_CF_this['query'], "TEXT", false ) )
+        {
+            _CF_onError(_CF_this, "query", _CF_this['query'].value, "Please enter your Search Criteria");
+            _CF_error_exists = true;
+        }
+
+
+        //display error messages and return success
+        if( _CF_error_exists )
+        {
+            if( _CF_error_messages.length > 0 )
+            {
+                // show alert() message
+                _CF_onErrorAlert(_CF_error_messages);
+                // set focus to first form error, if the field supports js focus().
+                if( _CF_this[_CF_FirstErrorField].type == "text" )
+                { _CF_this[_CF_FirstErrorField].focus(); }
+
+            }
+            return false;
+        }else {
+            return true;
+        }
+    }
+//-->
+</script>
+</head>
+
+
+
+
+
+
+	
+	
+		
+	
+	
+	
+
+
+
+
+
+
+
+	
+
+
+ 
+ 
+
+
+
+
+
+
+
+
+<body bgcolor="#ffffff" onload="window.focus(); ">
+<div align="center">
+<a name="CIT"></a>
+<table border="0" width="85%" cellspacing="0" cellpadding="0">
+<tr>
+<td>
+
+
+	
+		
+				
+				
+					
+				  
+		
+	 
+
+
+
+
+
+
+
+
+		
+
+	
+
+
+
+
+<table border="0" width="100%" cellspacing="0" cellpadding="0">
+	<tr valign="top">
+		<td width="1%" class="small-link-text" align="center"  background="http://portal.acm.org/images/horiz-bar.jpg"><img src="http://portal.acm.org/images/logo_acm_portal2.jpg" alt="ACM Portal" width="263" height="54" border="0" usemap="#PORT">
+			
+				<font color="white">
+				
+					New York University
+				
+				</font>
+			  
+		</td>
+		<td width="99%" align="left" class="small-link-text">
+			<table border="0" cellspacing="0" cellpadding="0">
+			<tr>
+				<td>&nbsp;</td>
+				
+					<td class="small-link-text"><a href="https://campus.acm.org/Public/login_genpubqj.cfm?rdr=http://portal.acm.org/citation.cfm?id=253206&coll=portal&dl=ACM&CFID=5251967&CFTOKEN=75161792&promo=QJPUB&offering=200&form_type=PUB&CFID=5251967&CFTOKEN=75161792" class="small-link-text">Subscribe</a><span class="small-link-text">&nbsp;(Full Service)</span>&nbsp;&nbsp;&nbsp;</td>
+					<td class="small-link-text"><a href="https://portal.acm.org/poplogin.cfm?dl=ACM&coll=portal&want_href=citation%2Ecfm%3Fid%3D253206%26coll%3Dportal%26dl%3DACM%26CFID%3D5251967%26CFTOKEN%3D75161792&CFID=5251967&CFTOKEN=75161792" class="small-link-text">Register</a><span class="small-link-text">&nbsp;(Limited Service, <font color="Red">Free</font>)</span>&nbsp;&nbsp;&nbsp;</td>
+				
+				<td class="small-link-text" valign="bot">
+					
+					
+		 					<a href="https://portal.acm.org/poplogin.cfm?dl=ACM&coll=portal&want_href=citation%2Ecfm%3Fid%3D253206%26coll%3Dportal%26dl%3DACM%26CFID%3D5251967%26CFTOKEN%3D75161792&CFID=5251967&CFTOKEN=75161792" class="small-link-text">Login</a>
+					
+				</td>			
+			</tr>
+			</table>
+			
+			<table border="0" width="100%" cellspacing="0" cellpadding="0">
+				<form name="qiksearch" action="http://portal.acm.org/results.cfm?coll=portal&amp;dl=ACM&amp;CFID=5251967&amp;CFTOKEN=75161792" method="post" target="_self" onsubmit="return _CF_checkqiksearch(this)">
+				<tr>
+					<td height="5"><img src="http://portal.acm.org/images/blanks.gif" width=1 height=1 alt="" border="0"></td>
+				</tr>
+				<input type="hidden" name="parser" value="Internet">
+				<tr>
+					<td class="small-link-text">&nbsp;</td>
+					<td class="small-link-text">
+						
+						  	
+						
+						<b>Search:</b>&nbsp;&nbsp;&nbsp;<input type="Radio" name="whichDL" value="acm" checked>The ACM Digital Library&nbsp;&nbsp;&nbsp;<input type="Radio" name="whichDL" value="guide" >The Guide
+						<br><input name="query" id="query" type="text" size="60"  class="pubdescr"  />&nbsp;&nbsp;
+						<input type="Image" alt="Search" name=Go src="http://portal.acm.org/images/search_small.jpg" border="0">
+					</td>
+				</tr>
+				</form>
+
+			</table>
+			
+		</td>
+	<!-- top nav END -->
+	</tr>
+	</table>
+	<table border="0" cellspacing="0" cellpadding="0">
+	<tr>
+		<td height="12"><img src="http://portal.acm.org/images/blanks.gif" width=1 height=1 alt="" border="0"></td>
+	</tr>
+	</table>
+
+<map name="PORT" > 
+  <area shape="rect" coords="1,1,55,60" href="http://www.acm.org/" alt="ACM Home Page">
+  <area shape="rect" coords="65,1,300,78" href="http://portal.acm.org/portal.cfm?coll=portal&amp;dl=ACM&amp;CFID=5251967&amp;CFTOKEN=75161792">
+</map>
+
+	
+
+<table border="0" width="100%" align="left">
+	<col width="40%">
+	<col width="60%">
+	<tr>
+		<td>
+			
+				<a href="http://portal.acm.org/dl.cfm?coll=portal&amp;dl=ACM&amp;CFID=5251967&amp;CFTOKEN=75161792"><img src="http://portal.acm.org/images/acm_dl_bar_large2.jpg" width=350 height=25 alt="" border="0"></a>
+			  
+		</td>
+ 		<td class="small-text" align="center">
+			<img src="http://portal.acm.org/images/feedback.gif" width="20" height="19" alt="Please provide us with feedback." border="0">&nbsp;<a href="http://portal.acm.org/survey/survey-ci.cfm?CFID=5251967&amp;CFTOKEN=75161792">Feedback</a>&nbsp;&nbsp;<a href="http://portal.acm.org/survey/survey-ci.cfm?CFID=5251967&amp;CFTOKEN=75161792">Report a problem</a>&nbsp;&nbsp;<a href="http://portal.acm.org/survey/survey-general.cfm?CFID=5251967&amp;CFTOKEN=75161792">Satisfaction survey</a>
+		</td>
+	</tr>
+	<tr>
+		<td height="6"><img src="http://portal.acm.org/images/blanks.gif" width=1 height=1 alt="" border="0"></td>
+	</tr>
+</table>
+</td>
+</tr>
+
+
+
+
+<tr>
+	<td colspan="3" valign="top" height="1" background="http://portal.acm.org/images/horiz-bar-long.jpg"></td>
+</tr>
+
+<tr>
+<td class="small-text">
+	<table border="0" width="100%"  cellpadding="2">
+		<col width="1%">
+		<col width="8%">
+		<col width="91%">
+	<tr>
+		<td class="medium-text" colspan="3"><strong>An experimental study of factors important in document ranking</strong></td>
+	</tr>
+					
+	
+		<tr valign="top">
+			
+			
+		</tr>
+		
+			<tr valign="top">
+				
+					<td class="small-text"><strong>Full text</strong></td>
+				 
+				<td class="smaller-text" colspan="2" >
+						
+							
+									 <A NAME="FullText" HREF="http://portal.acm.org/ft_gateway.cfm?id=253206&amp;type=pdf&amp;coll=portal&amp;dl=ACM&amp;CFID=5251967&amp;CFTOKEN=75161792" target="_blank"><img src="http://portal.acm.org/images/pdf_logo.gif" width="16" height="16" alt="pdf format" border="0" hspace="1" align="texttop">Pdf</A>
+									 (809&nbsp;KB)
+							
+						   
+				</td>
+			</tr>
+		
+
+		<tr valign="top">
+			<td class="small-text"><strong>Source</strong></td>
+			<td class="small-text" colspan="2">
+			
+								
+										
+											
+											
+												
+										
+											
+											
+											
+												
+											
+											
+												
+											
+											
+											    
+												
+												
+												
+												
+													
+													
+														
+												
+													
+													
+													
+														
+														
+														
+														
+														
+														<SPAN class="mediumb-text">Annual ACM Conference on Research and Development in Information Retrieval</span>
+																			<a href="http://portal.acm.org/toc.cfm?id=SERIES278&amp;type=series&amp;coll=portal&amp;dl=ACM&amp;CFID=5251967&amp;CFTOKEN=75161792" target="_self" class="small-link-text">archive</a><br>
+													  
+													<SPAN class="mediumb-text">Proceedings of the 9th annual international ACM SIGIR conference on Research and development in information retrieval </span>
+										 								 <a href="http://portal.acm.org/toc.cfm?id=253168&amp;type=proceeding&amp;coll=portal&amp;dl=ACM&amp;CFID=5251967&amp;CFTOKEN=75161792"  target="_self" class="small-link-text">table of contents</a><br>
+												  
+												<DIV class="small-text">
+													 Palazzo dei Congressi, Pisa, Italy 
+												</div>
+											   
+										
+								
+		
+
+		
+		<div class="medium-text">
+			
+			
+			
+		</div>
+		
+		
+		    
+			
+			
+		
+
+			
+			
+			<div class="small-text">
+				 Pages: 186 - 193&nbsp;&nbsp;
+			</div>
+					
+			
+			
+			
+				<div class="small-text">
+					Year of Publication:&nbsp;1986
+				</div>
+			
+					
+			
+				<div class="small-text">
+				
+					
+						
+						
+							
+							
+						  
+					  
+					ISBN:0-89791-187-3
+				</div>
+				
+
+			
+			
+				
+					
+					
+					
+				
+					
+					
+					
+				
+					
+					
+					
+				
+					
+					
+					
+				
+					
+					
+					
+				
+			
+			
+		
+			 
+			  	
+			 
+			 
+		
+			
+				
+			</td>
+		</tr>
+		
+		
+		
+			<tr valign="top">
+				<td class="small-text">							
+										  	<strong>Author </strong>
+										
+				</td>
+				
+				
+					
+					
+				<td colspan="2">
+				<div class="authors">
+					<table cellpadding="0" cellspacing="0">		
+					
+							<tr>
+								<td class="small-text">
+									<a href="http://portal.acm.org/results.cfm?query=author%3AP69112&amp;querydisp=author%3ADonna%20Williamson%20Harman&amp;coll=portal&amp;dl=ACM&amp;CFID=5251967&amp;CFTOKEN=75161792" target="_self">Donna Williamson Harman</a>
+ 									
+								</td>
+								<td class="small-text">
+									
+										<small>&nbsp;Lister Hill National Center for Biomedical Communications, National Library of Medicine, Bethesda, Maryland</small>
+										
+								</td>
+							</tr>
+					
+					</table>	
+				</div>
+				</td>
+			</tr>
+			
+			
+		
+		
+			
+				<tr valign="top">
+					<td class="small-text"><strong>Sponsor </strong></td>
+					<td colspan="2">
+						<div class="sponsors">
+							
+								
+								
+								
+							
+								
+								
+								
+							
+								
+								
+								
+									
+									
+									
+										<a href=" http://www.acm.org/sigir/" target="sponsor" title="Sponsor">SIGIR</a>:
+									  								
+									 ACM Special Interest Group on Information Retrieval <br>
+								
+							
+								
+								
+								
+							
+						</div>
+					 </td>
+				</tr>
+			
+		
+		
+		
+		
+			
+			
+			
+			
+				
+					<tr valign="top">
+						<td class="small-text"><strong>Publisher</strong></td>
+						<td colspan="2">
+							<div class="publishers">
+								
+								
+								
+								
+								
+								
+									
+									
+									  	ACM Press &nbsp;
+									
+									
+										<small> New York, NY, USA </small>
+									
+								
+							</div>
+						</td>
+					</tr>
+				
+			
+		
+		
+		
+		
+		
+		
+		
+		
+		</table>
+		
+		
+		
+		
+		
+		
+		
+ 
+ 		
+</td>
+</tr>
+
+
+<tr>
+<td>
+
+<!-- third main table: main content START -->
+	<table border="0" width="100%" cellspacing="0" cellpadding="0">
+	<tr>
+		<td height="6"><img src="http://portal.acm.org/images/blanks.gif" width=1 height=1 alt="" border="0"></td>
+	</tr>
+	<tr>
+		<td colspan="4" valign="top" height="1" background="http://portal.acm.org/images/horiz-bar-long.jpg"></td>
+	</tr>
+	<tr>
+		<td height="6"><img src="http://portal.acm.org/images/blanks.gif" width=1 height=1 alt="" border="0"></td>
+	</tr>
+
+	
+
+	<tr valign="top">
+	<!-- buttons -->
+		<td width="100%" colspan="4">
+	    <table border="0" cellspacing="0" cellpadding="0" width="100%">
+		<col width="22%">
+	    <col width="78%">
+		<tr>
+			<td class="small-text"><b>Additional Information:</b></td>
+			<td>
+			<p class="small-text">
+				
+				
+					<a href="citation.cfm%3Fid=253206&amp;coll=portal&amp;dl=ACM&amp;CFID=5251967&amp;CFTOKEN=75161792.1.html#abstract">abstract</a>&nbsp;&nbsp;
+				
+				
+					<a href="citation.cfm%3Fid=253206&amp;coll=portal&amp;dl=ACM&amp;CFID=5251967&amp;CFTOKEN=75161792.1.html#references">references</a>&nbsp;&nbsp;
+				
+				
+					<a href="citation.cfm%3Fid=253206&amp;coll=portal&amp;dl=ACM&amp;CFID=5251967&amp;CFTOKEN=75161792.1.html#citings">citings</a>&nbsp;&nbsp;
+				
+				
+				
+				
+				
+				
+					<a href="citation.cfm%3Fid=253206&amp;coll=portal&amp;dl=ACM&amp;CFID=5251967&amp;CFTOKEN=75161792.1.html#peers">peer to peer</a>&nbsp;&nbsp;
+				
+				</p>
+			</td>
+		</tr>
+		</table>
+		</td>
+	</tr>
+	<tr>
+		<td height="6"><img src="http://portal.acm.org/images/blanks.gif" width=1 height=1 alt="" border="0"></td>
+	</tr>
+	
+	<tr valign="top">
+	<!-- buttons -->
+		<form name="popbinder">
+		<td width="100%" colspan="4">
+		
+		<table border="0" cellspacing="0" cellpadding="2" width="100%" >
+		  <col width="22%">
+		  <col width="78%">
+		  <tr valign="top">
+		  	<td class="small-text"><b>Tools and Actions:</b></td>
+			<td>
+			
+				
+					
+					
+					 
+					 
+					 
+				
+				
+							
+				
+			  
+			
+			<a href="http://portal.acm.org/results.cfm?query=253206&amp;querydisp=Similar%20to%3A%20An%20experimental%20study%20of%20factors%20important%20in%20document%20ranking&amp;coll=portal&amp;dl=ACM&amp;CFID=5251967&amp;CFTOKEN=75161792" target="_self" class="small-link-text">Find similar Articles</a>&nbsp;&nbsp;
+
+			<a href="http://www.reviews.com/reviewer/quickreview/frameset_toplevel.cfm?bib_id=253206" target="reviews" class="small-link-text">Review this Article</a>&nbsp;&nbsp;
+			
+			
+			 	<br><a href="citation.cfm%3Fid=253206&amp;coll=portal&amp;dl=ACM&amp;CFID=5251967&amp;CFTOKEN=75161792.1.html#" onClick="window.alert('To use this Feature, you must login with your personal ACM Web Account.');" class="small-link-text">
+				Save this Article to a Binder</a><img src="http://portal.acm.org/images/blanks.gif" border="0" name="saved">
+			
+			&nbsp;&nbsp;
+			<span class="small-text">Display Formats:</span>
+			<a href="citation.cfm%3Fid=253206&amp;coll=portal&amp;dl=ACM&amp;CFID=5251967&amp;CFTOKEN=75161792.1.html#" onClick="window.open('popBibTex.cfm?id=253206&ids=SERIES278.253168.253206&types=series.proceeding.article&reqtype=article&coll=portal&dl=ACM&CFID=5251967&CFTOKEN=75161792','BibTex','width=800,height=100,top=100,left=100,scrollbars=Yes,resizable=yes');" class="small-link-text">
+			BibTex</a>&nbsp;
+
+			<a href="citation.cfm%3Fid=253206&amp;coll=portal&amp;dl=ACM&amp;CFID=5251967&amp;CFTOKEN=75161792.1.html#" onClick="window.open('popendnotes.cfm?id=253206&ids=SERIES278.253168.253206&types=series.proceeding.article&reqtype=article&coll=portal&dl=ACM&CFID=5251967&CFTOKEN=75161792','BibTex','width=800,height=100,top=100,left=100,scrollbars=Yes,resizable=yes');" class="small-link-text">
+			EndNote</a>
+
+			
+			 
+				<a href="citation.cfm%3Fid=253206&amp;coll=portal&amp;dl=ACM&amp;CFID=5251967&amp;CFTOKEN=75161792.1.html#" onClick="window.open('popacmref.cfm?id=253206&ids=SERIES278.253168.253206&types=series.proceeding.article&reqtype=article&coll=portal&dl=ACM&CFID=5251967&CFTOKEN=75161792','BibTeX','width=800,height=100,top=100,left=100,scrollbars=Yes,resizable=yes');" class="small-link-text">
+			ACM Ref</a>
+			
+			
+			&nbsp;&nbsp;				
+			
+			</td>
+		</tr>
+		<tr>
+			<td height="10"><img src="http://portal.acm.org/images/blanks.gif" width=1 height=1 alt="" border="0"></td>
+		</tr>
+		
+		<tr valign="top">
+			<td class="small-text"><b>DOI Bookmark:</b></td>
+			<td class="small-text">
+				<small>Use this link to bookmark this Article:&nbsp;</small><a href="http://doi.acm.org/10.1145/253168.253206">http://doi.acm.org/10.1145/253168.253206</a><br><small><a href="http://www.doi.org/">What is a DOI?</a></small>
+			    
+			</td>
+		</tr> 
+		
+		</table>
+		
+		</td>
+		</form>
+	</tr>
+	<tr>
+		<td height="6"><img src="http://portal.acm.org/images/blanks.gif" width=1 height=1 alt="" border="0"></td>
+	</tr>
+	<tr>
+		<td colspan="4" valign="top" height="1" background="http://portal.acm.org/images/horiz-bar-long.jpg"></td>
+	</tr>
+	<tr>
+		<td height="6"><img src="http://portal.acm.org/images/blanks.gif" width=1 height=1 alt="" border="0"></td>
+	</tr>
+	</table>
+<!-- third main table: main content END -->
+			
+		
+		
+		  	<div class="abstract">
+			
+			
+			  	
+			 
+			 
+			
+			</div>
+		
+		
+		
+		
+		
+			<br>
+			<div class="abstract">
+			
+			<A HREF="citation.cfm%3Fid=253206&amp;coll=portal&amp;dl=ACM&amp;CFID=5251967&amp;CFTOKEN=75161792.1.html#CIT"><img name="top" src="http://portal.acm.org/images/arrowu.gif" hspace="10" border="0"></A><SPAN class=heading><A NAME="abstract">ABSTRACT</A></span>
+			
+			  	
+			 
+			 
+			
+				<p class="abstract">
+				 <par>The ability to effectively rank retrieved documents in order of their probable relevance to a query is a critical factor in statistically-based keyword retrieval systems. This paper summarizes a set of experiments with different methods of term weighting for documents, using measures of term importance within an entire document collection, term importance within a given document, and document length. It is shown that significant improvements over no term weighting can be made using a combination of weighting measures and normalizing for document length.</par>
+
+				</p>
+			
+			
+			</div>
+		  
+			
+		
+			<br>
+			<div class="abstract">
+			
+			<A HREF="citation.cfm%3Fid=253206&amp;coll=portal&amp;dl=ACM&amp;CFID=5251967&amp;CFTOKEN=75161792.1.html#CIT"><img name="top" src="http://portal.acm.org/images/arrowu.gif" hspace="10" border="0"></A><SPAN class=heading><A NAME="references">REFERENCES</A></span>
+			<p class="abstract"><font color="Red">Note: OCR errors may be found in this Reference List extracted from the full text article.  ACM has opted to expose the complete List rather than only correct and linked references.</font></p>
+			
+			
+			  	
+					
+					
+					 
+					 
+					 
+				
+				
+								
+			  
+			
+			
+				<p class="abstract">
+				  CROFT79&nbsp;&nbsp;
+				  
+				  Croft W.B., Harper D.I., "Using Probabilistic Models of Document R~tricval Without Relevance Information", Journal of Documentation, Vol. 35, No. 4, #mbe.r 1979, pp. 285-295.
+				  
+				</p>
+			
+				<p class="abstract">
+				  CROFT82&nbsp;&nbsp;
+				  
+				  Croft W.B., "Experiments with Roprcscntation in a Document Retrieval System", COIN Technical Report 82-21, May 1982.
+				  
+				</p>
+			
+				<p class="abstract">
+				  DENNIS64&nbsp;&nbsp;
+				  
+				  Dennis S.F., "The Construction of a Thesaurus Automat/cally from a Sample of Tcxt",Symposium Proc#gs, Statistical Association Methods for Mecb# Documentation, 1964. (National Bureau of Standards Miscellaneous Publication 269).
+				  
+				</p>
+			
+				<p class="abstract">
+				  HARTER75&nbsp;&nbsp;
+				  
+				  Haner $.P., "A Probabilisti~ Approach to Automatic Keyword Indexing", Journal of the Amesican Society for Information Science, VoL 26, No. 5, Octobe# 1973, pp. 280-289.
+				  
+				</p>
+			
+				<p class="abstract">
+				  MCGILL79&nbsp;&nbsp;
+				  
+				  McGiU M., Koll M., Noreault T., "An Evaluation of Factors Affecting Document Ranking by Information Retrieval Systems". Report, School of Inforration Smd/es, Syracuse University, Syracuse, New York, October 1979.
+				  
+				</p>
+			
+				<p class="abstract">
+				  RAGHAVEN83&nbsp;&nbsp;
+				  
+				  	
+		 			  <a href="http://portal.acm.org/citation.cfm?id=511806&amp;dl=ACM&amp;coll=portal&amp;CFID=5251967&amp;CFTOKEN=75161792">
+					 
+				  
+				  Vijay V. Raghavan , Hong-pao Shi , C. T. Yu, Evaluation of the 2-Poisson model as a basis for using term frequency data in searching, Proceedings of the 6th annual international ACM SIGIR conference on Research and development in information retrieval, June 06-08, 1983, Bethesda, Maryland
+				  </a>
+				</p>
+			
+				<p class="abstract">
+				  SALTON73&nbsp;&nbsp;
+				  
+				  Salton G., Yang C.S., "On the Specilica#on of Term Values in Automti~ hdcxing", Journal of Documentation, Vol. 29, No. 4, December 1973, pp. 351-372.
+				  
+				</p>
+			
+				<p class="abstract">
+				  SALTON83&nbsp;&nbsp;
+				  
+				  	
+		 			  <a href="http://portal.acm.org/citation.cfm?id=576628&amp;dl=ACM&amp;coll=portal&amp;CFID=5251967&amp;CFTOKEN=75161792">
+					 
+				  
+				  Gerard Salton , Michael J. McGill, Introduction to Modern Information Retrieval, McGraw-Hill, Inc., New York, NY, 1986
+				  </a>
+				</p>
+			
+				<p class="abstract">
+				  SPARCK72&nbsp;&nbsp;
+				  
+				  Sparck Jones K., "A Statistical Intmtn#tation of Term Specificity and Its Application in Retrieval", Your. hal of D ocungntation, Vol. 28, No. 1, March 1972, pp. 11- 20.
+				  
+				</p>
+			
+				<p class="abstract">
+				  YU82&nbsp;&nbsp;
+				  
+				  	
+		 			  <a href="http://portal.acm.org/citation.cfm?id=322300&amp;dl=ACM&amp;coll=portal&amp;CFID=5251967&amp;CFTOKEN=75161792">
+					 
+				  
+				  C. T. Yu , K. Lam , G. Salton, Term Weighting in Information Retrieval Using the Term Precision Model, Journal of the ACM (JACM), v.29 n.1, p.152-170, Jan. 1982
+				  </a>
+				</p>
+			
+			
+			</div>
+		
+		
+		
+			<br>
+			<div class="abstract">
+			
+			<A HREF="citation.cfm%3Fid=253206&amp;coll=portal&amp;dl=ACM&amp;CFID=5251967&amp;CFTOKEN=75161792.1.html#CIT"><img name="top" src="http://portal.acm.org/images/arrowu.gif" hspace="10" border="0"></A><SPAN class=heading><A NAME="citings">CITINGS</A>&nbsp;&nbsp;<i>11</i></span>
+			
+			
+			  	
+					
+					
+					 
+					 
+					 
+				
+				
+									
+				
+			  
+			
+			
+				<p class="abstract">
+				
+	 				  <a href="http://portal.acm.org/citation.cfm?id=1009100&amp;dl=ACM&amp;coll=portal&amp;CFID=5251967&amp;CFTOKEN=75161792">
+				  
+					Ryen W. White , Joemon M. Jose, A study of topic similarity measures, Proceedings of the 27th annual international ACM SIGIR conference on Research and development in information retrieval, July 25-29, 2004, Sheffield, United Kingdom
+				  </a>
+				</p>
+			
+				<p class="abstract">
+				
+	 				  <a href="http://portal.acm.org/citation.cfm?id=74703&amp;dl=ACM&amp;coll=portal&amp;CFID=5251967&amp;CFTOKEN=75161792">
+				  
+					D. Harmon , G. Candela, A very fast prototype retrieval system using statistical ranking, ACM SIGIR Forum, v.23 n.3-4, p.100-110, Spring 1989
+				  </a>
+				</p>
+			
+				<p class="abstract">
+				
+	 				  <a href="http://portal.acm.org/citation.cfm?id=62469&amp;dl=ACM&amp;coll=portal&amp;CFID=5251967&amp;CFTOKEN=75161792">
+				  
+					D. Harman, Towards interactive query expansion, Proceedings of the 11th annual international ACM SIGIR conference on Research and development in information retrieval, p.321-331, May 1988, Grenoble, France
+				  </a>
+				</p>
+			
+				<p class="abstract">
+				
+	 				  <a href="http://portal.acm.org/citation.cfm?id=54348&amp;dl=ACM&amp;coll=portal&amp;CFID=5251967&amp;CFTOKEN=75161792">
+				  
+					D. Harman , D. Benson , L. Fitzpatrick , R. Huntzinger , C. Goldstein, IRX: an information retrieval system for experimentation and user applications, ACM SIGIR Forum, v.22 n.3-4, p.2-10, Spring/Summer 1988
+				  </a>
+				</p>
+			
+				<p class="abstract">
+				
+	 				  <a href="http://portal.acm.org/citation.cfm?id=1121511&amp;dl=ACM&amp;coll=portal&amp;CFID=5251967&amp;CFTOKEN=75161792">
+				  
+					Daniel B. Waegel , April Kontostathis, TextMOLE: text mining operations library and environment, ACM SIGCSE Bulletin, v.38 n.1, March 2006
+				  </a>
+				</p>
+			
+				<p class="abstract">
+				
+	 				  <a href="http://portal.acm.org/citation.cfm?id=101297&amp;dl=ACM&amp;coll=portal&amp;CFID=5251967&amp;CFTOKEN=75161792">
+				  
+					Donna Harman , Gerald Candela, Bringing natural language information retrieval out of the closet, ACM SIGCHI Bulletin, v.22 n.1, p.42-48, Jul. 1990
+				  </a>
+				</p>
+			
+				<p class="abstract">
+				
+	 				  <a href="http://portal.acm.org/citation.cfm?id=42017&amp;dl=ACM&amp;coll=portal&amp;CFID=5251967&amp;CFTOKEN=75161792">
+				  
+					D. Harman, A failure analysis of the limitation of suffixing in an online environment, Proceedings of the 10th annual international ACM SIGIR conference on Research and development in information retrieval, p.102-107, June 03-05, 1987, New Orleans, Louisiana, United States
+				  </a>
+				</p>
+			
+				<p class="abstract">
+				
+	 				  <a href="http://portal.acm.org/citation.cfm?id=502945&amp;dl=ACM&amp;coll=portal&amp;CFID=5251967&amp;CFTOKEN=75161792">
+				  
+					Joaquin Rapela, Automatically combining ranking heuristics for HTML documents, Proceedings of the 3rd international workshop on Web information and data management, November 09-01, 2001, Atlanta, Georgia, USA
+				  </a>
+				</p>
+			
+				<p class="abstract">
+				
+	 				  <a href="http://portal.acm.org/citation.cfm?id=507335&amp;dl=ACM&amp;coll=portal&amp;CFID=5251967&amp;CFTOKEN=75161792">
+				  
+					Ian Ruthven , Mounia Lalmas , Keith van Rijsbergen, Combining and selecting characteristics of information use, Journal of the American Society for Information Science and Technology, v.53 n.5, p.378-396, May 2002
+				  </a>
+				</p>
+			
+				<p class="abstract">
+				
+	 				  <a href="http://portal.acm.org/citation.cfm?id=500755&amp;dl=ACM&amp;coll=portal&amp;CFID=5251967&amp;CFTOKEN=75161792">
+				  
+					Stuart E. Middleton , David C. De Roure , Nigel R. Shadbolt, Capturing knowledge of user preferences: ontologies in recommender systems, Proceedings of the 1st international conference on Knowledge capture, October 22-23, 2001, Victoria, British Columbia, Canada
+				  </a>
+				</p>
+			
+				<p class="abstract">
+				
+	 				  <a href="http://portal.acm.org/citation.cfm?id=1142099&amp;dl=ACM&amp;coll=portal&amp;CFID=5251967&amp;CFTOKEN=75161792">
+				  
+					
+				  </a>
+				</p>
+			
+			
+			</div>
+		
+
+		
+			
+			
+			  	
+			 
+			 
+			
+		
+		
+		
+			
+			
+			  	
+			
+			
+			
+		
+		
+		
+				
+						
+		
+		
+		
+			<br>
+			<div class="abstract">
+			
+				<A HREF="citation.cfm%3Fid=253206&amp;coll=portal&amp;dl=ACM&amp;CFID=5251967&amp;CFTOKEN=75161792.1.html#CIT"><img name="top" src="http://portal.acm.org/images/arrowu.gif" hspace="10" border="0"></A><SPAN class=heading><A NAME="peers">Peer to Peer - Readers of this Article have also read:</cite></A></span>
+		<ul type="disc">
+		
+			  
+				
+				 
+				
+			<li>
+			 
+				<A HREF="http://portal.acm.org/citation.cfm?id=512248&amp;dl=ACM&amp;coll=portal&amp;CFID=5251967&amp;CFTOKEN=75161792" target="_self">		  	  M<sup>4</sup>:&nbsp;a metamodel for data preprocessing</a>
+			
+			
+				
+				  	
+					    <b>Proceedings of the 4th ACM international workshop on Data warehousing and OLAP</b><br>
+					
+				   
+				
+			
+			
+				
+					Anca Vaduva
+				
+					, &nbsp;J&#246;rg-Uwe Kietz
+				
+					, &nbsp;Regina Z&#252;cker
+				
+				<br>
+			
+			<br>
+			</li>
+		
+			  
+				
+				 
+				
+			<li>
+			 
+				<A HREF="http://portal.acm.org/citation.cfm?id=4290&amp;dl=ACM&amp;coll=portal&amp;CFID=5251967&amp;CFTOKEN=75161792" target="_self">		  	  Data structures for quadtree approximation and compression</a>
+			
+			
+				
+					
+						<b>Communications of the ACM</b>&nbsp;&nbsp;
+					
+					
+						<font size="-1">28,&nbsp;9</font><br>
+					 
+				  
+				
+			
+			
+				
+					Hanan Samet
+				
+				<br>
+			
+			<br>
+			</li>
+		
+			  
+				
+				 
+				
+			<li>
+			 
+				<A HREF="http://portal.acm.org/citation.cfm?id=143680&amp;dl=ACM&amp;coll=portal&amp;CFID=5251967&amp;CFTOKEN=75161792" target="_self">		  	  A hierarchical single-key-lock access control using the Chinese remainder theorem</a>
+			
+			
+				
+				  	
+					    <b>Proceedings of the 1992 ACM/SIGAPP Symposium on Applied computing</b><br>
+					
+				   
+				
+			
+			
+				
+					Kim S. Lee
+				
+					, &nbsp;Huizhu Lu
+				
+					, &nbsp;D. D. Fisher
+				
+				<br>
+			
+			<br>
+			</li>
+		
+			  
+				
+				 
+				
+			<li>
+			 
+				<A HREF="http://portal.acm.org/citation.cfm?id=125254&amp;dl=ACM&amp;coll=portal&amp;CFID=5251967&amp;CFTOKEN=75161792" target="_self">		  	  The GemStone object database management system</a>
+			
+			
+				
+					
+						<b>Communications of the ACM</b>&nbsp;&nbsp;
+					
+					
+						<font size="-1">34,&nbsp;10</font><br>
+					 
+				  
+				
+			
+			
+				
+					Paul Butterworth
+				
+					, &nbsp;Allen Otis
+				
+					, &nbsp;Jacob Stein
+				
+				<br>
+			
+			<br>
+			</li>
+		
+			  
+				
+				 
+				
+			<li>
+			 
+				<A HREF="http://portal.acm.org/citation.cfm?id=125322&amp;dl=ACM&amp;coll=portal&amp;CFID=5251967&amp;CFTOKEN=75161792" target="_self">		  	  Putting innovation to work:&nbsp;adoption strategies for multimedia communication systems</a>
+			
+			
+				
+					
+						<b>Communications of the ACM</b>&nbsp;&nbsp;
+					
+					
+						<font size="-1">34,&nbsp;12</font><br>
+					 
+				  
+				
+			
+			
+				
+					Ellen Francik
+				
+					, &nbsp;Susan Ehrlich Rudman
+				
+					, &nbsp;Donna Cooper
+				
+					, &nbsp;Stephen Levine
+				
+				<br>
+			
+			<br>
+			</li>
+		
+		</ul>
+		
+		</div>
+		
+		
+		
+		
+		
+			
+				
+				
+				
+			
+				
+				
+				
+			
+				
+				
+				
+			
+				
+				
+				
+			
+				
+				
+				
+			
+		
+				
+			
+  	
+
+
+
+
+<br>
+<DIV class=footer-copy-text align="center">
+	
+	The ACM Portal is published by the Association for Computing Machinery. Copyright © 2006 ACM, Inc.<br>
+	<A href="http://portal.acm.org/info/usage.cfm?CFID=5251967&CFTOKEN=75161792">Terms of Usage</A>&nbsp;&nbsp;
+	<A href="http://www.acm.org/serving/acm-privacy.html">Privacy Policy</A>&nbsp;&nbsp;
+	<A href="http://www.acm.org/constitution/code.html">Code of Ethics</A>&nbsp;&nbsp;	  
+	<A href="http://www.acm.org/key_people/">Contact Us</A>
+
+<br><br>
+Useful downloads: 
+<a href="http://www.adobe.com/products/acrobat/readstep2.html"><img src="http://portal.acm.org/images/pdf_logo.gif" width="16" height="16" alt="" border="0"> Adobe Acrobat</a>
+&nbsp;&nbsp;
+<a href="http://www.apple.com/quicktime/download/" target="_blank"><img src="http://portal.acm.org/images/qtlogo.gif" width="16" height="16" alt="" border="0"> QuickTime</a>
+&nbsp;&nbsp;
+<a href="http://www.microsoft.com/windows/windowsmedia/download/default.asp" target="_blank"><img src="http://portal.acm.org/images/wmv.gif" width="16" height="15" alt="" border="0"> Windows Media Player</a>
+&nbsp;&nbsp;
+<a href="http://www.real.com/" target="_blank"><img src="http://portal.acm.org/images/realplayer.gif" width="20" height="18" alt="" border="0"> Real Player</a>
+
+
+</DIV>
+
+</td>
+</tr>
+</table>
+</div>
+
+</body>
+</html>

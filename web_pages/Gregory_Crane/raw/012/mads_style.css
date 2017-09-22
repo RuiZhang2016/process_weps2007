@@ -1,0 +1,1267 @@
+/* - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - */
+/*                    Hello !                                      */
+/*                                                                 */
+/*                Please refer to                                  */
+/*    http://www.interaction-design.org/about/copyright.html       */
+/*                                                                 */
+/* - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - */
+
+body, html{
+color:#A5A5A5
+	width:100%;
+	height:auto;
+	margin-left: 0px;
+	margin-top: 0px;
+	text-align:center;
+	background-color:#F7F7F7;
+	padding: 0px 0px 0px 0px;
+	margin: 0px 0px 0px 0px;
+	/*border:1px YELLOW solid;*/
+}
+body,html,td,tr { 	
+	font-family:  verdana, geneva, sans-serif; 
+	font-size:  10pt;
+	font-style:  normal;
+	font-weight:  normal;     					
+	color: #333333;       
+	text-align:left;  
+}
+
+
+/* 
+-----------------------------------------------------------
+                Error boxes and the like : 
+-----------------------------------------------------------
+*/
+.userError,.userSuccess, .userInfo {
+	word-wrap:break-word;
+	margin-bottom:30px; 
+	margin-top:15px;
+}
+.userError{
+	
+position: relative; background-color: #DA260F; border-bottom: 1px solid #9F1000; text-align: left;
+
+}
+.userSuccess{
+position: relative; background-color: #3C6; border-bottom: 1px solid #178724; text-align: left;
+
+}
+.userInfo{
+	position: relative; background-color: #3C6; border-bottom: 1px solid #178724; text-align: left;
+}
+
+/* 
+-----------------------------------------------------------
+                All the A-tags: 
+-----------------------------------------------------------
+*/
+a:link {
+	/* unvisited link */
+	
+}     
+a:visited {
+	/* if set, heading will inheret this color, damn you, css!
+	color: purple;
+	*/
+}
+a:Hover	{	
+	/* Note: a:hover MUST come after a:link and a:visited in the CSS definition in order to be effective!! */
+	text-decoration:none;
+	}
+a:active {
+    /* Note: a:active MUST come after a:hover in the CSS definition in order to be effective! */
+	color: red;
+}		
+
+span.modifyLink a{
+	font-size: 8pt;
+	color: red;
+}
+
+a.sidelinks{	
+	font-family: verdana, geneva, sans-serif;
+	background: #069 none;
+	margin: 1em 1em 1em 1em;
+	padding: 0.3em 0.5em 0.3em 0.5em;
+	color: #FFFFFF;
+	font-weight: bold;
+}
+
+a.linkToEndnote{
+	color:rgb(0, 102, 102);
+}
+
+
+.leftColumn a, .rightColumn a, .rightColumn50 a, .leftColumn a, .leftColumn50 a, .leftColumn60 a, .leftColumn100 a, .frameFooterDiv a, div.indexEntry a{
+	/* keep .fakeLink in sync with this */
+	color: #0040b6;
+	border-bottom: dashed #cccccc 1px !important;
+	text-decoration:none;
+}
+
+.leftColumn a:Hover, div.rightColumn a:Hover, .rightColumn50 a:Hover, .leftColumn a:Hover, .leftColumn50 a:Hover, .leftColumn60 a:Hover, .leftColumn100 a:Hover, .frameFooterDiv a:Hover{	
+	/* keep .fakeLink in sync with this */
+	text-decoration:none;
+	color: #000000;
+	border-bottom: dotted #999999 1px;
+	background-color:#ACDBFF;
+}
+a.TOC{
+	
+		
+}
+a.imageLink{
+	text-decoration:none !important;
+	border-style:none !important;
+	border-bottom: none !important;
+	border: none !important;
+}
+
+a img{
+	border-width:0px !important;
+}
+
+	
+/*
+-----------------------------------------------------------
+                Quoting and figures: 
+-----------------------------------------------------------
+*/
+
+span.inlineQuote{
+	margin-left: 0px;
+	margin-right: 0px;
+	text-indent: 0px;
+	font-family: "Courier New", Courier, mono, monospace;
+}
+blockquote.middle, blockquote.right, blockquote.illustration, blockquote.left, p.blockquote{
+	/* A box with a long quote floating in the middle of the page: I have been inspired by the blockquote in http://www.boxesandarrows.com/lib/bandaStyles.css */
+	width: auto;
+	color: #666;
+	background: #eee;
+	border-right:1px solid #ddd;
+	border-bottom:1px solid #ddd;
+	padding: 1em;
+	margin: 9px 0px 9px 5%;
+	text-align:center;
+	line-height:100%;
+	}
+blockquote.right {
+	/* A box with a long quote floating in the RIGHT of the page */
+	float:right;
+}
+blockquote.left{
+	text-align:left;
+}
+blockquote.illustration{
+	/* A box with an image or illustration */
+	float:center;
+}
+p.blockquote{
+	text-align:left;	
+}
+.leftColumn100 blockquote.middle, .leftColumn100 blockquote.right, .leftColumn100 blockquote.illustration, .leftColumn100 blockquote.left, .leftColumn100 p.blockquote{
+	margin-right:60px;
+}
+
+.caption {
+	/* Caption for the image or illustration */
+        font-style: italic;
+        font-size: 0.8em;
+        text-indent: 0;
+        margin-top: 0;
+        margin-bottom: 0;
+}	
+quote{
+        margin-top: 1.17em;
+        margin-left: 20px;
+        margin-right: 20px;
+        font-family: Courier New;
+}
+p.caption-text{
+	margin-top: 0px;
+	margin-bottom: 10px;
+	font-style: italic;
+}
+
+
+/*
+-----------------------------------------------------------
+                Header elements: 
+-----------------------------------------------------------
+*/
+h1{
+	font-family: "Trebuchet MS",Verdana,Arial;
+	font-size: 20pt;
+	
+}
+h2{
+	font-family: "Trebuchet MS",Verdana,Arial;
+	font-size:  13pt;      		
+	color: #3B3B3B;
+	padding-bottom: 0px;
+	margin-bottom:0px;
+}
+
+h3{
+        /*font-family: "Trebuchet MS",Verdana,Arial;*/
+		color: #333333;
+        font-size: 10pt;
+        margin-bottom: 2px;
+}
+
+/*
+-----------------------------------------------------------
+                DIV elements: 
+-----------------------------------------------------------
+*/
+div{
+
+}
+div.frameDiv{
+	margin:0 auto; /*  in order to center the div; it's a hack (like everything else in css) */
+	width: 950px;
+	height:auto;
+}
+div.frameHeaderDiv{
+	background-image:url(/images/frameHeaderDivBackground.gif);
+	height:21px;
+}
+div.frameContentDiv{
+	background-image:url(/images/frameContentDivBackground.gif);
+	width:950px;
+	text-align:center;
+	height:auto;
+}
+div.theWholePageContainer{
+	display:block;
+	width: 900px;
+	height:100%;
+	padding-bottom:5px;
+	margin:0 auto; /* in order to center the div; it's a hack (like everything else in css) */
+	background-color: #FFFFFF;
+	text-align:left;
+}
+
+div.logoDiv{
+	background-image:url(/images/topBackground.gif);
+	background-repeat:repeat-x;
+	height:120px;
+	width: 900px;
+	text-align:left;
+	padding: 0px 0px 0px 0px;
+	margin:0px 0px 0px 0px;
+	/*border: 1PX SOLID #000000;*/
+	/*clear:both; */
+}
+div.miscLinksAndSearch{
+	position:relative;
+	text-align:right;
+	height:10px;
+	width:220px;
+	float:right;
+	clear:both;
+	padding-top:6px;
+	padding-right:43px;
+	padding-bottom:0px;
+	margin:0px 0px 0px 0px;
+}
+.miscLinksAndSearch a,.miscLinksAndSearch a:visited{
+	text-transform:uppercase;
+	font-family:Arial, Helvetica, sans-serif;
+	font-size:11px;
+	text-decoration:none;
+	font-weight:bold;
+	color:#EEEEEE;
+	padding-left:10px;
+}
+.miscLinksAndSearch a:hover{
+	color:#B4F616;
+}
+form.headerSearchForm{
+	margin:10px 0px 10px 0px;
+	padding:0px 0px 0px 0px;
+}
+
+#siteHeading{
+	position:relative;
+	text-align:left;
+	left:56px;
+	top:31px;
+	width:419px;
+	height:57px;
+	padding:0px 0px 0px 0px;
+	border-width:0px;
+	border-style:none;
+}
+div.navigDiv{
+	position:relative;
+	height:23px;
+	width:100%;
+	/* for IE --> top:35, for mozilla --> top:39 */
+	top:39px;
+	text-align:right;
+	z-index:1;
+	margin:0px 0px 0px 0px;
+	padding:0px 0px 0px 0px;
+}
+div.activeNavigTab, div.navigTab, div.emptyNavigTab, div.hoverNavigTab{
+	height:18px;
+	width:94px;
+	float:right;
+	text-align:center;
+	padding-top:5px;
+}
+div.activeNavigTab, div.navigTab, div.hoverNavigTab{
+	cursor:hand;
+	cursor:pointer;
+}
+div.navigTab{
+	background-image:url(/images/tab_off.gif);
+}
+.tabLinks{
+	font-family: Arial, Helvetica, sans-serif;
+	font-size:11px;
+	text-decoration:none;
+	color:#000000;
+}
+div.activeNavigTab{
+	background-image:url(/images/tab_on.gif);
+}
+div.hoverNavigTab{
+	background-image:url(/images/tab_hover.gif);
+}
+
+div.emptyNavigTab{
+	width:40px;
+}
+
+div.breadCrumbDiv{
+	position:relative;
+	background-color:#B4F616;
+	height:19px;
+	border-top:2px solid #A0DB14;
+	border-bottom:2px solid #A0DB14;
+	text-align:left;
+	padding-left:60px;
+}
+
+.breadCrumbDiv a, .breadCrumbDiv span, .breadCrumbDiv a:visited{	
+	font-weight: normal;	
+	font-size: 10px;	
+	color: #000000;
+	font-family: verdana, geneva, sans-serif;
+}
+
+.breadCrumbDiv a:hover{
+	text-decoration:none;
+}
+
+div.leftColumn, div.leftColumn50,div.leftColumn60,div.leftColumn100{
+	display: block;
+	width: 530px;
+	height:100%;
+	float: left;
+	background-color: #FFFFFF;
+	text-align: left;
+	margin: 0px 0px 0px 0px;
+	padding-left: 60px;
+	padding-right: 20px;
+	padding-bottom:10px;
+	padding-top:5px;
+}
+div.leftColumn50{
+	width: 400px;
+}
+div.leftColumn100{
+	width: 85%;
+}
+div.rightColumn, div.rightColumn50{
+	float: right;
+	background-color:#FFFFFF;
+	padding-left:12px;
+	padding-right:41px;
+	margin-right:0px;
+	/* how far down the smartbox should start: */
+	padding-top:0px;
+	width: 210px;
+	height: 100%;
+}
+div.rightColumn50{
+	width: 340px;
+	padding-right:41px;
+}
+div.rightColumn0{
+	width:0px;
+	display:none;
+}
+
+input.searchBox{
+	color: #666666;	
+	margin-bottom:1px;
+	font-size: 9px; 
+}
+input.searchBox{
+	/* border: 1px solid #FFFFFF;*/
+}
+input.searchButton,input.signupButton{
+	font-size: 9px; 
+	background-color: #C4C4C4; 
+	border-style:outset;
+	color:#000000;
+
+}
+.commentInputField{
+	font-family:  verdana, geneva, sans-serif; 
+	font-size:  10pt;
+	font-style:  normal;
+	font-weight:  normal;     					
+	background-color: #F9F9F9;
+	border: 1px solid #c3c3c3;
+	width: 100px;
+	padding: 2px;
+}
+
+/* .helpTextClass {
+	font-size: 150%;
+	font-family:"Times New Roman", Times, serif;
+	text-align:left;
+	color:#B7B7B7; 
+	background-color:#ffffff; 
+	layer-background-color:#ffffff;
+	position:absolute; 
+	top:845px; 
+	left:630px; 
+	width:130px; 
+	height:200px;
+	z-index:99; 
+	visibility:hidden;
+} */
+
+div.breadcrumb-box{	
+	padding-top: 8px;
+	padding-bottom: 8px;
+	padding-left: 8px;
+	padding-right: 8px;
+	text-align:left;
+	color: #000000;
+	font-weight: normal;	
+	font-size: 10px;	
+	font-family: verdana, geneva, sans-serif;
+	background-color: inherit;
+}
+
+div.threeLinks{
+	text-align: right;
+	margin-right:0px;
+	padding-top:20px;
+	/* ret denne når de to columns skal nedad: */
+	padding-bottom:25px;
+	padding-right:42px;
+}
+div.threeLinks a{
+	border-style:none !important;
+	text-decoration:underline;
+	border:none;
+	color:#000000;
+	/*margin-right:14px;*/
+}
+img.threeIcons{
+	vertical-align:middle;	
+	padding-right:2px;
+	border-style:none;
+	margin-left:14px;
+	border-style:none !important;
+}
+.authorImage{
+	border:2px dashed #C0C0C0;
+	padding:5px 5px 5px 5px;
+	margin:0px 0px 8px 8px;
+	display:block;
+}
+.authorImageWrapper{
+        float:right;
+        position:relative;
+        top:-31px;
+}
+div.footer{
+	/* this footer must be here, otherwise the page doesn't work in firefox */
+	width: 100%;
+	clear:both;
+}
+div.frameFooterDiv{
+	background-color:#FFFFFF;
+	background-image:url(/images/frameFooterDivBackground.gif);
+	background-position:bottom;
+	background-repeat:no-repeat;
+	width: 950px;
+	height:90%;
+	margin:0 auto; /*  in order to center the div; it's a hack (like everything else in css) */
+	padding-bottom:40px;
+	text-align:left;
+	line-height:85px;
+}
+
+div.pageInfo, div.pageChangelog, div.copyrightNotice{
+	font-size: 8pt;	
+	margin-top:0px;
+	text-align:left;
+	height:auto;
+	padding-left: 85px;
+	margin-right: 20px;
+	word-wrap: break-word;
+	overflow:hidden; /* only for mozilla because there is no break-word */
+	width:540px;
+	line-height:13px;
+}
+div.pageChangelog{
+ 	padding-top:13px;
+	padding-bottom:10px;
+}
+div.copyrightNotice{
+	/* only used on pages with pagelayout 100-column */		
+	height:auto;
+	background-color:none;
+	width:450px;
+}
+
+div.pageInfo h3, div.pageChangelog h3, div.copyrightNotice h3{
+	margin-top:2px;
+}
+div.referencesOnPage{
+	word-wrap: break-word;
+}
+div.relatedImages{
+	clear:both;
+}
+div.relatedPages, div.relatedPages h2{
+	margin-top:0px;
+}
+
+div.userContributedNotes{
+	clear:both;
+	padding-bottom:10px;
+	text-align:left;
+}
+div.frameFooterRightDiv{
+	height:auto;
+	background-color:none;
+	width:210px;
+	padding:0px 0px 0px 0px;
+	margin-right:30px;
+	float:right;
+}
+
+div.frameFooterLeftDiv{
+	/*float:left;*/
+	height:auto;
+	background-color:none;
+	margin: 0px 0px 0px 0px;
+	padding-left: 85px;
+	padding-right: 20px;
+	padding-bottom:10px;
+	padding-top:5px;
+	float:left;
+	width:450px;
+}
+div.siteFooter, .siteFooter a{
+	width: 100%;
+	clear:both;
+	padding-bottom:	10px;
+	padding-top:10px;
+	font-size:8pt;
+	color:#999999;
+	text-align:center;
+}
+
+/*
+-----------------------------------------------------------
+                the site changelog: 
+-----------------------------------------------------------
+*/
+.calPage, .calPageSmall {
+	color: #BDBDBD; 
+	float:left;  
+	font-size: 10px; 
+	text-shadow: #fff 1px 1px 1px; 
+	display: block; 
+	background: url(/images/date1.gif) 0 0 no-repeat;
+	text-align: center; 
+	text-transform: uppercase; 
+	line-height: 1; 
+	margin-top: 0; 
+	width: 35px; 
+	padding-top: 5px; 
+	top: 20px; 
+	left: -40px;
+}
+.calPage .day, .calPageSmall .daySmall {
+	display: block; 
+	font-weight: bold; 
+	font-size: 20px; 
+	text-indent: -3px; 
+	letter-spacing: -2px; 
+	color: #ddd;
+	text-shadow: #bbb 2px 2px 0; 
+	background: url(/images/date2.gif) bottom left no-repeat; 
+	padding-bottom: 5px;
+}
+.date, .calPage, .callPageSmall, .dateSmall {
+	/* the 3-letter month */
+	margin-bottom: 1em; 
+	font-size: 9pt; 
+	color: #8D8D8D;
+	font-weight:bold;
+}
+/* small version */
+.calPageSmall{
+	/* the 3-letter month small*/
+	font-size:9px;
+	color: #A8A8A8;
+	width: 26px; 
+	background: url(/images/date1_small.gif) 0 0 no-repeat;
+}
+.calPageSmall .daySmall{
+	font-size:15px;
+	background: url(/images/date2_small.gif) bottom left no-repeat;
+
+}
+.dateSmall{
+
+}
+div.siteChangelogEntry{
+	float:left;	
+	margin-bottom:8px;	
+	margin-top:8px;
+}
+.siteChangelogEntryText, .siteChangelogEntryTextFrontPage{
+	/* float may be left out */
+	float:right;
+	width:450px;
+	height:auto;
+	margin-left:40px;
+	padding-top:3px;
+	padding-bottom:1px !important; /* in order for the blue links underline (a border) to be displayed */
+	word-wrap: break-word;
+}
+.siteChangelogEntryTextFrontPage{
+	width:325px;
+	margin-left:35px;
+
+}
+/* ---------------------- end site changelog ------------------- */
+
+
+
+/* 
+-----------------------------------------------------------
+       Tags for indexes (like /references/authors/): 
+-----------------------------------------------------------
+*/
+.indexEntry{
+	margin-left: 25px;
+	margin-bottom:8px;
+	width:100%;
+	padding-bottom:1px; /* in order for the blue links underline (a border) to be displayed */
+}
+.indexOverview{
+	letter-spacing:7px;
+	margin-bottom:20px;
+	margin-top:12px;
+}
+
+.indexHeader{
+	font-weight:bold;
+	font-size:11pt;
+	background-image:url(/images/indexBackground.gif);
+	background-repeat:repeat-x;
+	background-position:center;
+	width:100%;
+	height:auto;
+	margin-top:25px;
+	margin-bottom:8px;
+	clear:both;
+}
+.indexHeader h1, .indexHeader h2, .indexHeader h3, .indexHeader .calendarHeading{
+	margin: 0px 0px 0px 0px;
+	padding: 0px 0px 0px 0px;
+	background-color:#FFFFFF;
+	width: 80px;
+	font-size:10pt;
+}
+.indexHeaderChar{
+	background-color:#FFFFFF;
+	padding: 0px 12px 0px 0px;
+}
+div.moreEventsOrNewsLink{
+	clear:both;
+	margin-bottom:20px;
+	margin-top:20px;
+	margin-left:76px;
+}
+
+/* 
+-----------------------------------------------------------
+                /calendar/ tags: 
+-----------------------------------------------------------
+*/
+
+.calendarMonth, .calendarDay, .calendarYear, .calendarEntryIsDeadline, .calendarEntryDeadline, .calendarEntryDate, .calendarEntryEvent, .calendarEntryPlace, .calendarEntryDeadline, .calendarMonth{
+
+}
+img.dateSeparator{
+	vertical-align:text-bottom;
+	float:left;
+}
+.calendarDay{
+	padding-bottom:5px;
+	float:left;
+
+}
+.calendarMonth{
+	display:block;
+}
+
+.calendarYear{
+	display:block;
+	clear:both;
+}
+
+.calendarEntry{
+
+}
+div.calendarEntryWrapNormal{
+	display:block;
+	/* margin-bottom:25px;	--> this is done via a spacer gif as firefox will not respond to this line */ 
+	clear:both;
+}
+.calendarEntryWrapDeadline{
+	display:none;
+	/*margin-bottom:25px;	--> this is done via a spacer gif as firefox will not respond to this line */
+	clear:both;
+}
+.calendarEntryDeadline{
+	margin-left:0px;
+	display:block;
+	/* here  */
+}
+
+.deadlineWrapper{
+	margin-left:0px;
+}
+.deadlineWrapper p{
+	margin-left:30px;
+	text-indent:-18px;
+	margin-top:0px;
+	margin-bottom:0px;
+	font-size:8pt;
+
+}
+.calendarEntryEvent{
+	float:right;
+	width:335px;
+}
+.calendarEntryEventFrontpage{
+	float:right;
+	width:325px;
+	margin-left:0px;
+}
+
+.calendarEntry img{
+	vertical-align: baseline !important;
+}
+.calendarEntryEventLink img{
+	vertical-align: top !important;
+}
+.calendarEntryDeadline img{
+	vertical-align: baseline !important;
+
+}
+.calendarEntryEventLink{
+	padding-bottom:1px;
+	padding-left:5px;
+	font-size:8pt;
+}
+.calendarEntryEventLink a{
+	font-size:8pt;
+	vertical-align:bottom;
+}
+.calendarEntryPlace{
+	float:right;width:100px;
+	text-align:left;
+	margin-left:20px;
+}
+.calPageSmallMonth{
+	/* border-bottom:none !important; */
+	font-weight: bold; 
+	text-indent: 0px; 
+	letter-spacing: -1px; 
+	color: #9F9F9F; 
+	text-shadow: #bbb 2px 2px 0;
+}
+a.calendarDateAnchor{
+	text-decoration: none;
+	/* border-bottom:none !important; */
+	border-style:none !important;
+	font-weight: bold; 
+	font-size: 14px; 
+	text-indent: 0px; 
+	letter-spacing: -1px; 
+	color: #9F9F9F; 
+	text-shadow: #bbb 2px 2px 0;
+}
+.indexHeader .calendarHeading{
+	background-color:#FFFFFF;
+	width: 70px;
+	color:#4E4E4E;
+
+}
+.deadlineRed{
+	color:#CC3333;
+}
+div.calendarInfoText{
+	display:none;
+	
+}
+
+/* 
+-----------------------------------------------------------
+        The box jonas spent a whole night programming: 
+-----------------------------------------------------------
+*/
+div.smartBox {
+        width: 99%;
+        height:100%;
+        padding: 0px 0px 0px 0px;
+        margin: 10px 0px 30px 0px;
+}
+
+div.topBorder{
+	width: 100%;
+	height: 9px;
+	line-height:0px;
+	padding: 0px 0px 0px 0px;
+	margin: 0px 0px 0px 0px;
+	float:left;
+	background:url(/images/topFill.gif) repeat-x bottom;
+	border: 0px 0px 0px 0px;
+}
+
+div.topLeft {
+	width: 9px;
+	height: 9px;
+	float:left;
+	padding: 0px 0px 0px 0px;
+	margin: 0px 0px 0px 0px;
+}
+
+div.topRight{
+	float: right;
+	width: 9px;
+	height: 9px;
+	padding: 0px 0px 0px 0px;
+	margin: 0px 0px 0px 0px;
+}
+
+div.smartFill{
+	height: 100%;
+	width:auto;
+	text-align:left;
+	padding:5px 15px 5px 15px;
+	background-color: #F7F7F7;
+	border-bottom: 1px solid #F7F7F7;
+	border-left: 1px solid #B7B7B7;
+	border-right: 1px solid #B7B7B7;
+	font-size:8pt;
+	line-height:150%;
+}
+
+div.smartFillGoogle{
+	height: 100%;
+	width:auto;
+	text-align:left;
+	padding:5px 15px 5px 15px;
+	background-color: #F7F7F7;
+	border-bottom: 1px solid #F7F7F7;
+	border-left: 1px solid #B7B7B7;
+	border-right: 1px solid #B7B7B7;
+	font-size:12pt;
+	line-height:200%;
+}
+
+div.smartFillGoogle p{
+	margin-top:0px;
+	font-size:12pt;
+	line-height:200%;
+}
+
+div.smartFill p{
+	margin-top:0px;
+	font-size:8pt;
+	line-height:150%;
+}
+div.smartFill h2, h3{
+	margin-top:8px;
+	margin-bottom:6px;	
+}
+
+div.bottomBorder{
+	width: 100%;
+	height: 9px;
+	line-height:0px;
+	padding: 0px 0px 0px 0px;
+	margin: 0px 0px 0px 0px;
+	float:left;
+	background:url(/images/bottomFill.gif) repeat-x bottom;
+	border: 0px 0px 0px 0px;
+}
+
+div.bottomLeft {
+	width: 9px;
+	height: 9px;
+	float:left;
+	padding: 0px 0px 0px 0px;
+	margin: 0px 0px 0px 0px;
+}
+
+div.bottomRight{
+	float: right;
+	width: 9px;
+	height: 9px;
+	padding: 0px 0px 0px 0px;
+	margin: 0px 0px 0px 0px;
+}
+
+/* 
+-----------------------------------------------------------
+                Miscellaneous tags: 
+-----------------------------------------------------------
+*/
+div.wrapInVisibleDiv{
+	border: 3px solid #009933;
+	padding:4px 4px 4px 4px;
+	margin-top:5px;
+	width:auto;
+	display:compact;
+	word-wrap:break-word;
+}
+div.dottedBox{
+
+	border:2px; 
+	border-style:dotted; 
+	border-color: #CCCCCC;
+	padding:5px 5px 5px 5px;
+	margin-left:30px; 
+	margin-top:4px;
+	margin-bottom:20px;
+	float: left; 
+	word-wrap:break-word;
+	clear:both;
+}
+.siteMapDiv, .siteMapDiv img{
+	margin: 0px 0px 0px 0px;
+	vertical-align:middle;
+}
+.siteMapDiv .dirName{
+	color:#666666;
+	font-family:"Courier New", Courier, mono, monospace;
+}
+.bibliographyBrowser {
+list-style-type: none;
+}
+.bibliographyBrowser li{
+	margin-bottom:2px;
+	text-indent:-35px;
+}
+input.greenButton, input.redButton{
+	/* border: 2px solid green;
+	padding: 2px 2px 2px 2px;*/
+	color: #009900;
+	font-weight:bold;
+	letter-spacing:2px;
+	font-family:"Courier New", Courier, mono, monospace;
+}
+input.redButton{
+	/*border: 2px solid red;
+	padding: 2px 2px 2px 2px;*/
+	color: red;
+}
+
+.standardSmallestSizeInput{
+	width:35px;
+}
+.standardSmallerSizeInput{
+	width:55px;
+}
+.standardSizeInput{
+	width:210px;
+}
+.standardLargerSizeInput{
+	width:400px;
+}
+
+.standardLargestSizeInput{
+	width:500px;
+}
+
+div.addNote{
+	float:right;
+	border: 5px solid #EEEEEE;
+	border-top:none;
+	padding: 5px 5px 5px 5px;	
+	clear:both;
+	display:block;
+}
+.addNote a{
+
+}
+a.viewMore{
+	color: #0040b6;
+	border-bottom: dashed #cccccc 1px;
+	text-decoration:none;
+	line-height:20px;
+}
+
+.smallText{
+	font-weight: normal; 
+	font-size: 8pt;
+	font-family: verdana, helvetica, arial, sans-serif; 
+}
+.imagebox {  
+	/* For the "related images" section of each page */
+	border: 3px #EEEEEE solid;
+	padding:5px;
+	margin: 0px 0px 0px 0px;
+}
+.imageTable{
+	width:100%;
+
+}
+div.emailToFriendHeading{
+	margin: 0px 0px 0px 0px;
+	color: #008000;
+	font-weight:bold;
+	width: 530px;
+	overflow:hidden;
+	white-space:nowrap;
+}
+div.emailToFriendHeading span{
+	color: #000000;
+}
+div.emailToFriendSubHeading{
+	margin: 0px 0px 10px 0px;
+	font-size:8pt;
+	width: 530px;
+	overflow:hidden;
+	white-space:nowrap;
+}
+div.emailToFriendSubHeading span{
+	
+}
+.blink{
+	text-decoration:blink;
+}
+td.QA{
+	vertical-align:top;
+}
+div.figure {
+        /* width: 25%; */
+        border: thin silver solid;
+        margin: 0.5em;
+        padding: 0.5em;
+        text-align: center
+}
+ul,li,ol{
+	line-height:150%;
+}
+ul.specialBullets {
+		line-height: 18px;
+		margin-top: 0;
+		list-style: url(/images/bullet.gif); 
+	}
+	
+p, .commentContent{ 
+        line-height:150%;
+	margin-top: 0;
+        margin-bottom: 10px;
+	font-family:  verdana, geneva, sans-serif;       				
+	font-size:  10pt;      					    					
+	font-weight:  normal;     					
+	color: #000000;     					
+}          				
+p.left-alignet{
+        text-align: left;
+	color: #000000; 
+	font-style: italic;
+}
+p.hoejre-alignet{
+    font-size: 10px;
+	text-align: right;
+	color: #FFFFFF; 
+}
+hr{
+margin-top:5px;
+margin-bottom:10px;
+}
+.rememberMeLabel{
+vertical-align:40%;
+color:#A5A5A5;
+}
+.howToCiteTableImage{
+display:block;
+}
+/*
+-----------------------------------------------------------
+                Styles for references: 
+-----------------------------------------------------------
+*/
+.referencer{
+	margin-left: 20px;
+	text-indent: -20px;
+	
+}
+.referencer, .referencer .Refer, .referencer .BibTex, .referencer .Standard, .referencer .MLA, .referencer .APA{
+	margin-top: 0px;
+	margin-bottom: 2px;
+	
+}
+.referencer .Standard, .referencer .MLA, .referencer .APA{
+  /*  */
+}	
+.referencer .Refer, .referencer .BibTex{
+	font-family: "Courier New", Courier, mono, monospace;	
+	font-size:12px;
+}
+.referencer .Refer{
+	margin-left: -20px;
+	text-indent:0px;
+	margin-bottom:20px;
+	display:block;
+}
+
+/*                */
+.howToCiteTable {
+	width: 442px;
+}
+.howToCiteTable, .howToCiteTable td, .howToCiteTable tr,.howToCiteTable img{
+	margin: 0px;
+	padding: 0px;
+	border-collapse:collapse;
+	border-spacing:none;
+}
+.howToCiteTableInnerDiv{
+	width:326px;
+	word-wrap:break-word;
+	overflow:hidden;
+}
+
+/*
+-----------------------------------------------------------
+                Form fields: 
+-----------------------------------------------------------
+from http://realworldstyle.com/forms.html
+*/
+hr.forms{
+	clear:both;
+	width:100%;
+	border-style:dashed;
+	color:#CCCCCC;
+	text-align:center;
+}
+div.formWrapper{
+	width: 100%; 
+	/*border: 1px dotted #333;*/
+}
+div.row {
+  clear: both;
+  padding-top: 10px;
+  }
+
+div.row span.label {
+  float: left;
+  width: 80px;
+  text-align: right;
+  vertical-align:middle;
+  font-size: 8pt;
+	height:auto;
+  }
+div.row span.formw {
+  float: left;
+  width:419px;
+  text-align: left;
+  padding-left:10px;
+  vertical-align:top;
+	font-size: 8pt;
+	height:auto;
+	/*border:1px solid grey;*/
+
+  } 
+div.spacer {
+  clear: both;
+  }
+span.nobr {
+	white-space: nowrap;
+}
+  
+.submissionDeadline{
+	display:inline;
+}
+
+/*
+-----------------------------------------------------------
+                Styles for the FAQ: 
+-----------------------------------------------------------
+*/
+.fakeLink {
+/* should be the same as a normal link */
+	color: #0040b6;
+	border-bottom: dashed #cccccc 1px !important;
+	text-decoration:none;
+	cursor:hand;cursor:pointer;
+}
+.fakeLink:hover {
+	text-decoration:none;
+	color: #000000;
+	border-bottom: dotted #999999 1px;
+	background-color:#ACDBFF;
+}
+.QA {font: normal 18pt arial, helvetica,tahoma; color: #cccccc; width: 16px}
+.question {font-weight: bold; margin: 0; padding: 3px; font-size: 10pt}
+.answer {font-weight: normal; background: #EFEFEF;  margin: 0; padding: 3px; font-size: 10pt; word-wrap:break-word;}
+
+
+
+/*
+-----------------------------------------------------------
+                Styles for the administration system: 
+-----------------------------------------------------------
+*/
+
+fieldset.newReference{
+	margin-left:10px;
+}
+
+/*
+                           --------------- <-- top
+                             top margin
+                           ---------------
+                             top border
+                           ---------------
+                            top padding
+                           +-------------+ <-- inner top
+|        |        |        |             |         |         |         |
+|--left--|--left--|--left--|-- content --|--right--|--right--|--right--|
+| margin | border | padding|             | padding | border  | margin  |
+|        |        |        |             |         |         |         |
+                           +-------------+ <-- inner bottom
+^                          ^             ^                             ^
+left         left inner edge             right inner edge          right
+outer                                                              outer
+edge                        bottom padding                          edge
+                           ---------------
+                             bottom border
+                           ---------------
+                             bottom margin
+                           --------------- <-- bottom
+*/

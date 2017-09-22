@@ -1,0 +1,817 @@
+/* 
+	Fonts and control
+*/
+
+body {
+	font-family: Verdana, Arial, Geneva, Verdana, Helvetica, sans-serif;
+	font-size: 9pt;
+	line-height: 16px;
+	padding: 0px;
+	margin: 0px;
+}
+
+h1 {
+	font-size: 18px;
+	padding: 0px;
+	margin: 5px 0px 2px 0px;
+	color: #28456E;	
+	line-height: 22px;
+}
+
+#banner h1 {
+	font-size: 18px;
+	padding: 0px;
+	margin: 5px 0px 2px 4px;
+	color: #FFFFFF;	
+	line-height: 22px;
+}
+
+
+h2 {
+	font-size: 16px;
+	margin: 10px 0px 2px 0px;	
+	color: #28456E;	
+}
+
+h3 {
+	font-size: 14px;
+	margin: 20px 0px 2px 0px;
+	text-decoration: none;	
+	color: #28456E;	
+}
+
+.normal h3 {
+	color: #000;
+	margin: 0px 0px 2px 0px;	
+	border: 1px solid green;
+}
+
+
+td { 
+   font-size: 9pt; 
+} 
+
+td h3 {
+	font-size: 14px;
+	margin: 4px 0px 2px 0px;
+	text-decoration: none;	
+	color: #28456E;	
+}
+
+
+
+h4 {
+	font-size: 12px;
+	font-weight: bold;
+	margin: 10px 0px 2px 0px;
+	text-decoration: underline;	
+	color: #28456E;	
+}
+
+
+a {
+	text-decoration: none;
+	border-bottom-style: dashed;
+	border-bottom-width: 1px;
+	border-bottom-color: #7D4900;
+	color: #7D4900;
+}
+
+h3.normal a {
+	color: #000;
+}
+
+h3.normal a:visited {
+	color: #000;
+}
+
+
+a:hover {
+	color: #28456E;
+	background: #E3E3E3;
+}
+
+a:visited {
+	color: #28456E;
+	background-color: inherit;
+}
+
+
+ul {
+	margin-top: -2px;
+}
+
+ul.normal {
+	margin-top: 10px;
+	/*margin-left: 10px; */
+}
+
+ul.tight {
+	margin-top: 2px;
+	margin-left: 10px;
+}
+
+ul.tight li.icon {
+	margin-left: 20px;
+	margin-right: 2px;
+	list-style-image: url(../../images/icon_picture.gif);	
+}
+
+ul.tight li.no_icon {
+	margin-left: 20px;
+	margin-right: 11px;
+	list-style-image: url(../../images/25x1.gif);	
+}
+
+
+li.news {
+	list-style: none;
+	list-style-type: none;
+}
+
+ul.normal li {
+	border: 0;
+	display: compact;
+}
+
+.white {
+	color: white;
+}  
+
+
+
+a.white, white {
+	color: white;
+}  
+
+a:hover.white {
+	background-color: #4d4d4d;
+	color: white;
+	font-weight: inherit;
+	letter-spacing: inherit;
+}
+  
+a:visited.white {
+	color: white;
+	font-weight: normal;
+}
+
+
+
+p {
+	margin-top: 12px;
+	margin-bottom: 10px;
+	margin-left: 0px;
+	margin-right: 0px;
+}
+
+.copyright {
+	font-size: 9px;
+	text-align: right;
+	color: white;
+}
+
+acronym, abbr { 
+	border-bottom: 1px dotted #666; 
+	cursor: help; 
+}
+
+.by-line {
+	font-weight: bold;
+	text-transform: uppercase;
+}
+
+.separator {
+	/* border-bottom: 2px dashed maroon; */
+	text-decoration: underline;
+	z-index: 0;
+}
+
+
+.caption {
+	font-size: 8pt;
+	font-style: italic;
+}
+
+.citation 
+{
+    text-align: right;
+    float: right;
+    font-style: italic;
+}
+
+
+.xhtml a {
+	text-decoration: none;
+	background-color: transparent;
+	border: 0;
+}
+
+.xhtml a:hover {
+	text-decoration: none;
+	background-color: transparent;
+}
+
+.no-hover a:hover {
+	background-color: transparent;
+}
+
+
+form {
+	margin: 2px;
+	padding: 2px;
+}
+
+.input {
+	background-color: white;
+	font-size: 9pt;
+	border: 1px solid black;
+	margin: 0px;
+	margin-top: 2px;
+	padding: 2px;
+	padding-left: 4px;
+	padding-right: 4px;
+	text-align: center;	
+	color: #000;
+	width: auto;
+}
+
+.search-field {
+	width: 110px;
+	margin: 0px;
+}
+
+
+.non-breaking {
+	white-space: nowrap;
+}
+
+.right {
+	text-align: right;
+}
+
+
+.Small {
+	font-size: 8pt;
+}
+
+.small {
+	font-size: 8pt;
+}
+
+
+.info-table {
+	border: 0px solid #6180A0;
+}
+
+.info-table td {
+	border: 1px solid #6180A0;	
+	padding: 2px;
+	margin: 2px;
+}
+
+.info-table tr {
+	background-color: rgb(235, 235, 235);
+}
+
+.table-grey {
+	border: 1px solid #000;
+	background-color: #f2f2f2;
+}
+
+
+.table-clean {
+	border: 0px;
+	background-color: inherit;
+}
+
+
+.table-clean td {
+	border: 0px;
+	background-color: inherit;
+}
+
+.info-box {
+	width: 90%;
+	background-color: rgb(235, 235, 235);
+	padding: 5px;
+}
+
+
+.no-format {
+	border: 0;
+	background-color: inherit;	
+}
+
+.no-format td {
+	border: 0;
+	background-color: inherit;
+}
+
+
+.highlight {
+	/* 	Used for color coding in tables	*/
+	color: #cc0000;
+	background-color: inherit;
+}
+
+.print-header {
+	display: none;
+}
+
+
+.progress_bar {
+	background: white;
+	border: 1px solid #000000;
+	width: 300px;
+	padding: 1px;
+}
+
+
+.black-box {
+	background: white;
+	border: 1px solid #000000;
+	padding: 5px;
+	width: 400px;
+}
+
+
+.black-border {
+	margin-top: 5px;
+	background: #f9f9f9;
+	border: 1px solid #000000;
+	padding: 5px;
+	width: 350px;
+}
+
+.black-border h3 {
+	margin-top: 0px;
+}
+
+.emp {
+	background: #ccffff;
+	color: black;
+}
+
+
+/***************************************
+Layout elements
+***************************************/
+
+		#container {
+			width: 760px;
+			\width: 780px;
+			w\idth: 760px;
+
+			border-left: 0px solid #c0c0c0;
+			border-right: 0px solid #c0c0c0;			
+			border-bottom: 0px solid #c0c0c0;
+			border-top: 0px solid #c0c0c0;
+
+			margin: 10px;
+			margin-left: auto;
+			margin-right: auto;
+			padding: 0px;
+			padding-top: 2px;
+		}
+
+		#banner {
+			padding: 0px;
+			margin: 0px;
+			margin-top: 0px;
+			margin-bottom: 2px;
+			margin-left: 0px;
+			margin-right: 0px;
+
+			background-color: #fff;
+			
+			height: 190px;
+			border: 0px solid #000;
+
+			/* background-image: url(/about/layout/includes/jolahaus.gif); */
+			background-image: url(/about/layout/includes/header5.gif);
+			background-repeat: no-repeat;
+			background-position: top left;
+		}
+
+	
+		#content {
+			padding-top: 2px;
+			padding-left: 10px;
+			padding-right: 15px;
+			padding-bottom: 10px;
+			margin: 0px;
+			margin-left: 153px;
+			margin-right: 2px;
+			background-color: white;
+			border-left: 1px solid #c0c0c0;
+			border-right: 1px solid #c0c0c0;
+		}
+
+		#sidebar-a {
+			float: left;
+			width: 145px;
+			\width: 145px;
+			w\idth: 145px;
+			margin: 0;
+			margin-right: 0px;
+			padding: 2px;
+			/* background-color: rgb(235, 235, 235); */
+		}
+
+
+		#sidebar-b {
+			float: right;
+			border: 0;
+			background-color: rgb(255, 255, 255);
+			margin: -3px -6px 2px 10px;
+			padding: 5px;
+			/*width: 148px; */
+			width: 145px;
+			\width: 145px;
+			w\idth: 145px;
+		}
+
+
+		#footer {
+			clear: both;
+			padding: 0px;
+			/* margin-top: 2px; */
+			margin: 2px;
+			/* background-color: rgb(213, 219, 225); */
+			/* background-color: #cc0000; */
+			/* background-color: #284569;	*/
+			/* background-color: #e3e3e3; */
+			background-color: #fff;
+			height: 42px;
+			border-top: 1px solid #6180A0;			
+		}
+
+		
+
+/*************************************
+Item elements - such as book of the week etc.
+*************************************/
+		
+.item_box {
+	border-style: solid;
+	border-width: 1px;
+	border-color: #c0c0c0;
+	background-color: rgb(235, 235, 235);
+	margin: 4px 0px 2px 0px;
+	padding: 5px;
+	/*clear: both; */
+	width: 135px;
+}		
+
+.item_box h4 {
+	margin: -3px -3px 4px -3px;
+	padding: 2px 2px 2px 4px;
+	background-color: #6180A0;
+	/* background-color: #DF2020; jóladæmi */
+	color: white;
+	text-decoration: none;
+	text-align: left;
+}
+
+.item_box a {
+	border: 0px;
+	text-decoration: none;
+}
+
+.item_box h4 a {
+	color: #ffffff;
+}
+
+.item_box h4 a:hover {
+	color: #ffffff;
+	background-color: #6180A0;	
+}
+
+
+.item_box h4 a:visited {
+	color: #ffffff;
+	background-color: transparent;
+}
+
+
+.item_box form {
+	margin: 0px;
+}
+
+
+
+
+
+#breadcrumbs {
+	background-color: #ffffff;
+	display: block;
+	padding: 2px 2px 4px 14px;
+	margin: 2px -2px 0px -4px;
+	clear: both;
+	height: 16px;
+	font-size: 8pt;
+}
+
+
+.photo-box {
+	border: 1px dashed #000;
+	width: auto;
+	/* float: left; */
+	text-align: center;
+	margin: 5px;
+	margin-bottom: 10px;
+	padding: 4px;
+	width: 150px;
+}
+
+
+/*************************************
+Menu CSS - top level
+*************************************/
+
+ #navcontainer {
+	margin: 129px 2px 2px 2px;
+	padding: 0;
+	height: 19px;
+	background: #E3E3E3;
+	border-bottom: 1px solid #6180A0;
+}
+
+#navcontainer ul {
+	border: 0;
+	margin: 0;
+	margin-top: 0px;
+	padding: 0;
+	list-style-type: none;
+	text-align: center;
+	
+}
+
+#navcontainer ul li {
+	display: block;
+	float: left;
+	text-align: center;
+	padding: 0;
+	margin: 0;
+}
+
+#navcontainer ul li a {
+	background: #E3E3E3;
+	color: #000000;
+	
+	width: 70px;
+	height: 19px;
+	border-top: none;
+	border-right: 1px solid #6180A0;
+	border-bottom: 0px solid #6180A0;
+	border-left: none;
+	padding: 0;
+	margin: 0 0 0px 0;
+	text-decoration: none;
+	display: block;
+	text-align: center;
+	font: normal 10px/18px verdana, lucida, sans-serif;
+}
+
+#navcontainer ul li a:hover {
+	color: #000;
+	background: #fff;
+	width: 70px;
+	height: 19px;
+	display: block;
+	text-align: center;
+	border-top: none;
+	border-right: 1px solid #6180A0;
+	border-bottom: 0px solid #6180A0;
+	padding: 0;
+	margin: 0 0 0px 0;
+	text-decoration: none;
+	
+}
+
+#navcontainer a:active	{
+	background: #c60;
+	color: #fff;
+}
+
+#navcontainer li#active a	{
+	background: #c60;
+	border: 1px solid #000;
+	color: #fff;
+}
+
+/* CSS menu ends */		
+
+
+
+/*************************************
+Menu CSS - submenu level
+*************************************/
+
+ #submenu {
+	margin: 4px 0px 2px 0px;
+	padding: 5px;
+	border-style: solid;
+	border-width: 1px;
+	border-color: #c0c0c0;
+	background-color: rgb(235, 235, 235);
+	width: 135px;
+	text-decoration: none;
+}
+
+#submenu h4 {
+	margin: -3px -3px 4px -3px;
+	padding: 2px 2px 2px 4px;
+	/* background-color: #6180A0;	/*Falið yfir jólin*/
+	background-color: #DF2020;
+	color: white;
+	text-decoration: none;
+	text-align: left;
+	text-transform: none;
+}
+
+#submenu h4 a {
+	color: #ffffff;
+	text-decoration: none;
+}
+
+
+
+#submenu ul	{
+	border: 0;
+	margin: 0;
+	padding: 0;
+	list-style-type: none;
+	text-align: left
+}
+
+#submenu ul li {
+	text-align: left;
+	padding: 0;
+	margin: 2px;
+	border: 0px;
+	display: inline;
+}
+
+#submenu ul li a {
+	padding: 1px;
+	margin: 1px 0 2px 0;
+	border: 0px;
+	color: #7D4900; 
+	text-decoration: none;
+	text-align: left;
+	font-weight: normal;
+	display: block;
+}
+
+#submenu ul li a:hover {
+	color: #930; 
+	background: #E3E3E3;
+}
+
+#submenu a:active {
+	background: #c60;
+	color: #fff;
+}
+
+#submenu li#active a {
+	background: #c60;
+	color: #fff;
+}
+
+#submenu .explanation {
+	font-size: 9px;
+	color: black;
+	background-color: white;
+	
+}
+
+
+/* CSS menu ends */
+
+
+
+
+
+
+
+/*************************************
+Menu CSS - footer menu
+*************************************/
+
+#footer_navcontainer {
+	margin: 0px 0px 0px 0px;
+	padding: 0;
+	height: 20px;
+	background: #E3E3E3;	
+	border-bottom: 1px solid #6180A0;
+	border-top: 0px solid #6180A0;			
+	text-decoration: none;	
+	font: normal 10px/18px verdana, lucida, sans-serif;	
+}
+
+
+#footer_navcontainer ul {
+	border: 0;
+	margin: 0;
+	padding: 0;
+	list-style-type: none;
+	text-align: center;
+}
+
+#footer_navcontainer ul li {
+	display: block;
+	float: left;
+	text-align: center;
+	padding: 0;
+	margin: 0;
+}
+
+#footer_navcontainer ul li a	{
+	background: #E3E3E3;
+	color: #000000;
+	width: 70px;
+	height: 20px;
+	border-right: 1px solid #6180A0;
+	padding: 0;
+	margin: 0 0 0px 0;
+	text-decoration: none;
+	display: block;
+	text-align: center;
+}
+
+#footer_navcontainer ul li a:hover {
+	background: #fff;
+	color: #000;
+	width: 70px;
+	height: 20px;
+	border-right: 1px solid #6180A0;
+	padding: 0;
+	margin: 0 0 0px 0;
+	text-decoration: none;
+	display: block;
+	text-align: center;
+}
+
+#footer_navcontainer a:active {
+	background: #c60;
+	color: #fff;
+	text-decoration: none;
+}
+
+#footer_navcontainer li#active a {
+	background: #c60;
+	/* border: 1px solid #c60; */
+	border: 1px solid #000;
+	color: #fff;
+	text-decoration: none;	
+}
+
+
+#footer_copyright {
+	/* background-color: 1px solid #6180A0;
+	*/
+	margin-top: 2px;
+	padding-top: 2px;
+	background: #6180A0;
+	height: 20px;
+	color: #fff;
+	font-size: 0.8em;
+	text-align: center;
+}
+
+/* CSS menu ends */		
+
+
+.ct_info {
+	border: 1px dashed #d1d1d1;
+	width: 390px;
+	padding: 5px;
+	margin: 10px 0px 10px 0px;
+}
+
+.ct_info_header {
+	color: Maroon; 
+	/* font-weight: bold; */
+	float: right;	
+	font-size: 0.8em;
+}
+
+.ct_info_header_new {
+	color: Maroon; 
+	font-weight: bold;
+	font-size: 0.9em;
+}
+
+
+div.merchant_info {
+	float: left;
+	padding: 5px 10px 5px 0px;
+	border: 0px;
+	width: 130px;
+	border: 0px solid red;
+}
+
+
+

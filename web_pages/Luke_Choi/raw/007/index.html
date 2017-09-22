@@ -1,0 +1,1394 @@
+<!--------------------------------------------------------------------------------->
+<!-- * Program Name - Sepal's SPBOARD PRO v2.0                                  -->
+<!-- * Programmer - Se-yoon Kim (sepal@spfamily.com, madgf@hanmail.net)          -->
+<!-- * Website - http://www.spfamily.com or http://sepal.woorizip.com            -->
+<!-- * Last Update - 2003.09.14                                                  -->
+<!--                                                         * made in KOREA *   -->
+<!--------------------------------------------------------------------------------->
+<html>
+<head><title> ::: SPBOARD PRO :::</title>
+<meta http-equiv=Content-Type content=text/html; charset="ISO-8859-1">
+<style type='text/css'>
+<!--
+A:link {color:#4F4F96;font-size:9pt;text-decoration:none;}
+A:visited {color:#4F4F96;font-size:9pt;text-decoration:none;}
+A:active {color:#090909;font-size:9pt;text-decoration:underline;}
+A:hover {color:#090909;font-size:9pt;text-decoration:underline;}
+p,br,body,td,form,div {color:#ffffff;font-size:9pt;font-family:Arial;}
+select,textarea,input {font-size:9pt;font-family:Arial;}
+.cont{line-height:140%}
+.small {font-size:8pt;font-family:tahoma;letter-spacing:0px;}
+.dwarf {font-size:7pt;font-family:tahoma;}
+.input {color:#000000; background-color:#ffffff; padding-top:3; border-width:1; border-color:#ffffff; border-style:solid; font-size:9pt;}
+.submit {font-size:9pt; font-family:Arial; border-style:ridge; background-color:#f3f3f3; border-width:1pt; border-top-color:#ffffff; border-right-color:#eeeeee; border-bottom-color:#eeeeee; border-left-color:#ffffff;}
+-->
+</style>
+<script language="JavaScript">
+<!--
+	function newin(width,height,url,name) {
+		msgWindow=window.open(url,name,'statusbar=no,scrollbars=yes,status=yes,resizable=yes,width='+width+',height='+height)
+	}
+
+	function view_img(width,height,url,name) {
+		msgWindow=window.open(url,name,'location=no,left=0,top=0,statusbar=no,scrollbars=no,status=no,resizable=no,width='+width+',height='+height)
+	}
+
+	function clearField(field){
+		if (field.value == field.defaultValue) {
+			field.value = "";
+		}
+	}
+
+	function checkField(field){
+		if (field.value == "") {
+			field.value = field.defaultValue;
+		}
+	}
+//-->
+</script>
+<!-- ·¹ÀÌ¾î ºÎºÐ ÀÚ¹Ù½ºÅ©¸³Æ®-->
+
+		<SCRIPT LANGUAGE='javascript'>				 
+			ns4 = (document.layers)? true:false
+			ie4 = (document.all)? true:false
+			ns = false
+
+			if (ie4) {
+				if (navigator.userAgent.indexOf('MSIE 5')>0 || navigator.userAgent.indexOf('MSIE 6')>0) {
+					ie5 = true;
+				} 
+				else {
+					ie5 = false; 
+				}
+			} 
+			else { 
+				ie5 = false; 
+			}
+
+			var width = 230;
+			var border = "0";
+			var offsetx = 4;
+			var offsety = 4;
+			var fontstyle = "font-size:9pt;";
+			var capfontstyle = "font-size:10pt;";
+			var snow = 0;
+			var x = 0;
+			var y = 0;
+			var tmpX, tmpY;
+			var newWin = null;
+			var doc_width=800, doc_height=600;
+			var curdiv = 0;
+
+			function mousemove(e) {
+				if (ns4) {x=e.pageX; y=e.pageY}
+				if (ie4) {x=event.x; y=event.y}
+				if (ie5) {x=event.x+document.body.scrollLeft; y=event.y+document.body.scrollTop;}
+
+				tmpX = (doc_width-x-offsetx-width < 0) ? (doc_width-width):(x+offsetx);
+
+				if (curdiv==1) moveTo(over1,tmpX,y+offsety)
+else if(curdiv==2) moveTo(over2,tmpX,y+offsety)
+else if(curdiv==3) moveTo(over3,tmpX,y+offsety)
+else if(curdiv==4) moveTo(over4,tmpX,y+offsety)
+else if(curdiv==5) moveTo(over5,tmpX,y+offsety)
+else if(curdiv==6) moveTo(over6,tmpX,y+offsety)
+else if(curdiv==7) moveTo(over7,tmpX,y+offsety)
+else if(curdiv==8) moveTo(over8,tmpX,y+offsety)
+else if(curdiv==9) moveTo(over9,tmpX,y+offsety)
+else if(curdiv==10) moveTo(over10,tmpX,y+offsety)
+else if(curdiv==11) moveTo(over11,tmpX,y+offsety)
+else if(curdiv==12) moveTo(over12,tmpX,y+offsety)
+else if(curdiv==13) moveTo(over13,tmpX,y+offsety)
+else if(curdiv==14) moveTo(over14,tmpX,y+offsety)
+else if(curdiv==15) moveTo(over15,tmpX,y+offsety)
+else if(curdiv==16) moveTo(over16,tmpX,y+offsety)
+else if(curdiv==17) moveTo(over17,tmpX,y+offsety)
+else if(curdiv==18) moveTo(over18,tmpX,y+offsety)
+else if(curdiv==19) moveTo(over19,tmpX,y+offsety)
+else if(curdiv==20) moveTo(over20,tmpX,y+offsety)
+else if(curdiv==21) moveTo(over21,tmpX,y+offsety)
+else if(curdiv==22) moveTo(over22,tmpX,y+offsety)
+else if(curdiv==23) moveTo(over23,tmpX,y+offsety)
+else if(curdiv==24) moveTo(over24,tmpX,y+offsety)
+else if(curdiv==25) moveTo(over25,tmpX,y+offsety)
+else if(curdiv==26) moveTo(over26,tmpX,y+offsety)
+else if(curdiv==27) moveTo(over27,tmpX,y+offsety)
+else if(curdiv==28) moveTo(over28,tmpX,y+offsety)
+else if(curdiv==29) moveTo(over29,tmpX,y+offsety)
+else if(curdiv==30) moveTo(over30,tmpX,y+offsety)
+else if(curdiv==31) moveTo(over31,tmpX,y+offsety)
+else if(curdiv==32) moveTo(over32,tmpX,y+offsety)
+else if(curdiv==33) moveTo(over33,tmpX,y+offsety)
+else if(curdiv==34) moveTo(over34,tmpX,y+offsety)
+else if(curdiv==35) moveTo(over35,tmpX,y+offsety)
+else if(curdiv==36) moveTo(over36,tmpX,y+offsety)
+else if(curdiv==37) moveTo(over37,tmpX,y+offsety)
+else if(curdiv==38) moveTo(over38,tmpX,y+offsety)
+else if(curdiv==39) moveTo(over39,tmpX,y+offsety)
+else if(curdiv==40) moveTo(over40,tmpX,y+offsety)
+
+			}
+
+			window.document.onmousemove = mousemove;
+			if (ns4) document.captureEvents(Event.MOUSEMOVE)
+
+			function ShowToolTip(overDiv) {
+				if(ns4) {
+					doc_width=self.innerWidth;
+					doc_height=self.innerHeight;
+				}
+				else {
+					if(ie4) {
+						doc_width=document.body.clientWidth;
+						doc_height=document.body.clientHeight;
+					}
+				}
+				moveTo(overDiv,tmpX,y+offsety);
+				if (ns4) overDiv.visibility = "show"
+				else if (ie4) overDiv.visibility = "visible";
+			}
+
+			function HideToolTip(overDiv) {
+				if (ns4) overDiv.visibility = "hide"
+				else if (ie4) overDiv.visibility = "hidden";
+			}
+
+			function 	disp(overDiv) {
+				if ( (ns4) || (ie4) ) {
+					if (snow == 0) {
+						moveTo(overDiv,tmpX,y+offsety);
+						showObject(overDiv);
+						snow = 1;
+					}
+				}
+			}
+
+			function SetCurrDiv(scd) {
+				curdiv = scd;
+			}
+
+			function moveTo(obj,xL,yL) {
+				obj.left = xL;
+				obj.top = yL;
+			}
+
+			function nd(overobj) {
+				if ( (ns4) || (ie4) ) {
+					snow = 0;
+					hideObject(overobj);
+				}
+			}
+
+			function high(which2) {
+				if (window.lowlighting) clearInterval(lowlighting);
+				if (window.highlighting) clearInterval(highlighting);
+
+				theobject=which2;
+				highlighting=setInterval("highlightit(theobject )",50);
+			}
+
+			function low(which2) {
+				if (window.lowlighting) clearInterval(lowlighting);
+				if (window.highlighting) clearInterval(highlighting);
+
+				theobject=which2;
+				lowlighting=setInterval("lowlightit(theobject )",50);
+			}
+
+			function highlightit(cur2) {
+				if (cur2.filters.alpha.opacity<85) cur2.filters.alpha.opacity+=3;
+			}
+
+			function lowlightit(cur2) {
+				try {
+					if (cur2.filters.alpha.opacity>=40) cur2.filters.alpha.opacity-=10;
+
+					if (cur2.filters.alpha.opacity<45) {
+						if (lowlighting) clearInterval(highlighting);
+						if (highlighting) clearInterval(highlighting);
+						nd(cur2);
+					}
+				} 
+				catch (e) {
+					nd(cur2);
+				}
+			}
+
+			function showObject(obj) {
+				if (ns4) obj.visibility = "show"
+				else if (ie4) obj.visibility = "visible";
+			}
+
+			function hideObject(obj) {
+				if (ns4) obj.visibility = "hide"
+				else if (ie4) obj.visibility = "hidden";
+			}
+		</script>
+	
+</head>
+<body bgcolor="#8087FF" background="http://www.lighthousecrc.org/imgages/lcrc_logo.jpg" topmargin="10" leftmargin="10">
+		<br>
+		<table  border=0 width=600 cellpadding=0 cellspacing=0 align=center>
+		<tr><td>
+			<table  border=0 cellpadding=0 cellspacing=0 align=center>
+			<tr><td background=http://www.lighthousecrc.org/spboard/img/img_skin/board_default/dot.gif><img src=http://www.lighthousecrc.org/spboard/img/img_skin/board_default/zero.gif width=0 height=1></td></tr>
+			<tr><td><img src=http://www.lighthousecrc.org/spboard/img/img_skin/board_default/zero.gif width=0 height=1></td></tr>
+			<tr><td>
+			<table border=0 cellpadding=2 cellspacing=0 align=center><tr><td>::: Photo Directory :::</td></tr></table>
+			</td></tr>
+			<tr><td background=http://www.lighthousecrc.org/spboard/img/img_skin/board_default/dot.gif><img src=http://www.lighthousecrc.org/spboard/img/img_skin/board_default/zero.gif width=0 height=1></td></tr>
+			</table>
+		</td></tr>
+		</table>
+		<br><br>
+		<div align=left><table border=0 cellpadding=0 cellspacing=0 width=600><tr><td align=center valign=top>
+<table border=0 cellpadding=0 cellspacing=0 width=600 align=left><tr><td>
+
+
+
+<form method=post action=./board.cgi>
+<input type=hidden name=action value=multi>
+<input type=hidden name=id value=photo2>
+<input type=hidden name=page value=1>
+<input type=hidden name=category value=>
+<input type=hidden name=sort value=>
+<input type=hidden name=go_cnt value=>
+
+
+<table border=0 width=100% cellpadding=0 cellspacing=0>
+<tr><td>&nbsp;</td><td>
+	<table border=0 width=100% cellpadding=2 cellspacing=0>
+	<tr>
+	<td valign=bottom><a href=http://www.lighthousecrc.org/spboard/board.cgi?id=photo2&action=input_form&page=><img src=http://www.lighthousecrc.org/spboard/img/img_skin/gallery_sp/write.gif width=40 height=15 border=0 alt="Write an article *^^*"></a></td><td valign=bottom><a href=http://www.lighthousecrc.org/spboard/board.cgi?id=photo2&action=input_pwd&load_act=admin_form><img src=http://www.lighthousecrc.org/spboard/img/img_skin/gallery_sp/admin.gif width=40 height=15 border=0 alt="Login to Admin Mode --+"></a></td>
+	<td align=center valign=bottom width=100%>Total <font color=#090909>40</font> articles (<font color=#090909>1</font>/<font color=>1</font> Page)</td>
+	<td valign=bottom class=cont><img src=http://www.lighthousecrc.org/spboard/img/img_skin/gallery_sp/prev.gif border=0 width=40 height=15 alt="This page is the first page."></td><td valign=bottom><img src=http://www.lighthousecrc.org/spboard/img/img_skin/gallery_sp/next.gif width=40 height=15 border=0 alt="This page is the last page."></td>
+	</tr>
+	</table>
+</td>
+</tr>
+<tr><td valign=top><table width=100% border=0 cellpadding=0 cellspacing=0>
+<tr>
+	<td>
+		<table width=100% border=1 cellpadding=2 cellspacing=0 bordercolordark="#666666" bordercolorlight="#efefef">
+			<tr bgcolor="#efefef"><td align=center><nobr><font color=#666666>Category</font></nobr></td></tr>
+			<tr><td bgcolor="">
+				<table border=0 cellpadding=2 cellspacing=0 width=100%>
+				<tr><td width=16><img src="http://www.lighthousecrc.org/spboard/img/img_skin/gallery_sp/chk_cate.gif" width=16 height=16></td><td><nobr><a href=http://www.lighthousecrc.org/spboard/board.cgi?id=photo2>Total (40)</a></nobr><td><tr><tr><td colspan=2>
+<table width=100% cellpadding=0 cellspacing=0><tr><td colspan=2 background=http://www.lighthousecrc.org/spboard/img/img_skin/gallery_sp/dot.gif><img src=http://www.lighthousecrc.org/spboard/img/img_skin/gallery_sp/zero.gif height=1></td><tr></table>
+</td></tr>
+<tr><td width=16><img src="http://www.lighthousecrc.org/spboard/img/img_skin/gallery_sp/cate.gif" width=16 height=16></td><td><nobr><a href=http://www.lighthousecrc.org/spboard/board.cgi?id=photo2&category=PRISM&cate_cnt=8>PRISM (8)</a>
+</nobr><td><tr>
+<tr><td colspan=2>
+<table width=100% cellpadding=0 cellspacing=0><tr><td colspan=2 background=http://www.lighthousecrc.org/spboard/img/img_skin/gallery_sp/dot.gif><img src=http://www.lighthousecrc.org/spboard/img/img_skin/gallery_sp/zero.gif height=1></td><tr></table>
+</td></tr>
+<tr><td width=16><img src="http://www.lighthousecrc.org/spboard/img/img_skin/gallery_sp/cate.gif" width=16 height=16></td><td><nobr><a href=http://www.lighthousecrc.org/spboard/board.cgi?id=photo2&category=BASIC&cate_cnt=7>BASIC (7)</a>
+</nobr><td><tr>
+<tr><td colspan=2>
+<table width=100% cellpadding=0 cellspacing=0><tr><td colspan=2 background=http://www.lighthousecrc.org/spboard/img/img_skin/gallery_sp/dot.gif><img src=http://www.lighthousecrc.org/spboard/img/img_skin/gallery_sp/zero.gif height=1></td><tr></table>
+</td></tr>
+<tr><td width=16><img src="http://www.lighthousecrc.org/spboard/img/img_skin/gallery_sp/cate.gif" width=16 height=16></td><td><nobr><a href=http://www.lighthousecrc.org/spboard/board.cgi?id=photo2&category=YAI!&cate_cnt=6>YAI! (6)</a>
+</nobr><td><tr>
+<tr><td colspan=2>
+<table width=100% cellpadding=0 cellspacing=0><tr><td colspan=2 background=http://www.lighthousecrc.org/spboard/img/img_skin/gallery_sp/dot.gif><img src=http://www.lighthousecrc.org/spboard/img/img_skin/gallery_sp/zero.gif height=1></td><tr></table>
+</td></tr>
+<tr><td width=16><img src="http://www.lighthousecrc.org/spboard/img/img_skin/gallery_sp/cate.gif" width=16 height=16></td><td><nobr><a href=http://www.lighthousecrc.org/spboard/board.cgi?id=photo2&category=JOY&cate_cnt=6>JOY (6)</a>
+</nobr><td><tr>
+<tr><td colspan=2>
+<table width=100% cellpadding=0 cellspacing=0><tr><td colspan=2 background=http://www.lighthousecrc.org/spboard/img/img_skin/gallery_sp/dot.gif><img src=http://www.lighthousecrc.org/spboard/img/img_skin/gallery_sp/zero.gif height=1></td><tr></table>
+</td></tr>
+<tr><td width=16><img src="http://www.lighthousecrc.org/spboard/img/img_skin/gallery_sp/cate.gif" width=16 height=16></td><td><nobr><a href=http://www.lighthousecrc.org/spboard/board.cgi?id=photo2&category=Youth&cate_cnt=5>Youth (5)</a>
+</nobr><td><tr>
+<tr><td colspan=2>
+<table width=100% cellpadding=0 cellspacing=0><tr><td colspan=2 background=http://www.lighthousecrc.org/spboard/img/img_skin/gallery_sp/dot.gif><img src=http://www.lighthousecrc.org/spboard/img/img_skin/gallery_sp/zero.gif height=1></td><tr></table>
+</td></tr>
+<tr><td width=16><img src="http://www.lighthousecrc.org/spboard/img/img_skin/gallery_sp/cate.gif" width=16 height=16></td><td><nobr><a href=http://www.lighthousecrc.org/spboard/board.cgi?id=photo2&category=etc&cate_cnt=8>Etc. (8)</a>
+</nobr><td><tr>
+<tr><td colspan=2>
+<table width=100% cellpadding=0 cellspacing=0><tr><td colspan=2 background=http://www.lighthousecrc.org/spboard/img/img_skin/gallery_sp/dot.gif><img src=http://www.lighthousecrc.org/spboard/img/img_skin/gallery_sp/zero.gif height=1></td><tr></table>
+</td></tr>
+<tr><td colspan=2><form name=form method=post><select onChange="location=this.options[this.selectedIndex].value" style="WIDTH:100%;color:#ffffff;background-color:;">
+<option value="http://www.lighthousecrc.org/spboard/board.cgi?id=photo2&sort=&category=" selected>Record
+<option value="http://www.lighthousecrc.org/spboard/board.cgi?id=photo2&sort=read&category=" >Access
+<option value="http://www.lighthousecrc.org/spboard/board.cgi?id=photo2&sort=vote&category=" >Vote
+</select>
+</td></tr>
+				</table>
+			</td></tr>
+		</table>
+	</td>
+	<td>
+		<table border=0 cellpadding=0 cellspacing=0>
+			<tr><td><img src="http://www.lighthousecrc.org/spboard/img/img_skin/gallery_sp/zero.gif" width=7 height=0></td></tr>
+		</table>
+	</td>
+</tr>
+</table></td><td valign=top>
+	<!--TBL_HEAD-->
+	<table border=0 width=100% bordercolordark="#666666" bordercolorlight="#efefef" cellpadding=2 cellspacing=0>
+	<table border=0 cellpadding=3 cellspacing=0><tr><td align=right>
+<!-- ±×¸² º¸±â Å×ÀÌºí ½ÃÀÛ-->
+ 
+				<div id='overDiv1' style="position:absolute; left:50px; top:50px; width:200px; height:200px; z-index:500; visibility:hidden; border-width:0px; border-style:none;">
+					 <table id=popup1 bgcolor=#B2B7FF border=0 width=230 style="filter:alpha(opacity=35); border:1  solid;" cellpadding=3 cellspacing=0>
+						<tr><td>&nbsp;&nbsp;<img src=http://www.lighthousecrc.org/spboard/img/img_skin/gallery_sp/sub.gif width=12 height=12><b>Daniel On</b></td></tr>					
+						<tr><td class=cont>Daniel On</td></tr>
+						<tr><td align=right>read:<b><font color=#090909>16</font></b> vote:<b><font color=#efefef>3</font></b> (<font color=#090909>2003.10.30</font>)</td></tr>
+					</table>
+				</div>
+				<SCRIPT LANGUAGE='javascript'>
+				if ( (ns4) || (ie4) ) {
+					if (ns4) over1 = document.overDiv1;
+					if (ie4) over1 = overDiv1.style;
+				}
+				</SCRIPT>
+			
+<table border=1 bgcolor="#B2B7FF" cellpadding=3 cellspacing=0 width="100%" height="100%" bordercolorlight="#efefef" bordercolordark="#efefef">
+	<tr><td align=center valign=bottom>
+		<table border=0 cellpadding=0 cellspacing=0 width="100%" height="100%">
+			<tr><td align=center valign=top width="140" height="120"><a href="javascript:view_img(640, 480, 'http://www.lighthousecrc.org/spboard/board.cgi?id=photo2&action=view&gul=59&page=1&go_cnt=','view_img40')"><img src=http://www.lighthousecrc.org/spboard/id/photo2/files/IMG_0905.JPG width=140 onmouseover="SetCurrDiv(1); ShowToolTip(over1); high(popup1);" onmouseout="SetCurrDiv(0); HideToolTip(over1); low(popup1);" border=1 style="border-style:groove;border-color:black;"></a></td></tr>
+			<tr><td align=right><img src=http://www.lighthousecrc.org/spboard/img/img_skin/gallery_sp/zero.gif width="140" height=2><br> <!--FACE--><!--MAIL-->&nbsp;<a href=http://www.lighthousecrc.org/spboard/board.cgi?id=photo2&action=vote&gul=59&page=1&go_cnt=><img src=http://www.lighthousecrc.org/spboard/img/img_skin/gallery_sp/vote.gif  border=0 alt="Vote"></a><a href=http://www.lighthousecrc.org/spboard/board.cgi?id=photo2&action=input_pwd&load_act=mod_form&gul=59&page=><img src=http://www.lighthousecrc.org/spboard/img/img_skin/gallery_sp/modify.gif  border=0 alt="Modify"></a><a href=http://www.lighthousecrc.org/spboard/board.cgi?id=photo2&action=input_pwd&load_act=delete&gul=59&page=><img src=http://www.lighthousecrc.org/spboard/img/img_skin/gallery_sp/delete.gif  border=0 alt="Delete"></a>&nbsp;</td></tr>
+		</table>
+	</td></tr>
+</table>
+<!--±×¸²º¸±â Å×ÀÌºí ³¡-->
+</td><td align=right>
+<!-- ±×¸² º¸±â Å×ÀÌºí ½ÃÀÛ-->
+ 
+				<div id='overDiv2' style="position:absolute; left:50px; top:50px; width:200px; height:200px; z-index:500; visibility:hidden; border-width:0px; border-style:none;">
+					 <table id=popup2 bgcolor=#B2B7FF border=0 width=230 style="filter:alpha(opacity=35); border:1  solid;" cellpadding=3 cellspacing=0>
+						<tr><td>&nbsp;&nbsp;<img src=http://www.lighthousecrc.org/spboard/img/img_skin/gallery_sp/sub.gif width=12 height=12><b>Leigha Chang</b></td></tr>					
+						<tr><td class=cont>Leigha Chang</td></tr>
+						<tr><td align=right>read:<b><font color=#090909>14</font></b> vote:<b><font color=#efefef>0</font></b> (<font color=#090909>2003.10.30</font>)</td></tr>
+					</table>
+				</div>
+				<SCRIPT LANGUAGE='javascript'>
+				if ( (ns4) || (ie4) ) {
+					if (ns4) over2 = document.overDiv2;
+					if (ie4) over2 = overDiv2.style;
+				}
+				</SCRIPT>
+			
+<table border=1 bgcolor="#B2B7FF" cellpadding=3 cellspacing=0 width="100%" height="100%" bordercolorlight="#efefef" bordercolordark="#efefef">
+	<tr><td align=center valign=bottom>
+		<table border=0 cellpadding=0 cellspacing=0 width="100%" height="100%">
+			<tr><td align=center valign=top width="140" height="120"><a href="javascript:view_img(640, 480, 'http://www.lighthousecrc.org/spboard/board.cgi?id=photo2&action=view&gul=58&page=1&go_cnt=','view_img39')"><img src=http://www.lighthousecrc.org/spboard/id/photo2/files/IMG_0904.JPG width=140 onmouseover="SetCurrDiv(2); ShowToolTip(over2); high(popup2);" onmouseout="SetCurrDiv(0); HideToolTip(over2); low(popup2);" border=1 style="border-style:groove;border-color:black;"></a></td></tr>
+			<tr><td align=right><img src=http://www.lighthousecrc.org/spboard/img/img_skin/gallery_sp/zero.gif width="140" height=2><br> <!--FACE--><!--MAIL-->&nbsp;<a href=http://www.lighthousecrc.org/spboard/board.cgi?id=photo2&action=vote&gul=58&page=1&go_cnt=><img src=http://www.lighthousecrc.org/spboard/img/img_skin/gallery_sp/vote.gif  border=0 alt="Vote"></a><a href=http://www.lighthousecrc.org/spboard/board.cgi?id=photo2&action=input_pwd&load_act=mod_form&gul=58&page=><img src=http://www.lighthousecrc.org/spboard/img/img_skin/gallery_sp/modify.gif  border=0 alt="Modify"></a><a href=http://www.lighthousecrc.org/spboard/board.cgi?id=photo2&action=input_pwd&load_act=delete&gul=58&page=><img src=http://www.lighthousecrc.org/spboard/img/img_skin/gallery_sp/delete.gif  border=0 alt="Delete"></a>&nbsp;</td></tr>
+		</table>
+	</td></tr>
+</table>
+<!--±×¸²º¸±â Å×ÀÌºí ³¡-->
+</td><td align=right>
+<!-- ±×¸² º¸±â Å×ÀÌºí ½ÃÀÛ-->
+ 
+				<div id='overDiv3' style="position:absolute; left:50px; top:50px; width:200px; height:200px; z-index:500; visibility:hidden; border-width:0px; border-style:none;">
+					 <table id=popup3 bgcolor=#B2B7FF border=0 width=230 style="filter:alpha(opacity=35); border:1  solid;" cellpadding=3 cellspacing=0>
+						<tr><td>&nbsp;&nbsp;<img src=http://www.lighthousecrc.org/spboard/img/img_skin/gallery_sp/sub.gif width=12 height=12><b>Eunice Chung</b></td></tr>					
+						<tr><td class=cont>Eunice Chung</td></tr>
+						<tr><td align=right>read:<b><font color=#090909>62</font></b> vote:<b><font color=#efefef>0</font></b> (<font color=#090909>2003.10.30</font>)</td></tr>
+					</table>
+				</div>
+				<SCRIPT LANGUAGE='javascript'>
+				if ( (ns4) || (ie4) ) {
+					if (ns4) over3 = document.overDiv3;
+					if (ie4) over3 = overDiv3.style;
+				}
+				</SCRIPT>
+			
+<table border=1 bgcolor="#B2B7FF" cellpadding=3 cellspacing=0 width="100%" height="100%" bordercolorlight="#efefef" bordercolordark="#efefef">
+	<tr><td align=center valign=bottom>
+		<table border=0 cellpadding=0 cellspacing=0 width="100%" height="100%">
+			<tr><td align=center valign=top width="140" height="120"><a href="javascript:view_img(640, 480, 'http://www.lighthousecrc.org/spboard/board.cgi?id=photo2&action=view&gul=57&page=1&go_cnt=','view_img38')"><img src=http://www.lighthousecrc.org/spboard/id/photo2/files/Eunice640.jpg width=140 onmouseover="SetCurrDiv(3); ShowToolTip(over3); high(popup3);" onmouseout="SetCurrDiv(0); HideToolTip(over3); low(popup3);" border=1 style="border-style:groove;border-color:black;"></a></td></tr>
+			<tr><td align=right><img src=http://www.lighthousecrc.org/spboard/img/img_skin/gallery_sp/zero.gif width="140" height=2><br> <!--FACE--><!--MAIL-->&nbsp;<a href=http://www.lighthousecrc.org/spboard/board.cgi?id=photo2&action=vote&gul=57&page=1&go_cnt=><img src=http://www.lighthousecrc.org/spboard/img/img_skin/gallery_sp/vote.gif  border=0 alt="Vote"></a><a href=http://www.lighthousecrc.org/spboard/board.cgi?id=photo2&action=input_pwd&load_act=mod_form&gul=57&page=><img src=http://www.lighthousecrc.org/spboard/img/img_skin/gallery_sp/modify.gif  border=0 alt="Modify"></a><a href=http://www.lighthousecrc.org/spboard/board.cgi?id=photo2&action=input_pwd&load_act=delete&gul=57&page=><img src=http://www.lighthousecrc.org/spboard/img/img_skin/gallery_sp/delete.gif  border=0 alt="Delete"></a>&nbsp;</td></tr>
+		</table>
+	</td></tr>
+</table>
+<!--±×¸²º¸±â Å×ÀÌºí ³¡-->
+</td><td align=right>
+<!-- ±×¸² º¸±â Å×ÀÌºí ½ÃÀÛ-->
+ 
+				<div id='overDiv4' style="position:absolute; left:50px; top:50px; width:200px; height:200px; z-index:500; visibility:hidden; border-width:0px; border-style:none;">
+					 <table id=popup4 bgcolor=#B2B7FF border=0 width=230 style="filter:alpha(opacity=35); border:1  solid;" cellpadding=3 cellspacing=0>
+						<tr><td>&nbsp;&nbsp;<img src=http://www.lighthousecrc.org/spboard/img/img_skin/gallery_sp/sub.gif width=12 height=12><b>Peter On</b></td></tr>					
+						<tr><td class=cont>Peter On</td></tr>
+						<tr><td align=right>read:<b><font color=#090909>17</font></b> vote:<b><font color=#efefef>0</font></b> (<font color=#090909>2003.10.30</font>)</td></tr>
+					</table>
+				</div>
+				<SCRIPT LANGUAGE='javascript'>
+				if ( (ns4) || (ie4) ) {
+					if (ns4) over4 = document.overDiv4;
+					if (ie4) over4 = overDiv4.style;
+				}
+				</SCRIPT>
+			
+<table border=1 bgcolor="#B2B7FF" cellpadding=3 cellspacing=0 width="100%" height="100%" bordercolorlight="#efefef" bordercolordark="#efefef">
+	<tr><td align=center valign=bottom>
+		<table border=0 cellpadding=0 cellspacing=0 width="100%" height="100%">
+			<tr><td align=center valign=top width="140" height="120"><a href="javascript:view_img(640, 480, 'http://www.lighthousecrc.org/spboard/board.cgi?id=photo2&action=view&gul=56&page=1&go_cnt=','view_img37')"><img src=http://www.lighthousecrc.org/spboard/id/photo2/files/IMG_0902640.jpg width=140 onmouseover="SetCurrDiv(4); ShowToolTip(over4); high(popup4);" onmouseout="SetCurrDiv(0); HideToolTip(over4); low(popup4);" border=1 style="border-style:groove;border-color:black;"></a></td></tr>
+			<tr><td align=right><img src=http://www.lighthousecrc.org/spboard/img/img_skin/gallery_sp/zero.gif width="140" height=2><br> <!--FACE--><!--MAIL-->&nbsp;<a href=http://www.lighthousecrc.org/spboard/board.cgi?id=photo2&action=vote&gul=56&page=1&go_cnt=><img src=http://www.lighthousecrc.org/spboard/img/img_skin/gallery_sp/vote.gif  border=0 alt="Vote"></a><a href=http://www.lighthousecrc.org/spboard/board.cgi?id=photo2&action=input_pwd&load_act=mod_form&gul=56&page=><img src=http://www.lighthousecrc.org/spboard/img/img_skin/gallery_sp/modify.gif  border=0 alt="Modify"></a><a href=http://www.lighthousecrc.org/spboard/board.cgi?id=photo2&action=input_pwd&load_act=delete&gul=56&page=><img src=http://www.lighthousecrc.org/spboard/img/img_skin/gallery_sp/delete.gif  border=0 alt="Delete"></a>&nbsp;</td></tr>
+		</table>
+	</td></tr>
+</table>
+<!--±×¸²º¸±â Å×ÀÌºí ³¡-->
+</td></tr><tr><td align=right>
+<!-- ±×¸² º¸±â Å×ÀÌºí ½ÃÀÛ-->
+ 
+				<div id='overDiv5' style="position:absolute; left:50px; top:50px; width:200px; height:200px; z-index:500; visibility:hidden; border-width:0px; border-style:none;">
+					 <table id=popup5 bgcolor=#B2B7FF border=0 width=230 style="filter:alpha(opacity=35); border:1  solid;" cellpadding=3 cellspacing=0>
+						<tr><td>&nbsp;&nbsp;<img src=http://www.lighthousecrc.org/spboard/img/img_skin/gallery_sp/sub.gif width=12 height=12><b>Jeannette Jung</b></td></tr>					
+						<tr><td class=cont>Jeannette Jung</td></tr>
+						<tr><td align=right>read:<b><font color=#090909>16</font></b> vote:<b><font color=#efefef>0</font></b> (<font color=#090909>2003.10.19</font>)</td></tr>
+					</table>
+				</div>
+				<SCRIPT LANGUAGE='javascript'>
+				if ( (ns4) || (ie4) ) {
+					if (ns4) over5 = document.overDiv5;
+					if (ie4) over5 = overDiv5.style;
+				}
+				</SCRIPT>
+			
+<table border=1 bgcolor="#B2B7FF" cellpadding=3 cellspacing=0 width="100%" height="100%" bordercolorlight="#efefef" bordercolordark="#efefef">
+	<tr><td align=center valign=bottom>
+		<table border=0 cellpadding=0 cellspacing=0 width="100%" height="100%">
+			<tr><td align=center valign=top width="140" height="120"><a href="javascript:view_img(640, 480, 'http://www.lighthousecrc.org/spboard/board.cgi?id=photo2&action=view&gul=55&page=1&go_cnt=','view_img36')"><img src=http://www.lighthousecrc.org/spboard/id/photo2/files/Jeannette640.jpg width=140 onmouseover="SetCurrDiv(5); ShowToolTip(over5); high(popup5);" onmouseout="SetCurrDiv(0); HideToolTip(over5); low(popup5);" border=1 style="border-style:groove;border-color:black;"></a></td></tr>
+			<tr><td align=right><img src=http://www.lighthousecrc.org/spboard/img/img_skin/gallery_sp/zero.gif width="140" height=2><br> <!--FACE--><!--MAIL-->&nbsp;<a href=http://www.lighthousecrc.org/spboard/board.cgi?id=photo2&action=vote&gul=55&page=1&go_cnt=><img src=http://www.lighthousecrc.org/spboard/img/img_skin/gallery_sp/vote.gif  border=0 alt="Vote"></a><a href=http://www.lighthousecrc.org/spboard/board.cgi?id=photo2&action=input_pwd&load_act=mod_form&gul=55&page=><img src=http://www.lighthousecrc.org/spboard/img/img_skin/gallery_sp/modify.gif  border=0 alt="Modify"></a><a href=http://www.lighthousecrc.org/spboard/board.cgi?id=photo2&action=input_pwd&load_act=delete&gul=55&page=><img src=http://www.lighthousecrc.org/spboard/img/img_skin/gallery_sp/delete.gif  border=0 alt="Delete"></a>&nbsp;</td></tr>
+		</table>
+	</td></tr>
+</table>
+<!--±×¸²º¸±â Å×ÀÌºí ³¡-->
+</td><td align=right>
+<!-- ±×¸² º¸±â Å×ÀÌºí ½ÃÀÛ-->
+ 
+				<div id='overDiv6' style="position:absolute; left:50px; top:50px; width:200px; height:200px; z-index:500; visibility:hidden; border-width:0px; border-style:none;">
+					 <table id=popup6 bgcolor=#B2B7FF border=0 width=230 style="filter:alpha(opacity=35); border:1  solid;" cellpadding=3 cellspacing=0>
+						<tr><td>&nbsp;&nbsp;<img src=http://www.lighthousecrc.org/spboard/img/img_skin/gallery_sp/sub.gif width=12 height=12><b>Richard Koh</b></td></tr>					
+						<tr><td class=cont>Richard Koh</td></tr>
+						<tr><td align=right>read:<b><font color=#090909>17</font></b> vote:<b><font color=#efefef>0</font></b> (<font color=#090909>2003.10.19</font>)</td></tr>
+					</table>
+				</div>
+				<SCRIPT LANGUAGE='javascript'>
+				if ( (ns4) || (ie4) ) {
+					if (ns4) over6 = document.overDiv6;
+					if (ie4) over6 = overDiv6.style;
+				}
+				</SCRIPT>
+			
+<table border=1 bgcolor="#B2B7FF" cellpadding=3 cellspacing=0 width="100%" height="100%" bordercolorlight="#efefef" bordercolordark="#efefef">
+	<tr><td align=center valign=bottom>
+		<table border=0 cellpadding=0 cellspacing=0 width="100%" height="100%">
+			<tr><td align=center valign=top width="140" height="120"><a href="javascript:view_img(640, 452, 'http://www.lighthousecrc.org/spboard/board.cgi?id=photo2&action=view&gul=54&page=1&go_cnt=','view_img35')"><img src=http://www.lighthousecrc.org/spboard/id/photo2/files/Richard640.jpg width=140 onmouseover="SetCurrDiv(6); ShowToolTip(over6); high(popup6);" onmouseout="SetCurrDiv(0); HideToolTip(over6); low(popup6);" border=1 style="border-style:groove;border-color:black;"></a></td></tr>
+			<tr><td align=right><img src=http://www.lighthousecrc.org/spboard/img/img_skin/gallery_sp/zero.gif width="140" height=2><br> <!--FACE--><!--MAIL-->&nbsp;<a href=http://www.lighthousecrc.org/spboard/board.cgi?id=photo2&action=vote&gul=54&page=1&go_cnt=><img src=http://www.lighthousecrc.org/spboard/img/img_skin/gallery_sp/vote.gif  border=0 alt="Vote"></a><a href=http://www.lighthousecrc.org/spboard/board.cgi?id=photo2&action=input_pwd&load_act=mod_form&gul=54&page=><img src=http://www.lighthousecrc.org/spboard/img/img_skin/gallery_sp/modify.gif  border=0 alt="Modify"></a><a href=http://www.lighthousecrc.org/spboard/board.cgi?id=photo2&action=input_pwd&load_act=delete&gul=54&page=><img src=http://www.lighthousecrc.org/spboard/img/img_skin/gallery_sp/delete.gif  border=0 alt="Delete"></a>&nbsp;</td></tr>
+		</table>
+	</td></tr>
+</table>
+<!--±×¸²º¸±â Å×ÀÌºí ³¡-->
+</td><td align=right>
+<!-- ±×¸² º¸±â Å×ÀÌºí ½ÃÀÛ-->
+ 
+				<div id='overDiv7' style="position:absolute; left:50px; top:50px; width:200px; height:200px; z-index:500; visibility:hidden; border-width:0px; border-style:none;">
+					 <table id=popup7 bgcolor=#B2B7FF border=0 width=230 style="filter:alpha(opacity=35); border:1  solid;" cellpadding=3 cellspacing=0>
+						<tr><td>&nbsp;&nbsp;<img src=http://www.lighthousecrc.org/spboard/img/img_skin/gallery_sp/sub.gif width=12 height=12><b>Angela Moon</b></td></tr>					
+						<tr><td class=cont>Angela Moon</td></tr>
+						<tr><td align=right>read:<b><font color=#090909>18</font></b> vote:<b><font color=#efefef>0</font></b> (<font color=#090909>2003.10.19</font>)</td></tr>
+					</table>
+				</div>
+				<SCRIPT LANGUAGE='javascript'>
+				if ( (ns4) || (ie4) ) {
+					if (ns4) over7 = document.overDiv7;
+					if (ie4) over7 = overDiv7.style;
+				}
+				</SCRIPT>
+			
+<table border=1 bgcolor="#B2B7FF" cellpadding=3 cellspacing=0 width="100%" height="100%" bordercolorlight="#efefef" bordercolordark="#efefef">
+	<tr><td align=center valign=bottom>
+		<table border=0 cellpadding=0 cellspacing=0 width="100%" height="100%">
+			<tr><td align=center valign=top width="140" height="120"><a href="javascript:view_img(640, 480, 'http://www.lighthousecrc.org/spboard/board.cgi?id=photo2&action=view&gul=53&page=1&go_cnt=','view_img34')"><img src=http://www.lighthousecrc.org/spboard/id/photo2/files/Angela640.jpg width=140 onmouseover="SetCurrDiv(7); ShowToolTip(over7); high(popup7);" onmouseout="SetCurrDiv(0); HideToolTip(over7); low(popup7);" border=1 style="border-style:groove;border-color:black;"></a></td></tr>
+			<tr><td align=right><img src=http://www.lighthousecrc.org/spboard/img/img_skin/gallery_sp/zero.gif width="140" height=2><br> <!--FACE--><!--MAIL-->&nbsp;<a href=http://www.lighthousecrc.org/spboard/board.cgi?id=photo2&action=vote&gul=53&page=1&go_cnt=><img src=http://www.lighthousecrc.org/spboard/img/img_skin/gallery_sp/vote.gif  border=0 alt="Vote"></a><a href=http://www.lighthousecrc.org/spboard/board.cgi?id=photo2&action=input_pwd&load_act=mod_form&gul=53&page=><img src=http://www.lighthousecrc.org/spboard/img/img_skin/gallery_sp/modify.gif  border=0 alt="Modify"></a><a href=http://www.lighthousecrc.org/spboard/board.cgi?id=photo2&action=input_pwd&load_act=delete&gul=53&page=><img src=http://www.lighthousecrc.org/spboard/img/img_skin/gallery_sp/delete.gif  border=0 alt="Delete"></a>&nbsp;</td></tr>
+		</table>
+	</td></tr>
+</table>
+<!--±×¸²º¸±â Å×ÀÌºí ³¡-->
+</td><td align=right>
+<!-- ±×¸² º¸±â Å×ÀÌºí ½ÃÀÛ-->
+ 
+				<div id='overDiv8' style="position:absolute; left:50px; top:50px; width:200px; height:200px; z-index:500; visibility:hidden; border-width:0px; border-style:none;">
+					 <table id=popup8 bgcolor=#B2B7FF border=0 width=230 style="filter:alpha(opacity=35); border:1  solid;" cellpadding=3 cellspacing=0>
+						<tr><td>&nbsp;&nbsp;<img src=http://www.lighthousecrc.org/spboard/img/img_skin/gallery_sp/sub.gif width=12 height=12><b>Jennifer Song</b></td></tr>					
+						<tr><td class=cont>Jennifer Song</td></tr>
+						<tr><td align=right>read:<b><font color=#090909>30</font></b> vote:<b><font color=#efefef>0</font></b> (<font color=#090909>2003.10.19</font>)</td></tr>
+					</table>
+				</div>
+				<SCRIPT LANGUAGE='javascript'>
+				if ( (ns4) || (ie4) ) {
+					if (ns4) over8 = document.overDiv8;
+					if (ie4) over8 = overDiv8.style;
+				}
+				</SCRIPT>
+			
+<table border=1 bgcolor="#B2B7FF" cellpadding=3 cellspacing=0 width="100%" height="100%" bordercolorlight="#efefef" bordercolordark="#efefef">
+	<tr><td align=center valign=bottom>
+		<table border=0 cellpadding=0 cellspacing=0 width="100%" height="100%">
+			<tr><td align=center valign=top width="140" height="120"><a href="javascript:view_img(640, 480, 'http://www.lighthousecrc.org/spboard/board.cgi?id=photo2&action=view&gul=52&page=1&go_cnt=','view_img33')"><img src=http://www.lighthousecrc.org/spboard/id/photo2/files/JenSong640.jpg width=140 onmouseover="SetCurrDiv(8); ShowToolTip(over8); high(popup8);" onmouseout="SetCurrDiv(0); HideToolTip(over8); low(popup8);" border=1 style="border-style:groove;border-color:black;"></a></td></tr>
+			<tr><td align=right><img src=http://www.lighthousecrc.org/spboard/img/img_skin/gallery_sp/zero.gif width="140" height=2><br> <!--FACE--><!--MAIL-->&nbsp;<a href=http://www.lighthousecrc.org/spboard/board.cgi?id=photo2&action=vote&gul=52&page=1&go_cnt=><img src=http://www.lighthousecrc.org/spboard/img/img_skin/gallery_sp/vote.gif  border=0 alt="Vote"></a><a href=http://www.lighthousecrc.org/spboard/board.cgi?id=photo2&action=input_pwd&load_act=mod_form&gul=52&page=><img src=http://www.lighthousecrc.org/spboard/img/img_skin/gallery_sp/modify.gif  border=0 alt="Modify"></a><a href=http://www.lighthousecrc.org/spboard/board.cgi?id=photo2&action=input_pwd&load_act=delete&gul=52&page=><img src=http://www.lighthousecrc.org/spboard/img/img_skin/gallery_sp/delete.gif  border=0 alt="Delete"></a>&nbsp;</td></tr>
+		</table>
+	</td></tr>
+</table>
+<!--±×¸²º¸±â Å×ÀÌºí ³¡-->
+</td></tr><tr><td align=right>
+<!-- ±×¸² º¸±â Å×ÀÌºí ½ÃÀÛ-->
+ 
+				<div id='overDiv9' style="position:absolute; left:50px; top:50px; width:200px; height:200px; z-index:500; visibility:hidden; border-width:0px; border-style:none;">
+					 <table id=popup9 bgcolor=#B2B7FF border=0 width=230 style="filter:alpha(opacity=35); border:1  solid;" cellpadding=3 cellspacing=0>
+						<tr><td>&nbsp;&nbsp;<img src=http://www.lighthousecrc.org/spboard/img/img_skin/gallery_sp/sub.gif width=12 height=12><b>Peter, Nathan, Michelle, and Joseph</b></td></tr>					
+						<tr><td class=cont>Peter, Nathan, Michelle, and Joseph</td></tr>
+						<tr><td align=right>read:<b><font color=#090909>28</font></b> vote:<b><font color=#efefef>0</font></b> (<font color=#090909>2003.10.19</font>)</td></tr>
+					</table>
+				</div>
+				<SCRIPT LANGUAGE='javascript'>
+				if ( (ns4) || (ie4) ) {
+					if (ns4) over9 = document.overDiv9;
+					if (ie4) over9 = overDiv9.style;
+				}
+				</SCRIPT>
+			
+<table border=1 bgcolor="#B2B7FF" cellpadding=3 cellspacing=0 width="100%" height="100%" bordercolorlight="#efefef" bordercolordark="#efefef">
+	<tr><td align=center valign=bottom>
+		<table border=0 cellpadding=0 cellspacing=0 width="100%" height="100%">
+			<tr><td align=center valign=top width="140" height="120"><a href="javascript:view_img(640, 456, 'http://www.lighthousecrc.org/spboard/board.cgi?id=photo2&action=view&gul=51&page=1&go_cnt=','view_img32')"><img src=http://www.lighthousecrc.org/spboard/id/photo2/files/Peter.jpg width=140 onmouseover="SetCurrDiv(9); ShowToolTip(over9); high(popup9);" onmouseout="SetCurrDiv(0); HideToolTip(over9); low(popup9);" border=1 style="border-style:groove;border-color:black;"></a></td></tr>
+			<tr><td align=right><img src=http://www.lighthousecrc.org/spboard/img/img_skin/gallery_sp/zero.gif width="140" height=2><br> <!--FACE--><!--MAIL-->&nbsp;<a href=http://www.lighthousecrc.org/spboard/board.cgi?id=photo2&action=vote&gul=51&page=1&go_cnt=><img src=http://www.lighthousecrc.org/spboard/img/img_skin/gallery_sp/vote.gif  border=0 alt="Vote"></a><a href=http://www.lighthousecrc.org/spboard/board.cgi?id=photo2&action=input_pwd&load_act=mod_form&gul=51&page=><img src=http://www.lighthousecrc.org/spboard/img/img_skin/gallery_sp/modify.gif  border=0 alt="Modify"></a><a href=http://www.lighthousecrc.org/spboard/board.cgi?id=photo2&action=input_pwd&load_act=delete&gul=51&page=><img src=http://www.lighthousecrc.org/spboard/img/img_skin/gallery_sp/delete.gif  border=0 alt="Delete"></a>&nbsp;</td></tr>
+		</table>
+	</td></tr>
+</table>
+<!--±×¸²º¸±â Å×ÀÌºí ³¡-->
+</td><td align=right>
+<!-- ±×¸² º¸±â Å×ÀÌºí ½ÃÀÛ-->
+ 
+				<div id='overDiv10' style="position:absolute; left:50px; top:50px; width:200px; height:200px; z-index:500; visibility:hidden; border-width:0px; border-style:none;">
+					 <table id=popup10 bgcolor=#B2B7FF border=0 width=230 style="filter:alpha(opacity=35); border:1  solid;" cellpadding=3 cellspacing=0>
+						<tr><td>&nbsp;&nbsp;<img src=http://www.lighthousecrc.org/spboard/img/img_skin/gallery_sp/sub.gif width=12 height=12><b>Helen, Jayden and Kenny</b></td></tr>					
+						<tr><td class=cont>Kenny, Jayden and Helen</td></tr>
+						<tr><td align=right>read:<b><font color=#090909>34</font></b> vote:<b><font color=#efefef>0</font></b> (<font color=#090909>2003.10.19</font>)</td></tr>
+					</table>
+				</div>
+				<SCRIPT LANGUAGE='javascript'>
+				if ( (ns4) || (ie4) ) {
+					if (ns4) over10 = document.overDiv10;
+					if (ie4) over10 = overDiv10.style;
+				}
+				</SCRIPT>
+			
+<table border=1 bgcolor="#B2B7FF" cellpadding=3 cellspacing=0 width="100%" height="100%" bordercolorlight="#efefef" bordercolordark="#efefef">
+	<tr><td align=center valign=bottom>
+		<table border=0 cellpadding=0 cellspacing=0 width="100%" height="100%">
+			<tr><td align=center valign=top width="140" height="120"><a href="javascript:view_img(640, 480, 'http://www.lighthousecrc.org/spboard/board.cgi?id=photo2&action=view&gul=50&page=1&go_cnt=','view_img31')"><img src=http://www.lighthousecrc.org/spboard/id/photo2/files/KenHelen640.jpg width=140 onmouseover="SetCurrDiv(10); ShowToolTip(over10); high(popup10);" onmouseout="SetCurrDiv(0); HideToolTip(over10); low(popup10);" border=1 style="border-style:groove;border-color:black;"></a></td></tr>
+			<tr><td align=right><img src=http://www.lighthousecrc.org/spboard/img/img_skin/gallery_sp/zero.gif width="140" height=2><br> <!--FACE--><!--MAIL-->&nbsp;<a href=http://www.lighthousecrc.org/spboard/board.cgi?id=photo2&action=vote&gul=50&page=1&go_cnt=><img src=http://www.lighthousecrc.org/spboard/img/img_skin/gallery_sp/vote.gif  border=0 alt="Vote"></a><a href=http://www.lighthousecrc.org/spboard/board.cgi?id=photo2&action=input_pwd&load_act=mod_form&gul=50&page=><img src=http://www.lighthousecrc.org/spboard/img/img_skin/gallery_sp/modify.gif  border=0 alt="Modify"></a><a href=http://www.lighthousecrc.org/spboard/board.cgi?id=photo2&action=input_pwd&load_act=delete&gul=50&page=><img src=http://www.lighthousecrc.org/spboard/img/img_skin/gallery_sp/delete.gif  border=0 alt="Delete"></a>&nbsp;</td></tr>
+		</table>
+	</td></tr>
+</table>
+<!--±×¸²º¸±â Å×ÀÌºí ³¡-->
+</td><td align=right>
+<!-- ±×¸² º¸±â Å×ÀÌºí ½ÃÀÛ-->
+ 
+				<div id='overDiv11' style="position:absolute; left:50px; top:50px; width:200px; height:200px; z-index:500; visibility:hidden; border-width:0px; border-style:none;">
+					 <table id=popup11 bgcolor=#B2B7FF border=0 width=230 style="filter:alpha(opacity=35); border:1  solid;" cellpadding=3 cellspacing=0>
+						<tr><td>&nbsp;&nbsp;<img src=http://www.lighthousecrc.org/spboard/img/img_skin/gallery_sp/sub.gif width=12 height=12><b>Alex (Hee Bum) Ro</b></td></tr>					
+						<tr><td class=cont>Alex (Hee Bum) Ro</td></tr>
+						<tr><td align=right>read:<b><font color=#090909>17</font></b> vote:<b><font color=#efefef>1</font></b> (<font color=#090909>2003.10.16</font>)</td></tr>
+					</table>
+				</div>
+				<SCRIPT LANGUAGE='javascript'>
+				if ( (ns4) || (ie4) ) {
+					if (ns4) over11 = document.overDiv11;
+					if (ie4) over11 = overDiv11.style;
+				}
+				</SCRIPT>
+			
+<table border=1 bgcolor="#B2B7FF" cellpadding=3 cellspacing=0 width="100%" height="100%" bordercolorlight="#efefef" bordercolordark="#efefef">
+	<tr><td align=center valign=bottom>
+		<table border=0 cellpadding=0 cellspacing=0 width="100%" height="100%">
+			<tr><td align=center valign=top width="140" height="120"><a href="javascript:view_img(640, 480, 'http://www.lighthousecrc.org/spboard/board.cgi?id=photo2&action=view&gul=49&page=1&go_cnt=','view_img30')"><img src=http://www.lighthousecrc.org/spboard/id/photo2/files/AlexRo640.jpg width=140 onmouseover="SetCurrDiv(11); ShowToolTip(over11); high(popup11);" onmouseout="SetCurrDiv(0); HideToolTip(over11); low(popup11);" border=1 style="border-style:groove;border-color:black;"></a></td></tr>
+			<tr><td align=right><img src=http://www.lighthousecrc.org/spboard/img/img_skin/gallery_sp/zero.gif width="140" height=2><br> <!--FACE--><!--MAIL-->&nbsp;<a href=http://www.lighthousecrc.org/spboard/board.cgi?id=photo2&action=vote&gul=49&page=1&go_cnt=><img src=http://www.lighthousecrc.org/spboard/img/img_skin/gallery_sp/vote.gif  border=0 alt="Vote"></a><a href=http://www.lighthousecrc.org/spboard/board.cgi?id=photo2&action=input_pwd&load_act=mod_form&gul=49&page=><img src=http://www.lighthousecrc.org/spboard/img/img_skin/gallery_sp/modify.gif  border=0 alt="Modify"></a><a href=http://www.lighthousecrc.org/spboard/board.cgi?id=photo2&action=input_pwd&load_act=delete&gul=49&page=><img src=http://www.lighthousecrc.org/spboard/img/img_skin/gallery_sp/delete.gif  border=0 alt="Delete"></a>&nbsp;</td></tr>
+		</table>
+	</td></tr>
+</table>
+<!--±×¸²º¸±â Å×ÀÌºí ³¡-->
+</td><td align=right>
+<!-- ±×¸² º¸±â Å×ÀÌºí ½ÃÀÛ-->
+ 
+				<div id='overDiv12' style="position:absolute; left:50px; top:50px; width:200px; height:200px; z-index:500; visibility:hidden; border-width:0px; border-style:none;">
+					 <table id=popup12 bgcolor=#B2B7FF border=0 width=230 style="filter:alpha(opacity=35); border:1  solid;" cellpadding=3 cellspacing=0>
+						<tr><td>&nbsp;&nbsp;<img src=http://www.lighthousecrc.org/spboard/img/img_skin/gallery_sp/sub.gif width=12 height=12><b>Ryan and Katherine</b></td></tr>					
+						<tr><td class=cont>Ryan and Katherine McKibben</td></tr>
+						<tr><td align=right>read:<b><font color=#090909>22</font></b> vote:<b><font color=#efefef>0</font></b> (<font color=#090909>2003.10.16</font>)</td></tr>
+					</table>
+				</div>
+				<SCRIPT LANGUAGE='javascript'>
+				if ( (ns4) || (ie4) ) {
+					if (ns4) over12 = document.overDiv12;
+					if (ie4) over12 = overDiv12.style;
+				}
+				</SCRIPT>
+			
+<table border=1 bgcolor="#B2B7FF" cellpadding=3 cellspacing=0 width="100%" height="100%" bordercolorlight="#efefef" bordercolordark="#efefef">
+	<tr><td align=center valign=bottom>
+		<table border=0 cellpadding=0 cellspacing=0 width="100%" height="100%">
+			<tr><td align=center valign=top width="140" height="120"><a href="javascript:view_img(640, 497, 'http://www.lighthousecrc.org/spboard/board.cgi?id=photo2&action=view&gul=48&page=1&go_cnt=','view_img29')"><img src=http://www.lighthousecrc.org/spboard/id/photo2/files/RyanKatherine640.jpg width=140 onmouseover="SetCurrDiv(12); ShowToolTip(over12); high(popup12);" onmouseout="SetCurrDiv(0); HideToolTip(over12); low(popup12);" border=1 style="border-style:groove;border-color:black;"></a></td></tr>
+			<tr><td align=right><img src=http://www.lighthousecrc.org/spboard/img/img_skin/gallery_sp/zero.gif width="140" height=2><br> <!--FACE--><!--MAIL-->&nbsp;<a href=http://www.lighthousecrc.org/spboard/board.cgi?id=photo2&action=vote&gul=48&page=1&go_cnt=><img src=http://www.lighthousecrc.org/spboard/img/img_skin/gallery_sp/vote.gif  border=0 alt="Vote"></a><a href=http://www.lighthousecrc.org/spboard/board.cgi?id=photo2&action=input_pwd&load_act=mod_form&gul=48&page=><img src=http://www.lighthousecrc.org/spboard/img/img_skin/gallery_sp/modify.gif  border=0 alt="Modify"></a><a href=http://www.lighthousecrc.org/spboard/board.cgi?id=photo2&action=input_pwd&load_act=delete&gul=48&page=><img src=http://www.lighthousecrc.org/spboard/img/img_skin/gallery_sp/delete.gif  border=0 alt="Delete"></a>&nbsp;</td></tr>
+		</table>
+	</td></tr>
+</table>
+<!--±×¸²º¸±â Å×ÀÌºí ³¡-->
+</td></tr><tr><td align=right>
+<!-- ±×¸² º¸±â Å×ÀÌºí ½ÃÀÛ-->
+ 
+				<div id='overDiv13' style="position:absolute; left:50px; top:50px; width:200px; height:200px; z-index:500; visibility:hidden; border-width:0px; border-style:none;">
+					 <table id=popup13 bgcolor=#B2B7FF border=0 width=230 style="filter:alpha(opacity=35); border:1  solid;" cellpadding=3 cellspacing=0>
+						<tr><td>&nbsp;&nbsp;<img src=http://www.lighthousecrc.org/spboard/img/img_skin/gallery_sp/sub.gif width=12 height=12><b>Milton and Christian Wong</b></td></tr>					
+						<tr><td class=cont>Milton and Christian Wong</td></tr>
+						<tr><td align=right>read:<b><font color=#090909>36</font></b> vote:<b><font color=#efefef>0</font></b> (<font color=#090909>2003.10.16</font>)</td></tr>
+					</table>
+				</div>
+				<SCRIPT LANGUAGE='javascript'>
+				if ( (ns4) || (ie4) ) {
+					if (ns4) over13 = document.overDiv13;
+					if (ie4) over13 = overDiv13.style;
+				}
+				</SCRIPT>
+			
+<table border=1 bgcolor="#B2B7FF" cellpadding=3 cellspacing=0 width="100%" height="100%" bordercolorlight="#efefef" bordercolordark="#efefef">
+	<tr><td align=center valign=bottom>
+		<table border=0 cellpadding=0 cellspacing=0 width="100%" height="100%">
+			<tr><td align=center valign=top width="140" height="120"><a href="javascript:view_img(640, 480, 'http://www.lighthousecrc.org/spboard/board.cgi?id=photo2&action=view&gul=47&page=1&go_cnt=','view_img28')"><img src=http://www.lighthousecrc.org/spboard/id/photo2/files/MiltonChristina640.jpg width=140 onmouseover="SetCurrDiv(13); ShowToolTip(over13); high(popup13);" onmouseout="SetCurrDiv(0); HideToolTip(over13); low(popup13);" border=1 style="border-style:groove;border-color:black;"></a></td></tr>
+			<tr><td align=right><img src=http://www.lighthousecrc.org/spboard/img/img_skin/gallery_sp/zero.gif width="140" height=2><br> <!--FACE--><!--MAIL-->&nbsp;<a href=http://www.lighthousecrc.org/spboard/board.cgi?id=photo2&action=vote&gul=47&page=1&go_cnt=><img src=http://www.lighthousecrc.org/spboard/img/img_skin/gallery_sp/vote.gif  border=0 alt="Vote"></a><a href=http://www.lighthousecrc.org/spboard/board.cgi?id=photo2&action=input_pwd&load_act=mod_form&gul=47&page=><img src=http://www.lighthousecrc.org/spboard/img/img_skin/gallery_sp/modify.gif  border=0 alt="Modify"></a><a href=http://www.lighthousecrc.org/spboard/board.cgi?id=photo2&action=input_pwd&load_act=delete&gul=47&page=><img src=http://www.lighthousecrc.org/spboard/img/img_skin/gallery_sp/delete.gif  border=0 alt="Delete"></a>&nbsp;</td></tr>
+		</table>
+	</td></tr>
+</table>
+<!--±×¸²º¸±â Å×ÀÌºí ³¡-->
+</td><td align=right>
+<!-- ±×¸² º¸±â Å×ÀÌºí ½ÃÀÛ-->
+ 
+				<div id='overDiv14' style="position:absolute; left:50px; top:50px; width:200px; height:200px; z-index:500; visibility:hidden; border-width:0px; border-style:none;">
+					 <table id=popup14 bgcolor=#B2B7FF border=0 width=230 style="filter:alpha(opacity=35); border:1  solid;" cellpadding=3 cellspacing=0>
+						<tr><td>&nbsp;&nbsp;<img src=http://www.lighthousecrc.org/spboard/img/img_skin/gallery_sp/sub.gif width=12 height=12><b>Tony Jiyon Anabel Aidan</b></td></tr>					
+						<tr><td class=cont>Jiyon, Aidan, Anabel and Tony</td></tr>
+						<tr><td align=right>read:<b><font color=#090909>38</font></b> vote:<b><font color=#efefef>0</font></b> (<font color=#090909>2003.10.16</font>)</td></tr>
+					</table>
+				</div>
+				<SCRIPT LANGUAGE='javascript'>
+				if ( (ns4) || (ie4) ) {
+					if (ns4) over14 = document.overDiv14;
+					if (ie4) over14 = overDiv14.style;
+				}
+				</SCRIPT>
+			
+<table border=1 bgcolor="#B2B7FF" cellpadding=3 cellspacing=0 width="100%" height="100%" bordercolorlight="#efefef" bordercolordark="#efefef">
+	<tr><td align=center valign=bottom>
+		<table border=0 cellpadding=0 cellspacing=0 width="100%" height="100%">
+			<tr><td align=center valign=top width="140" height="120"><a href="javascript:view_img(640, 480, 'http://www.lighthousecrc.org/spboard/board.cgi?id=photo2&action=view&gul=46&page=1&go_cnt=','view_img27')"><img src=http://www.lighthousecrc.org/spboard/id/photo2/files/TonyFamily640.jpg width=140 onmouseover="SetCurrDiv(14); ShowToolTip(over14); high(popup14);" onmouseout="SetCurrDiv(0); HideToolTip(over14); low(popup14);" border=1 style="border-style:groove;border-color:black;"></a></td></tr>
+			<tr><td align=right><img src=http://www.lighthousecrc.org/spboard/img/img_skin/gallery_sp/zero.gif width="140" height=2><br> <!--FACE--><!--MAIL-->&nbsp;<a href=http://www.lighthousecrc.org/spboard/board.cgi?id=photo2&action=vote&gul=46&page=1&go_cnt=><img src=http://www.lighthousecrc.org/spboard/img/img_skin/gallery_sp/vote.gif  border=0 alt="Vote"></a><a href=http://www.lighthousecrc.org/spboard/board.cgi?id=photo2&action=input_pwd&load_act=mod_form&gul=46&page=><img src=http://www.lighthousecrc.org/spboard/img/img_skin/gallery_sp/modify.gif  border=0 alt="Modify"></a><a href=http://www.lighthousecrc.org/spboard/board.cgi?id=photo2&action=input_pwd&load_act=delete&gul=46&page=><img src=http://www.lighthousecrc.org/spboard/img/img_skin/gallery_sp/delete.gif  border=0 alt="Delete"></a>&nbsp;</td></tr>
+		</table>
+	</td></tr>
+</table>
+<!--±×¸²º¸±â Å×ÀÌºí ³¡-->
+</td><td align=right>
+<!-- ±×¸² º¸±â Å×ÀÌºí ½ÃÀÛ-->
+ 
+				<div id='overDiv15' style="position:absolute; left:50px; top:50px; width:200px; height:200px; z-index:500; visibility:hidden; border-width:0px; border-style:none;">
+					 <table id=popup15 bgcolor=#B2B7FF border=0 width=230 style="filter:alpha(opacity=35); border:1  solid;" cellpadding=3 cellspacing=0>
+						<tr><td>&nbsp;&nbsp;<img src=http://www.lighthousecrc.org/spboard/img/img_skin/gallery_sp/sub.gif width=12 height=12><b>Harmony and Dan </b></td></tr>					
+						<tr><td class=cont>Harmony and Dan</td></tr>
+						<tr><td align=right>read:<b><font color=#090909>15</font></b> vote:<b><font color=#efefef>0</font></b> (<font color=#090909>2003.10.16</font>)</td></tr>
+					</table>
+				</div>
+				<SCRIPT LANGUAGE='javascript'>
+				if ( (ns4) || (ie4) ) {
+					if (ns4) over15 = document.overDiv15;
+					if (ie4) over15 = overDiv15.style;
+				}
+				</SCRIPT>
+			
+<table border=1 bgcolor="#B2B7FF" cellpadding=3 cellspacing=0 width="100%" height="100%" bordercolorlight="#efefef" bordercolordark="#efefef">
+	<tr><td align=center valign=bottom>
+		<table border=0 cellpadding=0 cellspacing=0 width="100%" height="100%">
+			<tr><td align=center valign=top width="140" height="120"><a href="javascript:view_img(640, 480, 'http://www.lighthousecrc.org/spboard/board.cgi?id=photo2&action=view&gul=45&page=1&go_cnt=','view_img26')"><img src=http://www.lighthousecrc.org/spboard/id/photo2/files/DanHarmony640.jpg width=140 onmouseover="SetCurrDiv(15); ShowToolTip(over15); high(popup15);" onmouseout="SetCurrDiv(0); HideToolTip(over15); low(popup15);" border=1 style="border-style:groove;border-color:black;"></a></td></tr>
+			<tr><td align=right><img src=http://www.lighthousecrc.org/spboard/img/img_skin/gallery_sp/zero.gif width="140" height=2><br> <!--FACE--><!--MAIL-->&nbsp;<a href=http://www.lighthousecrc.org/spboard/board.cgi?id=photo2&action=vote&gul=45&page=1&go_cnt=><img src=http://www.lighthousecrc.org/spboard/img/img_skin/gallery_sp/vote.gif  border=0 alt="Vote"></a><a href=http://www.lighthousecrc.org/spboard/board.cgi?id=photo2&action=input_pwd&load_act=mod_form&gul=45&page=><img src=http://www.lighthousecrc.org/spboard/img/img_skin/gallery_sp/modify.gif  border=0 alt="Modify"></a><a href=http://www.lighthousecrc.org/spboard/board.cgi?id=photo2&action=input_pwd&load_act=delete&gul=45&page=><img src=http://www.lighthousecrc.org/spboard/img/img_skin/gallery_sp/delete.gif  border=0 alt="Delete"></a>&nbsp;</td></tr>
+		</table>
+	</td></tr>
+</table>
+<!--±×¸²º¸±â Å×ÀÌºí ³¡-->
+</td><td align=right>
+<!-- ±×¸² º¸±â Å×ÀÌºí ½ÃÀÛ-->
+ 
+				<div id='overDiv16' style="position:absolute; left:50px; top:50px; width:200px; height:200px; z-index:500; visibility:hidden; border-width:0px; border-style:none;">
+					 <table id=popup16 bgcolor=#B2B7FF border=0 width=230 style="filter:alpha(opacity=35); border:1  solid;" cellpadding=3 cellspacing=0>
+						<tr><td>&nbsp;&nbsp;<img src=http://www.lighthousecrc.org/spboard/img/img_skin/gallery_sp/sub.gif width=12 height=12><b>Joe and HyunOk</b></td></tr>					
+						<tr><td class=cont>Joe & HyunOk Hwang</td></tr>
+						<tr><td align=right>read:<b><font color=#090909>18</font></b> vote:<b><font color=#efefef>0</font></b> (<font color=#090909>2003.10.11</font>)</td></tr>
+					</table>
+				</div>
+				<SCRIPT LANGUAGE='javascript'>
+				if ( (ns4) || (ie4) ) {
+					if (ns4) over16 = document.overDiv16;
+					if (ie4) over16 = overDiv16.style;
+				}
+				</SCRIPT>
+			
+<table border=1 bgcolor="#B2B7FF" cellpadding=3 cellspacing=0 width="100%" height="100%" bordercolorlight="#efefef" bordercolordark="#efefef">
+	<tr><td align=center valign=bottom>
+		<table border=0 cellpadding=0 cellspacing=0 width="100%" height="100%">
+			<tr><td align=center valign=top width="140" height="120"><a href="javascript:view_img(508, 372, 'http://www.lighthousecrc.org/spboard/board.cgi?id=photo2&action=view&gul=44&page=1&go_cnt=','view_img25')"><img src=http://www.lighthousecrc.org/spboard/id/photo2/files/JoeHyunOK.jpg width=140 onmouseover="SetCurrDiv(16); ShowToolTip(over16); high(popup16);" onmouseout="SetCurrDiv(0); HideToolTip(over16); low(popup16);" border=1 style="border-style:groove;border-color:black;"></a></td></tr>
+			<tr><td align=right><img src=http://www.lighthousecrc.org/spboard/img/img_skin/gallery_sp/zero.gif width="140" height=2><br> <!--FACE--><!--MAIL-->&nbsp;<a href=http://www.lighthousecrc.org/spboard/board.cgi?id=photo2&action=vote&gul=44&page=1&go_cnt=><img src=http://www.lighthousecrc.org/spboard/img/img_skin/gallery_sp/vote.gif  border=0 alt="Vote"></a><a href=http://www.lighthousecrc.org/spboard/board.cgi?id=photo2&action=input_pwd&load_act=mod_form&gul=44&page=><img src=http://www.lighthousecrc.org/spboard/img/img_skin/gallery_sp/modify.gif  border=0 alt="Modify"></a><a href=http://www.lighthousecrc.org/spboard/board.cgi?id=photo2&action=input_pwd&load_act=delete&gul=44&page=><img src=http://www.lighthousecrc.org/spboard/img/img_skin/gallery_sp/delete.gif  border=0 alt="Delete"></a>&nbsp;</td></tr>
+		</table>
+	</td></tr>
+</table>
+<!--±×¸²º¸±â Å×ÀÌºí ³¡-->
+</td></tr><tr><td align=right>
+<!-- ±×¸² º¸±â Å×ÀÌºí ½ÃÀÛ-->
+ 
+				<div id='overDiv17' style="position:absolute; left:50px; top:50px; width:200px; height:200px; z-index:500; visibility:hidden; border-width:0px; border-style:none;">
+					 <table id=popup17 bgcolor=#B2B7FF border=0 width=230 style="filter:alpha(opacity=35); border:1  solid;" cellpadding=3 cellspacing=0>
+						<tr><td>&nbsp;&nbsp;<img src=http://www.lighthousecrc.org/spboard/img/img_skin/gallery_sp/sub.gif width=12 height=12><b>Yong, Haemi, Christopher and Allison</b></td></tr>					
+						<tr><td class=cont>Haemi, Christopher, Allison, and Yong</td></tr>
+						<tr><td align=right>read:<b><font color=#090909>21</font></b> vote:<b><font color=#efefef>0</font></b> (<font color=#090909>2003.10.11</font>)</td></tr>
+					</table>
+				</div>
+				<SCRIPT LANGUAGE='javascript'>
+				if ( (ns4) || (ie4) ) {
+					if (ns4) over17 = document.overDiv17;
+					if (ie4) over17 = overDiv17.style;
+				}
+				</SCRIPT>
+			
+<table border=1 bgcolor="#B2B7FF" cellpadding=3 cellspacing=0 width="100%" height="100%" bordercolorlight="#efefef" bordercolordark="#efefef">
+	<tr><td align=center valign=bottom>
+		<table border=0 cellpadding=0 cellspacing=0 width="100%" height="100%">
+			<tr><td align=center valign=top width="140" height="120"><a href="javascript:view_img(640, 480, 'http://www.lighthousecrc.org/spboard/board.cgi?id=photo2&action=view&gul=43&page=1&go_cnt=','view_img24')"><img src=http://www.lighthousecrc.org/spboard/id/photo2/files/YongHaemi640.jpg width=140 onmouseover="SetCurrDiv(17); ShowToolTip(over17); high(popup17);" onmouseout="SetCurrDiv(0); HideToolTip(over17); low(popup17);" border=1 style="border-style:groove;border-color:black;"></a></td></tr>
+			<tr><td align=right><img src=http://www.lighthousecrc.org/spboard/img/img_skin/gallery_sp/zero.gif width="140" height=2><br> <!--FACE--><!--MAIL-->&nbsp;<a href=http://www.lighthousecrc.org/spboard/board.cgi?id=photo2&action=vote&gul=43&page=1&go_cnt=><img src=http://www.lighthousecrc.org/spboard/img/img_skin/gallery_sp/vote.gif  border=0 alt="Vote"></a><a href=http://www.lighthousecrc.org/spboard/board.cgi?id=photo2&action=input_pwd&load_act=mod_form&gul=43&page=><img src=http://www.lighthousecrc.org/spboard/img/img_skin/gallery_sp/modify.gif  border=0 alt="Modify"></a><a href=http://www.lighthousecrc.org/spboard/board.cgi?id=photo2&action=input_pwd&load_act=delete&gul=43&page=><img src=http://www.lighthousecrc.org/spboard/img/img_skin/gallery_sp/delete.gif  border=0 alt="Delete"></a>&nbsp;</td></tr>
+		</table>
+	</td></tr>
+</table>
+<!--±×¸²º¸±â Å×ÀÌºí ³¡-->
+</td><td align=right>
+<!-- ±×¸² º¸±â Å×ÀÌºí ½ÃÀÛ-->
+ 
+				<div id='overDiv18' style="position:absolute; left:50px; top:50px; width:200px; height:200px; z-index:500; visibility:hidden; border-width:0px; border-style:none;">
+					 <table id=popup18 bgcolor=#B2B7FF border=0 width=230 style="filter:alpha(opacity=35); border:1  solid;" cellpadding=3 cellspacing=0>
+						<tr><td>&nbsp;&nbsp;<img src=http://www.lighthousecrc.org/spboard/img/img_skin/gallery_sp/sub.gif width=12 height=12><b>Jong Ju Lee</b></td></tr>					
+						<tr><td class=cont>Jong Ju Lee</td></tr>
+						<tr><td align=right>read:<b><font color=#090909>30</font></b> vote:<b><font color=#efefef>0</font></b> (<font color=#090909>2003.10.11</font>)</td></tr>
+					</table>
+				</div>
+				<SCRIPT LANGUAGE='javascript'>
+				if ( (ns4) || (ie4) ) {
+					if (ns4) over18 = document.overDiv18;
+					if (ie4) over18 = overDiv18.style;
+				}
+				</SCRIPT>
+			
+<table border=1 bgcolor="#B2B7FF" cellpadding=3 cellspacing=0 width="100%" height="100%" bordercolorlight="#efefef" bordercolordark="#efefef">
+	<tr><td align=center valign=bottom>
+		<table border=0 cellpadding=0 cellspacing=0 width="100%" height="100%">
+			<tr><td align=center valign=top width="140" height="120"><a href="javascript:view_img(640, 480, 'http://www.lighthousecrc.org/spboard/board.cgi?id=photo2&action=view&gul=42&page=1&go_cnt=','view_img23')"><img src=http://www.lighthousecrc.org/spboard/id/photo2/files/Jongju.jpg width=140 onmouseover="SetCurrDiv(18); ShowToolTip(over18); high(popup18);" onmouseout="SetCurrDiv(0); HideToolTip(over18); low(popup18);" border=1 style="border-style:groove;border-color:black;"></a></td></tr>
+			<tr><td align=right><img src=http://www.lighthousecrc.org/spboard/img/img_skin/gallery_sp/zero.gif width="140" height=2><br> <!--FACE--><!--MAIL-->&nbsp;<a href=http://www.lighthousecrc.org/spboard/board.cgi?id=photo2&action=vote&gul=42&page=1&go_cnt=><img src=http://www.lighthousecrc.org/spboard/img/img_skin/gallery_sp/vote.gif  border=0 alt="Vote"></a><a href=http://www.lighthousecrc.org/spboard/board.cgi?id=photo2&action=input_pwd&load_act=mod_form&gul=42&page=><img src=http://www.lighthousecrc.org/spboard/img/img_skin/gallery_sp/modify.gif  border=0 alt="Modify"></a><a href=http://www.lighthousecrc.org/spboard/board.cgi?id=photo2&action=input_pwd&load_act=delete&gul=42&page=><img src=http://www.lighthousecrc.org/spboard/img/img_skin/gallery_sp/delete.gif  border=0 alt="Delete"></a>&nbsp;</td></tr>
+		</table>
+	</td></tr>
+</table>
+<!--±×¸²º¸±â Å×ÀÌºí ³¡-->
+</td><td align=right>
+<!-- ±×¸² º¸±â Å×ÀÌºí ½ÃÀÛ-->
+ 
+				<div id='overDiv19' style="position:absolute; left:50px; top:50px; width:200px; height:200px; z-index:500; visibility:hidden; border-width:0px; border-style:none;">
+					 <table id=popup19 bgcolor=#B2B7FF border=0 width=230 style="filter:alpha(opacity=35); border:1  solid;" cellpadding=3 cellspacing=0>
+						<tr><td>&nbsp;&nbsp;<img src=http://www.lighthousecrc.org/spboard/img/img_skin/gallery_sp/sub.gif width=12 height=12><b>Que Rhee</b></td></tr>					
+						<tr><td class=cont>Que Rhee</td></tr>
+						<tr><td align=right>read:<b><font color=#090909>26</font></b> vote:<b><font color=#efefef>0</font></b> (<font color=#090909>2003.10.11</font>)</td></tr>
+					</table>
+				</div>
+				<SCRIPT LANGUAGE='javascript'>
+				if ( (ns4) || (ie4) ) {
+					if (ns4) over19 = document.overDiv19;
+					if (ie4) over19 = overDiv19.style;
+				}
+				</SCRIPT>
+			
+<table border=1 bgcolor="#B2B7FF" cellpadding=3 cellspacing=0 width="100%" height="100%" bordercolorlight="#efefef" bordercolordark="#efefef">
+	<tr><td align=center valign=bottom>
+		<table border=0 cellpadding=0 cellspacing=0 width="100%" height="100%">
+			<tr><td align=center valign=top width="140" height="120"><a href="javascript:view_img(640, 480, 'http://www.lighthousecrc.org/spboard/board.cgi?id=photo2&action=view&gul=41&page=1&go_cnt=','view_img22')"><img src=http://www.lighthousecrc.org/spboard/id/photo2/files/Que640.jpg width=140 onmouseover="SetCurrDiv(19); ShowToolTip(over19); high(popup19);" onmouseout="SetCurrDiv(0); HideToolTip(over19); low(popup19);" border=1 style="border-style:groove;border-color:black;"></a></td></tr>
+			<tr><td align=right><img src=http://www.lighthousecrc.org/spboard/img/img_skin/gallery_sp/zero.gif width="140" height=2><br> <!--FACE--><!--MAIL-->&nbsp;<a href=http://www.lighthousecrc.org/spboard/board.cgi?id=photo2&action=vote&gul=41&page=1&go_cnt=><img src=http://www.lighthousecrc.org/spboard/img/img_skin/gallery_sp/vote.gif  border=0 alt="Vote"></a><a href=http://www.lighthousecrc.org/spboard/board.cgi?id=photo2&action=input_pwd&load_act=mod_form&gul=41&page=><img src=http://www.lighthousecrc.org/spboard/img/img_skin/gallery_sp/modify.gif  border=0 alt="Modify"></a><a href=http://www.lighthousecrc.org/spboard/board.cgi?id=photo2&action=input_pwd&load_act=delete&gul=41&page=><img src=http://www.lighthousecrc.org/spboard/img/img_skin/gallery_sp/delete.gif  border=0 alt="Delete"></a>&nbsp;</td></tr>
+		</table>
+	</td></tr>
+</table>
+<!--±×¸²º¸±â Å×ÀÌºí ³¡-->
+</td><td align=right>
+<!-- ±×¸² º¸±â Å×ÀÌºí ½ÃÀÛ-->
+ 
+				<div id='overDiv20' style="position:absolute; left:50px; top:50px; width:200px; height:200px; z-index:500; visibility:hidden; border-width:0px; border-style:none;">
+					 <table id=popup20 bgcolor=#B2B7FF border=0 width=230 style="filter:alpha(opacity=35); border:1  solid;" cellpadding=3 cellspacing=0>
+						<tr><td>&nbsp;&nbsp;<img src=http://www.lighthousecrc.org/spboard/img/img_skin/gallery_sp/sub.gif width=12 height=12><b>James Chang</b></td></tr>					
+						<tr><td class=cont>James Chang</td></tr>
+						<tr><td align=right>read:<b><font color=#090909>28</font></b> vote:<b><font color=#efefef>2</font></b> (<font color=#090909>2003.07.20</font>)</td></tr>
+					</table>
+				</div>
+				<SCRIPT LANGUAGE='javascript'>
+				if ( (ns4) || (ie4) ) {
+					if (ns4) over20 = document.overDiv20;
+					if (ie4) over20 = overDiv20.style;
+				}
+				</SCRIPT>
+			
+<table border=1 bgcolor="#B2B7FF" cellpadding=3 cellspacing=0 width="100%" height="100%" bordercolorlight="#efefef" bordercolordark="#efefef">
+	<tr><td align=center valign=bottom>
+		<table border=0 cellpadding=0 cellspacing=0 width="100%" height="100%">
+			<tr><td align=center valign=top width="140" height="120"><a href="javascript:view_img(640, 480, 'http://www.lighthousecrc.org/spboard/board.cgi?id=photo2&action=view&gul=38&page=1&go_cnt=','view_img21')"><img src=http://www.lighthousecrc.org/spboard/id/photo2/files/JamesChang640.jpg width=140 onmouseover="SetCurrDiv(20); ShowToolTip(over20); high(popup20);" onmouseout="SetCurrDiv(0); HideToolTip(over20); low(popup20);" border=1 style="border-style:groove;border-color:black;"></a></td></tr>
+			<tr><td align=right><img src=http://www.lighthousecrc.org/spboard/img/img_skin/gallery_sp/zero.gif width="140" height=2><br> <!--FACE--><!--MAIL-->&nbsp;<a href=http://www.lighthousecrc.org/spboard/board.cgi?id=photo2&action=vote&gul=38&page=1&go_cnt=><img src=http://www.lighthousecrc.org/spboard/img/img_skin/gallery_sp/vote.gif  border=0 alt="Vote"></a><a href=http://www.lighthousecrc.org/spboard/board.cgi?id=photo2&action=input_pwd&load_act=mod_form&gul=38&page=><img src=http://www.lighthousecrc.org/spboard/img/img_skin/gallery_sp/modify.gif  border=0 alt="Modify"></a><a href=http://www.lighthousecrc.org/spboard/board.cgi?id=photo2&action=input_pwd&load_act=delete&gul=38&page=><img src=http://www.lighthousecrc.org/spboard/img/img_skin/gallery_sp/delete.gif  border=0 alt="Delete"></a>&nbsp;</td></tr>
+		</table>
+	</td></tr>
+</table>
+<!--±×¸²º¸±â Å×ÀÌºí ³¡-->
+</td></tr><tr><td align=right>
+<!-- ±×¸² º¸±â Å×ÀÌºí ½ÃÀÛ-->
+ 
+				<div id='overDiv21' style="position:absolute; left:50px; top:50px; width:200px; height:200px; z-index:500; visibility:hidden; border-width:0px; border-style:none;">
+					 <table id=popup21 bgcolor=#B2B7FF border=0 width=230 style="filter:alpha(opacity=35); border:1  solid;" cellpadding=3 cellspacing=0>
+						<tr><td>&nbsp;&nbsp;<img src=http://www.lighthousecrc.org/spboard/img/img_skin/gallery_sp/sub.gif width=12 height=12><b>Jessica Chang</b></td></tr>					
+						<tr><td class=cont>Jessica Chang</td></tr>
+						<tr><td align=right>read:<b><font color=#090909>26</font></b> vote:<b><font color=#efefef>0</font></b> (<font color=#090909>2003.07.20</font>)</td></tr>
+					</table>
+				</div>
+				<SCRIPT LANGUAGE='javascript'>
+				if ( (ns4) || (ie4) ) {
+					if (ns4) over21 = document.overDiv21;
+					if (ie4) over21 = overDiv21.style;
+				}
+				</SCRIPT>
+			
+<table border=1 bgcolor="#B2B7FF" cellpadding=3 cellspacing=0 width="100%" height="100%" bordercolorlight="#efefef" bordercolordark="#efefef">
+	<tr><td align=center valign=bottom>
+		<table border=0 cellpadding=0 cellspacing=0 width="100%" height="100%">
+			<tr><td align=center valign=top width="140" height="120"><a href="javascript:view_img(640, 480, 'http://www.lighthousecrc.org/spboard/board.cgi?id=photo2&action=view&gul=37&page=1&go_cnt=','view_img20')"><img src=http://www.lighthousecrc.org/spboard/id/photo2/files/DSC00740.JPG width=140 onmouseover="SetCurrDiv(21); ShowToolTip(over21); high(popup21);" onmouseout="SetCurrDiv(0); HideToolTip(over21); low(popup21);" border=1 style="border-style:groove;border-color:black;"></a></td></tr>
+			<tr><td align=right><img src=http://www.lighthousecrc.org/spboard/img/img_skin/gallery_sp/zero.gif width="140" height=2><br> <!--FACE--><!--MAIL-->&nbsp;<a href=http://www.lighthousecrc.org/spboard/board.cgi?id=photo2&action=vote&gul=37&page=1&go_cnt=><img src=http://www.lighthousecrc.org/spboard/img/img_skin/gallery_sp/vote.gif  border=0 alt="Vote"></a><a href=http://www.lighthousecrc.org/spboard/board.cgi?id=photo2&action=input_pwd&load_act=mod_form&gul=37&page=><img src=http://www.lighthousecrc.org/spboard/img/img_skin/gallery_sp/modify.gif  border=0 alt="Modify"></a><a href=http://www.lighthousecrc.org/spboard/board.cgi?id=photo2&action=input_pwd&load_act=delete&gul=37&page=><img src=http://www.lighthousecrc.org/spboard/img/img_skin/gallery_sp/delete.gif  border=0 alt="Delete"></a>&nbsp;</td></tr>
+		</table>
+	</td></tr>
+</table>
+<!--±×¸²º¸±â Å×ÀÌºí ³¡-->
+</td><td align=right>
+<!-- ±×¸² º¸±â Å×ÀÌºí ½ÃÀÛ-->
+ 
+				<div id='overDiv22' style="position:absolute; left:50px; top:50px; width:200px; height:200px; z-index:500; visibility:hidden; border-width:0px; border-style:none;">
+					 <table id=popup22 bgcolor=#B2B7FF border=0 width=230 style="filter:alpha(opacity=35); border:1  solid;" cellpadding=3 cellspacing=0>
+						<tr><td>&nbsp;&nbsp;<img src=http://www.lighthousecrc.org/spboard/img/img_skin/gallery_sp/sub.gif width=12 height=12><b>Sumin, Sungchin, Daniel and Misook</b></td></tr>					
+						<tr><td class=cont>Sumin, Sungchin, Daniel and Misook</td></tr>
+						<tr><td align=right>read:<b><font color=#090909>22</font></b> vote:<b><font color=#efefef>0</font></b> (<font color=#090909>2003.07.19</font>)</td></tr>
+					</table>
+				</div>
+				<SCRIPT LANGUAGE='javascript'>
+				if ( (ns4) || (ie4) ) {
+					if (ns4) over22 = document.overDiv22;
+					if (ie4) over22 = overDiv22.style;
+				}
+				</SCRIPT>
+			
+<table border=1 bgcolor="#B2B7FF" cellpadding=3 cellspacing=0 width="100%" height="100%" bordercolorlight="#efefef" bordercolordark="#efefef">
+	<tr><td align=center valign=bottom>
+		<table border=0 cellpadding=0 cellspacing=0 width="100%" height="100%">
+			<tr><td align=center valign=top width="140" height="120"><a href="javascript:view_img(640, 480, 'http://www.lighthousecrc.org/spboard/board.cgi?id=photo2&action=view&gul=35&page=1&go_cnt=','view_img19')"><img src=http://www.lighthousecrc.org/spboard/id/photo2/files/DSC01227.JPG width=140 onmouseover="SetCurrDiv(22); ShowToolTip(over22); high(popup22);" onmouseout="SetCurrDiv(0); HideToolTip(over22); low(popup22);" border=1 style="border-style:groove;border-color:black;"></a></td></tr>
+			<tr><td align=right><img src=http://www.lighthousecrc.org/spboard/img/img_skin/gallery_sp/zero.gif width="140" height=2><br> <!--FACE--><!--MAIL-->&nbsp;<a href=http://www.lighthousecrc.org/spboard/board.cgi?id=photo2&action=vote&gul=35&page=1&go_cnt=><img src=http://www.lighthousecrc.org/spboard/img/img_skin/gallery_sp/vote.gif  border=0 alt="Vote"></a><a href=http://www.lighthousecrc.org/spboard/board.cgi?id=photo2&action=input_pwd&load_act=mod_form&gul=35&page=><img src=http://www.lighthousecrc.org/spboard/img/img_skin/gallery_sp/modify.gif  border=0 alt="Modify"></a><a href=http://www.lighthousecrc.org/spboard/board.cgi?id=photo2&action=input_pwd&load_act=delete&gul=35&page=><img src=http://www.lighthousecrc.org/spboard/img/img_skin/gallery_sp/delete.gif  border=0 alt="Delete"></a>&nbsp;</td></tr>
+		</table>
+	</td></tr>
+</table>
+<!--±×¸²º¸±â Å×ÀÌºí ³¡-->
+</td><td align=right>
+<!-- ±×¸² º¸±â Å×ÀÌºí ½ÃÀÛ-->
+ 
+				<div id='overDiv23' style="position:absolute; left:50px; top:50px; width:200px; height:200px; z-index:500; visibility:hidden; border-width:0px; border-style:none;">
+					 <table id=popup23 bgcolor=#B2B7FF border=0 width=230 style="filter:alpha(opacity=35); border:1  solid;" cellpadding=3 cellspacing=0>
+						<tr><td>&nbsp;&nbsp;<img src=http://www.lighthousecrc.org/spboard/img/img_skin/gallery_sp/sub.gif width=12 height=12><b>Gloria Shim</b></td></tr>					
+						<tr><td class=cont>Gloria Shim</td></tr>
+						<tr><td align=right>read:<b><font color=#090909>35</font></b> vote:<b><font color=#efefef>0</font></b> (<font color=#090909>2003.07.19</font>)</td></tr>
+					</table>
+				</div>
+				<SCRIPT LANGUAGE='javascript'>
+				if ( (ns4) || (ie4) ) {
+					if (ns4) over23 = document.overDiv23;
+					if (ie4) over23 = overDiv23.style;
+				}
+				</SCRIPT>
+			
+<table border=1 bgcolor="#B2B7FF" cellpadding=3 cellspacing=0 width="100%" height="100%" bordercolorlight="#efefef" bordercolordark="#efefef">
+	<tr><td align=center valign=bottom>
+		<table border=0 cellpadding=0 cellspacing=0 width="100%" height="100%">
+			<tr><td align=center valign=top width="140" height="120"><a href="javascript:view_img(640, 480, 'http://www.lighthousecrc.org/spboard/board.cgi?id=photo2&action=view&gul=31&page=1&go_cnt=','view_img18')"><img src=http://www.lighthousecrc.org/spboard/id/photo2/files/DSC00802.JPG width=140 onmouseover="SetCurrDiv(23); ShowToolTip(over23); high(popup23);" onmouseout="SetCurrDiv(0); HideToolTip(over23); low(popup23);" border=1 style="border-style:groove;border-color:black;"></a></td></tr>
+			<tr><td align=right><img src=http://www.lighthousecrc.org/spboard/img/img_skin/gallery_sp/zero.gif width="140" height=2><br> <!--FACE--><!--MAIL-->&nbsp;<a href=http://www.lighthousecrc.org/spboard/board.cgi?id=photo2&action=vote&gul=31&page=1&go_cnt=><img src=http://www.lighthousecrc.org/spboard/img/img_skin/gallery_sp/vote.gif  border=0 alt="Vote"></a><a href=http://www.lighthousecrc.org/spboard/board.cgi?id=photo2&action=input_pwd&load_act=mod_form&gul=31&page=><img src=http://www.lighthousecrc.org/spboard/img/img_skin/gallery_sp/modify.gif  border=0 alt="Modify"></a><a href=http://www.lighthousecrc.org/spboard/board.cgi?id=photo2&action=input_pwd&load_act=delete&gul=31&page=><img src=http://www.lighthousecrc.org/spboard/img/img_skin/gallery_sp/delete.gif  border=0 alt="Delete"></a>&nbsp;</td></tr>
+		</table>
+	</td></tr>
+</table>
+<!--±×¸²º¸±â Å×ÀÌºí ³¡-->
+</td><td align=right>
+<!-- ±×¸² º¸±â Å×ÀÌºí ½ÃÀÛ-->
+ 
+				<div id='overDiv24' style="position:absolute; left:50px; top:50px; width:200px; height:200px; z-index:500; visibility:hidden; border-width:0px; border-style:none;">
+					 <table id=popup24 bgcolor=#B2B7FF border=0 width=230 style="filter:alpha(opacity=35); border:1  solid;" cellpadding=3 cellspacing=0>
+						<tr><td>&nbsp;&nbsp;<img src=http://www.lighthousecrc.org/spboard/img/img_skin/gallery_sp/sub.gif width=12 height=12><b>Anne Kim</b></td></tr>					
+						<tr><td class=cont>Anne Kim</td></tr>
+						<tr><td align=right>read:<b><font color=#090909>43</font></b> vote:<b><font color=#efefef>1</font></b> (<font color=#090909>2003.07.19</font>)</td></tr>
+					</table>
+				</div>
+				<SCRIPT LANGUAGE='javascript'>
+				if ( (ns4) || (ie4) ) {
+					if (ns4) over24 = document.overDiv24;
+					if (ie4) over24 = overDiv24.style;
+				}
+				</SCRIPT>
+			
+<table border=1 bgcolor="#B2B7FF" cellpadding=3 cellspacing=0 width="100%" height="100%" bordercolorlight="#efefef" bordercolordark="#efefef">
+	<tr><td align=center valign=bottom>
+		<table border=0 cellpadding=0 cellspacing=0 width="100%" height="100%">
+			<tr><td align=center valign=top width="140" height="120"><a href="javascript:view_img(640, 480, 'http://www.lighthousecrc.org/spboard/board.cgi?id=photo2&action=view&gul=30&page=1&go_cnt=','view_img17')"><img src=http://www.lighthousecrc.org/spboard/id/photo2/files/Anne640.jpg width=140 onmouseover="SetCurrDiv(24); ShowToolTip(over24); high(popup24);" onmouseout="SetCurrDiv(0); HideToolTip(over24); low(popup24);" border=1 style="border-style:groove;border-color:black;"></a></td></tr>
+			<tr><td align=right><img src=http://www.lighthousecrc.org/spboard/img/img_skin/gallery_sp/zero.gif width="140" height=2><br> <!--FACE--><!--MAIL-->&nbsp;<a href=http://www.lighthousecrc.org/spboard/board.cgi?id=photo2&action=vote&gul=30&page=1&go_cnt=><img src=http://www.lighthousecrc.org/spboard/img/img_skin/gallery_sp/vote.gif  border=0 alt="Vote"></a><a href=http://www.lighthousecrc.org/spboard/board.cgi?id=photo2&action=input_pwd&load_act=mod_form&gul=30&page=><img src=http://www.lighthousecrc.org/spboard/img/img_skin/gallery_sp/modify.gif  border=0 alt="Modify"></a><a href=http://www.lighthousecrc.org/spboard/board.cgi?id=photo2&action=input_pwd&load_act=delete&gul=30&page=><img src=http://www.lighthousecrc.org/spboard/img/img_skin/gallery_sp/delete.gif  border=0 alt="Delete"></a>&nbsp;</td></tr>
+		</table>
+	</td></tr>
+</table>
+<!--±×¸²º¸±â Å×ÀÌºí ³¡-->
+</td></tr><tr><td align=right>
+<!-- ±×¸² º¸±â Å×ÀÌºí ½ÃÀÛ-->
+ 
+				<div id='overDiv25' style="position:absolute; left:50px; top:50px; width:200px; height:200px; z-index:500; visibility:hidden; border-width:0px; border-style:none;">
+					 <table id=popup25 bgcolor=#B2B7FF border=0 width=230 style="filter:alpha(opacity=35); border:1  solid;" cellpadding=3 cellspacing=0>
+						<tr><td>&nbsp;&nbsp;<img src=http://www.lighthousecrc.org/spboard/img/img_skin/gallery_sp/sub.gif width=12 height=12><b>Aemi, EJ, Sang and Aerin</b></td></tr>					
+						<tr><td class=cont>Aemi, EJ, Sang and Aerin</td></tr>
+						<tr><td align=right>read:<b><font color=#090909>32</font></b> vote:<b><font color=#efefef>0</font></b> (<font color=#090909>2003.07.19</font>)</td></tr>
+					</table>
+				</div>
+				<SCRIPT LANGUAGE='javascript'>
+				if ( (ns4) || (ie4) ) {
+					if (ns4) over25 = document.overDiv25;
+					if (ie4) over25 = overDiv25.style;
+				}
+				</SCRIPT>
+			
+<table border=1 bgcolor="#B2B7FF" cellpadding=3 cellspacing=0 width="100%" height="100%" bordercolorlight="#efefef" bordercolordark="#efefef">
+	<tr><td align=center valign=bottom>
+		<table border=0 cellpadding=0 cellspacing=0 width="100%" height="100%">
+			<tr><td align=center valign=top width="140" height="120"><a href="javascript:view_img(832, 624, 'http://www.lighthousecrc.org/spboard/board.cgi?id=photo2&action=view&gul=26&page=1&go_cnt=','view_img16')"><img src=http://www.lighthousecrc.org/spboard/id/photo2/files/DSC01047.JPG width=140 onmouseover="SetCurrDiv(25); ShowToolTip(over25); high(popup25);" onmouseout="SetCurrDiv(0); HideToolTip(over25); low(popup25);" border=1 style="border-style:groove;border-color:black;"></a></td></tr>
+			<tr><td align=right><img src=http://www.lighthousecrc.org/spboard/img/img_skin/gallery_sp/zero.gif width="140" height=2><br> <!--FACE--><!--MAIL-->&nbsp;<a href=http://www.lighthousecrc.org/spboard/board.cgi?id=photo2&action=vote&gul=26&page=1&go_cnt=><img src=http://www.lighthousecrc.org/spboard/img/img_skin/gallery_sp/vote.gif  border=0 alt="Vote"></a><a href=http://www.lighthousecrc.org/spboard/board.cgi?id=photo2&action=input_pwd&load_act=mod_form&gul=26&page=><img src=http://www.lighthousecrc.org/spboard/img/img_skin/gallery_sp/modify.gif  border=0 alt="Modify"></a><a href=http://www.lighthousecrc.org/spboard/board.cgi?id=photo2&action=input_pwd&load_act=delete&gul=26&page=><img src=http://www.lighthousecrc.org/spboard/img/img_skin/gallery_sp/delete.gif  border=0 alt="Delete"></a>&nbsp;</td></tr>
+		</table>
+	</td></tr>
+</table>
+<!--±×¸²º¸±â Å×ÀÌºí ³¡-->
+</td><td align=right>
+<!-- ±×¸² º¸±â Å×ÀÌºí ½ÃÀÛ-->
+ 
+				<div id='overDiv26' style="position:absolute; left:50px; top:50px; width:200px; height:200px; z-index:500; visibility:hidden; border-width:0px; border-style:none;">
+					 <table id=popup26 bgcolor=#B2B7FF border=0 width=230 style="filter:alpha(opacity=35); border:1  solid;" cellpadding=3 cellspacing=0>
+						<tr><td>&nbsp;&nbsp;<img src=http://www.lighthousecrc.org/spboard/img/img_skin/gallery_sp/sub.gif width=12 height=12><b>Chong-Hwa Lee</b></td></tr>					
+						<tr><td class=cont>Chong-Hwa Lee</td></tr>
+						<tr><td align=right>read:<b><font color=#090909>51</font></b> vote:<b><font color=#efefef>0</font></b> (<font color=#090909>2003.07.19</font>)</td></tr>
+					</table>
+				</div>
+				<SCRIPT LANGUAGE='javascript'>
+				if ( (ns4) || (ie4) ) {
+					if (ns4) over26 = document.overDiv26;
+					if (ie4) over26 = overDiv26.style;
+				}
+				</SCRIPT>
+			
+<table border=1 bgcolor="#B2B7FF" cellpadding=3 cellspacing=0 width="100%" height="100%" bordercolorlight="#efefef" bordercolordark="#efefef">
+	<tr><td align=center valign=bottom>
+		<table border=0 cellpadding=0 cellspacing=0 width="100%" height="100%">
+			<tr><td align=center valign=top width="140" height="120"><a href="javascript:view_img(640, 480, 'http://www.lighthousecrc.org/spboard/board.cgi?id=photo2&action=view&gul=23&page=1&go_cnt=','view_img15')"><img src=http://www.lighthousecrc.org/spboard/id/photo2/files/Chonghwa640.jpg width=140 onmouseover="SetCurrDiv(26); ShowToolTip(over26); high(popup26);" onmouseout="SetCurrDiv(0); HideToolTip(over26); low(popup26);" border=1 style="border-style:groove;border-color:black;"></a></td></tr>
+			<tr><td align=right><img src=http://www.lighthousecrc.org/spboard/img/img_skin/gallery_sp/zero.gif width="140" height=2><br> <!--FACE--><!--MAIL-->&nbsp;<a href=http://www.lighthousecrc.org/spboard/board.cgi?id=photo2&action=vote&gul=23&page=1&go_cnt=><img src=http://www.lighthousecrc.org/spboard/img/img_skin/gallery_sp/vote.gif  border=0 alt="Vote"></a><a href=http://www.lighthousecrc.org/spboard/board.cgi?id=photo2&action=input_pwd&load_act=mod_form&gul=23&page=><img src=http://www.lighthousecrc.org/spboard/img/img_skin/gallery_sp/modify.gif  border=0 alt="Modify"></a><a href=http://www.lighthousecrc.org/spboard/board.cgi?id=photo2&action=input_pwd&load_act=delete&gul=23&page=><img src=http://www.lighthousecrc.org/spboard/img/img_skin/gallery_sp/delete.gif  border=0 alt="Delete"></a>&nbsp;</td></tr>
+		</table>
+	</td></tr>
+</table>
+<!--±×¸²º¸±â Å×ÀÌºí ³¡-->
+</td><td align=right>
+<!-- ±×¸² º¸±â Å×ÀÌºí ½ÃÀÛ-->
+ 
+				<div id='overDiv27' style="position:absolute; left:50px; top:50px; width:200px; height:200px; z-index:500; visibility:hidden; border-width:0px; border-style:none;">
+					 <table id=popup27 bgcolor=#B2B7FF border=0 width=230 style="filter:alpha(opacity=35); border:1  solid;" cellpadding=3 cellspacing=0>
+						<tr><td>&nbsp;&nbsp;<img src=http://www.lighthousecrc.org/spboard/img/img_skin/gallery_sp/sub.gif width=12 height=12><b>Christine Kim</b></td></tr>					
+						<tr><td class=cont>Christine Kim</td></tr>
+						<tr><td align=right>read:<b><font color=#090909>40</font></b> vote:<b><font color=#efefef>0</font></b> (<font color=#090909>2003.07.19</font>)</td></tr>
+					</table>
+				</div>
+				<SCRIPT LANGUAGE='javascript'>
+				if ( (ns4) || (ie4) ) {
+					if (ns4) over27 = document.overDiv27;
+					if (ie4) over27 = overDiv27.style;
+				}
+				</SCRIPT>
+			
+<table border=1 bgcolor="#B2B7FF" cellpadding=3 cellspacing=0 width="100%" height="100%" bordercolorlight="#efefef" bordercolordark="#efefef">
+	<tr><td align=center valign=bottom>
+		<table border=0 cellpadding=0 cellspacing=0 width="100%" height="100%">
+			<tr><td align=center valign=top width="140" height="120"><a href="javascript:view_img(640, 480, 'http://www.lighthousecrc.org/spboard/board.cgi?id=photo2&action=view&gul=22&page=1&go_cnt=','view_img14')"><img src=http://www.lighthousecrc.org/spboard/id/photo2/files/DSC00756.JPG width=140 onmouseover="SetCurrDiv(27); ShowToolTip(over27); high(popup27);" onmouseout="SetCurrDiv(0); HideToolTip(over27); low(popup27);" border=1 style="border-style:groove;border-color:black;"></a></td></tr>
+			<tr><td align=right><img src=http://www.lighthousecrc.org/spboard/img/img_skin/gallery_sp/zero.gif width="140" height=2><br> <!--FACE--><!--MAIL-->&nbsp;<a href=http://www.lighthousecrc.org/spboard/board.cgi?id=photo2&action=vote&gul=22&page=1&go_cnt=><img src=http://www.lighthousecrc.org/spboard/img/img_skin/gallery_sp/vote.gif  border=0 alt="Vote"></a><a href=http://www.lighthousecrc.org/spboard/board.cgi?id=photo2&action=input_pwd&load_act=mod_form&gul=22&page=><img src=http://www.lighthousecrc.org/spboard/img/img_skin/gallery_sp/modify.gif  border=0 alt="Modify"></a><a href=http://www.lighthousecrc.org/spboard/board.cgi?id=photo2&action=input_pwd&load_act=delete&gul=22&page=><img src=http://www.lighthousecrc.org/spboard/img/img_skin/gallery_sp/delete.gif  border=0 alt="Delete"></a>&nbsp;</td></tr>
+		</table>
+	</td></tr>
+</table>
+<!--±×¸²º¸±â Å×ÀÌºí ³¡-->
+</td><td align=right>
+<!-- ±×¸² º¸±â Å×ÀÌºí ½ÃÀÛ-->
+ 
+				<div id='overDiv28' style="position:absolute; left:50px; top:50px; width:200px; height:200px; z-index:500; visibility:hidden; border-width:0px; border-style:none;">
+					 <table id=popup28 bgcolor=#B2B7FF border=0 width=230 style="filter:alpha(opacity=35); border:1  solid;" cellpadding=3 cellspacing=0>
+						<tr><td>&nbsp;&nbsp;<img src=http://www.lighthousecrc.org/spboard/img/img_skin/gallery_sp/sub.gif width=12 height=12><b>Yachen Chi</b></td></tr>					
+						<tr><td class=cont>Yachen Chi</td></tr>
+						<tr><td align=right>read:<b><font color=#090909>35</font></b> vote:<b><font color=#efefef>0</font></b> (<font color=#090909>2003.06.10</font>)</td></tr>
+					</table>
+				</div>
+				<SCRIPT LANGUAGE='javascript'>
+				if ( (ns4) || (ie4) ) {
+					if (ns4) over28 = document.overDiv28;
+					if (ie4) over28 = overDiv28.style;
+				}
+				</SCRIPT>
+			
+<table border=1 bgcolor="#B2B7FF" cellpadding=3 cellspacing=0 width="100%" height="100%" bordercolorlight="#efefef" bordercolordark="#efefef">
+	<tr><td align=center valign=bottom>
+		<table border=0 cellpadding=0 cellspacing=0 width="100%" height="100%">
+			<tr><td align=center valign=top width="140" height="120"><a href="javascript:view_img(640, 480, 'http://www.lighthousecrc.org/spboard/board.cgi?id=photo2&action=view&gul=20&page=1&go_cnt=','view_img13')"><img src=http://www.lighthousecrc.org/spboard/id/photo2/files/Yachen640.jpg width=140 onmouseover="SetCurrDiv(28); ShowToolTip(over28); high(popup28);" onmouseout="SetCurrDiv(0); HideToolTip(over28); low(popup28);" border=1 style="border-style:groove;border-color:black;"></a></td></tr>
+			<tr><td align=right><img src=http://www.lighthousecrc.org/spboard/img/img_skin/gallery_sp/zero.gif width="140" height=2><br> <!--FACE--><!--MAIL-->&nbsp;<a href=http://www.lighthousecrc.org/spboard/board.cgi?id=photo2&action=vote&gul=20&page=1&go_cnt=><img src=http://www.lighthousecrc.org/spboard/img/img_skin/gallery_sp/vote.gif  border=0 alt="Vote"></a><a href=http://www.lighthousecrc.org/spboard/board.cgi?id=photo2&action=input_pwd&load_act=mod_form&gul=20&page=><img src=http://www.lighthousecrc.org/spboard/img/img_skin/gallery_sp/modify.gif  border=0 alt="Modify"></a><a href=http://www.lighthousecrc.org/spboard/board.cgi?id=photo2&action=input_pwd&load_act=delete&gul=20&page=><img src=http://www.lighthousecrc.org/spboard/img/img_skin/gallery_sp/delete.gif  border=0 alt="Delete"></a>&nbsp;</td></tr>
+		</table>
+	</td></tr>
+</table>
+<!--±×¸²º¸±â Å×ÀÌºí ³¡-->
+</td></tr><tr><td align=right>
+<!-- ±×¸² º¸±â Å×ÀÌºí ½ÃÀÛ-->
+ 
+				<div id='overDiv29' style="position:absolute; left:50px; top:50px; width:200px; height:200px; z-index:500; visibility:hidden; border-width:0px; border-style:none;">
+					 <table id=popup29 bgcolor=#B2B7FF border=0 width=230 style="filter:alpha(opacity=35); border:1  solid;" cellpadding=3 cellspacing=0>
+						<tr><td>&nbsp;&nbsp;<img src=http://www.lighthousecrc.org/spboard/img/img_skin/gallery_sp/sub.gif width=12 height=12><b>Charlie, Luke, Joseph and June</b></td></tr>					
+						<tr><td class=cont>Charlie Choi,
+Luke Choi,
+Joseph Choi,
+June Kim</td></tr>
+						<tr><td align=right>read:<b><font color=#090909>46</font></b> vote:<b><font color=#efefef>0</font></b> (<font color=#090909>2003.06.10</font>)</td></tr>
+					</table>
+				</div>
+				<SCRIPT LANGUAGE='javascript'>
+				if ( (ns4) || (ie4) ) {
+					if (ns4) over29 = document.overDiv29;
+					if (ie4) over29 = overDiv29.style;
+				}
+				</SCRIPT>
+			
+<table border=1 bgcolor="#B2B7FF" cellpadding=3 cellspacing=0 width="100%" height="100%" bordercolorlight="#efefef" bordercolordark="#efefef">
+	<tr><td align=center valign=bottom>
+		<table border=0 cellpadding=0 cellspacing=0 width="100%" height="100%">
+			<tr><td align=center valign=top width="140" height="120"><a href="javascript:view_img(640, 480, 'http://www.lighthousecrc.org/spboard/board.cgi?id=photo2&action=view&gul=19&page=1&go_cnt=','view_img12')"><img src=http://www.lighthousecrc.org/spboard/id/photo2/files/charlie640.jpg width=140 onmouseover="SetCurrDiv(29); ShowToolTip(over29); high(popup29);" onmouseout="SetCurrDiv(0); HideToolTip(over29); low(popup29);" border=1 style="border-style:groove;border-color:black;"></a></td></tr>
+			<tr><td align=right><img src=http://www.lighthousecrc.org/spboard/img/img_skin/gallery_sp/zero.gif width="140" height=2><br> <!--FACE--><!--MAIL-->&nbsp;<a href=http://www.lighthousecrc.org/spboard/board.cgi?id=photo2&action=vote&gul=19&page=1&go_cnt=><img src=http://www.lighthousecrc.org/spboard/img/img_skin/gallery_sp/vote.gif  border=0 alt="Vote"></a><a href=http://www.lighthousecrc.org/spboard/board.cgi?id=photo2&action=input_pwd&load_act=mod_form&gul=19&page=><img src=http://www.lighthousecrc.org/spboard/img/img_skin/gallery_sp/modify.gif  border=0 alt="Modify"></a><a href=http://www.lighthousecrc.org/spboard/board.cgi?id=photo2&action=input_pwd&load_act=delete&gul=19&page=><img src=http://www.lighthousecrc.org/spboard/img/img_skin/gallery_sp/delete.gif  border=0 alt="Delete"></a>&nbsp;</td></tr>
+		</table>
+	</td></tr>
+</table>
+<!--±×¸²º¸±â Å×ÀÌºí ³¡-->
+</td><td align=right>
+<!-- ±×¸² º¸±â Å×ÀÌºí ½ÃÀÛ-->
+ 
+				<div id='overDiv30' style="position:absolute; left:50px; top:50px; width:200px; height:200px; z-index:500; visibility:hidden; border-width:0px; border-style:none;">
+					 <table id=popup30 bgcolor=#B2B7FF border=0 width=230 style="filter:alpha(opacity=35); border:1  solid;" cellpadding=3 cellspacing=0>
+						<tr><td>&nbsp;&nbsp;<img src=http://www.lighthousecrc.org/spboard/img/img_skin/gallery_sp/sub.gif width=12 height=12><b>Kenneth Cho</b></td></tr>					
+						<tr><td class=cont>Kenneth Cho</td></tr>
+						<tr><td align=right>read:<b><font color=#090909>41</font></b> vote:<b><font color=#efefef>0</font></b> (<font color=#090909>2003.06.10</font>)</td></tr>
+					</table>
+				</div>
+				<SCRIPT LANGUAGE='javascript'>
+				if ( (ns4) || (ie4) ) {
+					if (ns4) over30 = document.overDiv30;
+					if (ie4) over30 = overDiv30.style;
+				}
+				</SCRIPT>
+			
+<table border=1 bgcolor="#B2B7FF" cellpadding=3 cellspacing=0 width="100%" height="100%" bordercolorlight="#efefef" bordercolordark="#efefef">
+	<tr><td align=center valign=bottom>
+		<table border=0 cellpadding=0 cellspacing=0 width="100%" height="100%">
+			<tr><td align=center valign=top width="140" height="120"><a href="javascript:view_img(640, 480, 'http://www.lighthousecrc.org/spboard/board.cgi?id=photo2&action=view&gul=17&page=1&go_cnt=','view_img11')"><img src=http://www.lighthousecrc.org/spboard/id/photo2/files/Ken640.jpg width=140 onmouseover="SetCurrDiv(30); ShowToolTip(over30); high(popup30);" onmouseout="SetCurrDiv(0); HideToolTip(over30); low(popup30);" border=1 style="border-style:groove;border-color:black;"></a></td></tr>
+			<tr><td align=right><img src=http://www.lighthousecrc.org/spboard/img/img_skin/gallery_sp/zero.gif width="140" height=2><br> <!--FACE--><!--MAIL-->&nbsp;<a href=http://www.lighthousecrc.org/spboard/board.cgi?id=photo2&action=vote&gul=17&page=1&go_cnt=><img src=http://www.lighthousecrc.org/spboard/img/img_skin/gallery_sp/vote.gif  border=0 alt="Vote"></a><a href=http://www.lighthousecrc.org/spboard/board.cgi?id=photo2&action=input_pwd&load_act=mod_form&gul=17&page=><img src=http://www.lighthousecrc.org/spboard/img/img_skin/gallery_sp/modify.gif  border=0 alt="Modify"></a><a href=http://www.lighthousecrc.org/spboard/board.cgi?id=photo2&action=input_pwd&load_act=delete&gul=17&page=><img src=http://www.lighthousecrc.org/spboard/img/img_skin/gallery_sp/delete.gif  border=0 alt="Delete"></a>&nbsp;</td></tr>
+		</table>
+	</td></tr>
+</table>
+<!--±×¸²º¸±â Å×ÀÌºí ³¡-->
+</td><td align=right>
+<!-- ±×¸² º¸±â Å×ÀÌºí ½ÃÀÛ-->
+ 
+				<div id='overDiv31' style="position:absolute; left:50px; top:50px; width:200px; height:200px; z-index:500; visibility:hidden; border-width:0px; border-style:none;">
+					 <table id=popup31 bgcolor=#B2B7FF border=0 width=230 style="filter:alpha(opacity=35); border:1  solid;" cellpadding=3 cellspacing=0>
+						<tr><td>&nbsp;&nbsp;<img src=http://www.lighthousecrc.org/spboard/img/img_skin/gallery_sp/sub.gif width=12 height=12><b>Jennifer Oh</b></td></tr>					
+						<tr><td class=cont>Jennifer Oh</td></tr>
+						<tr><td align=right>read:<b><font color=#090909>39</font></b> vote:<b><font color=#efefef>0</font></b> (<font color=#090909>2003.06.10</font>)</td></tr>
+					</table>
+				</div>
+				<SCRIPT LANGUAGE='javascript'>
+				if ( (ns4) || (ie4) ) {
+					if (ns4) over31 = document.overDiv31;
+					if (ie4) over31 = overDiv31.style;
+				}
+				</SCRIPT>
+			
+<table border=1 bgcolor="#B2B7FF" cellpadding=3 cellspacing=0 width="100%" height="100%" bordercolorlight="#efefef" bordercolordark="#efefef">
+	<tr><td align=center valign=bottom>
+		<table border=0 cellpadding=0 cellspacing=0 width="100%" height="100%">
+			<tr><td align=center valign=top width="140" height="120"><a href="javascript:view_img(640, 480, 'http://www.lighthousecrc.org/spboard/board.cgi?id=photo2&action=view&gul=16&page=1&go_cnt=','view_img10')"><img src=http://www.lighthousecrc.org/spboard/id/photo2/files/Jen640.jpg width=140 onmouseover="SetCurrDiv(31); ShowToolTip(over31); high(popup31);" onmouseout="SetCurrDiv(0); HideToolTip(over31); low(popup31);" border=1 style="border-style:groove;border-color:black;"></a></td></tr>
+			<tr><td align=right><img src=http://www.lighthousecrc.org/spboard/img/img_skin/gallery_sp/zero.gif width="140" height=2><br> <!--FACE--><!--MAIL-->&nbsp;<a href=http://www.lighthousecrc.org/spboard/board.cgi?id=photo2&action=vote&gul=16&page=1&go_cnt=><img src=http://www.lighthousecrc.org/spboard/img/img_skin/gallery_sp/vote.gif  border=0 alt="Vote"></a><a href=http://www.lighthousecrc.org/spboard/board.cgi?id=photo2&action=input_pwd&load_act=mod_form&gul=16&page=><img src=http://www.lighthousecrc.org/spboard/img/img_skin/gallery_sp/modify.gif  border=0 alt="Modify"></a><a href=http://www.lighthousecrc.org/spboard/board.cgi?id=photo2&action=input_pwd&load_act=delete&gul=16&page=><img src=http://www.lighthousecrc.org/spboard/img/img_skin/gallery_sp/delete.gif  border=0 alt="Delete"></a>&nbsp;</td></tr>
+		</table>
+	</td></tr>
+</table>
+<!--±×¸²º¸±â Å×ÀÌºí ³¡-->
+</td><td align=right>
+<!-- ±×¸² º¸±â Å×ÀÌºí ½ÃÀÛ-->
+ 
+				<div id='overDiv32' style="position:absolute; left:50px; top:50px; width:200px; height:200px; z-index:500; visibility:hidden; border-width:0px; border-style:none;">
+					 <table id=popup32 bgcolor=#B2B7FF border=0 width=230 style="filter:alpha(opacity=35); border:1  solid;" cellpadding=3 cellspacing=0>
+						<tr><td>&nbsp;&nbsp;<img src=http://www.lighthousecrc.org/spboard/img/img_skin/gallery_sp/sub.gif width=12 height=12><b>Grace Jeon</b></td></tr>					
+						<tr><td class=cont>Grace Jeon</td></tr>
+						<tr><td align=right>read:<b><font color=#090909>39</font></b> vote:<b><font color=#efefef>0</font></b> (<font color=#090909>2003.06.10</font>)</td></tr>
+					</table>
+				</div>
+				<SCRIPT LANGUAGE='javascript'>
+				if ( (ns4) || (ie4) ) {
+					if (ns4) over32 = document.overDiv32;
+					if (ie4) over32 = overDiv32.style;
+				}
+				</SCRIPT>
+			
+<table border=1 bgcolor="#B2B7FF" cellpadding=3 cellspacing=0 width="100%" height="100%" bordercolorlight="#efefef" bordercolordark="#efefef">
+	<tr><td align=center valign=bottom>
+		<table border=0 cellpadding=0 cellspacing=0 width="100%" height="100%">
+			<tr><td align=center valign=top width="140" height="120"><a href="javascript:view_img(640, 480, 'http://www.lighthousecrc.org/spboard/board.cgi?id=photo2&action=view&gul=15&page=1&go_cnt=','view_img9')"><img src=http://www.lighthousecrc.org/spboard/id/photo2/files/Grace640.jpg width=140 onmouseover="SetCurrDiv(32); ShowToolTip(over32); high(popup32);" onmouseout="SetCurrDiv(0); HideToolTip(over32); low(popup32);" border=1 style="border-style:groove;border-color:black;"></a></td></tr>
+			<tr><td align=right><img src=http://www.lighthousecrc.org/spboard/img/img_skin/gallery_sp/zero.gif width="140" height=2><br> <!--FACE--><!--MAIL-->&nbsp;<a href=http://www.lighthousecrc.org/spboard/board.cgi?id=photo2&action=vote&gul=15&page=1&go_cnt=><img src=http://www.lighthousecrc.org/spboard/img/img_skin/gallery_sp/vote.gif  border=0 alt="Vote"></a><a href=http://www.lighthousecrc.org/spboard/board.cgi?id=photo2&action=input_pwd&load_act=mod_form&gul=15&page=><img src=http://www.lighthousecrc.org/spboard/img/img_skin/gallery_sp/modify.gif  border=0 alt="Modify"></a><a href=http://www.lighthousecrc.org/spboard/board.cgi?id=photo2&action=input_pwd&load_act=delete&gul=15&page=><img src=http://www.lighthousecrc.org/spboard/img/img_skin/gallery_sp/delete.gif  border=0 alt="Delete"></a>&nbsp;</td></tr>
+		</table>
+	</td></tr>
+</table>
+<!--±×¸²º¸±â Å×ÀÌºí ³¡-->
+</td></tr><tr><td align=right>
+<!-- ±×¸² º¸±â Å×ÀÌºí ½ÃÀÛ-->
+ 
+				<div id='overDiv33' style="position:absolute; left:50px; top:50px; width:200px; height:200px; z-index:500; visibility:hidden; border-width:0px; border-style:none;">
+					 <table id=popup33 bgcolor=#B2B7FF border=0 width=230 style="filter:alpha(opacity=35); border:1  solid;" cellpadding=3 cellspacing=0>
+						<tr><td>&nbsp;&nbsp;<img src=http://www.lighthousecrc.org/spboard/img/img_skin/gallery_sp/sub.gif width=12 height=12><b>Chan Park</b></td></tr>					
+						<tr><td class=cont>Chan Park</td></tr>
+						<tr><td align=right>read:<b><font color=#090909>14</font></b> vote:<b><font color=#efefef>0</font></b> (<font color=#090909>2003.06.10</font>)</td></tr>
+					</table>
+				</div>
+				<SCRIPT LANGUAGE='javascript'>
+				if ( (ns4) || (ie4) ) {
+					if (ns4) over33 = document.overDiv33;
+					if (ie4) over33 = overDiv33.style;
+				}
+				</SCRIPT>
+			
+<table border=1 bgcolor="#B2B7FF" cellpadding=3 cellspacing=0 width="100%" height="100%" bordercolorlight="#efefef" bordercolordark="#efefef">
+	<tr><td align=center valign=bottom>
+		<table border=0 cellpadding=0 cellspacing=0 width="100%" height="100%">
+			<tr><td align=center valign=top width="140" height="120"><a href="javascript:view_img(640, 480, 'http://www.lighthousecrc.org/spboard/board.cgi?id=photo2&action=view&gul=14&page=1&go_cnt=','view_img8')"><img src=http://www.lighthousecrc.org/spboard/id/photo2/files/ChanPark.jpg width=140 onmouseover="SetCurrDiv(33); ShowToolTip(over33); high(popup33);" onmouseout="SetCurrDiv(0); HideToolTip(over33); low(popup33);" border=1 style="border-style:groove;border-color:black;"></a></td></tr>
+			<tr><td align=right><img src=http://www.lighthousecrc.org/spboard/img/img_skin/gallery_sp/zero.gif width="140" height=2><br> <!--FACE--><!--MAIL-->&nbsp;<a href=http://www.lighthousecrc.org/spboard/board.cgi?id=photo2&action=vote&gul=14&page=1&go_cnt=><img src=http://www.lighthousecrc.org/spboard/img/img_skin/gallery_sp/vote.gif  border=0 alt="Vote"></a><a href=http://www.lighthousecrc.org/spboard/board.cgi?id=photo2&action=input_pwd&load_act=mod_form&gul=14&page=><img src=http://www.lighthousecrc.org/spboard/img/img_skin/gallery_sp/modify.gif  border=0 alt="Modify"></a><a href=http://www.lighthousecrc.org/spboard/board.cgi?id=photo2&action=input_pwd&load_act=delete&gul=14&page=><img src=http://www.lighthousecrc.org/spboard/img/img_skin/gallery_sp/delete.gif  border=0 alt="Delete"></a>&nbsp;</td></tr>
+		</table>
+	</td></tr>
+</table>
+<!--±×¸²º¸±â Å×ÀÌºí ³¡-->
+</td><td align=right>
+<!-- ±×¸² º¸±â Å×ÀÌºí ½ÃÀÛ-->
+ 
+				<div id='overDiv34' style="position:absolute; left:50px; top:50px; width:200px; height:200px; z-index:500; visibility:hidden; border-width:0px; border-style:none;">
+					 <table id=popup34 bgcolor=#B2B7FF border=0 width=230 style="filter:alpha(opacity=35); border:1  solid;" cellpadding=3 cellspacing=0>
+						<tr><td>&nbsp;&nbsp;<img src=http://www.lighthousecrc.org/spboard/img/img_skin/gallery_sp/sub.gif width=12 height=12><b>Eleanor Chang</b></td></tr>					
+						<tr><td class=cont>Eleanor Chang</td></tr>
+						<tr><td align=right>read:<b><font color=#090909>38</font></b> vote:<b><font color=#efefef>1</font></b> (<font color=#090909>2003.06.10</font>)</td></tr>
+					</table>
+				</div>
+				<SCRIPT LANGUAGE='javascript'>
+				if ( (ns4) || (ie4) ) {
+					if (ns4) over34 = document.overDiv34;
+					if (ie4) over34 = overDiv34.style;
+				}
+				</SCRIPT>
+			
+<table border=1 bgcolor="#B2B7FF" cellpadding=3 cellspacing=0 width="100%" height="100%" bordercolorlight="#efefef" bordercolordark="#efefef">
+	<tr><td align=center valign=bottom>
+		<table border=0 cellpadding=0 cellspacing=0 width="100%" height="100%">
+			<tr><td align=center valign=top width="140" height="120"><a href="javascript:view_img(640, 480, 'http://www.lighthousecrc.org/spboard/board.cgi?id=photo2&action=view&gul=13&page=1&go_cnt=','view_img7')"><img src=http://www.lighthousecrc.org/spboard/id/photo2/files/eleanorchang.jpg width=140 onmouseover="SetCurrDiv(34); ShowToolTip(over34); high(popup34);" onmouseout="SetCurrDiv(0); HideToolTip(over34); low(popup34);" border=1 style="border-style:groove;border-color:black;"></a></td></tr>
+			<tr><td align=right><img src=http://www.lighthousecrc.org/spboard/img/img_skin/gallery_sp/zero.gif width="140" height=2><br> <!--FACE--><!--MAIL-->&nbsp;<a href=http://www.lighthousecrc.org/spboard/board.cgi?id=photo2&action=vote&gul=13&page=1&go_cnt=><img src=http://www.lighthousecrc.org/spboard/img/img_skin/gallery_sp/vote.gif  border=0 alt="Vote"></a><a href=http://www.lighthousecrc.org/spboard/board.cgi?id=photo2&action=input_pwd&load_act=mod_form&gul=13&page=><img src=http://www.lighthousecrc.org/spboard/img/img_skin/gallery_sp/modify.gif  border=0 alt="Modify"></a><a href=http://www.lighthousecrc.org/spboard/board.cgi?id=photo2&action=input_pwd&load_act=delete&gul=13&page=><img src=http://www.lighthousecrc.org/spboard/img/img_skin/gallery_sp/delete.gif  border=0 alt="Delete"></a>&nbsp;</td></tr>
+		</table>
+	</td></tr>
+</table>
+<!--±×¸²º¸±â Å×ÀÌºí ³¡-->
+</td><td align=right>
+<!-- ±×¸² º¸±â Å×ÀÌºí ½ÃÀÛ-->
+ 
+				<div id='overDiv35' style="position:absolute; left:50px; top:50px; width:200px; height:200px; z-index:500; visibility:hidden; border-width:0px; border-style:none;">
+					 <table id=popup35 bgcolor=#B2B7FF border=0 width=230 style="filter:alpha(opacity=35); border:1  solid;" cellpadding=3 cellspacing=0>
+						<tr><td>&nbsp;&nbsp;<img src=http://www.lighthousecrc.org/spboard/img/img_skin/gallery_sp/sub.gif width=12 height=12><b>Jason Choi</b></td></tr>					
+						<tr><td class=cont>Jason Choi</td></tr>
+						<tr><td align=right>read:<b><font color=#090909>25</font></b> vote:<b><font color=#efefef>0</font></b> (<font color=#090909>2003.06.10</font>)</td></tr>
+					</table>
+				</div>
+				<SCRIPT LANGUAGE='javascript'>
+				if ( (ns4) || (ie4) ) {
+					if (ns4) over35 = document.overDiv35;
+					if (ie4) over35 = overDiv35.style;
+				}
+				</SCRIPT>
+			
+<table border=1 bgcolor="#B2B7FF" cellpadding=3 cellspacing=0 width="100%" height="100%" bordercolorlight="#efefef" bordercolordark="#efefef">
+	<tr><td align=center valign=bottom>
+		<table border=0 cellpadding=0 cellspacing=0 width="100%" height="100%">
+			<tr><td align=center valign=top width="140" height="120"><a href="javascript:view_img(640, 480, 'http://www.lighthousecrc.org/spboard/board.cgi?id=photo2&action=view&gul=10&page=1&go_cnt=','view_img6')"><img src=http://www.lighthousecrc.org/spboard/id/photo2/files/Jae640.jpg width=140 onmouseover="SetCurrDiv(35); ShowToolTip(over35); high(popup35);" onmouseout="SetCurrDiv(0); HideToolTip(over35); low(popup35);" border=1 style="border-style:groove;border-color:black;"></a></td></tr>
+			<tr><td align=right><img src=http://www.lighthousecrc.org/spboard/img/img_skin/gallery_sp/zero.gif width="140" height=2><br> <!--FACE--><!--MAIL-->&nbsp;<a href=http://www.lighthousecrc.org/spboard/board.cgi?id=photo2&action=vote&gul=10&page=1&go_cnt=><img src=http://www.lighthousecrc.org/spboard/img/img_skin/gallery_sp/vote.gif  border=0 alt="Vote"></a><a href=http://www.lighthousecrc.org/spboard/board.cgi?id=photo2&action=input_pwd&load_act=mod_form&gul=10&page=><img src=http://www.lighthousecrc.org/spboard/img/img_skin/gallery_sp/modify.gif  border=0 alt="Modify"></a><a href=http://www.lighthousecrc.org/spboard/board.cgi?id=photo2&action=input_pwd&load_act=delete&gul=10&page=><img src=http://www.lighthousecrc.org/spboard/img/img_skin/gallery_sp/delete.gif  border=0 alt="Delete"></a>&nbsp;</td></tr>
+		</table>
+	</td></tr>
+</table>
+<!--±×¸²º¸±â Å×ÀÌºí ³¡-->
+</td><td align=right>
+<!-- ±×¸² º¸±â Å×ÀÌºí ½ÃÀÛ-->
+ 
+				<div id='overDiv36' style="position:absolute; left:50px; top:50px; width:200px; height:200px; z-index:500; visibility:hidden; border-width:0px; border-style:none;">
+					 <table id=popup36 bgcolor=#B2B7FF border=0 width=230 style="filter:alpha(opacity=35); border:1  solid;" cellpadding=3 cellspacing=0>
+						<tr><td>&nbsp;&nbsp;<img src=http://www.lighthousecrc.org/spboard/img/img_skin/gallery_sp/sub.gif width=12 height=12><b>Pastor David Sung and Johan Sung</b></td></tr>					
+						<tr><td class=cont>Pastor David Sung and Johan Sung</td></tr>
+						<tr><td align=right>read:<b><font color=#090909>54</font></b> vote:<b><font color=#efefef>1</font></b> (<font color=#090909>2003.06.10</font>)</td></tr>
+					</table>
+				</div>
+				<SCRIPT LANGUAGE='javascript'>
+				if ( (ns4) || (ie4) ) {
+					if (ns4) over36 = document.overDiv36;
+					if (ie4) over36 = overDiv36.style;
+				}
+				</SCRIPT>
+			
+<table border=1 bgcolor="#B2B7FF" cellpadding=3 cellspacing=0 width="100%" height="100%" bordercolorlight="#efefef" bordercolordark="#efefef">
+	<tr><td align=center valign=bottom>
+		<table border=0 cellpadding=0 cellspacing=0 width="100%" height="100%">
+			<tr><td align=center valign=top width="140" height="120"><a href="javascript:view_img(640, 493, 'http://www.lighthousecrc.org/spboard/board.cgi?id=photo2&action=view&gul=9&page=1&go_cnt=','view_img5')"><img src=http://www.lighthousecrc.org/spboard/id/photo2/files/pastor.jpg width=140 onmouseover="SetCurrDiv(36); ShowToolTip(over36); high(popup36);" onmouseout="SetCurrDiv(0); HideToolTip(over36); low(popup36);" border=1 style="border-style:groove;border-color:black;"></a></td></tr>
+			<tr><td align=right><img src=http://www.lighthousecrc.org/spboard/img/img_skin/gallery_sp/zero.gif width="140" height=2><br> <!--FACE--><!--MAIL-->&nbsp;<a href=http://www.lighthousecrc.org/spboard/board.cgi?id=photo2&action=vote&gul=9&page=1&go_cnt=><img src=http://www.lighthousecrc.org/spboard/img/img_skin/gallery_sp/vote.gif  border=0 alt="Vote"></a><a href=http://www.lighthousecrc.org/spboard/board.cgi?id=photo2&action=input_pwd&load_act=mod_form&gul=9&page=><img src=http://www.lighthousecrc.org/spboard/img/img_skin/gallery_sp/modify.gif  border=0 alt="Modify"></a><a href=http://www.lighthousecrc.org/spboard/board.cgi?id=photo2&action=input_pwd&load_act=delete&gul=9&page=><img src=http://www.lighthousecrc.org/spboard/img/img_skin/gallery_sp/delete.gif  border=0 alt="Delete"></a>&nbsp;</td></tr>
+		</table>
+	</td></tr>
+</table>
+<!--±×¸²º¸±â Å×ÀÌºí ³¡-->
+</td></tr><tr><td align=right>
+<!-- ±×¸² º¸±â Å×ÀÌºí ½ÃÀÛ-->
+ 
+				<div id='overDiv37' style="position:absolute; left:50px; top:50px; width:200px; height:200px; z-index:500; visibility:hidden; border-width:0px; border-style:none;">
+					 <table id=popup37 bgcolor=#B2B7FF border=0 width=230 style="filter:alpha(opacity=35); border:1  solid;" cellpadding=3 cellspacing=0>
+						<tr><td>&nbsp;&nbsp;<img src=http://www.lighthousecrc.org/spboard/img/img_skin/gallery_sp/sub.gif width=12 height=12><b>Andi Song</b></td></tr>					
+						<tr><td class=cont>Andi Song</td></tr>
+						<tr><td align=right>read:<b><font color=#090909>47</font></b> vote:<b><font color=#efefef>0</font></b> (<font color=#090909>2003.06.09</font>)</td></tr>
+					</table>
+				</div>
+				<SCRIPT LANGUAGE='javascript'>
+				if ( (ns4) || (ie4) ) {
+					if (ns4) over37 = document.overDiv37;
+					if (ie4) over37 = overDiv37.style;
+				}
+				</SCRIPT>
+			
+<table border=1 bgcolor="#B2B7FF" cellpadding=3 cellspacing=0 width="100%" height="100%" bordercolorlight="#efefef" bordercolordark="#efefef">
+	<tr><td align=center valign=bottom>
+		<table border=0 cellpadding=0 cellspacing=0 width="100%" height="100%">
+			<tr><td align=center valign=top width="140" height="120"><a href="javascript:view_img(640, 480, 'http://www.lighthousecrc.org/spboard/board.cgi?id=photo2&action=view&gul=8&page=1&go_cnt=','view_img4')"><img src=http://www.lighthousecrc.org/spboard/id/photo2/files/Andi640.jpg width=140 onmouseover="SetCurrDiv(37); ShowToolTip(over37); high(popup37);" onmouseout="SetCurrDiv(0); HideToolTip(over37); low(popup37);" border=1 style="border-style:groove;border-color:black;"></a></td></tr>
+			<tr><td align=right><img src=http://www.lighthousecrc.org/spboard/img/img_skin/gallery_sp/zero.gif width="140" height=2><br> <!--FACE--><!--MAIL-->&nbsp;<a href=http://www.lighthousecrc.org/spboard/board.cgi?id=photo2&action=vote&gul=8&page=1&go_cnt=><img src=http://www.lighthousecrc.org/spboard/img/img_skin/gallery_sp/vote.gif  border=0 alt="Vote"></a><a href=http://www.lighthousecrc.org/spboard/board.cgi?id=photo2&action=input_pwd&load_act=mod_form&gul=8&page=><img src=http://www.lighthousecrc.org/spboard/img/img_skin/gallery_sp/modify.gif  border=0 alt="Modify"></a><a href=http://www.lighthousecrc.org/spboard/board.cgi?id=photo2&action=input_pwd&load_act=delete&gul=8&page=><img src=http://www.lighthousecrc.org/spboard/img/img_skin/gallery_sp/delete.gif  border=0 alt="Delete"></a>&nbsp;</td></tr>
+		</table>
+	</td></tr>
+</table>
+<!--±×¸²º¸±â Å×ÀÌºí ³¡-->
+</td><td align=right>
+<!-- ±×¸² º¸±â Å×ÀÌºí ½ÃÀÛ-->
+ 
+				<div id='overDiv38' style="position:absolute; left:50px; top:50px; width:200px; height:200px; z-index:500; visibility:hidden; border-width:0px; border-style:none;">
+					 <table id=popup38 bgcolor=#B2B7FF border=0 width=230 style="filter:alpha(opacity=35); border:1  solid;" cellpadding=3 cellspacing=0>
+						<tr><td>&nbsp;&nbsp;<img src=http://www.lighthousecrc.org/spboard/img/img_skin/gallery_sp/sub.gif width=12 height=12><b>Alex Chu</b></td></tr>					
+						<tr><td class=cont>Alex Chu</td></tr>
+						<tr><td align=right>read:<b><font color=#090909>36</font></b> vote:<b><font color=#efefef>0</font></b> (<font color=#090909>2003.06.09</font>)</td></tr>
+					</table>
+				</div>
+				<SCRIPT LANGUAGE='javascript'>
+				if ( (ns4) || (ie4) ) {
+					if (ns4) over38 = document.overDiv38;
+					if (ie4) over38 = overDiv38.style;
+				}
+				</SCRIPT>
+			
+<table border=1 bgcolor="#B2B7FF" cellpadding=3 cellspacing=0 width="100%" height="100%" bordercolorlight="#efefef" bordercolordark="#efefef">
+	<tr><td align=center valign=bottom>
+		<table border=0 cellpadding=0 cellspacing=0 width="100%" height="100%">
+			<tr><td align=center valign=top width="140" height="120"><a href="javascript:view_img(640, 480, 'http://www.lighthousecrc.org/spboard/board.cgi?id=photo2&action=view&gul=7&page=1&go_cnt=','view_img3')"><img src=http://www.lighthousecrc.org/spboard/id/photo2/files/Alex640.jpg width=140 onmouseover="SetCurrDiv(38); ShowToolTip(over38); high(popup38);" onmouseout="SetCurrDiv(0); HideToolTip(over38); low(popup38);" border=1 style="border-style:groove;border-color:black;"></a></td></tr>
+			<tr><td align=right><img src=http://www.lighthousecrc.org/spboard/img/img_skin/gallery_sp/zero.gif width="140" height=2><br> <!--FACE--><!--MAIL-->&nbsp;<a href=http://www.lighthousecrc.org/spboard/board.cgi?id=photo2&action=vote&gul=7&page=1&go_cnt=><img src=http://www.lighthousecrc.org/spboard/img/img_skin/gallery_sp/vote.gif  border=0 alt="Vote"></a><a href=http://www.lighthousecrc.org/spboard/board.cgi?id=photo2&action=input_pwd&load_act=mod_form&gul=7&page=><img src=http://www.lighthousecrc.org/spboard/img/img_skin/gallery_sp/modify.gif  border=0 alt="Modify"></a><a href=http://www.lighthousecrc.org/spboard/board.cgi?id=photo2&action=input_pwd&load_act=delete&gul=7&page=><img src=http://www.lighthousecrc.org/spboard/img/img_skin/gallery_sp/delete.gif  border=0 alt="Delete"></a>&nbsp;</td></tr>
+		</table>
+	</td></tr>
+</table>
+<!--±×¸²º¸±â Å×ÀÌºí ³¡-->
+</td><td align=right>
+<!-- ±×¸² º¸±â Å×ÀÌºí ½ÃÀÛ-->
+ 
+				<div id='overDiv39' style="position:absolute; left:50px; top:50px; width:200px; height:200px; z-index:500; visibility:hidden; border-width:0px; border-style:none;">
+					 <table id=popup39 bgcolor=#B2B7FF border=0 width=230 style="filter:alpha(opacity=35); border:1  solid;" cellpadding=3 cellspacing=0>
+						<tr><td>&nbsp;&nbsp;<img src=http://www.lighthousecrc.org/spboard/img/img_skin/gallery_sp/sub.gif width=12 height=12><b>Jasmine, Ezra, Chris and Song</b></td></tr>					
+						<tr><td class=cont>From the left...<br><br>Eunju &quot;Jasmine&quot; Yoon, <br>HaYun &quot;Ezra&quot; Chung,<br>MyungYun &quot;Chris&quot; Chung,<br>&quot;Song&quot; Yop Chung</td></tr>
+						<tr><td align=right>read:<b><font color=#090909>46</font></b> vote:<b><font color=#efefef>0</font></b> (<font color=#090909>2003.06.09</font>)</td></tr>
+					</table>
+				</div>
+				<SCRIPT LANGUAGE='javascript'>
+				if ( (ns4) || (ie4) ) {
+					if (ns4) over39 = document.overDiv39;
+					if (ie4) over39 = overDiv39.style;
+				}
+				</SCRIPT>
+			
+<table border=1 bgcolor="#B2B7FF" cellpadding=3 cellspacing=0 width="100%" height="100%" bordercolorlight="#efefef" bordercolordark="#efefef">
+	<tr><td align=center valign=bottom>
+		<table border=0 cellpadding=0 cellspacing=0 width="100%" height="100%">
+			<tr><td align=center valign=top width="140" height="120"><a href="javascript:view_img(615, 446, 'http://www.lighthousecrc.org/spboard/board.cgi?id=photo2&action=view&gul=6&page=1&go_cnt=','view_img2')"><img src=http://www.lighthousecrc.org/spboard/id/photo2/files/family.jpg width=140 onmouseover="SetCurrDiv(39); ShowToolTip(over39); high(popup39);" onmouseout="SetCurrDiv(0); HideToolTip(over39); low(popup39);" border=1 style="border-style:groove;border-color:black;"></a></td></tr>
+			<tr><td align=right><img src=http://www.lighthousecrc.org/spboard/img/img_skin/gallery_sp/zero.gif width="140" height=2><br> <!--FACE--><!--MAIL-->&nbsp;<a href=http://www.lighthousecrc.org/spboard/board.cgi?id=photo2&action=vote&gul=6&page=1&go_cnt=><img src=http://www.lighthousecrc.org/spboard/img/img_skin/gallery_sp/vote.gif  border=0 alt="Vote"></a><a href=http://www.lighthousecrc.org/spboard/board.cgi?id=photo2&action=input_pwd&load_act=mod_form&gul=6&page=><img src=http://www.lighthousecrc.org/spboard/img/img_skin/gallery_sp/modify.gif  border=0 alt="Modify"></a><a href=http://www.lighthousecrc.org/spboard/board.cgi?id=photo2&action=input_pwd&load_act=delete&gul=6&page=><img src=http://www.lighthousecrc.org/spboard/img/img_skin/gallery_sp/delete.gif  border=0 alt="Delete"></a>&nbsp;</td></tr>
+		</table>
+	</td></tr>
+</table>
+<!--±×¸²º¸±â Å×ÀÌºí ³¡-->
+</td><td align=right>
+<!-- ±×¸² º¸±â Å×ÀÌºí ½ÃÀÛ-->
+ 
+				<div id='overDiv40' style="position:absolute; left:50px; top:50px; width:200px; height:200px; z-index:500; visibility:hidden; border-width:0px; border-style:none;">
+					 <table id=popup40 bgcolor=#B2B7FF border=0 width=230 style="filter:alpha(opacity=35); border:1  solid;" cellpadding=3 cellspacing=0>
+						<tr><td>&nbsp;&nbsp;<img src=http://www.lighthousecrc.org/spboard/img/img_skin/gallery_sp/sub.gif width=12 height=12><b>John Chung</b></td></tr>					
+						<tr><td class=cont>John Chung</td></tr>
+						<tr><td align=right>read:<b><font color=#090909>30</font></b> vote:<b><font color=#efefef>0</font></b> (<font color=#090909>2003.06.09</font>)</td></tr>
+					</table>
+				</div>
+				<SCRIPT LANGUAGE='javascript'>
+				if ( (ns4) || (ie4) ) {
+					if (ns4) over40 = document.overDiv40;
+					if (ie4) over40 = overDiv40.style;
+				}
+				</SCRIPT>
+			
+<table border=1 bgcolor="#B2B7FF" cellpadding=3 cellspacing=0 width="100%" height="100%" bordercolorlight="#efefef" bordercolordark="#efefef">
+	<tr><td align=center valign=bottom>
+		<table border=0 cellpadding=0 cellspacing=0 width="100%" height="100%">
+			<tr><td align=center valign=top width="140" height="120"><a href="javascript:view_img(640, 480, 'http://www.lighthousecrc.org/spboard/board.cgi?id=photo2&action=view&gul=4&page=1&go_cnt=','view_img1')"><img src=http://www.lighthousecrc.org/spboard/id/photo2/files/John640.jpg width=140 onmouseover="SetCurrDiv(40); ShowToolTip(over40); high(popup40);" onmouseout="SetCurrDiv(0); HideToolTip(over40); low(popup40);" border=1 style="border-style:groove;border-color:black;"></a></td></tr>
+			<tr><td align=right><img src=http://www.lighthousecrc.org/spboard/img/img_skin/gallery_sp/zero.gif width="140" height=2><br> <!--FACE--><!--MAIL-->&nbsp;<a href=http://www.lighthousecrc.org/spboard/board.cgi?id=photo2&action=vote&gul=4&page=1&go_cnt=><img src=http://www.lighthousecrc.org/spboard/img/img_skin/gallery_sp/vote.gif  border=0 alt="Vote"></a><a href=http://www.lighthousecrc.org/spboard/board.cgi?id=photo2&action=input_pwd&load_act=mod_form&gul=4&page=><img src=http://www.lighthousecrc.org/spboard/img/img_skin/gallery_sp/modify.gif  border=0 alt="Modify"></a><a href=http://www.lighthousecrc.org/spboard/board.cgi?id=photo2&action=input_pwd&load_act=delete&gul=4&page=><img src=http://www.lighthousecrc.org/spboard/img/img_skin/gallery_sp/delete.gif  border=0 alt="Delete"></a>&nbsp;</td></tr>
+		</table>
+	</td></tr>
+</table>
+<!--±×¸²º¸±â Å×ÀÌºí ³¡-->
+</td></tr></table>
+	</table>
+	<table border=0 width=100% cellpadding=2 cellspacing=0><tr><td align=center width=20>&nbsp;</td><td align=center>[Prev]...[<font color=#090909><b>1</b></font>]...[Next]</td><td valign=bottom width=20 align=right><nobr>&nbsp;</nobr></td></tr></table>
+	</form>
+	<!--SEARCH-->
+	<!------ ::: COPYRIGHT ºÎºÐÀº ¼öÁ¤ÇÏ°Å³ª »èÁ¦ÇÏÁö ¸¶¼¼¿ä...!!! ::: ----->
+	<div align=center class=small><a href=http://www.spfamily.com/ target=_blank><font color=gray>Created by spfamily.com</font></a> <font color=gray>/</font> <a href=http://www.spcgi.com target=_blank><font color=gray>Skin by sepal</a></a></div>
+</td></tr>
+</table>
+</td></tr></table></td></tr></table></div>
+</body>
+</html>
+<!--------------------------------------------------------------------------------
+                  ::: SIMPLE INFORMATION OF THIS WEB SERVER :::
+
+	$SERVER_OS = Freebsd
+	$ENV{'GATEWAY_INTERFACE'} = CGI/1.1
+	$ENV{'HTTP_HOST'} = www.lighthousecrc.org
+	$ENV{'SERVER_PROTOCOL'} = HTTP/1.1
+	$ENV{'SERVER_SOFTWARE'} = Apache/1.3.29 (Unix) FrontPage/5.0.2.2623
+	$PERL_VERSION = v5.8.0
+
+                        It took 0.19 CPU seconds for this program to proceed!!!
+--------------------------------------------------------------------------------->

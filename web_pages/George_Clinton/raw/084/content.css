@@ -1,0 +1,927 @@
+/* SC 072906:  DO NOT overwrite; pixel-pushed for better album alignment */
+.content {
+	margin-top: 5px;
+	margin-left: 6px;
+	position:relative;
+}
+
+#content {
+	position:relative;
+	
+	width: 860px;
+	margin-top: 5px;
+	clear: both;
+	text-align:left;
+}
+
+#main_body {
+	 height: 100%;
+}
+
+.details {
+	width: 100px;
+	height: 80px;
+	float: none;
+	padding-left:10px;
+	position: relative;
+}
+
+.copy {
+	position: relative;
+	height: 80px;
+	margin-right:10px;
+	overflow: hidden;
+} 
+
+/* SC 080106:  DO NOT overwrite; set visibility to hidden to hide albums during page load */
+ul.paged {
+	height: 106px;
+	visibility: hidden;
+	_position: relative;
+}
+
+ul.paged,
+ul.paged li {
+	top:10px;
+	margin: 0px;
+	padding: 0px;
+	list-style-type: none;
+}
+
+.paged,
+.paged li {
+	margin: 0px;
+	padding: 0px;
+	position: none;
+}
+
+ul.connect_sets {
+	visibility: hidden;
+	_position: relative;
+}
+
+ul.connect_sets,
+ul.connect_sets li {
+	top:10px;
+	margin: 0px;
+	padding: 0px;
+	list-style-type: none;
+}
+
+.connect_sets,
+.connect_sets li {
+	height: 15px;
+	margin: 0px;
+	padding: 0px;
+	position: none;
+}
+
+
+
+.featured_albums ul,
+.featured_albums li {
+	top:5px;
+	margin: 0px;
+	padding: 0px;
+	list-style-type: none;
+}
+
+/* SC 080106:  DO NOT overwrite; set visibility to hidden to hide albums during page load */
+.featured_albums ul {
+	position: relative;
+	height: 110px;
+	width: 419px;
+	visibility: hidden;
+}
+
+/* SC 072906:  DO NOT overwrite; pixel-pushed */
+.featured_albums li {
+	float: left;
+	text-align:center;
+	width: 101px;
+	height: 110px;
+}
+
+/* firefox is being weird .. */
+.featured_albums li.hide,
+li.hide {
+	display:none;
+}
+
+/* album art size */
+
+.cover_art_lrg {
+	width: 130px;
+	/*height: 130px;*/
+	float: left;
+	position: relative;
+}
+
+.cover_art_lrg img { 
+	width: 130px;
+	/*height: 130px;*/
+}
+
+.cover_art_sml {
+	width: 60px;
+	height: 60px;
+	float: left;
+	position: relative;
+
+}
+
+.cover_art_sml img {  
+	width: 60px;
+	height: 60px;
+
+}
+
+.cover_art_hack {
+	display: block;
+	margin-left: auto;
+    margin-right: auto;
+	width: 60px;
+	height: 60px;
+}
+
+.cover_art_hack img {
+	width: 60px;
+	height: 60px;
+}
+
+/*this is an old hack that gets used once in the editors picks area */
+.cleaner {
+	clear: both;
+	height: 1px;
+	font-size: 1px;
+	border: none;
+	margin: 0;
+	padding: 0;
+	background: transparent;
+}
+
+#trackListing{
+	height:auto;
+	padding-top:5px; /* Keeps the padding for  firefox */
+	_padding:0px;
+	padding-right:10px;
+	_margin:0px;
+	font-size:10px;
+}
+
+#trackListing.row{
+	height:10px;
+}
+
+#trackListing ul{
+	margin:0px;
+	padding:0px;
+	list-style-type: none;
+	height:20px;
+	border:none;
+	border-width:0px;
+	
+}
+
+/* RP 080406 new highlight color defined */
+#trackListing .row ul:hover,
+#trackListingNew tr.over{
+	background-color:#F4F4F4;
+	background-image:url(/XSL/mb_us/images/c2/images/backgrounds/cList_hover.jpg);
+	_background-image:none;
+	background-repeat:repeat-x;
+}
+
+#trackListing ul li{
+	float:left;
+	text-decloration:none;
+	list-style-type: none;
+	padding:2px;
+}
+
+#trackListing ul li.header{
+	font-weight:bold;
+	color:#828186;
+}
+
+#trackListing ul li a,
+#trackListing ul li a:visited{
+	color:#68647D;
+	font-weight:bold;
+}
+
+#trackListing ul li a:hover{
+	color:#000000;
+}
+
+/* SC 061206 DO NOT overwrite; list tracks column alignment */
+#trackListing ul li.track{
+	font-weight:bold;
+	_width:40px;
+}
+
+#trackListing ul li.track_mix{
+	font-weight:bold;
+	width:20px;
+}
+
+#trackListing ul li.check_mix{
+	font-weight:normal;
+	width:20px;
+	margin-top: -3px;
+}
+
+/* SC 061206 DO NOT overwrite; list tracks column alignment */
+#trackListing ul li.title{
+	_width:125;
+}
+
+#trackListing ul li.title .add_btn{
+	float:left;
+	padding-right:2px;
+}
+/* SC 061206 DO NOT overwrite; list tracks column alignment */
+#trackListing ul li.artist{
+	_width:75px;
+}
+/* SC 061206 DO NOT overwrite; list tracks column alignment */
+#trackListing ul li.album{
+	_width:140px;
+}
+/* SC 061206 DO NOT overwrite; list tracks column alignment */
+#trackListing ul li.genre{
+	_width:80px;
+}
+/* SC 061206 DO NOT overwrite; list tracks column alignment */
+#trackListing ul li.duration{
+	_width:45px;
+}
+#trackListing ul li.duration_mix{
+	width:35px;
+}
+/* SC 061206 DO NOT overwrite; list tracks column alignment */
+#trackListing ul li.buynow{
+	width:75px;
+}
+#trackListing ul li.buynow .price{
+	float:left;
+}
+
+#mixtapeListing,
+#albumListing,
+#albumListingNumbered{
+position: relative;
+	height:auto;
+	padding-top:10px; /* Keeps the padding for  firefox */
+	float:left;
+	_padding:5px;
+	padding-left:10px;
+	_margin:0px;
+	font-size:10px;
+}
+
+#albumListing .albumNumber,
+#albumListingNumbered .albumNumber{
+font-weight:bold;
+width:25px;
+float:left;
+}
+
+#mixtapeListing ul,
+#albumListing ul,
+#albumListingNumbered ul{
+	margin:0px;
+	padding:0px;
+	list-style-type: none;
+
+	border:none;
+	border-width:0px;
+}
+
+/* SC 080706 DO NOT overwrite; had to add more to height than specified in orig wireframe */
+#mixtapeListing ul li,
+#albumListing ul li,
+#albumListingNumbered ul li{
+	float:left;
+	text-decloration:none;
+	list-style-type: none;
+	padding:2px;
+	width:200px;
+	height:90px;
+}
+
+#mixtapeListing ul li {
+	float:left;
+	text-decloration:none;
+	list-style-type: none;
+	padding:2px;
+	width:310px;
+}
+
+/* SC 062006 DO NOT overwrite */
+#albumListingNumbered .holder_side{
+	position: relative;
+	width:110px;
+ _height:auto;
+	text-align: left;
+}
+/* SC 062006 DO NOT overwrite */
+#albumListing .holder_side {
+	position: relative;
+	width:135px;
+ _height:auto;
+	text-align: left;
+}
+/* SC 062006 DO NOT overwrite */
+#mixtapeListing .holder_side {
+	position: relative;
+	width: 220px;
+ _height:90px;
+	text-align: left;
+	height: 50px;
+	overflow: hidden;
+}
+
+/* SC DO DOT overwrite */
+#trackListingSmall{
+	height:auto;
+	padding-top:0px; /* Keeps the padding for  firefox */
+	
+	_padding:0px;
+	padding-right:5px;
+	_margin:0px;
+	font-size:10px;
+}
+
+/* SC 081106 DO NOT overwrite */
+#trackListingSmall .trackNumber{
+text-align:right;
+/*_font-weight:bold;*/
+width:12px;
+padding-right:0px;
+float:left;
+}
+
+#trackListingSmall .holder_side {
+	position: relative;
+	width:155px;
+	text-align: left;
+}
+
+#trackListingSmall ul{
+	margin:0px;
+	padding:0px;
+	list-style-type: none;
+	border:none;
+	border-width:0px;
+	height:30px;
+	
+}
+
+#trackListingSmall ul li{
+	float:left;
+	text-decloration:none;
+	list-style-type: none;
+	padding:2px;
+	padding-bottom:0px;
+	margin-bottom:0px;
+	width:130px;
+}
+
+#trackListingSmall .listenButton{
+	width: 15px;
+	padding-right:2px;
+	padding-left:2px;
+	height:20px;
+	float: left;
+	position: relative;
+}
+
+/* SC DO DOT overwrite */
+div.holder {
+	clear: both;
+	position: relative;
+	padding: 2px;
+	width: 100px;
+	margin-top: 3px;
+	text-align: center;
+}
+
+/* SC DO DOT overwrite */
+div.cartHolder {
+	position: relative;
+	margin-top: 5px;
+	text-align: left;
+}
+
+#mixtape_holder {
+	position: relative;
+
+	padding: 5px;
+	height: 160px;
+	clear: both;
+}
+
+div.holder_side {
+	position: relative;
+	width:110px;
+	text-align: left;
+}
+
+
+#accountSignUp{
+	padding-top:15px;
+	padding-right:10px;
+}
+
+#accountSignUp .header{
+font-family:Arial, Helvetica, sans-serif;
+color:#66668C;
+font-size:18px;
+margin-bottom:10px;
+}
+#accountSignUp .subHeader p{
+margin-bottom:0px;
+}
+#accountSignUp .subHeader{
+
+border-bottom:dashed;
+border-bottom-width:1px;
+border-bottom-color:#CCCCCC;
+padding-top:10px;
+padding-bottom:5px;
+margin-top:10px;
+margin-bottom:10px;
+font-weight:bold;
+color:666666;
+width:100%;
+font-size: 12px;
+
+}
+
+#accountSignUp .subHeaderAccount{
+
+border-top:dashed;
+border-top-width:1px;
+border-top-color:#CCCCCC;
+margin-top:40px;
+margin-bottom:20px;
+font-weight:bold;
+color:666666;
+width:100%;
+font-size: 12px;
+
+}
+
+#accountSignUp .subHeader div{
+margin:0px;
+height:20px;
+
+}
+
+#accountSignUp .subHeaderAccount ul,
+#accountSignUp .subHeader ul{
+list-style-type: none;
+margin:0;
+padding:0;
+height:20px;
+
+}
+
+#accountSignUp .subHeaderAccount ul li,
+#accountSignUp .subHeader ul li{
+text-align:left;
+display:inline;
+float:left;
+text-decloration:none;
+list-style-type: none;
+margin-right:10px;
+
+}
+
+
+
+
+#accountSignUp .error_large{
+background-color: transparent;
+_background-image:none;
+background-position:top right;
+background-repeat:no-repeat;			 
+background-image: url(/XSL/mb_us/images/c2/images/content/signup/errors_found.png);
+_background-image:none;filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(src='/XSL/mb_us/images/c2/images/content/signup/errors_found.png',sizingMethod='image');
+width:102px;
+height:18px;
+}
+
+#accountSignUp .error_small{
+background-image: url(/XSL/mb_us/images/c2/images/content/signup/errors_found_sm.png);
+_background-image:none;filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(src='/XSL/mb_us/images/c2/images/content/signup/errors_found_sm.png',sizingMethod='scale');
+width:17px;
+height:14px;
+margin-left:10px;
+float:left;
+margin-top:4px;
+}
+
+#accountSignUp p{
+/* changed from 20 on 06/21/06 by me */
+ margin-bottom:5px; 
+
+clear:both;
+}
+
+#accountSignUp #steps div{
+width:100%;
+height:28px; 
+margin-bottom:20px;
+}
+
+#accountSignUp .errorMessage{
+font-size:10px;
+color:#990000;
+clear:both;
+}
+
+#accountSignUp .bigRed{
+font-size:11px;
+color:#990000;
+font-weight:bold;
+}
+
+#accountSignUp .bigPurple{
+font-size:11px;
+color:#5F5286;
+font-weight:bold;
+}
+
+#error_box{
+border-width: 1px;
+border-style: solid;
+border-color: #990000;
+font-size:11px;
+/*
+color:#990000;
+font-weight:bold;
+*/
+padding: 5px;
+margin-bottom: 40px;
+}
+
+#info_box{
+border-width: 1px;
+border-style: solid;
+border-color: #8C84B7;
+font-size:11px;
+
+background-color:#E2E1E6;
+
+padding: 5px;
+margin-bottom: 40px;
+}
+
+.bigRed a,
+.bigRed a:link,
+.bigRed a:visited {
+	font-weight: bold;
+}
+
+.bigRed a:hover {
+	font-weight: bold;
+	color: #000000;
+}
+
+
+#accountSignUp .buid{
+font-size:11px;
+color:#FFFFFF;
+margin-left: 10px;
+margin-right: -10px;
+padding-top: 3px;
+clear: both;
+height: 20px;
+}
+
+#ssl_secure{
+/*
+background-image:url(/XSL/mb_us/images/c2/images/content/signup/ssl_secure.gif);
+background-repeat:no-repeat;
+background-position:top;
+*/
+width: 80px;
+height: 20px;
+float: right;
+margin-top: -25px;
+
+}
+
+#accountSignUp .nrml{
+background-image:url(/XSL/mb_us/images/c2/images/content/signup/hdr_nrml.gif);
+background-repeat:no-repeat;
+background-position:top;
+}
+#accountSignUp .step1{
+background-image:url(/XSL/mb_us/images/c2/images/content/signup/hdr_step1.gif);
+background-repeat:no-repeat;
+background-position:top;
+}
+#accountSignUp .step2{
+background-image:url(/XSL/mb_us/images/c2/images/content/signup/hdr_step2.gif);
+background-repeat:no-repeat;
+background-position:top;
+}
+
+#accountSignUp .step3{
+background-image:url(/XSL/mb_us/images/c2/images/content/signup/hdr_step3.gif);
+background-repeat:no-repeat;
+background-position:top;
+}
+#accountSignUp .step4{
+background-image:url(/XSL/mb_us/images/c2/images/content/signup/hdr_step4.gif);
+background-repeat:no-repeat;
+background-position:top;
+}
+#accountSignUp .label{
+font-weight:bold;
+}
+
+#accountSignUp td.label{
+width:140px;
+}
+
+
+/** mixtapes tbf **/
+
+#mixtapes_info_top {
+	text-align: right;
+	position: relative;
+	width: 635px;
+	padding: 10px;
+	padding-bottom: 70px;
+}
+
+#mixtapes_info_left {
+	float: left;
+	position: relative;
+	width: 230px;
+}
+
+#mixtapes_info_right {
+	float: right;
+	position: relative;
+	width: 295px;
+}
+
+#mixtapes_copy{
+	color: #FFFFFF;
+	position: relative;
+	margin-left: 10px;
+	margin-right: 10px;
+}
+
+
+#radioAllStations{
+				
+				
+}
+
+#radioAllStations .heading{
+	border-bottom-color:#999999; 
+	border-bottom-width:1px; 
+	border-bottom-style:solid;
+	font-size:12px;
+	margin-bottom:5px;
+}
+#radioAllStations .station{
+
+}
+
+#radioAllStations .description{
+}
+
+#radioAllStations .genre{
+}
+
+#radioAllStations .listen{
+	padding-top:5px;
+}
+
+#accountPopUp .subHeader p{
+margin-bottom:0px;
+}
+
+#accountPopUp p{
+margin-right:10px;
+}
+
+#accountPopUp .subHeader{
+border-bottom:dashed;
+border-bottom-width:1px;
+border-bottom-color:#FFFFFF;
+padding-bottom:10px;
+margin-top:10px;
+margin-bottom:10px;
+margin-right: 40px;
+font-size: 14px;
+font-weight:bold;
+color:#FFFFFF;
+width:430px;
+}
+
+#accountPopUp .subHeader div{
+margin:0px;
+height:20px;
+}
+
+
+#viewCart td{
+	border-bottom-color:#D3D3D3; 
+	border-bottom-width:1px; 
+	border-bottom-style:solid;
+	padding-top:5px;
+}
+#viewCart .remove{
+	width:60px;
+}
+
+#viewCart .artist{
+width:135px;
+}
+#viewCart .album{
+width:150px;
+}
+#viewCart .trackListing{
+width:140px;
+}
+#viewCart .duration{
+width:75px;
+}
+
+#viewCart .price{
+width:30px;
+}
+#viewCart .heading{
+	font-size:11px;
+	margin-bottom:5px;
+}
+#viewCart a{
+	color:#6E688A;
+	font-weight:bold;
+}
+#viewCart a:hover{
+	color:#454254;
+}
+
+.total{
+	background-image:url(/XSL/mb_us/images/c2/images/content/account/viewCart_checkAll_bg.gif);
+	background-position:top;
+	background-repeat:no-repeat;
+	width: 635px;
+	height:21px;
+	padding-top:3px;
+	color:#FFFFFF;
+}
+
+.total a,
+.total a:link,
+.total a:visited {
+	color:#FFFFFF;
+
+}
+.total a:hover{
+	color:#D2D9DF;
+}
+
+#viewCart #giftCert{
+
+
+}
+#viewCart #giftCert td{
+	padding-bottom:4px;
+
+}
+#viewCart #giftCert .email{
+
+}
+#viewCart #giftCert .edit{
+width:200px;
+
+}
+#viewCart #giftCert .price{
+	width:60px;
+}
+
+#viewCart #giftCert .date{
+	width:150px;
+}
+
+#viewCart #giftCert .item{
+}
+
+#search{
+	padding-top:15px;
+}
+
+#search .subHeader span{
+margin-bottom:0px;
+font-weight:normal;
+}
+
+#search .subHeader{
+border-bottom:dashed;
+border-bottom-width:1px;
+border-bottom-color:#CCCCCC;
+padding-bottom:5px;
+margin-top:10px;
+margin-bottom:10px;
+margin-right:10px;
+font-weight:bold;
+color:666666;
+}
+
+#search ul{
+	margin:0px;
+	padding:0px;
+	list-style-type: none;
+
+	border:none;
+	border-width:0px;
+}
+
+#search ul li{
+	float:left;
+	text-decloration:none;
+	list-style-type: none;
+	padding:2px;
+	width:200px;
+}
+
+
+/* new table rollover */
+
+/* SC 070606 DO NOT overwrite */
+#trackListingNew{
+	height:auto;
+	font-size:10px;
+	/*width: 635px;*/
+	padding:0px;
+}
+/* SC 070606 DO NOT overwrite */
+#trackListingNew tr.highLight {
+	background-color:#F4F4F4;
+	/*background-image:url(/XSL/mb_us/images/c2/images/backgrounds/trackList_hover.jpg);
+	_background-image:none;
+	background-repeat:repeat-x;*/
+}
+
+#trackListingNew th {
+	text-align: left;
+	}
+	
+	#trackListingNew tr {
+	height: 20px;
+	}
+	
+#trackListingNew td{
+	border-top-color:#D3D3D3; 
+	border-top-width:1px; 
+	border-top-style:solid;
+	padding-top:5px;
+	vertical-align: top;
+}
+
+/* SC 081106 DO NOT overwrite */
+#trackListingNew .trackNumber{
+	text-align:right;
+	/*_font-weight:bold;*/
+	width:14px;
+	padding-right:0px;
+	float:left;
+}
+
+/* SC 081106 DO NOT overwrite */
+#trackListingNew .listenButton{
+	width: 15px;
+	padding-right:2px;
+	padding-left:2px;
+	height:20px;
+	float: left;
+}
+
+
+ul li{
+	text-decloration:none;
+	list-style-type: none;
+	}
+	
+	
+.tiny{
+	font-size: 10px;
+	font-weight: normal;
+	}
+	
+#customContainer{
+ position:relative;
+ width:300px;
+ float:left;
+ /* background-color:#FF9900; */
+}

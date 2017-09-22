@@ -1,0 +1,132 @@
+function addOnLoadEvent(func)
+{
+  var oldonload = window.onload;
+  if (typeof window.onload != 'function')
+  {
+    window.onload = func;
+  }
+  else
+  {
+    window.onload = function()
+    {
+      oldonload();
+      func();
+    }
+  }
+}
+
+function setNavMouseOver(element, func)
+{
+  var oldMouseOver = element.onmouseover;
+  if (typeof element.onmouseover != 'function')
+  {
+    element.onmouseover = func;
+  }
+  else
+  {
+    element.onmouseover = function()
+    {
+      oldMouseOver();
+      func();
+    }
+  }
+}
+
+function setNavMouseOut(element, func)
+{
+  var oldMouseOut = element.onmouseout;
+  if (typeof element.onmouseout != 'function')
+  {
+    element.onmouseout = func;
+  }
+  else
+  {
+    element.onmouseout = function()
+    {
+      oldMouseOut();
+      func();
+    }
+  }
+}
+
+function insertAfter(newElement,targetElement) {
+  var parent = targetElement.parentNode;
+  if (parent.lastChild == targetElement) {
+    parent.appendChild(newElement);
+  } else {
+    parent.insertBefore(newElement,targetElement.nextSibling);
+  }
+}
+
+function removeElement(elementId) {
+	if (!document.getElementById(elementId)) return false;
+	var removeThis = document.getElementById(elementId);
+	var fromThis = removeThis.parentNode;
+	fromThis.removeChild(removeThis);
+	return true;
+}
+
+document.getElementsByClassName = function(className) {
+  var children = document.getElementsByTagName('*') || document.all;
+  var elements = new Array();
+  for (var i = 0; i < children.length; i++) {
+    var child = children[i];
+    var classNames = child.className.split(' ');
+    for (var j = 0; j < classNames.length; j++) {
+      if (classNames[j] == className) {
+        elements.push(child);
+        break;
+      }
+    }
+  }
+  return elements;
+}
+
+function popUp(strURL,strType,strHeight,strWidth)
+{
+	var strOptions="";
+	if (strType=="console") strOptions="resizable,height="+strHeight+",width="+strWidth;
+	if (strType=="fixed") strOptions="status,height="+strHeight+",width="+strWidth;
+	if (strType=="elastic") strOptions="toolbar,menubar,scrollbars,resizable,location,height="+strHeight+",width="+strWidth;
+	window.open(strURL, 'newWin', strOptions);
+}
+
+function moveElement(elementID,final_x,final_y,interval) {
+  if (!document.getElementById) return false;
+  if (!document.getElementById(elementID)) return false;
+  var elem = document.getElementById(elementID);
+  if (elem.movement) {
+    clearTimeout(elem.movement);
+  }
+  if (!elem.style.left) {
+    elem.style.left = "0px";
+  }
+  if (!elem.style.top) {
+    elem.style.top = "0px";
+  }
+  var xpos = parseInt(elem.style.left);
+  var ypos = parseInt(elem.style.top);
+  if (xpos == final_x && ypos == final_y) {
+    return true;
+  }
+  if (xpos < final_x) {
+    var dist = Math.ceil((final_x - xpos)/10);
+    xpos = xpos + dist;
+  }
+  if (xpos > final_x) {
+    var dist = Math.ceil((xpos - final_x)/10);
+    xpos = xpos - dist;
+  }
+  if (ypos < final_y) {
+    var dist = Math.ceil((final_y - ypos)/10);
+    ypos = ypos + dist;
+  }
+  if (ypos > final_y) {
+    var dist = Math.ceil((ypos - final_y)/10);
+    ypos = ypos - dist;
+  }
+  elem.style.left = xpos + "px";
+  elem.style.top = ypos + "px";
+  var repeat = "moveElement('"+elementID+"',"+final_x+","+final_y+","+interval+")";
+  elem.movement = setTimeout(repeat,interval);
+}

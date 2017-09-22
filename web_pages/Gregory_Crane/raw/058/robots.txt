@@ -1,0 +1,17 @@
+# robot exclusion file
+
+# For local Netscape Catalog - MUST be first record block
+User-agent: Netscape-Catalog-Robot/1.01
+# Disallow: /directory/...
+
+# For local Ultraseek spider
+User-agent: EUCS-Ultraseek
+
+#For WWW
+User-agent: *
+Disallow: /cgi-bin/
+Disallow: /local/ling/
+
+#For www.archive.org
+User-agent: ia_archiver
+Disallow: /~eddie/fire.htm

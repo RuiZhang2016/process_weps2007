@@ -1,0 +1,200 @@
+function ShowMessage() 
+{
+	alert("This function is not implemented");
+}
+
+function ChangeVisibility(objImg, sDivID)
+{	
+	divObj = document.getElementById(sDivID)
+	if(divObj.style.visibility == "visible")
+	{
+		divObj.style.visibility = "hidden";
+		divObj.style.display = "none";
+		objImg.src = "/images/icons/expand_large.gif";
+	} else {
+		divObj.style.visibility = "visible";
+		divObj.style.display = "block";
+	objImg.src = "/images/icons/collapse_large.gif";
+	}
+}
+
+function PrintSummary() 
+{
+	if(self.print())
+	{
+	}
+	else
+	{
+		if(confirm("Do you want to close this window once the summary has been printed?"))
+		{
+			window.close();
+		}
+	}
+}
+
+function OpenPrintPersonView(iProfileID)
+{
+	OpenModalDialog('/Search/PrintPersonDetail.aspx?PersonID=' + iProfileID, 550, 400, true, false);
+}
+
+//this will supress the printing, and just show the dialog
+function OpenPrintPersonView(iProfileID, sDoPrint)
+{
+	OpenModalDialog('/Search/PrintPersonDetail.aspx?PersonID=' + iProfileID + "&print=" + sDoPrint, 550, 400, true, false);
+}
+
+function OpenClaimSummary()
+{
+	OpenModalDialog('/Search/Dialogs/ClaimSummary.aspx?', 550, 400, true, true);
+}
+
+function OpenPrivacyPolicy()
+{
+	OpenModalDialog('/Search/Dialogs/Privacy.aspx?', 600, 450, true, true);
+}
+
+function OpenTermsOfService()
+{
+	OpenModalDialog('/Search/Dialogs/TermsOfService.aspx?', 640, 450, true, true);
+}
+
+function OpenFAQDialog()
+{
+	OpenModalDialog('/Search/Dialogs/FAQ.aspx', 500, 450, true, true);
+}
+
+function OpenServiceOptions()
+{
+	OpenModalDialog('/Search/Dialogs/ServiceOptions.aspx', 620, 500, true, true);
+}
+
+function OpenSecurityCode()
+{
+	OpenModalDialog('/Search/Dialogs/SecurityCode.aspx', 520, 450, true, true);
+}
+
+function OpenHelpDialog()
+{
+	OpenModalDialog('/Search/Dialogs/Help.aspx', 500, 450, true, true);
+}
+
+function OpenHowDialog()
+{
+	OpenModalDialog('/Search/Dialogs/How.aspx', 550, 400, true, false);
+}
+
+function OpenSupportDialog()
+{
+	//this is obsolete  should be a link to /About/Contact.asp
+	OpenModalDialog('/Search/SupportForm.aspx', 660, 500, true, true)
+}
+
+function OpenImportResumeDialog()
+{
+	OpenModalDialog('/Search/Dialogs/ImportResume.aspx?state=0', 660, 500, false, false)
+}
+
+function OpenContactForm()
+{
+	// full domain name is hardcoded to allow users to get into "normal" site if they
+	// are in a branded site set up with an alternate subdomain.  Maybe we can make
+	// this more intelligent, to keep paths relative unless necessary... to ease testing.
+	document.location = 'http://www.zoominfo.com/about/contact.asp?url=' + UrlEncode(document.location);
+}
+
+function OpenGuidedTour()
+{
+	window.open('/About/Tour_PowerSearch.asp','_blank','width=760,height=380,top=50,left=50,scrollbars=0,resizable=0,status=0,location=0,toolbar=0,menubar=0');
+}
+
+
+function DoConsolidate(sUrl) {
+	var frm = document.form1;
+	var arrSelected = new Array();
+	var arrUnselected = new Array();
+	
+	for (var i=0; i<frm.elements.length; i++)
+	{
+		if(frm.elements[i].type == 'checkbox')
+		{
+			if(frm.elements[i].checked)
+			{
+				arrSelected.add(frm.elements[i].value);
+			}
+			else
+			{
+				arrUnselected.add(frm.elements[i].value);
+			}
+		}
+	}
+
+	//this is an error condition.  we should put up a message
+	if (arrSelected == null || arrSelected.length == 0)
+	{
+		alert("Please select at least one Web Summary, or click 'cancel' to close the window");
+		return;
+	}			
+	ProgressBar.Show();
+	document.location = '/Search/Consolidate.aspx?process=true&selected=' + arrSelected.join(',') + '&unselected=' + arrUnselected.join(',') + '&forward=' + UrlEncode(sUrl);
+}
+
+// Function to handle if the value in a country dropdown changes and updates state dropdown
+//EAK 09-22-2006 :: in the state array the stored state name is in the form: stateName_stateCode
+//the state that is selected by default is in the form of stateName_stateCode_SELECTED
+//Use the same string to pass several pieces of information with the same array.
+function UpdateStates(oCountryControl, sStateControlID)
+{
+	var oState = document.getElementById(sStateControlID);
+	var sStateArray = oCountryControl.options[oCountryControl.selectedIndex].id.toLowerCase() + "State";
+	
+	oState.options.length = 0;
+	oState.disabled = false;
+	
+	try
+	{
+		aStateArray = eval(sStateArray);
+		if(sStateArray.length != 0)
+		{
+			oState.options[0] = new Option("Select...", "Select...");
+			for(i = 1; i <= aStateArray.length; i++)
+			{
+				iOptions = oState.options.length;
+				var curState = aStateArray[i-1]; //string in form of stateName_stateCode[_SELECTED]
+				if(curState.indexOf("_SELECTED")!=-1){
+					curState = curState.substring(0, curState.indexOf("_SELECTED"));//cut off _SELECTED
+					var stateCode = curState.substring(curState.indexOf("_")+1, curState.length);
+					curState = curState.substring(0, curState.indexOf("_"));
+					oState.options[iOptions] = new Option(curState, stateCode);
+					oState.selectedIndex = iOptions;
+					
+				}
+				else{
+				var test = curState.indexOf("_");
+				var stateCode = curState.substring(curState.indexOf("_")+1, curState.length);
+				curState = curState.substring(0, curState.indexOf("_"));
+				oState.options[iOptions] = new Option(curState, stateCode);
+				}
+			}
+		}
+		else
+		{
+			//Disable drop down
+			oState.options[0] = new Option('No States Available', '');
+			oState.disabled = true;
+		}
+	}
+	catch(e)
+	{
+		//Disable drop down
+		oState.options[0] = new Option('No States Available', '');
+		oState.disabled = true;
+	}
+}
+
+function toggle(obj) {
+	var el = document.getElementById(obj);
+	if (el.style.display != 'none')
+		el.style.display = 'none';
+	else
+		el.style.display = '';
+}

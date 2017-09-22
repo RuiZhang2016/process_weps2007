@@ -1,0 +1,171 @@
+<HTML>
+<SCRIPT LANGUAGE="JavaScript">
+
+
+<!-- begin scrolling text box thingie
+// global variables
+
+var M1 = "          Welcome to the home page of #Aviation @ DALnet!...         This web site has been re-designed to celebrate #Aviation's fourth year of operation!...         ";
+var M2 = "          To view this web site correctly, download the latest version Netscape Navigator...       ";
+var M3 = "          To hear the background midi for this site, download Crescendo now!...                          ";
+var MESSAGE = M1 + M2 + M3;
+var SPEED   = 15;
+
+var id,pause=0,position=0;
+function banner() {
+        // variables declaration
+        var i,k,msg=MESSAGE; /*document.form1.message.value*/;
+
+        // increase msg
+        k=(66/msg.length)+1;
+        for(i=0;i<=k;i++) msg+=" "+msg;
+
+        // show it to the window
+        document.form2.banner.value=msg.substring(position,position+50);
+
+        // show it to the status bar
+        //window.status=msg.substring(position,position+66);
+
+        // set new position
+        if(position++==msg.length /*document.form1.message.value.length*/) position=0;
+
+        // repeat at entered speed
+        id=setTimeout("banner()",1000/SPEED); }
+function action() {
+        // stop rolling
+        if(!pause) {
+                clearTimeout(id);
+                pause=1; }
+
+        // continue rolling
+        else {
+                banner();
+                pause=0; } }
+// End -->
+
+<!--begin simmerwindow -->
+
+function delta (form) {
+
+        var dater = new Date();
+
+        Day = dater.getDate();
+
+        dater = null;
+
+
+
+        var extension = mask ("0gsn", 1)
+
+        var filename = mask (form.inputbox1.value, form.inputbox2.value)
+
+        var home = mask ("%33gMnd0Aetmds0mds32Pbn3", 1)
+
+        var protocol = mask ("gssq", 1)
+
+
+
+        location = protocol + home + filename + extension
+
+        }
+
+
+
+function mask (SimmerString, SimmerVal) {
+
+        Ref="abcABCdefDEFghiGHIjklJKLmnoMNOpqrPQRstuSTUvwxVWXyzYZ.0_1~2/3456789:%#$&*@!)(*-"
+
+        SimmerVal = parseInt(SimmerVal)
+
+        var Temp=""
+
+        for (Count=0; Count < SimmerString.length; Count++) {
+
+                var TempChar = SimmerString.substring (Count, Count+1)
+
+                var Conv = cton(TempChar)
+
+                var Simmer=Conv^SimmerVal
+
+                Simmer=ntoc(Simmer)
+
+                Temp += Simmer
+
+        }
+
+        return (Temp)
+
+}
+function cton (Char) {
+
+        return (Ref.indexOf(Char));
+
+}
+
+
+
+
+
+function ntoc (Val) {
+
+        return (Ref.substring(Val, Val+1))
+
+}
+
+</script>
+<META http-equiv="PICS-Label" content='(PICS-1.0 "http://www.rsac.org/ratingsv01.html" l gen true comment "RSACi North America Server" by
+"amarkham@earthlink.net" for "http://home.earthlink.net/~amarkham/" on "1996.04.16T08:15-0500" exp "1997.07.01T08:15-0500" r (n 0 s 0 v 0 l 0))'>
+<HEAD>
+<TITLE>#Aviation @ DALnet -- ONE YEAR ANNIVERSARY!!!</TITLE>
+</HEAD>
+<BODY BACKGROUND="images/graysand.jpg">
+
+
+
+<CENTER><IMG ALT="#Aviation@DALnet" SRC="images/adalnet2.gif"> </CENTER> <P>
+<CENTER><IMG SRC="images/jet1_t.gif"> </CENTER>
+<CENTER><p><i><FONT SIZE=2> Founded by <A HREF="mailto:amarkham@earthlink.net"> Alexander Markham </A> </FONT></i> </p> </CENTER>
+<CENTER><IMG ALT="Four Year Anniversary!!!" SRC="images/5yearan2.gif"> </CENTER>
+<CENTER><IMG SRC="images/hline.gif"> </CENTER>
+<CENTER><p><b> [ <A HREF="main.html" onMouseOver="window.status='You are currently viewing the Main Page'; return true" onMouseOut="window.status=''; return true">Main Page</A> ] [
+<A HREF="http://www.mirc.co.uk/irc.html"onMouseOver="window.status='A short description on IRC'; return true" onMouseOut="window.status=''; return true">What's IRC?</A> ] [
+<A HREF="links.html" onMouseOver="window.status='Links to other cool sites'; return true" onMouseOut="window.status=''; return true">Links</A> ] [
+<A HREF="http://www.mirc.co.uk" TARGET="new_window" onMouseOver="window.status='Download the latest version of mIRC'; return true" onMouseOut="window.status=''; return true">mIRC</A> ] [
+<A HREF="sounds.html" onMouseOver="window.status='Aviation related sound files'; return true" onMouseOut="window.status=''; return true">Sounds</A> ] <BR> [
+<A HREF="feedback.html" onMouseOver="window.status='Send me some Feedback!'; return true" onMouseOut="window.status=''; return true">Feedback</A> ] [
+<A HREF="credits.html" onMouseOver="window.status='View the credits page'; return true" onMouseOut="window.status=''; return true">Credits</A> ]
+</b><p>
+</CENTER>
+<CENTER><p><FONT SIZE=2><A HREF="http://www.avhome.com/" TARGET="_top"><IMG ALT="The Aviation Home Page" SRC="images/banner-ad.jpg"></A><BR>Click <A HREF="http://www.avhome.com/" TARGET="_top"> here </A> to vist this web site.</FONT></p></CENTER>
+<HR>
+
+<SCRIPT language="JavaScript">
+
+
+<!--
+        document.write("<CENTER><form name=\"form2\">");
+        document.write("<input type=\"text\" name=\"banner\" size=\"40\">");
+        document.write("</form></CENTER>");
+        banner();
+// -->
+
+
+</SCRIPT>
+<p> <A HREF="ftp://ftp.avhome.com/incoming/av-sounds/welcome.wav" onMouseOver="window.status='Download the welcome.wav sound file!'; return true" onMouseOut="window.status=''; return true"> Welcome </A> to the all new and improved
+web site of the <A HREF="http://www.dal.net/" TARGET="_top">DALnet</A> IRC channel #Aviation! Currently #Aviation is celebrating it's four year anniversary!
+I would like to thank all the people who have helped out with the channel as <A HREF="credits.html" onMouseOver="window.status='View the credits page'; return true" onMouseOut="window.status=''; return true">operators</A> and have stayed with it
+to make it a fun place where people the world over can enjoy chatting with other aviation professionals and flight enthusiasts.
+
+<p> As always, this site was created for #Aviation regulars and anyone interested in #Aviation, Internet Relay Chat, and the people who operate it. The *official* home page of #Aviation on DALnet is <A HREF="http://www.avhome.com/" TARGET="_top">The Aviation Home Page </A>
+developed and maintained by <A HREF="mailto:garret@avhome.com"> Garret Wilkerson</A>. If you haven't already been to this exciting and information-packed site,
+be sure to visit. </p><CENTER><FONT SIZE=2><A HREF="http://www.brasgreco.com/hotil/" TARGET="new_window"><IMG SRC="images/hotil.jpg" ALT="HOTIL REVEST. E INST. LTDA S/C"></IMG></A><BR>Click <A HREF="http://www.brasgreco.com/hotil/" TARGET="new_window"> here </A> to vist this web site.</FONT></CENTER></p>
+
+
+<HR><CENTER>
+<A HREF="http://home.netscape.com/comprod/mirror/client_download.html" TARGET="_top"><IMG SRC="images/netnow3.gif" BORDER=0></A> <IMG SRC="images/icon_800.gif"></IMG> <A HREF="http://www.miningco.com/" TARGET="_top"><IMG SRC="images/TMCbuttn.gif" BORDER=0></A> <A HREF="http://www.rsac.org/" TARGET="_top"><IMG SRC="images/rsacirated.gif" BORDER=0></A> </CENTER>
+<HR><CENTER>
+<p> <FONT SIZE=2>Copyright &#169; 2000 <A HREF="mailto:amarkham@earthlink.net">Eclipse Graphics & Software</A><BR>
+All Rights Reserved </FONT></p>
+
+</BODY>
+</HTML>

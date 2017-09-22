@@ -1,0 +1,92 @@
+/* Sets @print styles to stop unnecessary page elements displaying when page is printed out */
+#topbar {
+	padding: 0px;
+	border-bottom: 4px solid #0099FF;
+}
+
+#esrc {display:none}
+#logo {
+	border:0px solid white;
+}
+#logo a img{
+	border:0px solid white;
+}
+
+.topspacer{display:none}
+
+#menubar {display:none}
+#riderbox {display:none}
+#header	{display:none}
+#announcements {display:none}
+#content{
+	margin-top: 0px;
+}
+
+#contentRight #noprint { display:none }
+	
+
+#contentRight {
+	margin-top: 10px;
+	padding: 10px;
+	border: 1px black solid;
+	font-family: verdana, arial, helvetica, sans-serif;
+	font-weight: normal;
+	font-size: .8em;
+}
+
+#contentLeft a:after {
+	font-family: verdana, arial, helvetica, sans-serif;
+	font-weight: normal;
+	font-size: .8em;
+	
+	
+	content: "  (" attr(href) ") ";
+}
+
+#footer {
+	padding: 10px;
+	border-top: 4px solid #0099FF;
+	margin: 20px 1px 0px 0px;
+}
+#footer ul {
+	display: inline;
+	list-style: none;
+	}
+
+#footer ul li.first{
+	display:inline;
+	border-left: 0px none;
+	margin-left: -50px;
+}
+	
+#footer ul li{
+	display: inline;
+	padding: 0 0.5em;
+	border-left: 1px solid  #0099FF;
+	font-family: verdana, arial, helvetica, sans-serif;
+	font-size: 0.75em;
+	font-weight: normal;
+	color: #0099FF;	
+	display:none;
+}	
+
+#footer ul li.last{
+	display:none;
+}
+
+#footer a img {
+	margin-right: 120px;
+}
+
+#footer a:link{
+	font-family: verdana, arial, helvetica, sans-serif;
+	font-weight: normal;
+	color: #0099FF;
+	text-decoration: none; 
+}
+
+#footer a:visited{
+	color: #0099FF;
+	text-decoration: none;
+}
+

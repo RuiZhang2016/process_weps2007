@@ -1,0 +1,913 @@
+/* Crikey Main CSS file */
+
+@import "content.css";
+
+/*
+
+TOC
+
+1-: Main Page Structure
+2-: Header
+	2:1 -- Top Nav
+	2:2 -- Main Nav
+
+3-: Left Column
+	3:1 -- Left Nav
+	3:2 -- Left Links - rss - podcasts - send tip
+	
+4-: Right Column
+	4:1 -- Crikey Login
+	4:2 -- Crikey Search
+	4:3 -- Home page right bullets
+	4:4 -- Also in, Under Discussion, Related Articles
+	4:5 -- Caught in the Headlines
+	
+5-: Center Content
+6-: Footer
+
+*/
+
+/* 1 :-------- Main Page Structure ------------ */
+
+	body {
+		margin: 5px;
+		}
+	
+	#header, #content {
+		width: 780px;
+		}
+	
+	#header {
+		text-align: left;
+		}
+	
+	#content {
+		background: url(../Images/right/right_bar_bg.gif) right repeat-y;
+		text-align: left;
+		}
+	
+	#home #content {
+		background: url(../Images/right/right_bar_bg_home.gif) right repeat-y;
+		}
+		
+	.homeWrap {
+		float: left;
+		width: 605;
+		}
+		
+	#center {
+		float: left;
+		width: 430px;
+		padding-top: 12px;
+		margin: 0 0 20px 18px;
+		/*margin: 0 168px 20px 180px; this sets the left and right padding of the main content*/
+		}
+
+	#home #center {
+		width: 420px;
+		margin: 0 0 20px 10px;
+		/*float: none;
+		margin: 0 180px 20px 165px;*/
+		}
+		
+	#left {
+		float: left;
+		width: 161px;
+		margin: 0 0 10px 0;
+		}
+		
+	#home #left {
+		margin: 10px 0 10px 0;
+		}
+		
+	#right {
+		float: right;
+		width: 139px;
+		padding: 7px 3px 7px 7px;
+		}
+		
+	#home #right {
+		width: 150px;
+		padding: 13px 8px 13px 12px;
+		margin-left: 5px;
+		overflow: hidden;
+		}
+		
+	#footer {
+		width: 780px;
+		clear: both;
+		padding: 0 0 15px 0;
+		}
+
+	.rightFloat {
+		float: right;
+		}
+		
+		
+
+/* 2 :------ Header ------ */
+
+	
+	#topAdd {
+		text-align: right;
+		}	
+		
+	#noAdd {
+		text-align: right;
+		height: 20px;
+		}	
+		
+	#home #topAdd {
+		height: 60px;
+		padding-top: 5px;
+		}	
+		
+	#adContainer {
+		margin: 8px 0 0 0;
+		padding: 0;
+		width: 780px;
+		text-align: center;	
+	}
+	
+	.inputAd {
+		margin: 0;
+		padding: 0;
+		width: 260px;
+		float: left;
+		overflow:  hidden;
+	}
+	
+	
+	#logoGuy {
+		position: absolute;
+		width: 56px;
+		height: 105px;
+		margin-top: -3px;
+		}	
+	
+	#logo {
+		position: absolute;
+		width: 207px;
+		height: 53px;
+		padding: 5px 0 0 0;
+		text-align: right;
+		}
+		
+	#logo h1,
+	#logoGuy h1 {
+		margin: 0; padding: 0;
+		}
+		
+	#logo img,
+	#logoGuy img {
+		border: 0;
+		}
+		
+	#home #logoGuy {
+		position: absolute;
+		width: 66px;
+		height: 105px;
+		margin-top: 5px;
+		}
+		
+	#home #logo {
+		position: absolute;
+		width: 220px;
+		height: 99px;
+		padding-left: 72px;
+		text-align: left;
+		margin: 0;
+		}
+			
+	#date {
+		position: absolute;
+		margin: 73px 0 0 3px;
+		font-size: 15px;
+		font-weight: bold;
+		color: #666;	
+		}
+		
+		
+/* 2:1 -- Top Nav */
+
+	#topNav {
+		text-align: right;
+		padding: 32px 2px 15px 0;
+		}	
+	
+	#home #topNav {
+		text-align: right;
+		padding: 15px 7px 10px 0;
+		}	
+		
+	#topNav a {
+		font-family: Arial, Helvetica, sans-serif;
+		font-size: 12px;
+		font-weight: bold;
+		color: #FF0000;
+		text-transform: uppercase;
+		text-decoration: none;
+		margin: 0 0 0 14px;
+		}
+		
+	#topNav a:hover {
+		color: #717171;
+		}
+
+	#topNav a.on {
+		text-decoration: underline;
+		}	
+		
+			
+/* 2:2 -- Main Nav */
+	
+	
+	#mainNav {
+		height: 31px;
+		white-space: nowrap;
+		padding-left: 70px;
+		border-bottom: 1px solid #ccc;
+		}
+		
+	#mainNav ul {
+		margin: 0; padding: 0;
+		}
+		
+	#mainNav li {
+		list-style: none;
+		display: inline;
+		}
+		
+	#mainNav a {
+		float: left;
+		height: 31px;
+		}
+				
+	#mainNav li a:hover {
+		background-position: 0 -31px;
+		}
+ 
+	#mainNav li.on a {
+		background-position: 0 -62px!important;
+		}
+	
+	#mainNav a.nav1 {background: url(../Images/header/top_nav_01.gif) no-repeat;width: 70px;}
+	#mainNav a.nav2 {background: url(../Images/header/top_nav_02.gif) no-repeat;width: 131px;}
+	#mainNav a.nav3 {background: url(../Images/header/top_nav_03.gif) no-repeat;width: 134px;}
+	#mainNav a.nav4 {background: url(../Images/header/top_nav_04.gif) no-repeat;width: 105px;}
+	#mainNav a.nav5 {background: url(../Images/header/top_nav_05.gif) no-repeat;width: 82px;}
+	#mainNav a.nav6 {background: url(../Images/header/top_nav_06.gif) no-repeat;width: 74px;}
+	#mainNav a.nav7 {background: url(../Images/header/top_nav_07.gif) no-repeat;width: 103px;}
+		
+	#mainNav a.nav1 img {width: 70px;}
+	#mainNav a.nav2 img {width: 131px;}
+	#mainNav a.nav3 img {width: 134px;}
+	#mainNav a.nav4 img {width: 105px;}
+	#mainNav a.nav5 img {width: 82px;}
+	#mainNav a.nav6 img {width: 74px;}
+	#mainNav a.nav7 img {width: 103px;}
+
+	#mainNav img {
+		visibility: hidden;
+		height: 31px;
+		border: 0;
+		margin: 0; padding: 0;
+		}		
+
+	
+/* 3 :------ Left Column ------ */
+
+
+/* 3:1 -- Left Nav */
+
+	#leftNav {
+		margin-bottom: 15px;
+		}
+	
+	*html #leftNav {
+		margin-top: -4px;
+		}
+		
+	#leftNav ul {
+		margin: 0; padding: 0;		
+		}
+
+	#leftNav li {
+		list-style: none;		
+		}
+
+	#leftNav a {
+		display: block;
+		padding: 7px 20px 7px 5px;
+		width: 136px;
+		font-size: 13px;
+		font-weight: bold;
+		color: #858585;
+		background: url(../Images/leftnav/left_nav_arrow.gif) 150px 10px no-repeat;
+		border-bottom: 1px solid #E4E4E4;
+		margin-top: -1px;
+		}
+
+	#leftNav a:hover {
+		background-color: #E5FAEB;
+		text-decoration: none;
+		}
+
+	#leftNav a.on,
+	#leftNav a.on:hover {
+		color: #fff;
+		background-color: #02B52F;
+		}
+		
+
+/* 3:2 -- Left Links - rss - podcasts - send tip*/
+		
+	#leftLinks {
+		margin: 5px 0;
+		padding-bottom: 25px;
+		}
+
+	#leftLinks a {
+		float: left;
+		display: block;
+		font-family: Arial, Helvetica, sans-serif;
+		font-size: 11px;
+		font-weight: bold;
+		height: 20px;
+		color: #909090;
+		text-transform: uppercase;
+		}
+		
+	#leftLinks a.rss {
+		padding: 5px 15px 0 25px;
+		background: url(../Images/leftnav/leftLinks_rss.gif) 7px 6px no-repeat #F1F1F1;
+		}
+	
+	#leftLinks a.pod {
+		display: none;
+		padding: 5px 10px 0 29px;
+		background: url(../Images/leftnav/leftLinks_pod.gif) 7px 3px no-repeat #F1F1F1;
+		}
+		
+	#leftLinks a:hover {
+		background-color: #E3E3E3;
+		}
+
+	#leftLinks a.what {
+		float: left;
+		font-size: 10px;
+		padding-left: 5px;
+		margin: 7px 0 0;
+		}
+
+	#leftLinks a.what:hover {
+		color: #666;
+		background: none;
+		}
+	
+	#sendTip {
+		margin: 10px 0 10px 0;
+		}
+		
+	#home #sendTip {
+		margin: 5px 0 0 0;
+		}
+	
+	#leftAdds {
+		margin: 7px 0 0 0;
+		}
+		
+	.htmlAd {
+		margin: 15px 0;
+		font-size: 11px;
+		color: #666;
+		border: solid 1px #e2e2e2;
+		background: #fff;
+		padding-bottom: 5px;
+		}
+		
+	.htmlAd img{
+		width: 158px;
+		}
+		
+	.htmlAd p {
+		padding: 2px 7px 1px 7px;
+		}
+	
+	.htmlAd a {
+		font-size: 11px;
+		color: #666;
+		text-decoration: underline;
+		}
+		
+	.htmlAd a:hover {
+		color: #000;
+		}
+	
+	.htmlAd p a 
+	{
+		text-decoration: none;
+	}
+		
+	.htmlAd ul {
+		margin: 0; 
+		padding: 0;
+		padding-bottom: 7px;
+		list-style: none;
+		}	
+		
+	.htmlAd li {
+		font-size: 11px;
+		color: #666;
+		margin: 0;
+		padding: 4px 8px 0 18px;
+		background: url(/Images/icons/bullet.gif) 7px 0 no-repeat;
+		}
+		
+	*html .htmlAd li {
+		padding: 0 8px 0 18px;
+		}
+			
+
+/* 4 :------ Right Column ------ */
+		
+	#rightSpecial {
+		margin: 7px 0;
+		}
+		
+	#rightSurvey {
+		margin: 7px 0;
+		}
+		
+	#rightTrial {
+		border: solid 1px #00ad2b;
+		margin-top: 6px;
+		padding: 0 0 15px 0;
+		background: #40c260;
+		width: 148px;
+		}
+		
+	#rightTrial p{
+		font-size: 11px;
+		margin: 0 0 8px 8px;
+		color: #000;
+		}		
+		
+	#rightTrial input{
+		width: 128px;
+		margin-left: 7px;
+		padding: 4px 2px 4px 2px;
+		border: solid 1px #006319;
+		font-family: Verdana;
+		font-size: 11px;
+		}
+		
+	#rightTrial .btn{
+		margin: 3px 0 0 48px;
+		}						
+		
+
+/* 4:1 -- Crikey Login */
+
+	/* Toggle Button*/
+	
+	#loginContainer {
+		background-color: #fff;
+		border: 1px solid #8A8A8A;
+		border-bottom: 0;
+		text-align: left;
+		}
+		
+	a.loginToggleButton {
+		display: block;
+		background: url(../Images/buttons/button_crikey-login_bg_sm.gif) no-repeat;
+		height: 29px;
+		}
+		
+	#home a.loginToggleButton {
+		background: url(../Images/buttons/button_crikey-login_bg.gif) no-repeat;
+		}	
+
+	a.loginToggleButton:hover {
+		background-position: 0 bottom;
+		}
+		
+	#home a.loginToggleButton:hover {
+		background-position: 0 bottom;
+		}
+		
+	.loginToggleButton img {
+		visibility: hidden;
+		width: 137px;
+		height: 24px;
+		border: 0; 
+		}
+		
+	#home .loginToggleButton img {
+		width: 148px;
+		}
+
+	/* Panel that opens */
+	
+	#loginPanel {
+		display: none;
+		padding: 0 6px 4px 6px;
+		margin-bottom: 13px;
+		height: 100px;
+		}
+		
+	#loginPanel p {
+		position: relative;
+		font-size: 10px;
+		font-weight: bold;
+		margin: 4px 0 0;
+		}
+		
+	#loginPanel img {
+		margin:0; padding:0;
+		}
+	
+	#loginPanel .loginInputUser,
+	#loginPanel .loginInputPass {
+		width: 92px;
+		padding: 1px 1px 2px 2px;
+		margin: 2px 0 0;
+		border: 1px solid #8A8A8A;		
+		font-size: 11px;
+		color: #787873;
+		}
+
+	#loginPanel .loginInputPass {
+		float: left;
+		}
+		
+	#home #loginPanel .loginInputPass,
+	#home #loginPanel .loginInputUser {
+		width: 98px;
+		}
+	
+	#loginPanel .submitButton {
+		float: left;
+		margin: 2px 0 0 2px;
+		}
+			
+	#loginPanel #rememberPass {
+		clear: left;
+		float: left;
+		font-family: Arial, Helvetica, sans-serif;
+		text-align: left;
+		margin: 4px 0 0 -2px;
+		padding: 0 0 5px 0;
+		}
+			
+	*html #loginPanel #rememberPass {
+		margin-top: 0px;
+		padding: 0;
+		}
+				
+	#loginPanel #rememberText {
+		width: 109px;
+		font-size: 10px;
+		color: #737373;
+		margin: -16px 0 0 17px;
+		}	
+
+		
+	#loginPanel a.forgotPass {	
+		display: block;
+		font-size: 10px;
+		background: none;
+		padding: 3px 0 0;
+		}
+
+		
+	/* Text when logged in */
+	#loginPanel a {
+		font-family: Arial, Helvetica, sans-serif;
+		font-size: 11px;
+		color: #737373;
+		background: url(../Images/icons/bullet_greyonwhite.gif) 0 4px no-repeat;
+		padding-left: 10px
+		}
+		
+	#loginPanel a:hover {
+		color: #333;
+		}	
+			
+	#loginPanel h3 {
+		font-size: 11px;
+		color: #FF4D4D;
+		margin: 0;
+		}
+	
+	#loginPanel span {
+		display: block;
+		font-size: 11px;
+		font-weight: normal;
+		color: #747474;
+		margin: 2px 0 3px 0;
+		}
+	
+
+
+		
+/* 4:2 -- Crikey Search */
+
+	/* Toggle Button*/
+			
+	a.searchToggleButton {
+		display: block;
+		background: url(../Images/buttons/button_crikey-search_bg_sm.gif) no-repeat;
+		height: 29px;
+		}
+		
+	#home a.searchToggleButton {
+		background: url(../Images/buttons/button_crikey-search_bg.gif) no-repeat;
+		}	
+
+	a.searchToggleButton:hover {
+		background-position: 0 bottom;
+		}
+		
+	#home a.searchToggleButton:hover {
+		background-position: 0 bottom;
+		}
+		
+	.searchToggleButton img {
+		visibility: hidden;
+		width: 137px;
+		height: 24px;
+		border: 0; 
+		}
+		
+	#home .searchToggleButton img {
+		width: 148px;
+		}
+		
+	/* Panel that opens */		
+		
+	#searchPanel {
+		display: none;
+		padding: 2px 6px 5px;
+		}	
+		
+	*html #home #searchPanel {
+		padding: 2px 6px;
+		}
+		
+	#searchCrikey {
+		margin: 0;
+		border: solid #8A8A8A;
+		border-width: 1px 0;
+		}
+		
+	#searchCrikey .searchInput{
+		float: left;
+		width: 92px;
+		color: #787873;
+		font-size: 11px;
+		padding: 1px 1px 2px 2px;
+		margin: 0;
+		border: 1px solid #8A8A8A;
+		}
+	
+	#home #searchCrikey .searchInput {
+		width: 98px;
+		}	
+			
+	*html #searchCrikey .searchInput {
+		padding: 1px 1px 1px 2px;
+		}
+
+	#searchPanel .submitButton {
+		float: left;
+		margin: 0 0 0 2px;
+		}
+
+		
+/* 4:3 -- Right Panel links */
+	
+	#rightBullets ul {
+		margin: 5px 0;
+		padding: 0;
+		}
+	
+	#rightBullets li {
+		font-size: 12px;
+		font-weight: bold;
+		padding: 0 0 4px 15px;
+		margin: 4px 0 0;
+		list-style: none;
+		background: url(../Images/icons/bullet_ongrey_grey.gif) 3px 5px no-repeat;
+		}
+	
+	#rightBullets li.on {
+		background: url(../Images/icons/bullet_ongrey_red.gif) 3px 6px no-repeat;
+		border: 1px solid #FF0000;
+		}
+		
+	#rightBullets li.on a,
+	#rightBullets li.on a:hover {
+		color: #FF0000;
+		}	
+	
+	#rightBullets li a {
+		color: #9E9E9E;
+		}
+	
+	#rightBullets li a:hover {
+		color: #58595B;
+		}
+				
+	
+/* 4:4 -- Also in, Under Discussion, Related Articles	*/
+	
+	.titleAlsoIn {
+		display: block;
+		font-family: Verdana, Arial;
+		font-size: 12px;
+		font-weight: bold;
+		color: #fff;
+		padding: 5px 7px;
+		background-color: #00BB2F;
+		}
+		
+	.titleDiscussion {
+		display: block;
+		font-family: Verdana, Arial;
+		font-size: 12px;
+		font-weight: bold;
+		color: #fff;
+		padding: 5px 7px;
+		background-color: #FF0000;
+		}
+		
+	.titleRelated {
+		display: block;
+		font-family: Verdana, Arial;
+		font-size: 12px;
+		font-weight: bold;
+		color: #fff;
+		padding: 5px 7px;
+		background-color: #666666;
+		}
+	
+	#rightUnderdiss li a {
+		color: #58595B;
+		}	
+	
+	#rightUnderdiss li p {
+		font-size: 12px;
+		color: #9E9E9E;
+		margin: 0;
+		}		
+		
+	#rightUnderdiss li p a {
+		color: #9E9E9E!important;
+		}
+	
+	#rightUnderdiss li a:hover {
+		color: #9E9E9E;
+		}
+		
+		
+		
+/* 4:5 -- Caught in Headlines*/
+
+	#home #theInformation {
+		margin: 15px 0;
+		}
+	
+	#home #theInformation span {
+		color: #6D6F71;
+		margin: 0;
+		line-height: 0px;
+		background-color: none!important;
+		}
+		
+	#home #theInformation a {
+		display: block;
+		font-size: 12px!important;
+		font-weight: bold;
+		line-height: 14px;
+		color: #58595B;
+		background: url(../Images/icons/bullet_ongrey_grey.gif) 0 5px no-repeat;
+		padding: 2px 0 0 10px;
+		margin: 5px 0;
+		text-decoration: none;
+		}
+		
+	#home #theInformation br {
+		margin: 0;
+		padding: 0;
+		line-height: 5px;
+		}
+		
+	#home #theInformation ul,
+	#home #theInformation ol,
+	#home #theInformation li,
+	#home #theInformation blockquote {
+		margin: 0;
+		padding: 0;
+		}
+		
+	#home #theInformation p,
+	#home #theInformation h1,
+	#home #theInformation h2,
+	#home #theInformation h3,
+	#home #theInformation h4,
+	#home #theInformation h5,
+	#home #theInformation h6 {/* Force these tags to display the same */
+		font-size: 12px!important;
+		color: #58595B;
+		margin: 0;
+		padding: 0;
+		text-align: left;
+		}
+	
+	#home #theInformation a:hover {
+		color: #9E9E9E;
+		text-decoration: underline;
+		}	
+		
+		
+/* 5 :------ Center Content ------ */
+
+/* See content.css */
+
+/* 6 :------ Footer ------ */
+	
+	
+	#footer {
+		background-color: #fff;
+		text-align: center;
+		}
+	
+	
+	#footer .line1 {
+		height: 15px;
+		padding: 7px 3px 3px 7px;
+		background: url(../images/footer_dotted_line.gif) repeat-x; 
+		}
+		
+	#footer .line2 {
+		height: 15px;
+		padding: 7px 3px 3px 7px;
+		background: url(../images/footer_dotted_line.gif) repeat-x; 
+		}
+	
+	/* IE fix */
+	
+	* html #footer .line1 {
+		padding-left: 6px;
+		}
+		
+	* html #footer .line2 {
+		padding-left: 6px;
+		}	
+			
+	.line1 a, .line2 a {
+		float: left;
+		width: 84px;
+		text-align: left;
+		margin-left: 30px;
+		font-size: 11px;
+		font-family: Arial, Helvetica, sans-serif;
+		font-weight: bold;
+		text-transform: uppercase;
+		text-decoration: none;
+		}
+		
+	#footer a:hover {
+		color: #9E9E9E!important;
+		}
+	
+	#footer .line1 a {
+		color: #37A337;
+		}
+		
+	#footer .line2 a {
+		color: #FF4D4D;
+		}
+		
+	#footer a.firstLink {
+		margin: 0;
+		}
+
+	
+	#copyright {
+		margin-top: 14px;
+		color: #666;
+		font-family: Arial, Helvetica, sans-serif;
+		font-size: 10px;
+		text-align: left;
+		}
+	
+	#copyright a {
+		text-align: left;
+		margin: 0 6px;
+		color: #666;
+		text-decoration: none;
+		}
+
+	

@@ -1,0 +1,204 @@
+<head>
+<title> / FORUM / Database / </title>
+
+<style>
+a.TL:link{font-size:x-small;font-weight:bold;color:#000064;}
+a.TL:hover{font-size:x-small;font-weight:bold;color:#FFFFFF;}
+a.TL:visited{font-size:x-small;font-weight:bold;color:#000064;}
+a.FL:link{text-decoration:none;color:#000064;}
+a.FL:hover{color:#FFFFFF;text-decoration:underline;color:#FFFFFF;}
+a.FL:visited{text-decoration:none;color:#000064;}
+a.F1:link{text-decoration:none;color:#FFFFFF;}
+a.F1:hover{color:#FFFFFF;text-decoration:underline;color:#AA0000;}
+a.F1:visited{text-decoration:none;color:#FFFFFF;}
+a.F2:Link{font-size:x-small;font-weight:bold;text-decoration:none;color:#000064;}
+a.F2:Hover{font-size:x-small;font-weight:bold;color:#FFFFFF;text-decoration:underline;color:#FFFFFF;}
+a.F2:Visited{font-size:x-small;font-weight:bold;text-decoration:none;color:#000064;}
+a.F{font-size:xx-small;}
+td.F1{background-color:#7F7F7F;width:500;font-size:small;font-weight:bold;border-top:1px solid #ECECEC;border-left:1px solid #ECECEC;border-right:1px solid #7F7F7F;border-bottom:1px solid #7F7F7F;}
+td.F2{font-weight:bold;background-color:#ECECEC;width:400;border-right:1px solid #7F7F7F;border-bottom:1px solid #7F7F7F;}
+td.F3{width:500;font-size:x-small;font-weight:bold;border-top:1px solid #ECECEC;border-left:1px solid #ECECEC;border-right:1px solid #7F7F7F;border-bottom:1px solid #7F7F7F;}
+td.F4{font-size:xx-small;width:100;border-left:1px solid #ECECEC;border-right:1px solid #7F7F7F;border-bottom:1px solid #7F7F7F;}
+td.F5{width:400;border-right:1px solid #7F7F7F;border-bottom:1px solid #7F7F7F;}
+td.F6{border-top:1px solid #ECECEC;border-left:1px solid #ECECEC;border-right:1px solid #7F7F7F;border-bottom:1px solid #7F7F7F;}
+td.FC{border-left:1px solid #ECECEC;border-top:1px solid #ECECEC;color:#ECECEC;font-size:xx-small;border-bottom:1px solid #7F7F7F;background-color:#7F7F7F;}
+td.FN{font-size:xx-small;border-top:1px solid #ECECEC;border-left:1px solid #ECECEC;border-right:1px solid #7F7F7F;border-bottom:1px solid #7F7F7F;}
+a.W:link{font-weight:bold;color:#ECECEC;}
+a.W:hover{font-weight:bold;color:#7F7F7F;}
+a.W:visited{font-weight:bold;color:#ECECEC;}
+td.W{font-family:arial;font-size:xx-small;}
+a.COLTITLE:link{font-size:xx-small;}
+a.COLTITLE:hover{font-size:xx-small;}
+a.COLTITLE:visited{font-size:xx-small;}
+.HELP{font-size:xx-small;color:#646464;}
+td.RESULT{font-family:arial;color:#000064;}
+td{font-family:arial;font-size:x-small;}
+td.IN{font-size:x-small;text-align:right;}
+h1{width:400;font-family:arial;font-size:large;margin-bottom:0;padding:0;}
+body{text-align:center;}
+td.ICON{}
+td.NAME{border-bottom: 1px black solid;border-right: 1px black solid;white-space:nowrap;}
+td.AGE{text-align:right;border-bottom: 1px black solid;border-right: 1px black solid;}
+td.SINCE{text-align:right;border-bottom: 1px black solid;border-right: 1px black solid;}
+td.XP{text-align:center;border-bottom: 1px black solid;border-right: 1px black solid;}
+td.RANK{text-align:center;border-bottom: 1px black solid;border-right: 1px black solid;}
+td.V{font-size:xx-small;}
+td.N{font-size:xx-small;}
+td.NREQ{font-size:xx-small;color:#9A0000;}
+td.V{font-size:x-small;}
+td.N{font-size:x-small;}
+td.C{color:#ECECEC;font-size:xx-small;border-bottom:1px solid #7F7F7F;background-color:#7F7F7F;}
+td.R{font-size:xx-small;border-right:1px solid #7F7F7F;border-bottom:1px solid #7F7F7F;}
+td.H{font-size:small;font-weight:bold;border-bottom:2px solid #7F7F7F;}
+td.F{font-size:small;font-weight:bold;border-top:2px solid #7F7F7F;}
+td.IN{text-align:right;font-size:xx-small;}
+td.IN{font-size:x-small;text-align:right;color:#7F7F7F;}
+a.COLOFF{text-align:left;color:#666666;text-decoration:none;}
+a.COLACT{text-align:left;color:#000000;text-decoration:underline;}
+a.COLACTFLIP{text-align:left;color:#000000;text-decoration:overline;}
+td.COL{text-align:left;font-size:xx-small;border-bottom: 1px black solid;}
+td.COLBODY{font-size:x-small;border-bottom: 1px black solid;}
+td.LOCK{font-size:x-small;border-bottom: 1px black solid;border-right: 1px black solid;}
+td.ICON{font-size:x-small;border-bottom: 1px black solid;border-right: 1px black solid;}
+td.FileName{text-align:left;font-size:x-small;border-bottom: 1px black solid;border-right: 1px black solid;}
+td.FileSize{font-size:x-small;border-bottom: 1px black solid;border-right: 1px black solid;}
+td.Modified{font-size:xx-small;border-bottom: 1px black solid;border-right: 1px black solid;white-space:nowrap;}
+td.Created{font-size:xx-small;border-bottom: 1px black solid;border-right: 1px black solid;white-space:nowrap;}
+td.HT_REQUIRE{font-size:xx-small;border-bottom: 1px black solid;border-right: 1px black solid;}
+td.HT_AUTHNAME{font-size:xx-small;border-bottom: 1px black solid;border-right: 1px black solid;}
+td.HT_AUTHTYPE{font-size:xx-small;border-bottom: 1px black solid;border-right: 1px black solid;}
+td.HT_REQUIRE_USER{font-size:xx-small;border-bottom: 1px black solid;border-right: 1px black solid;white-space:nowrap;}
+td.HT_REQUIRE_GROUP{font-size:xx-small;border-bottom: 1px black solid;border-right: 1px black solid;white-space:nowrap;}
+td.HT_AUTHGROUPFILE{font-size:xx-small;border-bottom: 1px black solid;border-right: 1px black solid;}
+td.HT_AUTHUSERFILE{font-size:xx-small;border-bottom: 1px black solid;border-right: 1px black solid;}
+td.HT_SATISFY{font-size:xx-small;border-bottom: 1px black solid;border-right: 1px black solid;}
+td.IP_STATUS{text-align:center;font-size:xx-small;border-bottom: 1px black solid;border-right: 1px black solid;}
+td.USERS_GROUPS{text-align:center;font-size:xx-small;border-bottom: 1px black solid;border-right: 1px black solid;}
+td.USERS_NAME{border-bottom: 1px black solid;border-right: 1px black solid;white-space:nowrap;}
+td.USERS_ICON{border-right: 1px black solid;}
+a.FLIPOFF{text-decoration:underline;}
+a.FLIPON{text-decoration:overline;}
+td.B{padding:20;border-top:1px solid #ECECEC;border-left:1px solid #ECECEC;border-right:1px solid #7F7F7F;border-bottom:1px solid #7F7F7F;}
+td.B2{padding:4;border-top:1px solid #ECECEC;border-left:1px solid #ECECEC;border-right:1px solid #7F7F7F;border-bottom:1px solid #7F7F7F;}
+td.MENU{padding-left:5;padding-right:5;font-size:xx-small;letter-spacing:2;text-align:left;font-family:arial;border-top:1px solid #ECECEC;border-left:1px solid #ECECEC;border-right:1px solid #7F7F7F;border-bottom:1px solid #7F7F7F;}
+a.MENU:link{font-weight:bold;text-decoration:none;white-space:nowrap;color:#000000;}
+a.MENU:visited{font-weight:bold;text-decoration:none;color:#000000;white-space:nowrap;}
+a.MENU:hover{font-weight:bold;text-decoration:none;color:#0000FF;white-space:nowrap;}
+a.tree:link{white-space:nowrap;color:#0000FF;}
+a.tree:visited{color:#0000FF;white-space:nowrap;}
+a.tree:hover{color:#9A0000;white-space:nowrap;}
+</style>
+
+
+<SCRIPT LANGUAGE="JavaScript">
+//////////////////////////////////////////////
+var beginShift = "";var endShift = "";var isShift = "";var fileListLimit = 12;
+function doShiftCheck(e,i) {
+isShift = "no";
+if (window.event.shiftKey){isShift = "yes";}
+if (isShift == "yes"){
+if((beginShift)&&(endShift)){endShift = "";beginShift = "";}
+if (beginShift){endShift = i;}else{beginShift = i;}
+if((beginShift)&&(endShift)){
+toggleCheckAll();
+if (document.forms['keys'].FILE[endShift-1].checked){
+document.forms['keys'].FILE[endShift-1].checked = false;
+}else{
+document.forms['keys'].FILE[endShift-1].checked = true;
+}
+}
+}
+//setBGColors();
+}///////////////////////
+function setBGColors(){
+var from = 1;
+var to = document.forms['keys'].FILE.length;
+for(x=from;x<=to;x++){
+if (document.forms['keys'].FILE[x-1].checked){
+window["myBG"+x+"A"].bgColor = 'AA0000';
+}else{
+//changeBG("myBG"+x+"A",'');
+window["myBG"+x+"A"].bgColor = '';
+}
+}
+}////////////////////////
+function toggleCheckAll(){
+if (endShift == 'all'){
+beginShift = 0;
+endShift = document.forms['keys'].FILE.length;
+}
+///document.forms['keys'].FILE.checked = true;
+var from = beginShift;
+var to = endShift;
+//alert(from+"..."+to);
+for(x=from;x<to;x++){
+if (document.forms['keys'].FILE[x].checked){
+document.forms['keys'].FILE[x].checked = false;
+}else{
+document.forms['keys'].FILE[x].checked = true;
+}
+}
+}///////////////////////
+</SCRIPT>
+
+
+</head>
+<body bgcolor="CCCCCC">
+
+<table border=0 cellpadding=0 cellspacing=0 width=100%><tr><td width=100% valign=top align=center>
+<table width=600 border=0 cellpadding=6 cellspacing=0><tr>
+<td style="border-bottom:solid black;border-width:1px 0px;text-align:left;">
+<table border=0 width=100% cellpadding=0 cellspacing=0><tr>
+<td width=100%>
+<table border=0><tr>
+<td><a onMouseover="document.ico.src='http://www.metasphere.net/images/mreverse.gif';" onMouseout="document.ico.src='http://www.metasphere.net/images/mreverse2.gif';" href="http://www.metasphere.net/cgi/sql.cgi?View&D=metasphere&T=newsoftheweird">
+<img name=ico src="http://www.metasphere.net/images/mreverse2.gif" border=0>
+</a></td>
+<td style="letter-spacing:10;font-weight:bold;">
+METASPHERE.NET</td>
+</tr>
+</table>
+
+
+
+</td>
+<td align=right style="white-space: nowrap"></td>
+<td><a href="http://www.metasphere.net/cgi/login.cgi"><img src="http://www.metasphere.net/cgi/ACCESS_GUEST.gif" alt="" border=0></a></td>
+</tr></table>
+</td>
+</tr><tr>
+<td>
+<table border=0 cellspacing=0 cellpadding=4><tr>
+<td onMouseover="this.bgColor='#ECECEC'" onMouseout="this.bgColor='#CCCCCC'" class=MENU><a class=MENU href="http://www.metasphere.net/">Home</a></td>
+<td onMouseover="this.bgColor='#ECECEC'" onMouseout="this.bgColor='#CCCCCC'" class=MENU><a class=MENU href="http://www.metasphere.net/cgi/sql.cgi?View&D=metasphere&T=hosting">Hosting</a></td>
+<td onMouseover="this.bgColor='#ECECEC'" onMouseout="this.bgColor='#CCCCCC'" class=MENU><a class=MENU href="http://www.metasphere.net/cgi/sql.cgi?View&D=metasphere&T=tools">Tools</a></td>
+<td onMouseover="this.bgColor='#ECECEC'" onMouseout="this.bgColor='#CCCCCC'" class=MENU><a class=MENU href="http://www.metasphere.net/cgi/sql.cgi?View&D=metasphere&T=links">Links</a></td>
+<td onMouseover="this.bgColor='#ECECEC'" onMouseout="this.bgColor='#CCCCCC'" class=MENU><a class=MENU href="http://www.metasphere.net/cgi/sql.cgi?View&D=metasphere&T=help">Help</a></td>
+<td onMouseover="this.bgColor='#ECECEC'" onMouseout="this.bgColor='#CCCCCC'" class=MENU><a class=MENU href="http://www.metasphere.net/cgi/sql.cgi?View&D=metasphere&T=forums">Forums</a></td>
+<td onMouseover="this.bgColor='#ECECEC'" onMouseout="this.bgColor='#CCCCCC'" class=MENU><a class=MENU href="http://www.metasphere.net/flash/">Flash</a></td>
+<td onMouseover="this.bgColor='#ECECEC'" onMouseout="this.bgColor='#CCCCCC'" class=MENU><a class=MENU href="http://www.metasphere.net/cgi/sql.cgi?View&D=metasphere&T=newsoftheweird">News</a></td>
+</tr></table>
+<table border=0 cellspacing=0 cellpadding=4><tr>
+<td class=W>
+
+</td>
+</tr></table>
+
+</td>
+
+
+
+</tr></table>
+</td></tr></table>
+<center>
+<table border=0 width=600><tr><td class=B width=600><table width=560 cellpadding=4 border=0><tr>
+<td class=H>News of the Weird</td></tr><tr>
+<td align=right class=N>
+
+Page: 1 of 17 / 
+Stories: 323 / 
+<a href="?View&Q_MESSAGE=&SQL_DATABASE=metasphere&SQL_TABLE=newsoftheweird&page=17&by=&flip=&VIEW=SQL">Prev Page</a> / 
+<a href="?View&Q_MESSAGE=&SQL_DATABASE=metasphere&SQL_TABLE=newsoftheweird&page=2&by=&flip=&VIEW=SQL">Next Page</a> / 
+<a href="?View&SQL_DATABASE=metasphere&SQL_TABLE=newsoftheweird&VIEW=SQL">Index</a> / 
+<a href="?View&SQL_DATABASE=metasphere&SQL_TABLE=newsoftheweird&page=2&VIEW=SEARCH">Search</a>
+</td></tr><tr><td valign=top><table width=560 cellpadding=4 border=0><tr><td valign=top class=N style="font-size:xx-small;border-top:1px solid #7F7F7F;">1...<a href="?View&SQL_DATABASE=metasphere&SQL_TABLE=newsoftheweird&by=&flip=&VIEW=ID&Q_ID_REQUIRE=1">Man Shoots At Police To Attract Their Attention</a>...A 24-year-old man is being charged with attempted murder after he fired a shot at a passing police car. The officers heard a gunshot as they passed a stopped car, and after calling for backup, they approached the car and arrested the two occupants. During the arrest, one of the men admitted firing one shot at the police, but did it because he needed them to help him fix a tire. -Ananova: 1/27/02<hr noshade size=1>2...<a href="?View&SQL_DATABASE=metasphere&SQL_TABLE=newsoftheweird&by=&flip=&VIEW=ID&Q_ID_REQUIRE=2"> Florida Pick Pocketing Ring Led By Grandmother</a>... A statewide pick pocketing ring in Florida, that was aimed at the elderly, was allegedly run by a 65-year-old grandmother, who has been arrested 29 times since 1960. The women, named Ernestine Williams, led the 15-person operation, and taught each pickpocket the tricks of the trade. She has told police that she instructed her accomplices to target the elderly, because they were easy targets. Williams, a mother of 12, led the crime ring from her wheelchair, lasting 2 years until a Florida Department of Law Enforcement officer broke up the ring, arrested the members, including Ernestine and several of her family members. Ernestine Williams has pled guilty to racketeering, conspiracy to commit racketeering, two grand theft charges and three misdemeanor theft charges. She faces four to eight years in prison, according to Florida state sentencing guidelines. -South Florida Sun Sentinel: 4/2/02 -FDLE Press Release: 10/15/00 -ABC News: 10/26/00 -Associated Press: 10/26/00<hr noshade size=1>3...<a href="?View&SQL_DATABASE=metasphere&SQL_TABLE=newsoftheweird&by=&flip=&VIEW=ID&Q_ID_REQUIRE=3"> Convicted Murderer Sues Jail Because He Can't Sleep</a>...David Wild, 65, is attempting to sue a prison in Canada where he is being held, because the guards keep him up all night. Wild is in prison because he murdered his girlfriend in 1989, and says that the prison guards have deprived him of sleep 509 times in five years. He says that he has suffered permanent headaches, blurred and double vision, loss of balance and depression, all caused by noisy guards. -Ananova: 3/14/02<hr noshade size=1>4...<a href="?View&SQL_DATABASE=metasphere&SQL_TABLE=newsoftheweird&by=&flip=&VIEW=ID&Q_ID_REQUIRE=4"> Man Found Hiding Six Years After End Of War</a>... Even though the war in Bosnia has been over for many years, a man has been found hiding out - 6 years after the war stopped. The hermit was found hiding in the mountains of Bosnia, by British soldiers on a peacekeeping mission, and when he was told that the war was over, he was very surprised. The man, identified as Illija Panincic, had fled to the mountains surrounding the town of Sipovo, and lived off of twigs and berries for the duration of his stay. He was found in an abandon cabin in the mountains, and since they found him, British soldiers have been traveling great distances to deliver food to him. -Ananova: 2/21/02<hr noshade size=1>5...<a href="?View&SQL_DATABASE=metasphere&SQL_TABLE=newsoftheweird&by=&flip=&VIEW=ID&Q_ID_REQUIRE=5"> Assassin Mistakenly Honored At Martin Luther King Celebration</a>... The town of Lauderhill, Florida is very upset after a plaque intended to honor James Earl Jones instead honored the wrong man. The plaque was to be displayed at a celebration of Martin Luther King Jr.'s life, but instead of honoring Jones, the plaque read, &quot;Thank you James Earl Ray for keeping the dream alive.&quot; James Earl Ray was the man who assassinated King in 1968. A Merit Industries spokesman Herbert Miller, said that it was caused by an unintentional error, &quot;We in no way meant any disrespect. It was an honest error.&quot; -BBC: 1/17.02 -Associated Press: 1/16/02 -Reuters: 1/16/02 -CNN: 1/16/02<hr noshade size=1>6...<a href="?View&SQL_DATABASE=metasphere&SQL_TABLE=newsoftheweird&by=&flip=&VIEW=ID&Q_ID_REQUIRE=6">Zoo Labor</a>...Among issues in the months-long labor-management strife at the Taronga Zoo (Sydney, Australia): Workers have resisted managers' alleged solution for getting Kibabu the gorilla to mate (following his rejection of all females for six years now), which was to have the keepers sedate him, stimulate him manually, and collect his sperm in a container (but that, said one keeper, would be %22too bloody dangerous. What if he woke up?%22). It now appears that zoo officials are resigned to use technology instead, by a process called electro-ejaculation. Earlier, workers had announced a partial strike for a 3 percent pay increase, in that they would stop picking up animals' droppings (whereupon management began docking their pay of the %22poo allowance%22 of the equivalent of US $2.40 an hour. [Sydney Morning Herald, 10-31-02] <hr noshade size=1>7...<a href="?View&SQL_DATABASE=metasphere&SQL_TABLE=newsoftheweird&by=&flip=&VIEW=ID&Q_ID_REQUIRE=7">Dive the Sky</a>...On Nov. 2, skydiver Ron Sirull (1,000 career jumps) performed at the Air and Space Show at Vandenberg Air Force Base (just north of Lompoc, Calif.), accompanied by his Dachshund, Brutus the Skydiving Dog (100 career jumps), to the protests of animal-rights activists but (according to Sirull) to the delight of Brutus, who was %22totally turned on.%22 (Brutus doesn't jump alone; he wears goggles and rides in Sirull's jumpsuit. According to Sirull, Brutus' vet and the Arizona Humane Society say the jumps are safe.) [Seattle Post-Intelligencer-AP, 11-3-02]<hr noshade size=1></td><td valign=top class=N style="font-size:xx-small;border-top:1px solid #7F7F7F;border-left:1px solid #7F7F7F">8...<a href="?View&SQL_DATABASE=metasphere&SQL_TABLE=newsoftheweird&by=&flip=&VIEW=ID&Q_ID_REQUIRE=8">People Lower Than a Snake's Belly</a>...In August, Brian Lynch of Scotchtown, N.Y., was convicted of stealing $8,000 in donations intended for a Sept. 11 FDNY widow. Also in August, Vernon Coleman, 32 (of Philadelphia), and Dane Coleman, 28 (of Upper Darby, Pa.) (who are not related), were arraigned on charges of stealing $35,000 from a donation fund for Afghan children displaced by the war. Also in August, New York City landlord Denise M. Lyman announced she would not allow the family of Sept. 11 victim Danielle Kousoulis into Danielle's old apartment to secure DNA to help detect her remains because Danielle had breached her Sept. 1, 2001, lease by failing to give three months' notice before %22abandoning%22 the apartment. [St. Petersburg Times, 8-18-02] [USA Today, 8-16-02] [CBSNews.com, 8-27-02]<hr noshade size=1>9...<a href="?View&SQL_DATABASE=metasphere&SQL_TABLE=newsoftheweird&by=&flip=&VIEW=ID&Q_ID_REQUIRE=9">Homeless Taste</a>...According to a September New York Times report, New York City homeless-shelter workers believe that %2250 to 75 percent%22 of the current population of 8,000 families (2,000 more than the year before) are %22unreasonably picky%22 about moving into permanent assisted housing, thus remaining in temporary apartments at an average cost to the city of $2,800 per family per month. Sara Kelly, a mother of six and eight-year assisted-housing client, said she could not accept a three-bedroom apartment because %22you had to walk through one bedroom to get to another bedroom to get to a bathroom (and) I can't live like that. (I am) choosy about where I live.%22 [New York Times, 9-16-02]<hr noshade size=1>10...<a href="?View&SQL_DATABASE=metasphere&SQL_TABLE=newsoftheweird&by=&flip=&VIEW=ID&Q_ID_REQUIRE=10">Yards of Nerve</a>...In White River Junction, Vt., in October, Stewart Fuller, 41, was charged with looting about $30,000 worth of goods from the house of neighbors Roger and Shirley Labelle (who were away) and holding a three-day yard sale nearby so that when the Labelles returned, they couldn't help but notice that some of their neighbors had their stuff. [Rutland Herald, 10-8-02]<hr noshade size=1>11...<a href="?View&SQL_DATABASE=metasphere&SQL_TABLE=newsoftheweird&by=&flip=&VIEW=ID&Q_ID_REQUIRE=11">Snooty Booty</a>...Earlier this year, 89 wives, daughters and lovers of wealthy or powerful Mexican men posed chicly in extravagant settings with complete lack of inhibition about their opulence, for photographer Daniela Rossell's coffee-table book, %22Ricas y Famosas%22 (%22Rich and Famous%22), thus appearing to taunt the 53 percent of Mexicans who live in poverty. Rossell, who comes from the upper class herself, and is thought to have made the book in part because of conflicted views of her upbringing, has since received threats from the embarrassed wealthy, who apparently miscalculated how their pictures would be perceived. [The Observer (London), 9-15-02]<hr noshade size=1>12...<a href="?View&SQL_DATABASE=metasphere&SQL_TABLE=newsoftheweird&by=&flip=&VIEW=ID&Q_ID_REQUIRE=12">Life Imitates a Rodney Dangerfield Joke</a>...Herbert Toney, 36, and Latisha Washington, 29, were arrested in October in St. Bernard Parish, just outside New Orleans, and face several charges including deserting their 8-year-old son. According to police, the couple instructed the son to go into a Winn Dixie supermarket and steal groceries and beer. When a security guard stopped him, the boy pointed out his parents nearby, but Toney and Washington matter-of-factly denied knowing the kid and walked away. Deputies brought the couple in again a while later, but Washington said only that maybe she had seen the boy around the neighborhood a few times. Finally, she admitted he was hers. [The Times-Picayune, 10-4-02] <hr noshade size=1>13...<a href="?View&SQL_DATABASE=metasphere&SQL_TABLE=newsoftheweird&by=&flip=&VIEW=ID&Q_ID_REQUIRE=13">Extremely Effective Clothing</a>...According to a July Reuters photo dispatch from the mountains of northeast Colombia, U'wa Indian girls' traditional %22cocora%22 hats, designed to encourage chastity from puberty until marriage, consist of oversized cones made of layers of large sheets of green leaves, all completely covering the girls' heads, except for narrow eye slits. [Straits Times-Reuters, 7-10-02]<hr noshade size=1>14...<a href="?View&SQL_DATABASE=metasphere&SQL_TABLE=newsoftheweird&by=&flip=&VIEW=ID&Q_ID_REQUIRE=14">People Different From Us</a>...Suspected cult leader Scott Caruthers, 57, was arrested in September in Carroll County, Md., and charged with conspiracy to murder the ex-husbands of two of his alleged disciples; according to a Baltimore Sun report, Caruthers has claimed to be an alien who reported back to the mother ship by messages to cats. And Dem Mam, 54, head of a fringe Buddhist cult, was freed from custody in October, having been determined not responsible for three disciples' immolating themselves in a bathtub of gasoline in a Cambodian countryside pagoda; Dem Mam teaches that ritual suicide is the only path to heaven but told police that he did not need to commit suicide himself because he is already holy enough. [Baltimore Sun, 9-8-02] [Reuters, 10-1-02, 10-10-02]<hr noshade size=1></td><td valign=top class=N style="font-size:xx-small;border-top:1px solid #7F7F7F;border-left:1px solid #7F7F7F">15...<a href="?View&SQL_DATABASE=metasphere&SQL_TABLE=newsoftheweird&by=&flip=&VIEW=ID&Q_ID_REQUIRE=15">Least Competent Criminals</a>...Ronnie Dale Jones, 33, was arrested in Brevard, N.C., in September after he, for some reason, drove into a parking lot and past several police officers standing by their cars, talking; Jones apparently had momentarily forgotten he had a very large marijuana plant in his back seat. And a 22-year-old man was detained by a sheriff's deputy in Gainesville, Fla., in October after he had been stopped routinely for an expired tag; as the men were conversing casually, the deputy noticed a rolled-up marijuana joint behind the man's ear (to which the motorist said, %22Man, I forgot that was back there%22). [Transylvania Times, 9-24-02] [Gainesville Sun, 10-31-02]<hr noshade size=1>16...<a href="?View&SQL_DATABASE=metasphere&SQL_TABLE=newsoftheweird&by=&flip=&VIEW=ID&Q_ID_REQUIRE=16">Multitasking Gone Too Far</a>...In Tucson, Ariz., in August, Iris Jazmin Rangel, 24, was sentenced to three years' probation in the death of her 10-month-old daughter in a minor collision caused by Rangel's inability to brake quickly enough; her attention was diverted because she was breastfeeding the girl at the time. And South Carolina Highway Patrol officers said in July that Marie Butler, 20, triggered a five-car collision on State Road 90, sending three people to the hospital, when she lost control of her car while changing clothes during her drive to work. [Arizona Republic-AP, 8-14-02] [Myrtle Beach Sun News, 7-25-02]<hr noshade size=1>17...<a href="?View&SQL_DATABASE=metasphere&SQL_TABLE=newsoftheweird&by=&flip=&VIEW=ID&Q_ID_REQUIRE=17">The Classic Middle Name</a>...Arrested for murder: Anthony Wayne Grimm (Springfield, Ill., August); Daryl Wayne Smith (Wheeling, W.Va., August); Seth Wayne Campbell (Houston, July); Douglas Wayne Clark (Austin, Texas, October). Convicted of murder: Gary Wayne Davis (Louisville, Ky., September). Arrested on suspicion of murder at press time: Michael Wayne Bartlett (Ridgetop, Tenn., October). [Springfield Journal-Register, 8-21-02] [The Intelligencer (Wheeling, W.Va.), 8-6-02] [Houston Chronicle, 7-11-02] [News8austin.com, 10-22-02] [Louisville Courier-Journal, 9-4-02] [The Tennessean, 10-30-02]<hr noshade size=1>18...<a href="?View&SQL_DATABASE=metasphere&SQL_TABLE=newsoftheweird&by=&flip=&VIEW=ID&Q_ID_REQUIRE=18">Also, in the Last Month ...</a>...The North Korean government gave its top yearly science prize to Pyongyang Hospital for developing a rhubarb-and-marijuana concoction that is %2297 percent effective%22 in curing constipation. Adele Robinson and several other New York City public-school contract teachers were mailed checks for 1 cent to correct a calculation error on summer-class pay. Cheyenne Harley Kahnapace, 26, pleaded guilty to violating his parole restrictions after a police officer caught him out for a walk pushing a baby stroller containing a small keg of beer (Regina, Saskatchewan). Prominent entomologist Elmo Hardy passed away at age 88, his legacy secure in that 50 species of flies are named for him (Honolulu). [Reuters, 10-31-02] [Newsday, 10-25-02] [Sault Star-CP, 10-19-02] [Honolulu Advertiser, 10-20-02]<hr noshade size=1>19...<a href="?View&SQL_DATABASE=metasphere&SQL_TABLE=newsoftheweird&by=&flip=&VIEW=ID&Q_ID_REQUIRE=19">The Litigious Society</a>...Otis Stansbury, 34, of Long Eaton, England, filed a lawsuit in August against door-to-door salesman Jay Sims and his company, Accident Group, whose business is helping customers in personal-injury lawsuits. Sims had just left the Stansbury home (after failing to sign them up) when, according to the lawsuit, he attempted to catch a ball among kids playing in front of the Stansbury home, slipped, and fell on top of 6-year-old Yohan Stansbury, sending the boy to the hospital with head injuries. [Daily Telegraph, 8-15-02] <hr noshade size=1>20...<a href="?View&SQL_DATABASE=metasphere&SQL_TABLE=newsoftheweird&by=&flip=&VIEW=ID&Q_ID_REQUIRE=20">The Litigious Society</a>...Cherise Mosley, 19, filed a lawsuit against the Aaron Family Planning Clinic in Houston in August, seeking damages for the abortion it performed on her two years earlier when she was a minor. Mosley admits that she produced a false ID card at that time, showing that she was over 18, for the express purpose of receiving the abortion without having her parents notified. Now, Mosley apparently regrets the abortion and claims the clinic should have detected that her ID was false and thus notified her parents, who, Mosley believes, would have talked her out of the abortion. [Houston Chronicle, 8-2-02] <hr noshade size=1></td></tr></table></td></tr></table></td></tr></table>

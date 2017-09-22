@@ -1,0 +1,1550 @@
+<HTML>
+<!--Converted with LaTeX2HTML 98.1p1 release (March 2nd, 1998)
+originally by Nikos Drakos (nikos@cbl.leeds.ac.uk), CBLU, University of Leeds
+* revised and updated by:  Marcus Hennecke, Ross Moore, Herb Swan
+* with significant contributions from:
+  Jens Lippmann, Marek Rouchal, Martin Wilck and others -->
+<HEAD>
+  <META NAME="GENERATOR" CONTENT="Adobe PageMill 3.0 Win">
+  <TITLE>Results and Challenges in Web Search Evaluation1</TITLE>
+  <META NAME="description" CONTENT="Results and Challenges in Web Search Evaluation1">
+  <META NAME="keywords" CONTENT="www8">
+  <META NAME="resource-type" CONTENT="document">
+  <META NAME="distribution" CONTENT="global">
+  <META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=iso-8859-1">
+  <LINK REL="STYLESHEET" HREF="www8.css">
+</HEAD>
+<BODY BGCOLOR="#ffffff">
+
+<P><A NAME="TopOfPage"></A></P>
+
+<H1><CENTER><FONT FACE="Times New Roman">Results and Challenges
+in Web Search Evaluation</FONT><A NAME="tex2html1"></A><FONT FACE="Times New Roman"><A
+HREF="results.html#foot4"><SUP>1</SUP></A></FONT></CENTER></H1>
+
+<P><CENTER><STRONG><FONT FACE="Times New Roman">David Hawking
+</FONT><TT><FONT SIZE="-1" FACE="Times New Roman">(David.Hawking@cmis.csiro.au)<BR>
+</FONT></TT><FONT SIZE="-1" FACE="Times New Roman">CSIRO Mathematical
+and Information Sciences, <BR>
+Canberra, Australia. </FONT><FONT FACE="Times New Roman"><BR>
+Nick Craswell </FONT><TT><FONT SIZE="-1" FACE="Times New Roman">(nick@cs.anu.edu.au)</FONT></TT><FONT
+ FACE="Times New Roman"> and Paul Thistlewaite</FONT></STRONG><A
+NAME="tex2html2"></A><STRONG><FONT FACE="Times New Roman"><A 
+HREF="results.html#foot9"><SUP>2</SUP></A></FONT></STRONG><BR>
+<STRONG><FONT SIZE="-1" FACE="Times New Roman">Department of Computer
+Science, ANU<BR>
+Canberra, Australia.</FONT><FONT FACE="Times New Roman"><BR>
+Donna Harman </FONT><TT><FONT SIZE="-1" FACE="Times New Roman">(Donna.Harman@nist.gov)<BR>
+</FONT></TT><FONT SIZE="-1" FACE="Times New Roman">National Institute
+of Standards and Technology<BR>
+Gaithersburg MD.</FONT></STRONG></CENTER></P>
+
+<P>&nbsp;</P>
+
+<P>&nbsp;</P>
+
+<H3><FONT FACE="Times New Roman">Abstract:</FONT></H3>
+
+<P><FONT FACE="Times New Roman"><DIV>A frozen 18.5 million page
+snapshot of part of the Web has been created to enable and encourage
+meaningful and reproducible evaluation of Web search systems and
+techniques. This collection is being used in an evaluation framework
+within the Text Retrieval Conference (TREC) and will hopefully
+provide convincing answers to questions such as, ``Can link information
+result in better rankings?'', ``Do longer queries result in better
+answers?'', and, ``Do TREC systems work well on Web data?'' The
+snapshot and associated evaluation methods are described and an
+invitation is extended to participate. Preliminary results are
+presented for an effectivess comparison of six TREC systems working
+on the snapshot collection against five well-known Web search
+systems working over the current Web. These suggest that the standard
+of document rankings produced by public Web search engines is
+by no means state-of-the-art. </FONT></DIV></P>
+
+<P>&nbsp;</P>
+
+<P><I><FONT FACE="Times New Roman">Keywords:</FONT></I><FONT FACE="Times New Roman">
+Evaluation; Search engines; Test collection; TREC; Methodology</FONT></P>
+
+<P>&nbsp;</P>
+
+<H1><A NAME="SECTION00010000000000000000"></A><FONT FACE="Times New Roman">Introduction</FONT></H1>
+
+<P><FONT FACE="Times New Roman">Web search technology appears
+to have dominated recent Web research and development activity.
+The editors of the WWW7 Proceedings [<A HREF="http://www8.org/w8-papers/2c-search-discover/results/www8.html#AshmanThistlewaite98">2</A>]
+noted that</FONT></P>
+
+<BLOCKQUOTE>
+  <P><FONT FACE="Times New Roman">``About 20% of the 218 papers
+  submitted as full papers were tagged by their authors as being
+  in the area of Information Retrieval, and 17% in the area of
+  Search and Indexing Techniques ... This is nearly double that
+  of the next largest areas/topics for which papers were submitted&quot;.</FONT></P>
+</BLOCKQUOTE>
+
+<P><FONT FACE="Times New Roman">Web research covers a broad spectrum
+of novel and promising ideas, including algorithms for ranking
+the relevance of Web pages such as [<A HREF="http://www8.org/w8-papers/2c-search-discover/results/www8.html#BrinPage98">5</A>],
+[<A HREF="http://www8.org/w8-papers/2c-search-discover/results/www8.html#Kleinberg97">15</A>] and [<A HREF="http://www8.org/w8-papers/2c-search-discover/results/www8.html#LawrenceGiles98">16</A>].</FONT></P>
+
+<P><FONT FACE="Times New Roman">However, a very important question,
+from both a computer science and end-user perspective, remains
+basically unanswered regarding these and many other Web search
+algorithms - <EM>are they effective?</EM></FONT></P>
+
+<P><FONT FACE="Times New Roman">Aspects of effectiveness include
+whether the Web pages returned to the user are relevant (precision);
+whether they are presented in the order of relevance; whether
+a significant or desired number of available relevant pages have
+been identified to the user (recall); whether a required fact
+has been found and presented; whether a significant or desired
+number of aspects of the user's search need have been covered
+by the set of pages returned; whether returned pages are authoritative
+and so on.</FONT></P>
+
+<P><FONT FACE="Times New Roman">As the Information Retrieval (IR)
+research community well knows, resolving the question of effectiveness
+requires an evaluation methodology which is both scientifically
+rigorous and satisfying from an end-user perspective. The foundations
+of such an evaluation methodology can be found in IR; namely,
+the Text Retrieval Conference (TREC) evaluation program undertaken
+by the US National Institute of Standards and Technology (NIST).
+[<A HREF="http://www8.org/w8-papers/2c-search-discover/results/www8.html#TRECWebPage">18</A>] The TREC methodology
+is the result of decades of evaluation debate within the IR community.
+Key papers in this debate have recently been reprinted. [<A HREF="http://www8.org/w8-papers/2c-search-discover/results/www8.html#SparckJonesWillett97">19</A>,
+Chapter 4]</FONT></P>
+
+<P><FONT FACE="Times New Roman">We have conducted some preliminary
+research into the effectiveness of four popular commercial Web
+search engines (plus one research system), using TREC-like methodology,
+and compared them to six TREC systems operating over 100 gigabytes
+(18.5 million pages) of Web data. Results (subject to a number
+of methodological limitations outlined below) are reported in
+Table <A HREF="results.html#WSE">2</A> below. They do not support the claim
+[<A HREF="http://www8.org/w8-papers/2c-search-discover/results/www8.html#BrinPage98">5</A>, p. 111] that ``Things which
+work well on TREC often do not produce good results on the Web''.</FONT></P>
+
+<P><FONT FACE="Times New Roman">In fact, this work suggests that
+these engines may be far from state-of-the-art when it comes to
+search effectiveness. This result has significant consequences
+for ongoing research. It is not uncommon for a bright new idea
+to appear to make a difference, but nonetheless be tangential,
+irrelevant or even detrimental to effectiveness and/or efficiency.</FONT></P>
+
+<P><FONT FACE="Times New Roman">Using a rigorous evaluation methodology
+is not only good science, but has arguably contributed to the
+doubling in effectiveness of state-of-the-art search systems observed
+during the first few years of TREC. [<A HREF="http://www8.org/w8-papers/2c-search-discover/results/www8.html#BuckleySinghalMitra96">6</A>,
+p. 117, Table 16]</FONT></P>
+
+<P><FONT FACE="Times New Roman">To date it has been difficult
+to perform meaningful effectiveness evaluation in the context
+of the Web. Comparisons of Web search engines have been confounded
+by the differences in the sets of pages spidered. Consequently,
+results are not reproducible because the data keeps changing.
+The same difficulties beset the evaluation of new retrieval methods
+such as hub-and-authority ranking, and distributed rather than
+centralised search.</FONT></P>
+
+<P>&nbsp;</P>
+
+<H2><A NAME="SECTION00011000000000000000"></A><FONT FACE="Times New Roman">Outline
+of TREC Methodology</FONT></H2>
+
+<P><FONT FACE="Times New Roman">Participants in the annual TREC
+conference must process a long set of queries over a standard
+2 gigabyte test collection of newspaper and government documents
+and submit ranked lists of documents to NIST for assessment by
+human judges. Submissions are evaluated for effectiveness using
+measures described in Section <A HREF="http://www8.org/w8-papers/2c-search-discover/results/www8.html#measures">4.3</A>.</FONT></P>
+
+<P><FONT FACE="Times New Roman"><BR>
+</FONT></P>
+
+<P><CENTER><A NAME="topic"></A><FONT FACE="Times New Roman">&nbsp;</FONT><A
+NAME="214"></A><FONT FACE="Times New Roman">&nbsp; </FONT><TABLE
+WIDTH="50%" BORDER="0" CELLSPACING="2" CELLPADDING="0">
+  <CAPTION ALIGN="TOP"><STRONG>Figure 1:</STRONG> Example TREC topic (statement of user
+
+need), expressed in a form which might be given to a human research
+
+assistant or librarian.</CAPTION>
+   
+  <TR>
+    <TD>
+    <IMG SRC="img1.gif" WIDTH="641" HEIGHT="403" ALT="\begin{figure}{\small\small
+\begin{tex2html_preform}\begin{verbatim}&lt;top&gt;&lt;num&gt;...
+...ds are also relevant.&lt;/top&gt;\end{verbatim}\end{tex2html_preform}}\end{figure}"
+    NATURALSIZEFLAG="0" ALIGN="BOTTOM">
+</TD>
+  </TR>
+</TABLE></CENTER></P>
+
+<P><FONT FACE="Times New Roman"><BR>
+</FONT></P>
+
+<P><FONT FACE="Times New Roman">The TREC approach to objective
+evaluation of effectiveness is to define a large set (at least
+50) of statements of user need (called <EM>topics</EM> within
+TREC) and to use human judges to assess whether submitted pages
+are or are not relevant to the user's need. An example topic appears
+in Figure <A HREF="http://www8.org/w8-papers/2c-search-discover/results/www8.html#topic">1</A>. Note that the title
+of the topic may be used as a query to the retrieval system or
+longer queries may be derived from more or all of the topic. Regardless
+of what query is used, pages are judged against the full topic.
+Evaluation of search systems using the TREC framework offers the
+following advantages:</FONT></P>
+
+<P>&nbsp;</P>
+
+<DL>
+  <DT><FONT FACE="Times New Roman">1.</FONT>
+  <DD><FONT FACE="Times New Roman">Reproducible results.</FONT>
+  <DT><FONT FACE="Times New Roman">2.</FONT>
+  <DD><FONT FACE="Times New Roman">Blind testing. Document judges
+  do not know which documents were retrieved by which systems,
+  nor are they aware of the hypotheses being tested. Participating
+  researchers do not find out which documents are relevant and
+  cannot tell how well their system is performing until after runs
+  are submitted.</FONT>
+  <DT><FONT FACE="Times New Roman">3.</FONT>
+  <DD><FONT FACE="Times New Roman">Sharing of relevance judgments
+  across a large number of groups significantly reduces the total
+  cost of evaluations and dramatically magnifies benefit compared
+  with similar human-judged evaluation experiments conducted by
+  individual groups.</FONT>
+  <DT><FONT FACE="Times New Roman">4.</FONT>
+  <DD><FONT FACE="Times New Roman">Collaborative experiments. An
+  interesting result obtained in a single experiment may have been
+  due to errors in implementing an algorithm or to deficiencies
+  in controlling extraneous variables. Much more confidence can
+  be placed in a similar result obtained by nine out of ten groups
+  performing a common task.</FONT>
+  <DT><FONT FACE="Times New Roman">5.</FONT>
+  <DD><FONT FACE="Times New Roman">Extensive training sets (400
+  retrieval topics with more-or-less complete answers) separate
+  from the test sets allow proposed methods to be tuned and tested
+  on different data. This potentially allows avoidance of the major
+  pitfall of ``overfitting''. Despite this, many new victims are
+  claimed each year!</FONT>
+</DL>
+
+<P><FONT FACE="Times New Roman">To address the criticism that
+TREC data has not been representative of the Web, a new 100 gigabyte
+test collection of Web data was defined in 1997 and used in a
+special interest track of TREC-7. It is proposed that in TREC-8
+this collection will be used to support more specifically Web-oriented
+evaluations. It is further proposed that new question answering
+tasks (such as ``What is the population of China?'' and ``Who
+is the Prime Minister of Canada?'') will be introduced alongside
+the traditional TREC research topics. It is also likely that real
+natural language queries obtained from search engine logs will
+be used.</FONT></P>
+
+<P><FONT FACE="Times New Roman">At present, TREC judgments are
+binary (relevant/irrelevant, correct/incorrect, etc.) and completely
+independent of other judgments. However, there is active interest
+in broadening the definitions to address the issues of repetition,
+aspect-coverage, degrees of relevance, relevance of hyperlinked
+pages and so on.</FONT></P>
+
+<P><FONT FACE="Times New Roman">The initiative proposed in this
+paper is an attempt to bring the Web and IR communities closer
+together by developing a TREC-style evaluation framework in which
+questions important to the Web community may be reproducibly answered.</FONT></P>
+
+<P><FONT FACE="Times New Roman">This year's TREC will include
+a Web special interest track. It is proposed that there will be
+two Web tasks, one using 100 gigabytes of Web data and the other
+a much smaller subset. Activities in the track will culminate
+in track workshops at the TREC-8 conference to be held in November,
+1999 near Washington, DC.</FONT></P>
+
+<P>&nbsp;</P>
+
+<H1><A NAME="SECTION00020000000000000000"></A><FONT FACE="Times New Roman">&nbsp;
+</FONT><A NAME="data"></A><FONT FACE="Times New Roman">&nbsp;<BR>
+The VLC2 Collection: A Frozen Snapshot of the Web</FONT></H1>
+
+<P><FONT FACE="Times New Roman">Data obtained in an early-1997
+trawl of the Web by the Internet Archive [<A HREF="http://www8.org/w8-papers/2c-search-discover/results/www8.html#IntArch98">12</A>]
+forms the basis of a TREC test collection known as the VLC2 (Very
+Large Collection, second edition). The trawl data was supplied
+on tape, and we presume that the order of pages on the tapes corresponds
+to the order in which they were fetched. Unfortunately, no details
+are available on the spidering algorithm employed by the Internet
+Archive and whether or not any censorship was applied.</FONT></P>
+
+<P><FONT FACE="Times New Roman">The tapes were scanned in order,
+and each <TT>text/html</TT> page encountered (except for a few
+documents longer than 2 MB) was formatted for inclusion in the
+VLC2. The process was stopped after about one third of the full
+trawl had been processed. The resulting 18.5 million page, 100.426
+gigabyte VLC2 collection is the Web snapshot which will be used
+in the proposed TREC-8 Web track. Note that the word ``snapshot''
+does not reflect the long-drawn-out reality of Web spidering!</FONT></P>
+
+<P><FONT FACE="Times New Roman">Apart from the addition of a small
+number of tags to support TREC usage, the content of the trawled
+pages was not altered in any way. Header information supplied
+by the <TT>http</TT> daemon such as URL and page type was included.
+More details of the VLC2 are available on the Web track website.
+[<A HREF="http://www8.org/w8-papers/2c-search-discover/results/www8.html#WebTraxPage">10</A>]</FONT></P>
+
+<P><FONT FACE="Times New Roman"><BR>
+</FONT></P>
+
+<P><CENTER><FONT SIZE="-1" FACE="Times New Roman"><BR>
+<BR>
+</FONT><A NAME="215"></A><FONT FACE="Times New Roman">&nbsp; </FONT><TABLE
+CELLPADDING="3" BORDER="1" CELLSPACING="2">
+  <CAPTION ALIGN="TOP"><STRONG>Table 1:</STRONG> Hosts most heavily represented in the
+
+VLC2 collection. The top half of the table lists the ten hosts
+
+which contributed the largest numbers of pages and the bottom
+
+half lists the ten hosts which contributed the largest amounts
+
+of data.</CAPTION>
+   
+  <TR>
+    <TD>
+    Hostname</TD> 
+    <TD ALIGN="RIGHT">
+    #pages</TD> 
+    <TD ALIGN="RIGHT">
+    Data Size (MB)</TD> 
+    <TD ALIGN="RIGHT">
+    Ave. Page Size (kB)</TD> 
+  </TR>
+  <TR>
+    <TD>
+    <TT>pluto.coloradoranch.com:80</TT></TD> 
+    <TD ALIGN="RIGHT">
+    32169</TD> 
+    <TD ALIGN="RIGHT">
+    149</TD> 
+    <TD ALIGN="RIGHT">
+    4.73</TD> 
+  </TR>
+  <TR>
+    <TD>
+    <TT>www.kaufen.de:80</TT></TD> 
+    <TD ALIGN="RIGHT">
+    29546</TD> 
+    <TD ALIGN="RIGHT">
+    60</TD> 
+    <TD ALIGN="RIGHT">
+    2.08</TD> 
+  </TR>
+  <TR>
+    <TD>
+    <TT>www.compubooks.com:80</TT></TD> 
+    <TD ALIGN="RIGHT">
+    28845</TD> 
+    <TD ALIGN="RIGHT">
+    113</TD> 
+    <TD ALIGN="RIGHT">
+    4.01</TD> 
+  </TR>
+  <TR>
+    <TD>
+    <TT>hp-k100.vol.cz:80</TT></TD> 
+    <TD ALIGN="RIGHT">
+    28753</TD> 
+    <TD ALIGN="RIGHT">
+    67</TD> 
+    <TD ALIGN="RIGHT">
+    2.39</TD> 
+  </TR>
+  <TR>
+    <TD>
+    <TT>www.condom.com:80</TT></TD> 
+    <TD ALIGN="RIGHT">
+    28500</TD> 
+    <TD ALIGN="RIGHT">
+    109</TD> 
+    <TD ALIGN="RIGHT">
+    3.92</TD> 
+  </TR>
+  <TR>
+    <TD>
+    <TT>www.riksdagen.se:80</TT></TD> 
+    <TD ALIGN="RIGHT">
+    28089</TD> 
+    <TD ALIGN="RIGHT">
+    182</TD> 
+    <TD ALIGN="RIGHT">
+    6.64</TD> 
+  </TR>
+  <TR>
+    <TD>
+    <TT>www9.yahoo.com:80</TT></TD> 
+    <TD ALIGN="RIGHT">
+    28023</TD> 
+    <TD ALIGN="RIGHT">
+    132</TD> 
+    <TD ALIGN="RIGHT">
+    4.81</TD> 
+  </TR>
+  <TR>
+    <TD>
+    <TT>www.looksmart.com:80</TT></TD> 
+    <TD ALIGN="RIGHT">
+    27481</TD> 
+    <TD ALIGN="RIGHT">
+    131</TD> 
+    <TD ALIGN="RIGHT">
+    4.88</TD> 
+  </TR>
+  <TR>
+    <TD>
+    <TT>www.bravo.net:80</TT></TD> 
+    <TD ALIGN="RIGHT">
+    27392</TD> 
+    <TD ALIGN="RIGHT">
+    146</TD> 
+    <TD ALIGN="RIGHT">
+    5.46</TD> 
+  </TR>
+  <TR>
+    <TD>
+    <TT>www.tvguide.or.jp:80</TT></TD> 
+    <TD ALIGN="RIGHT">
+    27227</TD> 
+    <TD ALIGN="RIGHT">
+    71</TD> 
+    <TD ALIGN="RIGHT">
+    2.68</TD> 
+  </TR>
+  <TR>
+    <TD>
+    <TT>roswell.com:80</TT></TD> 
+    <TD ALIGN="RIGHT">
+    20495</TD> 
+    <TD ALIGN="RIGHT">
+    3175</TD> 
+    <TD ALIGN="RIGHT">
+    158.64</TD> 
+  </TR>
+  <TR>
+    <TD>
+    <TT>jewishmall.com:80</TT></TD> 
+    <TD ALIGN="RIGHT">
+    5474</TD> 
+    <TD ALIGN="RIGHT">
+    1292</TD> 
+    <TD ALIGN="RIGHT">
+    241.72</TD> 
+  </TR>
+  <TR>
+    <TD>
+    <TT>seawifs.gsfc.nasa.gov:80</TT></TD> 
+    <TD ALIGN="RIGHT">
+    6417</TD> 
+    <TD ALIGN="RIGHT">
+    594</TD> 
+    <TD ALIGN="RIGHT">
+    94.81</TD> 
+  </TR>
+  <TR>
+    <TD>
+    <TT>parl30.parl.gc.ca:80</TT></TD> 
+    <TD ALIGN="RIGHT">
+    10654</TD> 
+    <TD ALIGN="RIGHT">
+    389</TD> 
+    <TD ALIGN="RIGHT">
+    37.48</TD> 
+  </TR>
+  <TR>
+    <TD>
+    <TT>william.cs.byuh.edu:80</TT></TD> 
+    <TD ALIGN="RIGHT">
+    25649</TD> 
+    <TD ALIGN="RIGHT">
+    348</TD> 
+    <TD ALIGN="RIGHT">
+    13.89</TD> 
+  </TR>
+  <TR>
+    <TD>
+    <TT>www.jasonproject.org:80</TT></TD> 
+    <TD ALIGN="RIGHT">
+    21424</TD> 
+    <TD ALIGN="RIGHT">
+    282</TD> 
+    <TD ALIGN="RIGHT">
+    13.48</TD> 
+  </TR>
+  <TR>
+    <TD>
+    <TT>www.cleveland.com:80</TT></TD> 
+    <TD ALIGN="RIGHT">
+    24238</TD> 
+    <TD ALIGN="RIGHT">
+    280</TD> 
+    <TD ALIGN="RIGHT">
+    11.86</TD> 
+  </TR>
+  <TR>
+    <TD>
+    <TT>www.jason.org:80</TT></TD> 
+    <TD ALIGN="RIGHT">
+    20535</TD> 
+    <TD ALIGN="RIGHT">
+    272</TD> 
+    <TD ALIGN="RIGHT">
+    13.57</TD> 
+  </TR>
+  <TR>
+    <TD>
+    <TT>www.das-ieee.com:80</TT></TD> 
+    <TD ALIGN="RIGHT">
+    25675</TD> 
+    <TD ALIGN="RIGHT">
+    252</TD> 
+    <TD ALIGN="RIGHT">
+    10.06</TD> 
+  </TR>
+  <TR>
+    <TD>
+    <TT>www.sonatpower.com:80</TT></TD> 
+    <TD ALIGN="RIGHT">
+    19300</TD> 
+    <TD ALIGN="RIGHT">
+    243</TD> 
+    <TD ALIGN="RIGHT">
+    12.91</TD> 
+  </TR>
+</TABLE></CENTER></P>
+
+<P><FONT FACE="Times New Roman"><BR>
+</FONT></P>
+
+<P><FONT FACE="Times New Roman">The VLC2 contains data from 116,102
+different hosts, each contributing an average of just under 160
+pages. A total of 24,814 hosts are represented by a single page
+each. Table <A HREF="results.html#Hosts">1</A> lists the hosts which are most
+heavily represented in the VLC2.</FONT></P>
+
+<P><FONT FACE="Times New Roman">All data in the VLC2 was obtained
+by spidering from the Web. Although it constitutes only a small
+percentage of the <EM>current</EM> publicly indexable Web, it
+is considered to be sufficiently large to enable meaningful results
+to be obtained. It is reported [<A HREF="http://www8.org/w8-papers/2c-search-discover/results/www8.html#SEWWebPage">20</A>]
+that no search engine indexed more than 18.5 million pages until
+December, 1995 and that the largest current coverage in May 1998
+was less than an order of magnitude larger.</FONT></P>
+
+<P>&nbsp;</P>
+
+<H2><A NAME="SECTION00021000000000000000"></A><FONT FACE="Times New Roman">Spamming
+Issues</FONT></H2>
+
+<P><FONT FACE="Times New Roman">The creators of the VLC2 collection
+took no steps to remove ``spam'' (keywords multiply inserted by
+web page creators to increase the likelihood that their page will
+be retrieved) from pages. It is not known whether any such filtering
+was applied by the Internet Archive.</FONT></P>
+
+<P>&nbsp;</P>
+
+<H2><A NAME="SECTION00022000000000000000"></A><FONT FACE="Times New Roman">Access
+to the Snapshot</FONT></H2>
+
+<P><FONT FACE="Times New Roman">Access to the data is subject
+to the terms and conditions of the data permission forms available
+via the Web page. [<A HREF="http://www8.org/w8-papers/2c-search-discover/results/www8.html#WebTraxPage">10</A>] These
+agreements prevent further redistribution, restrict use of the
+data to the purposes of R&amp;D in the areas of Information Retrieval
+and Natural Language Processing and require recipients to delete
+documents if requested to do so by copyright holders, ACSys (see
+Section <A HREF="http://www8.org/w8-papers/2c-search-discover/results/www8.html#ACSys">4.1</A>) or the Internet Archive.</FONT></P>
+
+<P><FONT FACE="Times New Roman">In addition to the raw data, it
+is proposed that a number of Web servers be made accessible on
+the Web to participants in the track. These are likely to include
+connectivity servers (similar to that described by Bharat et al
+[<A HREF="http://www8.org/w8-papers/2c-search-discover/results/www8.html#BharatBHKV98">4</A>]), search servers and
+possibly document/proxy servers.</FONT></P>
+
+<P><FONT FACE="Times New Roman">Recipients of the data will be
+asked to contribute to the costs of tape media and distribution
+and other track running costs.</FONT></P>
+
+<P>&nbsp;</P>
+
+<H1><A NAME="SECTION00030000000000000000"></A><FONT FACE="Times New Roman">A
+Preliminary Experiment</FONT></H1>
+
+<P><FONT FACE="Times New Roman"><BR>
+</FONT></P>
+
+<P><CENTER><A NAME="Q"></A><FONT FACE="Times New Roman">&nbsp;</FONT><A
+NAME="218"></A><FONT FACE="Times New Roman">&nbsp; </FONT><TABLE
+WIDTH="50%" BORDER="0" CELLSPACING="2" CELLPADDING="0">
+  <CAPTION ALIGN="TOP"><STRONG>Figure 2:</STRONG> A sample of the queries used in experiments
+
+with commercial Web search engines. The query format was as shown
+
+- ie. an unordered list of words with no special query operators.
+
+This format is exactly as used in TREC title-only Automatic runs.</CAPTION>
+   
+  <TR>
+    <TD>
+    <IMG SRC="img2.gif" WIDTH="330" HEIGHT="209" ALT="\begin{figure}{\small
+\begin{tex2html_preform}\begin{verbatim}320 undersea fiber...
+...ons
+329 mexican air pollution\end{verbatim}\end{tex2html_preform}}\end{figure}"
+    NATURALSIZEFLAG="0" ALIGN="BOTTOM">
+</TD>
+  </TR>
+</TABLE></CENTER></P>
+
+<P><FONT FACE="Times New Roman"><BR>
+</FONT></P>
+
+<P><FONT FACE="Times New Roman"><BR>
+</FONT></P>
+
+<P><CENTER><FONT SIZE="-1" FACE="Times New Roman"><BR>
+<BR>
+</FONT></CENTER></P>
+
+<P><CENTER><A NAME="219"></A><FONT FACE="Times New Roman">&nbsp;
+</FONT><TABLE CELLPADDING="3" BORDER="1" CELLSPACING="2">
+  <CAPTION ALIGN="TOP"><STRONG>Table 2:</STRONG> P@20 performance for Web Search Engines,
+
+using 50 title-only queries (average 2.5 terms) and the real Web.
+
+P@20 is the proportion of the top 20 documents retrieved which
+
+were judged relevant. All documents for a query were judged by
+
+the same person using the same ``browser'', regardless of whether
+
+they came from the VLC2 or from the real Web.</CAPTION>
+   
+  <TR>
+    <TD>
+    Engine</TD> 
+    <TD ALIGN="RIGHT">
+    1</TD> 
+    <TD ALIGN="RIGHT">
+    2</TD> 
+    <TD ALIGN="RIGHT">
+    3</TD> 
+    <TD ALIGN="RIGHT">
+    4</TD> 
+    <TD ALIGN="RIGHT">
+    5</TD> 
+  </TR>
+  <TR>
+    <TD>
+    P@20</TD> 
+    <TD ALIGN="RIGHT">
+    .306</TD> 
+    <TD ALIGN="RIGHT">
+    .288</TD> 
+    <TD ALIGN="RIGHT">
+    .231</TD> 
+    <TD ALIGN="RIGHT">
+    .377</TD> 
+    <TD ALIGN="RIGHT">
+    .289</TD> 
+  </TR>
+</TABLE></CENTER></P>
+
+<P><FONT FACE="Times New Roman"><BR>
+</FONT></P>
+
+<P><FONT FACE="Times New Roman"><BR>
+</FONT></P>
+
+<P><CENTER><FONT SIZE="-1" FACE="Times New Roman"><BR>
+<BR>
+</FONT></CENTER></P>
+
+<P><CENTER><A NAME="221"></A><FONT FACE="Times New Roman">&nbsp;
+</FONT><TABLE CELLPADDING="3" BORDER="1" CELLSPACING="2">
+  <CAPTION ALIGN="TOP"><STRONG>Table 3:</STRONG> P@20 performance for all 16 automatic
+
+VLC2 runs. Runs 1 - 4 made use of the full topics, runs 5-13 made
+
+use of Title plus Description fields of the topic statement whereas
+
+runs 14-16 used only the Title field.</CAPTION>
+   
+  <TR>
+    <TD>
+    &nbsp;</TD> 
+    <TD ALIGN="CENTER" COLSPAN="4">
+    T+D+N</TD>
+     
+    <TD ALIGN="CENTER" COLSPAN="9">
+    T+D</TD>
+     
+    <TD ALIGN="CENTER" COLSPAN="3">
+    T</TD>
+     
+  </TR>
+  <TR>
+    <TD>
+    Run</TD> 
+    <TD ALIGN="RIGHT">
+    1</TD> 
+    <TD ALIGN="RIGHT">
+    2</TD> 
+    <TD ALIGN="RIGHT">
+    3</TD> 
+    <TD ALIGN="RIGHT">
+    4</TD> 
+    <TD ALIGN="RIGHT">
+    5</TD> 
+    <TD ALIGN="RIGHT">
+    6</TD> 
+    <TD ALIGN="RIGHT">
+    7</TD> 
+    <TD ALIGN="RIGHT">
+    8</TD> 
+    <TD ALIGN="RIGHT">
+    9</TD> 
+    <TD ALIGN="RIGHT">
+    10</TD> 
+    <TD ALIGN="RIGHT">
+    11</TD> 
+    <TD ALIGN="RIGHT">
+    12</TD> 
+    <TD ALIGN="RIGHT">
+    13</TD> 
+    <TD ALIGN="RIGHT">
+    14</TD> 
+    <TD ALIGN="RIGHT">
+    15</TD> 
+    <TD ALIGN="RIGHT">
+    16</TD> 
+  </TR>
+  <TR>
+    <TD>
+    P@20</TD> 
+    <TD ALIGN="RIGHT">
+    .625</TD> 
+    <TD ALIGN="RIGHT">
+    .624</TD> 
+    <TD ALIGN="RIGHT">
+    .598</TD> 
+    <TD ALIGN="RIGHT">
+    .545</TD> 
+    <TD ALIGN="RIGHT">
+    .598</TD> 
+    <TD ALIGN="RIGHT">
+    .541</TD> 
+    <TD ALIGN="RIGHT">
+    .509</TD> 
+    <TD ALIGN="RIGHT">
+    .442</TD> 
+    <TD ALIGN="RIGHT">
+    .397</TD> 
+    <TD ALIGN="RIGHT">
+    .503</TD> 
+    <TD ALIGN="RIGHT">
+    .587</TD> 
+    <TD ALIGN="RIGHT">
+    .357</TD> 
+    <TD ALIGN="RIGHT">
+    .375</TD> 
+    <TD ALIGN="RIGHT">
+    .442</TD> 
+    <TD ALIGN="RIGHT">
+    .298</TD> 
+    <TD ALIGN="RIGHT">
+    .345</TD> 
+  </TR>
+</TABLE></CENTER></P>
+
+<P><FONT FACE="Times New Roman"><BR>
+</FONT></P>
+
+<P><FONT FACE="Times New Roman"><BR>
+</FONT></P>
+
+<P><CENTER><FONT SIZE="-1" FACE="Times New Roman"><BR>
+<BR>
+</FONT></CENTER></P>
+
+<P><CENTER><A NAME="223"></A><FONT FACE="Times New Roman">&nbsp;
+</FONT><TABLE CELLPADDING="3" BORDER="1" CELLSPACING="2">
+  <CAPTION ALIGN="TOP"><STRONG>Table 4:</STRONG> Summary of P@20 performance for Web
+
+Search Engines and VLC2 runs. The median and range for all search
+
+engine runs are compared with median and range for each of the
+
+VLC2 topic-length categories.</CAPTION>
+   
+  <TR>
+    <TD>
+    &nbsp;</TD> 
+    <TD ALIGN="CENTER" COLSPAN="2">
+    Web Search Engines</TD>
+     
+    <TD ALIGN="CENTER" COLSPAN="6">
+    TREC Systems (on VLC2)</TD>
+     
+  </TR>
+  <TR>
+    <TD>
+    &nbsp;</TD> 
+    <TD ALIGN="CENTER" COLSPAN="2">
+    &nbsp;</TD>
+     
+    <TD ALIGN="CENTER" COLSPAN="2">
+    T (3 runs)</TD>
+     
+    <TD ALIGN="CENTER" COLSPAN="2">
+    T+D (9 runs)</TD>
+     
+    <TD ALIGN="CENTER" COLSPAN="2">
+    T+D+N (4 runs)</TD>
+     
+  </TR>
+  <TR>
+    <TD>
+    &nbsp;</TD> 
+    <TD ALIGN="RIGHT">
+    range</TD> 
+    <TD ALIGN="RIGHT">
+    median</TD> 
+    <TD ALIGN="RIGHT">
+    range</TD> 
+    <TD ALIGN="RIGHT">
+    median</TD> 
+    <TD ALIGN="RIGHT">
+    range</TD> 
+    <TD ALIGN="RIGHT">
+    median</TD> 
+    <TD ALIGN="RIGHT">
+    range</TD> 
+    <TD ALIGN="RIGHT">
+    median</TD> 
+  </TR>
+  <TR>
+    <TD>
+    P@20</TD> 
+    <TD ALIGN="RIGHT">
+    .231 - .377</TD> 
+    <TD ALIGN="RIGHT">
+    .289</TD> 
+    <TD ALIGN="RIGHT">
+    .345 - .442</TD> 
+    <TD ALIGN="RIGHT">
+    .397</TD> 
+    <TD ALIGN="RIGHT">
+    .298 - .598</TD> 
+    <TD ALIGN="RIGHT">
+    .503</TD> 
+    <TD ALIGN="RIGHT">
+    .545 - .625</TD> 
+    <TD ALIGN="RIGHT">
+    .611</TD> 
+  </TR>
+</TABLE></CENTER></P>
+
+<P><FONT FACE="Times New Roman"><BR>
+</FONT></P>
+
+<P><FONT FACE="Times New Roman">In order to compare TREC retrieval
+systems used in the TREC-7 Very Large Collection track with Web
+search engines, TREC-7 short queries (average 2.5 words) were
+fed to five well-known Web search engines. Of course, these engines
+were searching the current Web rather than the frozen snapshot.
+Top 20 results for each of the topics over the real Web were then
+judged. Note that the Web search engines were not penalised for
+returning URLs of non-existent or non-accessible documents. A
+sufficiently long ranking was taken from each search engine to
+allow creation of a complete top 20, despite removal of unresponsive
+links.</FONT></P>
+
+<P><FONT FACE="Times New Roman">The queries used were the title
+fields of the TREC topics, minus stopwords. Figure <A HREF="http://www8.org/w8-papers/2c-search-discover/results/www8.html#topic">1</A>
+shows an example of a topic and Figure <A HREF="http://www8.org/w8-papers/2c-search-discover/results/www8.html#Q">2</A>
+shows ten examples of the title-derived queries which were used
+in this experiment.</FONT></P>
+
+<P>&nbsp;</P>
+
+<H2><A NAME="SECTION00031000000000000000"></A><FONT FACE="Times New Roman">Judging
+Issues</FONT></H2>
+
+<P><FONT FACE="Times New Roman">Relevance was always judged against
+the full topic description and each document was judged independently
+of all others as either ``relevant'' or ``irrelevant''. Only the
+actual content of documents was judged (the judges did not follow
+links) and no penalty was imposed for presentation of duplicate
+documents.</FONT></P>
+
+<P><FONT FACE="Times New Roman">Four judges were employed, none
+of whom were involved in IR or Web research. One was a research
+assistant in Sociology, another a final year Philosophy/Art Curatorship
+student with employment experience in summarisation of technical
+articles, another a Science graduate and the fourth a graduate
+in both Arts/Asian Studies and Science.</FONT></P>
+
+<P><FONT FACE="Times New Roman">Topics were assigned to judges
+on an arbitrary basis. All judgments for a particular topic were
+made by the same judge. Every effort was made to ensure that the
+judgment conditions for the ``live'' Web documents were as close
+to identical as possible to those for the VLC2 web documents.
+In fact, the ``live'' Web pages were downloaded immediately after
+query processing and saved for later judging. The same browsing/judging
+software was used for each type of document and the only observed
+difference was that live documents were identified by URL and
+the VLC2 documents by a TREC document number.</FONT></P>
+
+<P><FONT FACE="Times New Roman">Judging was performed in several
+batches, meaning that the judges did not judge all documents for
+a topic in a single session but instead revisited topics several
+times. The batch of live documents was judged between batches
+of VLC2 documents.</FONT></P>
+
+<P>&nbsp;</P>
+
+<H2><A NAME="SECTION00032000000000000000"></A><FONT FACE="Times New Roman">Query
+Formats</FONT></H2>
+
+<P><FONT FACE="Times New Roman">Participants who submitted automatic
+runs in the VLC track were permitted to choose which fields of
+the TREC topic statements (such as the one in Figure <A HREF="http://www8.org/w8-papers/2c-search-discover/results/www8.html#topic">1</A>)
+to use when building queries for their system. Some participants
+used all three fields, others only title plus description and
+still others title-only.</FONT></P>
+
+<P><FONT FACE="Times New Roman">Title-only queries with no special
+operators were chosen for submission to the public web search
+engines on the following grounds:</FONT></P>
+
+<DL>
+  <DT><FONT FACE="Times New Roman">1.</FONT>
+  <DD><FONT FACE="Times New Roman">Typical web queries are of this
+  length or shorter and generally do not make use of query operators.
+  Jansen et al [<A HREF="http://www8.org/w8-papers/2c-search-discover/results/www8.html#Jansenetal98">13</A>] report
+  that, over a sample of 51,473 queries submitted to a major search
+  service (Excite), the average length of query was 2.35 terms
+  and less than 10% included any Boolean operators.</FONT>
+  <DT><FONT FACE="Times New Roman">2.</FONT>
+  <DD><FONT FACE="Times New Roman">The task, namely, ``take a query
+  expressed as an unordered series of words and rank documents
+  in order of likely relevance using an automatic method of your
+  choice'', is identical for both the search engines and the title-only
+  VLC2 runs and corresponds to the basic service provided by the
+  search engines.</FONT>
+</DL>
+
+<P>&nbsp;</P>
+
+<H2><A NAME="SECTION00033000000000000000"></A><FONT FACE="Times New Roman">Results</FONT></H2>
+
+<P><FONT FACE="Times New Roman">Results for these search engines
+are presented in Tables <A HREF="results.html#WSE">2</A> - <A HREF="results.html#Comp">4</A>.
+As may be seen, all five search engines performed below the median
+P@20 for title-only VLC2 submissions and substantially below the
+medians for the longer topic runs.</FONT></P>
+
+<P><FONT FACE="Times New Roman">The median performance of the
+VLC2 groups increases sharply with increasing use of topic words.</FONT></P>
+
+<P><FONT FACE="Times New Roman">A full report of the TREC-7 VLC
+track is available. [<A HREF="http://www8.org/w8-papers/2c-search-discover/results/www8.html#HawkingCraswellThistlewaite98V">8</A>]</FONT></P>
+
+<P>&nbsp;</P>
+
+<H2><A NAME="SECTION00034000000000000000"></A><FONT FACE="Times New Roman">Discussion
+of Results</FONT></H2>
+
+<P><FONT FACE="Times New Roman">Since Web search engines search
+varying samples of the Web [<A HREF="http://www8.org/w8-papers/2c-search-discover/results/www8.html#LawrenceG98sci">17</A>,<A
+HREF="http://www8.org/w8-papers/2c-search-discover/results/www8.html#BharatB98">3</A>] and the Internet Archive snapshot
+is different again, we cannot compare the effectiveness of ranking
+algorithms in isolation, but only the effectiveness of each combination
+of spidering run and ranking algorithms. In the case of the VLC2
+runs, each retrieval system is implicitly paired with the truncated
+1997 Internet Archive spidering run.</FONT></P>
+
+<P><FONT FACE="Times New Roman">In order to fairly compare the
+effectiveness of ranking algorithms alone, trials need to be conducted
+using a standardised test collection such as the one proposed
+in the present paper.</FONT></P>
+
+<P><FONT FACE="Times New Roman">Considering spidering/ranking
+combinations, the explanation of the observed poorer performance
+by the search engines is unlikely to lie in their use of larger
+data sets than the TREC systems. On the contrary, experiments
+with scaling up collections have consistently shown an increase
+in P@20 with increasing collection size. [<A HREF="http://www8.org/w8-papers/2c-search-discover/results/www8.html#HawkingThistlewaiteHarman98">11</A>,<A
+HREF="http://www8.org/w8-papers/2c-search-discover/results/www8.html#HawkingThistlewaite97">9</A>]</FONT></P>
+
+<P><FONT FACE="Times New Roman">It is also unlikely that the poorer
+performance was due to the shortness of the queries submitted
+to the search engines. First, it is not clear that better results
+would have been obtained by feeding more of the topic description
+to the search engines. Second, as shown in Table <A HREF="results.html#Comp">4</A>,
+the median of the title-only VLC2 runs is considerably higher
+than that of the search engines.</FONT></P>
+
+<P><FONT FACE="Times New Roman">The performance advantage to the
+TREC systems increased as the amount of topic text used in constructing
+the queries increased. However, it is difficult to draw a firm
+conclusion here, as the groups which were focussed on query processing
+speed rather than effectiveness were likely to have used shorter
+queries. It may well be that these TREC systems (and all of the
+search engines) performed less well because they chose fast but
+less effective methods, rather than because of the length of the
+queries.</FONT></P>
+
+<P><FONT FACE="Times New Roman">In fact, recent TREC experience
+with non-Web data and queries generated automatically from the
+topic descriptions suggests that the advantage derived from using
+larger amounts of the topic text is not as large as might be thought.
+Median average precision scores for all official title-only, title-plus-description
+and full topic runs in TREC-8 Ad Hoc tasks were (0.1898, 0.1962(+4%)
+and 0.2043 (+8%) respectively). In these tasks, the focus is on
+effectiveness only and there is no incentive to reduce query processing
+time. The queries used in the best-performing VLC2 run (UMass)
+were also used in the non-Web (automatic ad hoc) TREC task and
+achieved only 5% better average precision than the best title-only
+run on that task.</FONT></P>
+
+<P>&nbsp;</P>
+
+<H1><A NAME="SECTION00040000000000000000"></A><FONT FACE="Times New Roman">TREC-8
+Web Track</FONT></H1>
+
+<P><FONT FACE="Times New Roman">The Web track will make use of
+the VLC2 frozen data set (see Section <A HREF="http://www8.org/w8-papers/2c-search-discover/results/www8.html#data">2</A>)
+to enable reproducibility of results and endeavour to cooperatively
+address the following research questions:</FONT></P>
+
+<P>&nbsp;</P>
+
+<DL>
+  <DT><FONT FACE="Times New Roman">1.</FONT>
+  <DD><FONT FACE="Times New Roman">Are the best search methods
+  for traditonal text data (eg. the TREC collections) also the
+  best for Web data?</FONT>
+  <DT><FONT FACE="Times New Roman">2.</FONT>
+  <DD><FONT FACE="Times New Roman">Can link information in Web
+  data be used to obtain more effective search rankings than can
+  be obtained using page content alone?</FONT>
+  <DT><FONT FACE="Times New Roman">3.</FONT>
+  <DD><FONT FACE="Times New Roman">How can high efficiency and
+  good effectiveness be achieved over large datasets and under
+  heavy query processing load? Can distributed search methods such
+  as those outlined by Kirsch [<A HREF="http://www8.org/w8-papers/2c-search-discover/results/www8.html#Kirsch98">14</A>]
+  be used to achieve better (eg. more accurate, faster, cheaper)
+  results than centralised search methods?</FONT>
+</DL>
+
+<P><FONT FACE="Times New Roman">It may also be possible to estimate
+the benefit due to increasing query length.</FONT></P>
+
+<P><FONT FACE="Times New Roman">There is no intention to restrict
+research to these questions. They merely serve to focus attention
+on key issues which are likely to benefit from multi-group (competitive)
+work. Participants are free to address any other questions of
+interest (subject to legal restrictions on use of the data).</FONT></P>
+
+<P><FONT FACE="Times New Roman">Different primary research questions
+are likely to be adopted in subsequent TRECs.</FONT></P>
+
+<P>&nbsp;</P>
+
+<H2><A NAME="SECTION00041000000000000000"></A><FONT FACE="Times New Roman">&nbsp;
+</FONT><A NAME="ACSys"></A><FONT FACE="Times New Roman">&nbsp;<BR>
+Organisers of the TREC Web Track</FONT></H2>
+
+<P><FONT FACE="Times New Roman">The proposed Web track is being
+organised jointly by NIST and the Advanced Computational Systems
+(ACSys) Cooperative Research Centre in Canberra, Australia, whose
+core participants are the Australian National University, the
+Commonwealth Scientific and Industrial Research Organisation,
+Fujitsu, Sun, Compaq, StorageTek and Silicon Graphics.</FONT></P>
+
+<P>&nbsp;</P>
+
+<H2><A NAME="SECTION00042000000000000000"></A><FONT FACE="Times New Roman">Task
+and Assessment</FONT></H2>
+
+<P><FONT FACE="Times New Roman">An ideal Web search engine should
+not only return answers fast but should present results which
+satisfy the person requesting the search. The proposed Web Tracks
+allow measurement of both <EM>speed</EM> and <EM>effectiveness</EM>.</FONT></P>
+
+<P>&nbsp;</P>
+
+<H2><A NAME="SECTION00043000000000000000"></A><FONT FACE="Times New Roman">Effectiveness
+Measurement</FONT></H2>
+
+<P><A NAME="measures"></A><FONT FACE="Times New Roman">&nbsp;</FONT></P>
+
+<P><FONT FACE="Times New Roman"><BR>
+</FONT></P>
+
+<P><CENTER><A NAME="prg"></A><FONT FACE="Times New Roman">&nbsp;</FONT><A
+NAME="225"></A><FONT FACE="Times New Roman">&nbsp; </FONT><TABLE
+WIDTH="50%" BORDER="0" CELLSPACING="2" CELLPADDING="0">
+  <CAPTION ALIGN="TOP"><STRONG>Figure 3:</STRONG> An example precision-recall curve.
+
+The general shape is typical of the performance of retrieval systems
+
+tested in TREC. It shows that it is easier to find the first few
+
+percent of the relevant documents but, when required to find the
+
+last few percent, the system's precision drops to very low levels.</CAPTION>
+   
+  <TR>
+    <TD>
+    <P><CENTER><BR>
+<BR>
+    <!-- MATH: $\includegraphics[width=10cm]{example_p_r.eps}$ --><IMG 
+    SRC="img3.gif" WIDTH="434" HEIGHT="315" ALIGN="BOTTOM" BORDER="0"
+    ALT="\includegraphics[width=10cm]{example_p_r.eps}" NATURALSIZEFLAG="0"></CENTER></TD>
+  </TR>
+</TABLE></CENTER></P>
+
+<P><FONT FACE="Times New Roman"><BR>
+</FONT></P>
+
+<P><FONT FACE="Times New Roman">Evaluation measures include <EM>precision</EM>
+(the proportion of the retrieved documents which are relevant)
+and <EM>recall</EM> (the proportion of the total number of relevant
+documents which have been retrieved so far). Precision and recall
+can be calculated at arbitrary points in the search engine ranked
+list. If, for example a search engine found 6 relevant pages in
+the first 10 returned, its precision at 10 documents retrieved
+(P@10) would be 0.6. In TREC, systems are generally compared on
+the basis of plots of precision against recall or on <EM>average
+precision</EM> which may be thought of as the area under the precision-recall
+curve. An example (interpolated) recall-precision curve appears
+in Figure <A HREF="http://www8.org/w8-papers/2c-search-discover/results/www8.html#prg">3</A>.</FONT></P>
+
+<P><FONT FACE="Times New Roman">In the Web context, it is often
+said that people are not interested in recall. If this is really
+true, then evaluation should focus on the precision dimension.
+This is fortunate, because it is very difficult to assess recall
+in a 100 gigabyte collection. Judging all documents against the
+required number of topics is totally unaffordable and alternative
+methods such as TREC pooling [<A HREF="http://www8.org/w8-papers/2c-search-discover/results/www8.html#VoorheesHarman97">21</A>]
+are unlikely to be effective over that amount of data.</FONT></P>
+
+<P>&nbsp;</P>
+
+<H2><A NAME="SECTION00044000000000000000"></A><FONT FACE="Times New Roman">Speed
+Measurement</FONT></H2>
+
+<P><FONT FACE="Times New Roman">The Web snapshot was used in a
+Very Large Collection special interest track of TREC-7 in which
+speed and scalability of both query processing and indexing were
+measured. [<A HREF="http://www8.org/w8-papers/2c-search-discover/results/www8.html#HawkingCraswellThistlewaite98V">8</A>]
+One participating group (the MultiText project, based at the University
+of Waterloo [<A HREF="http://www8.org/w8-papers/2c-search-discover/results/www8.html#Cormacketal98">7</A>]) demonstrated
+an indexing rate of almost 20 gigabytes per hour, coupled with
+sub-second query processing rates and better effectiveness than
+popular search engines, <EM>using less than $US10,000 of hardware</EM>.</FONT></P>
+
+<P><FONT FACE="Times New Roman">The group which achieved highest
+effectiveness in the TREC-7 VLC track (UMass [<A HREF="http://www8.org/w8-papers/2c-search-discover/results/www8.html#AllanCallanetal98">1</A>])
+took three orders of magnitude longer to process queries despite
+using more expensive hardware. They did not put effort into optimisation.
+It would be of considerable interest to know to what extent query
+processing may be speeded up while retaining this high level of
+effectiveness (An average of nearly 13 relevant documents in each
+top 20 ranking).</FONT></P>
+
+<P>&nbsp;</P>
+
+<H2><A NAME="SECTION00045000000000000000"></A><FONT FACE="Times New Roman">Small
+Web Task</FONT></H2>
+
+<P><FONT FACE="Times New Roman"><BR>
+</FONT></P>
+
+<P><CENTER><A NAME="swt"></A><FONT FACE="Times New Roman">&nbsp;</FONT><A
+NAME="226"></A><FONT FACE="Times New Roman">&nbsp; </FONT><TABLE
+WIDTH="50%" BORDER="0" CELLSPACING="2" CELLPADDING="0">
+  <CAPTION ALIGN="TOP"><STRONG>Figure 4:</STRONG> Small Web Track: It is expected that
+
+participants will receive documents comprising the 2 gigabyte
+
+subset on magnetic tape and will also be able to obtain link data
+
+for the full 100 gigabyte VLC2 set via a server on the Web.</CAPTION>
+   
+  <TR>
+    <TD>
+    <P><CENTER><BR>
+<BR>
+    <!-- MATH: $\includegraphics[width=10cm]{diag1.eps}$ --><IMG 
+    SRC="img4.gif" WIDTH="420" HEIGHT="232" ALIGN="BOTTOM" BORDER="0"
+    ALT="\includegraphics[width=10cm]{diag1.eps}" NATURALSIZEFLAG="0"></CENTER></TD>
+  </TR>
+</TABLE></CENTER></P>
+
+<P><FONT FACE="Times New Roman"><BR>
+</FONT></P>
+
+<P><FONT FACE="Times New Roman">The Small web task will use a
+subset of the VLC2 data containing approximately two gigabytes
+of text (250,000 HTML pages). Participants will be encouraged
+to submit the results of a baseline search run based entirely
+on the content of the pages, in addition to results from runs
+in which link information is exploited. It is hoped that there
+will be a sufficient number and diversity of submitted runs to
+achieve nearly complete relevance judgments through pooling, thus
+allowing measurement of recall as well as precision and enabling
+inexpensive follow-up experiments.</FONT></P>
+
+<P><FONT FACE="Times New Roman">If relevance judgments are sufficiently
+complete, it will be possible to score the relevance of pages
+based on what they link to as well as what they contain, and to
+evaluate the effectiveness of ranking systems on this basis.</FONT></P>
+
+<P><FONT FACE="Times New Roman">Note that it is planned to make
+link information available for the full 100 gigabyte collection
+(at least as it relates to the 2 gigabyte subset), as shown in
+Figure <A HREF="http://www8.org/w8-papers/2c-search-discover/results/www8.html#swt">4</A>. This should ensure a higher
+degree of useful connectivity than might be obtained from an isolated
+2 gigabyte collection. The connectivity server also obviates the
+need for participants to generate their own link database from
+the raw data (although they may do so if they wish).</FONT></P>
+
+<P><FONT FACE="Times New Roman">If link-and-content methods consistently
+out-perform their content-only counterparts, this will be a very
+convincing demonstration of their worth.</FONT></P>
+
+<P>&nbsp;</P>
+
+<H2><A NAME="SECTION00046000000000000000"></A><FONT FACE="Times New Roman">Large
+Web Task</FONT></H2>
+
+<P><FONT FACE="Times New Roman">At present, it is proposed that
+a large number (say 10,000) of real web queries will be used as
+the query set. These will be natural language queries, so that
+the searchers' intentions may be more reliably determined for
+purposes of relevance judging. Queries will be chosen from sets
+of 100,000 obtained from both Alta Vista and Electric Monk query
+logs. It is at present unclear on what basis they will be selected
+or whether censorship will be applied.</FONT></P>
+
+<P><FONT FACE="Times New Roman">It is proposed that participants
+be asked to process the full set of queries and to submit the
+top 20 ranking results for each topic. After the submission deadline,
+50 topics will be chosen for assessment and the ranked lists for
+those topics will be fully judged.</FONT></P>
+
+<P><FONT FACE="Times New Roman">It is also planned to provide
+support for groups which wish to conduct distributed retrieval
+experiments by defining divisions of the data based on actual
+Internet hosts. Groups can thus carry out server selection and
+result merging experiments in ways which can be compared with
+centralised alternatives.</FONT></P>
+
+<P>&nbsp;</P>
+
+<H1><A NAME="SECTION00050000000000000000"></A><FONT FACE="Times New Roman">Conclusions</FONT></H1>
+
+<P><FONT FACE="Times New Roman">The effectiveness comparison of
+TREC systems and commercial search engines reported here is not
+as interesting as it might have been had all systems indexed the
+same set of pages and had more VLC2 runs used the same title-only
+queries.</FONT></P>
+
+<P><FONT FACE="Times New Roman">Tempting as it might be to conclude
+that commercial search engine ranking algorithms are not state-of-the-art,
+it is possible that the source of the problem may lie in the spidering
+rather than the ranking. Consequently, the reported experiment
+serves mostly to illustrate the potential value of effectiveness
+comparisons based on blind judgments by independent relevance
+judges and averaged over a large number of standardised topics.</FONT></P>
+
+<P><FONT FACE="Times New Roman">The TREC-8 Web Tracks, VLC2 collection
+and associated resources are proposed as a means of obtaining
+better (and reproducible) evaluation results in the context of
+Web search. Groups interested in questions relating to Web search
+are warmly invited to assist in fine-tuning the definition of
+the tracks and to participate in the evaluation.</FONT></P>
+
+<P><FONT FACE="Times New Roman">If future experiments were to
+lead to a firm conclusion that the ranking algorithms used by
+search engines are not as effective as they might be, the result
+would be significant, even if it could be completely explained
+by the commercial imperative for speed. Such a conclusion might
+lead to vigorous research into efficient implementations of effective
+algorithms or, alternatively, to the development of premium quality
+search services operated on a different commercial basis.</FONT></P>
+
+<P><FONT FACE="Times New Roman">Hopefully, search engine operators
+will take up the challenge and measure the effectiveness of their
+systems on the VLC2 data set. They stand to achieve potentially
+significant gains in effectiveness and user satisfaction. All
+participants should be aware that the aims of the Web track are
+to determine both what works best on Web data and what are the
+trade-offs between efficiency and effectiveness. There is no intentional
+bias against search engine companies or any other type of participant.</FONT></P>
+
+<P><FONT FACE="Times New Roman">If interested, please contact
+<TT>David.Hawking@cmis.csiro.au</TT> to join the mailing list.</FONT></P>
+
+<P>&nbsp;</P>
+
+<H1><A NAME="SECTION00060000000000000000"></A><FONT FACE="Times New Roman">Acknowledgements</FONT></H1>
+
+<P><FONT FACE="Times New Roman">We are very much indebted to Brewster
+Kahle of the Internet Archive for lending us a valuable set of
+spidered data and to Edward King of the Earth Observation Centre,
+CSIRO, Canberra for donating a considerable amount of his time
+and expertise in converting tape formats.</FONT></P>
+
+<H2><A NAME="SECTIONREF"></A><FONT FACE="Times New Roman">Bibliography</FONT></H2>
+
+<DL>
+  <DD>&nbsp;
+  <DT><A NAME="AllanCallanetal98"></A><STRONG><FONT FACE="Times New Roman">1</FONT></STRONG>
+  <DD><FONT FACE="Times New Roman">J. Allan, J. Callan, M. Sanderson,
+  J. Xu, and S.Wegmann. <BR>
+  INQUERY and TREC-7. <BR>
+  In Voorhees and Harman [<A HREF="http://www8.org/w8-papers/2c-search-discover/results/www8.html#VoorheesHarman98">22</A>].
+<BR>
+  NIST special publication 500-?</FONT>
+  <P>&nbsp;
+  <DT><A NAME="AshmanThistlewaite98"></A><STRONG><FONT FACE="Times New Roman">2</FONT></STRONG>
+  <DD><FONT FACE="Times New Roman">Helen Ashman and Paul Thistlewaite,
+  editors. <BR>
+  <EM>Proceedings of the Seventh International World Wide Web Conference</EM>,
+  volume 30 of <EM>Computer Networks and ISDN Systems. The International
+  Journal of Computer and Telecommunications Networking</EM>, Amsterdam,
+  April 1998. Elsevier. <BR>
+  Brisbane, Australia.</FONT>
+  <P>&nbsp;
+  <DT><A NAME="BharatB98"></A><STRONG><FONT FACE="Times New Roman">3</FONT></STRONG>
+  <DD><FONT FACE="Times New Roman">Krishna Bharat and Andrei Broder.
+<BR>
+  A technique for measuring the relative size and overlap of public
+  Web search engines. <BR>
+  In Ashman and Thistlewaite [<A HREF="http://www8.org/w8-papers/2c-search-discover/results/www8.html#AshmanThistlewaite98">2</A>],
+  pages 379-388. <BR>
+  Brisbane, Australia.</FONT>
+  <P>&nbsp;
+  <DT><A NAME="BharatBHKV98"></A><STRONG><FONT FACE="Times New Roman">4</FONT></STRONG>
+  <DD><FONT FACE="Times New Roman">Krishna Bharat, Andrei Broder,
+  Monika Henzinger, Puneet Kumar, and Suresh Venkatasubramanian.
+<BR>
+  The Connectivity Server: Fast access to linkage information on
+  the Web. <BR>
+  In Ashman and Thistlewaite [<A HREF="http://www8.org/w8-papers/2c-search-discover/results/www8.html#AshmanThistlewaite98">2</A>],
+  pages 469-477. <BR>
+  Brisbane, Australia.</FONT>
+  <P>&nbsp;
+  <DT><A NAME="BrinPage98"></A><STRONG><FONT FACE="Times New Roman">5</FONT></STRONG>
+  <DD><FONT FACE="Times New Roman">Sergey Brin and Lawrence Page.
+<BR>
+  The anatomy of a large-scale hypertextual Web search engine.
+<BR>
+  In Ashman and Thistlewaite [<A HREF="http://www8.org/w8-papers/2c-search-discover/results/www8.html#AshmanThistlewaite98">2</A>],
+  pages 107-117. <BR>
+  Brisbane, Australia.</FONT>
+  <P>&nbsp;
+  <DT><A NAME="BuckleySinghalMitra96"></A><STRONG><FONT FACE="Times New Roman">6</FONT></STRONG>
+  <DD><FONT FACE="Times New Roman">Chris Buckley, Amit Singhal,
+  and Mandar Mitra. <BR>
+  Using query zoning and correlation within SMART: TREC-5. <BR>
+  In E. M. Voorhees and D. K. Harman, editors, <EM>Proceedings
+  of the Fifth Text Retrieval Conference (TREC-5)</EM>, pages 105-118,
+  Gaithersburg MD, November 1996. U.S. National Institute of Standards
+  and Technology. <BR>
+  NIST special publication 500-238.</FONT>
+  <P>&nbsp;
+  <DT><A NAME="Cormacketal98"></A><STRONG><FONT FACE="Times New Roman">7</FONT></STRONG>
+  <DD><FONT FACE="Times New Roman">G.V. Cormack, C.R. Palmer, M
+  van Biesbrouck, and C.L.A. Clarke. <BR>
+  Short boolean queries: MultiText experiments for TREC-7. <BR>
+  In Voorhees and Harman [<A HREF="http://www8.org/w8-papers/2c-search-discover/results/www8.html#VoorheesHarman98">22</A>].
+<BR>
+  NIST special publication 500-?</FONT>
+  <P>&nbsp;
+  <DT><A NAME="HawkingCraswellThistlewaite98V"></A><STRONG><FONT
+   FACE="Times New Roman">8</FONT></STRONG>
+  <DD><FONT FACE="Times New Roman">David Hawking, Nick Craswell,
+  and Paul Thistlewaite. <BR>
+  Overview of TREC-7 Very Large Collection Track. <BR>
+  In Voorhees and Harman [<A HREF="http://www8.org/w8-papers/2c-search-discover/results/www8.html#VoorheesHarman98">22</A>].
+<BR>
+  NIST special publication 500-?</FONT>
+  <P>&nbsp;
+  <DT><A NAME="HawkingThistlewaite97"></A><STRONG><FONT FACE="Times New Roman">9</FONT></STRONG>
+  <DD><FONT FACE="Times New Roman">David Hawking and Paul Thistlewaite.
+<BR>
+  Overview of TREC-6 Very Large Collection Track. <BR>
+  In Voorhees and Harman [<A HREF="http://www8.org/w8-papers/2c-search-discover/results/www8.html#VoorheesHarman97">21</A>],
+  pages 93-106. <BR>
+  NIST special publication 500-240.</FONT>
+  <P>&nbsp;
+  <DT><A NAME="WebTraxPage"></A><STRONG><FONT FACE="Times New Roman">10</FONT></STRONG>
+  <DD><FONT FACE="Times New Roman">David Hawking, Paul Thistlewaite,
+  and Nick Craswell. <BR>
+  TREC Web Tracks home page. <BR>
+  <TT>=` http://pastime.anu.edu.au/TAR/webtrax.html</TT>, 1998.</FONT>
+  <P>&nbsp;
+  <DT><A NAME="HawkingThistlewaiteHarman98"></A><STRONG><FONT FACE="Times New Roman">11</FONT></STRONG>
+  <DD><FONT FACE="Times New Roman">David Hawking, Paul Thistlewaite,
+  and Donna Harman. <BR>
+  Scaling up the TREC Collection. <BR>
+  Accepted by <EM>Information Retrieval</EM> September 1998., 1999.</FONT>
+  <P>&nbsp;
+  <DT><A NAME="IntArch98"></A><STRONG><FONT FACE="Times New Roman">12</FONT></STRONG>
+  <DD><FONT FACE="Times New Roman">Internet Archive. <BR>
+  Building a digital library for the future, August 1997. <BR>
+  <IMG SRC="img5.gif" WIDTH="226" HEIGHT="31" ALIGN="MIDDLE" BORDER="0"
+  ALT="{\ttfamily\hyphenchar\font=\lq \/ http://www.archive.org/}"
+  NATURALSIZEFLAG="0">.</FONT>
+  <P>&nbsp;
+  <DT><A NAME="Jansenetal98"></A><STRONG><FONT FACE="Times New Roman">13</FONT></STRONG>
+  <DD><FONT FACE="Times New Roman">Bernard J. Jansen, Amanda Spink,
+  Judy Bateman, and Tefko Saracevic. <BR>
+  Real life information retrieval: A study of user queries on the
+  Web. <BR>
+  <IMG SRC="img6.gif" WIDTH="164" HEIGHT="15" ALIGN="BOTTOM" BORDER="0"
+  ALT="{\em ACM SIGIR Forum}" NATURALSIZEFLAG="0">, 32(1):5-17,
+  1998.</FONT>
+  <P>&nbsp;
+  <DT><A NAME="Kirsch98"></A><STRONG><FONT FACE="Times New Roman">14</FONT></STRONG>
+  <DD><FONT FACE="Times New Roman">Steve Kirsch. <BR>
+  The future of internet search. <BR>
+  In W. Bruce Croft, Alistair Moffat, C.J. van Rijsbergen, Ross
+  Wilkinson, and Justin Zobel, editors, <IMG SRC="img7.gif" WIDTH="1031"
+  HEIGHT="32" ALIGN="MIDDLE" BORDER="0" ALT="{\em Proceedings of the 21st Annual
+International {ACM} {SIGIR} Conference on Research and Development in
+Information Retrieval}" NATURALSIZEFLAG="0">, page 1, Melbourne,
+  Australia, August 1998. <BR>
+  Keynote Address.</FONT>
+  <P>&nbsp;
+  <DT><A NAME="Kleinberg97"></A><STRONG><FONT FACE="Times New Roman">15</FONT></STRONG>
+  <DD><FONT FACE="Times New Roman">Jon Kleinberg. <BR>
+  Authoritative sources in a hyperlinked environment. <BR>
+  Technical Report RJ 10076, IBM, May 1997.</FONT>
+  <P>&nbsp;
+  <DT><A NAME="LawrenceGiles98"></A><STRONG><FONT FACE="Times New Roman">16</FONT></STRONG>
+  <DD><FONT FACE="Times New Roman">Steve Lawrence and C. Lee Giles.
+<BR>
+  Inquirus, the NECI meta search engine. <BR>
+  In Ashman and Thistlewaite [<A HREF="http://www8.org/w8-papers/2c-search-discover/results/www8.html#AshmanThistlewaite98">2</A>],
+  pages 95-105. <BR>
+  Brisbane, Australia.</FONT>
+  <P>&nbsp;
+  <DT><A NAME="LawrenceG98sci"></A><STRONG><FONT FACE="Times New Roman">17</FONT></STRONG>
+  <DD><FONT FACE="Times New Roman">Steve Lawrence and C Lee Giles.
+<BR>
+  Searching the world wide web. <BR>
+  <IMG SRC="img8.gif" WIDTH="144" HEIGHT="31" ALIGN="MIDDLE" BORDER="0"
+  ALT="{\em Science Magazine}" NATURALSIZEFLAG="0">, 280(5360):98,
+  April 1998.</FONT>
+  <P>&nbsp;
+  <DT><A NAME="TRECWebPage"></A><STRONG><FONT FACE="Times New Roman">18</FONT></STRONG>
+  <DD><FONT FACE="Times New Roman">National Institute of Standards
+  and Technology. <BR>
+  TREC home page. <BR>
+  <IMG SRC="img9.gif" WIDTH="207" HEIGHT="31" ALIGN="MIDDLE" BORDER="0"
+  ALT="{\ttfamily\hyphenchar\font=\lq \/ http://trec.nist.gov/}"
+  NATURALSIZEFLAG="0">, 1997.</FONT>
+  <P>&nbsp;
+  <DT><A NAME="SparckJonesWillett97"></A><STRONG><FONT FACE="Times New Roman">19</FONT></STRONG>
+  <DD><FONT FACE="Times New Roman">Karen Sparck Jones and Peter
+  Willett, editors. <BR>
+  <IMG SRC="img10.gif" WIDTH="280" HEIGHT="34" ALIGN="MIDDLE" 
+  BORDER="0" ALT="{\em Readings in Information Retrieval}" NATURALSIZEFLAG="0">.
+<BR>
+  Morgan Kaufmann, San Francisco, CA, 1997.</FONT>
+  <P>&nbsp;
+  <DT><A NAME="SEWWebPage"></A><STRONG><FONT FACE="Times New Roman">20</FONT></STRONG>
+  <DD><FONT FACE="Times New Roman">Danny Sullivan. <BR>
+  Search Engine Sizes. <BR>
+  <IMG SRC="img11.gif" WIDTH="501" HEIGHT="31" ALIGN="MIDDLE" 
+  BORDER="0" ALT="{\ttfamily\hyphenchar\font=\lq \/
+http://www.searchenginewatch.com/reports/sizes.html}" NATURALSIZEFLAG="0">,
+  1998.</FONT>
+  <P>&nbsp;
+  <DT><A NAME="VoorheesHarman97"></A><STRONG><FONT FACE="Times New Roman">21</FONT></STRONG>
+  <DD><FONT FACE="Times New Roman">E. M. Voorhees and D. K. Harman,
+  editors. <BR>
+  <IMG SRC="img12.gif" WIDTH="503" HEIGHT="33" ALIGN="MIDDLE" 
+  BORDER="0" ALT="{\em Proceedings of the Sixth Text Retrieval Conference ({TREC}-6)}"
+  NATURALSIZEFLAG="0">, Gaithersburg MD, November 1997. U.S. National
+  Institute of Standards and Technology. <BR>
+  NIST special publication 500-240.</FONT>
+  <P>&nbsp;
+  <DT><A NAME="VoorheesHarman98"></A><STRONG><FONT FACE="Times New Roman">22</FONT></STRONG>
+  <DD><FONT FACE="Times New Roman">E. M. Voorhees and D. K. Harman,
+  editors. <BR>
+  <IMG SRC="img13.gif" WIDTH="525" HEIGHT="33" ALIGN="MIDDLE" 
+  BORDER="0" ALT="{\em Proceedings of the Seventh Text Retrieval Conference
+({TREC}-7)}" NATURALSIZEFLAG="0">, Gaithersburg MD, November 1998.
+  U.S. National Institute of Standards and Technology. <BR>
+  NIST special publication 500-?</FONT>
+</DL>
+
+<H1><A NAME="SECTION00080000000000000000"></A><FONT FACE="Times New Roman">About
+this document ...</FONT></H1>
+
+<P><STRONG><FONT FACE="Times New Roman">Results and Challenges
+in Web Search Evaluation</FONT></STRONG><A NAME="tex2html1"></A><STRONG><FONT
+ FACE="Times New Roman"><A HREF="results.html#foot4"><SUP>1</SUP></A></FONT></STRONG></P>
+
+<P><FONT FACE="Times New Roman">This document was generated using
+the </FONT><A HREF="http://www-dsed.llnl.gov/files/programs/unix/latex2html/manual/"><STRONG><FONT
+ FACE="Times New Roman">LaTeX</FONT></STRONG><FONT FACE="Times New Roman">2<TT>HTML</TT></FONT></A><FONT
+ FACE="Times New Roman"> translator Version 98.1p1 release (March
+2nd, 1998)</FONT></P>
+
+<P><FONT FACE="Times New Roman">Copyright &COPY; 1993, 1994, 1995,
+1996, 1997, <A HREF="http://cbl.leeds.ac.uk/nikos/personal.html">Nikos
+Drakos</A>, Computer Based Learning Unit, University of Leeds.</FONT></P>
+
+<P><FONT FACE="Times New Roman">The command line arguments were:
+<BR>
+<STRONG>latex2html</STRONG> <TT>-split 0 www8.tex</TT>.</FONT></P>
+
+<P><FONT FACE="Times New Roman">The translation was initiated
+by David Hawking on 1999-03-08<BR>
+<HR ALIGN=LEFT></FONT></P>
+
+<H4><FONT FACE="Times New Roman">Footnotes</FONT></H4>
+
+<DL>
+  <DT><A NAME="foot4"></A><FONT FACE="Times New Roman">... Evaluation</FONT><A
+  NAME="foot4"></A><FONT FACE="Times New Roman"><A HREF="http://www8.org/w8-papers/2c-search-discover/results/www8.html#tex2html1"><SUP>1</SUP></A></FONT>
+  <DD><FONT FACE="Times New Roman">The authors wish to acknowledge
+  that this work was partly carried out within the Cooperative
+  Research Centre for Advanced Computational Systems established
+  under the Australian Government's Cooperative Research Centres
+  Program.</FONT>
+  <DT><A NAME="foot9"></A><FONT FACE="Times New Roman">... Thistlewaite</FONT><A
+  NAME="foot9"></A><FONT FACE="Times New Roman"><A HREF="http://www8.org/w8-papers/2c-search-discover/results/www8.html#tex2html2"><SUP>2</SUP></A></FONT>
+  <DD><FONT FACE="Times New Roman">Tragically, Paul Thistlewaite
+  died suddenly just prior to submission of the final version of
+  this paper. It was largely his vision and initiative which led
+  to the creation of the TREC Web Track. We are sad that he will
+  not see it brought to fruition and we will greatly miss his perennially
+  valuable contributions.</FONT>
+</DL>
+
+<P><FONT FACE="Times New Roman"><HR ALIGN=LEFT></P>
+
+<ADDRESS><FONT FACE="Times New Roman">David Hawking <BR>
+1999-03-08</FONT></ADDRESS>
+
+</BODY>
+</HTML>

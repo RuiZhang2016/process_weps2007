@@ -1,0 +1,903 @@
+
+<html>
+<head>
+<title>*AZPunk.com*</title>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<!-- link rel="SHORTCUT ICON" href="http://www.azpunk.com/img/favicon.ico" -->
+<link rel=stylesheet type=text/css href=/styles/azpunk.css>
+
+
+<SCRIPT>
+<!--
+function newPopup(url)
+{
+        popWindow = window.open(url,'newWin','width=350,height=150,left=30,top=20,toolbar=no,location=no,scrollbars=no')
+        popWindow.focus()
+}
+
+function budPopup()
+{
+   popWindow = 
+
+window.open('http://www.azpunk.com/buds.php','newWin','width=225,height=400,left=150,top=200,toolbar=no,location=no,scrollbars=yes'
+
+)
+   popWindow.focus()
+}
+
+
+nTime=15;  // How long
+
+var ns=(document.layers);
+var ie=(document.all);
+var w3=(document.getElementById && !ie);
+
+w=150;
+h=25;
+t=99;
+l=10;
+
+nCount=0;
+dispX=0;
+
+function initNotify(dispX) {
+        if (!ns && !ie && !w3) return;
+
+        if (ie) {
+            pmDiv = eval('document.all.PMNotify.style');
+        }
+        else if (ns) {
+            pmDiv = eval('document.layers["PMNotify"]');
+        }
+        else if (w3) {
+            pmDiv=eval('document.getElementById("PMNotify").style');
+        }
+
+        if (dispX > 0) {
+          if (ie||w3) {
+             pmDiv.visibility="visible";
+          }
+          else {
+             pmDiv.visibility ="show";
+          }
+
+          showNotify();
+        }
+}
+
+function showNotify() {
+   if(nCount<nTime*10) {
+        nCount+=1;
+        if (ie) {
+            documentWidth  = w
+            documentHeight = h
+        }
+        else if (ns) {
+            documentWidth = w
+            documentHeight = h
+        }
+        else if (w3) {
+            documentWidth = w
+            documentHeight = h
+        }
+        pmDiv.left = l
+        pmDiv.top = t
+        setTimeout("showNotify()",100);
+   } else
+     closeNotify();
+}
+
+function closeNotify() {
+  if (ie||w3)
+     pmDiv.display="none";
+  else
+     pmDiv.visibility ="hide";
+}
+
+//-->
+</SCRIPT>
+
+<script type=text/javascript>
+var win= null;
+function NewWindow(mypage,myname,w,h,scroll){
+  var winl = (screen.width-w)/2;
+  var wint = (screen.height-h)/2;
+  var settings  ='height='+h+',';
+      settings +='width='+w+',';
+      settings +='top='+wint+',';
+      settings +='left='+winl+',';
+      settings +='scrollbars='+scroll+',';
+      settings +='resizable=yes';
+  win=window.open(mypage,myname,settings);
+  if(parseInt(navigator.appVersion) >= 4){win.window.focus();}
+}
+
+var TodaysDate = new Date( )
+
+function MM_reloadPage(init) {  //reloads the window if Nav4 resized
+  if (init==true) with (navigator) {if ((appName=="Netscape")&&(parseInt(appVersion)==4)) {
+    document.MM_pgW=innerWidth; document.MM_pgH=innerHeight; onresize=MM_reloadPage; }}
+  else if (innerWidth!=document.MM_pgW || innerHeight!=document.MM_pgH) location.reload();
+}
+MM_reloadPage(true);
+</script>
+</head>
+
+<body bgcolor="#000000" leftmargin="0" topmargin="0" marginwidth="0" marginheight="0" text="#FFFF00">
+
+<div id="overDiv" style="position:absolute; visibility:hidden; z-index:1000;"></div>
+<script language=JavaScript src=/overlib_mini.js></script> 
+
+<table width="100%" border="0" cellspacing="0" cellpadding="0" height="83" background="/img/img_tile_hdr.gif">
+  <tr> 
+    <td width="314" valign="top">
+
+<script language="Javascript">
+<!--
+
+function image() {
+};
+
+image = new image();
+number = 0;
+
+// imageArray
+image[number++] = "<a href=/main.php><img src='/img/img_hdr_azp.gif' border='0'></a>"
+image[number++] = "<a href=/main.php><img src='/img/img_hdr_azp2.gif' border='0'></a>"
+image[number++] = "<a href=/main.php><img src='/img/img_hdr_azp4.gif' border='0'></a>"
+image[number++] = "<a href=/main.php><img src='/img/img_hdr_azp5.gif' border='0'></a>"
+// keep adding items here...
+
+increment = Math.floor(Math.random() * number);
+
+document.write(image[increment]);
+
+//--></script>
+    </td>
+
+<td valign="middle" height=85 align="center" nowrap><a href=/friends.php><img src=/img/img_sponsorsuport.gif border=0></a><br>
+<A HREF="http://www.azpunk.com/ad_link.php?ad_id=183" TARGET="_blank"><IMG SRC="http://azpunk.com/img/banners/azrd_ban.gif" BORDER="0"></A> <A HREF="http://www.azpunk.com/ad_link.php?ad_id=208" TARGET="_blank"><IMG SRC="http://anticonformityusa.com/anti_ads_and_banners/anti_banner1_130x60.jpg" BORDER="0"></A></td>
+        </tr>
+      </table>
+
+
+<table width="97%" border="0" cellspacing="0" cellpadding="10">
+  <tr>
+    <td width="165" valign="top"> 
+
+	
+
+
+<script language=javascript>
+<!--
+function validateit(){
+
+    if (document.maillist.email.value==' email') {
+        alert('Enter your email');
+        document.maillist.email.focus();
+        return false;
+    }
+};
+-->
+</script>
+
+<div id=PMNotify style="visibility:hidden; position:absolute; height:77; width:150; top:0; left:0; z-order=1">
+    <table style="border-collapse: collapse" border=1 bordercolor=#FFFF00 width=100% height=100% bgcolor=#cc0000>
+        <tr><td align=center valign=middle>
+        <img src=/img/img_mail_unreadpm.gif>
+        <font size=1>
+	<p>
+		<p>
+	&nbsp;&nbsp;
+        <a href=/tforum/pm.php?action=inbox>
+       <img src=/img/img_mail_readpm.gif border=0></a> 
+       &nbsp;&nbsp;
+	<a href=# onClick=javascript:document.all.PMNotify.style.visibility='hidden'><img src=/img/img_nav_x_close.gif border=0 alt=close></a>
+    </td></tr></table>
+</div>
+
+<div style="width:142; z-order:0">
+      <table width="100%" border="0" cellspacing="0" cellpadding="0">
+
+<tr><td>
+<p>
+<A HREF="http://www.azpunk.com/ad_link.php?ad_id=190" TARGET="_blank"><IMG SRC="http://www.azpunk.com/img/banners/zone2/punkit_110.gif" BORDER="0"></A><p>
+</td></tr>
+
+<tr><td>
+
+<font size=1 face=Verdana,Arial color=green>Members Online:(<a href=/tforum/member.php?action=viewmembersonline><font color=green>19</font></a>)<br></font>
+<font face="Verdana, Arial, Helvetica, sans-serif" size="1">
+Logged in as:</font>
+<font face=Verdana, Arial, Helvetica, sans-serif size=1><b>Guest</b></font>
+</td></tr>
+
+
+<tr><td>
+<table width="100" border="0" cellspacing="0" cellpadding="0" height="100">
+  <tr> 
+    <td><img src="/img/img_login_top.gif" width="136" height="33"></td>
+  </tr>
+  <tr> 
+    <td background="/img/img_login_tile.gif"> 
+      <table width="100%" border="0" cellspacing="0" cellpadding="7">
+        <tr> 
+          <td align="center">
+            <!-- form method=post action=http://www.azpunk.com/login.php -->
+            <form method=post action=/tforum/login.php>
+
+          <input type="hidden" name="my_url" value="/bands.php?crit=m">      
+	<font size="1" face="Verdana,Arial" color="#FF9900"> 
+               <input type="text" style="font-family: Verdana; font-size: 10px; width: 90px; color : #FFFF00; background-color:#000000; border-color : #FFFF00; border: 2px groove #FFFF00;" size="9" alt="Username" name="username" value=" username" onFocus="if(this.value==' username')this.value='';" onBlur="if(this.value=='')this.value=' username';">
+              <br>
+              <input type="password" style="font-family: Verdana; font-size: 10px; width: 90px; color : #FFFF00; background-color: #000000; border-color : #FFFF00; border: 2px groove #FFFF00;" size="9" alt="your password" name="password" value=" Password" onFocus="if(this.value==' Password')this.value='';" onBlur="if(this.value=='')this.value=' Password';">
+              </font> 
+	      <input type=image class=button border=0 name=login src=/img/nav_form_login.gif>
+            </form>
+          </td>
+        </tr>
+      </table>
+    </td>
+  </tr>
+  <tr> 
+    <td><a href=/tforum/member.php?action=register><img src="/img/img_login_botm.gif" width="136" height="31" border=0></a></td>
+  </tr>
+</table> <br>
+	</td></tr>
+
+
+
+        <tr> 
+          <td><img src="/img/nav_azpunk.gif"></td>
+        </tr>
+        
+        <tr> 
+          <td class=menu>
+
+	    <a href="http://www.azpunk.com/main.php">Home</a><br>
+	    <a href="http://www.azpunk.com/donate.php">Make a Donation</a><br>
+	    <a href="http://www.azpunk.com/banprice.php">Advertising</a><br>
+	    <a href="http://www.shopazpunk.com/catalog" target=_blank>AZPunk Merch</a><br>
+	    <a href="http://www.azpunk.com/comp2/index.php">AZPunk.comp Vol II</a><br>
+	    <a href="http://www.azpunk.com/comp/index.php">AZPunk.comp Vol I</a><br>
+	    <a href="http://www.azpunk.com/press/index.php">In The News</a><br>
+	    <a href="http://www.azpunk.com/linkto.php">Link to AZPunk</a><br>
+
+	  </td>
+        </tr>
+
+        <tr> 
+          <td><img src="/img/nav_community.gif" width="103"  height="27"></td>
+        </tr>
+
+        <tr> 
+          <td class=menu> 
+	    <a href="http://www.azpunk.com/tforum/pm.php?action=inbox">Read Punk Mail</a><br>
+	    <a href="http://www.azpunk.com/tforum/pm.php?action=postnew">Send Punk Mail</a><br>
+        <a href="http://www.azpunk.com/tforum/index.php">Message Board <-- </a><br>
+	    <a href="http://www.azpunk.com/tforum/viewboard.php?BoardID=2">Classifieds</a><br>
+	    <!-- a href=JavaScript:budPopup()>AZPunk Buds</a><br -->
+	    <a href="http://www.azpunk.com/tforum/member.php?action=useroptions">Modify Account</a><br>
+          </td>
+        </tr>
+
+
+ 
+       <tr> 
+          <td><img src="/img/nav_azpradio.gif"></td>
+        </tr>
+
+        <tr> 
+          <td class=menu>
+	    <a href=http://www.live365.com/stations/boneyfiend#BC target=_blank>Listen Now!!</a><br>
+	    <a href=http://www.azpunk.com/songlist.php>What's Playing</a><br>
+	    <a href=http://www.azpunk.com/rdetail.php>Radio Status</a><br>
+	    <a href=http://www.azpunk.com/search.php>Submit Requests</a><br>
+	    <!-- a href=http://req.radiogroundzero.com:8080/azstat.asp?a=Req&b=Today>Playlist Stats</a><br -->
+	    <!-- a href=http://www.azpunk.com/stats/listener.php>Listener Stats</a><br -->
+	    <a href=http://www.azpunk.com/how_to.php>Listening Instructions</a><br>
+	  </td>
+        </tr>
+
+
+        <tr> 
+          <td><img src="/img/nav_features.gif"></td>
+        </tr>
+
+        <tr> 
+          <td class=menu>
+
+            <a href="http://www.azpunk.com/feature.php">Featured Bands</a><br>
+            <a href="http://www.azpunk.com/showrev.php">Show Reviews (80)</a><br>   
+	    <!-- a href="http://www.azpunk.com/top10.php">Top 10 Local Sales</a><br -->
+	    <!-- a href=http://www.azpunk.com/1100am.php>AZPunk Radio RIP</a><br -->
+	    <a href="http://www.azpunk.com/downloads.php">Downloads</a><br>
+	    <a href="http://www.azpunk.com/contest.php">Contests (0)</a><br>
+            <a href="http://www.azpunk.com/flyergal/index.php">Old Show Flyers</a><br>
+            <!-- a href="http://www.azpunk.com/google/index.php">Google Search</a><br -->
+            <!-- a href="http://www.azpunk.com/game.php">Games</a><br -->
+
+	  </td>
+        </tr>
+
+
+        <tr> 
+          <td><img src="/img/nav_resources.gif" width="111"  height="26"></td>
+        </tr>
+
+        <tr> 
+          <td class=menu>
+
+            <a href="http://www.azpunk.com/calendar.php?op=cal&month=9&year=2004">Shows (1268)</a><br>
+            <a href="http://www.azpunk.com/bands.php">Bands (549)</a><br>
+            <a href="http://www.azpunk.com/venues.php">Venues (209)</a><br>
+            <a href="http://www.azpunk.com/booking.php">Booking (46)</a><br>
+            <a href="http://www.azpunk.com/zines.php">Zines (38)</a><br>
+	    <a href="http://www.azpunk.com/recording.php">Recording Studios (61)</a><br>
+            <a href="http://www.azpunk.com/labels.php">Labels (52)</a><br>
+            <a href="http://www.azpunk.com/recstore.php">Punk Stores (45)</a><br>
+            <a href="http://www.azpunk.com/otherpunk.php">Other Punk Links (143)</a><br>
+
+	</td>
+        </tr>
+
+        <tr> 
+          <td><img src="/img/nav_feedback.gif" width="98" height="25"></td>
+        </tr>
+
+        <tr> 
+          <td class=menu>
+
+	    <a href=http://www.azpunk.com/gb.php>View/Sign Guestbook</a><br>
+            <a href="http://www.azpunk.com/contact.php">Contact Admin</a><br>
+            <!-- a href="http://www.azpunk.com/zine.php">AZPunk Zine</a><br -->
+            <a href="http://www.azpunk.com/mailfriend.php">Tell a friend</a>
+
+	  </td>
+        </tr>
+<tr><td>&nbsp;</td></tr>
+
+
+
+        <tr> 
+                    <td class=menu>
+
+           <a href="http://www.azpunk.com/privacy.php">Privacy Statement</a><br>
+            <a href="http://www.azpunk.com/legalterms.php"> Legal Terms and Conditions</a><br>
+				Copyright 2002 AZPunk.com.<br>
+				 All rights reserved.
+
+</td>
+        </tr>
+<tr><td>&nbsp;</td></tr>
+<!-- tr><td>
+<table width="100" border="0" cellspacing="0" cellpadding="0">
+  <tr>
+    <td><img src="/img/img_nwsltr_top.gif" width="136" height="31"></td>
+  </tr>
+  < tr>
+    <td background="/img/img_nwsltr_tile.gif">
+      <table width="100%" border="0" cellspacing="0" cellpadding="7">
+        <tr>
+          <td align="center"><form  name=maillist method=post action=http://www.azpunk.com/ml/maillist.php>
+              <font size="1" face="Verdana,Arial" color="#FF9900">
+<input type="text" style="font-family: Verdana; font-size: 10px; width: 90px; color : #FFFF00; background-color:
+#000000; border-$" alt="your
+email" name="email" value=" email" onFocus="if(this.value==' email')this.value='';" onBlur="if(this.value=='')this.value=' email';">
+              </font>
+              <input type=hidden name=action2 value=subscribe>
+              <input class=button type=image border=0 name=join 
+src=/img/nav_form_join.gif onClick="return validateit()">
+            </form></td>
+        </tr>
+      </table>
+    </td>
+  </tr>
+  <tr>
+    <td><img src="/img/img_nwsltr_botm.gif" width="136" height="31"></td>
+  </tr>
+</table>
+</td></tr-->
+
+</table>
+</div>
+
+        <table height=60 width=136><tr><td valign="bottom" align="center">
+          <tr><td align=left>
+            <table width="100" cellspacing="0" cellpadding="4" border="1" bgcolor="#CC0000" bordercolor="#FFFF00">
+              <tr>
+                <td align="center"><font face="Verdana,Arial" size="1">
+                 <!--WEBBOT bot="HTMLMarkup" startspan ALT="Site Meter" -->
+                 <a href="http://s10.sitemeter.com/stats.asp?site=s10azpunk" target="_top">
+                 <img src="http://s10.sitemeter.com/meter.asp?site=s10azpunk" alt="Site Meter" border=0></a>
+                 <!--WEBBOT bot="HTMLMarkup" Endspan --><br>
+                  +visitors+</font>
+                </td>
+              </tr>
+            </table>
+          </td></tr>
+        </table>
+        <br>
+    </td>
+    <td width="*" valign="top">
+
+<!-- script language=javascript type=text/javascript>
+<!--
+
+if (top.location == self.location) {
+   self.location.replace("index.php?/bands.php")
+  }
+-->
+</script -->
+
+<p align=center>
+<img src=img/img_hdr_bands.gif></p>
+<p align=center>
+
+If you want to add a band, please register or login!</P>
+
+
+<hr color=#CC0000 width=75%>
+
+  <table align=center border="0" width="80%">
+    <tr>
+      <td width="100%" style="color: #cc0000;" align=center><b><font size="2"> 
+        | <a class=x href="bands.php?crit=num">#</a> | <a class=x href="bands.php?crit=a">A</a> | <a class=x href="bands.php?crit=b">B</a> 
+        | <a class=x href="bands.php?crit=c">C</a> | <a class=x href="bands.php?crit=d">D</a> | <a class=x href="bands.php?crit=e">E</a> 
+        | <a class=x href="bands.php?crit=f">F</a> | <a class=x href="bands.php?crit=g">G</a> | <a class=x href="bands.php?crit=h">H</a> 
+        | <a class=x href="bands.php?crit=i">I</a> | <a class=x href="bands.php?crit=j">J</a> | <a class=x href="bands.php?crit=k">K</a> 
+        | <a class=x href="bands.php?crit=l">L</a> | <a class=x href="bands.php?crit=m">M</a> | <a class=x href="bands.php?crit=n">N</a> 
+        | <a class=x href="bands.php?crit=o">O</a> | <a class=x href="bands.php?crit=p">P</a> |<br>
+        | <a class=x href="bands.php?crit=q">Q</a> | <a class=x href="bands.php?crit=r">R</a> | <a class=x href="bands.php?crit=s">S</a> 
+        | <a class=x href="bands.php?crit=t">T</a> | <a class=x href="bands.php?crit=u">U</a> | <a class=x href="bands.php?crit=v">V</a> 
+        | <a class=x href="bands.php?crit=w">W</a> | <a class=x href="bands.php?crit=x">X</a> | <a class=x href="bands.php?crit=y">Y</a> 
+        | <a class=x href="bands.php?crit=z">Z</a> | <a class=x href="bands.php?crit=full">Full Band List</a> | 
+        </font></b></td>
+    </tr>
+  </table>
+
+        <hr color=#CC0000 width=75%>
+<p>
+
+        <table align=center border=1 bordercolor=#FFFF00 width=300 cellspacing=0 cellpadding=2 bgcolor=#CC0000>
+          <tr>
+            <td class=tabhed align="center">Find an AZPUNK Band</td>
+          </tr>
+
+          <tr>
+            <td> 
+
+              <form method=POST action="bands.php">
+                <table width=100% border=0 cellspacing=0 cellpadding=0>
+                  <tr> 
+                    <td class=a rowspan="2" height="25"> 
+                      <p align="center"> <b><font size=2> </font></b></p>
+                    </td>
+                  </tr>
+                  <tr> 
+                    <td class=a align=center> 
+		      <input type=hidden name=frm value=1>
+                      <input type=text name="crit" size=50>
+                    </td>
+                  </tr>
+                  <tr> 
+                    <td class=a colspan=2 align=center> 
+                      <input type=image class=button name=submit img src=img/nav_radiosearch.gif>
+                    </td>
+                  </tr>
+                </table>
+              </form>
+
+            </td>
+          </tr>
+	</table>
+
+
+<p>
+<hr color=CC0000 width=80%>
+<p align=center>
+      <table width="80%" border="0" cellspacing="0" cellpadding="2">
+        <tr>
+<td align="center" valign="top" width="30%"><b><font size=2 face="Verdana, Arial, Helvetica, sans-serif">
+            Maced By Ace<br>
+ </font>
+<font face="Verdana, Arial, Helvetica, sans-serif" size="1">
+
+<a href=http://macedbyace.iwarp.com target=_empty>Website</a> | <a href=mailto:faygomonky@aol.com>Booking</a> | <a href=resreview.php?cmd=rev&func=band&xid=131>Reviews</a><br><a href=resreview.php?cmd=rev&func=band&xid=131>Rate</a>
+</font></b></td>
+        <!-- /tr>
+        <tr --> 
+          <td width=70% align="center" valign="top"><font face="Verdana, Arial, Helvetica, sans-serif" size="1">Maced by Ace plays grunge style rock influenced by acts like bad brains, melvins, nirvana, sublime, pennywise and others. We're out here in apache junction. if ya know- nuff said. 
+      </table>
+
+
+<p>
+<hr color=CC0000 width=80%>
+<p align=center>
+      <table width="80%" border="0" cellspacing="0" cellpadding="2">
+        <tr>
+<td align="center" valign="top" width="30%"><b><font size=2 face="Verdana, Arial, Helvetica, sans-serif">
+            Madcaps, The<br>
+ </font>
+<font face="Verdana, Arial, Helvetica, sans-serif" size="1">
+
+<a href=http://www.themadcaps.net target=_empty>Website</a> | <a href=mailto:themadcaps@yahoo.com>Booking</a> | <a href=resreview.php?cmd=rev&func=band&xid=375>Reviews</a><p><center><a href=resreview.php?cmd=rev&func=band&xid=375><img src=img/rskull2.gif border=0><img src=img/rskull2.gif border=0><img src=img/rskull2.gif border=0><img src=img/rskull2.gif border=0><img src=img/rskull2.gif border=0></a></center>
+</font></b></td>
+        <!-- /tr>
+        <tr --> 
+          <td width=70% align="center" valign="top"><font face="Verdana, Arial, Helvetica, sans-serif" size="1">The MadCaPs are a new addition to the Phoenix scene playing our own brand of dance-able Rock that has been filtered through us. Thus, it comes out surreal, fast, soft and hard. 95% of our songs are origianls. We play covers to call up friends from bands like The Hammertoes and The Hypno-twists to play with us. John Logan on Guitar and Vocals; Christina Nunez on Bass and Vocals; and Artie Cassidy on drums.      </table>
+
+
+<p>
+<hr color=CC0000 width=80%>
+<p align=center>
+      <table width="80%" border="0" cellspacing="0" cellpadding="2">
+        <tr>
+<td align="center" valign="top" width="30%"><b><font size=2 face="Verdana, Arial, Helvetica, sans-serif">
+            Made Hope<br>
+ </font>
+<font face="Verdana, Arial, Helvetica, sans-serif" size="1">
+
+<a href=http://www.madehope.cjb.net target=_empty>Website</a> | <a href=mailto:Reallycoolloser@hotmail.com>Booking</a> | <a href=resreview.php?cmd=rev&func=band&xid=412>Reviews</a><br><a href=resreview.php?cmd=rev&func=band&xid=412>Rate</a>
+</font></b></td>
+        <!-- /tr>
+        <tr --> 
+          <td width=70% align="center" valign="top"><font face="Verdana, Arial, Helvetica, sans-serif" size="1">4 peice punk band that trys to incorporate, pop punk with hardcore.      </table>
+
+
+<p>
+<hr color=CC0000 width=80%>
+<p align=center>
+      <table width="80%" border="0" cellspacing="0" cellpadding="2">
+        <tr>
+<td align="center" valign="top" width="30%"><b><font size=2 face="Verdana, Arial, Helvetica, sans-serif">
+            Makeshift<br>
+ </font>
+<font face="Verdana, Arial, Helvetica, sans-serif" size="1">
+
+<a href=http://www.killingmakeshift.com target=_empty>Website</a> | <a href=mailto:meekay4prez@yahoo.com>Booking</a> | <a href=resreview.php?cmd=rev&func=band&xid=1193>Reviews</a><p><center><a href=resreview.php?cmd=rev&func=band&xid=1193><img src=img/rskull2.gif border=0><img src=img/rskull2.gif border=0><img src=img/rskull2.gif border=0><img src=img/rskull2.gif border=0><img src=img/rskull2.gif border=0></a></center>
+</font></b></td>
+        <!-- /tr>
+        <tr --> 
+          <td width=70% align="center" valign="top"><font face="Verdana, Arial, Helvetica, sans-serif" size="1">Original hardcore band with impressive stage show      </table>
+
+
+<p>
+<hr color=CC0000 width=80%>
+<p align=center>
+      <table width="80%" border="0" cellspacing="0" cellpadding="2">
+        <tr>
+<td align="center" valign="top" width="30%"><b><font size=2 face="Verdana, Arial, Helvetica, sans-serif">
+            Malarky<br>
+ </font>
+<font face="Verdana, Arial, Helvetica, sans-serif" size="1">
+
+<a href=http://malarky.20m.com target=_empty>Website</a> | <a href=mailto:malarky_music@yahoo.com>Booking</a> | <a href=resreview.php?cmd=rev&func=band&xid=168>Reviews</a><p><center><a href=resreview.php?cmd=rev&func=band&xid=168><img src=img/rskull2.gif border=0><img src=img/rskull2.gif border=0><img src=img/rskull2.gif border=0><img src=img/rskull2.gif border=0><img src=img/rskull_half2.gif border=0></a></center>
+</font></b></td>
+        <!-- /tr>
+        <tr --> 
+          <td width=70% align="center" valign="top"><font face="Verdana, Arial, Helvetica, sans-serif" size="1">Pretty music.      </table>
+
+
+<p>
+<hr color=CC0000 width=80%>
+<p align=center>
+      <table width="80%" border="0" cellspacing="0" cellpadding="2">
+        <tr>
+<td align="center" valign="top" width="30%"><b><font size=2 face="Verdana, Arial, Helvetica, sans-serif">
+            Management, The<br>
+ </font>
+<font face="Verdana, Arial, Helvetica, sans-serif" size="1">
+
+<a href=http://www.the-management.tk target=_empty>Website</a> | <a href=mailto:themanagementband@yahoo.com>Booking</a> | <a href=resreview.php?cmd=rev&func=band&xid=503>Reviews</a><p><center><a href=resreview.php?cmd=rev&func=band&xid=503><img src=img/rskull2.gif border=0><img src=img/rskull2.gif border=0><img src=img/rskull2.gif border=0><img src=img/rskull2.gif border=0></a></center>
+</font></b></td>
+        <!-- /tr>
+        <tr --> 
+          <td width=70% align="center" valign="top"><font face="Verdana, Arial, Helvetica, sans-serif" size="1">Newer melodic rock band from Chandler/Tempe, The Management is looking to play and rock you.  If you want us to play a show, or if you just need a band to fill a space, we'll play anywhere we can.  Come check us out!      </table>
+
+
+<p>
+<hr color=CC0000 width=80%>
+<p align=center>
+      <table width="80%" border="0" cellspacing="0" cellpadding="2">
+        <tr>
+<td align="center" valign="top" width="30%"><b><font size=2 face="Verdana, Arial, Helvetica, sans-serif">
+            Mary Lemanski And The Arrangements<br>
+ </font>
+<font face="Verdana, Arial, Helvetica, sans-serif" size="1">
+
+<a href=http://www.mp3.com/marylemanski target=_empty>Website</a> | <a href=mailto:painted421@aol.com>Booking</a> | <a href=resreview.php?cmd=rev&func=band&xid=416>Reviews</a><p><center><a href=resreview.php?cmd=rev&func=band&xid=416><img src=img/rskull2.gif border=0><img src=img/rskull2.gif border=0><img src=img/rskull2.gif border=0><img src=img/rskull2.gif border=0><img src=img/rskull2.gif border=0></a></center>
+</font></b></td>
+        <!-- /tr>
+        <tr --> 
+          <td width=70% align="center" valign="top"><font face="Verdana, Arial, Helvetica, sans-serif" size="1">An eclectic mix of punk and good old rock'n' freakin' roll styles.  Ranging from hardcore to pop punk fun with a little country and blues thrown in for good measure.  If you haven't seen this female fronted band then you are missing out on a great thing.      </table>
+
+
+<p>
+<hr color=CC0000 width=80%>
+<p align=center>
+      <table width="80%" border="0" cellspacing="0" cellpadding="2">
+        <tr>
+<td align="center" valign="top" width="30%"><b><font size=2 face="Verdana, Arial, Helvetica, sans-serif">
+            Meatwhistle<br>
+ </font>
+<font face="Verdana, Arial, Helvetica, sans-serif" size="1">
+
+<a href=http://www.meatwhistle.com target=_empty>Website</a> | <a href=mailto:sr_dirtbag@hotmail.com>Booking</a> | <a href=resreview.php?cmd=rev&func=band&xid=525>Reviews</a><p><center><a href=resreview.php?cmd=rev&func=band&xid=525><img src=img/rskull2.gif border=0><img src=img/rskull2.gif border=0><img src=img/rskull2.gif border=0></a></center>
+</font></b></td>
+        <!-- /tr>
+        <tr --> 
+          <td width=70% align="center" valign="top"><font face="Verdana, Arial, Helvetica, sans-serif" size="1">Five assholes from Phoenix exploiting the amish for fun and profit through pornography and punk rock.      </table>
+
+
+<p>
+<hr color=CC0000 width=80%>
+<p align=center>
+      <table width="80%" border="0" cellspacing="0" cellpadding="2">
+        <tr>
+<td align="center" valign="top" width="30%"><b><font size=2 face="Verdana, Arial, Helvetica, sans-serif">
+            Mid-Life<br>
+ </font>
+<font face="Verdana, Arial, Helvetica, sans-serif" size="1">
+
+<a href=http://www.mid-lifepunx.com target=_empty>Website</a> | <a href=mailto:mid-life@cox.net>Booking</a> | <a href=resreview.php?cmd=rev&func=band&xid=978>Reviews</a><p><center><a href=resreview.php?cmd=rev&func=band&xid=978><img src=img/rskull2.gif border=0><img src=img/rskull2.gif border=0><img src=img/rskull2.gif border=0><img src=img/rskull_half2.gif border=0></a></center>
+</font></b></td>
+        <!-- /tr>
+        <tr --> 
+          <td width=70% align="center" valign="top"><font face="Verdana, Arial, Helvetica, sans-serif" size="1">Phoenix 3 piece formed in 1998. Very fast and somewhat melodic in your face punk rock....      </table>
+
+
+<p>
+<hr color=CC0000 width=80%>
+<p align=center>
+      <table width="80%" border="0" cellspacing="0" cellpadding="2">
+        <tr>
+<td align="center" valign="top" width="30%"><b><font size=2 face="Verdana, Arial, Helvetica, sans-serif">
+            Mighty Sphincter<br>
+ </font>
+<font face="Verdana, Arial, Helvetica, sans-serif" size="1">
+
+<a href=http://www.tangento.net/mightysphincter.html target=_empty>Website</a> | <a href=mailto:greg.hynes@cox.net >Booking</a> | <a href=resreview.php?cmd=rev&func=band&xid=1598>Reviews</a><br><a href=resreview.php?cmd=rev&func=band&xid=1598>Rate</a>
+</font></b></td>
+        <!-- /tr>
+        <tr --> 
+          <td width=70% align="center" valign="top"><font face="Verdana, Arial, Helvetica, sans-serif" size="1">A sub-Goth sonic assault of ghastly imagery and complex Spook-core mayhem. This band has been terrorizing the AZ underground for 20+ years.      </table>
+
+
+<p>
+<hr color=CC0000 width=80%>
+<p align=center>
+      <table width="80%" border="0" cellspacing="0" cellpadding="2">
+        <tr>
+<td align="center" valign="top" width="30%"><b><font size=2 face="Verdana, Arial, Helvetica, sans-serif">
+            Mindset Defied<br>
+ </font>
+<font face="Verdana, Arial, Helvetica, sans-serif" size="1">
+
+<a href=http://www.geocities.com/mindsetdefied target=_empty>Website</a> | <a href=mailto:mindsetdefied@msn.com>Booking</a> | <a href=resreview.php?cmd=rev&func=band&xid=105>Reviews</a><p><center><a href=resreview.php?cmd=rev&func=band&xid=105><img src=img/rskull2.gif border=0></a></center>
+</font></b></td>
+        <!-- /tr>
+        <tr --> 
+          <td width=70% align="center" valign="top"><font face="Verdana, Arial, Helvetica, sans-serif" size="1">Great original teen band influenced bye punk, rock, metal, alternative, ska, and some jazz.  They have a unique style and sound awesome...  Variety of music that expresses many moods and emotions.  Check them out, they are awesome!      </table>
+
+
+<p>
+<hr color=CC0000 width=80%>
+<p align=center>
+      <table width="80%" border="0" cellspacing="0" cellpadding="2">
+        <tr>
+<td align="center" valign="top" width="30%"><b><font size=2 face="Verdana, Arial, Helvetica, sans-serif">
+            Minibosses<br>
+ </font>
+<font face="Verdana, Arial, Helvetica, sans-serif" size="1">
+
+<a href=http://www.minibosses.com/ target=_empty>Website</a> | <a href=mailto:kraid@minibosses.com>Booking</a> | <a href=resreview.php?cmd=rev&func=band&xid=765>Reviews</a><p><center><a href=resreview.php?cmd=rev&func=band&xid=765><img src=img/rskull2.gif border=0><img src=img/rskull2.gif border=0><img src=img/rskull2.gif border=0><img src=img/rskull2.gif border=0><img src=img/rskull2.gif border=0></a></center>
+</font></b></td>
+        <!-- /tr>
+        <tr --> 
+          <td width=70% align="center" valign="top"><font face="Verdana, Arial, Helvetica, sans-serif" size="1">Old School Nintendo cover band. These guys rock!      </table>
+
+
+<p>
+<hr color=CC0000 width=80%>
+<p align=center>
+      <table width="80%" border="0" cellspacing="0" cellpadding="2">
+        <tr>
+<td align="center" valign="top" width="30%"><b><font size=2 face="Verdana, Arial, Helvetica, sans-serif">
+            Mirror  Affect<br>
+ </font>
+<font face="Verdana, Arial, Helvetica, sans-serif" size="1">
+
+<a href=http://www.mirroraffect.com target=_empty>Website</a> | <a href=mailto:Chief>Booking</a> | <a href=resreview.php?cmd=rev&func=band&xid=1360>Reviews</a><p><center><a href=resreview.php?cmd=rev&func=band&xid=1360><img src=img/rskull2.gif border=0><img src=img/rskull2.gif border=0><img src=img/rskull2.gif border=0><img src=img/rskull2.gif border=0><img src=img/rskull2.gif border=0></a></center>
+</font></b></td>
+        <!-- /tr>
+        <tr --> 
+          <td width=70% align="center" valign="top"><font face="Verdana, Arial, Helvetica, sans-serif" size="1">"Your band is super crazy awesomely orgasmic" - Kelli
+"Trees are yellow when your colorblind" -Mike
+"You have a good new sound" -Danielle      </table>
+
+
+<p>
+<hr color=CC0000 width=80%>
+<p align=center>
+      <table width="80%" border="0" cellspacing="0" cellpadding="2">
+        <tr>
+<td align="center" valign="top" width="30%"><b><font size=2 face="Verdana, Arial, Helvetica, sans-serif">
+            Mismatch<br>
+ </font>
+<font face="Verdana, Arial, Helvetica, sans-serif" size="1">
+
+<a href=http://www.geocities.com/mismatchrocks target=_empty>Website</a> | <a href=mailto:bassboy@skyhawkband.org>Booking</a> | <a href=resreview.php?cmd=rev&func=band&xid=727>Reviews</a><p><center><a href=resreview.php?cmd=rev&func=band&xid=727><img src=img/rskull2.gif border=0><img src=img/rskull2.gif border=0><img src=img/rskull2.gif border=0><img src=img/rskull2.gif border=0><img src=img/rskull2.gif border=0></a></center>
+</font></b></td>
+        <!-- /tr>
+        <tr --> 
+          <td width=70% align="center" valign="top"><font face="Verdana, Arial, Helvetica, sans-serif" size="1">We're a skapunkrock band that never lets the crowd down.      </table>
+
+
+<p>
+<hr color=CC0000 width=80%>
+<p align=center>
+      <table width="80%" border="0" cellspacing="0" cellpadding="2">
+        <tr>
+<td align="center" valign="top" width="30%"><b><font size=2 face="Verdana, Arial, Helvetica, sans-serif">
+            Mission G<br>
+ </font>
+<font face="Verdana, Arial, Helvetica, sans-serif" size="1">
+
+<a href=http://www.missiong.com target=_empty>Website</a> | <a href=mailto:booking@sme-music.com>Booking</a> | <a href=resreview.php?cmd=rev&func=band&xid=272>Reviews</a><p><center><a href=resreview.php?cmd=rev&func=band&xid=272><img src=img/rskull2.gif border=0><img src=img/rskull2.gif border=0><img src=img/rskull2.gif border=0><img src=img/rskull2.gif border=0><img src=img/rskull_half2.gif border=0></a></center>
+</font></b></td>
+        <!-- /tr>
+        <tr --> 
+          <td width=70% align="center" valign="top"><font face="Verdana, Arial, Helvetica, sans-serif" size="1">fast punk, great vocals, one kick ass band.      </table>
+
+
+<p>
+<hr color=CC0000 width=80%>
+<p align=center>
+      <table width="80%" border="0" cellspacing="0" cellpadding="2">
+        <tr>
+<td align="center" valign="top" width="30%"><b><font size=2 face="Verdana, Arial, Helvetica, sans-serif">
+            Mobd<br>
+ </font>
+<font face="Verdana, Arial, Helvetica, sans-serif" size="1">
+
+<a href=http://www.mobdmusic.com target=_empty>Website</a> | <a href=mailto:bondi_78@yahoo.com>Booking</a> | <a href=resreview.php?cmd=rev&func=band&xid=1101>Reviews</a><p><center><a href=resreview.php?cmd=rev&func=band&xid=1101><img src=img/rskull2.gif border=0><img src=img/rskull2.gif border=0><img src=img/rskull2.gif border=0><img src=img/rskull2.gif border=0><img src=img/rskull2.gif border=0></a></center>
+</font></b></td>
+        <!-- /tr>
+        <tr --> 
+          <td width=70% align="center" valign="top"><font face="Verdana, Arial, Helvetica, sans-serif" size="1">mobd is a local band out of Tempe, AZ.  They are a cross between, Fuel, 3 Doors Down, & Good Charlotte.  If you like just plain good Rock! You'll love mobd.      </table>
+
+
+<p>
+<hr color=CC0000 width=80%>
+<p align=center>
+      <table width="80%" border="0" cellspacing="0" cellpadding="2">
+        <tr>
+<td align="center" valign="top" width="30%"><b><font size=2 face="Verdana, Arial, Helvetica, sans-serif">
+            Mongoloids, The<br>
+ </font>
+<font face="Verdana, Arial, Helvetica, sans-serif" size="1">
+
+<a href=http://themongoloids.com target=_empty>Website</a> | <a href=mailto:themongoloids@comcast.net>Booking</a> | <a href=resreview.php?cmd=rev&func=band&xid=1575>Reviews</a><p><center><a href=resreview.php?cmd=rev&func=band&xid=1575><img src=img/rskull2.gif border=0><img src=img/rskull2.gif border=0><img src=img/rskull2.gif border=0><img src=img/rskull2.gif border=0><img src=img/rskull2.gif border=0></a></center>
+</font></b></td>
+        <!-- /tr>
+        <tr --> 
+          <td width=70% align="center" valign="top"><font face="Verdana, Arial, Helvetica, sans-serif" size="1">Straight from the west side. An extra y chromosome makes us better. 80's Hardcore sound. Check the website for MP3s.      </table>
+
+
+<p>
+<hr color=CC0000 width=80%>
+<p align=center>
+      <table width="80%" border="0" cellspacing="0" cellpadding="2">
+        <tr>
+<td align="center" valign="top" width="30%"><b><font size=2 face="Verdana, Arial, Helvetica, sans-serif">
+            Monster Squad, The<br>
+ </font>
+<font face="Verdana, Arial, Helvetica, sans-serif" size="1">
+
+<a href=http://www.tmspunk.com target=_empty>Website</a> | <a href=mailto:tmsrocks@hotmail.com>Booking</a> | <a href=resreview.php?cmd=rev&func=band&xid=829>Reviews</a><p><center><a href=resreview.php?cmd=rev&func=band&xid=829><img src=img/rskull2.gif border=0><img src=img/rskull2.gif border=0><img src=img/rskull2.gif border=0><img src=img/rskull2.gif border=0><img src=img/rskull2.gif border=0></a></center>
+</font></b></td>
+        <!-- /tr>
+        <tr --> 
+          <td width=70% align="center" valign="top"><font face="Verdana, Arial, Helvetica, sans-serif" size="1">Skate Punk out of Parker, AZ. With Sean on the guitar, billy on the bass, and Schuyler (Duane Peters's Son) on the drums, and all 3 singing songs of degeneration and political matter, what more could you ask for?       </table>
+
+
+<p>
+<hr color=CC0000 width=80%>
+<p align=center>
+      <table width="80%" border="0" cellspacing="0" cellpadding="2">
+        <tr>
+<td align="center" valign="top" width="30%"><b><font size=2 face="Verdana, Arial, Helvetica, sans-serif">
+            Mormons, The<br>
+ </font>
+<font face="Verdana, Arial, Helvetica, sans-serif" size="1">
+
+<a href=http://themormons.tripod.com target=_empty>Website</a> | <a href=mailto:robertpaulson@cox.net>Booking</a> | <a href=resreview.php?cmd=rev&func=band&xid=1184>Reviews</a><br><a href=resreview.php?cmd=rev&func=band&xid=1184>Rate</a>
+</font></b></td>
+        <!-- /tr>
+        <tr --> 
+          <td width=70% align="center" valign="top"><font face="Verdana, Arial, Helvetica, sans-serif" size="1">A melodic blend of punk rock and hardcore music done in the vein of Bayside, Taking Back Sunday, Finch, and NOFX. A volitle blend of drop tuned guitars and punk rock beats.      </table>
+
+
+<p>
+<hr color=CC0000 width=80%>
+<p align=center>
+      <table width="80%" border="0" cellspacing="0" cellpadding="2">
+        <tr>
+<td align="center" valign="top" width="30%"><b><font size=2 face="Verdana, Arial, Helvetica, sans-serif">
+            Morning After, The<br>
+ </font>
+<font face="Verdana, Arial, Helvetica, sans-serif" size="1">
+
+<a href=http://www.morningmusic.net target=_empty>Website</a> | <a href=mailto:wishiwasafraggle@netscape.net>Booking</a> | <a href=resreview.php?cmd=rev&func=band&xid=1297>Reviews</a><p><center><a href=resreview.php?cmd=rev&func=band&xid=1297><img src=img/rskull2.gif border=0><img src=img/rskull2.gif border=0><img src=img/rskull2.gif border=0></a></center>
+</font></b></td>
+        <!-- /tr>
+        <tr --> 
+          <td width=70% align="center" valign="top"><font face="Verdana, Arial, Helvetica, sans-serif" size="1">we have heartfelt lyrics set to driving music.      </table>
+
+
+<p>
+<hr color=CC0000 width=80%>
+<p align=center>
+      <table width="80%" border="0" cellspacing="0" cellpadding="2">
+        <tr>
+<td align="center" valign="top" width="30%"><b><font size=2 face="Verdana, Arial, Helvetica, sans-serif">
+            Mourning Maxwell<br>
+ </font>
+<font face="Verdana, Arial, Helvetica, sans-serif" size="1">
+
+<a href=http://www.mourningmaxwell.com target=_empty>Website</a> | <a href=mailto:Alex@slowpokemusic.com>Booking</a> | <a href=resreview.php?cmd=rev&func=band&xid=936>Reviews</a><p><center><a href=resreview.php?cmd=rev&func=band&xid=936><img src=img/rskull2.gif border=0><img src=img/rskull2.gif border=0><img src=img/rskull2.gif border=0><img src=img/rskull2.gif border=0><img src=img/rskull2.gif border=0></a></center>
+</font></b></td>
+        <!-- /tr>
+        <tr --> 
+          <td width=70% align="center" valign="top"><font face="Verdana, Arial, Helvetica, sans-serif" size="1">Formerly SLOWPOKE with the addition and deletion of a member      </table>
+
+
+<p>
+<hr color=CC0000 width=80%>
+<p align=center>
+      <table width="80%" border="0" cellspacing="0" cellpadding="2">
+        <tr>
+<td align="center" valign="top" width="30%"><b><font size=2 face="Verdana, Arial, Helvetica, sans-serif">
+            My Dog Peter<br>
+ </font>
+<font face="Verdana, Arial, Helvetica, sans-serif" size="1">
+
+<a href=http://geocities.com/mydogpeterband/go.html target=_empty>Website</a> | <a href=mailto:mydogpeterband@hotmail.com>Booking</a> | <a href=resreview.php?cmd=rev&func=band&xid=222>Reviews</a><br><a href=resreview.php?cmd=rev&func=band&xid=222>Rate</a>
+</font></b></td>
+        <!-- /tr>
+        <tr --> 
+          <td width=70% align="center" valign="top"><font face="Verdana, Arial, Helvetica, sans-serif" size="1">A punk band from Phoenix with a very unique sound influenced by many different types of music. Always looking for cool bands to do shows with.      </table>
+
+
+<p>
+<hr color=CC0000 width=80%>
+<p align=center>
+      <table width="80%" border="0" cellspacing="0" cellpadding="2">
+        <tr>
+<td align="center" valign="top" width="30%"><b><font size=2 face="Verdana, Arial, Helvetica, sans-serif">
+            My Doll<br>
+ </font>
+<font face="Verdana, Arial, Helvetica, sans-serif" size="1">
+
+<a href=http://www.mydollrocks.com target=_empty>Website</a> | <a href=mailto:nessa@mydollrocks.com >Booking</a> | <a href=resreview.php?cmd=rev&func=band&xid=1409>Reviews</a><p><center><a href=resreview.php?cmd=rev&func=band&xid=1409><img src=img/rskull2.gif border=0><img src=img/rskull2.gif border=0><img src=img/rskull2.gif border=0><img src=img/rskull2.gif border=0></a></center>
+</font></b></td>
+        <!-- /tr>
+        <tr --> 
+          <td width=70% align="center" valign="top"><font face="Verdana, Arial, Helvetica, sans-serif" size="1">With a Riot Grll Rock sound the combined three compose music filled with fun and excitment. Songs  with messages about boys, life and issues. And besides, chicks with guitars just rock in general! <br />
+<br />
+<br />
+What they are is fuckin REFRESHING, that there is a band that rocks so much in Phoenix. It's like they blend some early 90's style with "fuckin rock" modern shit and make true punk out of it. My Doll is a refreshing breeze that breaks the stereotype and saves your goddamn souls."       </table>
+
+
+<hr color=CC0000 width=80%>
+
+<p><b><font face=Verdana size=2><center>
+</center></font></b>
+
+
+    </td>
+  </tr>
+</table>
+</body> 
+</html>

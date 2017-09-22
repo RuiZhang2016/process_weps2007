@@ -1,0 +1,1285 @@
+
+
+
+
+
+	
+
+
+
+
+
+
+
+
+
+ 		
+  
+
+
+
+		
+<style>
+.note-header-text {font-family: Times, Times New Roman, serif;
+		color:#ff0000; font-size: .95em;
+		margin-left: .75em; margin-right: .75em;}
+</style>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ 	
+	
+		
+		
+		
+					
+			
+				
+				  	
+				
+			
+				
+		    
+		
+		
+		
+		
+		
+		
+		
+	 
+
+
+
+	
+	
+	
+	
+	
+	
+	
+		
+  
+
+
+	
+	
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ 	
+ 	
+	
+
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+   "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+<head>
+<LINK REL=STYLESHEET TYPE="text/css" HREF="http://portal.acm.org/css/dl.css">
+<title>The ubiquitous beauty of user-aware software</title>
+<style type="text/css"><!--
+    body {margin-left: 0em; margin-top: 0}
+    a:link {text-decoration: underline; 	Color: #006699;}
+    a:visited  { color: #990033; text-decoration: underline;}
+    a:hover {color: red; text-decoration: none}
+    a.dLink1:link {color:#336699}
+    a.dLink1:visited {color:#666666}
+	a.isblack:link {text-decoration: underline; 	Color: #000000;}
+    a.isblack:visited  { color: #000000; text-decoration: underline;}
+    a.isblack:hover {color: #000000; text-decoration: none}
+    h1 {font-size: 140%; margin-bottom: 0}
+	ul {margin-top: .25em; list-style-type: disc}
+	ol {margin-top: .25em;}
+	li {padding-bottom: .25em}
+    h2 {color: white; background-color: #069; 
+        font-size: 100%; padding-left: 1em;
+		margin: 0}
+	h3 {color: black; background-color: yellow; 
+    	font-size: 100%;
+		margin: 0}
+	 h4 {color: black; background-color: #99c5e8; 
+        font-size: 100%;
+		margin: 0}
+    hr {color: #39176d;}
+    form {margin-top: 10}
+    form.xrs {margin-top: 0}
+	
+	a {text-decoration: none; }
+	
+	input {font-size: 1em;}
+	.chevron {color: #ff0000;}
+	.light-blue {color:#336699;}
+	.black {color:#000000;}
+	
+	/* ### standard text styles, smallest to largest ### */
+	
+	.footer-link-text {font-family: Arial, Helvetica, sans-serif;
+		color:#336699; font-size: .75em; line-height: 1.33em;
+		text-indent: -.75 em; margin-left: 2em; margin-right: .75em;}
+		
+	.footer-copy-text {font-family: Arial, Helvetica, sans-serif;
+		color:#000000; font-size: .75em; line-height: 1.3em;
+		margin-left: .75em; margin-right: .75em;}
+		
+	.small-link-text {font-family: Arial, Helvetica, sans-serif;
+		color:#000000; font-size: .83em; padding-bottom : 2px;
+	  	padding-top : 2px;}
+
+	.smaller-text {font-family: Arial, Helvetica, sans-serif;
+		color:#000000; font-size: .75em;}		
+	.small-text {font-family: Arial, Helvetica, sans-serif;
+		color:#000000; font-size: .83em;}
+	.medium-text {font-family: Arial, Helvetica, sans-serif;
+		color:#000000; font-size: 1em;}
+	.mediumb-text {font-family: Arial, Helvetica, sans-serif;
+		color:#000000; font-size: 1em; font-weight: bold;}
+	.large-text {font-family: Arial, Helvetica, sans-serif;
+		color:#000000; font-size: 1.3em;}		
+	
+	.list-link-text {font-family: Arial, Helvetica, sans-serif;
+		color:#336699; font-size: .83em; line-height: 1.3em;}
+	.list-link-btext {font-family: Arial, Helvetica, sans-serif;
+		color:#000000; font-size: .83em; line-height: 1.3em;}
+	
+	.searchbox-text {font-family: Arial, Helvetica, sans-serif;
+		color:#000066; font-size: 1em; font-weight: bold;}
+	.footer-header-text {font-family: Arial, Helvetica, sans-serif;
+		color:#000066; font-size: 1em; font-weight: bold;
+		margin-left: .75em; margin-right: .75em;}
+	.medium-link-text {font-family: Arial, Helvetica, sans-serif;
+		color:#000066; font-size: 1em; font-weight: bold; line-height: 1em;
+		text-indent: -1.25em; margin-left: 2em; margin-right: .75em;}
+	
+	
+	.small-copy-text {font-family: Times, Times New Roman, serif;
+		color:#000066; font-size: .75em; line-height: 1.2em;
+		margin-left: .75em; margin-right: .75em;}
+
+	.medium-copy-text {font-family: Times, Times New Roman, serif;
+		color:#000066; font-size: 1em; line-height: 1.2em;
+		margin-left: .75em; margin-right: .75em;}
+	
+	.large-copy-text {font-family: Times, Times New Roman, serif;
+		color:#000066; font-size: 1.3em; line-height: 1.5em;
+		margin-left: .75em; margin-right: .75em;}
+	
+	.medium-header-text {font-family: Times, Times New Roman, serif;
+		color:#ff0000; font-size: 1em;
+		margin-left: .75em; margin-right: .75em;}
+	
+	.large-header-text {font-family: Times, Times New Roman, serif;
+		color:#ff0000; font-size: 1.5em;
+		margin-left: .75em; margin-right: .75em;}
+
+  --></style>
+ 
+<SCRIPT LANGUAGE="JavaScript">
+ /* <!-- Begin
+	if(document.layers || document.all) {
+	a = 1;
+	setInterval("Jump()", 10);
+	}
+	function Jump() {
+	a = a + 1;
+	//self.moveBy((Math.random() * a * 2 - a), (Math.random() * a * 2) - a);
+	}
+//  End --> */
+</script>
+<script type="text/javascript" src="http://portal.acm.org/CFIDE/scripts/cfform.js"></script>
+<script type="text/javascript" src="http://portal.acm.org/CFIDE/scripts/masks.js"></script>
+<script type="text/javascript">
+<!--
+    function  _CF_checkqiksearch(_CF_this)
+    {
+        //reset on submit
+        _CF_error_exists = false;
+        _CF_error_messages = new Array();
+        _CF_error_fields = new Object();
+        _CF_FirstErrorField = null;
+
+        //form element query required check
+        if( !_CF_hasValue(_CF_this['query'], "TEXT", false ) )
+        {
+            _CF_onError(_CF_this, "query", _CF_this['query'].value, "Please enter your Search Criteria");
+            _CF_error_exists = true;
+        }
+
+
+        //display error messages and return success
+        if( _CF_error_exists )
+        {
+            if( _CF_error_messages.length > 0 )
+            {
+                // show alert() message
+                _CF_onErrorAlert(_CF_error_messages);
+                // set focus to first form error, if the field supports js focus().
+                if( _CF_this[_CF_FirstErrorField].type == "text" )
+                { _CF_this[_CF_FirstErrorField].focus(); }
+
+            }
+            return false;
+        }else {
+            return true;
+        }
+    }
+//-->
+</script>
+</head>
+
+
+
+
+
+
+	
+	
+		
+	
+	
+	
+
+
+
+
+
+
+
+	
+
+
+ 
+ 
+
+
+
+
+
+
+
+
+<body bgcolor="#ffffff" onload="window.focus(); ">
+<div align="center">
+<a name="CIT"></a>
+<table border="0" width="85%" cellspacing="0" cellpadding="0">
+<tr>
+<td>
+
+
+	
+		
+				
+				
+					
+				  
+		
+	 
+
+
+
+
+
+
+
+
+		
+
+	
+
+
+
+
+<table border="0" width="100%" cellspacing="0" cellpadding="0">
+	<tr valign="top">
+		<td width="1%" class="small-link-text" align="center"  background="http://portal.acm.org/images/horiz-bar.jpg"><img src="http://portal.acm.org/images/logo_acm_portal2.jpg" alt="ACM Portal" width="263" height="54" border="0" usemap="#PORT">
+			
+				<font color="white">
+				
+					Spain and Portugal Ebsco Open Consortium
+				
+				</font>
+			  
+		</td>
+		<td width="99%" align="left" class="small-link-text">
+			<table border="0" cellspacing="0" cellpadding="0">
+			<tr>
+				<td>&nbsp;</td>
+				
+					<td class="small-link-text"><a href="https://campus.acm.org/Public/login_genpubqj.cfm?rdr=http://portal.acm.org/citation.cfm?id=365240&coll=portal&dl=ACM&CFID=5040936&CFTOKEN=83468808&promo=QJPUB&offering=200&form_type=PUB&CFID=5040936&CFTOKEN=83468808" class="small-link-text">Subscribe</a><span class="small-link-text">&nbsp;(Full Service)</span>&nbsp;&nbsp;&nbsp;</td>
+					<td class="small-link-text"><a href="https://portal.acm.org/poplogin.cfm?dl=ACM&coll=portal&want_href=citation%2Ecfm%3Fid%3D365240%26coll%3Dportal%26dl%3DACM%26CFID%3D5040936%26CFTOKEN%3D83468808&CFID=5040936&CFTOKEN=83468808" class="small-link-text">Register</a><span class="small-link-text">&nbsp;(Limited Service, <font color="Red">Free</font>)</span>&nbsp;&nbsp;&nbsp;</td>
+				
+				<td class="small-link-text" valign="bot">
+					
+					
+		 					<a href="https://portal.acm.org/poplogin.cfm?dl=ACM&coll=portal&want_href=citation%2Ecfm%3Fid%3D365240%26coll%3Dportal%26dl%3DACM%26CFID%3D5040936%26CFTOKEN%3D83468808&CFID=5040936&CFTOKEN=83468808" class="small-link-text">Login</a>
+					
+				</td>			
+			</tr>
+			</table>
+			
+			<table border="0" width="100%" cellspacing="0" cellpadding="0">
+				<form name="qiksearch" action="http://portal.acm.org/results.cfm?coll=portal&amp;dl=ACM&amp;CFID=5040936&amp;CFTOKEN=83468808" method="post" target="_self" onsubmit="return _CF_checkqiksearch(this)">
+				<tr>
+					<td height="5"><img src="http://portal.acm.org/images/blanks.gif" width=1 height=1 alt="" border="0"></td>
+				</tr>
+				<input type="hidden" name="parser" value="Internet">
+				<tr>
+					<td class="small-link-text">&nbsp;</td>
+					<td class="small-link-text">
+						
+						  	
+						
+						<b>Search:</b>&nbsp;&nbsp;&nbsp;<input type="Radio" name="whichDL" value="acm" checked>The ACM Digital Library&nbsp;&nbsp;&nbsp;<input type="Radio" name="whichDL" value="guide" >The Guide
+						<br><input name="query" id="query" type="text" size="60"  class="pubdescr"  />&nbsp;&nbsp;
+						<input type="Image" alt="Search" name=Go src="http://portal.acm.org/images/search_small.jpg" border="0">
+					</td>
+				</tr>
+				</form>
+
+			</table>
+			
+		</td>
+	<!-- top nav END -->
+	</tr>
+	</table>
+	<table border="0" cellspacing="0" cellpadding="0">
+	<tr>
+		<td height="12"><img src="http://portal.acm.org/images/blanks.gif" width=1 height=1 alt="" border="0"></td>
+	</tr>
+	</table>
+
+<map name="PORT" > 
+  <area shape="rect" coords="1,1,55,60" href="http://www.acm.org/" alt="ACM Home Page">
+  <area shape="rect" coords="65,1,300,78" href="http://portal.acm.org/portal.cfm?coll=portal&amp;dl=ACM&amp;CFID=5040936&amp;CFTOKEN=83468808">
+</map>
+
+	
+
+<table border="0" width="100%" align="left">
+	<col width="40%">
+	<col width="60%">
+	<tr>
+		<td>
+			
+				<a href="http://portal.acm.org/dl.cfm?coll=portal&amp;dl=ACM&amp;CFID=5040936&amp;CFTOKEN=83468808"><img src="http://portal.acm.org/images/acm_dl_bar_large2.jpg" width=350 height=25 alt="" border="0"></a>
+			  
+		</td>
+ 		<td class="small-text" align="center">
+			<img src="http://portal.acm.org/images/feedback.gif" width="20" height="19" alt="Please provide us with feedback." border="0">&nbsp;<a href="http://portal.acm.org/survey/survey-ci.cfm?CFID=5040936&amp;CFTOKEN=83468808">Feedback</a>&nbsp;&nbsp;<a href="http://portal.acm.org/survey/survey-ci.cfm?CFID=5040936&amp;CFTOKEN=83468808">Report a problem</a>&nbsp;&nbsp;<a href="http://portal.acm.org/survey/survey-general.cfm?CFID=5040936&amp;CFTOKEN=83468808">Satisfaction survey</a>
+		</td>
+	</tr>
+	<tr>
+		<td height="6"><img src="http://portal.acm.org/images/blanks.gif" width=1 height=1 alt="" border="0"></td>
+	</tr>
+</table>
+</td>
+</tr>
+
+
+
+
+<tr>
+	<td colspan="3" valign="top" height="1" background="http://portal.acm.org/images/horiz-bar-long.jpg"></td>
+</tr>
+
+<tr>
+<td class="small-text">
+	<table border="0" width="100%"  cellpadding="2">
+		<col width="1%">
+		<col width="8%">
+		<col width="91%">
+	<tr>
+		<td class="medium-text" colspan="3"><strong>The ubiquitous beauty of user-aware software</strong></td>
+	</tr>
+					
+	
+		<tr valign="top">
+			
+			
+		</tr>
+		
+			<tr valign="top">
+				
+					<td class="small-text"><strong>Full text</strong></td>
+				 
+				<td class="smaller-text" colspan="2" >
+						
+							
+									 <A NAME="FullText" HREF="http://portal.acm.org/ft_gateway.cfm?id=365240&amp;type=html&amp;coll=portal&amp;dl=ACM&amp;CFID=5040936&amp;CFTOKEN=83468808" target="_blank"><img src="http://portal.acm.org/images/www.gif" width="16" height="16" alt="html format" border="0" align="texttop">Html</A>
+									 (6&nbsp;KB),
+							
+									 <A NAME="FullText" HREF="http://portal.acm.org/ft_gateway.cfm?id=365240&amp;type=pdf&amp;coll=portal&amp;dl=ACM&amp;CFID=5040936&amp;CFTOKEN=83468808" target="_blank"><img src="http://portal.acm.org/images/pdf_logo.gif" width="16" height="16" alt="pdf format" border="0" hspace="1" align="texttop">Pdf</A>
+									 (44&nbsp;KB)
+							
+						   
+				</td>
+			</tr>
+		
+
+		<tr valign="top">
+			<td class="small-text"><strong>Source</strong></td>
+			<td class="small-text" colspan="2">
+			
+								
+										
+											
+											
+										
+											
+											
+										
+											
+											
+												
+										
+											
+											
+											
+												
+											
+											
+												
+											
+											
+													
+													
+													
+												    
+													
+														
+														
+															
+													
+														
+														
+														
+														
+														
+														<SPAN class="mediumb-text">Communications of the ACM </span>
+																			<a href="http://portal.acm.org/toc.cfm?id=J79&amp;type=periodical&amp;coll=portal&amp;dl=ACM&amp;CFID=5040936&amp;CFTOKEN=83468808" target="_self" class="small-link-text">archive</a><br>
+														
+															 <span class="small-text"> Volume 44 ,&nbsp; Issue 3 &nbsp;(March 2001)</span>
+															 					  <a href="http://portal.acm.org/toc.cfm?id=365181&amp;type=issue&amp;coll=portal&amp;dl=ACM&amp;CFID=5040936&amp;CFTOKEN=83468808" target="_self" class="small-link-text">table of contents</a><br>
+															 <span class="small-text"> </span>
+														   
+													
+												 
+										
+								
+		
+
+		
+		<div class="medium-text">
+			
+			
+			
+		</div>
+		
+		
+		    
+			
+			
+		
+
+			
+			
+			<div class="small-text">
+				 Page: 130&nbsp;&nbsp;
+			</div>
+					
+			
+			
+			
+				<div class="small-text">
+					Year of Publication:&nbsp;2001
+				</div>
+			
+					
+			
+				<div class="small-text">
+				
+					
+						
+						
+							
+							
+						  
+					  
+					ISSN:0001-0782
+				</div>
+				
+
+			
+			
+				
+					
+					
+					
+				
+					
+					
+					
+				
+					
+					
+					
+				
+			
+			
+		
+			 
+			  	
+			 
+			 
+		
+			
+				
+			</td>
+		</tr>
+		
+		
+		
+			<tr valign="top">
+				<td class="small-text">							
+										  	<strong>Author </strong>
+										
+				</td>
+				
+				
+					
+					
+				<td colspan="2">
+				<div class="authors">
+					<table cellpadding="0" cellspacing="0">		
+					
+							<tr>
+							
+
+							
+							
+								<td class="small-text">
+
+									    <a href="http://portal.acm.org/results.cfm?query=author%3ACherri%20Pancake&amp;querydisp=author%3ACherri%20Pancake&amp;coll=portal&amp;dl=ACM&amp;CFID=5040936&amp;CFTOKEN=83468808" target="_self">Cherri Pancake</a>
+ 									 </td>
+								<td class="small-text">
+									
+										<small>&nbsp;Oregon State Univ.</small>
+										
+								</td>
+							</tr>
+					
+					</table>	
+				</div>
+				</td>
+			</tr>
+			
+			
+		
+		
+			
+		
+		
+		
+		
+			
+			
+			
+			
+				
+					<tr valign="top">
+						<td class="small-text"><strong>Publisher</strong></td>
+						<td colspan="2">
+							<div class="publishers">
+								
+								
+								
+								
+								
+								
+									
+									
+									  	ACM Press &nbsp;
+									
+									
+										<small> New York, NY, USA </small>
+									
+								
+							</div>
+						</td>
+					</tr>
+				
+			
+		
+		
+		
+		
+		
+		
+		
+		
+		</table>
+		
+		
+		
+		
+		
+		
+		
+ 
+ 		
+</td>
+</tr>
+
+
+<tr>
+<td>
+
+<!-- third main table: main content START -->
+	<table border="0" width="100%" cellspacing="0" cellpadding="0">
+	<tr>
+		<td height="6"><img src="http://portal.acm.org/images/blanks.gif" width=1 height=1 alt="" border="0"></td>
+	</tr>
+	<tr>
+		<td colspan="4" valign="top" height="1" background="http://portal.acm.org/images/horiz-bar-long.jpg"></td>
+	</tr>
+	<tr>
+		<td height="6"><img src="http://portal.acm.org/images/blanks.gif" width=1 height=1 alt="" border="0"></td>
+	</tr>
+
+	
+
+	<tr valign="top">
+	<!-- buttons -->
+		<td width="100%" colspan="4">
+	    <table border="0" cellspacing="0" cellpadding="0" width="100%">
+		<col width="22%">
+	    <col width="78%">
+		<tr>
+			<td class="small-text"><b>Additional Information:</b></td>
+			<td>
+			<p class="small-text">
+				
+				
+				
+				
+				
+				
+					<a href="citation.cfm%3Fid=365240&amp;coll=portal&amp;dl=ACM&amp;CFID=5040936&amp;CFTOKEN=83468808.1.html#IndexTerms">index terms</a>&nbsp;&nbsp;
+				
+				
+				
+						<a href="citation.cfm%3Fid=365240&amp;coll=portal&amp;dl=ACM&amp;CFID=5040936&amp;CFTOKEN=83468808.1.html#collab">collaborative colleagues</a>&nbsp;&nbsp;
+				
+				
+					<a href="citation.cfm%3Fid=365240&amp;coll=portal&amp;dl=ACM&amp;CFID=5040936&amp;CFTOKEN=83468808.1.html#peers">peer to peer</a>&nbsp;&nbsp;
+				
+				</p>
+			</td>
+		</tr>
+		</table>
+		</td>
+	</tr>
+	<tr>
+		<td height="6"><img src="http://portal.acm.org/images/blanks.gif" width=1 height=1 alt="" border="0"></td>
+	</tr>
+	
+	<tr valign="top">
+	<!-- buttons -->
+		<form name="popbinder">
+		<td width="100%" colspan="4">
+		
+		<table border="0" cellspacing="0" cellpadding="2" width="100%" >
+		  <col width="22%">
+		  <col width="78%">
+		  <tr valign="top">
+		  	<td class="small-text"><b>Tools and Actions:</b></td>
+			<td>
+			
+				
+					
+					
+					 
+					 
+					 
+				
+				
+							
+				
+			  
+			
+			<a href="http://portal.acm.org/results.cfm?query=365240&amp;querydisp=Similar%20to%3A%20The%20ubiquitous%20beauty%20of%20user%2Daware%20software&amp;coll=portal&amp;dl=ACM&amp;CFID=5040936&amp;CFTOKEN=83468808" target="_self" class="small-link-text">Find similar Articles</a>&nbsp;&nbsp;
+
+			<a href="http://www.reviews.com/reviewer/quickreview/frameset_toplevel.cfm?bib_id=365240" target="reviews" class="small-link-text">Review this Article</a>&nbsp;&nbsp;
+			
+			
+			 	<br><a href="citation.cfm%3Fid=365240&amp;coll=portal&amp;dl=ACM&amp;CFID=5040936&amp;CFTOKEN=83468808.1.html#" onClick="window.alert('To use this Feature, you must login with your personal ACM Web Account.');" class="small-link-text">
+				Save this Article to a Binder</a><img src="http://portal.acm.org/images/blanks.gif" border="0" name="saved">
+			
+			&nbsp;&nbsp;
+			<span class="small-text">Display Formats:</span>
+			<a href="citation.cfm%3Fid=365240&amp;coll=portal&amp;dl=ACM&amp;CFID=5040936&amp;CFTOKEN=83468808.1.html#" onClick="window.open('popBibTex.cfm?id=365240&ids=J79.365181.365240&types=periodical.issue.article&reqtype=article&coll=portal&dl=ACM&CFID=5040936&CFTOKEN=83468808','BibTex','width=800,height=100,top=100,left=100,scrollbars=Yes,resizable=yes');" class="small-link-text">
+			BibTex</a>&nbsp;
+
+			<a href="citation.cfm%3Fid=365240&amp;coll=portal&amp;dl=ACM&amp;CFID=5040936&amp;CFTOKEN=83468808.1.html#" onClick="window.open('popendnotes.cfm?id=365240&ids=J79.365181.365240&types=periodical.issue.article&reqtype=article&coll=portal&dl=ACM&CFID=5040936&CFTOKEN=83468808','BibTex','width=800,height=100,top=100,left=100,scrollbars=Yes,resizable=yes');" class="small-link-text">
+			EndNote</a>
+
+			
+			 
+				<a href="citation.cfm%3Fid=365240&amp;coll=portal&amp;dl=ACM&amp;CFID=5040936&amp;CFTOKEN=83468808.1.html#" onClick="window.open('popacmref.cfm?id=365240&ids=J79.365181.365240&types=periodical.issue.article&reqtype=article&coll=portal&dl=ACM&CFID=5040936&CFTOKEN=83468808','BibTeX','width=800,height=100,top=100,left=100,scrollbars=Yes,resizable=yes');" class="small-link-text">
+			ACM Ref</a>
+			
+			
+			&nbsp;&nbsp;				
+			
+			</td>
+		</tr>
+		<tr>
+			<td height="10"><img src="http://portal.acm.org/images/blanks.gif" width=1 height=1 alt="" border="0"></td>
+		</tr>
+		
+		<tr valign="top">
+			<td class="small-text"><b>DOI Bookmark:</b></td>
+			<td class="small-text">
+				<small>Use this link to bookmark this Article:&nbsp;</small><a href="http://doi.acm.org/10.1145/365181.365240">http://doi.acm.org/10.1145/365181.365240</a><br><small><a href="http://www.doi.org/">What is a DOI?</a></small>
+			    
+			</td>
+		</tr> 
+		
+		</table>
+		
+		</td>
+		</form>
+	</tr>
+	<tr>
+		<td height="6"><img src="http://portal.acm.org/images/blanks.gif" width=1 height=1 alt="" border="0"></td>
+	</tr>
+	<tr>
+		<td colspan="4" valign="top" height="1" background="http://portal.acm.org/images/horiz-bar-long.jpg"></td>
+	</tr>
+	<tr>
+		<td height="6"><img src="http://portal.acm.org/images/blanks.gif" width=1 height=1 alt="" border="0"></td>
+	</tr>
+	</table>
+<!-- third main table: main content END -->
+			
+		
+		
+		  	<div class="abstract">
+			
+			
+			  	
+			 
+			 
+			
+			</div>
+		
+		
+		
+		
+		
+		  	<div class="abstract">
+			
+			
+			  	
+			 
+			 
+			
+			</div>
+		
+			
+		
+		
+		
+
+		
+			
+			
+			  	
+			 
+			 
+			
+		
+		
+		
+		  	<br>
+			<div class="indterms">
+			
+			<A HREF="citation.cfm%3Fid=365240&amp;coll=portal&amp;dl=ACM&amp;CFID=5040936&amp;CFTOKEN=83468808.1.html#CIT"><img name="top" src="http://portal.acm.org/images/arrowu.gif" hspace="10" border="0"></A><SPAN class=heading><A NAME="IndexTerms">INDEX TERMS</A></span>
+			
+				
+					<p class="Categories">
+						<SPAN class=heading><A NAME="GenTerms">Primary Classification:</A></span>
+						
+						  	
+						
+						
+						
+							<br>&nbsp;
+							
+							
+								  
+									
+									
+									
+									<b>D.</b>
+									
+									
+									    
+									 
+									<a href="http://portal.acm.org/results.cfm?query=CCS%3AD%2E%2A&amp;coll=portal&amp;dl=ACM&amp;CFID=5040936&amp;CFTOKEN=83468808" target="_self">
+									Software</a><br>
+								  
+							
+								  
+									
+									
+										&nbsp;
+									
+									
+										<img src="http://portal.acm.org/images/tree.gif" border="0" height="20" width="20">
+									
+									<b>D.2</b>
+									
+									
+										
+									  
+									<a href="http://portal.acm.org/results.cfm?query=CCS%3A%22D%2E2%22&amp;coll=portal&amp;dl=ACM&amp;CFID=5040936&amp;CFTOKEN=83468808" target="_self">
+									 SOFTWARE ENGINEERING</a><br>
+								  
+							
+						
+					 </p>
+				  
+				
+				  <p class="Categories">
+					<SPAN class=heading><A NAME="GenTerms">Additional&nbsp;Classification:</A></span>
+					 
+					  	
+					 
+					 
+					
+							<br>&nbsp;
+							
+							
+								 
+									
+									
+									 
+									<b>H.</b>
+									
+									    
+									 
+									<a href="http://portal.acm.org/results.cfm?query=CCS%3AH%2E%2A&amp;coll=portal&amp;dl=ACM&amp;CFID=5040936&amp;CFTOKEN=83468808" target="_self">
+									Information Systems</a><br>
+								 
+							
+								 
+									
+									
+										&nbsp;
+									
+									
+										<img src="http://portal.acm.org/images/tree.gif" border="0" height="20" width="20">
+									 
+									<b>H.5</b>
+									
+										
+									  
+									<a href="http://portal.acm.org/results.cfm?query=CCS%3A%22H%2E5%22&amp;coll=portal&amp;dl=ACM&amp;CFID=5040936&amp;CFTOKEN=83468808" target="_self">
+									 INFORMATION INTERFACES AND PRESENTATION (I.7)</a><br>
+								 
+							
+								 
+									
+									
+										&nbsp;
+									
+										&nbsp;
+									
+										&nbsp;
+									
+									
+										<img src="http://portal.acm.org/images/tree.gif" border="0" height="20" width="20">
+									 
+									<b>H.5.2</b>
+									
+										
+									  
+									<a href="http://portal.acm.org/results.cfm?query=CCS%3A%22H%2E5%2E2%22&amp;coll=portal&amp;dl=ACM&amp;CFID=5040936&amp;CFTOKEN=83468808" target="_self">
+									 User Interfaces (D.2.2, H.1.2, I.3.6)</a><br>
+								 
+							
+								
+								  	
+									
+									
+										
+										
+											&nbsp;
+										
+											&nbsp;
+										
+											&nbsp;
+										
+											&nbsp;
+										
+											&nbsp;
+										
+										
+											<img src="http://portal.acm.org/images/tree.gif" border="0" height="20" width="20">
+										 
+										<b>Subjects:</b>
+									    
+											<a href="http://portal.acm.org/results.cfm?query=CCS%3A%22User%2Dcentered%20design%22&amp;coll=portal&amp;dl=ACM&amp;CFID=5040936&amp;CFTOKEN=83468808" target="_self">User-centered design</a>
+										
+									
+									<br>
+									
+								
+							
+					
+
+					</p>
+				   
+			
+				
+				<br>
+					<p class="GenTerms">
+						<SPAN class=heading><A NAME="GenTerms">General Terms:</A></span>
+						
+						  	
+						
+						
+						<BR>
+						 
+						
+							
+							<a href="http://portal.acm.org/results.cfm?query=genterm%3A%22Human%20Factors%22&amp;coll=portal&amp;dl=ACM&amp;CFID=5040936&amp;CFTOKEN=83468808" target="_self">
+							Human Factors</a>
+							
+						
+					</p>
+				  
+				
+				
+				  		
+						  	
+						
+						
+				
+				
+			
+			</div>
+		 
+		
+		
+				
+		
+			<div class="abstract">
+				
+				<A HREF="citation.cfm%3Fid=365240&amp;coll=portal&amp;dl=ACM&amp;CFID=5040936&amp;CFTOKEN=83468808.1.html#CIT"><img name="top" src="http://portal.acm.org/images/arrowu.gif" hspace="10" border="0"></A><SPAN class=heading><A NAME="collab">Collaborative Colleagues:</A></span>
+				
+				<table border="0" style="margin-left: 2em" cellpadding="2">
+				
+				
+						<tr valign="top"><td><div class="abstract">Cherri Pancake:</div></td><td>
+					
+					
+						
+					
+						
+					
+						
+					
+						
+					
+						
+					
+						
+					
+					
+							
+						
+					
+					
+						
+						
+						<div class="abstract">Joe Hanus</div>
+						
+					
+						
+						
+						<div class="abstract">Dylan Keon</div>
+						
+					
+						
+						
+						<div class="abstract">Christian Lengauer</div>
+						
+					
+						
+						
+						<div class="abstract">Mark Newsome</div>
+						
+					
+						
+						
+						<div class="abstract">Sue Utter</div>
+						
+					
+						
+						
+						<div class="abstract">Dawn Wright</div>
+						
+					
+						</td>
+						</tr>
+				
+				</table>
+			</div>
+						
+		
+		
+		
+			<br>
+			<div class="abstract">
+			
+				<A HREF="citation.cfm%3Fid=365240&amp;coll=portal&amp;dl=ACM&amp;CFID=5040936&amp;CFTOKEN=83468808.1.html#CIT"><img name="top" src="http://portal.acm.org/images/arrowu.gif" hspace="10" border="0"></A><SPAN class=heading><A NAME="peers">Peer to Peer - Readers of this Article have also read:</cite></A></span>
+		<ul type="disc">
+		
+			  
+				
+				 
+				
+			<li>
+			 
+				<A HREF="http://portal.acm.org/citation.cfm?id=4290&amp;dl=ACM&amp;coll=portal&amp;CFID=5040936&amp;CFTOKEN=83468808" target="_self">		  	  Data structures for quadtree approximation and compression</a>
+			
+			
+				
+					
+						<b>Communications of the ACM</b>&nbsp;&nbsp;
+					
+					
+						<font size="-1">28,&nbsp;9</font><br>
+					 
+				  
+				
+			
+			
+				
+					Hanan Samet
+				
+				<br>
+			
+			<br>
+			</li>
+		
+			  
+				
+				 
+				
+			<li>
+			 
+				<A HREF="http://portal.acm.org/citation.cfm?id=143680&amp;dl=ACM&amp;coll=portal&amp;CFID=5040936&amp;CFTOKEN=83468808" target="_self">		  	  A hierarchical single-key-lock access control using the Chinese remainder theorem</a>
+			
+			
+				
+				  	
+					    <b>Proceedings of the 1992 ACM/SIGAPP Symposium on Applied computing</b><br>
+					
+				   
+				
+			
+			
+				
+					Kim S. Lee
+				
+					, &nbsp;Huizhu Lu
+				
+					, &nbsp;D. D. Fisher
+				
+				<br>
+			
+			<br>
+			</li>
+		
+			  
+				
+				 
+				
+			<li>
+			 
+				<A HREF="http://portal.acm.org/citation.cfm?id=125254&amp;dl=ACM&amp;coll=portal&amp;CFID=5040936&amp;CFTOKEN=83468808" target="_self">		  	  The GemStone object database management system</a>
+			
+			
+				
+					
+						<b>Communications of the ACM</b>&nbsp;&nbsp;
+					
+					
+						<font size="-1">34,&nbsp;10</font><br>
+					 
+				  
+				
+			
+			
+				
+					Paul Butterworth
+				
+					, &nbsp;Allen Otis
+				
+					, &nbsp;Jacob Stein
+				
+				<br>
+			
+			<br>
+			</li>
+		
+			  
+				
+				 
+				
+			<li>
+			 
+				<A HREF="http://portal.acm.org/citation.cfm?id=125322&amp;dl=ACM&amp;coll=portal&amp;CFID=5040936&amp;CFTOKEN=83468808" target="_self">		  	  Putting innovation to work:&nbsp;adoption strategies for multimedia communication systems</a>
+			
+			
+				
+					
+						<b>Communications of the ACM</b>&nbsp;&nbsp;
+					
+					
+						<font size="-1">34,&nbsp;12</font><br>
+					 
+				  
+				
+			
+			
+				
+					Ellen Francik
+				
+					, &nbsp;Susan Ehrlich Rudman
+				
+					, &nbsp;Donna Cooper
+				
+					, &nbsp;Stephen Levine
+				
+				<br>
+			
+			<br>
+			</li>
+		
+			  
+				
+				 
+				
+			<li>
+			 
+				<A HREF="http://portal.acm.org/citation.cfm?id=123244&amp;dl=ACM&amp;coll=portal&amp;CFID=5040936&amp;CFTOKEN=83468808" target="_self">		  	  An intelligent component database for behavioral synthesis</a>
+			
+			
+				
+				  	
+					    <b>Proceedings of the 27th ACM/IEEE conference on Design automation</b><br>
+					
+				   
+				
+			
+			
+				
+					Gwo-Dong Chen
+				
+					, &nbsp;Daniel D. Gajski
+				
+				<br>
+			
+			<br>
+			</li>
+		
+		</ul>
+		
+		</div>
+		
+		
+		
+		
+		
+			
+				
+				
+				
+			
+				
+				
+				
+			
+				
+				
+				
+			
+		
+				
+			
+  	
+
+
+
+
+<br>
+<DIV class=footer-copy-text align="center">
+	
+	The ACM Portal is published by the Association for Computing Machinery. Copyright © 2007 ACM, Inc.<br>
+	<A href="http://portal.acm.org/info/usage.cfm?CFID=5040936&CFTOKEN=83468808">Terms of Usage</A>&nbsp;&nbsp;
+	<A href="http://www.acm.org/serving/acm-privacy.html">Privacy Policy</A>&nbsp;&nbsp;
+	<A href="http://www.acm.org/constitution/code.html">Code of Ethics</A>&nbsp;&nbsp;	  
+	<A href="http://www.acm.org/key_people/">Contact Us</A>
+
+<br><br>
+Useful downloads: 
+<a href="http://www.adobe.com/products/acrobat/readstep2.html"><img src="http://portal.acm.org/images/pdf_logo.gif" width="16" height="16" alt="" border="0"> Adobe Acrobat</a>
+&nbsp;&nbsp;
+<a href="http://www.apple.com/quicktime/download/" target="_blank"><img src="http://portal.acm.org/images/qtlogo.gif" width="16" height="16" alt="" border="0"> QuickTime</a>
+&nbsp;&nbsp;
+<a href="http://www.microsoft.com/windows/windowsmedia/download/default.asp" target="_blank"><img src="http://portal.acm.org/images/wmv.gif" width="16" height="15" alt="" border="0"> Windows Media Player</a>
+&nbsp;&nbsp;
+<a href="http://www.real.com/" target="_blank"><img src="http://portal.acm.org/images/realplayer.gif" width="20" height="18" alt="" border="0"> Real Player</a>
+
+
+</DIV>
+
+</td>
+</tr>
+</table>
+</div>
+
+</body>
+</html>

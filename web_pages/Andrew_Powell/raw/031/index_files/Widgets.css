@@ -1,0 +1,538 @@
+/* Widget holder on main pages */
+
+#LastWidgets, .LastWidgets {
+  padding: 6px 9px 3px 9px;
+  text-align: left;
+  width: 160px;
+  margin: 6px -9px 0 -9px;
+  border-top: dotted 1px #CCC;
+}
+
+#LastWebsite a.widget {
+  display: block;
+  width: 135px;
+  padding-left: 25px;
+  padding-top: 1px;
+  margin-top: 4px;
+  margin-left: 0px;
+  overflow: hidden;
+  color: #98AABF !important;
+  font-size: 12px;
+  line-height: 17px;
+  text-align: left;
+}
+
+#LastWebsite div.mainContent a.widget {
+  display: inline;
+  padding-left: 5px;
+}
+
+@media all and (min-width: 0) { 
+  #LastWebsite div.mainContent a.widget { 
+    padding-left: 25px; 
+  }
+}
+
+#LastWebsite div.mainContent a.widget span {
+  margin-left: 0;
+}
+
+#LastWebsite a.widget:hover {
+  color: #6087B0 !important;
+  background: transparent;
+}
+
+a.widget span {
+  float: left;
+  margin-left: -25px;
+  margin-top: -1px;
+  width: 20px;
+  height: 20px;
+  overflow: hidden;
+  font-size: 0;
+  line-height: 0;
+  position: relative;
+}
+
+a.widget > span {
+  text-indent: -9999px;
+}
+
+#widgetLoading {
+  display: none;
+  background: url('http://static.last.fm/depth/widgets/widget_loading.gif') top left no-repeat;
+  width: 346px;
+  height: 36px;
+}
+
+#widgetLoading h2 img { 
+  float: right;
+
+  position: relative;
+  top: 3px;
+}
+
+#whelp {
+  font-size: 11px;
+  color: #91998E;
+  display: block;
+  margin-bottom: 3px;
+}
+
+#message_w span { 
+  background: url("http://static.last.fm/depth/buttons/user_actions/message.gif") no-repeat; 
+}
+
+#friends_w span,
+#wishlist_w span,
+#addevent_w span { 
+  background: url("http://static.last.fm/depth/buttons/user_actions/add.gif") no-repeat;
+}
+
+#playlist_w span { 
+  background: url("http://static.last.fm/depth/buttons/user_actions/edit_playlist.gif") no-repeat;
+}
+
+#rmFriend_w span { 
+  background: url("http://static.last.fm/depth/buttons/user_actions/remove.gif") no-repeat;
+}
+
+#tag_w span { 
+  background: url("http://static.last.fm/depth/buttons/user_actions/tag.gif") no-repeat;
+}
+
+#flag_w span { 
+  background: url("http://static.last.fm/depth/buttons/user_actions/flag.gif") no-repeat;
+}
+
+#recommend_w span, #tellafriend_w span { 
+  background: url("http://static.last.fm/depth/buttons/user_actions/tell_a_friend.gif") no-repeat;
+}
+
+#journal_w span,
+#wiki_w span,
+#details_w span,
+#edit_w span { 
+  background: url("http://static.last.fm/depth/buttons/user_actions/edit.gif") no-repeat;
+}
+
+#upload_w span { 
+  background: url("http://static.last.fm/depth/buttons/user_actions/upload.gif") no-repeat;
+}
+
+#visit_w span { 
+  background: url("http://static.last.fm/depth/buttons/user_actions/visit_profile.gif") no-repeat;
+}
+
+#inviteafriend_w span { 
+  background: url("http://static.last.fm/depth/buttons/user_actions/invite.gif") no-repeat;
+}
+
+#LastWebsite a.widget:hover span { 
+  background-position: 0 -20px;
+}
+
+#LastWebsite a.on span,
+#LastWebsite a.on:hover span { 
+  font-weight: bold;
+  background-position: left bottom;
+}
+
+/* widgets themselves - SIZE */
+
+#widget {
+  width: 346px;
+  height: 36px;
+  overflow: hidden;
+}
+
+#widgetHolder {
+  margin: 1em 0 2em 0;
+}
+
+div.catContent #widgetHolder {
+  margin-top: 33px;
+  margin-bottom: -1em;
+}
+
+body.widget {
+  background-color: transparent;
+}
+
+/* damn IE for the following classes mishmash */
+
+div.widgetMini {
+	height: 240px !important;
+}
+
+body.widget div.widgetMini {
+	height: 230px !important;
+}
+
+body.widget div.widgetMini div.widgetBody {
+	height: 185px !important;
+}
+
+div.widgetNormal {
+	height: 370px !important;
+}
+
+body.widget div.widgetNormal {
+	height: 360px !important;
+}
+
+body.widget div.widgetNormal div.widgetBody {
+	height: 315px !important;
+}
+
+/* widget content */
+
+#loginWidget,
+body.widget {
+  background-color: transparent;
+	background-image: url('http://static.last.fm/depth/widgets/widget_bottom.gif');
+	background-position: left bottom;
+	background-repeat: no-repeat;
+	padding: 0 0 10px 0;
+	margin: 0;
+}
+
+#loginWidget {
+	width: 306px;
+	display: none;
+  position: absolute;
+  margin: 0 !important;
+  z-index: 1001;
+background-image: url('http://static.last.fm/depth/widgets/panel_widget_bottom_narrow.png');
+	height: 235px !important;
+}
+
+#theWidget {
+	padding: 0 7px 0 1px;
+  width: 338px;
+	text-align: left;
+	font-size: 12px;
+	line-height: 1.3;
+	background-image: url('http://static.last.fm/depth/widgets/widget_middle.gif');
+	background-position: left top;
+}
+
+#loginWidget #theWidget {
+	background-image: url('http://static.last.fm/depth/widgets/panel_widget_middle_narrow.png');
+	height: 171px;
+	padding: 10px 16px 28px 10px;
+	width: 280px;
+}
+
+#theWidget div.widgetBody {
+  overflow: auto;
+  width: 320px;
+  padding: 10px 9px;
+}
+
+#loginWidget h2,
+#theWidget h2,
+#widgetLoading h2 {
+	height: 25px;
+	background: #DDD;
+	margin: 0 -6px 0 -1px;
+	padding: 1px 16px 0 10px;
+	text-align: left;
+	line-height: 25px;
+	font-size: 11px;
+	color: #666;
+	background-image: url('http://static.last.fm/depth/widgets/widget_top.gif');
+	background-position: left top;
+	background-repeat: no-repeat;
+	background-color: transparent;
+}
+
+#loginWidget h2 {
+	background-image: url('http://static.last.fm/depth/widgets/panel_widget_top_narrow.png');
+	margin: 0;
+	background-color: transparent;
+}
+
+#widgetLoading h2 { background: none; margin-left: 0; }
+#widgetLoading h2 span { float: left;}
+
+#theWidget .close,
+#theWidget .helpWidget {
+	width: 22px;
+	height: 22px;
+	position: absolute;
+	top: 2px;
+	text-indent: -9999px;
+	line-height: 0;
+	font-size: 0;
+	border: none !important;
+	background-position: left top;
+	background-repeat: no-repeat;
+}
+
+#loginWidget #theWidget .close {
+	top: -24px;
+}
+
+#theWidget .close {
+	right: 7px;
+	background-image: url('http://static.last.fm/depth/panels/close_grey.gif');
+}
+
+#theWidget .helpWidget {
+	right: 29px;
+	background-image: url('http://static.last.fm/depth/panels/help_grey.gif');
+}
+
+#theWidget select {
+	float: left;
+	margin: 0;
+}
+
+#theWidget input {
+	float: left;
+	margin: 0 10px 0 0;
+	font-size: 12px;
+	clear: both;
+}
+
+#theWidget textarea {
+	margin: 0 0 10px 0;
+	width: 318px;
+	font-size: 12px;
+}
+
+#theWidget label {
+	float: left;
+	margin-top: -1px;
+}
+
+#theWidget label.input {
+	clear: both;
+	margin-bottom: 3px;
+}
+
+.widgetGroup {
+	overflow: hidden;
+	margin: 0 0 15px 0;
+	padding: 0;
+}
+
+.widgetGroup fieldset {
+  display: block;
+  clear: both;
+  padding-left: 1px;
+}
+
+#theWidget div#submitButtons {
+  clear: both;
+  margin: 15px auto 0 auto;
+  width: 15em;
+  padding-left: 1em;
+}
+
+#theWidget div#submitButtons input {
+  display: inline;
+  clear: none;
+  text-align: center;
+  margin: 0;
+}
+
+#theWidget div#submitButtons input#submit {
+  margin-right: 1em;
+}
+
+#theWidget .help {
+	clear: both;
+}
+
+#theWidget h4 {
+	font-size: 12px;
+	margin: 0 0 10px 0;
+	padding: 0;
+	font-weight: normal;
+	color: #545454;
+}
+
+#theWidget p {
+	margin: 0 0 10px 0;
+}
+
+/* login widget */
+
+#loginWidget #theWidget form {
+	height: 190px;
+	overflow: auto;
+	clear: both;
+}
+
+#LastWebsite #loginWidget #theWidget .chartmore {
+	margin: 0;
+	padding-top: 10px;
+	font-size: 12px;
+}
+
+#LastWebsite #loginWidget #theWidget .chartmore a {
+	font-size: 12px;
+}
+
+/* login widget login form */
+
+#loginWidget .realForm label {
+	width: 80px;
+}
+
+#loginWidget .realForm input {
+	width: 185px;
+}
+
+#LastWebsite #loginWidget .realForm #submit {
+	float: right;
+	width: auto;
+	clear: both;
+	margin-top: 15px;
+	margin-right: 10px;
+}
+
+/* remove friend */
+
+#removeFriendWidget .widgetGroup input {
+	clear: none !important;
+	float: left !important;
+	margin-right: 10px;
+}
+
+/* Tags */
+
+#tagWidget div.widgetBody {
+  font-size: 11px;
+}
+
+.tagGroup {
+	width: 300px;
+}
+
+#tagWidget label {
+  margin-bottom: 0.7em;
+  display: block;
+}
+
+#tagWidget textarea#tagInput {
+  margin-bottom: 1.2em;
+  width: 300px;
+  height: 2.4em;
+}
+
+#theWidget .tagGroup .tagUl h5 {
+	margin: 0;
+	font-size: 11px;
+	color: #545454;
+	font-weight: normal;
+}
+
+#theWidget .tagGroup div#favTagsUl {
+  margin-bottom: 12px;
+}
+
+#theWidget .tagGroup .tagUl ul {
+	margin: 0;
+  font-size: 13px;
+	display: block;
+	max-height: 5.2em;
+	overflow: auto;
+	padding: 0 0 1px 0;
+}
+
+#theWidget .tagGroup .onlyTagUl {
+  max-height: 12em;
+}
+
+#theWidget .tagGroup li {
+	margin: 0;
+	padding: 0;
+	display: inline;
+	color: #4B72A9;
+	font-weight: bold;
+	font-family: Arial, Helvetica, Verdana, sans-serif;
+	overflow: visible;
+}
+
+#theWidget .tagGroup li,
+#theWidget .tagGroup li a {
+	color: #4B72A9;
+	text-decoration: none;
+	background: transparent;
+	cursor: pointer;
+}
+
+#theWidget .tagGroup li:hover,
+#theWidget .tagGroup li a:hover {
+	color: #FFF;
+	background: #4B72A9;
+}
+
+/* Recommend */
+
+#theWidget div#radios input, #theWidget div#radios label, #theWidget div#radios select {
+	float: left;
+  margin-right: 0;
+  line-height: 2em;
+  vertical-align: middle;
+}
+
+#recommendWidget textarea#msg {
+  margin: 10px 0 0 0;
+  height: 2.7em;
+}
+
+#recommendWidget div.widgetGroup {
+  margin: 0;
+}
+
+
+#theWidget div#radios input {
+  margin-right: 4px;
+  position: relative;
+  top: 3px;
+}
+
+#theWidget div#radios input.text {
+  margin: 0;
+  width: 150px;
+  clear: none;
+  top: 0px;
+}
+
+#theWidget div#radios label {
+  margin-right: 6px;
+  height: 2em;
+}
+
+/* Message */
+
+#messageWidget #theWidget img {
+	float: left;
+	border: solid 1px #C2C2C2;
+	margin: 0 10px 0 0;
+}
+
+#messageWidget label {
+	clear: none !important;
+	width: 50px;
+	overflow: visible;
+	margin: 0 5px 0 0;
+	float: left;
+}
+
+#messageWidget input#subject {
+	clear: none;
+	float: right;
+	width: 180px;
+	margin: 0;
+}
+
+#messageWidget textarea {
+	margin: 0;
+	clear: both;
+	margin: 10px 0 0 0;
+}

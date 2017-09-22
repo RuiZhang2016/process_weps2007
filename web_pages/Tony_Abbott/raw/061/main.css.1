@@ -1,0 +1,500 @@
+/* General Styles */
+
+DIV, TD, BODY, OL, UL, LI, H1, H2, FORM, TABLE,P,H3,H4, IMG {
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: 11px;
+	color : #233603;
+	margin: 0;
+	padding: 0;
+	border: 0;
+	line-height: 1.2;
+	vertical-align : top;
+	text-align: left;
+}
+
+BODY, HTML {
+	margin : 0;
+	padding : 0;
+	border: 0;
+	text-align: center; /* IE 5.x hack */
+	background-color :#585858;
+}
+BODY {
+	margin-top : 20px;
+}
+
+A{
+	color : #00249F;
+	margin : 0px;
+
+}
+
+A:hover {
+    color : #ffa000;
+}
+
+P {
+	margin-bottom : 12px;
+}
+
+INPUT, OPTION, SELECT {
+	font-size : 10px;
+	color : #000;
+}
+
+H1 {
+
+}
+
+H2 {
+
+}
+
+H3 {
+
+}
+
+SPAN.pipe {
+	margin-left : 3px;
+	margin-right : 3px;
+}
+
+
+
+.s9i, .s10i, .s11i, .s12i, .s131 {font-style:italic;}
+.s9b, .s10b, .s11b, .s12b, .s13b {font-weight:bold;}
+.s9, .s9b, .s9i, TD.credits, TD.credits A, TD.account_details,
+DIV.view_all, DIV.view_all A  {font-size:9px;line-height:11px;}
+.s10, .s10b, .s10i {font-size:10px;line-height:13px;}
+.s11, .s11b, .s11i {font-size:11px;line-height:15px;}
+.s12, .s12b, .s12i {font-size:12px;line-height:17px;}
+.s13, .s13b, .s13i {font-size:13px;line-height:18px;}
+.s9, .s9b, .s9i, .s10, .s10b, .s10i, .s11, .s11b, .s11i, .s12, .s12b, .s12i, .s13, .s13b, .s13i {font-family:verdana,geneva,sans-serif;}
+STRONG {font-weight: bold;}
+.black {
+	color: #000;
+}
+
+.orange {
+	color: #D34803;
+}
+
+
+/* Shared Styles For Multi Use Classes And IDs */
+
+#contentContainer {
+	text-align: left; margin: 0 auto; /* Recover from ie hack for centering */
+	width: 770px;
+	}
+
+/* Styles For Dark Gray and Orange Text On Header Pill */
+.titleGray, .titleOrange {font-family: Verdana, Arial, Helvetica, sans-serif; /* Gray nonlinked text */
+	font-size: 10px;
+	color : #42413C;
+	font-weight: bold;
+	text-decoration: none;
+	}
+.titleOrange {color : #D34803;}	/* orange nonlinked text */
+
+/* Main Positioning */
+
+
+
+
+/* Styles For Category List */
+DIV#categories {
+	width: 161px;
+	background-color: #A0B549;
+	position: relative;
+	top: -1px; left: 0;
+}
+
+DIV#categories DIV#holds_list {
+	width: 145px;
+	margin-left: 10px;
+	padding-bottom : 20px;
+}
+
+/* Styles For Category List */
+DIV#categories_BCWG {
+	width: 161px;
+ 	position: relative;
+	top: -1px; left: 0;
+}
+
+DIV#categories_BCWG DIV#holds_list_BCWG {
+	width: 145px;
+	margin-left: 10px;
+	padding-bottom : 20px;
+}
+
+
+#catlist_home {
+	list-style: none;
+}
+
+#catlist_home_BCWG {
+	padding-left: 12px;
+	list-style: none;
+}
+#catlist_home_BCWG_DN {
+	list-style: none;
+}
+TABLE#secondaryNavWrapper #bottom {
+	height: 3px;
+	background:transparent;
+}
+
+
+#catlist_home LI {
+	padding-left: 10px;
+	background-image: url(/images/everest/layout/light_grn_cat_bullet.gif);
+	background-repeat: no-repeat;
+	background-position: 0 .5em;
+	font-size: 10px; line-height: 13px;
+	font-weight: bold;
+	text-decoration: none;
+}
+
+
+#catlist_home_BCWG LI {
+	padding-left: 15px;
+	background-image: url(/images/everest/landing/bookclub/icon_bullet_grey.gif);
+	background-repeat: no-repeat;
+	background-position: 0 .3em;
+	font-size: 10px; line-height: 13px;
+ 	text-decoration: none;
+}
+
+#catlist_home_BCWG_DN LI {
+	padding-left: 10px;
+	background-image: url(/images/everest/landing/bookclub/icon_arrow_down.gif);
+	background-repeat: no-repeat;
+	background-position: 0 .3em;
+	font-size: 10px; line-height: 13px;
+ 	font-weight: bold;
+ 	color: #cccccc;
+	text-decoration: none;
+}
+
+#catlist_home LI A {
+	text-decoration: none;
+}
+#catlist_home_BCWG LI A {
+		text-decoration: none;
+		color: #cccccc;
+
+}
+
+
+#catlist_home_BCWG_DN LI A {
+	text-decoration: none;
+		color: #cccccc;
+
+}
+#catlist_home LI.selected {
+	color: #000;
+	background-image: url(/images/everest/layout/orange_cat_bullet.gif);
+
+}
+
+
+
+#catlist_home_BCWG LI.selected {
+	padding-left: 15px;
+	color: #D53F1A;
+	background-image: url(/images/everest/landing/bookclub/icon_bullet_orange.gif);
+
+}
+
+
+#prod_detail_catList, #prod_detail_catList UL,  #category_catList, #category_catList UL {
+	list-style: none;
+	text-decoration: none;
+}
+
+
+#prod_detail_catList LI,  #prod_detail_catList LI LI, #category_catList LI,  #category_catList LI LI {
+	padding-left: 10px;
+	font-size: 10px; line-height: 13px;
+	font-weight: bold;
+	color: #D34803;
+}
+
+#category_catList LI {
+	color: #000;
+	background-image: url(/images/everest/layout/orange_cat_arrow.gif);
+	background-repeat: no-repeat;
+	background-position: 0 .3em;
+	padding-left: 12px;
+}
+
+#prod_detail_catList LI {
+	background-image: url(/images/everest/layout/light_grn_down_arrow.gif);
+	background-repeat: no-repeat;
+	background-position: 0 .5em;
+	padding-left: 12px;
+
+}
+
+#prod_detail_catList LI UL LI, #prod_detail_catList LI UL LI A, #category_catList LI UL LI, #category_catList LI UL LI A {
+	background-image: url(/images/everest/layout/light_grn_cat_bullet.gif);
+	background-repeat: no-repeat;
+	background-position: 0 .5em;
+	font-size: 10px; line-height: 13px;
+	font-weight: bold;
+	color: #fff;
+	text-decoration: none;
+}
+
+#prod_detail_catList LI LI.selected {
+	color: #000;
+	background-image: url(/images/everest/layout/orange_cat_bullet.gif);
+
+}
+
+
+
+SELECT.catDrop {
+	margin-bottom: 13px;
+}
+
+/* Styles For Footer  */
+P.footer {
+	position: relative; top: -59px;
+	width: 770px;
+	text-align: center;
+}
+P.footer, P.footer A, P.footer A:link, P.footer A:visited {
+	font-size: 9px; line-height: 13px;
+	color: #000;
+	text-decoration: none;
+}
+P.footer A:hover, P.footer A:active {
+	color:#fff;
+}
+P.footer A.rss, P.footer A.rss:link, P.footer A.rss:visited {
+	color: #B6CA64;
+}
+P.footer A.rss:hover, P.footer A.rss:active {
+	color: #fff;
+}
+
+/* Templates */
+#content_columns_nobg {
+	width:770px;
+	height: 500px;
+	position: relative;
+	top: -69px;
+	background: #B6CA64 url(/images/everest/layout/non_homepage_02.gif) no-repeat top left;
+	margin-bottom : 0;
+	border : 0;
+	z-index: 110;
+}
+
+#content_columns, #content_columns_2 {
+	width:770px;
+	height: 500px;
+	position: relative;
+	top: -69px;
+	background: #B6CA64 url(/images/everest/layout/non_homepage_02.gif) no-repeat top left;
+	margin-bottom : 0;
+	border : 0;
+	z-index: 110;
+}
+#content_columns_3 {
+	width:770px;
+	height: 500px;
+	position: relative;
+	top: -69px;
+	background: #B6CA64;
+	margin-bottom : 0;
+	border : 0;
+	z-index: 110;
+}
+#content_columns_3 TD.left{
+	padding: 40px 5px 0px 10px
+}
+#content_columns_3 TD.right{
+	padding: 10px 0 0 0;
+}
+#content_columns_3 #left_column  {
+	width: 178px;
+}
+#content_columns_2 TD.left {
+	padding: 40px 5px 0px 10px
+}
+#content_columns_2 TD.right {
+	padding: 40px 0 0 0;
+}
+#content_columns #left_column  {
+	width: 178px;
+	background: transparent url(/images/everest/layout/bg_categories.gif) no-repeat top left;
+}
+#content_columns #left_column_pad15  {
+	width: 178px;
+	background: transparent url(/images/everest/layout/bg_categories.gif) no-repeat top left;
+		padding-top : 45px;
+}
+#content_columns_nobg #left_column  {
+	width: 178px;
+	background: transparent url(/images/everest/layout/bg_categories.gif) no-repeat top left;
+}
+#content_columns_nobg #left_column_pad15  {
+	width: 178px;
+	background: transparent url(/images/everest/layout/bg_categories.gif) no-repeat top left;
+		padding-top : 45px;
+}
+#right_margin {
+	 background: transparent;
+}
+
+#bottomCurve {
+	background-color: #585858;
+}
+#left_column, #mid_column, #right_column ,#left_column_pad15{
+	padding-top : 15px;
+}
+
+
+/* Generic Form */
+TABLE.genForm{
+	width : 554px;
+	background-color : #E9ECDE;
+}
+TABLE.genForm TD.genFormTop {
+	background: url(/images/everest/layout/bg_genForm_top.gif) no-repeat top left;
+	padding: 9px 0 0 7px;
+}
+TABLE.genForm TR.bg1 {
+	background-color :#e1e5d1;
+}
+TABLE.genForm TR.bg2 {
+	background-color :#F1F3E9;
+}
+TABLE.genForm TR.bg3 {
+	background-color :#C6C9BA;
+}
+TABLE.genForm TD {
+	vertical-align : middle;
+	font-size:9px;
+}
+TABLE.genForm TH {
+	font-size:9px;
+	font-weight:bold;
+	background-color : #C6C9BA;
+}
+TABLE.genForm TH.title{
+	padding:10px 0 10px 10px;
+	width:86px;
+}
+TABLE.genForm TH.expiration{
+	width:151px;
+}
+TABLE.genForm TH.email{
+	width:169px;
+}
+TABLE.genForm TH.renew{
+	padding-right:10px;
+	width:119px;
+}
+TABLE.genForm TD.title{
+	padding:4px 0 4px 10px;
+	width:86px;
+}
+TABLE.genForm TD.expiration{
+	width:151px;
+}
+TABLE.genForm TD.email{
+	padding-left:30px;
+	width:139px;
+}
+TABLE.genForm TD.renew{
+	width:119px;
+}
+TABLE.genForm TD.submit{
+	padding:4px 0 0 10px;
+	background-color:#C6C9BA;
+}
+TABLE.genForm TD.user{
+	padding:10px 10px 10px 10px;
+}
+TABLE.genForm TD.formModule{
+	padding:20px 10px 10px 10px;
+	text-align:left;
+}
+TABLE.genForm INPUT{
+	width:145px;
+}
+TABLE.genForm INPUT.address{
+	width:215px;
+}
+TABLE.genForm INPUT.zip{
+	width:80px;
+}
+TABLE.genForm INPUT.check{
+	width:20px;
+}
+TABLE.genForm INPUT.emailCheck{
+	width:20px;
+}
+TABLE.genForm A{
+	color: #D65819;
+	text-decoration: underline;
+}
+TABLE.genForm TD.modSpacer, DIV.modSpacer {
+	height:1px;
+}
+h3.moduleHead {
+	font-size: 11px;
+	color: #233603;
+	font-weight: bold;
+	padding: 0 0 8px 0;
+}
+.wMargin {
+	height: 1px;
+	background-color: #fff;
+}
+.bold {
+	font-weight:bold;
+}
+TABLE.white580 {
+	width: 580px;
+	background-color: #fff;
+}
+TABLE.white580 TD.marginLeft, TABLE.white580 TD.marginRight {
+	width: 9px;
+}
+TABLE.white580 TD.marginRight {
+	width: 9px;
+}
+TABLE.white580 TD.dropShadow {
+	width: 3px;
+	background: transparent url(/images/everest/layout/3px_green_drop.gif) repeat;
+}
+TABLE.white580 TD.content {
+	width: 558px;
+}
+TABLE.white580 DIV.goBack {
+	padding: 8px 360px 8px 0; margin: 0; border: 0; float: left;
+}
+TABLE.white580 INPUT.continueShopping {
+	padding: 8px 308px 8px 0; margin: 0; border: 0; float: left;
+}
+TABLE.white580 INPUT.completePurchase {
+	padding: 8px 0 8px 0; margin: 0; border: 0; float: right;
+}
+TABLE.white580 INPUT.nextStep {
+	padding: 8px 0 8px 37px; margin: 0; border: 0; float: right;
+}
+.orangeLink A, .orangeLink A:link {
+	color: #d34803;
+}
+.orangeLink A:visited {
+	color: #913c12;
+}
+.orangeLink A:hover, .orangeLink A:active {
+	color: #000;
+}
+
+

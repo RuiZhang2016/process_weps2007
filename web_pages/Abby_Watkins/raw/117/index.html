@@ -1,0 +1,542 @@
+
+
+
+<html>
+<head>
+<script language="javascript" type="text/javascript">
+
+
+var rm = false;
+
+</script>
+
+
+
+
+<title>AP Wire | 02/10/2003 | Monday's Canada News Briefs</title>
+<link rel='stylesheet' type='text/css' href='/css/palette/ledgerenquirer/en/global.css'/><script type="text/javascript" language="javascript">
+
+_krdDartOrd = new Date().getTime();
+
+_krdDartInc = 0;
+var navReady = false;
+var toolsReady = false;var onLoadScript="";function Browser() {var b=navigator.appName;
+if (b=="Netscape") this.b="ns";
+else if ((b=="Opera") || (navigator.userAgent.indexOf("Opera")>0)) this.b = "opera";
+else if (b=="Microsoft Internet Explorer") this.b="ie";
+// I have disabled the following line, but something similar might be useful later,
+// but launching a popup window is more polite than this alert.
+//if (!b) alert(''Unidentified browser./nThis browser is not supported,'');
+this.version=navigator.appVersion;
+this.v=parseInt(this.version);
+this.ns=(this.b=="ns" && this.v>=4);
+this.ns4=(this.b=="ns" && this.v==4);
+this.ns6=(this.b=="ns" && this.v==5);
+this.ie=(this.b=="ie" && this.v>=4);
+this.ie4=(this.version.indexOf('MSIE 4')>0);
+this.ie4up = (this.ie && this.v>= 4);
+this.ns5up = (this.ns && this.v>= 5);
+this.ie5=(this.version.indexOf('MSIE 5')>0);
+this.ie5up = (this.ie5);
+this.ie55=(this.version.indexOf('MSIE 5.5')>0);
+this.opera=(this.b=="opera");
+this.def=(this.ie||this.dom);var ua=navigator.userAgent.toLowerCase();
+this.mac = (ua.indexOf("mac")!=-1);if (ua.indexOf("win")>-1) this.platform="win32";
+else if (ua.indexOf("mac")>-1) this.platform="mac";
+else this.platform="other";
+}
+var is = new Browser();
+// tiny extra css. these are ONLY used by old browsers.
+// VAST majority of users will NEVER request these files.
+// Even NS4 is around 7% of market and falling
+if (is.ns4 && is.mac==false) {
+var css = "<LINK rel='stylesheet' type='text/css' href='/css/palette/ledgerenquirer/en/browser/ns4.css'>\n";
+document.write(css);
+}
+if (((is.ns4)||(is.ie4))&&( is.mac)) {
+var css = "<LINK rel='stylesheet' type='text/css' href='/css/palette/ledgerenquirer/en/browser/ns4mac.css'>\n";
+document.write(css);
+}
+if (is.ie4 && is.mac==false) {
+var css = "<LINK rel='stylesheet' type='text/css' href='/css/palette/ledgerenquirer/en/browser/ie4.css'>\n";
+document.write(css);
+}
+
+function LayerObject(divId) {
+this.name = divId;
+if (is.ns4) this.ob = eval("document." +divId);
+else if (is.ie4) this.ob = document.all(divId);
+else this.ob = document.getElementById(divId);
+this.x = 0;
+this.y = 0;
+this.width = this.getWidth();
+this.height = this.getHeight();
+}
+LayerObject.prototype.px = (is.version>=5)?"px":"";
+LayerObject.prototype.hideSyntax = (is.ns4)? "hide":"hidden";
+LayerObject.prototype.showSyntax = "visible";// NS4::  Unbelievable, but document.layername.document.imgname works for img-in-layer-in document
+// and it works for img in layer in table in document.
+// but it doesnt work for img in layer in table in table in document.
+// Maybe a workaround exists, but it seems unlikely at this point.
+// The images MUST therefore be nested only one deep....
+LayerObject.prototype.getInlineLeft = function() {
+if (is.ns4) return this.ob.pageX;
+else if ((is.ie) || (is.opera)) {
+var elem = this.ob;
+var xPos = 0;
+var yPos = 0;
+while (elem.offsetParent != null) {
+xPos += elem.offsetLeft;
+yPos += elem.offsetTop;
+elem = elem.offsetParent;
+}
+if (is.mac) xPos += 2;
+return xPos;
+}
+else return (this.ob.offsetLeft + document.body.offsetLeft);
+}
+
+LayerObject.prototype.getInlineTop = function() {
+if (is.ns4) return this.ob.pageY;
+else if ((is.ie) || (is.opera)) {
+var elem = this.ob;
+var yPos=0;
+while (elem.offsetParent != null) {
+yPos += elem.offsetTop;
+elem = elem.offsetParent;
+}
+if (is.mac) yPos += 2;
+return yPos;
+}
+else return (this.ob.offsetTop+ document.body.offsetTop);
+}
+
+//getWidth and getHeight works for both inline and positioned divs.
+LayerObject.prototype.getWidth = function () {
+if (is.ns4) return this.ob.clip.width;
+else if (is.opera) return this.ob.style.pixelWidth;
+else return this.ob.offsetWidth;
+}
+LayerObject.prototype.getHeight = function () {
+if (is.ns4) return this.ob.clip.height;
+else if (is.opera) return this.ob.style.pixelHeight;
+else return this.ob.offsetHeight;
+}
+LayerObject.prototype.hide = function() {
+if (is.ns4) this.ob.visibility = this.hideSyntax;
+else this.ob.style.visibility = this.hideSyntax;
+}
+LayerObject.prototype.show = function() {
+if (is.ns4) this.ob.visibility = this.showSyntax;
+else this.ob.style.visibility = this.showSyntax;
+}
+LayerObject.prototype.moveLayerTo = function(toX, toY) {
+this.x = toX;
+this.y = toY;
+}
+LayerObject.prototype.updateLayer = function() {
+if (is.ns4) {
+this.ob.left = Math.round(this.x) + this.px;
+this.ob.top = Math.round(this.y)+ this.px ;
+}
+else {
+this.ob.style.left = Math.round(this.x) + this.px;
+this.ob.style.top = Math.round(this.y) + this.px;
+}
+}
+//-----------------
+function roll(divName, imgName, which) {
+var suffix = (which==1)?"on":"off"
+if ((is.ns4)&&(divName!=0)) {
+var imgObject = eval("document." + divName +".document.images['"+imgName +"']");
+imgObject.src = eval(imgName + "_" + suffix + ".src");
+}
+else {
+document.images[imgName].src = eval(imgName + "_" + suffix + ".src");
+}
+}
+
+function init() {
+if (onLoadScript) eval(onLoadScript);
+}
+
+// Workaround for the netscape resize problem --
+// namely, on resize ns looses div positioning and
+// styles from css files.
+// This checks to see if the window''s dimensions have
+// actually changed (because Netscape often fires a
+// false onResize event when it forms scrollbars);
+// if the dimensions have changed, page is reloaded
+function resizefix(){
+if((document.resizeFix.initWidth != window.innerWidth) ||
+(document.resizeFix.initHeight != window.innerHeight))
+{
+document.location = document.location;
+}
+}
+
+// This code creates a new object with properties
+// to hold the current window width & height to be
+// used in the event of a netscape resize
+document.resizeFix = new Object();
+if(is.ns4){
+document.resizeFix.initWidth = window.innerWidth;
+document.resizeFix.initHeight = window.innerHeight;
+window.onresize=resizefix;
+}
+
+
+
+
+
+
+
+function initMenus(){
+}
+
+
+function showResults(siteSurveyKey) {
+var url="/mld/templates/contentModules/poll-results-popup.jsp"+ "?siteSurveyKey=" + siteSurveyKey;
+window.open(url, 'Title');
+}
+
+function openWin(URL) {
+aWindow = window.open(URL,
+'thewindow','width=500,height=400,resizable=yes,scrollbars=yes');
+}
+
+
+
+
+
+</script>
+</head>
+<body class="body" topmargin="0" leftmargin="0" marginwidth="0" marginheight="0">
+
+
+
+
+
+<script id="search_box_center_jsp_script" language="javascript" type="text/javascript">
+function searchFormSubmit(form) {
+var searchSelectIndex = form.searchSelect.selectedIndex;
+var searchSelectValue = form.searchSelect.options[searchSelectIndex].value;
+if (searchSelectValue == "archives") {
+window.location = "http://www.newslibrary.com/nlsearch.asp?forceTheme=RealCities&s_site=ledgerenquirer&search_mode=all&action=search&date_mode=year&year=last+180+days&sort=d%3Ah&nitems=10&region=cl&dbquery=" + form.query.value;
+return false;
+}
+return true;
+}
+</script>
+<!-- CDS : SDP2.3.1_full_08172004_080001 : production --><table border="0" cellpadding="0" cellspacing="0" bgcolor="#000000" width="768">
+<tr><td background="/images/palette/ledgerenquirer/bg1.gif" width="280"><a href="/"><img src="/images/logos/site/ledgerenquirer/ledgerenquirer/site_logo_280x75.gif" width="280" height="75" alt="" border="0"/></a></td><td background="/images/palette/ledgerenquirer/bg2.gif" align="left" width="100%">
+<table cellspacing="0" cellpadding="0" width="100%" border="0">
+<tr><td><table cellspacing="0" cellpadding="1" border="0">
+<tr><td rowspan="4"><img src="/images/common/spacer.gif" width="25" height="1"></td></tr><tr><td colspan="4"><b class="headersearch">Search: </b>&nbsp;</td></tr><form action="http://www.ledger-enquirer.com/mld/ledgerenquirer/search/search_results.htm" method="get" name="SearchForm_top" ONSUBMIT="return searchFormSubmit(this)">
+<input type=hidden name="pubName" value="ledgerenquirer">
+<input type=hidden name="orderBy" value="date">
+<input type=hidden name="pageStart" value="1">
+
+
+<input type="hidden" name="sitesToSearch" value="ledgerenquirer,enquirer,realcities">
+
+
+
+<input type=hidden name="pageSize" value="10">
+<input type=hidden name="fieldsToSearch" value="HEADLINE,FORSEARCH,LEAD,BYLINE">
+<input type=hidden name="queryType" value="all">
+<tr><td class="v1search">
+<span id="globalsearchform"><select name="searchSelect" class="searchformelement2">
+<option value="article" selected>Articles-last 7 days</option><option value="archives">Articles-older than 7 days</option>
+
+
+
+<option value="web">The Web</option>
+
+
+</select>
+</span>
+</td><td class="headersearch">&nbsp;<b>for</b>&nbsp;</td><td><input name="query" type="text" size="23" class="searchformelement" maxlength="256">
+</td><td><input type="submit" value="Go" class="smallformbutton">
+<img src="/images/common/spacer.gif" width="20" height="1">
+</td></form>
+</tr><tr><td colspan="4"><img src="/images/common/spacer.gif" width="1" height="4"></td></tr></table></td></tr></table></td></tr></table>
+<table border="0" cellpadding="0" cellspacing="0" bgcolor="#000000" width="768" background="/images/palette/ledgerenquirer/bg4.gif">
+<tr><td valign="middle" align="left" class="utilitylinks">
+<img src="/images/palette/ledgerenquirer/spacer1.gif">
+<span class="navspace">&nbsp;&nbsp;</span><a href="/mld/ledgerenquirer/news/" class="utilitylinks"> News </a><span class="navpipe">&nbsp;|&nbsp;</span><a href="/mld/ledgerenquirer/business/" class="utilitylinks"> Business </a><span class="navpipe">&nbsp;|&nbsp;</span><a href="/mld/ledgerenquirer/sports/" class="utilitylinks"> Sports </a><span class="navpipe">&nbsp;|&nbsp;</span><a href="/mld/ledgerenquirer/entertainment/" class="utilitylinks"> Entertainment </a><span class="navpipe">&nbsp;|&nbsp;</span><a href="/mld/ledgerenquirer/living/" class="utilitylinks">Living </a><span class="navpipe">&nbsp;|&nbsp;</span><a href="http://www.shoplocal.com/ledgerenquirer/new_user_entry.aspx?CityStateZip=31829&AdRef=link02" class="utilitylinks">Shop Local</a><span class="navpipe">&nbsp;|&nbsp;</span><a href="/mld/ledgerenquirer/classifieds/" class="utilitylinks"> Classifieds </a><span class="navpipe">&nbsp;|&nbsp;</span><a href="/mld/ledgerenquirer/classifieds/employment/" class="utilitylinks"> Jobs </a><span class="navpipe">&nbsp;|&nbsp;</span><a href="/mld/ledgerenquirer/classifieds/automotive/" class="utilitylinks"> Cars </a><span class="navpipe">&nbsp;|&nbsp;</span><a href="/mld/ledgerenquirer/classifieds/real_estate/" class="utilitylinks"> Homes </a><br><img src="/images/palette/ledgerenquirer/spacer2.gif"></td></tr></table>
+
+
+<table border="0" cellpadding="0" cellspacing="0" width="768">
+<tr><td align="center" class="columndiv">
+<img src="/images/common/spacer.gif" width="768" height="1" ><br/></td></tr></table>
+<table border="0" cellpadding="2" cellspacing="0" width="768">
+<tr><td align="center" class="adbkg"><SCRIPT LANGUAGE="JavaScript1.1">
+_krdDartInc++;
+document.write('<SCRIPT LANGUAGE="JavaScript1.1" SRC="http://ad.doubleclick.net/adj/ledgerenquirer.news/news;kw=top;c2=news_homepage;pos=top;group=banner;dcopt=ist;tile='+_krdDartInc+';ord='+_krdDartOrd+'?"><\/SCRIPT>');
+</SCRIPT>
+<NOSCRIPT>
+<A HREF="http://ad.doubleclick.net/jump/ledgerenquirer.news/news;kw=top;c2=news_homepage;pos=top;group=banner;ord=1095868431342?" TARGET="_blank">
+<IMG SRC="http://ad.doubleclick.net/ad/ledgerenquirer.news/news;kw=top;c2=news_homepage;pos=top;group=banner;ord=1095868431342?" BORDER="0" ></A>
+</NOSCRIPT>
+</td></tr></table>
+<table border="0" cellpadding="0" cellspacing="0" width="768">
+<tr><td class="columndiv" width="134"><img src="/images/common/spacer.gif" width="134" height="1"></td><td class="columndiv" width="1"><img src="/images/common/spacer.gif" width="1" height="1"></td><td class="columndiv" width="472"><img src="/images/common/spacer.gif" width="472" height="1"></td><td class="columndiv" width="1"><img src="/images/common/spacer.gif" width="1" height="1"></td><td class="columndiv" width="160"><img src="/images/common/spacer.gif" width="160" height="1"></td></tr><tr>
+<td class="leftrail" valign="top" align="center" width="134">
+
+
+
+
+
+
+<table border="0" cellpadding="0" cellspacing="0" width="100%">
+<tr><td class="navborder">
+<table border="0" cellpadding="0" cellspacing="1" width="100%"><tr><td class="navbg1">
+&nbsp;<b><a href="/mld/ledgerenquirer/news/" name="1">
+<span class="nav1">News</span></b></a>
+</td></tr><tr><td class="navbg2">
+<span class="navbullet2">&nbsp;&#149;&nbsp;</span>
+<a href="/mld/ledgerenquirer/news/breaking_news/" name="3115"><b>
+<span class="nav2">Breaking News</span>
+</b></a>
+</td></tr><tr><td class="navbg2">
+<span class="navbullet2">&nbsp;&#149;&nbsp;</span>
+<a href="/mld/ledgerenquirer/news/columnists/" name="3125"><b>
+<span class="nav2">Columnists</span>
+</b></a>
+</td></tr><tr><td class="navbg2">
+<span class="navbullet2">&nbsp;&#149;&nbsp;</span>
+<a href="/mld/ledgerenquirer/news/state/" name="4195"><b>
+<span class="nav2">Fort Benning</span>
+</b></a>
+</td></tr><tr><td class="navbg2">
+<span class="navbullet2">&nbsp;&#149;&nbsp;</span>
+<a href="/mld/ledgerenquirer/news/local/" name="4160"><b>
+<span class="nav2">Local</span>
+</b></a>
+</td></tr><tr><td class="navbg2">
+<span class="navbullet2">&nbsp;&#149;&nbsp;</span>
+<a href="/mld/ledgerenquirer/news/nation/" name="4175"><b>
+<span class="nav2">Nation</span>
+</b></a>
+</td></tr><tr><td class="navbg2">
+<span class="navbullet2">&nbsp;&#149;&nbsp;</span>
+<a href="/mld/ledgerenquirer/news/obituaries/" name="3090"><b>
+<span class="nav2">Obituaries</span>
+</b></a>
+</td></tr><tr><td class="navbg2">
+<span class="navbullet2">&nbsp;&#149;&nbsp;</span>
+<a href="/mld/ledgerenquirer/news/opinion/" name="4180"><b>
+<span class="nav2">Opinion</span>
+</b></a>
+</td></tr><tr><td class="navbg2">
+<span class="navbullet2">&nbsp;&#149;&nbsp;</span>
+<a href="/mld/ledgerenquirer/news/photos/" name="1002118"><b>
+<span class="nav2">Photos</span>
+</b></a>
+</td></tr><tr><td class="navbg2">
+<span class="navbullet2">&nbsp;&#149;&nbsp;</span>
+<a href="/mld/ledgerenquirer/news/politics/" name="4185"><b>
+<span class="nav2">Politics</span>
+</b></a>
+</td></tr><tr><td class="navbg2">
+<span class="navbullet2">&nbsp;&#149;&nbsp;</span>
+<a href="/mld/ledgerenquirer/news/weather/" name="4215"><b>
+<span class="nav2">Weather</span>
+</b></a>
+</td></tr><tr><td class="navbg2">
+<span class="navbullet2">&nbsp;&#149;&nbsp;</span>
+<a href="/mld/ledgerenquirer/news/weird_news/" name="4230"><b>
+<span class="nav2">Weird News</span>
+</b></a>
+</td></tr><tr><td class="navbg2">
+<span class="navbullet2">&nbsp;&#149;&nbsp;</span>
+<a href="/mld/ledgerenquirer/news/world/" name="4235"><b>
+<span class="nav2">World</span>
+</b></a>
+</td></tr><tr><td class="navbg2">
+<span class="navbullet2">&nbsp;&#149;&nbsp;</span>
+<a href="/mld/ledgerenquirer/news/special_packages/school_of_the_americas/" name="7340"><b>
+<span class="nav2">School Of The Americas</span>
+</b></a>
+</td></tr><tr><td class="navbg1">
+&nbsp;<b><a href="/mld/ledgerenquirer/business/" name="1">
+<span class="nav1">Business</span></b></a>
+</td></tr><tr><td class="navbg1">
+&nbsp;<b><a href="/mld/ledgerenquirer/sports/" name="1">
+<span class="nav1">Sports</span></b></a>
+</td></tr><tr><td class="navbg1">
+&nbsp;<b><a href="/mld/ledgerenquirer/entertainment/" name="1">
+<span class="nav1">Entertainment</span></b></a>
+</td></tr><tr><td class="navbg1">
+&nbsp;<b><a href="/mld/ledgerenquirer/living/" name="1">
+<span class="nav1">Living</span></b></a>
+</td></tr><tr><td class="navbg1">
+&nbsp;<b><a href="/mld/ledgerenquirer/classifieds/" name="1">
+<span class="nav1">Classifieds</span></b></a>
+</td></tr><tr><td class="navbg1">
+&nbsp;<b><a href="/mld/ledgerenquirer/archives/" name="1">
+<span class="nav1">Archives</span></b></a>
+</td></tr><tr><td class="navbg1">
+&nbsp;<b><a href="/mld/ledgerenquirer/contact_us/" name="1">
+<span class="nav1">Contact Us</span></b></a>
+</td></tr><tr><td class="navbg1">
+&nbsp;<b><a href="http://www.shoplocal.com/ledgerenquirer/new_user_entry.aspx?CityStateZip=31829&AdRef=link04" name="1">
+<span class="nav1">Shop Local</span></b></a>
+</td></tr></table>
+</td></tr></table>
+<table border="0" cellpadding="0" cellspacing="0" width="100%">
+<tr><td class="raildiv"><img src="/images/common/spacer.gif" width="1" height="1" border="0"/></td></tr></table>
+
+
+
+
+
+
+<table border="0" cellpadding="0" cellspacing="0" width="100%">
+<tr><td class="navborder"><table border="0" cellpadding="0" cellspacing="1" width="100%">
+<tr><td valign="top" class="navbg1">&nbsp;<a href="/mld/ledgerenquirer/news/weather/"><span class="nav1"><b>Weather</b></span></a></td></tr><tr><td class="navbg8"><table border="0" cellpadding="1" cellspacing="0" width="94%" align="center"><tr valign="top">
+<td class="navbg8" width="100%"><span class="mediumarea"><b>Columbus</b></span></td><td class="navbg8" nowrap="nowrap" align="right"><span class="mediumarea"><img src=/images/component/weather_temp_up.gif width="6" height="7"/>82</span></td><td class="navbg8" nowrap="nowrap" align="right"><span class="mediumarea"><img src=/images/component/weather_temp_down.gif width="6" height="7"/>60</span></td></tr><tr valign="top">
+<td class="navbg8" width="100%"><span class="mediumarea"><b>Macon</b></span></td><td class="navbg8" nowrap="nowrap" align="right"><span class="mediumarea"><img src=/images/component/weather_temp_up.gif width="6" height="7"/>82</span></td><td class="navbg8" nowrap="nowrap" align="right"><span class="mediumarea"><img src=/images/component/weather_temp_down.gif width="6" height="7"/>57</span></td></tr><tr valign="top">
+<td class="navbg8" width="100%"><span class="mediumarea"><b>Washington DC</b></span></td><td class="navbg8" nowrap="nowrap" align="right"><span class="mediumarea"><img src=/images/component/weather_temp_up.gif width="6" height="7"/>82</span></td><td class="navbg8" nowrap="nowrap" align="right"><span class="mediumarea"><img src=/images/component/weather_temp_down.gif width="6" height="7"/>63</span></td></tr></table></td></tr><tr><td class="navbg1">&nbsp;<a href="http://www.ledger-enquirer.com/mld/ledgerenquirer/entertainment/"><span class="nav1"><b>Local Events</b></span></a><br></td></tr><tr><td class="navbg1">&nbsp;<a href="http://yp.Ledger-Enquirer.com/bin/cgidir.dll?MEM=1223&S=GA&t=Columbus"><span class="nav1"><b>Yellow Pages</b></span></a><br></td></tr><tr><td class="navbg1">&nbsp;<a href="http://forums.realcities.com/dir-app/nav/forumdirectory.aspx?webtag=kr-ledgerz&byName=y"><span class="nav1"><b>Discussion Boards</b></span></a><br></td></tr><tr><td class="navbg1">&nbsp;<a href="http://maps.Ledger-Enquirer.com/jump.cgi/refsrc=KR.1223"><span class="nav1"><b>Maps & Directions</b></span></a><br></td></tr></table>
+</td></tr></table>
+
+</td><td class="columndiv" rowspan="2"><img src="/images/common/spacer.gif" width="1" height="1"></td>
+<TD class="centerrail" rowspan="2" colspan="4" valign="top" width="637">
+
+<div align="center">
+<table border="0" cellpadding="0" cellspacing="2" width="97%">
+<tr><td valign="middle"><a href="/mld/ledgerenquirer/" class="related">Back to Home</a>&nbsp;&gt;&nbsp;
+</td><td align="right" class="byline">Wednesday, Sep 22, 2004</td></tr><tr><td colspan="2" align="center" bgcolor="#ffffff"> <img src="/images/common/spacer.gif" width="1" height="1" /><br></td></tr></table>
+<table border="0" cellpadding="0" cellspacing="0" width="97%">
+<tr> <td align="center" class="pagetitle" width="100%">News</td><td align="right" width="1" valign="top"><img src="/images/common/spacer.gif" width="1" height="1" /></td><td align="right"  valign="top">
+
+</td></tr></table><table border="0" cellpadding="0" cellspacing="0" width="97%" align="center">
+<tr><td align="center">
+<img src="/images/common/spacer.gif" width="1" height="2" /><br></td></tr><tr><td align="center" bgcolor="#cccccc">
+<img src="/images/common/spacer.gif" width="1" height="2" /><br></td></tr><tr><td align="center">
+<img src="/images/common/spacer.gif" width="1" height="2" /><br></td></tr><tr><td align="center" bgcolor="#cccccc">
+<img src="/images/common/spacer.gif" width="1" height="1" /><br></td></tr></table><img src="/images/common/spacer.gif" width="100%" height="5" /><br></div>
+
+<table border="0" cellpadding="1" cellspacing="0"><tr><td width="100%">&nbsp;</td><td><a href="5150933.htm?template=contentModules/emailstory.jsp">
+<img src="http://www.mercurynews.com/images/common/button_email_this.gif" width="22" height="15" border="0" hspace="3"/></a>
+</td><td nowrap>
+<a href="5150933.htm?template=contentModules/emailstory.jsp" class="v1">email this</a>&nbsp;&nbsp;&nbsp;
+</td><td><a href="5150933.htm?template=contentModules/printstory.jsp">
+<img src="http://www.mercurynews.com/images/common/button_print_this.gif" width="22" height="15" border="0" hspace="2"/></a>
+</td><td nowrap>
+<a href="5150933.htm?template=contentModules/printstory.jsp" class="v1">print this</a>&nbsp;&nbsp;&nbsp;
+</td></tr></table>
+<table border="0" cellpadding="2" cellspacing="1" width="100%">
+<tr><td width="15" rowspan="2">
+<img src=/images/common/spacer.gif width="15" height="1" /></td><td class="v1">Posted on Mon, Feb. 10, 2003</td></tr><tr><td colspan="2">
+<div class="body-head"><table border="0" cellpadding="0" cellspacing="5" align="right">
+<tr><td><table border="0" cellpadding="0" cellspacing="0" width="250"><tr><td><table border="0" cellpadding="0" cellspacing="0" width="100%">
+<tr><td align="left" class="adlabel">
+<SCRIPT LANGUAGE="JavaScript1.1">
+_krdDartInc++;
+document.write('<SCRIPT LANGUAGE="JavaScript1.1" SRC="http://ad.doubleclick.net/adj/ledgerenquirer.news/news;kw=center6;c2=news_homepage;pos=center6;group=rectangle;tile='+_krdDartInc+';ord='+_krdDartOrd+'?"><\/SCRIPT>');
+</SCRIPT>
+<NOSCRIPT>
+<A HREF="http://ad.doubleclick.net/jump/ledgerenquirer.news/news;kw=center6;c2=news_homepage;pos=center6;group=rectangle;ord=1095868431400?" TARGET="_blank">
+<IMG SRC="http://ad.doubleclick.net/ad/ledgerenquirer.news/news;kw=center6;c2=news_homepage;pos=center6;group=rectangle;ord=1095868431400?" BORDER="0" ></A>
+</NOSCRIPT>
+
+</td></tr></table></td></tr>
+
+
+
+
+
+</table></td></tr></table><img src="/images/common/spacer.gif" width="1" height="3"/><br>
+
+
+<h1>Monday's Canada News Briefs</h1>
+
+<img src="/images/common/spacer.gif" width="1" height="5"/><br>
+
+
+<b><font size="-1"><span class="creditline">Associated Press</span></font></b><br><img src="/images/common/spacer.gif" width="1" height="1"/><br>
+</div>
+<span class="body-content"><!-- begin body-content -->
+<span class="body-content">
+<p><b><span class="dateline">OTTAWA</span><span class="dateline-separator"> - </span></b>Cleaning Polluted Urban Lands Could Bring $7 Billion Benefit</p>
+<p>Crumbling warehouses, rusting refineries and abandoned gas stations represent a major economic opportunity for Canada, says a federal study.</p>
+<p>Cleaning up an estimated 30,000 so-called "brownfields" in cities and towns could bring $7 billion in benefits, the National Round Table on the Environment and the Economy says in a report released Monday.</p>
+<p>For example, restoring brownfields in Toronto would probably bring an extra $100 million in annual tax revenue, said Angus Ross, one of the study's authors.</p>
+<p>The report does not estimate costs of cleaning up the thousands of polluted sites.</p>
+<p>A brownfield is an abandoned, vacant or derelict site, contaminated by past industrial activity.</p>
+<p>Loans, grants and regulatory changes are needed to encourage remediation of such sites across Canada, says the report.</p>
+<p>Brownfields damage a neighborhoods image and quality of life and represent a major loss of economic opportunity, says the report.</p>
+<p>Restoring them would create jobs, increase tax revenues, reduce commuting times and ease pressure to develop cropland, wooded areas and recreational land around cities.</p>
+<p>"Brownfield redevelopment in Canada has the potential to bring billions and billions and billions of dollars in economic benefits," said David McGuinty, president of the federal research body.</p>
+<p>---</p>
+<p>Public Memorial Held for Students Killed in Avalanche</p>
+<p>CALGARY (AP) - A final farewell to seven teenaged classmates killed in an avalanche 10 days ago paid tribute Monday to their adventurous spirits and the void left by their deaths.</p>
+<p>"Never in our wildest dreams could we have imagined that any single community would be asked to withstand such an overwhelming burden of grief in a single stroke," said Tony Macoun, headmaster at Strathcona-Tweedsmuir, a small private school located just south of Calgary near Okotoks.</p>
+<p>Macoun was joined by hundreds of mourners at the Pengrowth Saddledome in remembering the seven Grade 10 students who were killed Feb. 1 when a concrete-like wall of snow crashed down upon them during a backcountry ski trip near Revelstoke, British Columbia</p>
+<p>Among the guests were Alberta Premier Ralph Klein and British Columbia mountain guides Abby Watkins and Rich Marshall, who are credited with saving at least five of the 10 survivors of the slide.</p>
+<p>The emotional memorial followed a week of funerals for the teens, who were heralded for their accomplishments, their compassion and their love of life.</p>
+<p>Tears flowed often as mourners recalled Ben Albert, Daniel Arato, Scott Broshko, Alex Pattillo, Michael Shaw, Marissa Staddon and Jeff Trickett. All were 15.</p>
+<p>"We have lost seven students, but also seven future leaders, seven great adventurers and seven brilliant young people," said Macoun, noting that the school's loss pales in comparison with that of the families.</p>
+<p>"This has indeed been an impossible week of sorrow."</p>
+<p>---</p>
+<p>Need for Child Care Vastly Outstripped by Availability</p>
+<p>TORONTO (AP) - Quebec is leaving the rest of the country in the dust when it comes to child care and early childhood education spending, a report released Monday reveals.</p>
+<p>But while the authors applauded Quebec's efforts, they were quick to point out it's not that the province is doing such a spectacular job in providing day-care funding. Rather, the rest of the country is doing a dismal job of it.</p>
+<p>"If you look at Quebec since they started developing the new program, they've put in a huge number of spaces. Now do I think it's exactly been done right? Well no, I don't really. But it's been done in the right ballpark," said Martha Friendly, one of the report's authors.</p>
+<p>"You can't make it spring up from nothing. You have to have people and you have to have places to put it and all that stuff. And the problem is the rest of Canada has not started essentially."</p>
+<p>The report was produced by the childcare resource and research unit of the University of Toronto, a group which Friendly heads. The report, which is based on data from 2001, is the fourth looking at the early childhood education and care sector in the country. Earlier reports were released in 1992, 1995 and 1998.</p>
+<p>The latest shows that spending on child care outside of Quebec has actually decreased over the past decade, dropping by about $70 million in 2001 constant dollars.</p>
+</span>
+<!-- end body-content -->
+</span>
+</td></tr></table>
+<br><table border="0" cellpadding="1" cellspacing="0"><tr><td width="100%">&nbsp;</td><td><a href="5150933.htm?template=contentModules/emailstory.jsp">
+<img src="http://www.mercurynews.com/images/common/button_email_this.gif" width="22" height="15" border="0" hspace="3"/></a>
+</td><td nowrap>
+<a href="5150933.htm?template=contentModules/emailstory.jsp" class="v1">email this</a>&nbsp;&nbsp;&nbsp;
+</td><td><a href="5150933.htm?template=contentModules/printstory.jsp">
+<img src="http://www.mercurynews.com/images/common/button_print_this.gif" width="22" height="15" border="0" hspace="2"/></a>
+</td><td nowrap>
+<a href="5150933.htm?template=contentModules/printstory.jsp" class="v1">print this</a>&nbsp;&nbsp;&nbsp;
+</td></tr></table>
+<br>
+
+
+</TD>
+
+</tr>
+
+</table>
+<table border="0" cellpadding="0" cellspacing="0" width="768">
+<tr><td class="leftrail" width="134">
+<img src="/images/common/spacer.gif" width="134" height="1">
+</td><td class="columndiv" width="1">
+<img src="/images/common/spacer.gif" width="1" height="1">
+</td><td class="centerrail" width="1">
+<img src="/images/common/spacer.gif" width="10" height="1">
+</td><td class="centerrail" width="100%" align="center">
+<img src="/images/common/spacer.gif" width="450" height="1">
+<br/><SCRIPT LANGUAGE="JavaScript1.1">
+_krdDartInc++;
+document.write('<SCRIPT LANGUAGE="JavaScript1.1" SRC="http://ad.doubleclick.net/adj/ledgerenquirer.news/news;kw=footer;c2=news_homepage;pos=footer;group=contextual;tile='+_krdDartInc+';ord='+_krdDartOrd+'?"><\/SCRIPT>');
+</SCRIPT>
+<NOSCRIPT>
+<A HREF="http://ad.doubleclick.net/jump/ledgerenquirer.news/news;kw=footer;c2=news_homepage;pos=footer;group=contextual;ord=1095868431467?" TARGET="_blank">
+<IMG SRC="http://ad.doubleclick.net/ad/ledgerenquirer.news/news;kw=footer;c2=news_homepage;pos=footer;group=contextual;ord=1095868431467?" BORDER="0" ></A>
+</NOSCRIPT>
+
+<br/><br/></td><td class="centerrail" width="1">
+<img src="/images/common/spacer.gif" width="10" height="1">
+</td></tr></table>
+
+
+<table border="0" cellpadding="3" cellspacing="0" width="768"><tr><td rowspan="2" valign="top" class="footer"><a href="http://www.realcities.com" target="_blank"><img src="/images/palette/ledgerenquirer/realcities_logo.gif" width="155" height="57" alt="RealCities" border="0"/></a>
+</td><td align="left" class="footer">
+<span class="lightgreylinks"><a href="/mld/ledgerenquirer/news/"> News  |</a> <a href="/mld/ledgerenquirer/business/"> Business  |</a> <a href="/mld/ledgerenquirer/sports/"> Sports  |</a> <a href="/mld/ledgerenquirer/entertainment/"> Entertainment  |</a> <a href="/mld/ledgerenquirer/living/">Living  |</a> <a href="http://www.shoplocal.com/ledgerenquirer/new_user_entry.aspx?CityStateZip=31829&AdRef=link02">Shop Local |</a> <a href="/mld/ledgerenquirer/classifieds/"> Classifieds  |</a> <a href="/mld/ledgerenquirer/classifieds/employment/"> Jobs  |</a> <a href="/mld/ledgerenquirer/classifieds/automotive/"> Cars  |</a> <a href="/mld/ledgerenquirer/classifieds/real_estate/"> Homes   </a><br><a href="/mld/ledgerenquirer/contact_us/about">About Ledger-Enquirer.com |</a> <a href="/mld/ledgerenquirer/contact_us/rc_sites/">About the Real Cities Network |</a> <a href="/mld/ledgerenquirer/contact_us/terms_of_use">Terms of Use & Privacy Statement |</a> <a href="http://www.knightridder.com">About Knight Ridder |</a> <a href="/mld/ledgerenquirer/contact_us/copyright">Copyright  </a><br></span>
+</td></tr></table>
+
+</body>
+</html>
+

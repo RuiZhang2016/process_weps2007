@@ -1,0 +1,153 @@
+/*
+	yDSF (ydnar Drop-Shadow-Fu)
+	ydnar@sixapart.com - http://www.sixapart.com
+*/
+
+.ydsf {
+	display: block;
+	position: relative;
+	margin: 8px -8px -8px 8px;
+	/*filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(src='shadow.png', sizingMethod='crop');*/
+	/*background: url(/bcom/images/ydsf/shadow-w.gif) right bottom no-repeat;*/
+}
+
+/* ie6 ignores this selector */
+html>body .ydsf {
+	margin: 15px -15px -15px 15px;
+	background: url(/bcom/images/ydsf/shadow.png) right bottom no-repeat;
+}
+
+/* shadow corners */
+.ydsf:before,
+.ydsf:after {
+	content: " ";
+	display: block;
+	width: 15px;
+	height: 15px;
+	background: inherit;	
+}
+
+.ydsf:before {
+	position: absolute;
+	top: 0;
+	right: 0;
+	margin: -15px 0 0 auto;
+	background-position: right top;
+}
+
+.ydsf:after {
+	margin: -15px 0 0 -15px;
+	background-position: left bottom;
+}
+
+.ydsf .inner {
+	display: block;
+	position: relative;
+	overflow: hidden; /* prevents margin leakage from child elements */
+	left: -4px;
+	top: -4px;
+	border:  2px solid #B3B3B3;
+}
+
+/* ie6 ignores this selector */
+html>body .ydsf .inner {
+	left: -15px;
+	top: -15px;
+	margin: 0;
+	border: 0;
+}
+
+/* non ydsf */
+.outer {
+ 	position:absolute;
+	top:0;
+	left:0; 
+ 	visibility: hidden;
+	z-index:9999;
+}
+
+.content {
+	background-color:#EFF5FF;
+	padding: 20px 20px 20px 20px;
+	width:500px;
+	font-family: "Trebuchet MS", Trebuchet, Arial, Geneva, sans-serif; 
+	font-size: 14px; 
+	color: black;
+}
+
+.content p {
+	padding:5px 0 0 0;
+	margin: 0;
+}
+
+/* link this article */
+
+#linkArtElCl {
+	float:right;
+	display:inline;
+	margin: -15px; -15px 0 0;
+	font-family: "Trebuchet MS", Trebuchet, Arial, Geneva, sans-serif; 
+	font-size: 14px;
+	font-weight: bold;
+	color: #FF9900;
+	text-decoration: none;
+	
+}
+
+#linkArtElCl:hover {
+	text-decoration:underline;	
+}
+
+.content h3 {
+	font-family: "Trebuchet MS", Trebuchet, Arial, Geneva, sans-serif; 
+	color: white;
+	text-align:center;
+	padding-top: 50px;
+}
+
+#webmasterLink {
+	font-family: "Trebuchet MS", Trebuchet, Arial, Geneva, sans-serif; 
+	font-size: 14px;
+	font-weight: bold;
+	color: #FF9900;
+	text-decoration: none;
+	
+}
+
+#webmasterLink:hover {
+	text-decoration:underline;	
+}
+.infoText{
+  clear: both;	
+  padding: 0px;
+  margin: 0px;  
+}	
+.articleImg{
+    background:  url(/bcom/images/ebol06_linktoarticle.gif) no-repeat;	
+	width: 100px;
+	border: 1px solid #CCCCCC;
+	float: left;
+	clear: none;
+	height: 285px;
+	margin: 0px;
+	padding: 0px;
+	margin-bottom: 10px;
+}	
+
+.linkArtText {	
+	padding: 0px;
+	clear: none;
+	float: left;	
+	margin-bottom: 5px;
+	margin-left: 5px;
+	width: 350px;
+}	
+
+.linkArtURL {	
+	padding: 10px; 
+	padding-top: 0px;
+	text-align: center;	
+	padding-left: 0px;
+	margin-top: -10px;
+}	
+	

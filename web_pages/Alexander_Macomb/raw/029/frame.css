@@ -1,0 +1,85 @@
+/*
+ Top of the gradiants is found in topnav.css
+*/
+/* PAGE FRAMING */
+body {
+    background-color: #acd;
+    margin-top: 0;
+}
+body.cobranded {
+    background-color: #fff;
+}
+
+/**
+Overall page placement
+See: http://ndpsoftware.com/experiment/css/stretch.php?width=780&css=stretchymaxcenter
+*/
+#marginGS {
+    width: 100%;
+    text-align: center;
+}
+
+#pageGS {
+    width: 900px;
+    text-align: left;
+    margin-left: auto;
+    margin-right: auto;
+    background-color: #fff;
+}
+body.unframed #pageGS {
+    border: 4px solid   #acd;
+}
+body.framed #pageGS {
+    width: 765px;
+}
+
+#adLeaderboard {
+    background-color: #fff;
+    height: 100px;
+    margin:auto;
+    margin-bottom: 10px;
+    width: 900px;
+}
+
+#contentGS {
+    background-color: #fff;
+    padding: 0;
+    margin: 0 18px 0 18px;
+    border-top: 1px solid #fff; /* IE hack-- otherwise it leaves a gap */
+    border-bottom: 1px solid #fff;
+    width: 864px;
+}
+body.framed #pageGS #contentGS {
+    width: 729px;       /* 765 - 18 -18 */
+}
+
+/* Cobrand specific -- not using these yet */
+body.xcontracostatimes #pageGS {
+    border: 0px solid   #acd;
+}
+
+
+#adLeaderboard {
+    text-align: center;
+    margin-bottom: 6px;
+    width: 900px;
+    padding: 7px 0px 0px 0px;
+}
+
+#adLeaderboard table {
+    padding: 0;
+    margin: 0;
+    margin-left: auto;
+    margin-right: auto;
+    width: 738px;
+}
+
+#adLeaderboard table img {
+    padding: 0 1px 0 2px;
+}
+
+#adLeaderboard table td.ad {
+    background-color: #e9e9e9;
+    border: 1px solid #bbb;
+    text-align: left;
+}

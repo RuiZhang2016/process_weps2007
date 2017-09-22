@@ -1,0 +1,409 @@
+@import url(base-weblog.css);
+
+/*
+name: miniml
+designer: J. Maloney
+designer_url: http://www.freshwear.ca
+description: A clean, liquid, minimal theme. The top bar and accent image can be
+easily changed in the stylesheet. The one used is simply a dingbat font.
+layouts: one-column, two-column-left, two-column-right, three-column
+*/
+
+
+/* neutralize some base weblog css styles */
+
+
+h1, h2, h3, h4, h5, h6 { font-weight: normal; }
+h1, h2, h3, h4, h5, h6, p, ol, ul, pre, blockquote
+{
+	margin-top: 0;
+	margin-bottom: 0;
+}
+
+.content-nav
+{
+	margin: 0 10px 25px 10px;
+	text-align: center;
+}
+
+.entry,
+.trackbacks,
+.comments,
+.archive
+{
+	position: static;
+	overflow: hidden;
+	clear: both;
+	width: 100%;
+	margin-bottom: 20px;
+}
+
+.entry-content,
+.trackbacks-info,
+.trackback-content,
+.comment-content,
+.comments-open-content,
+.comments-closed
+{
+	clear: both;
+	margin: 0;
+}
+
+
+.entry-footer,
+.trackback-footer,
+.comment-footer,
+.comments-open-footer,
+.archive-content
+{
+	clear: both;
+	margin: 0;
+}
+
+#comment-author, #comment-email, #comment-url, #comment-text
+{
+	width: 240px;
+}
+
+/* custom styles  */
+
+h1, h2, h3, h4, h5, h6 { font-weight: normal; }
+h1, h2, h3, h4, h5, h6, p, ol, ul, pre, blockquote
+{
+	margin-top: 0;
+	margin-bottom: 0;
+}
+
+.content-nav
+{
+	margin: 10px 10px 25px 10px;
+	text-align: center;
+}
+
+.entry,
+.trackbacks,
+.comments,
+.archive
+{
+	position: static;
+	overflow: hidden;
+	clear: both;
+	width: 100%;
+	margin-bottom: 20px;
+}
+
+.entry-content,
+.trackbacks-info,
+.trackback-content,
+.comment-content,
+.comments-open-content,
+.comments-closed
+{
+	clear: both;
+	margin: 0;
+}
+
+
+.entry-footer,
+.trackback-footer,
+.comment-footer,
+.comments-open-footer,
+.archive-content
+{
+	clear: both;
+	margin: 0;
+}
+
+#comment-author, #comment-email, #comment-url, #comment-text
+{
+	width: 240px;
+}
+
+/* custom styles  */
+
+* {
+	padding: 0;
+	margin: 0;
+	}
+
+a {
+	color: #0099CC;                             /* --- change the link color here --- */
+	text-decoration:none;
+	}
+
+a:hover {
+       text-decoration:underline;
+}
+
+body {
+	background-color: #FFF;
+	font-family: Verdana, Arial, sans-serif;
+	color: #353535;
+	line-height:1.0;
+	padding: 0;
+	margin: 0;
+	border-top: 10px solid #9DD5E0;        /* --- change the top bar here --- */
+	background-image:url(bluebird.gif);   /* --- change the top image here --- */
+	background-position: 82% 50px;
+	background-repeat: no-repeat;	
+	font-size:80%;
+	}
+
+#container {
+	position: relative;
+	margin: 0 auto; 
+	width: 78%;
+	text-align: left;
+	padding: 0;
+	}
+
+#container-inner, #banner {
+	padding: 0;
+	margin: 0;
+	}
+	   
+#banner-inner {
+	margin: 60px 0 0 0;
+	}
+
+h1, h1 {
+	margin:0;
+}
+
+#banner-header, #banner-header a {
+	font-size: 1.8em;
+	text-decoration: none;
+	margin: 0 0 5px 0;
+	font-family: Georgia, "Times New Roman", Times, serif;
+	color:#444;
+	}
+
+#banner-description {
+	font-size: 1em;
+	padding: 0 0 0 5px;
+	margin: 0;
+	}
+	
+#pagebody {
+	margin: 70px 0;
+	padding: 0;
+	font-size:.96em;
+	line-height:1.65;
+	}
+
+/* -----------one column ---------------------*/  
+
+.layout-one-column #container {
+	width:65%;
+	}
+
+.layout-one-column #alpha {
+	float:left;
+	text-align:left;
+	width:100%;
+	margin:0;
+}
+
+
+/* --------- two column right -------------- */  
+
+.layout-two-column-right #alpha {
+	float: left;
+	text-align: left;
+	width: 67%;
+	margin: 0 8% 0 0;
+	}
+
+.layout-two-column-right #beta {
+	float: left;
+	text-align: left;
+	width: 24%;
+	margin: 0;
+	}
+
+.module-categories ul li ul li {
+	margin-left:5px;
+}
+
+/* ----------------------------------------- */
+
+/* --------- two column left -------------- */  
+
+.layout-two-column-left #alpha {
+	float: left;
+	text-align: left;
+	width: 24%;
+	margin: 0 8% 0 0;
+	}
+	
+.layout-two-column-left #beta {
+	float: left;
+	text-align: left;
+	width: 67%;
+	margin: 0;
+	}
+
+.module-categories ul li ul li {
+	margin-left:5px;
+}
+
+/* ----------------   entry area styles  ------------------------- */
+
+h2, h3 {
+	margin:0;
+}
+
+.date-header {
+	font-family: Georgia, "Times New Roman", Times, serif;
+	font-size: 1.5em;
+	padding: 0;
+	margin: 0;
+	}   
+
+.entry-header {
+	font-size: 2em;
+	padding: 0;
+	margin: 0;
+	font-family: Georgia, "Times New Roman", Times, serif;
+	}
+
+.entry-body, .comment-body, .trackback-body {
+	width: 100%;
+        max-width: 650px;
+	margin: 25px 0 15px 0;
+	text-align:justify;
+	}
+	
+.entry-body p {
+	margin: 0 0 15px 0;
+	}
+
+.entry-body ul, .entry-body ol {
+	margin: 20px;
+	}
+
+.entry-body ul li {
+	list-style-type: square;
+	margin:5px 0;
+	}
+
+.entry-body ul li ul li {
+       margin-left:5px;
+       }
+
+.entry-body blockquote {
+	margin-left: 15px;
+	padding-left: 10px;
+	border-left: 3px solid #94C7D3;
+	}
+
+.entry-body img {border: 1px solid #353535;}
+.entry-body img[align="right"] {margin: 5px 0 15px 15px; display:block;}
+.entry-body img[align="left"] {margin: 5px 15px 15px 0;}
+
+.entry-footer {padding-top:10px; padding-bottom:20px; border-bottom:1px dashed #CCC; font-size:.96em; margin:0;}	
+
+
+/* ---- sidebar styles ---- */
+
+.module-content {
+	position: relative;
+	margin: 10px 10px 25px 0;
+	line-height:1.5;
+}
+
+
+.module-header {
+	font-family:Georgia, "Times New Roman", Times, serif;
+	font-size:1.5em;
+	color:#333;
+	text-decoration:none;
+	}
+
+.module-header a {
+	color:#333;
+	text-decoration:none;
+	}
+
+input#search {
+    padding:3px;
+	}
+
+input, textarea {
+	font-size: 1.2em;
+	padding: 2px;
+	margin:3px 1px 3px 0;
+	border:1px solid #333;
+	background-color:#FFF;
+	}
+
+/* --------- comment trackback styles ------ */
+
+.comments-open-header,
+.trackbacks-open-header,
+.comments-header,
+.trackbacks-header {
+	font-family:Georgia, "Times New Roman", Times, serif;
+	font-size:1.5em;
+	}
+	
+#trackbacks-info {
+	font-size:.95em;
+	margin:10px 0 10px 0;
+	padding-left: 10px;
+	border-left: 3px solid #94C7D3;
+	}
+
+.trackbacks-content {
+	margin:15px 0 15px 0;
+	}
+
+.trackback-content, .comment-content {
+	margin:20px 0;
+	}
+
+.comment-content {
+	background-color:#f5f5f5;
+	padding:15px;
+	} 
+
+.trackback {
+	background-color:#f5f5f5;
+	padding:5px 15px 15px 15px;
+	margin-top:15px;
+	}
+
+.trackback-footer,.comment-footer {
+	font-size:.95em;
+	}
+	
+/* livejournal styles */
+
+.entry-userpic {
+	display:none;  
+}
+
+.banner-user {
+	display:none;
+}
+
+.banner-user-photo {
+	display:none;
+}
+
+.banner-user-photo img {
+	display:none;
+}
+
+.comment-userpic {
+	display:none;
+}
+
+/*  typepad styles */
+
+.typelist-thumbnail img, 
+.module-galleries .typelist-thumbnail img,
+.module-featured-photo img,
+.image-thumbnail img {
+	border:1px solid #555;
+}

@@ -1,0 +1,462 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+<title>Members Login</title>
+
+<script language="JavaScript">
+function checkForm(frm) {
+	/*if (frm.user_name.value.search(/\S/)==-1) {
+		alert('Blank Username');
+		frm.user_name.focus();
+		return false;
+	}*/
+	if (frm.password.value.search(/\S/)==-1) {
+		alert('Blank Password');
+		frm.password.focus();
+		return false;
+	}
+	if (frm.email.value.search(/^[a-zA-Z0-9._-]+@([a-zA-Z0-9.-]+\.)+[a-zA-Z0-9.-]+$/)==-1) {
+		alert('Invalid email address');
+		frm.email.focus();
+		return false;
+	}		
+	return true;
+}
+</script>
+<link href="Links.css" rel="stylesheet" type="text/css">
+</head>
+<body bgcolor="#0000CC" onLoad="preloadImages();">
+<script language="JavaScript">
+
+
+
+if (document.images) {
+
+}
+
+function stopErrors() {
+
+  return true;
+
+ }
+
+ window.onerror = stopErrors;
+
+ 
+
+function MM_preloadImages() { //v3.0
+
+  var d=document; if(d.images){ if(!d.MM_p) d.MM_p=new Array();
+
+    var i,j=d.MM_p.length,a=MM_preloadImages.arguments; for(i=0; i<a.length; i++)
+
+    if (a[i].indexOf("#")!=0){ d.MM_p[j]=new Image; d.MM_p[j++].src=a[i];}}
+
+}
+
+
+
+function MM_swapImgRestore() { //v3.0
+
+  var i,x,a=document.MM_sr; for(i=0;a&&i<a.length&&(x=a[i])&&x.oSrc;i++) x.src=x.oSrc;
+
+}
+
+
+
+function MM_findObj(n, d) { //v4.01
+
+  var p,i,x;  if(!d) d=document; if((p=n.indexOf("?"))>0&&parent.frames.length) {
+
+    d=parent.frames[n.substring(p+1)].document; n=n.substring(0,p);}
+
+  if(!(x=d[n])&&d.all) x=d.all[n]; for (i=0;!x&&i<d.forms.length;i++) x=d.forms[i][n];
+
+  for(i=0;!x&&d.layers&&i<d.layers.length;i++) x=MM_findObj(n,d.layers[i].document);
+
+  if(!x && d.getElementById) x=d.getElementById(n); return x;
+
+}
+
+
+
+function MM_swapImage() { //v3.0
+
+  var i,j=0,x,a=MM_swapImage.arguments; document.MM_sr=new Array; for(i=0;i<(a.length-2);i+=3)
+
+   if ((x=MM_findObj(a[i]))!=null){document.MM_sr[j++]=x; if(!x.oSrc) x.oSrc=x.src; x.src=a[i+2];}
+
+}
+
+
+
+function newImage(arg) {
+
+	if (document.images) {
+
+		rslt = new Image();
+
+		rslt.src = arg;
+
+		return rslt;
+
+	}
+
+}
+
+
+
+function changeImages() {
+
+	if (document.images && (preloadFlag == true)) {
+
+		for (var i=0; i<changeImages.arguments.length; i+=2) {
+
+			document[changeImages.arguments[i]].src = changeImages.arguments[i+1];
+
+		}
+
+	}
+
+}
+
+
+
+var preloadFlag = false;
+
+function preloadImages() {
+
+	if (document.images) {
+
+		Players_over = newImage("http://www.juniortennis.com/CourtMap/images/Players-over.gif");
+
+		Players_down = newImage("http://www.juniortennis.com/CourtMap/images/Players-down.gif");
+
+		Interviews_over = newImage("http://www.juniortennis.com/CourtMap/images/Interviews-over.gif");
+
+		Interviews_down = newImage("http://www.juniortennis.com/CourtMap/images/Interviews-down.gif");
+
+		Science_over = newImage("http://www.juniortennis.com/CourtMap/images/Science-over.gif");
+
+		Science_down = newImage("http://www.juniortennis.com/CourtMap/images/Science-down.gif");
+
+		Home_over = newImage("http://www.juniortennis.com/CourtMap/images/Home-over.gif");
+
+		Home_down = newImage("http://www.juniortennis.com/CourtMap/images/Home-down.gif");
+
+		College_over = newImage("http://www.juniortennis.com/CourtMap/images/College-over.gif");
+
+		College_down = newImage("http://www.juniortennis.com/CourtMap/images/College-down.gif");
+
+		Camps_over = newImage("http://www.juniortennis.com/CourtMap/images/Camps-over.gif");
+
+		Camps_down = newImage("http://www.juniortennis.com/CourtMap/images/Camps-down.gif");
+
+		Games_over = newImage("http://www.juniortennis.com/CourtMap/images/Games-over.gif");
+
+		Games_down = newImage("http://www.juniortennis.com/CourtMap/images/Games-down.gif");
+
+		Coaching_over = newImage("http://www.juniortennis.com/CourtMap/images/Coaching-over.gif");
+
+		Coaching_down = newImage("http://www.juniortennis.com/CourtMap/images/Coaching-down.gif");
+
+		Tournaments_over = newImage("http://www.juniortennis.com/CourtMap/images/Tournaments-over.gif");
+
+		Tournaments_down = newImage("http://www.juniortennis.com/CourtMap/images/Tournaments-down.gif");
+
+		Rankings_over = newImage("http://www.juniortennis.com/CourtMap/images/Rankings-over.gif");
+
+		Rankings_down = newImage("http://www.juniortennis.com/CourtMap/images/Rankings-down.gif");
+
+		preloadFlag = true;
+
+	}
+
+}
+
+
+
+site = "http://www.juniortennis.com/"; 
+
+function combineMenus(form, menu1, menu2) {
+
+with (form) {
+
+str = menu2.options[menu2.selectedIndex].value;
+
+str += menu1.options[menu1.selectedIndex].value;
+
+url = site + str;
+
+window.location.href = url;
+
+   }
+
+}
+
+
+
+</script>
+
+<table width="101%"  border="0" cellpadding="0" cellspacing="0" bgcolor="#0000CC">
+
+  <tr>
+
+    <td width="10%">&nbsp;</td>
+
+    <td width="800"><table align="CENTER" border="0" cellspacing="0" cellpadding="0" width="800" bgcolor="#0000CC">
+
+      <tr>
+
+        <td width="170" align="center" valign="bottom"><div align="right"><img src="BlueLogo.gif" width="151" height="80"></div></td>
+
+        <td width="30" align="center" valign="bottom"><img src="Transp.gif" width="30" height="15"></td>
+
+        <td width="238" valign="bottom"><img src="Group4.jpg" width="233" height="97"></td>
+
+        <td width="35" valign="bottom"><img src="Transp.gif" width="35" height="15"></td>
+
+        <td width="13" align="right" valign="bottom"><p><img src="BlueBall.gif" width="13" height="13"><img src="Posts.gif" width="13" height="50"></td>
+
+        <td width="263" valign="bottom"><table width="263" border="0" cellspacing="0" cellpadding="0">
+
+            <tr>
+
+              <td width="263"><div align="center"><img src="Title.gif" width="224" height="31"></div></td>
+
+            </tr>
+
+            <tr>
+
+              <td width="263" valign="bottom" background="BackPost.gif"><div align="center">
+
+                  <!-- ImageReady Slices (CourtMap.psd) -->
+
+                  <TABLE WIDTH=224 BORDER=0 CELLPADDING=0 CELLSPACING=0>
+
+                    <TR>
+
+                      <TD COLSPAN=2><A HREF="http://www.juniortennis.com/Players/Players.php" target="_parent"
+
+				ONMOUSEDOWN="changeImages('Players', 'http://www.juniortennis.com/CourtMap/images/Players-down.gif'); return true;"
+
+				ONMOUSEUP="changeImages('Players', 'http://www.juniortennis.com/CourtMap/images/Players-over.gif'); return true;"
+
+				ONMOUSEOVER="changeImages('Players', 'http://www.juniortennis.com/CourtMap/images/Players-over.gif'); return true;"
+
+				ONMOUSEOUT="changeImages('Players', 'http://www.juniortennis.com/CourtMap/images/Players.gif'); return true;"> <IMG NAME="Players" SRC="Players.gif" WIDTH=112 HEIGHT=12 BORDER=0 ALT=""></A></TD>
+
+                      <TD COLSPAN=2><A HREF="http://www.juniortennis.com/Interviews/Interviews.php"
+
+				ONMOUSEDOWN="changeImages('Interviews', 'http://www.juniortennis.com/CourtMap/images/Interviews-down.gif'); return true;"
+
+				ONMOUSEUP="changeImages('Interviews', 'http://www.juniortennis.com/CourtMap/images/Interviews-over.gif'); return true;"
+
+				ONMOUSEOVER="changeImages('Interviews', 'http://www.juniortennis.com/CourtMap/images/Interviews-over.gif'); return true;"
+
+				ONMOUSEOUT="changeImages('Interviews', 'http://www.juniortennis.com/CourtMap/images/Interviews.gif'); return true;"> <IMG NAME="Interviews" SRC="Interviews.gif" WIDTH=112 HEIGHT=12 BORDER=0 ALT=""></A></TD>
+
+                    </TR>
+
+                    <TR>
+
+                      <TD ROWSPAN=2><A HREF="http://www.juniortennis.com/Science/SportsScience.php"
+
+				ONMOUSEDOWN="changeImages('Science', 'http://www.juniortennis.com/CourtMap/images/Science-down.gif'); return true;"
+
+				ONMOUSEUP="changeImages('Science', 'http://www.juniortennis.com/CourtMap/images/Science-over.gif'); return true;"
+
+				ONMOUSEOVER="changeImages('Science', 'http://www.juniortennis.com/CourtMap/images/Science-over.gif'); return true;"
+
+				ONMOUSEOUT="changeImages('Science', 'http://www.juniortennis.com/CourtMap/images/Science.gif'); return true;"> <IMG NAME="Science" SRC="Science.gif" WIDTH=57 HEIGHT=42 BORDER=0 ALT=""></A></TD>
+
+                      <TD><A HREF="http://www.juniortennis.com" target="_parent"
+
+				ONMOUSEDOWN="changeImages('Home', 'http://www.juniortennis.com/CourtMap/images/Home-down.gif'); return true;"
+
+				ONMOUSEUP="changeImages('Home', 'http://www.juniortennis.com/CourtMap/images/Home-over.gif'); return true;"
+
+				ONMOUSEOVER="changeImages('Home', 'http://www.juniortennis.com/CourtMap/images/Home-over.gif'); return true;"
+
+				ONMOUSEOUT="changeImages('Home', 'http://www.juniortennis.com/CourtMap/images/Home.gif'); return true;"> <IMG NAME="Home" SRC="Home.gif" WIDTH=55 HEIGHT=20 BORDER=0 ALT=""></A></TD>
+
+                      <TD><A HREF="http://www.juniortennis.com/College/College.php" target="_parent"
+
+				ONMOUSEDOWN="changeImages('College', 'http://www.juniortennis.com/CourtMap/images/College-down.gif'); return true;"
+
+				ONMOUSEUP="changeImages('College', 'http://www.juniortennis.com/CourtMap/images/College-over.gif'); return true;"
+
+				ONMOUSEOVER="changeImages('College', 'http://www.juniortennis.com/CourtMap/images/College-over.gif'); return true;"
+
+				ONMOUSEOUT="changeImages('College', 'http://www.juniortennis.com/CourtMap/images/College.gif'); return true;"> <IMG NAME="College" SRC="College.gif" WIDTH=56 HEIGHT=20 BORDER=0 ALT=""></A></TD>
+
+                      <TD ROWSPAN=2><A HREF="http://www.juniortennis.com/members/index.php?list_academies_page=yes"
+
+				ONMOUSEDOWN="changeImages('Camps', 'http://www.juniortennis.com/CourtMap/images/Camps-down.gif'); return true;"
+
+				ONMOUSEUP="changeImages('Camps', 'http://www.juniortennis.com/CourtMap/images/Camps-over.gif'); return true;"
+
+				ONMOUSEOVER="changeImages('Camps', 'http://www.juniortennis.com/CourtMap/images/Camps-over.gif'); return true;"
+
+				ONMOUSEOUT="changeImages('Camps', 'http://www.juniortennis.com/CourtMap/images/Camps.gif'); return true;"> <IMG NAME="Camps" SRC="Camps.gif" WIDTH=56 HEIGHT=42 BORDER=0 ALT=""></A></TD>
+
+                    </TR>
+
+                    <TR>
+
+                      <TD><A HREF="http://www.juniortennis.com/Games/Games.php"
+
+				ONMOUSEDOWN="changeImages('Games', 'http://www.juniortennis.com/CourtMap/images/Games-down.gif'); return true;"
+
+				ONMOUSEUP="changeImages('Games', 'http://www.juniortennis.com/CourtMap/images/Games-over.gif'); return true;"
+
+				ONMOUSEOVER="changeImages('Games', 'http://www.juniortennis.com/CourtMap/images/Games-over.gif'); return true;"
+
+				ONMOUSEOUT="changeImages('Games', 'http://www.juniortennis.com/CourtMap/images/Games.gif'); return true;"> <IMG NAME="Games" SRC="Games.gif" WIDTH=55 HEIGHT=22 BORDER=0 ALT=""></A></TD>
+
+                      <TD><A HREF="http://www.juniortennis.com/Coaching/Coaching.php" target="_parent"
+
+				ONMOUSEDOWN="changeImages('Coaching', 'http://www.juniortennis.com/CourtMap/images/Coaching-down.gif'); return true;"
+
+				ONMOUSEUP="changeImages('Coaching', 'http://www.juniortennis.com/CourtMap/images/Coaching-over.gif'); return true;"
+
+				ONMOUSEOVER="changeImages('Coaching', 'http://www.juniortennis.com/CourtMap/images/Coaching-over.gif'); return true;"
+
+				ONMOUSEOUT="changeImages('Coaching', 'http://www.juniortennis.com/CourtMap/images/Coaching.gif'); return true;"> <IMG NAME="Coaching" SRC="Coaching.gif" WIDTH=56 HEIGHT=22 BORDER=0 ALT=""></A></TD>
+
+                    </TR>
+
+                    <TR>
+
+                      <TD COLSPAN=2><A HREF="http://www.juniortennis.com/Tournaments/Tournaments.php" target="_parent"
+
+				ONMOUSEDOWN="changeImages('Tournaments', 'http://www.juniortennis.com/CourtMap/images/Tournaments-down.gif'); return true;"
+
+				ONMOUSEUP="changeImages('Tournaments', 'http://www.juniortennis.com/CourtMap/images/Tournaments-over.gif'); return true;"
+
+				ONMOUSEOVER="changeImages('Tournaments', 'http://www.juniortennis.com/CourtMap/images/Tournaments-over.gif'); return true;"
+
+				ONMOUSEOUT="changeImages('Tournaments', 'http://www.juniortennis.com/CourtMap/images/Tournaments.gif'); return true;"> <IMG NAME="Tournaments" SRC="Tournaments.gif" WIDTH=112 HEIGHT=13 BORDER=0 ALT=""></A></TD>
+
+                      <TD COLSPAN=2><A HREF="http://www.juniortennis.com/Rankings/Rankings.php" target="_parent"
+
+				ONMOUSEDOWN="changeImages('Rankings', 'http://www.juniortennis.com/CourtMap/images/Rankings-down.gif'); return true;"
+
+				ONMOUSEUP="changeImages('Rankings', 'http://www.juniortennis.com/CourtMap/images/Rankings-over.gif'); return true;"
+
+				ONMOUSEOVER="changeImages('Rankings', 'http://www.juniortennis.com/CourtMap/images/Rankings-over.gif'); return true;"
+
+				ONMOUSEOUT="changeImages('Rankings', 'http://www.juniortennis.com/CourtMap/images/Rankings.gif'); return true;"> <IMG NAME="Rankings" SRC="Rankings.gif" WIDTH=112 HEIGHT=13 BORDER=0 ALT=""></A></TD>
+
+                    </TR>
+
+                  </TABLE>
+
+                  <!-- End ImageReady Slices -->
+
+              </div></td>
+
+            </tr>
+
+        </table></td>
+
+        <td width="13" align="left" valign="bottom"><div align="right"> <img src="BlueBall.gif" width="13" height="13"><img src="PostsR.gif" width="13" height="50"></div></td>
+
+        <td width="38" valign="bottom">&nbsp;</td>
+
+      </tr>
+
+    </table></td>
+
+    <td width="15%">&nbsp;</td>
+
+  </tr>
+
+</table>  <table width="100%" height="100%" border="0" cellpadding="0" cellspacing="0">
+    <tr>
+      <td valign="top"><table align="center" width="800" border="0" background="Net.gif" bgcolor="#0000CC">
+        <tr>
+          <td height="44" width="28"><img src="LeftPost.gif" width="20" height="42" align="left"></td>
+          <td height="44" width="120"><div align="center"></div></td>
+          <td height="44" width="120"><div align="center"></div></td>
+          <td width="120"><div align="center"></div></td>
+          <td width="120"><div align="center"></div></td>
+          <td height="44" width="120"><div align="center"></div></td>
+          <td width="120"><div align="center"></div></td>
+          <td height="44" width="27"><img src="RightPost.gif" width="20" height="42" align="right"></td>
+        </tr>
+      </table>
+      <table width="550" border="0" align="center" cellpadding="0" cellspacing="0" bgcolor="#FFFFFF">
+        <tr>
+          <td width="38" height="298"><img src="Transp.gif" width="15" height="15"></td>
+          <td width="566" valign="top"><br>
+          <form action="new_member_login.php%3Fredirect=L2FqdC9wbGF5ZXJpbmZvLnBocD9wbGF5ZXJfaWQ9ODQ3MA==.1.html" method="post" name="frmLogin" onSubmit="return checkForm(this);">
+		  <!--form action="member_login.php" method="post" name="frmLogin" onSubmit="return checkForm(this);"-->
+            <table width="250" height="63" border="0" align="center" cellpadding="0" cellspacing="0" class="border">
+            <tr>
+              <td height="19" class="TextTableTop">
+                <div align="center">
+                  <p class="tableTop">Log in</p>
+              </div></td>
+            </tr>
+            <tr>
+              <td height="44" class="TextTableTop">
+                <table width="100%" border="0" cellspacing="0" cellpadding="4">
+                      <!--tr> 
+                        <td width="50%" nowrap class="Texto" align="right"><strong class="division">User 
+                          Id:</strong></td>
+                        <td width="50%"><input name="user_name" type="text" class="navbox" size="20" ></td>
+                      </tr-->
+					  <tr> 
+                        <td nowrap class="Texto" align="right"><strong class="division">Email 
+                          :</strong></td>
+                        <td><input name="email" type="text" class="navbox"  value="" size="20"></td>
+                      </tr>
+                      <tr> 
+                        <td nowrap class="Texto" align="right"><strong class="division">Password 
+                          :</strong></td>
+                        <td><input name="password" type="password" class="navbox"  value="" size="20"></td>
+                      </tr>
+					   <!--tr> 
+                        <td nowrap class="Texto" align="right"><strong class="division">Email 
+                          :</strong></td>
+                        <td><input name="email" type="text" class="navbox"  value="" size="20"></td>
+                      </tr-->
+                      <tr> 
+                        <td colspan="2" nowrap></td>
+                      </tr>
+                      <tr> 
+                        <td colspan="2" nowrap> <div align="left"> <a href="http://www.juniortennis.com">Back</a> 
+                            | 
+                            <input name="btnLogin" type="submit" class="buttontext" id="btnLogin" value="Login">
+                            <input name="Input" type="reset" class="buttontext" value="Clear">
+                          </div></td>
+                      </tr>
+                      <tr> 
+                        <td colspan="2" nowrap><div align="left" class="TextoEfct"><font color="#FF0000" size="1"> 
+                                                        <input type="hidden" name="page_from" value="http://www.juniortennis.com/ajt/playerinfo.php?player_id=8470">
+                            </font></div></td>
+                      </tr>
+                      <tr> 
+                        <td colspan="2" nowrap><div align="left"><a href="http://www.juniortennis.com/members/new_forgot_password.php" class="Links">Forgot 
+                            Password</a><!--&nbsp;|&nbsp;<a href="forgot_username.php" class="Links">Forgot 
+                            User Id</a--></div></td>
+                      </tr>
+                    </table></td>
+            </tr>
+          </table></form>
+            <span class="body">To sign up  click on the following links:<br>
+            <br>
+            <a href="http://www.juniortennis.com/members/new_juniormember_signup.php">Junior Players</a> Free Membership.<br> 
+            <br>
+            Other <a href="http://www.juniortennis.com/members/new_member_signup.php">            Paid Memberships</a>, including  Coach Membership with additional <a href="http://www.juniortennis.com/Coaching/coachprofiles.php">Coach Profiles</a>.<br>
+            <br>
+            </span><br>
+            <br></td>
+          <td width="32"><img src="Transp.gif" width="15" height="15"></td>
+        </tr>
+      </table> </td>
+    </tr>
+  </table>
+</body>
+</html>

@@ -1,0 +1,868 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<HTML><HEAD><TITLE>Action Corps Home</TITLE>
+<link rel="STYLESHEET" type="text/css" href="_StyleSheet.css">
+</HEAD>
+<BODY background="images/ACbackground.jpg" bgProperties=fixed>
+<TABLE border=0 cellPadding=0 cellSpacing=0 width="100%">
+<TBODY>
+<TR>
+<TD>
+      <P align=center><MAP name="FPMap0">
+	<AREA coords="449,82,573,126" href="http://www.vfwdc.org/AC/1action.htm" shape=RECT>
+	<AREA coords="335,67,441,129" href="http://www.vfwdc.org/NLS/1legishomepage.htm" shape=RECT>
+	<AREA coords="571,51,705,129" href="http://www.vfwdc.org/NVEO/1employhomepage.htm" shape=RECT>
+	<AREA coords="585,11,709,45" href="http://www.vfwdc.org/PA/1pahomepage.html" shape=RECT>
+	<AREA coords="443,9,581,85" href="http://www.vfwdc.org/NSFA/1SecurityFrontPage.htm" shape=RECT>
+	<AREA coords="335,5,433,63" href="http://www.vfwdc.org/NVS/1nvshomepage.htm" shape=RECT>
+	<AREA coords="3,13,333,129" href="http://www.vfwdc.org/index.htm" shape=RECT></MAP>
+<IMG alt="VFW Washington Office" border=0 height=130 src="images/dcheader.gif" useMap="#FPMap0" width=712></P>
+		</TD>
+	</TR>
+</TBODY>
+</TABLE>
+<TABLE align="center" border="0" cellPadding="0" cellSpacing="0" width="712">
+  <TR>
+    <TD vAlign=top>
+     <br>
+	 
+<SCRIPT language="JavaScript"><!-- 
+
+	function clickTab(tabNum) {
+		tabNum = parseInt(tabNum);
+		var menuTab;
+		var prevTab = tabNum - 1;
+		var nextTab = tabNum + 1;
+
+		for (var i = 0; i < tblContent.length; i++) {
+			menuTab = tabs[i];
+			menuTab.className = "menutab";
+			menuTab.style.borderLeftStyle = "";
+			menuTab.style.borderRightStyle = "";
+			tblContent[i].style.display = "none";
+		}
+
+		tblContent[tabNum].style.display = "block";
+		tabs[tabNum].className = "menutabactive";
+		menuTab = tabs[nextTab];
+		if (menuTab) menuTab.style.borderLeftStyle = "none";
+		menuTab = tabs[prevTab];
+		if (menuTab) menuTab.style.borderRightStyle = "none";
+		event.returnValue = false;
+	}
+
+	--></SCRIPT>
+<form name="frmZipCode" id="frmZipCode" method="get" action="LegislatorGet.asp">
+<input name="XSL" id="XSL" type="hidden" value="LegislatorGet">
+<table class="gray" border="0" cellpadding="3" cellspacing="0" width="100%">
+<tr>
+<td align="right" class="whitetext">
+<b>Write My Legislators</b>&nbsp;&nbsp;
+					zip code:
+					&nbsp;<input name="txtZip1" id="txtZip1" type="text" size="5" maxlength="5" value="">
+					-
+					<input name="txtZip2" id="txtZip2" type="text" size="4" maxlength="4" value="">&nbsp;&nbsp;<input name="cmdSubmit" id="cmdSubmit" type="submit" value="GO!" style="position: relative; top: 2" language="JavaScript" OnClick="if (frmZipCode.txtZip1.value == '') {alert('Please Enter A Zip Code'); return false;}">&nbsp;&nbsp;<A href="GetZIPPlus4.asp?XSL=GetZIPPlus4&amp;PageName=ProfileLegislator">
+						zip+4 lookup
+					</A>
+</td>
+</tr>
+</table>
+</form>
+<H1>Congressman Todd Platts&nbsp;(R-PA-19)</H1>
+<TABLE border="0" cellPadding="0" cellSpacing="0" class="blackborder" width="100%">
+<TBODY>
+<TR>
+<TD class="whitetext" vAlign="top">
+<CENTER>
+<IMG border="0" height="144" width="108" src="http://vocusgr.vocus.com/vfw/Images/Internal/.jpg"><BR>&nbsp;<A href="LetterType.asp?LegislatorID=17142&amp;XSL=LetterType">
+			  Write A Message
+			  </A>&nbsp;<BR>
+</CENTER>
+</TD>
+<TD vAlign="top">
+<TABLE width="100%" class="greenlantern" border="0" cellPadding="2" cellSpacing="0">
+<TBODY>
+<TR height="25" vAlign="middle">
+<TD class="menutabactive" id="tabs" onclick="clickTab('0');" onmouseout="window.status='';return true;" onmouseover="window.status='Member Info Tab';return true;">
+<A href="javascript:void();" onfocus="window.status='Member Info Tab';return true;">&nbsp;Member Info&nbsp;</A>
+</TD>
+<TD class="menutab" id="tabs" onclick="clickTab('1');" onmouseout="window.status='';return true;" onmouseover="window.status='Committees Tab';return true;">
+<A href="javascript:void();" onfocus="window.status='Committees Tab';return true;">&nbsp;Committees&nbsp;</A>
+</TD>
+<TD class="menutab" id="tabs" onclick="clickTab('2');" onmouseout="window.status='';return true;" onmouseover="window.status='Staff Tab';return true;">
+<A href="javascript:void();" onfocus="window.status='Staff Tab';return true;">&nbsp;Staff&nbsp;</A>
+</TD>
+<TD class="menutab" id="tabs" onclick="clickTab('3');" onmouseout="window.status='';return true;" onmouseover="window.status='Votes Tab';return true;">
+<A href="javascript:void();" onfocus="window.status='Votes Tab';return true;">&nbsp;Votes&nbsp;</A>
+</TD>
+<TD class="menutab" id="tabs" onclick="clickTab('4');" onmouseout="window.status='';return true;" onmouseover="window.status='Bills Tab';return true;">
+<A href="javascript:void();" onfocus="window.status='Bills Tab';return true;">&nbsp;Bills&nbsp;</A>
+</TD>
+<TD class="menutab" id="tabs" onclick="clickTab('5');" onmouseout="window.status='';return true;" onmouseover="window.status='Contributions Tab';return true;">
+<A href="javascript:void();" onfocus="window.status='Contributions Tab';return true;">&nbsp;Contributions&nbsp;</A>
+</TD>
+</TR>
+</TBODY>
+</TABLE>
+<TABLE width="100%" style="" border="0" cellPadding="0" cellSpacing="0" id="tblContent">
+<TBODY>
+<TR>
+<TD>
+<TABLE border="0" cellPadding="0" cellSpacing="0" class="blackborder" width="100%">
+<TBODY>
+<TR>
+<TD>&nbsp;</TD>
+</TR>
+<TR>
+<TD>&nbsp;</TD>
+</TR>
+<TR>
+<TD class="tableheader">&nbsp;</TD>
+<TD class="tableheader" colSpan="3">Capitol Office Information</TD>
+</TR>
+<TR>
+<TD>&nbsp;</TD>
+</TR>
+<TR>
+<TD>&nbsp;</TD>
+<TD>&nbsp;</TD>
+<TD class="whitetext" vAlign="top">
+<B>Address</B>
+</TD>
+<TD class="whitetext" vAlign="top">1032 Longworth House Office Building</TD>
+</TR>
+<TR>
+<TD>&nbsp;</TD>
+<TD>&nbsp;</TD>
+<TD class="whitetext" vAlign="top">
+<B></B>
+</TD>
+<TD class="whitetext" vAlign="top">Washington DC 20515</TD>
+</TR>
+<TR>
+<TD>&nbsp;</TD>
+<TD>&nbsp;</TD>
+<TD class="whitetext" vAlign="top">
+<B>Phone</B>
+</TD>
+<TD class="whitetext" vAlign="top">(202) 225-5836</TD>
+</TR>
+<TR>
+<TD>&nbsp;</TD>
+<TD>&nbsp;</TD>
+<TD class="whitetext" vAlign="top">
+<B>Fax</B>
+</TD>
+<TD class="whitetext" vAlign="top">(202) 226-1000</TD>
+</TR>
+<TR>
+<TD>&nbsp;</TD>
+<TD>&nbsp;</TD>
+<TD class="whitetext" vAlign="top">
+<B>Web Site</B>
+</TD>
+<TD class="whitetext" vAlign="top">
+<A href="http://www.house.gov/platts/" target="_new">http://www.house.gov/platts/</A>
+</TD>
+</TR>
+<TR>
+<TD>&nbsp;</TD>
+</TR>
+<TR>
+<TD class="tableheader"> </TD>
+<TD class="tableheader" colSpan="3">Biographical Information</TD>
+</TR>
+<TR>
+<TD>&nbsp;</TD>
+</TR>
+<TR>
+<TD>&nbsp;</TD>
+<TD>&nbsp;</TD>
+<TD class="whitetext" vAlign="top">
+<B>Year Elected</B>
+</TD>
+<TD class="whitetext" vAlign="top">2000</TD>
+</TR>
+<TR>
+<TD>&nbsp;</TD>
+<TD>&nbsp;</TD>
+<TD class="whitetext" vAlign="top">
+<B>Re-elect Year</B>
+</TD>
+<TD class="whitetext" vAlign="top">2004</TD>
+</TR>
+<TR>
+<TD>&nbsp;</TD>
+<TD>&nbsp;</TD>
+<TD class="whitetext" vAlign="top">
+<B>Birthday</B>
+</TD>
+<TD class="whitetext" vAlign="top">3/5/1962</TD>
+</TR>
+<TR>
+<TD>&nbsp;</TD>
+<TD>&nbsp;</TD>
+<TD class="whitetext" vAlign="top">
+<B>Birthplace</B>
+</TD>
+<TD class="whitetext" vAlign="top">York, PA</TD>
+</TR>
+<TR>
+<TD>&nbsp;</TD>
+<TD>&nbsp;</TD>
+<TD class="whitetext" vAlign="top">
+<B>Hometown</B>
+</TD>
+<TD class="whitetext" vAlign="top">Springettsbury</TD>
+</TR>
+<TR>
+<TD>&nbsp;</TD>
+<TD>&nbsp;</TD>
+<TD class="whitetext" vAlign="top">
+<B>Undergraduate Institution</B>
+</TD>
+<TD class="whitetext" vAlign="top">University of Pennsylvania</TD>
+</TR>
+<TR>
+<TD>&nbsp;</TD>
+<TD>&nbsp;</TD>
+<TD class="whitetext" vAlign="top">
+<B>Undergraduate Degree</B>
+</TD>
+<TD class="whitetext" vAlign="top">B.P.A.</TD>
+</TR>
+<TR>
+<TD>&nbsp;</TD>
+<TD>&nbsp;</TD>
+<TD class="whitetext" vAlign="top">
+<B>Graduate Institution</B>
+</TD>
+<TD class="whitetext" vAlign="top">Pepperdine University School of Law</TD>
+</TR>
+<TR>
+<TD>&nbsp;</TD>
+<TD>&nbsp;</TD>
+<TD class="whitetext" vAlign="top">
+<B>Graduate Degree</B>
+</TD>
+<TD class="whitetext" vAlign="top">J.D.</TD>
+</TR>
+<TR>
+<TD>&nbsp;</TD>
+<TD>&nbsp;</TD>
+<TD class="whitetext" vAlign="top">
+<B>Profession</B>
+</TD>
+<TD class="whitetext" vAlign="top">Attorney</TD>
+</TR>
+<TR>
+<TD>&nbsp;</TD>
+<TD>&nbsp;</TD>
+<TD class="whitetext" vAlign="top">
+<B>Religion</B>
+</TD>
+<TD class="whitetext" vAlign="top">Episcopal</TD>
+</TR>
+<TR>
+<TD>&nbsp;</TD>
+<TD>&nbsp;</TD>
+<TD class="whitetext" vAlign="top">
+<B>Gender</B>
+</TD>
+<TD class="whitetext" vAlign="top">M</TD>
+</TR>
+<TR>
+<TD>&nbsp;</TD>
+<TD>&nbsp;</TD>
+<TD class="whitetext" vAlign="top">
+<B>Spouse</B>
+</TD>
+<TD class="whitetext" vAlign="top">Leslie</TD>
+</TR>
+<TR>
+<TD>&nbsp;</TD>
+<TD>&nbsp;</TD>
+<TD class="whitetext" vAlign="top">
+<B>Children</B>
+</TD>
+<TD class="whitetext" vAlign="top">2</TD>
+</TR>
+<TR>
+<TD>&nbsp;</TD>
+</TR>
+<TR>
+<TD class="tableheader">&nbsp;</TD>
+<TD class="tableheader" colSpan="3">District Office Information</TD>
+</TR>
+<TR>
+<TD>&nbsp;</TD>
+</TR>
+<TR>
+<TD>&nbsp;</TD>
+<TD>&nbsp;</TD>
+<TD class="whitetext" vAlign="top">
+<B>Address</B>
+</TD>
+<TD class="whitetext" vAlign="top">22 Chambersburg Street</TD>
+</TR>
+<TR>
+<TD>&nbsp;</TD>
+<TD>&nbsp;</TD>
+<TD class="whitetext" vAlign="top">
+<B></B>
+</TD>
+<TD class="whitetext" vAlign="top">Gettysburg, PA 17325</TD>
+</TR>
+<TR>
+<TD>&nbsp;</TD>
+<TD>&nbsp;</TD>
+<TD class="whitetext" vAlign="top">
+<B>Phone</B>
+</TD>
+<TD class="whitetext" vAlign="top">(717) 338-1919</TD>
+</TR>
+<TR>
+<TD>&nbsp;</TD>
+</TR>
+</TBODY>
+</TABLE>
+<BR>
+</TD>
+</TR>
+</TBODY>
+</TABLE>
+<TABLE width="100%" style="DISPLAY: none" border="0" cellPadding="0" cellSpacing="0" id="tblContent">
+<TBODY>
+<TR>
+<TD>
+<TABLE width="100%" border="0" cellPadding="0" cellSpacing="0" class="blackborder">
+<TBODY>
+<TR>
+<TD>&nbsp;</TD>
+<TD>&nbsp;</TD>
+<TD>&nbsp;</TD>
+<TD>&nbsp;</TD>
+</TR>
+<TR>
+<TD>&nbsp;</TD>
+</TR>
+<TR>
+<TD class="tableheader">&nbsp;</TD>
+<TD class="tableheader" colSpan="3">Committees</TD>
+</TR>
+<TR>
+<TD>&nbsp;</TD>
+</TR>
+<TR>
+<TD>&nbsp;</TD>
+<TD>&nbsp;</TD>
+<TD class="whitetext" vAlign="top">
+<A href="ProfileCommittee.asp?CommitteeID=2994&amp;XSL=ProfileCommittee">Education and the Workforce</A>
+</TD>
+<TD class="whitetext" vAlign="top"></TD>
+</TR>
+<TR>
+<TD>&nbsp;</TD>
+<TD>&nbsp;</TD>
+<TD class="whitetext" vAlign="top">&nbsp;&nbsp;<A href="ProfileCommittee.asp?CommitteeID=2995&amp;XSL=ProfileCommittee">Education Reform</A>
+</TD>
+<TD class="whitetext" vAlign="top"></TD>
+</TR>
+<TR>
+<TD>&nbsp;</TD>
+<TD>&nbsp;</TD>
+<TD class="whitetext" vAlign="top">&nbsp;&nbsp;<A href="ProfileCommittee.asp?CommitteeID=2996&amp;XSL=ProfileCommittee">Employer-Employee Relations</A>
+</TD>
+<TD class="whitetext" vAlign="top"></TD>
+</TR>
+<TR>
+<TD>&nbsp;</TD>
+<TD>&nbsp;</TD>
+<TD class="whitetext" vAlign="top">
+<A href="ProfileCommittee.asp?CommitteeID=3000&amp;XSL=ProfileCommittee">Government Reform</A>
+</TD>
+<TD class="whitetext" vAlign="top"></TD>
+</TR>
+<TR>
+<TD>&nbsp;</TD>
+<TD>&nbsp;</TD>
+<TD class="whitetext" vAlign="top">&nbsp;&nbsp;<A href="ProfileCommittee.asp?CommitteeID=3004&amp;XSL=ProfileCommittee">Government Efficiency and Financial Management</A>
+</TD>
+<TD class="whitetext" vAlign="top"></TD>
+</TR>
+<TR>
+<TD>&nbsp;</TD>
+<TD>&nbsp;</TD>
+<TD class="whitetext" vAlign="top">&nbsp;&nbsp;<A href="ProfileCommittee.asp?CommitteeID=3006&amp;XSL=ProfileCommittee">National Security, Emerging Threats, and International Relations</A>
+</TD>
+<TD class="whitetext" vAlign="top"></TD>
+</TR>
+<TR>
+<TD>&nbsp;</TD>
+<TD>&nbsp;</TD>
+<TD class="whitetext" vAlign="top">
+<A href="ProfileCommittee.asp?CommitteeID=93510&amp;XSL=ProfileCommittee">Transportation and Infrastructure</A>
+</TD>
+<TD class="whitetext" vAlign="top"></TD>
+</TR>
+<TR>
+<TD>&nbsp;</TD>
+<TD>&nbsp;</TD>
+<TD class="whitetext" vAlign="top">&nbsp;&nbsp;<A href="ProfileCommittee.asp?CommitteeID=93562&amp;XSL=ProfileCommittee">Railroads</A>
+</TD>
+<TD class="whitetext" vAlign="top"></TD>
+</TR>
+<TR>
+<TD>&nbsp;</TD>
+<TD>&nbsp;</TD>
+<TD class="whitetext" vAlign="top">&nbsp;&nbsp;<A href="ProfileCommittee.asp?CommitteeID=93564&amp;XSL=ProfileCommittee">Highways, Transit, and Pipelines</A>
+</TD>
+<TD class="whitetext" vAlign="top"></TD>
+</TR>
+<TR>
+<TD>&nbsp;</TD>
+</TR>
+</TBODY>
+</TABLE>
+<BR>
+</TD>
+</TR>
+</TBODY>
+</TABLE>
+<TABLE width="100%" style="DISPLAY: none" border="0" cellPadding="0" cellSpacing="0" id="tblContent">
+<TBODY>
+<TR>
+<TD>
+<TABLE width="100%" border="0" cellPadding="0" cellSpacing="0" class="blackborder">
+<TBODY>
+<TR>
+<TD>&nbsp;</TD>
+<TD>&nbsp;</TD>
+<TD>&nbsp;</TD>
+<TD>&nbsp;</TD>
+</TR>
+<TR><TD>&nbsp;</TD></TR>
+<TR>
+<TD class="tableheader">&nbsp;</TD>
+<TD class="tableheader" colSpan="3">Key Staff</TD>
+</TR>
+<TR><TD>&nbsp;</TD></TR>
+<TR>
+<TD>&nbsp;</TD>
+<TD>&nbsp;</TD>
+<TD class="whitetext" vAlign="top"><B>Director of Constituent Services</B></TD>
+<TD class="whitetext" vAlign="top">Ms. Lisa Flanagan</TD>
+</TR>
+<TR>
+<TD>&nbsp;</TD>
+<TD>&nbsp;</TD>
+<TD class="whitetext" vAlign="top"><B>Legislative Assitant</B></TD>
+<TD class="whitetext" vAlign="top">Mr. Seth Grove</TD>
+</TR>
+<TR>
+<TD>&nbsp;</TD>
+<TD>&nbsp;</TD>
+<TD class="whitetext" vAlign="top"><B>District Staff Assistant</B></TD>
+<TD class="whitetext" vAlign="top">Mr. Ray Markey</TD>
+</TR>
+<TR>
+<TD>&nbsp;</TD>
+<TD>&nbsp;</TD>
+<TD class="whitetext" vAlign="top"><B>Legislative Assistant</B></TD>
+<TD class="whitetext" vAlign="top">Ms. Abbie Evans</TD>
+</TR>
+<TR>
+<TD>&nbsp;</TD>
+<TD>&nbsp;</TD>
+<TD class="whitetext" vAlign="top"><B>Legislative Assistant</B></TD>
+<TD class="whitetext" vAlign="top">Ms. Carmen Ferro</TD>
+</TR>
+<TR>
+<TD>&nbsp;</TD>
+<TD>&nbsp;</TD>
+<TD class="whitetext" vAlign="top"><B>Deputy Chief of Staff/Press Secretary</B></TD>
+<TD class="whitetext" vAlign="top">Mr. Bob Reilly</TD>
+</TR>
+<TR>
+<TD>&nbsp;</TD>
+<TD>&nbsp;</TD>
+<TD class="whitetext" vAlign="top"><B>Field Representative</B></TD>
+<TD class="whitetext" vAlign="top">Ms. Holly Sutphin</TD>
+</TR>
+<TR>
+<TD>&nbsp;</TD>
+<TD>&nbsp;</TD>
+<TD class="whitetext" vAlign="top"><B>Legislative Assistant</B></TD>
+<TD class="whitetext" vAlign="top">Mr. Chris Rager</TD>
+</TR>
+<TR>
+<TD>&nbsp;</TD>
+<TD>&nbsp;</TD>
+<TD class="whitetext" vAlign="top"><B>Legislative Director</B></TD>
+<TD class="whitetext" vAlign="top">Ms. Marianne Adezio</TD>
+</TR>
+<TR>
+<TD>&nbsp;</TD>
+<TD>&nbsp;</TD>
+<TD class="whitetext" vAlign="top"><B>Director of Field Operations</B></TD>
+<TD class="whitetext" vAlign="top">Ms. Melissa Plotkin</TD>
+</TR>
+<TR>
+<TD>&nbsp;</TD>
+<TD>&nbsp;</TD>
+<TD class="whitetext" vAlign="top"><B>District Staff Assistant</B></TD>
+<TD class="whitetext" vAlign="top">Ms. Julie Price</TD>
+</TR>
+<TR>
+<TD>&nbsp;</TD>
+<TD>&nbsp;</TD>
+<TD class="whitetext" vAlign="top"><B>Chief of Staff</B></TD>
+<TD class="whitetext" vAlign="top">Mr. Scott Miller</TD>
+</TR>
+<TR>
+<TD>&nbsp;</TD>
+<TD>&nbsp;</TD>
+<TD class="whitetext" vAlign="top"><B>Field Representative</B></TD>
+<TD class="whitetext" vAlign="top">Mr. Jay Swisher</TD>
+</TR>
+<TR>
+<TD>&nbsp;</TD>
+<TD>&nbsp;</TD>
+<TD class="whitetext" vAlign="top"><B>Legislative Assistant</B></TD>
+<TD class="whitetext" vAlign="top">Ms. Mary Weaver</TD>
+</TR>
+<TR>
+<TD>&nbsp;</TD>
+<TD>&nbsp;</TD>
+<TD class="whitetext" vAlign="top"><B>Legislative Assistant</B></TD>
+<TD class="whitetext" vAlign="top">Mr. Nathaniel Sloan</TD>
+</TR>
+<TR>
+<TD>&nbsp;</TD>
+<TD>&nbsp;</TD>
+<TD class="whitetext" vAlign="top"><B>Legislative Correspondent</B></TD>
+<TD class="whitetext" vAlign="top">Ms. Laura Garland</TD>
+</TR>
+<TR>
+<TD>&nbsp;</TD>
+<TD>&nbsp;</TD>
+<TD class="whitetext" vAlign="top"><B>District Executive Assistant/Scheduler</B></TD>
+<TD class="whitetext" vAlign="top">Ms. Carol Wiest</TD>
+</TR>
+<TR>
+<TD>&nbsp;</TD>
+</TR>
+</TBODY>
+</TABLE>
+<BR>
+</TD>
+</TR>
+</TBODY>
+</TABLE>
+<TABLE width="100%" style="DISPLAY: none" border="0" cellPadding="0" cellSpacing="0" id="tblContent">
+<TBODY>
+<TR>
+<TD>
+<TABLE border="0" cellPadding="0" cellSpacing="0" class="blackborder" width="100%">
+<TBODY>
+<TR>
+<TD>&nbsp;</TD>
+<TD>&nbsp;</TD>
+<TD>&nbsp;</TD>
+<TD>&nbsp;</TD>
+<TD>&nbsp;</TD>
+<TD>&nbsp;</TD>
+</TR>
+<TR>
+<TD>&nbsp;</TD>
+</TR>
+<TR>
+<TD class="tableheader">&nbsp;</TD>
+<TD class="tableheader" colSpan="5">Votes</TD>
+</TR>
+<TR><TD>&nbsp;</TD></TR>
+<TR>
+<TD>&nbsp;</TD>
+<TD>&nbsp;</TD>
+<TD vAlign="top" class="whitetext">
+<A href="ProfileVote.asp?VoteMasterID=54&amp;XSL=ProfileVote">H20030032</A>
+</TD>
+<TD valign="top" class="whitetext">Yea</TD>
+<TD valign="top" class="whitetext">2/13/2003</TD>
+<TD valign="top" class="whitetext">HJRES0002. On Agreeing to the Conference Report</TD>
+</TR>
+<TR>
+<TD>&nbsp;</TD>
+<TD>&nbsp;</TD>
+<TD vAlign="top" class="whitetext">
+<A href="ProfileVote.asp?VoteMasterID=62&amp;XSL=ProfileVote">H20030076</A>
+</TD>
+<TD valign="top" class="whitetext">Yea</TD>
+<TD valign="top" class="whitetext">3/20/2003</TD>
+<TD valign="top" class="whitetext">HR1307. On Motion to Suspend the Rules and Pass</TD>
+</TR>
+<TR>
+<TD>&nbsp;</TD>
+<TD>&nbsp;</TD>
+<TD vAlign="top" class="whitetext">
+<A href="ProfileVote.asp?VoteMasterID=61&amp;XSL=ProfileVote">H20030077</A>
+</TD>
+<TD valign="top" class="whitetext">Yea</TD>
+<TD valign="top" class="whitetext">3/20/2003</TD>
+<TD valign="top" class="whitetext">HRES0132. On Motion to Suspend the Rules and Agree</TD>
+</TR>
+<TR>
+<TD>&nbsp;</TD>
+<TD>&nbsp;</TD>
+<TD vAlign="top" class="whitetext">
+<A href="ProfileVote.asp?VoteMasterID=66&amp;XSL=ProfileVote">H20030083</A>
+</TD>
+<TD valign="top" class="whitetext">Yea</TD>
+<TD valign="top" class="whitetext">3/21/2003</TD>
+<TD valign="top" class="whitetext">HCONRES0104. On Agreeing to the Resolution</TD>
+</TR>
+<TR>
+<TD>&nbsp;</TD>
+<TD>&nbsp;</TD>
+<TD vAlign="top" class="whitetext">
+<A href="ProfileVote.asp?VoteMasterID=65&amp;XSL=ProfileVote">H20030096</A>
+</TD>
+<TD valign="top" class="whitetext">Yea</TD>
+<TD valign="top" class="whitetext">4/1/2003</TD>
+<TD valign="top" class="whitetext">HR1412. On Motion to Suspend the Rules and Pass</TD>
+</TR>
+<TR>
+<TD>&nbsp;</TD>
+<TD>&nbsp;</TD>
+<TD vAlign="top" class="whitetext">
+<A href="ProfileVote.asp?VoteMasterID=64&amp;XSL=ProfileVote">H20030097</A>
+</TD>
+<TD valign="top" class="whitetext">Yea</TD>
+<TD valign="top" class="whitetext">4/1/2003</TD>
+<TD valign="top" class="whitetext">HCONRES0109. On Motion to Suspend the Rules and Agree, as Amended</TD>
+</TR>
+<TR>
+<TD>&nbsp;</TD>
+<TD>&nbsp;</TD>
+<TD vAlign="top" class="whitetext">
+<A href="ProfileVote.asp?VoteMasterID=63&amp;XSL=ProfileVote">H20030108</A>
+</TD>
+<TD valign="top" class="whitetext">Yea</TD>
+<TD valign="top" class="whitetext">4/3/2003</TD>
+<TD valign="top" class="whitetext">HR1559. On Passage</TD>
+</TR>
+<TR>
+<TD>&nbsp;</TD>
+</TR>
+</TBODY>
+</TABLE>
+<BR>
+</TD>
+</TR>
+</TBODY>
+</TABLE>
+<TABLE width="100%" style="DISPLAY: none" border="0" cellPadding="0" cellSpacing="0" id="tblContent">
+<TBODY>
+<TR>
+<TD>
+<TABLE border="0" cellPadding="0" cellSpacing="0" class="blackborder" width="100%">
+<TBODY>
+<TR>
+<TD>&nbsp;</TD>
+<TD>&nbsp;</TD>
+<TD>&nbsp;</TD>
+<TD>&nbsp;</TD>
+<TD>&nbsp;</TD>
+<TD>&nbsp;</TD>
+</TR>
+<TR>
+<TD>&nbsp;</TD>
+</TR>
+<TR>
+<TD class="tableheader">&nbsp;</TD>
+<TD class="tableheader" colSpan="5">Bills</TD>
+</TR>
+<TR>
+<TD>&nbsp;</TD>
+</TR>
+<TR>
+<TD>&nbsp;</TD>
+<TD>&nbsp;</TD>
+<TD vAlign="top" class="whitetext">
+<A href="ProfileBill.asp?BillID=106&amp;XSL=ProfileBill">108HJRES4</A>
+</TD>
+<TD valign="top" class="whitetext">1/7/2003</TD>
+<TD valign="top" class="whitetext">Flag Protection Amendment</TD>
+<TD valign="top" class="whitetext">CoSponsor</TD>
+</TR>
+<TR>
+<TD>&nbsp;</TD>
+<TD>&nbsp;</TD>
+<TD vAlign="top" class="whitetext">
+<A href="ProfileBill.asp?BillID=110&amp;XSL=ProfileBill">108HR100</A>
+</TD>
+<TD valign="top" class="whitetext">1/7/2003</TD>
+<TD valign="top" class="whitetext">Servicemembers Civil Relief Act</TD>
+<TD valign="top" class="whitetext">CoSponsor</TD>
+</TR>
+<TR>
+<TD>&nbsp;</TD>
+<TD>&nbsp;</TD>
+<TD vAlign="top" class="whitetext">
+<A href="ProfileBill.asp?BillID=164&amp;XSL=ProfileBill">108HR1442</A>
+</TD>
+<TD valign="top" class="whitetext">3/26/2003</TD>
+<TD valign="top" class="whitetext">Vietnam Veterans Memorial Visitor Center Act</TD>
+<TD valign="top" class="whitetext">CoSponsor</TD>
+</TR>
+<TR>
+<TD>&nbsp;</TD>
+<TD>&nbsp;</TD>
+<TD vAlign="top" class="whitetext">
+<A href="ProfileBill.asp?BillID=121&amp;XSL=ProfileBill">108HR172</A>
+</TD>
+<TD valign="top" class="whitetext">1/7/2003</TD>
+<TD valign="top" class="whitetext">Blinded Veterans Annuity Protection Act</TD>
+<TD valign="top" class="whitetext">CoSponsor</TD>
+</TR>
+<TR>
+<TD>&nbsp;</TD>
+<TD>&nbsp;</TD>
+<TD vAlign="top" class="whitetext">
+<A href="ProfileBill.asp?BillID=122&amp;XSL=ProfileBill">108HR303</A>
+</TD>
+<TD valign="top" class="whitetext">1/8/2003</TD>
+<TD valign="top" class="whitetext">Retired Pay Restoration Act</TD>
+<TD valign="top" class="whitetext">CoSponsor</TD>
+</TR>
+<TR>
+<TD>&nbsp;</TD>
+<TD>&nbsp;</TD>
+<TD vAlign="top" class="whitetext">
+<A href="ProfileBill.asp?BillID=139&amp;XSL=ProfileBill">108HR548</A>
+</TD>
+<TD valign="top" class="whitetext">2/5/2003</TD>
+<TD valign="top" class="whitetext">Military Survivor Benefits Improvement Act</TD>
+<TD valign="top" class="whitetext">CoSponsor</TD>
+</TR>
+<TR>
+<TD>&nbsp;</TD>
+<TD>&nbsp;</TD>
+<TD vAlign="top" class="whitetext">
+<A href="ProfileBill.asp?BillID=130&amp;XSL=ProfileBill">108HR58</A>
+</TD>
+<TD valign="top" class="whitetext">1/7/2003</TD>
+<TD valign="top" class="whitetext">Keep Our Promise to America's Military Retirees Act</TD>
+<TD valign="top" class="whitetext">CoSponsor</TD>
+</TR>
+<TR>
+<TD>&nbsp;</TD>
+<TD>&nbsp;</TD>
+<TD vAlign="top" class="whitetext">
+<A href="ProfileBill.asp?BillID=140&amp;XSL=ProfileBill">108HR693</A>
+</TD>
+<TD valign="top" class="whitetext">2/11/2003</TD>
+<TD valign="top" class="whitetext">Military Death Gratuity Improvement Act</TD>
+<TD valign="top" class="whitetext">CoSponsor</TD>
+</TR>
+<TR>
+<TD>&nbsp;</TD>
+<TD>&nbsp;</TD>
+<TD vAlign="top" class="whitetext">
+<A href="ProfileBill.asp?BillID=153&amp;XSL=ProfileBill">108HR709</A>
+</TD>
+<TD valign="top" class="whitetext">2/11/2003</TD>
+<TD valign="top" class="whitetext">Veterans Prescription Access Improvement Act</TD>
+<TD valign="top" class="whitetext">CoSponsor</TD>
+</TR>
+<TR>
+<TD>&nbsp;</TD>
+<TD>&nbsp;</TD>
+<TD vAlign="top" class="whitetext">
+<A href="ProfileBill.asp?BillID=141&amp;XSL=ProfileBill">108HR742</A>
+</TD>
+<TD valign="top" class="whitetext">2/12/2003</TD>
+<TD valign="top" class="whitetext">Resevists Retirement Age Act</TD>
+<TD valign="top" class="whitetext">CoSponsor</TD>
+</TR>
+<TR>
+<TD>&nbsp;</TD>
+</TR>
+</TBODY>
+</TABLE>
+<BR>
+</TD>
+</TR>
+</TBODY>
+</TABLE>
+<TABLE width="100%" style="DISPLAY: none" border="0" cellPadding="0" cellSpacing="0" id="tblContent">
+<TBODY>
+<TR>
+<TD>
+<TABLE border="0" cellPadding="0" cellSpacing="0" width="100%" class="blackborder">
+<TBODY>
+<TR>
+<TD>&nbsp;</TD>
+<TD>&nbsp;</TD>
+<TD>&nbsp;</TD>
+<TD>&nbsp;</TD>
+</TR>
+<TR>
+<TD>&nbsp;</TD>
+</TR>
+<TR>
+<TD class="tableheader"> </TD>
+<TD class="tableheader" colSpan="3">Contributions</TD>
+</TR>
+<TR>
+<TD>&nbsp;</TD>
+</TR>
+<TR>
+<TD>&nbsp;</TD>
+<TD>&nbsp;</TD>
+<TD>&nbsp;</TD>
+<TD>&nbsp;</TD>
+</TR>
+<TR>
+<TD>&nbsp;</TD>
+</TR>
+</TBODY>
+</TABLE>
+<BR>
+</TD>
+</TR>
+</TBODY>
+</TABLE>
+</TD>
+</TR>
+</TBODY>
+</TABLE>
+      
+      
+      </TD>
+	</TR>
+</TABLE>
+<br>
+
+<p align="center"><a href="default.asp">VFW Action Corps Legislative Center</a></p><br>
+
+
+<H5 align=center><A href="http://www.vfwdc.org/index.htm">home</A> | <A 
+href="http://www.vfwdc.org/NVS/1nvshomepage.htm">veterans service</A> | <A 
+href="http://www.vfwdc.org/NLS/1legishomepage.htm">legislative service</A> | <A 
+href="http://www.vfwdc.org/AC/1action.htm">action corps</A> |&nbsp; <A 
+href="http://www.vfwdc.org/PA/1pahomepage.html">public affairs</A> |&nbsp; <A 
+href="http://www.vfwdc.org/NVEO/1employhomepage.htm">veterans employment 
+assistance service</A> |&nbsp; <A 
+href="http://www.vfwdc.org/NSFA/1SecurityFrontPage.htm">security &amp; foreign 
+affairs</A> | <A href="http://www.vfw.org/" target=new>vfw.org </A></H5>
+<H5 align=center><FONT face=Arial><A 
+href="http://www.vfwdc.org/AC/newsletter.htm">Sign up for our Washington 
+Newsletter</A> for information about current legislation, benefits and to find 
+out what's going on in the Halls of Congress</FONT></H5>
+<HR>
+
+<P align=center><FONT size=-2>Copyright &copy; 2001; Veterans of Foreign Wars of 
+United States, Washington Office, 200 Maryland Ave, NE Washington, DC 20002. 
+Telephone&nbsp; (202)543-2239. Email <A 
+href="mailto:vfw@vfwdc.org">vfw@vfwdc.org</A>&nbsp; All Rights Reserved. 
+</FONT></P></BODY></HTML>

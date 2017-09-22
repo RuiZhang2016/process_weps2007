@@ -1,0 +1,759 @@
+
+<!-- Begin header.html -->
+<!--#if expr="${SCRIPT_URI} = /library\.lp/" -->
+    <!--#set var="section" value="legal" -->
+<!--#endif -->
+
+<html>
+<head>
+<title>FindLaw for Legal Professionals - Case Law, Federal and State Resources, Forms, and Code</title>
+
+<link rel="stylesheet" href="http://images.findlaw.com/stylesheets/lp.css" type="text/css"></link>
+<LINK rel="stylesheet" href="http://news.findlaw.com/includes.findlaw/findlawnews.css" type="text/css">
+<!-- Jeff's Stylesheet -->
+<link rel="stylesheet" href="http://images.findlaw.com/stylesheets/cm_lp.css" title="Primary"></link>
+<script>
+//For Jeff's Modules.
+var what="LNCAI";
+var uri="file:///home/httpd/html/content/caselaw/data2/circs/11th/0114780.html";
+</script>
+<script src="http://ctx.findlaw.com/js/cm.js"></script>
+
+<META NAME="description" CONTENT="FindLaw for Legal Professionals is a free resource for attorneys that includes online case law, free state codes, free federal codes, free legal forms, and a directory of products and services for lawyers. This online legal Web site also includes a legal career center.">
+<META NAME="keywords" CONTENT="legal professionals, case law, free case law, state case law, federal case law, free US code, lawyer marketing, lawyer products, legal practice area, free legal forms, legal career, legal job, attorney job, lawyer resource, attorney resource.">
+<meta http-equiv="PICS-Label" content='(PICS-1.1 "http://www.classify.org/safesurf/" l r (SS~~000 1))'>
+<meta http-equiv="pics-label" content='(pics-1.1 "http://www.icra.org/ratingsv02.html" comment "ICRAonline v2.0" l gen true for "http://corporate.findlaw.com" r (nz 1 vz 1 lz 1 oz 1 cz 1) "http://www.rsac.org/ratingsv01.html" l gen true for "http://corporate.findlaw.com"  r (n 0 s 0 v 0 l 0))'>
+<meta http-equiv="pics-label" content='(pics-1.1 "http://www.icra.org/ratingsv02.html" comment "ICRAonline v2.0" l gen true for "http://contracts.corporate.findlaw.com" r (nz 1 vz 1 lz 1 oz 1 cz 1) "http://www.rsac.org/ratingsv01.html" l gen true for "http://contracts.corporate.findlaw.com"  r (n 0 s 0 v 0 l 0))'>
+<meta http-equiv="pics-label" content='(pics-1.1 "http://www.icra.org/ratingsv02.html" comment "ICRAonline v2.0" l gen true for "http://articles.corporate.findlaw.com" r (nz 1 vz 1 lz 1 oz 1 cz 1) "http://www.rsac.org/ratingsv01.html" l gen true for "http://articles.corporate.findlaw.com"  r (n 0 s 0 v 0 l 0))'>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<script language="Javascript" src="http://images.findlaw.com/doubleclick/lp_doubleclick.js"></script>
+<script language="JavaScript" type="text/javascript">
+<!--
+var checkName = "lawyer";
+var checkExp = "lawyer";
+var checkFederal = "";
+
+function pollSubPop(url, windowName) {    
+	w=540;    
+	h=330;    
+	var params = "width=" + w + ",height=" + h + ",";    
+	params += "resizable=no,scrollbars=yes,status=no,";    
+	params += "menubar=no,toolbar=no,location=no,directories=no";        
+	var win = window.open(url, windowName , params);        
+	win.opener = window;    
+}
+
+function clickNameSearch(isLawyer)
+{
+   if ( isLawyer != checkName ) {
+    var formName = document.nameSearch;
+    formName.action = "search_index.jsp";
+    formName.submit();
+   }
+}
+
+function clickExpSearch(isLawyer)
+{
+   if ( isLawyer != checkExp ) {
+      var formName = document.expSearch;
+      formName.action = "search_index.jsp";
+      formName.submit();
+   }
+}
+
+function clickFederal(box)
+{
+   var isFederal = box.value;
+
+   var formName = document.expSearch;
+
+   if( isFederal != checkFederal )
+   {
+      comboClear( formName.selectcircuit );
+      comboClear( formName.selectcourt );
+      comboClear( formName.selectjudge );
+      formName.action = "search_index.jsp";
+      formName.submit();
+   }
+}
+
+function ChangeCircuitState(box)
+{
+    var circuitorstate = box.options[box.selectedIndex].value;
+
+    var formName = document.expSearch;
+
+   if( circuitorstate != null  && circuitorstate != "" )
+   {
+      formName.action = "search_index.jsp";
+      formName.submit();
+   } else {
+    comboClear( formName.selectcourt );
+    comboClear( formName.selectjudge );
+   }
+}
+
+function comboClear(box)
+{
+   for (i = box.options.length; i > 0; i--)
+   {
+      box.options[i] = null;
+   }
+}
+
+function ChangeCourt(box )
+{
+    var court = box.options[box.selectedIndex].value;
+
+    var formName = document.expSearch;
+
+   if( court != null   && court != "" )
+   {
+        formName.action = "search_index.jsp";
+        formName.submit();
+   } else {
+    comboClear( formName.selectjudge );
+   }
+}
+
+function ChangeLtopic(box)
+{
+    var l = box.value;
+
+    var c = document.expSearch.legaltopic;
+
+   if( l != null && l != "" )
+   {
+        c.checked = true;
+   } else {
+        var legalissue = document.expSearch.legalissue.option[document.expSearch.legalissue.selectedIndex].value;
+    if( legalissue != null && legalissue != "" )
+    {
+            c.checked = true;
+    } else {
+            c.checked = false;
+        }
+   }
+}
+
+function ChangeLegalissue(box)
+{
+    var l = box.options[box.selectedIndex].value;
+    var c = document.expSearch.legaltopic;
+
+   if( l != null && l != "" )
+   {
+        c.checked = true;
+   } else {
+        var ltopic = document.expSearch.ltopic.value;
+        if( ltopic != null && ltopic != "" )
+        {
+            c.checked = true;
+        } else {
+            c.checked = false;
+        }
+   }
+}
+
+function ChangeCity(box)
+{
+    var l = box.value;
+
+    var c = document.expSearch.location;
+
+   if( l != null && l != "" )
+   {
+        c.checked = true;
+   } else {
+        var state = document.expSearch.state.option[document.expSearch.state.selectedIndex].value;
+        if( state != null && state != "" )
+        {
+            c.checked = true;
+        } else {
+            c.checked = false;
+        }
+   }
+}
+
+function ChangeState(box)
+{
+    var l = box.options[box.selectedIndex].value;
+
+    var c = document.expSearch.location;
+
+   if( l != null && l != "" )
+   {
+        c.checked = true;
+   } else {
+        var city = document.expSearch.city.value;
+        if( city != null && city != "" )
+        {
+            c.checked = true;
+        } else {
+            c.checked = false;
+        }
+   }
+}
+
+function setTag(id,text) {
+    document.getElementById(id).innerHTML=text;
+}
+
+// -->
+</script>
+</head>
+
+<body bgcolor="#F0F2F6" leftmargin="0" topmargin="0" marginwidth="0" marginheight="0" link="#000099" vlink="20206a" alink="#7A7A71">
+
+<table width="100%" border="0" cellpadding="0" cellspacing="0" align="center">
+
+<!-- BEGIN TOP LINKS -->
+<TR valign="middle"> 
+	<TD ALIGN="left" BGCOLOR="#000000" height="30" class="topleft" nowrap>&nbsp;&nbsp;<A HREF="http://www.findlaw.com/" class="topleft">FindLaw</A> | <A HREF="http://public.findlaw.com/" class="topleft">For the Public</A> | <A HREF="http://biz.findlaw.com/" class="topleft">For Business</A> | <A HREF="http://corporate.findlaw.com/" class="topleft">For Corporate Counsel</A></TD>
+
+    <form method="post" action="http://login.findlaw.com/scripts/login?dest=http://my.findlaw.com" name="">
+    <!-- MYFL LOGIN -->
+    <TD ALIGN="right" BGCOLOR="#000000" height="30" class="topleft" valign="middle" nowrap>
+
+    <a href="http://login.findlaw.com/scripts/register?dest='http://my.findlaw.com/0'&goback=1" class="topleft">Register/login to My FindLaw</a>&nbsp;&nbsp;&nbsp;    </td>
+    </form>
+
+</TR>
+<!-- END TOP LINKS -->
+
+
+
+<!-- BEGIN LOGO -->
+<tr valign="middle">
+<td height="74" width="100%" bgcolor="#566B7D" colspan="2"><a href="http://lp.findlaw.com/">
+<img src="http://images.findlaw.com/www/lp/lp_logo.gif" width="171" height="72" alt="FindLaw for Legal Professionals" border="0" align="left"></a><table align="right"><tr><td style="padding-top: 4px; padding-right: 4px;"><script language="Javascript">
+top();
+</script></td></tr></table></td>
+</tr>
+<!-- END LOGO -->
+
+
+<!-- BEGIN TOPNAV -->
+<tr>
+<td background="http://images.findlaw.com/www/lp/nav_back_top.gif" align="middle" valign="bottom" colspan="2" height="20"><img usemap="#topnav" src="http://images.findlaw.com/www/lp/tabs_cases.gif" width="692" height="25" alt="" border="0"></td>
+</tr>
+<!-- END TOPNAV -->
+<!-- START SUBNAV -->
+<tr>
+<td colspan="2" bgcolor="#F0F2F6">
+<table border=0 cellspacing=0 cellpadding=0 width="100%">
+<tr>
+<td align="left" width="8%">
+<img src="http://images.findlaw.com/www/lp/top_left_nav.gif">
+</td>
+<td align="middle">
+<table border=0 cellspacing=0 cellpadding=0>
+<tr>
+<td align="middle" nowrap><a href="http://www.findlaw.com/casecode/#federal" class="textsmall">Federal Law</a></td>
+<td>&nbsp;&nbsp;&nbsp;&nbsp;</td>
+<td align="middle" nowrap><a href="http://www.findlaw.com/casecode/#statelaw" class="textsmall">State Law</a></td>
+<td>&nbsp;&nbsp;&nbsp;&nbsp;</td>
+<td align="middle" nowrap><a href="http://caselaw.lp.findlaw.com/casesummary/index.html" class="textsmall">Case Summaries Search</a></td>
+<td>&nbsp;&nbsp;&nbsp;&nbsp;</td>
+<td align="middle" nowrap><a href="http://www.findlaw.com/casecode/uscodes/" class="textsmall">U.S. Code</a></td>
+<td>&nbsp;&nbsp;&nbsp;&nbsp;</td>
+<td align="middle" nowrap><a href="http://www.findlaw.com/casecode/supreme.html" class="textsmall">U.S. Supreme Court</a></td>
+
+<!--#endif -->
+
+</tr>
+</table>
+</td>
+
+<td align="right" valign="top">
+<img src="http://images.findlaw.com/www/lp/top_right_nav.gif">
+</td>
+</tr>
+
+</table>
+</td></tr>
+<!-- END SUBNAV -->
+
+</table>
+
+<map name="topnav">
+<area shape="rect" coords="0,2,52,25" href="http://lp.findlaw.com/">
+<area shape="rect" coords="53,3,216,25" href="http://www.findlaw.com/01topics/">
+<area shape="rect" coords="217,2,368,25" href="http://www.findlaw.com/jurisdiction/">
+<area shape="rect" coords="369,2,466,25" href="http://www.findlaw.com/casecode/">
+<area shape="rect" coords="467,3,575,25" href="http://news.lp.findlaw.com/">
+<area shape="rect" coords="576,2,692,25" href="http://legalrecords.findlaw.com/ss/search_index.jsp?ch=LP">
+</map>
+
+
+<!-- BEGIN MAIN TABLE -->
+<table width="100%" align="center" cellpadding="0" cellspacing="0" border="0">
+	<tr bgcolor="#F0F2F6">
+	<td colspan="3" align="left" valign="top"><img src="http://images.findlaw.com/corporate/spacer.gif" width="13" height="3"></td>
+	</tr>
+
+<!-- BEGIN LEFT-HAND CONTENT TABLE -->
+	<tr>
+	<td valign="top" bgcolor="#F0F2F6">
+		<table border="0" cellspacing="0" cellpadding="0">
+		<tr>
+		<td valign="top" bgcolor="#889BAE" width="150">
+
+		</td>
+		</tr>
+	    </table>
+		<table border="0" cellspacing="0" cellpadding="0" width="100%">
+		<tr><td border="0" height="371"></td></tr></table>
+
+
+	</td>
+<!-- END LEFT-HAND CONTENT TABLE -->
+
+<!-- BEGIN MIDDLE (MAIN) CONTENT TABLE -->
+	<td bgcolor="#ffffff" width="100%" align="left" valign="top">
+
+		<table width="100%" cellpadding="0" cellspacing="0" border="0" bgcolor="#ffffff">
+		<tr>
+		<td bgcolor=#FFFFFF valign="top" width="7" height="7"><img src="http://images.findlaw.com/www/lp/tl.gif" width="7" height="7"></td>
+		
+		<td width="100%"></td>
+		</tr>
+		<tr>
+		<td><img src="http://images.findlaw.com/corporate/spacer.gif" width="100%"></td>		
+
+		<td width="100%" height="25" align="left">
+
+	<!-- BEGIN ZIP LINE -->
+<table border=0 width="100%" cellspacing="0" cellpadding="0">
+<tr>
+<td bgcolor="#CED6E0" align="left" width="1%">
+<img src="http://images.findlaw.com/www/lp/blue_left.gif" height="25">
+</td>
+<td bgcolor="#CED6E0" class="textsmall-blue" align="left" nowrap>
+                My current location: <B><span id="csname">city</span></B> |
+<a href=/changezip.html?d=http://caselaw.lp.findlaw.com/cgi-bin/getcase.pl?court=11th&navby=docket&no=0114780>Change Location</a>
+</script>
+</td>
+</tr>
+</table>
+	<!-- END ZIP LINE-->
+
+	</td>
+	</tr>
+	<!-- END TITLE -->
+	</table>
+
+
+<table><tr><td>
+<!-- End top.html -->
+<table><tr><td>
+<A NAME=0114780><P></A></center><!------------ START RELATED FINDLAW RESOURCES ------------->
+<table width="100%" cellpadding="0" cellspacing="0" border="0" bgcolor="#ffffff" align="left">
+		<tr>
+		<td><img src="http://images.findlaw.com/corporate/spacer.gif" width="6"></td>				
+		<td width="100%" height="25" align="left">
+
+
+<table border="0" width="100%" cellpaddin="0" cellspacing="0">
+
+<tr><td bgcolor="#D4D6DD" class="textbold" style="padding-top: 3px; padding-bottom: 3px; padding-left: 8px">Related FindLaw Resources 
+</tr></td>
+<tr valign="top"><td bgcolor="#E5EDFC">
+<div id="fllink">FindLaw links</div>
+
+</td></tr>
+<tr><td bgcolor="#D4D6DD"><img src="http://images.findlaw.com/corporate/spacer.gif" height="1"></td></tr>
+</table>
+<!------------ END RELATED FINDLAW RESOURCES ------------->
+<!------------ START VIEW & PRINT CASES ------------->
+<img src="http://images.findlaw.com/corporate/spacer.gif" height="1">
+<table border="0" width="100%" cellpaddin="0" cellspacing="0">
+<tr valign="bottom">
+	<td align="left" style="padding-left: 8px"><li><a href="http://creditcard.westlaw.com/welcome/frameless/default.wl"><span class="textsmall">View enhanced case on Westlaw</span></a></li></td>
+	<td align="right"><a target=new href="/scripts/printer_friendly.pl?page=11th/0114780.html"><img src="http://images.findlaw.com/www/lp/printer.gif" border="0" alt="printer"> <span class="textsmall">Click for Printable version</span></a>&nbsp;&nbsp;&nbsp;<a href=http://caselaw.lp.findlaw.com/cgi-bin/send_mail_friend.pl?action=send_form&url=11th/0114780.html><img src="http://images.findlaw.com/www/lp/email.gif" border="0" alt="email"> <span class="textsmall">Email this case</span></a>
+</td></tr>
+<tr valign="bottom">
+	<td align="left" style="padding-left: 8px"><li><a href="http://creditcard.westlaw.com/welcome/frameless/default.wl"><span class="textsmall">Key cite this case on Westlaw</span></a></li></td>
+	<td align="right"><SMALL><B>http://laws.findlaw.com/11th/0114780.html</B></SMALL>
+	</td></tr>
+</table>
+</td></tr></table>
+<!------------ END VIEW & PRINT CASES ------------->
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+
+<TITLE>COMMODITY v R.J.FITZGERALD, </TITLE> <META NAME="title" content="COMMODITY v R.J.FITZGERALD, "></head><CENTER><H2>U.S. 11th Circuit Court of Appeals</H2><H3>COMMODITY v R.J.FITZGERALD<BR> </H3></CENTER><P>    <P>[PUBLISH]</P> <P></P> <P></P> <PRE>
+         IN THE UNITED STATES COURT OF APPEALS
+</PRE> <P></P> <PRE>
+                FOR THE ELEVENTH CIRCUIT
+                <U>                       </U>
+</PRE> <P></P> <PRE>
+                      No. 01-14780
+                <U>                       </U>
+</PRE> <P></P> <PRE>
+           D.C. Docket No. 99-01558-CV-T-23F
+</PRE> <P></P> <P>COMMODITY FUTURES TRADING COMMISSION,</P> <P></P> <P>Plaintiff-Appellant,</P> <P></P> <P>versus</P> <P></P> <P>R.J. FITZGERALD &amp; CO., INC.,</P> <P>RAYMOND FITZGERALD,</P> <P>LEIZA FITZGERALD,</P> <P>GREG BURNETT,</P> <P>CHUCK KOWALSKI,</P> <P></P> <P>Defendants-Cross-</P> <P>Claimants-Third-Party-</P> <P>Plaintiffs-Appellees,</P> <P></P> <P>AL CORINGRATO,</P> <P></P> <P>Defendant-Cross-</P> <P>Defendant,</P> <P></P> <P>SCOTT EUBANKS,</P> <P>JOHN RODGERS, et al.,</P> <P></P> <P>Third-Party-Defendants.</P> <P></P> <PRE>
+<U>                                       </U>
+</PRE> <P></P> <PRE>
+      Appeal from the United States District Court
+           for the Middle District of Florida
+                <U>                       </U>
+                   (October 29, 2002)
+</PRE> <P></P> <P>Before TJOFLAT, WILSON and COWEN*, Circuit Judges.</P> <P></P> <P>COWEN, Circuit Judge:<U></U></P>  <P><U></U>Presented in this appeal is the question of liability for fraud  and related allegations under the Commodities Exchange Act, 7  U.S.C. &sect;&sect; 1 <I>et seq., </I>(the &quot;CEA&quot; or &quot;Act&quot;)<I> </I>and accompanying  regulations. Plaintiff/Appellant Commodities Futures Trading  Commission (&quot;CFTC&quot;) appeals from a judgment finding all  Defendants not liable under the Act for various solicitation and  trading activities carried out at R.J. Fitzgerald &amp; Company,  Inc. (&quot;RJFCO&quot;). After reviewing the record in this matter,  considering the submissions of the parties, and having  benefitted from oral argument, we conclude that the District  Court erred in not finding liability under the Act as a matter  of law for two specific solicitation devices utilized by RJFCO:  (1) a television commercial that aired on the &quot;CNBC&quot; cable  network in March 1998 (The &quot;Commercial&quot;) and (2) a promotional  seminar for potential RJFCO customers that also took place in  1998 (the &quot;Seminar&quot;). For</P>  <P>_______________________________________</P> <P>*Honorable Robert E. Cowen , U.S. Circuit Judge for the Third Circuit, sitting by designation. <P>the reasons expressed below, we will reverse as to Raymond  Fitzgerald, Leiza Fitzgerald and RJFCO, and remand only for  enforcement proceedings against those two individuals and the  firm. </P>  <PRE>
+
+               I.  Procedural Background
+
+</PRE>  <P>In 1999, CFTC commenced this CEA enforcement case by filing a  Complaint against Defendants/Appellees RJFCO, Raymond  Fitzgerald, Leiza Fitzgerald, Chuck Kowlaski, and Greg Burnett,  alleging that they were involved in fraudulent solicitations to  attract potential customers throughout the United States to  invest in commodity options, in violation of the Act and related  federal regulations.<SUP><A NAME="Footref1"></A><A HREF="#Footnote1">1</A></SUP> This Complaint was dismissed  essentially for failure to plead fraud with particularity. </P>  <P>The District Court then required CFTC to file an Amended  Complaint detailing every fact it intended to prove in  establishing liability under the ACT. CFTC complied with that  request, filing an extensive 138 page, 15 count Complaint which  sets the framework for the instant case. The Amended Complaint  alleged that Defendants, or some individual Defendants, violated  the Act by: (1) committing fraud by misrepresentation or  omission of material facts in connection with the solicitation,  maintenance, or execution of commodity futures transactions; (2)  operating an introducing brokerage firm to cheat, defraud,  deceive, or attempt to cheat, defraud or deceive clients; (3)  trading client accounts excessively in order to generate  commissions without regard to customer interests (&quot;churning&quot;);  (4) failing to provide risk disclosure statements prior to the  opening of RJFCO customer accounts; and (5) failing to supervise  firm personnel diligently. Defendant Raymond Fitzgerald was  charged with &quot;controlling person&quot; liability under the Act. The  various allegations in the Amended Complaint encompass claims  grounded in 7 U.S.C. &sect; 6c(b), 17 C.F.R. &sect; 33.10(a) and (c), 17  C.F.R. &sect; 166.3, and 7 U.S.C. &sect; 13c(b).</P>  <P>Counts one, two, seven and nine alleged that Raymond Fitzgerald,  as principal of RJFCO, RJFCO, Leiza Fitzgerald and Greg Burnett  committed fraud by misrepresentation or omission of material  facts in connection with the solicitation of commodity futures  transactions. Counts three, ten and fifteen charged Raymond  Fitzgerald, as principal of RJFCO, RJFCO, Greg Burnett and Chuck  Kowalski with operating an introducing brokerage to cheat,  defraud, deceive, or attempt to cheat, defraud or deceive  clients. Counts four and eleven charged Raymond Fitzgerald,  RJFCO, and Greg Burnett with committing fraud by trading client  accounts excessively to generate commissions without regard to  client interests. Count five charged Raymond Fitzgerald and  RJFCO with failing to provide adequate risk disclosure  statements prior to opening customer accounts. Counts six,  eight, and twelve charged Raymond Fitzgerald, Leiza Fitzgerald  and Greg Burnett with failing to supervise diligently the sales  practices and solicitations of RJFCO brokers.</P>  <P>After some of the claims in the Amended Complaint were dismissed  on summary judgment, the parties agreed, pursuant to 28 U.S.C. &sect;  636(c) and Fed. R. Civ. P. 73, to conduct a bench trial before a  Magistrate Judge<SUP><A NAME="Footref2"></A><A HREF="#Footnote2">2</A></SUP>. That trial commenced on February  26, 2001. On March 8, 2001, the Court heard oral argument and  granted what it labeled a &quot;directed verdict&quot; against a  significant part of the CFTC's case. Germaine to this appeal,  and as will be explained further below, the District Court  granted relief to Defendants on that part of the CFTC's claim  that the Commercial violated the Act as well as on the claim  that Defendants had a duty to disclose their specific trading  record (i.e., their success rate) to potential customers. </P>  <P>The trial pressed forward to completion on the remaining claims  in the Amended Complaint and concluded on March 19, 2001.  Thereafter, the District Court entered extensive findings of  fact and conclusions of law, ruling in favor of all Defendants  on all counts in the Amended Complaint. <I>See CFTC v. R.J.  Fitzgerald &amp; Co.</I>, <I>Inc</I>., 173 F. Supp.2d 1295 (M.D. Fla. 2001).  CFTC appeals, essentially arguing that regardless of the Court's  factual findings based on witness credibility, Defendants  committed fraud and other CEA violations as a matter of law.</P>  <PRE>
+
+                  II. Background Facts
+
+</PRE>  <P>A. <U>The Defendants</U></P>  <P>RJFCO was a full service &quot;introducing broker&quot; at all times  relevant to this appeal. <I>See </I>7 U.S.C. &sect; 1a. RJFCO's obligations  to those with whom it dealt were guaranteed by Iowa Grain  Company (&quot;Iowa Grain&quot;), a registered futures commission  merchant. RJFCO opened for business in 1992. It operated as a  firm designed to service small customer accounts, where the  customer base had little experience in commodities markets.  RJFCO operated in a perhaps unique manner in the commodities  industry in that it used one team of sales brokers for  generating customers via telephone calls and a separate team of  brokers and traders to do the actual trades and monitor  accounts. Defendant Raymond Fitzgerald was the principal of  RJFCO and was responsible for all decisions, actions, and  trading recommendations made or entered into by the firm.  Defendant Leiza Fitzgerald's responsibilities at RJFCO involved  developing training materials and training sales brokers. Greg  Burnett was an associated person at RJFCO and was responsible  for supervising traders and brokers. Chuck Kowalski was RJFCO's  chief financial analyst, responsible for studying the  commodities markets and developing trades and trade strategies.</P>  <PRE>
+
+    B.  <U>Customer Solicitation Devices</U>
+
+</PRE>  <P>At the heart of this appeal are two solicitation devices used by  RJFCO to attract customers to invest in options on futures  contracts: the Commercial and the Seminar. </P>  <P>1. <U>The Commercial</U></P>  <P> The Commercial stated that &quot;the El Nino [weather phenomenon]  has struck where expected, and if patterns continue, the effects  could be devastating. Droughts, floods, and other adverse  conditions could drastically alter the supply and demand  dynamics of the corn market . . . .&quot; The Commercial also  declared that &quot;[w]ith the giant developing nations, such as  China and Russia badly in need of grains and world grain  supplies put to the test, conditions may exist for profits as  high as 200 to 300 percent.&quot; This was accompanied by a graphic  statement on the television screen that the percentages were a  mathematical example of leverage.</P>  <P>The Commercial further asserted that &quot;the potential of the corn  market may never be greater. Tight U.S. reserves coupled with  domestic and worldwide demands could be the formula for a trade  you won't want to miss. Find out how as little as $5,000 could  translate into profits as high as 200 to 300 percent. Call R.J.  Fitzgerald today . . . .&quot;</P>  <P>The Commercial was initially drafted by an advertising agency.  When Raymond Fitzgerald first received the script, he edited it  to add additional risk disclosures that would appear just above  the firm's phone number, so that anyone watching the Commercial  would see the risk disclosure. He further insisted that this  disclosure appear more than half the time the Commercial was  running. After his edits were done, he sent the script to Iowa  Grain's chief compliance officer, Anne Farris. Iowa Grain  approved the script on February 18, 1998.</P>  <P>The Commercial actually ran on CNBC for the first half of March,  1998, but did not generate much business. In total, it appeared  about eight or nine times and was then discontinued. At some  point after its discontinuation, Raymond Fitzgerald was  contacted by a National Futures Association (&quot;NFA&quot;)<SUP><A NAME="Footref3"></A><A HREF="#Footnote3">3</A></SUP>  compliance officer, who expressed concern over the Commercial's  content. More specifically, the NFA officer, David Croom,  informed Raymond Fitzgerald that the Commercial was in apparent  violation of NFA rules because: (1) it was misleading in that it  failed to tell potential customers that the options spoken of  were &quot;out-of-the money options&quot; that would require a dramatic  move in the options premium value in order for the customer to  see gains equal to that claimed in the Commercial; (2)  misleadingly gave the impression that weather events were  inevitable; (3) did not display the risk of loss statement  prominently enough on the screen; and (4) downplayed the risk of  loss. In response to this concern, Raymond Fitzgerald informed  Croom that the Commercial had already been discontinued and  would not be aired again.</P>  <P>At the close of CFTC's case, and before the defense was  presented, the District Court entered a directed verdict in  favor of Defendants on the part of the claim that the Commercial  was fraudulent and violated the CEA. The District Court  addressed the Commercial again in its opinion issued after the  bench trial, stating that the Commercial was not &quot;misleading or  deceptive&quot; and that there was no &quot;intent to defraud.&quot; 173 F.  Supp.2d at 1310. </P>  <P>2. <U>RJFCO's 1998 Promotional Seminar</U></P>  <P>In addition to the Commercial, CFTC alleged CEA violations  occurred in a promotional seminar used by RJFCO to attract  customers. The Seminar was developed by Leiza Fitzgerald and  RJFCO brokers Scott Campbell and Tom West after they attended a  training session on the topic conducted by the National  Introducing Brokers Association.<SUP><A NAME="Footref4"></A><A HREF="#Footnote4">4</A></SUP> </P>  <P>The Seminar informed customers that weather patterns, political  events, and historical trends can affect the prices of certain  commodities. The Seminar also told customers that technical  analysis could assist them in the commodity options market,  since &quot;history often repeats itself&quot; and &quot;past price action can  provide you with clues to future action.&quot; Customers were told  they could &quot;take advantage&quot; of &quot;fundamental&quot; market moves such  as weather events and political events and &quot;technical theory&quot;  such as past market movements through either futures or options  investing. The Seminar also drew a distinction between  investment instruments based on the quantum of risk involved:</P>           <PRE>
+         Which one you choose depends on how aggressive or
+         what degree of risk you wish to take on.
+</PRE> <P></P> <P><tt><blockquote>If you are highly aggressive and looking for unlimited profit potential as well as unlimited risk than [sic] it would be the futures. But most would like something less aggressive, something offering unlimited profit potential but limited risk--option trade [sic].</blockquote></tt></P> <P></P>  <P>On the topic of risk, the Seminar additionally told potential  customers: &quot;options on futures allow investors and risk mangers  to define risk and limit it to the loss of a premium paid for  the right to buy or sell a futures contract while still  providing . . . unlimited profit potential.&quot; </P>  <P>The RJFCO employees who conducted the Seminar offered what the  Seminar script deemed a &quot;very exciting&quot; illustration of how  profits could be made on options. Specifically, the Seminar  focused on the commodity heating oil, explaining that for the  last eighteen years, there was an average increase in that  commodity &quot;of 22 cents from the low to the high in the price  range&quot; and that a $5,000 investment on a heating oil futures  contract would result in $46,200 if there was a 22 cent move in  the price. Customers were told that if they wanted &quot;limited  risk,&quot; they could invest in an option contract, where they would  receive &quot;approximately 50% of that profit-46,200 divided by 2  equals $23,100.&quot;<SUP><A NAME="Footref5"></A><A HREF="#Footnote5">5</A></SUP> </P>  <P>In its opinion following the bench trial, the District Court  concluded that the Seminar did not violate the CEA. The District  Court explained that there was nothing &quot;patently or latently  misleading or deceitful&quot; about the profit illustrations used in  the seminar. 173 F. Supp.2d at 1311.</P>  <PRE>
+
+                    III. Discussion
+
+</PRE>  <P>The District Court had jurisdiction over this case under 7  U.S.C. &sect; 13a-1 and 28 U.S.C. &sect; 1331. We have jurisdiction  pursuant to 28 U.S.C. &sect; 636(c)(3) and 28 U.S.C. &sect; 1291.</P>  <P>It is somewhat unclear from the briefing what specific parts of  the judgment below are being challenged by CFTC, especially  given the large number of allegations in the extremely lengthy  Amended Complaint. CFTC's initial brief requests that this Court  &quot;reverse the district court's judgment and remand with  instructions to enter judgment in favor of appellant CFTC <I>on the  Amended Complaint</I>.&quot; Appellant's Brief at 57. However, we can  construe the CFTC's appellate position from the briefing and  from oral argument. It specifically challenges these discrete  aspects of the District Court's judgment: (1) the Commercial did  not violate the Act; (2) the Seminar did not violate the Act;  (3) Defendants had no duty to disclose their trading record to  potential customers; (4) Defendants did not excessively trade  their customers' accounts without regard to customer interest;  and (5) Raymond Fitzgerald did not have &quot;controlling person&quot;  liability under the Act. As explained below, we agree that the  District Court erred in not finding liability as a matter of law  under the Act for the Commercial, the Seminar, and for failure  to disclose RJFCO's trading record in both. We further agree  that Raymond Fitzgerald is liable in this case as a &quot;controlling  person&quot; at the firm. We do not disturb the District Court's  judgment as to the remaining alleged points of error. </P>  <P>A. <U>The Commercial</U></P>  <P>CFTC argues that the District Court erred because the Commercial  is fraudulent as a matter of law. Upon review of the full text  of the Commercial, we are constrained to agree. The CEA and its  accompanying regulations directly proscribe attempts to deceive  and defraud in connection with futures and options trading. 17  C.F.R. &sect; 33.10 provides:</P>  <P>It shall be unlawful for any person directly or indirectly:</P> <P><tt><blockquote>(a) To cheat or defraud or attempt to cheat or defraud any other person;</blockquote></tt></P> <P><tt><blockquote>(c) To deceive or attempt to deceive any other person by any means whatsoever</blockquote></tt></P> <P><tt><blockquote>in or in connection with an offer to enter into, the entry into, the confirmation of the execution of, or the maintenance of, any commodity option transaction.</blockquote></tt></P> <P><I></I></P>  <P><I>See also </I>7 U.S.C. &sect; 6b(a)(i), (iii) (proscribing similar conduct  in connection with a futures contract).</P>  <P>In order to establish liability for fraud, CFTC had the burden  of proving three elements: (1) the making of a  misrepresentation, misleading statement, or a deceptive  omission; (2) scienter; and (3) materiality. <I>See</I> <I>Hammond v.  Smith Barney Harris Upham &amp; Co.</I>, [1987-1990 Transfer Binder]  Comm. Fut. L. Rep. (CCH) 24,617 (CFTC Mar.1, 1990); <I>CFTC v.  Trinity Finan. Group, Inc.</I>, Comm Fut. L. Rep. 27,179 (S.D. Fla.  Sept. 29, 1997), <I>aff'd in relevant part</I>, <I>CFTC v. Sidoti</I>, 178  F.3d 1132 (11<SUP>th</SUP> Cir. 1999). Failure to establish any one of  these elements is dispositive and would preclude CFTC's  fraud/deception claims.<SUP><A NAME="Footref6"></A><A HREF="#Footnote6">6</A></SUP> </P>  <P>Whether a misrepresentation has been made depends on the  &quot;overall message&quot; and the &quot;common understanding of the  information conveyed.&quot; <I>Hammond</I>, Comm. Fut. L. Rep. at 36,657 &amp;  n.12. For purposes of fraud or deceit in an enforcement action,  scienter is established if Defendant intended to defraud,  manipulate, or deceive, or if Defendant's conduct represents an  extreme departure from the standards of ordinary care. <I>See,  e.g.,</I> <I>Messer v. E.F. Hutton &amp; Co.</I>,<I> </I>847 F.2d 673, 677-79 (11th  Cir. 1988). In the similar context of federal securities law, we  have previously stated that scienter is met when Defendant's  conduct involves &quot;highly unreasonable omissions or  misrepresentations . . . that present a danger of misleading  [customers] which is either known to the Defendant or so obvious  that Defendant must have been aware of it.&quot; <I>Ziemba v. Cascade  Int'l, Inc.</I>, 256 F.3d 1194, 1202 (11<SUP>th</SUP> Cir. 2001). A  representation or omission is &quot;material&quot; if a reasonable  investor would consider it important in deciding whether to make  an investment. <I>See Affiliated Ute Citizens of Utah v. United  States</I>, <A HREF="/cgi-bin/getcase.pl?navby=case&court=US&vol=406&invol=128&pageno=153">406 U.S. 128, 153-54</A>, 92 S. Ct. 1456, 1472 (1972); <I>R &amp; W  Technical Servs., Ltd. v. CFTC</I>, 205 F.3d 165, 169 (5th Cir.  2000). </P>  <P>In applying these various elements to the present case, we are  guided by the principle that the CEA is a remedial statute that  serves the crucial purpose of protecting the innocent individual  investor-who may know little about the intricacies and  complexities of the commodities market-from being misled or  deceived. As the Fifth Circuit recently explained in <I>R &amp; W</I>:</P>  <P><tt><blockquote>In 1974, Congress gave the [CFTC] even greater enforcement powers, in part because of the fear that unscrupulous individuals were encouraging amateurs to trade in the commodities markets through fraudulent advertising. Remedial statutes are to be construed liberally, and in an era of increasing individual participation in commodities markets, the need for such protection has not lessened. </blockquote></tt></P> <P> </P>  <P><I>Id.</I> at 173 (citations omitted) (emphasis added). </P>  <P>The parties obviously do not contest the textual content of the  Commercial. The actual words of the Commercial and how the  Commercial physically appeared on television are undisputed  matters of record and do not require us to second guess what the  District Court concluded with regard to witness demeanor and  credibility at the bench trial. That being said, we are  persuaded that these undisputed facts demonstrate fraud and  deception as a matter of law. </P>  <P>Read for its<I> overall message</I>, and how that message would be  interpreted by an objectively reasonable television viewer, the  Commercial overemphasizes profit potential and downplays risk of  loss, presenting an unbalanced image of the two. The Commercial  suggests to the potential investor, that truly enormous profits  (200-300%) can be made on options on futures contracts by  looking at known and expected weather patterns. More  specifically, the Commercial affirmatively represents to  potential RJFCO customers that El Nino had struck &quot;where<I>  expected</I>&quot; and that if the &quot;<I>patterns continue</I>,&quot; &quot;<I>huge </I>profits&quot; of  <I>&quot;200 to 300%</I>&quot; could be realized. The Commercial also improperly  overstated the profit potential by suggesting to potential  customers that they should not pass up such a tremendous chance  to make money. Rather, viewers are told to call RJFCO &quot;now&quot;  because there may &quot;never&quot; be such an opportunity in the corn  market again. (&quot;The potential of the corn market may <I>never</I> be  greater [and] &quot;could be the formula for a trade <I>you won't want  to miss. </I>Find out how as little<I> </I>as $5,000 could translate into  profits as<I> </I>high as 200 to 300 percent<I>. </I>Call<I> </I>R.J. Fitzgerald<I>  </I>today<I>.</I>&quot;)<I>. </I>Against these highly alluring statements is only  boilerplate risk disclosure language. We agree with CFTC's  position that these statements directly contravene the legal  principles established in prior commodities fraud cases. <I>See,  e.g., Trinity Finan. Group</I>, Comm. Fut. L. Rep. 27, 179, <I>aff'd in  relevant part</I>, <I>Sidoti, </I>178 F.3d 1132;<I> In re JCC, Inc.</I>, [1992-  1994 Transfer Binder] Comm. Fut. L. Rep. (CCH) 26,080 (CFTC May  12, 1994), <I>aff'd</I>, <I>JCC, Inc. v. CFTC</I>, 63 F.3d 1557 (11<SUP>th</SUP> Cir.  1995); <I>Bishop v. First Investors Group</I>, [1996-1998 Transfer  Binder] Comm. Fut. L. Rep. (CCH) 27,004, 44,841 (CFTC Mar. 26,  1997); <I>In re Staryk</I>, [1996-1998 Transfer Binder] Comm. Fut. L.  Rep. 27,206, 45,809 (CFTC Dec. 18, 1997). As we have indicated  in various prior commodities cases, the fact that the Commercial  had a general risk disclosure statement does not automatically  preclude liability under the CEA where the overall message is  clearly and objectively misleading or deceptive. <I>See Clayton  Brokerage Co. v. CFTC</I>, 794 F.2d 573, 580-81 (11<SUP>th</SUP> Cir. 1986);  <I>JCC</I>, 63 F.3d at 1565 n.23, 1569-70; <I>Sidoti</I>, 178 F.3d at 1136  (&quot;we seriously doubt whether boilerplate risk disclosure  language could ever render an earlier material misrepresentation  immaterial.&quot;); <I>see also</I> <I>Bishop</I>, Comm Fut. L. Rep. at 44,841.  Contrary to Defendants' argument, we see no absolute, bright-  line requirement in these cases that a solicitation offer a  &quot;clear guarantee[]&quot; of profits before liability is triggered.  Appellees' Brief at 40. Nor should there be. Such an exacting  standard would thrust the door of deception wide open, allowing  clearly misleading statements to escape CFTC enforcement,  thereby thwarting the underlying purpose of the Act. Brokers  would have free reign to abuse their knowledge by subtly  manipulating customer beliefs about the functioning of  commodities markets, afforded safe haven so long as no actual  &quot;guarantee&quot; is made.</P>  <P>Having determined that the Commercial contained deceptive and  misleading statements, we next consider the element of scienter.  This element is also met here as a matter of law. Defendant  acted recklessly with regard to the statements aired on  television. This recklessness is premised on the fact that this  Court and the CFTC have previously condemned attempts to attract  customers by: (1) linking profit expectations on commodities  options to known and expected weather events, seasonal trends,  and historical highs; (2) suggesting that the commodities market  can be correctly timed to generate large profits; and (3)  substantially inflating option profit expectations while  downplaying risk of loss. We hold that Defendant, as a federally  registered professional, knowledgeable in the nuances and  complexities of the industry, deviated in an extreme manner from  the standards of ordinary care.</P>  <P>The final element, materiality, is satisfied as well. It is too  obvious for debate that a reasonable listener's choice-making  process would be substantially affected by emphatic statements  on profit potential (&quot;200-300%&quot;) and the suggestion that known  and expected weather events are the vehicle for achieving those  enormous profits. A reasonable investor would also be heavily  influenced by the suggestion in the Commercial that, due to  weather events, the present day offers an opportunity like no  other to make money in the corn market. <I>See In re JCC</I>, Comm.  Fut. L. Rep. at 41,576 n.23 (&quot;When the language of a  solicitation obscures the important distinction between the  possibility of substantial profit and the probability that it  will be earned, it is likely to be materially misleading to  customers.&quot;). <I>See also CFTC v. Noble Wealth Data</I>, 90 F. Supp.2d  676, 686 (D. Md. 2000) (representations about profit potential  and risk &quot;<I>go to the heart of a customer's investment decision</I>  and are therefore material as a matter of law&quot;), <I>aff'd in part  and vacated in part</I>, 278 F.3d 319 (4<SUP>th</SUP> Cir. 2000).</P>  <P>Defendants argue that scienter is lacking with regard to the  Commercial because Raymond Fitzgerald edited the Commercial to  include more disclosures, sought and received approval from Iowa  Grain, and assured NFA official Croom that the Commercial had  already been discontinued after Croom expressed concern over its  misleading content. None of these arguments can overcome the  CFTC's position that prior cases establish the illegality of the  Commercial's content as a matter of law. Moreover, Defendants  should not be able to escape liability under the Act by simply  claiming that a related private business entity (Iowa Grain)  issued its stamp of approval. Iowa Grain does not determine with  legal finality what constitutes deceptive solicitations under  the CEA and its regulations.</P>  <P>Defendants further argue that CFTC has not established &quot;clear  error&quot; in the District Court's finding that the Commercial was  not &quot;deceptive or misleading,&quot; asserting that CFTC cannot  possibly leap the barrier of this highly deferential standard of  review. We are not persuaded. It is too well-settled for dispute  that findings of fact which flow directly from the observation  of witnesses at trial cannot be reversed unless clearly  erroneous. But that doctrine of appellate review is not  implicated here. This is not a situation where we must defer to  a trial court's conclusion of fact because that conclusion rests  on the unique opportunity to personally scrutinize live  testimony at trial and measure credibility word by word.  Rather, the precise language in the Commercial is an undisputed  part of the appellate record. The fraudulent and deceptive  nature of that language is, as CFTC posits, established as a  matter of law in precedent. The precise error at the district  court level is definitively legal in nature: it is the failure  to recognize that the outcome of CFTC's claim on the uncontested  words in the Commercial is controlled by case law. <I>See generally  Lincoln v. Board of Regents</I>, 697 F.2d 928, 939 (11<SUP>th</SUP> Cir. 1983)  (if legal error taints fact finding process, <I>de novo</I> review may  be used by appellate court).<SUP><A NAME="Footref7"></A><A HREF="#Footnote7">7</A></SUP></P>  <P>B. <U>The Promotional Seminar</U></P>  <P>Much of the discussion above on the illegality of the Commercial  applies to the Seminar as well. We hold that the Seminar is also  fraudulent and deceptive as a matter of law. Like the  Commercial, the Seminar, when viewed in its entirety, suggests  to a reasonable listener that RJFCO has a reliable strategy in  place for increasing profits and limiting losses.<SUP><A NAME="Footref8"></A><A HREF="#Footnote8">8</A></SUP>  Like the Commercial, it presents a distinctly unbalanced picture  between the potential for profit and the potential for loss in  options, inflating one while downplaying the other. The Seminar  also impermissibly suggests that profits on options on futures  contracts (the specific type of investment they were promoting)  are proportionally related to the cash market. <I>See CFTC v.  Commonwealth Finan. Group, Inc.</I>, 874 F. Supp. 1345, 1352 (S.D.  Fla. 1994), <I>vacated on other grounds</I>, Slip Op. No. 94-5182, 79  F.3d 1159 (11<SUP>th</SUP> Cir. 1996); <I>Bishop</I>, Comm. Fut. L. Rep. at 44,841  (deceptive to tell customer that one could earn $420 for every  penny increase in heating oil); <I>In re JCC</I>, Comm. Fut. L. Rep.  26,080 (fraud to tell customer that every time sugar moves ten  cents, you make $67,000); <I>Trinity</I> <I>Finan. Group</I>,<I> </I>Comm. Fut. L.  Rep. 27,179 (deceptive to use cash prices to predict  proportional profits on heating oil options). </P>  <P>Furthermore, as with the Commercial, the Seminar, in its heating  oil mathematical illustration, misleads potential customers by  suggesting that historical movements and known and expected  seasonal patterns can be used reliably to predict profits on  options. The Seminar gave those in attendance a deceptive  impression that known seasonal trends will lead to their quick  success and that options provide a scenario of &quot;limited risk.&quot;  In this regard, we are especially concerned with the Seminar's  suggestion toward the end of the undisputed script that &quot;greed&quot;  is a major reason people do not make money in commodities and  that a customer &quot;will<I> never go broke</I> taking a <I>profit</I>.&quot; Despite  the Seminar's use of risk disclosure material, the overall  impression is that RJFCO is going to make customers money if  they invest in options. Such conduct simply cannot survive under  the Act, its underlying purpose, its regulations, and the  interpretive case law. As with the Commercial, the statements in  the Seminar are clearly material because an objectively  reasonable investor's decision-making process would be  substantially affected by the Seminar's discussion on limited  risk, cyclical heating oil-weather patterns, and examples and  illustrations of large profits. Such representations, as a  matter of law, alter the total mix of relevant information  available to the potential commodity option investor. Scienter  is also established on this record as a matter of law for the  same reasons as with the Commercial. Precedent has condemned  materially similar representations in the past, including  specific representations on heating oil. We hold that Defendants  acted with the requisite recklessness and departed in an extreme  manner from the ordinary standards of care. </P>  <P>C. <U>Fraudulent Omission: Non-Disclosure of the Firm's Success  Record</U></P>  <P>As explained above, CFTC contends, and we agree, that liability  is established with regard to the language used in the  Commercial and the Seminar. As an additional violation of the  Act, CFTC claims that these two solicitation devices were  fraudulent as a matter of law because they spoke of RJFCO's  strategy for enormous profit potential without<I> </I>simultaneously  informing potential RJFCO<I> </I>customers that more than 95% of the  firm's clientele lost money in the types of investments being  advertised.<SUP><A NAME="Footref9"></A><A HREF="#Footnote9">9</A></SUP> We agree. </P>  <P>Given the extremely rosy picture for profit potential painted in  the Seminar and in the Commercial, a reasonable investor <I>surely</I>  would want to know-before committing money to a broker-that 95%  or more of RJFCO investors lost money. Such a disclosure would  have gone a long way in balancing out, for example, the  affirmative representation in the Commercial that the grain  market was ripe for &quot;huge&quot; profits of &quot;200-300 percent&quot; and to  telephone RJFCO &quot;now&quot; because such a corn market opportunity may  &quot;never&quot; exist again. It would also have done much to counteract  the assertion of &quot;limited risk&quot; in the Seminar. It is misleading  and deceptive to speak of &quot;limited risk&quot; and &quot;200-300&quot; percent  profits without also telling the reasonable listener that the  overwhelming bulk of firm customers lose money. <I>See Ziemba</I>, 256  F.3d at 1206 (duty to disclose arises where a &quot;defendant's  failure to speak would render the defendant's <I>own</I> prior speech  misleading or deceptive&quot;) (emphasis in original); <I>Rudolph v.  Arthur Anderson &amp; Co.</I>, 800 F.2d 1040, 1043 (11<SUP>th</SUP> Cir. 1986)  (same); <I>see also Modlin v. Cane</I>, [1999-2000 Transfer Binder]  Comm. Fut. L. Rep. (CCH) 28,059, 49,550 (CFTC March 15, 2000)  (&quot;a reasonable investor who hires a broker . . . would clearly  find it material to learn that that broker had never closed an  account with a profit.&quot;); W. Page Keeton et al., Prosser and  Keeton on Torts &sect; 106 at 738 (5<SUP>th</SUP> ed. 1984) (&quot;half of the truth  may obviously amount to a lie, if it is understood to be the  whole.&quot;).<SUP><A NAME="Footref10"></A><A HREF="#Footnote10">10</A></SUP><I></I></P>  <P><I></I>In its determination that there was no duty to disclose, the  District Court was influenced by the fact that there was no  evidence that other firms in the commodities industry did any  worse than RJFCO and that RJFCO did not affirmatively represent  that it had an attractive success rate. Given the highly  misleading nature of the Commercial and Seminar, we fail to  discern the legal significance of those facts in this case. As  CFTC has persuasively argued, the Act should not foster a &quot;race  to the bottom,&quot; where liability for unquestionably deceptive  activity is based in part on whether your competitors are not  doing any better than you are. The focus of the inquiry is not  on how well or how poorly others firms have done or even, in  some circumstances, whether a firm has affirmatively boasted  about a particular win-loss record. Rather, the judicial cross  hairs in this case fall squarely on what the investor would  reasonably want to know before deciding to commit money to a  broker. <I>See, e.g., </I>17 C.F.R. &sect; 33.7(f); <I>Sidoti</I>, 178 F.3d at 1136  n.3 (explaining that &sect; 33.7(f) &quot;bolsters&quot; 17 C.F.R. &sect; 33.10 by  stating that standard risk disclosures do not relieve a broker  from the obligation of disclosing all material facts to  potential or existing options customers). This of course brings  us back, as it should, to the underlying remedial purpose of the  Act: protecting the individual investor from being misled or  deceived in the highly risky arena of commodities investment.  The omission of highly material information is pernicious  because it strikes at the very core of individual autonomy. The  law vigorously protects the right of private individuals to  exercise free choice in the marketplace. Such freedom of choice  is eviscerated, and the autonomy of the individual severely  undermined, if decision-altering information is withheld. </P>  <P>D. <U>Excessive Trading of Customer Accounts</U></P>  <P><U></U>CFTC argues that the district court erred by finding that  Defendants did not excessively trade client accounts without  regard to client interest, in contravention of the Act. We do  not agree. This &quot;churning&quot; claim stems from a specific trading  strategy developed by Defendant Kowalski in 1998 known as  &quot;synthetic futures.&quot; The details of that strategy were  sufficiently explained in the District Court, <I>see </I>173 F. Supp.2d  at 1306-1309, and do not warrant repetition here. In order to  succeed on a churning claim, CFTC had to establish that  Defendants intentionally or recklessly traded client accounts in  excess, without regard to client interest, and that Defendants  controlled the accounts in question. <I>See, e.g.,</I> <I>Patch v.  Concorde Trading Group, Inc.</I>, [1994-1996 Transfer Binder] Comm.  Fut. L. Rep. (CCH) 26,253, 42,125 (CFTC Oct. 31, 1994). Unlike  the Commercial and the Seminar, the churning claim is intimately  connected with factual conclusions derived from witness  testimony and credibility assessments made at the bench trial.  For example, the requisite element of control over customer  accounts in this case is an inquiry that turns upon the credit  given to witnesses by the trier of fact. We have reviewed the  District Court's analysis of this claim and cannot find that  entering judgment in favor of Defendants on this claim was  erroneous. </P>  <P>E. <U>&quot;Controlling Person&quot; Liability under the Act</U></P>  <P><U></U>CFTC asserts that the District Court erred by finding Raymond  Fitzgerald not liable as a &quot;controlling person&quot; under the  provisions of 7 U.S.C. &sect; 13c(b). We agree. &quot;A fundamental  purpose of Section 13b is to allow the Commission to reach  behind the corporate entity to the controlling individuals of  the corporation and to impose liability for violations of the  Act directly on such individuals as well as the corporation  itself.&quot; <I>JCC</I>, 63 F.3d at 1567 (internal quotations and citation  omitted). In order to succeed on a 13c(b) claim, CFTC must show  that Defendant, as a controlling person, did not act in good  faith <I>or</I> knowingly induced, directly or indirectly, the conduct  which constitutes a violation of the Act. To satisfy the latter  standard, CFTC must show that the controlling person had actual  or constructive knowledge of the core activities that make up  the violation at issue and allowed them to continue. <I>Id. </I>at  1568. Section 13c(b), therefore, is about power, and imposing  liability for those who fail to exercise it to prevent illegal  conduct.</P>  <P>Applying this legal standard to the record, we conclude that  Raymond Fitzgerald meets the criteria for 13c(b) liability.  First, we note that Raymond Fitzgerald openly <I>concedes</I> that he  was a &quot;controlling person&quot; at RJFCO. Appellees' Brief at 62.  Raymond Fitzgerald was RJFCO's principal and exercised the  ultimate choice-making power within the firm regarding its  business decisions. <I>See </I>173 F. Supp.2d at 1297. He reviewed and  approved the activities that we hold today violated the Act and  its regulations-the Seminar and the Commercial. He was  ultimately responsible for compliance with all applicable rules  on commodities solicitations. He had the power and the authority  to prevent the Seminar from being conducted, or to alter its  content to comply with extant law.</P>      <PRE>
+
+                    IV.  Conclusion<U></U>
+
+</PRE>  <P>This case serves as a pungent reminder that <I>caveat emptor</I> has no  place in the realm of federal commodities fraud. Congress, the  CFTC, and the Judiciary have determined that customers must be  zealously protected from deceptive statements by brokers who  deal in these highly complex and inherently risky financial  instruments. Upon review of the record and controlling law, we  conclude that the District Court erred in finding that the  Commercial and the Seminar did not violate the CEA and its  regulations. Both were deceptive and misleading, unquestionably  material to the potential customer, and promulgated with the  requisite scienter. These two solicitation devices also violate  the Act because they failed to disclose extremely material  information that any reasonable investor would want to know  before committing money. </P>  <P>Raymond Fitzgerald is liable for the Commercial and Seminar  under 7 U.S.C. &sect; 6c(b) and 17 C.F.R. &sect; 33.10. Leiza Fitzgerald  is liable for her involvement with the Seminar under &sect; 6c(b) and  &sect; 33.10. For purposes of this CEA violation by Leiza Fitzgerald,  Raymond Fitzgerald is a controlling person and is liable under &sect;  13c(b). RJFCO is liable for the individual violations of Raymond  Fitzgerald and Leiza Fitzgerald pursuant to 7 U.S.C. &sect;  2(a)(1)(B). As to all other Defendants, we will affirm the order  of the District Court. We remand the matter for enforcement  proceedings on the above violations by Raymond Fitzgerald, Leiza  Fitzgerald and RJFC). To the extent that we did not discuss  other points of error raised by CFTC or by Defendants, we deem  them without merit. Each party to bear its own costs.  <P>TJOFLAT, Circuit Judge, concurring:</P>  <P>I write separately only to underscore the extent of the  misrepresentations committed by the defendants and to make a  broader point about &quot;clarity&quot; - the two issues most troubling  the dissent. </P>  <P>One particular passage in the dissent contains the essence of  the dispute in this case: &quot;The fact of the matter is, in  options, you are either going to lose big or win big - that is  why brokerage firms like RFJCO can advertise potential profits  of up to 200 to 300% and must also warn that this type of  investment involves a high risk of loss (only investment capital  should be used).&quot; The dissent evidently feels that by  proclaiming that only &quot;investment capital should be used,&quot;  together with an equally generic disclaimer, a reasonable  investor should be put on notice that commodities trading is  extraordinarily volatile and the risk of loss enormous.  Recognizing that &quot;[c]ommodities brokerage firms need to disclose  both the potential and risks involved in options trading,&quot; the  dissent concludes that &quot;RFCO does just that - disclosing the  appropriate amount of profit potential as well as the adequate  amount of risk.&quot;</P>  <P>The crux of my disagreement with the dissent, then, lies in the  necessary congruence between claims of potential profit and the  concomitant risk involved. The dissent evidently believes that  commodities brokerage firms can advertise about enormous profits  (replete with constant repetition, explanation points, and  satellite photographs of hurricanes) while making brief mention  of the risk involved - a discussion of risk sugar-coated with  assertions about how this risk can be &quot;limited&quot; while still  providing &quot;unlimited profit potential.&quot; In my view, such  lopsided advertising is hardly a disclosure of the &quot;the adequate  amount of risk&quot; as the dissent proclaims. It certainly failed to  convey the <I>magnitude</I> of the risk involved (remember: 95% of the  firm's clientele lost money on the advertised investments). </P>  <P>The deception regarding the substantial <I>risk</I> was compounded with  more deception about how, precisely, the potential <I>gains</I> were  going to be realized. The discussion about El Ni&ntilde;o and urgency  in the timing of the investment created an heir of inevitability  - as if the defendant had some special knowledge with which to  exploit an asymmetry of information in the market. All of this  is fine, the dissent argues, so long as the advertiser skirts  the line by peppering his language with conditional language  (&quot;could&quot; and &quot;may&quot;) and does not say that profits are <I>absolutely</I>  inevitable. Viewed from the perspective of a reasonable investor  - not an investment banker at Merrill Lynch or a futures  specialist for ADM<SUP><A NAME="Footref1"></A><A HREF="#Footnote1">1</A></SUP> - a misleading expectation of  investment success can certainly be made even if conditional  language is used. This misleading picture is exactly the sort  that the defendants painted. Perhaps the dissent would rather  have a world of <I>caveat emptor</I>: &quot;If it is the case that investors  `<I>surely</I>' wanted to know [information about the past success of  the defendants' clients] before they invested, then why didn't  they ask?&quot; says the dissent. But this is not the world Congress  envisioned when it enacted the commodities laws.</P>  <P>The dissent further bemoans the lack of clarity in the law.  While it is undoubtedly true that the terms chosen by Congress -  &quot;defraud&quot; and &quot;deceive&quot; - lack the precision necessary to guide  behavior in all transactions, this &quot;problem&quot; is a necessary  byproduct of the inherent difficulty in legal drafting.  Language of general applicability - the stuff of statutes and  common law rules - is simply incapable of conveying the entire  range of permissible and impermissible conduct. The law is  replete with nebulous phrases such as &quot;proximate cause&quot; and  &quot;rule of reason.&quot; Some cases may entail <I>post hoc</I> judicial  refinement, resulting in the unavoidable problem of a civil  defendant without notice that his precise conduct could result  in liability. </P>  <P>Whatever problems may be created by nebulous rules, I am  confident that in this case, the defendants had ample notice  that their heavily unbalanced portrait of options trading - a  picture far different from reality - was impermissible. When an  investor seeks to invest his money, he is principally concerned  with two factors: return and risk. A rational investor with no  peculiar aversion to risk would be indifferent between having $5  and a one-in-ten chance at winning $50. Change the risk factor  to one-in-eighty and the bet becomes unattractive even to the  most risk-seeking individual. The defendants in this case knew  that by trumpeting enormous returns and downplaying the risk  involved, a reasonable (if unsophisticated) investor would be  enticed to make a bet that he would not otherwise make were the  full picture disclosed. As the majority opinion points out, &quot;it  is misleading and deceptive to speak of `limited risk' and `200-  300' percent profits without also telling the reasonable  listener that the overwhelming bulk of firm customers lose  money.&quot; Don't make an active attempt to instill in the investor  a grossly inaccurate picture of the risk-to-reward ratio. That  is the rule in this case - a rule I find to be abundantly clear.  <P>WILSON, Circuit Judge, dissenting:</P>  <P>I am troubled by the majority's holding, because it provides no  useful guidance to commodities brokerage firms as to how to  bring their solicitation and advertising activities into  compliance with the law. Our case law already contains a  confusing and vague definition of what constitutes &quot;fraud&quot; under  the Commodities Exchange Act (CEA) and Commission Rule 33.10;  the majority's opinion only adds to the uncertainty of this body  of law. On this record, I would have found that R.J. Fitzgerald  &amp; Co. (RJFCO) was not involved in fraudulent solicitations, nor  did they attempt to cheat, defraud, or deceive clients under  Commission Rule 33.10. Therefore, I respectfully dissent.</P>  <P>DISCUSSION</P>  <P>The majority contends that the statements made by RJFCO in the  commercial and the promotional seminar &quot;directly contravene the  legal principles established in prior commodities fraud cases.&quot;  The majority cites the following four cases to support its  finding that RJFCO committed fraud: (1) <I>CFTC v. Trinity Fin.  Group, Inc.</I>, [1996-1998 Transfer Binder] Comm. Fut. L. Rep.  (CCH) &para; 27,179 (CFTC Sept. 29, 1997), <I>aff'd in relevant part and  vacated in part</I>,<I> CFTC v. Sidoti</I>, 178 F.3d 1132 (11th Cir. 1999);  (2) <I>In re JCC, Inc.</I>, [1992-1994 Transfer Binder] Comm. Fut. L.  Rep. (CCH) &para; 26,080 (CFTC May 12, 1994), <I>aff'd</I>, <I>JCC, Inc. v.  CFTC</I>, 63 F.3d 1557 (11th Cir. 1995); (3)<I> Bishop v. First  Investors Group of the Palm Beaches, Inc.</I>, [1996-1998 Transfer  Binder] Comm. Fut. L. Rep. (CCH) &para; 27,004 (CFTC Mar. 26, 1997);  (4) <I>In re Staryk</I>, [1994-1996 Transfer Binder] Comm. Fut. L. Rep.  (CCH) &para; 26,701 (CFTC June 5, 1996), <I>aff'd in relevant part and  vacated in part</I>, [1996-1998 Transfer Binder] Comm. Fut. L. Rep.  (CCH) &para; 27,206 (CFTC Dec. 18, 1997).</P>  <P>A comparison of the facts of these four cases to the facts in  this case should lead to the conclusion that RJFCO's statements  are dissimilar and legally distinguishable from all four cases.</P>  <P>I. <U>RJFCO did not falsely misrepresent profit potential or claim  that seasonal trends practically guaranteed profits.</U></P>  <P>It is clear from prior case law that a broker registered as an  associated person (AP) must not misrepresent the likelihood of  profit to any current or prospective customer. <I>See, e.g., In re  JCC, Inc.</I>, [1992-1994 Transfer Binder] Comm. Fut. L. Rep. (CCH)  at 41,576; <I>In re Staryk</I>, [1996-1998 Transfer Binder] Comm. Fut.  L. Rep. (CCH) at 45,809. As the commission in <I>In re JCC, Inc.</I>  stated, &quot;[w]hen the language of a solicitation obscures the  important distinction between the <I>possibility</I> of substantial  profit and the <I>probability</I> it will be earned, it is likely to be  materially misleading to customers.&quot; [1992-1994 Transfer Binder]  Comm. Fut. L. Rep. (CCH) at 41,576 n.23 (emphasis added). More  specifically, an AP must not represent that an anticipated  seasonal trend, such as winter and summer, will &quot;almost  guarantee profits.&quot; <I>Sidoti</I>, 178 F.3d at 1135-36.</P>  <P>For example, the APs in <I>Trinity Financial Group, Inc. </I>  &quot;misrepresented the profit potential of . . . commodity options  by falsely telling . . . customers that they were practically  guaranteed to make a profit because of the cyclical and/or  seasonal nature of the gasoline and heating oil markets.&quot; [1996-  1998 Transfer Binder] Comm. Fut. L. Rep. (CCH) at 45,628. One AP  told a customer &quot;that heating oil was cyclical in nature and  that this was a pattern that he had seen over the past ten  years, and that he had consistently made money on it.&quot; <I>Id.</I>  Another AP said that &quot;heating oil <I>always</I> went up during the  winter and that if he invested $10,000, he would make $60,000 to  $70,000 by the end of the year.&quot; <I>Id. </I>Yet another AP said that in  the heating oil market &quot;the trend is to buy in the summer months  and sell it in the winter months. And he made the analogy, . . .  when do you buy a fur coat? Do you buy a fur coat in the winter  months or do you buy it in the summer months?&quot; <I>Id.</I> </P>  <P>In <I>In re JCC, Inc.</I>, the scripts given to the APs &quot;often  emphasized historical market moves that earned customers  substantial profits, and encouraged customers to anticipate  similar profits.&quot; [1992-1994 Transfer Binder] Comm. Fut. L. Rep.  (CCH) at 41,576. For example, one customer related that an AP  told him that </P>  <P><tt><blockquote>I should purchase a position in heating oil, that it was a sure thing that every Fall heating oil goes up. It was guaranteed that I'd make $3,000 by Spring, no ifs, ands, or buts. It was a sure thing. . . . After [the heating oil losses], he called me with the same story about crude oil and that time I was going to make $8,000.</blockquote></tt></P> <P></P> <P><I>Id.</I> The commission in <I>In re JCC, Inc.</I> held that, </P>  <P><tt><blockquote>[g]iven the distorted view of the likelihood of profit and loss fostered by the blatant misrepresentations discussed above, such history-based statements do not escape our scrutiny merely because such a profit was possible, indeed, had actually been earned at a particular historical point . . . Without additional historical context, such as the frequency of the described market movement and whether market fundamentals or related circumstances have changed since the last occurrence, and some cautionary language about the difficulty of catching a market trend and escaping its reversal, customers can be misled by undue emphasis on such historical successes. In the circumstances of this case, we find that JCC and EDCO's focus on such successes helped deceive their customers about the fundamental nature of the futures markets.</blockquote></tt></P> <P></P> <P><I>Id.</I></P>  <P>In <I>Bishop</I>, the customer was induced into opening an account as a  result of an AP's statements that based upon the history of the  heating oil market, profits were &quot;<I>probable.</I>&quot; [1996-1998 Transfer  Binder] Comm. Fut. L. Rep. (CCH) at 44,841. The AP said that  &quot;based on the history of the heating oil market for the past 12  years, I could make a lot of money in heating oil. . . .  [P]eople had made a lot of money buying before prices rose and  selling after they had risen.&quot; <I>Id.</I> The commission found that  &quot;[t]hese types of representations made by [an AP] provide the  deceptive message that the predictable nature of the seasonal  demand and price trends essentially assured the likelihood of  dramatic profits and far outweighed the risk of loss generally  associated with trading commodity options.&quot; <I>Id. </I>What made the  AP's statements so deceptive as to be &quot;misleading half-truths&quot;  was the fact that the AP &quot;failed to disclose that a seasonal  increase in the demand for heating oil would not necessarily  result in the increased value of a heating oil option, because  the market had already factored seasonal demand into the price  of an option.&quot; <I>Id.</I></P>  <P>Lastly, in <I>In re Staryk</I>, an AP represented to his clients that  &quot;given the historical seasonal pricing trends in gasoline and  heating oil, speculation in gasoline and heating oil options is  significantly less risky and more likely to result in profits  than speculation in those options tied to non-seasonal markets.&quot;  [1994-1996 Transfer Binder] Comm. Fut. L. Rep. (CCH) at 43,928.  In fact, the AP claimed to customers that &quot;the likelihood of the  gasoline market going down in the summer is similar to the  likelihood that someone would cancel the Fourth of July, cancel  Memorial Day, or cancel summer vacations in schools in North  America and in Europe.&quot; <I>Id.</I> at 43,929. The administrative law  judge determined that those representations were &quot;blatantly  false&quot;:</P>  <P><tt><blockquote>seasonal shifts in demand (and the corresponding price changes) that generally characterize the physical markets for gasoline and heating oil, do not reduce the risks involved in trading energy options. No advantage is gained from knowledge of these seasonal patterns. . . . </blockquote></tt></P> <P><tt><blockquote>. . . It is only when unexpected events occur, including higher or lower than expected demand for gasoline, that an option may become profitable.</blockquote></tt></P> <P></P> <P><I>Id. </I>at 43,930-31. </P>  <PRE>
+
+    After reviewing these four cases, it is clear that RJFCO
+
+does not overstate the likelihood of profit or make claims that
+
+expected seasonal trends, compared to non-seasonal trends, will
+
+practically guarantee profits.  The RJFCO commercial
+
+specifically focuses on El Ni&ntilde;o, the effects of which one can
+
+hardly say were highly expected and predictable.  RJFCO states
+
+that &quot;[d]roughts, floods and other adverse conditions could
+
+dramatically alter the supply and demand dynamics of the corn
+
+market.&quot;  Not only did El Ni&ntilde;o have an unanticipated effect on
+
+the corn market compared to other seasonal trends in other
+
+commodities markets, but this weather phenomenon also had no
+
+history that RJFCO APs could utilize to boast of previous
+
+profits.  This is contrary to the bold statements made by the
+
+APs in <I>Trinity</I>, who bragged that they had consistently made
+
+money on the heating oil market, or the APs in <I>In re JCC,</I> <I>Inc.</I>,
+
+who claimed that every fall heating oil goes up.
+
+</PRE>  <P>Nor does RJFCO's promotional seminar focus on anticipated,  historical seasonal trends. In fact, the seminar script focuses  on unanticipated trends such as abnormal weather phenomena (such  as Hurricane Andrew, a drought, and floods), political  conditions (specifically August of 1990 and the impending Gulf  War), and new technical, hypothetical models (in which  &quot;[t]echnical analysts use trading volume and price study along  with charts or computer programs to identify and project trends  in the market&quot;). Even when the script discusses the potential  for profit in the heating oil market, RJFCO does not claim that  the fluctuations in the demand for heating oil in the summer and  winter will increase or decrease the price of an option or  futures. Instead, the seminar focuses on unexpected events that  may affect supply, such as storage facilities being depleted,  pipelines being destroyed in Colombia and Northern Iran, and  political events, such as the President of the United States  dispatching the USS Nimitz to the Middle East.</P>  <P>The majority also contends that &quot;the [s]eminar also  impermissibly suggests that profits on options (the specific  type of investment they were promoting) are proportionally  related to the cash market.&quot; However, stating that profits on  options is proportionally related to the cash market is not  necessarily fraud. In fact, it is only when the AP asserts a  one-for-one or greater correlation between profits and movements  in the cash price of the commodity that fraud exists. <I>See CFTC  v. Commonwealth Fin. Group, Inc.,</I> 874 F. Supp. 1345, 1352 (S.D.  Fla. 1994), <I>rev'd in part and vacated in part</I>, 79 F.3d 1159  (11th Cir. 1996) (unpublished table decision). RJFCO followed  the Chicago Board of Trade's example. The Chicago Board of  Trade's options manual explains that &quot;a one-cent change in the  futures price would result in only a half-cent change in the  option premium.&quot; Therefore, when RJFCO explains in its script  that by using an option, a twenty-two cent move in heating oil  &quot;could be 50-75% of the profit that the future would have  earned,&quot; RJFCO is assuming that a one-cent change in the futures  price would result in only a half-cent change in the futures  price. As the equation concludes, the script provides: &quot;Now  remember that profit is on a futures contract, and if you had a  less aggressive option, because you want limited risk so you  would receive <I>50%</I> of that profit - 46200 divided by 2 equals  $23,100.&quot; RJFCO never asserts that profits on options directly  move in relation to the cash market for the commodity.</P>  <P>II. <U>RJFCO did not downplay or minimize the degree of risk  involved in investing in commodity options.</U></P>  <P><I>Clayton Brokerage Co. of St. Louis v. CFTC</I>, 794 F.2d 573, 580  (11th Cir. 1986) (per curiam)<I>,</I> tells us that &quot;[t]he extent of  disclosure necessary to provide full information about risk will  vary depending on the facts and circumstances of trading as well  as on the nature of the relationship between the broker and the  customer.&quot; This standard leaves a lot to be desired and provides  courts with a significant amount of discretion as to what  constitutes sufficient disclosure of risk. However, several  cases, including <I>Sidoti</I>, <I>In re JCC, Inc.</I>, and <I>In re Staryk</I>,  provide us with some guidance as to how this standard is to be  applied.</P>  <P>The majority extends the principles of law articulated in these  cases into a set of facts where these principles should not  apply. It reaches overly broad conclusions, such as &quot;the  Commercial overemphasizes profit potential and downplays risk of  loss,&quot; and &quot;[the seminar] presents a distinctly unbalanced  picture between the potential for profit and the potential for  loss in options, inflating one while downplaying the other,&quot;  without grappling with the particular set of facts involved in  the instant case. These conclusions are not supported by this  record, nor is the legal standard underlying them supported by  our precedent. </P>  <P>In <I>Clayton Brokerage</I> <I>Co. of St. Louis</I>, APs made affirmative  misrepresentations as to risk; customers were told to &quot;ignore  the risk disclosure statement,&quot; &quot;that certain trading strategies  can limit losses,&quot; and &quot;that the broker's scheme can overcome  inherent markets risks, or that certain commodities are less  volatile.&quot; <I>Id.</I> at 580-81. </P>  <P>In <I>Sidoti</I>, the APs downplayed the degree of risk by telling  customers that the risks of trading &quot;commodity options were non-  existent or minimal.&quot; <I> </I>178 F.3d at 1135-36.</P>  <P>In <I>JCC, Inc.</I>, former APs testified that they were taught &quot;to  minimize risk, . . . to characterize the $2500 management fee as  insignificant compared to potential profits, and to use the  Regulation 1.55 risk disclosure statement as a sales tool by  explaining away various paragraphs of the document as  inapplicable to the FLT program.&quot; 63 F.3d at 1568. Customers  were told that &quot;they could lose no more than $500 in the sugar  market,&quot; &quot;that foreign currencies were much safer than grain  trading because of the guarantees of the movements in the  currencies,&quot; and that &quot;we actually had very little risk at all.&quot;  <I>In re JCC, Inc.</I>, [1992-1994 Transfer Binder] Comm. Fut. L. Rep.  (CCH) at 41,576.</P>  <P>In <I>In re Staryk</I>, although the AP would disclose risk, he would  always downplay it by emphasizing the predictability of the  price fluctuations in gasoline and heating oil. [1994-1996  Transfer Binder] Comm. Fut. L. Rep.(CCH) at 43,929. The  administrative law judge determined that although the AP  &quot;remind[ed] customers that past performance may not guarantee  success in the future, this generic warning of risk is almost  always juxtaposed with information and statements which convey  that this risk is in fact small.&quot; <I>Id.</I></P>  <P>The disclosures of risk that were employed in <I>Clayton Brokerage  Co. of St. Louis</I>, <I>Sidoti</I>, <I>In re JCC, Inc.</I>, and <I>In re Staryk</I> are  distinguishable from the risk disclosures provided by RJFCO in  the instant case.<SUP><A NAME="Footref1"></A><A HREF="#Footnote1">1</A></SUP> In its television commercial,  RJFCO attempted to explain the risk to potential customers in  four separate ways. The first, most obvious risk disclosure  statement made by RJFCO was the statement found on the bottom  one-fourth of the screen, which was kept on the screen for  forty-five of the sixty seconds of the commercial's running  time. This statement, displayed in bold capital letters directly  above RJFCO's phone number, provided: &quot;OPTIONS INVESTING  INVOLVES A RISK OF LOSS. MINIMUM ACCOUNT $5,000.&quot; Any viewer who  jotted the phone number down would have seen the prominent risk  disclosure statement displayed above the number. </P>  <P>The second disclosure statement flashed on the screen three  seconds after the commercial began. It provided in bright yellow  letters: &quot;The preceding were hypothetical mathematical samples  of leverage in the Commodity Options Market.&quot; This disclosure  clarifies the point that RJFCO's prediction was based upon a  hypothetical that is not guaranteed to come true.</P>  <P>Third, and perhaps most important, the commercial is filled with  conditional language - nothing is guaranteed. RJFCO is equivocal  in its advertising - none of the language in the commercial  suggests that El Ni&ntilde;o <I>will definitely</I> affect the corn market as  predicted and that customers <I>will </I>receive huge profit. Rather,  the following conditional statements were made: &quot;[El Ni&ntilde;o's]  effect on world crops <I>could </I>mean huge profits in the grain  markets.&quot; &quot;[C]onditions <I>may </I>exist for profits as high as 200 to  300 percent.&quot; &quot;[<I>I</I>]<I>f </I>patterns continue, the effects <I>could be</I>  devastating,&quot; and &quot;adverse conditions <I>could </I>dramatically alter  the supply and demand dynamics.&quot;<SUP><A NAME="Footref2"></A><A HREF="#Footnote2">2</A></SUP></P>  <P>And finally, in the middle of the commercial, the announcer  changes his tone (the voice drops) and we hear, &quot;<I>[o]ption  investing involves a high risk of loss and only risk capital  should be used</I>.&quot; The concurring opinion suggests that this  disclosure is inadequate to state the risk. How much more warning  is required than a disclosure that the investment is a &quot;<I>high  risk</I>&quot;? This flagrant risk disclosure statement, which is hardly  brief within the format of the commercial, combined with the  &quot;RISK OF LOSS&quot; statement conspicuously prominent on the screen  throughout almost the entire commercial, the other statement  explaining RJFCO's mathematical formula, and the conditional  language placed throughout the commercial, effectively and  sufficiently discloses the magnitude of risk involved.</P>  <P>As for the promotional seminar, once again I find that there is  an adequate amount of risk disclosure. One need only compare the  seminar with the National Futures Association's (NFA's)  manual<SUP><A NAME="Footref3"></A><A HREF="#Footnote3">3</A></SUP> to see that RJFCO thoroughly disclosed risk  according to the NFA's suggestions.</P>  <P>For example, RJFCO's promotional seminar provides: &quot;In contrast  to futures, options on futures allow investors and risk managers  to define risk and limit it to the loss of a premium paid for the  right to buy or sell a futures contract, while still providing  the buyer with unlimited profit potential.&quot; The NFA manual  provides: </P>  <P><tt><blockquote>For the individual who has a price opinion (that a particular futures price will change by at least some given amount in a certain direction within a specific period of time), buying options offers the opportunity to realize substantial profits with a predefined and limited risk. The maximum an option buyer can lose - should events prove him wrong about the direction, extent or timing of the price change - is the premium paid for the option plus commissions and other transaction costs.<SUP><A NAME="Footref4"></A><A HREF="#Footnote4">4</A></SUP></blockquote></tt></P> <P></P> <P>The majority takes exception to the following assertions  regarding unlimited profit potential and limited risk in options  found in RJFCO's seminar: &quot;If you are highly aggressive and  looking for unlimited profit potential as well as unlimited risk  than [sic] it would be the futures. But most would like something  less aggressive, something offering unlimited profit potential  but limited risk-option trade.&quot; The NFA manual confirms this for  it provides: &quot;[U]nlike an option which has limited risk, a  futures position has potentially unlimited risk.&quot; </P>  <P>Now, if the &quot;limited risk with unlimited profit potential&quot; had  been &quot;recited repeatedly as a sales inducement,&quot; then these true  statements could have become fraudulent in that the  representation begins to &quot;inflate the <I>likelihood</I> of profit while  minimizing the risk of loss.&quot; <I> In re Staryk,</I> [1996-1998 Transfer  Binder] Comm. Fut. L. Rep. (CCH) at 45,809. That, however, is  simply not the case here - the seminar does not overemphasize  profit and downplay risk of loss. Rather, the introduction to the  seminar provides, &quot;These markets are risky - we want you to go  away with ideas on how to limit your risk but still be positioned  to take advantage of the volatility that not only make them  exciting but potentially very profitable.&quot; RJFCO actually  mentions loss <I>first</I>, noting how options on futures contracts can  limit this risk, and <I>then</I> mentions potential profit (not  guaranteed or probable profit). Practically every affirmative  representation on profit is counterbalanced with a risk warning.  (&quot;Past price action can provide you with clues to future action.  The market is anticipatory, and you can see price movement first  in the chart for the day.&quot; The next paragraph then warns: &quot;Chart  signals, just like fundamental news can be misleading. You should  have structure in you[r] approach to the markets.&quot;) </P>  <P>Since I find no misleading or deceptive statements made by RJFCO  in its commercial or seminar, there is no need to examine  scienter and materiality. However, it bears mentioning that the  majority found RJFCO to have &quot;acted recklessly with regard to the  statements aired on television.&quot; The majority based this  recklessness </P>  <P><tt><blockquote>on the fact that this Court and the CFTC have previously condemned attempts to attract customers by: (1) linking profit expectations on commodities options to known and expected weather events, seasonal trends, and historical highs; (2) suggesting that the commodities market can be correctly timed to generate large profits; and (3) substantially inflating option profit expectations while downplaying risk of loss. </blockquote></tt></P> <P></P> <P>I find no prior precedent supporting these contentions. At the  most, these statements are oversimplifications of prior cases.  Linking profit expectations on commodities options to known  seasonal trends is only fraud if the AP &quot;almost guarantees  profits,&quot; as in <I>Sidoti</I>, or &quot;distorts the likelihood of profit,&quot;  as in <I>In re JCC,</I> <I>Inc</I>. Suggesting that the commodities market can  be correctly timed to generate profits is not necessarily fraud  when, as stated in <I>In re Staryk</I>, &quot;[i]t is only when unexpected  events occur, including higher or lower than expected demand for  gasoline, that an option may become profitable.&quot; [1994-1996  Transfer Binder] Comm. Fut. L. Rep. (CCH) at 43,931. And the  majority's buzz phrase, &quot;substantially inflating option profit  expectations while downplaying risk of loss,&quot; is much too vague  and abstract a standard to be of any use to commodities brokerage  firms who wish to advertise their services in the future. </P>  <P>The difficulty with the current standard for commodity options  fraud is that Rule 33.10 is too vague. According to the majority  opinion, in order to establish a fraud claim in an enforcement  action under the CEA, the CFTC must prove: &quot;(1) the making of a  misrepresentation, misleading statement, or a deceptive omission;  (2) scienter; and (3) materiality.&quot;<SUP><A NAME="Footref5"></A><A HREF="#Footnote5">5</A></SUP> Therefore, much  of the case law from this standard has been both arbitrary and  conflicting. Additional guidelines must be introduced to further  clarify the elements of fraud under Rule 33.10.</P>  <P>Courts have had the most difficulty in determining what  constitutes a material misrepresentation or a material omission.  According to the majority opinion, &quot;whether a misrepresentation  has been made depends on the `overall message' and the `common  understanding of the information conveyed.'&quot; As for materiality,  a statement is considered material if &quot;there is a substantial  likelihood that a reasonable investor would consider it important  in making an investment decision.&quot; <I> Saxe v. E.F. Hutton &amp; Co.</I>,  789 F.2d 105, 111 (2d Cir. 1986). Unfortunately, Rule 33.10 and  case law do not provide adequate guidance to either the CFTC or  commodity futures brokerage firms. </P>  <P>While every claim of commodities fraud must be reviewed on a  case-by-case basis under the existing standard, a more specific  interpretation of the elements under Rule 33.10 would create a  standard whereby &quot;material misrepresentations or material  omissions&quot; would be more readily discernible.</P>  <P>What constitutes a &quot;material misrepresentation&quot;?</P>  <P>(1) The most obvious material misrepresentations are outright  falsehoods told by brokerage firm APs and sales staff to  prospective or current customers. Examples of blatant material  misrepresentations include promising to open a trading account  and not doing so, reporting erroneous account balances, or making  unlawful trades in a customer's account without his or her  authorization. <I>See CFTC v. Muller</I>, 570 F.2d 1296, 1300-01 (5th  Cir. 1978) (finding evidence sufficient to support an injunction  because AP lied concerning opening of bank account and supplied  fictitious options trade statements).<I> </I>A material  misrepresentation also occurs if an AP lies about the amount of  profits earned, or losses accrued, in a customer's trading  account. <I>See</I> <I>CFTC v. Rosenberg</I>, 85 F. Supp. 2d 424, 447 (D.N.J.  2000) (finding fraud because the AP reported trading profits when  no profits had been earned and failed to report losses on trades  he was not authorized to make).</P>  <P>(2) A material misrepresentation that is not patently obvious,  but just as damaging, exists when a brokerage firm deliberately  overstates profit potential and conceals the possibility of loss.  Any prediction or recommendation must have a reasonable basis in  fact and should be explicitly labeled just that - a prediction  and not a guarantee. A statement regarding potential profits that  could be earned should not be considered a material  misrepresentation or misleading statement if it is possible that  these projected earnings could realistically occur. </P>  <P>For example, RJFCO informed customers of the potential for  profits up to 300% if the El Ni&ntilde;o atmospheric disturbances  occurred as projected. If this profit potential was attainable,  and RJFCO compiled significant research which suggested climactic  conditions created by the El Ni&ntilde;o phenomenon could create drought  and thereby increase the price of grain due to its scarcity, then  RJFCO's marketing strategy did not represent a material  misrepresentation. </P>  <P>Existing case law reflects situations, unlike RJFCO, where other  firms made unwarranted profit predictions which were considered  to be inherently fraudulent due to an absence of technical  research or proof to back up these claims. <I>See CFTC v. J.S. Love  &amp; Assocs. Options, Ltd.</I>, 422 F. Supp. 652, 660 (S.D.N.Y. 1976);<I>  In re British Am. Commodity Options Corp.</I>, Nos. 76-15 and 77-3  (C.F.T.C. Dec. 2, 1977), noted in [1977-1980 Transfer Binder]  Comm. Fut. L. Rep. &para; 20,526 (C.F.T.C. Dec. 2, 1977), avail. on  Westlaw FSEC-Admin. DATABASE, 1977 WL 13558, at *11-12.</P>  <P>(3) Also, any claim about a brokerage firm's past trading record  or an AP's puffing of past successes should be based upon actual  trades executed in the market place and should fairly represent  results achieved for those periods.</P>  <P><I>CFTC Interpretative Letter</I> No. 77-16 [1977-1980 Transfer Binder]  Comm. Fut. L. Rep. (CCH) &para; 20,498, 22,065 (Oct. 18, 1977); <I>see  Clayton Brokerage Co. of St. Louis</I>, 794 F.2d at 575 (finding  fraud when AP boasted of his successes and none of his failures);  <I>Commonwealth Fin. Group, Inc.</I>, 874 F. Supp. at 1353 (where  salespeople misrepresented the past success of themselves and  their firm by telling prospective customers that current clients  have &quot;recently doubled their money&quot; and that the firm &quot;has the  best track record in the industry and has made millions of  dollars in profits for their customers with little risk&quot;).</P>  <P>What constitutes a &quot;material omission&quot;? Omissions of material  fact are rarely transparent and perhaps more subject to  questionable interpretation than even material  misrepresentations.</P>  <P>For example, a brokerage firm must disclose to potential and  current customers the amount of risk inherent in commodity  futures and options trading. However, an undefined, grey area  exists between no disclosure and full disclosure. If there is no  mention of risk on the part of the brokerage firm, then a  material misrepresentation exists - options trading is a risky  business, and customers need to be told about the possibility of  losing their entire investment. The mandatory risk disclosure  statement required by the CFTC puts the customer on notice of the  risks of trading; however, in some instances this disclosure  statement is contradicted by oral representations made by APs who  tell customers to disregard this statement. <I>See Clayton Brokerage  Co. of St. Louis</I>, 794 F.2d at 580; <I>In re JCC, Inc.</I>, 63 F.3d at  1568 (where the risk disclosure statement was explained away as  &quot;inapplicable&quot;); <I>but see</I> <I>Puckett v. Rufenacht, Bromagen &amp; Hertz,  Inc</I>., 903 F.2d 1014, 1019 (5th Cir. 1990) (finding that the  written risk disclosure statement was sufficient enough to inform  the Pucketts of the risks involved because Dr. Puckett, an  educated and successful businessman who had traded securities for  more than thirty years, was capable of understanding the risk  disclosure statement, and admitted that he affirmatively sought  risk in order to make profits).</P>  <P>Therefore, in order to avoid any misunderstanding or charges of  misrepresentation, it would be preferable for brokerage firms to  err on the side of caution and provide both written and oral  disclosure statements to potential investors. If not, these firms  may leave themselves open to charges that they fraudulently  omitted material statements regarding risk of loss. <I>See CFTC v.  Crown Colony Commodity Options, Ltd.</I>, 434 F. Supp. 911, 916  (S.D.N.Y. 1977) (holding that the commodity options sales  presentations at issue were fraudulent because they &quot;conveyed the  distinct impression that extraordinary short-term profits were  all but certain to be realized by investors&quot; and because the  mechanics of commodity options trading were misrepresented).</P>  <P>These guidelines are merely suggestions, on my part, on how to  both interpret the existing standard and provide the commodities  industry with additional safeguards to ensure the legality of  their sales presentations, promotional seminars, and conduct  while maintaining their customers' trading accounts.</P>  <P>III. <U>RJFCO had no affirmative duty to disclose its trading  record.</U></P>  <P>The majority implies in its opinion that RJFCO had a duty to  disclose its previous track record to prospective customers.  However, the majority fails to point to any prior authority that  suggest that there is a specific affirmative duty on the part of  a commodities brokerage firm to disclose its prior track record.  The cases in the majority opinion suggest that a duty to disclose  arises <I>only</I> if the firm's statements would be misleading or  deceptive if it did not disclose its track record. <I>Ziemba v.  Cascade Int'l, Inc.</I>, 256 F.3d 1194, 1206 (11th Cir. 2001) (We  recognize a duty to disclose when &quot;a defendant's failure to speak  would render the defendant's <I>own</I> prior speech misleading or  deceptive&quot;); <I>Rudolph v. Arthur Andersen &amp; Co.</I>, 800 F.2d 1040,  1043 (11th Cir. 1986) (&quot;[A] defendant's omission to state a  material fact is proscribed <I>only</I> when the defendant has a duty to  disclose&quot;) (emphasis added). Simply put, there is no mandatory  duty to disclose.</P>  <P>The majority argues that a reasonable investor would &quot;<I>surely</I>&quot;  want to know how many RJFCO investors had lost money, and,  therefore, it was RJFCO's duty to tell them. If it is the case  that investors &quot;<I>surely</I>&quot; wanted to know this information before  they invested, then why didn't they ask? This is not a case where  the APs misrepresented the firm's track record or lied about  successes in the past. <I>See Modlin v. Cane</I>, [1999-2000 Transfer  Binder] Comm. Fut. L. Rep. (CCH) &para; 28,059 at 49,549-50 (CFTC Mar.  15, 2000) (The AP told customers &quot;his method of trading was  successful&quot; and was &quot;the key to making money,&quot; and &quot;that he would  jump into the East River if he was unable to generate a  profit.&quot;). RJFCO never made any bold misrepresentations regarding  its prior track record and, therefore, was under no duty to  disclose its record. </P>  <P>CONCLUSION</P>  <P>Commodities brokerage firms need to disclose both the profit  potential and risks involved in options trading. RJFCO does just  that - disclosing the appropriate amount of profit potential as  well as the adequate amount of risk.</P>  <P>Trading options on futures contracts is <I>inherently risky</I>. The  fact of the matter is, in options, you are either going to lose  big or win big - that is why brokerage firms like RJFCO can  advertise potential profits of up to 200 to 300% and must also  warn that this type of investment involves a high risk of loss  (only risk capital should be used). </P>  <P>Admittedly, under <I>Sidoti</I>, <I>In re JCC, Inc.</I>, <I>Bishop</I>, and <I>In re  Staryk</I>, the standard for fraud is vague. However, these cases at  least provide a sensible set of guidelines for brokerage firms to  follow in designing their solicitations and advertising programs.  Essentially, these cases suggest that brokerage firms must not  misrepresent or guarantee profits, nor minimize the degree of  loss. However, in this case, the majority has extended the  standard to apply to a situation where a firm did not  misrepresent or guarantee profits and in fact disclosed the  amount of risk involved.<SUP><A NAME="Footref6"></A><A HREF="#Footnote6">6</A></SUP> And the majority opinion  simply fails to offer any useful guidance to actors in this area  of the law.</P>  <P>Commodities brokerage firms should be on the alert - this  decision may make it difficult to advertise and solicit business  in the future. It is uncertain what subsequent advertising  language may &quot;overemphasize profit and downplay risk of loss.&quot; I  dissent.</P>  <P><H3>FOOTNOTES</H3></P> <P><B><P>--------------<br><A NAME="Footnote1"></A><A HREF="#Footref1">[1]</A><P></B> The Complaint also named as a Defendant RJFCO employee Al Coringrato who settled the claim before trial.</P>  <P><B><P>--------------<br><A NAME="Footnote2"></A><A HREF="#Footref2">[2]</A><P></B>Trial before the Magistrate Judge will hereafter be referred to as the &quot;District Court&quot; or the &quot;Court.&quot;</P>  <P><B><P>--------------<br><A NAME="Footnote3"></A><A HREF="#Footref3">[3]</A><P></B> The National Futures Association (&quot;NFA&quot;) is a congressionally authorized futures industry self regulatory organization. The purpose of the NFA is to assure high standards of business conduct by its Members and to protect the public interest.</P>  <P><B><P>--------------<br><A NAME="Footnote4"></A><A HREF="#Footref4">[4]</A><P></B> Leiza Fitzgerald developed the script of this Seminar based in part on materials from an NFA workbook and manuals from the Chicago Board of Trade. Testimony adduced at the bench trial revealed that RJFCO employees would read the promotional scripts given to them by Leiza Fitzgerald verbatim. The Seminar provided general background on the firm and how the commodities market operates. At the beginning of the Seminar, participants received written risk disclosure material. As with the Commercial, the content of the Seminar was approved by Iowa Grain before it went into action.</P>  <P><B><P>--------------<br><A NAME="Footnote5"></A><A HREF="#Footref5">[5]</A><P></B> Finally, the Seminar had more general advice for potential RJFCO customers: a &quot;big reason&quot; people lose money is &quot;greed&quot; and that &quot;you will never go broke taking a profit, just take it one piece at a time.&quot; </P>  <P><B><P>--------------<br><A NAME="Footnote6"></A><A HREF="#Footref6">[6]</A><P></B> Unlike a cause of action for fraud under the common law of Torts, &quot;reliance&quot; on the representations is not a requisite element in an enforcement action. <I>See, e.g., CFTC v. Rosenberg</I>, 85 F. Supp.2d 424, 446 (D.N.J. 2000). </P>  <P><B><P>--------------<br><A NAME="Footnote7"></A><A HREF="#Footref7">[7]</A><P></B> As part of their argument that the Commercial is not deceptive, Defendants assert that investors had, in the past, actually made profits as large as 200-300%. However, just because such profits are possible, or have happened to some degree in the past, does not mean that the Commercial's total message is not misleading. <I>See JCC</I>, 63 F.3d at 1568 n.34. Even literally true statements can be extremely and impermissibly deceptive when viewed in their overall context. <I>See, e.g., In re Staryk</I>, Comm. Fut. L. Rep. at 45,809.</P>  <P><B><P>--------------<br><A NAME="Footnote8"></A><A HREF="#Footref8">[8]</A><P></B> This Circuit has clearly explained previously that brokers must be extremely careful when making representations in the commodities market because the standard <I>pro forma</I> risk disclosures do not &quot;warn the customer to disbelieve <I>representations that certain trading strategies can . . . overcome inherent market risks, or that certain commodities are less volatile</I>. Those <I>unfamiliar </I>with the workings of markets are unlikely to understand that <I>no broker can eliminate or diminish risk.</I>&quot; <I>Clayton</I>, 794 F.2d at 580-81 (emphasis added). We note that RJFCO designed its business specifically to deal with smaller, less experienced customers. <I>See R.J. Fitzgerald</I>, 173 F. Supp.2d at 1297. </P>  <P><B><P>--------------<br><A NAME="Footnote9"></A><A HREF="#Footref9">[9]</A><P></B> RJFCO's principal, Raymond Fitzgerald, testified that more than 95% of Defendants' customers lost money.</P>  <P><B><P>--------------<br><A NAME="Footnote10"></A><A HREF="#Footref10">[10]</A><P></B> One RJFCO customer testified at trial that if he had been told during a telephone solicitation that about 96% of RJFCO customers lost money, he probably &quot;would have hung up the phone.&quot;</P>  <P><B><P>--------------<br><A NAME="Footnote1"></A><A HREF="#Footref1">[1]</A><P></B>The advertisement in this case was obviously aimed at the novice commodities investor.</P>  <P><B><P>--------------<br><A NAME="Footnote1"></A><A HREF="#Footref1">[1]</A><P></B> It is worth noting that the seven customers who testified against RJFCO acknowledged that they understood the level of risk involved in trading commodities. Several of these customers either maintained/traded stock and mutual fund investments or studied commodity futures. Most of RJFCO's customer base consisted of people who had themselves first inquired into commodity trading; they were not sought out.</P> <P>It was also determined at trial that all seven of these customers received and had an opportunity to review the risk disclosure booklet before opening an account. The risk disclosure booklet explained the amount of risk involved in options trading. The customers were also advised that only risk capital should be invested in this kind of market. And each customer approved every trade before any trade was placed by an RJFCO AP. </P>  <P><B><P>--------------<br><A NAME="Footnote2"></A><A HREF="#Footref2">[2]</A><P></B>RJFCO's chief market analyst studied the various commodities markets and developed a reasoned trading strategy. RJFCO's trading strategy was based on, as the district court found, &quot;deliberate research and logical assumptions and the strategy was developed primarily to yield profit for RJFCO clients, not simply to generate commissions.&quot; <I>CFTC v. R. J. Fitzgerald &amp; Co</I>., 173 F. Supp. 2d 1295, 1307 (M.D. Fla. 2001). Numerous reports from a variety of prominent and respected financial and meterological sources were examined to develop the strategy predictions.</P>  <P><B><P>--------------<br><A NAME="Footnote3"></A><A HREF="#Footref3">[3]</A><P></B> The NFA's manual, which was admitted into evidence at trial and is part of the record on appeal, provides an introduction to options on futures contracts, how they work, and the opportunities and risks associated with their purchase. The NFA is a self-regulatory organization in the futures industry.</P>  <P><B><P>--------------<br><A NAME="Footnote4"></A><A HREF="#Footref4">[4]</A><P></B> This explains that RJFCO's calculations in its profit illustration that the majority claims are false - &quot;Now remember that profit is on a futures contract, and if you had a less aggressive option, because you want limited risk so you would receive approximately 50% of that profit- 46200 divided by 2 equals $23,100&quot; - are actually possible according the NFA's manual. A less aggressive option on a futures contract does create limited risk.</P>  <P><B><P>--------------<br><A NAME="Footnote5"></A><A HREF="#Footref5">[5]</A><P></B> While customer reliance on the misrepresentation need not be proven in a CFTC enforcement action alleging fraud, it is essential to restitution relief sought to compensate the injured party. <I>CFTC v. Rosenberg</I>, 85 F. Supp. 2d 424, 447 (D.N.J. 2000).</P>  <P><B><P>--------------<br><A NAME="Footnote6"></A><A HREF="#Footref6">[6]</A><P></B>No customer suffered a loss beyond his or her initial investment. </P>     
+<!-- Begin bottom.html -->
+
+<!-- Weblinks Box for sales group -->
+<table bgcolor="#FFFFFF" width="100% border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td align="center">
+<table bgcolor="#9C9D9D" width="95%" border="0" cellspacing="0" cellpadding="2">
+<tr>
+<td>
+    <table bgcolor="#FFFFFF" width="100%" border="0" cellspacing="0" cellpadding="0">
+    <tr>
+    <td bgcolor="#F3F3F3" height="20" width="10"></td>
+    <td bgcolor="#F3F3F3" height="20" align="left" valign="middle"><span class="textxsmall-lgray">Sponsored Links</span></td>
+    </tr>
+    <tr>
+    <td colspan="2" height="10" width="100%"></td>
+    </tr>
+    <tr>
+    <td height="20" width="10"></td>
+    <td class="textsmall">
+        <p>
+<font face="arial, helvetica, sans-serif" size="-1">
+<b><a href=" http://www.lawquote.com/index.html?pa=gen&pnum=flaw&bannerid=weblink&GCID=C11071x021"> Find a Lawyer</a></b>:  Our free service locates Bankruptcy, Criminal, DUI, Immigration, Personal Injury, Taxation, or Trademark lawyers in your area who can help you with your legal issues. From LawQuote.com<br>
+<b><a href=" http://ad.doubleclick.net/clk;10908456;4832115;e?http://www.timematters.com"> Time Matters® 6.0 with Billing Matters™ Plus</a></b>:  The perfect marriage of the front office and back office. Finally, everything together.<br>
+<b><a href=" http://ad.doubleclick.net/clk;9019167;4832115;i?http://www.wsulaw.edu"> WESTERN STATE UNIVERSITY COLLEGE OF LAW</a></b>:  Connect with technology and programs that help you learn more effectively.<br>
+<b><a href=" http://ad.doubleclick.net/clk;4978906;4832115;s?http://www.tabs3.com/findlawbpt"> Tabs3 and PracticeMaster</a></b>:  Reliable billing and practice management software for solo to mid-sized firms. Recommended by 94% of firms that use them.<br>
+<b><a href=" http://www.uslegalforms.com"> U.S. Legal Forms, Inc.</a></b>:  ** Over 25000 Legal Forms! ** A unique legal forms site on the Internet providing legal forms to lawyers, businesses and the public.<br>
+<b><a href="http://ad.doubleclick.net/clk;6803590;4832115;g?http://www.pclaw.com/jump/fl_lpc.htm">PCLaw & PCLawPro</a></b>:  ONE integrated system to manage your whole office. Provides time billing, accounting and practice management. Download a FREE demo.<br>
+<b><a href=" http://www.proxilaw.com/?CMP=CAC-findlawP"> Online Paralegal Services</a></b>:  Proxilaw takes care of your document preparation and filing chores. Incorporation, living trusts, LLCs, divorce & more.<br>
+<b><a href=" http://ad.doubleclick.net/clk;7606481;4832115;h?http://amicusattorney.com/findlaw/legal_channel_link.html"> Amicus Attorney</a></b>:  Easy-to-use and intuitive - experience great practice management software that works the way you do. Free Trial.<br>
+<b><a href=" http://www.abacuslaw.com/dt/t/273/"> AbacusLaw</a></b>:  Enter data once, use everywhere! Integrated calendar, cases, contacts, conflicts, time/billing, accounting. Full front/back office.<br>
+<b><a href="http://www.lawquote.com/index.html?pa=gen&pnum=flaw&bannerid=weblink&GCID=C11071x021">LawQuote</a></b>:  Need an attorney? Our free service connects you to a nationwide network of lawyers who can help you with your case.<br>
+<b><a href="http://ad.doubleclick.net/clk;5941262;4832115;e?http://creditcard.westlaw.com">Westlaw</a></b>:  cases and statutes--$12<br>
+</font>
+    <!--#include virtual="/includes/www/guide.lp.findlaw.com/includes/weblinks.html" -->
+    </td>
+    </tr>
+    <tr>
+    <td colspan="2" height="10" width="100%"></td>
+    </tr>
+    </table>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+<p>&nbsp;</p>
+<!-- end Weblinks Box -->
+
+</td>
+</tr>
+</table>
+</td></tr></table>
+</td>
+
+<td valign="top" bgcolor="#F0F2F6">
+<table bgcolor="#F0F2F6" border="0" cellspacing="5" ALIGN="right" valign="top" width="180">
+<tr>
+<td>
+<!-- Begin right.html -->
+<table width="100%" border="0" cellspacing="5" cellpadding="0" align="center" bgcolor="#F0F2F6">
+<tr><td>
+
+<!-- START RELATED THOMSON LEGAL RECORDS -->
+<div id="profiles">Thomson Legal Records</div>
+<center><a href="http://legalrecords.findlaw.com/ss/search_index.jsp?ch=LP"> <span class="textsmall11">Search by Name</span></a><br><a href="http://legalrecords.findlaw.com/ss/search_index.jsp?ch=LP"> <span class="textsmall11">Search by Experience</span></a></center>
+<!-- END RELATED THOMSON LEGAL RECORDS -->
+
+	<!-- START ATTORNEYS IN YOUR AREA -->
+	<hr>
+<DIV ID="label">Sponsored Link</DIV>
+<table border=0 width="100%">
+<tr><td onMouseOver="window.status='go to Thomson Legal Record'" onMouseOut="window.status=''" onClick="window.location='http://legalrecords.findlaw.com/ss/search_index.jsp?ch=LP'">
+    <div id="border_1A">
+    <div id="ad_unit_1B">
+    <a class="rlinks2" href="http://legalrecords.findlaw.com/ss/search_index.jsp?ch=LP">Thomson Legal Record</a><p>
+Search a database of over 1,000,000 lawyer profiles to find the lawyer with the experience you need.<br>
+    </div>
+    </div>
+</td></tr>
+</table>
+<DIV>
+	<!-- END ATTORNEYS IN YOUR AREA -->
+
+	<!-- START RELATED LAW FIRM ARTICLES -->
+	<hr>
+    <span class="text"><b>&nbsp;&nbsp;&nbsp;Related Law Firm Articles</b></span>
+	<div id="relart">Related Law Firm</div>
+<a href="http://library.lp.findlaw.com"><span class="textsmall11"><center>Search Law Firm Articles</center></span></a>
+	<!-- END RELATED LAW FIRM ARTICLES -->
+
+
+
+</td></tr>
+</table>
+
+<!-- END CENTER LINKS -->
+<!-- End right.html -->
+</td>
+</tr>
+</table>
+</td>
+
+</tr>
+
+<tr>
+<td align="left" valign="bottom" bgcolor="#F0F2F6" width="150" height="10"><img src="http://images.findlaw.com/www/lp/bottom_left2.gif" border="0" width="10" height="10"></td>
+<td bgcolor="#FFFFFF"></td>
+<td align="right" valign="bottom" bgcolor="#F0F2F6" height="10"><img src="http://images.findlaw.com/www/lp/bottom_right2.gif" width="10" height="10"></td>
+</tr>
+<tr><td colspan="3" bgcolor="#262831" align="center" valign="middle"><img src="http://images.findlaw.com/www/lp/thomson_fl.gif" border="0" name="Thomson FindLaw" alt="Thomson FindLaw Logo" width="171" height="68"></td></tr>
+<tr>
+	<td colspan="3" bgcolor="#262831" align="center" width="100%">
+
+<font size="-1">
+<a href="http://www.findlaw.com/info/" class="textwhite">Help</a> | 
+<a href="http://findlaw.com/toc.html" class="textwhite">Site Map</a> | 
+<a href="http://findlaw.com/info/write/write.html" class="textwhite">Contact Us</a> | 
+<a href="http://west.thomson.com/privacy/" class="textwhite">Privacy Policy</a>
+<br></font>
+<span class="textwhite">Copyright &copy; 1994-2004</span>
+<a href="http://www.findlaw.com" class="textwhite">FindLaw</a><br><br>
+</font></td>
+</tr>
+</table>
+
+<!-- End bottom.html -->
+<!--WEBSIDESTORY CODE HBX1.0 (Universal)-->
+<!--COPYRIGHT 1997-2004 WEBSIDESTORY,INC. ALL RIGHTS RESERVED. U.S.PATENT No. 6,393,479B1. MORE INFO:http://websidestory.com/privacy-->
+<script language="javascript">
+var _hbEC=0,_hbE=new Array;function _hbEvent(a,b){b=_hbE[_hbEC++]=new Object();b._N=a;b._C=0;return b;}
+var hbx=_hbEvent("pv");hbx.vpc="HBX0100u";hbx.gn="ehg-findlaw.hitbox.com";
+
+// FINDLAW CODE
+var fl_path=location.pathname;
+var fl_search=location.search;
+var fl_entry=QueryString("entry");
+var fl_sites=QueryString("sites");
+var fl_hostname=location.hostname;
+if (fl_hostname == "findlaw.com") {
+  fl_hostname = "www.findlaw.com";
+}
+var ws_path="";
+var fl_sep="/";
+var fl_path_Array=fl_path.split(fl_sep);
+for (var i=0;i<fl_path_Array.length-1;i++) {
+  if (fl_path_Array[i].indexOf("cgi-bin") != -1) {
+  	ws_path=ws_path+"scripts/";
+  }
+  else {
+  	ws_path=ws_path+fl_path_Array[i]+'/';
+  }
+}
+ws_path=ws_path.substring(0, ws_path.length-1);
+fl_search=fl_path_Array[fl_path_Array.length-1]+fl_search;
+// Form Search
+if ((document.URL.indexOf("forms.lp") != -1) && (fl_search.indexOf("script.html") != -1)) {
+ 	fl_search=QueryString("keyword");
+ 	if (fl_search == "") {
+ 		fl_search="NO+KEYWORDS";
+ 	}
+}
+// Caselaw View Case & Other Scripts
+else if (document.URL.indexOf("caselaw") != -1) { 
+	if (fl_search.indexOf("viewcase.pl") != -1) {
+    	ws_path="/VIEW+CASE";
+    	var casecourt=QueryString("court");
+    	if (casecourt != "") {
+        	ws_path=ws_path+"/"+casecourt;
+    	}
+    	fl_search=QueryString("subject");
+    	if (fl_search == "") {
+        	fl_search="NO+SUBJECT";
+    	}
+    	else {
+        	fl_search="subject-"+fl_search;
+    	}
+	}
+	// Caselaw Get Case
+	else if ((fl_search.indexOf("getcase.pl") != -1) || (fl_search.indexOf("casesearch.pl") != -1)) {
+    	ws_path="/CASE+SEARCH";
+    	var casecourt=QueryString("court");
+    	if (casecourt == "") {
+        	fl_search="NO+COURT";
+    	}
+    	else {
+        	fl_search=casecourt;
+    	}
+	}
+	else if (fl_search.indexOf(".pl?") != -1) {
+  		fl_search=fl_search.substring(0,fl_search.indexOf("?"));
+	}
+}
+// Library Search
+else if ((document.URL.indexOf("library") != -1) && (fl_search.indexOf("libsearch.pl") != -1) || (fl_search.indexOf("titlesearch.pl") != -1)) {
+	fl_search="library+scripts";
+}
+// Dictionary Search
+else if (document.URL.indexOf("dictionary") != -1) { 
+	if (fl_search.indexOf("search.pl") != -1) {
+ 		fl_search="SEARCH-"+QueryString("s");
+	}
+	else if (fl_search.indexOf("results.pl") != -1) {
+		fl_search="VIEW+DEFINITION";
+	}
+}
+// Lawcrawler
+else if (document.URL.indexOf("lawcrawler.findlaw") != -1) {
+	if (document.URL.indexOf(".pl") != -1) {
+    	if (fl_sites != null) {
+        	ws_path="/"+fl_sites; //MULTI-LEVEL CONTENT CATEGORY
+    	}
+    	else {
+        	ws_path="/other"; //MULTI-LEVEL CONTENT CATEGORY
+    	}
+    	if (fl_entry != null) {
+        	fl_search=fl_entry;//PAGE NAME(S)
+    	}
+   		else {
+        	fl_search="NO+SEARCHTERM";//PAGE NAME(S)
+    	}
+	}
+}
+// Change Location
+else if (document.URL.indexOf("changezip.html") != -1) {
+	fl_search="changezip.html";
+}
+else if (fl_search == "") {
+ 	fl_search="index.html";
+}
+
+//BEGIN EDITABLE SECTION
+//CONFIGURATION VARIABLES
+if (location.hostname.indexOf("findlaw") != -1) {
+	hbx.acct="DM531216MLSZ64EN3;DM54022535DC";//ACCOUNT NUMBER(S)
+}
+else {
+	hbx.acct=""; //account number(s)
+}
+hbx.pn=fl_search;//PAGE NAME(S)
+hbx.mlc="/"+fl_hostname+ws_path;//MULTI-LEVEL CONTENT CATEGORY
+hbx.pndef="index.html";//DEFAULT PAGE NAME
+hbx.ctdef="full";//DEFAULT CONTENT CATEGORY
+
+//OPTIONAL PAGE VARIABLES
+//ACTION SETTINGS
+hbx.fv="";//FORM VALIDATION MINIMUM ELEMENTS OR SUBMIT FUNCTION NAME
+hbx.lt="none";//LINK TRACKING
+hbx.dlf="n";//DOWNLOAD FILTER
+hbx.dft="n";//DOWNLOAD FILE NAMING
+hbx.elf="n";//EXIT LINK FILTER
+
+//SEGMENTS AND FUNNELS
+hbx.seg="";//VISITOR SEGMENTATION
+hbx.fnl="";//FUNNELS
+
+//CAMPAIGNS
+hbx.cmp="";//CAMPAIGN ID
+hbx.cmpn="";//CAMPAIGN ID IN QUERY
+hbx.dcmp="";//DYNAMIC CAMPAIGN ID
+hbx.dcmpn="";//DYNAMIC CAMPAIGN ID IN QUERY
+hbx.dcmpe="";//DYNAMIC CAMPAIGN EXPIRATION
+hbx.dcmpre="";//DYNAMIC CAMPAIGN RESPONSE EXPIRATION
+hbx.hra="";//RESPONSE ATTRIBUTE
+hbx.hqsr="";//RESPONSE ATTRIBUTE IN REFERRAL QUERY
+hbx.hqsp="";//RESPONSE ATTRIBUTE IN QUERY
+hbx.hlt="";//LEAD TRACKING
+hbx.hla="";//LEAD ATTRIBUTE
+hbx.gp="";//CAMPAIGN GOAL
+hbx.gpn="";//CAMPAIGN GOAL IN QUERY
+hbx.hcn="";//CONVERSION ATTRIBUTE
+hbx.hcv="";//CONVERSION VALUE
+hbx.cp="null";//LEGACY CAMPAIGN
+hbx.cpd="";//CAMPAIGN DOMAIN
+
+//CUSTOM VARIABLES
+hbx.ci="";//CUSTOMER ID
+hbx.hc1="";//CUSTOM 1
+if ((fl_entry != null) && (document.URL.indexOf("lawcrawler.findlaw") != -1)) {
+    hbx.hc1=fl_entry;//CUSTOM 1
+}
+hbx.hc2="";//CUSTOM 2
+hbx.hc3="";//CUSTOM 3
+hbx.hc4="";//CUSTOM 4
+hbx.hrf="";//CUSTOM REFERRER
+hbx.pec="";//ERROR CODES
+
+//INSERT CUSTOM EVENTS
+
+//END EDITABLE SECTION
+
+//REQUIRED SECTION. CHANGE "YOURSERVER" TO VALID LOCATION ON YOUR WEB SERVER (HTTPS IF FROM SECURE SERVER)
+</script><script language="javascript1.1" defer src="http://images.findlaw.com/tracking/hbx.js"></script>
+<!--END WEBSIDESTORY CODE-->
+</body>
+</html>
+

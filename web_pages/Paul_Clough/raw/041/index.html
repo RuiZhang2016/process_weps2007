@@ -1,0 +1,544 @@
+<style>
+.note-header-text {font-family: Times, Times New Roman, serif;
+		color:#ff0000; font-size: .95em;
+		margin-left: .75em; margin-right: .75em;}
+</style>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+ "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+<head>
+<LINK REL=STYLESHEET TYPE="text/css" HREF="http://widit.slis.indiana.edu/irpub/SIGIR/2003/css/dl.css">
+<title>: SIGIR '03, Assessing the effectiveness of ...</title>
+<style type="text/css"><!--
+ body {margin-left: 0em; margin-top: 0}
+ a:link {text-decoration: underline; 	Color: #006699;}
+ a:visited { color: #990033; text-decoration: underline;}
+ a:hover {color: red; text-decoration: none}
+ a.dLink1:link {color:#336699}
+ a.dLink1:visited {color:#666666}
+	a.isblack:link {text-decoration: underline; 	Color: #000000;}
+ a.isblack:visited { color: #000000; text-decoration: underline;}
+ a.isblack:hover {color: #000000; text-decoration: none}
+ h1 {font-size: 140%; margin-bottom: 0}
+	ul {margin-top: .25em; list-style-type: disc}
+	ol {margin-top: .25em;}
+	li {padding-bottom: .25em}
+ h2 {color: white; background-color: #069;
+ font-size: 100%; padding-left: 1em;
+		margin: 0}
+	h3 {color: black; background-color: yellow;
+ 	font-size: 100%;
+		margin: 0}
+	 h4 {color: black; background-color: #99c5e8;
+ font-size: 100%;
+		margin: 0}
+ hr {color: #39176d;}
+ form {margin-top: 10}
+	a {text-decoration: none; }
+	input {font-size: 1em;}
+	.chevron {color: #ff0000;}
+	.light-blue {color:#336699;}
+	.black {color:#000000;}
+	/* ### standard text styles, smallest to largest ### */
+	.footer-link-text {font-family: Arial, Helvetica, sans-serif;
+		color:#336699; font-size: .75em; line-height: 1.33em;
+		text-indent: -.75 em; margin-left: 2em; margin-right: .75em;}
+	.footer-copy-text {font-family: Arial, Helvetica, sans-serif;
+		color:#000000; font-size: .75em; line-height: 1.3em;
+		margin-left: .75em; margin-right: .75em;}
+	.small-link-text {font-family: Arial, Helvetica, sans-serif;
+		color:#000000; font-size: .83em; padding-bottom : 2px;
+	 	padding-top : 2px;}
+	.smaller-text {font-family: Arial, Helvetica, sans-serif;
+		color:#000000; font-size: .75em;}
+	.small-text {font-family: Arial, Helvetica, sans-serif;
+		color:#000000; font-size: .83em;}
+	.medium-text {font-family: Arial, Helvetica, sans-serif;
+		color:#000000; font-size: 1em;}
+	.mediumb-text {font-family: Arial, Helvetica, sans-serif;
+		color:#000000; font-size: 1em; font-weight: bold;}
+	.large-text {font-family: Arial, Helvetica, sans-serif;
+		color:#000000; font-size: 1.3em;}
+	.list-link-text {font-family: Arial, Helvetica, sans-serif;
+		color:#336699; font-size: .83em; line-height: 1.3em;}
+	.list-link-btext {font-family: Arial, Helvetica, sans-serif;
+		color:#000000; font-size: .83em; line-height: 1.3em;}
+	.searchbox-text {font-family: Arial, Helvetica, sans-serif;
+		color:#000066; font-size: 1em; font-weight: bold;}
+	.footer-header-text {font-family: Arial, Helvetica, sans-serif;
+		color:#000066; font-size: 1em; font-weight: bold;
+		margin-left: .75em; margin-right: .75em;}
+	.medium-link-text {font-family: Arial, Helvetica, sans-serif;
+		color:#000066; font-size: 1em; font-weight: bold; line-height: 1em;
+		text-indent: -1.25em; margin-left: 2em; margin-right: .75em;}
+	.small-copy-text {font-family: Times, Times New Roman, serif;
+		color:#000066; font-size: .75em; line-height: 1.2em;
+		margin-left: .75em; margin-right: .75em;}
+	.medium-copy-text {font-family: Times, Times New Roman, serif;
+		color:#000066; font-size: 1em; line-height: 1.2em;
+		margin-left: .75em; margin-right: .75em;}
+	.large-copy-text {font-family: Times, Times New Roman, serif;
+		color:#000066; font-size: 1.3em; line-height: 1.5em;
+		margin-left: .75em; margin-right: .75em;}
+	.medium-header-text {font-family: Times, Times New Roman, serif;
+		color:#ff0000; font-size: 1em;
+		margin-left: .75em; margin-right: .75em;}
+	.large-header-text {font-family: Times, Times New Roman, serif;
+		color:#ff0000; font-size: 1.5em;
+		margin-left: .75em; margin-right: .75em;}
+ --></style>
+<SCRIPT LANGUAGE="JavaScript">
+ /* <!-- Begin
+	if(document.layers || document.all) {
+	a = 1;
+	setInterval("Jump()", 10);
+	}
+	function Jump() {
+	a = a + 1;
+	//self.moveBy((Math.random() * a * 2 - a), (Math.random() * a * 2) - a);
+	}
+// End --> */
+</script>
+<script LANGUAGE=JAVASCRIPT TYPE="text/javascript" >
+<!--
+function _CF_onError(form_object, input_object, object_value, error_message)
+ {
+	alert(error_message);
+ 	return false;
+ }
+function _CF_hasValue(obj, obj_type)
+ {
+ if (obj_type == "TEXT" || obj_type == "PASSWORD")
+	{
+ 	if (obj.value.length == 0)
+ 		return false;
+ 	else
+ 		return true;
+ 	}
+ else if (obj_type == "SELECT")
+	{
+ for (i=0; i < obj.length; i++)
+	 	{
+		if (obj.options[i].selected)
+			return true;
+		}
+ 	return false;
+	}
+ else if (obj_type == "SINGLE_VALUE_RADIO" || obj_type == "SINGLE_VALUE_CHECKBOX")
+	{
+		if (obj.checked)
+			return true;
+		else
+ 		return false;
+	}
+ else if (obj_type == "RADIO" || obj_type == "CHECKBOX")
+	{
+ for (i=0; i < obj.length; i++)
+	 	{
+		if (obj[i].checked)
+			return true;
+		}
+ 	return false;
+	}
+	}
+function _CF_checkqiksearch(_CF_this)
+ {
+ if (!_CF_hasValue(_CF_this.query, "TEXT" ))
+ {
+ if (!_CF_onError(_CF_this, _CF_this.query, _CF_this.query.value, "Please enter your Search Criteria"))
+ {
+ return false;
+ }
+ }
+ return true;
+ }
+//-->
+</script>
+</head>
+<body bgcolor="#ffffff" onload="window.focus()">
+<div align="center">
+<a name="CIT"></a>
+<table border="0" width="85%" cellspacing="0" cellpadding="0">
+<tr>
+<td>
+<table width="100%" border="0" cellpadding="0" cellspacing="0">
+<col width="1%"><col width="99%">
+			</td>
+		</tr>
+		<tr>
+			<td height="6"><img src="blanks.gif" width=1 height=1 alt="" border="0"></td>
+		</tr>
+		<tr>
+			<td colspan="2" valign="top" height="1" background="http://widit.slis.indiana.edu/irpub/SIGIR/2003/images/horiz-bar-long.jpg"></td>
+		</tr>
+		<tr>
+			<td height="6"><img src="blanks.gif" width=1 height=1 alt="" border="0"></td>
+		</tr>
+		</table>
+</td>
+</tr>
+<tr>
+	<td colspan="3" valign="top" height="1" background="http://widit.slis.indiana.edu/irpub/SIGIR/2003/images/horiz-bar-long.jpg"></td>
+</tr>
+<tr>
+<td class="small-text">
+	<table border="0" width="100%" cellpadding="2">
+		<col width="1%">
+		<col width="8%">
+		<col width="91%">
+	<tr>
+		<td class="medium-text" colspan="3"><strong>Assessing the effectiveness of pen-based input queries</strong></td>
+	</tr>
+			<tr valign="top">
+			</tr>
+			<tr valign="top">
+					<td class="small-text"><strong>Full text</strong></td>
+				<td class="smaller-text" colspan="2" >
+									 <A NAME="FullText" href="http://widit.slis.indiana.edu/irpub/SIGIR/2003/pdf104.pdf" target="_blank"><img src="pdf_logo.gif" width="16" height="16" alt="pdf format" border="0" hspace="1" align="texttop">Pdf</A>
+									 (217&nbsp;KB)
+				</td>
+			</tr>
+		<tr valign="top">
+			<td class="small-text"><strong>Source</strong></td>
+			<td class="small-text" colspan="2">
+														<SPAN class="mediumb-text">Annual ACM Conference on Research and Development in Information Retrieval</span>
+																			<a href="http://widit.slis.indiana.edu/irpub/SIGIR/2003/toc.cfm?id=SERIES278&amp;type=series&amp;coll=GUIDE&amp;dl=ACM&amp;idx=860435&amp;part=Proceedings&amp;WantType=Proceedings&amp;title=Annual%20ACM%20Conference%20on%20Research%20and%20Development%20in%20Information%20Retrieval&amp;CFID=13720957&amp;CFTOKEN=832591" target="_self" class="small-link-text">archive</a><br>
+													<SPAN class="mediumb-text">Proceedings of the 26th annual international ACM SIGIR conference on Research and development in informaion retrieval </span>
+										 								 <a href="http://widit.slis.indiana.edu/irpub/SIGIR/2003/toc.cfm?id=860435&amp;type=proceeding&amp;coll=GUIDE&amp;dl=ACM&amp;idx=860435&amp;part=Proceedings&amp;WantType=Proceedings&amp;title=Annual%20ACM%20Conference%20on%20Research%20and%20Development%20in%20Information%20Retrieval&amp;CFID=13720957&amp;CFTOKEN=832591" target="_self" class="small-link-text">table of contents</a><br>
+												<DIV class="small-text">
+													 Toronto, Canada
+												</div>
+		<div class="medium-text">
+								POSTER SESSION: Posters
+				<a href="http://widit.slis.indiana.edu/irpub/SIGIR/2003/toc.cfm?id=860435&amp;type=proceeding&amp;coll=GUIDE&amp;dl=ACM&amp;CFID=13720957&amp;CFTOKEN=832591#860500" target="_self" class="small-text">table of contents</a><br>
+		</div>
+			<div class="small-text">
+				 Pages: 437 - 438&nbsp;&nbsp;
+			</div>
+				<div class="small-text">
+					Year of Publication:&nbsp;2003
+				</div>
+				<div class="small-text">
+					ISBN:1-58113-646-3
+				</div>
+			</td>
+		</tr>
+			<tr valign="top">
+				<td class="small-text">
+										 	<strong>Authors</strong>
+				</td>
+				<td colspan="2">
+				<div class="authors">
+					<table cellpadding="0" cellspacing="0">
+							<tr>
+								<td class="small-text">
+ 									<a href="http://widit.slis.indiana.edu/irpub/SIGIR/2003/results.cfm?query=author%3AP574684&amp;querydisp=author%3AStephen%20%20Levin&amp;coll=GUIDE&amp;dl=ACM&amp;CFID=13720957&amp;CFTOKEN=832591" target="_self">Stephen Levin</a>
+								</td>
+								<td class="small-text">
+										<small>&nbsp;University of Sheffield, Western Bank, Sheffield, UK</small>
+								</td>
+							</tr>
+							<tr>
+								<td class="small-text">
+ 									<a href="http://widit.slis.indiana.edu/irpub/SIGIR/2003/results.cfm?query=author%3AP574674&amp;querydisp=author%3APaul%20%20Clough&amp;coll=GUIDE&amp;dl=ACM&amp;CFID=13720957&amp;CFTOKEN=832591" target="_self">Paul Clough</a>
+								</td>
+								<td class="small-text">
+										<small>&nbsp;University of Sheffield, Western Bank, Sheffield, UK</small>
+								</td>
+							</tr>
+							<tr>
+								<td class="small-text">
+ 									<a href="http://widit.slis.indiana.edu/irpub/SIGIR/2003/results.cfm?query=author%3AP191013&amp;querydisp=author%3AMark%20%20Sanderson&amp;coll=GUIDE&amp;dl=ACM&amp;CFID=13720957&amp;CFTOKEN=832591" target="_self">Mark Sanderson</a>
+								</td>
+								<td class="small-text">
+										<small>&nbsp;University of Sheffield, Western Bank, Sheffield, UK</small>
+								</td>
+							</tr>
+					</table>
+				</div>
+				</td>
+			</tr>
+				<tr valign="top">
+					<td class="small-text"><strong>Sponsor </strong></td>
+					<td>
+						<div class="sponsors">
+										<a href=" http://www.acm.org/" target="sponsor" title="Sponsor">ACM</a>:
+									 Association for Computing Machinery <br>
+						</div>
+					 </td>
+				</tr>
+					<tr valign="top">
+						<td class="small-text"><strong>Publisher</strong></td>
+						<td colspan="2">
+							<div class="publishers">
+									 	ACM Press &nbsp;
+										<small> New York, NY, USA </small>
+							</div>
+						</td>
+					</tr>
+		</table>
+</td>
+</tr>
+<tr>
+<td>
+<!-- third main table: main content START -->
+	<table border="0" width="100%" cellspacing="0" cellpadding="0">
+	<tr>
+		<td height="6"><img src="blanks.gif" width=1 height=1 alt="" border="0"></td>
+	</tr>
+	<tr>
+		<td colspan="4" valign="top" height="1" background="http://widit.slis.indiana.edu/irpub/SIGIR/2003/images/horiz-bar-long.jpg"></td>
+	</tr>
+	<tr>
+		<td height="6"><img src="blanks.gif" width=1 height=1 alt="" border="0"></td>
+	</tr>
+	<tr valign="top">
+	<!-- buttons -->
+		<td width="100%" colspan="4">
+	 <table border="0" cellspacing="0" cellpadding="0" width="100%">
+		<col width="22%">
+	 <col width="78%">
+		<tr>
+			<td class="small-text"><b>Additional Information:</b></td>
+			<td>
+			<p class="small-text">
+					<a href="cite104.htm#abstract">abstract</a>&nbsp;&nbsp;
+					<a href="cite104.htm#references">references</a>&nbsp;&nbsp;
+					<a href="cite104.htm#IndexTerms">index terms</a>&nbsp;&nbsp;
+						<a href="cite104.htm#collab">collaborative colleagues</a>&nbsp;&nbsp;
+				</p>
+			</td>
+		</tr>
+		</table>
+		</td>
+	</tr>
+	<tr>
+		<td height="6"><img src="blanks.gif" width=1 height=1 alt="" border="0"></td>
+	</tr>
+	<tr valign="top">
+	<!-- buttons -->
+		<form name="popbinder">
+		<td width="100%" colspan="4">
+		<table border="0" cellspacing="0" cellpadding="2" width="100%" >
+		 <col width="22%">
+		 <col width="78%">
+		 <tr valign="top">
+		 	<td class="small-text"><b>Tools and Actions:</b></td>
+			<td>
+				 <a href="https://portal.acm.org/poplogin.cfm?dl=ACM&coll=GUIDE&comp_id=COMPONENT032&want_href=ocr%5Fdiscuss%2Ecfm%3Fid%3D860539&CFID=13720957&CFTOKEN=832591" class="small-link-text">
+			Discussions</a>
+			&nbsp;&nbsp;
+			<a href="http://widit.slis.indiana.edu/irpub/SIGIR/2003/results.cfm?query=860539&amp;querydisp=Similar%20to%3A%20Assessing%20the%20effectiveness%20of%20pen%2Dbased%20input%20queries&amp;coll=GUIDE&amp;dl=ACM&amp;CFID=13720957&amp;CFTOKEN=832591" target="_self" class="small-link-text">Find similar Articles</a>&nbsp;&nbsp;
+			<a href="http://www.reviews.com/reviewer/quickreview/frameset_toplevel.cfm?bib_id=860539" target="reviews" class="small-link-text">Review this Article</a>&nbsp;&nbsp;
+			 	<br><a href="cite104.htm#" onClick="window.alert('To use this Feature, you must login with your personal ACM Web Account.');" class="small-link-text">
+				Save this Article to a Binder</a><img src="blanks.gif" border="0" name="saved">
+			&nbsp;&nbsp;
+			<a href="cite104.htm#" onClick="window.open('popBibTex.cfm?id=860539&ids=SERIES278.860435.860500.860539&types=series.proceeding.section.article&reqtype=article&coll=GUIDE&dl=ACM&CFID=13720957&CFTOKEN=832591','BibTex','width=800,height=100,top=100,left=100,scrollbars=Yes,resizable=yes');" class="small-link-text">
+			Display in BibTex Format</a>
+			&nbsp;&nbsp;
+			</td>
+		</tr>
+		<tr>
+			<td height="10"><img src="blanks.gif" width=1 height=1 alt="" border="0"></td>
+		</tr>
+		<tr valign="top">
+			<td class="small-text"><b>DOI Bookmark:</b></td>
+			<td class="small-text">
+				<small>Use this link to bookmark this Article:&nbsp;</small><a href="http://doi.acm.org/10.1145/860435.860539">http://doi.acm.org/10.1145/860435.860539</a><br><small><a href="http://www.doi.org/">What is a DOI?</a></small>
+			</td>
+		</tr>
+		</table>
+		</td>
+		</form>
+	</tr>
+	<tr>
+		<td height="6"><img src="blanks.gif" width=1 height=1 alt="" border="0"></td>
+	</tr>
+	<tr>
+		<td colspan="4" valign="top" height="1" background="http://widit.slis.indiana.edu/irpub/SIGIR/2003/images/horiz-bar-long.jpg"></td>
+	</tr>
+	<tr>
+		<td height="6"><img src="blanks.gif" width=1 height=1 alt="" border="0"></td>
+	</tr>
+	</table>
+<!-- third main table: main content END -->
+		 	<div class="abstract">
+			</div>
+			<br>
+			<div class="abstract">
+			<A HREF="cite104.htm#CIT"><img name="top" src="arrowu.gif" hspace="10" border="0"></A><SPAN class=heading><A NAME="abstract">ABSTRACT</A></span>
+				<p class="abstract">
+				 In this poster, we describe an experiment exploring the effectiveness of a pen based text input device for use in query construction. Standard TREC queries were written, recognised, and subsequently retrieved upon. Comparisons between retrieval effectiveness based on the recognised writing and a typed text baseline were made. On average, effectiveness was 75% of the baseline. Other statistics on the quality and nature of recognition are also reported. .
+				</p>
+			</div>
+			<br>
+			<div class="abstract">
+			<A HREF="cite104.htm#CIT"><img name="top" src="arrowu.gif" hspace="10" border="0"></A><SPAN class=heading><A NAME="references">REFERENCES</A></span>
+			<p class="abstract"><font color="Red">Note: OCR errors may be found in this Reference List extracted from the full text article. ACM has opted to expose the complete List rather than only correct and linked references.</font></p>
+				<p class="abstract">
+				 1&nbsp;&nbsp;
+				 Kupiec, J., Kimber, D. and Balasubramanian, V. (1994): Speech-based retrieval using semantic co-occurrence filtering, in Proceedings of ARPA Human Language Technology Workshop: 373--377.
+				</p>
+				<p class="abstract">
+				 2&nbsp;&nbsp;
+				 Ballesteros, L., Croft, W.B. (1998): Resolving ambiguity for cross-language retrieval, in Proceedings of ACM SIGIR: 64--71.
+				</p>
+				<p class="abstract">
+				 3&nbsp;&nbsp;
+				 Pirkola, A. (1998): The effects of query structure and dictionary setups in dictionary-based cross-language information retrieval, in Proc. of ACM SIGIR: 55--63.
+				</p>
+				<p class="abstract">
+				 4&nbsp;&nbsp;
+				 Windows XP Tablet Edition Home Page. http://www.microsoft.com/windowsxp/tabletpc/default.asp [Site visited 2nd May 2003].
+				</p>
+			</div>
+		 	<br>
+			<div class="indterms">
+			<A HREF="cite104.htm#CIT"><img name="top" src="arrowu.gif" hspace="10" border="0"></A><SPAN class=heading><A NAME="IndexTerms">INDEX TERMS</A></span>
+					<p class="Categories">
+						<SPAN class=heading><A NAME="GenTerms">Primary Classification:</A></span>
+							<br>&nbsp;
+									<b>H.</b>
+									<a href="http://widit.slis.indiana.edu/irpub/SIGIR/2003/results.cfm?query=CCS%3AH%2E%2A&amp;coll=GUIDE&amp;dl=ACM&amp;CFID=13720957&amp;CFTOKEN=832591" target="_self">
+									Information Systems</a><br>
+										&nbsp;
+										<img src="tree.gif" border="0" height="20" width="20">
+									<b>H.3</b>
+									<a href="http://widit.slis.indiana.edu/irpub/SIGIR/2003/results.cfm?query=CCS%3A%22H%2E3%22&amp;coll=GUIDE&amp;dl=ACM&amp;CFID=13720957&amp;CFTOKEN=832591" target="_self">
+									 INFORMATION STORAGE AND RETRIEVAL</a><br>
+										&nbsp;
+										&nbsp;
+										&nbsp;
+										<img src="tree.gif" border="0" height="20" width="20">
+									<b>H.3.3</b>
+									<a href="http://widit.slis.indiana.edu/irpub/SIGIR/2003/results.cfm?query=CCS%3A%22H%2E3%2E3%22&amp;coll=GUIDE&amp;dl=ACM&amp;CFID=13720957&amp;CFTOKEN=832591" target="_self">
+									 Information Search and Retrieval</a><br>
+												&nbsp;
+												&nbsp;
+												&nbsp;
+												&nbsp;
+												&nbsp;
+												<img src="tree.gif" border="0" height="20" width="20">
+											<b>Subjects:</b>
+												<a href="http://widit.slis.indiana.edu/irpub/SIGIR/2003/results.cfm?query=CCS%3A%22Search%20process%22&amp;coll=GUIDE&amp;dl=ACM&amp;CFID=13720957&amp;CFTOKEN=832591" target="_self">Search process</a>
+										<br>
+					 </p>
+				 <p class="Categories">
+					<SPAN class=heading><A NAME="GenTerms">Additional&nbsp;Classification:</A></span>
+							<br>&nbsp;
+									<b>H.</b>
+									<a href="http://widit.slis.indiana.edu/irpub/SIGIR/2003/results.cfm?query=CCS%3AH%2E%2A&amp;coll=GUIDE&amp;dl=ACM&amp;CFID=13720957&amp;CFTOKEN=832591" target="_self">
+									Information Systems</a><br>
+										&nbsp;
+										<img src="tree.gif" border="0" height="20" width="20">
+									<b>H.5</b>
+									<a href="http://widit.slis.indiana.edu/irpub/SIGIR/2003/results.cfm?query=CCS%3A%22H%2E5%22&amp;coll=GUIDE&amp;dl=ACM&amp;CFID=13720957&amp;CFTOKEN=832591" target="_self">
+									 INFORMATION INTERFACES AND PRESENTATION (I.7)</a><br>
+										&nbsp;
+										&nbsp;
+										&nbsp;
+										<img src="tree.gif" border="0" height="20" width="20">
+									<b>H.5.2</b>
+									<a href="http://widit.slis.indiana.edu/irpub/SIGIR/2003/results.cfm?query=CCS%3A%22H%2E5%2E2%22&amp;coll=GUIDE&amp;dl=ACM&amp;CFID=13720957&amp;CFTOKEN=832591" target="_self">
+									 User Interfaces (D.2.2, H.1.2, I.3.6)</a><br>
+											&nbsp;
+											&nbsp;
+											&nbsp;
+											&nbsp;
+											&nbsp;
+											<img src="tree.gif" border="0" height="20" width="20">
+										<b>Subjects:</b>
+											<a href="http://widit.slis.indiana.edu/irpub/SIGIR/2003/results.cfm?query=CCS%3A%22Input%20devices%20and%20strategies%20%28e%2Eg%2E%2C%20mouse%2C%20touchscreen%29%22&amp;coll=GUIDE&amp;dl=ACM&amp;CFID=13720957&amp;CFTOKEN=832591" target="_self">Input devices and strategies (e.g., mouse, touchscreen)</a>
+									<br>
+							<br>&nbsp;
+									<b>I.</b>
+									<a href="http://widit.slis.indiana.edu/irpub/SIGIR/2003/results.cfm?query=CCS%3AI%2E%2A&amp;coll=GUIDE&amp;dl=ACM&amp;CFID=13720957&amp;CFTOKEN=832591" target="_self">
+									 Computing Methodologies</a><br>
+										&nbsp;
+										<img src="tree.gif" border="0" height="20" width="20">
+									<b>I.7</b>
+									<a href="http://widit.slis.indiana.edu/irpub/SIGIR/2003/results.cfm?query=CCS%3A%22I%2E7%22&amp;coll=GUIDE&amp;dl=ACM&amp;CFID=13720957&amp;CFTOKEN=832591" target="_self">
+									 DOCUMENT AND TEXT PROCESSING</a><br>
+										&nbsp;
+										&nbsp;
+										&nbsp;
+										<img src="tree.gif" border="0" height="20" width="20">
+									<b>I.7.5</b>
+									<a href="http://widit.slis.indiana.edu/irpub/SIGIR/2003/results.cfm?query=CCS%3A%22I%2E7%2E5%22&amp;coll=GUIDE&amp;dl=ACM&amp;CFID=13720957&amp;CFTOKEN=832591" target="_self">
+									 Document Capture</a><br>
+											&nbsp;
+											&nbsp;
+											&nbsp;
+											&nbsp;
+											&nbsp;
+											<img src="tree.gif" border="0" height="20" width="20">
+										<b>Subjects:</b>
+											<a href="http://widit.slis.indiana.edu/irpub/SIGIR/2003/results.cfm?query=CCS%3A%22Graphics%20recognition%20and%20interpretation%22&amp;coll=GUIDE&amp;dl=ACM&amp;CFID=13720957&amp;CFTOKEN=832591" target="_self">Graphics recognition and interpretation</a>
+									<br>
+					</p>
+				<br>
+					<p class="GenTerms">
+						<SPAN class=heading><A NAME="GenTerms">General Terms:</A></span>
+						<BR>
+							<a href="http://widit.slis.indiana.edu/irpub/SIGIR/2003/results.cfm?query=genterm%3A%22Experimentation%22&amp;coll=GUIDE&amp;dl=ACM&amp;CFID=13720957&amp;CFTOKEN=832591" target="_self">
+							Experimentation</a>,
+							<a href="http://widit.slis.indiana.edu/irpub/SIGIR/2003/results.cfm?query=genterm%3A%22Measurement%22&amp;coll=GUIDE&amp;dl=ACM&amp;CFID=13720957&amp;CFTOKEN=832591" target="_self">
+							 Measurement</a>,
+							<a href="http://widit.slis.indiana.edu/irpub/SIGIR/2003/results.cfm?query=genterm%3A%22Performance%22&amp;coll=GUIDE&amp;dl=ACM&amp;CFID=13720957&amp;CFTOKEN=832591" target="_self">
+							 Performance</a>
+					</p>
+				<br>
+					<p class="keywords">
+						<SPAN class=heading><A NAME="Keywords">Keywords:</A></span>
+						<BR>
+							<a href="http://widit.slis.indiana.edu/irpub/SIGIR/2003/results.cfm?query=keyword%3A%22handwriting%20recognition%22&amp;coll=GUIDE&amp;dl=ACM&amp;CFID=13720957&amp;CFTOKEN=832591" target="_self">
+							handwriting recognition</a>,
+							<a href="http://widit.slis.indiana.edu/irpub/SIGIR/2003/results.cfm?query=keyword%3A%22tablet%20PC%22&amp;coll=GUIDE&amp;dl=ACM&amp;CFID=13720957&amp;CFTOKEN=832591" target="_self">
+							 tablet PC</a>
+					</p>
+			</div>
+			<div class="abstract">
+				<A HREF="cite104.htm#CIT"><img name="top" src="arrowu.gif" hspace="10" border="0"></A><SPAN class=heading><A NAME="collab">Collaborative Colleagues:</A></span>
+				<table border="0" style="margin-left: 2em" cellpadding="2">
+						<tr valign="top"><td><div class="abstract"><a href="http://widit.slis.indiana.edu/irpub/SIGIR/2003/results.cfm?query=%2Bauthor%3AP574674&amp;querydisp=author%3APaul%20Clough&amp;coll=GUIDE&amp;dl=GUIDE&amp;CFID=13720957&amp;CFTOKEN=832591" target="_self">Paul Clough</a>:</div></td><td>
+						<div class="abstract"><a href="http://widit.slis.indiana.edu/irpub/SIGIR/2003/results.cfm?query=%2Bauthor%3AP574684%20author%3AP574674&amp;querydisp=author%3AStephen%20Levin&amp;coll=GUIDE&amp;dl=GUIDE&amp;CFID=13720957&amp;CFTOKEN=832591" target="_self">Stephen Levin</a></div>
+						<div class="abstract"><a href="http://widit.slis.indiana.edu/irpub/SIGIR/2003/results.cfm?query=%2Bauthor%3AP191013%20author%3AP574674&amp;querydisp=author%3AMark%20Sanderson&amp;coll=GUIDE&amp;dl=GUIDE&amp;CFID=13720957&amp;CFTOKEN=832591" target="_self">Mark Sanderson</a></div>
+						</td>
+						</tr>
+						<tr valign="top"><td><div class="abstract"><a href="http://widit.slis.indiana.edu/irpub/SIGIR/2003/results.cfm?query=%2Bauthor%3AP574684&amp;querydisp=author%3AStephen%20Levin&amp;coll=GUIDE&amp;dl=GUIDE&amp;CFID=13720957&amp;CFTOKEN=832591" target="_self">Stephen Levin</a>:</div></td><td>
+						<div class="abstract"><a href="http://widit.slis.indiana.edu/irpub/SIGIR/2003/results.cfm?query=%2Bauthor%3AP574674%20author%3AP574684&amp;querydisp=author%3APaul%20Clough&amp;coll=GUIDE&amp;dl=GUIDE&amp;CFID=13720957&amp;CFTOKEN=832591" target="_self">Paul Clough</a></div>
+						<div class="abstract"><a href="http://widit.slis.indiana.edu/irpub/SIGIR/2003/results.cfm?query=%2Bauthor%3AP191013%20author%3AP574684&amp;querydisp=author%3AMark%20Sanderson&amp;coll=GUIDE&amp;dl=GUIDE&amp;CFID=13720957&amp;CFTOKEN=832591" target="_self">Mark Sanderson</a></div>
+						</td>
+						</tr>
+						<tr valign="top"><td><div class="abstract"><a href="http://widit.slis.indiana.edu/irpub/SIGIR/2003/results.cfm?query=%2Bauthor%3AP191013&amp;querydisp=author%3AMark%20Sanderson&amp;coll=GUIDE&amp;dl=GUIDE&amp;CFID=13720957&amp;CFTOKEN=832591" target="_self">Mark Sanderson</a>:</div></td><td>
+						<div class="abstract"><a href="http://widit.slis.indiana.edu/irpub/SIGIR/2003/results.cfm?query=%2Bauthor%3AP504975%20author%3AP191013&amp;querydisp=author%3AZo%26%23235%3B%20Bathie&amp;coll=GUIDE&amp;dl=GUIDE&amp;CFID=13720957&amp;CFTOKEN=832591" target="_self">Zo&#235; Bathie</a></div>
+						<div class="abstract"><a href="http://widit.slis.indiana.edu/irpub/SIGIR/2003/results.cfm?query=%2Bauthor%3AP199879%20author%3AP191013&amp;querydisp=author%3AMicheline%20Beaulieu&amp;coll=GUIDE&amp;dl=GUIDE&amp;CFID=13720957&amp;CFTOKEN=832591" target="_self">Micheline Beaulieu</a></div>
+						<div class="abstract"><a href="http://widit.slis.indiana.edu/irpub/SIGIR/2003/results.cfm?query=%2Bauthor%3AP83843%20author%3AP191013&amp;querydisp=author%3AFazli%20Can&amp;coll=GUIDE&amp;dl=GUIDE&amp;CFID=13720957&amp;CFTOKEN=832591" target="_self">Fazli Can</a></div>
+						<div class="abstract"><a href="http://widit.slis.indiana.edu/irpub/SIGIR/2003/results.cfm?query=%2Bauthor%3AP574674%20author%3AP191013&amp;querydisp=author%3APaul%20Clough&amp;coll=GUIDE&amp;dl=GUIDE&amp;CFID=13720957&amp;CFTOKEN=832591" target="_self">Paul Clough</a></div>
+						<div class="abstract"><a href="http://widit.slis.indiana.edu/irpub/SIGIR/2003/results.cfm?query=%2Bauthor%3AP346129%20author%3AP191013&amp;querydisp=author%3AClaire%20Coverson&amp;coll=GUIDE&amp;dl=GUIDE&amp;CFID=13720957&amp;CFTOKEN=832591" target="_self">Claire Coverson</a></div>
+						<div class="abstract"><a href="http://widit.slis.indiana.edu/irpub/SIGIR/2003/results.cfm?query=%2Bauthor%3AP83319%20author%3AP191013&amp;querydisp=author%3AFabio%20Crestani&amp;coll=GUIDE&amp;dl=GUIDE&amp;CFID=13720957&amp;CFTOKEN=832591" target="_self">Fabio Crestani</a></div>
+						<div class="abstract"><a href="http://widit.slis.indiana.edu/irpub/SIGIR/2003/results.cfm?query=%2Bauthor%3AP33363%20author%3AP191013&amp;querydisp=author%3ABruce%20Croft&amp;coll=GUIDE&amp;dl=GUIDE&amp;CFID=13720957&amp;CFTOKEN=832591" target="_self">Bruce Croft</a></div>
+						<div class="abstract"><a href="http://widit.slis.indiana.edu/irpub/SIGIR/2003/results.cfm?query=%2Bauthor%3AP338737%20author%3AP191013&amp;querydisp=author%3ATim%20Gollins&amp;coll=GUIDE&amp;dl=GUIDE&amp;CFID=13720957&amp;CFTOKEN=832591" target="_self">Tim Gollins</a></div>
+						<div class="abstract"><a href="http://widit.slis.indiana.edu/irpub/SIGIR/2003/results.cfm?query=%2Bauthor%3AP380481%20author%3AP191013&amp;querydisp=author%3APreben%20Hansen&amp;coll=GUIDE&amp;dl=GUIDE&amp;CFID=13720957&amp;CFTOKEN=832591" target="_self">Preben Hansen</a></div>
+						<div class="abstract"><a href="http://widit.slis.indiana.edu/irpub/SIGIR/2003/results.cfm?query=%2Bauthor%3AP110431%20author%3AP191013&amp;querydisp=author%3AHideo%20Joho&amp;coll=GUIDE&amp;dl=GUIDE&amp;CFID=13720957&amp;CFTOKEN=832591" target="_self">Hideo Joho</a></div>
+							</td><td>
+						<div class="abstract"><a href="http://widit.slis.indiana.edu/irpub/SIGIR/2003/results.cfm?query=%2Bauthor%3AP151583%20author%3AP191013&amp;querydisp=author%3AJussi%20Karlgren&amp;coll=GUIDE&amp;dl=GUIDE&amp;CFID=13720957&amp;CFTOKEN=832591" target="_self">Jussi Karlgren</a></div>
+						<div class="abstract"><a href="http://widit.slis.indiana.edu/irpub/SIGIR/2003/results.cfm?query=%2Bauthor%3AP574684%20author%3AP191013&amp;querydisp=author%3AStephen%20Levin&amp;coll=GUIDE&amp;dl=GUIDE&amp;CFID=13720957&amp;CFTOKEN=832591" target="_self">Stephen Levin</a></div>
+						<div class="abstract"><a href="http://widit.slis.indiana.edu/irpub/SIGIR/2003/results.cfm?query=%2Bauthor%3AP59593%20author%3AP191013&amp;querydisp=author%3ADaniela%20Petrelli&amp;coll=GUIDE&amp;dl=GUIDE&amp;CFID=13720957&amp;CFTOKEN=832591" target="_self">Daniela Petrelli</a></div>
+						<div class="abstract"><a href="http://widit.slis.indiana.edu/irpub/SIGIR/2003/results.cfm?query=%2Bauthor%3AP301836%20author%3AP191013&amp;querydisp=author%3AXiao%20Mang%20Shou&amp;coll=GUIDE&amp;dl=GUIDE&amp;CFID=13720957&amp;CFTOKEN=832591" target="_self">Xiao Mang Shou</a></div>
+						<div class="abstract"><a href="http://widit.slis.indiana.edu/irpub/SIGIR/2003/results.cfm?query=%2Bauthor%3AP16585%20author%3AP191013&amp;querydisp=author%3AAnastasios%20Tombros&amp;coll=GUIDE&amp;dl=GUIDE&amp;CFID=13720957&amp;CFTOKEN=832591" target="_self">Anastasios Tombros</a></div>
+						<div class="abstract"><a href="http://widit.slis.indiana.edu/irpub/SIGIR/2003/results.cfm?query=%2Bauthor%3AP39219%20author%3AP191013&amp;querydisp=author%3AC%2E%20J%2E%20Van%20Rijsbergen&amp;coll=GUIDE&amp;dl=GUIDE&amp;CFID=13720957&amp;CFTOKEN=832591" target="_self">C. J. Van Rijsbergen</a></div>
+						<div class="abstract"><a href="http://widit.slis.indiana.edu/irpub/SIGIR/2003/results.cfm?query=%2Bauthor%3AP39672%20author%3AP191013&amp;querydisp=author%3AC%2E%20J%2E%20van%20Rijsbergen&amp;coll=GUIDE&amp;dl=GUIDE&amp;CFID=13720957&amp;CFTOKEN=832591" target="_self">C. J. van Rijsbergen</a></div>
+						</td>
+						</tr>
+				</table>
+			</div>
+<br>
+<DIV class=footer-copy-text align="center">
+</DIV>
+</td>
+</tr>
+</table>
+</div>
+</body>
+</html></html>

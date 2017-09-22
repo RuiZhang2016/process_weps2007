@@ -1,0 +1,835 @@
+<!--  Copyright (c) 2000 - 2002, Sirsi Corporation
+  --
+  --  Unicorn Search Hitlist Page; State #4
+  -->
+
+
+                                                  <!-- iBistro -->
+
+<!--  Copyright (c) 2000 - 2002, Sirsi Corporation
+  --
+  --  Defines the HEAD and start of BODY of each page.
+  -->
+
+<HTML
+
+
+
+    DIR="LTR"
+>
+
+
+<HEAD>
+
+
+  <TITLE>[iBistro] Kalamazoo Public Library</TITLE>
+
+
+
+
+<!-- Set the expiration date to the past so the page will always be reloaded -->
+
+
+  <!-- Not the login page -->
+
+
+
+<STYLE>
+A:LINK {color:#3300FF; text-decoration:none}
+A:VISITED {color:#3300FF; text-decoration:none}
+A:HOVER {color:#FF0000; text-decoration:none}
+A.rootbar:LINK {color:#FFFFFF; text-decoration:none}
+A.rootbar:VISITED {color:#FFFFFF; text-decoration:none}
+A.rootbar:HOVER {color:#FFFFFF; text-decoration:none}
+A.blastoff:LINK {color:#006699; text-decoration:none}
+A.blastoff:VISITED {color:#006699; text-decoration:none}
+A.blastoff:HOVER {color:#FF0000; text-decoration:none}
+.rootbar {
+   font-family : Verdana, Helvetica, Arial, sans-serif;
+   font-size : 10pt;
+   color : #FFFFFF;
+   font-weight : bold; 
+   text-align : center;
+   background-color : #006699;
+;
+
+}
+.blastoff {
+   font-family : Verdana, Helvetica, Arial, sans-serif;
+   font-size : 10pt;
+   color : #006699;
+   font-weight : bold; 
+   text-align : center;
+   background-color : #FFFFFF;
+;
+
+}
+</STYLE>
+
+
+</HEAD>
+
+
+<!-- Start the body of the document.  WARNING:  No comments are allowed inside
+  -- of the <BODY> element's definition.
+  --  * Specify a background if configured.
+  --  * Load the toolbar frame unless this is the Login page or if toolbar
+  --    frame is not configured.  Also, unload the toolbar frame under the
+  --    same conditions.  Note that Netscape does not handle reloading the
+  --    ftoolbar frame (get Javascript error), so do not use the onUnload
+  --    event if this is not MSIE.
+  --  * If this is a download search results state (14, 62), then load the
+  --    results in a new browser window to facilitate printing.
+  --  * If this is an Archive image view state (911), then open a new window
+  --    to display the image.
+  --    in this frame.
+  --  * To help prevent premature selection of a toolbar button (i.e., before
+  --    the new toolbar is loaded), clear it when the page is unloaded.
+  -->
+<BODY
+
+  BGCOLOR = "#FFFFFF"
+
+onLoad="
+
+
+
+"
+
+onUnload="
+"
+
+> <!-- terminate BODY element -->
+<!--  Copyright (c) 1998 - 2002, Sirsi Corporation
+  --
+  --  Form for starting a new WebCat session in a new window.
+  -->
+
+
+<!-- By setting the "document.new_session.action" property to the URL for
+  -- logging into a new session at the particular page you want, a new window
+  -- will be opened and a new WebCat session will be started automatically.
+  -- Remember that many WebCat states are dependent on previous states, so only
+  -- certain "cgi types" can be opened.
+  --
+  -- Also, by setting the "document.new_session.new_gateway_db.value" property
+  -- to a gateway database name, the new session will use that gateway instead
+  -- of the user's default gateway.
+  --
+  -- Note that the use of Javascript is required to submit this form.
+  -->
+
+
+<FORM NAME="new_session" METHOD=POST
+      ACTION=/uhtbin/cgisirsi/XFfMj9T6Uf/0/57/49
+      TARGET="new_session">
+  <INPUT TYPE="hidden" NAME="user_id" VALUE="WEBSERVER">
+  <INPUT TYPE="hidden" NAME=password VALUE="">
+
+  <INPUT TYPE="hidden" NAME="new_gateway_db" VALUE="">
+</FORM>
+
+
+<!--  Copyright (c) 2000 - 2002, Sirsi Corporation
+  --
+  --  Puts the top-of-page stuff common to all pages.
+  -->
+
+
+<A NAME="TOP"></A>
+
+			  <!-- iBistro -->
+
+<!--  Copyright (c) 2000 - 2002, Sirsi Corporation
+  --
+  --  Title Bar.
+  -->
+
+ <!-- old WebCat -->
+<!--title bar-->
+
+<TABLE BGCOLOR="#0099CC" CELLSPACING=0 CELLPADDING=0 WIDTH="100%"><TR><TD>
+
+      <FORM NAME="loginform" METHOD=POST
+        ACTION="/uhtbin/cgisirsi/XFfMj9T6Uf/0/57/49">
+ <!-- start of login form-->
+
+<TABLE BGCOLOR="#0099CC" CELLSPACING=0 CELLPADDING=0 WIDTH="100%">
+
+  <TR>
+
+  <!-- if LIBLOGO env variable is not blank and not a Hyperion page, display the gif file -->
+    <TD VALIGN="center" ALIGN="center"> 
+      <IMG BORDER=0
+       SRC="/WebCat_Images/English/Other/Miscib/KPL_logo.gif">
+    </TD>
+
+  <TD VALIGN="center" ALIGN="center"> 
+    <FONT FACE="Helvetica" COLOR="#FFFFFF" SIZE=2>
+
+    <!-- Print the gateway envn title if not blank -->
+
+      <!-- Print a big header if not also using the icon -->
+        <!-- icon was printed -->
+        <B><I>Kalamazoo Public Library</I></B>
+    <BR>
+    <B>just imagine...</B></FONT>
+    <P>
+
+
+    </TD>
+
+     <!-- Titlebar login form -->
+
+        <TD VALIGN = "top" ALIGN = "left">
+<!--  Copyright (c) 2001 - 2002, Sirsi Corporation
+  --
+  --  login form in titlebar or Search/Home box
+  --
+  -->
+
+
+<!--  Copyright (c) 1998 - 2002, Sirsi Corporation
+  --
+  --  Sets the default values for USER_ID, ALT_ID, and PIN prompts.
+  --
+  --  The USER_ID, ALT_ID, and PIN page variables will be returned.
+  -->
+
+
+<!-- If the user has not logged in, first try to default to the ID based on
+  -- the IP address -- the $UO and $Uf will be set.  If that fails, then
+  -- default to the IDs in the config file.
+  -- If the user has already logged in, default to the logged in user's IDs,
+  -- unless the user is a shared login.
+  -->
+
+
+
+  <TABLE>
+   <TR>
+      <TD ALIGN="right">
+        <FONT FACE="Helvetica" COLOR="#FFFFFF" SIZE=1>
+          <!-- only user ID is used if both on -->
+          user ID: <!-- user ID -->
+          <INPUT TYPE="text" NAME="user_id" SIZE="8" MAXLENGTH="20"
+               VALUE=""></FONT>
+
+
+          <BR>
+          <FONT FACE="Helvetica" COLOR="#FFFFFF" SIZE=1>
+          PIN:
+          <INPUT TYPE=password NAME=password SIZE=8 MAXLENGTH=20
+                 VALUE=""></FONT>
+          <FONT FACE="Helvetica" SIZE=1>
+          <BR><INPUT TYPE=submit VALUE="Login"> 
+          </FONT>
+        </TD>
+      </TR>
+  </TABLE>
+
+        </TD>
+
+
+      <TD>
+        <A HREF="#skipnav"><IMG SRC="/WebCat_Images/English/Other/Miscib/clear.gif" HEIGHT=1 WIDTH=1 BORDER=0 ALT=""></A>
+      </TD>
+
+     <!-- Titlebar lib info -->
+
+        <TD VALIGN = "top" ALIGN = "left">
+<!--  Copyright (c) 2000 - 2002, Sirsi Corporation
+  --
+  --  Announcements/Activity in title bar.
+  --
+  --  This page file is processed by a SIRSI_Command for an Si response.
+  -->
+
+
+<TABLE CELLSPACING=0 CELLPADDING=1 WIDTH="100%">
+  <TR BGCOLOR="#006699"><TD>
+     <FONT FACE="Helvetica" COLOR="#FFFFFF" SIZE=2>
+     <B><I>Library Info</I></B></TD></TR>
+  <TR BGCOLOR="#FFFFFF"><TD VALIGN=top>
+      <FONT FACE = "Helvetica" SIZE = 1>
+            <A HREF="/uhtbin/cgisirsi/cKY88D23GY/214720060/1/1123/X">
+            Have You Read?</A><BR>
+           <!-- counter test -->
+            <A HREF="http://www.kpl.gov/LocationsHours/">
+            Hours</A><BR>
+           <!-- counter test -->
+            <A HREF="http://www.kpl.gov/children/">
+            Children's Services</A><BR>
+           <!-- counter test -->
+            <A HREF="http://www.kpl.gov/teen/">
+            Teen Services</A><BR>
+           <!-- counter test -->
+            <!-- counter is more than 5 -->
+           <!-- counter test -->
+      </TD></TR>
+      <TR BGCOLOR="#006699"><TD VALIGN=top
+            ALIGN="right">
+        <FONT FACE = "Helvetica" SIZE = 1>
+        <A HREF="/uhtbin/cgisirsi/J1ptNL4M8U/214720060/122/2004"><IMG BORDER=0 SRC="/WebCat_Images/English/Buttons/Bistro/MORE.gif" ALT="[MORE]"></A>
+</TD></TR></TABLE>
+        </TD>
+
+   </TR></TABLE>
+
+     </FORM>
+    <!-- end of login form -->
+
+   </TD></TR></TABLE>
+  			          <!-- iBistro -->
+<!--  Copyright (c) 2000 - 2002, Sirsi Corporation
+  --
+  --  Gateway Root Bar.
+  -->
+
+                          <!-- iBistro not WebCat -->
+  <FONT FACE="Helvetica" SIZE=2>
+
+    <!-- display text with CSS instead -->
+    <TABLE CELLPADDING=5 CELLSPACING=0 BORDER=0 WIDTH="100%">
+      <TR>
+
+       <!-- not the current element -->
+        <TD VALIGN="top" ALIGN=left class="rootbar">
+          <A HREF="/uhtbin/cgisirsi/MEyqWhaUcD/214720060/38/1/X/BLASTOFF" class="rootbar">
+      Search/Home</A>
+      </TD>
+
+       <!-- not the current element -->
+        <TD VALIGN="top" ALIGN=left class="rootbar">
+          <A HREF="/uhtbin/cgisirsi/MEyqWhaUcD/214720060/1/26/X/BLASTOFF" class="rootbar">
+      Category Search</A>
+      </TD>
+
+       <!-- not the current element -->
+        <TD VALIGN="top" ALIGN=left class="rootbar">
+          <A HREF="/uhtbin/cgisirsi/MEyqWhaUcD/214720060/1/774/X/BLASTOFF" class="rootbar">
+      Children's Library</A>
+      </TD>
+
+       <!-- not the current element -->
+        <TD VALIGN="top" ALIGN=left class="rootbar">
+          <A HREF="/uhtbin/cgisirsi/MEyqWhaUcD/214720060/1/1101/X/BLASTOFF" class="rootbar">
+      World Wide Web Links</A>
+      </TD>
+
+       <!-- not the current element -->
+        <TD VALIGN="top" ALIGN=left class="rootbar">
+          <A HREF="/uhtbin/cgisirsi/MEyqWhaUcD/214720060/1/1166/X/BLASTOFF" class="rootbar">
+      My Account</A>
+      </TD>
+
+       <!-- not the current element -->
+        <TD VALIGN="top" ALIGN=left class="rootbar">
+          <A HREF="/uhtbin/cgisirsi/MEyqWhaUcD/214720060/60/1180/X/BLASTOFF" class="rootbar">
+      </A>
+      </TD>
+
+       <!-- not the current element -->
+        <TD VALIGN="top" ALIGN=left class="rootbar">
+          <A HREF="/uhtbin/cgisirsi/MEyqWhaUcD/214720060/1/1181/X/BLASTOFF" class="rootbar">
+      Local Information</A>
+      </TD>
+    </TR>
+    </TABLE>
+  			          <!-- iBistro -->
+
+  			          <!-- k12 or iBistro -->
+  <FORM NAME="hitlist" METHOD="POST"
+        ACTION="/uhtbin/cgisirsi/4D5uYxhcLx/214720060/9">
+<!--  Copyright (c) 2000 - 2002, Sirsi Corporation
+  --
+  --  Buttons for Search Hitlist page  ; page #4
+  -->
+
+                                                  <!-- iBistro -->
+<TABLE BGCOLOR="#0099CC" CELLSPACING=0 CELLPADDING=0 WIDTH="100%"><TR><TD VALIGN="center">
+<A HREF=/uhtbin/cgisirsi/4D5uYxhcLx/214720060/2/2><IMG SRC=/WebCat_Images/English/Buttons/Bistro/GOBACK.gif BORDER=0 ALT="GO BACK"></A>
+
+  <!-- Help button -->
+  <SCRIPT Language=javascript>
+    put_help_button('search_results.html');
+  </SCRIPT>
+
+    <A HREF="#search_form">
+    <IMG SRC=/WebCat_Images/English/Buttons/Bistro/LIMIT.gif BORDER=0
+         ALT="LIMIT SEARCH"></A>
+
+
+<A HREF=/uhtbin/cgisirsi/abWapOkEFo/214720060/49><IMG SRC=/WebCat_Images/English/Buttons/Bistro/NSEARCH.gif BORDER=0 ALT="NEW SEARCH"></A>
+
+
+
+<!-- Backward button -->
+  <IMG SRC=/WebCat_Images/English/Buttons/Bistro/UNBACKWARD.gif BORDER=0>
+
+
+<!-- Forward button -->
+  <IMG SRC=/WebCat_Images/English/Buttons/Bistro/UNFORWARD.gif BORDER=0>
+
+
+
+<!-- Cross Reference button -->
+
+
+<!-- Capture Button -->
+  <INPUT TYPE=image SRC=/WebCat_Images/English/Buttons/Bistro/PRINTCAP.gif
+         BORDER=0 ALT="Print or email kept records" NAME=CAPTURE>
+
+
+
+  <!-- gateway's custom buttons -->
+
+
+
+  <A TARGET="_top" HREF=/uhtbin/cgisirsi/O0gaudqR0c/214720060/58><IMG SRC=/WebCat_Images/English/Buttons/Bistro/EXITCAT.gif BORDER=0 ALT="EXIT"></A>
+
+</TD></TR></TABLE>
+  			          <!-- iBistro -->
+<A NAME="skipnav"></A>
+  <FONT FACE = "Helvetica" SIZE = 2>
+<!--  Copyright (c) 2000 - 2002, Sirsi Corporation
+  --
+  --  Builds the hits list page heading
+  -->
+
+
+<!-- when search field is not blank, assign term to ENGINE_TERM -->
+
+<TABLE BGCOLOR="#CCCCFF" BORDER=1 WIDTH="100%">
+  <TR>
+    <TD WIDTH="10%">
+    <FONT FACE = "Helvetica" SIZE = 2>
+      <CENTER>
+      <B><BIG>
+          Search Results
+        </BIG></B>
+        </CENTER>
+    </TD>
+    <TD>
+    <FONT FACE = "Helvetica" SIZE = 2>
+    <CENTER><BIG>
+      &nbsp;
+<!--  Copyright (c) 2000 - 2002, Sirsi Corporation
+  --
+  --  Catalog Keyword search summary; iBistro
+  -->
+
+
+<!-- Print the search summary -->
+<B>
+    "&quot;Dicey's Song&quot;{TI} AND Cynthia Voigt{AU}"
+
+
+
+
+
+
+
+</B>
+          search found
+          <B>3</B> 
+          titles.
+      <P>
+      </BIG></CENTER>
+    </TD>
+</TR>
+</TABLE>
+  <HR>
+  <!-- Print the message, if one exists -->
+  <INPUT TYPE=hidden NAME=first_hit VALUE=1>
+  <INPUT TYPE=hidden NAME=last_hit VALUE=3>
+  <!-- Loop through the hits, printing each -->
+  <TABLE WIDTH="100%"><TR><TD VALIGN="top" ALIGN = "left"> <!-- full page-->
+  <TABLE>
+    <TR>
+      <TD BGCOLOR="#99CCFF" VALIGN="top" 
+        ALIGN="left" NOWRAP>
+        <!-- print list number, checkbox, FULL DETAILS icon in first column -->
+        <TABLE>
+          <TR>
+            <TD>
+              <FONT FACE = "Helvetica" SIZE = 2>
+              <B>#1</B>
+                 <INPUT TYPE=image
+                       SRC=/WebCat_Images/English/Buttons/Bistro/VIEW.gif
+                       BORDER=0 ALT="Full Details" 
+                       NAME=VIEW^1
+                       ALIGN=bottom>
+            </TD>
+          </TR>
+          <TR>
+            <TD>
+               <!-- holdings allowed -->
+                <IMG BORDER=0 SRC="/WebCat_Images/English/Special/Bistro/KEEP.gif" ALT="Keep for emailing/printing">
+                <INPUT TYPE=checkbox 
+                       NAME=1><BR>
+            </TD>
+          </TR>
+            <TR>
+              <TD ALIGN="left" NOWRAP>
+
+                <!-- netLibrary logo, if this is an electronic book -->
+              </TD>
+            </TR>
+        </TABLE>
+      </TD>
+      <TD BGCOLOR="#EEEEEE" VALIGN = "TOP" ALIGN = "left">
+        <TABLE WIDTH="100%"><TR><TD WIDTH="80%"><!--center cell-->
+        <FONT FACE = "Helvetica" SIZE = 2>
+        <!-- print message, call number, title, author in 2nd column -->
+              <!-- holdings allowed -->
+              <B>J CASSETTE V</B>
+        </TD>
+          <TD VALIGN="top" ALIGN="right">
+          <FONT FACE = "Helvetica" SIZE = 2>
+              <B>1992</B><BR>
+          </TD>
+        </TR>
+        <TR>
+          <TD WIDTH="80%">
+            <FONT FACE = "Helvetica" SIZE = 2>
+              Dicey's song sound recording<BR>
+              Voigt, Cynthia.<BR>
+
+              Prince Frederick, MD : Recorded Books, p1992.<BR>
+
+
+             <!-- text URL -->
+          </TD>
+          <TD VALIGN="top" ALIGN="right">
+            <FONT FACE = "Helvetica" SIZE = 2>
+            </FONT>
+          </TD>
+        </TR>
+        <TR>
+          <TD>
+          <FONT FACE = "Helvetica" SIZE = 1>
+                    2 copies available at CENTRAL and OSHTEMO<BR>
+		
+          </FONT>
+	  </TD>
+        <TD VALIGN="top" ALIGN="right">
+          <FONT FACE = "Helvetica" SIZE = 1>
+
+
+          </FONT>
+        </TD>
+       </TR>
+     </TABLE>
+      </TD>
+      <TD BGCOLOR="#FFFFFF" NOWRAP VALIGN="top" ALIGN="right">
+    <TR>
+      <TD BGCOLOR="#99CCFF" VALIGN="top" 
+        ALIGN="left" NOWRAP>
+        <!-- print list number, checkbox, FULL DETAILS icon in first column -->
+        <TABLE>
+          <TR>
+            <TD>
+              <FONT FACE = "Helvetica" SIZE = 2>
+              <B>#2</B>
+                 <INPUT TYPE=image
+                       SRC=/WebCat_Images/English/Buttons/Bistro/VIEW.gif
+                       BORDER=0 ALT="Full Details" 
+                       NAME=VIEW^2
+                       ALIGN=bottom>
+            </TD>
+          </TR>
+          <TR>
+            <TD>
+               <!-- holdings allowed -->
+                <IMG BORDER=0 SRC="/WebCat_Images/English/Special/Bistro/KEEP.gif" ALT="Keep for emailing/printing">
+                <INPUT TYPE=checkbox 
+                       NAME=2><BR>
+            </TD>
+          </TR>
+            <TR>
+              <TD ALIGN="left" NOWRAP>
+
+                <!-- netLibrary logo, if this is an electronic book -->
+              </TD>
+            </TR>
+        </TABLE>
+      </TD>
+      <TD BGCOLOR="#EEEEEE" VALIGN = "TOP" ALIGN = "left">
+        <TABLE WIDTH="100%"><TR><TD WIDTH="80%"><!--center cell-->
+        <FONT FACE = "Helvetica" SIZE = 2>
+        <!-- print message, call number, title, author in 2nd column -->
+              <!-- holdings allowed -->
+              <B>PBK FICTION</B>
+        </TD>
+          <TD VALIGN="top" ALIGN="right">
+          <FONT FACE = "Helvetica" SIZE = 2>
+              <B>1984</B><BR>
+          </TD>
+        </TR>
+        <TR>
+          <TD WIDTH="80%">
+            <FONT FACE = "Helvetica" SIZE = 2>
+              Dicey's song<BR>
+              Voigt, Cynthia.<BR>
+
+              New York : Fawcett Juniper, 1984, c1982.<BR>
+
+
+             <!-- text URL -->
+          </TD>
+          <TD VALIGN="top" ALIGN="right">
+            <FONT FACE = "Helvetica" SIZE = 2>
+            </FONT>
+          </TD>
+        </TR>
+        <TR>
+          <TD>
+          <FONT FACE = "Helvetica" SIZE = 1>
+                    2 copies available at CENTRAL and POWELL<BR>
+		
+          </FONT>
+	  </TD>
+        <TD VALIGN="top" ALIGN="right">
+          <FONT FACE = "Helvetica" SIZE = 1>
+
+
+          </FONT>
+        </TD>
+       </TR>
+     </TABLE>
+      </TD>
+      <TD BGCOLOR="#FFFFFF" NOWRAP VALIGN="top" ALIGN="right">
+    <TR>
+      <TD BGCOLOR="#99CCFF" VALIGN="top" 
+        ALIGN="left" NOWRAP>
+        <!-- print list number, checkbox, FULL DETAILS icon in first column -->
+        <TABLE>
+          <TR>
+            <TD>
+              <FONT FACE = "Helvetica" SIZE = 2>
+              <B>#3</B>
+                 <INPUT TYPE=image
+                       SRC=/WebCat_Images/English/Buttons/Bistro/VIEW.gif
+                       BORDER=0 ALT="Full Details" 
+                       NAME=VIEW^3
+                       ALIGN=bottom>
+            </TD>
+          </TR>
+          <TR>
+            <TD>
+               <!-- holdings allowed -->
+                <IMG BORDER=0 SRC="/WebCat_Images/English/Special/Bistro/KEEP.gif" ALT="Keep for emailing/printing">
+                <INPUT TYPE=checkbox 
+                       NAME=3><BR>
+            </TD>
+          </TR>
+            <TR>
+              <TD ALIGN="left" NOWRAP>
+
+                <!-- netLibrary logo, if this is an electronic book -->
+              </TD>
+            </TR>
+        </TABLE>
+      </TD>
+      <TD BGCOLOR="#EEEEEE" VALIGN = "TOP" ALIGN = "left">
+        <TABLE WIDTH="100%"><TR><TD WIDTH="80%"><!--center cell-->
+        <FONT FACE = "Helvetica" SIZE = 2>
+        <!-- print message, call number, title, author in 2nd column -->
+              <!-- holdings allowed -->
+              <B>*J</B>
+        </TD>
+          <TD VALIGN="top" ALIGN="right">
+          <FONT FACE = "Helvetica" SIZE = 2>
+              <B>1982</B><BR>
+          </TD>
+        </TR>
+        <TR>
+          <TD WIDTH="80%">
+            <FONT FACE = "Helvetica" SIZE = 2>
+              Dicey's song<BR>
+              Voigt, Cynthia.<BR>
+
+              New York : Atheneum, 1982.<BR>
+
+
+             <!-- text URL -->
+          </TD>
+          <TD VALIGN="top" ALIGN="right">
+            <FONT FACE = "Helvetica" SIZE = 2>
+              1st ed.
+            </FONT>
+          </TD>
+        </TR>
+        <TR>
+          <TD>
+          <FONT FACE = "Helvetica" SIZE = 1>
+                    10 copies available at CENTRAL, BOOKMOBILE, EASTWOOD, OSHTEMO, POWELL, and WASHSQUARE<BR>
+		
+          </FONT>
+	  </TD>
+        <TD VALIGN="top" ALIGN="right">
+          <FONT FACE = "Helvetica" SIZE = 1>
+            <INPUT TYPE=image SRC="/WebCat_Images/English/Special/Bistro/SUMMARY.gif" BORDER=0 ALT="Summary" NAME=VIEW^3 ALIGN=bottom>
+
+
+          </FONT>
+        </TD>
+       </TR>
+     </TABLE>
+      </TD>
+      <TD BGCOLOR="#FFFFFF" NOWRAP VALIGN="top" ALIGN="right">
+      <INPUT TYPE=image SRC="http://content.sirsi.net/uhtbin/getenrich/0689309449/COVER_GIF" BORDER=0 ALT="Cover" NAME=VIEW^3 ALIGN=bottom><BR>
+  </TD></TR>
+  </TABLE>
+  </TD>
+  <TD VALIGN="top" ALIGN = "left">
+
+<!--  Copyright (c) 2000 - 2002, Sirsi Corporation
+  --
+  --  LC Categories list page.
+  -->
+
+  <TABLE CELLSPACING=0 CELLPADDING=1 BGCOLOR="#006699"><TR><TD>
+  <TABLE CELLSPACING=0 CELLPADDING=0 WIDTH="100%">
+    <TR BGCOLOR="#006699">
+    <TD VALIGN="top" ALIGN = "left">
+      <FONT FACE="Helvetica" SIZE=2 
+        COLOR="#FFFFFF">
+      <B>You Found Titles in Categories:</B><BR>
+    </TD></TR>
+    <TR BGCOLOR="#FFFFFF">
+    <TD VALIGN="top" ALIGN = "left">
+      <FONT FACE = "Helvetica" SIZE = 2>
+
+    <A HREF='javascript:document.lc_search_form.searchdata1.value="&#35;123+AND+^Q34{LCAT}"; document.lc_search_form.search_disp_data1.value="Children&#39;s Literature"; document.lc_search_form.submit();'>
+      Children&#39;s Literature</A><BR>
+  </TD></TR></TABLE>
+</TD></TR></TABLE> <!-- end of LC Categories list table -->
+      <P>
+
+  </TD></TR></TABLE> <!-- new big table-->
+  <INPUT TYPE=hidden NAME=form_type VALUE="">
+  </FORM>
+  <HR>
+  <!-- Print the query form if this is the page immediately following the query.
+    -- QUERY_TYPE is defined only for the page generated immediately after the
+    -- search form is submitted.
+    -->
+  <A NAME="search_form"></A>
+<!--  Copyright (c) 2000 - 2002, Sirsi Corporation
+  --
+  --  LC Category hidden search form for javascript to work.
+  -->
+
+
+<FORM NAME=lc_search_form METHOD=POST
+      ACTION=/uhtbin/cgisirsi/Rr5QsN7AQU/214720060/5/5/27/1>
+  <INPUT TYPE=hidden NAME="searchdata1" VALUE="">
+  <INPUT TYPE=hidden NAME="search_disp_data1" VALUE="">
+</FORM>
+
+
+<FORM NAME=lc_return_form METHOD=POST
+      ACTION=/uhtbin/cgisirsi/Rr5QsN7AQU/214720060/5/0/27/0>
+  <INPUT TYPE=hidden NAME="searchdata1" VALUE="">
+  <INPUT TYPE=hidden NAME="sort_by" VALUE="">
+</FORM>
+
+
+<!--  Copyright (c) 1996 - 2002, Sirsi Corporation
+  --
+  --  Copyright statement
+  -->
+
+
+<TABLE CELLSPACING=0 WIDTH=100%>
+<TR>
+
+  <!-- Print the copyright statement if the TOC frame is not on.  Otherwise,
+    -- the copyright will be printed in the TOC frame.
+    -->
+
+  <TD ALIGN=left NOWRAP>
+     <!--Not the login page-->
+
+          <IMG SRC=/WebCat_Images/English/Other/Miscib/IBISTRO.gif
+             ALIGN=bottom ALT="[iBistro]" BORDER=0></A><BR>
+
+      <FONT FACE="Helvetica" SIZE=2>
+      <FONT COLOR="#666666">
+      Your Electronic Library on the Web</FONT>
+      <BR>Copyright &#169; 2000 - 2002, Sirsi Corporation
+      </FONT>
+  </TD>
+
+  <!-- Print the TOP button when not the TOC frame -->
+  <TD ALIGN=right>
+    <A NAME="BOTTOM" HREF="#TOP">
+       <IMG SRC=/WebCat_Images/English/Buttons/Bistro/TOP.gif
+            BORDER=0 ALT="[TOP]"></A> 
+  </TD>
+
+</TR>
+</TABLE>
+
+  <P>
+<!--  Copyright (c) 2000 - 2002, Sirsi Corporation
+  --
+  --  Gateway Root Bar.
+  -->
+
+                          <!-- iBistro not WebCat -->
+  <FONT FACE="Helvetica" SIZE=2>
+
+    <!-- display text with CSS instead -->
+    <TABLE CELLPADDING=5 CELLSPACING=0 BORDER=0 WIDTH="100%">
+      <TR>
+
+       <!-- not the current element -->
+        <TD VALIGN="top" ALIGN=left class="rootbar">
+          <A HREF="/uhtbin/cgisirsi/MEyqWhaUcD/214720060/38/1/X/BLASTOFF" class="rootbar">
+      Search/Home</A>
+      </TD>
+
+       <!-- not the current element -->
+        <TD VALIGN="top" ALIGN=left class="rootbar">
+          <A HREF="/uhtbin/cgisirsi/MEyqWhaUcD/214720060/1/26/X/BLASTOFF" class="rootbar">
+      Category Search</A>
+      </TD>
+
+       <!-- not the current element -->
+        <TD VALIGN="top" ALIGN=left class="rootbar">
+          <A HREF="/uhtbin/cgisirsi/MEyqWhaUcD/214720060/1/774/X/BLASTOFF" class="rootbar">
+      Children's Library</A>
+      </TD>
+
+       <!-- not the current element -->
+        <TD VALIGN="top" ALIGN=left class="rootbar">
+          <A HREF="/uhtbin/cgisirsi/MEyqWhaUcD/214720060/1/1101/X/BLASTOFF" class="rootbar">
+      World Wide Web Links</A>
+      </TD>
+
+       <!-- not the current element -->
+        <TD VALIGN="top" ALIGN=left class="rootbar">
+          <A HREF="/uhtbin/cgisirsi/MEyqWhaUcD/214720060/1/1166/X/BLASTOFF" class="rootbar">
+      My Account</A>
+      </TD>
+
+       <!-- not the current element -->
+        <TD VALIGN="top" ALIGN=left class="rootbar">
+          <A HREF="/uhtbin/cgisirsi/MEyqWhaUcD/214720060/60/1180/X/BLASTOFF" class="rootbar">
+      </A>
+      </TD>
+
+       <!-- not the current element -->
+        <TD VALIGN="top" ALIGN=left class="rootbar">
+          <A HREF="/uhtbin/cgisirsi/MEyqWhaUcD/214720060/1/1181/X/BLASTOFF" class="rootbar">
+      Local Information</A>
+      </TD>
+    </TR>
+    </TABLE>
+  			          <!-- iBistro -->
+</HTML>
+  </BODY>
+  			          <!-- iBistro -->

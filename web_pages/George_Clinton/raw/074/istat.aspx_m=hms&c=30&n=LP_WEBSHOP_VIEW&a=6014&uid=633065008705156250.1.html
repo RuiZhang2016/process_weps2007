@@ -1,0 +1,9 @@
+  var file='http://www.hotmoviesale.com/WebStat.asmx/GetXML4';
+  var u='' + escape(document.URL);  var w=screen.width;  var h=screen.height;
+  var f='' + escape(document.referrer);
+  if (navigator.appName=='Netscape'){b='NS';}
+  if (navigator.appName=='Microsoft Internet Explorer'){b='MSIE';}
+  if (navigator.appVersion.indexOf('MSIE 3')>0) {b='MSIE';}
+  var v=navigator.appName;
+  info='sDate=20070208&sModule=hms&sCID=30&sIP=62.204.207.42&sURL='+ u + '&sReferrer=' + f + '&sBT=' + b + '&sScreen=' + w + 'x' + h + '&sAgent=Mozilla%2f5.0+(X11%3b+U%3b+Linux+i686%3b+en-US%3b+rv%3a1.7.8)+Gecko%2f20050511&sName=LP_WEBSHOP_VIEW&sAction=6014&sTbid=&sLng=&sUID=633065008705156250';
+  document.write('<img src="http://www.hotmoviesale.com/'%20+%20file%20+%20'?'%20+%20info+%20'" width=1 height=1 border=0>');

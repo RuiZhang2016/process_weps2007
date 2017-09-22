@@ -1,0 +1,545 @@
+/* -------------------- */
+/* -- general styles -- */
+/* -------------------- */
+
+body {
+        margin:0px;
+        padding:0px;
+        }
+
+#hdrBr {
+        position:absolute;
+        top:0px;
+        left:0px;
+        width:100%;
+		font-family: Arial,Helvetica,Sans-serif;
+        font-size:11px !important;
+		z-index:1;
+        }
+
+#hdrBrBck {
+        position:absolute;
+        top:0px;
+        left:0px;
+        background-color:#000000;
+        background-image: url(http://ly.lygo.com/ly/hb/img/brBack.gif);
+        width:100%; 
+        height:22px; 
+        }
+
+#spc {
+        height:22px;
+        margin:0px;
+        }
+
+/* ----------------------------- */
+/* -- Site Specific Structure -- */
+/* ----------------------------- */
+
+#genHdr {
+        z-index:1;
+        position:relative;
+        width:817px;
+        margin:0px;
+        }
+
+#genLnks {
+        float:left;
+        margin-top:4px;
+        padding:0px 0px 0px 11px;
+        }
+
+#genLnks a {
+        color:#ffffff; 
+        text-decoration:none;
+		font-weight:normal;
+        }
+
+#genLnks .mail {
+        color:#F8CD31;
+        }
+
+#genLnks .vert {
+        color:#A5A5A5;
+        }
+
+#tR {
+        width:323px; 
+        float:right;
+        }
+
+/* --------------------- */
+/* -- Quick Menu link -- */
+/* --------------------- */
+
+#qMenu {
+        float:left;
+        margin-top:4px;
+        margin-left:150px;
+        width:87px;
+        }
+
+#qMenuBx {
+		float:right;
+        width:77px;
+        height:25px;
+        background-color:#474747;
+        text-align:center;
+        }
+
+#qMenuBx .popLnk {
+        margin-top:5px;
+        color:#ffffff;
+        text-decoration:none;
+        font-weight:normal;
+        cursor:pointer;
+        }
+
+#qMenu a {
+        color:#ffffff;
+        text-decoration:none;
+		font-weight:normal;
+        }
+
+#qMenuShdw {
+        float:left;
+        margin-top:18px;
+        width:10px;
+        height:6px;
+        background-repeat: no-repeat;
+        }
+
+/* -------------------- */
+/* Quick Menu Content   */
+/* -------------------- */
+
+#mnuBx {
+	display:none;
+	position:absolute;
+	z-index:2147483647;
+	}
+
+#mnuBxLayout {
+        width:454px;
+        height:278px;
+        margin:0px;
+        padding:0px;
+        text-align:left;
+        }
+
+#mnuBx iframe {
+        display:none;
+        display/**/:block;
+        position:absolute;
+        top:0;
+        left:0;
+        z-index:-1;
+        filter:mask();
+        width:454px;
+        height:278px;
+}
+
+#mnuBxR {
+        margin:0px;
+        padding:0px;
+        }
+
+#mnuBxShdwL {
+        float:left;
+        background:#000;
+        width:4px;
+        height:270px;
+        margin-top:4px;
+        padding:0px;
+        filter:alpha(opacity=30);
+        opacity:.30;
+        }
+
+#mnuBxShdwB {
+        float:left;
+        width:450px;
+        height:4px;
+        background:#000;
+        padding:0px;
+        margin:0px;
+        filter:alpha(opacity=30);
+        opacity:.30;
+        }
+
+#qMnu {
+        float:right;
+        font-family:arial,helvetica,sans-serif;
+        font-size:12px !important;
+        height:272px;
+        width:448px;
+        background:#fff;
+        border-top:solid 1px #666;
+        border-right:solid 1px #666;
+        border-bottom:solid 1px #000;
+        border-left:solid 1px #666;
+        filter:alpha(opacity=95);
+        opacity:.95;
+        }
+
+#qMnu a {
+        color:#0070E0;
+        text-decoration:none;
+		font-weight:normal;
+        }
+
+#qMnuNav {
+        height:245px;
+        width:448px;
+        }
+
+#lyLgo {
+        margin:0px;
+        padding:6px 0px 8px 10px;
+        }
+
+#lgo {
+        width:281px;
+        height:40px;
+        border:0px;
+        background-image: url(http://ly.lygo.com/ly/hb/img/qMnu/qm_logo.gif);
+        }
+
+#qMnuLnks {
+        margin:0px;
+        padding:0px;
+        height:108px;
+        }
+
+.qMnuGrp {
+        margin:0px;
+        float:left;
+        padding-left:27px;
+        }
+
+.cat {
+        color:#333;
+        font-weight:bold;
+        }
+
+#prmo {
+        padding:0px;
+        margin:0px;
+        width:448px;
+        height:83px;
+        }
+
+#dwnld {
+        float:left;
+        padding:14px 0px 0px 8px;
+        }
+
+#dwnldBk {
+        width:344px;
+        height:60px;
+        background-image: url(http://ly.lygo.com/ly/hb/img/qMnu/qm_dwnldBk.gif);
+        background-repeat: no-repeat;
+        }
+
+.dwnldRow {
+        margin:0px;
+        padding:5px 0px 0px 12px;
+        }
+
+#dwnld .prmoTitle {
+        color:#333;
+        font-weight:bold;
+        }
+
+#dwnldLnks1 {
+        float:left;
+        margin:0px;
+        }
+
+#dwnldLnks2 {
+        float:left;
+        margin:0px;
+        padding-left:12px;
+        }
+
+.dwnldCat {
+        color:#999;
+        }
+
+#prmo #lab {
+        float:right;
+        width:84px;
+        height:83px;
+        padding:0px;
+        margin:0px;
+        background-image: url(http://ly.lygo.com/ly/hb/img/qMnu/qm_dog.gif);
+        background-repeat: no-repeat;
+        }
+
+#qMnuLogos {
+        background-color:#000;
+        height:27px;
+        text-align:center;
+        background-image: url(http://ly.lygo.com/ly/hb/img/brBack.gif);
+        }
+
+#qMnuLogos img{
+        display:inline;
+        }
+
+
+#menu1 {
+        position:relative;
+        left:-50px;
+        top:33px;
+        font-size:14px
+        }
+
+/* ---------------- */
+/*	Mail Quick Menu	*/
+/* ---------------- */
+
+#mail_mnuBxLayout {
+	width:454px;
+	height:50px;
+	margin:0px;
+	padding:0px;
+	text-align:left;
+	}
+
+#mail_mnuBxR {
+	margin:0px;
+	padding:0px;
+	}
+
+#mail_mnuBxShdwL {
+	float:left;
+	background:#000;
+	width:4px;
+	height:42px;
+	margin-top:4px;
+	padding:0px;
+	filter:alpha(opacity=30);
+	opacity:.30;
+	}
+
+#mail_mnuBxShdwB {
+	width:450px;
+	height:4px;
+	background:#000;
+	padding:0px;
+	margin:0px;
+	filter:alpha(opacity=30);
+	opacity:.30;
+	clear:both;
+	}
+
+#mail_qMnu {
+	float:right;
+	font-family:arial,helvetica,sans-serif;
+	font-size:12px;
+	height:44px;
+	width:448px;
+	background:#fff;
+	border-top:solid 1px #666;
+	border-right:solid 1px #666;
+	border-bottom:solid 1px #000;
+	border-left:solid 1px #666;
+	filter:alpha(opacity=95);
+	opacity:.95;
+	}
+
+#mail_qMnu a {
+	color:#0070E0;
+	text-decoration:none;
+	}
+
+#mail_qMnuLnks {
+	margin:0px;
+	padding:5px 0px 0px 10px;
+	color:#333;
+	line-height:1.4;
+	}
+
+/* ----------------- */
+/* -- Search Form -- */
+/* ----------------- */
+
+#srchFrm {
+        padding:0px;
+        margin:0px;
+        }
+
+.srch {
+        width:323px;
+        padding:0px 0px 0px 0px;
+        }
+
+/*-- srchRow1 --*/
+
+#srchRow1Ctnt {
+        float:right;
+        width:303px;
+        height:35px;
+        margin:0px;
+        padding:0px;
+        text-align:right;
+        }
+
+#srchRow1Shdw {
+        float:right;
+        width:20px;
+        height:13px;
+        margin-top:22px;
+        background-repeat: no-repeat;
+        }
+
+#srchLab {
+        float:left; 
+        margin-top:6px;
+        padding-left:10px;
+        }
+
+#labImg {
+        border:0px;
+        padding:0px;
+        margin:0px;
+        width:19px;
+        height:21px;
+        }
+
+#srchTxt {
+         float:left;
+         font-weight:bold;
+         color:#fff;
+         line-height:1.1;
+         margin-top:4px;
+         padding-left:6px;
+        }
+
+#srchField {
+        float:left; 
+        margin-top:4px;
+        padding-left:4px;
+        }
+
+#srchField .fld {
+        height:16px; 
+        width:135px;
+        }
+
+#srchBtn {
+        float:left;
+        margin-top:4px;
+        padding-left:3px;
+        }
+
+#srchBtn .srchImg {
+        width:75px;
+        height:23px;
+        }
+
+/*-- srchRow2 --*/
+
+#srchRow2Ctnt {
+        float:right;
+        width:228px;
+        height:16px;
+        margin:0px;
+        padding:0px;
+        text-align:left;
+        }
+
+#srchRow2Shdw {
+        float:right;
+        width:21px;
+        height:16px;
+        background-repeat: no-repeat;
+		}
+
+/*-- srchRow3 --*/
+
+#srchRow3Ctnt {
+        float:right;
+        width:170px;
+        height:50px;
+        margin:0px;
+        padding:0px;
+        }
+
+#srchRow3Ctnt .logoImgs {
+        width:170px;
+        height:50px;
+        margin-left:10px;
+        margin-top:5px;
+        align:right;
+        text-align:right;
+        }
+
+#radDv {
+        color:#000;
+        float:left;
+        }
+
+#radDv .rad {
+        margin:0px 3px 0px 10px;
+        height:16px;
+        }
+
+/* ----------------------- */
+/* -- Sub Header Styles -- */
+/* ----------------------- */
+
+#subHd {
+        position:relative;
+        font-family:arial,helvetica,sans-serif;
+        font-size:12px;
+        }
+
+#subHdBk {
+        height:57px;
+        }
+
+#subNv1 {
+        position:relative;
+        width:808px;
+        height:30px;
+        background-repeat: no-repeat;
+        }
+
+#subLnks1 {
+        position:relative;
+        z-index:1;
+        float:left;
+        padding:8px 0px 0px 5px;
+        }
+
+#subLnks1 a {
+        color:#ffffff;
+        font-weight:bold;
+        text-decoration:none;
+        }
+
+#subLnks1 a:hover {
+        background-color:#9A0201;
+        }
+
+#subLnks1 #active {
+        color:#FDC8C2;
+        background-color:#9A0201;
+        }
+
+#subLnks1 .vert {
+        color:#8E2428;
+        }
+
+#subNvRt {
+        float:right;
+        width:3px;
+        height:30px;
+        background-repeat: no-repeat;
+        }
+
+#subTtle {
+        float:left;
+        margin:0px;
+        }

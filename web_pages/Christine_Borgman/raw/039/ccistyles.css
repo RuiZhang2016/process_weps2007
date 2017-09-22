@@ -1,0 +1,529 @@
+/* color palette
+Orange
+#FB7115
+
+Tans/Greens
+#999966
+#CCCC99
+#E6E6CC
+
+Grays
+#000000
+#333333
+#666666
+#999999
+
+Blues
+#003366
+#006699
+#80B1D5
+#DAF2EF
+*/
+
+/* h1 {font:bold 1.6em "Times New Roman", Times, serif;color:#333333;background-color:#ffffff;margin-bottom:4px;padding-bottom:0px;margin-top:0px;padding-top:0px;} 
+h2 {font:italic bold 1.5em Times, "Times New Roman", serif; margin-bottom:0px; color:#fb7115;background-color:#ffffff;}
+h3 {font:bold 1.2em Times, "Times New Roman", serif; margin-bottom:0px; color:#000000;background-color:#ffffff;}
+h4 {font:bold 1.0em Times, "Times New Roman", serif; margin-bottom:0px; color:#fb7115;background-color:#ffffff;}
+h5 {font:bold 1.0em Times, "Times New Roman", serif; margin-bottom:0px; color:#000000;background-color:#ffffff;}
+hr {color:#fb7115; background-color:#fb7115; height:1px; border:0px;}
+strong, b {font-weight:bold;} /* Fixes boldness problem in Netscape 4.x */
+
+.navigation {font:bold 0.83em/1.15em Verdana,Arial,sans-serif; color:#333333;}
+.navigation a:link {color:#000000;}
+.navigation a:active {color:#fb7115;}
+.navigation a:visited {color:#000000;}
+.navigation a:hover {color:#fb7115;text-decoration:underline;}
+.navigation p {margin-bottom:0px;}
+.subitem {font-size:0.73em; Verdana,Arial,sans-serif; color:#333333; }
+
+/* used for the main school/college name in the template */
+.name_bar {
+	font:bold 1.6em "Times New Roman", Times, serif;
+	color:#333333;
+	background-color:#ffffff;
+	margin-bottom:4px;
+	padding-bottom:0px;
+	margin-top:0px;
+	padding-top:0px;} 
+
+.content {
+	font:0.75em/1.5em Verdana,Arial,sans-serif; 
+	color:#333333;
+	background-color:#ffffff;
+}
+/* .content p {
+	max-width:600px; 
+	width:expression(document.body.clientWidth > 600? '600px': 'auto' );
+} */
+img a {
+	border:0px;
+	}
+ul { 
+    line-height: 1.5em;
+    list-style-type: square;
+    margin: 0.5em 0 0 1.5em;
+    padding: 0;
+    list-style-image: url(http://www.cci.utk.edu/images/bullet.gif);
+}
+ol {
+    line-height: 1.5em;
+    margin: 0.5em 0 0 1.5em;
+    padding: 0;
+}
+ul a, ol a {
+    text-decoration: underline;
+}
+li {
+    margin-bottom: 1em;
+}
+	
+
+/* 
+.contact {font:0.68em Verdana,Arial,sans-serif; color:#333333;background-color:#ffffff;}
+.contact_title {
+	font-weight:bold; 
+	font-size: 1.25em; 
+	color:#fb7115;
+	background-color:#ffffff;
+}
+*/
+
+/*
+a:link {color:#fb7115;}
+a:active {color:#333333;}
+a:visited {color:#666666;}
+a:hover {color:#333333; text-decoration:none;}
+*/
+
+a:link {color:#003366;}
+a:active {color:#333333;}
+a:visited {color:#003366;}
+a:hover {color:#333333; text-decoration:none; }
+
+
+div.ghost { display: none; }
+
+h2.heading {
+    text-align          : left;
+    width               : 300px;
+    /* background-color    : #E8EAF6; */
+	background-color    :#DAF2EF;
+    border              : 1px solid #003366;
+    border              : 1px solid #003366;
+    padding             : 5px;
+    /* margin-left         : 5px;  */
+	position            : relative;
+    z-index             : 10;
+	margin-bottom		: 0;
+}
+
+#content.doc-heading {
+    background-color    : #DAF2EF;
+    background-repeat   : no-repeat;
+    height              : 118px;
+    border-bottom       : 2px solid #003366;
+}
+div.heading-line-h2 {
+	padding-top         : 13px;
+	margin-left         : 5px;
+	border-bottom       : 1px solid #003366;
+	position            : relative;
+	top                 : 16px;
+	left: -3px;
+}
+h1, h2, h3, h4, h5, h6 {
+    color: #003366;
+    background-color: transparent;
+    font-family: "Lucida Grande", Verdana, Lucida, Helvetica, Arial, sans-serif;
+    font-size: 100%;
+    font-weight: normal;
+    /* margin: 0; */
+    padding-top: 0.5em;
+    border-bottom: 1px solid #003366;
+}
+h1 {
+    font-size: 160%;
+}
+
+h2 {
+    font-size: 145%;
+	font-style:italic;
+}
+
+h3 {
+    font-size: 120%;
+    border-bottom: none;
+    font-weight: bold;
+}
+
+h4 {
+    font-size: 115%;
+    border-bottom: none;
+    font-weight: bold;
+}
+
+h5 {
+    font-size: 100%;
+    border-bottom: none;
+    font-weight: bold;
+}
+
+h6 {
+    font-size: 85%;
+    border-bottom: none;
+    font-weight: bold;
+}
+ul { 
+    line-height: 1.5em;
+    list-style-type: square;
+    margin: 0.5em 0 0 1.5em;
+    padding: 0;
+    list-style-image: url(http://www.sis.utk.edu/bullet.gif);
+}
+li {
+    margin-bottom: .25em;
+}
+
+.contact {
+	font:0.68em Verdana,Arial,sans-serif; 
+	color:#333333;
+	background-color:#DAF2EF;    
+    border: 1px solid #BBBBBB;
+    margin-bottom: .5em;
+    padding: 0;
+}
+.contact_title { 
+    /*background: #dee7ec;*/
+	background-color: #80B1D5;
+    border: 1px solid #BBBBBB;
+    border-style: none none solid none;
+    padding: 0em 0em .25em .5em;
+    text-transform: none;
+    display: block; 
+    font-size: 110%;
+    height: 1em;
+    font-weight: bold;
+    white-space: nowrap;
+}
+.contact h6 { 
+    background: #80B1D5;
+    border: 1px solid #BBBBBB;
+    border-style: none none solid none;
+    padding: 0em 1em 0em 1em;
+    text-transform: none;
+    display: block;
+    font-size: 1em;
+    height: 1.2em;
+    font-weight: bold;
+    white-space: nowrap;
+}
+
+.contactBody {
+    background: #DAF2EF;
+    border-collapse: collapse;
+    padding: .5em .5em 0em .5em;
+}
+
+.spacer {
+	margin: 1px;
+}
+.searchArea {
+	margin: 0px;
+	height: 8px;
+	background-color: #FFF;
+	background-image: url('http://www.tennessee.edu/images/search_gradient_bg.gif');
+	background-position: top;
+	background-repeat: repeat-x;
+	overflow: hidden;
+}
+#searchArea .imageButton {
+	border-width: 0px;
+}
+.UTmast {
+	background-image: url('http://www.tennessee.edu/images/ut_header_bg.gif');
+	background-repeat: repeat;
+	overflow: hidden;
+}
+.UTmast_dept {
+	background-image: url('http://www.tennessee.edu/masthead/depts/dept_header_bg.gif');
+	background-repeat: repeat;
+	overflow: hidden;
+}
+
+.navbackground1 {
+	background-image: url('http://www.tennessee.edu/images/depts/navmenu_bg1.gif');
+	background-repeat: repeat;
+	overflow: hidden;
+}
+.navbackground2 {
+	background-image: url('http://www.tennessee.edu/images/depts/navmenu_bg2.gif');
+	background-repeat: repeat;
+}
+.navbackground3 {
+	background-image: url('http://www.tennessee.edu/images/depts/navmenu_bg3.gif');
+	background-repeat: repeat;
+	overflow: hidden;
+}
+
+#navlist
+{
+padding: 3px 0;
+margin-left: 0;
+/* border-bottom: 1px solid #778; */
+font: bold 12px Verdana, sans-serif;
+}
+
+#navlist li
+{
+list-style: none;
+margin: 0;
+display: inline;
+}
+
+#navlist li a
+{
+padding: 3px 0.5em;
+margin-left: 3px;
+border: 1px solid #778;
+border-bottom: none;
+background: #DAF2EF;
+text-decoration: none;
+}
+
+#navlist li a:link { color: #448; }
+#navlist li a:visited { color: #667; }
+
+#navlist li a:hover
+{
+color: #000;
+background: #80B1D5;
+border-color: #227;
+}
+
+#navlist li a#current
+{
+	background: #80B1D5;
+	/* border-bottom: none; /* 1px solid white; */
+	border-bottom: 1px solid #80B1D5;
+	color:#333333;
+
+}
+
+.odd { background-color: #f7f9fa; } 
+/* .odd { background-color: #DAF2EF; } */
+.even {background-color:#FFFFFF; }
+
+
+.listing {
+	padding: 0px 0px 0px 0px;
+	border-left: 1px solid #BBBBBB;
+	border-top: 1px solid #BBBBBB;
+	border-bottom: 1px solid #BBBBBB;
+}
+.listing th {
+	border-bottom: 1px solid #003366; 
+	background-color: #80B1D5;
+}
+.listing td, th {
+	border-right: 1px solid #BBBBBB;
+    padding: 0em 1em;
+    text-align: left;
+}
+
+
+/* NEWS SECTION */
+/* first items are for the news portlet */
+.news {
+	font:0.68em Verdana,Arial,sans-serif; 
+	color:#333333;
+	background-color:#DAF2EF;    
+    border: 1px solid #BBBBBB;
+    margin-bottom: 1em;
+    padding: 0 0 .5em 0;
+	top:-8px;
+	/* background-image:url(../images/sideLinksBG.gif); */
+}
+.news_headline { 
+	background-color: #DAF2EF; 
+    border: 1px solid #BBBBBB;
+	/* border: 1px solid #003366; */
+    border-style: none none solid none;
+    padding: .25em 0.25em .5em .5em;
+    text-transform: none;
+    font-size: 110%;
+    font-weight: normal;
+	padding-left: 10px;
+	background-image: url(../images/arrow.gif); 
+	/* background-image:url(../images/sideLinksAR.gif); */
+	background-repeat: no-repeat;
+	background-position: 0 .75em;
+	/*background-image:url(../images/sideLinksBG.gif);*/
+}
+.news_header { 
+    background: #80B1D5;
+	/*background-image:url(../images/newsBG.gif);*/
+    border: 1px solid #BBBBBB;
+    border-style: none none solid none;
+    padding: 0em .5em .25em .5em;
+    text-transform: none;
+    font-size: 110%;
+    height: 1.2em;
+    font-weight: bold;
+    white-space: nowrap;
+}
+.news img {
+  position:relative;
+  top:1px;
+  }
+.NewsPosted {
+	color: #666666;
+	font-size: 85%;
+}
+/* these are for the main news pages */
+.NewsHeadline {
+	font-size: 110%;
+	color: #000000;
+	font-weight:700;
+	/* display: block; */
+}
+.NewsBody {
+}
+.NewsTeaser {
+    /* The summary text describing the story */
+    font-weight: bold;
+    margin: 1em 0em;
+	display:block;
+	max-width:400px;
+    /* line-height: 2.5em; */
+}
+.NewsTeaserFront {
+	margin:0em .5em .25em 2em;
+}
+#NewsFront {
+	border: 1px dashed #666666;
+	max-width:300px;
+}
+
+.eventitem {
+	margin-left: .25em;
+    font-size: 105%;
+    font-weight: normal;
+	/* background-image: url(../images/arrow.gif); 
+	background-repeat: no-repeat;
+	background-position: 0 .75em; */
+
+}
+input.searchButton {
+    font-size: 80%;
+    margin-bottom: 1px ! important;
+    background: White url(http://www.cci.utk.edu/images/search_icon.gif) 2px 1px no-repeat;
+    cursor: pointer;
+    padding: 1px 1px 1px 15px;
+    text-transform: none;
+}
+input.btn,input.fontbtn {
+	margin:2px 2px 2px 0;
+	font-size:80%;
+	/* color:#884; */
+	background:#fff;
+	border:1px solid #ccc;
+	color:#FB7115;
+}
+.highlight {
+  background-color: #FFFF99;
+  display:inline;
+}
+
+#people {
+    background-color: transparent;
+    font-family: "Lucida Grande", Verdana, Lucida, Helvetica, Arial, sans-serif;
+}
+#people #firstname {
+    color: #333333;
+	text-transform:lowercase;
+    font-size: 210%;
+    font-weight: 500;
+	background:transparent;
+    padding-top: 0.5em;
+	vertical-align:baseline;
+	/* margin: 0em; 
+	padding-bottom:0.1em;
+    border-bottom: 1px solid #003366; 
+	width:500px;
+	display:block;
+	border:1px solid black; */
+}
+#people #test {
+	width:500px;
+	display:block;
+    margin: 0em; 
+    padding-top: 0.5em;
+	/* padding-bottom: -.5em; */
+	background:transparent;
+}
+#people #line {
+	width:500px;
+	border-bottom:1px solid #003366; 
+	background:transparent;
+	margin:1px;
+}
+#people #lastname {
+    font-size: 270%;
+	color:#006699;
+	margin-left:3em;
+	margin-bottom:1em;
+	margin-top:.1em; 
+	font-weight:600;
+    background-color: transparent;
+	text-transform:uppercase;
+	display:block;
+}
+#people .section {
+    font-size: 120%;
+	color:#006699;
+	font-weight:bold;
+	margin-bottom:0em;
+	display:block;
+}
+#people #photo {
+	min-width: 200px;
+}
+#people #body {
+	margin-left:230px;
+	position:relative;
+}
+.photo {
+	padding: 1em;
+}
+
+.featureText {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 75%;
+	color: #333333;
+   	border: 1px solid #BBBBBB; 
+	border-style: none none solid none;
+	/* padding: 2px 0 3px 0; */
+	max-width:166px;
+  
+	/*line-height:13px; */
+	 }
+.featureTextLeft { background:url(http://www.cci.utk.edu/images/feature_box_left.gif) 0px 0px; }
+.featureTextRight { background:url(http://www.cci.utk.edu/images/feature_box_right.gif) 0px 0px; }
+.featureText a {text-decoration:none; }
+.featureText a:hover {text-decoration:underline;}
+.featureTextHeader {
+	font-family: "Times New Roman", Times, serif;
+    font-size: 95%;
+    white-space: nowrap;
+	font-weight:600; 
+	margin-left:0px;
+	max-width:176px;
+	text-indent:6px;
+	background:url(http://www.cci.utk.edu/images/feature_box_top.gif) 0px 0px no-repeat;
+	
+	/*
+	background-image:url(http://www.cci.utk.edu/images/feature_box_top.gif) no-repeat;
+	background: White url(http://www.cci.utk.edu/images/search_icon.gif) 2px 1px no-repeat; 
+	background-image:url(../images/feature_box_top.gif) no-repeat;*/
+}
+	

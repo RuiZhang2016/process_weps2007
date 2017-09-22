@@ -1,0 +1,225 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+<title>Untitled Document</title>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<script language="JavaScript" type="text/JavaScript">
+<!--
+function MM_preloadImages() { //v3.0
+  var d=document; if(d.images){ if(!d.MM_p) d.MM_p=new Array();
+    var i,j=d.MM_p.length,a=MM_preloadImages.arguments; for(i=0; i<a.length; i++)
+    if (a[i].indexOf("#")!=0){ d.MM_p[j]=new Image; d.MM_p[j++].src=a[i];}}
+}
+
+function MM_findObj(n, d) { //v4.01
+  var p,i,x;  if(!d) d=document; if((p=n.indexOf("?"))>0&&parent.frames.length) {
+    d=parent.frames[n.substring(p+1)].document; n=n.substring(0,p);}
+  if(!(x=d[n])&&d.all) x=d.all[n]; for (i=0;!x&&i<d.forms.length;i++) x=d.forms[i][n];
+  for(i=0;!x&&d.layers&&i<d.layers.length;i++) x=MM_findObj(n,d.layers[i].document);
+  if(!x && d.getElementById) x=d.getElementById(n); return x;
+}
+
+function MM_nbGroup(event, grpName) { //v6.0
+  var i,img,nbArr,args=MM_nbGroup.arguments;
+  if (event == "init" && args.length > 2) {
+    if ((img = MM_findObj(args[2])) != null && !img.MM_init) {
+      img.MM_init = true; img.MM_up = args[3]; img.MM_dn = img.src;
+      if ((nbArr = document[grpName]) == null) nbArr = document[grpName] = new Array();
+      nbArr[nbArr.length] = img;
+      for (i=4; i < args.length-1; i+=2) if ((img = MM_findObj(args[i])) != null) {
+        if (!img.MM_up) img.MM_up = img.src;
+        img.src = img.MM_dn = args[i+1];
+        nbArr[nbArr.length] = img;
+    } }
+  } else if (event == "over") {
+    document.MM_nbOver = nbArr = new Array();
+    for (i=1; i < args.length-1; i+=3) if ((img = MM_findObj(args[i])) != null) {
+      if (!img.MM_up) img.MM_up = img.src;
+      img.src = (img.MM_dn && args[i+2]) ? args[i+2] : ((args[i+1])? args[i+1] : img.MM_up);
+      nbArr[nbArr.length] = img;
+    }
+  } else if (event == "out" ) {
+    for (i=0; i < document.MM_nbOver.length; i++) {
+      img = document.MM_nbOver[i]; img.src = (img.MM_dn) ? img.MM_dn : img.MM_up; }
+  } else if (event == "down") {
+    nbArr = document[grpName];
+    if (nbArr)
+      for (i=0; i < nbArr.length; i++) { img=nbArr[i]; img.src = img.MM_up; img.MM_dn = 0; }
+    document[grpName] = nbArr = new Array();
+    for (i=2; i < args.length-1; i+=2) if ((img = MM_findObj(args[i])) != null) {
+      if (!img.MM_up) img.MM_up = img.src;
+      img.src = img.MM_dn = (args[i+1])? args[i+1] : img.MM_up;
+      nbArr[nbArr.length] = img;
+  } }
+}
+//-->
+</script>
+</head>
+
+<body onLoad="MM_preloadImages('images/menu1/about.gif','images/menu1/tutoring.gif','images/menu1/returningtutors.gif','images/menu1/schedule.gif','images/menu1/schools.gif','images/menu1/teamleaders.gif','images/menu1/civichouse.gif','images/menu1/links.gif','images/menu1/home.gif')">
+<table border=0 cellpadding=0 cellspacing=0 height=139 width=700 hspace="0" 
+vspace="0" align="center">
+  <tbody>
+    <tr bgcolor="#FFCC66"> 
+      <td height=113 valign=top width="503"><img src="images/wptp_banner5_1.gif" width="503" height="113"></td>
+      <td height=113 valign=top width="197"><img src="images/005.jpg" width="197" height="113"></td>
+    </tr>
+    <tr valign="middle"> 
+      <td height=24 colspan=2> <table border="0" cellpadding="0" cellspacing="0">
+          <tr bgcolor="333399"> 
+            <td height="10"><a href="about.htm" target="_top" onClick="MM_nbGroup('down','group1','about','images/menu1/about.gif',1)" onMouseOver="MM_nbGroup('over','about','images/menu1/about.gif','images/menu1/about.gif',1)" onMouseOut="MM_nbGroup('out')"><img name="about" src="images/menu1/about2.gif" border="0" onLoad="" width="110" height="18"></a></td>
+            <td height="10"><a href="tutoring.htm" target="_top" onClick="MM_nbGroup('down','group1','tutoring','images/menu1/tutoring.gif',1)" onMouseOver="MM_nbGroup('over','tutoring','images/menu1/tutoring.gif','images/menu1/tutoring.gif',1)" onMouseOut="MM_nbGroup('out')"><img name="tutoring" src="images/menu1/tutoring2.gif" border="0" onLoad="" width="96" height="18"></a></td>
+            <td height="10"><a href="returningtutors.htm" target="_top" onClick="MM_nbGroup('down','group1','returningtutors','images/menu1/returningtutors.gif',1)" onMouseOver="MM_nbGroup('over','returningtutors','images/menu1/returningtutors.gif','images/menu1/returningtutors.gif',1)" onMouseOut="MM_nbGroup('out')"><img name="returningtutors" src="images/menu1/returningtutors2.gif" border="0" onLoad="" width="103" height="18"></a></td>
+            <td height="10"><a href="schedule.htm" target="_top" onClick="MM_nbGroup('down','group1','schedule','images/menu1/schedule.gif',1)" onMouseOver="MM_nbGroup('over','schedule','images/menu1/schedule.gif','images/menu1/schedule.gif',1)" onMouseOut="MM_nbGroup('out')"><img name="schedule" src="images/menu1/schedule2.gif" border="0" onLoad="" width="60" height="18"></a></td>
+            <td height="10"><a href="schools.htm" target="_top" onClick="MM_nbGroup('down','group1','schools','images/menu1/schools.gif',1)" onMouseOver="MM_nbGroup('over','schools','images/menu1/schools.gif','images/menu1/schools.gif',1)" onMouseOut="MM_nbGroup('out')"><img name="schools" src="images/menu1/schools2.gif" border="0" onLoad="" width="55" height="18"></a></td>
+            <td height="10"><a href="teamleaders.htm" target="_top" onClick="MM_nbGroup('down','group1','teamleaders','images/menu1/teamleaders.gif',1)" onMouseOver="MM_nbGroup('over','teamleaders','images/menu1/teamleaders.gif','images/menu1/teamleaders.gif',1)" onMouseOut="MM_nbGroup('out')"><img name="teamleaders" src="images/menu1/teamleaders2.gif" border="0" onLoad="" width="90" height="18"></a></td>
+            <td height="10"><a href="http://www.upenn.edu/civichouse" target="_top" onClick="MM_nbGroup('down','group1','civichouse','images/menu1/civichouse.gif',1)" onMouseOver="MM_nbGroup('over','civichouse','images/menu1/civichouse.gif','images/menu1/civichouse.gif',1)" onMouseOut="MM_nbGroup('out')"><img name="civichouse" src="images/menu1/civichouse2.gif" border="0" onLoad="" width="75" height="18"></a></td>
+            <td height="10"><a href="links.htm" target="_top" onClick="MM_nbGroup('down','group1','links','images/menu1/links.gif',1)" onMouseOver="MM_nbGroup('over','links','images/menu1/links.gif','images/menu1/links.gif',1)" onMouseOut="MM_nbGroup('out')"><img name="links" src="images/menu1/links2.gif" border="0" onLoad="" width="55" height="18"></a></td>
+            <td height="10"><a href="index.htm" target="_top" onClick="MM_nbGroup('down','group1','home','images/menu1/home.gif',1)" onMouseOver="MM_nbGroup('over','home','images/menu1/home.gif','images/menu1/home.gif',1)" onMouseOut="MM_nbGroup('out')"><img name="home" src="images/menu1/home2.gif" border="0" onLoad="" width="57" height="18"></a></td>
+          </tr>
+        </table></td>
+    </tr>
+    <tr bgcolor="#E1E1FF"> 
+      <td width="680" height=346 valign=top colspan="2"> <div align="center"> 
+          <table width="700" border="0" height="328" align="center">
+            <tr valign="top"> 
+              <td height="117" width="10"> <p><font face="Arial, Helvetica, sans-serif"></font></p></td>
+              <td height="117" width="680"> <p>&nbsp;</p>
+                <p align="center"><font face="Arial, Helvetica, sans-serif"><strong>Civic 
+                  House Resource and Reading Rooms</strong></font></p>
+                <p><font face="Arial, Helvetica, sans-serif"> Found on the third 
+                  floor of Civic House both the Resource and Reading Rooms have 
+                  the tools you need to make your tutoring effective, meaningful, 
+                  and fun!</font></p>
+                <p><font face="Arial, Helvetica, sans-serif"> In the Resource 
+                  Room you can find:<br>
+                  <br>
+                  &middot; Text books and workbooks for all subjects<br>
+                  &middot; Worksheets for various literacy and math skills<br>
+                  &middot; Games and activities for you and your tutee</font></p>
+                <p><font face="Arial, Helvetica, sans-serif"> In the Reading Room 
+                  you can find:<br>
+                  &middot; Fiction and Non-fiction books for all reading levels<br>
+                  &middot; Arts and crafts activities and materials</font></p>
+                <p><font face="Arial, Helvetica, sans-serif">Please stop by and 
+                  check out a book or explore our resources. These rooms are for 
+                  YOU; you and your tutee are always welcome and encouraged to 
+                  put them to use!</font></p>
+                <p><font face="Arial, Helvetica, sans-serif"><strong>In the Resource 
+                  Room</strong></font></p>
+                <p><font face="Arial, Helvetica, sans-serif">Webster's II New 
+                  Riverside Dictionary Berkeley Books<br>
+                  Atlas of the Environment Lean and Hinrichsen<br>
+                  Dictionary Skills Scholastic<br>
+                  Advanced Junior Dictionary Thorndike and Barnhart<br>
+                  10 Real SATs The College Board<br>
+                  SAT II Math Kaplan<br>
+                  SAT II Subject Tests Arco<br>
+                  How to Prepare for the AP Engllish Barrons<br>
+                  The Craft of Research Booth, Colomb, Williams</font> </p>
+                <p><font face="Arial, Helvetica, sans-serif"><strong>In the Reading 
+                  Room </strong> </font></p>
+                <p><font face="Arial, Helvetica, sans-serif">Chinua Achebe , Things 
+                  Fall Apart<br>
+                  Cleveland Amory , The Cat Who Came for Christmas<br>
+                  Isaac Asimov , Fantastic Voyage<br>
+                  Avi , Wolf Rider<br>
+                  Robert Bakker , Raptor Red<br>
+                  John Bellairs , The Curse of the Blue Figurine<br>
+                  Ray Bradbury , The October Country<br>
+                  Emily Bronte , Wuthering Heights<br>
+                  Melvin Burgess , Smack<br>
+                  James Collier , My Brother Sam is Dead<br>
+                  Max Collins , Dick Tracy<br>
+                  Charles Dickens , A Christmas Carol<br>
+                  Diane Duane , Deep Wizardry<br>
+                  Rose Estes , Hero of Washington Square<br>
+                  Rose Estes , Revenge of the Rainbow Dragons<br>
+                  Rose Estes , Revolt of the Dwarves<br>
+                  William Faulkner , Absalom, Absalom!<br>
+                  Anne Fine , Flour Babies<br>
+                  F. Scott Fitzgerald , The Great Gatsby<br>
+                  E.M. Forster , A Passage to India<br>
+                  John Fowls , The French Lieutenant's Woman<br>
+                  Jostein Gaardner , Sophie's World<br>
+                  Joanne Greenberg , I Never Promised You a Rose Garden<br>
+                  Virginia Hamilton , The Planet of Junior Brown<br>
+                  Thomas Harris , Silence of the Lambs<br>
+                  Nathaniel Hawthorne , Selected Short Stories<br>
+                  Patricia Hermes , My Girl<br>
+                  Karen Hesse , Out of the Dust<br>
+                  S.E. Hinton , That was Then, This is Now<br>
+                  S.E. Hinton , The Outsiders<br>
+                  Homer , The Oddysey<br>
+                  Ursula Le Guin , The Dispossessed<br>
+                  Robert Lipsyte , The Contender<br>
+                  Sylvia Lopez-Medina , Cantora<br>
+                  Kamala Markandaya , Nectar in a Sieve<br>
+                  Toni Morrison , The Bluest Eye<br>
+                  Robert O'Brien , Z for Zachariah<br>
+                  Mel Odom , Snow Day<br>
+                  Katherine Paterson , Lyddie<br>
+                  Wilson Rawls , Where the Red Fern Grows<br>
+                  Margaret Rostkowski , After the Dancing Days<br>
+                  Danny Santiago , Famous All Over Town<br>
+                  Morris Simon , The Fireseed<br>
+                  Gary Soto , Taking Sides<br>
+                  Nicholas Sparks , The Notebook<br>
+                  Jerry Spinelli , Crash<br>
+                  Judith St. George , The Secret in the Old House<br>
+                  Suzanne Staples , Shabanu<br>
+                  John Steinbeck , Of Mice and Men<br>
+                  Mildred Taylor , Let the Circle be Unbroken<br>
+                  John Tunis , The Kid from Tomkinsville<br>
+                  Cynthia Voigt , Seventeen Against the Dealer<br>
+                  Cynthia Voigt , Sons From Afar<br>
+                  H.G. Wells , The Time Machine<br>
+                  H.G. Wells , The War of the Worlds<br>
+                  T.H. White , Mistress Masham's Repose<br>
+                  T.H. White , The Sword in the Stone<br>
+                  Thornton Wilder , Our Town<br>
+                  Jean Wyss , Swiss Family Robinson<br>
+                  Jane Yolen , Briar Rose<br>
+                  Jane Yolen , The Devil's Arithmetic<br>
+                  Timothy Zahn , Star Wars Volume 1<br>
+                  Paul Zindel , The Pigman</font><br>
+                  <br>
+                  <br>
+                </p>
+                </td>
+              <td height="117" width="10">&nbsp;</td>
+            </tr>
+            <tr valign="top"> 
+              <td height="80" width="680" colspan="3"> <p align="center"><font face="Arial"> 
+                  </font><font face="Arial"><br>
+                  <br>
+                  </font></p></td>
+            </tr>
+          </table>
+        </div></td>
+    </tr>
+    <tr valign="middle"> 
+      <td height=24 colspan=2> <table border="0" cellpadding="0" cellspacing="0">
+          <tr bgcolor="333399"> 
+            <td height="10" width="700" valign="middle"> <div align="center"><font face="Arial" color="#FFFFFF"> 
+                <SCRIPT LANGUAGE="JavaScript">
+update = new Date(document.lastModified)
+theMonth = update.getMonth() + 1
+theDate = update.getDate()
+theYear = update.getFullYear()
+document.writeln("Last updated " + theMonth + "/" + theDate + "/" + theYear)
+</SCRIPT>
+                </font></div></td>
+          </tr>
+        </table></td>
+    </tr>
+    <tr> 
+      <td height=25 valign=top colspan="2"> <div align="center"><font face="Arial">WPTP 
+          // <a href="http://www.upenn.edu/civichouse">Civic House</a> // <a href="http://www.upenn.edu">University 
+          of Pennsylvania</a> // 3914 Locust Walk // Philadelphia PA 19104 //<br>
+          215 898 4831 // <a href="mailto:wptp@dolphin.upenn.edu">wptp@dolphin.upenn.edu</a></font></div></td>
+    </tr>
+  </tbody>
+</table>
+</body>
+</html>

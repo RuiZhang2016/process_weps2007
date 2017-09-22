@@ -1,0 +1,611 @@
+/*
+   Greatschools.net Base Styles
+   font-size: see http://www.thenoodleincident.com/tutorials/typography/template.html
+*/
+
+/*   General
+----------------------------------------------- */
+html, body {
+    width: 100%;
+    height: 100%;
+    font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+    font-family: Arial, Helvetica, sans-serif;
+   /* color: #333333;*/
+}
+
+body, form {
+    margin: 0;
+    padding: 0
+}
+
+/* Overrides of standard tags */
+img {
+    border: 0;
+    padding: 0;
+    margin: 0;
+}
+
+.contentGS a,
+    .contentGS a:link,
+    .contentGS a:visited,
+    .contentGS a:active {
+    text-decoration: none;
+    color: #00F;
+}
+
+.contentGS  a:hover {
+    text-decoration: underline;
+}
+
+.contentGS a.pad {
+    padding: 0px 10px 0px 0px;
+    display: inline;
+}
+
+.contentGS a.nohover:hover {
+    text-decoration: none;
+}
+
+.contentGS ul, .contentGS ol, .contentGS li,
+    .contentGS h1, .contentGS h2, .contentGS h3, .contentGS h4, .contentGS h5, .contentGS h6,
+    .contentGS pre,
+    .contentGS p,
+    .contentGS blockquote,
+    .contentGS fieldset,
+    .contentGS input,
+    .contentGS label,
+    .contentGS address {
+    list-style: none;
+    font-size: small;
+    font-style: normal;
+    font-weight: normal;
+    margin: 0;
+    padding: 0;
+}
+
+.border {
+    border: 1px solid #900;
+}
+
+.small {
+    font-size: 80%;
+}
+
+.lpad {
+    padding: 0px 0px 0px 10px;
+    display: inline;
+}
+
+.block, .block a {
+    display: block;
+}
+
+.bpad div {
+    padding-bottom: 6px;
+}
+
+.left {
+    text-align: left;
+}
+
+.bottomalign {
+    position: absolute;
+    bottom: 0px;
+}
+
+div.verticalcontainer {
+    position: relative;
+    height: 250px;
+}
+
+.nowrap {
+    white-space: nowrap;
+}
+
+/*
+Cobrand doesn't quite fit in the width required, so I squish the text for them.
+*/
+
+.cobranded .topCities li,
+    .cobranded h3 {
+    font-size: small;
+}
+
+.cobranded .topCities li {
+    white-space: normal;
+}
+
+/* patch for yahoo cobrand */
+.yedsearchbar {
+    font-size: 80%;
+}
+
+
+/*  Structure
+----------------------------------------------- */
+#main {
+    margin: 5px 0px 0px 0px;
+}
+
+#main td.col1 {
+    width: 11em;
+    height: 100%;
+    padding: 0;
+}
+
+#main td.col2 {
+    padding: 0;
+}
+
+table.bottomcontent tr {
+    padding-bottom: 5px;
+}
+
+table.bottomcontent tr td img {
+    text-align: center;
+}
+
+
+/*  Search
+----------------------------------------------- */
+.browselinks {
+    padding: 10px 0px 10px 0px;
+    width: 100%;
+    font-size: small;
+}
+
+.browselinks a {
+    padding-right: 20px;
+    white-space: nowrap;
+}
+
+/*  Headings
+----------------------------------------------- */
+
+h4.tagline b {
+    font-weight: bold;
+}
+
+.inline {
+    display: inline;
+}
+
+h2.segmentheader {
+    color: #900;
+    font-size: small; /* 1em; */
+    font-weight: bold;
+    padding: 0px 0px 3px 0px;
+}
+
+h3.tagline, h4.tagline {
+    color: #eb7a31;
+    font-weight: normal;
+    padding: 0px 0px 5px 0px;
+}
+
+h3.tagline {
+    font-size: x-small;
+}
+
+h3.tagline {
+    color: #eb7a31;
+    font-weight: normal;
+    padding: 0px 0px 5px 0px;
+}
+
+/*  Lists
+----------------------------------------------- */
+.result_title {
+    font-size: small;
+    padding: 0px 20px 0px 0px;
+    font-weight: bold;
+}
+
+.topCities ul {
+    padding: 0;
+}
+
+.topCities ul li {
+    padding: 0px 20px 1px 0px;
+}
+
+/*  Forms
+----------------------------------------------- */
+input.checkbox {
+    margin: 0px 0px -2px 0px;
+}
+
+.smallform .textfield {
+    font-size: small;
+    color: #999;
+    width: 75%;
+    height: 1.8em;
+    padding: 1px 0px 0px 3px;
+}
+
+.smallform input.btn {
+    width: 21px;
+    height: 18px;
+    margin: 0px 0px -3px 6px;
+    padding: 0;
+    border: 0;
+}
+
+.textfield {
+    color: #333;
+    min-width: 70%;
+}
+
+input.btn {
+    width: 28px;
+    height: 24px;
+    margin: 0px 0px 0px 6px;
+    padding: 0;
+    border: 0;
+}
+
+/*  Links
+----------------------------------------------- */
+
+/*  Misc
+----------------------------------------------- */
+.parentPoll {
+    text-align: center;
+}
+
+.parentPoll h3 {
+    padding: 0;
+    font-size: small;
+    font-weight: bold;
+    margin: 10px 0px 6px 0px;
+    color: #036;
+}
+
+.parentPoll h4 {
+    padding: 0 2em 0 2em;
+    white-space: nowrap;
+}
+
+/* PROMOS
+----------------------------------------------- */
+
+.featuredarticle {
+    margin: 0px 0px 0px 5px;
+}
+
+.featuredarticle b {
+    font-weight: bold;
+    text-decoration: none;
+}
+
+/* margin right is IE bug fix */
+img.newarticle {
+    margin-right: 5px;
+    margin-bottom: -2px;
+}
+
+div.featuredarticle h3 {
+    margin-top: 1em;
+}
+
+.featuredarticles,
+    .hotTopics {
+    margin: 0 .5em 0 .5em;
+}
+
+.featuredarticles li,
+    .hotTopics li {
+    padding: 3px 5px 3px 12px;
+    margin: 2px 0px 3px 0px;
+    background: url( ../img/bullet/bullet_blueball.gif ) 2px 7px no-repeat;
+}
+
+.featuredarticles li.new  img,
+    .schoolchoicecenter li.new img,
+    .hotTopics li.new img {
+    padding-left: .5em;
+}
+
+.featuredarticles h3, div.hotTopics h3 {
+    font-size: large;
+    color: #036;
+    font-weight: bold;
+    padding: 3px 20px 3px 0;
+    margin: 2px 0px 3px 0px;
+}
+
+.promoNewsletterMedium {
+    margin: 0px 0px 0px 2px;
+}
+
+.promoNewsletterMedium img {
+    float: right;
+    margin: 15px;
+}
+
+.promoNewsletterMedium a {
+    font-weight: normal;
+}
+
+.promoNewsletterMedium h2 {
+    font-size: large;
+    font-weight: bold;
+    margin: 0;
+}
+
+.promoNewsletterMedium h3 {
+    font-size: small; /* 1em; */
+    font-weight: bold;
+    margin: 10px 0px 5px 0px;
+    padding-top: 0.75em;
+}
+
+div.promoNewsletterMedium .smallform {
+    margin: 10px 0px 2px 0px;
+    white-space: nowrap;
+}
+
+.promoNewsletterMedium h4 {
+    font-size: small;
+    font-weight: bold;
+    margin: 10px 0px 6px 0px;
+    color: #036;
+
+}
+
+h3.membershipTagline {
+    color: #F60;
+    margin: 10px 0px 10px 0px;
+    font-weight: bold;
+}
+
+.promoMembershipBig td {
+    vertical-align: top;
+    padding: 0 0 .5em 0
+}
+
+table.promoMembershipBig {
+    margin: .1em 1em 1em 0;
+}
+
+.promoMembershipMedium {
+    margin: .3em;
+}
+
+table.promoMembershipMedium h3 {
+    color: #777;
+    font-size: small;
+}
+
+table.promoMembershipMedium th {
+    text-align: center;
+    font-size: x-small;
+    font-weight: 100;
+}
+
+table.promoMembershipMedium td {
+    font-size: x-small;
+    font-weight: 100;
+}
+
+table.promoMembershipMedium h5 {
+    font-weight: 700;
+    padding: .7em 0 0 0
+}
+
+.promoMembershipMedium td.learnMore a {
+    display: block;
+    padding: 1em
+}
+
+.promoArticles h3 {
+    font-weight: bold;
+}
+
+.promoArticles ul.promo {
+    margin: 10px 0px 15px 10px;
+}
+
+.promoArticles ul.promo li {
+    margin: 0px 0px 0px 20px;
+    list-style-type: disc;
+    line-height: 1.4em;
+}
+
+.schoolchoicecenter {
+    padding-top: 7px;
+    margin: 0px 0px 5px 5px;
+    height: 180px; /* image is 170px */
+}
+
+.schoolchoicecenter h3 {
+    font-size: large;
+    font-weight: bold;
+    color: #036;
+    padding: 0px 5px .3em 10px;
+    white-space: nowrap;
+}
+
+.schoolchoicecenter ul {
+/*border-left: 1px solid #999;*/
+    padding: 0px 5px .3em 10px;
+}
+
+.schoolchoicecenter li,
+    div.about li {
+    padding: 3px 5px 3px 0px;
+    margin: 2px 0px 3px 0px;
+    background-repeat: no-repeat;
+    background-position: 2px 7px;
+}
+
+div.about li {
+    padding-bottom: 0;
+}
+
+.schoolchoicecenter li.viewall {
+    margin-bottom: -6px;
+}
+
+.schoolchoicecenter pdf_li {
+    margin-top: 3px;
+    margin-bottom: 3px;
+    list-style-image: url( ../img/adobe/pdficon.gif )
+}
+
+.featuredarticle {
+    font-size: small;
+}
+
+/* Boxes
+----------------------------------------------- */
+.BG {
+    vertical-align: middle;
+}
+
+/**
+Page Layout styles.
+A surrounding div is set to have one of these classes.
+All the "about us" corporate pages, and a few others share the
+"twoColumnLayout" layout. Please use this when possible.
+*/
+
+.twoColumnLayout  .contentGS a:link,
+    .singleTextOnlyColumnLayout  .contentGS a:link {
+    color: #039;
+}
+
+.twoColumnLayout .contentGS h1,
+    .singleTextOnlyColumnLayout .contentGS h1 {
+    color: #039;
+    border-bottom: 1px solid #ccc;
+    font-weight: bold;
+    font-size: x-large;
+    margin: 0 0 .3em 0;
+}
+.twoColumnLayout .contentGS h2,
+    .singleTextOnlyColumnLayout .contentGS h2 {
+    color: #f60;
+    border-bottom: 1px solid #ccc;
+    font-weight: bold;
+    font-size: x-large;
+    margin: 0 0 .3em 0;
+}
+
+.twoColumnLayout div .contentGS h3,
+    .singleTextOnlyColumnLayout  .contentGS h3 {
+    color: #f60;
+    border-bottom: 1px solid #ccc;
+    font-weight: bold;
+    font-size: medium;
+    margin: 0em 0 1em 0;
+}
+
+.twoColumnLayout .contentGS h4{
+    font-weight: bold;
+    margin-top: 0;
+}
+
+.singleTextOnlyColumnLayout .contentGS h4 {
+    font-size: small;
+    color: #25457a;
+    font-weight: bold;
+    margin-top: 2ex;
+    margin-bottom: .5ex;
+}
+
+.twoColumnLayout .contentGS h5,
+    .singleTextOnlyColumnLayout .contentGS h5 {
+    color: #f60;
+    font-weight: bold;
+    font-size: small;
+    margin: 0 0 0 0;
+}
+
+    .singleTextOnlyColumnLayout .contentGS p {
+    margin: 0em 0 1.2em 0;
+        line-height:1.8;
+}
+.twoColumnLayout .contentGS p {
+    margin: 0em 0 1.2em 0;
+}
+
+.twoColumnLayout .contentGS ul,
+    .singleTextOnlyColumnLayout .contentGS ul {
+    margin-bottom: 1em;
+}
+
+.singleTextOnlyColumnLayout .contentGS ul li {
+    padding: 3px 5px 3px 12px;
+    margin: 2px 0px 3px 0px;
+    background: url( ../img/bullet/bullet_blueball.gif ) 2px 7px no-repeat;
+}
+
+.singleTextOnlyColumnLayout .contentGS ol li {
+    list-style: decimal;
+    list-style-position: inside;
+    padding: 0 0 1ex 0;
+}
+
+
+.singleTextOnlyColumnLayout div em {
+    font-weight: bold;
+
+}
+
+.twoColumnLayout .contentGS img,
+    .singleTextOnlyColumnLayout .contentGS img {
+    margin-bottom: .7em;
+}
+
+div.contentGS div.promoNewsletterSmall h2 {
+    font-size: large;
+    font-weight: bold;
+    margin: 4px 0 0 0;
+    color: #036;
+    border-bottom: 0;
+}
+
+div.contentGS div.promoNewsletterSmall h3 {
+    margin: 10px 0px 2px 0px;
+    font-size: small;
+    color: #000 !important;
+    border-bottom: 0;
+    font-weight: bold;
+}
+
+div.contentGS div.promoNewsletterSmall .smallform {
+    margin: 10px 0px 2px 0px;
+    white-space: nowrap;
+}
+
+.teaser, .smallTeaser {
+    font-style: italic;
+    font-weight: bold;
+    color: #EB7A31;
+}
+
+.smallTeaser {
+    font-size: 11px;
+    padding-left: 1em;
+}
+
+div#printandemail {
+    font-family:arial;
+    font-size: 11px;
+    padding:0px 7px 6px 8px;
+    text-align:right;
+}
+    div#printandemail a:hover {
+        color:black;
+        text-decoration:none;
+    }
+
+@media print {
+    .search, #adLeaderboard, #footer, .noprint  { display:none; }
+    .wrap0  { width:75%; background:white; }
+    body, body.unframed #pageGS {
+        background-color:#fff;
+        border: 0px solid   #fff;
+    }
+}

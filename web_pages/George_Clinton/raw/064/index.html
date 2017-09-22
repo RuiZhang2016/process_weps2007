@@ -1,0 +1,494 @@
+
+
+<SCRIPT LANGUAGE=javascript type="text/javascript">
+<!--
+function DisplayMaxBanner(){
+var ImagesPath;
+var FirstForm;
+var SecondForm;
+var StrMOver;
+var StrMOut;
+StrMOver = "this.className=\'formLinkHover\'";
+StrMOut = "this.className=\'formLink\'";
+FirstForm = getRandomNumber();
+SecondForm = getRandomNumber();
+
+var CountryCode = readCookie('CountryCode');
+if (readCookie('ImagesPath').length > 0) {
+    ImagesPath =  replaceAll( readCookie('ImagesPath'), [["%3A", ":"], [ "%2F", "/" ],["%2E", "."]] );
+}
+
+if( CountryCode == "FR" )
+{
+document.getElementById('DivBanner').innerHTML = "<table id='Table_01' width='779'   border='0' cellpadding='0' cellspacing='0' valign='top'>" + 
+		"<tr><td width='4' height='26' background='" + ImagesPath + "/images/art_intl/left_border.gif'></td>" + 
+		"<td width='43' height='26' background='" + ImagesPath + "/images/art_intl/center.gif' valign='middle' align='center'>" + 
+		"<Form name='A" + FirstForm + "' style = 'margin:0px;padding:0px;display:inline;' id = 'A" + FirstForm + "' action='http://affiliates.allposters.com/link/redirect.asp' method='get'><input type='hidden' name='AID' value='256009398'><input type='hidden' name='LANG' value='2'><div class='formLink' onclick=document.forms['A" + FirstForm + "'].submit() style='display:inline;'><img src='" + ImagesPath + "/images/art_intl/french.gif' width='24' height='14' border='0'></div></form></td>" + 
+		"<td width='620' height='26' background='"  + ImagesPath + "/images/art_intl/center.gif' class='TopNavMenuItem'><b>Vous préférez effectuer vos achats en français ? Visitez " + 
+		"<form name='A" + SecondForm + "' style='margin:0px;padding:0px;display:inline;' id = 'A" + SecondForm + "' + action='http://affiliates.allposters.com/link/redirect.asp' method='get'><input type='hidden' name='AID' value='256009398'><input type='hidden' name='LANG' value='2'><div class='formLink' onmouseover = " +  StrMOver + " onmouseout = " +  StrMOut + " onclick=document.forms['A" + SecondForm + "'].submit() style='display:inline;'>allposters.fr</div></form></b></td>" + 
+		"<td width='36' height='26' background='" + ImagesPath + "/images/art_intl/center.gif' valign='middle' align='right'>&nbsp;</td><td width='5' height='26' background='" + ImagesPath + "/images/art_intl/right_border.gif'></td></tr></table>";
+}
+else if( CountryCode == "DE" || CountryCode == "AT" )
+{
+document.getElementById('DivBanner').innerHTML = "<table id='Table_01' width='779'   border='0' cellpadding='0' cellspacing='0' valign='top'>" + 
+		"<tr><td width='4' height='26' background='" + ImagesPath + "/images/art_intl/left_border.gif'></td>" + 
+		"<td width='43' height='26' background='" + ImagesPath + "/images/art_intl/center.gif' valign='middle' align='center'>" + 		
+		"<Form name='A" + FirstForm + "' style = 'margin:0px;padding:0px;display:inline;' id = 'A" + FirstForm + "' action='http://affiliates.allposters.com/link/redirect.asp' method='get'><input type='hidden' name='AID' value='1631741110'><input type='hidden' name='LANG' value='3'><div class='formLink' onclick=document.forms['A" + FirstForm + "'].submit() style='display:inline;'><img src='" + ImagesPath + "/images/art_intl/germany.gif' width='24' height='14' border='0'></div></form></td>" + 
+		"<td width='620' height='26' background='"  + ImagesPath + "/images/art_intl/center.gif' class='TopNavMenuItem'><b>Möchten Sie die Seite lieber auf Deutsch anzeigen? Besuchen Sie " +
+		"<form name='A" + SecondForm + "' style='margin:0px;padding:0px;display:inline;' id = 'A" + SecondForm + "' + action='http://affiliates.allposters.com/link/redirect.asp' method='get'><input type='hidden' name='AID' value='1631741110'><input type='hidden' name='LANG' value='3'><div class='formLink' onmouseover = " +  StrMOver + " onmouseout = " +  StrMOut + " onclick=document.forms['A" + SecondForm + "'].submit() style='display:inline;'>allposters.de</div></form></b></td>" + 
+		"<td width='36' height='26' background='" + ImagesPath + "/images/art_intl/center.gif' valign='middle' align='right'>&nbsp;</td><td width='5' height='26' background='" + ImagesPath + "/images/art_intl/right_border.gif'></td></tr></table>";
+}
+else if( CountryCode == "AR" || CountryCode == "CL" || CountryCode == "CO" || CountryCode == "CR" || CountryCode == "DO" || CountryCode == "EC" || CountryCode == "SV" || CountryCode == "MX" || CountryCode == "PE" || CountryCode == "PR" || CountryCode == "ES" || CountryCode == "UY" || CountryCode == "VE" )
+{
+document.getElementById('DivBanner').innerHTML = "<table id='Table_01' width='779'   border='0' cellpadding='0' cellspacing='0' valign='top'>" + 
+		"<tr><td width='4' height='26' background='" + ImagesPath + "/images/art_intl/left_border.gif'></td>" + 
+		"<td width='43' height='26' background='" + ImagesPath + "/images/art_intl/center.gif' valign='middle' align='center'>" + 		
+		"<Form name='A" + FirstForm + "' style = 'margin:0px;padding:0px;display:inline;' id = 'A" + FirstForm + "' action='http://affiliates.allposters.com/link/redirect.asp' method='get'><input type='hidden' name='AID' value='859989174'><input type='hidden' name='LANG' value='4'><div class='formLink' onclick=document.forms['A" + FirstForm + "'].submit() style='display:inline;'><img src='" + ImagesPath + "/images/art_intl/spain.gif' width='24' height='14' border='0'></div></form></td>" + 
+		"<td width='620' height='26' background='"  + ImagesPath + "/images/art_intl/center.gif' class='TopNavMenuItem'><b>¿Prefiere realizar sus compras en español? Visite " +
+		"<form name='A" + SecondForm + "' style='margin:0px;padding:0px;display:inline;' id = 'A" + SecondForm + "' + action='http://affiliates.allposters.com/link/redirect.asp' method='get'><input type='hidden' name='AID' value='859989174'><input type='hidden' name='LANG' value='4'><div class='formLink' onmouseover = " +  StrMOver + " onmouseout = " +  StrMOut + " onclick=document.forms['A" + SecondForm + "'].submit() style='display:inline;'>allposters.fr</div></form></b></td>" + 
+		"<td width='36' height='26' background='" + ImagesPath + "/images/art_intl/center.gif' valign='middle' align='right'>&nbsp;</td><td width='5' height='26' background='" + ImagesPath + "/images/art_intl/right_border.gif'></td></tr></table>";
+}
+else if( CountryCode == "IT")
+{
+document.getElementById('DivBanner').innerHTML = "<table id='Table_01' width='779'   border='0' cellpadding='0' cellspacing='0' valign='top'>" + 
+		"<tr><td width='4' height='26' background='" + ImagesPath + "/images/art_intl/left_border.gif'></td>" + 
+		"<td width='43' height='26' background='" + ImagesPath + "/images/art_intl/center.gif' valign='middle' align='center'>" + 		
+		"<Form name='A" + FirstForm + "' style = 'margin:0px;padding:0px;display:inline;' id = 'A" + FirstForm + "' action='http://affiliates.allposters.com/link/redirect.asp' method='get'><input type='hidden' name='AID' value='1245865142'><input type='hidden' name='LANG' value='5'><div class='formLink' onclick=document.forms['A" + FirstForm + "'].submit() style='display:inline;'><img src='" + ImagesPath + "/images/art_intl/italian.gif' width='24' height='14' border='0'></div></form></td>" +
+		"<td width='620' height='26' background='"  + ImagesPath + "/images/art_intl/center.gif' class='TopNavMenuItem'><b>Preferisci fare acquisti in italiano? Visita " +
+		"<form name='A" + SecondForm + "' style='margin:0px;padding:0px;display:inline;' id = 'A" + SecondForm + "' + action='http://affiliates.allposters.com/link/redirect.asp' method='get'><input type='hidden' name='AID' value='1245865142'><input type='hidden' name='LANG' value='5'><div class='formLink' onmouseover = " +  StrMOver + " onmouseout = " +  StrMOut + " onclick=document.forms['A" + SecondForm + "'].submit() style='display:inline;'>allposters.fr</div></form></b></td>" + 
+		"<td width='36' height='26' background='" + ImagesPath + "/images/art_intl/center.gif' valign='middle' align='right'>&nbsp;</td><td width='5' height='26' background='" + ImagesPath + "/images/art_intl/right_border.gif'></td></tr></table>";
+}
+else if (CountryCode == "JP" )
+{
+document.getElementById('DivBanner').innerHTML = "<table id='Table_01' width='779'   border='0' cellpadding='0' cellspacing='0' valign='top'>" + 
+		"<tr><td width='4' height='26' background='" + ImagesPath + "/images/art_intl/left_border.gif'></td>" + 
+		"<td width='43' height='26' background='" + ImagesPath + "/images/art_intl/center.gif' valign='middle' align='center'>" + 		
+		"<Form name='A" + FirstForm + "' style = 'margin:0px;padding:0px;display:inline;' id = 'A" + FirstForm + "' action='http://affiliates.allposters.com/link/redirect.asp' method='get'><input type='hidden' name='AID' value='2017617078'><input type='hidden' name='LANG' value='6'><div class='formLink' onclick=document.forms['A" + FirstForm + "'].submit() style='display:inline;'><img src='" + ImagesPath + "/images/art_intl/japan.gif' width='24' height='14' border='0'></div></form></td>" + 
+		"<td width='620' height='26' background='"  + ImagesPath + "/images/art_intl/center.gif' class='TopNavMenuItem'><img src='" + ImagesPath + "/images/art_intl/jp_image1.gif' width='168' height='14' border='0'> " +		 
+		"<form name='A" + SecondForm + "' style='margin:0px;padding:0px;display:inline;' id = 'A" + SecondForm + "' + action='http://affiliates.allposters.com/link/redirect.asp' method='get'><input type='hidden' name='AID' value='2017617078'><input type='hidden' name='LANG' value='6'><div class='formLink' onmouseover = " +  StrMOver + " onmouseout = " +  StrMOut + " onclick=document.forms['A" + SecondForm + "'].submit() style='display:inline;'>allposters.fr</div></form> " + 
+		"<img src='" + ImagesPath + "/images/art_intl/jp_image2.gif' width='60' height='14' border='0'></b></td>" + 
+		"<td width='36' height='26' background='" + ImagesPath + "/images/art_intl/center.gif' valign='middle' align='right'>&nbsp;</td><td width='5' height='26' background='" + ImagesPath + "/images/art_intl/right_border.gif'></td></tr></table>";
+}
+}
+
+function readCookie(name){
+	var nameEQ = name + "=";
+	var ca = document.cookie.split(';');
+	for(var i=0;i < ca.length;i++)
+	{
+		var c = ca[i];
+		while (c.charAt(0)==' ') c = c.substring(1,c.length);
+		if (c.indexOf(nameEQ) == 0) return c.substring(nameEQ.length,c.length);		
+	}
+	return null;
+}
+
+function replaceAll( str, replacements ) {
+
+    for ( i = 0; i < replacements.length; i++ ) {
+        var idx = str.indexOf( replacements[i][0] );
+
+        while ( idx > -1 ) {
+            str = str.replace( replacements[i][0], replacements[i][1] ); 
+            idx = str.indexOf( replacements[i][0] );
+        }
+       }
+        return str;
+    }
+    
+function getRandomNumber() {
+
+	var FormNumber;
+	
+	FormNumber = Math.round(100000 * Math.random());
+    
+    return FormNumber;
+    }
+
+
+//-->
+</SCRIPT><script language="JavaScript"  type="text/javascript">
+function browserattr() {   var brname = new String();    var brver = new String();    var bragent = new String();    var strCookie = new String();    brname = window.navigator.appName;    brver = window.navigator.appVersion;    bragent = window.navigator.userAgent;    if (brname.indexOf('Netscape') != -1) {     intNet = bragent.indexOf('Netscape'); intPos = bragent.indexOf('/', intNet) + 1; brver = bragent.substr(intPos,1);    }    else if (brname.indexOf('Microsoft') != -1) { intPos = brver.indexOf('MSIE') + 5;        brver = brver.substr(intPos, 1);    }    strCookie = 'br_name=' + escape(brname);    strCookie = strCookie + '&br_ver=' + brver;    strCookie = strCookie + '&br_height=' + window.screen.height;    strCookie = strCookie + '&br_width=' + window.screen.width;    document.cookie  = 'browserattr=' + strCookie + ';path=/';  }  browserattr();
+</script>
+
+<!doctype html public "-//w3c//dtd html 3.2 final//en">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/> 
+
+<link rel="stylesheet" href="http://eu.art.com/styles/common.css" type="text/css">
+<link rel="stylesheet" href="http://eu.art.com/styles/sp.css" type="text/css">
+<link rel="stylesheet" href="http://eu.art.com/styles/holiday.css" type="text/css">
+<link rel="stylesheet" href="http://eu.art.com/styles/recentlyviewed.css?v=1" type="text/css">
+<link rel="stylesheet" href="http://eu.art.com/styles/select-a-size.css" type="text/css">
+
+
+<!--<script language="JavaScript" src="/scripts/scriptaculous/prototype.js" type="text/javascript"></script>
+<script language="JavaScript" src="/scripts/scriptaculous/scriptaculous.js" type="text/javascript"></script>-->
+<script language="JavaScript" src="http://eu.art.com/scripts/gallery_drag.js" type="text/javascript"></script>
+<script language="JavaScript" src="http://eu.art.com/scripts/recentlyviewed.js" type="text/javascript"></script>
+
+<!--[if lt IE 7]>
+<script language="JavaScript">
+function correctPNG() // correctly handle PNG transparency in Win IE 5.5 & 6.
+{
+   var arVersion = navigator.appVersion.split("MSIE")
+   var version = parseFloat(arVersion[1])
+   if ((version >= 5.5) && (document.body.filters)) 
+   {
+      for(var i=0; i<document.images.length; i++)
+      {
+         var img = document.images[i]
+         var imgName = img.src.toUpperCase()
+         if (imgName.substring(imgName.length-3, imgName.length) == "PNG")
+         {
+            var imgID = (img.id) ? "id='" + img.id + "' " : ""
+            var imgClass = (img.className) ? "class='" + img.className + "' " : ""
+            var imgTitle = (img.title) ? "title='" + img.title + "' " : "title='" + img.alt + "' "
+            var imgStyle = "display:inline-block;" + img.style.cssText 
+            if (img.align == "left") imgStyle = "float:left;" + imgStyle
+            if (img.align == "right") imgStyle = "float:right;" + imgStyle
+            if (img.parentElement.href) imgStyle = "cursor:hand;" + imgStyle
+            var strNewHTML = "<span " + imgID + imgClass + imgTitle
+            + " style=\"" + "width:" + img.width + "px; height:" + img.height + "px;" + imgStyle + ";"
+            + "filter:progid:DXImageTransform.Microsoft.AlphaImageLoader"
+            + "(src=\'" + img.src + "\', sizingMethod='scale');\"></span>" 
+            img.outerHTML = strNewHTML
+            i = i-1
+         }
+      }
+   }    
+}
+window.attachEvent("onload", correctPNG);
+</script>
+<![endif]-->
+
+<title>George Clinton Print by Darren Grealish at Art.com</title>
+<meta name="keywords" content="george clinton,fine art print,darren grealish,art posters,prints,photos,framed art,poster,print,fine art,artwork,art work,lithograph,giclee,painting,paintings,canvas,reproduction">
+<meta name="description" content="George Clinton Print by Darren Grealish - Find the George Clinton Fine Art Print by Darren Grealish or another poster, print, photograph, photo or artwork in Art.com's Galleries.">
+<META NAME="ROBOTS" CONTENT="NOINDEX, NOFOLLOW">
+
+<style>
+.topnavcell{
+ background-image: url("http://artfiles.art.com/images/pub/navigation/header/navbar_bkgnd.gif")}
+.topnavBackground{
+ background-image: url("http://artfiles.art.com/images/pub/navigation/header/top_grey_bkgnd.gif");}
+</style>
+
+
+</head>
+
+<body bgcolor="#ffffff" text="#000000" leftmargin="3" topmargin="3" marginwidth="3" marginheight="3" id="oBody">
+
+<script language="JavaScript" src="http://eu.art.com/scripts/getFrameWin.js" type="text/javascript"></script>
+<script language="JavaScript" src="http://eu.art.com/scripts/filter.js" type="text/javascript"></script> <script language="JavaScript" src="http://eu.art.com/scripts/nav.js" type="text/javascript"></script> <table width="779" BGCOLOR="#FFFFFF" height="100%" border="0" cellpadding="0" cellspacing="0" ><tr><td valign="top"><table cellpadding="0" cellspacing="0"  border="0" width="779" ><tr><td valign="bottom"  width="180"><a href="http://eu.art.com/asp/default-asp/_/posters.htm?ui=6239EC4613F14466B768DE63D4C2D09D" target="_top"><img src="http://artfiles.art.com/images/pub/navigation/header/art-logo.gif" width="180" height="54" border="0" alt="Art.com - Embrace Your Space" /></a></td><td width="260" rowspan="1" ><a href="http://www.art.co.uk/images/banners/20070208_82HS4/popup.html/_/posters.htm?cm_sp=banner-_-buyonegetone50off-_-header&amp;cm_re=header-_-promotion-_-features&ui=82088EB0791D49EEA4B37D36EEE9D21E" alt="20% off everything!" onclick='JavaScript:popOpen("/images/banners/20070208_82HS4/popup.html","bannerpopup","directories,scrollbars,resizable,width=420,height=420");Javascript:return false;'><img src="http://artfiles.art.com/images/banners/20070208_82HS4/20off020807-topban.gif" width="260" height="52" hspace="0" vspace="0" border="0" alt="20% off everything!"></a></td>
+<td width="280" rowspan="1" valign="bottom" >
+<table cellpadding="0" cellspacing="0" border="0" width="100%"><tr>
+<tr><td valign="middle" align="center"><img src="http://artfiles.art.com/images/pub/navigation/header/spacer.gif" width="51" height="1" border="0"><BR/></td><td valign="middle" align="right"><form name="A15211" style="margin:0px;padding:0px;display:inline;" id="A15211" action="http://eu.art.com/asp/place_order-asp/_/posters.htm" method="get" ><input type="hidden" name="WKID" value="6"><input type="hidden" name="LKID" value="105"><input type="hidden" name="ui" value="6239EC4613F14466B768DE63D4C2D09D"><div  onmouseover="this.className='formLinkHover'" onmouseout="this.className='formLink'"  class="formLink" onclick=document.forms['A15211'].submit() style="display:inline;"><img src="http://artfiles.art.com/images/pub/navigation/header/icon_cart_v2.gif" width="43" height="54" border="0" alt="My Shopping Cart" onMouseOver="onImgOver('cart','http://artfiles.art.com/images/pub/navigation/header/icon_cart_rollover_v2.gif');" onMouseOut="onImgOut('cart','http://artfiles.art.com/images/pub/navigation/header/icon_cart_v2.gif');" name="cart"/></div></form></td><td valign="middle" align="center"><img src="http://artfiles.art.com/images/pub/navigation/header/spacer.gif" width="6" height="1" border="0" alt="" name=""><BR /></td><td valign="middle" align="left"><form name="A8489800000" style="margin:0px;padding:0px;display:inline;" id="A8489800000" action="https://eu.art.com/asp/secure/your_account/your_account-asp/_/posters.htm" method="get" ><input type="hidden" name="WKID" value="6"><input type="hidden" name="LKID" value="106"><input type="hidden" name="ui" value="6239EC4613F14466B768DE63D4C2D09D"><div  onmouseover="this.className='formLinkHeaderHover'" onmouseout="this.className='formLinkHeader'"  class="formLinkHeader" onclick=document.forms['A8489800000'].submit() style="display:inline;">my account</div></form><BR /><form name="A24419" style="margin:0px;padding:0px;display:inline;" id="A24419" action="http://eu.art.com/asp/mygallery/default-asp/_/gt--gl/posters.htm" method="get" ><input type="hidden" name="ui" value="6239EC4613F14466B768DE63D4C2D09D"><div  onmouseover="this.className='formLinkHeaderHover'" onmouseout="this.className='formLinkHeader'"  class="formLinkHeader" onclick=document.forms['A24419'].submit() style="display:inline;">my gallery</div></form><BR /><form name="A8810300000" style="margin:0px;padding:0px;display:inline;" id="A8810300000" action="https://eu.art.com/asp/secure/your_account/track_orders-asp/_/posters.htm" method="get" ><input type="hidden" name="ui" value="6239EC4613F14466B768DE63D4C2D09D"><div  onmouseover="this.className='formLinkHeaderHover'" onmouseout="this.className='formLinkHeader'"  class="formLinkHeader" onclick=document.forms['A8810300000'].submit() style="display:inline;">track order</div></form><BR /><img src="http://artfiles.art.com/images/pub/navigation/header/spacer.gif" width="69" height="1" border="0" alt="" name=""><BR /></td><td valign="middle"><form name="A14806" style="margin:0px;padding:0px;display:inline;" id="A14806" action="http://photo.art.com/n/HomePages/default.aspx" method="get"  target="_top"><input type="hidden" name="ui" value="6239EC4613F14466B768DE63D4C2D09D"><div  onmouseover="this.className='formLinkHover'" onmouseout="this.className='formLink'"  class="formLink" onclick=document.forms['A14806'].submit() style="display:inline;"><img src="http://artfiles.art.com/images/pub/navigation/header/icon_photosToArt.gif" width="61" height="54" border="0" alt="Photos Into Art" onMouseOver="onImgOver('icon-artfun','http://artfiles.art.com/images/pub/navigation/header/icon_photosToArt_rollover.gif');" onMouseOut="onImgOut('icon-artfun','http://artfiles.art.com/images/pub/navigation/header/icon_photosToArt.gif');" name="icon-artfun"/></div></form></td><td valign="middle"><form name="A34696" style="margin:0px;padding:0px;display:inline;" id="A34696" action="http://eu.art.com/app/originalart/default-aspx/_/default.art" method="get"  target="_top"><input type="hidden" name="ui" value="6239EC4613F14466B768DE63D4C2D09D"><div  onmouseover="this.className='formLinkHover'" onmouseout="this.className='formLink'"  class="formLink" onclick=document.forms['A34696'].submit() style="display:inline;"><img src="http://artfiles.art.com/images/pub/navigation/header/icon_art_community.gif" width="117" height="54" border="0" alt="Art & Photography Community" onMouseOver="onImgOver('icon-art&photo','http://artfiles.art.com/images/pub/navigation/header/icon_art_community_rollover.gif');" onMouseOut="onImgOut('icon-art&photo','http://artfiles.art.com/images/pub/navigation/header/icon_art_community.gif');" name="icon-art&photo"/></div></form></td></tr></table>
+</td>
+</tr><tr>
+<td colspan=3><table width="100%" border="0" cellpadding="0" cellspacing="0">
+<tr><td width="4"><img src="http://artfiles.art.com/images/pub/navigation/header/navbar_endcap_left.gif" width="4" height="31" border="0"></td><form method="post" action="http://eu.art.com/asp/search_do-asp/_/posters.htm?ui=6239EC4613F14466B768DE63D4C2D09D" name="SearchForm" id="SearchForm" target="_top">
+<input type="hidden" name="SearchFromLocation" value="TopLeft"><input type="hidden" name="SubmittedForm" value="1"><td width="20"  background="http://artfiles.art.com/images/pub/navigation/header/navbar_bkgnd.gif"></td><td class="TopNavMenuItem" width="157" background="http://artfiles.art.com/images/pub/navigation/header/navbar_bkgnd.gif">Search Over 300,000 Prints:</td>
+<td width="80" height="31" background="http://artfiles.art.com/images/pub/navigation/header/navbar_bkgnd.gif">
+<input type="text" id="Search_String" name="Search_String" maxlength="100" size="25" alt="Search by entering keyword(s)" class="productdisplay"></td><td height="15" width="20" background="http://artfiles.art.com/images/pub/navigation/header/navbar_bkgnd.gif">
+<input type="image" id="butSearchBox" name="butSearchBox" src="http://artfiles.art.com/images/pub/navigation/search/navbar_go_button.gif" border="0"  onMouseOver="onButOver('butSearchBox','http://artfiles.art.com/images/pub/navigation/search/navbar_go_button_rollover.gif');"  onMouseOut="onButOver('butSearchBox','http://artfiles.art.com/images/pub/navigation/search/navbar_go_button.gif');" alt="Click to submit search criteria" ></td></form><td height="31" width="100" align="left" background="http://artfiles.art.com/images/pub/navigation/header/navbar_bkgnd.gif"><form name="A763530000000000" style="margin:0px;padding:0px;display:inline;" id="A763530000000000" action="http://eu.art.com/asp/search/advancedsearch-asp/_/posters.htm" method="get"  target="_top"><input type="hidden" name="ui" value="6239EC4613F14466B768DE63D4C2D09D"><div  onmouseover="this.className='formLink10Hover'" onmouseout="this.className='formLink10'"  class="formLink10" onclick=document.forms['A763530000000000'].submit() style="display:inline;">advanced search</div></form></td></td><td valign="middle" align="center" background="http://artfiles.art.com/images/pub/navigation/header/navbar_bkgnd.gif"><img src="http://artfiles.art.com/images/pub/navigation/header/spacer.gif" width="20" height="1" border="0" alt="" name=""><BR /></td><td align="center" background="http://artfiles.art.com/images/pub/navigation/header/navbar_bkgnd.gif">
+<a style="color:#333333" onMouseOver="this.style.color='#009900'" onMouseOut="this.style.color='#333333'" class="TopNavMenuItem"  href="http://eu.art.com/asp/subjects/default-asp/_/posters.htm?TNID=1&TNID=1&CNID=0&ui=6239EC4613F14466B768DE63D4C2D09D" ALT=Subjects" target="_top">Subjects</a></td>
+<td width="10" background="http://artfiles.art.com/images/pub/navigation/header/navbar_bkgnd.gif">
+<b>&middot;</b></td>
+<td align="center" background="http://artfiles.art.com/images/pub/navigation/header/navbar_bkgnd.gif">
+<a style="color:#333333" onMouseOver="this.style.color='#009900'" onMouseOut="this.style.color='#333333'" class="TopNavMenuItem"  href="http://eu.art.com/asp/artists/default-asp/_/posters.htm?WKID=6&LKID=102&TNID=1&CNID=1&ui=6239EC4613F14466B768DE63D4C2D09D" ALT=Artists" target="_top">Artists</a></td>
+<td width="10" background="http://artfiles.art.com/images/pub/navigation/header/navbar_bkgnd.gif">
+<b>&middot;</b></td>
+<td align="center" background="http://artfiles.art.com/images/pub/navigation/header/navbar_bkgnd.gif">
+<a style="color:#333333" onMouseOver="this.style.color='#009900'" onMouseOut="this.style.color='#333333'" class="TopNavMenuItem"  href="http://eu.art.com/asp/collections/default-asp/_/posters.htm?WKID=6&LKID=103&TNID=1&CNID=2&ui=6239EC4613F14466B768DE63D4C2D09D" ALT=Collections" target="_top">Collections</a></td>
+<td width="10" background="http://artfiles.art.com/images/pub/navigation/header/navbar_bkgnd.gif">
+<b>&middot;</b></td>
+<td align="center" background="http://artfiles.art.com/images/pub/navigation/header/navbar_bkgnd.gif">
+<a style="color:#333333" onMouseOver="this.style.color='#009900'" onMouseOut="this.style.color='#333333'" class="TopNavMenuItem"  href="http://eu.art.com/asp/top100-asp/_/posters.htm?WKID=6&LKID=104&TNID=1&CNID=3&ui=6239EC4613F14466B768DE63D4C2D09D" ALT=Best Sellers" target="_top">Best Sellers</a></td>
+<td width="4"><img src="http://artfiles.art.com/images/pub/navigation/header/navbar_endcap_right.gif" width="4" height="31" border="0"></td>
+</tr>
+</table></td>
+</tr></form>
+<script language="JavaScript" type="text/javascript">document.SearchForm.Search_String.focus();</script></table></td></tr><tr><td colspan="3"><table id='Table_01' width='779'  border='0' cellpadding='0' cellspacing='0' valign='top'><tr><td width='4' height='26' background='http://artfiles.art.com/images/art_intl/left_border.gif'>&nbsp;</td><td width='43' height='26' background='http://artfiles.art.com/images/art_intl/center.gif' valign='middle' align='center'><form name="A50055" style="margin:0px;padding:0px;display:inline;" id="A50055" action="http://affiliates.allposters.com/link/redirect.asp" method="get" ><input type="hidden" name="AID" value="859989174"><input type="hidden" name="LANG" value="4"><div  onmouseover="this.className='formLinkHover'" onmouseout="this.className='formLink'"  class="formLink" onclick=document.forms['A50055'].submit() style="display:inline;"><img src="http://artfiles.art.com/images/art_intl/spain.gif" width="24" height="14" border="0" /></div></form></td><td width='620' height='26' background='http://artfiles.art.com/images/art_intl/center.gif' class="TopNavMenuItem"><b>Prefiere realizar sus compras en espaol? Visite <form name="A4537700000" style="margin:0px;padding:0px;display:inline;" id="A4537700000" action="http://affiliates.allposters.com/link/redirect.asp" method="get" ><input type="hidden" name="AID" value="859989174"><input type="hidden" name="LANG" value="4"><div  onmouseover="this.className='formLinkHover'" onmouseout="this.className='formLink'"  class="formLink" onclick=document.forms['A4537700000'].submit() style="display:inline;">allposters.es</div></form></b></td><td width='36' height='26' background='http://artfiles.art.com/images/art_intl/center.gif' valign='middle' align='right'>&nbsp;</td><td width='5' height='26' background='http://artfiles.art.com/images/art_intl/right_border.gif'>&nbsp;</td></tr></table></td></tr><tr><td style="padding-top:2px" valign="top">
+<table width="775" border="0" cellpadding="0" cellspacing="0">
+   <tr>
+      <td width="370"><img src="http://artfiles.art.com/images/misc/blank.gif" height="1" width="370" border="0"></td>
+      <td width="135"><img src="http://artfiles.art.com/images/misc/blank.gif" height="1" width="135" border="0"></td>
+      <td width="95"><img src="http://artfiles.art.com/images/misc/blank.gif" height="1" width="95" border="0"></td>
+      <td width="175"><img src="http://artfiles.art.com/images/misc/blank.gif" height="1" width="175" border="0"></td>
+   </tr>
+   <tr>
+      <td colspan="4" style="padding-left:10px;padding-right:10px;">
+			<!-- BEGIN - Bread Crumb -->
+			<table width="100%" colspan="2" cellpadding="0" border="0" cellspacing="0">
+<tr><td class="pDetailsArrow" style="text-align:left;"><a class="pDetailsLink" href="http://eu.art.com/asp/default-asp/_/posters.htm?ui=6239EC4613F14466B768DE63D4C2D09D">home</a>
+ > <a alt="&quot;SUBJECTS&quot;" class="pDetailsLink" href="http://eu.art.com/asp/display-asp/_/ID--1/subjects.htm?ui=6239EC4613F14466B768DE63D4C2D09D">subjects</a>
+ > <a alt="&quot;Music&quot;" class="pDetailsLink" href="http://eu.art.com/asp/display-asp/_/ID--1851/music.htm?ui=6239EC4613F14466B768DE63D4C2D09D">music</a>
+ > <a alt="&quot;Music Genres&quot;" class="pDetailsLink" href="http://eu.art.com/asp/display-asp/_/ID--25940/music_genres.htm?ui=6239EC4613F14466B768DE63D4C2D09D">music&nbsp;genres</a>
+ > <a alt="&quot;R&B and Soul&quot;" class="pDetailsLink" href="http://eu.art.com/asp/display-asp/_/ID--17156/b_and_soul.htm?r&ui=6239EC4613F14466B768DE63D4C2D09D">r&b&nbsp;and&nbsp;soul</a>
+ > <a alt="&quot;Funk&quot;" class="pDetailsLink" href="http://eu.art.com/asp/display-asp/_/ID--23225/funk.htm?ui=6239EC4613F14466B768DE63D4C2D09D">funk</a>
+ > <a alt="&quot;George Clinton&quot;" class="pDetailsLink" href="http://eu.art.com/asp/display-asp/_/ID--2239/george_clinton.htm?ui=6239EC4613F14466B768DE63D4C2D09D">george&nbsp;clinton</a>
+</td></td><tr><td height="5"></td><tr></table>
+			<!-- END --- Bread Crumb --></td>
+   </tr>
+   <tr>
+      <td valign=top align=center style="padding-left:10px;padding-bottom:15px;">
+			<!-- BEGIN - Item Image -->
+			
+
+<table width="10" border="0" cellspacing="0" cellpadding="0">  <tr>     <td style="border-top: solid 1px #e7e7e7;border-left: solid 1px #e7e7e7;"><a href="sp.asp%3FPD=10279047&amp;RFID=346898&amp;engine=sitematch.1.html#" onclick="window.open('http://eu.art.com/asp/product/zoom-asp/_/PD--10279047/posters.htm?ui=6239EC4613F14466B768DE63D4C2D09D','Zoom','menubar=no,height=350,width=450,scrollbars=yes,resizable=yes,top=10,left=10' )"><img border="0" src="http://artfiles.art.com/images/-/Darren-Grealish/George-Clinton-Print-C10279047.jpeg" height="425" width="274" alt="&quot;George Clinton&quot; Print"></a></td>     <td valign="top" background="http://artfiles.art.com/images/pub/galleries/ShadowLG_RightTiling.jpg" style="vertical-align:top;"><img border="0" width="11" height="13" src="http://artfiles.art.com/images/pub/galleries/ShadowLG_RightTop.jpg"></td>  </tr>  <tr>     <td align="left" background="http://artfiles.art.com/images/pub/galleries/ShadowLG_BottomTiling.jpg"><img border="0" width="11" height="11" src="http://artfiles.art.com/images/pub/galleries/ShadowLG_BottomLeft.jpg"></td>     <td><img border="0" width="11" height="11" src="http://artfiles.art.com/images/pub/galleries/ShadowLG_BottomRight.jpg"></td>  </tr></table>
+
+
+			<!-- END --- Item Image --></td>
+		<td valign=top colspan="3" style="padding-left:20px;padding-right:20px;">
+			<!-- BEGIN - Item Details -->
+			<span id="itembox_10279047"></span><table border=0 cellpadding=0 cellspacing=0 width="100%"><tr><td height="16" style="height:16px;" colspan=2"><h2 class="ProductTitle">George Clinton&nbsp;</h2></td></tr><tr><td colspan=2 bgcolor="#AAAAAA" height=1><img src="http://artfiles.art.com/images/misc/blank.gif" border=0 width=1 height=1></td></tr><tr><td colspan=2><img src="http://artfiles.art.com/images/misc/blank.gif" border=0 width=1 height=10></td></tr><tr><td>by <a class="pDetailsLink" href="http://eu.art.com/asp/display_artist-asp/_/CRID--24702/DarrenGrealish.htm?ui=6239EC4613F14466B768DE63D4C2D09D">Darren Grealish</a><br>item #: 10279047A<br></td><td>&nbsp;</td></tr><tr><td colspan=2 height="120" class="errorheader" colspan="2">Sorry, this product is no longer available.</td></tr></table>			<!-- END --- Item Details --></td>
+  </tr>
+	
+	
+	 <tr>
+      <td colspan="4" background="http://artfiles.art.com/images/pub/pid/sectiontiling.gif"><IMG SRC="http://artfiles.art.com/images/pub/pid/sectiontiling.gif" WIDTH=25 HEIGHT=21></td>
+   </tr>
+   <tr>
+      <td valign=top colspan="3" style="padding-left:10px;padding-right:20px;">
+			<!-- BEGIN - Modules -->
+			<table style="width:570px;height:230px;" width="570" height="230" border="0" cellspacing="0" cellpadding="0"><tr><td style="height:24px;" height="24" colspan=2 background="http://artfiles.art.com/images/pub/pid/mod_r1_tiling.gif"><table border=0 cellpadding=0 cellspacing=0><tr><td bgcolor="#FFFFFF" class="heading2"><span style="font-family:arial,helvetica,verdana; font-size:16px;color:#669933;">Related&nbsp;Categories&nbsp;&nbsp;</span></td></tr></table></td><td><img src="http://artfiles.art.com/images/pub/pid/mod_r1_right.gif" width="5" height="24" alt=""></td></tr><tr><td background="http://artfiles.art.com/images/pub/pid/mod_r2_lefttiling.gif"><img src="http://artfiles.art.com/images/pub/pid/mod_r2_lefttiling.gif" width="5" height="5" alt=""></td><td style="padding:3px" valign=top><table cellpadding=0 cellspacing=5 border=0 width="100%"><tr><td colspan="2" align=left style="font-size:12px;color:#999999;">Art.com has over 10,000 artists and subjects.  Here are just a few!</td></tr><tr><td align=center><table style="display:inline;" width="100px" height="138px" cellpadding="1" border="0" cellspacing="0">
+<tr><td align="center" valign="middle" style="height:100px">
+<a alt="Darren Grealish" title="Darren Grealish" href="http://eu.art.com/asp/display_artist-asp/_/CRID--24702/Darren_Grealish.htm?ui=6239EC4613F14466B768DE63D4C2D09D"><img src="http://artfiles.art.com/images/-/--A10336804.jpeg" style="border-width:1;border-color:#cccccc" height="90" width="59"></a></td></tr><tr><td align="center" valign="top" style="height:38px"><a class="pDetailsLink" alt="Darren Grealish" title="Darren Grealish" href="http://eu.art.com/asp/display_artist-asp/_/CRID--24702/Darren_Grealish.htm?ui=6239EC4613F14466B768DE63D4C2D09D"><b>Darren Grealish Gallery</b></a><br><span class="pDetailsItem" style="color:#000000">(7 items)</span></td></tr>
+</table></td>
+</tr><tr><td colspan="2" align=right><form name="A31857" style="margin:0px;padding:0px;display:inline;" id="A31857" action="http://eu.art.com/asp/subjects/default-asp//_/posters.htm" method="get" ><input type="hidden" name="ui" value="6239EC4613F14466B768DE63D4C2D09D"><div  onmouseover="this.className='formLinkHover'" onmouseout="this.className='formLink'"  class="formLink" onclick=document.forms['A31857'].submit() style="display:inline;">view all subjects</div></form></td></tr></table></td><td background="http://artfiles.art.com/images/pub/pid/mod_r2_righttiling.gif"><img src="http://artfiles.art.com/images/pub/pid/mod_r2_righttiling.gif" width="5" height="5" alt=""></td></tr><tr><td width=5><img src="http://artfiles.art.com/images/pub/pid/mod_r3_left.gif" width="5" height="5" alt=""></td><td style="height:5px;" height="5" width=560 background="http://artfiles.art.com/images/pub/pid/mod_r3_tiling.gif"><img src="http://artfiles.art.com/images/pub/pid/mod_r3_tiling.gif" width="5" height="5" alt=""></td><td width=5><img src="http://artfiles.art.com/images/pub/pid/mod_r3_right.gif" width="5" height="5" alt=""></td></tr></table><br><table style="width:570px;height:230px;" width="570" height="230" border="0" cellspacing="0" cellpadding="0"><tr><td style="height:24px;" height="24" colspan=2 background="http://artfiles.art.com/images/pub/pid/mod_r1_tiling.gif"><table border=0 cellpadding=0 cellspacing=0><tr><td bgcolor="#FFFFFF" class="heading2"><span style="font-family:arial,helvetica,verdana; font-size:16px;color:#8F8427;">Custom&nbsp;Framing&nbsp;&nbsp;</span></td></tr></table></td><td><img src="http://artfiles.art.com/images/pub/pid/mod_r1_right.gif" width="5" height="24" alt=""></td></tr><tr><td background="http://artfiles.art.com/images/pub/pid/mod_r2_lefttiling.gif"><img src="http://artfiles.art.com/images/pub/pid/mod_r2_lefttiling.gif" width="5" height="5" alt=""></td><td style="padding:3px" valign=top><table width="100%" cellpadding=0 cellspacing=0 border=0><tr><td width="60%" class="textblocksize2">We use the same high quality framing components found in traditional offline frame shops. Our framers are professionally trained and we pride ourselves in our state-of-the-art facility.<br><br><span style="textblocksize2">Plus you'll save up to 40% off the cost of going to your local frame shop.</span></td><td><img src="http://artfiles.art.com/images/pub/pid/IMG_CustomFrame.jpg" width="221" height="192" alt="Pre-made Frame" border=0></td></tr></table></td><td background="http://artfiles.art.com/images/pub/pid/mod_r2_righttiling.gif"><img src="http://artfiles.art.com/images/pub/pid/mod_r2_righttiling.gif" width="5" height="5" alt=""></td></tr><tr><td width=5><img src="http://artfiles.art.com/images/pub/pid/mod_r3_left.gif" width="5" height="5" alt=""></td><td style="height:5px;" height="5" width=560 background="http://artfiles.art.com/images/pub/pid/mod_r3_tiling.gif"><img src="http://artfiles.art.com/images/pub/pid/mod_r3_tiling.gif" width="5" height="5" alt=""></td><td width=5><img src="http://artfiles.art.com/images/pub/pid/mod_r3_right.gif" width="5" height="5" alt=""></td></tr></table><br><table style="width:570px;height:230px;" width="570" height="230" border="0" cellspacing="0" cellpadding="0"><tr><td style="height:24px;" height="24" colspan=2 background="http://artfiles.art.com/images/pub/pid/mod_r1_tiling.gif"><table border=0 cellpadding=0 cellspacing=0><tr><td bgcolor="#FFFFFF" class="heading2"><span style="font-family:arial,helvetica,verdana; font-size:16px;color:#27708F;">Limited&nbsp;Editions&nbsp;&nbsp;</span></td></tr></table></td><td><img src="http://artfiles.art.com/images/pub/pid/mod_r1_right.gif" width="5" height="24" alt=""></td></tr><tr><td background="http://artfiles.art.com/images/pub/pid/mod_r2_lefttiling.gif"><img src="http://artfiles.art.com/images/pub/pid/mod_r2_lefttiling.gif" width="5" height="5" alt=""></td><td style="padding:3px" valign=top><table width="100%" cellpadding=0 cellspacing=0 border=0><tr><td width="60%" class="textblocksize2">Art.com is pleased to offer limited edition prints by some of today's most popular artists. Careful attention goes into the selection, handling, framing, and packaging.</td><td><img src="http://artfiles.art.com/images/pub/pid/IMG_LimitedEdition.jpg" width="307" height="142" border=0></td></tr><tr><td colspan=2 align=center style="font-size:12px;padding-top:20px;"><a href="http://eu.art.com/asp/le/default-asp/_/posters.htm?ui=6239EC4613F14466B768DE63D4C2D09D">View our entire collection</a> of over 2,500 limited edition items.</td></tr></table></td><td background="http://artfiles.art.com/images/pub/pid/mod_r2_righttiling.gif"><img src="http://artfiles.art.com/images/pub/pid/mod_r2_righttiling.gif" width="5" height="5" alt=""></td></tr><tr><td width=5><img src="http://artfiles.art.com/images/pub/pid/mod_r3_left.gif" width="5" height="5" alt=""></td><td style="height:5px;" height="5" width=560 background="http://artfiles.art.com/images/pub/pid/mod_r3_tiling.gif"><img src="http://artfiles.art.com/images/pub/pid/mod_r3_tiling.gif" width="5" height="5" alt=""></td><td width=5><img src="http://artfiles.art.com/images/pub/pid/mod_r3_right.gif" width="5" height="5" alt=""></td></tr></table><br>
+			<!-- END --- Modules --></td>
+      <td valign=top style="padding-right:10px;">
+			<!-- BEGIN - Taxonomy -->
+			<img src="http://artfiles.art.com/images/pub/pid/IMG_Guarantee.gif" border=1 style="border:#D2D2D8 1px solid;">
+			<!-- END --- Taxonomy --></td>
+   </tr>
+</table>
+<p>&nbsp;</p><style type="text/css">
+.copyLink { color: #990000; }
+DIV.footerDiv TD { font-family: verdana, arial, helvetica; font-size:10px; color: #999999; }
+DIV.footerDiv .formLink {color: #999999; font-size:10px;}
+DIV.footerDiv .formLinkHover {font-size:10px;}
+DIV.footerDiv .dot { width:66px;text-align:center; color: #666666; }
+DIV.footerDiv .row { height:19px; background-color:#e1e8ed;border-style: solid; border-left-width:0px;border-right-width:0px; border-color:#d4dde0;border-bottom-width:1px; border-top-width:1px;}
+</style>
+<br clear="all"><br clear="all"><DIV class="footerDiv"><table width="779" border="0" cellpadding="0" cellspacing="0"><tr>   <td width="1" align="right"><img src="http://artfiles.art.com/images/pub/navigation/footer/footer-left.gif"/></td><td  class="row" align=center>      <table border="0" cellpadding="0" cellspacing="0"><tr>   <td><form name="A96759" style="margin:0px;padding:0px;display:inline;" id="A96759" action="http://eu.art.com/asp/aboutus/default-asp/_/posters.htm" method="get"  target="_top"><input type="hidden" name="ui" value="6239EC4613F14466B768DE63D4C2D09D"><div  onmouseover="this.className='formLinkHover'" onmouseout="this.className='formLink'"  class="formLink" onclick=document.forms['A96759'].submit() style="display:inline;">About&nbsp;Us</div></form></td>   <td class="dot"><b>&middot;</b></td>   <td><form name="A61106" style="margin:0px;padding:0px;display:inline;" id="A61106" action="http://corporate.art.com/careers.aspx" method="get"  target="_blank"><div  onmouseover="this.className='formLinkHover'" onmouseout="this.className='formLink'"  class="formLink" onclick=document.forms['A61106'].submit() style="display:inline;">Careers</div></form></td>   <td class="dot"><b>&middot;</b></td>   <td><form name="A94623" style="margin:0px;padding:0px;display:inline;" id="A94623" action="http://affiliates.art.com/index.aspx" method="get"  target="_top"><div  onmouseover="this.className='formLinkHover'" onmouseout="this.className='formLink'"  class="formLink" onclick=document.forms['A94623'].submit() style="display:inline;">Affiliates</div></form></td>   <td class="dot"><b>&middot;</b></td>   <td><form name="A67515" style="margin:0px;padding:0px;display:inline;" id="A67515" action="http://eu.art.com/asp/landing/Business/default-asp/_/posters.htm" method="get"  target="_top"><input type="hidden" name="ui" value="6239EC4613F14466B768DE63D4C2D09D"><div  onmouseover="this.className='formLinkHover'" onmouseout="this.className='formLink'"  class="formLink" onclick=document.forms['A67515'].submit() style="display:inline;">Business&nbsp;Sales</div></form></td>   <td class="dot"><b>&middot;</b></td>   <td><form name="A75397" style="margin:0px;padding:0px;display:inline;" id="A75397" action="http://eu.art.com/asp/catalogrequest-asp/_/posters.htm" method="get"  target="_top"><input type="hidden" name="ui" value="6239EC4613F14466B768DE63D4C2D09D"><div  onmouseover="this.className='formLinkHover'" onmouseout="this.className='formLink'"  class="formLink" onclick=document.forms['A75397'].submit() style="display:inline;">Request&nbsp;Catalog</div></form></td>   <td class="dot"><b>&middot;</b></td>   <td><form name="A25194" style="margin:0px;padding:0px;display:inline;" id="A25194" action="http://eu.art.com/asp/aboutus/contact_us-asp/_/posters.htm" method="get"  target="_top"><input type="hidden" name="ui" value="6239EC4613F14466B768DE63D4C2D09D"><div  onmouseover="this.className='formLinkHover'" onmouseout="this.className='formLink'"  class="formLink" onclick=document.forms['A25194'].submit() style="display:inline;">Contact&nbsp;Us</div></form></td>   <td class="dot"><b>&middot;</b></td>   <td><form name="A9742300000" style="margin:0px;padding:0px;display:inline;" id="A9742300000" action="http://eu.art.com/asp/customerservice/default-asp/_/posters.htm" method="get"  target="_top"><input type="hidden" name="ui" value="6239EC4613F14466B768DE63D4C2D09D"><div  onmouseover="this.className='formLinkHover'" onmouseout="this.className='formLink'"  class="formLink" onclick=document.forms['A9742300000'].submit() style="display:inline;">Help</div></form></td>   </tr></table>   </td><td width="1" align="left"><img src="http://artfiles.art.com/images/pub/navigation/footer/footer-right.gif"/></td></tr><tr><td class="copyright" colspan="3"><script language="JavaScript" src="http://eu.art.com/scripts/formvalidation.js?v=5" type="text/javascript"></script>
+<form action="http://ebm.cheetahmail.com/r/regf2" method="post" id="FooterEmail" name="FooterEmail" style="display:inline;padding:0px;margin:0px; border:0;" onSubmit="return validateAndSaveEmail(this,'FTRError02');"><input type="hidden" name="submitted" value="Y" /><input type="hidden" name="ORIGINATEDFROM" value="MLL"><div align=center><table border="0" cellspacing="0" cellpadding="0" width="100%"><tr><td colspan=3 valign="bottom" align="center" style="FONT-FAMILY: Verdana, Arial, Helvetica, sans-serif;font-size:10px;"><span id="FTRFormValidation" class="errorline" style="display:none;color:red"><b>Please Fix the Following:</b></span><div id="FTRError01" style="display:none;color:red" class="errorline">Please enter your email.</div><div id="FTRError02" style="display:none;color:red" class="errorline">Please enter a valid email address.</div></td><td width="53"></td><td width="65"></td></tr><tr><td width="70%" height="37" align="right" valign="middle" align="right" style="FONT-FAMILY: Verdana, Arial, Helvetica, sans-serif;font-size:11px;">Sign up for Art.com newsletters!&nbsp;<input style="border: solid 1px #819EBA; height:18px; width:135px; color:#666666; font-size:11px; font-family:Verdana, Arial, Helvetica, sans-serif;background-color:#FFFFCC;" type="text" name="email" size="16" maxlength="50" value="Enter email" onfocus="if(this.value=='Enter email') { this.value='' }" onblur="if(this.value=='') { this.value='Enter email' }"/></td><td width="25%" align="left" valign="middle"><input type="image" align="bottom" id="btnEmailSubmit" name="btnEmailSubmit" src="http://artfiles.art.com/images/pub/buttons/btn-go_gray.gif" width="44" height="25" alt="" border="0" onmouseover="onButOver('btnEmailSubmit','http://artfiles.art.com/images/pub/buttons/btn-go1.gif')" onmouseout="onButOut('btnEmailSubmit','http://artfiles.art.com/images/pub/buttons/btn-go_gray.gif')" /><br /></td><td align="right" valign="top" width="5%"><a target="_blank" href="https://www.scanalert.com/RatingVerify?ref=www.art.com"><img width="65" height="37" border="0" src="https://images.scanalert.com/meter/www.art.com/31.gif" alt="HACKER SAFE certified sites prevent over 99.9% of hacker crime."></a></td></tr></table></div><input type="hidden" name="aid" value="666243671"><input type="hidden" name="n" value="100"><input type="hidden" name="NEWSLETTERSIGNUPDATE" value="08-FEB-2007"><input type="hidden" name="idc" value="%%idc%%"></form>
+<br>&copy; 1995-2007 Art.com, Inc. All rights reserved.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<form name="A85674" style="margin:0px;padding:0px;display:inline;" id="A85674" action="http://eu.art.com/asp/customerservice/privacy_policy-asp/_/posters.htm" method="get"  target="_top"><input type="hidden" name="ui" value="6239EC4613F14466B768DE63D4C2D09D"><div  onmouseover="this.className='formLinkHover'" onmouseout="this.className='formLink'"  class="formLink" onclick=document.forms['A85674'].submit() style="display:inline;"><span style="color:#6F8BEE" onmouseover="this.style.color='#009900';" onmouseout="this.style.color='#6F8BEE';">Privacy Policy</span></div></form>&nbsp;&nbsp;&nbsp;<form name="A20922" style="margin:0px;padding:0px;display:inline;" id="A20922" action="http://eu.art.com/asp/customerservice/terms_of_use-asp/_/posters.htm" method="get"  target="_top"><input type="hidden" name="ui" value="6239EC4613F14466B768DE63D4C2D09D"><div  onmouseover="this.className='formLinkHover'" onmouseout="this.className='formLink'"  class="formLink" onclick=document.forms['A20922'].submit() style="display:inline;"><span style="color:#6F8BEE" onmouseover="this.style.color='#009900';" onmouseout="this.style.color='#6F8BEE';">Terms of Use</span></div></form><br /><br />Art.com the leading online print and poster retailer provides framing, mounting and laminating services, posters,<br>art prints, paintings, canvas prints, vintage original posters, fine art prints, inspirational posters, <br>giclee prints, art reproductions and original art and photography.</td></tr></table></DIV><span id="oMoveItemsInGallery">
+  <form name="addItemToGallery">
+  </form>
+</span><script language="JavaScript">
+  function doGalleryPopUP( displayBox, pid, spid ) {
+    alert( 'The My Gallery functionality requires Microsoft Internet Explorer 6.0 or newer.' )
+  }
+  function hideFrame( obj ) {
+    alert( 'The My Gallery functionality requires Microsoft Internet Explorer 6.0 or newer.' )
+  }
+  function doSubmit() {
+    alert( 'The My Gallery functionality requires Microsoft Internet Explorer 6.0 or newer.' )
+  }
+  function validateGalleryName() {
+    if ( ( Trim( document.forms[ "addItemToGallery" ].galName.value ) ).length > 0 ) {
+      alert( 'The product has been added to your gallery' );
+      return true;
+    } else {
+      document.forms[ "addItemToGallery" ].galName.focus();
+      alert( "You must provide a gallery name" );
+      return false;
+    }
+  }
+  function LTrim( str ) {
+    var whitespace = new String(" \t\n\r");
+    var s = new String(str);
+    if (whitespace.indexOf(s.charAt(0)) != -1) {
+      var j=0, i = s.length;
+      while (j < i && whitespace.indexOf(s.charAt(j)) != -1)
+        j++;
+        s = s.substring(j, i);
+    }
+    return s;
+  }
+  function RTrim( str ) {
+    var whitespace = new String(" \t\n\r");
+    var s = new String(str);
+    if (whitespace.indexOf(s.charAt(s.length-1)) != -1) {
+      var i = s.length - 1;       // Get length of string
+      while (i >= 0 && whitespace.indexOf(s.charAt(i)) != -1)
+        i--;
+        s = s.substring(0, i+1);
+    }
+    return s;
+  }
+  function Trim( str ) {
+    return RTrim( LTrim( str ) );
+  }
+</script>
+<span id="oMoveItemsInWL" style="font-family:verdana, helvetica, arial, sans-serif; font-size:8pt; font-weight: bold; width:180px; height:225px; display:none; position:absolute; background-color:#FFDDDD; padding-left: 2px; padding-right: 0px; padding-top: 1px; padding-bottom: 0px; text-align: left; text-decoration: none; color: Black;">
+
+<table cellpadding="0" cellspacing="0">
+  <tr>
+    <td colspan="2" rowspan="2" style="width:180px; border: thin solid Black;">
+ <center>
+ <table  style="font-family:verdana, helvetica, arial, sans-serif; font-size:8pt; font-weight: bold">
+   <form name="addItemToWL" action="https://eu.art.com/asp/secure/your_account/your_account-asp/_/posters.htm?ui=6239EC4613F14466B768DE63D4C2D09D" method="post">
+     <input type="hidden" name="submit" value="2" >
+     <input type="hidden" name="gt" value="wl" >
+     <input type="hidden" name="came_from" value="" >
+     <input type="hidden" name="returnTo" value="" >
+     <input type="hidden" name="productid" value="" >
+     <input type="hidden" name="PD" value="" >
+     <input type="hidden" name="SP" value="" >
+     <input type="hidden" name="notify_topic" value="" >
+     <tr>
+       <td height="10"><b>Log in to your account.</b></td>
+     </tr>
+     <tr>
+       <td height="10">&nbsp;</td>
+     </tr>
+     <tr>
+       <td height="10"><b>Email Address:</b> </td>
+     </tr>
+     <tr>
+       <td height="10"><input type="text" size="20" maxlength="30" name="emailAddress" value="">
+     </tr>
+     <tr>
+       <td height="10"><b>Password: </b></td>
+     </tr>
+     <tr>
+       <td><input type="Password" size="20" name="password" value=""></td>
+     </tr>
+     <tr>
+       <td height="10" align="center"><p>
+         <input type="Image" id="butWLLogin" src="http://artfiles.art.com/images/pub/buttons/btnp-login0.gif"  onMouseOver="onButOver('butWLLogin','http://artfiles.art.com/images/pub/buttons/btnp-login1.gif');"  onMouseOut="onButOut('butWLLogin','http://artfiles.art.com/images/pub/buttons/btnp-login0.gif');"  alt="CLICK TO LOGIN">
+&nbsp;&nbsp;<a href="javascript:hideFrame( 'oMoveItemsInWL' )"><img border="0" id="butWLCancel" src="http://artfiles.art.com/images/pub/buttons/btnp-cancel0.gif"  onMouseOver="onButOver('butWLCancel','http://artfiles.art.com/images/pub/buttons/btnp-cancel1.gif');"  onMouseOut="onButOut('butWLCancel','http://artfiles.art.com/images/pub/buttons/btnp-cancel0.gif');"  alt="CLICK TO CANCEL" height="25" width="80"></a>       </td>
+     </tr>
+   </form>
+ </table>
+ </center>
+ <hr>
+ <li><a style="font-family:verdana, helvetica, arial, sans-serif; font-size:8pt; color: blue" href="http://eu.art.com/asp/mygallery/newgallery-asp/_/gt--wl/posters.htm?type=w&ui=6239EC4613F14466B768DE63D4C2D09D">Create a new wish list</a>
+     <li><a style="font-family:verdana, helvetica, arial, sans-serif; font-size:8pt; color: blue" href="http://eu.art.com/asp/mygallery/default-asp/_/gt--wl/posters.htm?type=w&ui=6239EC4613F14466B768DE63D4C2D09D">Go to wish list home</a>
+    </td>
+  <td background="http://artfiles.art.com/images/shadows/dhtml_shadow_side.gif"><img src="http://artfiles.art.com/images/misc/blank.gif" width="6" height="110"></td>
+  </tr>
+  <tr>
+    <td background="http://artfiles.art.com/images/shadows/dhtml_shadow_side.gif"><img src="http://artfiles.art.com/images/misc/blank.gif" width="6" height="110"></td>
+  </tr>
+  <tr>
+    <td><img src="http://artfiles.art.com/images/misc/blank.gif" width="6" height="6"></td>
+    <td background="http://artfiles.art.com/images/shadows/dhtml_shadow.gif"><img src="http://artfiles.art.com/images/misc/blank.gif" width="180" height="6"></td>
+    <td background="http://artfiles.art.com/images/shadows/dhtml_shadow_corner.gif"><img src="http://artfiles.art.com/images/misc/blank.gif" width="6" height="6"></td>
+  </tr>
+</table>
+</span>
+<script language="JavaScript">
+  function doWLPopUP( displayBox, pid, spid ) {
+    alert( 'The wish list functionality requires Microsoft Internet Explorer 6.0 or newer.' )
+  }
+  function hideFrame() {
+    alert( 'The wish list functionality requires Microsoft Internet Explorer 6.0 or newer.' )
+  }
+  function doSubmit() {
+    alert( 'The wish list functionality requires Microsoft Internet Explorer 6.0 or newer.' )
+  }
+  function validateWishListName() {
+    if ( ( Trim( document.forms[ "addItemToWL" ].galName.value ) ).length > 0 ) {
+      alert( 'The product has been added to your wish list' );
+      return true;
+    } else {
+      document.forms[ "addItemToWL" ].galName.focus();
+      alert( "You must provide a wishlist name" );
+      return false;
+    }
+  }
+</script>
+
+<script type="text/javascript" language="javascript">
+  // <![CDATA[
+    if ($('rViewMore') != null)
+      {
+       Element.show('rViewMore')
+       //if ($('rView') != null)
+        // new Draggable('rView',{revert:false, handle:$('rViewDraggable')});
+      }
+  // ]]>
+</script>
+
+<script type="text/javascript" language="javascript">
+  // <![CDATA[
+    function fmsAdd2CartClick(divID, pID, sID, add2CartURL)
+      {
+       var opt = {method: 'get',
+                  parameters: $H({pID: pID, sID: sID}).toQueryString(),
+                  onFailure: function(t) {location.href=add2CartURL;},
+                  onComplete: function(t) {if (Element.empty(divID)) location.href=add2CartURL;
+                                           else {Effect.Grow('fmsMain'); new Draggable('fmsMain'); if (correctPNG) correctPNG();}}};
+       if (Element.empty(divID))
+         new Ajax.Updater ({success:divID}, '/asp/fmspopup.asp', opt);
+      }
+  // ]]>
+</script>
+<script type="text/javascript" language="javascript">
+// <![CDATA[
+/* This is for the Select a Size Popup */
+function hideSelectBox()
+{ 
+	document.getElementById('PopupGalleryNav_box').style.visibility = 'hidden'; 
+	//the code below causes the popup to reopen in the same place each time
+	//remove the next two lines if we want the popup to open where it was last closed
+	document.getElementById('PopupGalleryNav_box').style.top = '215';
+	document.getElementById('PopupGalleryNav_box').style.left = '389';  
+}
+
+function showSelectBox()
+{ 
+	document.getElementById('PopupGalleryNav_box').style.top = document.body.scrollTop + 215;
+	document.getElementById('PopupGalleryNav_box').style.left = document.body.scrollLeft + 389;
+	document.getElementById('PopupGalleryNav_box').style.visibility = 'visible'; 
+} 
+/* End this is for the Select a Size Popup */
+  // ]]>
+</script>
+
+<img src="http://www.art.com/asp/robot/not_robot-asp/_/ui--6239EC4613F14466B768DE63D4C2D09D/ui--6239EC4613F14466B768DE63D4C2D09D/rfid--346898/persistentID--0/tkid--/posters.htm?affilInfo=%2Fasp%2Fsp%2Easp&qs=PD%3D10279047%26RFID%3D346898%26engine%3Dsitematch&referer=" width="1" height="1">
+<img border="0" width="1" height="1" src="http://track.roiservice.com/track/pixel.gif.aspx?roiid=939255107925522&sid=6239EC4613F14466B768DE63D4C2D09D&desc=landingpage&refr=">
+
+<SCRIPT LANGUAGE="JavaScript">
+<!--
+var pm_tagname = "universalTag.txt";
+var pm_tagversion = "1.4";
+var pm_accountid = "TNQTL2K2PQ3U2M2B78CVG78KJ4";
+var pm_scripthost = "srv.perf.overture.com";
+var pm_customargs = "";
+var pm_querystr = "?" + "ver=" + pm_tagversion + "&aid=" + pm_accountid + pm_customargs;
+var pm_tag = "<SCR" + "IPT LANGUAGE='JavaScript' SRC=//" + pm_scripthost + "/collweb/ScriptServlet" + pm_querystr + "></SCR" + "IPT>";
+document.write(pm_tag);
+-->
+</SCRIPT>
+
+<SCRIPT LANGUAGE="JavaScript">
+<!--
+function launchStudio(pURL, pParameters, qs_sessionid, glbCustomerZoneID, sAltLink){
+   var winPop;
+   var newWindow = false;
+   var mTop = 10;
+   var mLeft = 10;
+   if (screen.width >= 1024) {
+      var WindowName="FrameStudio" + new Date().getTime();
+      winPop = window.open(pURL + "?" + pParameters + "&ui=" + qs_sessionid + "&customerzoneid=" + glbCustomerZoneID,WindowName,'toolbar=no,location=no,status=no,statusbar=no,menubar=no,height=678,width=900,scrollbars=no,resizable=no,top=' + mTop + ',left=' + mLeft);
+      if (winPop){
+         if (winPop.focus){
+            winPop.focus()
+         }//end if
+      }else{
+         window.location.href = "/FrameStudio/error.asp?error=popup&" + pParameters + "&ui=" + qs_sessionid;
+      }
+   }else{
+      document.location.href = sAltLink;
+   }//end if
+}//end function
+-->
+</SCRIPT>
+</body>
+</html>

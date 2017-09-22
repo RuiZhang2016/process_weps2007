@@ -1,0 +1,1125 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+
+<html>
+
+<head>
+
+<META NAME="description" CONTENT=""><META NAME="keywords" CONTENT="MUSICMATCH,MUSIC,Paul Collins,Paul Collins,">
+<META NAME="revisit-after" CONTENT="15 days">
+
+
+<title>Paul Collins by Paul Collins</title>
+
+<LINK REL="STYLESHEET" TYPE="text/css" HREF="http://wwws.mmjbdata.com/graphics/www.mmguide.musicmatch.com/radio/ac_style.css">
+
+<xNORADIOMXLOGIN>
+	<xNOMMJBPLUS>
+		<!-- This space left intentionally blank -->
+	</xNOMMJBPLUS>
+</xNORADIOMXLOGIN>
+<SCRIPT LANGUAGE="JavaScript1.2">
+<!--
+function getCookie(Name) {
+	// We have to do it this way so that we can deal with MMCUID and MMAL cookies
+	// If we use other published getCookie functions, they will try and split MMCUID and MMAL
+	// incorrectly.
+	var search = "; " + Name + "=";
+	var searchtoo = Name + "=";
+	if (document.cookie.length > 0) { // if there are any cookies
+	   	//alert(document.cookie);
+		offset = document.cookie.indexOf(search);
+		//alert(offset)
+	    if (offset != -1) { // if cookie exists 
+	      	offset += search.length 
+	       	// set index of beginning of value
+	       	end = document.cookie.indexOf(";", offset) 
+	       	//alert(end)
+			// set index of end of cookie value
+	       	if (end == -1) {
+	        	end = document.cookie.length
+	       		return unescape(document.cookie.substring(offset, end))
+	    	} else {
+				return(unescape(document.cookie.substring(offset, end)));
+			}
+	 	} else {
+			// If we didn't find the cookie check the beginning to see if it is there.
+			offset = document.cookie.indexOf(searchtoo);
+			if (offset != -1) { // if cookie exists 
+	       		offset += searchtoo.length 
+	        	// set index of beginning of value
+	        	end = document.cookie.indexOf(";", offset) 
+	        	//alert(end)
+				// set index of end of cookie value
+	        	if (end == -1) {
+	          		end = document.cookie.length
+	        		return unescape(document.cookie.substring(offset, end))
+	     		} else {
+					return(unescape(document.cookie.substring(offset, end)));
+				}
+	  		}
+		}
+	}
+}
+
+function setCookie(Name,value,expire,path,domain,secure) {
+	var ExpDate = new Date ();
+	if (expire) {
+		ExpDate.setTime (ExpDate.getTime() + (expire * 60 * 60 * 1000));
+	}
+	document.cookie = Name + "=" + value +
+	((path) ? "; path=" + path : "") +
+    ((domain) ? "; domain=" + domain : "") +
+	((secure) ? "; secure" : "") +
+    ((expire) ? "; expires=" + ExpDate.toGMTString() : "");
+	//alert (getCookie(Name));
+}
+
+function GetTheFunk(Cookie,CValue) {
+	//Cookie - MMCUID or MMAL or any MMJB funky cookie
+	//CValue - The nested data value that you want
+	if (! Cookie) {
+		Cookie = 'MMCUID' ;
+	}
+	var mmcookie = getCookie(Cookie);
+	if (! mmcookie) {
+		return false;
+	}
+	var mmcuidarray = new Array();
+	mmcuidarray = mmcookie.split("&");
+	mmcuidhash = new Array();
+	var elements = mmcuidarray.length;
+	var count = 0;
+	while (count < elements)
+	{
+		mmcuidhash[mmcuidarray[count]] = mmcuidarray[count + 1];
+		count += 2; 
+	}
+	return mmcuidhash[CValue];
+}
+
+// Set cookie for MCS server
+setCookie('MMJB_USER_AGENT',escape(navigator.userAgent),3600,'/','musicmatch.com');
+
+// Define some useful variables for future use.
+var PlusUser = GetTheFunk('MMCUID','MMJB_KEY');
+var ValidKey = GetTheFunk('MMCUID','KEY_STATE');
+var MMALstatus = GetTheFunk('MMAL','AUTOLOGIN');
+var MMJBversion = GetTheFunk('MMCUID','VERSION');
+var MMJBLang = 'ENU'; // Value inserted by MML
+var versionArray = new Array;
+var MajorVer;
+var MinorVer;
+var Build;
+if (MMJBversion && MMJBversion != 'undefined') {
+	versionArray = MMJBversion.split(".");
+	MajorVer = versionArray[0];
+	MinorVer = versionArray[1];
+	Build    = versionArray[2];
+}
+//
+
+	function NotifyRBNewTrack(trackName, artistName, albumName, trackAudioFormat, serverRequest) {
+		if (serverRequest) {
+			//alert("NotifyRBNewTrack " + serverRequest);
+		}
+		var srarray = new Array();
+		var srnameval = new Array();
+		var tmparray = new Array();
+		var thisRequest = unescape(serverRequest);
+		if (serverRequest) {
+			//alert (thisRequest);
+		}
+		
+		srarray = thisRequest //thisRequest.split("&");
+		var sreles = srarray.length;
+		var count = 0;
+		while(count < sreles)
+		{
+			tmparray = thisRequest.split("BannerUrl="); //srarray[count].split("=");
+			//alert(tmparray[0]);
+			srnameval["BannerUrl"] = unescape(tmparray[1]);
+			count++;
+		}
+		//alert (srnameval["BannerUrl"]);
+		// We got a spcific banner request...change right away
+		var NewBanner = srnameval["BannerUrl"]
+		//alert (NewBanner);
+		//alert (top.ShowBanner);
+		//var NewBanner = "http://wwwp.musicmatch.com/bannertest.html";
+		if (NewBanner) {
+			//alert (NewBanner);
+			top.bannerurl = NewBanner;
+			top.bannerGood = NewBanner;
+			//alert (top.ShowBanner);
+			//top.secretgarden.location.replace(NewBanner);
+			if ((top.ShowBanner == 'TRUE') && (window.BIGBANNER)) {
+				MMNotifyPageActive(1);
+				/*
+				// Log event in MMJBLOG.txt
+				var testver = MajorVer + "" + MinorVer;
+				if (testver <= 720) {
+					window.external.NotifyPlayerTraceRequest('Guide - NotifyRBNewTrack() - Synced banner requested.');
+				}
+				*/
+			}
+		} else {
+			top.bannerurl = '';
+			top.bannerGood = '';
+		}
+		
+	}
+
+	// Ask the Jukebox if the window is visible
+	function MMNotifyPageActive(n) {
+    	if (n == 1) {
+			// Banner display is back...get a new banner
+			top.ShowBanner = 'TRUE';
+			LargeBanner(n,1,'x');
+		} else {
+			// Stop banner display in this window.
+			top.ShowBanner = 'FALSE';
+			// Log event in MMJBLOG.txt
+			var testver = MajorVer + "" + MinorVer;
+			if (testver >= 720) {
+				try {
+					window.external.NotifyPlayerTraceRequest('Guide - MMNotifyPageActive() - Shut off banner.');
+				} catch (e) {
+					//die
+				}
+			}
+			return false;	
+		}
+    }
+	
+	// Set config variables for banner ad call
+	function LargeBanner(n,state,BannerID) {
+		// This has to be here for browsers that do not support the IFRAME tag
+		now = new Date();
+   		random = now.getTime();
+   		var BannerRec = top.bannerurl;
+		if ((!BannerRec) || (BannerRec == "")) {
+			// Modify to reflect site specifics
+			site = "http://ad.musicmatch.com";
+	    	target = "/AAMSZ=468X60/SITE=MM/AREA=GUIDE.ALBUM/OEM=www/ARTISTID=784660/ALBUMID=703311/MMJBPLUS=/PARENT=3//LANG=" + MMJBLang + "/VERSION=" + MMJBversion;
+			BannerRec = site + '/hserver/acc_random=' + random + target;
+		}
+		// Check to see if the banner window already exists or should be refreshed
+		if (state == 0) {
+			// Make Banner for the first time
+			top.ShowBanner = 'TRUE';
+			
+			document.write('<IFRAME NAME="' + BannerID + '" SRC="' + BannerRec + '"');
+			document.write(' NORESIZE SCROLLING="NO" HSPACE="0" VSPACE="0" FRAMEBORDER="0" MARGINHEIGHT="0" MARGINWIDTH="0" WIDTH="468" HEIGHT="60" ALIGN="RIGHT">\n');
+			document.write('<img src="http://wwws.mmjbdata.com/graphics/www.mmguide.musicmatch.com/pixel.gif" width="1" height="3"><BR>');
+			document.write('<SCR');
+   			document.write('IPT SRC="' + site + '/jnserver/acc_random=' + random + target + '">');
+   			document.write('</SCR');
+   			document.write('IPT>');
+			document.write('</IFRAME>\n');
+			// Log event in MMJBLOG.txt
+			var testver = MajorVer + "" + MinorVer;
+			if (testver >= 720) {
+				try {
+					window.external.NotifyPlayerTraceRequest('Guide - MMNotifyPageActive() - Fetch a new banner.');
+				} catch (e) {
+					//die
+				}
+			}
+		} else {
+			// Get a new banner...the IFRAME already exists.
+			DoRefresh(BannerRec);
+		}
+		
+	}
+	
+	function SmallBanner(n,state,BannerID) {
+		// This has to be here for browsers that do not support the IFRAME tag
+		smnow = new Date();
+   		smrandom = smnow.getTime();
+   		// Modify to reflect site specifics
+    	site = "http://ad.musicmatch.com";
+    	smtarget = "/AAMSZ=120X60/SITE=MM/AREA=GUIDE.ALBUM/OEM=www/ARTISTID=784660/ALBUMID=703311/MMJBPLUS=/PARENT=3//LANG=" + MMJBLang + "/VERSION=" + MMJBversion;
+		smBannerRec = site + '/hserver/acc_random=' + smrandom + smtarget;
+		// Check to see if the banner window already exists or should be refreshed
+		if (state == 0) { 
+			// Make Banner for the first time
+			document.write('<IFRAME NAME="' + BannerID + '" SRC="' + smBannerRec + '"');
+			document.write(' NORESIZE SCROLLING="NO" HSPACE="0" VSPACE="0" FRAMEBORDER="0" MARGINHEIGHT="0" MARGINWIDTH="0" WIDTH="120" HEIGHT="60" ALIGN="RIGHT">\n');
+			document.write('<img src="http://wwws.mmjbdata.com/graphics/www.mmguide.musicmatch.com/pixel.gif" width="1" height="3"><BR>');
+			document.write('<SCR');
+   			document.write('IPT SRC="' + site + '/jnserver/acc_random=' + smrandom + smtarget + '">');
+   			document.write('</SCR');
+   			document.write('IPT>');
+			document.write('</IFRAME>\n');
+		}
+	}
+	function SkyScraperBanner(n,state,BannerID) {
+		// This has to be here for browsers that do not support the IFRAME tag
+		now = new Date();
+   		random = now.getTime();
+   		// Modify to reflect site specifics
+    	site = "http://ad.musicmatch.com";
+    	target = "/AAMSZ=120X240/SITE=MM/AREA=GUIDE.ALBUM/OEM=www/ARTISTID=784660/ALBUMID=703311/MMJBPLUS=/PARENT=3//LANG=" + MMJBLang + "/VERSION=" + MMJBversion;
+		BannerRec = site + '/hserver/acc_random=' + random + target;
+		// Check to see if the banner window already exists or should be refreshed
+		if (state == 0) {
+			// Make Banner for the first time
+			document.write('<IFRAME NAME="' + BannerID + '" SRC="' + BannerRec + '"');
+			document.write(' NORESIZE SCROLLING="NO" HSPACE="0" VSPACE="0" FRAMEBORDER="0" MARGINHEIGHT="0" MARGINWIDTH="0" WIDTH="120" HEIGHT="240" ALIGN="CENTER" STYLE="background: red">\n');
+			document.write('<img src="http://wwws.mmjbdata.com/graphics/www.mmguide.musicmatch.com/pixel.gif" width="1" height="3"><BR>');
+			document.write('<SCR');
+   			document.write('IPT SRC="' + site + '/jnserver/acc_random=' + random + target + '">');
+   			document.write('</SCR');
+   			document.write('IPT>');
+			document.write('</IFRAME>\n');
+		}
+		
+	}
+	
+	function SquareBanner(n,state,BannerID) {
+		// This has to be here for browsers that do not support the IFRAME tag
+		now = new Date();
+   		random = now.getTime();
+   		// Modify to reflect site specifics
+    	site = "http://ad.musicmatch.com";
+    	target = "/AAMSZ=125X125/SITE=MM/AREA=GUIDE.ALBUM/OEM=www/ARTISTID=784660/ALBUMID=703311/MMJBPLUS=/PARENT=3//LANG=" + MMJBLang + "/VERSION=" + MMJBversion;
+		BannerRec = site + '/hserver/acc_random=' + random + target;
+		// Check to see if the banner window already exists or should be refreshed
+		if (state == 0) {
+			// Make Banner for the first time
+			document.write('<IFRAME NAME="' + BannerID + '" SRC="' + BannerRec + '"');
+			document.write(' NORESIZE SCROLLING="NO" HSPACE="0" VSPACE="0" FRAMEBORDER="0" MARGINHEIGHT="0" MARGINWIDTH="0" WIDTH="125" HEIGHT="125" ALIGN="CENTER">\n');
+			document.write('<img src="http://wwws.mmjbdata.com/graphics/www.mmguide.musicmatch.com/pixel.gif" width="1" height="3"><BR>');
+			document.write('<SCR');
+   			document.write('IPT SRC="' + site + '/jnserver/acc_random=' + random + target + '">');
+   			document.write('</SCR');
+   			document.write('IPT>');
+			document.write('</IFRAME><p>\n');
+		} 
+		
+	}
+	function BigButtonBanner(n,state,BannerID) {
+		// This has to be here for browsers that do not support the IFRAME tag
+		now = new Date();
+   		random = now.getTime();
+   		// Modify to reflect site specifics
+    	site = "http://ad.musicmatch.com";
+    	target = "/AAMSZ=120X90/SITE=MM/AREA=GUIDE.ALBUM/OEM=www/ARTISTID=784660/ALBUMID=703311/MMJBPLUS=/PARENT=3//LANG=" + MMJBLang + "/VERSION=" + MMJBversion;
+		BannerRec = site + '/hserver/acc_random=' + random + target;
+		// Check to see if the banner window already exists or should be refreshed
+		if (state == 0) {
+			// Make Banner for the first time
+			document.write('<IFRAME NAME="' + BannerID + '" SRC="' + BannerRec + '"');
+			document.write(' NORESIZE SCROLLING="NO" HSPACE="0" VSPACE="0" FRAMEBORDER="0" MARGINHEIGHT="0" MARGINWIDTH="0" WIDTH="120" HEIGHT="90" ALIGN="CENTER">\n');
+			document.write('<img src="http://wwws.mmjbdata.com/graphics/www.mmguide.musicmatch.com/pixel.gif" width="1" height="3"><BR>');
+			document.write('<SCR');
+   			document.write('IPT SRC="' + site + '/jnserver/acc_random=' + random + target + '">');
+   			document.write('</SCR');
+   			document.write('IPT>');
+			document.write('</IFRAME>\n');
+		}
+		
+	}
+	
+	//MONGO Banner
+	function MONGOBanner(n,state,BannerID) {
+		// This has to be here for browsers that do not support the IFRAME tag
+		now = new Date();
+   		random = now.getTime();
+   		// Modify to reflect site specifics
+    	site = "http://ad.musicmatch.com";
+    	target = "/AAMSZ=120X600/SITE=MM/AREA=GUIDE.ALBUM/OEM=www/ARTISTID=784660/ALBUMID=703311/MMJBPLUS=/PARENT=3//LANG=" + MMJBLang + "/VERSION=" + MMJBversion;
+		BannerRec = site + '/hserver/acc_random=' + random + target;
+		// Check to see if the banner window already exists or should be refreshed
+		if (state == 0) {
+			// Make Banner for the first time
+			document.write('<IFRAME NAME="' + BannerID + '" SRC="' + BannerRec + '"');
+			document.write(' NORESIZE SCROLLING="NO" HSPACE="0" VSPACE="0" FRAMEBORDER="0" MARGINHEIGHT="0" MARGINWIDTH="0" WIDTH="120" HEIGHT="600" ALIGN="CENTER" STYLE="background: red">\n');
+			document.write('<img src="http://wwws.mmjbdata.com/graphics/www.mmguide.musicmatch.com/pixel.gif" width="1" height="3"><BR>');
+			document.write('<SCR');
+   			document.write('IPT SRC="' + site + '/jnserver/acc_random=' + random + target + '">');
+   			document.write('</SCR');
+   			document.write('IPT>');
+			document.write('</IFRAME>\n');
+		}
+		
+	}
+	// Unicast superstitial
+	function UNICASTBanner(n,state,BannerID) {
+		// This has to be here for browsers that do not support the IFRAME tag
+		now = new Date();
+   		random = now.getTime();
+   		// Modify to reflect site specifics
+    	site = "http://ad.musicmatch.com";
+    	target = "/AAMSZ=UNICAST/SITE=MM/AREA=GUIDE.ALBUM/OEM=www/ARTISTID=784660/ALBUMID=703311/MMJBPLUS=/PARENT=3//LANG=" + MMJBLang + "/VERSION=" + MMJBversion;
+		BannerRec = site + '/hserver/acc_random=' + random + target;
+		// Check to see if the banner window already exists or should be refreshed
+		if (state == 0) {
+			// Make Banner for the first time
+			document.write('<IFRAME NAME="' + BannerID + '" SRC="' + BannerRec + '"');
+			document.write(' NORESIZE SCROLLING="NO" HSPACE="0" VSPACE="0" FRAMEBORDER="0" MARGINHEIGHT="0" MARGINWIDTH="0" WIDTH="0" HEIGHT="0" ALIGN="CENTER">\n');
+			document.write('<img src="http://wwws.mmjbdata.com/graphics/www.mmguide.musicmatch.com/pixel.gif" width="1" height="1"><BR>');
+			document.write('<SCR');
+   			document.write('IPT SRC="' + site + '/jnserver/acc_random=' + random + target + '">');
+   			document.write('</SCR');
+   			document.write('IPT>');
+			document.write('</IFRAME>\n');
+		}
+	}
+	// OUTBOX ads
+	function OUTBOXBanner(n,state,BannerID) {
+		// This has to be here for browsers that do not support the IFRAME tag
+		now = new Date();
+   		random = now.getTime();
+   		// Modify to reflect site specifics
+    	site = "http://ad.musicmatch.com";
+    	target = "/AAMSZ=OUTBOX/SITE=MM/AREA=GUIDE.ALBUM/OEM=www/ARTISTID=784660/ALBUMID=703311/MMJBPLUS=/PARENT=3//LANG=" + MMJBLang + "/VERSION=" + MMJBversion;
+		BannerRec = site + '/hserver/acc_random=' + random + target;
+		// Check to see if the banner window already exists or should be refreshed
+		if (state == 0) {
+			// Make Banner for the first time
+			document.write('<IFRAME NAME="' + BannerID + '" SRC="' + BannerRec + '"');
+			document.write(' NORESIZE SCROLLING="NO" HSPACE="0" VSPACE="0" FRAMEBORDER="0" MARGINHEIGHT="0" MARGINWIDTH="0" WIDTH="0" HEIGHT="0" ALIGN="CENTER">\n');
+			document.write('<img src="http://wwws.mmjbdata.com/graphics/www.mmguide.musicmatch.com/pixel.gif" width="1" height="1"><BR>');
+			document.write('<SCR');
+   			document.write('IPT SRC="' + site + '/jnserver/acc_random=' + random + target + '">');
+   			document.write('</SCR');
+   			document.write('IPT>');
+			document.write('</IFRAME>\n');
+		}
+	}
+	
+	function DoRefresh(BannerRec) {
+		if ((top.ShowBanner == 'TRUE') && (window.BIGBANNER)) {
+			Browser = navigator.appName;
+			if (Browser == "Microsoft Internet Explorer") {
+				if (document.images) {
+					//alert ('Replace banner with ' + BannerRec);
+					window.BIGBANNER.location.replace(BannerRec);
+					//window.TOP.location.replace(BannerRec);
+					// Log event in MMJBLOG.txt
+					var testver = MajorVer + "" + MinorVer;
+					if (testver >= 720) {
+						try {
+							window.external.NotifyPlayerTraceRequest('Guide - MMNotifyPageActive() - Refresh banner.');
+						} catch (e) {
+							//die
+						}
+					}
+				} else {
+					//window.TOP.location = BannerRec;
+				}
+			}
+		} else {
+			// Log event in MMJBLOG.txt
+			var testver = MajorVer + "" + MinorVer;
+			if (testver >= 720) {
+				try {
+					window.external.NotifyPlayerTraceRequest('Guide - MMNotifyPageActive() - Do not refresh banner.');
+				} catch (e) {
+					//die
+				}
+			}
+		}
+	}
+	
+	function Header8_DoFSCommand(command, args) {
+	    switch (command) {
+	        case "GuideHome":
+				location.href = "/index.cgi";
+	            break;
+			case "GetGear":
+				var pop = window.open("http://www.musicmatch.com/browse/get_gear/index.htm")
+				break;
+			case "Feedback":
+				location.href = "/feedback.html";
+				break;
+			case "Help":
+				location.href = "/about.html";
+				break;
+			case "FreeMusic":
+				location.href = "/whatsup/whatsup.cgi?p=FREEMUSIC";
+				break;
+			case "Rec":
+				location.href = "/match/best.cgi";
+				break;
+			case "Browse":
+				location.href = "/find/browse_top.cgi";
+				break;
+			case "Charts":
+				location.href = "/charts/index.cgi";
+				break;
+			case "Tour":
+				location.href = "/tour/tourinfo.cgi";
+				break;
+			
+			
+		}
+	}
+
+	function MMNotifyWishlistAdd(artistid,artistname,albumid,albumname,trackname) {
+		var PlusUser = GetTheFunk('MMCUID','MMJB_KEY');
+		var ValidKey = GetTheFunk('MMCUID','KEY_STATE');
+		var RadioMX = getCookie('loogie');
+		var lvl = GetTheFunk('MAID','LEVEL');
+		//alert (GetTheFunk('MMAL','PER'));
+		// Wishlist functionality
+		var TestVer = MajorVer + "" +  MinorVer;
+	
+		if (!artistid && !artistname && !albumid && !albumname && !trackname) {
+			// Nothing to add, just show the WishList
+			location.href = "/wishlist/wishlist.cgi";
+		} else {
+			// We have an item to add
+			var base = "/wishlist/editwishlist.cgi?";
+			var qString = "action=new&" + 
+				((artistid) ? "&ARTISTID1=" + artistid : "") +
+				((artistname) ? "&ARTISTNAME1=" + artistname : "") +
+				((albumid) ? "&ALBUMID1=" + albumid : "") +
+				((albumname) ? "&ALBUMNAME1=" + albumname : "") + 
+				((trackname) ? "&TRACKNAME1=" + trackname : "");
+			
+			//alert (qString);
+			location.href = base + qString;
+		}
+	}
+	
+	
+	
+function NotifyRBBuyCD(Artist, TrackName, Album, ArtistUrl, Vendor) {
+		//This will be called by the client when the user selects buy cd
+		var baseUrl = "http://mmjb.musicmatch.com/mmjb/process.cgi?REQUEST=BUYCD";
+		var args = "&ARTIST="  + Artist;
+			args += "&SONG=" + TrackName;
+			args += "&ALBUM=" + Album;
+			args += "&VERSION=" + MMJBversion;
+			args += "&MMJB_KEY=" + PlusUser;
+			args += "&LANG=" + MMJBLang;
+			args += "&Grant=1";			
+		location.href = baseUrl + args;
+	}
+
+	
+function PlayRadio(params) {
+  // Detect Web Radio and web guide?
+  var oem = 'www.mmguide.musicmatch.com';
+  var regex = /^www\.|webradio/;
+  var isWWW = regex.exec(oem);
+  var FormData = params.split("&");
+  var mylen = FormData.length;
+  var count = 0;
+  var ENV_QUERY = new Array();
+  var tmpry = new Array();
+  while (count < mylen) {
+   tmpry = FormData[count].split("=");
+   ENV_QUERY[tmpry[0]] = tmpry[1];
+   count++;
+  }
+  // Turn old style request into delena station string
+  var stationString = params;
+  var isOldStyle = /num=(\d+)/;
+  if (isOldStyle.test(params)) {
+   var stParams = isOldStyle.exec(params);
+   stationString = "reference=1&params=" + escape(escape("stationid=" + stParams[1] + "&xml=strict"));
+   ENV_QUERY['name'] = ENV_QUERY['STATIONNAME'];
+  }
+  //alert (unescape(stationString));
+  window.open("/aod/aodPromo.cgi?" + stationString + "&sname=" + ENV_QUERY['name']);
+ } 
+	
+
+	var Cart;
+	function LoadShoppingCart(url,name) {	
+		// Xena	
+		if (window[name]) {
+			window[name].close();
+		}
+		if (! url || url == '') {
+			url = "http://www.thestore24.com/Cart/EN/Cart.asp?si=musicmatch";
+		}
+		window.open(url,name,'height=600,width=600,top=10,left=250,scrollbars=1,toolbar=1,status=1')
+		try {window[name].focus();} catch (e) {/*die*/}
+	}
+// -->
+
+function closewin(url,name) {
+	pop=window.open(url,name,"Toolbar=no,location=no,directories=no,status=yes,menubar=no,scrollbars=no,resizable=no,width=1,height=1");
+	pop.close(); // by reopening the window, it will prevent errors you would get if the window were already closed.
+}
+
+function OpenLinkInGuide(URL) {
+ window.location.href = URL;
+}
+function OpenArtistLinkInGuide(ARTISTID) {
+ OpenLinkInGuide("/artist/artist.cgi?ARTISTID=" + ARTISTID);
+}
+function OpenAlbumLinkInGuide(ALBUMID) {
+ OpenLinkInGuide("/album/album.cgi?ALBUMID=" + ALBUMID);
+}
+
+
+</SCRIPT>
+<SCRIPT LANGUAGE="VBScript">
+<!--
+// Map VB script events to the JavaScript method - Netscape will ignore this...
+Sub Header8_FSCommand(ByVal command, ByVal args)
+	call Header8_DoFSCommand(command, args)
+end sub
+-->
+</SCRIPT>
+
+	<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1"> 
+
+<script language="javascript">
+
+//This function is used to prevent multiple windows from opening.
+
+function closewin(url,name) {
+
+	pop=window.open(url,name,"Toolbar=no,location=no,directories=no,status=yes,menubar=no,scrollbars=no,resizable=no,width=1,height=1");
+
+	pop.close(); // by reopening the window, it will prevent errors you would get if the window were already closed.
+
+}
+
+
+
+function OpenLinkInGuide(URL) {
+
+ window.location.href = URL;
+
+}
+
+function OpenArtistLinkInGuide(ARTISTID) {
+
+ OpenLinkInGuide("/artist/artist.cgi?ARTISTID=" + ARTISTID);
+
+}
+
+function OpenAlbumLinkInGuide(ALBUMID) {
+
+ OpenLinkInGuide("/album/album.cgi?ALBUMID=" + ALBUMID);
+
+}
+
+
+
+</script>
+
+
+
+</head>
+
+
+
+<BODY bgcolor="#d5e9f3" leftmargin="0" topmargin="0" rightmargin="0" MARGINHEIGHT="0" MARGINWIDTH="0" >
+
+
+
+<!-- Top Nav and Banner Ad -->
+
+<div id="bannerads" style="display:">
+<xNORADIOLOGIN>
+<xNOMMJBPLUS>
+<table border=0 cellspacing=0 cellpadding=0 width="100%" bgcolor="#ACD1E4">
+<tr bgcolor="50637D">
+<td valign="top" background="http://wwws.mmjbdata.com/graphics/www.mmguide.musicmatch.com/blue/backfade.gif">
+<table width="595" border="0" cellspacing="0" cellpadding="0">
+	<tr>
+		<td align="left" width="120">
+			<script>SmallBanner(1,0,'SMALLBANNER')</script>
+				<noscript>
+					<img src="http://wwws.mmjbdata.com/graphics/www.mmguide.musicmatch.com/pixel.gif" width="1" height="3"><BR>
+	   				<A HREF="http://ad.musicmatch.com/accipiter/adclick.exe/SITE=MM/AAMFMT=NORMAL/AAMSZ=120X60/" target="_blank"> 
+	   				 <IMG SRC="http://ad.musicmatch.com/accipiter/adserver.exe/SITE=MM/AAMFMT=NORMAL/AAMSZ=120X60/" BORDER="0" width="120" height="60"> 
+	    			</A> 
+				</noscript>
+		</td>
+		<td valign="bottom" width="7">
+			<!--outof box ads-->
+			<script>OUTBOXBanner(1,0,'OUTBOX')</script>
+			<script>UNICASTBanner(1,0,'UNICAST')</script>
+		</td>
+		<td align="right" width="468">
+			<script>LargeBanner(1,0,'BIGBANNER')</script>
+			<noscript>
+				<img src="http://wwws.mmjbdata.com/graphics/www.mmguide.musicmatch.com/pixel.gif" width="1" height="3"><BR>
+	  				<A HREF="http://ad.musicmatch.com/accipiter/adclick.exe/SITE=MM/AAMFMT=NORMAL/AAMSZ=468x60/" target="_blank"> 
+	  				 <IMG SRC="http://ad.musicmatch.com/accipiter/adserver.exe/SITE=MM/AAMFMT=NORMAL/AAMSZ=468x60/" BORDER="0" width="468" height="60"> 
+	   			</A> 
+			</noscript>
+		</td>
+	</tr>
+</table>
+</td>
+</tr>
+<tr bgcolor="#50637D">
+<td><img src="http://wwws.mmjbdata.com/graphics/www.mmguide.musicmatch.com/pixel.gif" width="1" height="1" alt="" border="0"></td>
+</tr>
+</table>
+</xNOMMJBPLUS>
+</xNORADIOLOGIN>
+</div>
+
+<script language="JavaScript1.2">
+function signUp(product) {
+	OEMMMJB = 'MMD';
+	
+	var isBellCanadaEn = /BellCanada/i;
+	var isBellCanadaFra = /BellCanadaFRA/i;
+
+	var url;
+	if (isBellCanadaFra.exec(OEMMMJB)) {
+		url = "http://www.musicmatch.ca/product/" + product + ".do?lang=fr"
+	} else if (isBellCanadaEn.exec(OEMMMJB)) {
+		url = "http://www.musicmatch.ca/product/" + product + ".do?lang=en";
+	} else {
+		switch (product) {
+			case 'mx':
+				url = "http://www.musicmatch.com/r.htm?redirect=%2fdownload%2fmx_intro.htm%3FDID%3d999991614%26oem%3d" + OEMMMJB + "&source=mm_guide";
+				break;
+			case 'jb':
+				url = "http://www.musicmatch.com/r.htm?redirect=%2fdownload%2fplus%2fjukebox%5fintro%2ehtm%3fos%3dpc%26mode%3dinput%26BTD%3d0%26DID%3d999991614%26oem%3d" + OEMMMJB + "&source=mm_guide";
+				break;
+		}
+	}
+	window.open(url);
+}
+</script>
+<table border=0 cellspacing=0 cellpadding=0 width="100%" bgcolor="#ACD1E4">
+<tr bgcolor="#F0F0F0">
+<td>	<table border="0" cellpadding="0" cellspacing="0" width="100%">
+<tr>
+	<td class="topframetext" align="left" width=6>
+<img src="http://wwws.mmjbdata.com/graphics/www.mmguide.musicmatch.com/pixel.gif" width="6" height="1" alt="" border="0">
+</td>
+<td align="left" valign="middle" class="topframetext" width="80">
+	<A HREF="http://www.mmguide.musicmatch.com/"><img src="http://wwws.mmjbdata.com/graphics/www.mmguide.musicmatch.com/blue/mmguide_logo.gif" width="82" height="25" alt="" border="0" hspace=4 vspace=4></A>
+</td>
+<td align="left" valign="middle">
+<img border=0 width=96 height=1 src="http://wwws.mmjbdata.com/graphics/www.mmguide.musicmatch.com/pixel.gif">
+</td>
+<td align="center" valign="middle" width="1">
+<img src="http://wwws.mmjbdata.com/graphics/www.mmguide.musicmatch.com/blue/separator.gif" width="1" height="38" alt="" border="0">
+</td>
+<td align="center" valign="middle">
+	<table border="0" cellpadding="0" cellspacing="0">
+	<tr>
+<td class="topframetext"><a href="javascript:window.history.back()"><img src="http://wwws.mmjbdata.com/graphics/www.mmguide.musicmatch.com/blue/back.gif" width="25" height="18" alt="" border="0"></a></td>
+<td class="topframetext" align="left">
+<img src="http://wwws.mmjbdata.com/graphics/www.mmguide.musicmatch.com/pixel.gif" width="3" height="1" alt="" border="0">
+</td>
+		<td class="topframetext"><a href="javascript:window.history.forward()"><img src="http://wwws.mmjbdata.com/graphics/www.mmguide.musicmatch.com/blue/forward.gif" width="25" height="18" alt="" border="0"></a></td>
+<td class="topframetext" align="left">
+<img src="http://wwws.mmjbdata.com/graphics/www.mmguide.musicmatch.com/pixel.gif" width="3" height="1" alt="" border="0">
+</td>
+		<td class="topframetext"><a href="http://www.mmguide.musicmatch.com/index.cgi"><img src="http://wwws.mmjbdata.com/graphics/www.mmguide.musicmatch.com/blue/home.gif" width="25" height="18" alt="" border="0"></a></td>
+	</tr>
+	</table></td>
+	<td align="center" valign="middle" width="1">
+<img src="http://wwws.mmjbdata.com/graphics/www.mmguide.musicmatch.com/blue/separator.gif" width="1" height="38" alt="" border="0">
+</td>
+<td align="right"><div class="noaod">
+<xNOMMJBPLUS>
+&nbsp;<a href="Javascript: signUp('jb')" class="navlink"><img src="http://wwws.mmjbdata.com/graphics/www.mmguide.musicmatch.com/blue/upgrade_to_plus.gif" width="200" height="16" alt="" border="0"></a><br>
+</xNOMMJBPLUS>
+<xNORADIOLOGIN>
+<a href="Javascript: signUp('mx')" class="navlink"><img src="http://wwws.mmjbdata.com/graphics/www.mmguide.musicmatch.com/blue/signup_mx.gif" width="153" height="16" alt="" border="0"></a>
+</xNORADIOLOGIN>
+
+</div></td>
+<td class="topframetext" align="left">
+<img src="http://wwws.mmjbdata.com/graphics/www.mmguide.musicmatch.com/pixel.gif" width="6" height="1" alt="" border="0">
+</td>
+</tr>
+</table>
+</td>
+</tr><tr>
+<td valign="top" bgcolor="b0c3d0"><table border=0 cellspacing=0 cellpadding=0>
+<tr>
+<td bgcolor="#f0f0f0"><img src="http://wwws.mmjbdata.com/graphics/www.mmguide.musicmatch.com/pixel.gif" width="163" height="1" alt="" border="0"></td>
+<td bgcolor="#f0f0f0"><img src="http://wwws.mmjbdata.com/graphics/www.mmguide.musicmatch.com/pixel.gif" width="1" height="1" alt="" border="0"></td>
+<td bgcolor="#f0f0f0"><img src="http://wwws.mmjbdata.com/graphics/www.mmguide.musicmatch.com/pixel.gif" width="4" height="1" alt="" border="0"></td>
+</tr></table></td>
+</tr></table>
+<table border=0 cellspacing=0 cellpadding=0 width=595 bgcolor="#ACD1E4">
+<tr>
+<td valign=top width="160"><table border=0 cellpading=0 cellspacing=0 class="onlyundertableborder"><tr bgcolor="#F0F0F0"><td valign="top"><table width=160 cellpadding=2 cellspacing=0 align="center" height="27">
+<tr>
+	<td rowspan=2><form action="http://www.mmguide.musicmatch.com/search/nm.cgi" name="searchdis"></td>
+	<td align="left" valign="bottom"><input type="text" name="rightere" size="12" class="inputtypewht"></td>
+	<td align="left" valign="middle"><input type="Image" src="http://wwws.mmjbdata.com/graphics/www.mmguide.musicmatch.com/blue/search_go.gif" alt="Go"></td>
+</tr><tr>
+<td colspan=2 valign="BOTTOM">
+<div class="noaod">Search for artists and albums</div>
+
+</td>
+</tr>
+</table></td>
+</form>
+</tr></table>
+
+
+<table border=0 cellpadding=2 cellspacing=0 width="160"><tr>
+
+<td valign="top">
+
+<table border=0 cellpadding=0 cellspacing=0 width="160"><tr>
+<td class="noaod" colspan=2><div class="navlink"><b>Browse</b></div></td>
+</tr><tr>
+<td class="noaod" valign="top"><img src="http://wwws.mmjbdata.com/graphics/www.mmguide.musicmatch.com/blue/navlink.gif" width="4" height="8" alt="" border="0" vspace=2 hspace=3 align="left"></td>
+<td class="noaod"><a href="http://www.mmguide.musicmatch.com/find/browse_top.cgi" class="navlink">Browse music info by genre</a></td>
+</tr><tr>
+<td class="noaod" valign="top"></td>
+<td class="noaod"><img src="http://wwws.mmjbdata.com/graphics/www.mmguide.musicmatch.com/blue/navlinksub.gif" width="4" height="8" alt="" border="0" vspace=2 hspace=3 align="left"> <a href="http://www.mmguide.musicmatch.com/find/browse_genre.cgi?GENREID=3" class="navlink">Rock/Pop</a></td>
+</tr><tr>
+<td class="noaod" valign="top"></td>
+<td class="noaod"><img src="http://wwws.mmjbdata.com/graphics/www.mmguide.musicmatch.com/blue/navlinksub.gif" width="4" height="8" alt="" border="0" vspace=2 hspace=3 align="left"> <a href="http://www.mmguide.musicmatch.com/find/browse_genre.cgi?GENREID=2" class="navlink">Rap/R&B</a></td>
+</tr><tr>
+<td class="noaod" valign="top"></td>
+<td class="noaod"><img src="http://wwws.mmjbdata.com/graphics/www.mmguide.musicmatch.com/blue/navlinksub.gif" width="4" height="8" alt="" border="0" vspace=2 hspace=3 align="left"> <a href="http://www.mmguide.musicmatch.com/find/browse_genre.cgi?GENREID=27" class="navlink">Electronica</a></td>
+</tr><tr>
+<td class="noaod" valign="top"></td>
+<td class="noaod"><img src="http://wwws.mmjbdata.com/graphics/www.mmguide.musicmatch.com/blue/navlinksub.gif" width="4" height="8" alt="" border="0" vspace=2 hspace=3 align="left"> <a href="http://www.mmguide.musicmatch.com/find/browse_genre.cgi?GENREID=5" class="navlink">Country</a></td>
+</tr><tr>
+<td class="noaod" valign="top"></td>
+<td class="noaod"><img src="http://wwws.mmjbdata.com/graphics/www.mmguide.musicmatch.com/blue/navlinksub.gif" width="4" height="8" alt="" border="0" vspace=2 hspace=3 align="left"> <a href="http://www.mmguide.musicmatch.com/find/browse_genre.cgi?GENREID=16" class="navlink">Jazz</a></td>
+</tr><tr>
+<td class="noaod" valign="top"></td>
+<td class="noaod"><img src="http://wwws.mmjbdata.com/graphics/www.mmguide.musicmatch.com/blue/navlinksub.gif" width="4" height="8" alt="" border="0" vspace=2 hspace=3 align="left"> <a href="http://www.mmguide.musicmatch.com/find/browse_top.cgi" class="navlink">More...</a></td>
+</tr><tr>
+<td class="noaod" valign="top"><img src="http://wwws.mmjbdata.com/graphics/www.mmguide.musicmatch.com/blue/navlink.gif" width="4" height="8" alt="" border="0" vspace=2 hspace=3 align="left"></td>
+<td class="noaod"><a href="http://www.mmguide.musicmatch.com/index.cgi?type=cl" class="navlink">Go to the Musicmatch&reg; Guide Classical Edition</a></td>
+</tr><tr>
+<td class="noaod" colspan=2><br><div class="navlink"><b>Discover</b></div></td>
+</tr><tr>
+<td class="noaod" valign="top"><img src="http://wwws.mmjbdata.com/graphics/www.mmguide.musicmatch.com/blue/navlink.gif" width="4" height="8" alt="" border="0" vspace=2 hspace=3 align="left"></td>
+<td class="noaod"><a href="http://www.mmguide.musicmatch.com/wishlist/wishlist.cgi" class="navlink">View My WishList</a></td>
+</tr><tr>
+<td class="noaod" valign="top"><img src="http://wwws.mmjbdata.com/graphics/www.mmguide.musicmatch.com/blue/navlink.gif" width="4" height="8" alt="" border="0" vspace=2 hspace=3 align="left"></td>
+<td class="noaod"><a href="http://www.mmguide.musicmatch.com/match/best.cgi" class="navlink">Get recommendations</a></td>
+</tr><tr>
+<td class="noaod" valign="top"><img src="http://wwws.mmjbdata.com/graphics/www.mmguide.musicmatch.com/blue/navlink.gif" width="4" height="8" alt="" border="0" vspace=2 hspace=3 align="left"></td>
+<td class="noaod"><a href="http://www.mmguide.musicmatch.com/charts/index.cgi" class="navlink">Check charts</a></td>
+</tr><tr>
+<td class="noaod" valign="top"><img src="http://wwws.mmjbdata.com/graphics/www.mmguide.musicmatch.com/blue/navlink.gif" width="4" height="8" alt="" border="0" vspace=2 hspace=3 align="left"></td>
+<td class="noaod"><a href="http://www.mmguide.musicmatch.com/whatsup/whatsup.cgi?p=HOME" class="navlink">Read news & features</a></td>
+</tr><tr>
+<td class="noaod" colspan=2><br><div class="navlink"><b>Tools</b></div></td>
+</tr><tr>
+<td class="noaod" valign="top"><img src="http://wwws.mmjbdata.com/graphics/www.mmguide.musicmatch.com/blue/navlink.gif" width="4" height="8" alt="" border="0" vspace=2 hspace=3 align="left"></td>
+<td class="noaod"><a href="http://www.mmguide.musicmatch.com/about.html" class="navlink">Find help</a></td>
+</tr><tr>
+<td class="noaod" valign="top"><img src="http://wwws.mmjbdata.com/graphics/www.mmguide.musicmatch.com/blue/navlink.gif" width="4" height="8" alt="" border="0" vspace=2 hspace=3 align="left"></td>
+<td class="noaod"><a href="http://www.mmguide.musicmatch.com/feedback.html" class="navlink">Contact us</a></td>
+</tr><tr>
+<td class="noaod" valign="top"><img src="http://wwws.mmjbdata.com/graphics/www.mmguide.musicmatch.com/blue/navlink.gif" width="4" height="8" alt="" border="0" vspace=2 hspace=3 align="left"></td>
+<td class="noaod"><a href="http://www.mmguide.musicmatch.com/skins/search.cgi?REQUEST=THEMES&amp;VERSION=" class="navlink">Download skins for Musicmatch&reg; Jukebox</a></td>
+</tr><tr>
+<td class="noaod" valign="top"><img src="http://wwws.mmjbdata.com/graphics/www.mmguide.musicmatch.com/blue/navlink.gif" width="4" height="8" alt="" border="0" vspace=2 hspace=3 align="left"></td>
+<td class="noaod"><a href="http://www.musicmatch.com/r.htm?redirect=/email_subscriptions.cgi%3FDID%3d999991614&source=mm_guide" class="navlink" TARGET="_blank">Sign up for the<BR>Musicmatch&reg; Newsletter</a></td>
+</tr>
+<!-- not in wwwP 
+<tr>
+<td class="noaod" valign="top"><img src="http://wwws.mmjbdata.com/graphics/www.mmguide.musicmatch.com/blue/navlink.gif" width="4" height="8" alt="" border="0" vspace=2 hspace=3 align="left"></td>
+<td class="noaod"><a href="#" class="navlink">Make Musicmatch&reg; Guide my homepage</a></td>
+</tr>
+-->
+</table>
+<br><br>
+<xNORADIOLOGIN>
+<div class="callboxdark"><br><center>
+
+				<script>SkyScraperBanner(1,0,'OUTBOX')</script>
+
+</center><br></div>
+</xNORADIOLOGIN>
+<br>
+
+</td>
+
+</tr></table></td>
+
+<td bgcolor="50637D" valign="top" align="left" width="1"><table border=0 cellpadding=0 cellspacing=0 width="1"><tr>
+
+<td valign="top" bgcolor="f0f0f0"><img src="http://wwws.mmjbdata.com/graphics/www.mmguide.musicmatch.com/pixel.gif" width="1" height="3" alt="" border="0"></td>
+
+</tr><tr>
+
+<td valign="top" bgcolor="b0c3d0"><img src="http://wwws.mmjbdata.com/graphics/www.mmguide.musicmatch.com/pixel.gif" width="1" height="1" alt="" border="0"></td>
+
+</tr><tr>
+
+<td valign="top" bgcolor="a0b3cd"><img src="http://wwws.mmjbdata.com/graphics/www.mmguide.musicmatch.com/pixel.gif" width="1" height="1" alt="" border="0"></td>
+
+</tr><tr>
+
+<td valign="top" bgcolor="90a3bd"><img src="http://wwws.mmjbdata.com/graphics/www.mmguide.musicmatch.com/pixel.gif" width="1" height="1" alt="" border="0"></td>
+
+</tr><tr>
+
+<td valign="top" bgcolor="8093ad"><img src="http://wwws.mmjbdata.com/graphics/www.mmguide.musicmatch.com/pixel.gif" width="1" height="1" alt="" border="0"></td>
+
+</tr><tr>
+
+<td valign="top" bgcolor="70839d"><img src="http://wwws.mmjbdata.com/graphics/www.mmguide.musicmatch.com/pixel.gif" width="1" height="1" alt="" border="0"></td>
+
+</tr></table></td>
+
+<td bgcolor="d5e9f3" valign="top" width="1"><table border=0 cellpadding=0 cellspacing=0><tr>
+
+<td valign="top" bgcolor="f0f0f0"><img src="http://wwws.mmjbdata.com/graphics/www.mmguide.musicmatch.com/pixel.gif" width="1" height="1" alt="" border="0"></td>
+
+<td valign="top" bgcolor="f0f0f0"><img src="http://wwws.mmjbdata.com/graphics/www.mmguide.musicmatch.com/pixel.gif" width="1" height="1" alt="" border="0"></td>
+
+<td valign="top" bgcolor="b0c3d0"><img src="http://wwws.mmjbdata.com/graphics/www.mmguide.musicmatch.com/pixel.gif" width="1" height="1" alt="" border="0"></td>
+
+</tr><tr>
+
+<td valign="top" bgcolor="f0f0f0"><img src="http://wwws.mmjbdata.com/graphics/www.mmguide.musicmatch.com/pixel.gif" width="1" height="1" alt="" border="0"></td>
+
+<td valign="top" bgcolor="b0c3d0"><img src="http://wwws.mmjbdata.com/graphics/www.mmguide.musicmatch.com/pixel.gif" width="1" height="1" alt="" border="0"></td>
+
+</tr><tr>
+
+<td valign="top" bgcolor="b0c3d0"><img src="http://wwws.mmjbdata.com/graphics/www.mmguide.musicmatch.com/pixel.gif" width="1" height="1" alt="" border="0"></td>
+
+</tr></table>
+
+</td>
+
+<td valign=top class=noaod bgcolor="d5e9f3" width="295" align="left">
+
+<div class="darktext"><div class="supertinytext">&nbsp;</div>
+
+		<b>Paul Collins</b> by <strong><a href="http://www.mmguide.musicmatch.com/artist/artist.cgi?ARTISTID=784660"  CLASS="noaod">Paul Collins</a></strong><br>
+
+		<div class="noaod"><font class="noaod">Jump to: <A HREF="album.cgi%3FALBUMID=703311.1.html#tracklist" CLASS="noaod">Track List</A> *&nbsp;   <A HREF="album.cgi%3FALBUMID=703311.1.html#credits" CLASS="noaod">Credits</A> *&nbsp;</font></div> 
+
+<br>
+
+</div>
+
+<div style="line-height:9px; font-size:8px;">&nbsp;</div>
+
+<table border=0 width="280" cellpadding="0" cellspacing="0">
+
+<tr>
+
+	<td align="left" valign="top" width="130">
+
+<img src="http://wwws.mmjbdata.com/graphics/www.mmguide.musicmatch.com/default.jpg" width="130" alt="" border="0" CLASS="callboxdark" vspace=0><br>
+<span class="noaod" >
+
+</span>
+
+		</td>
+
+	<td align="center" valign="top">
+
+<div class="singledot">..........</div>
+
+</td>
+
+	<td align="center" valign="left" width="150">
+
+			
+
+	
+
+	
+
+</td>
+
+	</tr><tr>
+
+	<td colspan=3>
+
+	<xNORADIOLOGIN>
+
+	<a href="http://www.musicmatch.com/r.htm?redirect=%2fdownload%2fmx_intro.htm%3FDID%3d999991614&source=mm_guide" class="noaod" target="_blank"><b>Got MUSICMATCH MX?</b></a>
+
+</xNORADIOLOGIN>
+
+</td>
+
+</table>
+
+<br><br>
+
+						
+
+						<a name="tracklist"></a><span class="darktext"><strong>TRACK LISTING</strong></span> <a href="http://www.mmguide.musicmatch.com/email/send.cgi?ALBUMID=703311"><img src="http://wwws.mmjbdata.com/graphics/www.mmguide.musicmatch.com/blue/main_send.gif" border="0" alt="Send this Track Listing to a friend"></a>
+<br>
+<table width="290" cellpadding="0" cellspacing="0">
+<tr>
+<td align="left" width="50%" class="noaod"><IMG SRC="http://wwws.mmjbdata.com/graphics/www.mmguide.musicmatch.com/blue/preview.gif" WIDTH="11" HEIGHT="11" ALT="Indicates a 30 sec. preview clip is available." BORDER="0"> = song preview
+</td>
+<td align="right" width="50%" class="noaod">
+
+</td>
+</tr>
+</table>
+<table border=0 cellpadding=4 cellspacing=0 width=290 class="callbox">
+				<tr class="callboxtop"><td class="noaod" COLSPAN=2><u>Disc 1:</u></td></tr><TR VALIGN="top" class="artistlistbox2nb">
+	<TD class="noaod" WIDTH="40" align="left" nowrap><img src="http://wwws.mmjbdata.com/graphics/www.mmguide.musicmatch.com/nopreview.gif" align="middle" WIDTH="14" height="11">&nbsp;1.</TD><TD class="noaod" align="left" width="200">&nbsp;In Another World</TD>
+</TR>	<TR VALIGN="top" class="artistlistbox1nb">
+	<TD class="noaod" WIDTH="40" align="left" nowrap><img src="http://wwws.mmjbdata.com/graphics/www.mmguide.musicmatch.com/nopreview.gif" align="middle" WIDTH="14" height="11">&nbsp;2.</TD><TD class="noaod" align="left" width="200">&nbsp;I Could Have Told You So</TD>
+</TR>	<TR VALIGN="top" class="artistlistbox2nb">
+	<TD class="noaod" WIDTH="40" align="left" nowrap><img src="http://wwws.mmjbdata.com/graphics/www.mmguide.musicmatch.com/nopreview.gif" align="middle" WIDTH="14" height="11">&nbsp;3.</TD><TD class="noaod" align="left" width="200">&nbsp;Aswan to Luxer</TD>
+</TR>	<TR VALIGN="top" class="artistlistbox1nb">
+	<TD class="noaod" WIDTH="40" align="left" nowrap><img src="http://wwws.mmjbdata.com/graphics/www.mmguide.musicmatch.com/nopreview.gif" align="middle" WIDTH="14" height="11">&nbsp;4.</TD><TD class="noaod" align="left" width="200">&nbsp;Under the Rock</TD>
+</TR>	<TR VALIGN="top" class="artistlistbox2nb">
+	<TD class="noaod" WIDTH="40" align="left" nowrap><img src="http://wwws.mmjbdata.com/graphics/www.mmguide.musicmatch.com/nopreview.gif" align="middle" WIDTH="14" height="11">&nbsp;5.</TD><TD class="noaod" align="left" width="200">&nbsp;Anne's Song</TD>
+</TR>	<TR VALIGN="top" class="artistlistbox1nb">
+	<TD class="noaod" WIDTH="40" align="left" nowrap><img src="http://wwws.mmjbdata.com/graphics/www.mmguide.musicmatch.com/nopreview.gif" align="middle" WIDTH="14" height="11">&nbsp;6.</TD><TD class="noaod" align="left" width="200">&nbsp;Under the Spanish Sun</TD>
+</TR>	<TR VALIGN="top" class="artistlistbox2nb">
+	<TD class="noaod" WIDTH="40" align="left" nowrap><img src="http://wwws.mmjbdata.com/graphics/www.mmguide.musicmatch.com/nopreview.gif" align="middle" WIDTH="14" height="11">&nbsp;7.</TD><TD class="noaod" align="left" width="200">&nbsp;Long Way from Home</TD>
+</TR>	<TR VALIGN="top" class="artistlistbox1nb">
+	<TD class="noaod" WIDTH="40" align="left" nowrap><img src="http://wwws.mmjbdata.com/graphics/www.mmguide.musicmatch.com/nopreview.gif" align="middle" WIDTH="14" height="11">&nbsp;8.</TD><TD class="noaod" align="left" width="200">&nbsp;Dream a Little Longer</TD>
+</TR>	<TR VALIGN="top" class="artistlistbox2nb">
+	<TD class="noaod" WIDTH="40" align="left" nowrap><img src="http://wwws.mmjbdata.com/graphics/www.mmguide.musicmatch.com/nopreview.gif" align="middle" WIDTH="14" height="11">&nbsp;9.</TD><TD class="noaod" align="left" width="200">&nbsp;You're Never Gonna Find That Girl</TD>
+</TR>	<TR VALIGN="top" class="artistlistbox1nb">
+	<TD class="noaod" WIDTH="40" align="left" nowrap><img src="http://wwws.mmjbdata.com/graphics/www.mmguide.musicmatch.com/nopreview.gif" align="middle" WIDTH="14" height="11">&nbsp;10.</TD><TD class="noaod" align="left" width="200">&nbsp;You Can't Go Back</TD>
+</TR>	<TR VALIGN="top" class="artistlistbox2nb">
+	<TD class="noaod" WIDTH="40" align="left" nowrap><img src="http://wwws.mmjbdata.com/graphics/www.mmguide.musicmatch.com/nopreview.gif" align="middle" WIDTH="14" height="11">&nbsp;11.</TD><TD class="noaod" align="left" width="200">&nbsp;Fall on You</TD>
+</TR>	<TR VALIGN="top" class="artistlistbox1nb">
+	<TD class="noaod" WIDTH="40" align="left" nowrap><img src="http://wwws.mmjbdata.com/graphics/www.mmguide.musicmatch.com/nopreview.gif" align="middle" WIDTH="14" height="11">&nbsp;12.</TD><TD class="noaod" align="left" width="200">&nbsp;That's When I Think of You</TD>
+</TR>	<TR VALIGN="top" class="artistlistbox2nb">
+	<TD class="noaod" WIDTH="40" align="left" nowrap><img src="http://wwws.mmjbdata.com/graphics/www.mmguide.musicmatch.com/nopreview.gif" align="middle" WIDTH="14" height="11">&nbsp;13.</TD><TD class="noaod" align="left" width="200">&nbsp;Livin' off the Land</TD>
+</TR>	
+</table>
+
+						<xNOMMJBPLUS>
+<xOEM:bellcanada-bellcanadaFRA:->
+<div id="plus_upsell" CLASS="callbox" align="center">	
+	<span class="noaod" align="center">
+	<a href="http://www.musicmatch.com/r.htm?redirect=%2fdownload%2fplus%2fjukebox%5fintro%2ehtm%3fos%3dpc%26mode%3dinput%26BTD%3d0%26DID%3d999991614&source=mm_guide_album" target="_blank" class="noaod" style="text-decoration:none">
+		<strong>Have this CD? Create Paul Collins MP3s faster with MUSICMATCH Jukebox Plus! Click here to get it.</strong>
+</a>
+	</span>
+</div>
+<br>
+</xOEM:bellcanada-bellcanadaFRA:->
+
+</xNOMMJBPLUS>
+
+						
+
+						<a name="credits"></a><span class="darktext"><strong>CREDITS</strong></span> <a href="http://www.mmguide.musicmatch.com/email/send.cgi?ALBUMID=703311"><img src="http://wwws.mmjbdata.com/graphics/www.mmguide.musicmatch.com/blue/main_send.gif" border="0" alt="Send this page to a friend"></a>
+<TABLE CELLSPACING="1" CELLPADDING="0" BORDER="0" width="295" class="callbox">
+<TR VALIGN="top">
+	<TD class="noaod" nowrap>&nbsp; Steve Huff</TD>
+	<TD class="noaod" align=right>Bass, Songwriter&nbsp;</TD>
+</TR><TR VALIGN="top">
+	<TD class="noaod" nowrap>&nbsp; Paul Collins</TD>
+	<TD class="noaod" align=right>Guitar, Vocals, Main Performer&nbsp;</TD>
+</TR><TR VALIGN="top">
+	<TD class="noaod" nowrap>&nbsp; Chris Solberg</TD>
+	<TD class="noaod" align=right>Guitar&nbsp;</TD>
+</TR><TR VALIGN="top">
+	<TD class="noaod" nowrap>&nbsp; David Immerglück</TD>
+	<TD class="noaod" align=right>Guitar&nbsp;</TD>
+</TR><TR VALIGN="top">
+	<TD class="noaod" nowrap>&nbsp; Cyril Jordan</TD>
+	<TD class="noaod" align=right>Guitar&nbsp;</TD>
+</TR><TR VALIGN="top">
+	<TD class="noaod" nowrap>&nbsp; Jeff Trott</TD>
+	<TD class="noaod" align=right>Guitar&nbsp;</TD>
+</TR><TR VALIGN="top">
+	<TD class="noaod" nowrap>&nbsp; Hilary Stench</TD>
+	<TD class="noaod" align=right>Bass&nbsp;</TD>
+</TR><TR VALIGN="top">
+	<TD class="noaod" nowrap>&nbsp; Norman Kerner</TD>
+	<TD class="noaod" align=right>Engineer, Producer&nbsp;</TD>
+</TR><TR VALIGN="top">
+	<TD class="noaod" nowrap>&nbsp; Kenny Johnson</TD>
+	<TD class="noaod" align=right>Drums&nbsp;</TD>
+</TR><TR VALIGN="top">
+	<TD class="noaod" nowrap>&nbsp; John Stench</TD>
+	<TD class="noaod" align=right>Drums&nbsp;</TD>
+</TR><TR VALIGN="top">
+	<TD class="noaod" nowrap>&nbsp; Greg Kihn</TD>
+	<TD class="noaod" align=right>Guitar&nbsp;</TD>
+</TR><TR VALIGN="top">
+	<TD class="noaod" nowrap>&nbsp; Rowland Salley</TD>
+	<TD class="noaod" align=right>Bass (Electric)&nbsp;</TD>
+</TR><TR VALIGN="top">
+	<TD class="noaod" nowrap>&nbsp; Chris Von Sneidern</TD>
+	<TD class="noaod" align=right>Guest Appearance&nbsp;</TD>
+</TR>
+</TABLE>
+
+						
+
+<br><br>
+
+
+
+</td>
+
+<td bgcolor="#d5e9f3">&nbsp;</td>
+
+<td valign=top class=noaod bgcolor="#d5e9f3">
+
+<br>
+
+<div class="callboxtop" style="width:118;"><div class="noaod"><b>Buy CD</b></div></div>
+<div class="callbox" style="width:118;">
+<table WIDTH="110" border="0" cellspacing="0" align="center">
+<tr><td align="center">
+					<img src="http://wwws.mmjbdata.com/graphics/www.mmguide.musicmatch.com/default_not_avail.jpg" width="110" border="0">
+					</td></tr>
+					
+					
+					
+					
+					
+					<tr><td class="noaod" align="center">
+<a href="javascript:MMNotifyWishlistAdd('784660','','703311','','')"><img src="http://wwws.mmjbdata.com/graphics/www.mmguide.musicmatch.com/blue/cdaddwish.gif" border="0" alt="Add this album to your WishList"></a><a href="javascript:MMNotifyWishlistAdd()" title="View your WishList"><img src="http://wwws.mmjbdata.com/graphics/www.mmguide.musicmatch.com/blue/cdviewwish.gif" border="0" alt="View your WishList"></a>
+</td></tr>
+					
+					<tr><td align=left class="noaod">
+<font class=noaod><b>Released:</b> 1992</font>
+</td></tr><tr><td align=left class="noaod">
+<font class=noaod><b>Label:</b> Dro</font>
+</td></tr>
+				</table>
+</div>
+
+<xNOMMJBPLUS>
+
+<br>
+
+<div class="callbox" style="width:118;">
+
+<a href="http://www.musicmatch.com/r.htm?redirect=%2fdownload%2fplus%2fjukebox%5fintro%2ehtm%3fos%3dpc%26mode%3dinput%26BTD%3d0%26DID%3d999991614&source=mm_guide" class="noaod" style="text-decoration:none;" target="_blank">Tag all your own MP3 files with album covers easily with <strong>MUSICMATCH Jukebox Plus!</strong></a>
+
+<div align="right"></div></div><br>
+
+</xNOMMJBPLUS>
+
+	
+
+
+
+
+
+</td>
+
+
+
+<table border=0 cellspacing=0 cellpadding=0 width="100%" bgcolor="#ACD1E4">
+<tr>
+<td colspan=6><div class="artistlistbox1nb" align="center"><A HREF="http://www.musicmatch.com/info/plug-ins/?REQUEST=PLUGINS&VERSION=" target="_blank" class="noaod">Plug-Ins</A> &#149; <A HREF="http://www.mmguide.musicmatch.com/feedback.html" class="noaod">Feedback</A> &#149; <A HREF="http://www.mmguide.musicmatch.com/music" class="noaod">Partners</A> &#149; <A HREF="http://www.mmguide.musicmatch.com/skins/search.cgi?REQUEST=THEMES&amp;VERSION=" class="noaod">Skins</A> &#149; <A HREF="http://www.mmguide.musicmatch.com/about.html" class="noaod">About the Guide</A> &#149; <A HREF="http://www.mmguide.musicmatch.com/disclaimer.html" class="noaod">Terms of Use</A></div>
+<BR>
+
+<div class="noaod" align="center">Copyright &copy; 2001-2004 Musicmatch&reg;, Inc. For personal use only. All rights reserved.<br>
+   <img src="http://wwws.mmjbdata.com/graphics/www.mmguide.musicmatch.com/amg_35x11.gif" border="0" alt="">Portions of content provided by All Music Guide &copy; 2001 AEC One Stop Group, Inc. All Music Guide is a registered Trademark of AEC One Stop Group, Inc.</div>
+	</td>
+</tr>
+</table>
+
+</body>
+
+</html>

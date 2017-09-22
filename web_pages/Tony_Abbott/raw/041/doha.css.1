@@ -1,0 +1,1210 @@
+/* main stylesheet for www.health.gov.au */
+
+/*--------------- generic font and element styling ----------------*/
+
+body {
+	font-family: verdana, arial, helvetica, sans-serif;
+}
+
+table, tr, td, ol, ul, li {
+	font-size: 100%;
+	color: #000;
+	font-family: verdana, arial, helvetica, sans-serif;
+}
+
+p {
+	margin-top: 10px;
+	font-size: 100%;
+	margin-bottom: 1.5em;
+	color: #000000;
+	font-family: verdana, arial, helvetica, sans-serif;
+}
+
+a {
+	color: #336699;
+	text-decoration: underline;
+}
+
+a:hover {
+	color: #336699;
+	text-decoration: none;
+}
+
+a:visited {
+	color: #444;
+}
+
+h1 {
+	margin-top: -40px;
+	margin-left: 0;
+	padding-left: 22px;
+	font-size: 120%;
+	background:    url(/internet/wcms/publishing.nsf/AttachmentsByTitle/h1dots.gif/$FILE/h1dots.gif) no-repeat;
+	color: #225E76; 
+
+}
+
+h1.nback {
+	margin-top: 0;
+	padding: 0;
+	font-size: 120%;
+	background-image: none;
+	color: #225E76;
+	background-repeat: no-repeat;
+}
+h1.spaced {
+	margin-top: 0px;
+	margin-left: 0;
+	padding-left: 22px;
+	font-size: 120%;
+	color: #225E76;
+	background: none;
+}
+h2 {
+	font-weight: bold;
+	font-size: 110%;
+	color: #000;
+	margin-top: 1em;
+}
+h3 {
+	font-weight: bold;
+	font-size: 105%;
+	color: #369;
+}
+h4 {
+	font-weight: bold;
+	font-size: 100%;
+	color: #000;
+}
+h5 {
+	font-weight: bold;
+	font-size: 95%;
+	color: #369;
+}
+h6 {
+	font-weight: bold;
+	font-size: 95%;
+	color: #000;
+}
+form {
+	padding: 0;
+	margin: 0;
+}
+.gry {
+	color: #666666;
+}
+.grysm {
+	font-size: 90%;
+	color: #666666;
+}
+
+.footnote {
+	font-size: 90%; 
+	color: #666;
+	margin-top: 5px;
+}
+
+/*------------------------- header section ---------------------------*/
+
+#header {
+	z-index: 2;
+	left: 0;
+	width: 99%;
+	margin-right: -25px;
+	position: absolute;
+}
+
+#headerback {
+	z-index: 1;
+	background: #4b8ba4 url(/internet/wcms/publishing.nsf/AttachmentsByTitle/top_background.jpg/$FILE/top_background.jpg) repeat-x;
+	width: 100%;
+	height: 135px;
+}
+#rightbanner {
+	z-index: 1;
+	background: url(/internet/wcms/publishing.nsf/AttachmentsByTitle/top_rghtimg.jpg/$FILE/top_rghtimg.jpg) no-repeat;
+	width: 373px;
+	height: 107px;
+	float: right;
+	margin-top: -135px;
+}
+#headerback_handheld{
+	display: none;
+}
+#skiplinks {
+	left: 0;
+	position: absolute;
+	top: -25px;
+}
+#topsearch {
+	text-align: right;
+	right: 0;
+	font-size: 1em;
+	letter-spacing: 1px;
+	font-weight: bold;
+	color: #fff;
+	margin-top: 89px;
+	width: 100%;
+	position: relative;
+	right: 0px;
+
+}
+#topsearch a {
+	color: #fff;
+	text-decoration: none;
+}
+#topsearch a:hover {
+	text-decoration: underline;
+
+}
+
+/*------------------------------------ left navigation ----------------------------------*/
+
+#lft {
+	left: 5;
+	width: 24%;
+	position: absolute;
+	top: 128px;
+	margin-top: 10px;
+}
+#lft .navi {
+	padding: 20px 0 20px 5px;
+	text-align: right;
+}
+#lft .navi a {
+	font-weight: bold;
+	color: #336699; 
+	text-decoration: none;
+}
+#lft .navi a:hover {
+	color: #000; 
+	text-decoration: none;
+}
+
+#lft .navi ul {
+	padding: 0;
+	margin: 0;
+	list-style-type: none;
+	height: auto;
+
+}
+#lft .navi ul li {
+	padding: 3px 16px 3px 0;
+	font-size: 100%;
+	border-right-width: 4px;
+	border-right-style: solid;
+	border-right-color: #5696B1;
+	border-bottom-width: 1px;
+	border-bottom-style: solid;
+	border-bottom-color: #D2DAE2;
+	margin-top: 4px;
+	margin-bottom: 0;
+
+}
+
+#lft .navi ul li a {
+	display: block;
+	height: auto;
+}
+#lft .navi ul li ul {
+	font-size: 100%; 
+	padding: 7px 0 0 0; 
+	margin: 0; 
+	list-style-type: none;
+	height: auto;
+}
+#lft .navi ul li ul li {
+	padding: 0; 
+	background-image: none;
+	margin: 0;
+	border: 0;
+}
+#lft .navi ul li ul li a {
+	font-weight: normal;
+	color: #666; 
+	text-decoration: none;
+	display: block;
+	height: auto;
+}
+#lft .navi ul li ul li a:hover {
+	color: #666;
+	text-decoration: underline;
+}
+#lft #logoph {
+	text-align: right;
+}
+#lft .latest {
+	border: 0;
+	width: auto;
+	float: right;
+	clear: both;
+	margin: 0 5px 0 0;
+}
+#lft .latest img {
+	display: block;
+	margin: 10px auto;
+	border: 0;
+}
+#lft .latest .greyhd {
+	padding: 4px;
+	font-weight: bold;
+	color: #000000;
+	text-align: center;
+}
+#lft .latest .whtback {
+	color: #000;
+	background-color: #ffffff;
+	text-align: center;
+	padding: 5px;
+}
+#lft .latest .latesttext {
+	background-image:url(/internet/wcms/publishing.nsf/AttachmentsByTitle/list_arrow.gif/$FILE/list_arrow.gif);
+	background-repeat: no-repeat;
+	background-position: right;
+	padding-right: 10px;
+}
+/*----------------------------- centre pane / content --------------------------------*/
+
+#mainbody {
+	left: 24%; 
+	width: 73%; 
+	position: absolute; 
+	top: 110px;
+	font-size: 1.1em;
+	padding-left: 22px;
+	margin: 0;
+	line-height: 1.4;
+}
+
+
+/*--- 2 pane styles ---*/
+
+#mainbody .maincntnt2pn {
+	padding: 0 15px 0 0;
+	border-bottom: 20px; 
+	position: relative; 
+	top: 0; 
+	left: 0; 
+	height: auto; 
+	width: 96%; 
+	line-height: 1.4;
+}
+
+/*--- table styles ---*/
+/* Some styles have been commented out for release in July 2005 */
+/* Max-width set to 55% as an arbitrary value.  Trying to pick the size that tables will use the most screen width, without
+being forced below the right-hand teasers (if possible to avoid) */
+#mainbody table {
+	border-collapse: collapse;
+	border: #a29e9e 1px solid;
+	font-size: 0.9em;
+	margin: 0;
+	max-width: 100%; 
+}
+/* These styles make sure that really wide tables will be forded below any right-hand teasers in Firefox */
+#mainbody>.lftpad table {
+	float:left;
+}
+/* This clears any text occuring below the tables */
+#mainbody>.lftpad table + * {
+	clear:left;
+}
+/* The ollowing two styles were added as the long document style adds the "maincntnt" div */
+#mainbody>.maincntnt>.lftpad table {
+	float:left;
+}
+/* This clears any text occuring below the tables */
+#mainbody>.maincntnt>.lftpad table + * {
+	clear:left;
+}
+/* Top of page links */
+#mainbody A.top {
+	CLEAR: both; PADDING-LEFT: 17px; FONT-SIZE: 0.9em; BACKGROUND: url(/internet/wcms/publishing.nsf/AttachmentsByTitle/top.gif/$FILE/top.gif) no-repeat 0px center; FLOAT: right; MARGIN: 10px 0px 10px 15px; COLOR: #336699;
+}
+#mainbody A.top:link {
+	COLOR: #336699;
+}
+#mainbody A.top:visited {
+	COLOR: #336699;
+}
+#mainbody A.top:active {
+	COLOR: #336699; TEXT-DECORATION: none
+}
+#mainbody A.top:hover {
+	COLOR: #336699; TEXT-DECORATION: none
+}
+/* End top of page links */
+
+/* START HACK FOR IE - IE (in quirks mode) renders any table within the #mainbody div too wide */
+* html #mainbody table {
+	width: 90%;
+}
+/* END HACK */
+
+#mainbody .maincntnt2pn table {
+	width: 100%;
+	border: #a29e9e 1px solid;
+	font-size: 0.9em;
+	margin: 0;
+	max-width: 100%; 
+}
+
+/* START HACK FOR IE - IE (in quirks mode) renders any table within the #mainbody .maincntnt2pn div too wide */
+* html #mainbody .maincntnt2pn table {
+	width: 95%;
+}
+/* END HACK */
+
+#mainbody .maincntnt2pn table table {
+	font-size: 1em;
+}
+
+#mainbody table table {
+	font-size: 1em;
+}
+
+#mainbody table td {
+	border: #a29e9e 1px solid;
+	padding: 4px;
+	vertical-align: top;
+}
+
+#mainbody .maincntnt2pn table td {
+	border: #a29e9e 1px solid;
+	padding: 4px; 
+	vertical-align: top;
+}
+
+#mainbody table th {
+	border: #a29e9e 1px solid;
+	background-color: #d0d0d0;
+	padding: 4px;
+	vertical-align: top;
+}
+
+#mainbody .maincntnt2pn table th {
+	border: #a29e9e 1px solid;
+	background-color: #d0d0d0;
+	padding: 4px; 
+	vertical-align: top;
+}
+
+#mainbody table caption {
+	text-align: left;
+	font-size: 1.1em;
+	font-weight: bold;
+	padding: 1em 0;
+}
+
+#mainbody .maincntnt2pn table caption {
+	text-align: left;
+	font-size: 1.1em;
+	font-weight: bold;
+	padding: 1em 0;
+}
+#mainbody table h1, #mainbody table h2 {
+	margin-bottom: 2px;
+	padding-bottom: 2px;
+	font: bold 1.2em;
+	margin-top: 0;
+	padding-top: 0;
+}
+
+#mainbody table h3 {
+	margin-bottom: 0;
+	padding-bottom: 0;
+	font: 800 1.15em;
+	margin-top: 0;
+	padding-top: 0;
+}
+
+#mainbody table h4 {
+	margin-bottom: 0;
+	padding-bottom: 0;
+	font: 600 1.0em;
+	margin-top: 0;
+	padding-top: 0;
+}
+
+#mainbody table h5, #mainbody table h6 {
+	margin-bottom: 0;
+	padding-bottom: 0;
+	font: 400 1.0em;
+	margin-top: 0;
+	padding-top: 0;
+}
+
+#mainbody .maincntnt2pn table h1, #mainbody .maincntnt2pn table h2 {
+	margin-bottom: 2px;
+	padding-bottom: 2px;
+	font: bold 1.2em;
+	margin-top: 0;
+	padding-top: 0;
+}
+
+#mainbody .maincntnt2pn table h3 {
+	margin-bottom: 0;
+	padding-bottom: 0;
+	font: 800 1.15em;
+	margin-top: 0;
+	padding-top: 0;
+}
+
+#mainbody .maincntnt2pn table h4 {
+	margin-bottom: 0;
+	padding-bottom: 0;
+	font: 600 1.0em;
+	margin-top: 0;
+	padding-top: 0;
+}
+
+#mainbody .maincntnt2pn table h5, #mainbody .maincntnt2pn table h6 {
+	margin-bottom: 0;
+	padding-bottom: 0;
+	font: bold 1.1em;
+	margin-top: 0;
+}
+
+/*--- breadcrumb styles ---*/
+
+#mainbody .breadcrm {
+	padding-bottom: 19px;
+	margin: 10px 0 35px 0;
+	font-size: 90%;
+	left: 0;
+	color: #666;
+	position: relative;
+	width: 60%;
+	top: 0;
+}
+
+
+/* START HACK for IE which renders the breadcrumb too narrow using the 60% width above */
+* html #mainbody .breadcrm {
+	width: auto;
+}
+/* END HACK */
+
+#mainbody .breadcrm p {
+	color: #666666;
+}
+#mainbody .breadcrm a {
+	color: #666666;
+	text-decoration: underline;
+}
+#mainbody .breadcrm a:hover {
+	color: #666666;
+	text-decoration: none;
+}
+
+#mainbody .maincntnt2pn .breadcrm {
+	margin-bottom: 5px;
+	width: 75%;
+}
+
+/*--- archive text box --- these styles are for future use on the styledisplaycontentarchive template 
+#mainbody #archive {
+	border: 1px solid red;
+	padding: 10px;
+	margin: 10px 0 15px 0;
+	background-color: #f8e3e3;
+	font-size: 1em;
+	font-weight: bold;
+}
+*/
+
+
+/*--- other centre pane styles ---*/
+
+
+#mainbody img.left {
+	margin: 0 15px 15px 0;
+	float: left;
+}
+
+#mainbody .lftpad {
+	padding-left: 22px;
+}
+#mainbody .bluhome {
+	color: #225E76;
+}
+#mainbody .blu {
+	color: #444;
+}
+#mainbody .blu a {
+	text-decoration: underline
+}
+#mainbody .blu a:hover {
+	text-decoration: none
+}
+#mainbody p.hmpg {
+	margin: 0;
+	padding: 0;
+	color: #336699;
+}
+.lftpad .subnav {
+	border: 0;
+	margin-top: 10px;
+	padding-top: 0;
+	width: 100%;
+	clear: none;
+	display: block;
+}
+/* width: auto for compliant browsers to clear context nav and use appropriate screen */
+div.lftpad>div.subnav {
+	width: auto;
+}
+#mainbody .subnav .hd {
+	padding: 0 4px 4px 4px;
+	font-weight: bold;
+	color: #336699;
+}
+#mainbody .subnav p {
+	padding: 0 4px 4px 4px; 
+	margin: 0;
+}
+#mainbody .subnav a {
+	text-decoration: underline;
+	font-weight: bold;
+}
+#mainbody .seealso {
+	margin-bottom: 0;
+	padding-bottom: 0;
+	margin-top: 10px;
+	padding-left: 22px;
+}
+#lpnav {
+	margin-bottom: 0;
+	padding-bottom: 0;
+	margin-top: 10px;
+}
+#lpnav .subnav {
+	margin-top: 0;
+}
+#mainbody .seealso .hd {
+	font-weight: bold;
+	margin-bottom: 3px;
+}
+#mainbody .seealso .hd a, #lpnav .hd a {
+	text-decoration: underline;
+	font-weight: bold;
+}
+#lpnav .subnav a:hover {
+	color: #000000;
+	text-decoration: none;
+}
+#mainbody .seealso .hd a:hover, #lpnav .hd a:hover {
+	color: #000000;
+	text-decoration: none;
+}
+
+#mainbody hr {
+	margin: 0px 0;
+	color: #CCC;
+	background-color: #CCC;
+	height: 1px;
+}
+#mainbody .seealso p, #lpnav p {
+	margin: 0 0 10px 0;
+}
+#mainbody .seealso .bot, #lpnav .bot {
+	padding: 2px 0 7px 0;
+}
+#mainbody .seealso .bot ul, #lpnav .bot ul {
+	padding: 0 0 0 2px;
+	margin: 0 0 0 15px;
+	list-style-type: square;
+}
+#mainbody .seealso .bot a:hover, #lpnav .bot a:hover {
+	color: #336699;
+	text-decoration: underline;
+}
+#mainbody .seealso .bot ul li, #lpnav .bot ul li {
+	padding-left: 0px;
+	padding-bottom: 4px;
+	color: #369;
+}
+#mainbody .welcome p {
+	padding: 0;
+	font-weight: bold;
+	margin: 0;
+	color: #336699;
+}
+#mainbody .strytbl td.img {
+	padding-right: 10px;
+}
+/* Commented out old TOC styles as replaced by CSS in expandable_menu.css
+#mainbody .toc ul {
+	padding-right: 0;
+	padding-left: 0;
+	margin-left: 0;
+	margin-right: 0;
+	list-style-type: none;
+}
+#mainbody .toc ul li {
+	padding-left: 15px;
+	background: url(/internet/wcms/publishing.nsf/AttachmentsByTitle/liarrows.gif/$FILE/liarrows.gif) left top no-repeat;
+}
+#mainbody .toc ul li.plus {
+	background-image: url(/internet/wcms/publishing.nsf/AttachmentsByTitle/liplus.gif/$FILE/liplus.gif);
+	background-repeat: no-repeat;
+}
+*/
+#mainbody .btt a {
+	text-decoration: underline;
+}
+#mainbody .btt a:hover {
+	text-decoration: none;
+}
+#mainbody .seealso .bot a, #lpnav .bot a {
+	color: #336699;
+	text-decoration: underline;
+}
+#mainbody .seealso .bot a:hover, #lpnav .bot a:hover {
+	color: #000;
+	text-decoration: none;
+}
+#mainbody .sitemap {
+	padding: 0 0 10px 0;
+	margin: 0;
+	list-style-type: none
+}
+#mainbody .sitemap li {
+	padding-bottom: 6px;
+	padding-top: 6px;
+}
+#mainbody .sitemap li ul {
+	padding: 0 0 0 20px;
+	margin: 0;
+	list-style-type: none;
+}
+#mainbody .sitemap li ul li {
+	padding-bottom: 4px;
+	padding-top: 4px;
+	margin: 0;
+}
+#mainbody div .bluehead {
+	border-top: #dde9f4 1px solid;
+	padding: 0;
+	margin: 0;
+}
+#mainbody div .blueback {
+	border: #dde9f4 1px solid;
+	border-top: 0;
+	background-color: #f4fafb;
+	padding: 7px;
+}
+
+/* removes the link border and adds padding to images of other language names written in that language, ie 'Arablic' written in Arabic */
+#mainbody .language {
+	border: 0;
+	margin: 0 15px 0 15px;
+}
+
+/*--- form styles ---*/
+#mainbody form {
+	background-color: #f2f8f9;
+	border: 1px solid #dde9f4;
+	float: left;
+	margin: 0 0 2em 0;
+	padding: 1em 0 0 0;
+}
+/* To clear everything following forms in IE, as IE does not recognize adjacent selectors. */
+#mainbody * {
+	clear: left;
+}
+
+/*Make sure that anything following the form is cleared, as the form is floated left. */
+#mainbody form + * {
+	clear: left;
+}
+
+/*Search input and button. */
+#mainbody #search form {
+	border: 0;
+	background-color: none;
+	margin: 0;
+	padding: 0;
+	width: 100%;
+}
+
+#mainbody #search form fieldset {
+	border: 0;
+	background-color: #FFF;
+	margin: 0;
+	padding: 0;
+	width: auto;
+}
+
+#mainbody #search form input.searchbox {
+	float: none;
+	letter-spacing: 0.1em;
+	font-size: 0.85em;
+	color: #666;
+	background-color: #EFF3F6;
+	border: 0.1em solid #B9DAE9;
+	padding: 2px;
+	height:1.9em;
+	width: 60%;
+}
+
+#mainbody #search form input.searchbutton {
+	float: none;
+	font-size: 0.85em;
+	color: #FFF;
+	background-color: #A22030;
+	border: 0.1em solid #B9DAE9;
+	letter-spacing: 0.1em;
+	padding: 2px;
+	height:1.9em;
+}
+
+#mainbody form fieldset {
+	margin: 0.5em 0 0 0;
+	height: auto;
+	border: 0;
+}
+
+#mainbody form fieldset fieldset {
+	border: 1px solid #7F9DB9;
+	margin: 0 1em 1em 1em;
+}
+
+#mainbody form fieldset fieldset legend {
+	color: #000000;
+}
+
+/* start hack
+the following statements allow the border of each fieldset to enclose all the label and field elements within it */
+#mainbody form div:after {
+    content: "."; 
+    display: block; 
+    height: 1em; 
+    clear: both; 
+    visibility: hidden;
+}
+
+/* for ie mac */
+#mainbody form fieldset {
+	display: inline-table;
+	margin: 0;
+	padding: 0;
+}
+
+/* hides from ie-mac \*/
+* html #mainbody form fieldset {height: 1%;}
+#mainbody form fieldset  {display: block;}
+/* end hide from ie-mac */
+
+/* end hack */
+
+#mainbody form div {
+	display: block;
+	clear: both;
+	height: auto;
+	padding: 0;
+}
+
+#mainbody form p.summary {
+	padding: 0 7px 0 7px;
+}
+
+#mainbody form p.label {
+	float: left;
+	margin: 0;
+	padding: 0 0 0 7px;
+	text-align: left;
+	width: 45%;
+}
+
+#mainbody form p.field {
+	clear: none;
+	float: right;
+	margin: 0;
+	padding: 0 0 0 7px;
+	text-align: left;
+	width: 50%;
+}
+
+/* IE hack to put in spacing after each field */
+* html #mainbody form p.label {
+	padding: 0 0 1em 1em;
+}
+
+* html #mainbody form p.field {
+	padding: 0 0 1em 1em;
+}
+
+/*---------------------------------- right pane ---------------------------------*/
+#rght {
+	float: right;
+	padding-right: 10px;
+	padding-left: 10px;
+	margin-left: 15px;
+	margin-top: 12px;
+	margin-bottom: 2px;
+	width: 35%;
+	z-index: 6;
+	text-align: left;
+}
+
+#rght .rghtpad {
+	padding-right: 10px;
+	text-align: right;
+}
+#rght .rghtnavblock {
+	margin-top: 35px;
+	padding: 13px 10px 18px 10px;
+	background-position: bottom;
+	border: 1px solid #D2DAE2;
+	border-top: 4px solid #5696B1;
+	background-image: url(/internet/wcms/publishing.nsf/AttachmentsByTitle/grad.jpg/$FILE/grad.jpg);
+	background-repeat: repeat-x;
+	background-color: #FFF;
+}
+#rght .rghtnavblock ul {
+	margin: 0 0 0 16px;
+	padding: 0;
+	list-style-type: square;
+}
+#rght .rghthealth {
+	margin-top: 20px;
+	font-size: 90%;
+}
+#rght .rghthealth .hd {
+	font-weight: bold;
+	background-image: url(/internet/wcms/publishing.nsf/AttachmentsByTitle/ha_back.gif/$FILE/ha_back.gif);
+	color: #ffffff;
+	padding: 2px;
+}
+#rght .rghthealth ul {
+	margin: 0;
+	padding: 0 0 0 4px;
+	list-style-type: none;
+}
+#rght .rghthealth ul li {
+	padding-left: 10px;
+	background: url(/internet/wcms/publishing.nsf/AttachmentsByTitle/nav_dot2.gif/$FILE/nav_dot2.gif) left top no-repeat;
+}
+#rght .rghtpad .tpbord {
+	border-top: #99bdca 2px solid;
+}
+#rght .rghtpad td ul {
+	padding: 0;
+	margin: 0;
+	list-style-type: none;
+}
+#rght .rghtpad td ul li {
+	padding-left: 20px;
+	padding-bottom: 4px;
+	background: url(/internet/wcms/publishing.nsf/AttachmentsByTitle/liarrows.gif/$FILE/liarrows.gif) left top no-repeat;
+}
+
+#rght .rghtpad a {
+	color: #336699;
+	text-decoration: none;
+}
+
+#rght .rghtpad a:hover {
+	color: #336699;
+	text-decoration: underline;
+}
+#rght .rghtpad .rghthealth a {
+	color: #336699;
+	text-decoration: none;
+}
+#rght .rghtpad .rghthealth a:hover {
+	color: #000000;
+	text-decoration: none;
+}
+/*--- 3 pane footer ---*/
+
+#footer {
+	border: 0;
+	border-top: #5e9eb7 1px solid;
+	font-size: 0.9em;
+	left: 22PX;
+	margin-bottom: 5px;
+	padding-bottom: 5px;
+	padding-top: 10px;
+	width: 96%;
+	color: #777;
+	position: relative;
+	top: 40px;
+	height: 100px;
+	text-align: center;
+	clear: both;
+}
+#footer a {
+	color: #666;
+	text-decoration: none;
+}
+#footer a:hover {
+	color: #666;
+	text-decoration: underline;
+}
+
+/*--- 2 pane footer ---*/
+
+#footer2pn {
+	position: relative;
+	top: 40px;
+	left: 44px;
+	border-top: 1px solid #5e9eb7;
+	font-size: 0.9em;
+	margin: 0 0 5px 0;
+	padding: 10px 15px 5px 0;
+	height: auto;
+	text-align: center;
+	width: 90%;
+	color: #666;
+}
+
+#footer2pn a{
+	color: #666;
+	text-decoration: none;
+}
+#footer2pn a:hover {
+	color: #666;
+	text-decoration: underline;
+}
+ /*--- end footer styles ---*/
+
+.footnote {
+	font-size: 90%;
+	color: #666;
+}
+#search {
+	text-align: right;
+	position: relative;
+	margin-bottom: 10px;
+}
+.asearch {
+	border: #dde9f4 1px solid;
+	background-color: #f4fafb;
+	
+}
+.fsheet {
+	border: #5696b1 1px solid;
+	background-color: #f0f7f9;
+}
+.icns {
+	visibility: visible;
+	text-align:right;
+	margin-bottom: 0px;
+	padding-top: 15px;
+}
+.disclaimer {
+	font-size: 90%;
+	color: #336699;
+	clear: both;
+}
+.currency {
+	font-size: 90%;
+	color: #777;
+	clear: both;
+}
+.doha_search label {
+	display: block;
+	float: left;
+	width: 9em;
+	padding-top: 8px;
+}
+.doha_search input {
+	margin-top: 4px;
+}
+.doha_search select {
+	margin-top: 4px;
+}
+.symbol {
+	font-family: symbol;
+}
+.tabcentrshade {
+	font-size: 80%;
+	background-color: #cff;
+	text-align: center;
+}
+.tabcentrshadedark {
+	font-size: 80%;
+	background-color: #9cf;
+	text-align: center;
+}
+ /*--- vacancies page styles begin ---*/
+.advertIndent{
+	padding-top: 10px;
+	border-top-width: 1px;
+	border-top-color: #ffffff;
+	width: 100%;
+}
+.indent {
+	left: 20px;
+	padding-left: 20px;
+/*--- vacancies page styles end ---*/	
+}
+.arrowlist {
+	url(/internet/wcms/publishing.nsf/AttachmentsByTitle/list_arrow.gif/$FILE/list_arrow.gif);
+	margin:0;
+	padding: 0;
+	/*list-style-position: inside;*/
+}
+
+ul.arrowlist li {
+	margin: 0 0 0 18px;
+	padding: -50px;
+	url(/internet/wcms/publishing.nsf/AttachmentsByTitle/list_arrow.gif/$FILE/list_arrow.gif);
+}
+
+.arrowlist a {
+padding-left: 0;
+}
+hr {
+	margin: 0px 0;
+	max-width: 65%;
+	text-align: left;
+	color: #CCCCCC;
+	border: 0px #A22030;
+}
+#topImagePrint {
+	display: none;
+}
+/* LANDING PAGE REDEV STYLES */
+div#siteareas {
+	display: block;
+	width: 100%;
+}
+/* For IE */
+.siteareabox {
+	margin: 0 3% 5px 0;
+	padding: 0 0 0 45px;
+	background: url(/internet/wcms/publishing.nsf/AttachmentsByTitle/arrowbig.gif/$FILE/arrowbig.gif) no-repeat 23px 2px;
+	width: 48%;
+	display: inline;
+	vertical-align: top;
+	border-left: dotted #CCC 1px;
+}
+.siteareaboxnosummary {
+	margin: 0 3% 0 0;
+	padding: 0 0 10px 45px;
+	background: url(/internet/wcms/publishing.nsf/AttachmentsByTitle/arrowbig.gif/$FILE/arrowbig.gif) no-repeat 23px 2px;
+	width: 48%;
+	display: inline;
+	vertical-align: top;
+	border-left: dotted #CCC 1px;
+}
+
+/* For compliant browsers */
+div.subnav>div.siteareabox {
+	margin: 0 3% 5px 0;
+	padding: 0 0 0 23px;
+	background: url(/internet/wcms/publishing.nsf/AttachmentsByTitle/arrowbig.gif/$FILE/arrowbig.gif) no-repeat 0 2px;
+	display: block;
+	vertical-align: top;
+	border: 0;
+	width: auto;
+}
+div.subnav>div.siteareaboxnosummary {
+	margin: 0 3% 0 0;
+	padding: 0 0 10px 23px;
+	background: url(/internet/wcms/publishing.nsf/AttachmentsByTitle/arrowbig.gif/$FILE/arrowbig.gif) no-repeat 0 2px;
+	width: auto;
+	display: block;
+	vertical-align: top;
+	border: 0;
+}
+#thissection {
+	margin-top: 35px;
+	/*width: 30%;*/
+	border: 1px solid #D2DAE2; /*#ECECEC*/
+	border-top: 4px solid #5696B1;
+	font-size: 0.8em;
+	padding: 8px;
+	background-image: url(/internet/wcms/publishing.nsf/AttachmentsByTitle/grad.jpg/$FILE/grad.jpg);
+	background-repeat: repeat-x;
+	background-position: bottom;
+}
+#thissection ul {
+	margin-left: 0;
+	padding: 0;
+}
+#thissection ul li{
+	margin-bottom: 3px;
+	margin-left: 0;
+	padding: 0;
+	color: #444;
+}
+#thissection ul li.current{
+	margin-left: -17px;
+	background: url(/internet/wcms/publishing.nsf/AttachmentsByTitle/arrow_context.gif/$FILE/arrow_context.gif) no-repeat 0 0.3em;
+	padding-left: 17px;
+	list-style: none;
+	font-weight: bold;
+	color: #336699;	
+}
+#thissection ul ul {
+	margin-left: 0;
+	margin-top: 5px;
+	font-weight: normal;
+	padding: 0;
+}
+#thissection ul ul li{
+	margin-left: 15px;
+	list-style: square;
+	padding: 0;
+	color: #336699;
+}
+#thissection h3 {
+	/*background: url(grad2.jpg) repeat-y 0 right;*/
+	margin: 0 0 1.8em 0;
+	padding-bottom: 5px;
+	border-bottom: 1px solid #D2DAE2;
+}
+
+/*--- Tender page style ---*/
+/* NOTE: These styles NEED #mainbody in front to make them specific enough to overwrite previous styles earlier in the CSS */
+#mainbody div.tenderRowTop, div.tenderRow {
+	border: 1px solid #CCCCCC;
+	clear: both;
+	width: 100%;
+}
+
+#mainbody div.tenderRowTop {
+	margin-top: 15px;
+}
+
+#mainbody div.tenderRow {
+	border-top: 0;
+}
+
+#mainbody div.tenderRowTop:after, div.tenderRow:after { 
+	clear: both; 
+	content: "."; 
+	display: block; 
+	font-size:0; 
+	height: 0; 
+	visibility:hidden; 
+}
+
+#mainbody div.tenderHeader {
+	clear: none;
+	float: left;
+	font-weight: 700;
+	padding: 5px;
+	width: 20%;
+}
+
+#mainbody div.tenderInfo {
+	clear: none;
+	border-left: 1px solid #CCCCCC;
+	float: right;
+	padding: 5px;
+	width: 60%;
+}
+
+/*This is a hack to feed specific styles to Opera. In this case, it is to stop it outputting a gap between the bottom
+of tenderInfo and it's containing div.*/
+@media all and (min-width: 0px){
+   div.tenderInfo {
+   		min-height: 40px;
+   		margin-bottom: -12px;
+   }
+}

@@ -1,0 +1,135 @@
+<html><!-- #BeginTemplate "/Templates/portfolio.dwt" -->
+<head>
+<!-- #BeginEditable "doctitle" --> 
+<title>jimmy chin photography</title>
+<!-- #EndEditable -->
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<script language="JavaScript">
+<!--
+function MM_preloadImages() { //v3.0
+  var d=document; if(d.images){ if(!d.MM_p) d.MM_p=new Array();
+    var i,j=d.MM_p.length,a=MM_preloadImages.arguments; for(i=0; i<a.length; i++)
+    if (a[i].indexOf("#")!=0){ d.MM_p[j]=new Image; d.MM_p[j++].src=a[i];}}
+}
+
+function MM_findObj(n, d) { //v4.0
+  var p,i,x;  if(!d) d=document; if((p=n.indexOf("?"))>0&&parent.frames.length) {
+    d=parent.frames[n.substring(p+1)].document; n=n.substring(0,p);}
+  if(!(x=d[n])&&d.all) x=d.all[n]; for (i=0;!x&&i<d.forms.length;i++) x=d.forms[i][n];
+  for(i=0;!x&&d.layers&&i<d.layers.length;i++) x=MM_findObj(n,d.layers[i].document);
+  if(!x && document.getElementById) x=document.getElementById(n); return x;
+}
+
+function MM_nbGroup(event, grpName) { //v3.0
+  var i,img,nbArr,args=MM_nbGroup.arguments;
+  if (event == "init" && args.length> 2) {
+    if ((img = MM_findObj(args[2])) != null && !img.MM_init) {
+      img.MM_init = true; img.MM_up = args[3]; img.MM_dn = img.src;
+      if ((nbArr = document[grpName]) == null) nbArr = document[grpName] = new Array();
+      nbArr[nbArr.length] = img;
+      for (i=4; i < args.length-1; i+=2) if ((img = MM_findObj(args[i])) != null) {
+        if (!img.MM_up) img.MM_up = img.src;
+        img.src = img.MM_dn = args[i+1];
+        nbArr[nbArr.length] = img;
+    } }
+  } else if (event == "over") {
+    document.MM_nbOver = nbArr = new Array();
+    for (i=1; i < args.length-1; i+=3) if ((img = MM_findObj(args[i])) != null) {
+      if (!img.MM_up) img.MM_up = img.src;
+      img.src = (img.MM_dn && args[i+2]) ? args[i+2] : args[i+1];
+      nbArr[nbArr.length] = img;
+    }
+  } else if (event == "out" ) {
+    for (i=0; i < document.MM_nbOver.length; i++) {
+      img = document.MM_nbOver[i]; img.src = (img.MM_dn) ? img.MM_dn : img.MM_up; }
+  } else if (event == "down") {
+    if ((nbArr = document[grpName]) != null)
+      for (i=0; i < nbArr.length; i++) { img=nbArr[i]; img.src = img.MM_up; img.MM_dn = 0; }
+    document[grpName] = nbArr = new Array();
+    for (i=2; i < args.length-1; i+=2) if ((img = MM_findObj(args[i])) != null) {
+      if (!img.MM_up) img.MM_up = img.src;
+      img.src = img.MM_dn = args[i+1];
+      nbArr[nbArr.length] = img;
+  } }
+}
+//-->
+</script>
+<link rel="stylesheet" href="jc_photograpy.css" type="text/css">
+</head>
+
+<body bgcolor="#333333" onLoad="MM_preloadImages('images/nv_biography_f2.gif','images/nv_portfolio_f3.gif','images/nv_portfolio_f2.gif','images/nv_work_f2.gif','images/nv_contact_f3.gif','images/nv_contact_f2.gif','images/nv_back_f2.gif','images/nv_index_f2.gif','images/nv_next_f2.gif','images/nv_portfolio.gif','images/nv_portfolio_f4.gif')" leftmargin="0" topmargin="0">
+
+<center>
+
+<table border="0" cellpadding="0" cellspacing="0" width="760">
+  <tr>
+   <td><img src="images/spacer.gif" width="32" height="1" border="0"></td>
+   <td><img src="images/spacer.gif" width="150" height="1" border="0"></td>
+   <td><img src="images/spacer.gif" width="82" height="1" border="0"></td>
+   <td><img src="images/spacer.gif" width="110" height="1" border="0"></td>
+   <td><img src="images/spacer.gif" width="8" height="1" border="0"></td>
+   <td><img src="images/spacer.gif" width="110" height="1" border="0"></td>
+   <td><img src="images/spacer.gif" width="8" height="1" border="0"></td>
+   <td><img src="images/spacer.gif" width="110" height="1" border="0"></td>
+   <td><img src="images/spacer.gif" width="8" height="1" border="0"></td>
+   <td><img src="images/spacer.gif" width="110" height="1" border="0"></td>
+   <td><img src="images/spacer.gif" width="32" height="1" border="0"></td>
+  </tr><tr>
+   <td colspan="11"><img src="images/spacer.gif" width="1" height="32" border="0"></td>
+  </tr><tr>
+    <td>&nbsp;</td>
+      <td><a href="index.htm"><img name="logo" src="images/logo.gif" width="150" height="38" border="0" alt="Jimmy Chin photography"></a></td>
+    <td>&nbsp;</td>
+	  <td><a href="biography.htm" onMouseOver="MM_nbGroup('over','nv_biography','images/nv_biography_f2.gif','',1)" onMouseOut="MM_nbGroup('out')"><img src="images/nv_biography.gif" width="110" height="38" border="0" alt="biography" name="nv_biography"></a></td>
+	<td>&nbsp;</td>
+	  <td><a href="portfolio_01.htm" onMouseOver="MM_nbGroup('over','nv_portfolio','images/nv_portfolio_f4.gif','',1)" onMouseOut="MM_nbGroup('out')"><img src="images/nv_portfolio_f3.gif" border="0" alt="portfolio" name="nv_portfolio" onLoad=""></a></td>
+    <td>&nbsp;</td>
+	  <td><a href="work_01.htm" onMouseOver="MM_nbGroup('over','nv_work','images/nv_work_f2.gif','',1)" onMouseOut="MM_nbGroup('out')"><img src="images/nv_work.gif" width="110" height="38" border="0" alt="work" name="nv_work"></a></td>
+	<td>&nbsp;</td>
+	  <td><a href="contact.htm" onMouseOver="MM_nbGroup('over','nv_contact','images/nv_contact_f2.gif','',1)" onMouseOut="MM_nbGroup('out')"><img src="images/nv_contact.gif" width="110" height="38" border="0" alt="contact" name="nv_contact"></a></td>
+	<td>&nbsp;</td>
+  </tr><tr>
+   <td colspan="11"><img src="images/spacer.gif" width="1" height="48" border="0"></td>
+  </tr>
+</table>
+
+<table border="0" cellpadding="0" cellspacing="0" width="760">
+  <tr>
+   <td width="32"><img src="images/spacer.gif" width="32" height="1" border="0"></td>
+   <td width="500"><img src="images/spacer.gif" width="500" height="1" border="0"></td>
+   <td width="16"><img src="images/spacer.gif" width="16" height="1" border="0"></td>
+   <td width="180"><img src="images/spacer.gif" width="180" height="1" border="0"></td> 
+   <td width="32"><img src="images/spacer.gif" width="32" height="1" border="0"></td>
+  </tr><tr>
+   <td rowspan="2"><img src="images/spacer.gif" width="1" height="1" border="0"></td>
+   <td align="center"><!-- #BeginEditable "image" --><img src="images/watkins_tnf_22.jpg" width="330" height="500"><!-- #EndEditable --></td>
+   <td rowspan="2"><img src="images/spacer.gif" width="1" height="1" border="0"></td>
+   <td rowspan="2" valign="top">
+     <table border="0" cellpadding="0" cellspacing="0" width="180">
+	  <tr>
+	   <td><img src="images/spacer.gif" width="1" height="140" border="0"></td>
+	   <td colspan="4" valign="bottom" class="txt_caption"><!-- #BeginEditable "caption" -->Abby Watkins<br>
+                British Columbia, Canada<!-- #EndEditable --></td>
+	  </tr><tr>
+	   <td colspan="5"><img src="images/spacer.gif" width="1" height="16" border="0"></td>
+	  </tr><tr>
+	   <td><img src="images/spacer.gif" width="1" height="1" border="0"></td>
+	        <td><!-- #BeginEditable "backlink" --><a href="portfolio_20.htm" onMouseOver="MM_nbGroup('over','nv_back','images/nv_back_f2.gif','',1)" onMouseOut="MM_nbGroup('out')"><img src="images/nv_back.gif" width="42" height="10" alt="back" border="0" name="nv_back"></a><!-- #EndEditable --></td>
+	   <td><a href="portfolio.htm" onMouseOver="MM_nbGroup('over','nv_index','images/nv_index_f2.gif','',1)" onMouseOut="MM_nbGroup('out')"><img src="images/nv_index.gif" width="58" height="10" border="0" alt="index" name="nv_index"></a></td>
+	        <td><!-- #BeginEditable "nextlink" --><a href="portfolio_22.htm" onMouseOver="MM_nbGroup('over','nv_next','images/nv_next_f2.gif','',1)" onMouseOut="MM_nbGroup('out')"><img src="images/nv_next.gif" width="39" height="10" border="0" alt="next" name="nv_next"></a><!-- #EndEditable --></td>
+	   <td><img src="images/spacer.gif" width="40" height="1" border="0"></td>
+	  </tr>
+     </table></td>
+	 <td rowspan="2"><img src="images/spacer.gif" width="1" height="1" border="0"></td>
+  </tr><tr>
+   <td class="txt_copyright" align="right"><img src="images/spacer.gif" width="1" height="32" border="0" class="txt_copyright"><br>
+        &copy; 2003 Jimmy Chin photography  -  All rights reserved  -  Stock and prints available</td>
+  </tr>
+</table>
+
+</center>
+
+<p>&nbsp;<p>
+
+</body>
+<!-- #EndTemplate --></html>

@@ -1,0 +1,50 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<html>
+<head>
+<title>Your Favorite Stores</title>
+<meta name="Generator" content="EditPlus">
+<meta name="Author" content="">
+<meta name="Keywords" content="">
+<meta name="Description" content="">
+<style>
+body {background-color:#ffffff;color:#666666;font-family:arial,verdana,sans-serif;font-size: 11px;}
+a:link {color:#1289D0;text-decoration:none;}
+a:visited {color:#1289D0;text-decoration:none;}
+a:hover {color:#1289D0;text-decoration:underline;}
+.favStore{padding: 3px 0px; background:url(../img/hr_repeater.gif) left bottom repeat-x}
+.favStore img{border:0; margin: 0; padding: 0}
+</style>
+<script>
+var locQuery  = document.location.search;
+var tmpArray   = locQuery.split("=")[1].split("|");
+var mnArray = new Array();
+for(i=0; i<tmpArray.length; i++)
+{
+	if(tmpArray[i] != "")
+	{
+		mnArray[mnArray.length] = tmpArray[i];
+	}
+}
+</script>
+</head>
+
+<body>
+<div id="favPlaceHolder"></div>
+<script type="text/javascript" src="http://ar.atwola.com/file/adsWrapper.js">
+    </script> 
+<script language="Javascript1.1">
+if(mnArray.length == 0)
+{
+	window.parent.document.getElementById('featuredStoreContainer').style.display = "none";
+}
+window.parent.document.getElementById('favoriteStore').style.height = mnArray.length * 52 + "px";
+document.write("<div id='storesListing'>");
+for(i=0; i<mnArray.length; i++)
+{		
+		document.write("<script>adSetTarget('_blank');htmlAdWH('"+ mnArray[i] +"','130','50')<\/script>");
+}
+document.write("</div>");
+</script>
+<script type="text/javascript" src="http://ar.atwola.com/file/adsEnd.js"></script>
+</body>
+</html>

@@ -1,0 +1,1 @@
+<!-- Begin// NOTE: If you use a ' add a slash before it like this \'document.write('<span class="copytext">');document.write('<a href="contact.htm" target="_top">Design-Ezi</a> & <a href="contact.htm" target="_top">Website Solutions</a><br>&copy;Site-Ezi.com 2005<br></span>');//  End -->

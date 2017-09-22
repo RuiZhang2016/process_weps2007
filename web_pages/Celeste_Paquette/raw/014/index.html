@@ -1,0 +1,107 @@
+<html>
+
+	<head>
+		<title>FSU Press Release</title>
+		<meta http-equiv="content-type" content="text/html;charset=ISO-8859-1">
+		<csactions>
+			<csaction name="B87ED0CB88" class="Close Window" type="onevent"></csaction>
+			<csaction name="B87ED0CF90" class="Close Window" type="onevent"></csaction>
+		</csactions>
+		<csscriptdict>
+			<script><!--
+function CSClickReturn () {
+	var bAgent = window.navigator.userAgent; 
+	var bAppName = window.navigator.appName;
+	if ((bAppName.indexOf("Explorer") >= 0) && (bAgent.indexOf("Mozilla/3") >= 0) && (bAgent.indexOf("Mac") >= 0))
+		return true; // dont follow link
+	else return false; // dont follow link
+}
+CSStopExecution=false;
+function CSAction(array) {return CSAction2(CSAct, array);}
+function CSAction2(fct, array) { 
+	var result;
+	for (var i=0;i<array.length;i++) {
+		if(CSStopExecution) return false; 
+		var aa = fct[array[i]];
+		if (aa == null) return false;
+		var ta = new Array;
+		for(var j=1;j<aa.length;j++) {
+			if((aa[j]!=null)&&(typeof(aa[j])=="object")&&(aa[j].length==2)){
+				if(aa[j][0]=="VAR"){ta[j]=CSStateArray[aa[j][1]];}
+				else{if(aa[j][0]=="ACT"){ta[j]=CSAction(new Array(new String(aa[j][1])));}
+				else ta[j]=aa[j];}
+			} else ta[j]=aa[j];
+		}			
+		result=aa[0](ta);
+	}
+	return result;
+}
+CSAct = new Object;
+function CSCloseWindow() { 
+if (self.parent.frames.length != 0) {
+	self.parent.close()	
+	} else {
+	window.close()
+	}
+}
+
+// --></script>
+		</csscriptdict>
+		<csactiondict>
+			<script><!--
+CSAct[/*CMP*/ 'B87ED0CB88'] = new Array(CSCloseWindow);
+CSAct[/*CMP*/ 'B87ED0CF90'] = new Array(CSCloseWindow);
+
+// --></script>
+		</csactiondict>
+	</head>
+
+	<body bgcolor="#ffffff" text="black" link="#660000" alink="red" vlink="#996600">
+		<table border="1" cellpadding="5" cellspacing="0" width="100%">
+			<tr>
+				<td valign="middle" align="center" bgcolor="#660000"><img src="../../../media/press_rel_header_01.gif" width="172" height="26" border="0"></td>
+			</tr>
+			<tr>
+				<td>
+					<table border="1" cellpadding="5" cellspacing="1" align="right">
+						<tr>
+							<td bgcolor="#cccc99" valign="middle" align="center"><font face="Verdana,Arial,Helvetica,Geneva" size="1"><b><a href="#" onclick="CSAction(new Array(/*CMP*/'B87ED0CF90'));return CSClickReturn();" csclick="B87ED0CF90">Close Window</a></b></font></td>
+						</tr>
+					</table>
+					<font face="Verdana,Arial,Helvetica,Geneva" size="2">CONTACT:<br>
+						Lesley Sacher, 850.644.8869<br>
+						or Dr. Celeste Paquette, 850.644.2026<br>
+						<br>
+						Feb. 11, 2003<br>
+						<br>
+						<b>FSU PROVIDES PREVENTIVE TREATMENT IN POTENTIAL MENINGITIS CASE</b><br>
+						<br>
+						TALLAHASSEE, Fla.-Florida State University's Thagard Student Health Center is treating close contacts of an FSU student who died of a suspected case of bacterial meningitis early Tuesday at Tallahassee Memorial Hospital.<br>
+						<br>
+						Those students who have had prolonged close contact are being treated with antibiotics to prevent the onset of meningitis, an infection of the fluid in the spinal cord and the fluid that surrounds the brain. The bacteria are spread by direct close contact with mucus or saliva of the infected person.<br>
+						<br>
+						So far, Thagard Student Health Center has given preventive treatment to about 20 students, including friends and classmates who have had close contact with the student during the past week. The FSU Counseling Center is available to provide support to the FSU community.<br>
+						<br>
+						&quot;If students are concerned, we are advising them to talk to someone at Thagard or the Leon County Health Department sooner rather than later because the first 24 hours are so important for prophylactic treatment,&quot; said Lesley Sacher, director of Thagard.&nbsp;<br>
+						<br>
+						Outbreaks of the disease are rare, medical experts say. Students who are concerned are advised to call the Leon County Health Department at (850) 487-3186.<br>
+						<br>
+						FSU has taken an aggressive preventive stance against meningitis and hepatitis, requiring all freshmen and incoming new students to get vaccinated or sign a waiver that they have elected not to do so. As of January 2003, new students were blocked from registration if they did not comply.<br>
+						<br>
+						The FSU policy goes beyond what the Florida Legislature requires of students. Legislation passed in 2002 requires only university students who live in residence halls to be vaccinated against meningitis and hepatitis.<br>
+						<br>
+						<br>
+					</font>
+					<div align="center">
+						<table border="1" cellpadding="5" cellspacing="1">
+							<tr>
+								<td bgcolor="#cccc99" valign="middle" align="center"><font face="Verdana,Arial,Helvetica,Geneva" size="1"><b><a href="#" onclick="CSAction(new Array(/*CMP*/'B87ED0CB88'));return CSClickReturn();" csclick="B87ED0CB88">Close Window</a></b></font></td>
+							</tr>
+						</table>
+					</div>
+				</td>
+			</tr>
+		</table>
+	</body>
+
+</html>

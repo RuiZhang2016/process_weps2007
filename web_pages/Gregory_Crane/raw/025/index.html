@@ -1,0 +1,559 @@
+<style>
+.note-header-text {font-family: Times, Times New Roman, serif;
+		color:#ff0000; font-size: .95em;
+		margin-left: .75em; margin-right: .75em;}
+</style>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+ "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+<head>
+<LINK REL=STYLESHEET TYPE="text/css" HREF="http://widit.slis.indiana.edu/irpub/DL/2001/css/dl.css">
+<title>DL: JCDL '01, Document quality indicators and ...</title>
+<style type="text/css"><!--
+ body {margin-left: 0em; margin-top: 0}
+ a:link {text-decoration: underline; 	Color: #006699;}
+ a:visited { color: #990033; text-decoration: underline;}
+ a:hover {color: red; text-decoration: none}
+ a.dLink1:link {color:#336699}
+ a.dLink1:visited {color:#666666}
+	a.isblack:link {text-decoration: underline; 	Color: #000000;}
+ a.isblack:visited { color: #000000; text-decoration: underline;}
+ a.isblack:hover {color: #000000; text-decoration: none}
+ h1 {font-size: 140%; margin-bottom: 0}
+	ul {margin-top: .25em; list-style-type: disc}
+	ol {margin-top: .25em;}
+	li {padding-bottom: .25em}
+ h2 {color: white; background-color: #069;
+ font-size: 100%; padding-left: 1em;
+		margin: 0}
+	h3 {color: black; background-color: yellow;
+ 	font-size: 100%;
+		margin: 0}
+	 h4 {color: black; background-color: #99c5e8;
+ font-size: 100%;
+		margin: 0}
+ hr {color: #39176d;}
+ form {margin-top: 10}
+	a {text-decoration: none; }
+	input {font-size: 1em;}
+	.chevron {color: #ff0000;}
+	.light-blue {color:#336699;}
+	.black {color:#000000;}
+	/* ### standard text styles, smallest to largest ### */
+	.footer-link-text {font-family: Arial, Helvetica, sans-serif;
+		color:#336699; font-size: .75em; line-height: 1.33em;
+		text-indent: -.75 em; margin-left: 2em; margin-right: .75em;}
+	.footer-copy-text {font-family: Arial, Helvetica, sans-serif;
+		color:#000000; font-size: .75em; line-height: 1.3em;
+		margin-left: .75em; margin-right: .75em;}
+	.small-link-text {font-family: Arial, Helvetica, sans-serif;
+		color:#000000; font-size: .83em; padding-bottom : 2px;
+	 	padding-top : 2px;}
+	.smaller-text {font-family: Arial, Helvetica, sans-serif;
+		color:#000000; font-size: .75em;}
+	.small-text {font-family: Arial, Helvetica, sans-serif;
+		color:#000000; font-size: .83em;}
+	.medium-text {font-family: Arial, Helvetica, sans-serif;
+		color:#000000; font-size: 1em;}
+	.mediumb-text {font-family: Arial, Helvetica, sans-serif;
+		color:#000000; font-size: 1em; font-weight: bold;}
+	.large-text {font-family: Arial, Helvetica, sans-serif;
+		color:#000000; font-size: 1.3em;}
+	.list-link-text {font-family: Arial, Helvetica, sans-serif;
+		color:#336699; font-size: .83em; line-height: 1.3em;}
+	.list-link-btext {font-family: Arial, Helvetica, sans-serif;
+		color:#000000; font-size: .83em; line-height: 1.3em;}
+	.searchbox-text {font-family: Arial, Helvetica, sans-serif;
+		color:#000066; font-size: 1em; font-weight: bold;}
+	.footer-header-text {font-family: Arial, Helvetica, sans-serif;
+		color:#000066; font-size: 1em; font-weight: bold;
+		margin-left: .75em; margin-right: .75em;}
+	.medium-link-text {font-family: Arial, Helvetica, sans-serif;
+		color:#000066; font-size: 1em; font-weight: bold; line-height: 1em;
+		text-indent: -1.25em; margin-left: 2em; margin-right: .75em;}
+	.small-copy-text {font-family: Times, Times New Roman, serif;
+		color:#000066; font-size: .75em; line-height: 1.2em;
+		margin-left: .75em; margin-right: .75em;}
+	.medium-copy-text {font-family: Times, Times New Roman, serif;
+		color:#000066; font-size: 1em; line-height: 1.2em;
+		margin-left: .75em; margin-right: .75em;}
+	.large-copy-text {font-family: Times, Times New Roman, serif;
+		color:#000066; font-size: 1.3em; line-height: 1.5em;
+		margin-left: .75em; margin-right: .75em;}
+	.medium-header-text {font-family: Times, Times New Roman, serif;
+		color:#ff0000; font-size: 1em;
+		margin-left: .75em; margin-right: .75em;}
+	.large-header-text {font-family: Times, Times New Roman, serif;
+		color:#ff0000; font-size: 1.5em;
+		margin-left: .75em; margin-right: .75em;}
+ --></style>
+<SCRIPT LANGUAGE="JavaScript">
+ /* <!-- Begin
+	if(document.layers || document.all) {
+	a = 1;
+	setInterval("Jump()", 10);
+	}
+	function Jump() {
+	a = a + 1;
+	//self.moveBy((Math.random() * a * 2 - a), (Math.random() * a * 2) - a);
+	}
+// End --> */
+</script>
+<script LANGUAGE=JAVASCRIPT TYPE="text/javascript" >
+<!--
+function _CF_onError(form_object, input_object, object_value, error_message)
+ {
+	alert(error_message);
+ 	return false;
+ }
+function _CF_hasValue(obj, obj_type)
+ {
+ if (obj_type == "TEXT" || obj_type == "PASSWORD")
+	{
+ 	if (obj.value.length == 0)
+ 		return false;
+ 	else
+ 		return true;
+ 	}
+ else if (obj_type == "SELECT")
+	{
+ for (i=0; i < obj.length; i++)
+	 	{
+		if (obj.options[i].selected)
+			return true;
+		}
+ 	return false;
+	}
+ else if (obj_type == "SINGLE_VALUE_RADIO" || obj_type == "SINGLE_VALUE_CHECKBOX")
+	{
+		if (obj.checked)
+			return true;
+		else
+ 		return false;
+	}
+ else if (obj_type == "RADIO" || obj_type == "CHECKBOX")
+	{
+ for (i=0; i < obj.length; i++)
+	 	{
+		if (obj[i].checked)
+			return true;
+		}
+ 	return false;
+	}
+	}
+function _CF_checkqiksearch(_CF_this)
+ {
+ if (!_CF_hasValue(_CF_this.query, "TEXT" ))
+ {
+ if (!_CF_onError(_CF_this, _CF_this.query, _CF_this.query.value, "Please enter your Search Criteria"))
+ {
+ return false;
+ }
+ }
+ return true;
+ }
+//-->
+</script>
+</head>
+<body bgcolor="#ffffff" onload="window.focus()">
+<div align="center">
+<a name="CIT"></a>
+<table border="0" width="85%" cellspacing="0" cellpadding="0">
+<tr>
+<td>
+<table width="100%" border="0" cellpadding="0" cellspacing="0">
+<col width="1%"><col width="99%">
+			</td>
+		</tr>
+		<tr>
+			<td height="6"><img src="blanks.gif" width=1 height=1 alt="" border="0"></td>
+		</tr>
+		<tr>
+			<td colspan="2" valign="top" height="1" background="http://widit.slis.indiana.edu/irpub/DL/2001/images/horiz-bar-long.jpg"></td>
+		</tr>
+		<tr>
+			<td height="6"><img src="blanks.gif" width=1 height=1 alt="" border="0"></td>
+		</tr>
+		</table>
+</td>
+</tr>
+<tr>
+	<td colspan="3" valign="top" height="1" background="http://widit.slis.indiana.edu/irpub/DL/2001/images/horiz-bar-long.jpg"></td>
+</tr>
+<tr>
+<td class="small-text">
+	<table border="0" width="100%" cellpadding="2">
+		<col width="1%">
+		<col width="8%">
+		<col width="91%">
+	<tr>
+		<td class="medium-text" colspan="3"><strong>Document quality indicators and corpus editions</strong></td>
+	</tr>
+			<tr valign="top">
+			</tr>
+			<tr valign="top">
+					<td class="small-text"><strong>Full text</strong></td>
+				<td class="smaller-text" colspan="2" >
+									 <A NAME="FullText" href="http://widit.slis.indiana.edu/irpub/DL/2001/pdf82.pdf" target="_blank"><img src="pdf_logo.gif" width="16" height="16" alt="pdf format" border="0" hspace="1" align="texttop">Pdf</A>
+									 (115&nbsp;KB)
+				</td>
+			</tr>
+		<tr valign="top">
+			<td class="small-text"><strong>Source</strong></td>
+			<td class="small-text" colspan="2">
+														<SPAN class="mediumb-text">International Conference on Digital Libraries</span>
+																			<a href="http://widit.slis.indiana.edu/irpub/DL/2001/toc.cfm?id=SERIES492&amp;type=series&amp;coll=GUIDE&amp;dl=ACM&amp;idx=SERIES492&amp;part=Proceedings&amp;WantType=Proceedings&amp;title=International%20Conference%20on%20Digital%20Libraries&amp;CFID=13720957&amp;CFTOKEN=832591" target="_self" class="small-link-text">archive</a><br>
+													<SPAN class="mediumb-text">Proceedings of the first ACM/IEEE-CS joint conference on Digital libraries </span>
+										 								 <a href="http://widit.slis.indiana.edu/irpub/DL/2001/toc.cfm?id=379437&amp;type=proceeding&amp;coll=GUIDE&amp;dl=ACM&amp;idx=SERIES492&amp;part=Proceedings&amp;WantType=Proceedings&amp;title=International%20Conference%20on%20Digital%20Libraries&amp;CFID=13720957&amp;CFTOKEN=832591" target="_self" class="small-link-text">table of contents</a><br>
+												<DIV class="small-text">
+													 Roanoke, Virginia, United States
+												</div>
+		<div class="medium-text">
+		</div>
+			<div class="small-text">
+				 Pages: 435 - 436&nbsp;&nbsp;
+			</div>
+				<div class="small-text">
+					Year of Publication:&nbsp;2001
+				</div>
+				<div class="small-text">
+					ISBN:1-58113-345-6
+				</div>
+			</td>
+		</tr>
+			<tr valign="top">
+				<td class="small-text">
+										 	<strong>Authors</strong>
+				</td>
+				<td colspan="2">
+				<div class="authors">
+					<table cellpadding="0" cellspacing="0">
+							<tr>
+								<td class="small-text">
+ 									<a href="http://widit.slis.indiana.edu/irpub/DL/2001/results.cfm?query=author%3AP137963&amp;querydisp=author%3AJeffrey%20A%2E%20Rydberg%2DCox&amp;coll=GUIDE&amp;dl=ACM&amp;CFID=13720957&amp;CFTOKEN=832591" target="_self">Jeffrey A. Rydberg-Cox</a>
+								</td>
+								<td class="small-text">
+								</td>
+							</tr>
+							<tr>
+								<td class="small-text">
+ 									<a href="http://widit.slis.indiana.edu/irpub/DL/2001/results.cfm?query=author%3AP316430&amp;querydisp=author%3AAnne%20%20Mahoney&amp;coll=GUIDE&amp;dl=ACM&amp;CFID=13720957&amp;CFTOKEN=832591" target="_self">Anne Mahoney</a>
+								</td>
+								<td class="small-text">
+								</td>
+							</tr>
+							<tr>
+								<td class="small-text">
+ 									<a href="http://widit.slis.indiana.edu/irpub/DL/2001/results.cfm?query=author%3AP335458&amp;querydisp=author%3AGregory%20R%2E%20Crane&amp;coll=GUIDE&amp;dl=ACM&amp;CFID=13720957&amp;CFTOKEN=832591" target="_self">Gregory R. Crane</a>
+								</td>
+								<td class="small-text">
+								</td>
+							</tr>
+					</table>
+				</div>
+				</td>
+			</tr>
+				<tr valign="top">
+					<td class="small-text"><strong>Sponsor </strong></td>
+					<td>
+						<div class="sponsors">
+										<a href=" http://www.acm.org/" target="sponsor" title="Sponsor">ACM</a>:
+									 Association for Computing Machinery <br>
+						</div>
+					 </td>
+				</tr>
+					<tr valign="top">
+						<td class="small-text"><strong>Publisher</strong></td>
+						<td colspan="2">
+							<div class="publishers">
+									 	ACM Press &nbsp;
+										<small> New York, NY, USA </small>
+							</div>
+						</td>
+					</tr>
+		</table>
+</td>
+</tr>
+<tr>
+<td>
+<!-- third main table: main content START -->
+	<table border="0" width="100%" cellspacing="0" cellpadding="0">
+	<tr>
+		<td height="6"><img src="blanks.gif" width=1 height=1 alt="" border="0"></td>
+	</tr>
+	<tr>
+		<td colspan="4" valign="top" height="1" background="http://widit.slis.indiana.edu/irpub/DL/2001/images/horiz-bar-long.jpg"></td>
+	</tr>
+	<tr>
+		<td height="6"><img src="blanks.gif" width=1 height=1 alt="" border="0"></td>
+	</tr>
+	<tr valign="top">
+	<!-- buttons -->
+		<td width="100%" colspan="4">
+	 <table border="0" cellspacing="0" cellpadding="0" width="100%">
+		<col width="22%">
+	 <col width="78%">
+		<tr>
+			<td class="small-text"><b>Additional Information:</b></td>
+			<td>
+			<p class="small-text">
+					<a href="cite82.htm#abstract">abstract</a>&nbsp;&nbsp;
+					<a href="cite82.htm#references">references</a>&nbsp;&nbsp;
+					<a href="cite82.htm#citings">citings</a>&nbsp;&nbsp;
+					<a href="cite82.htm#IndexTerms">index terms</a>&nbsp;&nbsp;
+						<a href="cite82.htm#collab">collaborative colleagues</a>&nbsp;&nbsp;
+					<a href="cite82.htm#peers">peer to peer</a>&nbsp;&nbsp;
+				</p>
+			</td>
+		</tr>
+		</table>
+		</td>
+	</tr>
+	<tr>
+		<td height="6"><img src="blanks.gif" width=1 height=1 alt="" border="0"></td>
+	</tr>
+	<tr valign="top">
+	<!-- buttons -->
+		<form name="popbinder">
+		<td width="100%" colspan="4">
+		<table border="0" cellspacing="0" cellpadding="2" width="100%" >
+		 <col width="22%">
+		 <col width="78%">
+		 <tr valign="top">
+		 	<td class="small-text"><b>Tools and Actions:</b></td>
+			<td>
+				 <a href="https://portal.acm.org/poplogin.cfm?dl=ACM&coll=GUIDE&comp_id=COMPONENT032&want_href=ocr%5Fdiscuss%2Ecfm%3Fid%3D379757&CFID=13720957&CFTOKEN=832591" class="small-link-text">
+			Discussions</a>
+			&nbsp;&nbsp;
+			<a href="http://widit.slis.indiana.edu/irpub/DL/2001/results.cfm?query=379757&amp;querydisp=Similar%20to%3A%20Document%20quality%20indicators%20and%20corpus%20editions&amp;coll=GUIDE&amp;dl=ACM&amp;CFID=13720957&amp;CFTOKEN=832591" target="_self" class="small-link-text">Find similar Articles</a>&nbsp;&nbsp;
+			<a href="http://www.reviews.com/reviewer/quickreview/frameset_toplevel.cfm?bib_id=379757" target="reviews" class="small-link-text">Review this Article</a>&nbsp;&nbsp;
+			 	<br><a href="cite82.htm#" onClick="window.alert('To use this Feature, you must login with your personal ACM Web Account.');" class="small-link-text">
+				Save this Article to a Binder</a><img src="blanks.gif" border="0" name="saved">
+			&nbsp;&nbsp;
+			<a href="cite82.htm#" onClick="window.open('popBibTex.cfm?id=379757&ids=SERIES492.379437.379757&types=series.proceeding.article&reqtype=article&coll=GUIDE&dl=ACM&CFID=13720957&CFTOKEN=832591','BibTex','width=800,height=100,top=100,left=100,scrollbars=Yes,resizable=yes');" class="small-link-text">
+			Display in BibTex Format</a>
+			&nbsp;&nbsp;
+			</td>
+		</tr>
+		<tr>
+			<td height="10"><img src="blanks.gif" width=1 height=1 alt="" border="0"></td>
+		</tr>
+		<tr valign="top">
+			<td class="small-text"><b>DOI Bookmark:</b></td>
+			<td class="small-text">
+				<small>Use this link to bookmark this Article:&nbsp;</small><a href="http://doi.acm.org/10.1145/379437.379757">http://doi.acm.org/10.1145/379437.379757</a><br><small><a href="http://www.doi.org/">What is a DOI?</a></small>
+			</td>
+		</tr>
+		</table>
+		</td>
+		</form>
+	</tr>
+	<tr>
+		<td height="6"><img src="blanks.gif" width=1 height=1 alt="" border="0"></td>
+	</tr>
+	<tr>
+		<td colspan="4" valign="top" height="1" background="http://widit.slis.indiana.edu/irpub/DL/2001/images/horiz-bar-long.jpg"></td>
+	</tr>
+	<tr>
+		<td height="6"><img src="blanks.gif" width=1 height=1 alt="" border="0"></td>
+	</tr>
+	</table>
+<!-- third main table: main content END -->
+		 	<div class="abstract">
+			</div>
+			<br>
+			<div class="abstract">
+			<A HREF="cite82.htm#CIT"><img name="top" src="arrowu.gif" hspace="10" border="0"></A><SPAN class=heading><A NAME="abstract">ABSTRACT</A></span>
+				<p class="abstract">
+				 <par>Corpus editions can only be useful to scholars when users know what to expect of the texts. We argue for text quality indicators, both general and domain-specific.</par>
+				</p>
+			</div>
+			<br>
+			<div class="abstract">
+			<A HREF="cite82.htm#CIT"><img name="top" src="arrowu.gif" hspace="10" border="0"></A><SPAN class=heading><A NAME="references">REFERENCES</A></span>
+			<p class="abstract"><font color="Red">Note: OCR errors may be found in this Reference List extracted from the full text article. ACM has opted to expose the complete List rather than only correct and linked references.</font></p>
+				<p class="abstract">
+				 1&nbsp;&nbsp;
+		 			 <a href="http://widit.slis.indiana.edu/irpub/DL/2001/citation.cfm?id=256290&amp;dl=ACM&amp;coll=GUIDE&amp;CFID=13720957&amp;CFTOKEN=832591">
+				 James Blustein , Robert E. Webber , Jean Tague-Sutcliffe, Methods for evaluating the quality of hypertext links, Information Processing and Management: an International Journal, v.33 n.2, p.255-271, March 1997
+				 </a>
+				</p>
+				<p class="abstract">
+				 2&nbsp;&nbsp;
+				 Bunker, G, Zick G. "Collaboration as a Key to Digital Library Development: High Performance Image Management at the University of Washington." D-Lib 1999. 5:3. http://www.dlib.org/dlib/march99/bunker/03bunker.html
+				</p>
+				<p class="abstract">
+				 3&nbsp;&nbsp;
+				 Chestnutt, David R. "The Model Editions Partnership: 'Smart Text' and Beyond" D-Lib July/August 1997 http://www.dlib.org/dlib/july97/07chesnutt.html.
+				</p>
+				<p class="abstract">
+				 4&nbsp;&nbsp;
+		 			 <a href="http://widit.slis.indiana.edu/irpub/DL/2001/citation.cfm?id=336686&amp;dl=ACM&amp;coll=GUIDE&amp;CFID=13720957&amp;CFTOKEN=832591">
+				 Gregory Crane , Jeffrey A. Rydberg-Cox, New technology and new roles: the need for &ldquo;corpus editors&rdquo;, Proceedings of the fifth ACM conference on Digital libraries, p.252-253, June 02-07, 2000, San Antonio, Texas, United States
+				 </a>
+				</p>
+				<p class="abstract">
+				 5&nbsp;&nbsp;
+		 			 <a href="http://widit.slis.indiana.edu/irpub/DL/2001/citation.cfm?id=276691&amp;dl=ACM&amp;coll=GUIDE&amp;CFID=13720957&amp;CFTOKEN=832591">
+				 E. Lecolinet , L. Likforman-Sulem , L. Robert , F. Role , J-L. Lebrave, An integrated reading and editing environment for scholarly research on literary works and their handwritten sources, Proceedings of the third ACM conference on Digital libraries, p.144-151, June 23-26, 1998, Pittsburgh, Pennsylvania, United States
+				 </a>
+				</p>
+			</div>
+			<br>
+			<div class="abstract">
+			<A HREF="cite82.htm#CIT"><img name="top" src="arrowu.gif" hspace="10" border="0"></A><SPAN class=heading><A NAME="citings">CITINGS</A></span>
+				<p class="abstract">
+	 				 <a href="http://widit.slis.indiana.edu/irpub/DL/2001/citation.cfm?id=827150&amp;dl=ACM&amp;coll=GUIDE&amp;CFID=13720957&amp;CFTOKEN=832591">
+					Gregory Crane , Clifford Wulfman, Towards a cultural heritage digital library, Proceedings of the thirdd ACM/IEEE-CS joint conference on Digital libraries, May 27-31, 2003, Houston, Texas
+				 </a>
+				</p>
+			</div>
+		 	<br>
+			<div class="indterms">
+			<A HREF="cite82.htm#CIT"><img name="top" src="arrowu.gif" hspace="10" border="0"></A><SPAN class=heading><A NAME="IndexTerms">INDEX TERMS</A></span>
+					<p class="Categories">
+						<SPAN class=heading><A NAME="GenTerms">Primary Classification:</A></span>
+							<br>&nbsp;
+									<b>H.</b>
+									<a href="http://widit.slis.indiana.edu/irpub/DL/2001/results.cfm?query=CCS%3AH%2E%2A&amp;coll=GUIDE&amp;dl=ACM&amp;CFID=13720957&amp;CFTOKEN=832591" target="_self">
+									Information Systems</a><br>
+										&nbsp;
+										<img src="tree.gif" border="0" height="20" width="20">
+									<b>H.3</b>
+									<a href="http://widit.slis.indiana.edu/irpub/DL/2001/results.cfm?query=CCS%3A%22H%2E3%22&amp;coll=GUIDE&amp;dl=ACM&amp;CFID=13720957&amp;CFTOKEN=832591" target="_self">
+									 INFORMATION STORAGE AND RETRIEVAL</a><br>
+					 </p>
+				 <p class="Categories">
+					<SPAN class=heading><A NAME="GenTerms">Additional&nbsp;Classification:</A></span>
+							<br>&nbsp;
+									<b>H.</b>
+									<a href="http://widit.slis.indiana.edu/irpub/DL/2001/results.cfm?query=CCS%3AH%2E%2A&amp;coll=GUIDE&amp;dl=ACM&amp;CFID=13720957&amp;CFTOKEN=832591" target="_self">
+									Information Systems</a><br>
+										&nbsp;
+										<img src="tree.gif" border="0" height="20" width="20">
+									<b>H.5</b>
+									<a href="http://widit.slis.indiana.edu/irpub/DL/2001/results.cfm?query=CCS%3A%22H%2E5%22&amp;coll=GUIDE&amp;dl=ACM&amp;CFID=13720957&amp;CFTOKEN=832591" target="_self">
+									 INFORMATION INTERFACES AND PRESENTATION (I.7)</a><br>
+					</p>
+				<br>
+					<p class="GenTerms">
+						<SPAN class=heading><A NAME="GenTerms">General Terms:</A></span>
+						<BR>
+							<a href="http://widit.slis.indiana.edu/irpub/DL/2001/results.cfm?query=genterm%3A%22Design%22&amp;coll=GUIDE&amp;dl=ACM&amp;CFID=13720957&amp;CFTOKEN=832591" target="_self">
+							Design</a>,
+							<a href="http://widit.slis.indiana.edu/irpub/DL/2001/results.cfm?query=genterm%3A%22Documentation%22&amp;coll=GUIDE&amp;dl=ACM&amp;CFID=13720957&amp;CFTOKEN=832591" target="_self">
+							 Documentation</a>,
+							<a href="http://widit.slis.indiana.edu/irpub/DL/2001/results.cfm?query=genterm%3A%22Languages%22&amp;coll=GUIDE&amp;dl=ACM&amp;CFID=13720957&amp;CFTOKEN=832591" target="_self">
+							 Languages</a>,
+							<a href="http://widit.slis.indiana.edu/irpub/DL/2001/results.cfm?query=genterm%3A%22Standardization%22&amp;coll=GUIDE&amp;dl=ACM&amp;CFID=13720957&amp;CFTOKEN=832591" target="_self">
+							 Standardization</a>,
+							<a href="http://widit.slis.indiana.edu/irpub/DL/2001/results.cfm?query=genterm%3A%22Theory%22&amp;coll=GUIDE&amp;dl=ACM&amp;CFID=13720957&amp;CFTOKEN=832591" target="_self">
+							 Theory</a>
+					</p>
+				<br>
+					<p class="keywords">
+						<SPAN class=heading><A NAME="Keywords">Keywords:</A></span>
+						<BR>
+							<a href="http://widit.slis.indiana.edu/irpub/DL/2001/results.cfm?query=keyword%3A%22automatic%20linking%22&amp;coll=GUIDE&amp;dl=ACM&amp;CFID=13720957&amp;CFTOKEN=832591" target="_self">
+							automatic linking</a>,
+							<a href="http://widit.slis.indiana.edu/irpub/DL/2001/results.cfm?query=keyword%3A%22browsing%22&amp;coll=GUIDE&amp;dl=ACM&amp;CFID=13720957&amp;CFTOKEN=832591" target="_self">
+							 browsing</a>,
+							<a href="http://widit.slis.indiana.edu/irpub/DL/2001/results.cfm?query=keyword%3A%22collection%20development%22&amp;coll=GUIDE&amp;dl=ACM&amp;CFID=13720957&amp;CFTOKEN=832591" target="_self">
+							 collection development</a>,
+							<a href="http://widit.slis.indiana.edu/irpub/DL/2001/results.cfm?query=keyword%3A%22document%20design%22&amp;coll=GUIDE&amp;dl=ACM&amp;CFID=13720957&amp;CFTOKEN=832591" target="_self">
+							 document design</a>,
+							<a href="http://widit.slis.indiana.edu/irpub/DL/2001/results.cfm?query=keyword%3A%22reading%22&amp;coll=GUIDE&amp;dl=ACM&amp;CFID=13720957&amp;CFTOKEN=832591" target="_self">
+							 reading</a>
+					</p>
+			</div>
+			<div class="abstract">
+				<A HREF="cite82.htm#CIT"><img name="top" src="arrowu.gif" hspace="10" border="0"></A><SPAN class=heading><A NAME="collab">Collaborative Colleagues:</A></span>
+				<table border="0" style="margin-left: 2em" cellpadding="2">
+						<tr valign="top"><td><div class="abstract"><a href="http://widit.slis.indiana.edu/irpub/DL/2001/results.cfm?query=%2Bauthor%3AP335458&amp;querydisp=author%3AGregory%20R%2E%20Crane&amp;coll=GUIDE&amp;dl=GUIDE&amp;CFID=13720957&amp;CFTOKEN=832591" target="_self">Gregory R. Crane</a>:</div></td><td>
+						<div class="abstract"><a href="http://widit.slis.indiana.edu/irpub/DL/2001/results.cfm?query=%2Bauthor%3AP316430%20author%3AP335458&amp;querydisp=author%3AAnne%20Mahoney&amp;coll=GUIDE&amp;dl=GUIDE&amp;CFID=13720957&amp;CFTOKEN=832591" target="_self">Anne Mahoney</a></div>
+						<div class="abstract"><a href="http://widit.slis.indiana.edu/irpub/DL/2001/results.cfm?query=%2Bauthor%3AP137963%20author%3AP335458&amp;querydisp=author%3AJeffrey%20A%2E%20Rydberg%2DCox&amp;coll=GUIDE&amp;dl=GUIDE&amp;CFID=13720957&amp;CFTOKEN=832591" target="_self">Jeffrey A. Rydberg-Cox</a></div>
+						</td>
+						</tr>
+						<tr valign="top"><td><div class="abstract"><a href="http://widit.slis.indiana.edu/irpub/DL/2001/results.cfm?query=%2Bauthor%3AP316430&amp;querydisp=author%3AAnne%20Mahoney&amp;coll=GUIDE&amp;dl=GUIDE&amp;CFID=13720957&amp;CFTOKEN=832591" target="_self">Anne Mahoney</a>:</div></td><td>
+						<div class="abstract"><a href="http://widit.slis.indiana.edu/irpub/DL/2001/results.cfm?query=%2Bauthor%3AP244432%20author%3AP316430&amp;querydisp=author%3ARobert%20F%2E%20Chavez&amp;coll=GUIDE&amp;dl=GUIDE&amp;CFID=13720957&amp;CFTOKEN=832591" target="_self">Robert F. Chavez</a></div>
+						<div class="abstract"><a href="http://widit.slis.indiana.edu/irpub/DL/2001/results.cfm?query=%2Bauthor%3AP99725%20author%3AP316430&amp;querydisp=author%3AGregory%20Crane&amp;coll=GUIDE&amp;dl=GUIDE&amp;CFID=13720957&amp;CFTOKEN=832591" target="_self">Gregory Crane</a></div>
+						<div class="abstract"><a href="http://widit.slis.indiana.edu/irpub/DL/2001/results.cfm?query=%2Bauthor%3AP335458%20author%3AP316430&amp;querydisp=author%3AGregory%20R%2E%20Crane&amp;coll=GUIDE&amp;dl=GUIDE&amp;CFID=13720957&amp;CFTOKEN=832591" target="_self">Gregory R. Crane</a></div>
+						<div class="abstract"><a href="http://widit.slis.indiana.edu/irpub/DL/2001/results.cfm?query=%2Bauthor%3AP316834%20author%3AP316430&amp;querydisp=author%3AThomas%20L%2E%20Milbank&amp;coll=GUIDE&amp;dl=GUIDE&amp;CFID=13720957&amp;CFTOKEN=832591" target="_self">Thomas L. Milbank</a></div>
+						<div class="abstract"><a href="http://widit.slis.indiana.edu/irpub/DL/2001/results.cfm?query=%2Bauthor%3AP248202%20author%3AP316430&amp;querydisp=author%3ARohit%20Parikh&amp;coll=GUIDE&amp;dl=GUIDE&amp;CFID=13720957&amp;CFTOKEN=832591" target="_self">Rohit Parikh</a></div>
+						<div class="abstract"><a href="http://widit.slis.indiana.edu/irpub/DL/2001/results.cfm?query=%2Bauthor%3AP137963%20author%3AP316430&amp;querydisp=author%3AJeffrey%20A%2E%20Rydberg%2DCox&amp;coll=GUIDE&amp;dl=GUIDE&amp;CFID=13720957&amp;CFTOKEN=832591" target="_self">Jeffrey A. Rydberg-Cox</a></div>
+						<div class="abstract"><a href="http://widit.slis.indiana.edu/irpub/DL/2001/results.cfm?query=%2Bauthor%3AP63856%20author%3AP316430&amp;querydisp=author%3ADavid%20A%2E%20Smith&amp;coll=GUIDE&amp;dl=GUIDE&amp;CFID=13720957&amp;CFTOKEN=832591" target="_self">David A. Smith</a></div>
+						<div class="abstract"><a href="http://widit.slis.indiana.edu/irpub/DL/2001/results.cfm?query=%2Bauthor%3AP316476%20author%3AP316430&amp;querydisp=author%3AClifford%20E%2E%20Wulfman&amp;coll=GUIDE&amp;dl=GUIDE&amp;CFID=13720957&amp;CFTOKEN=832591" target="_self">Clifford E. Wulfman</a></div>
+						</td>
+						</tr>
+						<tr valign="top"><td><div class="abstract"><a href="http://widit.slis.indiana.edu/irpub/DL/2001/results.cfm?query=%2Bauthor%3AP137963&amp;querydisp=author%3AJeffrey%20A%2E%20Rydberg%2DCox&amp;coll=GUIDE&amp;dl=GUIDE&amp;CFID=13720957&amp;CFTOKEN=832591" target="_self">Jeffrey A. Rydberg-Cox</a>:</div></td><td>
+						<div class="abstract"><a href="http://widit.slis.indiana.edu/irpub/DL/2001/results.cfm?query=%2Bauthor%3AP244432%20author%3AP137963&amp;querydisp=author%3ARobert%20F%2E%20Chavez&amp;coll=GUIDE&amp;dl=GUIDE&amp;CFID=13720957&amp;CFTOKEN=832591" target="_self">Robert F. Chavez</a></div>
+						<div class="abstract"><a href="http://widit.slis.indiana.edu/irpub/DL/2001/results.cfm?query=%2Bauthor%3AP99725%20author%3AP137963&amp;querydisp=author%3AGregory%20Crane&amp;coll=GUIDE&amp;dl=GUIDE&amp;CFID=13720957&amp;CFTOKEN=832591" target="_self">Gregory Crane</a></div>
+						<div class="abstract"><a href="http://widit.slis.indiana.edu/irpub/DL/2001/results.cfm?query=%2Bauthor%3AP335458%20author%3AP137963&amp;querydisp=author%3AGregory%20R%2E%20Crane&amp;coll=GUIDE&amp;dl=GUIDE&amp;CFID=13720957&amp;CFTOKEN=832591" target="_self">Gregory R. Crane</a></div>
+						<div class="abstract"><a href="http://widit.slis.indiana.edu/irpub/DL/2001/results.cfm?query=%2Bauthor%3AP316430%20author%3AP137963&amp;querydisp=author%3AAnne%20Mahoney&amp;coll=GUIDE&amp;dl=GUIDE&amp;CFID=13720957&amp;CFTOKEN=832591" target="_self">Anne Mahoney</a></div>
+						<div class="abstract"><a href="http://widit.slis.indiana.edu/irpub/DL/2001/results.cfm?query=%2Bauthor%3AP316834%20author%3AP137963&amp;querydisp=author%3AThomas%20L%2E%20Milbank&amp;coll=GUIDE&amp;dl=GUIDE&amp;CFID=13720957&amp;CFTOKEN=832591" target="_self">Thomas L. Milbank</a></div>
+						<div class="abstract"><a href="http://widit.slis.indiana.edu/irpub/DL/2001/results.cfm?query=%2Bauthor%3AP63856%20author%3AP137963&amp;querydisp=author%3ADavid%20A%2E%20Smith&amp;coll=GUIDE&amp;dl=GUIDE&amp;CFID=13720957&amp;CFTOKEN=832591" target="_self">David A. Smith</a></div>
+						<div class="abstract"><a href="http://widit.slis.indiana.edu/irpub/DL/2001/results.cfm?query=%2Bauthor%3AP316476%20author%3AP137963&amp;querydisp=author%3AClifford%20E%2E%20Wulfman&amp;coll=GUIDE&amp;dl=GUIDE&amp;CFID=13720957&amp;CFTOKEN=832591" target="_self">Clifford E. Wulfman</a></div>
+						</td>
+						</tr>
+				</table>
+			</div>
+			<br>
+			<div class="abstract">
+				<A HREF="cite82.htm#CIT"><img name="top" src="arrowu.gif" hspace="10" border="0"></A><SPAN class=heading><A NAME="peers">Peer to Peer - Readers of this Article have also read:</cite></A></span>
+		<ul type="disc">
+			<li>
+				<A HREF="http://widit.slis.indiana.edu/irpub/DL/2001/citation.cfm?id=166086&amp;dl=ACM&amp;coll=GUIDE&amp;CFID=13720957&amp;CFTOKEN=832591" target="_self">		 	 Constructing reality</a>
+				<br>
+					 <b>Proceedings of the 11th annual international conference on Systems documentation</b><br>
+					Douglas A. Powell
+					, &nbsp;Norman R. Ball
+					, &nbsp;Mansel W. Griffiths
+				<br>
+			<br>
+			</li>
+			<li>
+				<A HREF="http://widit.slis.indiana.edu/irpub/DL/2001/citation.cfm?id=512248&amp;dl=ACM&amp;coll=GUIDE&amp;CFID=13720957&amp;CFTOKEN=832591" target="_self">		 	 M<sup>4</sup>:&nbsp;a metamodel for data preprocessing</a>
+				<br>
+					 <b>Proceedings of the fourth ACM international workshop on Data warehousing and OLAP</b><br>
+					Anca Vaduva
+					, &nbsp;J&#246;rg-Uwe Kietz
+					, &nbsp;Regina Z&#252;cker
+				<br>
+			<br>
+			</li>
+			<li>
+				<A HREF="http://widit.slis.indiana.edu/irpub/DL/2001/citation.cfm?id=4290&amp;dl=ACM&amp;coll=GUIDE&amp;CFID=13720957&amp;CFTOKEN=832591" target="_self">		 	 Data structures for quadtree approximation and compression</a>
+				<br>
+						<b>Communications of the ACM</b>&nbsp;&nbsp;
+						<font size="-1">28,&nbsp;9</font><br>
+					Hanan Samet
+				<br>
+			<br>
+			</li>
+			<li>
+				<A HREF="http://widit.slis.indiana.edu/irpub/DL/2001/citation.cfm?id=255524&amp;dl=ACM&amp;coll=GUIDE&amp;CFID=13720957&amp;CFTOKEN=832591" target="_self">		 	 Toward a real-time Ada design methodology</a>
+				<br>
+					 <b>Proceedings of the conference on TRI-ADA '90</b><br>
+					Norman R. Howes
+				<br>
+			<br>
+			</li>
+			<li>
+				<A HREF="http://widit.slis.indiana.edu/irpub/DL/2001/citation.cfm?id=255523&amp;dl=ACM&amp;coll=GUIDE&amp;CFID=13720957&amp;CFTOKEN=832591" target="_self">		 	 Fashioning conceptual constructs in Ada</a>
+				<br>
+					 <b>Proceedings of the conference on TRI-ADA '90</b><br>
+					Robert C. Shock
+				<br>
+			<br>
+			</li>
+		</ul>
+		</div>
+<br>
+<DIV class=footer-copy-text align="center">
+</DIV>
+</td>
+</tr>
+</table>
+</div>
+</body>
+</html></html>

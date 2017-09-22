@@ -1,0 +1,451 @@
+<html><head>
+      <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+   <META HTTP-EQUIV="Expires" CONTENT="0"><title>iPac2.0</title><link title="bannerstyles" href="/hipres/css/ipac.css" type="text/css" rel="stylesheet"><SCRIPT LANGUAGE="JavaScript">
+	function startTimer()
+	{
+		curUrl = window.location.href;
+		if (curUrl.indexOf("startover=true", 0) < 0)
+		{    
+		  var time= new Date();
+	        hours= time.getHours();
+	        mins= time.getMinutes();
+	        secs= time.getSeconds();
+	        closeTime=hours*3600+mins*60+secs;
+	        closeTime+=300;
+	        Timer();
+		}
+	}
+	function Timer()
+	{
+	        var time= new Date();
+	        hours= time.getHours();
+	        mins= time.getMinutes();
+	        secs= time.getSeconds();
+	        curTime=hours*3600+mins*60+secs;
+	        if(curTime>=closeTime)
+		{
+		        location = "http://ipac.wfpl.net/ipac20/ipac.jsp?session=109A87590B526.129&profile=main&logout=true&startover=true";
+		}
+		else
+		{
+			window.setTimeout("Timer()",1000);
+		}
+	}
+	</SCRIPT><script language="JavaScript">
+	var checked = false;
+	function checkGoButton()
+	{
+		if (checked)
+		{
+			return false;
+		}
+		else
+		{
+			checked = true;
+			return true;
+		}
+	}
+</script><script language="JavaScript"><!--
+	function setfocus()
+	{
+	 if (document.search)
+	 {
+		 if (document.search.term)
+	 	{
+			if (document.search.term[0])
+			{
+				document.search.term[0].focus();
+				document.search.term[0].select();
+			}
+			else
+			{
+				document.search.term.focus();
+				document.search.term.select();
+			}
+		 }
+	}
+	if (document.security)
+	{
+		 if (document.security.sec1)
+		 {
+			document.security.sec1.focus();
+		 }
+	 }
+	}
+	// --></script></head><body bgcolor="#FFFFFF" onload="startTimer();setfocus();" background="" leftmargin="0" topmargin="0" marginwidth="0" marginheight="0"><input type="hidden" name="session" value="109A87590B526.129"><a xmlns:URLEncoder="/com.dynix.util.IpacURLEncoder" class="tinyAnchor" href="#content" title="Jump to Content" alt="Jump to Content"></a><table xmlns:URLEncoder="/com.dynix.util.IpacURLEncoder" width="100%" border="0" cellpadding="0" cellspacing="0"><tbody><tr valign="bottom"><td valign="bottom" align="middle" width="10%" rowspan="2"><a class="globalAnchor" href="http://www.wfpl.net"><img src="/hipres/images/wfplsmall.jpg" border="0" alt="Click Here for the WFPL HomePage"></a><br><a class="tinyAnchor" href="http://www.wfpl.net">Click Here for the WFPL HomePage</a><br><table width="100%" border="0" cellpadding="0" cellspacing="0" background="/hipres/images/tab_mt.gif"><tbody><tr><td><img height="2" src="/hipres/images/spacer.gif"></td></tr></tbody></table></td><td align="right" width="100%" colspan="2"><table cellspacing="0" cellpadding="3" valign="top" border="0"><tbody><tr><td class="globalLinks" valign="middle" nowrap="true" align="right"><table cellspacing="2" cellpadding="0" valign="top" border="0"><tr><td></td><td><a name="viewlist" class="globalAnchor" title="My List0" href="javascript:buildMyList('http%3A%2F%2Fipac.wfpl.net%2Fipac20%2Fipac.jsp%3Fsession%3D109A87590B526.129%26profile%3Dmain%26menu%3Dmylist%26listkey%3Dipac_my_list','')"><img src="/hipres/images/booklist-view.gif" border="0" width="25" height="20" alt="View my Bookbag" align="middle"></a><a name="viewlist" class="globalAnchor" title="View my Bookbag" href="javascript:buildMyList('http%3A%2F%2Fipac.wfpl.net%2Fipac20%2Fipac.jsp%3Fsession%3D109A87590B526.129%26profile%3Dmain%26menu%3Dmylist%26listkey%3Dipac_my_list','')" id="bookbag">My List - 0</a></td><td><a class="globalAnchor" title="Login" href="javascript:loginIntoOrOutOfAccount('http%3A%2F%2Fipac.wfpl.net%2Fipac20%2Fipac.jsp%3Fsession%3D109A87590B526.129%26profile%3Dmain%26auth%3Dtrue%26submenu%3Dbasic%26date%3D1095875903995','')"><img src="/hipres/images/login.gif" width="25" height="20" border="0" alt="Click here to login" align="middle">Login</a></td><td><a class="globalAnchor" title="Help" href="javascript:popUpHelp('/hipres/help/eng/horizon/interpretsearch.htm');"><img src="/hipres/images/help.gif" width="25" height="20" border="0" alt="Help" align="middle">Help</a></td></tr></table></td></tr></tbody></table></td></tr><tr><td align="center" valign="bottom" width="99%"><table border="0" cellpadding="0" cellspacing="0"><tbody><tr><td width="50%" valign="bottom"><table width="100%" border="0" cellpadding="0" cellspacing="0" background="/hipres/images/tab_mt.gif"><tbody><tr><td><img height="2" src="/hipres/images/spacer.gif"></td></tr></tbody></table></td><td valign="bottom"><table bgcolor="#008080" cellpadding="0" cellspacing="0" border="0"><tbody><tr><td width="4"><img height="4" src="/hipres/images/tab_lt.gif" width="4"></td><td background="/hipres/images/tab_mt.gif"><img height="4" src="/hipres/images/spacer.gif" width="8"></td><td width="4"><img height="4" src="/hipres/images/tab_rt.gif" width="4"></td></tr><tr><td background="/hipres/images/tab_lm.gif"><img height="4" src="/hipres/images/spacer.gif" width="4"></td><td nowrap="true"><table cellpadding="0" cellspacing="0" width="100%" border="0"><tbody><tr><td><img height="8" src="/hipres/images/spacer.gif" width="2"></td><td nowrap="true" class="tabText" align="middle" height="22">&nbsp;<a class="TabActive" title="Searching Home" alt="Searching Home">Home<br></a>&nbsp;</td><td><img height="8" src="/hipres/images/spacer.gif" width="2"></td></tr></tbody></table></td><td background="/hipres/images/tab_rm.gif"><img height="4" src="/hipres/images/spacer.gif" width="4"></td></tr><tr><td><img height="2" src="/hipres/images/tab_lb.gif" width="4"></td><td><img height="2" src="/hipres/images/spacer.gif" width="8"></td><td><img height="2" src="/hipres/images/tab_rb.gif" width="4"></td></tr></tbody></table></td><td valign="bottom"><table bgcolor="#BDC5C9" border="0" cellpadding="0" cellspacing="0"><tbody><tr><td width="4"><img height="4" src="/hipres/images/NW0-blue.gif" width="4"></td><td background="/hipres/images/bg-N0-blue.gif"><img height="4" src="/hipres/images/spacer.gif" width="8"></td><td width="4"><img height="4" src="/hipres/images/NE0-blue.gif" width="4"></td></tr><tr><td background="/hipres/images/bg-W0-blue.gif"><img height="4" src="/hipres/images/spacer.gif" width="4"></td><td align="middle"><table width="100%" border="0" cellpadding="0" cellspacing="0"><tbody><tr><td><img height="8" src="/hipres/images/spacer.gif" width="2"></td><td nowrap="true" class="tabText" align="middle" height="22">&nbsp;<a class="TabInactive" title="Search Library Catalog" alt="Search Library Catalog" href="http://ipac.wfpl.net/ipac20/ipac.jsp?session=109A87590B526.129&amp;profile=main&amp;menu=search_numeric&amp;ts=1095875903995">More<br>Searches</a>&nbsp;</td><td><img height="8" src="/hipres/images/spacer.gif" width="2"></td></tr></tbody></table></td><td background="/hipres/images/bg-E0-blue.gif"><img height="4" src="/hipres/images/spacer.gif" width="4"></td></tr><tr><td background="/hipres/images/tab_mt.gif"><img height="2" src="/hipres/images/spacer.gif" width="4"></td><td background="/hipres/images/tab_mt.gif"><img height="2" src="/hipres/images/spacer.gif" width="8"></td><td background="/hipres/images/tab_mt.gif"><img height="2" src="/hipres/images/spacer.gif" width="4"></td></tr></tbody></table></td><td valign="bottom"><table bgcolor="#BDC5C9" border="0" cellpadding="0" cellspacing="0"><tbody><tr><td width="4"><img height="4" src="/hipres/images/NW0-blue.gif" width="4"></td><td background="/hipres/images/bg-N0-blue.gif"><img height="4" src="/hipres/images/spacer.gif" width="8"></td><td width="4"><img height="4" src="/hipres/images/NE0-blue.gif" width="4"></td></tr><tr><td background="/hipres/images/bg-W0-blue.gif"><img height="4" src="/hipres/images/spacer.gif" width="4"></td><td align="middle"><table width="100%" border="0" cellpadding="0" cellspacing="0"><tbody><tr><td><img height="8" src="/hipres/images/spacer.gif" width="2"></td><td nowrap="true" class="tabText" align="middle" height="22">&nbsp;<a class="TabInactive" title="View my account information" alt="View my account information" href="http://ipac.wfpl.net/ipac20/ipac.jsp?session=109A87590B526.129&amp;profile=main&amp;menu=account&amp;ts=1095875903995">My<br>Account</a>&nbsp;</td><td><img height="8" src="/hipres/images/spacer.gif" width="2"></td></tr></tbody></table></td><td background="/hipres/images/bg-E0-blue.gif"><img height="4" src="/hipres/images/spacer.gif" width="4"></td></tr><tr><td background="/hipres/images/tab_mt.gif"><img height="2" src="/hipres/images/spacer.gif" width="4"></td><td background="/hipres/images/tab_mt.gif"><img height="2" src="/hipres/images/spacer.gif" width="8"></td><td background="/hipres/images/tab_mt.gif"><img height="2" src="/hipres/images/spacer.gif" width="4"></td></tr></tbody></table></td><td valign="bottom"><table bgcolor="#BDC5C9" border="0" cellpadding="0" cellspacing="0"><tbody><tr><td width="4"><img height="4" src="/hipres/images/NW0-blue.gif" width="4"></td><td background="/hipres/images/bg-N0-blue.gif"><img height="4" src="/hipres/images/spacer.gif" width="8"></td><td width="4"><img height="4" src="/hipres/images/NE0-blue.gif" width="4"></td></tr><tr><td background="/hipres/images/bg-W0-blue.gif"><img height="4" src="/hipres/images/spacer.gif" width="4"></td><td align="middle"><table width="100%" border="0" cellpadding="0" cellspacing="0"><tbody><tr><td><img height="8" src="/hipres/images/spacer.gif" width="2"></td><td nowrap="true" class="tabText" align="middle" height="22">&nbsp;<a class="TabInactive" title="Research Databases" alt="Research Databases" href="http://www.wfpl.net/in-house.htm">Research<br>Databases</a>&nbsp;</td><td><img height="8" src="/hipres/images/spacer.gif" width="2"></td></tr></tbody></table></td><td background="/hipres/images/bg-E0-blue.gif"><img height="4" src="/hipres/images/spacer.gif" width="4"></td></tr><tr><td background="/hipres/images/tab_mt.gif"><img height="2" src="/hipres/images/spacer.gif" width="4"></td><td background="/hipres/images/tab_mt.gif"><img height="2" src="/hipres/images/spacer.gif" width="8"></td><td background="/hipres/images/tab_mt.gif"><img height="2" src="/hipres/images/spacer.gif" width="4"></td></tr></tbody></table></td><td valign="bottom"><table bgcolor="#BDC5C9" border="0" cellpadding="0" cellspacing="0"><tbody><tr><td width="4"><img height="4" src="/hipres/images/NW0-blue.gif" width="4"></td><td background="/hipres/images/bg-N0-blue.gif"><img height="4" src="/hipres/images/spacer.gif" width="8"></td><td width="4"><img height="4" src="/hipres/images/NE0-blue.gif" width="4"></td></tr><tr><td background="/hipres/images/bg-W0-blue.gif"><img height="4" src="/hipres/images/spacer.gif" width="4"></td><td align="middle"><table width="100%" border="0" cellpadding="0" cellspacing="0"><tbody><tr><td><img height="8" src="/hipres/images/spacer.gif" width="2"></td><td nowrap="true" class="tabText" align="middle" height="22">&nbsp;<a class="TabInactive" title="Interlibrary Loan" alt="Interlibrary Loan" href="http://www.wfpl.net/ILL.htm">ILL<br>Request</a>&nbsp;</td><td><img height="8" src="/hipres/images/spacer.gif" width="2"></td></tr></tbody></table></td><td background="/hipres/images/bg-E0-blue.gif"><img height="4" src="/hipres/images/spacer.gif" width="4"></td></tr><tr><td background="/hipres/images/tab_mt.gif"><img height="2" src="/hipres/images/spacer.gif" width="4"></td><td background="/hipres/images/tab_mt.gif"><img height="2" src="/hipres/images/spacer.gif" width="8"></td><td background="/hipres/images/tab_mt.gif"><img height="2" src="/hipres/images/spacer.gif" width="4"></td></tr></tbody></table></td><td valign="bottom"><table bgcolor="#BDC5C9" border="0" cellpadding="0" cellspacing="0"><tbody><tr><td width="4"><img height="4" src="/hipres/images/NW0-blue.gif" width="4"></td><td background="/hipres/images/bg-N0-blue.gif"><img height="4" src="/hipres/images/spacer.gif" width="8"></td><td width="4"><img height="4" src="/hipres/images/NE0-blue.gif" width="4"></td></tr><tr><td background="/hipres/images/bg-W0-blue.gif"><img height="4" src="/hipres/images/spacer.gif" width="4"></td><td align="middle"><table width="100%" border="0" cellpadding="0" cellspacing="0"><tbody><tr><td><img height="8" src="/hipres/images/spacer.gif" width="2"></td><td nowrap="true" class="tabText" align="middle" height="22">&nbsp;<a class="TabInactive" title="Purchase Request" alt="Purchase Request" href="http://www.wfpl.net/purchaseform.htm">Purchase<br>Request</a>&nbsp;</td><td><img height="8" src="/hipres/images/spacer.gif" width="2"></td></tr></tbody></table></td><td background="/hipres/images/bg-E0-blue.gif"><img height="4" src="/hipres/images/spacer.gif" width="4"></td></tr><tr><td background="/hipres/images/tab_mt.gif"><img height="2" src="/hipres/images/spacer.gif" width="4"></td><td background="/hipres/images/tab_mt.gif"><img height="2" src="/hipres/images/spacer.gif" width="8"></td><td background="/hipres/images/tab_mt.gif"><img height="2" src="/hipres/images/spacer.gif" width="4"></td></tr></tbody></table></td><td width="50%" valign="bottom"><table width="100%" border="0" cellpadding="0" cellspacing="0" background="/hipres/images/tab_mt.gif"><tbody><tr><td><img height="2" src="/hipres/images/spacer.gif"></td></tr></tbody></table></td></tr></tbody></table></td><td width="1%" valign="bottom"><table width="180" border="0" cellpadding="0" cellspacing="0"><tbody><tr><td valign="top" align="right" nowrap="true" width="100%"><a class="normalBlackFont1">&nbsp;&nbsp;&nbsp;</a></td></tr><tr><td background="/hipres/images/tab_mt.gif"><img height="2" src="/hipres/images/spacer.gif"></td></tr></tbody></table></td></tr></tbody></table><table xmlns:URLEncoder="/com.dynix.util.IpacURLEncoder" cellspacing="0" cellpadding="3" width="100%" bgcolor="#008080" border="0"><tbody><tr valign="top" align="middle"><td width="100%"><table cellspacing="0" cellpadding="0" border="0"><tbody><tr><td><img height="30" src="/hipres/images/spacer.gif" width="8"></td><td valign="center" align="middle"><a class="navBarCurrent" title="Quick Search" alt="Quick Search" href="http://ipac.wfpl.net/ipac20/ipac.jsp?session=109A87590B526.129&amp;profile=main&amp;menu=home&amp;submenu=basic&amp;ts=1095875903995">Quick Search</a></td><td><img height="8" src="/hipres/images/spacer.gif" width="8"></td><td><img height="16" src="/hipres/images/bck_tan.gif" width="1"></td><td><img height="30" src="/hipres/images/spacer.gif" width="8"></td><td valign="center" align="middle"><a class="navBarAnchor" title="Hours" alt="Hours" href="http://ipac.wfpl.net/ipac20/ipac.jsp?session=109A87590B526.129&amp;profile=main&amp;menu=home&amp;submenu=hours&amp;cl=Calendarjsp&amp;ts=1095875903995">Hours</a></td><td><img height="8" src="/hipres/images/spacer.gif" width="8"></td><td><img height="16" src="/hipres/images/bck_tan.gif" width="1"></td><td><img height="30" src="/hipres/images/spacer.gif" width="8"></td><td valign="center" align="middle"><a class="navBarAnchor" title="Find a Good Book" alt="Find a Good Book" href="http://ipac.wfpl.net/ipac20/ipac.jsp?&amp;profile=main&amp;ri=&amp;index=BSTLL&amp;term=*&amp;aspect=BSL#focusfocusfocusfocus">Find a Good Book</a></td><td><img height="8" src="/hipres/images/spacer.gif" width="8"></td></tr></tbody></table></td></tr></tbody></table><table xmlns:sstrings="http://www.dynix.com/2001/sstrings" xmlns:URLEncoder="/com.dynix.util.IpacURLEncoder" class="tableBackground" width="100%" cellpadding="0" cellspacing="0" border="0"><tr><form name="search" action="http://ipac.wfpl.net/ipac20/ipac.jsp" method="GET"><td bgcolor="#EEEECC" width="100%" align="left" colspan="3"><input type="hidden" name="session" value="109A87590B526.129"><input type="hidden" name="menu" value="home"><input type="hidden" name="aspect" value="basic"><input type="hidden" name="npp" value="10" size="2"><input type="hidden" name="ipp" value="20"><input type="hidden" name="profile" value="main"><input type="hidden" name="ri" value="1"><input type="hidden" name="source" value="172.31.4.150@!horizon"><table class="tableBackgroundHighlight" cellpadding="3" cellspacing="0" border="0" width="100%"><tr><td bgcolor="#EEEECC"><a class="boldBlackFont2">Search:&nbsp;</a></td><td bgcolor="#EEEECC"><select class="comboBox" name="index"><option selected="true" value=".GW">General Keyword</option></select></td><td bgcolor="#EEEECC">&nbsp;</td><td bgcolor="#EEEECC"><input class="textInputBox" type="text" size="25" name="term" maxsize="100" value="homecoming voigt"></td><td bgcolor="#EEEECC">&nbsp;<input class="normalBlackFont1" type="image" src="/hipres/images/b-go-red.gif" border="0" alt="Go"><input type="hidden" name="aspect" value="basic"></td><td bgcolor="#EEEECC">&nbsp;</td><td bgcolor="#EEEECC" valign="bottom" nowrap="true"><a class="tinyAnchor" href="http://ipac.wfpl.net/ipac20/ipac.jsp?session=109A87590B526.129&amp;profile=main&amp;menu=search&amp;aspect=history&amp;histedit=last">Refine Search</a></td><td bgcolor="#EEEECC" width="40%">&nbsp;</td></tr><tr><td bgcolor="#EEEECC" align="left" valign="top" nowrap="true" colspan="15"><a class="normalBlackFont0">You're searching: <b>WFPL</b></a></td></tr></table></td></form></tr></table><table xmlns:sstrings="http://www.dynix.com/2001/sstrings" xmlns:URLEncoder="/com.dynix.util.IpacURLEncoder" class="tableBackground" width="100%" cellpadding="0" cellspacing="0" border="0"><tr><td width="100%" colspan="3">&nbsp;</td></tr><tr valign="center"><td width="99%"><table border="0"><tr><td><a class="boldBlackFont3">&nbsp;Search Results</a></td></tr><tr><td><a class="normalBlackFont2">&nbsp;<b>3</b>&nbsp;titles matched:&nbsp;<b>homecoming voigt</b></a></td></tr></table></td><td align="right"><table class="tableBackground" border="0" cellpadding="3" cellspacing="0"><form name="sort_limit" action="http://ipac.wfpl.net/ipac20/ipac.jsp" method="GET"><input class="normalBlackFont1" type="hidden" name="npp" value="10" size="2"><input type="hidden" name="ipp" value="20"><input type="hidden" name="profile" value="main"><input type="hidden" name="aspect" value="basic"><input type="hidden" name="term" value="homecoming voigt"><input type="hidden" name="index" value=".GW"><input type="hidden" name="uindex" value=""><input type="hidden" name="oper" value=""><input type="hidden" name="ri" value="1"><input type="hidden" name="session" value="109A87590B526.129"><input type="hidden" name="menu" value="home"><input type="hidden" name="aspect" value="basic"><input type="hidden" name="npp" value="10" size="2"><input type="hidden" name="ipp" value="20"><input type="hidden" name="profile" value="main"><input type="hidden" name="ri" value="1"><input type="hidden" name="source" value="172.31.4.150@!horizon"><tr valign="top"><td nowrap="true" valign="top" colspan="2" align="right" bgcolor="#EEEECC"><a class="boldBlackFont1">Sort by:&nbsp;</a><select class="comboBox" name="sort" width="30"><option value="">Select...</option><option value="none">None</option><option value="3100012">Authors</option><option value="3100013">Media</option><option value="3100014">Publication date</option><option selected="true" value="3100015">Title</option></select></td><td rowspan="2" valign="center" bgcolor="#EEEECC"><input type="image" src="/hipres/images/b-go-tan.gif" border="0" name="go_sort_limit" alt="Sort/Limit"></td></tr><tr valign="top"><td nowrap="true" colspan="2" valign="top" align="right" bgcolor="#EEEECC">&nbsp;&nbsp;&nbsp;<a class="boldBlackFont1">Limit by:&nbsp;</a><select class="comboBox" name="limit" width="30"><option value="">Select...</option><option value="none">None</option><option value="CO01 = co_jFICPIC">Coll: J Fiction Picture Books</option><option value="CO01 = co_audio">Audio Books</option><option value="CO01 = co_compact">Compact Discs</option><option value="CO01 = Videos">Videos &amp; DVDs</option><option value="CO01 = GENTX">Genealogy &amp; TX History</option><option value="CO01 = Leased">Leased Collection</option><option value="CO01 = LP">Large Print Materials</option><option value="CO01 = YA">Young Adult Materials</option><option value="CO01 = Adult">Adult Circulating Materials</option><option value="CO01 = Youth">Youth Materials</option><option value="IT01 = ref">Reference Item type</option><option value="LA01 = la_eng">Lang: English</option><option value="LA01 = la_fre">Lang: French</option><option value="LA01 = la_ger">Lang: German</option><option value="LA01 = la_spa">Lang: Spanish</option><option value="LO01 = main">Loc: Wichita Falls Public Library</option><option value="LO01 = ebook">Netlibrary</option></select></td></tr></form></table><table class="tableBackground" border="0" cellpadding="3" cellspacing="0"><tr align="right"><td>&nbsp;</td><td>&nbsp;</td></tr></table></td></tr></table><table xmlns:sstrings="http://www.dynix.com/2001/sstrings" xmlns:URLEncoder="/com.dynix.util.IpacURLEncoder" class="tableBackground" width="100%" cellpadding="0" cellspacing="0" border="0"><tr><td align="right" width="30%"><table class="tableBackground" border="0" cellpadding="0" width="100%"><tr width="100%" align="right"></tr></table></td></tr></table><script xmlns:URLEncoder="/com.dynix.util.IpacURLEncoder" LANGUAGE="JavaScript">
+myarr = null;
+count = 0;
+setReturnFlag=1;
+
+function buildReturnPageNewList(thisurl,returnurl)
+{
+
+       if(document.buildLink.returnURL )
+        {
+          if(returnurl != '')
+		  {
+            document.buildLink.returnURL.value = returnurl;
+			}
+
+        }
+       // window.location = url;
+       document.buildLink.action=thisurl;
+       document.buildLink.submit();
+
+
+
+}
+
+function buildNewList(url)
+{
+    i = 0;
+
+
+       if(myarr != null)
+        {
+                while(myarr[i] != null)
+                 {
+                         url +='&addkeys=' + myarr[i];
+                        i++;
+                 }
+
+
+        }
+
+       if(document.buildLink.returnURL )
+        {
+         if(setReturnFlag == 1)
+          {
+                        document.buildLink.returnURL.value = document.location.toString();
+           }
+        }
+
+       // window.location = url;
+        if(navigator.appName == "Netscape")
+        {
+            document.buildLink.action=unescape(url);
+        }
+        else
+        {
+            document.buildLink.action=url;
+        }
+
+       document.buildLink.submit();
+
+
+
+}
+
+function buildMyList(URL,retURL)
+{
+  i = 0;
+
+
+if(document.buildLink)
+{
+
+        link = document.buildLink.action;
+
+        if(myarr != null)
+        {
+                while(myarr[i] != null)
+                 {
+                         link+='&addkeys=' + myarr[i];
+                        i++;
+                 }
+
+
+        }
+
+       if(document.buildLink.returnURL )
+        {
+
+             if(setReturnFlag == 1 || retURL != '')
+             {
+
+
+                    if(retURL != '')
+                            document.buildLink.returnURL.value = retURL;
+                    else
+                      document.buildLink.returnURL.value = document.location.toString();
+
+
+
+
+
+                         if(myarr != null)
+                        {
+                          i = 0;
+                            while(myarr[i] != null)
+                            {
+                                    document.buildLink.returnURL.value+='&addkeys=' + myarr[i];
+                                    i++;
+                            }
+
+                        }
+
+
+             }
+
+        }
+
+
+
+
+
+        document.buildLink.action = link;
+
+        document.buildLink.submit();
+}
+else
+{
+
+    window.location = URL;
+}
+
+
+}
+
+function   loginIntoOrOutOfAccount(URL,retURL)
+    {
+         i = 0;
+
+
+
+
+        if(document.buildLink)
+        {
+
+                if(navigator.appName == "Netscape")
+                {
+                    document.buildLink.action=unescape(URL);
+                }
+                else
+                {
+                    document.buildLink.action=URL;
+                }
+
+                if(myarr != null)
+                {
+                        while(myarr[i] != null)
+                         {
+                                 document.buildLink.action+='&addkeys=' + myarr[i];
+                                i++;
+                         }
+
+
+                }
+
+               if(document.buildLink.returnURL || setReturnFlag == 1 )
+                {
+
+                     if(retURL != '')
+                     {
+                          document.buildLink.returnURL.value = retURL;
+                     }
+                     else
+                     {
+                           document.buildLink.returnURL.value = document.location.toString();
+                     }
+                     if(myarr != null)
+                     {
+                              i = 0;
+                              while(myarr[i] != null)
+                              {
+                                      document.buildLink.returnURL.value+='&addkeys=' + myarr[i];
+                                      i++;
+                               }
+
+                      }
+
+                }
+
+
+
+                document.buildLink.submit();
+        }
+        else
+        {
+
+            if(navigator.appName == "Netscape")
+            {
+                window.location = unescape(URL);
+            }
+            else
+            {
+                window.location = URL;
+            }
+
+        }
+
+
+ }
+
+function popUpHelp(URL)
+{
+	day = new Date();
+	id = day.getTime();
+	eval("page" + id + " = window.open(URL, '" + id + "', 'toolbar=1,scrollbars=1,location=0,statusbar=0,menubar=0,resizable=1,width=350,height=650');");
+}
+function changeBookbagText(text)
+{
+	if (document.getElementById)
+	{
+ 		document.getElementById('bookbag').innerHTML=text;
+	}
+	else if (document.layers)
+	{
+  		document.anchors["viewlist"].text=text;
+	}
+	else
+	{
+
+		bookbag.innerHTML=text;
+	}
+}
+</script><!--
+****************************************************
+Security
+****************************************************
+--><a xmlns:strings="http://www.dynix.com/2001/strings" xmlns:stringex="/com.dynix.util.StringEx" xmlns:URLEncoder="/com.dynix.util.IpacURLEncoder" name="content"></a><center xmlns:strings="http://www.dynix.com/2001/strings" xmlns:stringex="/com.dynix.util.StringEx" xmlns:URLEncoder="/com.dynix.util.IpacURLEncoder"><hr color="#008080" size="1"><table class="tableBackground" width="100%" border="0" cellspacing="0" cellpadding="0"><tr><form name="summary" action="http://ipac.wfpl.net/ipac20/ipac.jsp" method="GET"><input type="hidden" name="menu" value="search"><td><table class="tableBackground" style="0" width="100%" border="0" cellspacing="0" cellpadding="0"><TR><TD valign="top" width="2%">&nbsp;<a class="boldBlackFont1">1.
+			</a></TD><TD width="100%"><table class="tableBackground" style="0" cellspacing="0" cellpadding="0" height="100%" border="0" width="100%"><TR><TD width="100%" colspan="3"><table class="tableBackground" width="100%"><tr><td><a class="mediumBoldAnchor" href="javascript:buildNewList('http%3A%2F%2Fipac.wfpl.net%2Fipac20%2Fipac.jsp%3Fsession%3D109A87590B526.129%26profile%3Dmain%26uri%3Dfull%3D3100001%40%2136324%40%210%26ri%3D1%26aspect%3Dbasic%26menu%3Dsearch%26source%3D172.31.4.150%40%21horizon%26ipp%3D20%26staffonly%3D%26term%3Dhomecoming%2Bvoigt%26index%3D.GW%26uindex%3D%26aspect%3Dbasic%26menu%3Dsearch%26ri%3D1')">Homecoming / by Cynthia Voigt.</a></td><td width="1%" nowrap=""><a class="smallAnchor" href="javascript:buildNewList('http%3A%2F%2Fipac.wfpl.net%2Fipac20%2Fipac.jsp%3Fsession%3D109A87590B526.129%26profile%3Dmain%26uri%3Dfull%3D3100001%40%2136324%40%210%26ri%3D1%26aspect%3Dbasic%26menu%3Dsearch%26source%3D172.31.4.150%40%21horizon%26ipp%3D20%26staffonly%3D%26term%3Dhomecoming%2Bvoigt%26index%3D.GW%26uindex%3D%26aspect%3Dbasic%26menu%3Dsearch%26ri%3D1')">Show details</a></td></tr></table></TD></TR><TR><TD width="100%" colspan="2"><a class="normalBlackFont1">by <i>Voigt, Cynthia.</i></a></TD></TR><TR><TD width="100%" colspan="2"><a class="normalBlackFont1">New York : Atheneum Books for Young Readers, 1981. </a></TD></TR><TR><TD colspan="2"><img name="bkey36324" width="1" height="1" src="/hipres/images/spacer.gif" alt="Add to my list" border="0"></TD></TR><TR><TD colspan="2"><img name="bkey36324" width="1" height="1" src="/hipres/images/spacer.gif" alt="Add to my list" border="0"></TD></TR><TR><TD colspan="2"><img name="bkey36324" width="1" height="1" src="/hipres/images/spacer.gif" alt="Add to my list" border="0"></TD></TR><TR><TD colspan="2"><img name="bkey36324" width="1" height="1" src="/hipres/images/spacer.gif" alt="Add to my list" border="0"></TD></TR><TR><TD colspan="2"><img name="bkey36324" width="1" height="1" src="/hipres/images/spacer.gif" alt="Add to my list" border="0"></TD></TR><TR><TD colspan="2"><img name="bkey36324" width="1" height="1" src="/hipres/images/spacer.gif" alt="Add to my list" border="0"></TD></TR><TR><TD colspan="2"><img name="bkey36324" width="1" height="1" src="/hipres/images/spacer.gif" alt="Add to my list" border="0"></TD></TR><TR><TD colspan="2"><img name="bkey36324" width="1" height="1" src="/hipres/images/spacer.gif" alt="Add to my list" border="0"></TD></TR><TR><TD colspan="2"><img name="bkey36324" width="1" height="1" src="/hipres/images/spacer.gif" alt="Add to my list" border="0"></TD></TR><TR><TD valign="top" width="100%" colspan="2"><table class="tableBackground" border="0" cellspacing="0" cellpadding="0"><tr><td rowspan="1" valign="top"><a class="boldBlackFont1">Number of Requests:&nbsp;</a></td><td><a class="smallAnchor">0</a></td></tr></table></TD></TR><TR><TD colspan="4" width="100%"><table class="tableBackground" cellpadding="3" cellspacing="0" width="100%" border="0"><tr height="20"><td bgcolor="white"><a class="boldBlackFont1" title="Location">Location</a></td><td bgcolor="white"><a class="boldBlackFont1" title="Collection">Collection</a></td><td bgcolor="white"><a class="boldBlackFont1" title="Call No.">Call No.</a></td><td bgcolor="white"><a class="boldBlackFont1" title="Status">Status</a></td><td bgcolor="white"><a class="boldBlackFont1" title="Due Date">Due Date</a></td></tr><tr height="15"><td bgcolor="white"><a class="normalBlackFont1" title="Item Information">Wichita Falls Public Library</a></td><td bgcolor="white"><a class="normalBlackFont1" title="Item Information">Young Adult Fiction</a></td><td bgcolor="white"><a class="normalBlackFont1" title="Item Information">F VOI</a></td><td bgcolor="white"><a class="normalBlackFont1" title="Item Information">On Shelf</a></td><td bgcolor="white">&nbsp;</td></tr><tr height="15"><td bgcolor="white"><a class="normalBlackFont1" bgcolor="white" title="Item Information">Wichita Falls Public Library</a></td><td bgcolor="white"><a class="normalBlackFont1" bgcolor="white" title="Item Information">Young Adult Fiction</a></td><td bgcolor="white"><a class="normalBlackFont1" bgcolor="white" title="Item Information">F VOI</a></td><td bgcolor="white"><a class="normalBlackFont1" bgcolor="white" title="Item Information">On Shelf</a></td><td bgcolor="white">&nbsp;</td></tr><tr height="15"><td bgcolor="white"><a class="normalBlackFont1" title="Item Information">Wichita Falls Public Library</a></td><td bgcolor="white"><a class="normalBlackFont1" title="Item Information">Young Adult Fiction</a></td><td bgcolor="white"><a class="normalBlackFont1" title="Item Information">F VOI</a></td><td bgcolor="white"><a class="normalBlackFont1" title="Item Information">On Shelf</a></td><td bgcolor="white">&nbsp;</td></tr><tr height="15"><td bgcolor="white"><a class="normalBlackFont1" bgcolor="white" title="Item Information">Wichita Falls Public Library</a></td><td bgcolor="white"><a class="normalBlackFont1" bgcolor="white" title="Item Information">Young Adult Fiction</a></td><td bgcolor="white"><a class="normalBlackFont1" bgcolor="white" title="Item Information">F VOI</a></td><td bgcolor="white"><a class="normalBlackFont1" bgcolor="white" title="Item Information">On Shelf</a></td><td bgcolor="white">&nbsp;</td></tr></table></TD></TR><TR><TD>&nbsp;</TD></TR><TR><TD width="100%">&nbsp;</TD><TD width="100%" valign="top" align="right" nowrap="true"><input type="button" onClick="javascript:updatebooklist(this);" name="bkey36324" class="button" value="Add to my list" alt="Add to my list"><img name="bkey36324" width="1" height="1" src="/hipres/images/spacer.gif" alt="Add to my list" border="0">&nbsp;<input type="button" name="request" onClick="javascript:requestcopy('36324', 'full=3100001@!36324@!0');" class="button" value="Request Item " alt="Request Item">&nbsp;</TD></TR></table></TD></TR></table><hr color="#008080" size="1"><table class="tableBackground" style="0" width="100%" border="0" cellspacing="0" cellpadding="0"><TR><TD valign="top" width="2%">&nbsp;<a class="boldBlackFont1">2.
+			</a></TD><TD width="100%"><table class="tableBackground" style="0" cellspacing="0" cellpadding="0" height="100%" border="0" width="100%"><TR><TD width="100%" colspan="3"><table class="tableBackground" width="100%"><tr><td><a class="mediumBoldAnchor" href="javascript:buildNewList('http%3A%2F%2Fipac.wfpl.net%2Fipac20%2Fipac.jsp%3Fsession%3D109A87590B526.129%26profile%3Dmain%26uri%3Dfull%3D3100001%40%21127330%40%211%26ri%3D1%26aspect%3Dbasic%26menu%3Dsearch%26source%3D172.31.4.150%40%21horizon%26ipp%3D20%26staffonly%3D%26term%3Dhomecoming%2Bvoigt%26index%3D.GW%26uindex%3D%26aspect%3Dbasic%26menu%3Dsearch%26ri%3D1')">Homecoming / Cynthia Voigt.</a></td><td width="1%" nowrap=""><a class="smallAnchor" href="javascript:buildNewList('http%3A%2F%2Fipac.wfpl.net%2Fipac20%2Fipac.jsp%3Fsession%3D109A87590B526.129%26profile%3Dmain%26uri%3Dfull%3D3100001%40%21127330%40%211%26ri%3D1%26aspect%3Dbasic%26menu%3Dsearch%26source%3D172.31.4.150%40%21horizon%26ipp%3D20%26staffonly%3D%26term%3Dhomecoming%2Bvoigt%26index%3D.GW%26uindex%3D%26aspect%3Dbasic%26menu%3Dsearch%26ri%3D1')">Show details</a></td></tr></table></TD></TR><TR><TD width="100%" colspan="2"><a class="normalBlackFont1">by <i>Voigt, Cynthia.</i></a></TD></TR><TR><TD width="100%" colspan="2"><a class="normalBlackFont1">New York : Ballantine Books, 1983, c1981. </a></TD></TR><TR><TD colspan="2"><img name="bkey127330" width="1" height="1" src="/hipres/images/spacer.gif" alt="Add to my list" border="0"></TD></TR><TR><TD colspan="2"><img name="bkey127330" width="1" height="1" src="/hipres/images/spacer.gif" alt="Add to my list" border="0"></TD></TR><TR><TD colspan="2"><img name="bkey127330" width="1" height="1" src="/hipres/images/spacer.gif" alt="Add to my list" border="0"></TD></TR><TR><TD colspan="2"><img name="bkey127330" width="1" height="1" src="/hipres/images/spacer.gif" alt="Add to my list" border="0"></TD></TR><TR><TD colspan="2"><img name="bkey127330" width="1" height="1" src="/hipres/images/spacer.gif" alt="Add to my list" border="0"></TD></TR><TR><TD colspan="2"><img name="bkey127330" width="1" height="1" src="/hipres/images/spacer.gif" alt="Add to my list" border="0"></TD></TR><TR><TD colspan="2"><img name="bkey127330" width="1" height="1" src="/hipres/images/spacer.gif" alt="Add to my list" border="0"></TD></TR><TR><TD colspan="2"><img name="bkey127330" width="1" height="1" src="/hipres/images/spacer.gif" alt="Add to my list" border="0"></TD></TR><TR><TD colspan="2"><img name="bkey127330" width="1" height="1" src="/hipres/images/spacer.gif" alt="Add to my list" border="0"></TD></TR><TR><TD valign="top" width="100%" colspan="2"><table class="tableBackground" border="0" cellspacing="0" cellpadding="0"><tr><td rowspan="1" valign="top"><a class="boldBlackFont1">Number of Requests:&nbsp;</a></td><td><a class="smallAnchor">0</a></td></tr></table></TD></TR><TR><TD colspan="4" width="100%"><table class="tableBackground" cellpadding="3" cellspacing="0" width="100%" border="0"><tr height="20"><td bgcolor="white"><a class="boldBlackFont1" title="Location">Location</a></td><td bgcolor="white"><a class="boldBlackFont1" title="Collection">Collection</a></td><td bgcolor="white"><a class="boldBlackFont1" title="Call No.">Call No.</a></td><td bgcolor="white"><a class="boldBlackFont1" title="Status">Status</a></td><td bgcolor="white"><a class="boldBlackFont1" title="Due Date">Due Date</a></td></tr><tr height="15"><td bgcolor="white"><a class="normalBlackFont1" title="Item Information">Wichita Falls Public Library</a></td><td bgcolor="white"><a class="normalBlackFont1" title="Item Information">Young Adult Fiction</a></td><td bgcolor="white"><a class="normalBlackFont1" title="Item Information">F VOI</a></td><td bgcolor="white"><a class="normalBlackFont1" title="Item Information">On Shelf</a></td><td bgcolor="white">&nbsp;</td></tr><tr height="15"><td bgcolor="white"><a class="normalBlackFont1" bgcolor="white" title="Item Information">Wichita Falls Public Library</a></td><td bgcolor="white"><a class="normalBlackFont1" bgcolor="white" title="Item Information">Young Adult Fiction</a></td><td bgcolor="white"><a class="normalBlackFont1" bgcolor="white" title="Item Information">F VOI</a></td><td bgcolor="white"><a class="normalBlackFont1" bgcolor="white" title="Item Information">On Shelf</a></td><td bgcolor="white">&nbsp;</td></tr><tr height="15"><td bgcolor="white"><a class="normalBlackFont1" title="Item Information">Wichita Falls Public Library</a></td><td bgcolor="white"><a class="normalBlackFont1" title="Item Information">Young Adult Fiction</a></td><td bgcolor="white"><a class="normalBlackFont1" title="Item Information">F VOI</a></td><td bgcolor="white"><a class="normalBlackFont1" title="Item Information">Not Returned</a></td><td bgcolor="white"><a class="normalBlackFont1" title="Item Information">07/24/2002</a></td></tr></table></TD></TR><TR><TD>&nbsp;</TD></TR><TR><TD width="100%">&nbsp;</TD><TD width="100%" valign="top" align="right" nowrap="true"><input type="button" onClick="javascript:updatebooklist(this);" name="bkey127330" class="button" value="Add to my list" alt="Add to my list"><img name="bkey127330" width="1" height="1" src="/hipres/images/spacer.gif" alt="Add to my list" border="0">&nbsp;<input type="button" name="request" onClick="javascript:requestcopy('127330', 'full=3100001@!127330@!1');" class="button" value="Request Item " alt="Request Item">&nbsp;</TD></TR></table></TD></TR></table><hr color="#008080" size="1"><table class="tableBackground" style="0" width="100%" border="0" cellspacing="0" cellpadding="0"><TR><TD valign="top" width="2%">&nbsp;<a class="boldBlackFont1">3.
+			</a></TD><TD width="100%"><table class="tableBackground" style="0" cellspacing="0" cellpadding="0" height="100%" border="0" width="100%"><TR><TD width="100%" colspan="3"><table class="tableBackground" width="100%"><tr><td><a class="mediumBoldAnchor" href="javascript:buildNewList('http%3A%2F%2Fipac.wfpl.net%2Fipac20%2Fipac.jsp%3Fsession%3D109A87590B526.129%26profile%3Dmain%26uri%3Dfull%3D3100001%40%21141792%40%212%26ri%3D1%26aspect%3Dbasic%26menu%3Dsearch%26source%3D172.31.4.150%40%21horizon%26ipp%3D20%26staffonly%3D%26term%3Dhomecoming%2Bvoigt%26index%3D.GW%26uindex%3D%26aspect%3Dbasic%26menu%3Dsearch%26ri%3D1')">Homecoming [sound recording] / by Cynthia Voigt.</a></td><td width="1%" nowrap=""><a class="smallAnchor" href="javascript:buildNewList('http%3A%2F%2Fipac.wfpl.net%2Fipac20%2Fipac.jsp%3Fsession%3D109A87590B526.129%26profile%3Dmain%26uri%3Dfull%3D3100001%40%21141792%40%212%26ri%3D1%26aspect%3Dbasic%26menu%3Dsearch%26source%3D172.31.4.150%40%21horizon%26ipp%3D20%26staffonly%3D%26term%3Dhomecoming%2Bvoigt%26index%3D.GW%26uindex%3D%26aspect%3Dbasic%26menu%3Dsearch%26ri%3D1')">Show details</a></td></tr></table></TD></TR><TR><TD width="100%" colspan="2"><a class="normalBlackFont1">by <i>Voigt, Cynthia.</i></a></TD></TR><TR><TD width="100%" colspan="2"><a class="normalBlackFont1">Prince Frederick, MD : Recorded Books, p1992. </a></TD></TR><TR><TD colspan="2"><img name="bkey141792" width="1" height="1" src="/hipres/images/spacer.gif" alt="Add to my list" border="0"></TD></TR><TR><TD colspan="2"><img name="bkey141792" width="1" height="1" src="/hipres/images/spacer.gif" alt="Add to my list" border="0"></TD></TR><TR><TD colspan="2"><img name="bkey141792" width="1" height="1" src="/hipres/images/spacer.gif" alt="Add to my list" border="0"></TD></TR><TR><TD colspan="2"><img name="bkey141792" width="1" height="1" src="/hipres/images/spacer.gif" alt="Add to my list" border="0"></TD></TR><TR><TD colspan="2"><img name="bkey141792" width="1" height="1" src="/hipres/images/spacer.gif" alt="Add to my list" border="0"></TD></TR><TR><TD colspan="2"><img name="bkey141792" width="1" height="1" src="/hipres/images/spacer.gif" alt="Add to my list" border="0"></TD></TR><TR><TD colspan="2"><img name="bkey141792" width="1" height="1" src="/hipres/images/spacer.gif" alt="Add to my list" border="0"></TD></TR><TR><TD valign="top" width="100%" colspan="2"><table class="tableBackground" border="0" cellspacing="0" cellpadding="0"><tr><td rowspan="1" valign="top"><a class="boldBlackFont1">Format:&nbsp;</a></td><td><a class="smallAnchor"><img src="/hipres/images/formaticons/ipac-icon-bt.gif"></a></td></tr></table></TD></TR><TR><TD colspan="2"><img name="bkey141792" width="1" height="1" src="/hipres/images/spacer.gif" alt="Add to my list" border="0"></TD></TR><TR><TD valign="top" width="100%" colspan="2"><table class="tableBackground" border="0" cellspacing="0" cellpadding="0"><tr><td rowspan="1" valign="top"><a class="boldBlackFont1">Number of Requests:&nbsp;</a></td><td><a class="smallAnchor">0</a></td></tr></table></TD></TR><TR><TD colspan="4" width="100%"><table class="tableBackground" cellpadding="3" cellspacing="0" width="100%" border="0"><tr height="20"><td bgcolor="white"><a class="boldBlackFont1" title="Location">Location</a></td><td bgcolor="white"><a class="boldBlackFont1" title="Collection">Collection</a></td><td bgcolor="white"><a class="boldBlackFont1" title="Call No.">Call No.</a></td><td bgcolor="white"><a class="boldBlackFont1" title="Status">Status</a></td><td bgcolor="white"><a class="boldBlackFont1" title="Due Date">Due Date</a></td></tr><tr height="15"><td bgcolor="white"><a class="normalBlackFont1" title="Item Information">Wichita Falls Public Library</a></td><td bgcolor="white"><a class="normalBlackFont1" title="Item Information">Young Adult Audiobook Fiction</a></td><td bgcolor="white"><a class="normalBlackFont1" title="Item Information">F VOI</a></td><td bgcolor="white"><a class="normalBlackFont1" title="Item Information">On Shelf</a></td><td bgcolor="white">&nbsp;</td></tr></table></TD></TR><TR><TD>&nbsp;</TD></TR><TR><TD width="100%">&nbsp;</TD><TD width="100%" valign="top" align="right" nowrap="true"><input type="button" onClick="javascript:updatebooklist(this);" name="bkey141792" class="button" value="Add to my list" alt="Add to my list"><img name="bkey141792" width="1" height="1" src="/hipres/images/spacer.gif" alt="Add to my list" border="0">&nbsp;<input type="button" name="request" onClick="javascript:requestcopy('141792', 'full=3100001@!141792@!2');" class="button" value="Request Item " alt="Request Item">&nbsp;</TD></TR></table></TD></TR></table><hr color="#008080" size="1"></td></form></tr></table></center><p xmlns:strings="http://www.dynix.com/2001/strings" xmlns:stringex="/com.dynix.util.StringEx" xmlns:URLEncoder="/com.dynix.util.IpacURLEncoder" align="right"><table class="tableBackground" cellspacing="0" border="0" cellpadding="3" width="100%"><tr><td width="100%" align="left">&nbsp;</td><td xmlns:sstrings="http://www.dynix.com/2001/sstrings">&nbsp;</td><td xmlns:sstrings="http://www.dynix.com/2001/sstrings">&nbsp;</td></tr></table></p><form xmlns:strings="http://www.dynix.com/2001/strings" xmlns:stringex="/com.dynix.util.StringEx" xmlns:URLEncoder="/com.dynix.util.IpacURLEncoder" name="mylist" action="http://ipac.wfpl.net/ipac20/ipac.jsp" onSubmit="return validateMyListRange();" method="GET"><input xmlns:sstrings="http://www.dynix.com/2001/sstrings" type="hidden" name="session" value="109A87590B526.129"><input xmlns:sstrings="http://www.dynix.com/2001/sstrings" type="hidden" name="menu" value="home"><input xmlns:sstrings="http://www.dynix.com/2001/sstrings" type="hidden" name="aspect" value="basic"><input xmlns:sstrings="http://www.dynix.com/2001/sstrings" type="hidden" name="npp" value="10" size="2"><input xmlns:sstrings="http://www.dynix.com/2001/sstrings" type="hidden" name="ipp" value="20"><input xmlns:sstrings="http://www.dynix.com/2001/sstrings" type="hidden" name="profile" value="main"><input xmlns:sstrings="http://www.dynix.com/2001/sstrings" type="hidden" name="ri" value="1"><input xmlns:sstrings="http://www.dynix.com/2001/sstrings" type="hidden" name="source" value="172.31.4.150@!horizon"><center><table class="tableBackground"><tr><td align="right"><a class="boldBlackFont1">Add/Remove MyList (max=100, ie. 1,2 5-20)</a></td><td align="left"><input class="textInputBox" type="text" size="40" name="multi_add_remove_mylist" maxlength="40" value="1-3"></td><td align="left"><input type="submit" name="bla_multi_add" value="Add" class="button">&nbsp;<input type="submit" name="bla_multi_remove" value="Remove" class="button"></td></tr></table></center><input type="hidden" name="maxmylist" value="100"></form><form xmlns:strings="http://www.dynix.com/2001/strings" xmlns:stringex="/com.dynix.util.StringEx" xmlns:URLEncoder="/com.dynix.util.IpacURLEncoder" name="email_summary" action="http://ipac.wfpl.net/ipac20/ipac.jsp" onSubmit="return validateEmailRange();" method="GET"><br><input xmlns:sstrings="http://www.dynix.com/2001/sstrings" type="hidden" name="session" value="109A87590B526.129"><input xmlns:sstrings="http://www.dynix.com/2001/sstrings" type="hidden" name="menu" value="home"><input xmlns:sstrings="http://www.dynix.com/2001/sstrings" type="hidden" name="aspect" value="basic"><input xmlns:sstrings="http://www.dynix.com/2001/sstrings" type="hidden" name="npp" value="10" size="2"><input xmlns:sstrings="http://www.dynix.com/2001/sstrings" type="hidden" name="ipp" value="20"><input xmlns:sstrings="http://www.dynix.com/2001/sstrings" type="hidden" name="profile" value="main"><input xmlns:sstrings="http://www.dynix.com/2001/sstrings" type="hidden" name="ri" value="1"><input xmlns:sstrings="http://www.dynix.com/2001/sstrings" type="hidden" name="source" value="172.31.4.150@!horizon"><input type="hidden" name="rtngroup" value="0"><input type="hidden" name="rtnpage" value="1"><input type="hidden" name="rtnbrowse" value=""><input type="hidden" name="maxmylist" value="100"><table class="tableBackground" border="0" align="center" cellpadding="2"><tr><td align="right"><a class="boldBlackFont1">Format:</a></td><td><input class="boldBlackFont1" type="radio" name="booklistformat" value="plain"><a class="normalBlackFont1">Plain text</a><input class="boldBlackFont1" type="radio" name="booklistformat" value="mla"><a class="normalBlackFont1">MLA</a><input class="boldBlackFont1" type="radio" name="booklistformat" value="chicago"><a class="normalBlackFont1">Chicago</a></td></tr><tr><td align="right"><a class="boldBlackFont1">Email items: (max=100, ie. 1,2 5-20)</a></td><td align="left"><input class="textInputBox" type="text" size="40" name="emaillist" maxlength="40" value="1-3"></td><td>&nbsp;</td></tr><tr><td align="right"><a class="boldBlackFont1">Subject:</a></td><td align="left"><input class="textInputBox" type="text" size="40" name="subject" maxlength="40" value="My Search"></td><td>&nbsp;</td></tr><tr><td align="right"><a class="boldBlackFont1">Email to:</a></td><td align="left"><input class="textInputBox" type="text" size="40" name="emailaddress" maxlength="100" value=""></td><td align="left"><input type="submit" name="bla_send_list" value="Send" class="button"></td></tr></table></form><script xmlns:strings="http://www.dynix.com/2001/strings" xmlns:stringex="/com.dynix.util.StringEx" xmlns:URLEncoder="/com.dynix.util.IpacURLEncoder" language="javascript">
+
+
+
+var bookbagsize = 0;
+
+
+function searchinternet(query)
+{
+	window.open("http://www.google.com/search?q=" + query,"popup","resize=yes,scrollbars=yes,dependent=yes,alwaysRaised=yes");
+}
+
+function updatebooklist(myObj)
+{
+	key = myObj.name;
+
+    
+	if (myObj.value == 'Add to my list')
+	{
+
+     hitcount = 3;
+
+
+
+         if(myarr == null)
+         {
+             myarr = new Array('3');
+
+         }
+         myarr[count] = key;        
+         count++;
+
+
+
+         
+
+		now = new Date();
+
+		myImage = new Image();
+		myImage.src = 'http://ipac.wfpl.net/ipac20/ipac.jsp?session=109A87590B526.129&profile=main&addbl=' + key + '&time=' + now.getTime() + '&visible=false';
+		document.images[key].src=myImage.src;
+		myImage = new Image();
+		myImage.src = '/hipres/images/spacer.gif';
+		document.images[key].src=myImage.src;
+
+		document.images[key].alt='Remove from my list';
+		myObj.value='     Remove    ';
+		/* my comment */
+		
+			myObj.style.color='#FFFFFF';
+			myObj.style.background='#3C7A49';
+			myObj.style.border.left='2px solid #4AA65B';
+			myObj.style.border.top='2px solid #4AA65B'; 
+			myObj.style.border.right='2px solid #1B5927'; 
+			myObj.style.border.bottom='2px solid #1B5927';
+			bookbagsize++;
+			changeBookbagText('My List - ' + bookbagsize);
+		
+
+        // now save the value in hidden element
+
+        
+	}
+	else
+	{
+
+  if(count > 0)
+  {
+     count--;
+     myarr[count] = null;
+  }
+
+		now = new Date();
+		myImage = new Image();
+		myImage.src = 'http://ipac.wfpl.net/ipac20/ipac.jsp?session=109A87590B526.129&profile=main&removebl=' + key + '&time=' + now.getTime() + '&visible=false';
+		document.images[key].src=myImage.src;
+		myImage = new Image();
+		myImage.src = '/hipres/images/spacer.gif';
+		document.images[key].src=myImage.src;
+		document.images[key].alt='Add to my list';
+		myObj.value='Add to my list';
+		
+			myObj.style.color='#000066';
+			myObj.style.background='#cccc99';
+			myObj.style.border.left='2px solid #aaaa77';
+			myObj.style.border.top='2px solid #aaaa77'; 
+			myObj.style.border.right='2px solid #003366'; 
+			myObj.style.border.bottom='2px solid #003366';
+			bookbagsize--;
+			changeBookbagText("My List - " + bookbagsize);
+		
+		
+	}
+   
+	 if (bookbagsize >=  100)
+	{
+		document.location.reload();  
+	}
+     
+}  
+function bklist(key)
+{
+	/* Do nothing here! */
+}
+function requestcopy(key, uri)
+{
+    now = new Date();
+	source = '172.31.4.150@!horizon';
+	location = 'http://ipac.wfpl.net/ipac20/ipac.jsp?session=109A87590B526.129&profile=main&bibkey=' + key + '&aspect=basic&menu=request&submenu=none&source=' + source + '&uri=' + uri + '&time=' + now.getTime();
+}
+function requestILL(illurl)
+{
+	source = '172.31.4.150@!horizon';
+	location = illurl;
+}
+function validateMyListRange()
+{
+	if ( document.mylist.multi_add_remove_mylist.value == '' )
+	{
+		window.alert('Must specify a valid range');
+		document.mylist.multi_add_remove_mylist.value = '1-3';
+		return false;
+	}
+	return true;
+}
+function validateEmailRange()
+{
+	if ( document.email_summary.emaillist.value == '' )
+	{
+		window.alert('Must specify a valid range');
+		document.email_summary.emaillist.value = '1-3';
+		return false;
+	}
+	return true;
+}
+
+</script><center><table class="tableBackground" valign="bottom" width="100%"><tr><td align="center"><a class="boldBlackFont1">Horizon Information Portal 2.1</a></td></tr><tr><td align="center">&nbsp;<a href="http://www.dynix.com"><img src="/hipres/logos/poweredbydynix.gif" border="0" alt="epixtech, inc."></a></td></tr><tr><td align="center"><font size="1">© 2001-2003 <a class="mediumAnchor" href="http://www.dynix.com">Dynix</a> All rights reserved.</font></td></tr><br></table></center><form name="buildLink" action="http://ipac.wfpl.net/ipac20/ipac.jsp?session=109A87590B526.129&amp;profile=main&amp;menu=mylist&amp;listkey=ipac_my_list" method="post"><input type="hidden" name="returnURL" value=""></form></body><!-- See Microsoft article Q222064 for reason why there are two head tags --><head>
+      <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+   <META HTTP-EQUIV="Expires" CONTENT="0"><title>iPac2.0</title><link title="bannerstyles" href="/hipres/css/ipac.css" type="text/css" rel="stylesheet"></head></html>

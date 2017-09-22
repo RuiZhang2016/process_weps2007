@@ -1,0 +1,15 @@
+# Give access to googlebot-pm
+User-agent: googlebot-pm
+Disallow: /Yahoo
+Disallow: /Pages
+
+# Give access to slurp (Yahoo crawler)
+User-agent: Slurp
+Disallow: /Google
+Disallow: /Pages
+
+# Restrict access to all files to all other user agents 
+User-agent: *
+Disallow: /Google
+Disallow: /Yahoo
+Disallow: /Pages

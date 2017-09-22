@@ -1,0 +1,385 @@
+
+<script language="javascript">
+	function openWindow(strWindowName,strWindowContent) {
+		var winowOptions = "toolbar=no,scrollbars=yes,height=400,width=400,left=100,top=100,resize=yes;"
+		window.open( strWindowContent, strWindowName, winowOptions )
+	}	
+
+	function openOrderWindow(strWindowContent) {
+		var windowName;
+		var winowOptions;
+
+		windowName = "TOC";
+		winowOptions = "toolbar=yes,scrollbars=yes,height=600,width=630,resize=yes;"
+			
+	 window.open( strWindowContent, windowName, winowOptions )
+	}
+
+
+
+	function updatetotal(){
+		var a = parseFloat(totalForm.text2.value);
+		var b = parseFloat(9.90);
+		
+		if (totalForm.checkbox1.checked){
+			totalForm.text1.value='9.90';
+			totalForm.text2.value=FormatCurrency(a+b);
+		} else {
+			totalForm.text1.value='';
+			totalForm.text2.value=FormatCurrency(a-b);
+		}
+	}
+
+
+
+
+
+function FormatCurrency( fPrice ) 
+{ 
+	// convert to string, and round up 2 dp 
+	var sCurrency = "" + ( fPrice + 0.00500000001 ); 
+   
+	// find . 
+	var nPos = sCurrency.indexOf ( '.' ); 
+   
+	if ( nPos < 0 ) { 
+		sCurrency += '.00'; 
+	}else { 
+		// hack off 3rd dp 
+		sCurrency = sCurrency.slice ( 0, nPos + 3 ); 
+		// add up to 2 trailing zeroes if necessary 
+		var nZero = 3 - ( sCurrency.length - nPos ); 
+	    for ( var i=0; i<nZero; i++ ) 
+        sCurrency += '0'; 
+	} 
+
+   return sCurrency; 
+} 
+
+
+</script>
+<html>
+	<head>
+		<title>Cambridge University Press Australia | Secondary</title>
+		<link rel="stylesheet" type="text/css" href="/Education/_include/inc_Cambridge.css">
+		<link rel="stylesheet" type="text/css" href="_include/inc_Secondary.css">
+	</head>
+	<body class="Normal" marginwidth="0" marginheight="0" topmargin="0" bottommargin="0" leftmargin="0" rightmargin="0">
+		<table width="100%" border="0" cellpadding="0" cellspacing="0">
+		
+			<!-- HEADER -->
+		
+			<tr>
+				<td class="Header"><img alt src="../_images/_layout/shim.gif" height="1" width="5"><img src="../_images/_layout/cambridge_Secondary.gif"><img alt src="../_images/_layout/shim.gif" height="1" width="5"></td>
+				<td class="Header" align="right"><img alt src="_images/header.jpg" height="50" width="400"></td>
+			</tr>
+			<tr><td class="Menu" colspan="2"><img alt src="../_images/_layout/shim.gif" height="1" width="1"></td></tr>
+			
+			<!-- NAVIGATOR -->
+			
+			<tr><td colspan="2" class="Navigator" align="right"><img alt src="../_images/_layout/shim.gif" height="1" width="5"><a class="Navigator" href="search.asp">Search</a>&nbsp;&nbsp;|&nbsp;&nbsp;<a class="Navigator" href="mybooklist.asp">My&nbsp;Book&nbsp;List</a>&nbsp;&nbsp;|&nbsp;&nbsp;<a class="Navigator" href="orderinginfo.asp">Ordering&nbsp;Info</a>&nbsp;&nbsp;|&nbsp;&nbsp;<a class="Navigator" href="contactus.asp">Contact&nbsp;Us</a><img alt src="../_images/_layout/shim.gif" height="1" width="5"></td></tr>
+			<tr><td colspan="2" class="Navigator"><img alt src="../_images/_layout/shim.gif" height="1" width="1"></td></tr>
+			
+			<!-- BREADCRUMB TRAIL -->
+			
+			<tr><td colspan="2" class="BreadCrumbTrail"><img alt src="../_images/_layout/shim.gif" height="1" width="1">
+
+
+
+<a class="BreadCrumbTrail" href="/Education">Cambridge Australia</a> &gt; <a class="BreadCrumbTrail" href="/Education/Secondary">Secondary</a> &gt; <a class="BreadCrumbTrail" href="Subject.asp?SubjectID=37">English</a> > <a class="BreadCrumbTrail" href="SubjectCatalog.asp?SubjectID=37">All Titles</a> &gt; Developing Snapshots			</td></tr>
+
+			<tr><td colspan="2" class="BreadCrumbTrail"><img alt src="../_images/_layout/shim.gif" height="1" width="1"></td></tr>
+			<tr><td colspan="2" bgcolor="#999999"><img alt src="../_images/_layout/shim.gif" height="1" width="1"></td></tr>
+
+		</table>
+		<table width="100%" border="0" cellpadding="0" cellspacing="0">
+			<tr>
+				<td class="Menu" valign="top">
+				
+					<!-- MENU -->
+				
+					<table border="0" cellpadding="0" cellspacing="0" width="165">
+						<tr><td class="Menu" colspan="2"><img alt src="../_images/_layout/shim.gif" height="1" width="1"></td></tr>
+						<tr><td class="Menu"><img alt src="../_images/_layout/shim.gif" height="10" width="1"></td></tr>
+						<tr><td class="MenuHeading"><img alt src="../_images/_layout/shim.gif" height="1" width="5">Browse by Subject</td></tr>
+						<tr><td class="MenuDivider"><img alt src="../_images/_layout/shim.gif" height="1" width="1"></td></tr>
+						<tr>
+							<td class="Menu">
+								<table width="100%" border="0" cellpadding="5" cellspacing="0">
+									<tr>
+										<td>
+<a class="MenuItem" href="Subject.asp?SubjectID=33">Arts</a><br>
+<a class="MenuItem" href="Subject.asp?SubjectID=34">Business & Commerce</a><br>
+<a class="MenuItem" href="Subject.asp?SubjectID=35">Computing/ICT</a><br>
+<a class="MenuItem" href="Subject.asp?SubjectID=37">English</a><br>
+<a class="MenuItem" href="Subject.asp?SubjectID=116">English (Shakespeare)</a><br>
+<a class="MenuItem" href="Subject.asp?SubjectID=39">Geography</a><br>
+<a class="MenuItem" href="Subject.asp?SubjectID=40">Health & Phys. Ed.</a><br>
+<a class="MenuItem" href="Subject.asp?SubjectID=41">History</a><br>
+<a class="MenuItem" href="Subject.asp?SubjectID=42">Languages</a><br>
+<a class="MenuItem" href="Subject.asp?SubjectID=43">Legal Studies</a><br>
+<a class="MenuItem" href="Subject.asp?SubjectID=44">Mathematics</a><br>
+<a class="MenuItem" href="Subject.asp?SubjectID=46">Science</a><br>
+<a class="MenuItem" href="Subject.asp?SubjectID=47">SOSE/HSIE</a><br>
+<a class="MenuItem" href="Subject.asp?SubjectID=48">Special Needs</a><br>
+<a class="MenuItem" href="Subject.asp?SubjectID=113">Study Guides</a><br>
+<a class="MenuItem" href="Subject.asp?SubjectID=49">Technology</a><br>
+
+									</td>
+									</tr>
+									</tr>
+								</table>								
+							</td>
+						</tr>
+						<tr><td class="Menu"><img alt src="../_images/_layout/shim.gif" height="10" width="1"></td></tr>
+						<tr><td class="MenuHeading"><img alt src="../_images/_layout/shim.gif" height="1" width="5">Quick Search</td></tr>
+						<tr><td class="MenuDivider"><img alt src="../_images/_layout/shim.gif" height="1" width="1"></td></tr>
+						<tr>
+							<td class="Menu">
+								<table border="0" cellpadding="5" cellspacing="0">
+									<form name="QuickSearch" action="SearchCatalog.asp" method="GET">
+										<input type="Hidden" name="Form" value="QuickSearch">
+									<tr>
+										<td>
+											<input size="15" name="Keyword">&nbsp;<input type="Submit" value="Go" id="Submit1" name="Submit1"><br>
+											<a class="MenuItem" href="search.asp">Advanced search</a>
+										</td>
+									</tr>
+									</form>
+								</table>
+							</td>
+						</tr>
+
+						<tr><td class="Menu"><img alt src="../_images/_layout/shim.gif" height="10" width="1"></td></tr>
+						<tr><td class="MenuHeading"><img alt src="../_images/_layout/shim.gif" height="1" width="5">Teacher Resources</td></tr>
+						<tr><td class="MenuDivider"><img alt src="../_images/_layout/shim.gif" height="1" width="1"></td></tr>
+						<tr>
+							<td class="Menu">
+								<table width="100%" border="0" cellpadding="5" cellspacing="0">
+									<tr>
+										<td><a class="MenuItem" href="Resources.asp">View All Resources</a></td>
+									</tr>
+								</table>
+							</td>
+						</tr>
+						
+						<tr>
+							<td class="Menu" colspan="2"><img alt src="../_images/_layout/shim.gif" height="10" width="1"></td>
+						</tr>
+					</table>
+				</td>
+				<td width="1" bgcolor="#999999"><img alt src="../_images/_layout/shim.gif" height="1" width="1"></td>
+				<td valign="top" class="Body" bgcolor="#FFFFFF">
+					<table width="100%" border="0" cellpadding="10" cellspacing="0">
+						<tr>
+							<td valign="top">
+								
+<!-- BEGIN BODY -->
+<table width="100%" border="0" cellpadding="0" cellspacing="0">
+	<tr>
+		<td valign="top" width="180">
+			<table bgcolor="#333333" border="0" cellpadding="1" cellspacing="0">
+				<tr>
+					<td><img border="0" alt="Developing Snapshots" src="../_images/product/large/0521485282.gif" width="180"></td>
+				</tr>
+			</table>
+			
+			<table border="0" cellpadding="0" cellspacing="0">
+	
+				<tr>
+					<td><img alt src="../_images/_layout/shim.gif" height="10" width="1"></td>
+				</tr>
+
+				<tr>
+					<td><a href="RelatedCatalog.asp?SubjectID=37&SeriesID=&ProductID=101322&Type=1"><b>View related titles</b></a></td>
+				</tr>
+				<tr>
+					<td><img alt src="../_images/_layout/shim.gif" height="10" width="1"></td>
+				</tr>
+			</table>
+	
+
+		</td>
+		<td width="10"><img alt src="../../images/site/shim.gif" height="1" width="10"><td>
+		<td valign="top">
+		
+			<span class="BodyDocumentTitle">Developing Snapshots</span><br><img alt src="../_images/_layout/shim.gif" height="10" width="1"><br>
+			
+			<table width="100%" border="0" cellpadding="1" cellspacing="0">
+				<tr>
+					<td valign="top">
+
+					
+						<table border="0" cellpadding="0" cellspacing="0">
+							<tr>
+								<td valign="top"><b>Authors:</b></td>
+								<td><img alt src="../_images/_layout/shim.gif" height="1" width="10"></td>
+								<td> Guy Dunbar</td>
+							</tr>
+							<tr>
+								<td><img alt src="../_images/_layout/shim.gif" height="10" width="1"></td>
+							</tr>
+				
+							<tr>
+								<td>ISBN</td>
+								<td><img alt src="../_images/_layout/shim.gif" height="1" width="5"></td>
+								<td>0521485282</td>
+							</tr>
+							<tr>
+								<td>Price:</td>
+								<td><img alt src="../_images/_layout/shim.gif" height="1" width="5"></td>
+								<td>AUD$74.95</td>
+							</tr>
+							<tr>
+								<td>Format:</td>
+								<td><img alt src="../_images/_layout/shim.gif" height="1" width="5"></td>
+								<td>Spiral Bound</td>
+							</tr>
+							<tr>
+								<td>Edition:</td>
+								<td><img alt src="../_images/_layout/shim.gif" height="1" width="5"></td>
+								<td>First</td>
+							</tr>
+							<tr>
+								<td><img alt src="../_images/_layout/shim.gif" height="10" width="1"></td>
+							<tr>
+								<td colspan="3"><b>Available on firm sale only</b></td>
+							</tr>
+							<tr>
+								<td><img alt src="../_images/_layout/shim.gif" height="10" width="1"></td>
+							<tr>
+							<tr>
+								<td colspan="3" valign="top">
+									<table width="160" bgcolor="#FFCC66" border="0" cellpadding="2" cellspacing="0">
+										<form action="/Education/Secondary/Product.asp?SubjectID=37&ProductID=101322&Redirect=" method="post" name="formadd101322">
+										<input type="hidden" name="sAction" value="add">
+										<input type="hidden" name="intProductID" value="101322">
+										<tr>
+											<td>
+												<table bgcolor="#FFEE99" width="100%" border="0" cellpadding="0" cellspacing="0">
+													<tr>
+														<td width="1"><img alt src="../_images/_layout/shim.gif" height="19" width="4"></td>
+														<td align="center"><a class="MenuItem" href="javascript:document.formadd101322.submit();">Add to My Book List</a></td>
+														<td width="1"><img alt src="../_images/_layout/shim.gif" height="19" width="4"></td>
+													</tr>
+												</table>
+											</td>
+										</tr>
+										</form>
+									</table>
+								</td>
+							</tr>			
+						</table>
+				
+					</td>
+					<td><img alt src="../_images/_layout/shim.gif" height="1" width="10"></td>
+					<td align="right" valign="top">
+				
+						<table bgcolor="#CCCCCC" border="0" cellpadding="1" cellspacing="0">
+							<tr>
+								<td>
+									
+									<table bgcolor="#EEEEEE" border="0" cellpadding="10" cellspacing="0">
+										<tr>
+											<td>
+									
+												<table border="0" cellpadding="0" cellspacing="0">
+													<tr>
+														<td>
+															<b>Subject&nbsp;areas:</b><br>
+															<a href="Subject.asp?SubjectID=37">English</a><br>
+													<tr>
+														<td><img alt src="../_images/_layout/shim.gif" height="10" width="1"></td>
+													</tr>
+													<tr>
+														<td>
+															<b>Levels:</b><br>
+Year 7<br>
+Year 8<br>
+Year 9<br>
+														</td>
+													</tr>
+													<tr>
+														<td><img alt src="../_images/_layout/shim.gif" height="10" width="1"></td>
+													</tr>
+													<tr>
+														<td>
+															<b>States:</b><br>
+All states														</td>
+													</tr>
+												</table>
+
+											</td>
+										</tr>
+									</table>
+			
+								</td>
+							</tr>
+						</table>
+
+					</td>
+				</tr>
+			</table>
+				
+
+			<img alt src="../_images/_layout/shim.gif" height="10" width="1"><br>
+			A photocopiable resource for teachers to support <i>Snapshots</I>, <i>Developing Snapshots</I> provides a wide range of follow up work, both oral and written, for individual, pair and group work, and offers suggestions both for further exploration of the stories themselves and for the development of students' own ideas.<br>
+			
+
+
+		</td>
+	</tr>
+</table>
+
+
+<!-- END BODY -->
+
+							</td>
+						</tr>
+					</table>
+				</td>
+			</tr>
+			<tr bgcolor="#999999">
+				<td colspan="3"><img alt src="global/Images/Global/shim.gif" height="1" width="1"></td>
+			</tr>
+			
+			<!-- FOOTER -->
+						
+			<tr>
+				<td colspan="3" class="Footer"><img alt src="global/Images/Global/shim.gif" height="1" width="5">©2002 Cambridge University Press Australia &nbsp;|&nbsp; <a class="Footer" href="disclaimer.asp">Disclaimer & Privacy Information</a></td>
+			</tr>
+			<tr>
+				<td></td>
+				<td></td>
+				<td>
+				
+					<!-- FORCE THE TABLES TO GROCK -->
+					
+					&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;
+					&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;
+					&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;
+					&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;
+					&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;
+					&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;
+					&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;
+					&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;
+					&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;
+					&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;
+					&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;
+					&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;
+					&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;
+					&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;
+					&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;
+					&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;
+					&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;
+					&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;
+					&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;
+				
+				</td>
+			</tr>		
+		</table>
+
+		<!-- Page served in 188 milliseconds -->
+
+	</body>
+</html>

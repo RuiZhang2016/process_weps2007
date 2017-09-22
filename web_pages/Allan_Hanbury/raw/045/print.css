@@ -1,0 +1,407 @@
+/* Libraries Newblog, modified for new template.  mc:20060106 */
+
+body {
+	font-family: verdana, arial, sans-serif; 
+	font-size: 11px;
+	background-color: #acac9f;
+	margin-top: 13px; width:100%;
+}
+
+caption {
+	font-family: verdana, arial, sans-serif; 
+	font-weight: bold;
+}
+
+table.invisible
+{
+	margin: 1ex;
+	border-collapse: collapse
+}
+table.invisible td
+{
+	padding: 0ex 1ex;
+}
+td.right
+{
+	text-align: right;
+}
+p.baseline {
+	clear: both;
+	text-align: center;
+	border-top: 1px none #ccc;
+	margin: 1ex;
+	padding: 1ex;
+}
+dt {
+	font-weight: bold;
+	color: #009999;
+}
+blockquote {
+	border: 1px dotted #6699CC;
+	padding: 12px 16px;
+	background-color: #f8f8f8;
+	margin: 10px;
+}
+.center
+{
+	text-align: center;
+}
+img.top {
+	vertical-align: top;
+	border: 0px;
+}
+img.middle {
+	vertical-align: middle;
+	border: 0px;
+}
+img.leftmargin {
+	float: left;
+	border: 0px;
+	margin-right: 1ex;
+	margin-top: .2ex;
+	margin-bottom: .2ex;
+}
+img.rightmargin {
+	float: right;
+	border: 0px;
+	margin-left: 1ex;
+	margin-top: .2ex;
+	margin-bottom: .2ex;
+}
+	
+acronym {
+	border-bottom-width: 1px;
+	border-bottom-style: dotted;
+	border-bottom-color: #000000;
+	cursor: help;
+}
+abbr {
+	border-bottom-width: 1px;
+	border-bottom-style: dotted;
+	border-bottom-color: #000000;
+	cursor: help;
+}
+del {
+	color: #999999;
+}
+ins {
+	color: #009999;
+	text-decoration: none;
+}
+
+/* -----------------------------  BUTTONS */
+a.BlogButton {
+	text-decoration: none;
+	border: 1px solid #FFFFFF;
+	padding-top: 2px;
+	padding-right: 4px;
+	padding-bottom: 2px;
+	padding-left: 4px;
+	white-space: nowrap;
+	margin-right: 3px;
+	margin-top: 3px;
+	background: #336699;
+}
+a.BlogButtonCurr {
+	text-decoration: none;
+	border: 1px solid #FFFFFF;
+	text-align: left;
+	vertical-align: top;
+	padding-top: 2px;
+	padding-right: 4px;
+	padding-bottom: 2px;
+	padding-left: 4px;
+	white-space: nowrap;
+	margin-top: 3px;
+	margin-right: 3px;
+	background: #6699CC;
+}
+
+A.BlogButton:link,
+A.BlogButton:visited,	
+A.BlogButton:active,
+A.BlogButtonCurr:link,
+A.BlogButtonCurr:visited,	
+A.BlogButtonCurr:active,
+{
+	color: #FFFFFF;
+}
+A.BlogButton:hover		{
+	color: #FFFFFF;
+	background: #6699CC;
+
+	/* text-decoration: underline; */
+}
+A.BlogButtonCurr:hover		{
+	color: #336699;
+	/* text-decoration: underline; */
+}
+
+.pageSubTitle {
+	color: #FFFFFF;
+	letter-spacing: 4px;
+	text-align: left;
+	vertical-align: middle;
+	border: 0px;
+	font: bold 1.5em Arial, Helvetica, sans-serif;
+
+}
+div.stats{
+	float: right;
+	padding-right: 1px;
+	padding-top: 1px;
+	padding-bottom: 1px;
+	padding-left: 0px;
+}
+
+/* -----------------------------  bPOSTS */
+
+/* Styles for posts */
+.bPost {
+	clear: both;
+	margin-right: 10px; margin-left: 20px; margin-top: 8px; margin-bottom: 8px;
+	padding-right: 8px; padding-left: 8px; 
+	border-top: 1px solid #999; border-left: 1px solid #999;
+/* 6699CC */
+   font; 11px/1.5em Verdana, Arial, Helvetica, sans-serif;
+ } 
+
+.bPosts {
+	vertical-align: top; float: left; width: 98%;
+   padding-right:0px; border-right:1px solid #fff; 
+	background: #ffffff;
+	font: 11px/1.5em verdana, arial, sans-serif;
+}
+.bPostpublished
+{
+	clear: both;
+	margin-right: 10px;
+	margin-left: 20px;
+	margin-top: 8px;
+	margin-bottom: 8px;
+	border: 1px solid #6699CC;
+	padding-right: 8px;
+	padding-left: 8px;
+}
+.bSmallHead {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 1em;
+	margin-top: 8px;
+	margin-bottom: 8px;
+	color: #69c;
+
+}
+.bTitle {
+/*	margin-top: 8px;
+	margin-bottom: 8px; */
+	font: 16px Arial, Helvetica, sans-serif; font-weight:bold;
+	color: #333;
+   padding-top:8px; padding-bottom: 10px;
+}
+.bText {
+/*	margin-top: 0px;
+	margin-bottom: 0px; */
+	font: 11px/1.5em verdana, arial, sans-serif;  
+}
+.bMore
+{
+	text-align: center;
+}
+.bMore a
+{
+	font-weight: bold;
+	font-size: 110%;
+}
+
+
+/* -----------------------------  bSIDEBAR */
+
+.bSideBar {  
+   display: none;
+}
+
+
+
+.bSmallPrint, .bCommentSmallPrint
+{
+	clear: both;
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 80%;
+	margin-top: 8px;
+	margin-bottom: 8px;
+}
+
+/* Styles for comments */
+.bComment {
+	margin-right: 20px;
+	margin-left: 20px;
+	margin-top: 8px;
+	margin-bottom: 8px;
+	border: 1px dotted #6699CC;
+	padding-right: 8px;
+	padding-left: 8px;
+}
+.bCommentTitle {
+	margin-top: 8px;
+	margin-bottom: 8px;
+	font-weight: bold;
+}
+.bCommentText {
+	margin-top: 0px;
+	margin-bottom: 0px;
+}
+
+/* Styles for comment form */
+form.bComment fieldset
+{
+	clear: both;
+	border: none;
+	margin: 2ex 0ex;
+	padding: 0ex;
+	/* border: 1px solid #f00; */
+}
+div.label
+{
+	float: left;
+	width: 18%;
+	text-align: right;
+	font-weight: bold;
+	position: relative;
+	top: .5ex;
+	/* border: 1px solid #00f; */
+}
+form.bComment label
+{
+	font-weight: bold;
+}
+div.input
+{
+	float: right;
+	width: 80%;
+	/* border: 1px solid #00f; */
+}
+input.bComment, 
+textarea.bComment
+{
+	background-color: #fff;
+	border-width: 1px;
+	border-color: #cccccc;
+	border-style: solid;
+	padding: .5ex;
+	width: 98%;
+	margin: 0ex;
+}
+fieldset .notes
+{
+	/* display: block; */
+	font-size: 80%;
+	color: #999999;
+}
+
+/* Styles for stats */
+div.statbloc
+{
+	float: left;
+	width: 44%;
+	margin-left: 2%; 
+	margin-right: 0%; 
+	margin-bottom: 2ex;
+	border: 1px solid #6699CC;
+}
+div.statbloc h3
+{
+	margin-top: 0px;
+	margin-left: 0px;
+	margin-right: 0px;
+	color: #FFFFFF;
+	text-align: center;
+	background: #6699CC;
+	padding: 1ex;
+}
+.bSmallPrint {font-size:10px}
+.dimmed
+{
+	color: #aaa;
+	font-size: 84%;
+}
+input.SearchField
+{
+	background-color: #fff;
+	border-width: 1px;
+	border-color: #cccccc;
+	border-style: solid;
+	padding: .5ex;
+	width: 96%;
+	margin: 0ex;
+}
+
+/* Styles for Calendar: */
+caption.bCalendarMonth
+{
+	border-left: solid 1px #ccc;
+	border-right: solid 1px #ccc;
+	border-top: solid 1px #ccc;
+	margin: auto;
+}
+table.bCalendarTable
+{
+	margin: auto;
+	font-size: 84%;
+	border: solid 1px #ccc;
+	background: #fff;
+}
+tr.bCalendarRow
+{
+	text-align: center;
+}
+th.bCalendarHeaderCell
+{
+	font-size: 84%;
+}
+td.bCalendarCell
+{
+}
+td.bCalendarEmptyCell
+{
+}
+a.bCalendarLinkPost
+{
+	font-weight: bold;
+}
+
+/* = = = = = = = = = = = = = = = = = = = = */
+
+/* MODIFIED ELEMENTS */
+
+.newsTitle, a:link.newsTitle, a:hover.newsTitle  {
+	font: 22px verdana, arial, sans-serif; font-weight: bold;
+	color: #fff; background-color: #cc0000;
+	text-decoration: none;
+}
+.newsNavbar {
+	font: 10px verdana, arial, sans-serif; font-weight: bold;
+	color: #111; text-decoration: none;
+	background-color: #eee;
+}
+a:link.newsNavbar  {
+	font: 10px verdana, arial, sans-serif; font-weight: bold;
+	color: #111;
+}
+a:hover.newsNavbar  {
+	font: 10px verdana, arial, sans-serif; font-weight: bold;
+	color: #c00; background-color: #fff;
+}	
+#newsMainBody {
+   
+}
+
+.newsDate {
+	font: 18px arial, sans-serif; font-weight: bold;
+	color: #c00; 
+}
+.newsSectionTitle {
+	font: 19px arial, sans-serif; font-weight: bold;
+	color: #c00; padding-top:10px; padding-bottom:12px;
+}
+.printNone {
+   display: none;}

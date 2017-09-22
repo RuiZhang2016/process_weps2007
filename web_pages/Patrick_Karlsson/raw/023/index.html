@@ -1,0 +1,734 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2//EN">
+<HTML>
+<link rel="stylesheet" type="text/css" href= 
+"http://www.uu.se/CSS/uustyle.css">
+<link rel="stylesheet" type="text/css" href= 
+"/Adresser/moduler/uuaddressstyle.css">
+<style type="text/css">
+<!--
+.menu { position:absolute; 
+                visibility:hidden; 
+                background-color: white; 
+                color: black;
+                width: 80px;
+                height: auto;
+                border-style: solid; 
+                border-color: black; 
+                border-width: 1px; 
+                padding: 4px;
+                font-size : 12px;
+                font-family: "verdana","arial", "geneva";
+                line-height: 16px;}
+
+.menu A:hover {background-color:#FFFF66;}
+.menu A {text-decoration: none; color: black;}
+-->              
+</style>
+
+<script type="text/javascript" language="javascript">
+
+
+//do browser detect stuff
+var isNS = (navigator.appName == "Netscape");
+var isMacIE = ( (navigator.userAgent.indexOf("IE 4")  > -1) && (navigator.userAgent.indexOf("Mac")  > -1) );
+var layerRef = (isNS) ? "document" : "document.all";
+var styleRef = (isNS) ? "" : ".style";
+var isDynamic = ( (document.layers || document.all) && !isMacIE );
+
+var activeMenu = 0;
+var finalClip;
+
+
+function activateMenu(menuLayerRef, offset) {
+        
+        if (isDynamic && activeMenu != menuLayerRef) {
+
+                if (activeMenu) hideMenu("menu" + activeMenu);
+                        
+                menuID = "menu" + menuLayerRef;
+                activeMenu = menuLayerRef;
+        
+                if (isNS) {
+                        document[menuID].top = 21;
+                        document[menuID].left = offset;
+                } else {
+                        document.all[menuID].style.pixelTop = 25;
+                        document.all[menuID].style.pixelLeft = offset;
+                }
+
+                showMenu(menuID)
+                
+        }
+        if (isDynamic && !isNS) window.event.cancelBubble = true;
+}
+
+function showMenu(layerID) {
+        eval(layerRef + '["' + layerID + '"]' + styleRef + '.visibility = "visible"');
+}
+
+function hideMenu(layerID) {
+        eval(layerRef + '["' + layerID + '"]' + styleRef + '.visibility = "hidden"');
+}
+
+function killMenu(e) {
+        //check if theres a menu active
+        if (activeMenu) {
+                menuID = "menu" + activeMenu;
+                if (isNS) {
+                        menuX1 = document[menuID].left;
+                        menuX2 = menuX1 + document[menuID].clip.right;
+                        menuY1 = document[menuID].top;
+                        menuY2 = menuY1 + document[menuID].clip.bottom;
+                        
+                        if (e.pageX < menuX1 || e.pageX > menuX2 || e.pageY > menuY2) {
+                                hideMenu(menuID);
+                                activeMenu = 0;
+                        }
+                } else {
+                                hideMenu(menuID);
+                                activeMenu = 0;
+
+                }
+        }  
+
+}
+
+
+function init() {
+        if (isDynamic) {
+                if (isNS) { 
+                        document.captureEvents(Event.MOUSEMOVE); 
+                        document.onmousemove = killMenu;
+                } else {
+                        document.onmouseover = killMenu;
+                }
+                
+        }
+}
+</script><HEAD>
+<TITLE>Institutionen f&ouml;r informationsteknologi
+</TITLE>
+<META HTTP-EQUIV="content-type" CONTENT="text/html;charset=iso-8859-1">
+</head>
+<BODY BGCOLOR="#ffffff" topmargin='0'  marginheight='0'>
+<div class='utfallande'><table width='100%'  cellspacing='0' border='0' cellpadding='1' bgcolor='red' summary="sidhuvud"><tr><td class='huvudcell'><b>&nbsp;<a href="http://www.uu.se/" title="Till universitetets hemsida."><font face='verdana,arial' size='-1' color='#cccccc' class='huvudtext'>UPPSALA UNIVERSITET</font></a></b></td></tr></table></div>
+<P CLASS='normal'><a href="http://www.uu.se/Adresser/">Universitetskatalogen</a>:<A NAME="top"></A>
+<A NAME="X61"></A>
+
+<H2>31.1 Institutionen f&ouml;r informationsteknologi
+<br>Department of Information Technology
+</H2>
+<A HREF="http://www.it.uu.se/">Hemsida / Home Page</A>
+<br>
+
+<A HREF="http://utbdatabas.uu.se/katalog/enhet.asp?id=X61">Utbildningar</A>
+<br>
+<HR>
+Besöksadress: L&auml;gerhyddsv. 2, Polacksbacken, MIC, hus 1, 2, 4 och 8<br>
+Postadress: Box 337, 751 05  UPPSALA<br>
+Fax 018 51 19 25, 018 471 62 89<br>
+Prefekt/motsv.: <A HREF="&#109;&#97ilt&#111;:Hakan.Lanshammar&#64it.uu.se">H&aring;kan Lanshammar</A>, 018 471 30 33, 018 471 10 87<br>
+Stf. prefekt: <A HREF="&#109;&#97ilt&#111;:Bengt.Sandblad&#64it.uu.se">Bengt Sandblad</A>, 018 471 28 68<br>
+Studierektor: <A HREF="&#109;&#97ilt&#111;:Roland.Bol&#64it.uu.se">Roland Bol</A>, 018 471 76 06, <A HREF="&#109;&#97ilt&#111;:Mats.Daniels&#64it.uu.se">Mats Daniels</A>, 018 471 31 60, <A HREF="&#109;&#97ilt&#111;:Jan.Gulliksen&#64hci.uu.se">Jan Gulliksen</A>, 018 471 28 49, <A HREF="&#109;&#97ilt&#111;:Hans.Norlander&#64it.uu.se">Hans Norlander</A>, 018 471 30 70, <A HREF="&#109;&#97ilt&#111;:Stefan.Palsson&#64it.uu.se">Stefan P&aring;lsson</A>, 018 471 29 70<br>
+Studiev&auml;gledare: <A HREF="&#109;&#97ilt&#111;:Olle.Gallmo&#64it.uu.se">Olle G&auml;llmo</A>, 018 471 10 09, 018 471 31 54, <A HREF="&#109;&#97ilt&#111;:Torsten.Jarkrans&#64it.uu.se">Torsten Jarkrans</A>, 018 471 57 07, 018 471 31 54<br>
+Katalogansvarig: <A HREF="&#109;&#97ilt&#111;:Ulrika.Andersson&#64it.uu.se">Ulrika Andersson</A>, 018 471 30 21, <A HREF="&#109;&#97ilt&#111;:Anneli.Svensson&#64it.uu.se">Anneli Svensson</A>, 018 471 57 59, <A HREF="&#109;&#97ilt&#111;:Marianne.Ahrne&#64it.uu.se">Marianne Ahrne</A>, 018 471 10 60, <A HREF="&#109;&#97ilt&#111;:Ingegerd.Wass&#64it.uu.se">Ingegerd Wass</A>, 018 471 30 74, <A HREF="&#109;&#97ilt&#111;:Anna.Blomberg&#64it.uu.se">Anna Blomberg</A>, 018 471 30 14<br>
+<p>
+Administrat&ouml;r UPPMAX: <a href="mailto:Elisabeth.Lindqvist@it.uu.se">Elisabeth.Lindqvist@it.uu.se</a>, 6339<br>
+Registratorer:Marianne Ahrne, 1060, Elisabeth Lindqvist, 6339.E-post: <a href="mailto:registrator@it.uu.se">registrator@it.uu.se</a><br>
+Grundutbildningskansli, 7604. E-post: <a href="mailto:IT-kansli@it.uu.se">IT-kansli@it.uu.se</a><br>
+Forskningsprefekt: <a href="mailto:Erik.Hagersten@it.uu.se">Erik.Hagersten@it.uu.se</a>, 7342<br>
+Grundutbildningsprefekt: <a href="mailto:Joachim.Parrow@it.uu.se">Joachim.Parrow@it.uu.se</a>, 5704<br>
+Studierektor f&ouml;r forskarutbildningen: <a href="mailto:bernhard.muller@it.uu.se">bernhard.muller@it.uu.se</a>, 2975<br>
+Exjobbssamordnare: <a href="mailto:Lars-Henrik.Eriksson@it.uu.se">Lars-Henrik.Eriksson@it.uu.se</a>, 1057<br>
+Intendent: <a href="mailto:Annette.Ander@it.uu.se">Annette.Ander@it.uu.se</a>, 1030<br>
+<p>
+<p>
+
+<b><a href="/findperson.php?uid=AA25">Ander, Annette</a></b>, intendent, 018 471 25 83,
+ <A HREF="&#109;&#97ilt&#111;:Annette.Ander&#64it.uu.se">Annette.Ander&#64it.uu.se</A><br>
+<b><a href="/findperson.php?uid=XX3552">Andersson, Anders</a></b>, 1:e forskn.ing., 018 471 31 70<br>
+<b><a href="/findperson.php?uid=N3-961">Andersson, Ulrika</a></b>, personaladm., 018 471 30 21, fax 018 471 78 11, mobtel. 0704 25 08 60,
+ <A HREF="&#109;&#97ilt&#111;:Ulrika.Andersson&#64it.uu.se">Ulrika.Andersson&#64it.uu.se</A><br>
+<b><a href="/findperson.php?uid=XX1417">Ahrne, Marianne</a></b>, forskn. adm., 018 471 10 60,
+ <A HREF="&#109;&#97ilt&#111;:Marianne.Ahrne&#64it.uu.se">Marianne.Ahrne&#64it.uu.se</A><br>
+<b><a href="/findperson.php?uid=AA300">Berggren, Magnus</a></b>, inst.tekn., 018 471 31 99, mobtel. 0704 25 03 52,
+ <A HREF="&#109;&#97ilt&#111;:Magnus.Berggren&#64it.uu.se">Magnus.Berggren&#64it.uu.se</A><br>
+<b><a href="/findperson.php?uid=N1-13">Blomberg, Anna</a></b>, adm. koordinator, 018 471 30 14, fax 018 471 62 89,
+ <A HREF="&#109;&#97ilt&#111;:Anna.Blomberg&#64it.uu.se">Anna.Blomberg&#64it.uu.se</A><br>
+<b><a href="/findperson.php?uid=N3-688">Foyer, Per</a></b>, ped. konsult, mobtel. 0704 44 67 00,
+ <A HREF="&#109;&#97ilt&#111;:Per.Foyer&#64it.uu.se">Per.Foyer&#64it.uu.se</A><br>
+<b><a href="/findperson.php?uid=N99-155">Fredrikson, Joel</a></b>, systemadm., 018 471 29 07, mobtel. 0704 25 02 90,
+ <A HREF="&#109;&#97ilt&#111;:Joel.Fredrikson&#64it.uu.se">Joel.Fredrikson&#64it.uu.se</A><br>
+<b><a href="/findperson.php?uid=N94-1919">Frimmel, Hans</a></b>, 1:e forskn.ing., 018 471 29 85,
+ <A HREF="&#109;&#97ilt&#111;:Hans.Frimmel&#64it.uu.se">Hans.Frimmel&#64it.uu.se</A><br>
+<b><a href="/findperson.php?uid=AA241">Gupta, Naresh</a></b>, univ.adj., 018 471 79 79<br>
+<b><a href="/findperson.php?uid=N3-1238">Gutgesell, Goten</a></b>, amanuens<br>
+<b><a href="/findperson.php?uid=N0-753">Halvarsson, Per G&ouml;ran</a></b>, 1:e forskn.ing., 018 471 10 59, mobtel. 0707 33 06 81,
+ <A HREF="&#109;&#97ilt&#111;:Per.Halvarsson&#64it.uu.se">Per.Halvarsson&#64it.uu.se</A><br>
+<b><a href="/findperson.php?uid=N1-1234">Hedlund, Henrik</a></b>, systemadm., 018 471 27 67,
+ <A HREF="&#109;&#97ilt&#111;:Henrik.Hedlund&#64it.uu.se">Henrik.Hedlund&#64it.uu.se</A><br>
+<b><a href="/findperson.php?uid=N4-860">Herseus, Erika</a></b>, amanuens,
+ <A HREF="&#109;&#97ilt&#111;:erika.herseus&#64it.uu.se">erika.herseus&#64it.uu.se</A><br>
+<b><a href="/findperson.php?uid=N2-1454">Jaresund, Ulrika</a></b>, kursadministrat&ouml;r, 018 471 29 69,
+ <A HREF="&#109;&#97ilt&#111;:Ulrika.Jaresund&#64it.uu.se">Ulrika.Jaresund&#64it.uu.se</A><br>
+<b><a href="/findperson.php?uid=N1-1230">Johansson, Patrik</a></b>, ekonom, 018 471 57 01, fax 018 471 78 11,
+ <A HREF="&#109;&#97ilt&#111;:Patrik.Johansson&#64it.uu.se">Patrik.Johansson&#64it.uu.se</A><br>
+<b><a href="/findperson.php?uid=N3-1239">Kia, Leonard</a></b>, amanuens<br>
+<b><a href="/findperson.php?uid=N2-954">Komminaho, Jukka</a></b>, 1:e forskn.ing., 018 471 10 24,
+ <A HREF="&#109;&#97ilt&#111;:Jukka.Komminaho&#64it.uu.se">Jukka.Komminaho&#64it.uu.se</A><br>
+<b><a href="/findperson.php?uid=N95-17">Kupper, Ulrika</a></b>, ekonomiadministrat&ouml;r, 018 471 10 31,
+ <A HREF="&#109;&#97ilt&#111;:Ulrika.Kupper&#64it.uu.se">Ulrika.Kupper&#64it.uu.se</A><br>
+<b><a href="/findperson.php?uid=XX2866">K&auml;rrman, Jan</a></b>, 1:e forskn.ing., 018 471 29 88,
+ <A HREF="&#109;&#97ilt&#111;:Jan.Karrman&#64it.uu.se">Jan.Karrman&#64it.uu.se</A><br>
+<b><a href="/findperson.php?uid=N94-1606">Lindgren, Carina</a></b>, ekonomiadministrat&ouml;r, 018 471 10 58,
+ <A HREF="&#109;&#97ilt&#111;:Carina.Lindgren&#64it.uu.se">Carina.Lindgren&#64it.uu.se</A><br>
+<b><a href="/findperson.php?uid=N0-906">Lindqvist, Elisabeth</a></b>, forskn. adm., 018 471 63 39, fax 018 471 78 11,
+ <A HREF="&#109;&#97ilt&#111;:Elisabeth.Lindqvist&#64it.uu.se">Elisabeth.Lindqvist&#64it.uu.se</A><br>
+<b><a href="/findperson.php?uid=N0-378">Lundell, Lotta</a></b>, informat&ouml;r, 018 471 10 13, fax 018 51 19 25, mobtel. 0704 25 05 85,
+ <A HREF="&#109;&#97ilt&#111;:Lotta.Lundell&#64it.uu.se">Lotta.Lundell&#64it.uu.se</A><br>
+<b><a href="/findperson.php?uid=N96-5994">Malm Holmgren, Karolina</a></b>, 1:e forskn.ing., 018 471 68 88,
+ <A HREF="&#109;&#97ilt&#111;:Karolina.Malm-Holmgren&#64it.uu.se">Karolina.Malm-Holmgren&#64it.uu.se</A><br>
+<b><a href="/findperson.php?uid=N96-2693">Nilsson, Anne-Marie</a></b>, ekonomiassistent, 018 471 73 43,
+ <A HREF="&#109;&#97ilt&#111;:Anne-Marie.Nilsson&#64it.uu.se">Anne-Marie.Nilsson&#64it.uu.se</A><br>
+<b><a href="/findperson.php?uid=N1-609">Nordholm, Marina</a></b>, inst.tekn., 018 471 57 03, mobtel. 0704 25 08 70,
+ <A HREF="&#109;&#97ilt&#111;:Marina.Nordholm&#64it.uu.se">Marina.Nordholm&#64it.uu.se</A><br>
+<b><a href="/findperson.php?uid=N1-700">Nordling, Tord</a></b>, systemadm., 018 471 10 21,
+ <A HREF="&#109;&#97ilt&#111;:Tord.Nordling&#64it.uu.se">Tord.Nordling&#64it.uu.se</A><br>
+<b><a href="/findperson.php?uid=N98-143">Svensson, Anneli</a></b>, kursadministrat&ouml;r, 018 471 57 59,
+ <A HREF="&#109;&#97ilt&#111;:Anneli.Svensson&#64it.uu.se">Anneli.Svensson&#64it.uu.se</A><br>
+<b><a href="/findperson.php?uid=XX1840">Waller, Christina</a></b>, kursadministrat&ouml;r, 018 471 27 58, fax 018 471 62 89,
+ <A HREF="&#109;&#97ilt&#111;:Christina.Waller&#64it.uu.se">Christina.Waller&#64it.uu.se</A><br>
+<b><a href="/findperson.php?uid=XX2972">Wass, Ingegerd</a></b>, kursadministrat&ouml;r, 018 471 30 74, fax 018 51 19 25,
+ <A HREF="&#109;&#97ilt&#111;:Ingegerd.Wass&#64it.uu.se">Ingegerd.Wass&#64it.uu.se</A><br>
+<b><a href="/findperson.php?uid=XX3188">Wiman, G&ouml;ran</a></b>, inst.tekn., 018 471 57 03, fax 018 51 19 25<br>
+<b><a href="/findperson.php?uid=N96-3304">Ylitalo, Lasse</a></b>, 1:e forskn.ing., 018 471 31 75,
+ <A HREF="&#109;&#97ilt&#111;:Lasse.Ylitalo&#64it.uu.se">Lasse.Ylitalo&#64it.uu.se</A><br>
+<p>
+IT-sektionen, 2760<br>
+<p>
+
+<br>
+<A NAME="X61:6"></A>
+<H3>31.1.1 Programsamordnare
+<br>Program coordinators
+</H3><p>
+<p>
+
+<b><a href="/findperson.php?uid=XX3157">Christoff, Ivan</a></b>, univ.lekt. Datavetenskapliga programmet,
+ <A HREF="&#109;&#97ilt&#111;:Ivan.Christoff&#64it.uu.se">Ivan.Christoff&#64it.uu.se</A><br>
+<b><a href="/findperson.php?uid=XX1717">Flack, Hans</a></b>, univ.lekt. Informationsteknologiska programmet, mobtel. 0706 65 69 63,
+ <A HREF="&#109;&#97ilt&#111;:Hans.Flack&#64it.uu.se">Hans.Flack&#64it.uu.se</A><br>
+<b><a href="/findperson.php?uid=N96-6428">Nissen, J&ouml;rgen</a></b>, univ.lekt. System i teknik och samh&auml;lle, mobtel. 0706 73 55 18,
+ <A HREF="&#109;&#97ilt&#111;:Jorgen.Nissen&#64it.uu.se">Jorgen.Nissen&#64it.uu.se</A><br>
+
+<br>
+<A NAME="X61:1"></A>
+<H3>31.1.2 Datalogi
+<br>Computing Science
+</H3>
+<A HREF="http://www.it.uu.se/">Hemsida / Home Page</A>
+<br>
+<p>
+Besöksadress: L&auml;gerhyddsv. 2, Polacksbacken hus 1<br>
+Postadress: Box 337, 751 05  UPPSALA<br>
+Fax 018 51 19 25<br>
+Forskningsledare: <A HREF="&#109;&#97ilt&#111;:Arne.Andersson&#64csd.uu.se">Arne Andersson</A>, 018 471 10 22<br>
+<p>
+Avdelningsf&ouml;rest&aring;ndare: Lars-Henrik Eriksson, 1057<br>
+<p>
+<p>
+
+<b><a href="/findperson.php?uid=N96-6046">Andersson, Arne</a></b>, prof. i datalogi 98, 018 471 10 22, mobtel. 0704 25 03 82,
+ <A HREF="&#109;&#97ilt&#111;:Arne.Andersson&#64csd.uu.se">Arne.Andersson&#64csd.uu.se</A><br>
+<b><a href="/findperson.php?uid=N2-488">Bj&ouml;rklund, Henrik</a></b>, doktorand, 018 471 10 23, mobtel. 073 035 57 54,
+ <A HREF="&#109;&#97ilt&#111;:Henrik.Bjorklund&#64it.uu.se">Henrik.Bjorklund&#64it.uu.se</A><br>
+<b><a href="/findperson.php?uid=N96-516">Bol, Roland</a></b>, univ.lekt., 018 471 76 06, mobtel. 0704 25 03 34,
+ <A HREF="&#109;&#97ilt&#111;:Roland.Bol&#64it.uu.se">Roland.Bol&#64it.uu.se</A><br>
+<b><a href="/findperson.php?uid=N96-6192">Eriksson, Lars-Henrik</a></b>, univ.lekt., 018 471 10 57,
+ <A HREF="&#109;&#97ilt&#111;:Lars-Henrik.Eriksson&#64it.uu.se">Lars-Henrik.Eriksson&#64it.uu.se</A><br>
+<b><a href="/findperson.php?uid=N99-130">Flener, Pierre</a></b>, univ.lekt., 018 471 10 28,
+ <A HREF="&#109;&#97ilt&#111;:Pierre.Flener&#64it.uu.se">Pierre.Flener&#64it.uu.se</A><br>
+<b><a href="/findperson.php?uid=N1-1163">Fomkin, Ruslan</a></b>, doktorand, 018 471 10 62, mobtel. 073 059 57 89,
+ <A HREF="&#109;&#97ilt&#111;:Ruslan.Fomkin&#64it.uu.se">Ruslan.Fomkin&#64it.uu.se</A><br>
+<b><a href="/findperson.php?uid=N2-1581">Gustafsson, Per</a></b>, doktorand, 018 471 31 55, mobtel. 0704 71 70 73,
+ <A HREF="&#109;&#97ilt&#111;:Per.Gustafsson&#64it.uu.se">Per.Gustafsson&#64it.uu.se</A><br>
+<b><a href="/findperson.php?uid=N2-1109">Holmstr&ouml;m, Jim</a></b>, doktorand, 018 471 76 32,
+ <A HREF="&#109;&#97ilt&#111;:Jim.Holmstrom&#64it.uu.se">Jim.Holmstrom&#64it.uu.se</A><br>
+<b><a href="/findperson.php?uid=N0-506">Ivanova, Milena</a></b>, doktorand, 018 471 28 46,
+ <A HREF="&#109;&#97ilt&#111;:Milena.Koparanova&#64it.uu.se">Milena.Koparanova&#64it.uu.se</A><br>
+<b><a href="/findperson.php?uid=N96-3811">Carlsson, Richard</a></b>, doktorand, 018 471 10 51,
+ <A HREF="&#109;&#97ilt&#111;:Richard.Carlsson&#64it.uu.se">Richard.Carlsson&#64it.uu.se</A><br>
+<b><a href="/findperson.php?uid=N2-1580">Lindahl, Tobias</a></b>, doktorand, 018 471 31 55,
+ <A HREF="&#109;&#97ilt&#111;:Tobias.Lindahl&#64it.uu.se">Tobias.Lindahl&#64it.uu.se</A><br>
+<b><a href="/findperson.php?uid=N96-727">Moller, Faron</a></b>, prof. i datalogi 01, 018 471 10 39,
+ <A HREF="&#109;&#97ilt&#111;:Faron.Moller&#64it.uu.se">Faron.Moller&#64it.uu.se</A><br>
+<b><a href="/findperson.php?uid=XX3737">Nystr&ouml;m, Sven-Olof</a></b>, univ.adj., 018 471 76 91,
+ <A HREF="&#109;&#97ilt&#111;:Sven-Olof.Nystrom&#64it.uu.se">Sven-Olof.Nystrom&#64it.uu.se</A><br>
+<b><a href="/findperson.php?uid=N99-1626">Orsborn, Kjell</a></b>, univ.lekt., 018 471 11 54, mobtel. 0704 25 06 91,
+ <A HREF="&#109;&#97ilt&#111;:Kjell.Orsborn&#64it.uu.se">Kjell.Orsborn&#64it.uu.se</A><br>
+<b><a href="/findperson.php?uid=N3-312">Petrini, Johan</a></b>, doktorand, 018 471 63 45,
+ <A HREF="&#109;&#97ilt&#111;:Johan.Petrini&#64it.uu.se">Johan.Petrini&#64it.uu.se</A><br>
+<b><a href="/findperson.php?uid=N96-6144">Pettersson, Mikael</a></b>, forskare, 018 471 10 54,
+ <A HREF="&#109;&#97ilt&#111;:Mikael.Pettersson&#64it.uu.se">Mikael.Pettersson&#64it.uu.se</A><br>
+<b><a href="/findperson.php?uid=N99-1592">Risch, Tore</a></b>, prof. databasteknik 99, 018 471 63 42, mobtel. 0704 25 05 22,
+ <A HREF="&#109;&#97ilt&#111;:Tore.Risch&#64it.uu.se">Tore.Risch&#64it.uu.se</A><br>
+<b><a href="/findperson.php?uid=N1-1116">Runeson, Johan</a></b>, doktorand, 018 471 10 49,
+ <A HREF="&#109;&#97ilt&#111;:Johan.Runeson&#64it.uu.se">Johan.Runeson&#64it.uu.se</A><br>
+<b><a href="/findperson.php?uid=N4-1029">Sabesan, Manivasakan</a></b>, doktorand, 018 471 77 78, mobtel. 073 691 47 18,
+ <A HREF="&#109;&#97ilt&#111;:Manivasakan.Sabesan&#64it.uu.se">Manivasakan.Sabesan&#64it.uu.se</A><br>
+<b><a href="/findperson.php?uid=N99-793">Sagonas, Konstantinos</a></b>, univ.lekt., 018 471 10 56, mobtel. 0704 25 06 42,
+ <A HREF="&#109;&#97ilt&#111;:Konstantinos.Sagonas&#64it.uu.se">Konstantinos.Sagonas&#64it.uu.se</A><br>
+<b><a href="/findperson.php?uid=N2-1113">Sandberg, Sven</a></b>, doktorand, 018 471 10 49,
+ <A HREF="&#109;&#97ilt&#111;:Sven.Sandberg&#64it.uu.se">Sven.Sandberg&#64it.uu.se</A><br>
+<b><a href="/findperson.php?uid=N0-492">Somla, Rafal</a></b>, doktorand, 018 471 76 92,
+ <A HREF="&#109;&#97ilt&#111;:Rafal.Somla&#64it.uu.se">Rafal.Somla&#64it.uu.se</A><br>
+<b><a href="/findperson.php?uid=XX1020">T&auml;rnlund, Sten-&Aring;ke</a></b>, prof. i datalogi 84, mobtel. 0707 30 40 02,
+ <A HREF="&#109;&#97ilt&#111;:Sten-Ake.Tarnlund&#64it.uu.se">Sten-Ake.Tarnlund&#64it.uu.se</A><br>
+<b><a href="/findperson.php?uid=N2-424">Wilhelmsson, Jesper</a></b>, doktorand, 018 471 10 46,
+ <A HREF="&#109;&#97ilt&#111;:Jesper.Wilhelmsson&#64it.uu.se">Jesper.Wilhelmsson&#64it.uu.se</A><br>
+<b><a href="/findperson.php?uid=N0-490">Willman, Mattias</a></b>, univ.adj., 018 471 25 89, mobtel. 073 366 55 11,
+ <A HREF="&#109;&#97ilt&#111;:Mattias.Willman&#64it.uu.se">Mattias.Willman&#64it.uu.se</A><br>
+<b><a href="/findperson.php?uid=N99-765">Vorobyov, Sergei</a></b>, univ.lekt., 018 471 10 55,
+ <A HREF="&#109;&#97ilt&#111;:Sergei.Vorobyov&#64csd.uu.se">Sergei.Vorobyov&#64csd.uu.se</A><br>
+<b><a href="/findperson.php?uid=N2-1123">&Aring;gren, Magnus</a></b>, doktorand, 018 471 78 94, mobtel. 0708 78 96 89,
+ <A HREF="&#109;&#97ilt&#111;:Magnus.Agren&#64it.uu.se">Magnus.Agren&#64it.uu.se</A><br>
+
+<br>
+<A NAME="X61:2"></A>
+<H3>31.1.3 Datorteknik
+<br>Department of Computer Systems
+</H3>
+<A HREF="http://www.it.uu.se/">Hemsida / Home Page</A>
+<br>
+<p>
+Besöksadress: L&auml;gerhyddsv. 2, Polacksbacken, hus 1<br>
+Postadress: Box 337, 751 05  UPPSALA<br>
+Fax 018 55 02 25<br>
+Forskningsledare: <A HREF="&#109;&#97ilt&#111;:Bengt.Jonsson&#64it.uu.se">Bengt Jonsson</A>, 018 471 31 57<br>
+<p>
+Avdelningsf&ouml;rest&aring;ndare: Ivan Christoff, 3161<br>
+Forskningsprogram: ASTEC och ARTES, samordnare: Roland Gr&ouml;nroos, 6847<br>
+<p>
+<p>
+
+<b><a href="/findperson.php?uid=XX3579">Abdulla, Parosh</a></b>, prof. i datorteknik 00, 018 471 31 63, mobtel. 0704 25 02 16,
+ <A HREF="&#109;&#97ilt&#111;:Parosh.Abdulla&#64it.uu.se">Parosh.Abdulla&#64it.uu.se</A><br>
+<b><a href="/findperson.php?uid=N2-1672">Ahmed, Rezine</a></b>, doktorand, 018 471 72 17, mobtel. 073 927 19 64,
+ <A HREF="&#109;&#97ilt&#111;:Rezine.Ahmed&#64it.uu.se">Rezine.Ahmed&#64it.uu.se</A><br>
+<b><a href="/findperson.php?uid=N2-1323">Baldamus, Michael</a></b>, post doc., 018 471 79 52, mobtel. +49-175 467 06 87,
+ <A HREF="&#109;&#97ilt&#111;:Michael.Baldamus&#64it.uu.se">Michael.Baldamus&#64it.uu.se</A><br>
+<b><a href="/findperson.php?uid=N2-1638">Ben Henda, Noomene</a></b>, doktorand, 018 471 72 17, mobtel. 073 738 52 50,
+ <A HREF="&#109;&#97ilt&#111;:Noomene.BenHenda&#64it.uu.se">Noomene.BenHenda&#64it.uu.se</A><br>
+<b><a href="/findperson.php?uid=N3-1455">Bengtson, Jesper</a></b>, doktorand, 018 471 31 56,
+ <A HREF="&#109;&#97ilt&#111;:Jesper.Bengtson&#64it.uu.se">Jesper.Bengtson&#64it.uu.se</A><br>
+<b><a href="/findperson.php?uid=N96-1461">Bengtsson, Johan</a></b>, forskare, 018 471 71 22,
+ <A HREF="&#109;&#97ilt&#111;:johanb&#64it.uu.se">johanb&#64it.uu.se</A><br>
+<b><a href="/findperson.php?uid=N98-145">Berg, Erik</a></b>, doktorand, 018 471 68 61,
+ <A HREF="&#109;&#97ilt&#111;:Erik.Berg&#64it.uu.se">Erik.Berg&#64it.uu.se</A><br>
+<b><a href="/findperson.php?uid=N2-1111">Berg, Therese</a></b>, doktorand, 018 471 57 79,
+ <A HREF="&#109;&#97ilt&#111;:Therese.Berg&#64it.uu.se">Therese.Berg&#64it.uu.se</A><br>
+<b><a href="/findperson.php?uid=XX3048">Berglund, Anders</a></b>, univ.adj., dokt.tj., 018 471 31 67, mobtel. 0704 25 02 11,
+ <A HREF="&#109;&#97ilt&#111;:Anders.Berglund&#64it.uu.se">Anders.Berglund&#64it.uu.se</A><br>
+<b><a href="/findperson.php?uid=XX3146">Bj&ouml;rkman, Christina</a></b>, univ.adj. tjl.- 2004-12-31,
+ <A HREF="&#109;&#97ilt&#111;:Christina.Bjorkman&#64it.uu.se">Christina.Bjorkman&#64it.uu.se</A><br>
+<b><a href="/findperson.php?uid=XX3446">Bj&ouml;rkman, Mats</a></b>, univ.lekt.,
+ <A HREF="&#109;&#97ilt&#111;:Mats.Bjorkman&#64it.uu.se">Mats.Bjorkman&#64it.uu.se</A><br>
+<b><a href="/findperson.php?uid=N94-1761">Blom, Johan</a></b>, doktorand, 018 471 73 45,
+ <A HREF="&#109;&#97ilt&#111;:Johan.Blom&#64it.uu.se">Johan.Blom&#64it.uu.se</A><br>
+<b><a href="/findperson.php?uid=N4-639">Brown, Tim</a></b><br>
+<b><a href="/findperson.php?uid=XX3157">Christoff, Ivan</a></b>, univ.lekt., 018 471 31 61,
+ <A HREF="&#109;&#97ilt&#111;:Ivan.Christoff&#64it.uu.se">Ivan.Christoff&#64it.uu.se</A><br>
+<b><a href="/findperson.php?uid=XX3066">Daniels, Mats</a></b>, univ.lekt., 018 471 31 60, fax 018 55 02 25, mobtel. 0708 91 82 62,
+ <A HREF="&#109;&#97ilt&#111;:Mats.Daniels&#64it.uu.se">Mats.Daniels&#64it.uu.se</A><br>
+<b><a href="/findperson.php?uid=N1-1155">Deneux, Johann</a></b>, doktorand, 018 471 76 07, mobtel. 073 974 86 26,
+ <A HREF="&#109;&#97ilt&#111;:Johann.Deneux&#64it.uu.se">Johann.Deneux&#64it.uu.se</A><br>
+<b><a href="/findperson.php?uid=N96-2705">Engblom, Jakob</a></b>, adj. lektor, fax 018 55 02 25, mobtel. 0709 24 26 46,
+ <A HREF="&#109;&#97ilt&#111;:Jakob.Engblom&#64it.uu.se">Jakob.Engblom&#64it.uu.se</A><br>
+<b><a href="/findperson.php?uid=N3-379">Erickson, Carl</a></b>, adj. lektor, mobtel. 0702 92 04 22,
+ <A HREF="&#109;&#97ilt&#111;:Carl.Erickson&#64it.uu.se">Carl.Erickson&#64it.uu.se</A><br>
+<b><a href="/findperson.php?uid=XX1717">Flack, Hans</a></b>, univ.lekt., 018 471 30 16, mobtel. 0706 65 69 63,
+ <A HREF="&#109;&#97ilt&#111;:Hans.Flack&#64it.uu.se">Hans.Flack&#64it.uu.se</A><br>
+<b><a href="/findperson.php?uid=N2-668">Gold, Richard</a></b>, doktorand, 018 471 23 32, mobtel. 0702 86 27 37,
+ <A HREF="&#109;&#97ilt&#111;:Richard.Gold&#64it.uu.se">Richard.Gold&#64it.uu.se</A><br>
+<b><a href="/findperson.php?uid=N2-1301">Grinchtein, Olga</a></b>, doktorand, 018 471 57 77,
+ <A HREF="&#109;&#97ilt&#111;:Olga.Grinchtein&#64it.uu.se">Olga.Grinchtein&#64it.uu.se</A><br>
+<b><a href="/findperson.php?uid=N99-277">Gr&ouml;nroos, Roland</a></b>, forskningssamordnare, 018 471 68 47, fax 018 51 19 25,
+ <A HREF="&#109;&#97ilt&#111;:Roland.Gronroos&#64it.uu.se">Roland.Gronroos&#64it.uu.se</A><br>
+<b><a href="/findperson.php?uid=AA117">Gunningberg, Per</a></b>, prof. i datakommunikation 99, 018 471 31 71, mobtel. 0705 57 63 84,
+ <A HREF="&#109;&#97ilt&#111;:Per.Gunningberg&#64it.uu.se">Per.Gunningberg&#64it.uu.se</A><br>
+<b><a href="/findperson.php?uid=XX4169">G&auml;llmo, Olle</a></b>, univ.adj., 018 471 10 09, 018 471 31 54,
+ <A HREF="&#109;&#97ilt&#111;:Olle.Gallmo&#64it.uu.se">Olle.Gallmo&#64it.uu.se</A><br>
+<b><a href="/findperson.php?uid=N99-781">Hagersten, Erik</a></b>, prof. i datorarkitektur 99, 018 471 73 42, fax 018 55 02 25, mobtel. 0704 25 05 02,
+ <A HREF="&#109;&#97ilt&#111;:Erik.Hagersten&#64it.uu.se">Erik.Hagersten&#64it.uu.se</A><br>
+<b><a href="/findperson.php?uid=XX3191">Hansson, Hans</a></b>, g&auml;stprof., mobtel. 0704 91 22 88,
+ <A HREF="&#109;&#97ilt&#111;:Hans.Hansson&#64it.uu.se">Hans.Hansson&#64it.uu.se</A><br>
+<b><a href="/findperson.php?uid=N4-611">Haziza, Fr&eacute;d&eacute;ric</a></b>, forskn.ass., 018 471 31 62,
+ <A HREF="&#109;&#97ilt&#111;:frederic.haziza&#64it.uu.se">frederic.haziza&#64it.uu.se</A><br>
+<b><a href="/findperson.php?uid=N3-1537">Hedqvist, Pekka</a></b>, kursass., mobtel. 0709 16 08 26,
+ <A HREF="&#109;&#97ilt&#111;:pekka&#64user.it.uu.se">pekka&#64user.it.uu.se</A><br>
+<b><a href="/findperson.php?uid=N1-1229">Hessel, Anders</a></b>, doktorand, 018 471 62 01, mobtel. 0702 92 93 12,
+ <A HREF="&#109;&#97ilt&#111;:Anders.Hessel&#64it.uu.se">Anders.Hessel&#64it.uu.se</A><br>
+<b><a href="/findperson.php?uid=N3-462">H&aring;kansson, John</a></b>, doktorand, 018 471 73 41,
+ <A HREF="&#109;&#97ilt&#111;:John.Hakansson&#64it.uu.se">John.Hakansson&#64it.uu.se</A><br>
+<b><a href="/findperson.php?uid=N2-249">Johansson, Magnus</a></b>, doktorand, 018 471 62 25, mobtel. 0707 76 69 17,
+ <A HREF="&#109;&#97ilt&#111;:Magnus.Johansson&#64it.uu.se">Magnus.Johansson&#64it.uu.se</A><br>
+<b><a href="/findperson.php?uid=XX3201">Jonsson, Bengt</a></b>, prof. i datorteknik 92, 018 471 31 57, mobtel. 0704 25 02 40,
+ <A HREF="&#109;&#97ilt&#111;:Bengt.Jonsson&#64it.uu.se">Bengt.Jonsson&#64it.uu.se</A><br>
+<b><a href="/findperson.php?uid=N2-314">Kaati, Lisa</a></b>, doktorand, 018 471 10 53, mobtel. 0707 43 32 44,
+ <A HREF="&#109;&#97ilt&#111;:Lisa.Kaati&#64it.uu.se">Lisa.Kaati&#64it.uu.se</A><br>
+<b><a href="/findperson.php?uid=N3-463">Karlsson, Annika</a></b>, doktorand, 018 471 30 17, mobtel. 0706 66 00 20,
+ <A HREF="&#109;&#97ilt&#111;:Annika.Karlsson&#64it.uu.se">Annika.Karlsson&#64it.uu.se</A><br>
+<b><a href="/findperson.php?uid=N0-749">Karlsson, Martin</a></b>, doktorand, 018 471 31 59, fax 018 55 02 25, mobtel. 0706 67 48 67,
+ <A HREF="&#109;&#97ilt&#111;:Martin.Karlsson&#64it.uu.se">Martin.Karlsson&#64it.uu.se</A><br>
+<b><a href="/findperson.php?uid=N2-547">Carlsson, Mikael</a></b>, proj.ass., 018 471 57 16, mobtel. 0707 55 55 28,
+ <A HREF="&#109;&#97ilt&#111;:Mikael.Carlsson&#64it.uu.se">Mikael.Carlsson&#64it.uu.se</A><br>
+<b><a href="/findperson.php?uid=N94-1911">Carlstr&ouml;m, Jakob</a></b>, vik. univ.lekt., 018 471 28 27, mobtel. 073 327 97 92,
+ <A HREF="&#109;&#97ilt&#111;:Jakob.Carlstrom&#64it.uu.se">Jakob.Carlstrom&#64it.uu.se</A><br>
+<b><a href="/findperson.php?uid=N4-1030">Kathiravelu, Thabotharan (&quot;Thabo)&quot;</a></b>, doktorand, 018 471 62 31,
+ <A HREF="&#109;&#97ilt&#111;:Thabotharan.Kathiravelu&#64it.uu.se">Thabotharan.Kathiravelu&#64it.uu.se</A><br>
+<b><a href="/findperson.php?uid=N3-1496">Krcal, Pavel</a></b>, doktorand, 018 471 31 65,
+ <A HREF="&#109;&#97ilt&#111;:Pavel.Krcal&#64it.uu.se">Pavel.Krcal&#64it.uu.se</A><br>
+<b><a href="/findperson.php?uid=N3-976">Larzon, Lars-&Aring;ke</a></b>, univ.lekt., 018 471 27 81,
+ <A HREF="&#109;&#97ilt&#111;:Lars-Ake.Larzon&#64it.uu.se">Lars-Ake.Larzon&#64it.uu.se</A><br>
+<b><a href="/findperson.php?uid=N2-632">Leucker, Martin</a></b>, post doc., 018 471 57 79, mobtel. 0704 05 15 47,
+ <A HREF="&#109;&#97ilt&#111;:Martin.Leucker&#64it.uu.se">Martin.Leucker&#64it.uu.se</A><br>
+<b><a href="/findperson.php?uid=N99-768">Lundgren, Henrik</a></b>, doktorand, 018 471 62 03,
+ <A HREF="&#109;&#97ilt&#111;:Henrik.Lundgren&#64it.uu.se">Henrik.Lundgren&#64it.uu.se</A><br>
+<b><a href="/findperson.php?uid=N1-489">Mahata, Pritha</a></b>, doktorand, 018 471 31 68,
+ <A HREF="&#109;&#97ilt&#111;:Pritha.Mahata&#64it.uu.se">Pritha.Mahata&#64it.uu.se</A><br>
+<b><a href="/findperson.php?uid=N2-482">Marklund, Karl</a></b>, doktorand, 018 471 62 16,
+ <A HREF="&#109;&#97ilt&#111;:Karl.Marklund&#64it.uu.se">Karl.Marklund&#64it.uu.se</A><br>
+<b><a href="/findperson.php?uid=N2-257">Mokrushin, Leonid</a></b>, doktorand, 018 471 62 30, mobtel. 073 922 43 63,
+ <A HREF="&#109;&#97ilt&#111;:Leonid.Mokrushin&#64it.uu.se">Leonid.Mokrushin&#64it.uu.se</A><br>
+<b><a href="/findperson.php?uid=N99-769">Nilsson, Marcus</a></b>, doktorand, 018 471 57 15,
+ <A HREF="&#109;&#97ilt&#111;:Marcus.Nilsson&#64it.uu.se">Marcus.Nilsson&#64it.uu.se</A><br>
+<b><a href="/findperson.php?uid=N3-1025">Nordkvist, Martin</a></b>, mobtel. 0709 24 48 72<br>
+<b><a href="/findperson.php?uid=N2-383">Nordstr&ouml;m, Erik</a></b>, doktorand, 018 471 62 02, mobtel. 0706 53 88 72,
+ <A HREF="&#109;&#97ilt&#111;:Erik.Nordstrom&#64it.uu.se">Erik.Nordstrom&#64it.uu.se</A><br>
+<b><a href="/findperson.php?uid=N96-2813">Nyl&eacute;n, Aletta</a></b>, proj.ass., 018 471 76 07,
+ <A HREF="&#109;&#97ilt&#111;:Aletta.Nylen&#64it.uu.se">Aletta.Nylen&#64it.uu.se</A><br>
+<b><a href="/findperson.php?uid=XX3129">Parrow, Joachim</a></b>, prof. i datorteknik 01, 018 471 57 04, mobtel. 0705 73 33 24,
+ <A HREF="&#109;&#97ilt&#111;:Joachim.Parrow&#64it.uu.se">Joachim.Parrow&#64it.uu.se</A><br>
+<b><a href="/findperson.php?uid=N0-379">Pears, Arnold</a></b>, univ.lekt., 018 471 10 66,
+ <A HREF="&#109;&#97ilt&#111;:Arnold.Pears&#64it.uu.se">Arnold.Pears&#64it.uu.se</A><br>
+<b><a href="/findperson.php?uid=N96-5972">Pearson, Justin</a></b>, univ.lekt., 018 471 72 92,
+ <A HREF="&#109;&#97ilt&#111;:Justin.Pearson&#64it.uu.se">Justin.Pearson&#64it.uu.se</A><br>
+<b><a href="/findperson.php?uid=AA33">Pettersson, Paul</a></b>, univ.lekt., 018 471 62 32, fax 018 55 02 25, mobtel. 0704 25 06 94,
+ <A HREF="&#109;&#97ilt&#111;:Paul.Pettersson&#64it.uu.se">Paul.Pettersson&#64it.uu.se</A><br>
+<b><a href="/findperson.php?uid=N0-894">Radovic, Zoran</a></b>, doktorand, 018 471 76 05,
+ <A HREF="&#109;&#97ilt&#111;:Zoran.Radovic&#64it.uu.se">Zoran.Radovic&#64it.uu.se</A><br>
+<b><a href="/findperson.php?uid=N4-567">Rensfelt, Olof</a></b>, proj.ass., 018 471 14 57, mobtel. 0707 846 54 77,
+ <A HREF="&#109;&#97ilt&#111;:olof.rensfelt&#64it.uu.se">olof.rensfelt&#64it.uu.se</A><br>
+<b><a href="/findperson.php?uid=N3-454">Rohner, Christian</a></b>, post doc., 018 471 31 58,
+ <A HREF="&#109;&#97ilt&#111;:Christian.Rohner&#64it.uu.se">Christian.Rohner&#64it.uu.se</A><br>
+<b><a href="/findperson.php?uid=N2-1110">Saksena, Mayank</a></b>, doktorand, 018 471 62 08,
+ <A HREF="&#109;&#97ilt&#111;:Mayank.Saksena&#64it.uu.se">Mayank.Saksena&#64it.uu.se</A><br>
+<b><a href="/findperson.php?uid=N96-6145">Sandstr&ouml;m, Anna</a></b>, univ.adj., 018 471 75 95,
+ <A HREF="&#109;&#97ilt&#111;:Anna.Sandstrom&#64it.uu.se">Anna.Sandstrom&#64it.uu.se</A><br>
+<b><a href="/findperson.php?uid=N2-1440">Valencia, Frank</a></b>, post doc., 018 471 10 30,
+ <A HREF="&#109;&#97ilt&#111;:Frank.Valencia&#64it.uu.se">Frank.Valencia&#64it.uu.se</A><br>
+<b><a href="/findperson.php?uid=N0-666">Wallin, Dan</a></b>, doktorand, 018 471 62 34,
+ <A HREF="&#109;&#97ilt&#111;:Dan.Wallin&#64it.uu.se">Dan.Wallin&#64it.uu.se</A><br>
+<b><a href="/findperson.php?uid=N94-1382">Wang, Yi</a></b>, prof. i realtidssystem, 018 471 31 10,
+ <A HREF="&#109;&#97ilt&#111;:Wang.Yi&#64it.uu.se">Wang.Yi&#64it.uu.se</A><br>
+<b><a href="/findperson.php?uid=N2-1495">Wibling, Oskar</a></b>, doktorand, 018 471 62 25,
+ <A HREF="&#109;&#97ilt&#111;:Oskar.Wibling&#64it.uu.se">Oskar.Wibling&#64it.uu.se</A><br>
+<b><a href="/findperson.php?uid=N2-1269">Wiggberg, Mattias</a></b>, doktorand, 018 471 31 76, mobtel. 0709 99 88 44,
+ <A HREF="&#109;&#97ilt&#111;:Mattias.Wiggberg&#64it.uu.se">Mattias.Wiggberg&#64it.uu.se</A><br>
+<b><a href="/findperson.php?uid=XX3795">Victor, Bj&ouml;rn</a></b>, univ.lekt., 018 471 31 69, mobtel. 0704 25 02 39,
+ <A HREF="&#109;&#97ilt&#111;:Bjorn.Victor&#64it.uu.se">Bjorn.Victor&#64it.uu.se</A><br>
+<b><a href="/findperson.php?uid=N1-953">Yemane, Kidane</a></b>, doktorand, 018 471 31 11,
+ <A HREF="&#109;&#97ilt&#111;:Kidane.Yemane&#64it.uu.se">Kidane.Yemane&#64it.uu.se</A><br>
+<b><a href="/findperson.php?uid=N3-555">Zeffer, H&aring;kan</a></b>, doktorand, 018 471 31 72, mobtel. 0709 29 06 66,
+ <A HREF="&#109;&#97ilt&#111;:Hakan.Zeffer&#64it.uu.se">Hakan.Zeffer&#64it.uu.se</A><br>
+<p>
+
+<br>
+<A NAME="X61:3"></A>
+<H3>31.1.4 M&auml;nniska-datorinteraktion
+<br>Department of Human-Computer Interaction
+</H3>
+<A HREF="http://www.it.uu.se">Hemsida / Home Page</A>
+<br>
+<p>
+Besöksadress: L&auml;gerhyddsv. 2, Polacksbacken hus 1<br>
+Postadress: Box 337, 751 05  UPPSALA<br>
+Fax 018 471 78 11<br>
+IT-ansvarig: <A HREF="&#109;&#97ilt&#111;:Erik.Boralv&#64it.uu.se">Erik Bor&auml;lv</A>, 018 471 28 28<br>
+<p>
+Forskningsledare, avdelningsf&ouml;rest&aring;ndare: Bengt Sandblad, 2868<br>
+<p>
+<p>
+
+<b><a href="/findperson.php?uid=XX1482">Andersson, Arne W</a></b>, forskn.ing., 018 471 68 93, fax 018 471 78 11, mobtel. 0704 25 00 77,
+ <A HREF="&#109;&#97ilt&#111;:Arne.Andersson&#64hci.uu.se">Arne.Andersson&#64hci.uu.se</A><br>
+<b><a href="/findperson.php?uid=N2-379">Blomkvist, Stefan</a></b>, doktorand, 018 471 28 28, mobtel. 0704 25 07 85,
+ <A HREF="&#109;&#97ilt&#111;:Stefan.Blomkvist&#64it.uu.se">Stefan.Blomkvist&#64it.uu.se</A><br>
+<b><a href="/findperson.php?uid=N0-572">Boivie, Inger</a></b>, doktorand, 018 471 28 37, mobtel. 0704 25 07 01,
+ <A HREF="&#109;&#97ilt&#111;:Inger.Boivie&#64it.uu.se">Inger.Boivie&#64it.uu.se</A><br>
+<b><a href="/findperson.php?uid=AA204">Bor&auml;lv, Erik</a></b>, doktorand, 018 471 28 28, mobtel. 0704 25 01 44,
+ <A HREF="&#109;&#97ilt&#111;:Erik.Boralv&#64it.uu.se">Erik.Boralv&#64it.uu.se</A><br>
+<b><a href="/findperson.php?uid=N2-392">Cajander, &Aring;sa</a></b>, doktorand, 018 471 10 04, mobtel. 0704 25 07 86,
+ <A HREF="&#109;&#97ilt&#111;:Asa.Cajander&#64it.uu.se">Asa.Cajander&#64it.uu.se</A><br>
+<b><a href="/findperson.php?uid=N2-1160">Erlandsson, Mikael</a></b>, doktorand, 018 471 62 19, mobtel. 073 908 56 70,
+ <A HREF="&#109;&#97ilt&#111;:Mikael.Erlandsson&#64it.uu.se">Mikael.Erlandsson&#64it.uu.se</A><br>
+<b><a href="/findperson.php?uid=N2-387">Flink, Jimmy</a></b>, doktorand, 018 471 10 52, mobtel. 0707 57 60 35,
+ <A HREF="&#109;&#97ilt&#111;:Jimmy.Flink&#64it.uu.se">Jimmy.Flink&#64it.uu.se</A><br>
+<b><a href="/findperson.php?uid=XX4032">Gulliksen, Jan (&quot;Gulan)&quot;</a></b>, univ.lekt., 018 471 28 49, mobtel. 0704 25 00 86,
+ <A HREF="&#109;&#97ilt&#111;:Jan.Gulliksen&#64hci.uu.se">Jan.Gulliksen&#64hci.uu.se</A><br>
+<b><a href="/findperson.php?uid=AA231">G&ouml;ransson, Bengt</a></b>, doktorand, 018 471 10 04, mobtel. 0704 25 01 45,
+ <A HREF="&#109;&#97ilt&#111;:Bengt.Goransson&#64it.uu.se">Bengt.Goransson&#64it.uu.se</A><br>
+<b><a href="/findperson.php?uid=N99-531">Jansson, Anders</a></b>, univ.lekt., 018 471 28 59, mobtel. 0704 25 00 90,
+ <A HREF="&#109;&#97ilt&#111;:Anders.Jansson&#64it.uu.se">Anders.Jansson&#64it.uu.se</A><br>
+<b><a href="/findperson.php?uid=N2-991">Johansson, Niklas</a></b>, doktorand, 018 471 28 28, mobtel. 0703 36 67 54,
+ <A HREF="&#109;&#97ilt&#111;:Niklas.Johansson&#64it.uu.se">Niklas.Johansson&#64it.uu.se</A><br>
+<b><a href="/findperson.php?uid=N2-88">Kauppi, Arvid</a></b>, doktorand, 018 471 34 53, mobtel. 073 640 75 55,
+ <A HREF="&#109;&#97ilt&#111;:Arvid.Kauppi&#64it.uu.se">Arvid.Kauppi&#64it.uu.se</A><br>
+<b><a href="/findperson.php?uid=N99-530">Kavathatzopoulos, Iordanis</a></b>, univ.lekt., 018 471 68 94, mobtel. 0704 25 03 83,
+ <A HREF="&#109;&#97ilt&#111;:Iordanis.Kavathatzopoulos&#64it.uu.se">Iordanis.Kavathatzopoulos&#64it.uu.se</A><br>
+<b><a href="/findperson.php?uid=N96-6428">Nissen, J&ouml;rgen</a></b>, univ.lekt. tjl.- 2004-12-31, mobtel. 0706 73 55 18,
+ <A HREF="&#109;&#97ilt&#111;:Jorgen.Nissen&#64it.uu.se">Jorgen.Nissen&#64it.uu.se</A><br>
+<b><a href="/findperson.php?uid=AA224">Olsson, Eva</a></b>, doktorand, 018 471 28 81, mobtel. 0704 25 00 99,
+ <A HREF="&#109;&#97ilt&#111;:Eva.Olsson&#64it.uu.se">Eva.Olsson&#64it.uu.se</A><br>
+<b><a href="/findperson.php?uid=N0-382">Persson, Jenny</a></b>, doktorand, 018 471 63 38, mobtel. 0707 27 37 78,
+ <A HREF="&#109;&#97ilt&#111;:Jenny.Persson&#64it.uu.se">Jenny.Persson&#64it.uu.se</A><br>
+<b><a href="/findperson.php?uid=XX2069">Sandblad, Bengt</a></b>, prof. i m&auml;nniska-datorinteraktion 01, 018 471 28 68, mobtel. 0705 43 77 19,
+ <A HREF="&#109;&#97ilt&#111;:Bengt.Sandblad&#64it.uu.se">Bengt.Sandblad&#64it.uu.se</A><br>
+<b><a href="/findperson.php?uid=N96-366">Seipel, Stefan</a></b>, prof. i datorgrafik, 018 471 28 29, mobtel. 0704 25 00 78,
+ <A HREF="&#109;&#97ilt&#111;:Stefan.Seipel&#64it.uu.se">Stefan.Seipel&#64it.uu.se</A><br>
+<b><a href="/findperson.php?uid=N2-1258">Wikstr&ouml;m, Johan</a></b>, doktorand, 018 471 34 53, mobtel. 0709 53 24 36,
+ <A HREF="&#109;&#97ilt&#111;:Johan.Wikstrom&#64it.uu.se">Johan.Wikstrom&#64it.uu.se</A><br>
+<b><a href="/findperson.php?uid=N2-1351">Winkler Pettersson, Lars</a></b>, doktorand, 018 471 49 12, mobtel. 0709 64 80 96,
+ <A HREF="&#109;&#97ilt&#111;:Lars.Pettersson&#64it.uu.se">Lars.Pettersson&#64it.uu.se</A><br>
+
+<br>
+<A NAME="X61:4"></A>
+<H3>31.1.5 Systemteknik
+<br>Systems and Control
+</H3>
+<A HREF="http://www.it.uu.se">Hemsida / Home Page</A>
+<br>
+<p>
+Besöksadress: L&auml;gerhyddsv. 2, Polacksbacken, MIC, hus 2<br>
+Postadress: Box 337, 751 05  UPPSALA<br>
+Fax 018 51 19 25<br>
+Forskningsledare: <A HREF="&#109;&#97ilt&#111;:Torsten.Soderstrom&#64it.uu.se">Torsten S&ouml;derstr&ouml;m</A>, 018 471 30 75<br>
+IT-ansvarig: <A HREF="&#109;&#97ilt&#111;:oe&#64signal.uu.se">Ove Ewerlid</A><br>
+Katalogansvarig: <A HREF="&#109;&#97ilt&#111;:Ingegerd.Wass&#64it.uu.se">Ingegerd Wass</A>, 018 471 30 74<br>
+<p>
+Avdelningsf&ouml;rest&aring;ndare: H&aring;kan Lanshammar, 3033, 1087<br>
+<p>
+<p>
+
+<b><a href="/findperson.php?uid=N0-550">Abd-Elrady, Emad</a></b>, doktorand, 018 471 33 89, mobtel. 073 731 36 14,
+ <A HREF="&#109;&#97ilt&#111;:Emad.Abd-Elrady&#64it.uu.se">Emad.Abd-Elrady&#64it.uu.se</A><br>
+<b><a href="/findperson.php?uid=N0-548">Abrahamsson, Richard</a></b>, doktorand tjl.- 2004-12-31, 018 471 33 96, mobtel. 0704 03 85 26,
+ <A HREF="&#109;&#97ilt&#111;:Richard.Abrahamsson&#64it.uu.se">Richard.Abrahamsson&#64it.uu.se</A><br>
+<b><a href="/findperson.php?uid=N4-778">Bleja, Sergiusz</a></b>, 018 471 33 99, mobtel. 0708 94 58 77,
+ <A HREF="&#109;&#97ilt&#111;:Sergiusz.Bleja&#64it.uu.se">Sergiusz.Bleja&#64it.uu.se</A><br>
+<b><a href="/findperson.php?uid=N3-189">Brus, Linda</a></b>, doktorand, 018 471 33 97,
+ <A HREF="&#109;&#97ilt&#111;:Linda.Brus&#64it.uu.se">Linda.Brus&#64it.uu.se</A><br>
+<b><a href="/findperson.php?uid=N0-551">Ekman, Mats</a></b>, doktorand, 018 471 78 46,
+ <A HREF="&#109;&#97ilt&#111;:Mats.Ekman&#64it.uu.se">Mats.Ekman&#64it.uu.se</A><br>
+<b><a href="/findperson.php?uid=N3-190">Evestedt, Magnus</a></b>, doktorand, 018 471 33 94, mobtel. 0703 12 75 83,
+ <A HREF="&#109;&#97ilt&#111;:Magnus.Evestedt&#64it.uu.se">Magnus.Evestedt&#64it.uu.se</A><br>
+<b><a href="/findperson.php?uid=N4-450">Halvarsson, Bj&ouml;rn</a></b>, forskn.ass., 018 471 78 40,
+ <A HREF="&#109;&#97ilt&#111;:Bjorn.Halvarsson&#64it.uu.se">Bjorn.Halvarsson&#64it.uu.se</A><br>
+<b><a href="/findperson.php?uid=N2-831">Holmberg, Bj&ouml;rn</a></b>, doktorand, 018 471 33 91, mobtel. 073 443 93 95,
+ <A HREF="&#109;&#97ilt&#111;:Bjorn.Holmberg&#64it.uu.se">Bjorn.Holmberg&#64it.uu.se</A><br>
+<b><a href="/findperson.php?uid=N3-191">Hong, Mei</a></b>, doktorand, 018 471 33 98, mobtel. 073 959 53 75,
+ <A HREF="&#109;&#97ilt&#111;:Mei.Hong&#64it.uu.se">Mei.Hong&#64it.uu.se</A><br>
+<b><a href="/findperson.php?uid=XX3268">Carlsson, Bengt</a></b>, prof. i reglerteknik 00, 018 471 31 19, mobtel. 0706 27 45 90,
+ <A HREF="&#109;&#97ilt&#111;:Bengt.Carlsson&#64it.uu.se">Bengt.Carlsson&#64it.uu.se</A><br>
+<b><a href="/findperson.php?uid=XX2117">Lanshammar, H&aring;kan</a></b>, prof. i reglerteknik och systemanalys 00, 018 471 30 33, 018 471 10 87,
+ <A HREF="&#109;&#97ilt&#111;:Hakan.Lanshammar&#64it.uu.se">Hakan.Lanshammar&#64it.uu.se</A><br>
+<b><a href="/findperson.php?uid=N2-213">Medvedev, Alexander</a></b>, prof. i reglerteknik 98, 018 471 30 64, mobtel. 0705 74 81 73,
+ <A HREF="&#109;&#97ilt&#111;:Alexander.Medvedev&#64it.uu.se">Alexander.Medvedev&#64it.uu.se</A><br>
+<b><a href="/findperson.php?uid=N3-186">Naucl&eacute;r, Peter</a></b>, doktorand, 018 471 33 95, mobtel. 0707 31 63 61,
+ <A HREF="&#109;&#97ilt&#111;:Peter.Naucler&#64it.uu.se">Peter.Naucler&#64it.uu.se</A><br>
+<b><a href="/findperson.php?uid=N96-3799">Norlander, Hans</a></b>, univ.adj., 018 471 30 70, mobtel. 0703 47 14 34,
+ <A HREF="&#109;&#97ilt&#111;:Hans.Norlander&#64it.uu.se">Hans.Norlander&#64it.uu.se</A><br>
+<b><a href="/findperson.php?uid=N4-254">Runqvist, Agnes</a></b>, doktorand, 018 471 31 89, mobtel. 0707 34 29 27,
+ <A HREF="&#109;&#97ilt&#111;:Agnes.Runqvist&#64it.uu.se">Agnes.Runqvist&#64it.uu.se</A><br>
+<b><a href="/findperson.php?uid=N96-3802">Samuelsson, P&auml;r</a></b>, doktorand tjl.- 2004-12-31, 018 471 30 79,
+ <A HREF="&#109;&#97ilt&#111;:Par.Samuelsson&#64it.uu.se">Par.Samuelsson&#64it.uu.se</A><br>
+<b><a href="/findperson.php?uid=N2-178">Sandgren, Niclas</a></b>, doktorand, 018 471 33 92,
+ <A HREF="&#109;&#97ilt&#111;:Niclas.Sandgren&#64it.uu.se">Niclas.Sandgren&#64it.uu.se</A><br>
+<b><a href="/findperson.php?uid=N2-830">Sel&eacute;n, Yngve</a></b>, doktorand, 018 471 33 93, mobtel. 0704 05 66 23,
+ <A HREF="&#109;&#97ilt&#111;:Yngve.Selen&#64it.uu.se">Yngve.Selen&#64it.uu.se</A><br>
+<b><a href="/findperson.php?uid=XX2283">Stoica, Peter</a></b>, prof. i systemmodellering 98, 018 471 76 19,
+ <A HREF="&#109;&#97ilt&#111;:Peter.Stoica&#64it.uu.se">Peter.Stoica&#64it.uu.se</A><br>
+<b><a href="/findperson.php?uid=N0-752">Stokes, Virgil</a></b>, univ.lekt., 018 471 57 68,
+ <A HREF="&#109;&#97ilt&#111;:Virgil.Stokes&#64it.uu.se">Virgil.Stokes&#64it.uu.se</A><br>
+<b><a href="/findperson.php?uid=XX1686">S&ouml;derstr&ouml;m, Torsten</a></b>, prof. i reglerteknik 82, 018 471 30 75,
+ <A HREF="&#109;&#97ilt&#111;:Torsten.Soderstrom&#64it.uu.se">Torsten.Soderstrom&#64it.uu.se</A><br>
+<b><a href="/findperson.php?uid=N0-536">Wigren, Torbj&ouml;rn</a></b>, adj. prof. i reglerteknik 00, 018 471 62 26, mobtel. 0702 67 19 82,
+ <A HREF="&#109;&#97ilt&#111;:Torbjorn.Wigren&#64it.uu.se">Torbjorn.Wigren&#64it.uu.se</A><br>
+
+<br>
+<A NAME="X61:5"></A>
+<H3>31.1.6 Teknisk databehandling
+<br>Department of Scientific Computing
+</H3>
+<A HREF="http://www.it.uu.se/">Hemsida / Home Page</A>
+<br>
+<p>
+Besöksadress: L&auml;gerhyddsv. 2, Polacksbacken hus 2<br>
+Postadress: Box 337, 751 05  UPPSALA<br>
+Fax 018 52 30 49<br>
+Forskningsledare: <A HREF="&#109;&#97ilt&#111;:Bertil.Gustafsson&#64it.uu.se">Bertil Gustafsson</A>, 018 471 29 68, <A HREF="&#109;&#97ilt&#111;:Sverker.Holmgren&#64it.uu.se">Sverker Holmgren</A>, 018 471 29 92, <A HREF="&#109;&#97ilt&#111;:Per.Lotstedt&#64it.uu.se">Per L&ouml;tstedt</A>, 018 471 29 72, <A HREF="&#109;&#97ilt&#111;:Bernhard.Muller&#64it.uu.se">Bernhard M&uuml;ller</A>, 018 471 29 75, <A HREF="&#109;&#97ilt&#111;:Michael.Thune&#64it.uu.se">Michael Thun&eacute;</A>, 018 471 29 81<br>
+<p>
+Avdelningsf&ouml;rest&aring;ndare: Tom Smedsaas, 2989<br>
+<p>
+<p>
+
+<b><a href="/findperson.php?uid=N4-52">Abenius, Erik</a></b>, doktorand, 018 471 29 93, mobtel. 0703 96 29 22,
+ <A HREF="&#109;&#97ilt&#111;:Erik.Abenius&#64it.uu.se">Erik.Abenius&#64it.uu.se</A><br>
+<b><a href="/findperson.php?uid=N0-278">Amoignon, Olivier</a></b>, doktorand, 018 471 62 86, fax 018 52 30 49,
+ <A HREF="&#109;&#97ilt&#111;:Olivier.Amoignon&#64it.uu.se">Olivier.Amoignon&#64it.uu.se</A><br>
+<b><a href="/findperson.php?uid=N3-1404">Ander, Magnus</a></b>, proj.ass., 018 471 29 66,
+ <A HREF="&#109;&#97ilt&#111;:Magnus.Ander&#64it.uu.se">Magnus.Ander&#64it.uu.se</A><br>
+<b><a href="/findperson.php?uid=N4-1178">Axelsson, Ove</a></b>, g&auml;stforskare, 018 471 29 84, fax 018 52 30 49<br>
+<b><a href="/findperson.php?uid=N2-1175">B&auml;ngtsson, Erik</a></b>, doktorand, 018 471 62 87, fax 018 52 30 49,
+ <A HREF="&#109;&#97ilt&#111;:Erik.Bangtsson&#64it.uu.se">Erik.Bangtsson&#64it.uu.se</A><br>
+<b><a href="/findperson.php?uid=XX2095">Bengtsson, Ewert</a></b>, prof. i datoriserad bildanalys, 018 471 34 67, fax 018 55 34 47,
+ <A HREF="&#109;&#97ilt&#111;:Ewert.Bengtsson&#64cb.uu.se">Ewert.Bengtsson&#64cb.uu.se</A><br>
+<b><a href="/findperson.php?uid=N96-6520">Berggren, Martin</a></b>, univ.lekt., 018 471 29 64,
+ <A HREF="&#109;&#97ilt&#111;:Martin.Berggren&#64it.uu.se">Martin.Berggren&#64it.uu.se</A><br>
+<b><a href="/findperson.php?uid=N1-351">Bergholm, Fredrik</a></b>, prof. i datoriserad bildanalys, 018 471 34 73, fax 018 55 34 47,
+ <A HREF="&#109;&#97ilt&#111;:fredrikb&#64cb.uu.se">fredrikb&#64cb.uu.se</A><br>
+<b><a href="/findperson.php?uid=N3-1473">Boustedt, Jonas</a></b>, doktorand, 018 471 29 78<br>
+<b><a href="/findperson.php?uid=N96-975">Brand&eacute;n, Henrik</a></b>, forskarass., 018 471 29 76,
+ <A HREF="&#109;&#97ilt&#111;:Henrik.Branden&#64it.uu.se">Henrik.Branden&#64it.uu.se</A><br>
+<b><a href="/findperson.php?uid=XX1747">Cedvall, Mats</a></b>, univ.lekt. i ADB, 018 471 29 73, 018 471 10 29,
+ <A HREF="&#109;&#97ilt&#111;:Mats.Cedvall&#64it.uu.se">Mats.Cedvall&#64it.uu.se</A><br>
+<b><a href="/findperson.php?uid=N98-44">Dominicus van den Bussche, Liselott</a></b>, univ.adj., 018 471 29 78,
+ <A HREF="&#109;&#97ilt&#111;:Liselott.Dominicus&#64it.uu.se">Liselott.Dominicus&#64it.uu.se</A><br>
+<b><a href="/findperson.php?uid=N99-802">Eckerdal, Anna</a></b>, univ.adj., 018 471 29 78,
+ <A HREF="&#109;&#97ilt&#111;:Anna.Eckerdal&#64it.uu.se">Anna.Eckerdal&#64it.uu.se</A><br>
+<b><a href="/findperson.php?uid=N96-2941">Edelvik, Fredrik</a></b>, forskare, 018 471 57 02,
+ <A HREF="&#109;&#97ilt&#111;:fredrik.edelvik&#64it.uu.se">fredrik.edelvik&#64it.uu.se</A><br>
+<b><a href="/findperson.php?uid=N2-1296">Engblom, Stefan</a></b>, doktorand, 018 471 29 67, mobtel. 0706 20 62 20,
+ <A HREF="&#109;&#97ilt&#111;:Stefan.Engblom&#64it.uu.se">Stefan.Engblom&#64it.uu.se</A><br>
+<b><a href="/findperson.php?uid=XX2551">Eriksson, Olle</a></b>, univ.lekt., 018 471 29 83, 018 471 34 68, mobtel. 0705 72 87 20,
+ <A HREF="&#109;&#97ilt&#111;:Olle.Eriksson&#64cb.uu.se">Olle.Eriksson&#64cb.uu.se</A><br>
+<b><a href="/findperson.php?uid=N4-1138">Ex  jobbare, TDB</a></b>, 018 471 10 50<br>
+<b><a href="/findperson.php?uid=N4-1140">Ex jobbare, TDB</a></b>, 018 471 27 91<br>
+<b><a href="/findperson.php?uid=XX2041">Ferm, Lars</a></b>, forskare, 018 471 29 74,
+ <A HREF="&#109;&#97ilt&#111;:Lars.Ferm&#64it.uu.se">Lars.Ferm&#64it.uu.se</A><br>
+<b><a href="/findperson.php?uid=N4-1179">Fornberg, Bengt</a></b>, g&auml;stforskare, 018 471 23 23, fax 018 52 30 49<br>
+<b><a href="/findperson.php?uid=N96-6086">Forss&eacute;n, Patrik</a></b>, doktorand, 018 471 76 31, fax 018 52 30 49,
+ <A HREF="&#109;&#97ilt&#111;:Patrik.Forssen&#64it.uu.se">Patrik.Forssen&#64it.uu.se</A><br>
+<b><a href="/findperson.php?uid=N4-1069">Gomes, Sonya Maria</a></b>, g&auml;stprof., 018 471 76 86<br>
+<b><a href="/findperson.php?uid=N3-923">Gong, Jing</a></b>, doktorand, 018 471 62 53,
+ <A HREF="&#109;&#97ilt&#111;:Jing.Gong&#64it.uu.se">Jing.Gong&#64it.uu.se</A><br>
+<b><a href="/findperson.php?uid=XX803">Gustafsson, Bertil</a></b>, prof. i numerisk analys 82, 018 471 29 68,
+ <A HREF="&#109;&#97ilt&#111;:Bertil.Gustafsson&#64it.uu.se">Bertil.Gustafsson&#64it.uu.se</A><br>
+<b><a href="/findperson.php?uid=N4-1174">Hodzig, Adis</a></b>, g&auml;ststudent, 018 471 29 67<br>
+<b><a href="/findperson.php?uid=XX3728">Holmgren, Sverker</a></b>, univ.lekt., 018 471 29 92, mobtel. 0705 80 58 87,
+ <A HREF="&#109;&#97ilt&#111;:Sverker.Holmgren&#64it.uu.se">Sverker.Holmgren&#64it.uu.se</A><br>
+<b><a href="/findperson.php?uid=XX2880">Jarkrans, Torsten</a></b>, univ.lekt., 018 471 57 07, 018 471 31 54, mobtel. 0704 25 04 70,
+ <A HREF="&#109;&#97ilt&#111;:Torsten.Jarkrans&#64it.uu.se">Torsten.Jarkrans&#64it.uu.se</A><br>
+<b><a href="/findperson.php?uid=N4-1026">Jayawardena, Mahen</a></b>, doktorand, 018 471 31 23,
+ <A HREF="&#109;&#97ilt&#111;:Mahen.Jayawardena&#64it.uu.se">Mahen.Jayawardena&#64it.uu.se</A><br>
+<b><a href="/findperson.php?uid=N3-1393">Johansson, Henrik</a></b>, doktorand, 018 471 62 53,
+ <A HREF="&#109;&#97ilt&#111;:Henrik.Johansson&#64it.uu.se">Henrik.Johansson&#64it.uu.se</A><br>
+<b><a href="/findperson.php?uid=N0-874">Johansson, Stefan</a></b>, doktorand, 018 471 68 89,
+ <A HREF="&#109;&#97ilt&#111;:Stefan.Johansson&#64it.uu.se">Stefan.Johansson&#64it.uu.se</A><br>
+<b><a href="/findperson.php?uid=N96-6199">Jonsson, Jacob</a></b>, forskare, 018 471 31 31,
+ <A HREF="&#109;&#97ilt&#111;:Jacob.Jonsson&#64Angstrom.uu.se">Jacob.Jonsson&#64Angstrom.uu.se</A><br>
+<b><a href="/findperson.php?uid=N94-2143">Larsson, Elisabeth</a></b>, forskarass., 018 471 27 68,
+ <A HREF="&#109;&#97ilt&#111;:Elisabeth.Larsson&#64it.uu.se">Elisabeth.Larsson&#64it.uu.se</A><br>
+<b><a href="/findperson.php?uid=N0-544">Ljungberg, Kajsa</a></b>, doktorand, 018 471 29 90, fax 018 52 30 49,
+ <A HREF="&#109;&#97ilt&#111;:Kajsa.Ljungberg&#64it.uu.se">Kajsa.Ljungberg&#64it.uu.se</A><br>
+<b><a href="/findperson.php?uid=N99-805">Ljungberg, Malin</a></b>, doktorand, 018 471 62 09,
+ <A HREF="&#109;&#97ilt&#111;:Malin.Ljungberg&#64it.uu.se">Malin.Ljungberg&#64it.uu.se</A><br>
+<b><a href="/findperson.php?uid=XX171">Lundqvist, Einar</a></b>, univ.lekt. emer. i numerisk analys, 018 471 29 64,
+ <A HREF="&#109;&#97ilt&#111;:Einar.Lundqvist&#64it.uu.se">Einar.Lundqvist&#64it.uu.se</A><br>
+<b><a href="/findperson.php?uid=XX2387">L&ouml;tstedt, Per</a></b>, prof. i numerisk analys, 018 471 29 72,
+ <A HREF="&#109;&#97ilt&#111;:Per.Lotstedt&#64it.uu.se">Per.Lotstedt&#64it.uu.se</A><br>
+<b><a href="/findperson.php?uid=N99-1639">L&ouml;f, Henrik</a></b>, doktorand, 018 471 10 40, fax 018 52 30 49, mobtel. 0709 94 97 45,
+ <A HREF="&#109;&#97ilt&#111;:Henrik.Lof&#64it.uu.se">Henrik.Lof&#64it.uu.se</A><br>
+<b><a href="/findperson.php?uid=N4-1173">Mishchenko, Kateryna</a></b>, 018 471 29 65<br>
+<b><a href="/findperson.php?uid=N4-439">Mtega, Narsis</a></b>, 018 471 27 66<br>
+<b><a href="/findperson.php?uid=N96-6243">M&uuml;ller, Bernhard</a></b>, univ.lekt., 018 471 29 75,
+ <A HREF="&#109;&#97ilt&#111;:Bernhard.Muller&#64it.uu.se">Bernhard.Muller&#64it.uu.se</A><br>
+<b><a href="/findperson.php?uid=N1-397">Neytcheva, Maya</a></b>, univ.lekt., 018 471 29 79,
+ <A HREF="&#109;&#97ilt&#111;:Maya.Neytcheva&#64it.uu.se">Maya.Neytcheva&#64it.uu.se</A><br>
+<b><a href="/findperson.php?uid=N96-6250">Nilsson, Martin</a></b>, forskare, 018 471 73 47,
+ <A HREF="&#109;&#97ilt&#111;:Martin.Nilsson&#64it.uu.se">Martin.Nilsson&#64it.uu.se</A><br>
+<b><a href="/findperson.php?uid=N99-1640">Nord&eacute;n, Markus</a></b>, doktorand, 018 471 62 85, fax 018 52 30 49,
+ <A HREF="&#109;&#97ilt&#111;:Markus.Norden&#64it.uu.se">Markus.Norden&#64it.uu.se</A><br>
+<b><a href="/findperson.php?uid=XX2645">Nordin, Bo</a></b>, univ.lekt., 018 471 34 70, 018 471 31 79,
+ <A HREF="&#109;&#97ilt&#111;:Bo.Nordin&#64cb.uu.se">Bo.Nordin&#64cb.uu.se</A><br>
+<b><a href="/findperson.php?uid=N96-2341">Nordstr&ouml;m, Jan</a></b>, adj. prof. i numerisk analys, 018 471 29 80, fax 018 52 30 49,
+ <A HREF="&#109;&#97ilt&#111;:Jan.Nordstrom&#64it.uu.se">Jan.Nordstrom&#64it.uu.se</A><br>
+<b><a href="/findperson.php?uid=XX3240">Nycander, Jonas</a></b>, g&auml;stforskare, 018 471 29 63<br>
+<b><a href="/findperson.php?uid=XX3695">Otto, Kurt</a></b>, forskare, 018 471 29 91,
+ <A HREF="&#109;&#97ilt&#111;:Kurt.Otto&#64it.uu.se">Kurt.Otto&#64it.uu.se</A><br>
+<b><a href="/findperson.php?uid=N1-391">Persson, Jonas</a></b>, doktorand, 018 471 78 93,
+ <A HREF="&#109;&#97ilt&#111;:Jonas.Persson&#64it.uu.se">Jonas.Persson&#64it.uu.se</A><br>
+<b><a href="/findperson.php?uid=N0-461">Peterson, Christer</a></b>, doktorand, 018 471 27 53,
+ <A HREF="&#109;&#97ilt&#111;:Christer.Peterson&#64it.uu.se">Christer.Peterson&#64it.uu.se</A><br>
+<b><a href="/findperson.php?uid=N3-1290">Pettersson, Ulrika</a></b>, doktorand, 018 471 29 78, mobtel. 0703 94 76 35,
+ <A HREF="&#109;&#97ilt&#111;:Ulrika.Pettersson&#64it.uu.se">Ulrika.Pettersson&#64it.uu.se</A><br>
+<b><a href="/findperson.php?uid=N4-1181">Pihl, Andreas</a></b>, timl&auml;rare, 018 471 10 50<br>
+<b><a href="/findperson.php?uid=XX3110">P&aring;lsson, Stefan</a></b>, univ.adj., 018 471 29 70, mobtel. 0704 25 02 13,
+ <A HREF="&#109;&#97ilt&#111;:Stefan.Palsson&#64it.uu.se">Stefan.Palsson&#64it.uu.se</A><br>
+<b><a href="/findperson.php?uid=XX3553">P&auml;rt-Enander, Eva</a></b>, univ.lekt., 018 471 29 63, fax 018 471 62 94, 018 52 30 49, mobtel. 0704 25 07 12,
+ <A HREF="&#109;&#97ilt&#111;:Eva.Part-Enander&#64it.uu.se">Eva.Part-Enander&#64it.uu.se</A><br>
+<b><a href="/findperson.php?uid=XX4186">Rantakokko, Jarmo</a></b>, univ.lekt., 018 471 29 77, fax 018 52 30 49,
+ <A HREF="&#109;&#97ilt&#111;:Jarmo.Rantakokko&#64it.uu.se">Jarmo.Rantakokko&#64it.uu.se</A><br>
+<b><a href="/findperson.php?uid=XX1067">Sj&ouml;berg, Anders</a></b>, univ.lekt., 018 471 29 71, mobtel. 0704 25 02 98,
+ <A HREF="&#109;&#97ilt&#111;:Anders.Sjoberg&#64it.uu.se">Anders.Sjoberg&#64it.uu.se</A><br>
+<b><a href="/findperson.php?uid=N2-1127">Sj&ouml;berg, Paul</a></b>, doktorand, 018 471 27 59,
+ <A HREF="&#109;&#97ilt&#111;:Paul.Sjoberg&#64it.uu.se">Paul.Sjoberg&#64it.uu.se</A><br>
+<b><a href="/findperson.php?uid=XX1629">Smedsaas, Tom</a></b>, univ.lekt., 018 471 29 89, mobtel. 0704 25 03 12,
+ <A HREF="&#109;&#97ilt&#111;:Tom.Smedsaas&#64it.uu.se">Tom.Smedsaas&#64it.uu.se</A><br>
+<b><a href="/findperson.php?uid=XX3910">Strand, Bo</a></b>, g&auml;stforskare, 018 471 29 80,
+ <A HREF="&#109;&#97ilt&#111;:Bo.Strand&#64it.uu.se">Bo.Strand&#64it.uu.se</A><br>
+<b><a href="/findperson.php?uid=N1-754">Sundkvist, Elena</a></b>, doktorand, 018 471 29 82,
+ <A HREF="&#109;&#97ilt&#111;:Elena.Sundkvist&#64it.uu.se">Elena.Sundkvist&#64it.uu.se</A><br>
+<b><a href="/findperson.php?uid=N99-1636">Sundqvist, Per</a></b>, doktorand, 018 471 27 54,
+ <A HREF="&#109;&#97ilt&#111;:Per.Sundqvist&#64it.uu.se">Per.Sundqvist&#64it.uu.se</A><br>
+<b><a href="/findperson.php?uid=N99-1723">Sv&auml;rd, Magnus</a></b>, doktorand, 018 471 62 04, fax 018 52 30 49,
+ <A HREF="&#109;&#97ilt&#111;:Magnus.Svard&#64it.uu.se">Magnus.Svard&#64it.uu.se</A><br>
+<b><a href="/findperson.php?uid=XX4244">von Sydow, Lina</a></b>, univ.lekt., 018 471 27 85,
+ <A HREF="&#109;&#97ilt&#111;:Lina.von.Sydow&#64it.uu.se">Lina.von.Sydow&#64it.uu.se</A><br>
+<b><a href="/findperson.php?uid=AA336">Thun&eacute;, Michael</a></b>, prof. i teknisk databehandling, 018 471 29 81,
+ <A HREF="&#109;&#97ilt&#111;:Michael.Thune&#64it.uu.se">Michael.Thune&#64it.uu.se</A><br>
+<b><a href="/findperson.php?uid=N4-1025">Udawalpola, Rajitha</a></b>, doktorand, 018 471 31 23<br>
+<b><a href="/findperson.php?uid=N4-626">Wadbro, Eddie</a></b>, doktorand, 018 471 29 65, mobtel. 073 356 24 20,
+ <A HREF="&#109;&#97ilt&#111;:eddie.wadbro&#64it.uu.se">eddie.wadbro&#64it.uu.se</A><br>
+<b><a href="/findperson.php?uid=N99-1641">Wait, Richard</a></b>, univ.lekt., 018 471 27 57, fax 018 52 30 49,
+ <A HREF="&#109;&#97ilt&#111;:Richard.Wait&#64it.uu.se">Richard.Wait&#64it.uu.se</A><br>
+<b><a href="/findperson.php?uid=XX2255">Wahlund, Per</a></b>, univ.lekt., 018 471 29 86, fax 018 52 30 49,
+ <A HREF="&#109;&#97ilt&#111;:Per.Wahlund&#64it.uu.se">Per.Wahlund&#64it.uu.se</A><br>
+<b><a href="/findperson.php?uid=AA186">&Aring;hlander, Krister</a></b>, forskarass., 018 471 29 87, fax 018 52 30 49,
+ <A HREF="&#109;&#97ilt&#111;:Krister.Ahlander&#64it.uu.se">Krister.Ahlander&#64it.uu.se</A><br>
+<p>
+F&ouml;rutom ovan angivna personer &auml;r nedanst&aring;ende anst&auml;llda vid Centrum f&ouml;r bildanalys engagerade i grundutbildningen vid avd f&ouml;r teknisk databehandling:<br>
+<p>
+<p>
+Ewert Bengtsson, Mats Erikson, Hamed Hamid Muhammed, Roger Hult, Patrick Karlsson, Ingela Nystr&ouml;m, Ida-Maria Sintorn, Xavier Tizon, Felix Wehrmann, Carolina W&auml;hlby.<br>
+<p>
+
+<p><a href="mailto:anblo676@anst.uu.se,annenils@anst.uu.se,annesven@anst.uu.se,carilind@anst.uu.se,ingewass@anst.uu.se,jankarr@anst.uu.se,mariahrn@anst.uu.se,uku24874@anst.uu.se,uland516@anst.uu.se">Kontakta den ansvariga/e</a> för kataloguppgifterna vid institutionen (motsv.)
+ för att rätta ev. felaktigheter.  <a href="/Adresser/uppdatera/kat-client.cgi?action=index&inst=X61">Uppdatera.</a> (kräver lösenord)</p>
+<table width="640" border="0" cellspacing="0" cellpadding="0"
+height="100">
+  <tr>
+    <td colspan="2"><hr align=left size="1"></td>
+  </tr>
+  <tr>
+  <td width="176" height="17" valign="top"><a href="/"><img src="/Logo/160.gif"
+      width="160" height="70" align="bottom" border="0" ></a></td>
+    <td width="464" height="17" valign="top">
+  <p><font size="-2" face="Verdana, Arial, Helvetica, sans-serif">UPPSALA UNIVERSITET, Box 256, SE-751 05  Uppsala<br>
+Senast &auml;ndrad ifr&aring;n katalogdatabasen 26 sept 2004
+<br><a href="/Webmaster/">Webmaster</font></a>
+    </td>
+  </tr>
+</table>
+</body>
+</html>

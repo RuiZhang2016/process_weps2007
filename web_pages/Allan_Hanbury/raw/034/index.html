@@ -1,0 +1,805 @@
+
+<HTML>
+<HEAD>
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1254">
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-9">
+<meta name="Keywords" CONTENT="web, www, Internet, sanal, avuçiçi, palm, yazılım, donanım, chat, mp3, ICQ, nasıl, Windows, linux, irc, pc, rehber, uzman,  forum, soru, cevap, yardım, bilgi, veri, kitap, Microsoft, Word, Excel , Powerpoint, Access, Outlook, tasarım, acemi, e-ticaret, kitap, yeni, ekonomi, röportaj, basın, anket, klavye, tarihçe, yazıcı, fare, hukuk, alışveriş, sözlük">
+<LINK REL="stylesheet" TYPE="text/css" HREF="bebek0.css">
+<TITLE>Rozika.Com > Web Rehberi > Recreation/Aviation/Personal_Pages/Pilots/</TITLE>
+<style>
+<!--
+.skin0{
+position:absolute;
+width:165px;
+border:2px solid black;
+background-color:menu;
+font-family:Verdana;
+line-height:20px;
+cursor:default;
+font-size:14px;
+z-index:100;
+visibility:hidden;
+}
+
+.menuitems{
+padding-left:10px;
+padding-right:10px;
+}
+-->
+</style>
+
+</HEAD>
+
+<BODY>
+<!--TOP-->
+<div id="ie5menu" class="skin0" onMouseover="highlightie5(event)" onMouseout="lowlightie5(event)" onClick="jumptoie5(event)" display:none>
+<div class="menuitems" url="http://www.rozika.com"><img src="1.gif" border="0" width="15" height="15"> Ana Sayfa</div>
+<div class="menuitems" url="news.asp"><img src="2.gif" border="0" width="15" height="15"> Haberler</div>
+<div class="menuitems" url="oyun.asp"><img src="3.gif" border="0" width="15" height="15"> Oyun Merkezi</div>
+<div class="menuitems" url="softwaredefault.asp"><img src="4.gif" border="0" width="15" height="15"> Yazılım Arşivi</div>
+<div class="menuitems" url="surfdefault.asp"><img src="5.gif" border="0" width="15" height="15"> Web Rehberi</div>
+<div class="menuitems" url="/new/"><img src="6.gif" border="0" width="15" height="15"> Forum</div>
+<hr>
+<div class="menuitems" url="mailto:admin@rozika.com"><img src="7.gif" border="0" width="15" height="15"> Email Gönder</div>
+</div>
+
+<script language="JavaScript1.2">
+
+//set this variable to 1 if you wish the URLs of the highlighted menu to be displayed in the status bar
+var display_url=0
+
+var ie5=document.all&&document.getElementById
+var ns6=document.getElementById&&!document.all
+if (ie5||ns6)
+var menuobj=document.getElementById("ie5menu")
+
+function showmenuie5(e){
+//Find out how close the mouse is to the corner of the window
+var rightedge=ie5? document.body.clientWidth-event.clientX : window.innerWidth-e.clientX
+var bottomedge=ie5? document.body.clientHeight-event.clientY : window.innerHeight-e.clientY
+
+//if the horizontal distance isn't enough to accomodate the width of the context menu
+if (rightedge<menuobj.offsetWidth)
+//move the horizontal position of the menu to the left by it's width
+menuobj.style.left=ie5? document.body.scrollLeft+event.clientX-menuobj.offsetWidth : window.pageXOffset+e.clientX-menuobj.offsetWidth
+else
+//position the horizontal position of the menu where the mouse was clicked
+menuobj.style.left=ie5? document.body.scrollLeft+event.clientX : window.pageXOffset+e.clientX
+
+//same concept with the vertical position
+if (bottomedge<menuobj.offsetHeight)
+menuobj.style.top=ie5? document.body.scrollTop+event.clientY-menuobj.offsetHeight : window.pageYOffset+e.clientY-menuobj.offsetHeight
+else
+menuobj.style.top=ie5? document.body.scrollTop+event.clientY : window.pageYOffset+e.clientY
+
+menuobj.style.visibility="visible"
+return false
+}
+
+function hidemenuie5(e){
+menuobj.style.visibility="hidden"
+}
+
+function highlightie5(e){
+var firingobj=ie5? event.srcElement : e.target
+if (firingobj.className=="menuitems"||ns6&&firingobj.parentNode.className=="menuitems"){
+if (ns6&&firingobj.parentNode.className=="menuitems") firingobj=firingobj.parentNode //up one node
+firingobj.style.backgroundColor="#FFCC66"
+firingobj.style.color="white"
+if (display_url==1)
+window.status=event.srcElement.url
+}
+}
+
+function lowlightie5(e){
+var firingobj=ie5? event.srcElement : e.target
+if (firingobj.className=="menuitems"||ns6&&firingobj.parentNode.className=="menuitems"){
+if (ns6&&firingobj.parentNode.className=="menuitems") firingobj=firingobj.parentNode //up one node
+firingobj.style.backgroundColor=""
+firingobj.style.color="black"
+window.status=''
+}
+}
+
+function jumptoie5(e){
+var firingobj=ie5? event.srcElement : e.target
+if (firingobj.className=="menuitems"||ns6&&firingobj.parentNode.className=="menuitems"){
+if (ns6&&firingobj.parentNode.className=="menuitems") firingobj=firingobj.parentNode
+if (firingobj.getAttribute("target"))
+window.open(firingobj.getAttribute("url"),firingobj.getAttribute("target"))
+else
+window.location=firingobj.getAttribute("url")
+}
+}
+
+if (ie5||ns6){
+menuobj.style.display=''
+document.oncontextmenu=showmenuie5
+document.onclick=hidemenuie5
+}
+
+</script>
+<TABLE width="778" BORDER="0" CELLSPACING="0" CELLPADDING="0" ALIGN="CENTER">
+<tr>
+<td align=right valign="top" bgcolor="#BDCEE1" height=60>
+<A HREF="http://www.rozika.com/default.asp">
+<img src="logo1.gif" width="120" height="60" border="0" align=left vspace=0 hspace=0></a>
+<center>
+
+<A HREF="http://www.rozika.com/subcat.asp?id1=10&amp;path1=Microsoft" Office border=0>
+<img src="banner_microsoft.gif" alt="RoziKa.CoM" width=468 height=60 border=0></a>
+</TD>
+</tr>
+
+   <tr>
+      <td bgcolor="#8BA2B5" colspan=2>
+      <img src="dotclear.gif" width="600" height="1" border="0"></td>
+   </tr>
+
+<TR>
+<td valign="bottom" align="left" bgcolor="white">
+<a href="http://www.rozika.com/lesson.asp"><font class=about><b>Dersler</b></font></font></a>
+<font color="#8BA2B5" class=about>|</font>
+<a href="http://www.rozika.com/news.asp"><font class=about><b>Haberler</b></font></a>
+<font color="#8BA2B5" class=about>|</font>
+<a href="http://www.rozika.com/glossary.asp"><font class=about><b>Sözlük</b></font></a>
+<font color="#8BA2B5" class=about>|</font>
+<a href="http://www.rozika.com/oyun.asp"><font class=about><b>Oyunlar</b></font></a>
+<font color="#8BA2B5" class=about>|</font>
+<a href="http://www.rozika.com/softwaredefault.asp"><font class=about><b>Yazılım Arşivi</b></font></a>
+<font color="#8BA2B5" class=about>|</font>
+<a href="http://www.rozika.com/surfdefault.asp"><font class=about><b>Web Rehberi</b></font></a>
+<font color="#8BA2B5" class=about>|</font>
+<a href="http://www.rozika.com/new"><font class=about><b>Forum</b></font></a>
+<font color="#8BA2B5" class=about>|</font>
+<a href="http://www.rozika.com/forum/policy.asp"><font class=about><b>Üyelik</b></font></a>
+<font color="#8BA2B5" class=about>|</font>
+&nbsp;&nbsp;
+<font color="red" class=about>
+<b>
+   <script language="JavaScript">
+   var isnMonth = new
+    Array("Ocak","Şubat","Mart","Nisan","Mayıs","Haziran","Temmuz","Ağustos","Eylül","Ekim","Kasım","Aralık");
+    var isnDay = new
+    Array("Pazar","P.tesi","Salı","Çarş.","Perş.","Cuma","C.tesi","Pazar");
+    today = new Date () ;
+    Yil=today.getYear();
+    if (Yil < 1000)
+    Yil+=1900
+    Gun=today.getDate();
+    var tarih = " "+Gun+" "+isnMonth[today.getMonth()]+"  "+Yil+", "+isnDay[today.getDay()]+" " ;
+    document.write(tarih)
+   </script></b>
+   </font>
+</td>
+</TR>
+</TABLE>
+<TABLE width="778" BORDER="0" CELLSPACING="0" CELLPADDING="0" ALIGN="CENTER" bgcolor="#E2871E">
+<tr><td align=right valign="top" bgcolor="#8BA2B5" height=1>
+</td></tr>
+</TABLE>
+<!--TOP-->
+<!--FAST-->
+
+<TABLE width="778" BORDER="0" CELLSPACING="0" CELLPADDING="0" ALIGN="CENTER">
+<TR><td width="1%">&nbsp;</td>
+<TD width="22%">&nbsp; </TD>
+<TD width="1%"></TD>
+<TD width="56%" vALIGN="top" ALIGN="CENTER">&nbsp; </TD>
+<TD width="20%" vALIGN="top">
+<IMG src="scat.asp%3FID=Recreation%252FAviation%252FPersonal_Pages%252FPilots%252F.1.html" width="1" height="1"></TD></TR>
+</TABLE>
+<TABLE width="778" BORDER="0" CELLSPACING="0" CELLPADDING="0" ALIGN="CENTER">
+  <TR>
+<td width="1%">&nbsp;</td>
+
+<TD width="19%" vALIGN="top">
+<!--LEFT-->
+
+<SCRIPT LANGUAGE="JavaScript">
+function CheckEmpty2(frm){
+	var str;
+	var str2;
+
+	str=strTrim(frm.username.value);
+	if (str.length == 0  ) {
+		alert("Lütfen 'Kullanıcı isminizi' giriniz.");
+		return false;
+	}
+	str2=strTrim(frm.password.value);
+	if (str2.length == 0  ) {
+		 alert("Lütfen 'Şifrenizi' giriniz.");
+		return false;
+	}
+}
+
+</SCRIPT>
+
+<table border="0" cellpadding="0" cellspacing="0" bgcolor="#172F5C" width=" 99% ">
+<tr bgcolor="#172F5C"><td><img src="iconleft.gif" border="0" width="9" height="9">
+<font color="white"> <b>ÜYE GİRİŞİ</b></font><br></td></tr></table>
+<TABLE width="99%" BORDER="0" CELLSPACING="0" CELLPADDING="0">
+<FORM name="frm_login" action="http://www.rozika.com/login.asp" method="post">
+<TR BGCOLOR="white">
+<TD><DIV class="clsPageMTit">
+<font class=clsAbout><b>Kullanıcı</b></font></DIV><INPUT TYPE="text" name="username" size="12" maxlength="20">
+</TD></TR>
+		                
+ 	<TR BGCOLOR="white"><TD><DIV class="clsPageMTit"><font class=clsAbout><b>Şifre</b></font></DIV>
+	<INPUT TYPE="password" name="password" size="12" maxlength="20">
+	<INPUT TYPE="Submit" VALUE="Giriş" name=Submit1 ALIGN="absmiddle">
+	<input type=hidden name=login value=true>
+	<br>
+<img src="bullet2.gif" border=0 width=8 height=9>
+<a href="http://www.rozika.com/forum/policy.asp"><font class=about><b>Üye olmak için...</b></font></a><br>
+<img src="bullet2.gif" border=0 width=8 height=9>
+<a href="javascript:op('forum/pop_pword.asp')"><font class=about><b>Şifremi Unuttum</b></font></a>
+</TD></TR> 
+</FORM>
+</TABLE> 
+
+<br>
+
+<table border="0" cellpadding="0" cellspacing="0" bgcolor="#CC0000" width=" 99% ">
+<tr bgcolor="#CC0000"><td><img src="iconleft.gif" border="0" width="9" height="9">
+<font color="white"> <b>PRATİK INTERNET</b></font><br></td></tr></table>    
+
+<TABLE width="99%" BORDER="0" CELLSPACING="0" CELLPADDING="0" bgColor="white">
+<TR>
+<TD><IMG src="animated4.gif" width="15" height="15" border=0>
+<A CLASS=3 HREF="http://www.rozika.com/brand.asp?id1=1&amp;id2=3&amp;path1=Pratik%20Internet&amp;path2=Internet'e%20H%FDzl%FD%20Eri%FEim"><font class=about color="#FF3300"><b>
+Hızlı Erişim</b></font></A><BR></TD></TR>
+<TR>
+<TD><IMG src="animated4.gif" width="15" height="15" border=0>
+<A CLASS=3 HREF="http://www.rozika.com/brand.asp?id1=1&amp;id2=4&amp;path1=Pratik%20Internet&amp;path2=Internet'te%20Y%FCksek%20Performans"><font class=about color="#FF3300"><b>Yüksek Performans</b></font></A><BR></TD></TR>
+<TR>
+<TD><IMG src="animated4.gif" width="15" height="15" border=0>
+<A CLASS=3 HREF="http://www.rozika.com/brand.asp?id1=1&amp;id2=5&amp;path1=Pratik%20Internet&amp;path2=Internet'i%20Etkili%20Kullanmak"><font class=about color="#FF3300"><b>Internet'i Etkili Kullanmak</b></font></A><BR></TD></TR>
+<TR>
+<TD><IMG src="animated4.gif" width="15" height="15" border=0>
+<A CLASS=3 HREF="http://www.rozika.com/brand.asp?id1=1&amp;id2=63&amp;path1=Pratik%20Internet&amp;path2=Netscape"><font class=about color="#FF3300"><b>Netscape</b></font></A><BR></TD></TR>
+</table>
+<br>
+
+<table border="0" cellpadding="0" cellspacing="0" bgcolor="#172F5C" width=" 99% ">
+<tr bgcolor="#172F5C"><td><img src="iconleft.gif" border="0" width="9" height="9">
+<font color="white"> <b>E-MAIL</b></font><br></td></tr></table>    
+
+<TABLE width="99%" BORDER="0" CELLSPACING="0" CELLPADDING="0" bgColor="white">
+<TR>
+<TD><IMG src="arrow_red.gif" width="9" height="9" border=0>
+<A CLASS=3 HREF="http://www.rozika.com/brand.asp?id1=2&amp;id2=12&amp;path1=E-mail&amp;path2=Olmazsa%20Olmaz%20Bilgiler"><font class=about><b>Temel Bilgiler</b></font></A><BR></TD></TR>
+<TR><TD><IMG src="arrow_red.gif" width="9" height="9" border=0>
+<A CLASS=3 HREF="http://www.rozika.com/brand.asp?id1=2&amp;id2=15&amp;path1=E-mail&amp;path2=E-mail%20G%FCvenli%F0i"><font class=about><b>E-mail Güvenliği</b></font></A><BR></TD></TR>
+<TR>
+<TD><IMG src="arrow_red.gif" width="9" height="9" border=0>
+<A CLASS=3 HREF="http://www.rozika.com/brand.asp?id1=2&amp;id2=14&amp;path1=E-mail&amp;path2=E-mail%20Trafi%F0ini%20Y%F6netmek"><font class=about><b>E-mail Trafiğini Yönetmek</b></font></A><BR></TD></TR>
+</table>
+<br>
+
+<table border="0" cellpadding="0" cellspacing="0" bgcolor="#006633" width=" 99% ">
+<tr bgcolor="#006633"><td><img src="iconleft.gif" border="0" width="9" height="9">
+<font color="white"> <b>ICQ/mIRC</b></font><br></td></tr></table>    
+
+<TABLE width="99%" BORDER="0" CELLSPACING="0" CELLPADDING="0" bgColor="white">
+<TR><TD><IMG src="icq.gif" width="15" height="15" border=0>
+<A CLASS=3 HREF="http://www.rozika.com/brand.asp?id1=3&amp;id2=18&amp;path1=ICQ/mIRC&amp;path2=ICQ"><font class=about color="#006600"><b>ICQ</b></font></A><BR></TD></TR>
+<TR><TD><IMG src="icq.gif" width="15" height="15" border=0>
+<A CLASS=3 HREF="http://www.rozika.com/brand.asp?id1=3&amp;id2=19&amp;path1=ICQ/mIRC&amp;path2=mIRC"><font class=about color="#006600"><b>mIRC</b></font></A><BR></TD></TR>
+<TR><TD><IMG src="icq.gif" width="15" height="15" border=0>
+<A CLASS=3 HREF="http://www.rozika.com/brand.asp?id1=3&amp;id2=74&amp;path1=ICQ/mIRC&amp;path2=An%FDnda%20Mesajla%FEma%20%3Cimg%20src=yeni1.gif%20border=0%3E"><font class=about color="#006600"><b>Anında Mesajlaşma</b></font></A><BR></TD></TR>
+</TABLE>
+
+<br>
+
+<table border="0" cellpadding="0" cellspacing="0" bgcolor="#172F5C" width=" 99% ">
+<tr bgcolor="#172F5C"><td><img src="iconleft.gif" border="0" width="9" height="9">
+<font color="white"> <b>E-TİCARET</b></font><br></td></tr></table>    
+
+<TABLE width="99%" BORDER="0" CELLSPACING="0" CELLPADDING="0" bgColor="white">
+<TR><TD><IMG src="arrow_red.gif" width="9" height="9" border=0>
+<A CLASS=3 HREF="http://www.rozika.com/brand.asp?id1=5&amp;id2=9&amp;path1=E-Ticaret&amp;path2=Sanal%20Al%FD%FEveri%FE"><font class=about><b>Sanal Alışveriş</b></font></A><BR></TD></TR>
+<TR><TD><IMG src="arrow_red.gif" width="9" height="9" border=0>
+<A CLASS=3 HREF="http://www.rozika.com/brand.asp?id1=5&amp;id2=72&amp;path1=E-Ticaret&amp;path2=Online%20Bankac%FDl%FDk"><font class=about><b>Online Bankacılık</b></font></A><BR></TD></TR>
+<TR><TD><IMG src="arrow_red.gif" width="9" height="9" border=0>
+<A CLASS=3 HREF="http://www.rozika.com/brand.asp?id1=5&amp;id2=28&amp;path1=E-Ticaret&amp;path2=Internet'te%20%DD%FE%20Bulmak"><font class=about><b>Internet'de İş Bulmak</b></font></A><BR></TD></TR>
+
+</TABLE>
+
+<br>
+
+<table border="0" cellpadding="0" cellspacing="0" bgcolor="#FF9900" width=" 99% ">
+<tr bgcolor="#FF9900"><td><img src="iconleft.gif" border="0" width="9" height="9">
+<font color="white"> <b>MP3</b></font><br></td></tr></table>    
+
+<TABLE width="99%" BORDER="0" CELLSPACING="0" CELLPADDING="0" bgColor="white">
+<TR><TD><IMG src="logo_mp3.gif" width="15" height="15" border=0>
+<A CLASS=3 HREF="http://www.rozika.com/brand.asp?id1=7&amp;id2=33&amp;path1=MP3&amp;path2=MP3:%20K%FDsaca"><font class=about color="#FFCC00"><b>MP3 Kısaca</b></font></A><BR></TD></TR>
+<TR><TD><IMG src="logo_mp3.gif" width="15" height="15" border=0>
+<A CLASS=3 HREF="http://www.rozika.com/brand.asp?id1=7&amp;id2=34&amp;path1=MP3&amp;path2=MP3%20Dinlemek"><font class=about color="#FFCC00"><b>MP3 Dinlemek</b></font></A><BR></TD></TR>
+<TR><TD><IMG src="logo_mp3.gif" width="15" height="15" border=0>
+<A CLASS=3 HREF="http://www.rozika.com/brand.asp?id1=7&amp;id2=35&amp;path1=MP3&amp;path2=MP3%20Yaratmak"><font class=about color="#FFCC00"><b>MP3 Yaratmak</b></font></A><BR></TD></TR>
+<TR><TD><IMG src="logo_mp3.gif" width="15" height="15" border=0>
+<A CLASS=3 HREF="http://www.rozika.com/brand.asp?id1=7&amp;id2=37&amp;path1=MP3&amp;path2=Napster%20Ger%E7e%F0i"><font class=about color="#FFCC00"><b>Napster Gerçeği</b></font></A><BR></TD></TR>
+<TR><TD><IMG src="logo_mp3.gif" width="15" height="15" border=0>
+<A CLASS=3 HREF="http://www.rozika.com/brand.asp?id1=7&amp;id2=62&amp;path1=MP3&amp;path2=MP3%20%C7alar'lar%3Cimg%20src=yeni1.gif%20border=0%3E"><font class=about color="#FFCC00"><b>MP3 Çalar'lar</b></font></A><BR></TD></TR>
+</TABLE>
+
+<br>
+
+<table border="0" cellpadding="0" cellspacing="0" bgcolor="#172F5C" width=" 99% ">
+<tr bgcolor="#172F5C"><td><img src="iconleft.gif" border="0" width="9" height="9">
+<font color="white"> <b>VCD/DVD</b></font><br></td></tr></table>    
+
+<TABLE width="99%" BORDER="0" CELLSPACING="0" CELLPADDING="0" bgColor="white">
+<TR><TD><IMG src="arrow_red.gif" width="9" height="9" border=0>
+<A CLASS=3 HREF="http://www.rozika.com/brand.asp?id1=8&amp;id2=38&amp;path1=VCD%20/%20DVD&amp;path2=VCD/DVD%20Rehberi"><font class=about><b>VCD/DVD Rehberi</b></font></A><BR></TD></TR>
+<TR><TD><IMG src="arrow_red.gif" width="9" height="9" border=0>
+<A CLASS=3 HREF="http://www.rozika.com/brand.asp?id1=8&amp;id2=40&amp;path1=VCD%20/%20DVD&amp;path2=VCD/%20DVD%20Sat%FDn%20Alma%20K%FDlavuzu"><font class=about><b>Satın Alma Kılavuzu</b></font></A><BR></TD></TR>
+<TR><TD><IMG src="arrow_red.gif" width="9" height="9" border=0>
+<A CLASS=3 HREF="http://www.rozika.com/brand.asp?id1=8&amp;id2=73&amp;path1=VCD%20/%20DVD&amp;path2=En%20%DDyi%20DVD-%C7alarlar%20%3Cimg%20src=yeni1.gif%20border=0%3E"><font class=about><b>En İyi DVD Çalar'lar</b></font></A><BR></TD></TR>
+</TABLE>
+
+<br>
+
+<table border="0" cellpadding="0" cellspacing="0" bgcolor="#666699" width=" 99% ">
+<tr bgcolor="#666699"><td><img src="iconleft.gif" border="0" width="9" height="9">
+<font color="white"> <b>MS OFFICE</b></font><br></td></tr></table>    
+
+<TABLE width="99%" BORDER="0" CELLSPACING="0" CELLPADDING="0" bgColor="white">
+<TR><TD><IMG src="word1.gif" width="15" height="15" border=0>
+<A CLASS=3 HREF="http://www.rozika.com/brand.asp?id1=10&amp;id2=46&amp;path1=Microsoft%20Office&amp;path2=Word"><font class=about><b>Word</b></font></A><BR></TD></TR>
+<TR><TD><IMG src="excel1.gif" width="15" height="15" border=0>
+<A CLASS=3 HREF="http://www.rozika.com/brand.asp?id1=10&amp;id2=47&amp;path1=Microsoft%20Office&amp;path2=Excel"><font class=about color="#669933"><b>Excel</b></font></A><BR></TD></TR>
+<TR><TD><IMG src="powerpoint1.gif" width="15" height="15" border=0>
+<A CLASS=3 HREF="http://www.rozika.com/brand.asp?id1=10&amp;id2=48&amp;path1=Microsoft%20Office&amp;path2=PowerPoint"><font class=about color="#FF3300"><b>Powerpoint</b></font></A><BR></TD></TR>
+<TR><TD><IMG src="access1.gif" width="15" height="15" border=0>
+<A CLASS=3 HREF="http://www.rozika.com/brand.asp?id1=10&amp;id2=49&amp;path1=Microsoft%20Office&amp;path2=Access%20%3Cimg%20src=yeni1.gif%20border=0%3E"><font class=about color="#CC3366"><b>Access</b></font></A><BR></TD></TR>
+</TABLE>
+
+<br>
+
+<table border="0" cellpadding="0" cellspacing="0" bgcolor="#172F5C" width=" 99% ">
+<tr bgcolor="#172F5C"><td><img src="iconleft.gif" border="0" width="9" height="9">
+<font color="white"> <b>AVUÇİÇİ</b></font><br></td></tr></table>   
+
+<TABLE width="99%" BORDER="0" CELLSPACING="0" CELLPADDING="0" bgColor="white">
+<TR><TD><IMG src="arrow_red.gif" width="9" height="9" border=0>
+<A CLASS=3 HREF="http://www.rozika.com/brand.asp?id1=12&amp;id2=56&amp;path1=Avu%E7i%E7i&amp;path2=Palm%20nedir?"><font class=about><b>Palm Nedir?</b></font></A><BR></TD></TR>
+<TR><TD><IMG src="arrow_red.gif" width="9" height="9" border=0>
+<A CLASS=3 HREF="http://www.rozika.com/brand.asp?id1=12&amp;id2=57&amp;path1=Avu%E7i%E7i&amp;path2=Palm%20Yaz%FDl%FDm%20Rehberi"><font class=about><b>Avuçiçi Yazılımlar</b></font></A><BR></TD></TR>
+</TABLE>
+
+<br>
+
+<!-- SEARCH -->
+<table border="0" cellpadding="0" cellspacing="0" bgcolor="#666666" width=" 99% ">
+<tr bgcolor="#666666"><td><img src="iconleft.gif" border="0" width="9" height="9">
+<font color="white"> <b>ARAMA</b></font><br></td></tr></table>   
+
+<TABLE width="99%" BORDER="0" CELLSPACING="0" CELLPADDING="0" BORDERCOLOR=#EEEEEE BORDER=0 bgColor="white">
+
+<form name="gs" method="get" action="http://www.google.com.tr/custom" target="_top">	
+<TR>
+		<TD>
+<input type="hidden" name="client" value="pub-5289213389266084"></input>
+<input type="hidden" name="forid" value="1"></input>
+<input type="hidden" name="ie" value="ISO-8859-9"></input>
+<input type="hidden" name="oe" value="ISO-8859-9"></input>
+<input type="hidden" name="cof" value="GALT:#008000;GL:1;DIV:#336699;VLC:663399;AH:center;BGC:FFFFFF;LBGC:336699;ALC:0000FF;LC:0000FF;T:000000;GFNT:0000FF;GIMP:0000FF;LH:25;LW:50;L:http://www.rozika.com/logo1.gif;S:http://;FORID:1;"></input>
+<input type="hidden" name="hl" value="tr"></input>
+<input type="hidden" name="domains" value="www.rozika.com"></input>
+<INPUT TYPE="text" name="q" size="16" maxlength="100">
+
+            <A onclick="document.gs.submit();">
+            <IMG BORDER="0" src="ara.gif" width="24" height="19" ALIGN="absmiddle"><BR></A>
+<input type="radio" name="sitesearch" value="www.rozika.com" checked="checked"></input>
+<font size="-1" color="#000000">www.rozika.com</font>
+
+            </TD>
+	</TR>
+ 	</FORM>
+</TABLE>
+<br>
+
+<table border="0" cellpadding="0" cellspacing="0" bgcolor="#FF9900" width=" 99% ">
+<tr bgcolor="#FF9900"><td><img src="iconleft.gif" border="0" width="9" height="9">
+<font color="white"> <b>BÖLÜMLER</b></font><br></td></tr></table>   
+
+<TABLE width="99%" BORDER="0" CELLSPACING="0" CELLPADDING="0" bgColor="white">
+<tr><td width="100%" onMouseOut="javascript:this.style.background='white'" onMouseOver="javascript:this.style.background='NavajoWhite'" bgcolor=white align="left" height="20" valign="middle" nowrap style="border-bottom-style: solid; border-bottom-width: 1">
+<A HREF="http://www.rozika.com/forum/default.asp"><font class=about color=#FF9900><b>:: Forum</b></font></A></TD></TR>
+
+<tr><td width="100%" onMouseOut="javascript:this.style.background='white'" onMouseOver="javascript:this.style.background='NavajoWhite'" bgcolor=white align="left" height="20" valign="middle" nowrap style="border-bottom-style: solid; border-bottom-width: 1">
+<A HREF="http://www.rozika.com/surfdefault.asp"><font class=about color=#FF9900><b>:: WebRehberi</b></font></A></TD></TR>
+
+<tr><td width="100%" onMouseOut="javascript:this.style.background='white'" onMouseOver="javascript:this.style.background='NavajoWhite'" bgcolor=white align="left" height="20" valign="middle" nowrap style="border-bottom-style: solid; border-bottom-width: 1">
+<A HREF="http://www.rozika.com/softwaredefault.asp"><font class=about color=#FF9900><b>:: Yazılım Arşivi</b></font></A></TD></TR>
+
+<tr><td width="100%" onMouseOut="javascript:this.style.background='white'" onMouseOver="javascript:this.style.background='NavajoWhite'" bgcolor=white align="left" height="20" valign="middle" nowrap style="border-bottom-style: solid; border-bottom-width: 1">
+<A HREF="http://www.rozika.com/top10.asp"><font class=about color=#FF9900><b>:: TOP 10</b></font></A></TD></TR>
+
+<tr><td width="100%" onMouseOut="javascript:this.style.background='white'" onMouseOver="javascript:this.style.background='NavajoWhite'" bgcolor=white align="left" height="20" valign="middle" nowrap style="border-bottom-style: solid; border-bottom-width: 1">
+<A HREF="http://www.rozika.com/glossary.asp?iki=1"><font class=about color=#FF9900><b>:: Sözlük</b></font></A></TD></TR>
+</TABLE>
+<br>
+
+<script language="JavaScript">
+function op(url) {
+  popupWin = window.open(url,'new_page','width=600,height=450,scrollbars=yes')
+}
+</script>
+<script>
+function func_add2favorites(){
+window.external.AddFavorite('http://www.rozika.com','RoZiKa.CoM -> Internet Rehberiniz');
+}
+</script>
+
+<table border="0" cellpadding="0" cellspacing="0" bgcolor="orange" width=" 99% ">
+<tr bgcolor="orange"><td><img src="iconleft.gif" border="0" width="9" height="9">
+<font color="white"> <b>ROZİKA'YA KATIL</b></font><br></td></tr></table> 
+
+<table border="0" width="100%" cellspacing="0" cellpadding="0">
+<tr><td>
+
+<tr><td width="100%" onMouseOut="javascript:this.style.background='White'" onMouseOver="javascript:this.style.background='NavajoWhite'" bgcolor=White align="left" height="25" valign="middle" nowrap style="border-bottom-style: solid; border-bottom-width: 1">
+<a class=about href="javascript:void(0);" onclick="this.style.behavior='url(#default#homepage)';this.setHomePage('http://www.rozika.com/');"  style="cursor: hand">
+<font class=about color=#FF9900><b><img src="home.gif" width="16" height="17" border="0" align="bottom"> Ana Sayfa Yap</b></a></font></a>
+</td></tr>
+
+<tr><td width="100%" onMouseOut="javascript:this.style.background='White'" onMouseOver="javascript:this.style.background='NavajoWhite'" bgcolor="White" align="left" height="25" valign="middle" nowrap style="border-bottom-style: solid; border-bottom-width: 1">
+<a href="javascript:void(0);" onclick='func_add2favorites();'>
+<font class=about color=#FF9900><b><img src="contact.gif" width="16" height="17" border="0" align="bottom"> Favorilere Ekle</b></a></font></a>
+</td></tr>
+
+</td></tr></table>
+
+<br>
+
+<table border="0" cellpadding="0" cellspacing="0" bgcolor="#3366FF" width=" 99% ">
+<tr bgcolor="#3366FF"><td><img src="iconleft.gif" border="0" width="9" height="9">
+<font color="white"> <b>BİZE ULAŞIN</b></font><br></td></tr></table>   
+
+<TABLE width="99%" BORDER="0" CELLSPACING="0" CELLPADDING="0" ALIGN="CENTER">
+<TR>
+<TD valign="middle">
+<p align="left">
+<a href="mailto:admin@Rozika.Com?subject=Rozika.Com Hakkındaki Görüşüm">
+<img src= "news.gif" border=0 align="left" width=38 height=35></a>
+<font color=black class=about>Her türlü <b>görüş</b>, <b>eleştiri</b> ve <b>yorumlarınız</b> bizim için çok değerli! Sizlere daha yararlı olabilmek için lütfen</font id=black> 
+<a href="mailto:admin@Rozika.Com?subject=Rozika.Com Hakkındaki Görüşüm">
+<b>tıklayın!</b></A></p>
+</TD></TR>
+</TABLE>
+
+
+<TD width="1%" background="point.gif">&nbsp;</TD>
+</TD>
+
+<!--POLL-->
+
+<!--PATH-->
+<TD VALIGN="top" ALIGN="CENTER" width="58%">
+
+<TABLE width="100%" BORDER="0" CELLSPACING="0" CELLPADDING="0" ALIGN="CENTER">
+<div align=left>&nbsp;&nbsp;
+<a href="http://www.rozika.com/default.asp"><font class=about color=MediumBlue><b>Ana Sayfa</b></font></a>
+<font class=about>&nbsp;&gt;&nbsp;</font>
+<a href="http://www.rozika.com/surfdefault.asp"><font class=about color=MediumBlue><b>Web Rehberi</b></font></a>
+<font class=about>&nbsp;&gt;&nbsp;</font>
+<font class=about color=black> Recreation/Aviation/Personal_Pages/Pilots/</font>
+</div>
+</TABLE>
+<BR>
+<!--PATH-->
+<!--CENTER-->
+<TABLE width="96%" BORDER="0" CELLSPACING="0" CELLPADDING="0" ALIGN="CENTER" >
+<TD><DIV class="login"><b>WEBREHBERİ</b></DIV></TD>
+</TR>
+<TR height="4"><td width="100%"><img src="1px.gif" width="95%" height="2" alt="" border="0"></TD></TR>
+<TR height="4"><TD>
+<DIV class="newscontent">
+<IMG ALIGN=left src="acid.gif" border=0>
+<A class="3" HREF=><b>Hoşgeldiniz!</b></A><BR>
+<font color=brown><b>WebRehberi'</b></font><font color=black class=about>ne sitenizi eklemek için lütfen</font>
+<a class="2" href="http://dmoz.org/cgi-bin/add.cgi?where=Recreation/Aviation/Personal_Pages/Pilots/"><b>tıklayınız!</b></a>
+</DIV>
+<CENTER><hr color=#79A5D5 width=98% noshade size=1></center>
+</TD></TR>
+
+<TR><TD vALIGN="top">
+<br>
+<table border=0 cellpadding=1 cellspacing=1 bgcolor="#8BA2B5" width=99%>
+<tr bgcolor=#172F5C><td>
+<img src="iconleft.gif" border=0 width=9 height=9>
+<font color=white> <b>WEB REHBERİ</b></font>
+<br></td></tr>
+<tr bgcolor=whitesmoke><td>
+<font class=about color=brown><b>RoziKa.CoM</b></font><font class=about color=black>'da yer alan <b>web rehberleri</b>:</font>
+</td></tr>
+</table>
+
+</center>
+
+<table align=center width="100%" cellpadding=0 cellspacing=0><tr><td align=left valign=top><font size="+1"><b><a href="http://www.rozika.com/scat.asp?ID=">Top</a>: <a href="http://www.rozika.com/scat.asp?ID=Recreation/">Recreation</a>:
+<a href="http://www.rozika.com/scat.asp?ID=Recreation/Aviation/">Aviation</a>:
+<a href="http://www.rozika.com/scat.asp?ID=Recreation/Aviation/Personal_Pages/">Personal Pages</a>:
+Pilots</b></font> &nbsp;<i>(41)</i>
+</td><td align=right valign=top><table bgcolor="#f0f0f0" cellspacing=0 cellpadding=4><tr><td align=center><b><a href="http://dmoz.org/Recreation/Aviation/Personal_Pages/Pilots/desc.html" target="_new">Description</a></b></td></tr><tr><td align=center></table></td></tr></table>
+<hr>
+<ul>
+<li><a href="http://webs.lanset.com/aeolusaero/">Aeolus Aerospace</a> - A collection of aerospace life support equipment and the Christopher T. Carey opinions on American society.
+<li><a href="http://allanhanbury.netfirms.com">Allan Hanbury's Homepage</a> - Private pilot flights from Cardiff International Airport. Logbook, photos, journal, links and feedback.
+<li><a href="http://www.iol.ie/~jordane/fly">AV8 Ireland</a> - Flying in Ireland, forum, photo gallery, space flight, and Salthill airshow, July 2001.
+<li><a href="http://www.notso.com/aviator.htm">Aviator Logic</a> - Flying quotations from River Rat Gerald Horiuchi.
+<li><a href="http://www.geocities.com/bdt13/airshow.html">Ben's Airshow Pages</a> - Descriptions of and photos from airshows Ben has attended.
+<li><a href="http://hometown.aol.com/GRC6431/myhomepage/index.html">Bob Champine</a> - History of Bobs' aviation career; including some personal history and his involvement with both NACA, NASA, and model aviation.
+<li><a href="http://www.kerrlake.com/mgarratt/index.htm">Carol Ann Garratt World Flight</a> - Pilot's editorial of trip around in the world in a Mooney.
+<li><a href="http://www.damir.co.uk/">Damir's Aviation Site</a> - Damir's flying experiences in the UK, with a list of airfields visited, air show pictures, and videos.
+<li><a href="http://www.dmjwilliams.co.uk/">David Williams Flying Homepage</a> - Includes a photo gallery, aircraft flown, logbook, and links.
+<li><a href="http://www.dicksmithflyer.com.au/">Dick Smith Flyer</a> - Aviator Dick Smith comments on general aviation in Australia.
+<li><a href="http://www.eisenhard.net/brucee/mooney/">Eisenhard's Mooney</a> - Bruce and Nancy Eisenhard offers photos of a Mooney aircraft before and after restoration.
+<li><a href="http://www.icfn.net/bluesky">Erez's Aviation Homepage</a> - Offering photo galleries of various types of aircrafts.
+<li><a href="http://www.fergworld.com">Fergworld</a> - Personal aviation experiences of a flight instructor. Includes training and reference section, articles, stories, and flying pictures.
+<li><a href="http://flyto.mysite.wanadoo-members.co.uk/">Flying for fun</a> - John Crossland offers information on air trips.
+<li><a href="http://www.geocities.com/carolosm/">Flying in Africa</a> - Photojournal of flying in Africa.
+<li><a href="http://flyingohio.blogspot.com/">Flying In Ohio</a> - A blog detailing the adventures of a private pilot in Ohio, also general aviation topics.
+<li><a href="http://www.frenchflyer.com/">Frenchflyer's Home Page</a> - Emmanuelle Richard's offers photos, movies and stories about her aviation adventures.
+<li><a href="http://pad39a.com/gene/plane.html">Gene Seibel's Electric Flying Machine</a> - Offering information on a TriPacer. Stories, pictures, links.
+<li><a href="http://www.holiday.flyer.co.uk/">Holiday Flyer</a> - The flying experiences of a British private pilot in  Europe, Canada and US. Pictures and stories.
+<li><a href="http://www.honeymooney.com/">Honey Mooney's Home Page</a> - Pilot's world wide adventures in a Mooney aircraft. Includes logbook and photographs.
+<li><a href="http://www.jimforeman.com/Stories/flying.htm">Jim Foreman's Flying Stories</a> - A collection of tales from a glider pilot and a builder of homemade aircraft.
+<li><a href="http://www.oregonairborne.com">Jon Eggert's Flying Pages</a> - Private pilot's flight journal, photos, and trip stories in the Oregon area.
+<li><a href="http://members.tripod.com/SuperSabre/KKHomepage.htm">Kunal's Khatua's Homepage</a> - Offers personal insight into aviation history and links.
+<li><a href="http://homepage.mac.com/lcgauthier/">Laurent's Helicopter Pictures</a> - Photo albums of Laurent's flights, and the machines used for them.
+<li><a href="http://www.geocities.com/kswisslk01/">Lee Keller's Aerodrome</a> - Personal information, aircraft pictures and links to pilot resources.
+<li><a href="http://www.gear-up.ch">Markus Rohrers Aviation Page</a> - Offering information about an airline pilot's life. Includes bio and photo gallery.
+<li><a href="http://members.aol.com/creasonwings">Mary Creason's Aviation Website</a> - Offering info about pilot training, racing, scholarships, and aviation camp from a pilot with 60 years of aviation experience.
+<li><a href="http://www.ecn.net.au/~mb/">Mick Boyle's Aviation Page</a> - Offering information on Mick Boyle from Brisbane Australia.
+<li><a href="http://www.geocities.com/SouthBeach/Bay/3012/">Mike's Page</a> - Aviation photography, articles, and personal information of flight instructor Mike Drag.
+<li><a href="http://www.newflight.net/">NewFlight Student Pilot Experience Australia</a> - Offering student pilot experiences. Includes journals, pictures, reports, links, and aviation adventures.
+<li><a href="http://home.sprynet.com/~nhoffmann/">Nick's Aviation World</a> - Offering insight by an Aircraft Dispatcher for a US Airline. Aircraft dispatch, aviation weather, flight simulator, aviation photography, aircraft spotting, and airline news.
+<li><a href="http://www.ovomalley.com">Owen O'Malley and the RAAF 462 Squadron</a> - Tribute to the late Owen O'Malley and members of the RAF/RAAF 462 Squadron. Includes rare photos.
+<li><a href="http://flying.guapacha.com">Paul's Flying Diary - Ratings and Trip Reports</a> - This site chronicles the flight training diary and 'interesting' flights that the author has taken.
+<li><a href="http://www.pfactor.com">Pfactor - Flying and Stuff</a> - Articles written by husband and wife pilots about general aviation travel, pictures, and flying in general.
+<li><a href="http://www.thepilotlounge.com">The Pilot Lounge Message Board</a> - This site provides a location for pilots to discuss and share their aviation issues, experiences and adventures.
+<li><a href="http://rafaero.free.fr/index-eng.html">Raf Aerobatics</a> - Offers pictures, aerobatic history, animations, videos, and forum.
+<li><a href="http://www.geocities.com/CapeCanaveral/Hangar/7596/">Sergei N.Stepanenko</a> - History from Russian flight test engineer, Sergei N.Stepanenko.
+<li><a href="http://home.earthlink.net/~soaresva/avpage.htm">The Soares Aviation Web Site</a> - Vincent A. Soares describes aviation experiences with photos and profile.
+<li><a href="http://www.claytor.com">Tom Claytor Bush Pilot</a> - Offering information on the travels of a bush pilot on a solo flight to seven continents.
+<li><a href="http://www.worldwings.org/">Wings Around the World</a> - Record-breaking solo flight in a single engine Piper Cherokee Dakota undertaken by Polly Vacher. Provides a picture gallery, diary, itinerary and route map.
+<li><a href="http://www.zone.com.br/parceiros/asasdovento/ingles/">Wings of the Wind</a> - Details a flight around the world by Gerard Moss in a Ximango. Information on aircraft, pilot, support team, log book and position.
+</ul><hr>
+
+
+<table border=0 cellpadding=1 cellspacing=1 bgcolor="#8BA2B5" width=99%>
+<tr bgcolor=#172F5C><td>
+<img src="iconleft.gif" border=0 width=9 height=9>
+<font color=white> <b>SİTENİZİ EKLEYİN</b></font>
+<br></td></tr>
+<tr bgcolor=whitesmoke><td>
+<font class=about color=brown><b>RoziKa.CoM</b></font><font class=about color=black>'a sitenizi <b>ODP</b> aracılığı ile ekleyebilirsiniz:</font>
+</td></tr>
+</table>
+
+<table border=0 cellspacing=0 cellpadding=4 width=99%>
+
+       <tr bgcolor="#CCCCCC" align="center">
+        <td><font face="sans-serif, Arial, Helvetica" size="2"> 
+		<a href="http://dmoz.org/cgi-bin/add.cgi?where=Recreation/Aviation/Personal_Pages/Pilots/">SİTENİZİ EKLEYİN!
+            </a>
+</td>
+</tr>
+</table>
+
+</TD></TR>
+</TABLE>
+<BR>
+
+<!--CENTER-->
+</TD>
+<!--RIGHT-->
+<TD width="20%" vALIGN="top" align="right">
+
+<TABLE width="99%" BORDER="0" CELLSPACING="0" CELLPADDING="0" ALIGN="CENTER" bgColor="white">
+<TR>
+<TD>
+<center>
+<script type="text/javascript">
+<!--
+google_ad_client = "pub-5289213389266084";
+google_ad_width = 120;
+google_ad_height = 600;
+google_ad_format = "120x600_as";
+google_ad_type = "text_image";
+google_ad_channel ="";
+google_color_border = "660000";
+google_color_bg = "7D2626";
+google_color_link = "FFFFFF";
+google_color_url = "DAA520";
+google_color_text = "BDB76B";
+//--></script>
+<script type="text/javascript"  src="http://pagead2.googlesyndication.com/pagead/show_ads.js"> </script>
+</center>
+</TD></TR>
+</TABLE>
+
+<br>
+
+<TABLE width="99%" cellpadding=1 cellspacing=1 BORDER="0" ALIGN="CENTER" bgcolor="#8BA2B5">
+<tr bgcolor=Chocolate><td>
+<img src="iconleft.gif" border=0 width=9 height=9>
+<font color=white class=clsAbout>
+<b>POPÜLER SİTELER</b>
+</font>
+</td></tr>
+</TABLE>
+
+<TABLE width="99%" BORDER="0" CELLSPACING="0" CELLPADDING="0" ALIGN="CENTER" bgcolor="whitesmoke">
+<TR><TD>
+
+
+<A class=3 HREF="http://www.rozika.com/surf.asp?id1=199" target=_blank>
+<img src="mor.gif" border=0 width=9 height=9>
+<font class=about color=Chocolate>
+<b> TurkMP3</b></font></A><BR>
+
+<A class=3 HREF="http://www.rozika.com/surf.asp?id1=201" target=_blank>
+<img src="mor.gif" border=0 width=9 height=9>
+<font class=about color=Chocolate>
+<b> Turk Best MP3</b></font></A><BR>
+
+<A class=3 HREF="http://www.rozika.com/surf.asp?id1=310" target=_blank>
+<img src="mor.gif" border=0 width=9 height=9>
+<font class=about color=Chocolate>
+<b> Excel.gen.tr</b></font></A><BR>
+
+<A class=3 HREF="http://www.rozika.com/surf.asp?id1=217" target=_blank>
+<img src="mor.gif" border=0 width=9 height=9>
+<font class=about color=Chocolate>
+<b> YourMobile</b></font></A><BR>
+
+<A class=3 HREF="http://www.rozika.com/surf.asp?id1=195" target=_blank>
+<img src="mor.gif" border=0 width=9 height=9>
+<font class=about color=Chocolate>
+<b> AKM Online</b></font></A><BR>
+
+<A class=3 HREF="http://www.rozika.com/surf.asp?id1=160" target=_blank>
+<img src="mor.gif" border=0 width=9 height=9>
+<font class=about color=Chocolate>
+<b> Kim 500 milyar ister?</b></font></A><BR>
+
+<A class=3 HREF="http://www.rozika.com/surf.asp?id1=214" target=_blank>
+<img src="mor.gif" border=0 width=9 height=9>
+<font class=about color=Chocolate>
+<b> Cepci.Com</b></font></A><BR>
+
+<A class=3 HREF="http://www.rozika.com/surf.asp?id1=200" target=_blank>
+<img src="mor.gif" border=0 width=9 height=9>
+<font class=about color=Chocolate>
+<b> Muziik.CoM</b></font></A><BR>
+
+<A class=3 HREF="http://www.rozika.com/surf.asp?id1=213" target=_blank>
+<img src="mor.gif" border=0 width=9 height=9>
+<font class=about color=Chocolate>
+<b> WinBox</b></font></A><BR>
+
+<A class=3 HREF="http://www.rozika.com/surf.asp?id1=216" target=_blank>
+<img src="mor.gif" border=0 width=9 height=9>
+<font class=about color=Chocolate>
+<b> Superonline Mesaj Merkezi</b></font></A><BR>
+
+</TD></TR>
+</TABLE>
+
+<br>
+
+<TABLE width="99%" cellpadding=1 cellspacing=1 BORDER="0" ALIGN="CENTER" bgcolor="#8BA2B5">
+<tr bgcolor=Chocolate><td>
+<img src="iconleft.gif" border=0 width=9 height=9>
+<font color=white class=clsAbout>
+<b>YAZI TAHTASI</b>
+</font>
+</td></tr>
+</TABLE>
+
+<TABLE width="99%" BORDER="0" CELLSPACING="0" CELLPADDING="0" ALIGN="CENTER">
+<TR><TD>
+<IMG src="leftleft.gif" width="9" height="9" border=0>
+<A HREF="http://www.rozika.com/article.asp?id1=1">
+<font class=about color=Chocolate>
+<b> Güzellik Uzmanı</b></font></A>
+<BR>
+
+<IMG src="leftleft.gif" width="9" height="9" border=0>
+<A HREF="http://www.rozika.com/article.asp?id1=2">
+<font class=about color=Chocolate>
+<b> Çocuk & Internet</b></font></A>
+<BR>
+
+<IMG src="leftleft.gif" width="9" height="9" border=0>
+<A HREF="http://www.rozika.com/article.asp?id1=3">
+<font class=about color=Chocolate>
+<b> Yeni Ekonomi</b></font></A>
+<BR>
+
+<IMG src="leftleft.gif" width="9" height="9" border=0>
+<A HREF="http://www.rozika.com/article.asp?id1=4">
+<font class=about color=Chocolate>
+<b> Moda Dünyası</b></font></A>
+<BR>
+
+<IMG src="leftleft.gif" width="9" height="9" border=0>
+<A HREF="http://www.rozika.com/article.asp?id1=5">
+<font class=about color=Chocolate>
+<b> Mutfak</b></font></A>
+<BR>
+
+<IMG src="leftleft.gif" width="9" height="9" border=0>
+<A HREF="http://www.rozika.com/article.asp?id1=6">
+<font class=about color=Chocolate>
+<b> Pratik Bilgiler</b></font></A>
+<BR>
+</TD></TR>
+</TABLE>
+
+<br>
+
+<TABLE width="99%" cellpadding=1 cellspacing=1 BORDER="0" ALIGN="CENTER" bgcolor="#8BA2B5">
+<tr bgcolor=Chocolate><td>
+<img src="iconleft.gif" border=0 width=9 height=9>
+<font color=white class=clsAbout>
+<b>BİZE ULAŞIN</b>
+</font>
+</td></tr>
+</TABLE>
+
+<TABLE width="99%" BORDER="0" CELLSPACING="0" CELLPADDING="0" ALIGN="CENTER" bgColor="white">
+<TR><TD valign="middle">
+<p align="left">
+<a class=3 href="mailto:admin@Rozika.Com?subject=Rozika.Com Hakkındaki Görüşüm">
+<img src="news.gif" border=0 align="left" width=38 height=35></a>
+<font color=black class=about>Her türlü <b>görüş</b>, <b>eleştiri</b> ve <b>yorumlarınız</b> bizim için çok değerli! Sizlere daha yararlı olabilmek için lütfen</font id=black>
+<a class=3 href="mailto:admin@Rozika.Com?subject=Rozika.Com Hakkındaki Görüşüm">
+<b>tıklayın!</b></A></p>
+</TD></TR>
+</TABLE>
+
+</TD>
+</TR>
+</TABLE>
+<!--RIGHT-->
+<!--FOOTER-->
+<TABLE width="620" BORDER="0" CELLSPACING="0" CELLPADDING="0" ALIGN="CENTER">
+<HR color="#8BA2B5" noshade size=1>
+
+<TR><TD>
+<DIV ALIGN="CENTER">
+<A HREF="http://www.rozika.com/en/index.html"><font class=clsAbout><b>RoZiKa in English</b></font></A> |
+<A HREF="javascript:op('about.asp')"><font class=clsAbout><b>Hakkımızda</b></font></A> | <A HREF="http://www.rozika.com/new/default.asp"><font class=clsAbout><b>Forum</b></font></A> |
+<A HREF="http://www.rozika.com/surfdefault.asp"><font class=clsAbout><b>WebRehberi</b></font></A> | <A HREF="http://www.rozika.com/softwaredefault.asp"><font class=clsAbout><b>Yazılım Arşivi</b></font></A> | <A HREF="http://www.rozika.com/glossary.asp?iki=1"><b>Sözlük</b></font></A> |
+<A HREF="javascript:op('contact.asp')"><font class=clsAbout><b>Bize Ulaşın</b></font></A>
+<BR></DIV>
+</TD></TR>
+<TR><TD ALIGN="CENTER">
+<DIV class="clsAbout"><b>© 2001-2006, RoZiKa.Com</b><BR>
+</DIV>
+</TD></TR>
+<tr><td bgcolor="#CCFF33">
+<DIV class="about">RoZiKa.Com, <a class=3 href=http://www.hertera.com target=_><b>Hertera Business Solutions</b></a> tarafından geliştirilen web teknolojilerini kullanmaktadır.</DIV>
+</td></tr>
+<tr><td>
+<center>
+</center>
+</td></tr>
+</TABLE>
+<script src="http://www.google-analytics.com/urchin.js" type="text/javascript">
+</script>
+<script type="text/javascript">
+_uacct = "UA-319780-1";
+urchinTracker();
+</script>
+<!--FOOTER-->
+<BR>
+</BODY>
+</HTML>

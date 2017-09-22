@@ -1,0 +1,331 @@
+/**** Typography ****/
+
+body {
+	font-size: 62.5%;
+	font-family: verdana, arial, sans-serif;
+}
+
+h1,h2,h3 {
+	font-family: arial, helvetica, sans-serif;
+}
+
+ul {
+	list-style: square;
+}
+
+ul {
+	margin-left: 2em;
+	padding-left: 0;
+}
+
+#header h1 {
+	font-size: 1.3em;
+	margin: 0;
+}
+
+#header h1 a {
+	color: #abc;
+	background: transparent;
+	text-decoration: none;
+}
+
+#header h2 {
+        font-family: arial, helvetica, sans-serif;
+	font-size: 2.5em;
+        font-weight: bold;
+	margin: 0;
+        color: #7367A9;
+}
+
+h2 {
+        font-family: georgia, serif;
+        font-weight: normal;
+}
+
+#page {
+	font-size: 1.4em;
+}
+
+#content {
+	line-height: 1.5em;
+}
+
+blockquote {
+	background: #eee;
+	padding: 2px 5px;
+}
+
+/**** Links ****/
+
+a {
+	color: #6C8C37;
+}
+
+a:hover {
+	text-decoration: underline;
+        color: #009193;
+}
+
+.new {
+	color: #f00;
+}
+
+hr {
+	border: 0;
+	border-bottom: 1px dotted #aaa;
+	height: 1px;
+}
+
+/**** Common ****/
+
+img, img a {
+	border: 0;
+}
+
+textarea {
+	width: 100%;
+}
+
+/**** Layout ****/
+
+body {
+	margin: 0;
+	padding: 30px 50px;
+	background:#EDE8E2;
+}
+
+#page {
+	margin: auto;
+}
+
+#header,#footer {
+	background: #fff;
+	padding: 30px 30px 20px;
+}
+
+#header { 
+	margin-top: 5px;
+}
+
+#content {
+	background: #fff;
+	padding: 5px 30px;
+}
+
+#search {
+	float: right;
+}
+
+#search form {
+	display: inline;
+}
+
+#subheader {
+	padding: 5px 15px;
+	background: #7367A9;
+	border-left: 15px solid #fff;
+	border-right: 15px solid #fff;
+}
+
+#credits {
+	text-align: center;
+}
+
+.clear {
+	clear: both;
+	height: 1px;
+}
+
+/**** Section Edit ****/
+
+.editsection {
+	font-size: x-small;
+}
+
+/**** Navigation ****/
+
+#navigation {
+	float: left;
+	padding-top: 2px;
+}
+
+#navigation a {
+	color: #fff;
+	background: transparent;
+        text-decoration: none;
+        text-transform: lowercase;
+        font-variant: small-caps;
+}
+
+#navigation a:hover {
+	text-decoration: underline;
+}
+
+#navigation ul {
+	list-style: none;
+	margin: 0;
+	padding: 0;
+}
+
+#navigation li {
+	display: inline;
+	padding-right: 10px;
+}
+
+/**** Footer ****/
+
+#footer {
+	text-align: center;
+}
+
+/**** Wiki Tools ****/
+
+#wikitools ul {
+	link-style: none;
+	margin-left: 0;
+	padding-left: 0;
+}
+
+#wikitools li {
+	background: #fff;
+	display: inline;
+}
+
+/**** Personal Tools ****/
+
+#personalTools {
+	text-transform: capitalize;
+}
+
+/**** Views Box ****/
+
+#views {
+	text-align: right;
+	margin-right: 15px;
+}
+
+#views ul {
+	link-style: none;
+	margin: 0;
+	padding: 0;
+}
+
+#views li {
+	background: #ddd;
+	display: inline;
+	padding: 5px;
+}
+
+#views li.selected {
+	background: #fff;
+}
+
+#views li:hover {
+	background: #eee;
+}
+
+#views li a {
+	text-decoration: none;
+	font-size: small;
+}
+
+/**** Table of Contents ****/
+
+#toc {
+	font-size: x-small;
+	margin-top: 1em;
+	background: #eee;
+	padding: 5px;
+}
+
+#toc ul, #toc li {
+	list-style: none;
+	margin: 0;
+	padding: 0;
+}
+
+#toc h2 {
+	display: inline;
+}
+
+.toctoggle {
+
+}
+
+/**** Preferences ****/
+
+#preftoc {
+     	float: left;
+    	margin: 1em 1em 0 0;
+    	width: 13em;
+}
+
+#preftoc ul {
+	margin: 0;
+	padding: 0;
+}
+
+#preftoc li { 
+	border: 1px solid White; 
+	list-style: none;
+}
+
+#preftoc li.selected a {
+    	background-color: #def;
+}
+
+#preftoc a,
+#preftoc a:active {
+    	display: block;
+	padding: 2px;
+}
+
+#prefcontrol {
+    	clear: both;
+    	float: left;
+    	margin-top: 1em;
+	margin-left: 14em;
+}
+
+div.prefsectiontip {
+    	font-size: 95%;
+    	margin-top: 1em;
+}
+
+fieldset.operaprefsection { margin-left: 15em }
+
+/**** Media Wiki likes to be helpful ****/
+
+.printfooter {
+	display: none;
+}
+
+.urlexpansion {
+	display: none;
+}
+
+.editsection {
+	display: none;
+}
+
+/**** Schedule Table ****/
+
+#schedule {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+#schedule th, #schedule td {
+	padding: 5px;
+	border: 1px solid #ccf;
+}
+
+#schedule th {
+	background: #eef;
+	font-size: small;
+}
+
+#schedule td {
+	font-size: small;
+	vertical-align: top;
+}

@@ -1,0 +1,533 @@
+<!DOCTYPE HTML PUBLIC "-//SoftQuad//DTD HoTMetaL PRO 4.0::19971010::extensions to HTML 4.0//EN"
+ "hmpro4.dtd">
+
+<HTML>
+  
+  <HEAD>
+    <TITLE>'Knowledge Management in the Perseus Digital Library', Ariadne Issue
+    25</TITLE>
+  </HEAD>
+  
+  <BODY BGCOLOR="#FFFFFF">
+    <DIV CLASS="UKOLN-page-heading">
+    
+    <P ALIGN="center"><A HREF="http://xml.coverpages.org/../intro.html#main-articles">
+        <IMG SRC="http://xml.coverpages.org/../../icon/tag-main.gif" ALT="Main Articles" BORDER="0" WIDTH="577" HEIGHT="47"></A></P>
+    
+    <H2 ALIGN="center">Knowledge Management in the Perseus Digital Library</H2>
+    
+    <P ALIGN="center"><STRONG>Jeffrey A. Rydberg-Cox, Robert F. Chavez, David
+      A. Smith, Anne Mahoney, Gregory R. Crane</STRONG> <BR>In this paper, we describe the new document delivery and knowledge
+      management tools in the Perseus Digital Library</P>
+    
+    <P ALIGN="center"> <A HREF="http://xml.coverpages.org/../"><IMG SRC="http://xml.coverpages.org/../../icon/button-main-contents.gif" BORDER="0" ALT="Main Contents Page " WIDTH="115" HEIGHT="28"></A>
+      <A HREF="http://xml.coverpages.org/../intro.html#main-articles"><IMG SRC="http://xml.coverpages.org/../../icon/button-section-menu.gif" BORDER="0" ALT="Section Menu " WIDTH="115" HEIGHT="28"></A>
+      <A HREF="http://xml.coverpages.org/../../mail/intro-new.html"><IMG SRC="http://xml.coverpages.org/../../icon/button-email-ariadne.gif" ALT="Mail Ariadne " BORDER="0" WIDTH="115" HEIGHT="28"></A>
+      <A HREF="http://xml.coverpages.org/../../search/intro-new.html"><IMG SRC="http://xml.coverpages.org/../../icon/button-search.gif" ALT="Search Ariadne " BORDER="0" WIDTH="115" HEIGHT="28"></A>
+    </P>
+    
+    <P ALIGN="center"><IMG SRC="http://xml.coverpages.org/../../icon/ariadne-bar.gif" ALT="dividing bar" BORDER="0" WIDTH="577" HEIGHT="47"></P>
+    </DIV>
+    <DIV CLASS="UKOLN-body">
+
+<!--Text of Article begins-->
+    
+    
+    <P>Digital libraries can be an extremely effective method of extending the
+      services of a traditional library by enabling activities such as access to
+      materials outside the physical confines of the library <A NAME="anch1"></A><A HREF="perseus-rydberg-cox-ariadne.html#fn1">[1]</A>.
+      The true benefit of a digital library, however, comes not from the
+      replication and enhancement of traditional library functions, but rather
+      in the ability to make possible tasks that would not be possible outside
+      the electronic environment, such as the hypertextual linking of related
+      texts, full text searching of holdings, and the integration of knowledge
+      management, data visualization, and geographic information tools with the
+      texts in the digital library. One of the challenges in building this type
+      of system is the ability to apply these sorts of tools in a scalable
+      manner to a large number of documents tagged according to different levels
+      of specificity, tagging conventions, and document type definitions (DTDs).
+      To address this challenge, we have developed a generalizable toolset to
+      manage XML and SGML documents of varying DTDs for the Perseus Digital
+      Library. These tools extract structural and descriptive metadata from
+      these documents, deliver well formed document fragments on demand to a
+      text display system, and can be extended with other modules that support
+      the sort of advanced applications required to unlock the potential of a
+      digital library. </P>
+    
+    <H3>I. What is Perseus?</H3>
+    
+    <P>The Perseus digital library is a heterogeneous collection of texts and
+      images pertaining to the Archaic and Classical Greek world, late
+      Republican and early Imperial Rome, the English Renaissance, and 19th
+      Century London. <A NAME="anch2"></A><A HREF="perseus-rydberg-cox-ariadne.html#fn2">[2]</A> The texts are
+      integrated with morphological analysis tools, student and advanced lexica,
+      and sophisticated searching tools that allow users to find all of the
+      inflected instantiations of a particular lexical form. <A NAME="anch3"></A><A HREF="perseus-rydberg-cox-ariadne.html#fn3">[3]</A>
+      The current corpus of Greek texts contains approximately four million
+      words by thirty-three different authors. Most of the texts were written in
+      the fifth and fourth centuries B.C.E., with some written as late as the
+      second century C.E. The corpus of Latin texts contains approximately one
+      million five hundred thousand words mostly written by authors from the
+      republican and early imperial periods. <A NAME="anch4"></A><A HREF="perseus-rydberg-cox-ariadne.html#fn4">[4]</A>
+      The digital library also contains more than 30,000 images, 1000 maps, and
+      a comprehensive catalog of sculpture. Collections of English language
+      literature from the Renaissance and the 19th century will be added in the
+      fall of 2000. </P>
+    
+    <H3>II. Building Documents</H3>
+    
+    <P>In developing this collection of SGML and now XML documents, we have
+      benefited from the generality and abstraction of structured markup which
+      has allowed us to deliver our content smoothly on a variety of platforms.
+      The vast majority of our documents are tagged according to the guidelines
+      established by the Text Encoding Initiative (TEI). <A NAME="anch5"></A><A HREF="perseus-rydberg-cox-ariadne.html#fn5">[5]</A>
+      While we have had a great deal of success with these guidelines, other
+      digitization projects have found other DTDs more useful for their
+      purposes. <A NAME="anch6"></A><A HREF="perseus-rydberg-cox-ariadne.html#fn6">[6]</A> As XML becomes more
+      widely used, more and more specifications for different subject fields and
+      application domains are being created by various industries and user
+      communities; a well known and extensive list of XML applications includes
+      a wide variety of markup standards for different domains ranging from
+      genealogy to astronomy. <A NAME="anch7"></A><A HREF="perseus-rydberg-cox-ariadne.html#fn7">[7]</A>
+      Customized DTDs ease the encoding of individual documents and often allow
+      scholars to align their tags with the intellectual conventions of their
+      field. At the same time, they can raise barriers to both basic and
+      advanced applications within a digital library. To take a simple example,
+      a programmer wishing to extract all of the book titles mentioned in a
+      collection of documents marked according to more than one DTD might may
+      have to look for a &lt;cit&gt; tag in some documents and a &lt;title&gt;
+      tag in others, whose DTD might use the &lt;cit&gt; tag to mean a piece of
+      quoted text. More importantly, a document's structural metadata, which is
+      intended to allow access to logical parts of the document, is tied to
+      specific concrete element names. In order to find &quot;chapter 5&quot; in
+      an XML document, the user or system implementor must know something about
+      that document's markup --- whether the DTD and encoding conventions favor
+      counting to the fifth &lt;chapter&gt; tag or searching for &lt;div2 type=&quot;chapter&quot;
+      n=&quot;5&quot;&gt;. <A NAME="anch8"></A><A HREF="perseus-rydberg-cox-ariadne.html#fn8">[8]</A> </P>
+    
+    <P>To address this problem, our system allows digital librarians to create
+      partial mappings between the elements in a DTD and abstract structural
+      elements and then produces an index of the elements so mapped. What is
+      encoded as &lt;div1 type=&quot;scene&quot;&gt; in one document and as &lt;scene&gt;
+      in another is presented to the system as an abstract, structural &quot;scene&quot;.
+      Identifier attributes on XML elements, such as 'ID' or 'N', are also
+      indexed, and occurrences of each structure within the document are
+      sequentially numbered. A mapping may also specify that some of the
+      document's content, such as section titles or dates, be recorded and
+      passed on to other resource discovery or visualization modules within the
+      system. Finally, not every element in the DTD need be mapped. This allows
+      the digital librarians to focus attention on the structural features of
+      the texts. After this structural element map is created for the DTD, an
+      unlimited number of documents written in conformance with this DTD can be
+      parsed and indexed by the system. </P>
+    
+    <H3>III. Document Delivery</H3>
+    
+    <P>One of the primary benefits that we derive from this system is the
+      ability to display any number of documents tagged according to the same
+      DTD very quickly. In previous instantiations of the Perseus Digital
+      Library, after a text was tagged, it was necessary to write a custom
+      specification to transform the archival SGML text into a form that could
+      be delivered to end users to read. We also were required to add the
+      document to both our catalog and our searching programs by hand. This
+      process not only added extra time to the process of publishing a document,
+      it also was prone to error. It was possible, for example, to publish a
+      document that was not indexed or included in the searching interface.
+      Likewise, it was possible for an uncataloged document to exist in the
+      digital library and only be accessible by knowing and typing in the exact
+      URL required to display the document. In the new system, cataloging
+      information is automatically extracted from the document headers and
+      included in the table of contents and other searching interfaces. This has
+      enabled us to cut dramatically the time required to include new documents
+      in the Perseus digital library; in fact, since we released this software
+      on our production servers in the spring of 2000, we have been able to add
+      substantial collections of Latin texts and commentaries on Greek texts to
+      the digital library. <A NAME="anch9"></A><A HREF="perseus-rydberg-cox-ariadne.html#fn9">[9]</A> In
+      addition to facilitating our own work, this system has also allowed us to
+      collaborate more effectively with other projects. For example, we have
+      been conducting experiments with the SGML documents created by the Library
+      of Congress American Memory project and the documents on the <I>Thesaurus
+      Linguae Graecae</I> CD ROM. <A NAME="anch10"></A><A HREF="perseus-rydberg-cox-ariadne.html#fn10">[10]</A>
+      In internal experiments, we have been able to integrate large numbers of
+      texts from these collections into the Perseus Digital Library with very
+      little custom programming and gain the benefits of all of the advanced
+      modules in this system. </P>
+    
+    <P>One of the modules in our system allows us to create custom display
+      templates for different documents or collections. When a user requests a
+      document, our display system locates the XML file and its associated
+      metadata, uses the abstracted mappings to determine which portion of the
+      file contains the desired text section, applies appropriate styling rules,
+      and presents the text to the end user in HTML. The styling rules are
+      controlled by templates that allow us to create a custom look and feel for
+      different texts or collections of texts within the digital library.
+      Currently, this template is written in HTML with place-holders for
+      variable display elements and the text itself. We can also apply these
+      templates to objects in the digital library: images, maps, or searching
+      tools. We produce HTML output because our current primary delivery
+      mechanism is the World Wide Web. Our display system can produce other
+      formats, notably Adobe's Portable Document Format and raw XML.
+      <A NAME="anch11"></A><A HREF="perseus-rydberg-cox-ariadne.html#fn11">[11]</A> As browser support for XML
+      becomes more robust, we expect to exploit XSL (Extensible Stylesheet
+      Language) or other XML styling tools to produce attractive direct XML
+      displays in this module. </P>
+    
+    <H3>IV. Knowledge Management Tools</H3>
+    
+    <P>The advantages of this toolset extend far beyond the practical issues
+      related to displaying, cataloging, and indexing documents for end users.
+      Because this system abstracts the metadata from the text, we are able to
+      develop scalable tools for linguistic analysis, knowledge management, and
+      information retrieval within the digital library, thereby allowing users
+      to work with documents in ways that would simply not be possible outside
+      the digital environment. The tools in the currently existing system
+      include sophisticated full-text searching tools, the creation of live
+      links among documents in the system, extraction of toponyms and the
+      automatic generation of maps, discovery of dates and the dynamic display
+      of timelines, the automatic implicit searching, discovery of word
+      co-occurrence patterns, and linkages to morphological analysis. </P>
+    
+    <P>A great deal of traditional scholarship involves tracking down footnotes
+      and discovering what others have said about a text. Our toolset allows us
+      to display links to other texts that cite the document currently being
+      displayed. A simple example is a commentary, which explicitly talks about
+      another text. For example, when a reader views the text of Thucydides or
+      Homer's Iliad, we are able to show notes from several commentaries about
+      these texts. Much more exciting, however, is the ability to display
+      citations from texts that are not explicitly related to each other. For
+      example, a reader of Andocides 1.57 might be interested to know that
+      <A HREF="http://www.perseus.tufts.edu/cgi-bin/ptext?lookup=andoc.+1.57">this
+        passage</A> is cited in section 2017 of Smyth's <I>Greek Grammar</I>.
+      The reader can follow an active link to this Smyth passage and read the
+      discussion there about the usage of the word <I>eipon</I> and compare
+      other passages also cited by Smyth to illustrate this point. Because this
+      'citation reversal' happens automatically each time a text is added to the
+      system, it becomes even more valuable as the digital library expands. This
+      system also reveals unexpected links among texts, which scholars might not
+      have been aware of. A reader of Homer might be surprised to find that <I>Iliad</I>
+      8.442 is cited in the Variorum Edition of Shakespeare's <I>Coriolanus</I>,
+      V.i. </P>
+    
+    <P>Another module automatically scans the English language texts in the
+      digital library for place names. These names are linked to a Geographic
+      Information System (GIS) that allows users to generate a map of the places
+      mentioned in the entire document, in the section currently being
+      displayed, or in a larger logical unit, for example a book or an act.
+      <A NAME="anch12"></A><A HREF="perseus-rydberg-cox-ariadne.html#fn12">[12]</A> Moreover, the map serves
+      as a gateway into the collection, since users can move from a spot on the
+      map to a document that refers to it. The tool can also be used to map all
+      of the places mentioned in a collection of documents. For example, a map
+      of the American Memory texts shows that most of the documents in this
+      collection describe places in North America, while a map of
+      <A HREF="http://www.perseus.tufts.edu/cgi-bin/perscoll?collection=Bolles">our
+        collection of documents about 19th century London</A> shows very few
+      discussions of places in North America. While these examples are
+      relatively obvious, they illustrate how this tool might be used to show a
+      new user the characteristics of the collections within the digital
+      library. At the same time, the digital librarian need not add metadata
+      describing the geographic and temporal extent of a collection. For this
+      tool, our abstraction of structural and descriptive metadata is more
+      important than the markup of the individual documents: place names are
+      discovered by an information extraction system after the documents have
+      been indexed. <A NAME="anch13"></A><A HREF="perseus-rydberg-cox-ariadne.html#fn13">[13]</A> Because the
+      XML back end described above presents all documents to the information
+      discovery module in a uniform way, the GIS programmer need not be aware of
+      the details of the DTDs or of the markup conventions used in the texts.
+    </P>
+    
+    <P>A third tool automatically extracts date information and uses this
+      information to generate timelines of the dates mentioned in texts. The
+      dates in this timeline are active links, leading to the passage in the
+      text that contains this link. This means that the reader of a text who is
+      interested in events that happened in
+      <A HREF="http://www.perseus.tufts.edu/cgi-bin/timevis?id=Perseus:text:2000.01.0008">1666</A>
+      can quickly locate these passages on the timeline. Likewise, a reader can
+      use this timeline to locate other passages that describe the date in
+      question. This tool, like the mapping tool, can also be applied to
+      collections of documents, allowing users to gain a sense of what time
+      frame the documents cover. For example, when this tool is applied to our
+      Greco-Roman collection, users can quickly see that we have much greater
+      coverage of the Classical period than of the Hellenistic period. </P>
+    
+    <P>We have exploited this abstraction in other information extraction
+      systems we have written, one of which is the creation of automatic
+      hypertexts for implicit searching.<A NAME="anch14"></A><A HREF="perseus-rydberg-cox-ariadne.html#fn14">[14]</A>
+      Important subject terms within the domain area are recognized and linked
+      to other documents within the digital library that contain the term. These
+      links are provided automatically for every document when it is displayed.
+      This makes it easy for readers to get fuller information about important
+      ideas, to contextualize unfamiliar vocabulary, and to explore related
+      documents in the digital library. Because subject terms are linked to
+      dynamic hypertexts, not to simple glossary or dictionary entries, readers
+      can explore types of material they might not have thought relevant (or
+      even have known of): historical texts, site plans, art works, or the like.
+      Further, as the library expands, new documents appear on these pages
+      without any additional programming. In addition to helping users explore
+      large domains, we also have modules that help users explore the smallest
+      details of the language. These details include morphology and word
+      co-occurrence. Every word of Latin or Greek is passed through a
+      morphological analyzer and the resulting analyses are placed in a
+      database. When Greek or Latin text is displayed, each word is checked
+      against this database, and links are generated between words and their
+      analyses. These analyses, in turn, are linked to a suite of dictionaries
+      and grammars, allowing users to read texts in languages they do not yet
+      know well. Another module that operates at the level of the word
+      identifies words that regularly co-occur. Abstracted indices are used to
+      scan texts and calculate word frequencies and co-occurrence ratios. Highly
+      significant word pairs can be presented along with lexical information, or
+      in independent tabular displays. </P>
+    
+    <P>While it certainly would be possible to develop many of these tools
+      without the document management system described here, this document
+      management system makes this task much easier. The abstraction of the
+      varying tagging systems in these documents allows programmers to focus on
+      interesting tasks instead of dealing with different tagging systems on an
+      ad hoc basis. Further, because these tools function as 'modules' within
+      the Perseus digital library rather than stand-alone programs, we can apply
+      these tools to every text that is added to the library without any
+      additional programming. This allows us to begin to meet the challenges
+      involved in the scalable creation of a digital library that does not
+      simply replicate and enhance the tasks of a traditional library, but
+      rather renders it possible for a large number of people to study texts in
+      ways that would not be possible outside the electronic environment. </P>
+    
+    <H3>References</H3>
+    
+    <OL>
+      <LI>Chavez, Robert F. 2000. &quot;Using GIS in an Integrated Digital
+        Library.&quot; <I>Proceedings of the 5th Annual Digital LIbrary
+        Conference</I> 250-251. </LI>
+      <LI>Crane, Gregory. 1991. &quot;Generating and Parsing Classical Greek.&quot;
+        Literary and Linguistic Computing 6:243-245. </LI>
+      <LI>Crane, Gregory. 1998a. &quot;New Technologies for Reading: The
+        Lexicon and the Digital Library.&quot; Classical World:471- 501. </LI>
+      <LI>Crane, G. 1998b. The Perseus Project and Beyond: How Building a
+        Digital Library Challenges the Humanities and Technology. D-Lib,
+        January, <A HREF="http://www.dlib.org/dlib/january98/01crane.html">http://www.dlib.org/dlib/january98/01crane.html</A>.
+      </LI>
+      <LI>Crane, G. 2000. Designing Documents to Enhance the Performance of
+        Digital Libraries: Time, Space, People and a Digital Library on London.
+        D-Lib, January, http://www.dlib.org/dlib/july00/crane/07crane.html.
+      </LI>
+      <LI>DeRose, Steven J. , and David G. Durand. 1994. Making Hypermedia
+        Work: A User's Guide to HyTime. Boston: Kluwer Academic Publishers.
+      </LI>
+      <LI>Mahoney, Anne. 2000. &quot;Explicit and Implicit Searching in the
+        Perseus Digital Library.&quot; Eleventh ACM Conference on Hypertext and
+        Hypermedia, June 2000, pre-conference workshop.
+        <A HREF="http://www.ics.mq.edu.au/~einat/info_doors/">http://www.ics.mq.edu.au/~einat/info_doors/</A>
+      </LI>
+      <LI>Smith, David, Gregory Crane, and Jeffrey A. Rydberg-Cox. 2000. &quot;The
+        Perseus Project: A Digital Library for the Humanities.&quot; Literary
+        and Linguistic Computing 15 (1). </LI>
+      <LI>Smith, David, Anne Mahoney, and Jeffrey A. Rydberg-Cox. 2000b. &quot;Management
+        of XML Documents in an Integrated Digital Library.&quot; Proceedings of
+        <I>Extreme Markup Languages 2000</I> </LI>
+      <LI>Sperberg-McQueen, C., and L. Burnard. 1994. Guidelines for Electronic
+        Text Encoding and Interchange. Chicago: Text Encoding Initiative. </LI>
+      <LI>Usdin, Tommie, and Tony Graham. 1998. &quot;XML: Not a silver bullet,
+        but a great pipe wrench.&quot; Standard View 6 (3):125-132. </LI>
+      <LI>Mueller, Martin 2000. &quot;Electronic Homer&quot;, Ariadne Issue 25
+        <A HREF="http://www.ariadne/issue25/mueller/">http://www.ariadne/issue25/mueller/</A></LI>
+    </OL><HR>
+    
+    <P><A NAME="fn1"></A><A HREF="perseus-rydberg-cox-ariadne.html#anch1">[1]</A> A version of this article
+      that focuses much more on the technical details of the system described
+      here will appear in Smith (2000). The work described here was supported by
+      the Digital Library Initiative, with primary support from the NEH and the
+      NSF. </P>
+    
+    <P><A NAME="fn2"></A><A HREF="perseus-rydberg-cox-ariadne.html#anch2">[2]</A> Various aspects of the
+      Perseus Digital Library are described in Crane (2000), Smith, Crane, and
+      Rydberg-Cox (2000), Crane (1998b), and Crane (1998a). </P>
+    
+    <P><A NAME="fn3"></A><A HREF="perseus-rydberg-cox-ariadne.html#anch3">[3]</A> The Greek parser is
+      described in Crane (1991). </P>
+    
+    <P><A NAME="fn4"></A><A HREF="perseus-rydberg-cox-ariadne.html#anch4">[4]</A> Yale University Press has
+      published the Greek materials and morphological analysis tools on several
+      CD ROMs and all of the most current materials are freely available on the
+      World Wide Web at <A HREF="http://www.perseus.tufts.edu">http://www.perseus.tufts.edu</A>.
+      We also have two European mirrors, one at Oxford University at
+      <A HREF="http://perseus.csad.ox.ac.uk">http://perseus.csad.ox.ac.uk</A>
+      and one in Berlin at <A HREF="http://perseus.mpiwg-berlin.mpg.de">http://perseus.mpiwg-berlin.mpg.de</A>.
+      The audience for these texts and tools in an integrated digital library
+      does exist and it is larger than one might expect. The past four years
+      have seen remarkable increase in the use of the Perseus web site. Usage
+      has grown from just under three thousand hits on its first day in July of
+      1996 to two hundred fifty thousand hits on peak days during the current
+      academic year. From July 1996 until May 2000, Perseus servers have
+      delivered more than one hundred ten million pages of primary source
+      material. </P>
+    
+    <P><A NAME="fn5"></A><A HREF="perseus-rydberg-cox-ariadne.html#anch5">[5]</A> Sperberg-McQueen and
+      Burnard (1994). </P>
+    
+    <P><A NAME="fn6"></A><A HREF="perseus-rydberg-cox-ariadne.html#anch6">[6]</A> Usdin and Graham (1998).
+    </P>
+    
+    <P><A NAME="fn7"></A><A HREF="perseus-rydberg-cox-ariadne.html#anch7">[7]</A> See
+      <A HREF="http://www.oasis-open.org/cover/xml.html">http://www.oasis-open.org/cover/xml.html</A>.
+    </P>
+    
+    <P><A NAME="fn8"></A><A HREF="perseus-rydberg-cox-ariadne.html#anch8">[8]</A> Although much work has been
+      done on XML Namespaces to encourage markup reuse and minimize duplication
+      of semantic structures, it is unlikely that all marked up documents will
+      eventually use tags such as &lt;ns:title&gt; for book titles. </P>
+    
+    <P><A NAME="fn9"></A><A HREF="perseus-rydberg-cox-ariadne.html#anch9">[9]</A> See
+      <A HREF="http://www.perseus.tufts.edu/PR/latin.ann.html">http://www.perseus.tufts.edu/PR/latin.ann.html</A>
+      and <A HREF="http://www.perseus.tufts.edu/PR/greek.com.ann.html">http://www.perseus.tufts.edu/PR/greek.com.ann.html</A>.
+    </P>
+    
+    <P><A NAME="fn10"></A><A HREF="perseus-rydberg-cox-ariadne.html#anch10">[10]</A> See
+      <A HREF="http://memory.loc.gov/">http://memory.loc.gov/</A> and
+      <A HREF="http://www.tlg.uci.edu">http://www.tlg.uci.edu</A>. </P>
+    
+    <P><A NAME="fn11"></A><A HREF="perseus-rydberg-cox-ariadne.html#anch11">[11]</A> Our current production
+      system does not, however, allow users to request outputs other than HTML.
+    </P>
+    
+    <P><A NAME="fn12"></A><A HREF="perseus-rydberg-cox-ariadne.html#anch12">[12]</A> See Chavez 2000. </P>
+    
+    <P><A NAME="fn13"></A><A HREF="perseus-rydberg-cox-ariadne.html#anch13">[13]</A> Editors may also choose
+      to mark place names. </P>
+    
+    <P><A NAME="fn14"></A><A HREF="perseus-rydberg-cox-ariadne.html#anch14">[14]</A> See Mahoney 2000.
+
+<!-- Author Details section below should be filled in by the article -->
+      
+      
+<!-- author. The left hand table cell can be used to locate an author -->
+      
+      
+<!-- photograph-->
+      
+       </P>
+    
+    <H3> Author Details</H3>
+    
+    <TABLE BORDER="0" CELLPADDING="3">
+      <TR>
+        <TD VALIGN="middle"></TD>
+        <TD><STRONG>Jeffrey A. Rydberg-Cox</STRONG><BR>
+         Assistant Professor<BR>
+         Department of English<BR>
+         University of Missouri at Kansas City<BR>
+        
+        
+        <P>Email: <A HREF="mailto:jrydberg@perseus.tufts.edu">jrydberg@perseus.tufts.edu</A><BR>
+           Web site: <A HREF="http://www.perseus.tufts.edu/">www.perseus.tufts.edu</A></P></TD>
+      </TR>
+      <TR>
+        <TD VALIGN="middle"></TD>
+        <TD><STRONG>Robert F. Chavez</STRONG><BR>
+         Programmer<BR>
+         Perseus Project, Tufts University<BR>
+        
+        
+        <P>Email: <A HREF="mailto:rchavez@perseus.tufts.edu">rchavez@perseus.tufts.edu</A><BR>
+           Web site: <A HREF="http://www.perseus.tufts.edu/">www.perseus.tufts.edu</A></P></TD>
+      </TR>
+      <TR>
+        <TD VALIGN="middle"></TD>
+        <TD><STRONG>Anne Mahoney</STRONG><BR>
+         Programmer<BR>
+         Perseus Project, Tufts University<BR>
+        
+        
+        <P>Email: <A HREF="mailto:amahoney@perseus.tufts.edu">amahoney@perseus.tufts.edu</A><BR>
+           Web site: <A HREF="http://www.perseus.tufts.edu/">www.perseus.tufts.edu</A></P></TD>
+      </TR>
+      <TR>
+        <TD VALIGN="middle"></TD>
+        <TD><STRONG>David A. Smith</STRONG><BR>
+         Programmer<BR>
+         Perseus Project, Tufts University<BR>
+        
+        
+        <P>Email: <A HREF="mailto:dasmith@perseus.tufts.edu">dasmith@perseus.tufts.edu</A><BR>
+           Web site: <A HREF="http://www.perseus.tufts.edu/">www.perseus.tufts.edu</A></P></TD>
+      </TR>
+      <TR>
+        <TD VALIGN="middle"></TD>
+        <TD><STRONG>Gregory R. Crane</STRONG><BR>
+         Professor of Classics<BR>
+         Winnick Family Chair in Technology and Entrepreneurship<BR>
+         Editor-in-Chief, Perseus Project Tufts University<BR>
+        
+        
+        <P>Email: <A HREF="mailto:gcrane@perseus.tufts.edu">gcrane@perseus.tufts.edu</A><BR>
+           Web site: <A HREF="http://www.perseus.tufts.edu/">www.perseus.tufts.edu</A></P></TD>
+      </TR>
+    </TABLE>
+
+<!-- Author Details section ends-->
+    
+    
+<!--Text of Article ends - no author modifications required after this point-->
+    
+    </DIV>
+    <DIV CLASS="UKOLN-page-footer"> <BR>
+     <BR>
+    
+
+<!-- Below Citation section for Ariadne Office use only - please ignore-->
+    
+    <BLOCKQUOTE><SMALL><STRONG>Article Title</STRONG>: &quot;Knowledge
+      Management in the Perseus Digital Library&quot; <STRONG>Author</STRONG>:
+      Jeffrey A. Rydberg-Cox; Robert F. Chavez, David A. Smith, Anne Mahoney,
+      Gregory R. Crane.<BR>
+      <STRONG>Publication Date</STRONG>:
+
+24-Sep-2000
+
+      
+      &nbsp;&nbsp;<STRONG>Publication</STRONG>: Ariadne Issue
+
+25
+
+      
+      &nbsp;&nbsp;<STRONG>Originating URL</STRONG>: http://www.ariadne.ac.uk
+
+/issue25/rydberg-cox/intro.html
+      
+       <BR>
+
+<A HREF="http://xml.coverpages.org/../../about/copyright-new.html">
+
+      
+      <STRONG>Copyright and citation information</STRONG>&nbsp;&nbsp; <STRONG>File
+      last modified</STRONG>:
+
+Sunday, 24-Sep-00 18:02:05 BST
+      
+       <BR></SMALL></BLOCKQUOTE>
+
+<!-- Above Citation section for Ariadne Office use only - please ignore-->
+    
+    
+<!-- Footer section below requires no author modification - please ignore-->
+    
+    
+    <P ALIGN="center"><IMG SRC="http://xml.coverpages.org/../../icon/ariadne-bar.gif" ALT="dividing bar" BORDER="0" WIDTH="577" HEIGHT="47"></P>
+    
+    <P ALIGN="center"> <A HREF="http://xml.coverpages.org/../"><IMG SRC="http://xml.coverpages.org/../../icon/button-main-contents.gif" BORDER="0" ALT="Main Contents Page " WIDTH="115" HEIGHT="28"></A>
+      <A HREF="http://xml.coverpages.org/../intro.html#main-articles"><IMG SRC="http://xml.coverpages.org/../../icon/button-section-menu.gif" BORDER="0" ALT="Section Menu " WIDTH="115" HEIGHT="28"></A>
+      <A HREF="http://xml.coverpages.org/../../mail/intro-new.html"><IMG SRC="http://xml.coverpages.org/../../icon/button-email-ariadne.gif" ALT="Mail Ariadne " BORDER="0" WIDTH="115" HEIGHT="28"></A>
+      <A HREF="http://xml.coverpages.org/../../search/intro-new.html"><IMG SRC="http://xml.coverpages.org/../../icon/button-search.gif" ALT="Search Ariadne " BORDER="0" WIDTH="115" HEIGHT="28"></A>
+    </P> </DIV>
+    <DIV CLASS="UKOLN-footer-small">
+    <BLOCKQUOTE><SMALL><SMALL>Ariadne is published every three months by
+      <A HREF="http://www.ukoln.ac.uk/">UKOLN</A>. UKOLN is funded by Resource:
+      The Council for Museums, Archives &amp; Libraries (the organisation
+      succeeding the <A HREF="http://www.lic.gov.uk/">Library and Information
+        Commission</A>), the <A HREF="http://www.jisc.ac.uk/"> Joint
+        Information Systems Committee (JISC)</A> of the Higher Education Funding
+      Councils, as well as by project funding from the JISC and the
+      <A HREF="http://www2.echo.lu/">European Union</A>. UKOLN also receives
+      support from the <A HREF="http://www.bath.ac.uk/">University of Bath</A>
+      where it is based. Text on this page is <A HREF="http://xml.coverpages.org/../about/copyright.html">copyright
+        Ariadne/original authors</A>. </SMALL></SMALL></BLOCKQUOTE></DIV>
+  </BODY>
+</HTML>

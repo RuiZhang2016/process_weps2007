@@ -1,0 +1,785 @@
+<!-- Vignette StoryServer 5.0 Wed Sep 22 14:07:43 2004 -->
+    <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+	<title>christianity.com</title>
+	<script type="text/javascript" language="javascript">
+<!--
+//-->
+</script>
+
+
+
+
+
+
+
+
+
+
+ 
+<script>
+//	These functions are used to display an article or channel
+//
+
+function displayArticle(id, pid, chid)
+{
+	if (pid == 0) {
+		pid = "1000";
+	}
+	if (chid == 0) {
+		chid = "74";
+	} else if (chid == -1) {
+		chid = "";
+	}
+	
+	var oid = "PTID" + pid + "|CHID" + chid + "|CIID" + id;
+	
+	url = "/partner/Article_Display_Page/0,,_OID_,00.html";
+	url = url.replace(/_OID_/g, oid);
+	window.location = url;
+}
+
+function displayChannel(pid, chid)
+{
+	if (pid == 0) {
+		pid = "1000";
+	}
+	
+	var oid = "PTID" + pid + "|CHID" + chid + "|CIID";
+
+	url = "/CC_Content_Page/0,,_OID_,00.html";
+	url = url.replace(/_OID_/g, oid);
+
+	window.location = url;
+}
+</script>
+  <link rel="stylesheet" type="text/css" href="/cc/cdc_v_20.css">
+	<link rel="stylesheet" type="text/css" href="/cc/cdcadmin_v_1.css">
+	
+
+<script language="JavaScript" type="text/javascript" src="/CC/JS/CC_Open_Window/0,,,00.js"></script>
+ <script src="/CC/CDA/CC_Navigation/Ad_Script/0,,,00.js"></script>
+	<script src="/CC/cookie/0,,,00.js"></script>
+	<script>
+		var to_do;
+		if(to_do = GetCookie("openJSWindow")) {
+			//eval(to_do);
+			//alert(to_do);
+			DeleteCookie("openJSWindow","/",null);
+		}
+
+		function init() {
+ window.setInterval("refreshAd()",300000);
+		}
+	</script>
+</head>
+
+<body marginwidth="0" marginheight="0" leftmargin="0" topmargin="0" onload="init()">
+<a NAME="top"></a> 
+<!----- HTML HEADER ------->
+
+	    <script language=javascript>
+<!-- //
+
+function nav(e){
+if (e && (e.tagName=='TD')) {
+	if (e.children) e.children.tags('div')[0].children.tags('a')[0].click()
+}
+}
+
+var tmp = false;
+var highlight = Array('#ffd38b', '#ffc73e', '#efefef', '#efefef', '#efefef', '#efefef');
+function nav2(e, d, level, sel){
+	if (d && tmp==false) {
+	tmp = e.style.backgroundColor;
+	//if (!sel)
+	e.style.backgroundColor=highlight[level]
+	if (e.children)	window.status=e.children.tags('div')[0].children.tags('a')[0];
+	} else {
+	e.style.backgroundColor=tmp; 
+	tmp=false;
+	window.status=''
+	}
+}
+//-->
+</script>
+
+<style type="text/css">
+<!--
+
+
+a:link {color: #003399; text-decoration: none}
+a:active {color: #0B82DC; text-decoration: none}
+a:visited {text-decoration: none}
+a:hover {color : #0B82DC; text-decoration: none}
+
+label { cursor: hand; }
+
+.nav_menu {
+	background-color:#FFDE8B;
+}
+.nav_menu {
+	background-color:#ffffff;
+}
+.nav_menu td {
+	font-family : verdana,arial,helvetica;
+	font-size: 9px; 
+}
+.nav_cell {
+	padding-left: 27px;
+}
+
+
+div.pagenums{
+	width: 98%;
+	margin-top: 25px;
+	font-size: x-small;
+	font-family: verdana, arial, helvetica;
+	text-align:right;
+	border: 1px solid #FFDE8B;
+	padding: 3px;
+}
+
+
+div.pagenums a{
+	font-size: x-small;
+	color: #0C448F;
+}
+span.pagenums {
+	font-size: x-small;
+}
+
+div.advbox {
+	padding: 10px; 
+	border: 4px solid #ffc73e;
+}
+div.advbox .advtab {
+	font-family: verdana, arial;
+	font-size: 10px;
+	padding-right: 15px;
+	vertical-align : middle;
+	text-transform : uppercase;
+}
+
+div.searchbox {
+	margin-bottom: 20px;
+}
+
+div.searchbox .tab{
+	background-color: #ffc73e;
+	color: black;
+	padding-top: 3px;
+	padding: 0px;
+	font-family: verdana, arial;
+	font-weight:bold;
+	font-size: 12px;
+	text-align:center;
+}
+div.searchbox .tab2{
+	background-color: #eeeeee;
+	border-right: 1px solid white;
+	padding: 3px;
+	padding-left: 8px;
+	font-family: verdana, arial;
+	font-size: 10px;
+	position:relative;
+	margin-top: 8px;
+	text-align:center;
+}
+div.searchbox .tab2 a {
+	color: #666666;
+	text-decoration:none;
+}
+div.searchbox .tab2 a:hover {
+	text-decoration:underline;
+}
+div.searchbox .tab3 {
+	background-color: #ffc73e;
+	padding: 0px;
+}
+div.searchbox .tab4 {
+	background-color: #eeeeee;
+	padding: 0px;
+}
+
+div.searchbox .tab_desc {
+	background-color: #ffc73e;
+	color: black;
+	padding: 2px;
+	padding-left: 8px;
+	font-family: verdana, arial;
+	font-size: 10px;
+}
+
+div.searchbox .query {
+	border: 5px solid #ffc73e;
+	border-top: 1px solid #ffc73e;
+	padding: 10px;
+	font-family: verdana, arial;
+	font-size: xx-small;
+}
+div.searchbox .opts {
+	position: relative;
+	left: 15px;
+}
+
+
+div.sponsorbox {
+	font-family: verdana, arial;
+}
+
+div.sponsorbox a.title {
+	color: #003399;
+	font-family: verdana, arial;
+	font-size: 12px;
+}
+div.sponsorbox .label {
+	font-size: smallpx;
+}
+
+div.pagenums a.pg {
+	text-decoration:underline;
+	font-weight:bold;
+	font-size: x-small;
+}
+
+div.pagenums span.sel{
+	font-size: x-small;
+	font-weight:bold;
+}
+
+div.results, 
+div.resultstxt {
+	font-size: small;
+	font-family: verdana, arial, helvetica;
+}
+
+div.results a.title{
+	color:#0C448F;
+	position:relative;
+	left: 0px;
+	font-size: x-small;
+}
+div.results a.title:hover {
+	color: #0B82DC;
+}
+
+div.result_desc {
+	color:#666666;
+	font-size: xx-small;
+	font-family:verdana, arial;
+	margin-bottom: 10px;	 
+	width: 98%;
+}
+div.result_desc span{
+	color:black;
+}
+div.result_desc a {
+	color:#666666;
+	text-decoration:none;
+}
+
+div.result_desc span.a {
+	text-decoration:underline;
+}
+div.result_desc a:hover {
+	text-decoration:underline;
+}
+
+
+div.results td.num{
+	font-weight:bold;
+	width: 25px;
+	padding-right: 3px;
+}
+
+div.nav_path {
+	width:100%;
+	padding-bottom:15px;
+	font-size: 10px;
+	font-family : verdana,arial,helvetica;
+	cursor:default;
+}
+
+div.picker_header {
+font-size: 14px; color:black; font-family: verdana, arial, helvetica; 
+font-weight:bold;
+border: 1px solid #aaaaaa;
+width: 90%;
+padding: 2px;
+}
+
+div.midfeature {
+	font-size: xx-small; 
+	font-family: verdana, arial, helvetica;
+	margin-bottom: 10px;
+}
+
+div.midfeature .br {
+	position: relative;
+	margin-top: 15px;
+	top: 0px;
+	left: 15%;
+	width: 70%;
+	height: 1px;
+	background-color: #cccccc;
+}
+
+
+div.ls_formats {
+	margin-left: 25px;
+	margin-top: 15px;
+	margin-bottom: 20px;
+	padding: 4px;
+	border: 1px solid #FFC73E;
+	width: 80%;
+}
+
+div.ls_formats .btn {
+	border: 1px solid white;
+	cursor:hand;
+}
+
+
+table.btn {
+	border: 4px solid #bbbbbb;
+}
+
+table.btn input {
+	color:black;
+	background-color: #cc3333;/*#1262CD;*/
+	border: 2px solid #458DEF;
+	border-bottom: 2px solid #0c448f;
+	border-right: 2px solid #0c448f;
+}
+
+a.nav_link {
+	color:#003399;
+}
+
+.level0 { height: 18px; font-weight:bold; background-color: #FFC73E; border-bottom:1px solid #a3a3a3; cursor:hand; }
+
+.level1 { height: 18px; cursor:hand; border-bottom:1px solid #a3a3a3; }
+
+.level2 { background-color:#ffffff; cursor:hand; }
+.level2 div { }
+
+.level3 { background-color:#ffffff; cursor:hand; }
+.level3 div { padding-left: 10px; }
+
+.level4 { background-color:#ffffff; cursor:hand; }
+.level4 div { padding-left: 18px; }
+
+.level5 { background-color:#ffffff; cursor:hand; }
+.level5 div {  padding-left: 26px; }
+
+.heading {
+	font-size: 12px; color: #000066; 
+}
+
+div.c_sponsors{
+	border: 1px solid #efefef;
+}
+
+div.c_sponsors .title {
+	color: white;
+	font-family: verdana, arial, helvetica;
+	font-size: 10px;
+	background-color: #dddddd;
+	text-align:center;
+}
+
+div.sponsor_rnav{
+	border: 0px solid #999999;
+	font-size: 9px; font-family: verdana, arial, helvetica;
+	margin-bottom: 10px;
+	padding:4px;
+}
+
+.sponsor_rnav a{
+	color: #003399;
+}
+a.top {
+	color: white; font-weight:bold;
+}
+a.or {
+	color: #ffb400;
+}
+a.k {
+	color: black;
+}
+a.gr3 {
+	color: #cccccc;
+}
+a.gr4 {
+	color: #666666;
+}
+
+
+.bl { font-size: 9px; color: #003399; font-family : verdana,arial,helvetica}
+.bl2 { font-size: 9px; color: #003399; font-family : verdana,arial,helvetica; font-weight: bold}
+.bl3 { font-size: 12px; color: #003399; font-family : verdana,arial,helvetica; font-weight: bold}
+.bl4 { font-size: 10px; color: #003399; font-family : verdana,arial,helvetica}
+.bl5 { font-size: 10px; color: #003399; font-family : verdana,arial,helvetica; font-weight: bold}
+.bl6 { font-size: 12px; color: #003399; font-family : verdana,arial,helvetica;}
+.or { font-size: 9px; color: #FFB400; font-family : verdana,arial,helvetica}
+.k { font-size: 10px; color: #000000; font-family : verdana,arial,helvetica}
+.k2 { font-size: 9px; color: #000000; font-family : verdana,arial,helvetica}
+.gr { font-size: 9px; color: #CCCCCC; font-family : verdana,arial,helvetica; font-weight: bold}
+.gr2 { font-size: 14px; color: #666666; font-family : verdana,arial,helvetica; font-weight: bold}
+.gr3 { font-size: 9px; color: #CCCCCC; font-family : verdana,arial,helvetica}
+.gr4 { font-size: 9px; color: #666666; font-family : verdana,arial,helvetica;}
+.gr5 { font-size: 12px; color: #666666; font-family : verdana,arial,helvetica; }
+.bk { font-size: 14px; color:black; font-family: verdana, arial, helvetica; }
+
+.wh { font-size: 9px; color: #FFFFFF; font-family : verdana,arial,helvetica; font-weight: bold}
+.pu { font-size: 9px; color: #8C0977; font-family : verdana,arial,helvetica}
+.green { font-size: 9px; color: #006666; font-family : verdana,arial,helvetica}
+.blhdr { font-size: 9px; color: #0C448F; font-family : verdana,arial,helvetica}
+.txt { font-size: x-small; color: #000000; font-family : verdana,arial,helvetica}
+.txt a { color: black; text-decoration:underline;}
+.txt a:hover { text-decoration:none; }
+.err{ color: #CC1033; }
+
+.ccombody {
+	font-size: x-small;
+	font-family: verdana, arial, helvetica;
+	color: #000000;
+}
+.ccombody p{
+	font-size: x-small;
+	font-family: verdana, arial, helvetica;
+	color: #000000;
+}
+
+.nav_vert_bar{
+	background-color:#000066;
+}
+.nav_path {
+	color: #000066;
+}
+
+.level0_selected{
+	background-color:#000066;
+}
+.level0_selected a{
+	color:#cccccc;
+}
+
+.level1_selected, .level2_selected, .level3_selected, .level4_selected, .level5_selected {
+	font-weight:bold;
+}
+-->
+</style>
+
+<a NAME="top"></a> 
+<table width="100%"  cellpadding=0 cellspacing=0 border=0  background="/CC/Images/ccom/bg2.gif"><tr><td>
+<TABLE 
+WIDTH="100%" CELLPADDING="0" CELLSPACING="0" BORDER="0">
+<TR>
+	<TD><a href="http://home.christianity.com"><IMG SRC="/CC/Images/ccom/LogoSecond.gif" WIDTH="364" HEIGHT="58" BORDER="0" ALT="Christianity.com"></a></TD>
+	<TD ALIGN="RIGHT" CLASS="wh" VALIGN="TOP"><img src='/CC/Images/spacer.gif' width='1' height='28' align='' border='0'><BR>
+<a href="http://home.christianity.com/learn/jesus/" class=top>Learn about Jesus</a> / 
+<a href="http://www.christianity.com/webministry/" class=top>About Christianity.com</a> / 
+<a href="javascript:openWindow('medium','http://www.lifeaudio.com/listsignup/default.php?domain=christianity.com');" class=top>Join Email List</a>&nbsp;&nbsp;&nbsp;&nbsp;
+	</TD>
+</TR>	
+</TABLE>
+</td></tr></table>
+
+<table  width="100%" height="100%"  cellpadding=0 cellspacing=0 border=0 >
+<tr><td width=125 rowspan=2 valign=top class=nav_menu>
+<table width=125  cellpadding=0 cellspacing=0 border=0  class=nav_menu>
+
+<TR><TD colspan=2 HEIGHT="2" BGCOLOR="#CDC3B8"><img src='/CC/Images/spacer.gif' width='1' height='1' align='' border='0'></TD></TR>
+<TR><TD colspan=2 BGCOLOR="#A3A3A3" HEIGHT="1"><img src='/CC/Images/spacer.gif' width='1' height='1' align='' border='0'></TD></TR>
+</table><!-- main content table -->
+<table border="0" cellpadding="0" cellspacing="0" width="100%">
+<tr valign="top">
+	<!-- left column -->
+	<td align="center" width="125" bgcolor="#FFDE8B"><table border=0 cellpadding=0 cellspacing=0 width=125 bgcolor=ffde8b>
+
+
+<tr><td><table width=100% cellpadding=0 cellspacing=0 border=0><tr>
+	<TD><a href="/learn/jesus/"><img src=/CC/Images/ccom/jesusnavbtn_125.gif border=0></a></div></TD>
+</tr></table></td><td width=6 bgcolor=000066><img src=/CC/Images/spacer.gif height=1 width=6></td></tr>
+
+
+<tr><td><table width=100%  cellpadding=0 cellspacing=0 border=0   class="level0"><tr>
+	<TD HEIGHT="16" class="" style="padding-left:27px;" onmousedown="nav(this)" onmouseover="nav2(this,1,0, '')" onmouseout="nav2(this,0,0, '')"><div>
+	<a href="/" class="nav_link">HOME</a></div></TD>
+</tr></table></td><td width=6 bgcolor=000066><img src=/CC/Images/spacer.gif height=1 width=6></td></tr>
+
+
+<tr><td style=""><table width=100%  cellpadding=0 cellspacing=0 border=0  class="level0">
+<tr class="">
+	<td height="10" valign=middle class=nav_cell onmousedown="nav(this)" onmouseover="nav2(this,1,0, '')" onmouseout="nav2(this,0,0, '')"><div >
+	<a href="http://home.christianity.com/local/jesus/" class=nav_link target="_top" onclick="return doNavClick(this)"><span >WHO IS JESUS?</span></a></div></td>
+</tr></table></td><td width=6 bgcolor=000066><img src=/CC/Images/spacer.gif height=1 width=6></td></tr>
+
+
+
+<tr><td style=""><table width=100%  cellpadding=0 cellspacing=0 border=0  class="level0">
+<tr class="">
+	<td height="10" valign=middle class=nav_cell onmousedown="nav(this)" onmouseover="nav2(this,1,0, '')" onmouseout="nav2(this,0,0, '')"><div >
+	<a href="http://home.christianity.com/topics/" class=nav_link target="_top" onclick="return doNavClick(this)"><span >TOPICS</span></a></div></td>
+</tr></table></td><td width=6 bgcolor=000066><img src=/CC/Images/spacer.gif height=1 width=6></td></tr>
+
+
+
+<tr><td style=""><table width=100%  cellpadding=0 cellspacing=0 border=0  class="level0">
+<tr class="">
+	<td height="10" valign=middle class=nav_cell onmousedown="nav(this)" onmouseover="nav2(this,1,0, '')" onmouseout="nav2(this,0,0, '')"><div >
+	<a href="http://home.christianity.com/ministries/" class=nav_link target="_top" onclick="return doNavClick(this)"><span >MINISTRIES</span></a></div></td>
+</tr></table></td><td width=6 bgcolor=000066><img src=/CC/Images/spacer.gif height=1 width=6></td></tr>
+
+
+
+<tr><td style=""><table width=100%  cellpadding=0 cellspacing=0 border=0  class="level0">
+<tr class="">
+	<td height="10" valign=middle class=nav_cell onmousedown="nav(this)" onmouseover="nav2(this,1,0, '')" onmouseout="nav2(this,0,0, '')"><div >
+	<a href="http://home.christianity.com/communities/" class=nav_link target="_top" onclick="return doNavClick(this)"><span >COMMUNITIES</span></a></div></td>
+</tr></table></td><td width=6 bgcolor=000066><img src=/CC/Images/spacer.gif height=1 width=6></td></tr>
+
+
+
+<tr><td style=""><table width=100%  cellpadding=0 cellspacing=0 border=0  class="level0">
+<tr class="">
+	<td height="10" valign=middle class=nav_cell onmousedown="nav(this)" onmouseover="nav2(this,1,0, '')" onmouseout="nav2(this,0,0, '')"><div >
+	<a href="http://home.christianity.com/connect/" class=nav_link target="_top" onclick="return doNavClick(this)"><span >CONNECTIONS</span></a></div></td>
+</tr></table></td><td width=6 bgcolor=000066><img src=/CC/Images/spacer.gif height=1 width=6></td></tr>
+
+
+<tr><td style=""><table width=100%  cellpadding=0 cellspacing=0 border=0  class="level0">
+<tr class="">
+	<td height="10" valign=middle class=nav_cell onmousedown="nav(this)" onmouseover="nav2(this,1,0, '')" onmouseout="nav2(this,0,0, '')"><div >
+	<a href="http://directory.christianity.com" class=nav_link target="_top" onclick="return doNavClick(this)"><span >DIRECTORY</span></a></div></td>
+</tr></table></td><td width=6 bgcolor=000066><img src=/CC/Images/spacer.gif height=1 width=6></td></tr>
+
+
+<tr><td style=""><table width=100%  cellpadding=0 cellspacing=0 border=0  class="level0">
+<tr class="">
+	<td height="10" valign=middle class=nav_cell onmousedown="nav(this)" onmouseover="nav2(this,1,0, '')" onmouseout="nav2(this,0,0, '')"><div >
+	<a href="http://music.christianity.com" class=nav_link target="_top" onclick="return doNavClick(this)"><span >MUSIC</span></a></div></td>
+</tr></table></td><td width=6 bgcolor=000066><img src=/CC/Images/spacer.gif height=1 width=6></td></tr>
+
+
+<tr><td style=""><table width=100%  cellpadding=0 cellspacing=0 border=0  class="level0">
+<tr class="">
+	<td height="10" valign=middle class=nav_cell onmousedown="nav(this)" onmouseover="nav2(this,1,0, '')" onmouseout="nav2(this,0,0, '')"><div >
+	<a href="http://home.christianity.com/about/" class=nav_link target="_top" onclick="return doNavClick(this)"><span >ABOUT US</span></a></div></td>
+</tr></table></td><td width=6 bgcolor=000066><img src=/CC/Images/spacer.gif height=1 width=6></td></tr>
+
+
+<tr><td style=""><table width=100%  cellpadding=0 cellspacing=0 border=0  class="level0">
+<tr class="">
+	<td height="10" valign=middle class=nav_cell onmousedown="nav(this)" onmouseover="nav2(this,1,0, '')" onmouseout="nav2(this,0,0, '')"><div >
+	<a href="http://home.christianity.com/job_openings/" class=nav_link target="_top" onclick="return doNavClick(this)"><span >JOBS</span></a></div></td>
+</tr></table></td><td width=6 bgcolor=000066><img src=/CC/Images/spacer.gif height=1 width=6></td></tr>
+
+
+<tr><td style=""><table width=100%  cellpadding=0 cellspacing=0 border=0  class="level0">
+<tr class="">
+	<td height="10" valign=middle class=nav_cell onmousedown="nav(this)" onmouseover="nav2(this,1,0, '')" onmouseout="nav2(this,0,0, '')"><div >
+	<a href="http://home.christianity.com/sitemap/" class=nav_link target="_top" onclick="return doNavClick(this)"><span >SITE MAP</span></a></div></td>
+</tr></table></td><td width=6 bgcolor=000066><img src=/CC/Images/spacer.gif height=1 width=6></td></tr>
+
+
+<tr><td style=""><table width=100%  cellpadding=0 cellspacing=0 border=0  class="level0">
+<tr class="">
+	<td height="10" valign=middle class=nav_cell onmousedown="nav(this)" onmouseover="nav2(this,1,0, '')" onmouseout="nav2(this,0,0, '')"><div >
+	<a href="http://home.christianity.com/help/" class=nav_link target="_top" onclick="return doNavClick(this)"><span >HELP</span></a></div></td>
+</tr></table></td><td width=6 bgcolor=000066><img src=/CC/Images/spacer.gif height=1 width=6></td></tr>
+
+
+<TR><TD BGCOLOR="#A3A3A3" HEIGHT="1"><img src='/IMG/pix.gif' width='1' height='1' align='' border='0'></TD><td width=6 bgcolor=000066><img src=/CC/Images/spacer.gif height=1 width=6></td></tr>
+</table><br> 
+<table border="0" cellspacing="0" cellpadding="0" width="100%">
+	<tr> 		
+		<td align="center"></td>
+	</tr>     
+</table>
+<br>
+<!-- Vignette StoryServer 5.0 Wed Sep 22 01:02:23 2004 -->
+
+	<!-- go --> 
+		  
+<!-- init layout channelID: 74 containerType: 1 sliceContainerType: 3 layoutMode:  -->				
+				<table border="0" width="100%" cellpadding="0" cellspacing="0" class="slicecontainer_3">
+			 
+		
+		
+<!-- start slice -->		
+			<tr>
+			<td align="left" valign="top" width="100%" colspan="1" ><img src="/CC/Images/spacer.gif" height="1" width="125" border="0" alt=""><br>
+				<table width="100%" border="0" cellspacing="0" cellpadding="0"><tr><td></td></tr>
+	 
+<!-- finish layout -->
+				
+					</table> <!--end column-->
+				</td></tr>
+<!-- end slice -->
+		
+				</table>
+		<br><img src="/CC/Images/spacer.gif" alt="" border="0" height="1" width="125"></td>
+	<!-- left gutter -->
+	<td width="12"><img src="/CC/Images/spacer.gif" width="12" height="1" alt="" border="0"></td>
+	<!-- center column -->
+	<td width="100%"><img src="/CC/Images/spacer.gif" width="468" height="2" alt="" border="0"><br>
+<br><table cellspacing="0" cellpadding="0" width="100%" border="0">
+	<tr>
+		<td>&nbsp;</td>
+	</tr>
+	<tr>
+		<td>
+			<div class="titlelg">We're sorry, but the page you requested could not be found.</div>
+			<div class="element">
+				<p>If you got here by typing a URL, please make sure the spelling, capitalization, and punctuation are correct, then try reloading the page.</p>
+				<p>You may also try searching for the page or start over again at <a href="/partner/0,,1000,00.html">christianity.com</a>.</p>
+			</div>
+		</td>
+	</tr>
+	<tr>
+		<td>&nbsp;</td>
+	</tr>
+</table>
+<!-- 404errorLocation: www.christianity.com/partner/Article_Display_Page/0,,PTID307086|CHID560800|CIID1413596,00.html
+<P><B><FONT SIZE=+1 FACE="Verdana, Arial, Helvetica">Elapsed Execution Time: </B>0.114 seconds</FONT></P><P><HR ALIGN=LEFT SIZE=1></P>
+    <P><B><FONT SIZE=+1 FACE="Verdana, Arial, Helvetica">Template Variables:</FONT></B></P>
+    <BLOCKQUOTE><P><TABLE BORDER=0 CELLSPACING=3 CELLPADDING=0 WIDTH=100%>
+    <TR><TD><B><FONT FACE="Verdana, Arial, Helvetica">variable</FONT></B></TD>
+    <TD><B><FONT FACE="Verdana, Arial, Helvetica">value</FONT></B></TD></TR><TR><TD><TT>ID</TT></TD><TD><TT>PTID1000</TT></TD></TR><TR><TD><TT>TABLE</TT></TD><TD><TT></TT></TD></TR><TR><TD VALIGN=TOP><TT>_Schema_partner</TT></TD>
+                        <TD VALIGN=TOP><TT></TT></TD></TR><TR><TD VALIGN=TOP><TT>_SOURCE(CC Detection source)</TT></TD>
+                            <TD VALIGN=TOP><TT></TT></TD></TR><TR><TD VALIGN=TOP><TT>_SOURCE(CC Masking Setting source)</TT></TD>
+                            <TD VALIGN=TOP><TT></TT></TD></TR><TR><TD VALIGN=TOP><TT>_TEMPLATE_LOOKUP</TT></TD>
+                        <TD VALIGN=TOP><TT>1</TT></TD></TR><TR><TD VALIGN=TOP><TT>_Database(,vignette,reppr1)</TT></TD>
+                            <TD VALIGN=TOP><TT>Vdbtcl0</TT></TD></TR><TR><TD VALIGN=TOP><TT>_includedTemplate</TT></TD>
+                        <TD VALIGN=TOP><TT>CC Masking Setting source</TT></TD></TR><TR><TD VALIGN=TOP><TT>::VgnDefaultNamespace::libName</TT></TD>
+                        <TD VALIGN=TOP><TT>CC 404 Error lib</TT></TD></TR><TR><TD VALIGN=TOP><TT>::VgnDefaultNamespace::netsuccess</TT></TD>
+                        <TD VALIGN=TOP><TT>0</TT></TD></TR><TR><TD VALIGN=TOP><TT>::VgnDefaultNamespace::pList</TT></TD>
+                        <TD VALIGN=TOP><TT>d3d3LmNocmlzdGlhbml0eS5jb20= L3BhcnRuZXIvQXJ0aWNsZV9EaXNwbGF5X1BhZ2UvMCwsUFRJRDMwNzA4NnxDSElENTYwODAwfENJSUQxNDEzNTk2LDAwLmh0bWw=</TT></TD></TR><TR><TD VALIGN=TOP><TT>::VgnDefaultNamespace::success</TT></TD>
+                        <TD VALIGN=TOP><TT>0</TT></TD></TR><TR><TD VALIGN=TOP><TT>::VgnDefaultNamespace::partnerID</TT></TD>
+                        <TD VALIGN=TOP><TT>1000</TT></TD></TR><TR><TD VALIGN=TOP><TT>::VgnDefaultNamespace::ln</TT></TD>
+                        <TD VALIGN=TOP><TT>xw 404 processing</TT></TD></TR><TR><TD VALIGN=TOP><TT>::VgnDefaultNamespace::pathName</TT></TD>
+                        <TD VALIGN=TOP><TT>/partner/Article_Display_Page/0,,PTID307086|CHID560800|CIID1413596,00.html</TT></TD></TR><TR><TD VALIGN=TOP><TT>::VgnDefaultNamespace::pageType</TT></TD>
+                        <TD VALIGN=TOP><TT>2</TT></TD></TR><TR><TD VALIGN=TOP><TT>::VgnDefaultNamespace::hostName</TT></TD>
+                        <TD VALIGN=TOP><TT>www.christianity.com</TT></TD></TR></TABLE></P></BLOCKQUOTE> -->
+<!-- This is done by passover; 0; xw 404 processing;  --><!--end	of content table-->
+	</td>
+	<!-- right gutter -->
+	<td width="12"><img src="/CC/Images/spacer.gif" width="12" height="0" alt="" border="0"></td>
+	<!-- right column -->
+	<td width="125" align="center"><!-- Vignette StoryServer 5.0 Thu Sep 16 15:43:31 2004 -->
+
+	<!-- go --> 
+		 
+		  
+<!-- init layout channelID: 74 containerType: 1 sliceContainerType: 5 layoutMode:  -->				
+				<table border="0" width="100%" cellpadding="0" cellspacing="0" class="slicecontainer_5">
+			 
+		
+		
+<!-- start slice -->		
+			<tr>
+			<td align="left" valign="top" width="100%" colspan="1" ><img src="/CC/Images/spacer.gif" height="1" width="125" border="0" alt=""><br>
+				<table width="100%" border="0" cellspacing="0" cellpadding="0"><tr><td></td></tr>
+	 
+		
+		
+					</table> <!--end column-->
+				</td></tr>
+<!-- end slice -->
+		
+				<tr>
+					<td valign="middle"  colspan="5" height="9" background="/CC/Images/hline_cccccc.gif"><img src="/CC/Images/spacer.gif" width="1" height="9"></td>
+				</tr>
+			
+<!-- start slice -->		
+			<tr>
+			<td align="left" valign="top" width="100%" colspan="1" ><img src="/CC/Images/spacer.gif" height="1" width="125" border="0" alt=""><br>
+				<table width="100%" border="0" cellspacing="0" cellpadding="0"><tr><td></td></tr>
+	 
+<!-- finish layout -->
+				
+					</table> <!--end column-->
+				</td></tr>
+<!-- end slice -->
+		
+				</table>
+		<!-- Vignette StoryServer 5.0 Wed Sep 22 11:16:08 2004 -->
+
+	<!-- go --> 
+		  
+<!-- init layout channelID: 74 containerType: 1 sliceContainerType: 4 layoutMode:  -->				
+				<table border="0" width="100%" cellpadding="0" cellspacing="0" class="slicecontainer_4">
+			 
+		
+		
+<!-- start slice -->		
+			<tr>
+			<td align="left" valign="top" width="100%" colspan="1" ><img src="/CC/Images/spacer.gif" height="1" width="125" border="0" alt=""><br>
+				<table width="100%" border="0" cellspacing="0" cellpadding="0"><tr><td></td></tr>
+	 
+<!-- finish layout -->
+				
+					</table> <!--end column-->
+				</td></tr>
+<!-- end slice -->
+		
+				</table>
+		<!-- Vignette StoryServer 5.0 Thu Sep 16 15:49:18 2004 -->
+
+	<!-- go --> 
+		  
+<!-- init layout channelID: 74 containerType: 1 sliceContainerType: 6 layoutMode:  -->				
+				<table border="0" width="100%" cellpadding="0" cellspacing="0" class="slicecontainer_6">
+			 
+		
+		
+<!-- start slice -->		
+			<tr>
+			<td align="left" valign="top" width="100%" colspan="1" ><img src="/CC/Images/spacer.gif" height="1" width="125" border="0" alt=""><br>
+				<table width="100%" border="0" cellspacing="0" cellpadding="0"><tr><td></td></tr>
+	 
+<!-- finish layout -->
+				
+					</table> <!--end column-->
+				</td></tr>
+<!-- end slice -->
+		
+				</table>
+		<br><img src="/CC/Images/spacer.gif" alt="" border="0" height="1" width="125"></td>
+	<!-- end gutter -->
+	<td width="10"><img src="/CC/Images/spacer.gif" width="10" height="1" alt="" border="0"></td>
+</tr>
+</table>
+<!-- end main content table-->
+<!-- footer -->
+
+<!--FOOTER-->
+<table border="0" cellspacing="0" cellpadding="0" width="100%">
+<tr>
+<!--LEFT COLUMN / BACK TO TOP BUTTON-->
+<td valign="top" align="right" width="125"><a href="/CC_Container_Page/1,,PTID1000,00.html#top"><img src="/CC/Images/CC_BackToTop.gif" width="125" height="44" alt="Back To Top" border="0"></a></td>
+<!--LEFT CENTER GUTTER-->
+<td width="12" valign="top"><img src="/CC/Images/spacer.gif" width="12" height="1" alt="" border="0"></td>
+<!--FOOTER CONTENT-->
+<td width="100%" valign="top"><img src="/CC/Images/spacer.gif" width="468" height="1" alt="" border="0">&nbsp;</td>
+
+<!--RIGHT GUTTER-->
+	<td width="10" valign="top"><img src="/CC/Images/spacer.gif" width="10" height="1" alt="" border="0"></td>
+</tr>
+</table><br>
+<div style="position: absolute; top: -3000px; left: -3000px;">
+<!-- Start Logging Code v3a-->
+
+<script src="/CC/cookie/0,,,00.js"></script>
+<script language="JavaScript" src="/CC/log/1,,,00.js?logURL=http%3A%2F%2Flogserver%2Echristianity%2Ecom%2Fweblog%2Fv3%2Fsignin%2F1000%2F74%2F0%2Fanonymous%2F&locLOC=signin&logREF=" type="text/javascript"></script>
+<noscript><img src="http://logserver.christianity.com/weblog/v3/signin/1000/74/0/anonymous/0?noscript" height="1" width="1"></noscript>
+<img src="/CC/Images/Log/log_spacer.gif">
+<!-- End Logging Code -->
+</div></div><!-- br -->
+</body>
+</html>

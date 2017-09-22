@@ -1,0 +1,387 @@
+@import url(global.css);
+
+/**
+ * Layout tested successfully on:
+ * Win/IE 5.01, 5.5, 6.0
+ * Win/Firefox 1.5.0.4
+ * Mac/Firefox
+ * Mac/Safari
+ * 
+ * Layout test unsuccessfully on:
+ * Mac/IE 5.2
+ */
+
+/**
+ * General Styles
+ */
+
+#SKIN h1 {
+	padding: 5px 0;
+	margin: 0;
+}
+
+#SKIN p,
+#SKIN h3,
+#SKIN h4,
+#SKIN .table_container {
+	padding: 5px;
+	margin: 0;
+}
+
+#SKIN img {
+	border: 0;
+}
+
+#SKIN table,
+#SKIN tr,
+#SKIN td, 
+#SKIN th,
+#SKIN form {
+	padding: 0;
+	margin: 0;
+	border: 0;
+}
+
+#SKIN table {
+	width: 100%;
+}
+
+#SKIN fieldset {
+	position: relative;
+	margin: 0;
+	padding: 5px;
+	border: 0;
+}
+
+#SKIN .form_button_group {
+	margin: 5px 0;
+}
+
+#SKIN .form_button_group input {
+	margin: 0 5px 0 0;
+}
+
+#SKIN .widget_actions {
+	height: 28px;
+	line-height: 28px;
+}
+
+#SKIN .standard_form .form_field {
+	position: relative;
+	float: none;
+	margin: 0 0 5px 0;
+}
+
+#SKIN .standard_form .form_label {
+	position: absolute;
+	width: 120px;
+}
+
+#SKIN .standard_form .form_input {
+	position: relative;
+	padding: 0 0 0 120px;
+}
+
+/**
+ * Font Styles
+ */
+
+#SKIN h1 {
+	color: white;
+	font-size: 18px;
+	font-weight: normal;
+}
+
+body.article #content h2, /* need this to override DNC style */
+#SKIN h2 {
+	color: black;
+	font-size: 14px;
+	font-weight: bold;
+}
+
+#SKIN h3, 
+#SKIN h4 {
+	font-size: 12px;
+}
+
+#SKIN .widget_header h2.widget_title {
+	color: white;
+	font-weight: bold;
+	font-size: 12px;
+	line-height: 28px;
+}
+
+#SKIN p, 
+#SKIN li, 
+#SKIN td, 
+#SKIN th,
+#SKIN label,
+#SKIN div,
+#SKIN a {
+	font-size: 10px;
+}
+
+#SKIN a:link, 
+#SKIN a:active, 
+#SKIN a:visited {
+	color: #CC3300;
+}
+
+#SKIN a:hover {
+	color: #FF9900;
+}
+
+#SKIN em {
+	font-weight: bold;
+	font-style: normal;
+}
+
+#SKIN #account_actions a:link,
+#SKIN #account_actions a:active,
+#SKIN #account_actions a:visited,
+#SKIN #account_actions a:hover {
+	color: #FF9900;
+	font-weight: bold;
+	font-size: 10px;
+}
+
+#SKIN .widget_actions select {
+	font-size: 10px;
+}
+
+#SKIN #account_actions .delimiter {
+	color: #CC3300;
+	margin: auto 3px;
+}
+
+/*
+ * list entities: for example group and profile listings
+ */
+#SKIN .entity_list_header h3,
+#SKIN .entity_list_header a {
+	padding-bottom: 0 ;
+	font-size: 12px ;
+}
+
+#SKIN .entity_list_title {
+	margin-top: 10px ;
+	margin-left: 5px ;
+}
+
+
+#SKIN .entity_list_subheading {
+	margin-left: 5px ;
+}
+
+#SKIN .form_label {
+	font-weight: bold;
+}
+
+#SKIN .form_value {
+}
+
+#SKIN .form_required,
+#SKIN .form_error {
+	color: red;
+}
+
+#SKIN .group_access_public {
+	color: green;
+}
+
+#SKIN .group_access_private {
+	color: red;
+}
+
+#SKIN td.group_prev_link {
+	text-align: left;
+}
+
+#SKIN td.group_next_link {
+	text-align: right;
+}
+
+#SKIN .odd {
+	background: #EDF3FE;
+}
+
+#SKIN .even {
+	background: white;
+}
+
+/**
+ * Layout Styles
+ */
+
+#SKIN .container {
+	position: relative;
+}
+
+#SKIN .widget_groups_container {
+	background: #3270A5;
+	width: 530px;
+	w\idth: 512px;
+	padding: 9px;
+}
+
+#SKIN .widget_groups_container #control_set {
+	float: left;
+	width: 250px;
+	w\idth: 232px;
+	padding: 10px 9px 5px 9px;
+	margin: 0 11px 0 0;
+	background: black url(/skins/dnc/images/welcome-bg.gif) no-repeat left top;
+}
+
+#SKIN .widget_group {
+	width: 250px;
+	overflow: hidden; /* prevent blowing out of the column layout */
+}
+
+#SKIN .widget_container {
+	padding: 0;
+	margin: 0;
+	background: white;
+	border-left: 1px solid #072658;
+	border-right: 1px solid #072658;
+}
+
+#SKIN .group_last {
+	border-bottom: 1px solid #072658;
+}
+
+/* left column */
+#SKIN #widget_group_1 {
+	float: left;
+	clear: left;
+	margin: 0 11px 0 0;
+}
+
+/* right column
+   IE only
+   Explorer 6 Duplicate Characters Bug  
+   (reference http://positioniseverything.net/explorer/dup-characters.html) */
+* html #SKIN #widget_group_2 {
+	margin-right: -3px;
+}
+
+/* IE <= 6 */
+* html #SKIN #widget_group_2 {
+	float: left;
+}
+
+#SKIN #widget_group_2 {
+	padding: 0 0 9px 0;
+	background: #3270A5;
+}
+
+#SKIN #widget_group_2 .group_first {
+	border-top: 1px solid #072658;
+}
+
+#SKIN .widget_header {
+	background: #3366CC url(/skins/dnc/images/title-bg.gif) repeat-x left bottom;
+}
+
+#SKIN .widget_header .widget_title {
+	padding: 0 5px;
+	margin: 0;
+	float: left;
+	vertical-align: middle;
+}
+
+#SKIN .widget_actions {
+	float: right;
+	margin: -1px 2px 0 0;
+	padding: 0;
+	vertical-align: middle;
+	line-height: 28px;
+	/* to vertically center, set line-height to size of .widget_title */
+}
+
+/* IE <= 6 */
+* html #SKIN .widget_actions {
+	right: 10px;
+}
+
+/* IE = 7 */
+*:first-child+html #SKIN .widget_actions {
+	right: 10px;
+}
+
+/* IE <= 6 */
+* html #SKIN .widget_actions {
+	margin-top: -1px;
+}
+
+/* IE = 7 */
+*:first-child+html #SKIN .widget_actions {
+	margin-top: -3px;
+}
+
+#SKIN .widget_action_submit {
+	padding: 0;
+	margin: 2px 0 0 0;
+	border: 0;
+	height: 22px;
+	width: 18px;
+	overflow: hidden;
+	background: url(/skins/dnc/images/action-5.gif) no-repeat left 4px;
+	text-indent: -3000px;
+}
+
+/* IE <= 6 */
+* html #SKIN .widget_action_submit {
+	margin-left: 4px;
+}
+
+/* IE = 7 */
+*:first-child+html #SKIN .widget_action_submit {
+	margin-left: 4px;
+}
+
+#SKIN .widget_action_menu {
+	margin: auto 0;
+}
+
+#SKIN .widget_subheader {
+	background: #FFF1D4;
+	border-bottom: 1px solid #FFD9B1;
+	margin: 0 0 1px 0;
+}
+
+#SKIN .basic {
+	width: 530px;
+	padding: 0;
+	margin: 0;
+	background: #3270A5;
+}
+
+#SKIN .basic #control_set {
+	padding: 5px 9px;
+	margin: 0;
+	background: black url(/skins/dnc/images/welcome-bg.gif) no-repeat left top;
+}
+
+#SKIN .basic .main {
+	background: white;
+	border: 1px solid #072658;
+	margin: 9px;
+}
+
+#SKIN .basic .main h2 {
+	padding: 5px;
+}
+
+/**
+ * 3rd party app styling
+ */
+ 
+/* YUI tooltip */
+#SKIN .tt {
+	width: 200px;
+}
+
+#SKIN .tt .empty_tt {
+	font-style: italic;
+}

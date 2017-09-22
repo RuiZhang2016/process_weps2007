@@ -1,0 +1,17 @@
+
+#root_div {
+	height:100%; 
+}
+#noFlash { background-color:#fff; width:1000px; margin:auto;}
+#upgradeFlash { background-color:#000; color:#999; display:none; width:1000px; margin:auto;}
+#flashObj { 
+	position:absolute; 
+	width:100%; 
+	min-width:1003px;
+	height:100%; 
+	min-height:540px; 
+	top:0; 
+	left:0;
+	width:expression(document.body.clientWidth<1003? "1003px": "100%");
+	height:expression(document.body.clientHeight<540? "540px": "100%");
+}

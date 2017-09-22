@@ -1,0 +1,219 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<HTML>
+<HEAD>
+<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+
+<title>NSDL Whiteboard Report - Full Resource Record Display</title>
+<link rel="stylesheet" href="SPT--Stylesheet.css" type="text/css">
+<link href="SPT--NoNetscape4.css" type="text/css" rel="stylesheet" media="all">
+
+<script type="text/javascript"><!--
+    var Interface = "SPTUI--Default";
+--></script>
+<script type="text/javascript" src="SPT--FastRating.js"></script>
+
+</HEAD>
+<BODY BGCOLOR="#FFFFFF">
+<table border="0" cellspacing="0" cellpadding="0" width="680">
+    <tr>
+        <td valign="top" align="left" width="680" colspan="2">
+			<table border="0" cellpadding="0" cellspacing="0">
+				<tr>
+					<td rowspan="2"><a href="http://content.nsdl.org/wbr/SPT--Home.php"><IMG SRC="SPT--Logo.gif" WIDTH="222" HEIGHT="72" alt="SPT Logo" border="0"></a></td>
+					<td colspan="5" width="458" valign="bottom" align="right"></td>
+				</tr>
+				<tr>
+                    <td width="136"><a href="http://content.nsdl.org/wbr/SPT--BrowseResources.php"><img src="SPT--TopNav_01.gif" width="136" height="14" border="0" alt="Browse Resources"></a></td>
+                    <td width="136"><a href="http://content.nsdl.org/wbr/SPT--Advanced.php"><img src="SPT--TopNav_02.gif" width="136" height="14" border="0" alt="Advanced Search"></a></td>
+                			
+                    <td width="68"><a href="http://content.nsdl.org/wbr/SPT--Forums.php"><img src="SPT--TopNav_03.gif" width="68" height="14" border="0" alt="Forums"></a></td>
+                			
+                    <td width="59"><a href="http://content.nsdl.org/wbr/SPT--About.php"><img src="SPT--TopNav_04.gif" width="59" height="14" border="0" alt="About"></a></td>
+                    <td width="56"><a href="http://content.nsdl.org/wbr/SPT--Home.php"><img src="SPT--TopNav_05.gif" width="56" height="14" border="0" alt="Home"></a></td>
+				</tr>
+			</table>
+        </td>
+    </tr>    
+    <tr>
+        <td width="135" valign="top" background="SPT--VStripe.gif">
+
+			<TABLE BORDER="0" CELLPADDING="0" CELLSPACING="0" style="margin-top: 10px;">
+				
+			</table>
+			<br>
+			<form method="POST" action="http://content.nsdl.org/wbr/SPT--UserLogin.php">
+			<TABLE BORDER="0" CELLPADDING="0" CELLSPACING="0" width="135">
+				<TR>
+					<TD background="FieldBox--T.gif" width="132" colspan="2" align="right"><IMG SRC="FieldBox--UserLogin.gif" WIDTH="78" HEIGHT="17" alt="user login" border="0"></TD>
+					<TD background="FieldBox--T.gif" width="3"><IMG SRC="FieldBox--TR.gif" WIDTH="3" HEIGHT="17" alt="" border="0"></TD>
+				</TR>
+				<TR>
+					<td colspan="2" background="white.gif" align="center">
+					    <table border="0">
+					        <tr>
+					            <td><img src="Username.gif" width="61" height="10" alt="username" border="0" class="inline"><br>
+					            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input id="userloginfield" type="text" size="12" maxlength="24" name="F_UserName" style="margin-top: 2px;"></td>
+					        </tr>
+					        <tr>
+					            <td><img src="Password.gif" width="61" height="10" alt="password" border="0" class="inline"><br>
+					            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input id="userloginfield" type="password" size="12" maxlength="24" name="F_Password" style="margin-top: 2px;"></td>
+					        </tr>
+					    </table>
+					</td>
+					<TD background="FieldBox-V.gif"><IMG SRC="FieldBox-V.gif" WIDTH="3" HEIGHT="2" alt="" border="0"></TD>
+				</TR>
+				<TR>
+					<TD background="FieldBox--B.gif" align="left"><IMG SRC="FieldBox--H.gif" WIDTH="74" HEIGHT="14" alt="" border="0"></TD>
+					<TD background="FieldBox--B.gif"><input type="image" SRC="FieldBox--LoginButton.gif" border="0" alt="Login"></TD>
+					<TD background="FieldBox--B.gif" align="left"><IMG SRC="FieldBox--BR.gif" WIDTH="3" HEIGHT="14" alt="" border="0"></TD>
+				</TR>
+			</TABLE>
+			<br>
+			<a href="http://content.nsdl.org/wbr/SPT--RequestAccount.php" class="small"><IMG SRC="SPT--GetAccount.gif" WIDTH="135" HEIGHT="11" alt="get an account" border="0"></a>
+			</form>
+			<br>
+
+
+			<form method="POST" action="http://content.nsdl.org/wbr/SPT--AdvancedSearch.php">
+			<TABLE BORDER="0" CELLPADDING="0" CELLSPACING="0">
+				<TR>
+					<TD colspan="2" background="FieldBox--T.gif"><IMG SRC="FieldBox--Search.gif" alt="Search Resources" border="0"></TD>
+					<TD background="FieldBox--T.gif"><IMG SRC="FieldBox--TR.gif" WIDTH="3" HEIGHT="17" alt="" border="0"></TD>
+				</TR>
+				<TR>
+					<td colspan="2" background="white.gif" align="center">
+	                    <input type="text" style="margin:5px; font-size: 11px" name="F_SearchString" size="15" maxlength="120" value="">
+					</td>
+					<TD background="FieldBox-V.gif" align="right"><IMG SRC="FieldBox-V.gif" WIDTH="3" HEIGHT="2" alt="" border="0"></TD>
+				</TR>
+				<TR>
+					<TD background="FieldBox--B.gif"><IMG SRC="FieldBox--H.gif" WIDTH="74" HEIGHT="14" alt="" border="0"></TD>
+					<TD background="FieldBox--B.gif"><input type="image" SRC="FieldBox--SearchButton.gif" border="0" alt="Search"></TD>
+					<TD background="FieldBox--B.gif"><IMG SRC="FieldBox--BR.gif" WIDTH="3" HEIGHT="14" alt="" border="0"></TD>
+				</TR>
+			</TABLE>
+			</form>
+			<br>
+			<a href="http://content.nsdl.org/wbr/SPT--Help.php"><img src="SPT--Help.gif" border="0" width="114" height="26" alt="Help" title="Find Help"></a>
+			<br><br>
+        </td>
+        <td valign="top" align="left" width="545">
+        
+
+
+<table cellpadding="3" cellspacing="2" border="0" width="100%" style="margin-top: 2px;">
+	<tr class="SPTcolorHeader">
+		<td width="15%">
+					</td>
+		<td width="85%">&nbsp;</td>
+	</tr>
+	
+	<tr class="lightBody">
+		<td><b>Date Of Record Release:</b></td>
+		<td>2005-02-01 16:11:00</td>
+	</tr>
+
+
+	<tr class="lightBody">
+		<td><b>Title:</a></b></td>
+		<td><a href="http://content.nsdl.org/wbr/Issue.php?issue=76" class="ResourceTitle" target="new"">NSDL Standing Committee Meetings at JCDL</td>
+	</tr>
+
+	<tr>
+		<td colspan="2">
+		<table cellpadding="3" cellspacing="0" width="100%" style="border: 2px solid gainsboro; margin: 5px 0px 5px 0px;">
+			<tr>
+				<td align="left" valign="top" class="lightBody">
+					<p><b>Description:</b>
+					NSDL Standing Committee Meetings at JCDL<br>The Educational Impact and Evaluation (EIESC), Content (CSC), and Technology (TSC) Standing Committees met in Denver last week.<br><br><br><br>-The EIESC meeting, chaired by Laura Bartolo, reviewed:<br><br><br><br>1. CALL for participation in working groups to continue EIESC work throughout the year, as well as to work with other projects sharing similar interests. Please email Anita Coleman (asc@acm.org) or Laura Bartolo (lbartolo@kent.edu) by Thursday, June 30, if you would like to participate in one of the Working Groups listed below, or another that you would like to suggest:<br><br><br><br>-Evaluation Tutorial Workshop at NSDL Annual Meeting 2005 (deadline for proposal is July 10)<br><br>-2006 Annual Report--Each year EIESC works with other groups on contributing to AR. Carol Minton Morris discussed that the AR Committee looks for ways to demonstrate impact and will disseminate the publication in print and<br>online version<br><br>-DLIST Evaluation Clearinghouse: Collaborative effort to build an evaluation materials repository for EIESC Grade Level Vocabularies<br><br><br><br><br>2. CALL 2006-2008 Chair and Vice-Chair Nominations<br><br>Please email Anita Coleman (asc at acm.org) or Laura Bartolo (lbartolo at kent.edu) if you would like to volunteer or nominate individuals for these positions. The term starts in January 2006. Voting will be held at Annual Meeting in November.<br><br><br><br>3. Additional Discussion for EIESC List: Fall teleconference call, and EIESC meeting at the Annual Meeting:<br><br><br><br>The EIESC will revisit goals to find out where there is energy. Please send your thoughts to the EIESC list [eduimpact-members@comm.nsdl.org]. The fall teleconference will be scheduled in late August to plan for the EIESC meeting at the NSDL Annual Meeting.<br><br><br><br>-The CSC meeting, chaired by Kim Lightle, discussed:<br><br><br><br>1. A strategy for developing a list of documents (everything from collection development policies to reusability guidelines) that would be useful to collect in one place<br><br><br><br>2. A process for finding controlled vocabularies that have already been registered.<br><br><br><br>-Robbie Robson, TSC Chair, led the Technology Standing Committee Meeting on Friday morning where he outlined a possible "Plugfest" for the Annual Meeting explaining that a venue for experimentation and demonstration would be an opportunity for developers to cross-fertilize. Response was favorable, but timing and resources are missing to make this happen in conjunction with the Annual Meeting. Could be presented at an additional NSDL event. The TSC would like to:<br><br><br><br>1. Get a better idea what technologies are being used by NSDL projects. Survey methods were discussed.<br><br><br><br>2. Explore creating a facility within the poster finder to help developers find others who are presenting complimentary technologies.<br><br><br><br>3. Give the Annual Meeting Planning committee feedback about what sorts of technical presentations would be useful during the Annual Meeting.</p>
+				</td>
+			</tr>
+		</table>
+		</td>
+	</tr>
+
+	<tr class="lightBody">
+		<td><b>Url:</a></b></td>
+		<td><a href="http://content.nsdl.org/wbr/Issue.php?issue=76">http://content.nsdl.org/wbr/Issue.php?issue=76</td>
+	</tr>
+
+
+	<tr class="lightBody">
+		<td><b>Relation:</b></td>
+		<td>http://nsdl.org/ofinterest/?ctype=rss&rss=wbr</td>
+	</tr>
+
+
+	<tr class="lightBody">
+		<td><b>Release Flag:</b></td>
+		<td>OK for Viewing</td>
+	</tr>
+
+
+	<tr class="lightBody">
+		<td><b>Citation:</b></td>
+		<td>Whiteboard Report, 76, June 2005, News</td>
+	</tr>
+
+    <tr class="lightBody">
+               <th valign="top" class="middle" align="left">Language:</th>
+           <td>
+    <a href="http://content.nsdl.org/wbr/SPT--AdvancedSearch.php?Q=Y&amp;G24=17">English</a><br>
+    </tr>
+        <tr class="lightBody">
+               <th valign="top" class="middle" align="left">PubType:</th>
+           <td>
+    <a href="http://content.nsdl.org/wbr/SPT--AdvancedSearch.php?Q=Y&amp;G33=101">WBR</a><br>
+    </tr>
+        <tr class="lightBody">
+               <th valign="top" class="middle" align="left">Audience:</th>
+           <td>
+    <a href="http://content.nsdl.org/wbr/SPT--AdvancedSearch.php?Q=Y&amp;G25=13">Undergraduate</a><br>
+    <a href="http://content.nsdl.org/wbr/SPT--AdvancedSearch.php?Q=Y&amp;G25=14">Graduate</a><br>
+    <a href="http://content.nsdl.org/wbr/SPT--AdvancedSearch.php?Q=Y&amp;G25=15">Research</a><br>
+    <a href="http://content.nsdl.org/wbr/SPT--AdvancedSearch.php?Q=Y&amp;G25=16">Lifelong Learner</a><br>
+    </tr>
+        <tr class="lightBody">
+               <th valign="top" class="middle" align="left">Format:</th>
+           <td>
+    <a href="http://content.nsdl.org/wbr/SPT--AdvancedSearch.php?Q=Y&amp;G26=43">plain</a><br>
+    </tr>
+        <tr class="lightBody">
+               <th valign="top" class="middle" align="left">Resource Type:</th>
+           <td>
+    <a href="http://content.nsdl.org/wbr/SPT--AdvancedSearch.php?Q=Y&amp;G23=9">Text</a><br>
+    </tr>
+    
+	<tr class="lightBody">
+		<td><b>Date Last Modified:</b></td>
+		<td>2005-06-16 17:31:36</td>
+	</tr>
+
+
+	<tr class="lightBody">
+		<td><b>Date Of Record Creation:</b></td>
+		<td>2005-06-16 17:22:20</td>
+	</tr>
+
+
+	<tr class="lightBody">
+		<td><b>Date Record Checked:</b></td>
+		<td>1999-11-30</td>
+	</tr>
+
+</table>
+
+
+
+      </td>
+    </tr>
+    <tr>
+        <td colspan="2" background="white.gif">
+            <img src="SPT--BottomLine.gif" width="680" height="1" border="0" alt="">
+            <div class="TopNBottom" style="margin-left: 117px">© nsdl.org&nbsp;&nbsp;|&nbsp;&nbsp;Comments, Suggestions? Use our <a href="http://content.nsdl.org/wbr/SPT--LeaveFeedback.php">feedback form</a>.</div>
+                        <div style="margin: 3px 0px 3px 280px;"><a href="http://scout.wisc.edu/research/SPT/"><img src="PoweredBySPT.gif" border="0" height="17" width="189" vspace="5" hspace="0" alt="Powered By Scout Portal Toolkit"></a></div>
+        </td>
+    </tr>
+</table>
+</BODY>
+</HTML>

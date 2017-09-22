@@ -1,0 +1,338 @@
+
+/* Elements */
+body, p, ol, ul, li, dt, dd, td, th, select, input, textarea, option {
+	font-family: Arial,Geneva,Helvetica,sans-serif;
+	font-size: 10pt;
+	color: #555555;
+}
+
+body, form {
+	margin: 0;
+	padding: 0;
+}
+
+h1 {
+	margin: 0;
+	font-size: 14pt;
+	padding: 0 0 15px 0;
+	font-weight: normal;
+}
+
+h2 {
+	margin: 0;
+	padding: 0 0 4px 0;
+	font-size: 10pt;
+	font-weight: bold;
+}
+
+a:link {
+	color: #555555;
+}
+a:visited {
+	color: #770000;
+}
+
+a:hover {
+	color: red;
+}
+
+a:active {
+	color: #dd0000;
+}
+
+ul {
+	margin: 0;
+	padding: 0 0 10px 0;
+}
+
+p {
+	margin: 0;
+	padding: 0 0 12px 0;
+}
+
+hr {
+	height: 1px;
+	margin: 8px auto;
+	border: none;
+	background-color: #555555;
+	color: #555555;
+}
+
+/*hr {
+	height: 1px;
+	border-bottom: 1px solid #555555;
+	margin: 10px auto;
+	color: #ffffff;
+	background-color: #ffffff;
+}*/
+
+img {
+	border: 0;
+	margin: 0;
+	padding: 0;
+}
+
+/* IDs */
+#header {
+	margin: 0;
+	padding: 0;
+}
+
+#subheader {
+	margin: 0;
+	padding: 0;
+}
+
+#footer {
+	margin: 0;
+	padding: 0;
+}
+
+#bannerbar {
+	margin: 0;
+	padding: 10px;
+	background-color: #424242;
+	text-align: center;
+}
+
+#connect {
+	margin: 0;
+	padding: 0 0 10px 24px;
+	/*border: solid 1px red;*/
+	position: absolute;
+	width: 146px;
+}
+
+#connect p {
+	font-size: 8pt;
+	padding: 0 0 3px 0;
+}
+
+#connect p.RSS {
+	font-size: 8pt;
+	padding: 0 0 6px 0;
+}
+
+#connect p a:link, #connect p a:visited {
+	color: #555555;
+	text-decoration: none;
+}
+	
+#connect p a:hover {
+	color: red;
+}
+
+#content {
+	margin: 0;
+	padding: 0 10px 10px 196px;
+	/*border: solid 1px green;*/
+	height: 110px;	/* needed for short error messages so connect area is fully exposed */
+}
+
+html > body #content {
+	/*this rule will set everything right for CSS2 browsers*/
+	height: auto;
+	min-height: 110px;
+}
+
+#content_txt {
+	margin: 0;
+	padding: 10px 0 0 0;
+	/*border-top: solid 1px green;
+	border-left: solid 1px green;
+	border-right: solid 1px green;*/
+	border-bottom: 1px solid #555555;
+}
+
+#content_txt a, #content_txt a:visited {
+	text-decoration: none;
+}
+
+#copyright {
+	margin: 0;
+	padding: 2px 10px 3px 10px;
+	background: #fff url(/graphcc/dot_clear.gif);
+	font-size: 7pt;
+	color: #777777;
+}
+
+#copyright a:link, #copyright a:visited {
+	color: #777777;
+	text-decoration: underline;
+}
+
+#copyright a:hover {
+	color: red;
+}
+
+#prev_next {
+	margin: 0;
+	padding: 15px 0 0 0;
+	/*border: solid 1px red;
+	border-top: 1px solid #555555;*/
+	font-size: 8pt;
+	text-align: center;
+}
+
+#prev_next a:link, #prev_next a:visited {
+	color: #555555;
+}
+
+#prev_next a:hover {
+	color: red;
+}
+
+#dateline a:link, #dateline a:visited {
+	color: #555555;
+}
+
+#dateline a:hover {
+	color: red;
+}
+
+/* Classes */
+.title {
+	margin: 0;
+	padding: 0 0 10px 0;
+	color: #990000;
+	font-weight: bold;
+	/*border: solid 1px yellow;*/
+}
+
+#authorline {
+	padding: 0 0 10px 0;
+	/*font-size: 10pt;
+	border: solid 1px blue;*/
+	border-bottom: 1px solid #555555;
+}
+
+#dateline {
+	font-size: 8pt;
+	height: 24px;
+	/*border: solid 1px pink;*/
+}
+
+.float_right {
+	float: right;
+}
+
+.float_left {
+	float: left;
+}
+
+.left {
+	text-align: left;
+}
+
+.right {
+	text-align: right;
+}
+
+.center {
+	text-align: center;
+}
+
+.large {
+	font-size: 12pt;
+}
+
+.small {
+	font-size: 8pt;
+}
+
+.italic {
+	font-style: italic;
+}
+
+.clear {
+	clear: both;
+}
+
+.red {
+	color: #dd0000;
+}
+
+.darkred {
+	color: #990000;
+}
+
+.darkgray {
+	color: #555555;
+}
+
+.square_ad {
+	float: right;
+	margin: 0;
+	padding: 0 0 0 4px;
+	font-size: 7pt;
+	text-align: center;
+	/*border: solid 1px orange;*/
+}
+
+.error ul {
+	margin: 0;
+	padding: 0 0 10px 0;
+}
+
+.error li {
+	list-style-position: inside;
+	padding: 0 0 4px 0;
+}
+
+.header {
+	margin: 0;
+	padding: 0 0 3px 0;
+	font-weight: bold;
+	color: #990000;
+}
+
+.olive { font-weight: bold; color: #666600; }
+
+.light { font-size: 8pt; background-color: #ffffff; }
+
+.dark {	font-size: 8pt; background-color: #cccccc; }
+
+.main { font-size: 7.5pt; }
+
+.bot { font-size: 8pt; }
+
+.login {
+	font-family: Verdana,Arial,Geneva,Helvetica,sans-serif;
+	font-size: 8pt;
+}
+.login a:visited { color: #555555; }
+.login a:hover { color: red; }
+.login a:active { color: #dd0000; }
+
+.tds { font-size: 10pt; }
+.tds a:link { text-decoration: none; }
+.tds a:visited { text-decoration: none; }
+
+.cspot a:link { color: #555555; text-decoration: none; }
+.cspot a:visited { color: #555555; text-decoration: none; }
+
+.sm { font-size: 8pt; }
+.sm a:link { text-decoration: none; }
+.sm a:visited { text-decoration: none; }
+
+/*====================================*/
+/*#leftcolumn {
+	position:absolute;
+	top:389px;
+	left:0;
+	width:200px;
+	vertical-align:top;
+	border: 1px solid blue;
+}
+
+#rightcolumn {
+	margin: 0 0 0 200px;
+	padding: 0 3px 0 0;
+	width: auto;
+	vertical-align:top;
+}
+
+p#rightcolumn {
+	font-size: 10pt;
+	color: red;
+}*/

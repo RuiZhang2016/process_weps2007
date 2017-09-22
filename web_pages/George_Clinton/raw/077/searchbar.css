@@ -1,0 +1,59 @@
+/* searchbar.css */
+
+#searchbar { 
+background-image: url(/templates/types/common/style/bkg-searchbar-lightgreyfade.gif); 
+padding:0 0 5px 0; margin:0;
+border-left:8px solid #ccc;
+border-bottom:1px solid #999;
+border-right:1px solid #ccc;
+text-align:center;
+padding:0;
+font-size:10px;
+font-family:Verdana, Arial, Helvetica, sans-serif;
+clear:both;
+}
+#searchbar strong {
+font-size:1.4em;
+color:#999;
+margin:0 10px 0 6px;
+text-transform:uppercase;
+}
+#searchbar span {
+font-weight:bold;
+color:#555;
+}
+#searchbar input.entry {
+border:1px solid #666;
+margin:0 0 0 10px;
+}
+#searchbar input.button {
+margin:5px 0 -5px 5px;
+}
+html:not([dummy]) #searchbar input.button {
+margin:5px 0 -6px 5px;
+}
+#searchbar .option {
+margin:0 0 0 10px;
+}
+#searchbar .option input {
+margin:2px 5px -2px 0;
+}
+#searchbar #googlelogosm {
+margin:0 0 -6px 2px;
+padding:0;
+}
+#searchbar form {
+padding:0;
+margin:0;
+}
+#searchbar .row {
+padding:0 0 5px 0;
+margin:0;
+}
+
+/* === if the searchbar is inside group, paired with group.2.css === */
+
+#group #searchbar {
+margin:0 0 0 1px;
+border-left:0;
+}

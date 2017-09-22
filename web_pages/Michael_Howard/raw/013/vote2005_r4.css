@@ -1,0 +1,1354 @@
+body{font-family:verdana;background:#fff;color:#000;font-size:13px;}
+table{font-family:Verdana,Arial,Helvetica,sans-serif,"MS sans serif";font-size:13px;}
+tr{font-family:Verdana,Arial,Helvetica,sans-serif,"MS sans serif";font-size:13px;}
+td{font-family:Verdana,Arial,Helvetica,sans-serif,"MS sans serif";font-size:13px;}
+b{font-weight:bold;}
+p{font-family:Verdana,Arial,Helvetica,sans-serif,"MS sans serif";}
+div{font-family:Verdana,Arial,Helvetica,sans-serif,"MS sans serif";}
+a{font-family:Verdana,Arial,Helvetica,sans-serif,"MS sans serif";text-decoration:none;}
+form{margin:0px;padding:0px;}
+a:link{font-family:Verdana,Arial,Helvetica,sans-serif,"MS sans serif";text-decoration:none;font-size:11px;color:#000099;}
+a:visited{font-family:Verdana,Arial,Helvetica,sans-serif,"MS sans serif";text-decoration:none;font-size:11px;color:#6666CC;}
+a:active{font-family:Verdana,Arial,Helvetica,sans-serif,"MS sans serif";text-decoration:none;font-size:11px;color:#000099;}
+a:hover{font-family:Verdana,Arial,Helvetica,sans-serif,"MS sans serif";font-size:11px;color:#000099;text-decoration:underline;}
+
+a.tsh:link{font-size:16px;font-weight:bold;color:#000099;}
+a.tsh:visited{font-size:16px;font-weight:bold;color:#6666CC;}
+a.tsh:hover{font-size:16px;font-weight:bold;color:#000099;}
+a.tsh:active{font-size:16px;font-weight:bold;color:#000099;}
+
+a.lp:link{color:#990000;font-size:10px;font-weight:bold;}
+a.lp:active{color:#990000;font-size:10px;font-weight:bold;}
+a.lp:visited{color:#CC6666;font-size:10px;font-weight:bold;}
+a.lp:hover{color:#990000;font-size:10px;font-weight:bold;}
+
+a.shl:link{color:#000099;font-weight:bold;font-size:12px;text-decoration:none;}
+a.shl:visited{color:#6666CC;font-weight:bold;font-size:12px;text-decoration:none;}
+a.shl:hover{color:#000099;font-weight:bold;font-size:12px;text-decoration:underline;}
+a.shl:active{color:#000099;font-weight:bold;font-size:12px;text-decoration:none;}
+
+.sh{font-size:18px;font-weight:bold;color:#000000;}
+.ish{font-size:16px;font-weight:bold;color:#444444;margin-top:5px;}
+.rhst{font-size:11px;}
+.nlp{font-size:10px;font-weight:bold;color:#444444;margin-top:0px;}
+.nlpa{font-size:10px;font-weight:bold;color:#000000;}
+.nlpuff{font-size:11px;font-weight:bold;}
+.ds{font-size:11px;color:#000000;}
+.di{font-size:11px;color:#666666;}
+.lu{font-size:11px;color:#666666;}
+.bull{background-image:url("http://newsimg.bbc.co.uk/nol/shared/vote2005/img/fact_bullet.gif");background-repeat:no-repeat;padding-left:10px;font-size:11px;}
+.arr{background-image:url("http://newsimg.bbc.co.uk/nol/shared/vote2005/img/arrow_grey.gif");background-repeat:no-repeat;padding-left:7px;padding-bottom:3px;}
+
+.arry{background-image:url("http://newsimg.bbc.co.uk/nol/shared/img/v3/arrow.gif");background-repeat:no-repeat;padding-left:7px;padding-bottom:3px;}
+.arrup{background-image:url("http://newsimg.bbc.co.uk/nol/shared/img/v3/arrow_up.gif");background-repeat:no-repeat;padding-left:7px;padding-bottom:3px;}
+.arrdo{background-image:url("http://newsimg.bbc.co.uk/nol/shared/img/v3/arrow_down.gif");background-repeat:no-repeat;padding-left:7px;padding-bottom:3px;}
+.sabull{background-image:url("http://newsimg.bbc.co.uk/nol/shared/vote2005/img/seealso_plus.gif");background-repeat:no-repeat;padding-left:10px;padding-bottom:3px;}
+
+.pb{background-color:#fff;color:#000000;width:203px;border:1px;}
+.gffffff{background-color:#FFFFFF;}
+.gpromo{}
+.gddddbb{background-color:#DDDDBB;}
+.gcccccc{background-color:#CCCCCC;}
+.g000000{background-color:#000000;}
+.gefefef{background-color:#EFEFEF;}
+.vb{background-color:#eee;color:#000000;font-size:11px;border:1px;width:203px;padding-bottom:5px;margin-bottom:10px;}
+.vh{padding-left:5px;background-color:#778;font-size:10px;font-weight:bold;color:#FFFFFF;padding-top:2px;padding-bottom:2px;text-transform:uppercase}
+.vdi{font-size:10px;color:#000000;}
+.pb{background-color:#fff;color:#000000;width:203px;border:1px;}
+.stpb{color:#ffffff;width:416px;height:22px;background-color:#669999;border:1px;}
+.stpt{font-size:11px;color:#ffffff;font-weight:bold;padding-left:10px;padding-top:5px;}
+.ch1 {font-size:11px;color:#ffffff;background-color:#888899;border:1px;padding:4px 0 4px 4px;font-family:verdana;}
+.ch2{font-size:11px;color:#ffffff;background-color:#778;border:1px;padding:4px 0 4px 4px;font-family:verdana;}
+.av1h{background-color:#CC0000;color:#FFFFFF;font-size:10px;font-weight:bold;padding-left:5px;padding-top:2px;padding-bottom:2px;}
+.av1sh{background-color:#000000;color:#FFFFFF;font-size:10px;font-weight:bold;padding-top:2px;padding-bottom:2px;padding-left:5px;}
+.av1lh{background-color:#000000;color:#FFFFFF;font-size:10px;font-weight:bold;padding-top:2px;padding-bottom:2px;padding-left:5px;}
+.avt{font-size:11px;}
+.spb{background-color:#FFFFCC;border:1px;width:203px;}
+.spbe{background-color:#FFFF33;border-top:1px dashed;border-bottom:1px dashed;padding-top:3px;padding-bottom:3px;width:100%;}
+.gnb{background-color:#669933;color:#FFFFFF;border:1px;padding-top:5px;padding-bottom:5px;padding-left:5px;}
+.wtrb{background-color:#DDEEEE;color:#FFFFFF;border:1px;padding-top:5px;padding-bottom:5px;padding-left:5px;}
+.tqub{background-color:#99CCCC;color:#000000;border:1px;padding-top:5px;padding-bottom:5px;padding-left:5px;width:100%;}
+
+/*.fefefef{background-color:#efefef;border:1px;padding-top:5px;padding-bottom:5px;padding-left:5px;width:100%;}*/
+.wsb{background-color:#DDEEFF;border:1px;width:203px;margin-bottom:7px}
+.mph1{background-color:#778;color:#FFFFFF;font-size:10px;font-weight:bold;padding-left:5px;padding-top:2px;padding-bottom:2px;}
+.mph{background-color:#778;color:#FFFFFF;font-size:10px;font-weight:bold;padding-left:5px;padding-top:2px;padding-bottom:2px;}
+.s003366{background-color:#003366;color:#ffffff;font-size:11px;font-weight:bold;border:1px;padding-top:2px;padding-bottom:2px;padding-left:5px;}
+.formatStyle{width:160px;}
+.ddb{background-color:#ffffff;border:1px;font-size:11px;padding-bottom:5px;padding-top:2px;padding-left:5px;color:#000000;}
+.ddh{font-size:10px;font-weight:bold;color:#000000;}
+.ddt{margin-bottom:5px;font-size:11px;}
+.dd160{width:160px;}
+.dd250{width:250px;}
+td.sibt{font-size:11px;}
+td.sibtbg{font-size:11px;background-color:#EEE;}
+.sih{font-weight:bold;font-size:10px;background-color:#778;color:#FFFFFF;padding-left:5px;padding-top:2px;padding-bottom:2px;}
+.sibf{background-color:#EEEEDD;}
+.sibmg{background-color:#FFDE9C;margin-left:5px;}
+.cap{font-size:10px;color:#666666}
+.bys{font-size:11px;font-weight:bold;color:#000000}
+.byl{font-size:11px;font-weight:bold;color:#666666}
+.byd{font-size:11px;color:#000000}
+.msd{font-size:11px;font-weight:bold;color:#666666}
+.sah{background-color:#778;color:#ffffff;font-size:10px;font-weight:bold;padding-left:5px;padding-top:2px;padding-bottom:2px;}
+.sad{font-size:11px;color:#666666;}
+.snh{font-size:10px;font-weight:bold;background-color:#778;color:#ffffff;padding-left:5px;padding-top:2px;padding-bottom:2px;}
+.sng{background-color:#EEEEEE;}
+.sph{background-color:#990000;font-weight:bold;color:#ffffff;font-size:10px;padding-top:2px;padding-bottom:2px;padding-left:5px;}
+.pph{background-color:#888888;font-weight:bold;color:#ffffff;font-size:10px;padding-top:2px;padding-bottom:2px;padding-left:5px;}
+a.tickl{font-family:Verdana,Arial,Helvetica,sans-serif;font-size:11px;line-height:12px;text-decoration:none;color:#000099;}
+a.tickl:hover{color:#6666CC;text-decoration:none;}
+.ticki{width:629px;height:13px;overflow:hidden;}
+.ticko{display:none;}
+
+.lhsh{text-align:right;font-weight:bold;font-size:10px;color:#ffffff;background-color:#778;padding:2px 6px 2px 0;}
+.lhs{text-align:right;font-size:11px;border:1px;width:121px;padding-top:5px;}
+.lhsb{padding-bottom:2px;padding-top:2px;padding-right:6px;font-weight:bold;}
+.lhssq{background-repeat:repeat-y;background-color:#ccc;padding-bottom:2px;padding-top:2px;padding-right:6px;font-weight:bold;}
+
+.lhsbsn{background-image:url("/nol/shared/vote2005/img/nav_square.gif");background-color:#eee;padding-bottom:2px;padding-top:2px;padding-right:6px;font-weight:bold;}
+
+.lhslt{padding-bottom:2px;padding-top:2px;padding-right:6px;background-color:#eee;}
+.lhsl{padding-bottom:2px;padding-top:2px;padding-right:6px;}
+
+.lhsad{text-align:right;font-size:11px;background-color:#eee;border:1px;width:121px;padding-top:5px;}
+
+.lhssqs{background-image:url("/nol/shared/vote2005/img/nav_square.gif");background-repeat:repeat-y;background-color:#BBBBBB;padding-bottom:2px;padding-top:2px;padding-right:6px;font-weight:bold;}
+.lhssqs2{background-color:#BBBBBB;padding-bottom:2px;padding-top:2px;padding-right:6px;font-weight:bold;}
+.lhsdl{font-size:11px;color:#999999;padding-right:6px;}
+.lhsnlp{font-size:10px;color:#778;font-weight:bold;padding-bottom:2px;padding-top:2px;padding-right:6px;}
+.lhsmi{background-color:#DDDDDD;}
+
+#share {white-space:nowrap;margin-bottom:10px;}
+#share td{
+	font-size:11px;
+	color:#fff;
+	text-align:center;
+	font-weight:bold;	
+}
+#share td div{
+	padding:4px 0 4px 0;
+}
+#share td.LAB{
+	background:#CC0000;
+}
+#share td.CON{
+	background:blue;
+}
+.mva{margin:5px;}
+.mvt{margin-top:5px;}
+.mvtr{margin-top:5px;margin-right:5px;}
+.mvtl{margin-top:5px;margin-left:5px;}
+.pvtl{padding-top:5px;padding-left:5px;}
+.mvl{margin-left:5px;font-size:11px;}
+.mxl{margin-left:10px;}
+.mvr{margin-right:5px;}
+.mvtb{margin-top:5px;margin-bottom:5px;}
+.mvb{margin-bottom:5px;}
+.mxb{margin-bottom:10px;}
+.mxvb{margin-bottom:15px;}
+.mvbl{margin-bottom:5px;margin-left:5px;}
+.miiibl{margin-bottom:3px;margin-left:3px;}
+.miiia{margin:3px;}
+.miiil{margin-left:3px;}
+.miiir{margin-right:3px;}
+.miiitb{margin-top:3px;margin-bottom:3px;}
+.miiib{margin-bottom:3px;}
+.miiit{margin-top:3px;}
+.miiilr{margin-left:3px;margin-right:3px;}
+.miitb{margin-top:2px;margin-bottom:2px;}
+.imvr{margin-right:5px;}
+.pva{padding:5px;}
+.pvl{padding-left:5px;}
+.pvr{padding-right:5px;}
+.pvt{padding-top:5px;}
+.pvtb{padding-top:5px;padding-bottom:5px;}
+.pvtbl{padding-top:5px;padding-bottom:5px;padding-left:5px;}
+.pvlb{padding-left:5px;padding-bottom:5px;}
+.pvb{padding-bottom:5px;}
+.piiia{padding:3px;}
+.piiil{padding-left:3px;}
+.piiir{padding-right:3px;}
+.piiitb{padding-top:3px;padding-bottom:3px;}
+.piiibl{padding-bottom:3px;padding-left:3px;}
+.piiit{padding-top:3px;}
+.piiib{padding-bottom:3px;}
+/* --- LHS VOTE SERVICES & RELATED SITES --- */
+/* */
+
+#voteservices{
+	margin-top:10px;
+}
+#voteservices, #relatedsites {
+/*	width: 121px; */
+	padding:0 0 6px 0;
+	margin-bottom: 1px;		
+}
+#voteservices ul, #relatedsites ul {
+	list-style: none;
+	text-align:right;
+	margin: 0;
+	padding: 0;
+	border: none;
+}
+#voteservices li, #relatedsites li {
+	margin: 0;
+	padding: 2px 6px 2px 0;	
+}
+#voteservices li.heading, #relatedsites li.heading{
+	font-weight:bold;
+	display:block;
+	font-size:10px;
+	color:#ffffff;
+	background-color:#778;
+	padding:0px 6px 2px 0;
+}
+#voteservices li.rsslink{
+	padding:0 0px 0 0;
+	margin:4px 6px 0 0;
+}
+#voteservices div.heading, #relatedsites div.heading{
+	font-weight:bold;
+	display:block;
+	font-size:10px;
+	color:#ffffff;
+	background-color:#778;
+	padding:0px 6px 2px 0;
+	
+}
+.votego{font-size:10px;background-color:#CC0000;color:#fff;border:1px solid #000;width:60px;font-weight:bold;}
+
+
+.o{}
+.tbsh{background-color:#828282;}
+.tbshl{border-left:2px solid #828282;}
+.tbb{background:#999999 url("http://newsimg.bbc.co.uk/shared/img/v3_tb/v.gif") repeat-y;}
+.tbs1{background:#556 url("http://newsimg.bbc.co.uk/shared/img/v3_tb/sl.gif") no-repeat;}
+.tbs{background:#556 url("http://newsimg.bbc.co.uk/shared/img/v3_tb/st.gif") repeat-x;}
+.tbs2{background:#556 url("http://newsimg.bbc.co.uk/shared/img/v3_tb/st.gif") repeat-x 0 0;}
+.tbsra{background:#999999 url("http://newsimg.bbc.co.uk/shared/img/v3_tb/sra.gif") no-repeat;}
+.tbsrb{background:#999999 url("http://newsimg.bbc.co.uk/shared/img/v3_tb/srb.gif") no-repeat;}
+.tbbl{background-color:#000000;}
+.tbg, .tbshl{background-color:#999999;}
+.tbwl,font.tbwl,a.tbwl,a.tbwl:link,a.tbwl:hover,a.tbwl:visited{color:#ffffff;text-decoration:none;font-family:verdana,arial,helvetica,sans-serif;padding:1px 4px;}
+.tbbr {background-color:#556;}
+#tbtbl {background:url("http://newsimg.bbc.co.uk/shared/img/v3_tb/blt2.gif") no-repeat;}
+html>body #tbtbl {background:url("http://newsimg.bbc.co.uk/shared/img/v3_tb/blt3.gif") no-repeat;}
+/* --- [ GENERAL ] --- */
+
+.clear {
+	clear:both;
+}
+
+.left{
+	float:left;
+}
+
+
+/* --- [ TOP CRUMB TRAIL ] --- */
+#topcrumb{
+	background-color: #556 ;
+	padding:2px 0;
+	margin:0;
+	height:14px;
+	width:760px;
+}
+ul#topservices
+{
+	font-size:11px;
+	list-style-type: none;
+	margin: 0;
+	padding: 0;
+	
+}
+ul#topservices li{
+	padding:0 5px 0 5px;
+}
+ul#topservices li a    
+{
+	background-color: #556 ;
+	color: #fff;
+	text-align: center;
+	text-decoration: none;
+}
+
+ul#topservices li a:hover
+{
+	color: #fff;
+	text-decoration: underline;
+}
+
+ul#topservices .textonly{ float: left;}
+ul#topservices .homepage{ float: right;}
+
+
+* html #topservices{height:1%}
+* html #topservices li{
+	display:block;
+	float:left;
+}
+
+
+/* --- [ BBC NEWS ELECTION BANNER ] --- */
+
+#election05banner{
+	padding:0;
+	margin:0;	
+	text-indent:-1000px;
+	width:760px;
+	border-top:1px solid #fff;
+	border-bottom:1px solid #fff;	
+}
+#election05banner h1{
+	background:url(http://newsimg.bbc.co.uk/nol/shared/vote2005/img/nav/bbc_news.gif) no-repeat 0 0;
+	border-right:1px solid #fff;
+	height:51px;
+	width:121px;
+	float:left;
+	margin:0;
+	padding:0;
+}
+#election05banner h2{
+	background:url(http://newsimg.bbc.co.uk/nol/shared/vote2005/img/nav/election_banner.gif) no-repeat 0 0;
+	height:51px;
+	width:435px;
+	float:left;
+	margin:0;
+	padding:0;
+}
+#election05banner a{
+	display:block;
+	height:51px;
+}
+#election05banneranner img{
+	border:0px;
+	display:block;
+	width:0;
+}
+div#watchelections05{
+	border:0px;
+	background:url(http://newsimg.bbc.co.uk/nol/shared/vote2005/img/nav/election_av.gif) no-repeat 0 0;	
+	float:right;
+	height:51px;
+	width:203px;
+}
+div#watchelections05 a{
+	height:46px;
+	display:block;
+	cursor:hand;
+}
+/* --- [ FOOTER ] --- */
+#footernav a{
+	font-size:85%;
+}
+.backtotop a{
+
+}
+#footernav ul
+{
+	clear:both;
+	padding: 2px 0;
+	margin: 0;
+	list-style-type: none;
+	color: #036;
+	width: 760px;
+	text-align: center;
+}
+#footernav li { display: inline; }
+#footernav li a.none{ border:none; }
+#footernav li a
+{
+	color: #000099;
+	padding: 0 8px 0 4px;
+	border-right: 1px solid #ccc;
+}
+
+ul#foot
+{
+	border-top:2px solid #556;
+	list-style-type: none;
+	margin:15px 0 0 0;
+	padding: 2px 0;
+	width:760px;
+	height:10px;
+}
+ul#foot li{
+	padding:0 5px 0 5px;
+}
+
+ul#foot .copyright a{ 
+	float: left;
+	text-indent:-1000px;
+	width:100px;
+	background: url("http://newsimg.bbc.co.uk/nol/shared/img/nav/v3_bbc_copyright_footer_2005.gif") no-repeat 3px
+ 3px;
+	border:none; 
+
+	}
+
+ul#foot .backtotop a{ 
+	padding-right:20px;
+	float: right;
+	background: url("http://newsimg.bbc.co.uk/shared/img/backtotop.gif") no-repeat right;
+	border:none;
+}
+* html #foot{height:1%}
+* html #foot li{
+	display:block;
+	float:left;
+}
+
+ul.piped li.arrow
+{
+	border-left: none;
+	padding:0 0 0 10px;
+	background:url(http://newsimg.bbc.co.uk/nol/shared/vote2005/img/sch/double_arrow.gif) no-repeat left;
+	
+}
+
+.clearboth{ clear:both;}
+
+/* TABLES */
+#glance {
+	background:#eee;
+	width:416px;
+	padding:0;
+	margin:0 0 10px 0;
+	font-size:12px;
+	border-left:1px solid #fff;
+	border-right:1px solid #fff;
+}
+#constituencyresults, #constituencyaz, #regionmap, #fullscoreboard, .localcouncil, #localcouncildetail{
+	width:416px;
+	padding:0;
+	margin:0 0 10px 0;
+	font-size:12px;
+	}
+#summaryscoreboard{
+	width:203px;
+	padding:0;
+	margin:10px 0 10px 0;
+	font-size:12px;
+}
+
+#constituencyaz #council{width:50%;}
+#constituencyaz #results{width:50%;}
+
+#mptable{
+	margin:10px 0 10px 0;
+}
+#mpphoto{
+	padding:0 5px 0 0;
+}
+/* TH */
+#constituencyaz th.constituency, #constituencyaz th.party{
+	width:142px;
+	}
+.localcouncil #party{
+	width:162px;
+	text-align:left;
+}
+#constituencyaz th.year{
+	width:96px;
+	text-align:right;
+	border-left:0px;
+	}
+	
+#constituencyaz td.BLANK{
+	text-align:right;
+	border-left:0px;
+	}
+	
+	#t4 td.BLANK{
+	text-align:left;
+	border-left:0px;
+	}
+	
+	#constituencyaz td.BLANK{
+	text-align:left;
+	border-left:0px;
+	}
+	
+#fullscoreboard td.BLANK{
+	text-align:right;
+	border-left:0px;
+	}
+	
+#constituencyresults th, #constituencyaz th, #fullscoreboard th#party, #summaryscoreboard th#party, #scorecard th, .localcouncil th, #localcouncildetail th#candidate, #localcouncildetail th#party, #localcouncildetail th#status{
+	padding:3px;
+	background:#ddd;
+	text-align:left;
+	}
+#fullscoreboard th, #summaryscoreboard th, .localcouncil th,  #localcouncildetail th{
+	padding:3px;
+	background:#ddd;
+	text-align:right;
+}
+#constituencyaz th#previous, #constituencyaz th#plusmin, #constituencyaz th#year_2004, #constituencyaz th#results, {
+	text-align:right;
+	padding:3px;
+}
+
+/* TD */
+#constituencyaz td, .localcouncil td{
+	border-left:5px solid #999;text-align:left
+}
+
+#constituencyaz td, .localcouncil td{
+	border-left:5px solid #999;text-align:left
+}
+
+#constituencyaz td.year{
+	background:#ddd;
+	font-weight:bold;
+	border-left:0px;
+	text-align:right;
+}
+#glance td{
+	padding:6px 0 6px 0;
+	font-size:12px;
+	margin:0px;
+	}
+#glance td.party{
+	text-align:right;
+	padding:0 10px 0 0;
+	margin:0;
+	font-weight:normal;
+	width:160px;
+	}
+/* these need all updating for the icons */
+#glance td.LAB{
+	text-align:right;
+	padding:0 25px 0 0;
+	background:#CC0000 url(http://newsimg.bbc.co.uk/nol/shared/vote2005/img/icon_lab.gif) no-repeat 125px 5px;
+	width:120px;
+	}
+#glance td.CON{
+	text-align:right;
+	padding:0 25px 0 0;
+	background:#eee url(http://newsimg.bbc.co.uk/nol/shared/vote2005/img/icon_con.gif) no-repeat 125px 5px;
+	width:120px;
+	}
+#glance td.LD{
+	text-align:right;
+	padding:0 25px 0 0;
+	background:#eee url(http://newsimg.bbc.co.uk/nol/shared/vote2005/img/icon_con.gif) no-repeat 125px 5px;
+	width:120px;
+	}
+#glance td.percent{
+	text-align:right;
+	padding:0 5px 0 0;
+	font-weight:bold;
+	}
+	
+#glance td.constituencyaz{
+	text-align:right;
+	padding:0 5px 0 0;
+	font-weight:bold;
+	}
+	
+#constituencyaz td.percent, #constituencyaz td.plusmin{
+	text-align:right;
+	padding:0 5px 0 0;
+	border-left:0px solid #ddd;
+	}
+	
+#glance td.sum{
+	background:#ddd;
+	padding:3px 0 3px 5px;
+	border-left:0px solid #ddd;
+	}
+#fullscoreboard td.seats, #summaryscoreboard td.seats{
+	background:#ddd;
+	text-align:right;
+	font-weight:bold;
+	border-left:5px solid #ddd;
+	}
+	
+#fullscoreboard td.BLANK{
+	text-align:right;
+	}
+	
+#fullscoreboard td.sum{
+	text-align:right;
+	border-left:0px;
+	}
+
+.localcouncil td.BLANK{
+	padding:3px;
+	border-left:0px solid #fff;
+}
+
+.localcouncil td.BLANKRIGHT{
+	padding:3px;
+	border-left:0px solid #fff;
+	text-align: right;
+}
+
+	
+#constituencyresults td, #constituencyaz td, #fullscoreboard td, #summaryscoreboard td, .localcouncil td, #localcouncildetail td{
+	padding:3px;
+	background:#eee;
+}
+
+#constituencyresults td{
+	border-left:5px solid #999;
+}
+
+#constituencyresults td.BLANK, #constituencyresults td.votes, #constituencyresults td.percent, #constituencyresults td.plusmin, #constituencyresults td.majority, #constituencyresults td.turnout{
+	border:0px;
+	border-left:0px solid #eee;
+}
+
+#constituencyresults td.majority, #constituencyresults td.turnout{
+	border:0px;
+	border-left:0px solid #ddd;
+}
+
+/* TR TD TH */
+#constituencyresults th.votes, #constituencyresults th.percent, #constituencyresults th.plusmin, #constituencyresults td.votes, #constituencyresults th.year, #constituencyresults td.percent, #constituencyresults td.plusmin, #fullscoreboard tr.right, #summaryscoreboard tr.right{
+	text-align:right;
+	}
+
+/* STRAPS */
+/* RESULTS BANNER  */
+
+#resultbanner {
+	width:385px;float:left;height:31px;
+	}
+#resultbanner h3{
+	color:#fff;font-size:18px;font-weight:bolder;padding:4px 2px 0px 6px;margin:0;
+	}
+#candidatebanner{
+	width:416px;float:left;height:31px;background-color: #999999
+	}
+#candidatebanner h3{
+	color:#fff;font-size:18px;font-weight:bolder;padding:3px 0px 0px 3px;margin:0;height:27px;
+	}	
+#resultimg {
+	width:31px;float:right;
+	}
+
+#bannerstrap{
+	padding:0 0 2px 5px;
+	margin:0px;
+	font-size:20px;
+	margin-bottom:10px;
+	color:#ffffff;
+	font-weight:bold;
+	text-align:left;
+	}
+#bannerstrap span{
+	font-weight:normal;
+	font-size:18px;
+	}
+#bannerstrap img{
+	float:right;
+	border:1px solid red;
+}
+
+#glance .strap, #constituencyresults .strap, #regionmap .strap, #constituencyaz .strap, #fullscoreboard .strap, #summaryscoreboard .strap, #share .strap, #swing .strap, #winpost .strap, .strap, .localcouncil .strap, #localcouncildetail .strap{
+	background:#778;
+	font-size:10px;
+	color:#fff;
+	font-weight:bold;
+	text-align:left;
+	padding:3px;
+	}
+/* LINKS */
+#glance a, #constituencyresults a, #constituencyaz a, #fullscoreboard a, #summaryscoreboard a{
+	font-size:12px;
+	text-align:right;
+	color:#009;
+	text-decoration:none;
+	}
+#glance a:hover, #constituencyresults a:hover, #constituencyaz a:hover, #fullscoreboard a:hover, #summaryscoreboard a:hover{
+	font-size:12px;
+	text-align:right;
+	color:#009;
+	text-decoration:underline;
+	}
+#glance .BLANK{
+	width:200px;
+	}
+#constituencyresults .majority, #constituencyresults .turnout, .localcouncil td.turnout{
+	background:#ddd;
+	text-align:right;
+	padding:0 5px;
+	}
+#fullscoreboard .turnout{
+	background:#eee;
+	border-left:5px solid #eee;
+	}
+	
+#fullscoreboard td{
+	border-left:5px solid #999;text-align:left;
+}
+
+#fullscoreboard .BLANK{
+	border-left:5px solid #eee;
+}
+	
+#partycolors {
+	width:203px;
+	padding:0;
+	margin:5px 0 10px 0;
+	font-size:12px;
+}
+#partycolors .strap{background:#fff;color:#000;font-size:10px;padding-left:0px;}
+#partycolors td{
+	padding:3px;
+	background:#fff;
+}
+
+#partycolors td{
+	border-left:5px solid #999;
+}	
+
+	
+#constituencyresults td.CON, #constituencyaz td.CON, #fullscoreboard td.CON, #summaryscoreboard td.CON, .localcouncil td.CON, #localcouncildetail td.CON, #partycolors td.CON{border-left:5px solid #333399;text-align:left}
+#constituencyresults td.IKHH, #results td.IKHH, #constituencyaz td.IKHH, #fullscoreboard td.IKHH, #summaryscoreboard td.IKHH, .localcouncil td.IKHH, #localcouncildetail td.IKHH{border-left:5px solid #999999;text-align:left}
+#constituencyresults td.SDLP, #results td.SDLP, #constituencyaz td.SDLP, #fullscoreboard td.SDLP, #summaryscoreboard td.SDLP, .localcouncil td.SDLP, #localcouncildetail td.SDLP, #partycolors td.SDLP{border-left:5px solid #669966;text-align:left}
+#constituencyresults td.LAB, #results td.LAB, #constituencyaz td.LAB, #fullscoreboard td.LAB, #summaryscoreboard td.LAB, .localcouncil td.LAB, #localcouncildetail td.LAB, #partycolors td.LAB{border-left:5px solid #CC0000;text-align:left}
+#constituencyresults td.LD, #results td.LD, #constituencyaz td.LD, #fullscoreboard td.LD, #summaryscoreboard td.LD, .localcouncil td.LD, #localcouncildetail td.LD, #partycolors td.LD {border-left:5px solid #F90;text-align:left}
+#constituencyresults td.SNP, #results td.SNP, #constituencyaz td.SNP, #fullscoreboard td.SNP, #summaryscoreboard td.SNP, .localcouncil td.SNP, #localcouncildetail td.SNP, #partycolors td.SNP {border-left:5px solid #F9F000;text-align:left}
+#constituencyresults td.PC, #results td.PC, #constituencyaz td.PC, #fullscoreboard td.PC, #summaryscoreboard td.PC, .localcouncil td.PC, #localcouncildetail td.PC, #partycolors td.PC {border-left:5px solid #336600;text-align:left}
+#constituencyresults td.UUP, #results td.UUP, #constituencyaz td.UUP, #fullscoreboard td.UUP, #summaryscoreboard td.UUP, .localcouncil td.UUP, #localcouncildetail td.UUP, #partycolors td.UUP {border-left:5px solid #FF6600;text-align:left}	
+#constituencyresults td.UKIP, #results td.UKIP, #constituencyaz td.UKIP, #fullscoreboard td.UKIP, #summaryscoreboard td.UKIP, .localcouncil td.UKIP, #localcouncildetail td.UKIP, #partycolors td.UKIP {border-left:5px solid #663366;text-align:left}
+#constituencyresults td.SLP, #results td.SLP, #constituencyaz td.SLP, #fullscoreboard td.SLP, #summaryscoreboard td.SLP, .localcouncil td.SLP, #localcouncildetail td.SLP {border-left:5px solid #AA0000;text-align:left}
+#constituencyresults td.DUP, #results td.DUP, #constituencyaz td.DUP, #fullscoreboard td.DUP, #summaryscoreboard td.DUP, .localcouncil td.DUP, #localcouncildetail td.DUP, #partycolors td.DUP {border-left:5px solid #930;text-align:left}
+#constituencyresults td.SF, #results td.SF, #constituencyaz td.SF, #fullscoreboard td.SF, #summaryscoreboard td.SF, .localcouncil td.SF, #localcouncildetail td.SF, #partycolors td.SF {border-left:5px solid #363;text-align:left}
+#constituencyresults td.OTH, #results td.OTH, #constituencyaz td.OTH, #fullscoreboard td.OTH, #summaryscoreboard td.OTH, .localcouncil td.OTH, #localcouncildetail td.OTH, #partycolors td.OTH {border-left:5px solid #999;text-align:left}
+#constituencyresults td.GRN, #results td.GRN, #constituencyaz td.GRN, #fullscoreboard td.GRN, #summaryscoreboard td.GRN, .localcouncil td.GRN, #localcouncildetail td.GRN, #partycolors td.GRN {border-left:5px solid #393;text-align:left}
+#constituencyresults td.SGP, #results td.SGP, #constituencyaz td.SGP, #fullscoreboard td.SGP, #summaryscoreboard td.SGP, .localcouncil td.SGP, #localcouncildetail td.SGP {border-left:5px solid #393;text-align:left}
+#constituencyresults td.PLA, #results td.PLA, #constituencyaz td.PLA, #fullscoreboard td.PLA, #summaryscoreboard td.PLA, .localcouncil td.PLA, #localcouncildetail td.PLA {border-left:5px solid #000;text-align:left}
+#constituencyresults td.LIB, #results td.LIB, #constituencyaz td.LIB, #fullscoreboard td.LIB, #summaryscoreboard td.LIB, .localcouncil td.LIB, #localcouncildetail td.LIB {border-left:5px solid #FF9911;text-align:left}
+#constituencyresults td.BNP, #results td.BNP, #constituencyaz td.BNP, #fullscoreboard td.BNP, #summaryscoreboard td.BNP, .localcouncil td.BNP, #localcouncildetail td.BNP {border-left:5px solid #006666;text-align:left}
+#constituencyresults td.CPB, #results td.CPB, #constituencyaz td.CPB, #fullscoreboard td.CPB, #summaryscoreboard td.CPB, .localcouncil td.CPB, #localcouncildetail td.CPB {border-left:5px solid #900;text-align:left}
+#constituencyresults td.AP, #results td.AP, #constituencyaz td.AP, #fullscoreboard td.AP, #summaryscoreboard td.AP, .localcouncil td.AP, #localcouncildetail td.AP {border-left:5px solid #cc9000;text-align:left}
+#constituencyresults td.APNI, #results td.APNI, #constituencyaz td.APNI, #fullscoreboard td.APNI, #summaryscoreboard td.APNI, .localcouncil td.APNI, #localcouncildetail td.APNI {border-left:5px solid #cc9000;text-align:left}
+#constituencyresults td.RES, #results td.RES, #constituencyaz td.RES, #fullscoreboard td.RES, #summaryscoreboard td.RES, .localcouncil td.RES, #localcouncildetail td.RES {border-left:5px solid #811;text-align:left}
+#constituencyresults td.ED, #results td.ED, #constituencyaz td.ED, #fullscoreboard td.ED, #summaryscoreboard td.ED, .localcouncil td.ED, #localcouncildetail td.ED {border-left:5px solid #a55;text-align:left}
+#constituencyresults td.SP, #results td.SP, #constituencyaz td.SP, #fullscoreboard td.SP, #summaryscoreboard td.SP, .localcouncil td.SP, #localcouncildetail td.SP {border-left:5px solid #600;text-align:left}
+#constituencyresults td.TW, #results td.TW, #constituencyaz td.TW, #fullscoreboard td.TW, #summaryscoreboard td.TW, .localcouncil td.TW, #localcouncildetail td.TW {border-left:5px solid #b66;text-align:left}
+#constituencyresults td.NOC, #results td.NOC, #constituencyaz td.NOC, #fullscoreboard td.NOC, #summaryscoreboard td.NOC, .localcouncil td.NOC, #localcouncildetail td.NOC {border-left:5px solid #000;text-align:left}
+#constituencyresults td.NF, #results td.NF, #constituencyaz td.NF, #fullscoreboard td.NF, #summaryscoreboard td.NF, .localcouncil td.NF, #localcouncildetail td.NF {border-left:5px solid #990066;text-align:left}
+#constituencyresults td.IND, #results td.IND, #constituencyaz td.IND, #fullscoreboard td.IND, #summaryscoreboard td.IND, .localcouncil td.IND, #localcouncildetail td.IND {border-left:5px solid #8a7;text-align:left}
+#constituencyresults td.none, #results td.none, #constituencyaz td.none, #fullscoreboard td.none, #summaryscoreboard td.none, .localcouncil td.none, #localcouncildetail td.none {border-left:5px solid #eee;text-align:left}
+#constituencyresults td.VER, #results td.VER, #constituencyaz td.VER, #fullscoreboard td.VER, #summaryscoreboard td.VER, .localcouncil td.VER, #localcouncildetail td.VER {border-left:5px solid #939;text-align:left}
+#constituencyresults td.UKUP, #results td.UKUP, #constituencyaz td.UKUP, #fullscoreboard td.UKUP, #summaryscoreboard td.UKUP, .localcouncil td.UKUP, #localcouncildetail td.UKUP {border-left:5px solid #939;text-align:left}
+#constituencyresults td.SSP, #results td.SSP, #constituencyaz td.SSP, #fullscoreboard td.SSP, #summaryscoreboard td.SSP, .localcouncil td.SSP, #localcouncildetail td.SSP {border-left:5px solid #FF3333;text-align:left}
+#constituencyresults td.WP, #results td.WP, #constituencyaz td.WP, #fullscoreboard td.WP, #summaryscoreboard td.WP, .localcouncil td.WP, #localcouncildetail td.WP, #partycolors td.WP {border-left:5px solid #999;text-align:left}	
+#constituencyresults td.PUP, #results td.PUP, #constituencyaz td.PUP, #fullscoreboard td.PUP, #summaryscoreboard td.PUP, .localcouncil td.PUP, #localcouncildetail td.PUP, #partycolors td.PUP {border-left:5px solid #999;text-align:left}	
+#constituencyresults td.NIWC, #results td.NIWC, #constituencyaz td.NIWC, #fullscoreboard td.NIWC, #summaryscoreboard td.NIWC, .localcouncil td.NIWC, #localcouncildetail td.NIWC, #partycolors td.NIWC {border-left:5px solid #999;text-align:left}	
+#constituencyresults td.UUC, #results td.UUC, #constituencyaz td.UUC, #fullscoreboard td.UUC, #summaryscoreboard td.UUC, .localcouncil td.UUC, #localcouncildetail td.UUC, #partycolors td.UUC {border-left:5px solid #999;text-align:left}	
+#constituencyresults td.NRA, #results td.NRA, #constituencyaz td.NRA, #fullscoreboard td.NRA, #summaryscoreboard td.NRA, .localcouncil td.NRA, #localcouncildetail td.NRA, #partycolors td.NRA {border-left:5px solid #999;text-align:left}	
+#constituencyresults td.Soc, #results td.Soc, #constituencyaz td.Soc, #fullscoreboard td.Soc, #summaryscoreboard td.Soc, .localcouncil td.Soc, #localcouncildetail td.Soc, #partycolors td.Soc {border-left:5px solid #999;text-align:left}
+#constituencyresults td.SEA, #results td.SEA, #constituencyaz td.SEA, #fullscoreboard td.SEA, #summaryscoreboard td.SEA, .localcouncil td.SEA, #localcouncildetail td.SEA, #partycolors td.SEA {border-left:5px solid #999;text-align:left}	
+
+
+#regionmap th{padding:0 0px 0 0;background:#DCDDCB;text-align:left; border-left:0px;}
+#regionmap td.BLANK, #glance td.BLANK, #indetail td.BLANK, #results td.BLANK{border-left:0px solid #eee;}
+
+#constituencyaz td.year1, #constituencyaz td.year2{
+	width:40px;
+	}
+#constituencyaz td.yeararrow{
+	width:16px;
+	}
+#councilquota{
+	width:414px;background:#eee;color:#000;padding:2px 0 2px 2px;
+}
+/* A - Z NAV */
+.atoznav{background:#ccc;padding:5px 0px;text-align:center;margin-bottom:10px;font-size:13px;width:416px}
+.atoznav a{font-weight:bold;}
+
+/* PARTY COLORS */
+.CON, td#CON {background:#333399;}
+.LAB{background:#CC0000;}
+
+/* KEY SEATS */
+
+ .keyflpad{text-align:right;font-weight:bold;}
+ .keyfloatl{float:left;}
+
+
+/* TABBS */
+#tabnavbox{width:629px;font-size:100%;padding:0;}
+#tabnav
+	{
+		height:24px !important;
+		height /**/:30px; /* for IE5/Win */
+		margin: 0;
+		padding:12px 0 0 10px;
+		background: url(http://newsimg.bbc.co.uk/nol/shared/bsp/guides/img/tab_nav_line.gif) repeat-x bottom;
+	}
+#tabnav li
+	{
+		margin: 0; 
+		padding: 0;
+  		display: inline;
+  		list-style-type: none;
+  	}
+#tabnav a:link, #tabnav a:visited
+	{
+		width:120px;
+		float: left;
+		background: #ddd;
+		font-size: 11px;
+		line-height: 16px;
+		font-weight: bold;
+		padding: 2px 40px 2px 40px;
+		margin-right: 4px;
+		border: 1px solid #999;
+		text-decoration: none;
+		color: #009;
+		text-align:center;
+		height:18px !important;
+		height /**/:20px; /* for IE5/Win */
+	}
+#tabnav a:link.active, #tabnav a:visited.active
+	{
+		border-bottom: 1px solid #fff;
+		background: #fff;
+		color: #000;
+	}
+#tabnav a:hover
+	{
+		text-decoration: underline;			
+		background: #ddd;
+	}
+#tabnav a:hover.active{ background: #fff;}
+ #tabnav a:visited{	background: #ddd; color: #66c;}
+#navcontainer {
+	width:627px;padding:6px 0 6px 0;
+	border-left:1px solid #999;
+	border-right:1px solid #999;	
+	}
+
+#navlist
+{
+	list-style: none;
+	padding: 0;
+	margin: 0;
+	font-size:10px;
+	color:#999;
+}
+#navlist li
+{
+	display: inline;
+	padding: 0;
+	margin: 0;
+}
+#navlist li:before { content: "| ";   padding:10px;}
+#navlist li:first-child:before { content: ""; }
+/* MAP TABBS */
+#tabmapnavbox{width:265px;font-size:100%;padding:0;}
+#tabmapnav
+	{
+		height:20px !important;
+		height /**/:26px; /* for IE5/Win */
+		margin: 0;
+		padding:10px 0 0 10px;
+		background: url(http://newsimg.bbc.co.uk/nol/shared/bsp/guides/img/tab_nav_line.gif) repeat-x bottom;
+	}
+#tabmapnav li
+	{
+		margin: 0; 
+		padding: 0;
+  		display: inline;
+  		list-style-type: none;
+  	}
+#tabmapnav a:link, #tabmapnav a:visited
+	{
+		width:121px;	
+		float: left;
+		background: #ddd;
+		font-size: 11px;
+		line-height: 16px;
+		font-weight: bold;
+		padding: 0px 0px 0px 0px;
+		margin-right: 4px;
+		border: 1px solid #999;
+		text-decoration: none;
+		color: #009;
+		text-align:center;
+		height:18px !important;
+		height /**/:20px; /* for IE5/Win */
+	}
+#tabmapnav a:link.active, #tabmapnav a:visited.active
+	{
+		border-bottom: 1px solid #fff;
+		background: #fff;
+		color: #000;
+	}
+#tabmapnav a:hover
+	{
+		text-decoration: underline;			
+		background: #ddd;
+	}
+#tabmapnav a:hover.active{ background: #fff;}
+ #tabmapnav a:visited{background: #ddd; color: #66c;}
+#mapcontainer {
+	width:263px;padding:6px 0 6px 0;
+	border-left:1px solid #999;
+	border-right:1px solid #999;	
+	border-bottom:1px solid #999;	
+	}
+
+
+/*IE workaround*/
+/*All IE browsers*/
+* html #navlist li
+{
+	border-left: 1px solid #999;
+	padding: 0 15px 0 15px;
+	margin: 0 0.4em 0 -0.4em;
+}
+
+/*Win IE browsers - hide from Mac IE\*/
+* html #navlist { height: 1%; }
+
+* html #navlist li
+{
+display: block;
+float: left;
+}
+
+/*End hide*/
+/*Mac IE 5*/
+* html #navlist li:first-child { border-left: 0; }
+ul#navlist li a {
+  font-size:11px;
+   color:#009;
+  font-weight:bold;
+}
+ul#navlist li a:hover {
+  text-decoration:underline;  
+  color:#009;
+}
+ul#navlist li a:visited {
+  color:#66c;
+}
+#navlist a:link.active, #navlist a:visited.active, #navlist a:visited.CON, #navlist a:visited.LD, #navlist a:visited.LAB, #navlist a:visited.LABdefence
+	{
+		color: #000;
+	}
+
+
+
+/* INDEX PAGE */
+.glance, .postcode{
+	padding:3px 0 3px 0;
+	background:#eee;
+	width:203px;
+	font-size:11px;	
+}
+.glance p, .postcode p{
+	padding:2px 0 4px 2px;;
+	margin:0;
+}
+.glance #middle img {
+	border-left:1px solid #fff;
+	border-right:1px solid #fff;
+}
+.glance span, .postcode span{
+	font-weight:bold;
+	font-size:11px;
+	padding:0 0 0 2px;
+}
+.glance .LAB{color:#CC0000;background:#eee;font-size:10px;text-align:center;}
+.glance .LAB span{font-size:15px;padding:0;}
+.glance .CON{color:#339;background:#eee;font-size:10px;text-align:center;}
+.glance .CON span{font-size:15px;padding:0;}
+.glance .LD{color:#f90;background:#eee;font-size:10px;text-align:center;}
+.glance .LD span{font-size:15px;padding:0;}
+
+form#postcodesearch{
+	padding:0;
+	margin:0;
+}
+form#postcodesearch #search{
+
+}
+form#postcodesearch input#searchpostcode{
+	border:1px solid #ddd;
+	width:130px;
+	margin-bottom:4px;
+}
+.postcode ul{
+	list-style:none;
+	padding:0;
+	margin:0;
+}
+.postcode li{
+	background: url(http://newsimg.bbc.co.uk/nol/shared/vote2005/img/arrow_red.gif) no-repeat 2px 4px;
+	padding:0 0 0 10px;
+}
+#swing ul{
+	clear:both;
+	list-style:none;
+	padding:0px 0 10px 0;
+	margin:0;
+ }
+ 
+ #swing box{
+	padding:0 0 0 10px;
+	margin:0;
+}
+ 
+#swing li{
+	background: url(http://newsimg.bbc.co.uk/nol/shared/vote2005/img/arrow_red.gif) no-repeat 2px 5px;
+	padding:0 0 0 10px;
+	margin:0;
+}
+#swing img{
+	padding:0 10px 0 0;
+	float:left;
+	width:101px;
+}
+#swing{
+	background:#eee;
+	color:#000;
+	font-size:11px;
+	width:100%;
+}
+#swing p strong{
+	font-size:20px;
+	font-weight:bold;
+}
+#swing p{
+	float:left;
+	width:81px;
+	color:#000;
+	margin:0;
+	padding:5px 0 0 0;
+}
+
+#swingbox{
+	background:#eee;
+}
+
+.bgbox{
+	background:#eee;
+}
+/* scorecard */
+#scorecard .strap{background:#778;font-size:10px;color:#fff;font-weight:bold;text-align:left;padding:3px;margin-bottom:3px;}	
+.scoverflow{overflow:auto;height:300px;}	
+#scorecard #year01{border-right:1px solid #fff;border-left:1px solid #fff;}
+#scorecard #year05{border-left:1px solid #fff;}
+#scorecard .arrow{padding:5px;}
+#scorecard tr{padding:5px;}
+#scorecard td{border-bottom:1px dashed #666666;padding:5px;}
+.sctime{font-size:11px;color:#666;}
+.sctxt{color:#fff;font-size:11px;margin-top:2px;}
+.sctxtn{font-size:14px;font-weight:bold;}
+.borderl{border-left:2px solid #fff;height:46px;}
+.scLAB{background:#CC0000;}
+.scCON{background:#333399;}
+.scLD{background:#F90;}
+/* winpost */
+#winpost {background:#eee;margin-top:10px;margin-bottom:10px;border:0px solid green; height:147px;}
+.winposttxt{font-size:11px;color:#666;margin-top:3px;}
+.winpostbox{background:#fff url("http://newsimg.bbc.co.uk/nol/shared/vote2005/img/winpostbg.gif") no-repeat;height:75px;}
+#winpost .turnout{font-size:11px;}
+.winpostfltl{float:left;width:110px;}
+.winpostfltr{float:right;width:90px;}
+.winpostclear{clear:both;}
+/* GAIN LOSS SELECT */
+#gainlossselect {
+	padding:0 0 10px 0;
+
+}
+#gainlossselect p{
+	padding:3px 0 3px 2px;
+	font-size:11px;
+	margin:0;
+	background:#eee;
+}
+
+
+/* target seats */
+.targettxt{font-size:14px;color:#339;font-weight:bold;}
+.targettxtbox{font-size:11px;margin:5px 0px;}
+.CONtargetbox{background:#fff url("/nol/shared/vote2005/img/targetbg_con.gif") no-repeat;height:41px;}
+.LDtargetbox{background:#fff url("/nol/shared/vote2005/img/targetbg_ld.gif") no-repeat;height:41px;}
+.LABtargetbox{background:#fff url("/nol/shared/vote2005/img/targetbg_lab.gif") no-repeat;height:41px;}
+.mvb{margin-bottom:5px;}
+/* party colours */
+.LAB{background:#CC0000;}
+.CON{background:#339;}
+.LD{background:#f90;}
+.SNP{background:#F9F000;}
+.PC{background:#360;}
+.GRN{background:#393;}
+.UKIP{background:#636;}
+.DUP{background:#930;}
+.SF{background:#363;}
+.UUP{background:#f60;}
+.SDLP{background:#696;}
+.OTH{background:#999;}
+.SSP{background:#f33;}
+.IND{background:#8a7;}
+.AP{background:#c90;}
+.UKUP{background:#969;}
+.PUP{background:#a55;}
+.BNP{background:#006666;}
+.UKIP{background:#663366;}
+
+.APNI{background:#cc9000;}
+.RES{background:#881111;}
+.ED{background:#aa5555;}
+.SLP{background:#AA0000;}
+.SP{background:#660000;}
+.TW{background:#BB6666;}
+.NOC{background:#000000;}
+.NF{background:#990066;}
+.VRT{background:#993399;}
+
+
+a.sel:link{color:#DDDDDD;}
+a.sel:active{color:#DDDDDD;}
+a.sel:visited{color:#CCCCCC;}
+a.sel:hover{color:#AAAAAA;}
+a.fl:link{font-size:11px;color:#000099;}
+a.fl:visited{font-size:11px;color:#6666CC;}
+a.fl:hover{font-size:11px;color:#000099;}
+a.fl:active{font-size:11px;color:#000099;}
+a.flb:link{font-size:11px;color:#000099;font-weight:bold;}
+a.flb:visited{font-size:11px;color:#6666CC;font-weight:bold;}
+a.flb:hover{font-size:11px;color:#000099;font-weight:bold;}
+a.flb:active{font-size:11px;color:#000099;font-weight:bold;}
+table.fs{margin-top:20px;}
+td.fo{background-color:#990000;color:#CCCC99;font-size:12px;padding-bottom:2px;}
+.f{margin-left:131px;width:629px;margin-bottom:10px;font-size:13px;}
+a.bl:link{color:#DDDDDD;}
+a.bl:active{color:#DDDDDD;}
+a.bl:visited{color:#CCCCCC;}
+a.bl:hover{color:#AAAAAA;}
+td.ba{background-color:#333333;color:#CCCC99;font-size:11px;padding-bottom:2px;padding-top:2px;}
+.nwfootm{margin-right:20px;}
+.footm{padding-top:10px;padding-bottom:20px;}
+.nwfoot{background-color:#cccccc;height:18px;width:760px;}
+#newstracker .arr{background:url("http://newsimg.bbc.co.uk/nol/shared/img/v3/arrow.gif") no-repeat 0 3px;padding-left:7px;padding-bottom:3px;}
+#newstracker .arr span{font-size:11px;color:#666666;}
+#newstracker .sah{background-color:#669999;color:#ffffff;font-size:10px;font-weight:bold;padding-left:5px;padding-top:2px;padding-bottom:2px;}
+#newstracker{width:203px;text-align:left;}
+.nlpnb{font-size:10px;color:#444444;}
+.stp2{background-color:#d4dae0;font-weight:bold;color:#333399;font-size:10px;padding-top:2px;padding-bottom:2px;padding-left:5px;}
+.stp1{background-color:#333399;font-weight:bold;color:#ffffff;font-size:10px;padding-top:2px;padding-bottom:2px;padding-left:5px;}
+
+.keyseatsintro{font-size:12px;}
+
+.ch1 {font-size:11px;color:#ffffff;background-color:#888899;border:1px;padding:4px 0 4px 4px;font-family:verdana;}
+
+/* old fillers for nolpreview....... to be removed when we add the vote fillers */
+.mph1{background-color:#778;color:#FFFFFF;font-size:10px;font-weight:bold;padding-left:5px;padding-top:2px;padding-bottom:2px;}
+/* vote fillers */
+
+.filler3{background-color:#d11;font-weight:bold;color:#ffffff;font-size:10px;padding-top:2px;padding-bottom:2px;padding-left:5px;}
+.filler3 .nlp{color:#ffffff;margin-top:0px;}
+.nwfiller1{background-color:#778;font-weight:bold;color:#ffffff;font-size:10px;padding-top:2px;padding-bottom:2px;padding-left:5px;text-align:left;}
+.nwfiller1 .nlp{color:#ffffff;margin-top:0px;}
+.nwfiller2{background-color:#eee;color:#000000;margin:0px;padding:0px;height:150px;}
+.nwfiller2 .mvb{margin-bottom:0px;}
+
+
+
+.fefefef{background-color:#eee;color:#000000;margin:0px;padding:0px;border:1px;width:100%;}
+.fefefef .mvb{margin-bottom:0px;} 
+
+
+.fgbi{background-color:#eee;color:#000000;border:1px;margin:0px;padding:0px;height:59px;}
+.fgbi .mvb{margin-bottom:0px;} 
+.filler3{background-color:#d11;font-weight:bold;color:#ffffff;font-size:10px;padding-top:2px;padding-bottom:2px;padding-left:5px;}
+.filler3 .nlp{color:#ffffff;margin:0px;}
+
+
+.filler4{background-color:#eee;color:#000000;border:1px;margin:0px;padding:0px;height:59px;}
+.filler4 .mvb{margin-bottom:0px;} 
+.filler4 .o{margin-bottom:0px;}
+
+.filler5{background-color:#eee;color:#000000;border:1px;height:75px;clear:both;border:1px solid #eee;}
+.filler5 .mva b{font-weight:normal;}
+
+
+/* --- KEY SEATS --- */
+.textleft {text-align:left;}
+.textright, th.textright{text-align:right;}
+.center, #scorecard th.center {text-align:center;}
+
+#keyseats #constituency{
+	width:250px;
+}
+#keyseats .bold{font-weight:bold;}
+
+#keyseats td{
+	background:#eee;
+	padding:2px;
+}
+
+.banner{
+	padding:4px 0 4px 4px;
+	font-size:18px;
+	font-weight:bold;
+	color:#fff;
+	}
+td.banner{
+	padding:4px 0 4px 4px;
+	font-size:18px;
+	font-weight:bold;
+	color:#fff;
+	border-top:10px solid #fff;
+	}
+td span{font-size:12px;}
+
+td.LABg{border-right:20px solid #CC0000;}
+td.SNPg{border-right:20px solid #FEDD58;}
+td.LDg{border-right:20px solid #f90;}
+td.CONg{border-right:20px solid #339;}
+td.PCg{border-right:20px solid #0C0;}
+td.RESg{border-right:20px solid #881111;}
+td.INDg{border-left:20px solid #999999;}
+
+td.LABl{border-left:20px solid #c00;}
+td.SNPl{border-left:20px solid #fc0;}
+td.LDl{border-left:20px solid #f90;}
+td.CONl{border-left:20px solid #339;}
+td.PCl{border-left:20px solid #0C0;}
+td.RESl{border-left:20px solid #881111;}
+td.INDl{border-left:20px solid #999999;}
+
+
+#CON .banner{background:#339;}
+#CON td.majority{border-left:20px solid #339;}
+#CON td.constituency{border-right:20px solid #339;}
+
+#LAB .banner{background:#c00;}
+#LAB td.majority{border-left:20px solid #c00;}
+#LAB td.constituency{border-right:20px solid #c00;}
+
+#LD .banner{background:#f90;}
+#LD td.majority{border-left:20px solid #f90;}
+#LD td.constituency{border-right:20px solid #f90;}
+
+#keyseats td.empty{background:#fff;}
+#keyseats {
+	font-size:12px;
+	width:629px;
+}
+#keyseats th{
+	background:#ccc;
+	padding:2px;
+}
+#keyseats .gainedfrom{padding-right:20px;}
+
+#keyseats td.arrow{
+	background:#fff url("../img/arrow_black.gif") no-repeat center center;
+}
+#keyseats #party2001{padding-right:20px;}
+#keyseats #party2005{padding-left:20px;}
+#keyseats .constituency{padding-left:46px;}
+
+.issueacro{margin-top:1px;padding-left:20px;background:url("http://newsimg.bbc.co.uk/nol/shared/img/pdf.gif") no-repeat;color:#000000;font-size:11px;height:26px;}
+.issueacroblank{margin-top:1px;padding-left:20px;background:url("http://newsimg.bbc.co.uk/shared/img/o.gif") no-repeat;color:#000000;font-size:11px;height:26px;}
+
+
+#issues {margin-top:10px;}
+#issues div h2{font-size:14px;margin:0px;padding:0px;color:#000;font-weight:bold;}
+.issuesubh{background-color:#eee;font-size:11px;margin:0px;padding:0px;color:#000;font-weight:bold;padding:2px 2px 2px 5px;}
+.issuesubhdevolved{background-color:#eee;font-size:11px;margin:0px;padding:0px;color:#000;padding:2px 2px 2px 5px;}
+
+#issues .borderLAB{border-bottom:10px solid #CC0000;margin-bottom:10px;}
+#issues .borderCON{border-bottom:10px solid #339;margin-bottom:10px;}
+#issues .borderLD{border-bottom:10px solid #f90;margin-bottom:10px;}
+#issues .borderUKIP{border-bottom:10px solid #636;margin-bottom:10px;}
+#issues .borderGRN{border-bottom:10px solid #393;margin-bottom:10px;}
+#issues .borderPC{border-bottom:10px solid #360;margin-bottom:10px;}
+#issues .borderSSP{border-bottom:10px solid #f33;margin-bottom:10px;}
+#issues .borderSNP{border-bottom:10px solid #fc0;margin-bottom:10px;}
+#issues .borderSGP{border-bottom:10px solid #393;margin-bottom:10px;}
+#issues .borderUUP{border-bottom:10px solid #f60;margin-bottom:10px;}
+#issues .borderDUP{border-bottom:10px solid #930;margin-bottom:10px;}
+#issues .borderSF{border-bottom:10px solid #363;margin-bottom:10px;}
+#issues .borderSDLP{border-bottom:10px solid #696;margin-bottom:10px;}
+#issues .borderAP{border-bottom:10px solid #c90;margin-bottom:10px;}
+
+#issues .border2LAB{border-bottom:2px solid #CC0000;}
+#issues .border2CON{border-bottom:2px solid #339;}
+#issues .border2LD{border-bottom:2px solid #f90;}
+
+#issues .border2UKIP{border-bottom:2px solid #636;}
+#issues .border2GRN{border-bottom:2px solid #393;}
+#issues .border2PC{border-bottom:2px solid #360;}
+#issues .border2SSP{border-bottom:2px solid #f33;}
+#issues .border2SNP{border-bottom:2px solid #fc0;}
+#issues .border2SGP{border-bottom:2px solid #393;}
+#issues .border2UUP{border-bottom:2px solid #f60;}
+#issues .border2DUP{border-bottom:2px solid #930;}
+#issues .border2SF{border-bottom:2px solid #363;}
+#issues .border2SDLP{border-bottom:2px solid #696;}
+#issues .border2AP{border-bottom:2px solid #c90;}
+
+.issuesel{width:140px;margin-top:2px;}
+.ddtd{border-right:10px solid #fff;height:100px;padding:5px 2px 0px 5px;}
+
+.issuetdbg{background-color:#eee;}
+.issuehead{background-color:#eee;font-weight:bold;font-size:10px;padding-top:2px;padding-bottom:2px;padding-left:5px;}
+
+table.search{margin-top:10px;}
+ td#postcode, td#region{background:#eee;margin-top:10px;}
+ #postcode {text-align:center;}
+ td#postcode {background: #eee url(http://newsimg.bbc.co.uk/nol/shared/vote2005/img/issue_arrdown.gif) no-repeat 140px 65px ;}
+ #postcode input#textinput{margin:30px 0 20px 0;}
+ #postcode input{padding:8px;}
+ #postcode p{font-size:10px;padding:0 0 2px 0;margin:0;}
+ td#postcode form div{padding:20px 0 13px 0;}
+ td#region div.region{padding:13px;background:url(http://newsimg.bbc.co.uk/nol/shared/vote2005/img/issue_arr.gif) no-repeat 150px 5px ;}
+ label input{margin:0;}
+ label.bypostcode input{margin:0 0 0 2px;} 
+.rss span{margin-left:4px;}
+
+
+a.tickl{font-family:Verdana,Arial,Helvetica,sans-serif;font-size:11px;line-height:12px;text-decoration:none;color:#000099;font-weight:bold;}a.tickl:hover{color:#6666CC;text-decoration:none;}.ticki{width:629px;height:13px;overflow:hidden;}.ticko{width:629px;border-top:1px solid #FFFFFF;border-bottom:1px solid #778;padding:1px 0 4px 0;margin:4px 0 0px 0;display:block;}.tickls{color:#444444;}.tickh{display:none;}
+/*#rssBox{margin-top:0px;margin-bottom:12px;background:#EEEEEE;border:1px solid #000000;padding:3px 3px 4px 3px;}*/
+.acrol{padding-bottom:7px;margin-top:1px;padding-left:20px;background:url("http://newsimg.bbc.co.uk/nol/shared/img/pdf.gif") no-repeat;color:#000000;font-size:11px;}
+.acrod{height:17px;margin-bottom:7px;margin-top:1px;padding-left:20px;background:url("http://newsimg.bbc.co.uk/nol/shared/img/acrobat.gif") no-repeat;font-size:11px;}
+.pdft{font-size:10px;color:#000000;margin-bottom:5px;}
+
+/* ADDED FOR THE SEARCH STRAP ON INDEX */
+form.postcodeplacesearch{
+	background:#eee url("http://newsimg.bbc.co.uk/nol/shared/vote2005/img/search_arr.gif") no-repeat 412px 7px ;
+	width:629px;
+	padding:4px 0 5px 0;
+}
+form.postcodeplacesearch span{
+	font-weight:bold;
+	font-size:18px;
+	color:#556;
+	margin-left:5px;
+}
+form.postcodeplacesearch span.or{
+	font-weight:bold;
+	font-size:12px;
+	color:#556;
+	margin-left:5px;
+}
+form.postcodeplacesearch label{
+	color:#000;
+	font-size:11px;
+	font-weight:bold;
+}
+form.postcodeplacesearch #textinput{
+	width:115px;
+	border:1px solid #ddd;
+	margin:0 5px 0 32px;
+}
+form.postcodeplacesearch #search{
+	background:#eee url("http://newsimg.bbc.co.uk/nol/shared/vote2005/img/button_search.gif") no-repeat 0 0;
+	width:52px;
+	padding:0;
+	height:20px;
+	margin:0;
+	border:0;
+}

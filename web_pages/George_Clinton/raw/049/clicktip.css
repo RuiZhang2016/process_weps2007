@@ -1,0 +1,194 @@
+dl.clicktip {
+  position:absolute;
+  top: 0;
+  display: block;
+}
+
+div.clicktip {
+  position:absolute;
+  top: 0;
+  display: none;
+}
+
+dl.pseudo_clicktip {
+  position:absolute;
+  display: block;
+}
+
+div.ct_pt_handle {
+  width: 301px;
+}
+
+div.ct_pt_main {
+  padding: 0 0 0 0;
+  position: relative;
+  border: 2px solid #3D0C3D;
+  background-color: white;
+  background-color: #E1D7EA;
+}
+
+a.ct_pt_closebutton {
+  position: absolute;
+  display: block;
+  top: 0;
+  left: 242px;
+  width: 55px;
+  height: 20px;
+  background-image: url(/px.gif); /* ie hack to show the button */
+  text-indent: -1000px;
+  /* hide from ie5mac \*/
+  overflow: hidden;
+  /* end hide */
+}
+
+table.ct_pt_mini {
+  padding: 0;
+  margin: 0 25px 0 20px;
+}
+
+div.ct_pt_dig {
+  margin: 0 25px 6px 25px;
+  text-align: justify;
+}
+
+div.ct_pt_sswrapper {
+  border: 1px solid #AF9AAF;
+  height: 107px;
+  overflow: auto;
+
+  background-color: #efecf0; /* lter purple */
+
+ /* this crashes ie on reveal() */
+ /* so keep it hidden til we find a fix
+  scrollbar-face-color: #EFECF0;
+  scrollbar-arrow-color: #38072C;
+  scrollbar-base-color: #EFECF0;
+  scrollbar-shadow-color: #38072C;
+  scrollbar-darkshadow-color: white;
+  scrollbar-highlight-color: #38072C;
+  scrollbar-3dlight-color: white;
+  scrollbar-track-color: white;
+*/
+}
+
+a.bluelink, a.bluelink:hover {
+  color: #124363;
+  font-weight: bold;
+  font-size: 11px;
+  line-height: 18px;
+}
+
+table#ct_pt_tracks_hdr {
+  margin: 0;
+}
+
+table#ct_pt_tracks {
+  margin: 0;
+  display: none;
+}
+
+th.colwmp, th.colrp, th.coltracks {
+  font-size: 11px;
+  padding: 0 0 6px 0;
+  color: #330033;
+  background-color: #E1D7EB;
+}
+
+th.colwmp {
+  padding: 2px 0 3px 10px;
+  width: 46px;
+}
+
+th.colrp {
+  padding: 2px 0 3px 0;
+  width: 26px;
+}
+
+th.coltracks {
+  padding: 2px 0 3px 0;
+  width: 153px;
+  text-align: left;
+  text-indent: 5px;
+}
+
+td.colwmp, td.colrp {
+  text-align: center;
+  height: 14px;
+}
+
+td.colwmp {
+  padding: 2px 0 3px 10px;
+  width: 46px;
+}
+
+td.colrp {
+  width: 26px;
+}
+
+td.coltracks {
+  padding: 2px 3px 0 10px;
+  width: 153px;
+}
+
+td.ct_pt_icons {
+ text-align:right;
+}
+
+/* give some love to the icons */
+td.ct_pt_icons img {
+  margin: 2px 0 2px 2px;
+}
+
+a.blockmini {
+  display: block;
+}
+
+a.blockmini_loading {
+  display: block;
+  cursor: wait;
+}
+
+div.shadow_top {
+  position: absolute;
+  top: 0;
+  left: 301px;
+  width: 10px;
+  height: 10px;
+  filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(src='/images/clicktip/shadow_top.png', sizingMethod='image');
+}
+
+div>div.shadow_top {
+  background-image: url(/images/clicktip/shadow_top.png);
+}
+
+div.shadow_right {
+  position: absolute;
+  top: 10px;
+  left: 301px;
+  width: 10px;
+  height: 10px;
+  filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(src='/images/clicktip/shadow_right.png', sizingMethod='scale');
+}
+
+div>div.shadow_right {
+  background-image: url(/images/clicktip/shadow_right.png);
+}
+
+div.shadow_bottom {
+  position: absolute;
+  bottom: -10px;
+  left: 0px;
+  width: 311px;
+  height: 10px;
+  filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(src='/images/clicktip/shadow_bottom.png', sizingMethod='image');
+}
+
+div>div.shadow_bottom {
+  background-image: url(/images/clicktip/shadow_bottom.png);
+}
+
+.ct_iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+}

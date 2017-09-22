@@ -1,0 +1,1501 @@
+
+
+
+
+
+
+
+
+
+
+
+		
+		
+				
+
+
+
+
+
+		
+	
+
+
+		
+		
+				
+
+
+
+<!-- Title: gatekeeper -->
+<html>
+<head>
+<!--SiteCatalyst code version: G.7. Copyright 1997-2004 Omniture, Inc.
+More info available at http://www.omniture.com
+-->
+<script language="JavaScript">
+<!--
+var s_pageName="";
+var s_server="";
+var s_channel="";
+var s_pageType="";
+var s_prop1="";
+var s_prop2="";
+var s_prop3="Dr. Dobb's Journal | 184405734 | Detecting Source-Code Plagiarism";
+var s_prop4="Detecting Source-Code Plagiarism";
+var s_prop5="Portal | Architecture & Design";
+var s_prop6="";
+var s_prop7="Bob Zeidman";
+var s_prop8="62.204.207.53 | Mozilla/5.0 (X11; U; Linux i686; en-US; rv:1.7.8) Gecko/20050511";
+var s_prop9="";
+var s_prop10="";
+var s_prop11="";
+var s_prop12="";
+var s_prop13="http://www.ddj.com/dhandler.jhtml";
+var s_prop14="";
+var s_prop15="";
+var s_prop16="";
+
+/* E-commerce Variables */
+var s_campaign="";
+var s_state="";
+var s_zip="";
+var s_events="event5";
+var s_products="";
+var s_purchaseID="";
+var s_eVar1="";
+var s_eVar2="";
+var s_eVar3="";
+var s_eVar4="";
+var s_eVar5="";
+//-->
+</script>
+
+<title>Dr. Dobb's | Detecting Source-Code Plagiarism | June 1, 2004</title>
+			<META NAME="description" CONTENT="Software tools and techniques for global software development. Dr. Dobb's features articles, source code, blogs,forums,video tutorials, and audio podcasts, as well as articles from Dr. Dobb's Journal, BYTE.com, C/C++ Users Journal, and Software Development magazine.">
+		<META NAME="keywords" CONTENT="software development, source code,Architecture & Design, Eclipse & Open Source, Windows/.NET, Database, Testing & Debugging, SOA,Web Services & XML, Mobility, Security, Global Developer,64-bit/Multicore,Embedded Systems, Lightweight Languages, Perl, PHP, Ruby, Python, AI and Robotics, Linux/UNIX">
+		<META NAME="headline" CONTENT="Detecting Source-Code Plagiarism">
+		<META NAME="created" CONTENT="">
+	
+
+<link rel="Stylesheet" rev="Stylesheet" href="http://i.cmpnet.com/ddj/styles/Layout.css" type="text/css">
+<link rel="Stylesheet" rev="Stylesheet" href="http://i.cmpnet.com/ddj/styles/FontStyles.css" type="text/css">
+<link rel="Stylesheet" rev="Stylesheet" href="http://i.cmpnet.com/ddj/styles/newarticle.css" type="text/css">
+<script src="https://i.cmpnet.com/ddj/js/popwindow.js"></script>
+<script language="javascript">
+<!--
+function jobsopen(){
+      document.getElementById("jobscontainer").style.height = '';
+      }
+
+function jobsclose(){
+      document.getElementById("jobscontainer").style.height = "41px";
+      }
+
+//-->
+</script>
+<script language="JavaScript" type="text/javascript">
+var addtoMethod=1;
+var AddURL = document.location.href;
+var AddTitle = escape(document.title);
+
+</script>
+<script language="JavaScript" src="http://i.cmpnet.com/ddj/ddj/images/add2/add2.js" type="text/javascript"></script> 
+</head>
+<body  bgcolor="#ffffff" vlink="#006699" link="#006699" marginwidth="0" marginheight="0" topmargin="0" leftmargin="0">
+<table cellpadding=0 cellspacing=0>
+<tr>
+<td><script language="JavaScript" src="http://i.cmpnet.com/shared/omniture/s_code_remote.js"></script></td>
+</tr>
+</table>
+<!-- End SiteCatalyst code version: G.7. -->
+
+	
+<!-- CMP LOGO and AD BANNER AT TOP -->
+<div id="TopAdContainer">
+	<img src="http://i.cmpnet.com/ddj/logo_cmp.jpg" width="90" height="90" hspace="15" vspace="0" border="0" align="left" alt="">
+
+
+
+		<!-- http://as.cmpnet.com/html.ng/pagepos=top&affiliate=ddj&site=sdmg&country=spain&server=atg&target=/184405734 -->
+<a target="_parent" href="http://as.cmpnet.com/event.ng/Type=click&FlightID=82735&AdID=138279&TargetID=4879&Segments=1411,1551,3108,3317,3383,3448,4875,5470,6877,10552,11155&Targets=1251,2625,2878,4879,7241&Values=34,46,51,63,77,82,90,100,140,203,442,646,656,944,945,975,1184,1388,1785,1925,1970,2172,2299,2310,2313,2326,2352,2678,2862,3712,3714,3890,3904,4079&RawValues=IP,66.77.24.210,&Redirect=https://www1.cmpnetseminars.com/ars/eventregistration.do%3Fmode%3Deventreg%26F%3D5930%26K%3D3SD6"><img src="http://i.cmpnet.com/ads/graphics/as5/kh/house/iAnywhereWebinar728x90.gif" border=0 height=90 width=728 alt=""></a><img src="http://as.cmpnet.com/event.ng/Type=count&ClientType=2&AdID=138279&FlightID=82735&TargetID=4879&Segments=1411,1551,3108,3317,3383,3448,4875,5470,6877,10552,11155&Targets=1251,2625,2878,4879,7241&Values=34,46,51,63,77,82,90,100,140,203,442,646,656,944,945,975,1184,1388,1785,1925,1970,2172,2299,2310,2313,2326,2352,2678,2862,3712,3714,3890,3904,4079&RawValues=&random=bgdwhhW,bcKvKojcnatsc" width=1 height=1 border=0>
+
+	
+</div>
+<!-- /CMP LOGO and AD BANNER AT TOP -->
+<!-- LOGO and USER/PORTAL NAV and SEARCH -->
+<table border="0" width="990" cellpadding="0" cellspacing="0" class="elfixo">
+	<TR>
+		<TD width="1" bgcolor="#000000" rowspan=2><img src="http://i.cmpnet.com/ddj/blank.gif" border="0" width="1" height="1" alt=""></td>
+		<TD width="362" bgcolor="#000000"><img src="http://i.cmpnet.com/ddj/blank.gif" border="0" width="362" height="1" alt=""></td>
+		<TD width="536" bgcolor="#000000"><img src="http://i.cmpnet.com/ddj/blank.gif" border="0" width="536" height="1" alt=""></td>
+		<TD width="1" bgcolor="#000000" rowspan=2><img src="http://i.cmpnet.com/ddj/blank.gif" border="0" width="1" height="1" alt=""></td>
+	</TR>
+	<TR>
+		<TD align=left valign=middle bgcolor="#349F2C">
+			<a href="http://www.ddj.com/;jsessionid=M1UAVXGT3TBHQQSNDLOSKH0CJUNN2JVN"><img src="http://i.cmpnet.com/ddj/logo_ddj.gif" hspace="3" vspace="5" border="0" alt=""></a> 
+		</td>
+		
+			<TD valign=middle align=right bgcolor="#349F2C">
+				<!-- SEARCH -->
+				<FORM action="http://www.ddj.com/TechSearch/searchResults.jhtml;jsessionid=M1UAVXGT3TBHQQSNDLOSKH0CJUNN2JVN">
+				<input type="text" name="queryText" value="" style="width:290px; height:20px" size="11" class="searchInput" onfocus="this.value=''">
+				<input type="image" src="http://i.cmpnet.com/ddj/search.gif" alt=""  align="absbottom" hspace="3" vspace="0">
+				</FORM>
+				<!-- /SEARCH -->
+				
+				<a style="font: 10px verdana, sans-serif  bold; color: #ffc20e;" href="http://www.ddj.com/TechSearch/searchResults.jhtml;jsessionid=M1UAVXGT3TBHQQSNDLOSKH0CJUNN2JVN">Site Archive (Complete)</a>	  </td>
+		
+	</TR>
+	<!-- /LOGO, and SEARCH -->
+	<TR>
+		<TD colspan=4 bgcolor="#000000"><img src="http://i.cmpnet.com/ddj/blank.gif" border="0" width="250" height="1" alt=""></TD>
+	</TR>
+	<TR>
+
+
+
+
+
+        
+                
+            
+    
+<TD bgcolor="#000000"></TD>
+<TD bgcolor="#FFB305" colspan=2>
+	<div class="portalNAVPad">
+		<span class=noLINE>
+			<a href="http://www.ddj.com/about.html;jsessionid=M1UAVXGT3TBHQQSNDLOSKH0CJUNN2JVN" CLASS=portalNAV>ABOUT US</a> | 
+			<a href="http://www.ddj.com/contact.html;jsessionid=M1UAVXGT3TBHQQSNDLOSKH0CJUNN2JVN" CLASS=portalNAV>CONTACT</a> | 
+			<a href="http://www.ddj.com/advertise/;jsessionid=M1UAVXGT3TBHQQSNDLOSKH0CJUNN2JVN" CLASS=portalNAV>ADVERTISE</a> | 
+			<a href="http://www.ddj.com/subscribe/;jsessionid=M1UAVXGT3TBHQQSNDLOSKH0CJUNN2JVN" CLASS=portalNAV>SUBSCRIBE</a> | 
+			<!-- <a href="/pubs/" CLASS=portalNAV>ARCHIVES</a> | -->
+			<a href="http://www.ddj.com/code/;jsessionid=M1UAVXGT3TBHQQSNDLOSKH0CJUNN2JVN" CLASS=portalNAV>SOURCE CODE</a> | 
+			<a href="http://www.ddj.com/currentIssuePage.html;jsessionid=M1UAVXGT3TBHQQSNDLOSKH0CJUNN2JVN" CLASS=portalNAV>CURRENT PRINT ISSUE</a> | 
+			<a href="http://www.forums.ddj.com/jive3/index.jspa;jsessionid=M1UAVXGT3TBHQQSNDLOSKH0CJUNN2JVN?categoryID=51" CLASS=portalNAV>
+				FORUMS
+			</a>| 
+			<a href="http://www.ddj.com/newsletters/;jsessionid=M1UAVXGT3TBHQQSNDLOSKH0CJUNN2JVN" CLASS=portalNAV>NEWSLETTERS</a>
+			| 
+			<a href="http://www.ddj.com/resources/;jsessionid=M1UAVXGT3TBHQQSNDLOSKH0CJUNN2JVN" CLASS=portalNAV>RESOURCES</a>
+			| 
+			<a href="http://www.ddj.com/blog/;jsessionid=M1UAVXGT3TBHQQSNDLOSKH0CJUNN2JVN" CLASS=portalNAV>BLOGS</a>
+			| 
+			<a href="http://www.ddj.com/mediaCenter/;jsessionid=M1UAVXGT3TBHQQSNDLOSKH0CJUNN2JVN" CLASS=portalNAV>PODCASTS</a>
+			| 
+			<a href="http://www.techcareers.com/?affiliate=ddj" CLASS=portalNAV>CAREERS</a>
+		</span>
+	</div>
+</TD>
+<TD bgcolor="#000000"></TD>
+	</TR>
+	<TR>
+		<TD colspan=4 bgcolor="#000000"><img src="http://i.cmpnet.com/ddj/blank.gif" border="0" width="250" height="1" alt=""></TD>
+	</TR>
+</TABLE>
+<div style="height: 14px; width: 990px; color: white;">
+</div>
+	<table border="0" width="900" cellpadding="0" cellspacing="0" class=elfixo>
+		
+		<TR>
+			<td valign=top>
+			<!-- LEFT COL -->
+				
+						
+
+
+
+		
+		
+		
+		
+	
+						
+						
+
+
+
+
+
+
+<script language="Javascript">
+	function launcher(art_id,urlPrefix,siteUrl) {
+ uri = "/article/emailBox.jhtml?articleID=" +art_id+"&urlPrefix="+ urlPrefix+"&host_url="+siteUrl;
+	window.open(uri,"","toolbar=no,scrollbars=auto,location=no,status=no,width=480,height=415,resizable=1");
+	}
+</script>
+
+		
+	
+
+
+
+
+
+
+
+
+
+
+<DIV class="LColMargin">
+	
+			<a href="http://www.ddj.com/dept/architect/;jsessionid=M1UAVXGT3TBHQQSNDLOSKH0CJUNN2JVN"><img src=http://i.cmpnet.com/ddj/header_architect.gif hspace="0" vspace="0" border="0" alt="Architecture &amp; Design"></a>
+			<img src="http://i.cmpnet.com/ddj/rule.gif" width="405" height="1" hspace="0" vspace="0" border="0" align="left"><BR>
+		
+</DIV>
+
+
+<DIV class="articlepadding">
+
+
+		
+		
+				
+				
+						
+					
+			
+				
+				
+						
+								
+							
+					
+			
+		<table border="0" width="160" cellpadding="0" cellspacing="0" class=elfixo align=right>
+		<TR>
+		<TD width="10" rowspan=5><img src="http://i.cmpnet.com/ddj/blank.gif" border="0" width="10" height="1"></td>
+		<TD width="75"><img src="http://i.cmpnet.com/ddj/blank.gif" border="0" width="75" height="1"></td>
+		<TD width="75"><img src="http://i.cmpnet.com/ddj/blank.gif" border="0" width="75" height="1"></td>
+		</TR>
+	<TR><TD valign=top>
+
+		    <img src="http://i.cmpnet.com/ddj/redsquare.gif" width="15" height="12" hspace="0" vspace="0" border="0" align="absmiddle"><a href="javascript:launcher(184405734,'/dept/architect/','www.ddj.com')" title="Send As Email">Email</a><BR>
+			<img src="http://i.cmpnet.com/ddj/redsquare.gif" width="15" height="12" hspace="0" vspace="0" border="0" align="absmiddle"><a href="184405734.1.html#articleComments">Discuss</a> 
+		</td>
+		<TD valign=top>
+		<img src="http://i.cmpnet.com/ddj/redsquare.gif" width="15" height="12" hspace="0" vspace="0" border="0" align="absmiddle"><a href="http://www.ddj.com/article/printableArticle.jhtml;jsessionid=M1UAVXGT3TBHQQSNDLOSKH0CJUNN2JVN?articleID=184405734&amp;dept_url=/dept/architect/">Print</a><BR>
+		<img src="http://i.cmpnet.com/ddj/redsquare.gif" width="15" height="12" hspace="0" vspace="0" border="0" align="absmiddle"><a href="http://www.cmpreprints.com/faxback.jhtml" target="_new">Reprint</a>  
+		</td></tr>
+		<TR>
+		  <TD height="7" colspan="2" valign="middle" style="padding: 7 0 0 0;"><div align="center"><img src="http://i.cmpnet.com/ddj/ddj/images/dotted_line3.gif" width="140" height="1" hspace="0" vspace="0" border="0"><br><span class="add2header">add to:</span></div></td>
+  </tr>
+		<TR>
+		  <TD valign=top><img src="http://i.cmpnet.com/ddj/redsquare.gif" width="15" height="12" hspace="0" vspace="0" border="0" align="absmiddle"><span class="add2ddj" title="Add this page to Delicious" onclick="addto(2)"><u>Del.icio.us</u></span><BR>
+<img src="http://i.cmpnet.com/ddj/redsquare.gif" width="15" height="12" hspace="0" vspace="0" border="0" align="absmiddle"><span class="add2ddj" title="Add this page to Digg" onclick="addto(3)"><u>Digg</u></span><BR>
+
+<img src="http://i.cmpnet.com/ddj/redsquare.gif" width="15" height="12" hspace="0" vspace="0" border="0" align="absmiddle"><span class="add2ddj"title="Add this page to Google" onclick="addto(5)"><u>Google</u></span><BR>
+<img src="http://i.cmpnet.com/ddj/redsquare.gif" width="15" height="12" hspace="0" vspace="0" border="0" align="absmiddle"><span class="add2ddj" title="Add this page to Spurl" onclick="addto(8)"><u>Spurl</u></span></td>
+          <TD valign=top>		<img src="http://i.cmpnet.com/ddj/redsquare.gif" width="15" height="12" hspace="0" vspace="0" border="0" align="absmiddle"><span class="add2ddj" title="Add this page to Slashdot" onclick="addto(6)"><u>Slashdot</u></span><BR>
+<img src="http://i.cmpnet.com/ddj/redsquare.gif" width="15" height="12" hspace="0" vspace="0" border="0" align="absmiddle"><span class="add2ddj" title="Add this page to Yahoo! MyWeb" onclick="addto(7)"><u>Y! MyWeb</u></span><BR>
+
+<img src="http://i.cmpnet.com/ddj/redsquare.gif" width="15" height="12" hspace="0" vspace="0" border="0" align="absmiddle"><span class="add2ddj" title="Add this page to Blink" onclick="addto(1)"><u>Blink</u></span><BR>
+<img src="http://i.cmpnet.com/ddj/redsquare.gif" width="15" height="12" hspace="0" vspace="0" border="0" align="absmiddle"><span class="add2ddj" title="Add this page to Furl" onclick="addto(4)"><u>Furl</u></span></td>
+  </tr>
+		
+				
+				
+				
+				
+				
+				
+				
+				
+			
+		
+		
+				
+						
+					
+						
+								
+									
+							
+					
+						
+								
+									
+							
+					
+						
+								
+									
+							
+					
+						
+								
+									
+							
+					
+						
+								
+									
+							
+					
+			
+		
+		</table>
+		<DIV class="Bspace4">
+		<em>June 01, 2004</em><BR>
+		
+				<h5>Detecting Source-Code Plagiarism</h5>
+				<h2></h2>
+			</div>
+		
+				<DIV class="Bspace15">
+				<div class=PageNumbers>
+					 (Page <a href="http://www.ddj.com/dept/architect/184405734;jsessionid=M1UAVXGT3TBHQQSNDLOSKH0CJUNN2JVN?pgno=1">1</a> of 
+					<a href="http://www.ddj.com/dept/architect/184405734;jsessionid=M1UAVXGT3TBHQQSNDLOSKH0CJUNN2JVN?pgno=6">6</a>)<br>
+				</div></div>
+			
+		
+		
+		
+				
+						<DIV class="Bspace15"><em>Bob Zeidman</em></div>
+					
+			
+
+		
+		
+
+		
+		
+				<!-- teaser -->
+				<DIV class="Bspace15"><span class="greenBlurb">Bob examines the tools and algorithms for uncovering plagiarism in source code.</span></div>
+				<!-- end teaser -->
+			
+		
+
+		
+<html>
+<head>
+<title>July, 2004: Detecting  Source-Code Plagiarism</title>
+</head>
+<P>
+<body BGCOLOR="#ffffff" LINK="#0000ff" VLINK="#330066" ALINK="#ff0000" TEXT="#000000">
+<!--Copyright &#169; Dr. Dobb's Journal-->
+<P>
+ 
+<P>
+ 
+<h2>Tools and algorithms for finding plagiarism in source code</h2>
+<P>
+
+ 
+<P>
+<I>Bob is a senior member of the IEEE and president of Zeidman Consulting, a contract research and development firm. He can be contacted at bobzeidmanconsulting.com.</I>
+<P>
+<hr>
+<P>
+
+<P>
+
+<P>
+
+<P>
+Plagiarism detection programs have been around for a number of years. Examples of some widely used programs include Plague, the YAP programs (YAP, YAP2, and YAP3), JPlag, and MOSS. These programs have recently gotten more attention for two main reasons: </p>
+<P>
+
+<P>
+<ul>
+  <li>The Internet and search engines (like Google) have made source code easy to obtain. </li>
+  <li>The open-source movement lets programmers all over the world write, distribute, and share code. Moreover, the increased mobility of high-tech employees contributes to code leaving one company and showing up at another company, intentionally or not. </li>
+</ul>
+<P>
+
+<P>
+
+<P>
+It follows that plagiarism detection programs have become more sophisticated in recent years. In his excellent paper "Plagiarism in Natural and Programming Languages: An Overview of Current Tools and Technologies" (http://ir.shef.ac.uk/cloughie/papers/plagiarism2000.pdf/), Paul Clough discusses tools and algorithms for finding plagiarism in generic text documents, as well as in programming- language source-code files. Since I am only interested in tools and algorithms for finding plagiarism in source code, I confine my discussion to those relevant tools. </p>
+<P>
+
+<P>
+Plague (http://www.csse.monash.edu.au/projects/plague/), YAP (http://www.cs.su.oz.au/~michaelw/YAP.html), and JPlag (http://wwwipd.ira.uka.de:2222/) can be described in general terms as using the following three-phase algorithm. Each program uses different methods for each phase, but essentially the steps are the same:</p>
+<P>
+
+<P>
+<ol>
+  <li>Remove comments, identifier names, and whitespace.</li>
+  <li>Replace code statements with a sequence of tokens.</li>
+  <li>Compare token sequences to find similarity.</li>
+</ol>
+<P>
+
+<P>
+
+<P>
+In the first phase, all comments are discarded. Also, identifier names such as variable name and function names are discarded. Whitespace is removed. In the second phase, programming-language statements are replaced with generic tokens that describe the basic functionality of the program, as in <a name="rf1"></a><a href="http://www.ddj.com/showArticle.jhtml?documentID=ddj0407l&amp;pgno=2">Figure 1</a>. In the third phase, the token sequences of pairs of files are compared to find matches.</p>
+<P>
+
+<P>
+There are a number of problems with this type of approach:</p>
+<P>
+
+<P>
+<ul>
+  <li>These programs are difficult to adapt to new programming languages because they are so dependent on expert knowledge of the programming language's source code they are examining.</li>
+  <li>They are vulnerable to changing the order of code lines in the source code. </li>
+  <li>They throw out useful information when they discard comments, variable names, function names, and other identifiers.</li>
+</ul>
+<P>
+
+<P>
+
+<P>
+The second point is a particular problem because code sections can be rearranged and individual lines can be reordered to fool these programs into giving lower scores or miscopied code altogether. This is one method that sophisticated plagiarists use to hide malicious code theft.</p>
+<P>
+
+<P>
+The third point is a problem because comments, variable names, function names, and other identifiers can be useful in finding plagiarism. These identifiers can be used to pinpoint copied code immediately. Even in many cases of intentional copying, comments are inadvertently left in the copied code and can be used to find matches. Common misspellings or the use of particular words throughout the program in two sets of source code can help identify them as having the same author, even if the code structures themselves do not match. In <i>Cadence v. Avant!</i>, in which Avant! was found guilty of stealing code from Cadence Design Systems, the code for Avant!'s ArcCell and Aquarius programs included words in comments that were consistently misspelled in the same way as the comments in the code for Cadence's Symbad program. It appeared that sections of the code had been rewritten but many comments remained. It was thus proven that Avant! had not started its code development from scratch but had gotten a head start by illegally appropriating source code. ("'Smoking gun' presented at Avant! restitution hearing," <i>EE Times</i>, June 27, 2001.) Ignoring comments and identifier names is a common problem with plagiarism tools.</p>
+<P>
+
+<P>
+The MOSS program (http://www.cs.berkeley.edu/~aiken/moss.html) works differently than the others. Its algorithm can be described by these phases:</p>
+<P>
+
+<P>
+<ol>
+  <li>Remove all whitespace and punctuation from each source-code file and convert all characters to lowercase.</li>
+  <li>Divide the remaining nonwhitespace characters of each file into <i>k</i>-grams, which are contiguous substrings of length <i>k</i>, by sliding a window of size <i>k</i> through the file. In this way, the second character of the first <i>k</i>-gram is the first character of the second <i>k</i>-gram, and so on.</li>
+  <li>Hash each <i>k</i>-gram and select a subset of all <i>k</i>-grams to be the fingerprints of the document. The fingerprint includes information about the position of each selected <i>k</i>-gram in the document.</li>
+  <li>Compare file fingerprints to find similar files.</li>
+</ol>
+<P>
+
+<P>
+
+<P>
+As with the other programs, MOSS discards comments, variable names, function names, and other identifiers that can be very useful in finding plagiarism.</p>
+<P>
+
+<P>
+MOSS considers source-code files as if they were generic text files. Because of this, much structural information that can be used to find matches is lost. For example, whitespace, punctuation, uppercase characters, and nonalphanumeric symbols have significant meaning in programming languages but are thrown out by MOSS.</p>
+<P>
+
+<P>
+To speed execution time, MOSS uses a statistical algorithm to find matches. While this results in the program completing faster than if it used a deterministic algorithm, it also results in a small but nonzero chance of missing plagiarized program pairs.</p>
+<h3>CodeMatch</h3>
+<P>
+
+<P>
+CodeMatch, a program I wrote, takes an entirely different approach to plagiarism detection than the programs previously described. First, CodeMatch compares features of each pair of source-code files completely, rather than using a sampling method for comparing a small number of hashed samples of code. This may require the program to run for hours, or in some cases days, to find plagiarism among large sets of large files. Given the stakes in many intellectual property theft cases, this more accurate method is worth the processing time involved. And it is certainly less expensive than hiring experts on an hourly basis to manually pore over code.</p>
+<P>
+
+<P>
+Second, CodeMatch makes use of knowledge of programming languages and program structures to improve the matching results. There is a small amount of information needed in the form of a list of common programming-language statements that CodeMatch must recognize. This list is specific to the programming language being examined. In addition, CodeMatch needs information on characters that are used to identify comments and characters that are used as separators.</p>
+<P>
+
+<P>
+CodeMatch uses a combination of five algorithms to find plagiarism: Source Line Matching, Comment Line Matching, Word Matching, Partial Word Matching, and Semantic Sequence Matching. Each algorithm is useful in finding different clues to plagiarism that the other algorithms may miss. By using all five algorithms, chances of missing plagiarized code is significantly diminished. Before any of the algorithm processing takes place, some preprocessing is done to create string arrays. Each file is represented by three arrays&#151;an array of source lines that consists of lines of functional source code and does not include comments; an array of comment lines that consists of comments and does not include functional code; and an array of identifiers found in the source code. Identifiers include variable names, constant names, function names, and any other words that are not keywords of the programming language.</p>
+<h3>Word Matching</h3>
+<P>
+
+<P>
+For each file pair, the CodeMatch Word Matching algorithm counts the number of matching words that are not programming-language keywords. To determine whether a word is a programming-language keyword, comparison is done with a list of programming-language keywords. For example, the word <i>while</i> in a C source code file would be ignored as a keyword by this algorithm. In some programming languages such as C and Java, keywords are case sensitive. In other programming languages like Basic, keywords are not case sensitive. CodeMatch has a switch to turn case sensitivity on/off depending on the language being examined. So, for a case-sensitive language like C, the word <i>While</i> would not be considered a language keyword and would not be ignored. In a case-insensitive language such as Basic, however, the word <i>While</i> would be considered a language keyword and would be ignored. In either case, when comparing nonkeyword words in the file pairs, case is ignored so that the word <i>Index</i> in one file would be matched with the word <i>index</i> in the other. This case-insensitive comparison is done to prevent being fooled by simple case changes in plagiarized code.</p>
+<h3>Partial Word Matching</h3>
+<P>
+
+<P>
+The CodeMatch Partial Word Matching algorithm examines each nonkeyword word in the source code of one file and finds all words that match a sequence within one or more nonkeyword words in the other file. Like the word-matching algorithm, this one is also case insensitive. <a name="rf2"></a><a href="http://www.ddj.com/showArticle.jhtml?documentID=ddj0407l&amp;pgno=3">Figure 2</a> shows the results of this algorithm. In <a name="rf2"></a><a href="http://www.ddj.com/showArticle.jhtml?documentID=ddj0407l&amp;pgno=3">Figure 2</a>(a), the nonkeyword words from the two files are displayed. In <a name="rf2"></a><a href="http://www.ddj.com/showArticle.jhtml?documentID=ddj0407l&amp;pgno=3">Figure 2</a>(b), every word from one file that can be found as a sequence within a word from the other file is listed. So the word <i>abc</i> in file 1 can be found within words <i>aabc</i>, <i>abc1111111</i>, and <i>abcxxxyz</i> in file 2. Note that word <i>pdq</i> is not listed in the array of partially matching words because it matches a complete word in both files and was already considered in the word-matching algorithm. Also note that <i>x</i> is not listed in the array because one-character words are ignored for being too common.</p>
+<h3>Source Line Matching</h3>
+<P>
+
+<P>
+The CodeMatch Source Line Matching algorithm compares each line of source code from both files, ignoring case. I refer to functional program language lines as source lines and exclude comment lines. Also, sequences of whitespace are converted to single spaces so that the syntax structure of the line is preserved. Note that a line of source code may have a comment at the end. The comment is stripped off for this comparison. Source lines that contain only programming-language keywords are not considered matching. For source lines to be considered matches, they must contain at least one nonkeyword such as a variable name or function name. Otherwise, lines containing basic operations would be reported as matching. <a name="rf3"></a><a href="http://www.ddj.com/showArticle.jhtml?documentID=ddj0407l&amp;pgno=4">Figure 3</a> shows two files along with line numbers and the source lines that are considered matching by this algorithm.</p>
+<h3>Comment Line Matching</h3>
+<P>
+
+<P>
+The CodeMatch Comment Line Matching algorithm compares each line of comments from both files, again ignoring case. As before, sequences of whitespace are converted to single spaces so that the syntax structure of the line is preserved. Note that a line of source code may have a comment at the end. The source code is stripped off for this comparison. The entire comment is compared, regardless of whether there are keywords in the comment or not. <a name="rf4"></a><a href="http://www.ddj.com/showArticle.jhtml?documentID=ddj0407l&amp;pgno=5">Figure 4</a> shows two files along with line numbers and the comment lines that are considered matching by this algorithm.</p>
+<h3>Semantic Sequence Matching</h3>
+<P>
+
+<P>
+The CodeMatch Semantic Sequence Matching algorithm compares the first word of every source line in the pair of files, ignoring blank lines and comment lines. This algorithm finds sequences of code that appear to perform the same functions despite changed comments and identifier names. The algorithm finds the longest common semantic sequence within both files. Look at the example code in <a name="rf5"></a><a href="http://www.ddj.com/showArticle.jhtml?documentID=ddj0407l&amp;pgno=6">Figure 5</a>. The sequence of lines in both files is considered matching because the first word is identical when blank lines, whitespace, and punctuation are removed. This algorithm yields a score representing the number of source lines in the longest semantically matching sequence in the two files.</p>
+<h3>Match Score</h3>
+<P>
+
+<P>
+Finally, a single score is given for the similarity of the file pairs. If a file pair has a higher score, it implies that these files are more similar and may be plagiarized from each other or from a common third file. Each of the scores from each of the five individual algorithms is weighted and added to give the Total Match Score. These weights can be adjusted to give the optimal results.</p>
+<P>
+
+<P>
+Over time, these weights have been adjusted by comparing results of files in which code has been copied and disguised. However, unlike the other algorithms described in this article, CodeMatch is not intended to give a specific cutoff threshold for file similarity. I recognize that there are many kinds of plagiarism and many ways of fooling plagiarism detection programs. For this reason, CodeMatch produces an HTML output report with a list of file pairs ordered by their Total Match Scores. Users can click on a file-pair hyperlink to bring up a detailed HTML report showing exact matches that occurred between the selected files. In this way, experts are directed to suspicious similarities and allowed to make their own judgments. CodeMatch is not a tool for precisely pinpointing plagiarized code, but rather a tool to assist an expert in finding plagiarized code. CodeMatch reduces the effort needed by the expert by allowing him to narrow his focus from hundreds of thousands of lines of code in hundreds of files to dozens of lines of code in dozens of files.</p>
+<h3>Conclusion</h3>
+<P>
+
+<P>
+Experts in intellectual property litigation have used the commercial version of CodeMatch to successfully search for plagiarized source code. A demo version of CodeMatch is available at no charge from <i>DDJ</i> (see "Resource Center," page 3) and my web site (http:/www.zeidmanconsulting.com/). The demo version compares two files and lists all their similarities as determined by the five algorithms. The commercial version compares lots of files in different directories and ranks them according to most similar pairs. Then you can click on a pair to see their similarities as determined by the five algorithms.</p>
+<h3>Acknowledgments</h3>
+<P>
+
+<P>
+Thanks to the following people who have years of engineering experience designing software and hardware. Each has contributed suggestions for the CodeMatch program and ran tests to help determine its usefulness: Bob Wedig, Mike Potel, Charlie Neuhauser, Brian Berg, and Rich Belgard.</p>
+<h3>References</h3>
+<P>
+
+<P>
+Whale, Geoff. "Identification of Program Similarity in Large Populations," <i>The Computer Journal, </i>Vol. 33, Number 2, 1990.</p>
+<P>
+
+<P>
+Wise, Michael J. "YAP3: Improved Detection of Similarities in Computer Program and Other Texts," <i>Proceedings of SIGCSE '96</i>.</p>
+<P>
+
+<P>
+Prechelt, Lutz, Guido Malpohl, and Michael Philippsen. "Finding Plagiarisms Among a Set of Programs with JPlag," <i>Journal of Universal Computer Science, </i>Vol. 8, no. 11, 2002.</p>
+<P>
+
+<P>
+Schleimer, Saul, Daniel Wilkerson, and Alex Aiken. "Winnowing: Local Algorithms for Document Fingerprinting," <i>Proceedings of SIGMOD 2003</i>, 2003.</p>
+<P>
+
+<P>
+Clough, Paul. "Plagiarism in Natural and Programming Languages: An Overview of Current Tools and Technologies," <i>Research Memoranda, CS-00-05</i>, Department of Computer Science, University of Sheffield, UK, 2000.</p>
+<P>
+
+<P>
+
+<b>DDJ</b></p>
+<P>
+
+<P>
+
+</body>
+</html>
+
+		
+		
+			
+		
+		<center>
+		
+
+
+
+
+
+
+		
+				
+			
+		
+				
+						
+								1
+							
+					
+			
+		
+				| 
+			
+	
+		
+				
+			
+		
+				<a href="http://www.ddj.com/dept/architect/184405734;jsessionid=M1UAVXGT3TBHQQSNDLOSKH0CJUNN2JVN?pgno=2">
+					
+					2</a>
+			
+		
+				| 
+			
+	
+		
+				
+			
+		
+				<a href="http://www.ddj.com/dept/architect/184405734;jsessionid=M1UAVXGT3TBHQQSNDLOSKH0CJUNN2JVN?pgno=3">
+					
+					3</a>
+			
+		
+				| 
+			
+	
+		
+				
+			
+		
+				<a href="http://www.ddj.com/dept/architect/184405734;jsessionid=M1UAVXGT3TBHQQSNDLOSKH0CJUNN2JVN?pgno=4">
+					
+					4</a>
+			
+		
+				| 
+			
+	
+		
+				
+			
+		
+				<a href="http://www.ddj.com/dept/architect/184405734;jsessionid=M1UAVXGT3TBHQQSNDLOSKH0CJUNN2JVN?pgno=5">
+					
+					5</a>
+			
+		
+				| 
+			
+	
+		
+				
+			
+		
+				<a href="http://www.ddj.com/dept/architect/184405734;jsessionid=M1UAVXGT3TBHQQSNDLOSKH0CJUNN2JVN?pgno=6">
+					
+					6</a>
+			
+		
+	
+
+		<a href="http://www.ddj.com/dept/architect/184405734;jsessionid=M1UAVXGT3TBHQQSNDLOSKH0CJUNN2JVN?pgno=2" CLASS="autoPagebreak">Next Page</a>
+		<img src="http://i.cmpnet.com/ddj/redarrow.gif" width="7" height="13" hspace="5" vspace="0" border="0" align=absbottom alt="">
+	
+
+		</center>
+		
+		
+	
+
+<!-- ARTICLE COMMENTS-->
+<a name="articleComments"></a>
+<br>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+				
+      
+
+
+
+				
+      
+
+
+
+  
+				
+	
+	
+
+
+
+				
+      
+
+
+
+
+						 
+    
+
+
+		<table width="90%" border="0" cellspacing="1" cellpadding="4">
+			<tr>
+				<td><h3> </h3></td>
+			</tr>
+		</table>
+  
+
+<br>
+
+
+
+		
+		Please <a href="http://www.ddj.com/profile/login.jhtml;jsessionid=M1UAVXGT3TBHQQSNDLOSKH0CJUNN2JVN?_DARGS=/article/articleComments.jhtml_A&amp;_DAV=/184405734"  >log in</a> to post comments.<br />
+	
+
+ 
+
+<!-- AROUND THE WEB AND TOP 5 ARTICLES -->
+<table border="0" width="467" cellpadding="0" cellspacing="0" class=elfixo>
+<tr>
+	<td width="229"><img src="http://i.cmpnet.com/ddj/blank.gif" border="0" width="229" height="1"></td>
+	<td width="9"><img src="http://i.cmpnet.com/ddj/blank.gif" border="0" width="9" height="1"></td>
+	<td width="229"><img src="http://i.cmpnet.com/ddj/blank.gif" border="0" width="229" height="1"></td>
+</tr>
+<TR>
+	<TD valign=top>
+	<!-- AROUND THE WEB -->
+	<!-- AROUND THE WEB -->
+		<div id="GreenContainerBoxSM2">
+			<div id="GreenBARSM2"><span class="BARTitles">RELATED ARTICLES</span></div>
+			
+
+
+
+
+		
+		
+	
+<DIV class="PaddingStyle2">
+	
+	
+		
+			
+
+
+
+
+		
+	
+			
+		
+		
+			
+
+
+
+
+		
+	
+			
+		
+			
+					<DIV class="Bspace5">
+						<a href="http://www.ddj.com/dept/database/197006254;jsessionid=M1UAVXGT3TBHQQSNDLOSKH0CJUNN2JVN">
+						Julian and Gregorian Calendars</a>
+					</div>
+				
+					<DIV class="Bspace5">
+						<a href="http://www.ddj.com/dept/database/193500389;jsessionid=M1UAVXGT3TBHQQSNDLOSKH0CJUNN2JVN">
+						Algorithmic Trading</a>
+					</div>
+				
+		 
+</div>
+		</div>
+	</td>
+	<td width="9"><img src="http://i.cmpnet.com/ddj/blank.gif" border="0" width="9" height="1" alt=""></td>
+	<TD valign=top>
+	<!-- TOP 5 ARTICLES -->
+	<div id="GreenContainerBoxSM2"><div id="GreenBARSM2"><span class="BARTitles">TOP 5 ARTICLES</span></div>
+		<DIV class="PaddingStyle2">
+			
+
+
+
+
+
+
+
+	
+	
+<DIV class="PaddingStyle2">
+	
+			
+					
+							
+									
+									
+									
+
+
+
+
+		
+	
+									
+									<DIV class="Bspace5">
+									<a href="http://www.ddj.com/dept/debug/197003338;jsessionid=M1UAVXGT3TBHQQSNDLOSKH0CJUNN2JVN">
+										Debugging Makefiles
+									</a></div>
+								
+						
+				
+					
+							
+									
+									
+									
+
+
+
+
+		
+	
+									
+									<DIV class="Bspace5">
+									<a href="http://www.ddj.com/dept/architect/197003363;jsessionid=M1UAVXGT3TBHQQSNDLOSKH0CJUNN2JVN">
+										Agile Documentation Strategies
+									</a></div>
+								
+						
+				
+					
+							
+						
+				
+					
+							
+									
+									
+									
+
+
+
+
+		
+	
+									
+									<DIV class="Bspace5">
+									<a href="http://www.ddj.com/dept/webservices/197006639;jsessionid=M1UAVXGT3TBHQQSNDLOSKH0CJUNN2JVN">
+										Rich Internet Applications
+									</a></div>
+								
+						
+				
+					
+							
+						
+				
+					
+							
+									
+									
+									
+
+
+
+
+		
+	
+									
+									<DIV class="Bspace5">
+									<a href="http://www.ddj.com/dept/architect/186100398;jsessionid=M1UAVXGT3TBHQQSNDLOSKH0CJUNN2JVN">
+										Maven: Building Complex Systems
+									</a></div>
+								
+						
+				
+					
+							
+									
+									
+									
+
+
+
+
+		
+	
+									
+									<DIV class="Bspace5">
+									<a href="http://www.ddj.com/dept/cpp/197003350;jsessionid=M1UAVXGT3TBHQQSNDLOSKH0CJUNN2JVN">
+										Practical C++ Error Handling in Hybrid Environments
+									</a></div>
+								
+						
+				
+					
+				
+					
+				
+					
+				
+					
+				
+					
+				
+					
+				
+					
+				
+					
+				
+					
+				
+					
+				
+					
+				
+					
+				
+					
+				
+					
+				
+					
+				
+					
+				
+					
+				
+					
+				
+					
+				
+					
+				
+					
+				
+					
+				
+					
+				
+					
+				
+					
+				
+					
+				
+					
+				
+					
+				
+					
+				
+					
+				
+					
+				
+					
+				
+					
+				
+					
+				
+					
+				
+					
+				
+					
+				
+					
+				
+					
+				
+					
+				
+					
+				
+					
+				
+					
+				
+			
+		
+</div>
+
+		</DIV>
+	</td>
+</tr>
+</table>
+</DIV>
+
+
+					
+					
+			</td>
+			<TD width="10"><img src="http://i.cmpnet.com/ddj/blank.gif" border="0" width="10" height="1" alt=""></td>
+			<td valign=top>
+			<!-- RIGHT COL -->
+				
+
+
+
+<!-- RIGHT COL -->
+
+<!-- ARTICLE contaier table for media center and departments -->
+<table width="575" cellpadding="0" cellspacing="0" border="0" class="elfixo">
+<TR> 	<TD width=400 rowspan="2" valign=top>
+
+<!-- YET TO RECEIVE AD PARAMS-->
+
+	<div class="clear">
+
+
+
+		<!-- http://as.cmpnet.com/html.ng/pagepos=sponsbox&affiliate=ddj&site=sdmg&country=spain&server=atg&target=/184405734 -->
+<a target="_parent" href="http://as.cmpnet.com/event.ng/Type=click&FlightID=75634&AdID=125682&TargetID=2625&Segments=1411,3108,3448,4875&Targets=2625,2878&Values=34,46,51,63,77,82,90,100,140,442,646,656,944,945,975,1184,1388,1785,1925,1970,2172,2299,2310,2313,2326,2352,2678,2862,3544,3712,3714,3890,3904,4079&RawValues=IP,66.77.24.210,&Redirect=http://www.cmp.com"><img src="http://i.cmpnet.com/ads/graphics/as5/rk/iopsblank.gif" border=0  alt=""></a><img src="http://as.cmpnet.com/event.ng/Type=count&ClientType=2&AdID=125682&FlightID=75634&TargetID=2625&Segments=1411,3108,3448,4875&Targets=2625,2878&Values=34,46,51,63,77,82,90,100,140,442,646,656,944,945,975,1184,1388,1785,1925,1970,2172,2299,2310,2313,2326,2352,2678,2862,3544,3712,3714,3890,3904,4079&RawValues=&random=daciogf,bcKvKojbkcmrA" width=1 height=1 border=0>
+
+	</div>
+	
+ 
+<!----------------------SEARCH JOBS BOX----------------->
+
+<div id="jobscontainer" style="height: 41px; width: 402px; overflow: hidden;">
+
+<form method="post" action="http://www.TechCareers.com/js/action/searchresults.asp?affiliate=ddj&_DARGS=/template_parts/dept/right/right.jhtml" id="form1" name="form1">
+
+<input type="hidden" name="FOrderBy" value="modifydate[d]"> 
+<div id="TechCareersBox">
+<div id="SponsorBar" style="background-color: teal;">
+<span class="miniBARTitles">DR. DOBB'S CAREER CENTER</span>
+
+
+
+		<!-- http://as.cmpnet.com/html.ng/pagepos=careers1&affiliate=ddj&site=sdmg&country=spain&server=atg&target=/184405734 -->
+<a target="_parent" href="http://as.cmpnet.com/event.ng/Type=click&FlightID=75634&AdID=125682&TargetID=2625&Segments=1411,3108,3448,4875,11102&Targets=2625,2878,7744&Values=34,46,51,63,77,82,90,100,140,442,646,656,944,945,975,1184,1339,1388,1785,1925,1970,2172,2299,2310,2313,2326,2352,2678,2862,3712,3714,3890,3904,4079,4377&RawValues=IP,66.77.24.210,&Redirect=http://www.cmp.com"><img src="http://i.cmpnet.com/ads/graphics/as5/rk/iopsblank.gif" border=0  alt=""></a><img src="http://as.cmpnet.com/event.ng/Type=count&ClientType=2&AdID=125682&FlightID=75634&TargetID=2625&Segments=1411,3108,3448,4875,11102&Targets=2625,2878,7744&Values=34,46,51,63,77,82,90,100,140,442,646,656,944,945,975,1184,1339,1388,1785,1925,1970,2172,2299,2310,2313,2326,2352,2678,2862,3712,3714,3890,3904,4079,4377&RawValues=&random=bzwcmly,bcKvKojcnatsf" width=1 height=1 border=0>
+
+	
+</div>
+<div style="width: 100%; padding: 5px 0px 5px 5px;">
+Ready to take that job and shove it? <span style="text-decoration: underline;" class="pointerhand" onclick="jobsopen()">open</span> | <span style="text-decoration: underline;" class="pointerhand" onclick="jobsclose()">close</span><br>
+</div>
+</div>
+<table  width=100% border=0 cellpadding=5 cellspacing=1 bgcolor="000000">
+  
+  <tr bgcolor="FFFFFF">
+    <td colspan="2" valign=top bgcolor="CDE5E8" class="noLINE"> <b>Search jobs on</b> <a class="thirteenBOLD" href="http://www.techcareers.com/?affiliate=ddj">Dr. Dobb's TechCareers</a></td>
+    </tr>
+  <tr bgcolor="FFFFFF">
+      <td width="50%" valign=top> 
+<table border=0 cellpadding=0 cellspacing=0 width="100%">
+          <tr>
+                  <td valign="top">
+				   
+              <div><strong>Function:</strong><br> <select name='FCareerFocus1' size='1'>
+                <option value='23'  >Information Technology</option>
+                <option value='25'  >Engineering</option>
+              </select></div>
+              <br />
+                    <div><strong>Keyword(s):</strong><br>
+              <input name="FKeywords" size=25></div>
+                   <br />
+	<div><b>State:</b>   <input name="FState" size=8 maxlength=2> <input type="submit" value="Go" id=submit1 name=submit1 align="right"></div>
+               </td>
+
+          </tr>
+        </table>
+
+ </td>
+      <td width="50%" valign=top class="noLINE">
+	        <!------------------FEATURED JOB----------------->
+ 
+<li><a href="http://www.TechCareers.com/JS/Form/SignUpForm.asp?affiliate=ddj">Post Your Resume</a>               
+<li><a href="http://www.TechCareers.com/MKT/Content/EMP/Default.asp?affiliate=ddj">Employers Area</a>
+<li><a href="http://www.techcareers.com/content/news.asp?affiliate=ddj">News & Features</a>
+<li><a href="http://www.techcareers.com/content/forum.asp?affiliate=ddj">Blogs & Forums</a>
+<li><a href="http://www.techcareers.com/JS/CareerResources/?affiliate=ddj">Career Resources</a> 	  
+<br><br>
+<b>Browse By:</b> <br>
+      <A href="http://www.TechCareers.com/JS/JobSearch/?affiliate=ddj">Location</A> | <A href="http://www.TechCareers.com/JS/JobSearch/?affiliate=ddj">Employer</A> | <A href="http://www.TechCareers.com/JS/JobSearch/?affiliate=ddj">City</A><br>
+	  
+
+
+
+		<!-- http://as.cmpnet.com/html.ng/pagepos=careers2&affiliate=ddj&site=sdmg&country=spain&server=atg&target=/184405734 -->
+<a target="_parent" href="http://as.cmpnet.com/event.ng/Type=click&FlightID=75640&AdID=125688&TargetID=2878&Segments=1411,3108,3448,4875,11103&Targets=2625,2878,7743&Values=34,46,51,63,77,82,90,100,140,442,646,656,944,945,975,1184,1339,1388,1785,1925,1970,2172,2299,2310,2313,2326,2352,2678,2862,3712,3714,3890,3904,4079,4378&RawValues=IP,66.77.24.210,&Redirect=http://www.cmp.com"><img src="http://i.cmpnet.com/ads/graphics/as5/rk/iopsblank.gif" border=0  alt=""></a><img src="http://as.cmpnet.com/event.ng/Type=count&ClientType=2&AdID=125688&FlightID=75640&TargetID=2878&Segments=1411,3108,3448,4875,11103&Targets=2625,2878,7743&Values=34,46,51,63,77,82,90,100,140,442,646,656,944,945,975,1184,1339,1388,1785,1925,1970,2172,2299,2310,2313,2326,2352,2678,2862,3712,3714,3890,3904,4079,4378&RawValues=&random=dechRrR,bcKvKojbkclbR" width=1 height=1 border=0>
+
+	
+	  </td>
+	  </tr> 
+	   
+  <tr bgcolor="FFFFFF">
+    <td colspan="2" valign=top bgcolor="CDE5E8"><b>Most Recent Posts:</b></td>
+  </tr>
+  <tr bgcolor="FFFFFF">
+    <td colspan="2" valign=top class="noLINE">
+     <!--  <script language=javascript
+src=http://www.4jobs.com/common/partnership/jobs/display.asp?max=4&col=1&par=http://www.techcareers.com&slo=N&vj=N&des=y&ran=Y&i1=23&aor=OR&loc=Y&ind=N&sal=N&comp=Y&bc=FFFFFF&bg=FFFFFF&jbc=FFFFFF&jbg=FFFFFF&pad=5&wid=&tar=n&qsn1=affiliate&qsv1=ddj&date=Y></script> -->
+<!-- <script language="javascript" src="http://www.dobbsprojects.com/prox/tcrss.js"></script> -->
+<script language="javascript" src="http://i.cmpnet.com/ddj/js/tcrss.js"></script></td>
+    </tr>
+</table>
+</form>
+</div>
+<DIV class="Bspace15"></DIV>
+<!----------------------END SEARCH JOBS BOX----------------->
+<br>
+<!-- VIDEO BOX -->
+
+	
+<!-- END VIDEO BOX -->
+
+<br>
+<div align="center">
+
+
+
+		<!-- http://as.cmpnet.com/html.ng/pagepos=jumbobox&affiliate=ddj&site=sdmg&country=spain&server=atg&target=/184405734 -->
+<script type="text/javascript"><!--
+google_ad_client = "pub-3090493805493308";
+google_ad_width = 336;
+google_ad_height = 280;
+google_ad_format = "336x280_as";
+google_ad_channel ="4678898387";
+google_color_border = "FFFFFF";
+google_color_bg = "FFFFFF";
+google_color_link = "003399";
+google_color_text = "000000";
+google_color_url = "003399";
+//-->
+</script>
+<script type="text/javascript"
+  src="http://pagead2.googlesyndication.com/pagead/show_ads.js">
+</script><img src="http://as.cmpnet.com/event.ng/Type=count&ClientType=2&AdID=131424&FlightID=78537&TargetID=7240&Segments=1411,3108,3448,4569,4875,5385,5472,6879,6939,10554,11156&Targets=2625,2878,3885,4532,7240&Values=34,46,51,63,77,82,90,100,140,290,442,646,656,944,945,975,1184,1388,1785,1925,1970,2172,2299,2310,2313,2326,2352,2678,2862,3712,3714,3890,3904,4079&RawValues=&random=cgtrrfK,bcKvKojbojheK" width=1 height=1 border=0>
+
+	</div>
+	<br>
+	
+	
+		<TABLE>
+			<TR>
+				<TD VALIGN="TOP">
+					
+
+					<!-- <img src="http://i.cmpnet.com/ddj/rule.gif" width="180" height="1" hspace="0" vspace="0" border="0" alt=""> -->
+					<!-- INFO LINK-->
+					<!-- <droplet src="/template_parts/common/info_link.jhtml"/> -->
+					 
+				</TD>
+				
+			    <TD VALIGN="TOP">
+					<!-- INFO LINK-->
+					
+
+<DIV id="ArticlerightcolBox">
+<span class="blogName">INFO-LINK</span>
+  <DIV class="Bspace5">
+  
+
+
+
+		<!-- http://as.cmpnet.com/html.ng/pagepos=infolink1&affiliate=ddj&site=sdmg&country=spain&server=atg&target=/184405734 -->
+<a target="_blank" href="http://as.cmpnet.com/event.ng/Type=click&FlightID=82432&AdID=137739&TargetID=4845&Segments=1411,3108,3448,4875,6084,6088,6876&Targets=2625,2878,4845,4855&Values=34,46,51,63,77,82,90,100,140,442,646,656,944,945,975,1184,1388,1785,1925,1970,2172,2299,2310,2313,2326,2352,2678,2862,3183,3712,3714,3890,3904,4079&RawValues=&Redirect=http://clk.atdmt.com/MRT/go/cmpmgvse0090002838mrt/direct/01/">ASP.NET 2.0 for PHP Developers</a><img src="http://as.cmpnet.com/event.ng/Type=count&ClientType=2&AdID=137739&FlightID=82432&TargetID=4845&Segments=1411,3108,3448,4875,6084,6088,6876&Targets=2625,2878,4845,4855&Values=34,46,51,63,77,82,90,100,140,442,646,656,944,945,975,1184,1388,1785,1925,1970,2172,2299,2310,2313,2326,2352,2678,2862,3183,3712,3714,3890,3904,4079&RawValues=&random=bvrrKjw,bcKvKojbkcmrW" width=1 height=1 border=0>
+
+	</div>
+  <DIV class="Bspace5">
+  
+
+
+
+		<!-- http://as.cmpnet.com/html.ng/pagepos=infolink2&affiliate=ddj&site=sdmg&country=spain&server=atg&target=/184405734 -->
+<a target="_blank" href="http://as.cmpnet.com/event.ng/Type=click&FlightID=81238&AdID=135849&TargetID=4921&Segments=1411,3108,3448,4875,6085,6097&Targets=2625,2878,7437,4921&Values=34,46,51,63,77,82,90,100,140,442,646,656,944,945,975,1184,1388,1785,1925,1970,2172,2299,2310,2313,2326,2352,2678,2862,3184,3712,3714,3890,3904,4079&RawValues=&Redirect=http://www.dobbsprojects.com/lcap/verio1/?method=verio5">Dr. Dobb's Managed Hosting E-zine...DOWNLOAD NOW!</a><img src="http://as.cmpnet.com/event.ng/Type=count&ClientType=2&AdID=135849&FlightID=81238&TargetID=4921&Segments=1411,3108,3448,4875,6085,6097&Targets=2625,2878,7437,4921&Values=34,46,51,63,77,82,90,100,140,442,646,656,944,945,975,1184,1388,1785,1925,1970,2172,2299,2310,2313,2326,2352,2678,2862,3184,3712,3714,3890,3904,4079&RawValues=&random=dejoguW,bcKvKojbojheR" width=1 height=1 border=0>
+
+	</div>
+  <DIV class="Bspace5">
+  
+
+
+
+		<!-- http://as.cmpnet.com/html.ng/pagepos=infolink3&affiliate=ddj&site=sdmg&country=spain&server=atg&target=/184405734 -->
+<a target="_blank" href="http://as.cmpnet.com/event.ng/Type=click&FlightID=81444&AdID=136184&TargetID=5776&Segments=1411,3108,3448,4875,6089,8088&Targets=2625,2878,7601,5776&Values=34,46,51,63,77,82,90,100,140,442,646,656,944,945,975,1184,1388,1785,1925,1970,2172,2299,2310,2313,2326,2352,2678,2862,3185,3712,3714,3890,3904,4079&RawValues=&Redirect=http://www.dobbsprojects.com/lcap/telelogic2/?method=tele2e">Download the ultimate guide for evaluating a change & configuration management system</a><img src="http://as.cmpnet.com/event.ng/Type=count&ClientType=2&AdID=136184&FlightID=81444&TargetID=5776&Segments=1411,3108,3448,4875,6089,8088&Targets=2625,2878,7601,5776&Values=34,46,51,63,77,82,90,100,140,442,646,656,944,945,975,1184,1388,1785,1925,1970,2172,2299,2310,2313,2326,2352,2678,2862,3185,3712,3714,3890,3904,4079&RawValues=&random=bAbvvve,bcKvKojcnatsm" width=1 height=1 border=0>
+
+	</div>
+  <DIV class="Bspace5">
+  
+
+
+
+		<!-- http://as.cmpnet.com/html.ng/pagepos=infolink4&affiliate=ddj&site=sdmg&country=spain&server=atg&target=/184405734 -->
+<a target="_blank" href="http://as.cmpnet.com/event.ng/Type=click&FlightID=81825&AdID=137013&TargetID=7244&Segments=1411,3108,3448,4875,6090,8089&Targets=2625,2878,7244,5775&Values=34,46,51,63,77,82,90,100,140,442,646,656,944,945,975,1184,1388,1785,1925,1970,2172,2299,2310,2313,2326,2352,2678,2862,3186,3712,3714,3890,3904,4079&RawValues=&Redirect=http://ad.doubleclick.net/clk;73964026;15644856;t?http://vmware.rsc02.net/servlet/campaignrespondent?_ID_=vmwi.1919&email=email&code=Q107WKSNCMPInfolinkddj.com">Get VMware Workstation 6 free - Buy Workstation 5</a><img src="http://as.cmpnet.com/event.ng/Type=count&ClientType=2&AdID=137013&FlightID=81825&TargetID=7244&Segments=1411,3108,3448,4875,6090,8089&Targets=2625,2878,7244,5775&Values=34,46,51,63,77,82,90,100,140,442,646,656,944,945,975,1184,1388,1785,1925,1970,2172,2299,2310,2313,2326,2352,2678,2862,3186,3712,3714,3890,3904,4079&RawValues=&random=cdochcd,bcKvKojcnatsn" width=1 height=1 border=0>
+
+	</div>
+</div>
+					<br>
+					
+
+
+
+		<!-- http://as.cmpnet.com/html.ng/pagepos=testdrive&affiliate=ddj&site=sdmg&country=spain&server=atg&target=/184405734 -->
+<a target="_parent" href="http://as.cmpnet.com/event.ng/Type=click&FlightID=75640&AdID=125688&TargetID=2878&Segments=1411,3108,3448,4875,8135&Targets=2625,2878,5806&Values=34,46,51,63,77,82,90,100,140,442,646,656,944,945,975,1184,1388,1785,1925,1970,2172,2299,2310,2313,2326,2352,2678,2862,3654,3712,3714,3890,3904,4079&RawValues=IP,66.77.24.210,&Redirect=http://www.cmp.com"><img src="http://i.cmpnet.com/ads/graphics/as5/rk/iopsblank.gif" border=0  alt=""></a><img src="http://as.cmpnet.com/event.ng/Type=count&ClientType=2&AdID=125688&FlightID=75640&TargetID=2878&Segments=1411,3108,3448,4875,8135&Targets=2625,2878,5806&Values=34,46,51,63,77,82,90,100,140,442,646,656,944,945,975,1184,1388,1785,1925,1970,2172,2299,2310,2313,2326,2352,2678,2862,3654,3712,3714,3890,3904,4079&RawValues=&random=cxpNIvw,bcKvKojbojhfb" width=1 height=1 border=0>
+
+	
+				</TD>
+			</TR>
+		</TABLE>
+	
+
+	
+	<td rowspan="2">
+<TD width=10 rowspan="2" VALIGN=top>&nbsp;</TD>
+	<TD VALIGN=top width=165>
+		<!-- DEPARTMENTS -->
+		
+
+<div id="DepartmentBOX"><div id="DepartmentBar"><span class="miniBARTitles">DEPARTMENTS</span></div>
+<span class="deptLinks">
+
+<div class="DeptLinkPad"><a href="http://www.ddj.com/;jsessionid=M1UAVXGT3TBHQQSNDLOSKH0CJUNN2JVN" class="deptLinks">Home</a></div>
+  <div id="dividerLine"><img src="http://i.cmpnet.com/ddj/images/blank.gif" hspace="0" vspace="0" border="0" width=5 height=1></div>
+
+  <div class="DeptLinkPad"><a href="http://www.ddj.com/dept/cpp/;jsessionid=M1UAVXGT3TBHQQSNDLOSKH0CJUNN2JVN" class="deptLinks">C/C++</a></div>
+  <div id="dividerLine"><img src="http://i.cmpnet.com/ddj/images/blank.gif" hspace="0" vspace="0" border="0" width=5 height=1></div>
+
+  <div class="DeptLinkPad"><a href="http://www.ddj.com/dept/java/;jsessionid=M1UAVXGT3TBHQQSNDLOSKH0CJUNN2JVN" class="deptLinks">Java</a></div>
+  <div id="dividerLine"><img src="http://i.cmpnet.com/ddj/images/blank.gif" hspace="0" vspace="0" border="0" width=5 height=1></div>
+
+
+  <div class="DeptLinkPad"><a href="http://www.ddj.com/dept/architect/;jsessionid=M1UAVXGT3TBHQQSNDLOSKH0CJUNN2JVN" class="deptLinks">Architecture & Design</a></div>
+  <div id="dividerLine"><img src="http://i.cmpnet.com/ddj/images/blank.gif" hspace="0" vspace="0" border="0" width=5 height=1></div>
+
+  <div class="DeptLinkPad"><a href="http://www.ddj.com/dept/opensource/;jsessionid=M1UAVXGT3TBHQQSNDLOSKH0CJUNN2JVN" class="deptLinks">Eclipse & Open Source</a></div>
+  <div id="dividerLine"><img src="http://i.cmpnet.com/ddj/images/blank.gif" hspace="0" vspace="0" border="0" width=5 height=1></div>
+
+  <div class="DeptLinkPad"><a href="http://www.ddj.com/dept/windows/;jsessionid=M1UAVXGT3TBHQQSNDLOSKH0CJUNN2JVN" class="deptLinks">Windows/.NET</a></div><div id="dividerLine"><img src="http://i.cmpnet.com/ddj/images/blank.gif" hspace="0" vspace="0" border="0" width=5 height=1></div>
+
+
+  <div class="DeptLinkPad"><a href="http://www.ddj.com/dept/database/;jsessionid=M1UAVXGT3TBHQQSNDLOSKH0CJUNN2JVN" class="deptLinks">Database</a></div>
+  <div id="dividerLine"><img src="http://i.cmpnet.com/ddj/images/blank.gif" hspace="0" vspace="0" border="0" width=5 height=1></div>
+
+
+  <div class="DeptLinkPad"><a href="http://www.ddj.com/dept/debug/;jsessionid=M1UAVXGT3TBHQQSNDLOSKH0CJUNN2JVN" class="deptLinks">Testing & Debugging</a></div>
+  <div id="dividerLine"><img src="http://i.cmpnet.com/ddj/images/blank.gif" hspace="0" vspace="0" border="0" width=5 height=1></div>
+
+  <div class="DeptLinkPad"><a href="http://www.ddj.com/dept/webservices/;jsessionid=M1UAVXGT3TBHQQSNDLOSKH0CJUNN2JVN" class="deptLinks">SOA, Web Services & XML</a></div>
+  <div id="dividerLine"><img src="http://i.cmpnet.com/ddj/images/blank.gif" hspace="0" vspace="0" border="0" width=5 height=1></div>
+
+  <div class="DeptLinkPad"><a href="http://www.ddj.com/dept/mobile/;jsessionid=M1UAVXGT3TBHQQSNDLOSKH0CJUNN2JVN" class="deptLinks">Mobility</a></div>
+  <div id="dividerLine"><img src="http://i.cmpnet.com/ddj/images/blank.gif" hspace="0" vspace="0" border="0" width=5 height=1></div>
+
+  <div class="DeptLinkPad"><a href="http://www.ddj.com/dept/security/;jsessionid=M1UAVXGT3TBHQQSNDLOSKH0CJUNN2JVN" class="deptLinks">Security</a></div>
+  <div id="dividerLine"><img src="http://i.cmpnet.com/ddj/images/blank.gif" hspace="0" vspace="0" border="0" width=5 height=1></div>
+
+  <div class="DeptLinkPad"><a href="http://www.ddj.com/dept/global/;jsessionid=M1UAVXGT3TBHQQSNDLOSKH0CJUNN2JVN" class="deptLinks">Global Developer</a></div>
+  <div id="dividerLine"><img src="http://i.cmpnet.com/ddj/images/blank.gif" hspace="0" vspace="0" border="0" width=5 height=1></div>
+
+  <div class="DeptLinkPad"><a href="http://www.ddj.com/dept/64bit/;jsessionid=M1UAVXGT3TBHQQSNDLOSKH0CJUNN2JVN" class="deptLinks">64-bit/Multicore</a></div>
+  <div id="dividerLine"><img src="http://i.cmpnet.com/ddj/images/blank.gif" hspace="0" vspace="0" border="0" width=5 height=1></div>
+
+  <div class="DeptLinkPad"><a href="http://www.ddj.com/dept/embedded/;jsessionid=M1UAVXGT3TBHQQSNDLOSKH0CJUNN2JVN" class="deptLinks">Embedded Systems</a></div>
+  <div id="dividerLine"><img src="http://i.cmpnet.com/ddj/images/blank.gif" hspace="0" vspace="0" border="0" width=5 height=1></div>
+
+
+
+  <div class="DeptLinkPad"><a href="http://www.ddj.com/dept/lightlang/;jsessionid=M1UAVXGT3TBHQQSNDLOSKH0CJUNN2JVN" class="deptLinks">Lightweight Languages</a></div>
+  <div id="dividerLine"><img src="http://i.cmpnet.com/ddj/images/blank.gif" hspace="0" vspace="0" border="0" width=5 height=1></div>
+
+  <div class="DeptLinkPad"><a href="http://www.ddj.com/dept/ai/;jsessionid=M1UAVXGT3TBHQQSNDLOSKH0CJUNN2JVN" class="deptLinks">AI and Robotics</a></div>
+  <div id="dividerLine"><img src="http://i.cmpnet.com/ddj/images/blank.gif" hspace="0" vspace="0" border="0" width=5 height=1></div>
+
+
+  <div class="DeptLinkPad"><a href="http://www.ddj.com/dept/linux/;jsessionid=M1UAVXGT3TBHQQSNDLOSKH0CJUNN2JVN" class="deptLinks">Linux/UNIX</a></div>
+  <div id="dividerLine"><img src="http://i.cmpnet.com/ddj/images/blank.gif" hspace="0" vspace="0" border="0" width=5 height=1></div>
+  <!--
+</span>
+<div id="EventBar"><span class="eventBARTitles"><a href="/dept/events/" class="eventBARTitles">Events</a></span></div>-->
+</div>
+</DIV>
+		<br>
+		<div align="center" width="161" height="601" hspace="0" vspace="0" border="0">
+									
+
+
+
+		<!-- http://as.cmpnet.com/html.ng/pagepos=sky&affiliate=ddj&site=sdmg&country=spain&server=atg&target=/184405734 -->
+<a target="_parent" href="http://as.cmpnet.com/event.ng/Type=click&FlightID=82737&AdID=138284&TargetID=2781&Segments=1411,1552,3108,3219,3448,4875,5473,6878,7136,10555&Targets=1254,2625,2781,2878,7243&Values=34,46,51,63,77,82,90,100,140,206,442,646,656,944,945,975,1184,1388,1785,1925,1970,2172,2299,2310,2313,2326,2352,2678,2862,3712,3714,3890,3904,4079&RawValues=IP,66.77.24.210,&Redirect=https://www1.cmpnetseminars.com/ars/eventregistration.do%3Fmode%3Deventreg%26F%3D5930%26K%3D3SD5"><img src="http://i.cmpnet.com/ads/graphics/as5/kh/house/iAnywhereWebinar160x600.gif" border=0 height=600 width=160 alt=""></a><img src="http://as.cmpnet.com/event.ng/Type=count&ClientType=2&AdID=138284&FlightID=82737&TargetID=2781&Segments=1411,1552,3108,3219,3448,4875,5473,6878,7136,10555&Targets=1254,2625,2781,2878,7243&Values=34,46,51,63,77,82,90,100,140,206,442,646,656,944,945,975,1184,1388,1785,1925,1970,2172,2299,2310,2313,2326,2352,2678,2862,3712,3714,3890,3904,4079&RawValues=&random=dcqclkp,bcKvKojbkclcg" width=1 height=1 border=0>
+
+	 
+							  </div>
+							  <br>
+								 
+
+
+
+		<!-- http://as.cmpnet.com/html.ng/pagepos=tile&affiliate=ddj&site=sdmg&country=spain&server=atg&target=/184405734 -->
+<script type="text/javascript"><!--
+google_ad_client = "pub-3090493805493308";
+google_ad_width = 125;
+google_ad_height = 125;
+google_ad_format = "125x125_as";
+google_ad_channel ="6848714456";
+google_color_border = "FFFFFF";
+google_color_bg = "FFFFFF";
+google_color_link = "003399";
+google_color_text = "000000";
+google_color_url = "003399";
+//-->
+</script>
+<script type="text/javascript"
+  src="http://pagead2.googlesyndication.com/pagead/show_ads.js">
+</script><img src="http://as.cmpnet.com/event.ng/Type=count&ClientType=2&AdID=131745&FlightID=78715&TargetID=2780&Segments=1411,3108,3250,3448,4875,5387,5471&Targets=2625,2780,2878,4298&Values=34,46,51,63,77,82,90,100,140,205,442,646,656,944,945,975,1184,1388,1785,1925,1970,2172,2299,2310,2313,2326,2352,2678,2862,3712,3714,3890,3904,4079&RawValues=&random=cxKanAq,bcKvKojbkclch" width=1 height=1 border=0>
+
+	
+	</TD>
+</TR>
+</table>
+<!-- IMU AD-->
+
+
+			</td>
+		</TR>
+	</table>
+	
+<img src="http://i.cmpnet.com/ddj/rule.gif" width="900" height="1" hspace="5" vspace="10" border="0" align="left" alt="">
+<br clear="left">
+<!-- AD BANNER AT BOTTOM -->
+<div id="BottomAdContainer">
+
+
+
+		<!-- http://as.cmpnet.com/html.ng/pagepos=bottom&affiliate=ddj&site=sdmg&country=spain&server=atg&target=/184405734 -->
+<a target="_parent" href="http://as.cmpnet.com/event.ng/Type=click&FlightID=82732&AdID=138277&TargetID=4879&Segments=1411,1551,3108,3317,3448,4875,5470,11862&Targets=1251,2625,2878,4879,8387&Values=34,46,51,63,77,82,90,100,140,204,442,646,656,944,945,975,1184,1388,1785,1925,1970,2172,2299,2310,2313,2326,2352,2678,2862,3712,3714,3890,3904,4079&RawValues=IP,66.77.24.210,&Redirect=http://www.sdexpo.com"><img src="http://i.cmpnet.com/ads/graphics/as5/kh/house/SDW07728x90new.gif" border=0 height=90 width=728 alt=""></a><img src="http://as.cmpnet.com/event.ng/Type=count&ClientType=2&AdID=138277&FlightID=82732&TargetID=4879&Segments=1411,1551,3108,3317,3448,4875,5470,11862&Targets=1251,2625,2878,4879,8387&Values=34,46,51,63,77,82,90,100,140,204,442,646,656,944,945,975,1184,1388,1785,1925,1970,2172,2299,2310,2313,2326,2352,2678,2862,3712,3714,3890,3904,4079&RawValues=&random=biesKKI,bcKvKojbkcmse" width=1 height=1 border=0>
+
+	
+</div>
+<!-- /AD BANNER AT BOTTOM -->
+<DIV class="LColMargin">
+	<table width=900 cellpadding=0 cellspacing=0 border=0 class=elfixo>
+		<TR>
+			<TD valign=top width=600>
+				 
+						<div id="MarketPlaceBox">
+							<div id="MarketPlaceBar">
+								<span class="miniBARTitles">MARKETPLACE</span>
+							</div>
+							<DIV class="MarketPlacePad">
+					
+								<DIV class="Bspace5">
+									<a href="http://links.industrybrains.com/click?sid=37&amp;rqctid=451&amp;pos=1&amp;lid=416985&amp;cid=97654&amp;pr=2&amp;tstamp=20070220082113&amp;url=http://www.mantrasys.com" class="SMALLheadline">
+										Offshore Custom Financial Application Development
+									</a>
+									<BR>
+									Offshore IT Development and testing projects to Mantra. Mantra is Alpharetta GA based company with a delivery center in India. With broad financial domain experience &amp; solid technical expertise, all projects are managed locally &amp; delivered globally!
+								</div>
+					
+								<DIV class="Bspace5">
+									<a href="http://links.industrybrains.com/click?sid=37&amp;rqctid=451&amp;pos=2&amp;lid=425083&amp;cid=101209&amp;pr=2&amp;tstamp=20070220082113&amp;url=http://www.webex.com/go/IB_1008155" class="SMALLheadline">
+										Share Your Desktop and Present Online with WebEx
+									</a>
+									<BR>
+									Make presentations, review documents &amp; share your entire desktop. Try WebEx Free!
+								</div>
+					
+								<DIV class="Bspace5">
+									<a href="http://links.industrybrains.com/click?sid=37&amp;rqctid=451&amp;pos=3&amp;lid=401861&amp;cid=78700&amp;pr=2&amp;tstamp=20070220082113&amp;url=http://www.noonmarktech.com/index.aspx%3freferrer%3dtwwallstreet" class="SMALLheadline">
+										Automate Your Repetitive File Tasks
+									</a>
+									<BR>
+									The NTS File Mover is a simple way to automate file tasks. Save time, avoid errors, and keep track of key file tasks. Set up scheduled jobs to copy, move, delete, rename, ftp, encrypt, decrypt, zip, unzip, and email files.
+								</div>
+					
+								<DIV class="Bspace5">
+									<a href="http://links.industrybrains.com/click?sid=37&amp;rqctid=451&amp;pos=4&amp;lid=421936&amp;cid=99398&amp;pr=2&amp;tstamp=20070220082113&amp;url=http://www.privacyware.com/managed_firewall.html" class="SMALLheadline">
+										Are your mobile PCs jeopardizing your enterprise?
+									</a>
+									<BR>
+									Lock down PCs and enforce IT policies with Endpoint Security Console. Download trial today!
+								</div>
+					
+								<DIV class="Bspace5">
+									<a href="http://links.industrybrains.com/click?sid=37&amp;rqctid=451&amp;pos=5&amp;lid=421730&amp;cid=99382&amp;pr=2&amp;tstamp=20070220082113&amp;url=http://u.umthri.com/cgi/r%3f%3bn%3d203%3bc%3d229232%3bs%3d3086%3bx%3d7936%3bf%3d200610111853270%3bu%3dj%3bz%3dTIMESTAMP%3bac%3d001%26ti%3d49967F1EC419C6D31DEDCFF699382ED9558BA628%26kw%3dCMP_Enterprise_IT_Wall_Street" class="SMALLheadline">
+										Intuit QuickBase
+									</a>
+									<BR>
+									Use the QuickBase web-based Project Management solution with a FREE 30 day trial.
+								</div>
+					
+							</div>
+						</div>
+					
+<!-- /MARKET PLACE -->
+			</TD>
+                        <TD valign=top width=300>
+
+                          <!-- put Microsoft Resource Center box on article pages -->
+                          
+
+                              
+
+                                  <table cellpadding=1 border=0><tr><td>
+                                  <!-- http://as.cmpnet.com/html.ng/affiliate=ddj&pagepos=mslink1&site=sdmg&country=spain&server=atg&target=/184405734 -->
+<a target="_parent" href="http://as.cmpnet.com/event.ng/Type=click&FlightID=75640&AdID=125688&TargetID=2878&Segments=1411,3108,3448,4875,7953&Targets=2625,2878&Values=34,46,51,63,77,82,90,100,140,442,646,656,944,945,975,1184,1388,1785,1925,1970,2172,2299,2310,2313,2326,2352,2678,2862,3556,3712,3714,3890,3904,4079&RawValues=IP,66.77.24.210,&Redirect=http://www.cmp.com"><img src="http://i.cmpnet.com/ads/graphics/as5/rk/iopsblank.gif" border=0  alt=""></a><img src="http://as.cmpnet.com/event.ng/Type=count&ClientType=2&AdID=125688&FlightID=75640&TargetID=2878&Segments=1411,3108,3448,4875,7953&Targets=2625,2878&Values=34,46,51,63,77,82,90,100,140,442,646,656,944,945,975,1184,1388,1785,1925,1970,2172,2299,2310,2313,2326,2352,2678,2862,3556,3712,3714,3890,3904,4079&RawValues=&random=bNsIlmA,bcKvKojbkcmsh" width=1 height=1 border=0>
+
+                                  </td></tr></table>
+
+                                
+
+                            
+
+                        </TD> 
+		</tr>
+	</table>
+</div>
+<img src="http://i.cmpnet.com/ddj/rule.gif" width="900" height="1" hspace="5" vspace="8" border="0" align="left" alt="">
+<br clear="left">
+
+<!-- COPYRIGHT AND LINKS -->
+<div id="COPYRIGHTContainer">
+	<span class="tenBOLD"> 
+		<div class="Bspace8">
+			<!--<a href="http://www.sdmediagroup.com/reg/faq.html" class=nineBOLD>What are the <span class="green9">green links</span>?</a> |-->
+			<!-- The value for parameter category is the same as deptID. It has value when the blog pages are called. -->
+			
+					
+				
+			
+					
+							
+						
+				
+			
+			<a href="http://www.ddj.com/rss/architect.xml;jsessionid=M1UAVXGT3TBHQQSNDLOSKH0CJUNN2JVN"> <img src="http://i.cmpnet.com/ddj/rss.jpg" hspace="3" vspace="0" border="0" align=absbottom ></a> |
+			<!-- <a href="/sitemap/" class="tenBOLD">Site map</a> -->
+		</div>
+	</span>	<span class="tenBOLD"> 
+		<div class="Bspace8">
+			<a href="http://www.cmp.com/delivery/copyright.html" target="new" class="tenBOLD">Copyright © 2007
+			CMP Technology</a>,
+			<a href="http://www.cmp.com/delivery/privacy.html" class="tenBOLD">Privacy Policy</a>,
+			<a href="http://www.cmp.com/delivery/privacy.html#california" class="tenBOLD">Your California Privacy Rights</a>,
+			<a href="http://www.cmp.com/delivery/terms.html" class="tenBOLD">Terms of Service</a><BR>
+			Comments about the web site: <a href="mailto:webmaster@ddj.com" class="tenBOLD">webmaster@ddj.com</a>
+		</div>
+		SDMG Websites: <a href="http://www.byte.com/" target="_blank" class="tenBOLD">BYTE.com</a>,
+		<a href="http://www.dotnetjunkies.com/" target="_blank" class="tenBOLD">DotNetJunkies</a>,
+		<a href="http://msdn.microsoft.com/msdnmag/" target="_blank" class="tenBOLD">MSDN Magazine</a>,
+		<a href="http://www.samag.com/" target="_blank" class="tenBOLD">Sys Admin</a>,
+		<a href="http://www.sdexpo.com/" target="_blank" class="tenBOLD">SD Expo</a>,
+		<a href="http://www.sqljunkies.com/" target="_blank" class="tenBOLD">SqlJunkies</a>,
+		<a href="http://www.technetmagazine.com/" target="_blank" class="tenBOLD">TechNet Magazine</a>,
+		<a href="http://www.unixreview.com/" target="_blank" class="tenBOLD">Unixreview</a></span>
+</div>
+<script type="text/javascript" src="http://i.cmpnet.com/ddj/js/ieupdate.js"></script>
+<!-- /COPYRIGHT AND LINKS -->
+
+
+
+
+		<!-- http://as.cmpnet.com/html.ng/pagepos=toptile&affiliate=ddj&site=sdmg&country=spain&server=atg&target=/184405734 -->
+<a target="_parent" href="http://as.cmpnet.com/event.ng/Type=click&FlightID=75640&AdID=125688&TargetID=2878&Segments=1411,3108,3448,4875,7725,8892&Targets=2625,2878&Values=34,46,51,63,77,82,90,100,140,265,442,646,656,944,945,975,1184,1388,1785,1925,1970,2172,2299,2310,2313,2326,2352,2678,2862,3712,3714,3890,3904,4079&RawValues=IP,66.77.24.210,&Redirect=http://www.cmp.com"><img src="http://i.cmpnet.com/ads/graphics/as5/rk/iopsblank.gif" border=0  alt=""></a><img src="http://as.cmpnet.com/event.ng/Type=count&ClientType=2&AdID=125688&FlightID=75640&TargetID=2878&Segments=1411,3108,3448,4875,7725,8892&Targets=2625,2878&Values=34,46,51,63,77,82,90,100,140,265,442,646,656,944,945,975,1184,1388,1785,1925,1970,2172,2299,2310,2313,2326,2352,2678,2862,3712,3714,3890,3904,4079&RawValues=&random=lqoWrv,bcKvKojcniufe" width=1 height=1 border=0>
+
+	
+	
+
+
+
+		<!-- http://as.cmpnet.com/html.ng/pagepos=fullpage&affiliate=ddj&site=sdmg&country=spain&server=atg&target=/184405734 -->
+<a target="_parent" href="http://as.cmpnet.com/event.ng/Type=click&FlightID=75634&AdID=125682&TargetID=2625&Segments=1411,3108,3448,4875,11070&Targets=2625,2878&Values=34,46,51,63,77,82,90,100,140,442,646,656,944,945,975,1184,1388,1785,1925,1970,2172,2299,2310,2313,2326,2352,2678,2862,3216,3224,3712,3714,3890,3904,4079&RawValues=IP,66.77.24.210,&Redirect=http://www.cmp.com"><img src="http://i.cmpnet.com/ads/graphics/as5/rk/iopsblank.gif" border=0  alt=""></a><img src="http://as.cmpnet.com/event.ng/Type=count&ClientType=2&AdID=125682&FlightID=75634&TargetID=2625&Segments=1411,3108,3448,4875,11070&Targets=2625,2878&Values=34,46,51,63,77,82,90,100,140,442,646,656,944,945,975,1184,1388,1785,1925,1970,2172,2299,2310,2313,2326,2352,2678,2862,3216,3224,3712,3714,3890,3904,4079&RawValues=&random=dhqpKtw,bcKvKojbojhfg" width=1 height=1 border=0>
+
+	
+	
+</body>
+</html>
+
+			
+
+
+	
+
+			
+	
+			
+			
+	
+
+
+
+

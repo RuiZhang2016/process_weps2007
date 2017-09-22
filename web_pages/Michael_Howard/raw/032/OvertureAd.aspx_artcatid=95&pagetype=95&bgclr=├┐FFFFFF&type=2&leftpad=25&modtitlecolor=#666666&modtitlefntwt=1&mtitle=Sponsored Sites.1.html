@@ -1,0 +1,44 @@
+
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN" > 
+<html>
+  <head>
+	<title>OvertureAd</title>
+	<LINK REL="stylesheet" TYPE="text/css" HREF="inline.css"/>
+	<style>
+		td.ovtrdesc {padding-left:25;}
+		td.ovtrurl {padding-left:25;}
+		td.ovtrtitle {padding-left:25;}
+		div.ovtrmodtitle {padding-left:25;font-weight:normal; color:#666666;}
+		div.ovtrmod{border:1px solid FFFFFF; background-color:FFFFFF;width:100%;}
+	</style>
+  </head>
+ <body leftmargin="0" topmargin="0" marginwidth="0" marginheight="0" allowTransparency="true">
+	<script language='javascript' src='http://cmhtml.msn.overture.com/d/search/p/msn/js/encarta/uk/ctxt/?Partner=msn_encarta_articles_ctxt_uk&mkt=uk&maxCount=3&ctxtId=95&type=95'></script>
+	<script>
+		if (zSr.length > 6)
+		{
+		
+		document.write("<div class='ovtrmod'><div class='ovtrmodtitle'>Sponsored Sites</div>");
+		
+		document.write("<table cellpadding='0' cellspacing='0'  width='100%' bgcolor='FFFFFF' >");
+		i=6;
+		while(i < zSr.length)
+		{
+			var desc = zSr[i++];
+			var unused = zSr[i++];
+			var clickURL = zSr[i++];
+			var title = zSr[i++];
+			var sitehost = zSr[i++];
+			var bid = zSr[i++];
+			document.write("<tr><td class='ovtrtitle'><a target='_top' href='http://uk.encarta.msn.com/encnet/sharedcontrols/%22+clickURL+%22' class='ovtrtitle'>"+title+"</a></td></tr>");
+			document.write("<tr><td class='ovtrdesc'><a target='_top' href='http://uk.encarta.msn.com/encnet/sharedcontrols/%22+clickURL+%22' class='ovtrdesc'>"+desc+"</a></td></tr>");
+			document.write("<tr><td class='ovtrurl'><a target='_top' href='http://uk.encarta.msn.com/encnet/sharedcontrols/%22+clickURL+%22' class='ovtrurl'>"+sitehost+"</a></td></tr>");
+		}
+		document.write("<tr><td height='9'><img width='1' height='9' src='trans.gif'/></td></tr>");
+		document.write("</table>");
+		document.write("</div>");
+		document.write("<div id='ovtrEnd'/>");
+		}
+	</script>
+  </body>
+</html>

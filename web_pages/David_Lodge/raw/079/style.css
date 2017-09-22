@@ -1,0 +1,374 @@
+body {
+	margin: 0px;
+	padding: 0px;
+	border: 0px;
+	background-color: #003300;
+	}
+
+form {
+	margin: 0px;
+	border: 0px;
+	padding: 0px;
+	}
+
+body, table, tr, td, p, h1, h2, h3, h4, h5, h6, a, b, i, ul, ol, li {
+	font-family: arial, helvetica, geneva, swiss, sunSans-regular;
+	}
+
+body, table, tr, td, p, ul, ol, li {
+	font-size: 12px;
+	}
+
+body, table, tr, td, ul, ol, li {
+	color: #333333;
+	}
+
+p {
+	padding: 0px;
+	margin: 1em 0px;
+	}
+
+h1 {
+	font-size: 12px;
+	color: #336699;
+	font-weight: bold;
+	font-style:italic;
+	padding:0px 0px 0px 18px;
+	margin: 0px;
+	}
+
+h2 {
+	font-size: 12px;
+	color: #336633;
+	font-weight: bold;
+	font-style:italic;
+	padding: 0px;
+	margin: .25em 0px;
+	}
+
+a:link, a:active, a:visited {
+	color: #3333ff;
+	text-decoration: none;
+	}
+
+a:hover {
+	color: #336633;
+	text-decoration: underline;
+	}
+
+
+.address {
+	font-size: 11px;
+	color: #333333;
+	}	
+
+.address b {
+	font-size: 11px;
+	font-style: bold;
+	color: #8D001A;
+	}
+
+.address a:link, a:active, a:visited {
+	color: #003366;
+	}
+
+
+.callout {
+	/* color: #ffffff; */
+	}
+
+.callout a:link, .callout a:active, .callout a:visited {
+	color: #003366;
+	text-decoration: none;
+	font-style: italic;
+	}
+
+.callout a:hover {
+	color: #336633;
+	text-decoration: underline;
+	}
+
+.footer {
+ 	font-size:11px;
+	color: #ffffff;
+	}
+
+.footer a:link, .footer a:active, .footer a:visited, .footer a:hover {
+	color: #ffffff;
+	text-decoration: none;
+	}
+
+p.breadcrumbs {
+	padding-left:8px;
+	padding-right:2px;
+	}
+
+.breadcrumbs a {
+	color: #996600;
+	}
+
+.sideBarHeader {
+	font-weight: bold;
+	color: #ffffff;
+	}
+
+td.sideBarHeader {
+	text-align: right;
+	padding-right: 20px;
+	padding-bottom:1px;
+	}
+
+input.radio, input.checkbox {
+	border: 0px solid #ffffff ! important;
+	}
+
+table.contentTable div input {
+	border: 1px solid;
+	}
+
+.button {
+	background-color: #336699;
+	color: #ffffff;
+	cursor: hand;
+	border: 1px outset #003366;
+	}
+
+.topInfo {
+	color: #ffffff;
+	font-size: 11px;
+	}
+.topInfo a:link, .topInfo a:active, .topInfo a:visited, {
+	color: #ffffff;
+	font-size: 11px;
+	}
+	
+
+table.checkboxTable input {
+	margin-right: .75em; /* force space after checkboxes & radio buttons */
+	}
+
+table.checkboxTable td {
+	padding: 0px 0px .25em 0px ! important; /* force to not pick up padding rules from parent table */
+	}
+
+table.formTable {
+	padding: 8px 0px 0px 0px;
+	}
+
+table.formTable td {
+	padding-bottom: 8px;
+	}
+
+table.formTable th {
+	padding: 0px 1em 8px 0px;
+	text-align: left;
+	font-weight: bold;
+	font-style: normal;
+	}
+
+.required {
+	color:#cc0000;
+	margin: 0px 4px;
+	}
+	
+	
+@media print {
+	table.contentTable {
+		width: 500px;
+		}
+	}
+
+@media screen {
+	table.contentTable {
+		width: 100%;
+		}
+	}
+
+table#searchFellows {
+	width: 550px;
+	}
+
+table#searchFellows td#leftCol {
+	width: 70%;
+	padding-right: 10px;
+	padding-bottom: 1em;
+	}
+
+table#searchFellows td#rightCol {
+	width: 30%;
+	padding-left: 10px;
+	border-left: 1px solid #336699;
+	}
+
+table#searchFellows table.topsearch {
+	width: 100%;
+	}
+
+table#searchFellows table.topsearch td {
+	text-align: center;
+	}
+
+table#searchFellows div.filterHeader {
+	background-color: #336699;
+	color: #ffffff;
+	font-weight: bold;
+	padding: 1px 6px;
+	}
+
+table#searchFellows div.filter {
+	padding: 1px 6px;
+	height: 100px;
+	border: 1px solid #336699;
+	margin-bottom: 6px;
+	}
+
+table#searchFellows div.filterStatic {
+	padding: 1px 6px;
+	border: 1px solid #336699;
+	margin-bottom: 6px;
+	}
+
+table#searchFellows div.filterStatic td {
+	padding-right: 1em;
+	}
+
+table#searchFellows div#resultsContainer {
+	height:400px;
+	background-color: #EEFFEE;
+	/* padding: 1.5em 0px 0px 1em; */
+	}
+
+table#searchFellows div#researchSpecialties {
+	overflow:auto;
+}
+
+table#searchFellows div#researchHabitat {
+	overflow:auto;
+}
+
+table#searchFellows div#issueArea {
+	overflow:auto;
+}
+
+table#searchFellows div#fellowsResultCount {
+	font-size: 1.3em;
+	text-align: left;
+	color: #ffffff;
+	font-weight: bold;
+	border: 0px;
+	padding: 2px ! important;
+	margin-right: 1em;
+	margin-bottom: 0em;
+	}
+
+div#resultsMidContainer {
+	padding: 0.75em 0px 0.75em 1em;
+	background-color: #336699;
+	}
+
+div#fellowsResults {
+	position:absolute;
+	top:276px;
+	left: 610px;
+	height: 350px;
+	width: 140px;
+	padding-bottom: .5em;
+	border: 0px;
+	overflow:auto;
+	}
+
+div#fellowsResults a, div#fellowsResults a:link, div#fellowsResults a:hover, div#fellowsResults a:active, div#fellowsResults a:visited {
+	margin: .5em 0px .5em 0px;
+	color: #336699;
+	}
+
+.fellowResult {
+	padding-top:0px;
+	padding-bottom:0px;	
+	margin-top:0px;
+	margin-bottom:6px;
+	}
+
+td.checkCol {
+	padding-right: .75em;
+	}
+
+div#initialSearch {
+	padding: .5em 0px 1em 0px ! important;
+	}
+
+div#viewAllFellows {
+	border: 0px ! important;
+	}
+
+div#viewAllFellows a {
+	color: #336699 ! important;
+	text-align: right;
+	font-style: italic;
+	display: block;
+	font-size: 12px;
+	}
+
+.flushTop {
+	border-top: 0px;
+	padding-top: 0px;
+	margin-top: 0px;
+	}
+
+.flushBottom {
+	border-bottom: 0px;
+	padding-bottom: 0px;
+	margin-bottom: 0px;
+	}
+
+span#homeSearch form {
+	margin-top: 1em;
+	margin-bottom: 1em;
+	}
+
+span#homeSearch input.criteria {
+	width: 120px;
+	}
+
+
+span#homeSearch div.homeSearchHeader {
+	font-weight: bold;
+	color: #00265C;
+	text-align: left;
+	margin: 1em 0px 1em 0px;
+	padding: 2px;
+	font-size: 1.3em;
+	border-bottom: 1px solid #00265C;
+	}
+
+span#homeSearch span.homeSearchDetail {
+	/* color: #ffffff; */
+	display: block;
+	text-align: left;
+	margin: 1em 0px 1em 0px;
+	}
+
+span#homeSearch span.homeSearchDetail a, span#homeSearch span.homeSearchDetail a:link, span#homeSearch span.homeSearchDetail a:hover, span#homeSearch span.homeSearchDetail a:active, span#homeSearch span.homeSearchDetail a:visited {
+	display: block;
+	margin: .5em 0px .5em 0px;
+	}
+
+span#homeSearch span.homeSearchDetail a.separate, a.separate {
+	margin-top: 1em;
+	text-align: right;
+	font-style: italic;
+	display: block;
+	padding-bottom:10px;
+	}
+
+span#homeSearchDetail p#searchCountDynamic {
+	font-size: 1.3em;
+	text-align: left;
+	color: #00265C;
+	font-weight: bold;
+	border: 0px;
+	border-bottom: 1px solid #00265C;
+	padding: 2px;
+	margin-right: 1em;
+	margin-bottom: 1em;
+	}

@@ -1,0 +1,63 @@
+# Allowed everywhere in our site except certain pages
+# 
+
+
+User-agent: *  
+
+
+Disallow: /forums/post-*.html
+Disallow: /forums/post-*
+Disallow: /forums/post-
+Disallow: /forums/mark-*.html
+Disallow: /forums/mark-*
+Disallow: /forums/mark-
+Disallow: /forums/updates-topic.html
+Disallow: /forums/stop-updates-topic.html 
+Disallow: /forums/ptopic*.html
+Disallow: /forums/ptopic*
+Disallow: /forums/ptopic
+Disallow: /forums/memberlist.php 
+Disallow: /forums/profile.php*
+Disallow: /forums/posting.php
+Disallow: /forums/posting.php*
+Disallow: /forums/posting.php?
+Disallow: /forums/login.php*
+Disallow: /forums/login.php
+Disallow: /forums/login.php?
+Disallow: /forums/search.php
+Disallow: /forums/search.php?
+Disallow: /forums/search.php*
+Disallow: /forums/faq.php
+Disallow: /forums/register.php
+Disallow: /forums/report.php*
+Disallow: /query/search
+Disallow: /query/search*
+Disallow: /query/search?
+Disallow: /ca/
+Disallow: /fr/
+Disallow: /de/
+Disallow: /searchhelp.php
+Disallow: /addbox.php
+Disallow: /query/querydata.e?search*
+Disallow: /query/search?*
+Disallow: /dir/Tops/*
+Disallow: /forums/post-
+Crawl-delay: 1
+
+User-agent: msnbot
+Crawl-delay: 1
+
+User-agent: Slurp
+Crawl-delay: 1
+
+User-agent: Teoma
+Crawl-delay: 5
+
+User-agent: aipbot
+Disallow: /
+
+User-agent: BecomeBot 
+Disallow: /
+
+User-agent: psbot
+Disallow: /

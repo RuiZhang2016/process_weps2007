@@ -1,0 +1,133 @@
+/*
+Theme Name: FRBR
+Description: My custom theme (based on Simple Green)
+Version: 1.0
+Author: William Denton
+Author URI: http://www.miskatonic.org/
+*/
+
+body { 
+  margin: 2% 2% 2% 2%; 
+  padding: 0; 
+  background-color: white; /* #cccc99; */ /*#666633;*/ 
+  font-family: sans-serif;
+}
+
+#wrap { height: 100%; margin-left: auto; margin-right: auto; width: 90%; /*border: thin solid #000000;*/ background-color: #ffffff; }
+
+#head { 
+  clear: both; 
+  height: 100px; 
+  padding: 20px 40px 0px 40px; 
+  border-bottom: 1px dashed #999966; 
+  background-color: #CCCC99; 
+  font-family: serif; 
+  text-align: center; }
+
+#head h1 { /*font-size: 28px;*/ margin: 0px; padding: 0px; font-weight: bold; letter-spacing: 1px; color: #666633; }
+
+#head h1 a:link, #head h1 a:visited { 
+  color: #666633; 
+  text-decoration: none; 
+  font-family: sans-serif; 
+  font-variant: small-caps; 
+}
+
+#head h1 a:hover { 
+  color: #663333; 
+  text-decoration: none; 
+}
+
+#head #description { font-weight: normal; padding: 0px 30px 0px 30px; font-style: italic; }
+#head .small { font-size: 14px; color: #666633; }
+
+#bot { clear: both; background-color: #CCCC99; border-top: 1px dashed #999966; padding: 5px; text-align: center; }
+#bot a { color: #666633; }
+
+
+#main { margin-left: 230px; padding: 20px; border-left: 1px dashed #999966; }
+#main textarea { width: 90%; }
+
+.postend { margin: 5px 0px 30px 0px; padding: 0px; text-align: center; color: #CCCC99; line-height: 0px; }
+.meta { font-size: small; margin-bottom: 2ex; }
+/* .meta a:link, .meta a:visited { color: #999966; }
+.meta a:hover { color: #666633; } */
+
+blockquote { 
+  border: 1px dashed #999966; 
+  margin-left: 30px; 
+  margin-right: 30px; 
+  padding: 0px 10px 0px 10px; 
+}
+
+
+#left { float: left; width: 210px; padding: 20px 10px 20px 10px; border-right: 1px dashed #999966; }
+#left ul { margin-left: 0px; padding-left: 0px; font-weight: bold; }
+#left ul li { margin-left: 0px; padding-left: 0px; margin-bottom: 20px; list-style-type: none; }
+#left ul ul { border-top: 1px dashed #999966; font-weight: normal; padding: 0px; margin: 0px; }
+#left ul ul li { border: none; padding: 0px; margin: 0px; font-weight: normal; list-style-type: none; display: block; }
+#left ul ul li a:link, #left ul ul li a:visited { display: block; padding: 2px 0px 2px 10px; margin: 0px; background-color: #CCCC99; color: #663333; border-bottom: 1px dashed #999966; text-decoration: none; }
+#left ul ul li a:hover { background-color: #999966; color: #FFFFFF; }
+/* Fix IE spaces. Hide from IE Mac \*/
+* ul li a { height: 1%; }
+/* End */
+#left h2 { margin: 0px; padding: 0px; font-weight: bold; border: none; background: none; color: #000000; }
+
+#cal { margin: 0px 0px 10px 0px; border: 1px dashed #666633; background-color: #cccc99; }
+#cal caption { border-bottom: 1px solid #666633; padding: 2px; }
+#wp-calendar { width: 100%; }
+#wp-calendar thead { /*font-size: 10px;*/ }
+#wp-calendar td { text-align: center; }
+
+#wp-calendar td a:link, #wp-calendar td a:visited { 
+  font-weight: bold; 
+  text-decoration: underline; 
+}
+#wp-calendar td a:hover { color: #ffffff; }
+
+#about { margin: 0px 0px 20px 0px; padding: 0; }
+
+
+h2 { 
+  /* border: 1px dashed #999966; */
+  margin: 0px 0px 20px 0px; 
+  padding: 3px; 
+  background-color: white; /* #cccc99; */
+  color: #666633; 
+}
+
+h3 { font-weight: bold; border-bottom: 1px dashed #666633; margin: 0px 0px 5px 0px; padding: 0px 0px 2px 0px; }
+h3 a:link, h3 a:visited { color: #663333; text-decoration: none; }
+h3 a:hover { color: #666633; }
+
+/* a:link, a:visited { color: #663333; }
+a:hover { color: #666633; } */
+
+a {
+  color: #00F;
+  text-decoration: none;
+}
+
+a:hover {
+ text-decoration: underline;
+}
+
+a:visited {
+ color: #800080;
+}
+
+a.inviz {
+ display: none
+}
+
+.trackback { font-size: 10px; }
+
+#commentlist { list-style-type: none; margin: 0px; padding: 0px; }
+#commentlist li { list-style-type: none; margin-bottom: 10px; padding: 10px; background-color: #E0E1CE; border-top: 1px dashed #999966; border-bottom: 1px dashed #999966; }
+#commentlist cite { margin: 7px 0px 0px 0px; padding: 0px; font-style: normal; }
+#commentlist p { margin-top: 0px; padding-top: 0px; }
+
+acronym {
+  border-bottom: thin dotted black;
+  cursor: help;
+}

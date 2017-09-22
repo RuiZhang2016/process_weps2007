@@ -1,0 +1,954 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<html>
+<head>
+<title>MANTEC.org</title>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<link href="/includes/styles.css" rel="stylesheet" type="text/css">
+
+
+<meta name="keywords" content="MANTEC, Mantec, Mid Penn MEP, Industrial Resource Center, IRC, Manufacturing Extension Partnership, Pennsylvania, Adams County, Cumberland County, Dauphin County, Franklin County, Fulton County, Lancaster County, Lebanon County, Perry County, York County, quality, Quality Systems, business assistance, environmental, process improvement, Lean manufacturing, clean manufacturing, financial systems, management systems, strategic planning, ISO 9000, ISO 14000, Lean, JIT, HR, human resources, personnel, compliance, OSHA, health and safety, permit, permitting, DEP, EPA, technology,IT, e-commerce, consulting, business consultant, professional business advisor, PBA, 360vu, price competitive, improve, finance, product development, market expansion, workforce, training, software selection,  business planning, Six Sigma, Kanban, kaizen, 5S, team building, waste">
+<meta name="description" content="MANTEC, Incorporated, is a private non-profit 501 (c) 3 organization dedicated to meeting the needs of small and mid-sized manufacturing enterprises of south central Pennsylvania. Created in 1988 by the Governor, MANTEC serves the manufacturing community as one of seven Industrial Resource Centers across Pennsylvania. The Commonwealth of Pennsylvania, through the Department of Community and Economic Development, supports MANTEC, its 3,000 manufacturers and the Industrial Resource Centers.
+
+The service region of MANTEC includes Adams, Cumberland, Dauphin, Franklin, Fulton, Lancaster, Lebanon, Perry and York counties. MANTEC is headquartered in the city of York and maintains field offices in the cities of Carlisle, Chambersburg, Lancaster and Lebanon.">
+<meta name="classification" content="">
+<meta http-equiv="title" content="MANTEC.org">
+<meta name="robots" content="Yes">
+<meta name="author" content="Jeff Davis and Scott Sipe">
+<meta name="doc-type" content="HTML">
+<meta name="doc-rights" content="">
+<meta name="rating" content="General">
+<meta name="revisit-after" content="2">
+
+
+<script language="JavaScript" type="text/javascript">
+<!--
+var old_index = 0;
+var hide = 'hidden';
+var show = 'visible';
+var timeout_id;
+var IE = document.all?true:false;
+var tempX = 0;
+var tempY = 0;
+
+function layer(value) {
+	if(IE)
+	return document.all(value);
+	else
+	return document.getElementById(value);
+}
+
+function getMouseXY(e) {
+	if (IE) { // grab the x-y pos.s if browser is IE
+		tempY = event.clientY + document.body.scrollTop - event.offsetY;
+	}
+	else {  // grab the x-y pos.s if browser is NS
+		tempY = e.pageY;
+	}  
+	return true;
+}
+
+function clear_timeouts() {
+	if(timeout_id != null)
+		self.clearTimeout(timeout_id);
+}
+
+function popupon(index) {
+	if(timeout_id != null) {
+		self.clearTimeout(timeout_id);
+	}
+	if(old_index != 0) {
+		layer('div' + old_index).style.backgroundColor = '#CCCCCC';
+		layer('pop' + old_index).style.visibility = hide;
+	}
+	layer('pop' + index).style.top = layer('div' + index).offsetTop - 2;
+	layer('pop' + index).style.left = layer('div' + index).offsetLeft + 130;
+
+	if(document.body.clientHeight != null) {
+		if(layer('pop' + index).clientHeight + parseInt(layer('pop' + index).style.top.substring(0, layer('pop' + index).style.top.length - 2)) > document.body.clientHeight + document.body.scrollTop) {
+			layer('pop' + index).style.top = document.body.clientHeight + document.body.scrollTop - layer('pop' + index).clientHeight - 10;
+		}
+	}
+	else {
+		if(layer('pop' + index).offsetHeight + parseInt(layer('pop' + index).style.top.substring(0, layer('pop' + index).style.top.length - 2)) > window.innerHeight + window.pageYOffset) {
+			layer('pop' + index).style.top = window.innerHeight + window.pageYOffset - layer('pop' + index).offsetHeight - 10;
+		}
+	}
+
+	layer('pop' + index).style.visibility = show;
+	layer('div' + index).style.backgroundColor = "#EEEEEE";
+	old_index = index;
+}
+
+function popupoff() {
+	if(old_index != 0)
+		timeout_id = setTimeout("layer('pop' + old_index).style.visibility = hide;layer('div' + old_index).style.backgroundColor = '#CCCCCC';", 500);
+}
+
+if(!IE) {
+	document.captureEvents(Event.MOUSEOVER | Event.MOUSEOUT | Event.MOUSEMOVE);
+}
+
+function arrowOver(imageName,color) {
+	imageName.src = "/images/button_" + color + "_over.gif";
+}
+function arrowOut(imageName,color) {
+	imageName.src = "/images/button_" + color + ".gif";
+}
+function checksearch() {
+	if(document.searchForm.frm_query.value == "" || document.searchForm.frm_query.value == " ") {
+		alert("Please enter search criteria.");
+		return false;
+	}
+	else {
+		return true;
+	}
+}
+//-->
+</script>
+</head>
+
+<body bgcolor="#FFFFFF" topmargin="0" leftmargin="0" bottommargin="0" rightmargin="0" marginheight="0" marginwidth="0">
+<table width="100%" height="120" cellpadding="0" cellspacing="0" border="0" bgcolor="#999999">
+<form name="searchForm" action="/search.cfm" method="post" onSubmit="return checksearch();">
+<tr>
+	<td nowrap><img src="/images/top_pic2.jpg" border="0" width="313" height="120"><a href="/"><img src="/images/top_logo2.gif" border="0" width="220" height="120" alt="MANTEC, Inc."></a></td>
+	<td align="right"><table cellpadding="0" cellspacing="0" border="0" width="240" height="120">
+		<tr>
+			<td colspan="3" align="right" valign="top"><img src="/images/spacer.gif" border="0" width="61" height="68" alt="360vu"></td>
+		</tr>
+		<tr>
+			<td align="right"><span style="color: #FFFFFF; font-size: 14px;">search</span></td>
+			<td align="center"><input type="text" size="8" maxlength="50" name="frm_query" class="search"></td>
+			<td><input type="image" src="/images/button_go.gif" border="0" width="42" height="22" onMouseOver="this.src='/images/button_go_over.gif';" onMouseOut="this.src='/images/button_go.gif';"></td>
+		</tr>
+		</table></td>
+</tr>
+</form>
+</table>
+<table width="100%" height="14" cellpadding="0" cellspacing="0" border="0">
+<tr>
+	<td height="2"><img src="/images/spacer.gif" width="1" height="1" border="0"></td>
+</tr>
+<tr>
+	<td bgcolor="#000000" height="1"><img src="/images/spacer.gif" width="1" height="1" border="0"></td>
+</tr>
+<tr>
+	<td bgcolor="#666666" height="10"><img src="/images/spacer.gif" width="1" height="1" border="0"></td>
+</tr>
+<tr>
+	<td bgcolor="#000000" height="1"><img src="/images/spacer.gif" width="1" height="1" border="0"></td>
+</tr>
+</table>
+
+<table width="100%" cellpadding="0" cellspacing="0" border="0">
+<tr>
+<td valign="top" width="150">
+<img src="/images/spacer.gif" width="1" height="20" border="0"><br>
+	
+	
+	<div id="pop13" class="navsubdiv"></div>
+	
+	
+	<div id="pop01" class="navsubdiv" onMouseOver="clear_timeouts();" onMouseOut="popupoff();">
+	<table cellpadding="0" cellspacing="0" border="0">
+	<tr>
+		<td valign="top" background="/images/nav_edge.gif"><img src="/images/nav_arrow.gif" width="8" height="19" border="0"></td>
+		<td>
+			<table cellpadding="0" cellspacing="0" border="0" class="navsubdivtable">
+			<tr> 
+				<td><a href="/about.cfm" class="nav">
+                  <div class="navsubdivitem">Mission</div>
+                  </a></td>
+			</tr>
+			<tr> 
+				<td class="navbg"><img src="/images/spacer.gif" width="1" height="1" border="0"></td>
+			</tr>
+			<tr> 
+				<td><a href="/about.cfm#history" class="nav">
+                  <div class="navsubdivitem">History</div>
+                  </a></td>
+			</tr>
+			<tr> 
+				<td class="navbg"><img src="/images/spacer.gif" width="1" height="1" border="0"></td>
+			</tr>
+			<tr> 
+				<td><a href="/personnel.cfm" class="nav">
+                  <div class="navsubdivitem">Personnel</div>
+                  </a></td>
+			</tr>
+			<tr> 
+				<td class="navbg"><img src="/images/spacer.gif" width="1" height="1" border="0"></td>
+			</tr>
+			<tr> 
+				<td><a href="/board.cfm" class="nav">
+                  <div class="navsubdivitem">Board of Directors</div>
+                  </a></td>
+			</tr>
+			<tr> 
+				<td class="navbg"><img src="/images/spacer.gif" width="1" height="1" border="0"></td>
+			</tr>
+			<tr> 
+				<td><a href="/offices.cfm" class="nav">
+                  <div class="navsubdivitem">Regional Offices</div>
+                  </a></td>
+			</tr>
+			<tr> 
+				<td class="navbg"><img src="/images/spacer.gif" width="1" height="1" border="0"></td>
+			</tr>
+			<tr> 
+				<td><a href="/inthenews.cfm" class="nav">
+                  <div class="navsubdivitem">MANTEC in the News</div>
+                  </a></td>
+			</tr>
+			<tr> 
+				<td class="navbg"><img src="/images/spacer.gif" width="1" height="1" border="0"></td>
+			</tr>
+			<tr> 
+				<td><a href="/about.cfm#impact" class="nav">
+                  <div class="navsubdivitem">Impact</div>
+                  </a></td>
+			</tr>
+			</table>
+		</td>
+	</tr>
+	</table>
+	</div>
+	
+	<div id="pop02" class="navsubdiv" onMouseOver="clear_timeouts();" onMouseOut="popupoff();">
+	<table cellpadding="0" cellspacing="0" border="0">
+	<tr>
+		<td valign="top" background="/images/nav_edge.gif"><img src="/images/nav_arrow.gif" width="8" height="19" border="0"></td>
+		<td>
+			<table cellpadding="0" cellspacing="0" border="0" class="navsubdivtable">
+			<tr> 
+				<td><a href="/question.cfm?questionid=q2" class="nav">
+                  <div class="navsubdivitem">Optimize my Financial Performance</div>
+                  </a></td>
+			</tr>
+			<tr> 
+				<td class="navbg"><img src="/images/spacer.gif" width="1" height="1" border="0"></td>
+			</tr>
+			<tr> 
+				<td><a href="/question.cfm?questionid=q3" class="nav">
+                  <div class="navsubdivitem">Streamline my Manufacturing Process</div>
+                  </a></td>
+			</tr>
+			<tr> 
+				<td class="navbg"><img src="/images/spacer.gif" width="1" height="1" border="0"></td>
+			</tr>
+			<tr> 
+				<td><a href="/question.cfm?questionid=q4" class="nav">
+                  <div class="navsubdivitem">Improve my Product Quality</div>
+                  </a></td>
+			</tr>
+			<tr> 
+				<td class="navbg"><img src="/images/spacer.gif" width="1" height="1" border="0"></td>
+			</tr>
+			<tr> 
+				<td><a href="/question.cfm?questionid=q1" class="nav">
+                  <div class="navsubdivitem">Get LEAN</div>
+                  </a></td>
+			</tr>
+			<tr> 
+				<td class="navbg"><img src="/images/spacer.gif" width="1" height="1" border="0"></td>
+			</tr>
+			<tr> 
+				<td><a href="/question.cfm?questionid=q5" class="nav">
+                  <div class="navsubdivitem">Maximize my Workforce Potential</div>
+                  </a></td>
+			</tr>
+			<tr> 
+				<td class="navbg"><img src="/images/spacer.gif" width="1" height="1" border="0"></td>
+			</tr>
+			<tr> 
+				<td><a href="/question.cfm?questionid=q6" class="nav">
+                  <div class="navsubdivitem">Take the Pain Out of Regulatory Compliance</div>
+                  </a></td>
+			</tr>
+			<tr> 
+				<td class="navbg"><img src="/images/spacer.gif" width="1" height="1" border="0"></td>
+			</tr>
+			<tr> 
+				<td><a href="/question.cfm?questionid=q7" class="nav">
+                  <div class="navsubdivitem">Expand My Market</div>
+                  </a></td>
+			</tr>
+			</table>
+		</td>
+	</tr>
+	</table>
+	</div>
+	
+	
+	
+	<div id="pop03" class="navsubdiv" onMouseOver="clear_timeouts();" onMouseOut="popupoff();">
+	<table cellpadding="0" cellspacing="0" border="0">
+	<tr>
+		<td valign="top" background="/images/nav_edge.gif"><img src="/images/nav_arrow.gif" width="8" height="19" border="0"></td>
+		<td>
+			<table cellpadding="0" cellspacing="0" border="0" class="navsubdivtable">
+			<tr>
+				<td><a href="products.cfm" class="nav">
+				<div class="navsubdivitem">View All Products</div>
+				</a></td>
+			</tr>
+			<tr> 
+				<td class="navbg"><img src="/images/spacer.gif" width="1" height="1" border="0"></td>
+			</tr>
+			
+				<tr>
+					<td><a href="prodcat.cfm?categoryid=37" class="nav">
+                    <div class="navsubdivitem">Automation, Material Handling and Robotics</div>
+                    </a></td>
+				</tr>
+				
+				<tr> 
+					<td class="navbg"><img src="/images/spacer.gif" width="1" height="1" border="0"></td>
+				</tr>
+				
+				<tr>
+					<td><a href="prodcat.cfm?categoryid=29" class="nav">
+                    <div class="navsubdivitem">Business Systems and Management</div>
+                    </a></td>
+				</tr>
+				
+				<tr> 
+					<td class="navbg"><img src="/images/spacer.gif" width="1" height="1" border="0"></td>
+				</tr>
+				
+				<tr>
+					<td><a href="prodcat.cfm?categoryid=28" class="nav">
+                    <div class="navsubdivitem">CAD/CAM/CAE</div>
+                    </a></td>
+				</tr>
+				
+				<tr> 
+					<td class="navbg"><img src="/images/spacer.gif" width="1" height="1" border="0"></td>
+				</tr>
+				
+				<tr>
+					<td><a href="prodcat.cfm?categoryid=34" class="nav">
+                    <div class="navsubdivitem">EDI/IT/e-Commerce</div>
+                    </a></td>
+				</tr>
+				
+				<tr> 
+					<td class="navbg"><img src="/images/spacer.gif" width="1" height="1" border="0"></td>
+				</tr>
+				
+				<tr>
+					<td><a href="prodcat.cfm?categoryid=35" class="nav">
+                    <div class="navsubdivitem">Energy Demand/Utility Cost Reduction</div>
+                    </a></td>
+				</tr>
+				
+				<tr> 
+					<td class="navbg"><img src="/images/spacer.gif" width="1" height="1" border="0"></td>
+				</tr>
+				
+				<tr>
+					<td><a href="prodcat.cfm?categoryid=30" class="nav">
+                    <div class="navsubdivitem">Environmental, Health & Safety</div>
+                    </a></td>
+				</tr>
+				
+				<tr> 
+					<td class="navbg"><img src="/images/spacer.gif" width="1" height="1" border="0"></td>
+				</tr>
+				
+				<tr>
+					<td><a href="prodcat.cfm?categoryid=38" class="nav">
+                    <div class="navsubdivitem">Human Resources</div>
+                    </a></td>
+				</tr>
+				
+				<tr> 
+					<td class="navbg"><img src="/images/spacer.gif" width="1" height="1" border="0"></td>
+				</tr>
+				
+				<tr>
+					<td><a href="prodcat.cfm?categoryid=41" class="nav">
+                    <div class="navsubdivitem">Market Development/Business to Business Marketing</div>
+                    </a></td>
+				</tr>
+				
+				<tr> 
+					<td class="navbg"><img src="/images/spacer.gif" width="1" height="1" border="0"></td>
+				</tr>
+				
+				<tr>
+					<td><a href="prodcat.cfm?categoryid=33" class="nav">
+                    <div class="navsubdivitem">Plant Layout/Manufacturing Cells</div>
+                    </a></td>
+				</tr>
+				
+				<tr> 
+					<td class="navbg"><img src="/images/spacer.gif" width="1" height="1" border="0"></td>
+				</tr>
+				
+				<tr>
+					<td><a href="prodcat.cfm?categoryid=32" class="nav">
+                    <div class="navsubdivitem">Process Improvement</div>
+                    </a></td>
+				</tr>
+				
+				<tr> 
+					<td class="navbg"><img src="/images/spacer.gif" width="1" height="1" border="0"></td>
+				</tr>
+				
+				<tr>
+					<td><a href="prodcat.cfm?categoryid=31" class="nav">
+                    <div class="navsubdivitem">Quality: Systems (ISO/QS) and Six Sigma</div>
+                    </a></td>
+				</tr>
+				
+				<tr> 
+					<td class="navbg"><img src="/images/spacer.gif" width="1" height="1" border="0"></td>
+				</tr>
+				
+				<tr>
+					<td><a href="prodcat.cfm?categoryid=39" class="nav">
+                    <div class="navsubdivitem">Training and Development</div>
+                    </a></td>
+				</tr>
+				
+			</table>
+		</td>
+	</tr>
+	</table>
+	</div>
+
+	
+	<div id="pop05" class="navsubdiv" onMouseOver="clear_timeouts();" onMouseOut="popupoff();">
+	<table cellpadding="0" cellspacing="0" border="0">
+	<tr>
+		<td valign="top" background="/images/nav_edge.gif"><img src="/images/nav_arrow.gif" width="8" height="19" border="0"></td>
+		<td>
+			<table cellpadding="0" cellspacing="0" border="0" class="navsubdivtable">
+			<tr>
+				<td><a href="leandefined.cfm" class="nav">
+                  <div class="navsubdivitem">What is LEAN Maufacturing?</div>
+                  </a></td>
+			</tr>
+			<tr> 
+				<td class="navbg"><img src="/images/spacer.gif" width="1" height="1" border="0"></td>
+			</tr>
+			<tr>
+				<td><a href="leanhow.cfm" class="nav">
+                  <div class="navsubdivitem">How Do I get Started?</div>
+                  </a></td>
+			</tr>
+			<tr> 
+				<td class="navbg"><img src="/images/spacer.gif" width="1" height="1" border="0"></td>
+			</tr>
+			<tr>
+				<td><a href="leancourses.cfm" class="nav">
+                  <div class="navsubdivitem">LEAN Training</div>
+                  </a></td>
+			</tr>
+			</table>
+		</td>
+	</tr>
+	</table>
+	</div>
+	
+	
+	<div id="pop06" class="navsubdiv" onMouseOver="clear_timeouts();" onMouseOut="popupoff();">
+	<table cellpadding="0" cellspacing="0" border="0">
+	<tr>
+		<td valign="top" background="/images/nav_edge.gif"><img src="/images/nav_arrow.gif" width="8" height="19" border="0"></td>
+		<td>
+			<table cellpadding="0" cellspacing="0" border="0" class="navsubdivtable">
+			<tr>
+				<td><a href="newsletter.cfm" class="nav">
+                  <div class="navsubdivitem">Newsletters</div>
+                  </a></td>
+			</tr>
+			<tr> 
+				<td class="navbg"><img src="/images/spacer.gif" width="1" height="1" border="0"></td>
+			</tr>
+			<tr>
+				<td><a href="press.cfm" class="nav">
+                  <div class="navsubdivitem">Press Releases</div>
+                  </a></td>
+			</tr>
+			<tr> 
+				<td class="navbg"><img src="/images/spacer.gif" width="1" height="1" border="0"></td>
+			</tr>
+			<tr>
+				<td><a href="newslinks.cfm" class="nav">
+                  <div class="navsubdivitem">News Links</div>
+                  </a></td>
+			</tr>
+			</table>
+		</td>
+	</tr>
+	</table>
+	</div>
+	
+	
+	<div id="pop07" class="navsubdiv" onMouseOver="clear_timeouts();" onMouseOut="popupoff();">
+	<table cellpadding="0" cellspacing="0" border="0">
+	<tr>
+		<td valign="top" background="/images/nav_edge.gif"><img src="/images/nav_arrow.gif" width="8" height="19" border="0"></td>
+		<td>
+			<table cellpadding="0" cellspacing="0" border="0" class="navsubdivtable">
+			<tr>
+				<td><a href="/resources.cfm?type=resourcesbook" class="nav">
+                  <div class="navsubdivitem">Books</div>
+                  </a></td>
+			</tr>
+			<tr> 
+				<td class="navbg"><img src="/images/spacer.gif" width="1" height="1" border="0"></td>
+			</tr>
+			<tr>
+				<td><a href="/resources.cfm?type=globalprof" class="nav">
+                  <div class="navsubdivitem">Professional Organizations</div>
+                  </a></td>
+			</tr>
+			<tr> 
+				<td class="navbg"><img src="/images/spacer.gif" width="1" height="1" border="0"></td>
+			</tr>
+			<tr>
+				<td><a href="/resources.cfm?type=resourcesweb" class="nav">
+                  <div class="navsubdivitem">Resources on the Web</div>
+                  </a></td>
+			</tr>
+			<tr> 
+				<td class="navbg"><img src="/images/spacer.gif" width="1" height="1" border="0"></td>
+			</tr>
+			<tr>
+				<td><a href="/resources.cfm?type=mantecpartners" class="nav">
+                  <div class="navsubdivitem">Mantec Partners</div>
+                  </a></td>
+			</tr>
+			<tr> 
+				<td class="navbg"><img src="/images/spacer.gif" width="1" height="1" border="0"></td>
+			</tr>
+			<tr>
+				<td><a href="/resources.cfm?type=industrypartners" class="nav">
+                  <div class="navsubdivitem">Industry Resources</div>
+                  </a></td>
+			</tr>
+			</table>
+		</td>
+	</tr>
+	</table>
+	</div>
+	
+	
+	
+	<div id="pop08" class="navsubdiv" onMouseOver="clear_timeouts();" onMouseOut="popupoff();">
+	<table cellpadding="0" cellspacing="0" border="0">
+	<tr>
+		<td valign="top" background="/images/nav_edge.gif"><img src="/images/nav_arrow.gif" width="8" height="19" border="0"></td>
+		<td>
+			<table cellpadding="0" cellspacing="0" border="0" class="navsubdivtable">
+			
+				<tr>
+					<td><a href="briefs.cfm?briefcatsid=26" class="nav">
+                    <div class="navsubdivitem">Funding Sources for Training</div>
+                    </a></td>
+				</tr>
+				
+				<tr> 
+					<td class="navbg"><img src="/images/spacer.gif" width="1" height="1" border="0"></td>
+				</tr>
+				
+				<tr>
+					<td><a href="briefs.cfm?briefcatsid=33" class="nav">
+                    <div class="navsubdivitem">Information Technology (IT) & MIS</div>
+                    </a></td>
+				</tr>
+				
+				<tr> 
+					<td class="navbg"><img src="/images/spacer.gif" width="1" height="1" border="0"></td>
+				</tr>
+				
+				<tr>
+					<td><a href="briefs.cfm?briefcatsid=22" class="nav">
+                    <div class="navsubdivitem">Internet and e-Business</div>
+                    </a></td>
+				</tr>
+				
+				<tr> 
+					<td class="navbg"><img src="/images/spacer.gif" width="1" height="1" border="0"></td>
+				</tr>
+				
+				<tr>
+					<td><a href="briefs.cfm?briefcatsid=25" class="nav">
+                    <div class="navsubdivitem">IRC / MEP Centers</div>
+                    </a></td>
+				</tr>
+				
+				<tr> 
+					<td class="navbg"><img src="/images/spacer.gif" width="1" height="1" border="0"></td>
+				</tr>
+				
+				<tr>
+					<td><a href="briefs.cfm?briefcatsid=23" class="nav">
+                    <div class="navsubdivitem">Management</div>
+                    </a></td>
+				</tr>
+				
+				<tr> 
+					<td class="navbg"><img src="/images/spacer.gif" width="1" height="1" border="0"></td>
+				</tr>
+				
+				<tr>
+					<td><a href="briefs.cfm?briefcatsid=31" class="nav">
+                    <div class="navsubdivitem">Managing for the Future</div>
+                    </a></td>
+				</tr>
+				
+				<tr> 
+					<td class="navbg"><img src="/images/spacer.gif" width="1" height="1" border="0"></td>
+				</tr>
+				
+				<tr>
+					<td><a href="briefs.cfm?briefcatsid=24" class="nav">
+                    <div class="navsubdivitem">MANTEC Products and Services</div>
+                    </a></td>
+				</tr>
+				
+				<tr> 
+					<td class="navbg"><img src="/images/spacer.gif" width="1" height="1" border="0"></td>
+				</tr>
+				
+				<tr>
+					<td><a href="briefs.cfm?briefcatsid=34" class="nav">
+                    <div class="navsubdivitem">Manufacturer's Spotlight</div>
+                    </a></td>
+				</tr>
+				
+				<tr> 
+					<td class="navbg"><img src="/images/spacer.gif" width="1" height="1" border="0"></td>
+				</tr>
+				
+				<tr>
+					<td><a href="briefs.cfm?briefcatsid=29" class="nav">
+                    <div class="navsubdivitem">Reading Lists</div>
+                    </a></td>
+				</tr>
+				
+				<tr> 
+					<td class="navbg"><img src="/images/spacer.gif" width="1" height="1" border="0"></td>
+				</tr>
+				
+				<tr>
+					<td><a href="briefs.cfm?briefcatsid=27" class="nav">
+                    <div class="navsubdivitem">Regulatory Information</div>
+                    </a></td>
+				</tr>
+				
+				<tr> 
+					<td class="navbg"><img src="/images/spacer.gif" width="1" height="1" border="0"></td>
+				</tr>
+				
+				<tr>
+					<td><a href="briefs.cfm?briefcatsid=35" class="nav">
+                    <div class="navsubdivitem">Studies of Manufacturing</div>
+                    </a></td>
+				</tr>
+				
+			</table>
+		</td>
+	</tr>
+	</table>
+	</div>
+	
+	
+	<div id="pop09" class="navsubdiv" onMouseOver="clear_timeouts();" onMouseOut="popupoff();">
+	<table cellpadding="0" cellspacing="0" border="0">
+	<tr>
+		<td valign="top" background="/images/nav_edge.gif"><img src="/images/nav_arrow.gif" width="8" height="19" border="0"></td>
+		<td>
+			<table cellpadding="0" cellspacing="0" border="0" class="navsubdivtable">
+			<tr>
+				<td><a href="/contactform.cfm" class="nav">
+                  <div class="navsubdivitem">Contact Form</div>
+                  </a></td>
+			</tr>
+			<tr> 
+				<td class="navbg"><img src="/images/spacer.gif" width="1" height="1" border="0"></td>
+			</tr>
+			<tr>
+				<td><a href="/emailclub.cfm" class="nav">
+                  <div class="navsubdivitem">Join Email Club</div>
+                  </a></td>
+			</tr>
+			<tr> 
+				<td class="navbg"><img src="/images/spacer.gif" width="1" height="1" border="0"></td>
+			</tr>
+			<tr>
+				<td><a href="/contact_personnel.cfm" class="nav">
+                  <div class="navsubdivitem">Personnel List</div>
+                  </a></td>
+			</tr>
+			<tr> 
+				<td class="navbg"><img src="/images/spacer.gif" width="1" height="1" border="0"></td>
+			</tr>
+			<tr>
+				<td><a href="/directions.cfm" class="nav">
+                  <div class="navsubdivitem">Directions</div>
+                  </a></td>
+			</tr>
+			</table>
+		</td>
+	</tr>
+	</table>
+	</div>
+
+	
+	<div id="pop11" class="navsubdiv" onMouseOver="clear_timeouts();" onMouseOut="popupoff();">
+	<table cellpadding="0" cellspacing="0" border="0">
+	<tr>
+		<td valign="top" background="/images/nav_edge.gif"><img src="/images/nav_arrow.gif" width="8" height="19" border="0"></td>
+		<td>
+			<table cellpadding="0" cellspacing="0" border="0" class="navsubdivtable">
+			<tr>
+				<td><a href="/successgallery.cfm" class="nav">
+                  <div class="navsubdivitem">Success Gallery</div>
+                  </a></td>
+			</tr>
+			<tr> 
+				<td class="navbg"><img src="/images/spacer.gif" width="1" height="1" border="0"></td>
+			</tr>
+			<tr>
+				<td><a href="/client_successes.cfm" class="nav">
+                  <div class="navsubdivitem">Current Testimonials</div>
+                  </a></td>
+			</tr>
+			<tr> 
+				<td class="navbg"><img src="/images/spacer.gif" width="1" height="1" border="0"></td>
+			</tr>
+			<tr>
+				<td><a href="/client_successes.cfm" class="nav">
+                  <div class="navsubdivitem">Archived Testimonials</div>
+                  </a></td>
+			</tr>
+			</table>
+		</td>
+	</tr>
+	</table>
+	</div>
+	
+	
+	<div id="pop12" class="navsubdiv" onMouseOver="clear_timeouts();" onMouseOut="popupoff();">
+	<table cellpadding="0" cellspacing="0" border="0">
+	<tr>
+		<td valign="top" background="/images/nav_edge.gif"><img src="/images/nav_arrow.gif" width="8" height="19" border="0"></td>
+		<td>
+			<table cellpadding="0" cellspacing="0" border="0" class="navsubdivtable">
+			<tr>
+				<td><a href="faq.cfm#1" class="nav">
+                  <div class="navsubdivitem">How Does MANTEC Work For You?</div>
+                  </a></td>
+			</tr>
+			<tr> 
+				<td class="navbg"><img src="/images/spacer.gif" width="1" height="1" border="0"></td>
+			</tr>
+			<tr>
+				<td><a href="faq.cfm#2" class="nav">
+                  <div class="navsubdivitem">Who Does MANTEC Serve?</div>
+                  </a></td>
+			</tr>
+			<tr> 
+				<td class="navbg"><img src="/images/spacer.gif" width="1" height="1" border="0"></td>
+			</tr>
+			<tr>
+				<td><a href="faq.cfm#3" class="nav">
+                  <div class="navsubdivitem">What is an IRC?</div>
+                  </a></td>
+			</tr>
+			<tr> 
+				<td class="navbg"><img src="/images/spacer.gif" width="1" height="1" border="0"></td>
+			</tr>
+			<tr>
+				<td><a href="faq.cfm#4" class="nav">
+                  <div class="navsubdivitem">What is MEP?</div>
+                  </a></td>
+			</tr>
+			<tr> 
+				<td class="navbg"><img src="/images/spacer.gif" width="1" height="1" border="0"></td>
+			</tr>
+			<tr>
+				<td><a href="faq.cfm#5" class="nav">
+                  <div class="navsubdivitem">To Get on the Consultant Database</div>
+                  </a></td>
+			</tr>
+			</table>
+		</td>
+	</tr>
+	</table>
+	</div>
+	
+	
+	<div id="pop04" class="navsubdiv"></div>
+	<div id="pop10" class="navsubdiv"></div>
+
+	
+
+	<table width="150" cellpadding="0" cellspacing="0" border="0" bgcolor="#cccccc">
+	<tr>
+		<td height="5" align="right"><img src="/images/ur_gry.gif" width="5" height="5" border="0"></td>
+	</tr>
+	<tr>
+		<td><a href="/" class="nav">
+          <div id="div13" class="navdiv" onMouseOver="popupon('13');" onMouseOut="popupoff();"><img src="/images/spacer.gif" width="10" height="1" border="0">Home</div>
+          </a></td>
+	</tr>
+	<tr>
+		<td height="1"><img src="/images/dotted_line.gif" width="150" height="1" border="0"></td>
+	</tr>
+	<tr>
+		<td><a href="javascript:;" class="nav">
+          <div id="div01" class="navdiv" style="cursor:default;" onMouseOver="popupon('01');" onMouseOut="popupoff();"><img src="/images/spacer.gif" width="10" height="1" border="0">About 
+            MANTEC, Inc.</div>
+          </a></td>
+	</tr>
+	<tr>
+		<td height="1"><img src="/images/dotted_line.gif" width="150" height="1" border="0"></td>
+	</tr>
+	<tr>
+		<td><a href="javascript:;" class="nav">
+          <div id="div12" class="navdiv" style="cursor:default;" onMouseOver="popupon('12');" onMouseOut="popupoff();"><img src="/images/spacer.gif" width="10" height="1" border="0">FAQ</div>
+          </a></td>
+	</tr>
+	<tr>
+		<td height="1"><img src="/images/dotted_line.gif" width="150" height="1" border="0"></td>
+	</tr>
+	<tr>
+		<td colspan="2"><a href="javascript:;" class="nav">
+          <div id="div11" class="navdiv" style="cursor:default;" onMouseOver="popupon('11');" onMouseOut="popupoff();"><img src="/images/spacer.gif" width="10" height="1" border="0">Client 
+            Successes</div>
+          </a></td>
+	</tr>
+	<tr>
+		<td height="1"><img src="/images/dotted_line.gif" width="150" height="1" border="0"></td>
+	</tr>
+	<tr>
+		<td><a href="javascript:;" class="nav">
+          <div id="div02" class="navdiv" style="cursor:default;" onMouseOver="popupon('02');" onMouseOut="popupoff();"><img src="/images/spacer.gif" width="10" height="1" border="0">Show 
+            Me How To...</div>
+          </a></td>
+	</tr>
+	<tr>
+		<td height="1"><img src="/images/dotted_line.gif" width="150" height="1" border="0"></td>
+	</tr>
+	<tr>
+		<td><a href="javascript:;" class="nav">
+          <div id="div03" class="navdiv" style="cursor:default;" onMouseOver="popupon('03');" onMouseOut="popupoff();"><img src="/images/spacer.gif" width="10" height="1" border="0">Products 
+            &amp; Services</div>
+          </a></td>
+	</tr>
+	<tr>
+		<td height="1"><img src="/images/dotted_line.gif" width="150" height="1" border="0"></td>
+	</tr>
+	<tr>
+		<td><a href="javascript:;" class="nav">
+          <div id="div05" class="navdiv" style="cursor:default;" onMouseOver="popupon('05');" onMouseOut="popupoff();"><img src="/images/spacer.gif" width="10" height="1" border="0">What 
+            is LEAN?</div>
+          </a></td>
+	</tr>
+	<tr>
+		<td height="1"><img src="/images/dotted_line.gif" width="150" height="1" border="0"></td>
+	</tr>
+	<tr>
+		<td><a href="events.cfm" class="nav">
+          <div id="div04" class="navdiv" onMouseOver="popupon('04');" onMouseOut="popupoff();"><img src="/images/spacer.gif" width="10" height="1" border="0">Events</div>
+          </a></td>
+	</tr>
+	<tr>
+		<td height="1"><img src="/images/dotted_line.gif" width="150" height="1" border="0"></td>
+	</tr>
+	<tr>
+		<td><a href="javascript:;" class="nav">
+          <div id="div07" class="navdiv" style="cursor:default;" onMouseOver="popupon('07');" onMouseOut="popupoff();"><img src="/images/spacer.gif" width="10" height="1" border="0">Resources</div>
+          </a></td>
+	</tr>
+	<tr>
+		<td height="1"><img src="/images/dotted_line.gif" width="150" height="1" border="0"></td>
+	</tr>
+	<tr>
+		<td><a href="javascript:;" class="nav">
+          <div id="div06" class="navdiv" style="cursor:default;" onMouseOver="popupon('06');" onMouseOut="popupoff();"><img src="/images/spacer.gif" width="10" height="1" border="0">News</div>
+          </a></td>
+	</tr>
+	<tr>
+		<td height="1"><img src="/images/dotted_line.gif" width="150" height="1" border="0"></td>
+	</tr>
+	<tr>
+		<td><a href="javascript:;" class="nav">
+          <div id="div08" class="navdiv" style="cursor:default;" onMouseOver="popupon('08');" onMouseOut="popupoff();"><img src="/images/spacer.gif" width="10" height="1" border="0">Briefs</div>
+          </a></td>
+	</tr>
+	<tr>
+		<td height="1"><img src="/images/dotted_line.gif" width="150" height="1" border="0"></td>
+	</tr>
+	<tr>
+		<td><a href="javascript:;" class="nav">
+          <div id="div09" class="navdiv" style="cursor:default;" onMouseOver="popupon('09');" onMouseOut="popupoff();"><img src="/images/spacer.gif" width="10" height="1" border="0">Contact Us</div>
+          </a></td>
+	</tr>
+	<tr>
+		<td height="5" align="right"><img src="/images/lr_gry.gif" width="5" height="5" border="0"></td>
+	</tr>
+	</table>
+	
+	
+		<br>
+		<img src="/images/spacer.gif" width="10" height="1" border="0"><a href="/changing.cfm"><img src="/images/changing/changing_faces.gif" width="133" height="47" border="0"></a>
+	
+	
+</td>
+<td valign="top" width="10"><img src="/images/spacer.gif" width="10" height="1" border="0"></td>
+<td valign="top">
+<img src="/images/spacer.gif" width="1" height="20" border="0"><br>
+
+	<img src="/images/headers/h_pressreleases.gif" width="342" height="27" border="0"><br>
+
+	<span class="large">Congress Guts Program for Small Manufacturers</span><br>
+	<br>
+	
+	
+		<b>December 1, 2003</b><br>
+	FOR IMMEDIATE RELEASE  Monday, December 1, 2003    <P>
+  Washington, DC:  Congressional appropriators agreed to gut the main federal program, the Manufacturing Extension Partnership, which serves America's small manufacturers, despite the 300 members of Congress who supported $110 million in letters to the CJS Subcommittee leadership.  Senators Arlen Specter and Rick Santorum as well as Representatives Todd Platts, Joseph Pitts, Tim Holden and Bill Shuster all supported full funding for MEP as a way to combat the decline in U.S. manufacturing.       <P>
+Pennsylvania has lost an estimated 198,000 manufacturing jobs since the beginning of November 2000, contributing to the total loss of employment for 2.5 million American manufacturing workers.  The South Central Region of Pennsylvania has lost more than 24,000 manufacturing jobs in that time.    <P>
+Congress will provide only $39.6 million for MEP in Fiscal Year 2004, a 63 percent cut from the current funding level.  Last year, Congress provided MEP with $106.6 million.  The cut to MEP came during last minute wrangling over a final Omnibus Appropriations bill that would provide about $700 billion for up to 12 federal departments.      <P>
+Commenting on the cuts, the Honorable Todd Platts, Republican from the 19th Congressional District of Pennsylvania observed, "Many local manufacturers have contacted me about the critically important role that the Manufacturing Extension Partnership (MEP) has played in helping them stay competitive in today's marketplace.  In light of the significant benefits of the MEP program to our Nation's manufacturers and the significant challenges still facing the manufacturing sector, it makes no sense to be cutting the MEP budget at this time, especially by such a large percentage."     <P>
+MEP, a public-private program, provides small manufacturers with critical support to bolster the domestic production base and keep manufacturing jobs in the United States. As a federal-state-private partnership, MEP supports a national network of over 60 centers with 400 locations across the country and Puerto Rico providing technical assistance and business support services to small manufacturers.  The cuts in MEP would result in deep cuts in state-based programs across the country.      <P>
+In South Central Pennsylvania, the region's approximately 2800 small manufacturers receive services through MANTEC.  MEP clients report impressive improvements as a direct result of MEP assistance.  For a 12 month period, MANTEC clients reported $67.48 million in new or retained sales, $10.9 million in cost savings, $20.1 million in new investments in modernization, and over 1145 jobs retained or created. Federal MEP dollars supports approximately a third of MANTEC's budget and would mean redefinition of customer services and potential curtailment of certain activities over the long-term.    <P>
+"The cutbacks in the federal funding will force MANTEC to stretch our decreasing resources even further to meet increasing demand from our manufacturing clients", commented John W. Lloyd, President and CEO of MANTEC.   "I am disappointed, given the heightened concern over the state of American manufacturing, that Congress and the Administration would cut a program that everyone agrees has been highly effective."    <P>
+MANTEC is a resource created to provide manufacturers customized solutions to deliver quantifiable results in productivity, profitability and competitiveness. For companies willing to commit to improvement, MANTEC offers assistance in all facets of manufacturing enterprises.  MANTEC leverages private and public monies to provide cost-effective solutions from proven providers and, for those companies that qualify, assistance dollars to provide an additional catalyst for investment and growth.    <P>
+CONTACT:John W. Lloyd, MANTEC, Inc, 717 843-5054	                            <P> 
+
+<br>
+<br>
+<a href="javascript:window.history.back();" class="blue"><img src="/images/back.gif" width="21" height="21" border="0" align="absmiddle" hspace="4">Back to Summary Page</a><br>
+<img src="/images/spacer.gif" width="1" height="5" border="0"><br>
+<a href="/" class="blue"><img src="/images/home.gif" width="21" height="21" border="0" align="absmiddle" hspace="4">Home Page</a><br>
+<br>
+
+
+</td>
+<td valign="top" width="10"><img src="/images/spacer.gif" width="10" height="1" border="0"></td>
+</tr>
+</table>
+
+<img src="/images/spacer.gif" height="20" width="1" border="0"><br>
+<table width="100%" cellpadding="0" cellspacing="0" border="0" bgcolor="#999999">
+<tr>
+	<td align="center"><img src="/images/spacer.gif" height="5" width="770" border="0"></td>
+</tr>
+<tr>
+	<td align="center" class="footer">PO Box 5046, 227 West Market St &#8226; York, PA  17405-5046 &#8226; Phone: 717-843-5054 Toll Free: 888-843-5054 Fax: 717-854-0087&nbsp;&nbsp; &nbsp;&nbsp;<a href="/legal.cfm?id=legal" class="footernav">Legal&nbsp;Disclaimer</a>&nbsp;&nbsp;&#8226;&nbsp;&nbsp;<a href="/legal.cfm?id=privacy" class="footernav">Privacy&nbsp;Statement</a><br>
+	<a href="/" class="footernav">Home</a>&nbsp;&nbsp;&#8226;&nbsp;&nbsp;<a href="/about.cfm" class="footernav">About</a>&nbsp;&nbsp;&#8226;&nbsp;&nbsp;<a href="/faq.cfm" class="footernav">FAQ</a>&nbsp;&nbsp;&#8226;&nbsp;&nbsp;<a href="/client_successes.cfm" class="footernav">Client Successes</a>&nbsp;&nbsp;&#8226;&nbsp;&nbsp;<a href="/products.cfm" class="footernav">Products &amp; Services</a>&nbsp;&nbsp;&#8226;&nbsp;&nbsp;<a href="/leandefined.cfm" class="footernav">What is LEAN?</a>&nbsp;&nbsp;&#8226;&nbsp;&nbsp;<a href="/events.cfm" class="footernav">Events</a>&nbsp;&nbsp;&#8226;&nbsp;&nbsp;<a href="/newsletter.cfm" class="footernav">Newsletters</a>&nbsp;&nbsp;&#8226;&nbsp;&nbsp;<a href="/press.cfm" class="footernav">Press Releases</a>&nbsp;&nbsp;&#8226;&nbsp;&nbsp;<a href="/contactform.cfm" class="footernav">Contact Us</a></td>
+</tr>
+<tr>
+	<td><img src="/images/spacer.gif" height="5" width="1" border="0"></td>
+</tr>
+</table>
+</body>
+</html>

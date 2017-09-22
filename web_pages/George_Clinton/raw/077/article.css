@@ -1,0 +1,307 @@
+/* article.css, based on uyniversaltable/default-0.38.css by todd */
+/* 2005.12.7 */
+
+#group {
+ border-left:8px solid #CCE5E5;
+}
+/* begin content */
+ 
+ #content {
+ padding:10px 0 20px 10px;
+ margin:0;
+ }
+ #content #columnlogo img {
+ display:inline;
+ }
+ #contentheader .vendorlogo {
+ padding:.4em 0 .25em 0;
+ margin:0;
+ font-size:10px;
+ /* font-size: .75em; disabled due to font resizing anomolies */
+ font-weight:bold;
+ display:block;
+ }
+ #contentheader {
+border-bottom-color:#BBBBBB;
+ border-bottom-style:solid;
+ border-bottom-width:1px;
+ padding:0 0 8px 0;
+ }
+ #contentheader h1 {
+ /* font-size: 1.15em; disabled due to font resizing anomolies */
+ font-family:Arial, Helvetica, sans-serif;
+ margin:0;
+ padding:6px 0 2px 0;
+ }
+ #contentheader h2 {
+ /* font-size: 1.05em; disabled due to font resizing anomolies */
+ font-family:Arial, Helvetica, sans-serif;
+ margin:0;
+ padding:0 0 2px 0;
+ }
+ #contentheader h3 {
+ /* font-size: 1.05em; disabled due to font resizing anomolies */
+ font-family:Geneva, Arial, Helvetica, sans-serif;
+ margin:0;
+ padding:0 0 2px 0;
+ }
+  #contentheader h3.althead {
+ /* font-size: .9em; disabled due to font resizing anomolies */
+ font-family:Geneva, Arial, Helvetica, sans-serif;
+ font-style:italic;
+ margin:0;
+ padding:0;
+ }
+ #contentheader h4 {
+ /* font-size: .9em; disabled due to font resizing anomolies */
+ font-family:Geneva, Arial, Helvetica, sans-serif;
+ margin:0;
+ padding:0 0 2px 0;
+ }
+ #content p {
+ }
+ #contentheader .author {
+ /* font-size: .83em; disabled due to font resizing anomolies */
+ font-family:Geneva, Arial, Helvetica, sans-serif;
+ padding:.5em 0 .2em 0;
+ margin:0;
+ }
+ #contentheader .date {
+ padding:0 0 .4em 0;
+ margin:0;
+ /* font-size: .83em; disabled due to font resizing anomolies */
+ font-family:Geneva, Arial, Helvetica, sans-serif;
+ color:#CC3333;
+ }
+ #contentbody {
+ /* font-size: .83em; disabled due to font resizing anomolies */
+ padding:0 .3em 0 0;
+ margin:0;
+ }
+ #contentbody .pagenumber {
+ color:#777;
+ font-family:Verdana, Arial, Helvetica, sans-serif;
+ /* font-size: 1em; disabled due to font resizing anomolies */
+ font-weight:bold;
+ }
+
+ /* begin divider area */
+ #content #divider {
+ padding:0;
+ margin:0;
+ }
+#divider #bylinelogo, #divider #columnlogo {
+ font-family:Arial, Helvetica, sans-serif;
+ padding:.25em 0 .5em 0;
+ border-bottom:1px solid #bbb;
+border-top:1px solid #bbb;
+ }
+#divider #bylinelogo img, #divider #columnlogo img {
+display:inline;
+ vertical-align:middle;
+ margin:0 1.4em 0 0;
+ padding:0;
+/* float:left;*/
+ }
+#divider #bylinelogo h3, #divider #columnlogo h3 {
+display:inline;
+/* font-size: 1.1em; disabled due to font resizing anomolies */ /*1.25em;*/
+color:/*#668B8B; or navy */#293173;
+text-transform:uppercase;
+vertical-align:middle;
+line-height:2em;
+margin:0;
+padding:0;
+/*border:1px dotted #000;*/
+ }
+#divider #bylinelogo h4, #divider #columnlogo h4 {
+display:inline;
+/* font-size: .9em; disabled due to font resizing anomolies */ /*16px;*/
+color:#666;
+vertical-align:middle;
+margin:0 0 0 1.4em;
+padding:0;
+line-height:2em;
+ }
+ 
+ /* being utilitylinks */
+ 
+ #utilitylinks {
+ margin:0;
+ padding:8px;
+ font-size:10px;
+ /* font-size: .8em; disabled due to font resizing anomolies */
+ font-family:Geneva, Arial, Helvetica, sans-serif;
+ border:1px solid #666;
+ }
+#utilitylinks img,  #utilitylinks a {
+ padding:0 .3em 0 0;
+}
+ /* begin utilitymenu */
+
+#utilitymenu {
+border:1px solid #666;
+font-size:10px;
+margin:0 0 10px 0;
+}
+#utilitymenu .simplemenu {
+padding:3px 0 3px 0;
+ font-family:Geneva, Arial, Helvetica, sans-serif;
+ /* font-size: .8em; disabled due to font resizing anomolies */
+ list-style-position:inside;
+ list-style-image:url(http://www.sfgate.com/templates/types/universal/graphics/greybox5x7.gif); 
+ }
+ #utilitymenu .simplemenu li {
+padding:2px 2px 2px 5px;
+}
+html>body #utilitymenu {
+width:166px;
+}
+ 
+ /* begin related content */
+ #relatedcontent, #contentobjects, #poll, #dropin, #utilitylinks, #utilitymenu {
+width:160px;
+}
+ 
+ #relatedcontent {
+ font-family:Geneva, Arial, Helvetica, sans-serif;
+ /* font-size: .9em; disabled due to font resizing anomolies */
+ margin:0 0 8px 8px;
+ /* border:1px solid #000; testing box model */
+ }
+ #relatedcontent h4 {
+ font-family:Verdana, Arial, Helvetica, sans-serif;
+ /* font-size: .95em; disabled due to font resizing anomolies */
+ padding:3px;
+ margin:0;
+ color:#777777;
+ background-color:#eee;
+ border-bottom-color:#777;
+ border-bottom-style:solid;
+ border-bottom-width:1px;
+ }
+ #contentobjects {
+ padding:5px 0 0 5px;
+ margin:0 0 10px 0;
+ border:1px solid #666;
+ }
+#contentobjects img {
+border:1px solid #666;
+margin:0 0 5px 0;
+}
+ #contentobjects h4 {
+ display:none;
+ }
+ #contentobjects a.more, .chart {
+text-transform:uppercase;
+display:block;
+margin:0;
+padding:8px 0 8px 8px;
+font-size:10px;
+/* font-size: .7em; disabled due to font resizing anomolies */
+}
+ #relatedcontent p {
+ margin:0;
+ padding:.4em;
+ }
+ #relatedcontent .relateditem,  #relatedcontent #dropin  {
+ border-color:#666;
+ border-width:1px;
+ border-style:solid;
+ }
+ #relatedcontent .relateditemcontent {
+ padding:3px;
+ }
+ #relatedcontent .simplemenu {
+ margin:0;
+ font-family:Geneva, Arial, Helvetica, sans-serif;
+ list-style-position:inside;
+ list-style-image:url(http://www.sfgate.com/templates/types/universal/graphics/greybox5x7.gif); 
+ }
+ html>body #relatedcontent .simplemenu {
+ padding:0 0 0 3px;
+ }
+ 
+ /* begin #dropin */
+ 
+ #dropin {
+ border:1px solid #666;
+ margin:0 0 10px 0;
+ }
+ #dropin h4 { 
+ padding:2px;
+ margin:0;
+ font-size:12px;
+ }
+ #dropin h4 img {
+ }
+ #dropin img {
+ border:0;
+ }
+ #dropin p.item { 
+ font-size:10px;
+ /* font-size: .83em; disabled due to font resizing anomolies */
+ padding:0 3px 5px 3px ;
+ margin:0;
+ }
+ #dropin p.simplemenu {
+ font-size:10px;
+ /* font-size: .8em; disabled due to font resizing anomolies */
+padding-bottom:4px;
+margin-bottom:4px;
+ }
+ #dropin form {
+ padding:4px;
+ font-size:10px;
+ /* font-size: 1em; disabled due to font resizing anomolies */
+ }
+
+ /* begin ads */
+#adblock {
+padding: 10px 0 0 8px;
+}
+#ad1 table {
+ border-left-color: #fff;
+ border-left-width:1px;
+ border-left-style:solid;
+ padding:4px;
+ background-image:url(http://www.sfgate.com/templates/types/universaltable/style/adheader-sm.gif);
+ background-position:center;
+ background-repeat:no-repeat;
+}
+#boxad {
+margin:0 0 10px 0;
+}
+p.adheader {
+display:none;
+color:#888888;
+/* font-size: .65em; disabled due to font resizing anomolies */
+text-align:left;
+margin:0;
+padding:2px;
+}
+#skyad {
+text-align:center;
+ background-image:url(http://www.sfgate.com/templates/types/universaltable/style/adheader-sm.gif);
+ background-position:center;
+ background-repeat:no-repeat;
+}
+#skyad .adheader {
+text-align:center;
+}
+/* begin buychronicle */
+
+#buychronicle { 
+font-family:Arial, Helvetica, sans-serif;
+/* font-size: .9em; disabled due to font resizing anomolies */
+text-align:left;
+display:block;
+font-size:10px;
+}
+
+
+/* topautos */
+
+#adjacency {
+margin:0 10px 0 0;
+}

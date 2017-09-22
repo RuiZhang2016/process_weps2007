@@ -1,0 +1,436 @@
+<html>
+
+	<head>
+		<meta http-equiv="content-type" content="text/html;charset=iso-8859-1">
+		<meta name="generator" content="Adobe GoLive 4">
+		<title>Welcome to Chicks with Picks</title>
+		<csscriptdict>
+			<script><!--
+CSStopExecution = false;
+CSInit = new Array;
+function CSScriptInit() {
+idxArray = new Array;
+for(var i=0;i<CSInit.length;i++)
+	idxArray[i] = i;
+CSAction2(CSInit, idxArray);
+}
+CSAg = window.navigator.userAgent; CSBVers = parseInt(CSAg.charAt(CSAg.indexOf("/")+1),10);
+function IsIE() { return CSAg.indexOf("MSIE") > 0;}
+function CSIEStyl(s) { return document.all.tags("div")[s].style; }
+function CSNSStyl(s) { return CSFindElement(s,0); }
+function CSFindElement(n,ly) { if (CSBVers < 4) return document[n];
+	var curDoc = ly ? ly.document : document; var elem = curDoc[n];
+	if (!elem) { for (var i=0;i<curDoc.layers.length;i++) {
+		elem = CSFindElement(n,curDoc.layers[i]); if (elem) return elem; }}
+	return elem;
+}
+function CSButtonReturn () {
+	var bAgent = window.navigator.userAgent; 
+	var bAppName = window.navigator.appName;
+	if ((bAppName.indexOf("Explorer") >= 0) && (bAgent.indexOf("Mozilla/3") >= 0) && (bAgent.indexOf("Mac") >= 0))
+		return false; // follow link
+	else return true; // follow link
+}
+CSIm = new Object();
+function CSIShow(n,i) {
+	if (document.images) {
+		if (CSIm[n]) {
+			var img = (!IsIE()) ? CSFindElement(n,0) : document[n];
+			if (img && typeof(CSIm[n][i].src) != "undefined") {img.src = CSIm[n][i].src;}
+			if(i != 0)
+				self.status = CSIm[n][3];
+			else
+				self.status = " ";
+			return true;
+		}
+	}
+	return false;
+}
+function CSILoad(action) {
+	im = action[1];
+	if (document.images) {
+		CSIm[im] = new Object();
+		for (var i=2;i<5;i++) {
+			if (action[i] != '') { CSIm[im][i-2] = new Image(); CSIm[im][i-2].src = action[i]; }
+			else CSIm[im][i-2] = 0;
+		}
+		CSIm[im][3] = action[5];
+	}
+}
+CSStopExecution = false;
+
+function CSAction(array) { 
+	return CSAction2(CSAct, array);
+}
+function CSAction2(fct, array) { 
+	var result;
+	for (var i=0;i<array.length;i++) {
+		if(CSStopExecution) return false; 
+		var actArray = fct[array[i]];
+		var tempArray = new Array;
+		for(var j=1;j<actArray.length;j++) {
+			if((actArray[j] != null) && (typeof(actArray[j]) == "object") && (actArray[j].length == 2)) {
+				if(actArray[j][0] == "VAR") {
+					tempArray[j] = CSStateArray[actArray[j][1]];
+				}
+				else {
+					if(actArray[j][0] == "ACT") {
+						tempArray[j] = CSAction(new Array(new String(actArray[j][1])));
+					}
+				else
+					tempArray[j] = actArray[j];
+				}
+			}
+			else
+				tempArray[j] = actArray[j];
+		}			
+		result = actArray[0](tempArray);
+	}
+	return result;
+}
+CSAct = new Object;
+
+// --></script>
+		</csscriptdict>
+		<csactiondict>
+		<script><!--
+CSInit[CSInit.length] = new Array(CSILoad,/*CMP*/'2',/*URL*/'graphics/buttcomps.gif',/*URL*/'graphics/buttcompsg.gif',/*URL*/'','');
+CSInit[CSInit.length] = new Array(CSILoad,/*CMP*/'button2',/*URL*/'graphics/buttsamps.gif',/*URL*/'graphics/buttsampsg.gif',/*URL*/'','');
+CSInit[CSInit.length] = new Array(CSILoad,/*CMP*/'button3',/*URL*/'graphics/butteasts.gif',/*URL*/'graphics/butteastsg.gif',/*URL*/'','');
+CSInit[CSInit.length] = new Array(CSILoad,/*CMP*/'',/*URL*/'graphics/buttteass.jpg',/*URL*/'graphics/butteassg.jpg',/*URL*/'','');
+CSInit[CSInit.length] = new Array(CSILoad,/*CMP*/'button4',/*URL*/'graphics/buttalumni.jpg',/*URL*/'graphics/butalumni.gif',/*URL*/'','');
+
+// --></script>
+		</csactiondict>
+	</head>
+
+	<style type="text/css">
+ A:link  { color:#000000; }
+ A:visited { color:#CCCCCC; }
+ A:hover  { color:#FF9900; }
+</style>
+
+	<body bgcolor="white" topmargin="0" leftmargin="0" marginheight="0" marginwidth="0" onload="CSScriptInit();">
+		<table border="0" cellpadding="0" cellspacing="0" width="636" align="left" height="582">
+			<tr height="90">
+				<td width="176" valign="bottom" align="right" height="90"><img height="19" width="120" src="graphics/welcome.gif"></td>
+				<td height="90" align="left" valign="bottom" width="276"><img height="86" width="226" src="graphics/chickstitle.gif"><font size="1" face="arial,helvetica,geneva">presented by</font> <a href="(Empty Reference!)" target="_blank"><img height="18" width="72" src="graphics/Marmot.gif" border="0"></a></td>
+			</tr>
+			<tr height="2">
+				<td height="2" bgcolor="#000011" colspan="2" valign="top"><img src="graphics/spaceblack.gif" width="2" height="2" border="0"></td>
+			</tr>
+			<tr height="116">
+				<td width="176" valign="bottom" align="left" height="116"><img height="93" width="176" src="graphics/chiclogan.gif"></td>
+				<td height="116" width="276" align="left">
+					<table border="0" cellpadding="0" cellspacing="0" width="460" height="120">
+						<tr height="116">
+							<td width="92" height="116"><csobj w="92" h="116" t="Button" ht="graphics/buttcompsg.gif"><a href="complete.htm" onmouseover="return CSIShow(/*CMP*/'2',1)" onmouseout="return CSIShow(/*CMP*/'2',0)" onclick="return CSButtonReturn()"><img src="graphics/buttcomps.gif" width="92" height="116" name="2" border="0"></a></csobj></td>
+							<td width="92" height="116"><csobj w="92" h="116" t="Button" ht="graphics/buttsampsg.gif"><a href="sampler.htm" onmouseover="return CSIShow(/*CMP*/'button2',1)" onmouseout="return CSIShow(/*CMP*/'button2',0)" onclick="return CSButtonReturn()"><img src="graphics/buttsamps.gif" width="92" height="116" name="button2" border="0"></a></csobj></td>
+							<td width="92" height="116"><csobj w="92" h="116" t="Button" ht="graphics/butteastsg.gif"><a href="east.htm" onmouseover="return CSIShow(/*CMP*/'button3',1)" onmouseout="return CSIShow(/*CMP*/'button3',0)" onclick="return CSButtonReturn()"><img src="graphics/butteasts.gif" width="92" height="116" name="button3" border="0"></a></csobj></td>
+							<td width="92" height="116"><csobj w="92" h="116" t="Button" ht="graphics/butteassg.jpg"><a href="teaser.htm" onmouseover="return CSIShow(/*CMP*/'',1)" onmouseout="return CSIShow(/*CMP*/'',0)" onclick="return CSButtonReturn()"><img src="graphics/buttteass.jpg" width="92" height="116" name="" border="0"></a></csobj></td>
+							<td width="92" height="116"><csobj w="92" h="116" t="Button" ht="graphics/butalumni.gif"><a href="alumni.htm" onmouseover="return CSIShow(/*CMP*/'button4',1)" onmouseout="return CSIShow(/*CMP*/'button4',0)" onclick="return CSButtonReturn()"><img src="graphics/buttalumni.jpg" width="92" height="116" name="button4" border="0"></a></csobj></td>
+						</tr>
+					</table>
+				</td>
+			</tr>
+			<tr height="2">
+				<td height="2" bgcolor="#000011" colspan="2" valign="top"><img src="graphics/spaceblack.gif" width="2" height="2" border="0"></td>
+			</tr>
+			<tr height="300">
+				<td width="176" valign="top" rowspan="3" align="right">
+					<div align="right">
+						<table border="0" cellpadding="0" cellspacing="0" width="136" height="206">
+							<tr height="11">
+								<td width="150" height="11"><a href="signup.htm"><img height="167" width="176" src="graphics/chiclogbn.gif" border="0"></a></td>
+							</tr>
+							<tr height="11">
+								<td width="150" height="11"><font color="white">x</font></td>
+							</tr>
+							<tr height="11">
+								<td width="150" height="11">
+									<div align="right">
+										<font face="arial,helvetica,geneva" size="2" color="#000011">Call Us (970)626-4424</font></div>
+								</td>
+							</tr>
+							<tr height="11">
+								<td width="150" height="11">
+									<div align="right">
+										<a href="mailto:kim@chickswithpicks.net"><font face="arial,helvetica,geneva" size="2" color="#000011">kim@chickswithpicks.net</font></a></div>
+								</td>
+							</tr>
+							<tr height="11">
+								<td width="150" height="11"><font color="white">x</font></td>
+							</tr>
+							<tr height="11">
+								<td width="150" height="11">
+									<div align="right">
+										<a href="classdescr.htm"><font size="2" color="#5167b4" face="arial,helvetica,geneva"><b>Clinic Descriptions</b></font></a></div>
+								</td>
+							</tr>
+							<tr height="11">
+								<td width="150" height="11">
+									<div align="right">
+										<a href="index.htm"><font face="arial,helvetica,geneva" color="#ec2611" size="2">Home</font></a></div>
+								</td>
+							</tr>
+							<tr height="11">
+								<td width="150" height="11">
+									<div align="right">
+										<a href="transport.htm"><font face="arial,helvetica,geneva" color="#ec2611" size="2">Travel</font></a></div>
+								</td>
+							</tr>
+							<tr height="11">
+								<td width="150" height="11">
+									<div align="right">
+										<a href="guides.htm"><font face="arial,helvetica,geneva" color="#ec2611" size="2">Guides &amp; Guests</font></a></div>
+								</td>
+							</tr>
+							<tr height="11">
+								<td width="150" height="11">
+									<div align="right">
+										<a href="sponsor.htm"><font face="arial,helvetica,geneva" color="#ec2611" size="2">Sponsors</font></a></div>
+								</td>
+							</tr>
+							<tr height="11">
+								<td width="150" height="11">
+									<div align="right">
+										<a href="charity.htm"><font face="arial,helvetica,geneva" color="#ec2611" size="2">Charities</font></a></div>
+								</td>
+							</tr>
+							<tr height="11">
+								<td width="150" height="11">
+									<div align="right">
+										<a href="photos.htm"><font face="arial,helvetica,geneva" color="#ec2611" size="2">Photo Gallery</font></a></div>
+								</td>
+							</tr>
+							<tr height="11">
+								<td width="150" height="11">
+									<div align="right">
+										<a href="backphil.htm"><font face="arial,helvetica,geneva" color="#ec2611" size="2">Background &amp; Philosophy</font></a></div>
+								</td>
+							</tr>
+							<tr height="11">
+								<td width="150" height="11">
+									<div align="right">
+										<a href="merch.htm"><font face="arial,helvetica,geneva" color="#ec2611" size="2">Merchandise</font></a></div>
+								</td>
+							</tr>
+							<tr>
+								<td width="150">
+									<div align="right">
+										<a href="bring.htm"><font face="arial,helvetica,geneva" color="#ec2611" size="2">What to Bring</font></a></div>
+								</td>
+							</tr>
+							<tr>
+								<td width="150">
+									<div align="right">
+										<font color="white">x</font><a href="press.htm"><font color="#ec2611" face="arial,helvetica,geneva" size="2">Hear What the Press Says</font></a></div>
+								</td>
+							</tr>
+						</table>
+					</div>
+				</td>
+				<td valign="top" rowspan="3" align="left" width="276">
+					<table border="0" cellpadding="0" cellspacing="0" width="460" height="43">
+						<tr height="26">
+							<td width="92" height="26">
+								<center>
+									<a href="complete.htm"><img height="26" width="68" src="graphics/butcomp.gif" border="0"></a></center>
+							</td>
+							<td width="92" height="26">
+								<center>
+									<a href="sampler.htm"><img height="26" width="60" src="graphics/butsamps.gif" border="0"></a></center>
+							</td>
+							<td width="92" height="26">
+								<center>
+									<a href="east.htm"><img height="26" width="49" src="graphics/buteasts.gif" border="0"></a></center>
+							</td>
+							<td width="92" height="26">
+								<center>
+									<a href="teaser.htm"><img height="26" width="47" src="graphics/buteas.gif" border="0"></a></center>
+							</td>
+							<td width="92" height="26"><a href="alumni.htm"><img height="26" width="92" src="graphics/butalumni.gif" border="0"></a></td>
+						</tr>
+						<tr height="17">
+							<td height="17" bgcolor="#0f0d2b" colspan="5">
+								<div align="left">
+									<font face="arial,helvetica,geneva" color="#0f0d2b" size="4"><b>1. </b></font><font face="arial,helvetica,geneva" color="white" size="4"><b>The Guides</b></font></div>
+							</td>
+						</tr>
+					</table>
+					<font face="arial,helvetica,geneva" color="#000011" size="2"><b>
+					<table border="0" cellpadding="10" cellspacing="0" width="460" height="250">
+						<tr>
+							<td valign="top" width="100%">
+								<div align="left">
+									<font face="arial,helvetica,geneva"><b>
+									<table border="0" cellpadding="0" cellspacing="2" width="360" height="2955" align="left">
+										<tr height="243">
+											<td height="243" colspan="2">
+												<div align="left">
+													<img height="187" width="266" src="graphics/ggroup.gif">
+													<p><font face="arial,helvetica,geneva" size="2">2001 Chicks instructors gather beneath the San Juan mountains of Ouray after a successful clinic. Guides from left to right are: Jen Stewart-Grimes, Cathy Cosley, Kim Reynolds (event organizer), Kitty Calhoun, Angela Hawse, Kim Csizmazia and Julie Faure.</font></div>
+											</td>
+										</tr>
+										<tr height="12">
+											<td width="117" height="12" align="left" valign="top"></td>
+											<td width="237" height="12" align="left" valign="top"><font color="white">w</font></td>
+										</tr>
+										<tr height="144">
+											<td width="117" height="144" align="left" valign="top"><img height="144" width="108" src="graphics/gkitty.gif"></td>
+											<td width="237" height="144" align="left" valign="top"><font face="arial,helvetica,geneva" size="2"><b>Kitty Calhoun</b><br>
+												Alpinist Kitty Calhoun began climbing at the age of 18 on the crags of her native South Carolina. Soon afterward she turned her attention to the Himalayas, focusing on small teams and committed objectives. Since then, Kitty has climbed several Himalayan routes, as well as routes in South America and Alaska. Kitty is a mom, earned an MBA from University of Washington, works for Patagonia, and is a storyteller.</font></td>
+										</tr>
+										<tr height="12">
+											<td width="117" height="12" align="left" valign="top"></td>
+											<td width="237" height="12" align="left" valign="top"><font color="white">w</font></td>
+										</tr>
+										<tr height="187">
+											<td width="117" height="187" align="left" valign="top"><img height="144" width="108" src="graphics/gkimc.gif"></td>
+											<td width="237" height="187" align="left" valign="top"><font face="arial,helvetica,geneva" size="2"><b>Kim Csizmazia<br>
+												</b>Kim started climbing ten years ago after completing an English/Skiing degree at the University of Utah. With a minor in Ski Bumming, Kim took to the climbing lifestyle well and she has been climbing full time ever since. While she considers herself to be a climbing generalist her most significant accomplishments have been in ice climbing. She was the first women to consistently lead Water Ice (WI) 6 and the first women to climb the modern<br>
+												mixed grade of M10. Kim has also dominated the competition scene in ice climbing with three X-Game Gold medals, two first places in the Ouray Ice Climbing Exhibition and winning the first ever Ice climbing World Cup in 2000. Kim lives in Canmore AB, Canada where she spends most of her time climbing.</font></td>
+										</tr>
+										<tr height="12">
+											<td width="117" height="12" align="left" valign="top"></td>
+											<td width="237" height="12" align="left" valign="top"></td>
+										</tr>
+										<tr>
+											<td width="117" align="left" valign="top"><img height="144" width="108" src="aac%20graphics/biokaren.jpg"></td>
+											<td width="237" align="left" valign="top"><font face="arial,helvetica,geneva" size="2"><b>Karen McNeill<br>
+												</b><br>
+												Karen began climbing thirteen years ago after a trekking trip to Nepal. Since that trip, she has spent her time organizing her own expeditions. These trips have taken her to India, Nepal, Tibet, Peru, Bolivia, Alaska and Greenland.<br>
+												<br>
+												Originally from New Zealand, where she began climbing, Karen now lives in Canada. She finds the colder climate suits her lust for ice and mountainous places.<br>
+												<br>
+												In between organizing expeditions, Karen juggles several jobs. These jobs range from teaching, waitressing to landscaping. Karen teaches part time on a local reservation and she finds the work gives her a good perspective on the rest of her life. Karen enjoys teaching climbing to Youth at Risk and women's groups. Karen loves fun and has a weakness for sparkles and chocolate.<br>
+												</font></td>
+										</tr>
+										<tr height="12">
+											<td width="117" height="12" align="left" valign="top"></td>
+											<td width="237" height="12" align="left" valign="top"></td>
+										</tr>
+										<tr height="231">
+											<td width="117" height="231" align="left" valign="top"><img height="144" width="108" src="graphics/gcosley.gif"></td>
+											<td width="237" height="231" align="left" valign="top"><font face="arial,helvetica,geneva" size="2"><b>Kathy Cosley<br>
+												</b>Kathy Cosley is an independent guide based in Bishop, California and along with her husband co-owns Cosley and Houston Alpine Guides. Shehas guided and taught climbing skills in the U.S. and worldwide for 19 years, including 13 with the American Alpine Institute. Over these years some of the more ill advised capers she has participated in have included Cerro Torre, the South Face of Aconcagua, the North Face of the Eiger, and the 1990 Makalu West Pillar expedition with Kitty Calhoun. Kathy has also been actively involved with the American Mountain Guides Association since 1986, participated in its training and certification programs, and has served on its Board of Directors for the past 5 years. Kathy has completed training and examination and become certified in all three of the guiding disciplines of Rock, Alpine and Ski Mountaineering, and is internationally certified as a UIAGM Mountain Guide.<br>
+												</font></td>
+										</tr>
+										<tr height="12">
+											<td width="117" height="12" align="left" valign="top"></td>
+											<td width="237" height="12" align="left" valign="top"><font color="white">w</font></td>
+										</tr>
+										<tr height="231">
+											<td width="117" height="231" align="left" valign="top"><img height="144" width="108" src="graphics/ghawse.gif"></td>
+											<td width="237" height="231" align="left" valign="top"><font face="arial,helvetica,geneva" size="2"><b>Angela Hawse<br>
+												</b>From ski traverses of Lapland to Mt. Everest Angela has packed in more adventures than most people read about. Climbing has taken her across the globe and the world has been her classroom. Angela holds a Master's degree and has extensive teaching and guiding experience. Over the past 16 years she has worked for such reputable organizations as Ultimate Ascents, the American Alpine Institute, Prescott College, Outward Bound, the Wind Horse Legacy and Chicks with Picks! Her climbing resume is impressive: Mt. Waddington, the Bolivian Andes, Patagonia, the Karakoram of Pakistan, Denali (multiple times), Mt. Everest, the St. Elias Range, the Canadian Rockies, and the Garwhal Himalaya in India, to name a few areas she has lead expeditions and explored. Angela has worked on numerous projects in Nepal training women guides, working to create higher standards for Porters, and cleaning up the mountains. On top of all that, she's a pretty nice kid.</font></td>
+										</tr>
+										<tr height="12">
+											<td width="117" height="12" align="left" valign="top"></td>
+											<td width="237" height="12" align="left" valign="top"><font color="white">w</font></td>
+										</tr>
+										<tr height="144">
+											<td width="117" height="144" align="left" valign="top"><img height="144" width="108" src="graphics/gparker.gif"></td>
+											<td width="237" height="144" align="left" valign="top"><font face="arial,helvetica,geneva" size="2"><b>Carolyn Parker<br>
+												</b>For the last five years Carolyn has been guiding for the American Alpine Institute out of Bellingham WA. She guides in Canada, Bolivia, Peru, Ecuador, Asia and western United States. When she's not guiding she studies Oriental Medicine, practices yoga, and developing her personal climbing goals. Carolyn has a passion for taking her talents to the big mountains around the world in pursuit of aesthetic alpine style ascents, steep and beautiful ice lines, splitter cracks on desert sandstone, and of course the world&#146;s best granite bouldering.</font></td>
+										</tr>
+										<tr height="12">
+											<td width="117" height="12" align="left" valign="top"></td>
+											<td width="237" height="12" align="left" valign="top"><font color="white">w</font></td>
+										</tr>
+										<tr height="297">
+											<td width="117" height="297" align="left" valign="top"><img height="144" width="108" src="graphics/gjen.gif"></td>
+											<td width="237" height="297" align="left" valign="top"><font face="arial,helvetica,geneva" size="2"><b>Jen Stewart-Grimes<br>
+												</b>Jen Grimes started climbing 13 years ago during college while studying geology and studio arts. She went on to teach climbing while attending the University of Minnesota in Duluth graduate school for geology. Ice climbing began as a way for her to combat the dreary winters of northern Minnesota. Surprisingly, Minnesota ice climbing provided varied, albeit short climbing, making for an excellent learning ground. After realizing that a career in geology was not for her, Jen became involved in the Outdoor Industry. Now, most of her time is spent, literally, living in a truck with her husband and two dogs. The Midwest is the territory where they work as independent sales representatives selling climbing gear and clothing. In 1997 Jen got invited to join the competitors at the Ouray Ice fest and won first place, she has participated in the climbing exhibitions there ever since. Jen was also a participant in the 1998 X-games and came away with a bronze medal. Teaching women is a priority for Jen and this year she is participating in multiple Ice Fests, in order to share her skills with women in the Midwest. Jen also has secret passions for knitting, chocolate and good books. Ok, maybe the chocolate part isn't so secret. </font></td>
+										</tr>
+										<tr height="12">
+											<td width="117" height="12" align="left" valign="top"></td>
+											<td width="237" height="12" align="left" valign="top"></td>
+										</tr>
+										<tr height="253">
+											<td width="117" height="253" align="left" valign="top"><img height="144" width="108" src="graphics/gjulie.gif"></td>
+											<td width="237" height="253" align="left" valign="top"><font face="arial,helvetica,geneva" size="2"><b>Julie Faure<br>
+												</b>Julie was born and raised in France and started mountaineering in the Alps.She has rock, alpine and ice climbed throughout the Western US, Alaska,France and the Northern Himalaya. She has led two Denali expeditions,completed the first ski descent of neighboring Mt Foraker&#146;s Sultana ridge, and summitted 23,000 ft Khan Tengri in the Tien Shan Mtns. of Kyrgyzstan.She has also climbed several routes on El Capitan in Yosemite. In the fall of 1995, Julie traveled by bicycle through Western China, Tibet and Vietnam. Her outside interests include culture, politics and cinema. Julie is currently winter program director and a senior guide for Exum Utah Mountain Adventures where she guides ice climbing, ski touring and teaches avalanche courses. In the spring, she guides on Denali for Alaska-Denali Guiding and in the summer, in the Tetons for Exum Mountain Guides. She has been guest instructor for Women Rock Day in North Conway, NH and for Chicks with Picks in Ouray, CO. Julie also works as an avalanche controller at Snowbird Resort.<br>
+												</font></td>
+										</tr>
+										<tr height="12">
+											<td width="117" height="12" align="left" valign="top"></td>
+											<td width="237" height="12" align="left" valign="top"><font color="white">ww</font></td>
+										</tr>
+										<tr height="231">
+											<td width="117" height="231" align="left" valign="top"><img height="144" width="108" src="graphics/gbullard.gif"></td>
+											<td width="237" height="231" align="left" valign="top"><font face="arial,helvetica,geneva" size="2"><b>Amy Bullard<br>
+												</b>Amy learned to climb on ice and rock 17 years ago while studying Anthropology and Environmental Studies at UVM. Her first lead climbs were on waterfall ice. Eager to study the world more intimately, she traded books for a mountain bike and rode from Germany to Turkey in 1988 to study climbing and culture. She ended up designing and testing a telemark ski in Germany on the way and it was during this time that she noticed how much glaciers make mountains come alive. She has not been able to stay away from living mountains since. Climbing has continued to be a venue for travel and study, taking her all over North America, South America and Asia. She has been part of seven expeditions to the Himalayas including Mustagh Tower (Pakistan), Island Peak, Peaks 6770 and 6800, first ascent of Melanphulan (Nepal), and she led the first American women's expedition to climb an 8,000m peak with out climbing Sherpas or supplemental oxygen (Cho Oyu, Tibet). She has also climbed in the Cordillera Blanca in Peru with first ascents of the northwest face of Artesonrajau, East Ridge of Millishrajau Norte and Peak 5600m. Her favorite climbs are to very obscure places with a small group of friends with similar goals, experiencing crazy, nutty cities and cultures along the way.<br>
+												She has been a Mountain Guide for eight years in Alaska, Wyoming, Nevada, Oregon, Idaho and for the past four years has guided for Exum Mountain Guides in the Tetons and in Tibet. She also enjoys chopping wood, snow plowing, growing tomatoes, mountain running, skate skiing, hanging with her Maine Coon Cat, and potlucks with neighbors and friends.<br>
+												</font></td>
+										</tr>
+										<tr height="12">
+											<td width="117" height="12" align="left" valign="top"></td>
+											<td width="237" height="12" valign="top"><font color="white">w</font></td>
+										</tr>
+										<tr height="275">
+											<td width="117" height="275" align="left" valign="top"><img height="144" width="108" src="graphics/ganna.gif"></td>
+											<td width="237" height="275" valign="top"><font face="arial,helvetica,geneva" size="2"><b>Anna Keeling</b><br>
+												Anna Keeling is a New Zealander living in Utah, NZ and Canada. A ski and mountain guide qualified through the New Zealand Mountain Guides Association, Anna is one exam away from becoming one of very few New Zealand woman to gain UIAGM status. Anna began as a skier (racing on the NZ junior team as a teenager) she began mountaineering and rock climbing at 19. Anna was an avid adventure racer for much of her late teens/ early 20's while at university and the climbing developed from there. She loved going out training and climbing a few peaks along the way. She completed a degree in parks and recreation management in 1990 and quit her masters degree in 1991 in order to work in the outdoors. Having climbed most of the high peaks in NZ, Anna has spent much of her time in North America over the past four years climbing, skiing and guiding in Western Canada and USA. She has also traveled to the Indian Himalayas on ski expeditions - several of which have been guiding women's ski tours. Anna also enjoys a spot of amateur painting and photography, ocean-oriented activities like building sandcastles and hanging with friends and family.</font></td>
+										</tr>
+										<tr height="12">
+											<td width="117" height="12" align="left" valign="top"></td>
+											<td width="237" height="12" valign="top"><font color="white">w</font></td>
+										</tr>
+										<tr height="144">
+											<td width="117" height="144" align="left" valign="top"><img height="144" width="108" src="graphics/gimmel.gif"></td>
+											<td width="237" height="144" valign="top"><font face="arial,helvetica,geneva" size="2"><b>Peggy Immel<br>
+												</b>Peg Immel has been climbing for ten years and guiding for four. She was introduced to rock climbing in 1991 when she sent her oldest off to college and decided to spice up her life with climbing instead of golf. She hired a guide and climbed Upper Refuse on Cathedral Ledge in North Conway, New Hampshire. One year later her ice climbing career was launched. Her climbing has taken her to Switzerland, Spain, Italy, France and throughout the United States over numerous rock, alpine and waterfall ice routes. She beganguiding for International Mountain Climbing School in 1997. Her primary focus since then has been the development and instruction of women&#146;s climbing programs.&nbsp; She developed the IMCS Women&#146;s Ice Climbing Retreats, organized the IMCS annual Women&#146;s Rock Day in1997 and 1999, has been a guest instructor for Chicks with Picks and Adirondack International Mountain Fest, and was a founding member of Women Climbers Northeast.</font></td>
+										</tr>
+										<tr height="12">
+											<td width="117" height="12" align="left" valign="top"></td>
+											<td width="237" height="12" valign="top"></td>
+										</tr>
+										<tr height="12">
+											<td width="117" height="12" align="left" valign="top"><img height="144" width="108" src="graphics/gabby.jpg"></td>
+											<td width="237" height="12" valign="top"><font face="arial,helvetica,geneva" size="2"><b>Abby Watkins</b><br>
+												Abby has been an athlete all of her life. She grew up in Australia where a twelve year competitive gymnastics career culminated in selection on Australian teams for international competition and a full athletic scholarship to U.C. Berkeley in 1988. There she studied biology and dance receiving the Mask and Dagger Prize for extraordinary contributions to Dramatic Art in 1994. Abby began climbing while in Berkeley in 1988. Variation has been the theme of her climbing career. She spent time focusing on sportclimbing, redpointing 5.13, consistently onsighting 5.12 andsucceeding to the finals of U.S. Nationals in the Difficulty event and holding the title of U.S. Speed Champion in 1996. In that year, Abby also set the Women&#146;s Speed Record on the Nose of El Capitan and the Regular Northwest Face of Half Dome with fellow Australian, Vera Wong. With Vera and their friend Nicola Woolford, Abby took her Big Wall skills to the big mountains, establishing the first ascent of Changi Tower (19,500ft) via the 3000ft SE Face in the Karakoram, Pakistan. Lately, she is focusing her attention in the winter on ice climbing and skiing in the mountains of Canada where she now makes her home. In 2001, she placed 2nd at the Ouray Ice Festival and 1st at Festiglace du Quebec. She is competing on the Ice World Cup Circuit in the Winter of 2002. She is currently working on her guide&#146;s certification in Canada and runs women's rock, ice and alpine courses through Ascending Women (with Kim Csizmazia).</font></td>
+										</tr>
+										<tr height="12">
+											<td width="117" height="12" align="left" valign="top"></td>
+											<td width="237" height="12" valign="top"></td>
+										</tr>
+									</table>
+									</b></font></div>
+							</td>
+						</tr>
+					</table>
+					<br>
+					<table border="0" cellpadding="0" cellspacing="0" width="100%" height="12">
+						<tr height="12">
+							<td width="20%" height="12">
+								<center>
+									<a href="complete.htm"><font face="arial,helvetica,geneva" size="2" color="#000011">complete chicks</font></a></center>
+							</td>
+							<td width="20%" height="12">
+								<center>
+									<a href="sampler.htm"><font face="arial,helvetica,geneva" size="2" color="#000011">chicks sampler</font></a></center>
+							</td>
+							<td width="20%" height="12">
+								<center>
+									<a href="east.htm"><font face="arial,helvetica,geneva" size="2" color="black">chicks east</font></a></center>
+							</td>
+							<td width="20%" height="12">
+								<center>
+									<a href="teaser.htm"><font size="2" face="arial,helvetica,geneva" color="#000011">east teaser</font></a></center>
+							</td>
+							<td width="20%" height="12">
+								<center>
+									<a href="classdescr.htm"><font face="arial,helvetica,geneva" size="2" color="#000011">class descriptions</font></a></center>
+							</td>
+						</tr>
+					</table>
+					</b></font>
+					<p><a href="mailto:dayzign@mindspring.com"><font face="arial,helvetica,geneva" size="2" color="#ec2611"><b>site design by dayzign graphics</b></font></a></td>
+			</tr>
+			<tr></tr>
+			<tr></tr>
+		</table>
+	</body>
+
+</html>

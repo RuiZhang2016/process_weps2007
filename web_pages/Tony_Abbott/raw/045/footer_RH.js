@@ -1,0 +1,16 @@
+document.write('	<div style="float: left; width: 406px; padding: 14px;" class="White">');
+document.write('		Copyright &copy; 2006 Random House of Canada Limited.<br />');
+document.write('		All right reserved.');
+document.write('		<!--TODO: link-->');
+document.write('		<a href="/about/privacy.html" class="linkWhite Bold">Privacy Policy</a>&nbsp;');
+document.write('		<!--TODO: link-->');
+document.write('		<a href="/about/contact.html" class="linkWhite Bold">Contact Us</a>');
+document.write('	</div>');
+document.write('	<div style="float: right; width: 350px; margin: 0; padding: 0; border: 0; height: 96px;">');
+document.write('		<div style="white-space: nowrap; float: left; width: 350px; margin: 0; padding: 0;">');
+document.write('			<a href="http://www.booklounge.ca/"><img src="/images/header_nav_booklounge.gif" width="128" height="28" border="0" alt="" /></a><a href="http://www.bookclubs.ca/"><img src="/images/header_nav_bookclubs.gif" width="103" height="28" border="0" alt="" /></a><a href="http://www.mysterybooks.ca/"><img src="/images/header_nav_mysterybooks.gif" width="119" height="28" border="0" alt="" /></a>');
+document.write('		</div>');
+document.write('		<div style="white-space: nowrap; float: right; width: 173px; margin: 14px 0px 0px 0px; padding: 0px 0px 0px 0px;">');
+document.write('		<a href="http://www.bertelsmann.com/bertelsmann_corp/wms41/bm/index.php?language=2" TARGET="_blank"><img src="/images/bertelsmann.jpg" alt="bertelsmann" width="157" height="51" border="0" /></a>');
+document.write('		</div>');
+document.write('	</div>');

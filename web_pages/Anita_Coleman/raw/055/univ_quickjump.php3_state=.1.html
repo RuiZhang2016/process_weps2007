@@ -1,0 +1,147 @@
+<html>
+<body bgcolor='#E0E0E0'>
+
+<font size='1'>
+<form method="get" action="http://www.studentsreview.com/professors/univ_quickjump.php3" name='ULIST'>
+<!--
+
+<table align="center" border="0" width="100%" cellpadding="1" cellspacing="0">
+
+</table>
+&nbsp;
+
+
+-->
+
+<script>
+function change_window()
+{
+        var formObj = document.ULIST
+
+
+        ns4 = (document.layers)? true:false
+        ie4 = (document.all)? true:false
+
+        ns4 = ( document.layers )? true:false
+        nsa4 = ( document['divID'] )? true:false
+        ie4 = ( document.all )? true:false
+        dom = ( document.getElementById )? true:false
+
+
+        if (ns4){
+        var windowvar = top.document.layers['nscroll1']; //.src = 'http://www.studentsreview.com';
+
+        var statevar = formObj.state[formObj.state.options.selectedIndex].value
+/*
+        parent.SURVEY.document.REVIEW.UNIVERSITY.options[i]=new Option(sname[i],uid[i]);
+        parent.SURVEY.document.REVIEW.UNIVERSITY.options.length = U_count;
+*/
+        document.location = 'univ_quickjump.php3?state='+statevar
+
+                }
+        if (nsa4) {
+        var windowvar = top.document.layers['nscroll1']; // .src = 'http://www.studentsreview.com';
+        document.src = 'http://www.studentsreview.com';
+
+                }
+        if(ie4)
+                {
+                var windowvar = top.document.all.iscroll1;
+                var statevar = formObj.state[formObj.state.options.selectedIndex].value
+                top.document.all.iscroll1.src ='univ_selector.php3?state='+statevar
+                }
+
+        if(dom) {
+        var windowvar = document.getElementById('nscroll1');
+        var statevar = formObj.state[formObj.state.options.selectedIndex].value
+
+        document.location = 'univ_quickjump.php3?state='+statevar
+
+        }
+/*
+        if ((! ie4) && (! ns4))
+                {
+
+                parent.frames['SURVEY'].document.forms['REVIEW'].UNIVERSITY.options[i]=new Option(sname[i],uid[i]);
+                this.src = 'http://www.studentsreview.com';
+                }
+*/
+
+}
+</script><table border="0" cellpadding="1" cellspacing="0" width='100%'>
+<tr>
+
+<td><div align='right'><font size="2" face="verdana">
+<font color='880000'><b>Quick&nbsp;Jump<b></font>:&nbsp;<select name="state" onChange="change_window();">
+<option value=''>Select State</option>
+<OPTION VALUE="">Any State</OPTION>
+<OPTION VALUE="AK">AK </OPTION>
+<OPTION VALUE="AL">AL </OPTION>
+<OPTION VALUE="AR">AR </OPTION>
+<OPTION VALUE="AS">AS </OPTION>
+<OPTION VALUE="AZ">AZ </OPTION>
+<OPTION VALUE="CA">CA </OPTION>
+<OPTION VALUE="CO">CO </OPTION>
+<OPTION VALUE="CT">CT </OPTION>
+<OPTION VALUE="DC">DC </OPTION>
+<OPTION VALUE="DE">DE </OPTION>
+<OPTION VALUE="FL">FL </OPTION>
+<OPTION VALUE="FM">FM </OPTION>
+<OPTION VALUE="GA">GA </OPTION>
+<OPTION VALUE="GU">GU </OPTION>
+<OPTION VALUE="HI">HI </OPTION>
+<OPTION VALUE="IA">IA </OPTION>
+<OPTION VALUE="ID">ID </OPTION>
+<OPTION VALUE="IL">IL </OPTION>
+<OPTION VALUE="IN">IN </OPTION>
+<OPTION VALUE="KS">KS </OPTION>
+<OPTION VALUE="KY">KY </OPTION>
+<OPTION VALUE="LA">LA </OPTION>
+<OPTION VALUE="MA">MA </OPTION>
+<OPTION VALUE="MD">MD </OPTION>
+<OPTION VALUE="ME">ME </OPTION>
+<OPTION VALUE="MH">MH </OPTION>
+<OPTION VALUE="MI">MI </OPTION>
+<OPTION VALUE="MN">MN </OPTION>
+<OPTION VALUE="MO">MO </OPTION>
+<OPTION VALUE="MP">MP </OPTION>
+<OPTION VALUE="MS">MS </OPTION>
+<OPTION VALUE="MT">MT </OPTION>
+<OPTION VALUE="NC">NC </OPTION>
+<OPTION VALUE="ND">ND </OPTION>
+<OPTION VALUE="NE">NE </OPTION>
+<OPTION VALUE="NH">NH </OPTION>
+<OPTION VALUE="NJ">NJ </OPTION>
+<OPTION VALUE="NM">NM </OPTION>
+<OPTION VALUE="NV">NV </OPTION>
+<OPTION VALUE="NY">NY </OPTION>
+<OPTION VALUE="OH">OH </OPTION>
+<OPTION VALUE="OK">OK </OPTION>
+<OPTION VALUE="OR">OR </OPTION>
+<OPTION VALUE="PA">PA </OPTION>
+<OPTION VALUE="PR">PR </OPTION>
+<OPTION VALUE="PW">PW </OPTION>
+<OPTION VALUE="RI">RI </OPTION>
+<OPTION VALUE="SC">SC </OPTION>
+<OPTION VALUE="SD">SD </OPTION>
+<OPTION VALUE="TN">TN </OPTION>
+<OPTION VALUE="TX">TX </OPTION>
+<OPTION VALUE="UT">UT </OPTION>
+<OPTION VALUE="VA">VA </OPTION>
+<OPTION VALUE="VI">VI </OPTION>
+<OPTION VALUE="VT">VT </OPTION>
+<OPTION VALUE="WA">WA </OPTION>
+<OPTION VALUE="WI">WI </OPTION>
+<OPTION VALUE="WV">WV </OPTION>
+<OPTION VALUE="WY">WY </OPTION>
+<OPTION VALUE="Canada">Canada </OPTION>
+</select>&nbsp;<font size="2" face="verdana">Select&nbsp;school:<select name="LAYER_UNIVERSITY" >
+<option value='4844' >Westwood College</option>
+</select></div></td>
+</tr>
+</form>
+</table>
+</font>
+<!-- </div> -->
+</body>
+</html>

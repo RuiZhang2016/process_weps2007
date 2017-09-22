@@ -1,0 +1,70 @@
+// Create image objects, preload all active and inactive images.
+ starBlue = new Image(); starBlue.src = "/images/ratings/star_blue.gif";
+ starGrey = new Image(); starBlue.src = "/images/ratings/star_grey.gif";
+var stars = new Array("/images/ratings/star_grey.gif",
+"/images/ratings/star_blue.gif");
+function preloadImages(){
+	for (i=0; i < preloadImages.length ;i++){
+		allImages[i] = new Image();
+		allImages[i].src = preloadImages.arguments[i];
+	}
+}
+preloadImages( stars);
+
+var starsTxt = new Array( "No Rating",
+			  "I Hate It",
+			  "I Don't Like It",
+			  "It's OK",
+			  "I Like It",
+			  "I Love It");
+
+var userRatings = new Array();
+function setUserRating( emId, rating) {
+    userRatings[ emId] = rating;
+}
+
+function starMouseOver( emId, rating)
+{
+	var i = 1;
+	for( i=1; i<6; i++) 
+	{
+	    if (i <= rating) {
+		document.images[ "rating.img."+emId+"."+i].src = stars[ 1];
+	    }
+	    else {
+		document.images[ "rating.img."+emId+"."+i].src = stars[ 0];
+	    }
+	}
+	document.getElementById( "rating.txt."+emId).innerHTML = starsTxt[ rating];
+}
+function starMouseOut( emId)
+{
+	var i = 1;
+	for( i=1; i<6; i++) 
+	{
+	    if (i <= userRatings[ emId]) {
+		document.images[ "rating.img."+emId+"."+i].src = stars[ 1];
+	    }
+	    else {
+		document.images[ "rating.img."+emId+"."+i].src = stars[ 0];
+	    }
+	}
+	document.getElementById( "rating.txt."+emId).innerHTML = starsTxt[ userRatings[ emId]];
+}
+function _sendRating( emID, rating, domain)
+{
+    var submitURL = "/setRating.html?id="+emID+"&domain="+domain+"&rating="+rating;
+    window.location.href = submitURL;
+}
+function sendRating( emID, rating, domain)
+{
+  ratingInput = document.getElementById( "ratingForm."+emID+".rating");
+  ratingInput.value = rating;
+  form = document.getElementById( "ratingForm."+emID);
+  form.submit();
+}
+function starMouseClick( emId, rating, domain)
+{
+    userRatings[ emId] = rating;
+    sendRating( emId, rating, domain);
+}

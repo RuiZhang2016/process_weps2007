@@ -1,0 +1,86 @@
+/**CSS document**/
+
+/**Basic HTML**/
+body { font-family:verdana, arial, helvetica, sans-serif; color:#151515; }
+p { font-size:12px; line-height: 20px; margin:0 0 10px 0; text-align:left; }
+	p span.small,p.small {font-size:11px; font-weight:normal; color:#555555; }
+	p span.italsmlCopy,p.italsmlCopy {font-size:11px; font-style:italic; }
+	p.italsmlCopyright {font-size:11px; font-style:italic; text-align:right; }
+b, strong { }
+h1 { font-size:13px; color: #333333; line-height: 16px; margin:0 0 10px 0; text-align:left; }
+	h1 a {  text-decoration:none; }
+	h1 span.small {font-size:11px; font-weight:normal; color:#666666; }
+	h1 span.small a { text-decoration:underline; }
+	h1 span.subhead { font-size:11px; }
+h2 { font-size:12px; color: #660033; line-height: 16px; margin:15px 0 10px 0; text-align:left; }
+	h2 span.small {font-size:11px; font-weight:normal; color:#666666; }
+h3 { font-size:12px; color:#660033; line-height:16px; margin:15px 0 10px 0; text-align:left; }
+ul { margin:0; padding:0 0 0 30px;  }
+ol { margin:0; padding:0 0 0 32px; }
+li { font-size:12px; line-height:15px; margin:0 0 10px 0; color:#151515; text-align:left;}
+a:link { color:#660033; }
+a:visited { color:#333300; }
+a:active { color:#660033;}
+a:hover { color:#660033; }
+blockquote { padding:0; margin:0 0 0 15px; }
+form { margin:0; padding:0; }
+input,textarea,select { padding:0; margin:1px 3px 12px 0; }
+label { font-size:10px; font-weight:bold; color:#444400; vertical-align:top; margin:0 0 3px 0; }
+	label span.small { font-weight:normal; color:#666666; }
+
+/****ORIGINAL CLASSES****/
+.sfnmtext { font-size: 11px; font-style: normal; font-weight: normal; text-indent: 0; vertical-align: baseline; text-align: left; line-height: 15px; font-variant: normal; text-transform: none; }
+.centered { font-size: 11px; color: #333333; text-decoration: none; text-align: center; line-height: 12px; }
+.italtext { font-size: 11px; font-style: italic; line-height: 15px; font-weight: normal; font-variant: normal; color: #000000; text-decoration: none; }
+/**.italsmlCopy { font-size: 11px; font-style: italic; line-height: 10px; font-weight: normal; font-variant: normal; color: #000000; text-decoration: none; }**/
+.sfnmsmallCopy { font-size: 10px; font-style: normal; font-weight: normal; color: #000000; text-decoration: none; line-height: 10px; font-variant: normal; text-decoration: none; border-color: #333333; border: 1px; }
+.sfnmtable {  font-size: 11px; font-style: normal; font-weight: normal; color: #000000; text-decoration: none; text-indent: 0pt; vertical-align: baseline; text-align: left; line-height: 9px; font-variant: normal; }
+
+/***NEW CLASSES and STYLES****/
+#skipnav { display:none; }
+#container1 { margin-top:12px;}
+#container1 td { vertical-align:top; }
+#main { padding:5px 25px 15px 30px; }
+#leftpix { padding-top:10px; }
+.cd_details { font-size:11px; line-height:13px; padding-top:3px; border-top:1px solid #999999; }
+/**navbar***/
+table.navbar { margin:12px 0 60px 0; }
+ul.udm { margin:0; padding:0; }
+ul.udm li.green a:link, ul.udm li.green a:visited { color:#444400; }
+ul.udm li.green a:hover, ul.udm li.green a:active { color:#000000; }
+ul.udm li.green ul li a:link, ul.udm li.green ul li a:visited { color:#444400; }
+ul.udm li.green ul li a:hover, ul.udm li.green ul li a:active { color:#000000; }
+/***NOTE: all other navbar style settings are in udm-resources/udm-custom***/
+
+/****rotating quotes*****/
+#CaptionBox { margin:15px 60px 5px 0; padding:9px; height:45px; }
+#CaptionBox p { font-family:Times, Times New Roman, Georgia, sans-serif; font-style:italic; font-size:13px; line-height:18px; margin:0 0 0 30px; color:#333300; padding:0; }
+#CaptionBox p.author { font-family:Times, Times New Roman, Georgia, sans-serif; font-style:normal; font-size:11px; line-height:16px; margin:0 48px 0 0; padding:0; text-align:right; }
+
+/***displaytable***/
+table.display { margin:9px 0 15px 0; border-bottom:1px solid #D4D4B4; }
+table.display th { vertical-align:top; text-align:left; padding:1px 1px 1px 4px; background:#660033/*#61614F*/; color:#ffffff; font-size:10px; }
+table.display td { vertical-align:top; text-align:left; padding:4px; font-size:12px; }
+table.display tr.even td { background-color:#D4D4B4; }
+table.display td.title { padding:4px 0 4px 0; font-size:11px; }
+
+
+/***newsletter**/
+#newsletter { margin:32px 28px 0 0; text-align:center;}
+#newsletter form { margin:0; padding:0 0 18px 0; }
+#newsletter p { margin:0 32px 0 0; padding:0; font-family:Georgia, Times, serif; font-weight:bold; font-size:15px; color:#006699; line-height:16px; text-align:center; }
+
+/***JK**/
+#mainJK { padding:5px 25px 15px 30px; }
+#mainJK p { font-family:Georgia, Times, Times New Roman, serif; }
+#mainJK p.small,#mainJK p span.small { font-family:Verdana, Arial, sans-serif; }
+#mainJK h3  { font-family:Georgia, Times, Times New Roman, serif; margin:0 0 10px 0; }
+#mainJK p.biggreen,#mainJK p span.biggreen {font-size: 13px; font-weight: bold; color: #003300; }
+
+
+/***footer****/
+#footer { margin:32px 12px 0 0; padding-top:3px; border-top:1px solid #660033; font-family:Verdana, Arial, sans-serif; }
+#footer p { font-size:11px; font-family:Verdana, Arial, sans-serif; }
+#footer b, #footer strong { font-size:10px; color:#555555; font-family:Verdana, Arial, sans-serif; }
+#footer p span.small, #footer p.small { font-size:10px; color:#222222; font-family:Verdana, Arial, sans-serif; }
+#footer a { text-decoration:none; font-family:Verdana, Arial, sans-serif; }

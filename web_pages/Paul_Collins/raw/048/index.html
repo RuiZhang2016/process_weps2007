@@ -1,0 +1,567 @@
+
+<html>
+<head>
+<title> Paul Collins Band : iSOUND.COM&#8482;</title>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<link href="styles.css" rel="stylesheet" type="text/css">
+
+<LINK REL="SHORTCUT ICON" HREF="favicon.ico">
+
+<script language="JavaScript" type="text/JavaScript">
+<!--
+function MM_swapImgRestore() { //v3.0
+  var i,x,a=document.MM_sr; for(i=0;a&&i<a.length&&(x=a[i])&&x.oSrc;i++) x.src=x.oSrc;
+}
+
+function MM_preloadImages() { //v3.0
+  var d=document; if(d.images){ if(!d.MM_p) d.MM_p=new Array();
+    var i,j=d.MM_p.length,a=MM_preloadImages.arguments; for(i=0; i<a.length; i++)
+    if (a[i].indexOf("#")!=0){ d.MM_p[j]=new Image; d.MM_p[j++].src=a[i];}}
+}
+
+function MM_findObj(n, d) { //v4.01
+  var p,i,x;  if(!d) d=document; if((p=n.indexOf("?"))>0&&parent.frames.length) {
+    d=parent.frames[n.substring(p+1)].document; n=n.substring(0,p);}
+  if(!(x=d[n])&&d.all) x=d.all[n]; for (i=0;!x&&i<d.forms.length;i++) x=d.forms[i][n];
+  for(i=0;!x&&d.layers&&i<d.layers.length;i++) x=MM_findObj(n,d.layers[i].document);
+  if(!x && d.getElementById) x=d.getElementById(n); return x;
+}
+
+function MM_swapImage() { //v3.0
+  var i,j=0,x,a=MM_swapImage.arguments; document.MM_sr=new Array; for(i=0;i<(a.length-2);i+=3)
+   if ((x=MM_findObj(a[i]))!=null){document.MM_sr[j++]=x; if(!x.oSrc) x.oSrc=x.src; x.src=a[i+2];}
+}
+
+    var submitted = false;
+    function disableSubmit(){
+      if(submitted){
+        alert("Your request has already been submitted.");
+        return false;
+      }
+      submitted = true;
+      document.RBSearchForm.sub.disabled = true;
+      return true;
+    }
+
+function player_pop(url) {newwindow=window.open(url,"addsite",'toolbar=0,location=0,directories=0,status=0,menubar=0,scrollbars=0,resizable=0,width=416,height=216');}	
+
+function player_pop2(url) {newwindow=window.open(url,"addsite",'toolbar=0,location=0,directories=0,status=0,menubar=0,scrollbars=0,resizable=0,width=416,height=216');}	
+
+function pop_up(URL,WIDTH,HEIGHT) { eval("newwindow = window.open(URL, 'popup', 'toolbar=0,scrollbars=1,location=0,statusbar=0,menubar=0,resizable=0,width= " + WIDTH + ",height= " + HEIGHT + "');");}
+
+
+function goThere(genre) {
+	var list = genre;
+	location = list.options[list.selectedIndex].value;
+}
+
+function showChart(p_id) {
+	var chart_array = new Array('home', 'mp3s', 'photos', 'bio');	// comma-separated names of the div IDs you want to be affected.
+	
+	for (i = 0; i < chart_array.length; i++) {
+		var my_div = document.getElementById('chart_' + chart_array[i]);
+		var my_btn = document.getElementById('btn_' + chart_array[i]);
+		
+		if (p_id == chart_array[i]) {
+			my_div.style.display = 'inline';
+			my_btn.src = '/img/btn-' + chart_array[i] + 'On.gif';
+
+			if (chart_array[i] == 'photos') {
+
+    				var html = "<table width=100% border=0 cellspacing=2 cellpadding=0><tr><td align=center valign=middle><a href=\"/paul_collins_band/photos/59759\"><img class=\"borderAlbum\" src=\"http://files.isound.com/pics3/59000/59759sm.jpg\" border=0></a><br><span class=\"textSmall\">Paul Collins Band Promo Photo</span></td><td align=center valign=middle><a href=\"/paul_collins_band/photos/59765\"><img class=\"borderAlbum\" src=\"http://files.isound.com/pics3/59000/59765sm.jpg\" border=0></a><br><span class=\"textSmall\">Paul Collins publicity photo</span></td><td align=center valign=middle><a href=\"/paul_collins_band/photos/59766\"><img class=\"borderAlbum\" src=\"http://files.isound.com/pics3/59000/59766sm.jpg\" border=0></a><br><span class=\"textSmall\">Paul Collins Band Live At The Cavern Club Liverpool, England</span></td><td align=center valign=middle><a href=\"/paul_collins_band/photos/59761\"><img class=\"borderAlbum\" src=\"http://files.isound.com/pics3/59000/59761sm.jpg\" border=0></a><br><span class=\"textSmall\">Paul Collins Band acoustic</span></td><tr><td align=center valign=middle><a href=\"/paul_collins_band/photos/59764\"><img class=\"borderAlbum\" src=\"http://files.isound.com/pics3/59000/59764sm.jpg\" border=0></a><br><span class=\"textSmall\">Paul Collins Band From Town To Town Poster</span></td></table>";    
+    document.getElementById('photo_display').innerHTML = html;
+
+			} else if (chart_array[i] == 'friends') {
+
+    				var friendsVar = "";    
+    document.getElementById('friend_display').innerHTML = friendsVar;
+
+			}
+
+
+		} else {			my_div.style.display = 'none';
+			my_btn.src = '/img/btn-' + chart_array[i] + 'Off.gif';
+		}
+	}
+}
+//-->
+</script>
+
+
+
+
+</head>
+
+<body bgcolor="#394A63" topmargin="0" leftmargin="0" marginheight="0" marginwidth="0">
+<table bgcolor="#FFFFFF" width="725" height="100%" cellpadding="0" cellspacing="0" border="0" align="center">
+<!-- AD SPACE -->
+<tr>
+		<td bgcolor="#394A63" width="725" height="80" align="center"><!-- ValueClick Media 468x60 Banner v1.4 for isound.com -->
+<script language="Javascript"><!--
+var i=j=p=t=u=x=z=dc='';var id=f=0;var f=Math.floor(Math.random()*7777);
+id=12631; dc=document;u='ht'+'tp://media.fastclick.net/w'; x='/get.media?t=n';
+z=' width=468 height=60 border=0 ';t=z+'marginheight=0 marginwidth=';
+i=u+x+'&sid='+id+'&m=1&tp=1&f=b&v=1.4&c='+f+'&r='+escape(dc.referrer);
+u='<a  hr'+'ef="'+u+'/click.here?sid='+id+'&m=1&c='+f+'"  target="_blank">';
+dc.writeln('<ifr'+'ame src="'+i+'&d=f"'+t+'0 hspace=0 vspace=0 frameborder=0 scrolling=no>');
+if(navigator.appName.indexOf('Mic')<=0){dc.writeln(u+'<img src="'+i+'&d=n"'+z+'></a>');}
+dc.writeln('</iframe>'); // --></script><noscript>
+<a href="http://media.fastclick.net/w/click.here?sid=12631&m=1&c=1"  target="_blank">
+<img src="http://media.fastclick.net/w/get.media?sid=12631&m=1&tp=1&d=s&c=1&f=b&v=1.4"
+width=468 height=60 border=1></a></noscript>
+<!-- ValueClick Media 468x60 Banner v1.4 for isound.com -->
+<div id="beacon_2" style="position: absolute; left: 0px; top: 0px; visibility: hidden;"><img src='adlog.php%3Fbannerid=2&amp;clientid=4&amp;zoneid=1&amp;source=&amp;block=0&amp;capping=0&amp;cb=fb0113b720f95ac3167e2dc9f2379141' width='0' height='0' alt='' style='width: 0px; height: 0px;'></div></td>
+	</tr><!-- END AD SPACE -->
+	<tr>
+		<td background="header_bg.jpg" width="725" height="92" valign="middle">
+			<table width="725" height="68" cellpadding="0" cellspacing="0" border="0">
+				<tr>
+					<td width="12"><img src="spacer.gif" width="12" height="1"></td>
+					<td width="156"><a href="http://www.isound.com"><img border=0 src="header_logo.gif" width="156" height="68"></a></td>
+					<td width="21"><img src="header_line.gif" width="21" height="68"></td>
+					<td width="34"><img src="header_search.gif" width="34" height="68"></td>
+				  <td width="270" valign="bottom">
+				  	<div class="form">
+				  		<form name="search" action="http://www.isound.com/find.php" method=get>
+				  			<select size="1" name="t" style="width: 65px; height: 15px; font-size:9px; font-family:verdana;">
+									<option value="">Artists</option>
+									<option value="a">Albums</option>
+									<option value="s">Songs</option>
+              	</select><br>
+								<input name="fi" type="text" style="width: 270px; height: 17px; border: solid 1px #333333; font-size:9px; font-family:verdana;">
+								<img src="search_line.gif" width="270" height="4"><br><a href="http://www.isound.com/artists/1/"><img src="searchNum.gif" alt="#" width="7" height="11" border="0"></a><a href="http://www.isound.com/artists/a/"><img src="searchA.gif" alt="A" width="9" height="11" border="0"></a><a href="http://www.isound.com/artists/b/"><img src="searchB.gif" alt="B" width="9" height="11" border="0"></a><a href="http://www.isound.com/artists/c/"><img src="searchC.gif" alt="C" width="8" height="11" border="0"></a><a href="http://www.isound.com/artists/d/"><img src="searchD.gif" alt="D" width="9" height="11" border="0"></a><a href="http://www.isound.com/artists/e/"><img src="searchE.gif" alt="E" width="8" height="11" border="0"></a><a href="http://www.isound.com/artists/f/"><img src="searchF.gif" alt="F" width="8" height="11" border="0"></a><a href="http://www.isound.com/artists/g/"><img src="searchG.gif" alt="G" width="9" height="11" border="0"></a><a href="http://www.isound.com/artists/h/"><img src="searchH.gif" alt="H" width="9" height="11" border="0"></a><a href="http://www.isound.com/artists/i/"><img src="searchI.gif" alt="I" width="8" height="11" border="0"></a><a href="http://www.isound.com/artists/j/"><img src="searchJ.gif" alt="J" width="9" height="11" border="0"></a><a href="http://www.isound.com/artists/k/"><img src="searchK.gif" alt="K" width="9" height="11" border="0"></a><a href="http://www.isound.com/artists/l/"><img src="searchL.gif" alt="L" width="8" height="11" border="0"></a><a href="http://www.isound.com/artists/m/"><img src="searchM.gif" alt="M" width="10" height="11" border="0"></a><a href="http://www.isound.com/artists/n/"><img src="searchN.gif" alt="N" width="9" height="11" border="0"></a><a href="http://www.isound.com/artists/o/"><img src="searchO.gif" alt="O" width="9" height="11" border="0"></a><a href="http://www.isound.com/artists/p/"><img src="searchP.gif" alt="P" width="9" height="11" border="0"></a><a href="http://www.isound.com/artists/q/"><img src="searchQ.gif" alt="Q" width="9" height="11" border="0"></a><a href="http://www.isound.com/artists/r/"><img src="searchR.gif" alt="R" width="9" height="11" border="0"></a><a href="http://www.isound.com/artists/s/"><img src="searchS.gif" alt="S" width="9" height="11" border="0"></a><a href="http://www.isound.com/artists/t/"><img src="searchT.gif" alt="T" width="8" height="11" border="0"></a><a href="http://www.isound.com/artists/u/"><img src="searchU.gif" alt="U" width="9" height="11" border="0"></a><a href="http://www.isound.com/artists/v/"><img src="searchV.gif" alt="V" width="9" height="11" border="0"></a><a href="http://www.isound.com/artists/w/"><img src="searchW.gif" alt="W" width="10" height="11" border="0"></a><a href="http://www.isound.com/artists/x/"><img src="searchX.gif" alt="X" width="9" height="11" border="0"></a><a href="http://www.isound.com/artists/y/"><img src="searchY.gif" alt="Y" width="9" height="11" border="0"></a><a href="http://www.isound.com/artists/z/"><img src="searchZ.gif" alt="Z" width="12" height="11" border="0"></a><input type=image src="btn-go.gif" width="30" height="11" alt="search" name="I1"></form></div>
+					</td>
+					<td width="41"><img src="header_line02.gif" width="41" height="68"></td>
+					<td width="179" align="right" valign="bottom">
+
+
+<div class="form"><FORM ACTION="http://www.isound.com/signin.php" METHOD=post><img src="header_email.gif" width="50" height="17"><input name="email" type="text" value="" size="11" style="width: 120px; height: 17px; border: solid 1px #333333; font-size:9px; font-family:verdana;"><br>
+					<img src="header_password.gif"><input name="password" type="password" size="14" style="width: 120px; height: 17px; border: solid 1px #333333; font-size:9px; font-family:verdana;"><br>
+					<img src="header_login.gif"><select size="1" name="type" style="width: 54px; height: 15px; font-size:9px; font-family:verdana;">
+              		<option value="l">Listener</option>
+              		<option value="a">Artist</option>
+              		</select><input name="autologin" type="checkbox" checked value="y"><img src="header_autologin.gif" width="47" height="15"><br>
+					<img src="header_signinline.gif" width="121" height="4"><br>
+				  	<input type=image src="btn-signin.gif" width="52" height="11" alt="sign in"></form></div></td>
+					<td width="12"><img src="spacer.gif" width="12" height="1"></td>
+				</tr>
+			</table>
+		</td>
+	</tr>
+	<tr>
+		<td width="725" height="25">
+			<table width="725" height="25" cellpadding="0" cellspacing="0" border="0">
+				<tr>
+					<td width="11"><img src="spacer.gif" width="11" height="1"></td>
+					<td width="703" align="center" valign="middle" background="nav_bg.jpg"><a href="http://www.isound.com" onMouseOut="MM_swapImgRestore()" onMouseOver="MM_swapImage('home','','/img/b-homeOver.gif',1)"><img src="b-home.gif" alt="Home" name="home" width="48" height="25" vspace="0" border="0"></a><img src="b-space.gif" width="20" height="25"><a href="http://www.isound.com/artists" onMouseOut="MM_swapImgRestore()" onMouseOver="MM_swapImage('artists','','/img/b-artistsOver.gif',1)"><img src="b-artists.gif" alt="Artists" name="artists" width="60" height="25" vspace="0" border="0"></a><img src="b-space.gif" width="20" height="25"><a href="http://www.isound.com/listeners" onMouseOut="MM_swapImgRestore()" onMouseOver="MM_swapImage('community','','/img/b-communityOver.gif',1)"><img src="b-community.gif" alt="Community" name="community" width="74" height="25" vspace="0" border="0"></a><img src="b-space.gif" width="20" height="25"><a href="http://www.isound.com/mp3" onMouseOut="MM_swapImgRestore()" onMouseOver="MM_swapImage('mp3s','','/img/b-mp3sOver.gif',1)"><img src="b-mp3s.gif" alt="mp3s" name="mp3s" width="51" height="25" vspace="0" border="0"></a><img src="b-space.gif" width="20" height="25"><a href="http://www.isound.com/music_videos" onMouseOut="MM_swapImgRestore()" onMouseOver="MM_swapImage('videos','','/img/b-videosOver.gif',1)"><img src="b-videos.gif" alt="Videos" name="videos" width="56" height="25" vspace="0" border="0"></a><img src="b-space.gif" width="20" height="25"><a href="http://www.isound.com/shows" onMouseOut="MM_swapImgRestore()" onMouseOver="MM_swapImage('shows','','/img/b-showsOver.gif',1)"><img src="b-shows.gif" alt="Shows" name="shows" width="56" height="25" vspace="0" border="0"></a><img src="b-space.gif" width="20" height="25"><a href="http://www.isound.com/stations" onMouseOut="MM_swapImgRestore()" onMouseOver="MM_swapImage('stations','','/img/b-stationsOver.gif',1)"><img src="b-stations.gif" alt="Stations" name="stations" width="65" height="25" vspace="0" border="0"></a><img src="b-space.gif" width="20" height="25"><a href="http://www.isound.com/labels" onMouseOut="MM_swapImgRestore()" onMouseOver="MM_swapImage('labels','','/img/b-labelsOver.gif',1)"><img src="b-labels.gif" alt="Labels" name="labels" width="59" height="25" vspace="0" border="0"></a><img src="b-space.gif" width="20" height="25"><a href="http://www.isound.com/sign_up/" onMouseOut="MM_swapImgRestore()" onMouseOver="MM_swapImage('signup','','/img/b-signupOver.gif',1)"><img src="b-signup.gif" alt="Sign Up" name="signup" width="54" height="25" vspace="0" border="0"></a></td>
+					<td width="11"><img src="spacer.gif" width="11" height="1"></td>
+				</tr>
+			</table>
+		</td>
+	</tr>
+	<tr>
+		<td valign="top" height="41">
+			<table width="725" cellpadding="0" cellspacing="0" border="0">
+				<tr>
+					<td width="11"><img src="spacer.gif" width="11" height="1"></td>
+					<td width="703" align="center" valign="middle">
+						<table width="703" height="41" cellpadding="0" cellspacing="0" border="0" class="textSmall">
+							<tr>
+								<td width="703" height="5" colspan="5"><img src="spacer.gif" width="1" height="5"></td>
+							</tr>
+							<tr>
+							  	<td background="middle_bg_left.gif" width="141" height="31" align="right" valign="middle"><div class="form"><FORM METHOD=post ACTION="http://www.isound.com/goto.php" NAME="genres">
+								<select name="url" style="background-color:ffffff; font-size:9px; font-family:verdana; color:556677;" onChange="goThere(this)">
+								<OPTION VALUE="/section/genres/" SELECTED>Genres</option>
+								<OPTION VALUE="/section/genres/"></option>
+								<OPTION VALUE="/genre/alternative/">+Alternative</option>
+								<OPTION VALUE="/genre/indie/">+Indie/Punk</option>
+								<OPTION VALUE="/genre/metal/">+Hard/Metal</option>
+								<OPTION VALUE="/genre/classic_rock/">+Classic Rock</option>
+								<OPTION VALUE="/genre/pop_rock/">+Pop-Rock</option>
+								<OPTION VALUE="/genre/r_and_b/">+R&B/Oldies</option>
+								<OPTION VALUE="/genre/other_rock/">+Other Rock</option>
+								<OPTION VALUE="/section/genres/"></option>
+								<OPTION VALUE="/genre/hip_hop/">+Rap/Hip Hop</option>
+								<OPTION VALUE="/genre/modern_rb/">+Modern R&B</option>
+								<OPTION VALUE="/section/genres/"></option>
+								<OPTION VALUE="/genre/electronic/">+Electronic</option>
+								<OPTION VALUE="/genre/dance/">+Dance</option>
+								<OPTION VALUE="/section/genres/"></option>
+								<OPTION VALUE="/genre/blues_location/">+Blues Location</option>
+								<OPTION VALUE="/genre/blues_style/">+Blues Style</option>
+								<OPTION VALUE="/section/genres/"></option>
+								<OPTION VALUE="/genre/trad_jazz/">+Traditional Jazz</option>
+								<OPTION VALUE="/genre/non_trad_jazz/">+Non-Trad Jazz</option>
+								<OPTION VALUE="/section/genres/"></option>
+								<OPTION VALUE="/genre/trad_country/">+Trad. Country</option>
+								<OPTION VALUE="/genre/modern_country/">+Modern Country</option>
+								<OPTION VALUE="/section/genres/"></option>
+								<OPTION VALUE="/genre/world/">+World/Misc...</option>
+								</SELECT>
+								<INPUT align="absmiddle" border=0 name="go2" type=image src="btn-genresgo.gif" value="Go" width="13" height="18"></FORM></div></td>
+			<td background="bg-download.gif" width="40" height="18" align="center" valign="middle"><img src="middle_line.gif" align="absmiddle"></td>
+
+
+<td background="bg-download.gif" width="285" height="31">
+<!-- MP3 PLAYER -->
+<img border="0" src="spr.gif" width="1" height="10"><a href="http://www.isound.com/daily_download"><img align="absmiddle" border=0 src="middle_download.gif"></a> <a href="http://www.isound.com/download.php?id=22326"><img alt="Download Mp3" align="absmiddle" border=0 src="dailydownload2.gif"></a> <img src="middle_iconDot.gif" align="absmiddle"> <a href="javascript:player_pop('/mp3player/play.php?type=song&id=22326',410,425)" onmouseover="window.status='/play';return true;" onmouseout="window.status=' ';return true;"><img border=0 src="middle_iconPlay.gif" alt="Stream Mp3" align="absmiddle"></a> <img src="middle_iconDot.gif" align="absmiddle"> <a href="javascript:player_pop('/mp3player/play.php?type=song&id=22326',410,425)" onmouseover="window.status='/play';return true;" onmouseout="window.status=' ';return true;"><span class="textDownload">Finally Mine</span></a> by <a href="http://www.isound.com/nycsmoke"><span class="textDownload">NYCSmoke</span></a>
+<!-- END MP3 PLAYER --></td>
+
+<td background="bg-download.gif" width="40" height="18"><img src="middle_line.gif" align="absmiddle"></td><td background="middle_bg_right.gif" width="125" height="31" align="left" valign="middle"><img src="middle_onlinenow.gif" align="absmiddle"><br><span class="textDownload">1,493 Visitors | <a href="http://www.isound.com/useronline/display.php"><span class="textDownload">74 Listeners</span></td>
+							</tr>
+							<tr>
+								<td width="703" height="5" colspan="5"><img src="spacer.gif" width="1" height="5"></td>
+							</tr>
+						</table>
+					</td>
+					<td width="11"><img src="spacer.gif" width="11" height="1"></td>
+				</tr>
+			</table>
+		</td>
+	</tr>
+	<tr>
+		<td width="725" height="87">
+			<table width="725" cellpadding="0" cellspacing="0" border="0">
+				<tr>
+					<td width="11"><img src="spacer.gif" width="11" height="1"></td>
+					<td width="703">
+						<table width="703" height="87" cellpadding="0" cellspacing="0" border="0">
+							<tr>
+								<td width="703" height="11" bgcolor="#31373C" colspan="2"><img src="band_headerTop.gif"></td>
+							</tr>
+							<tr>
+								<td bgcolor="#31373C" width="603" height="71" valign="middle" class="header"><span class="textName">Paul Collins Band</span><br>
+								<span class="textDescription"><a href="http://www.isound.com/style/punk_pop"><span class="textDescription">Punk-Pop</span></a> <span class="textDescription">from Los Angeles, CA [US]</span></span></td>
+								<td bgcolor="#31373C" width="100" height="71" align="center" valign="middle"><img src="spacer.gif" width="5" height="1"></td>
+							</tr>
+							<tr>
+								<td width="703" height="5" colspan="2"><img src="spacer.gif" width="1" height="5"></td>
+							</tr>
+						</table>
+					</td>
+					<td width="11"><img src="spacer.gif" width="11" height="1"></td>
+				</tr>
+			</table>
+		</td>
+	</tr>
+	<tr>
+		<td width="725" valign="top">
+			<table width="725" cellpadding="0" cellspacing="0" border="0">
+				<tr>
+					<td width="11"><img src="spacer.gif" width="11" height="1"></td>
+					<td width="703">
+						<table width="703" cellpadding="0" cellspacing="0" border="0">
+							<tr>
+								<td width="256" valign="top">
+									<table width="256" height="240" cellpadding="0" cellspacing="0" border="0">
+										<tr>
+											<td class="borderTop" colspan="3"></td>
+										</tr>
+										<tr>
+											<td class="borderLeft"></td>
+											<td class="boxContent" valign="top">
+												<table width="230" cellpadding="0" cellspacing="0" border="0" class="textSmall">
+													<tr>
+														<td bgcolor="#E1E1E1"><img src="http://files.isound.com/pics/p/a/paul_collins_band-59764.jpg"></td>
+													</tr>
+													<tr>
+													<td class="infoBox">
+<a href="http://www.isound.com/listener.php?l=messageuser&amp;contactid=690225&amp;a=paul_collins_band" class="small"><img src="icon_contactartist.gif" border="0"> Contact Artist</a><br>														<a href="http://www.isound.com/listener.php?l=music&amp;a=690225" class="small"><img src="icon_addtoprofile.gif" border="0"> Add to Profile</a>   
+<a href="http://www.isound.com/listener.php?l=addfriend&amp;a=690225&amp;b=2" class="small"><img border=0 width="15" height="15" src="icon_addtoprofile.gif"> Add to friends</a><br></td>
+													</tr>
+												</table>
+											</td>
+											<td class="borderRight"></td>
+										</tr>
+										<tr>
+											<td class="borderBottom" colspan="3"></td>
+										</tr>
+									</table>
+									<table width="256" height="10" cellpadding="0" cellspacing="0" border="0">
+										<tr>
+											<td><img src="spacer.gif" width="1" height="10"></td>
+										</tr>
+									</table>
+								</td>
+								<td width="10"><img src="spacer.gif" width="10" height="1"></td>
+								<td width="437" valign="top">
+
+									<table width="437" height="240" cellpadding="0" cellspacing="0" border="0" class="textSmall">
+										<tr>
+											<td class="borderTop" colspan="3"></td>
+										</tr>
+										<tr>
+											<td class="borderLeft"></td>
+											<td class="boxContent" valign="top" align=center><!-- START PLAYER CODE -->
+<script type="text/javascript">
+<!--
+function setPlayerURL(auto)
+{
+	if (auto)
+	{
+		player_embed.value = '<embed src="http://www.isound.com/mp3player/Mp3App.swf?id=playerxml/690000/690225.pla&noPop=y&startPlayingOnload=y" type="application/x-shockwave-flash" wmode="transparent" width="415" height="220"></embed><br>Powered by <a href="http://www.isound.com">iSOUND.COM</a><br>';
+	}
+	else
+	{	
+		player_embed.value = '<embed src="http://www.isound.com/mp3player/Mp3App.swf?id=playerxml/690000/690225.pla&noPop=y" type="application/x-shockwave-flash" wmode="transparent" width="415" height="220"></embed><br>Powered by <a href="http://www.isound.com">iSOUND.COM</a><br>';
+	}
+}
+
+
+//-->
+</script>
+
+
+<object classid="clsid:d27cdb6e-ae6d-11cf-96b8-444553540000" codebase="http://fpdownload.macromedia.com/pub/shockwave/cabs/flash/swflash.cab#version=7,0,0,0" width="415" height="220" id="Mp3App" align="middle">
+<param name="allowScriptAccess" value="sameDomain" />
+<param name="movie" value="/mp3player/Mp3App.swf?id=playerxm1/690000/690225.pla&noPop=n&startPlayingOnload=y" /><param name="quality" value="high" /><param name="bgcolor" value="#ffffff" /><embed src="Mp3App.swf%3Fid=playerxm1%252F690000%252F690225.pla&amp;noPop=n&amp;startPlayingOnload=y" quality="high" bgcolor="#ffffff" width="415" height="220" name="Mp3App" align="middle" allowScriptAccess="sameDomain" type="application/x-shockwave-flash" pluginspage="http://www.macromedia.com/go/getflashplayer" />
+</object>
+
+<!-- START PLAYER CODE -->
+<!--
+<object classid="clsid:d27cdb6e-ae6d-11cf-96b8-444553540000" codebase="http://fpdownload.macromedia.com/pub/shockwave/cabs/flash/swflash.cab#version=7,0,0,0" width="415" height="220" id="Mp3App" align="middle">
+<param name="allowScriptAccess" value="sameDomain" />
+<param name="movie" value="/play/Mp3App.swf?id=/play/playerxm1/690000/690225.xml&noPop=n&startPlayingOnload=n" /><param name="quality" value="high" /><param name="bgcolor" value="#ffffff" /><embed src="/play/Mp3App.swf?id=/play/playerxm1/690000/690225.xml&noPop=n&startPlayingOnload=n" quality="high" bgcolor="#ffffff" width="415" height="220" name="Mp3App" align="middle" allowScriptAccess="sameDomain" type="application/x-shockwave-flash" pluginspage="http://www.macromedia.com/go/getflashplayer" />
+</object>
+
+<object classid="clsid:d27cdb6e-ae6d-11cf-96b8-444553540000" codebase="http://fpdownload.macromedia.com/pub/shockwave/cabs/flash/swflash.cab#version=6,0,47,0" width="415" height="220" align="center" >
+<param name="allowScriptAccess" value="always" />
+<param name="movie" value="/player/new/player5New.swf?id=/playerxm1/690000/690225.xml&defaultImage=http://files.isound.com/pics_sm/p/a/paul_collins_band.jpg&noPop=n&startPlayingOnload=no" />
+<param name="loop" value="false" />
+<param name="menu" value="false" />
+<param name="quality" value="high" />
+<param name="scale" value="noscale" />
+<param name="salign" value="lt" />
+<param name="bgcolor" value="#000000" />
+<param name="wmode" value="transparent" />
+<embed src="/player/new/player5New.swf?id=/playerxm1/690000/690225.xml&defaultImage=http://files.isound.com/pics_sm/p/a/paul_collins_band.jpg&noPop=n&startPlayingOnload=no" loop="false" allowScriptAccess="always" menu="false" quality="high" wmode="transparent" width="415" height="220" scale="noscale" salign="lt" align="center" bgcolor="#000000"  type="application/x-shockwave-flash" pluginspage="http://www.macromedia.com/go/getflashplayer"  swLiveConnect="true" />
+</object>
+
+-->
+<script type="text/javascript" src="ieupdate.js"></script><br>
+Put this player on your other sites (myspace, blogs etc...)<br>
+Embed: <input style="width: 170px; height: 17px; border: solid 1px #333333; font-size:9px; font-family:verdana;" name="player_embed" type="text" value='<embed src="http://www.isound.com/mp3player/Mp3App.swf?id=playerxml/690000/690225.pla&noPop=y" type="application/x-shockwave-flash" wmode="transparent" width="415" height="220"></embed><br>Powered by <a href="http://www.isound.com">iSOUND.COM</a><br>' readonly="readonly" id="player_embed" onclick="this.focus();this.select();" style="width:150px;" /> <input type="checkbox" onclick="setPlayerURL(this.checked)" style="vertical-align:top;" id="playerCheckbox" />Autoplay
+<!--<br>[<a href="/portable_player.php?a=690225"><span class="textSmall">Put this player on your other sites</span></a>]-->
+
+</td>
+											<td class="borderRight"></td>
+										</tr>
+										<tr>
+											<td class="borderBottom" colspan="3"></td>
+										</tr>
+									</table>
+								</td>
+							</tr>
+						</table>
+					</td>
+					<td width="11"><img src="spacer.gif" width="11" height="1"></td>
+				</tr>
+			</table>
+		</td>
+	</tr>
+	<tr>
+		<td width="725" valign="top">
+			<table width="725" cellpadding="0" cellspacing="0" border="0">
+				<tr>
+					<td width="11"><img src="spacer.gif" width="11" height="1"></td>
+					<td width="703" valign="top">
+						<table width="703" cellpadding="0" cellspacing="0" border="0">
+							<tr>
+								<td height="24" align="left"><img src="btn-homeOn.gif" width="76" height="24" hspace="1" id="btn_home" style="cursor: pointer; cursor: hand;" onclick="showChart('home');"><img border=0 src="btn-mp3sOff.gif" width="58" height="24" hspace="1" id="btn_mp3s" style="cursor: pointer; cursor: hand;" onclick="showChart('mp3s');"><img border=0 src="btn-photosOff.gif" width="55" height="24" hspace="1" id="btn_photos" style="cursor: pointer; cursor: hand;" onclick="showChart('photos');"><img src="btn-bioOff.gif" width="49" height="24" hspace="1" id="btn_bio" style="cursor: pointer; cursor: hand;" onclick="showChart('bio');"></td>
+							</tr>
+							<tr>
+								<td valign="top">
+								<div id="chart_home">
+									<table bgcolor="#DFE0E1" width="703" cellpadding="0" cellspacing="10" border="0">
+										<tr>
+											<td bgcolor="#FFFFFF" width="221" height="200" valign="top">
+												<table width="221" height="200" cellpadding="0" cellspacing="0" border="0" class="textSmall">
+													<tr>
+														<td class="borderHeader" width="196">Stats</td>
+														<td class="borderHeader" width="25" align="right"><!-- <img src="/img/icon_questionmark.gif" width="15" height="15"> --></td>
+													</tr>
+													<tr>
+														<td width="221" valign="top" class="bandContent" colspan="2">
+															<table width="211" cellpadding="0" cellspacing="0" border="0" class="textSmall">
+																																<tr>
+																	<td>Plays: 451<br>
+																	Views: 730</td>
+																	<!-- <td>Todays Plays: 150<br>
+																	Todays Views: 125</td> -->
+																</tr>
+																																<tr>
+																	<td colspan="2">
+																	<br>
+<strong>Formed:</strong> 1992<br>																	
+																	<br>
+																																		<strong>iSound Site:</strong> <a href="http://www.isound.com/paul_collins_band" class="small">www.isound.com/paul_collins_band</a>
+																	</td>
+																</tr>
+															</table>
+														</td>
+													</tr>
+											  	</table>
+											</td>
+
+																						<td bgcolor="#FFFFFF" width="221" height="200" valign="top">
+												<table width="221" height="200" cellpadding="0" cellspacing="0" border="0" >
+													<tr>
+														<td class="borderHeader" width="196">Biography</td>
+													</tr>
+													<tr>
+														<td width="221" valign="top" class="bandContent">
+															<table width="211" cellpadding="0" cellspacing="0" border="0" class="textSmall">
+																<tr>
+																	<td>Alongside Peter Case and Jack Lee, Paul Collins was a founding member of legendary U.S. punk rock band The Nerves. The Nerves originally wrote and recorded the song Hanging On The Telephone, later recorded by Deborah Harry and Blondie. After The Nerves disbanded, Peter Case </td>
+																</tr>
+																<tr>
+																	<td height="20" align="right" valign="bottom"><img style="cursor: pointer; cursor: hand;" onclick="showChart('bio');" src="btn-more.gif" width="43" height="14"></td>
+																</tr>
+															</table>
+														</td>
+													</tr>
+												</table>
+											</td>
+																					</tr>
+										<tr>
+											<td bgcolor="#FFFFFF" width="221" height="185" valign="top">
+												<table width="221" height="185" cellpadding="0" cellspacing="0" border="0" class="textSmall">
+													<tr>
+														<td class="borderHeader" width="221">Sounds Like</td>
+													</tr>
+													<tr>
+														<td width="221" valign="top" class="bandContent"><strong>Artists:</strong><br><a class="small" href="http://www.isound.com/paul_collins_beat">Paul Collins Beat</a><br><a class="small" href="http://www.isound.com/guided_by_voices">Guided by Voices</a><br><a class="small" href="http://www.isound.com/john_wicks_and_the_records">John Wicks And The Records</a><br><a class="small" href="http://www.isound.com/gin_blossoms">Gin Blossoms</a><br><a class="small" href="http://www.isound.com/tom_petty">Tom Petty</a><br><a class="small" href="http://www.isound.com/johnny_cash">Johnny Cash</a><br><a class="small" href="http://www.isound.com/paul_westerberg">Paul Westerberg</a><br>														<strong>Genres:</strong><br>
+														<a href="http://www.isound.com/style/punk_pop" class="small">Punk-Pop</a><br><a href="http://www.isound.com/style/alternative_country_rock" class="small">Alt. Country-Rock</a><br>														<br>
+														<!-- <strong>One Liner:</strong><br>
+														"Tool meets Rush with a dash of hip-hop on top." --> </td>
+													</tr>
+												</table>
+											</td>
+										</tr>
+										<tr>
+										</tr>
+									</table>
+								</div>
+								<div id="chart_mp3s" style="display: none;">
+									<table bgcolor="#DFE0E1" width="703" cellpadding="0" cellspacing="10" border="0" class="text">
+										<tr>
+											<td bgcolor="#ffffff"><table cellpadding="4" cellspacing="0" border="0" class="text"><tr>
+														<td colspan=8 class="borderHeader" width="703">Mp3s</td>
+													</tr><tr><td><tr>
+																	<td class="chartBandDark"><strong>Song</strong></td>
+																	<td class="chartBandDark"><strong>Play</strong></td>
+																	<td class="chartBandDark"><strong>Download</strong></td>
+																	<td class="chartBandDark"><strong>Add to station</strong></td>
+																	<td class="chartBandDark"><strong>Comments</strong></td>
+																	<td class="chartBandDark"><strong>Price</strong></td>
+																	<td class="chartBandDark"><strong>Rating(1-5)</strong></td>
+																	<td class="chartBandDark"><strong>Album</strong></td>
+																</tr><tr><td class="chartBandLight"><a href="javascript:player_pop('/mp3player/play.php?type=song&id=101661',410,425)" onmouseover="window.status='/play';return true;" onmouseout="window.status=' ';return true;">In Another World</a></td><td class="chartBandLight"><a href="javascript:player_pop('/mp3player/play.php?type=song&id=101661',410,425)" onmouseover="window.status='/play';return true;" onmouseout="window.status=' ';return true;"><img border=0 src="play.gif"></a></td><td class="chartBandLight"><a href="http://www.isound.com/download.php?id=101661"><img border=0 src="download.gif"></a></td><td class="chartBandLight"><a href="http://www.isound.com/listener.php?l=mp3s&amp;a=101661"><img border=0 src="plus4.gif"> Add to station</a></td><td width=115 class="chartBandLight"><a href="http://www.isound.com/listener.php?l=comment&amp;a=101661"><img border=0 src="plus4.gif"> Add Comment</a></td><td class="chartBandLight"><span class="textSmall">Free</span></td><td class="chartBandLight"><span class="textSmall">Not Rated</span></td><td class="chartBandLight"><span class="textSmall">[Single]</span></td></tr><tr><td class="chartBandLight"><a href="javascript:player_pop('/mp3player/play.php?type=song&id=101663',410,425)" onmouseover="window.status='/play';return true;" onmouseout="window.status=' ';return true;">On The Radio</a></td><td class="chartBandLight"><a href="javascript:player_pop('/mp3player/play.php?type=song&id=101663',410,425)" onmouseover="window.status='/play';return true;" onmouseout="window.status=' ';return true;"><img border=0 src="play.gif"></a></td><td class="chartBandLight"><a href="http://www.isound.com/download.php?id=101663"><img border=0 src="download.gif"></a></td><td class="chartBandLight"><a href="http://www.isound.com/listener.php?l=mp3s&amp;a=101663"><img border=0 src="plus4.gif"> Add to station</a></td><td width=115 class="chartBandLight"><a href="http://www.isound.com/listener.php?l=comment&amp;a=101663"><img border=0 src="plus4.gif"> Add Comment</a></td><td class="chartBandLight"><span class="textSmall">Free</span></td><td class="chartBandLight"><span class="textSmall">Not Rated</span></td><td class="chartBandLight"><span class="textSmall">[Single]</span></td></tr><tr><td class="chartBandLight"><a href="javascript:player_pop('/mp3player/play.php?type=song&id=107097',410,425)" onmouseover="window.status='/play';return true;" onmouseout="window.status=' ';return true;">Met Her Yesterday</a></td><td class="chartBandLight"><a href="javascript:player_pop('/mp3player/play.php?type=song&id=107097',410,425)" onmouseover="window.status='/play';return true;" onmouseout="window.status=' ';return true;"><img border=0 src="play.gif"></a></td><td class="chartBandLight"><a href="http://www.isound.com/download.php?id=107097"><img border=0 src="download.gif"></a></td><td class="chartBandLight"><a href="http://www.isound.com/listener.php?l=mp3s&amp;a=107097"><img border=0 src="plus4.gif"> Add to station</a></td><td width=115 class="chartBandLight"><a href="http://www.isound.com/listener.php?l=comment&amp;a=107097"><img border=0 src="plus4.gif"> Add Comment</a></td><td class="chartBandLight"><span class="textSmall">Free</span></td><td class="chartBandLight"><span class="textSmall">Not Rated</span></td><td class="chartBandLight"><span class="textSmall">[Single]</span></td></tr><tr><td colspan=3><br><i><span class="textSmall">Important: you should turn off any pop-up blockers as the mp3 player is a pop-up window and may not load!</span></i></td></tr></td></tr></table></td>
+										</tr>
+									</table>
+								</div>
+								<div id="chart_albums" style="display: none;">
+									<table bgcolor="#DFE0E1" width="703" cellpadding="0" cellspacing="10" border="0" class="text">
+										<tr>
+											<td bgcolor="#ffffff"><table cellpadding="4" cellspacing="0" border="0" class="text"><tr>
+														<td colspan=2 class="borderHeader" width="703">Albums</td>
+													</tr><tr><td></td></tr></table></td>
+										</tr>
+									</table>
+								</div>
+								<div id="chart_ringtones" style="display: none;">
+									<table bgcolor="#DFE0E1" width="703" cellpadding="0" cellspacing="10" border="0" class="text">
+										<tr>
+												<td bgcolor="#ffffff"><table cellpadding="4" cellspacing="0" border="0" class="text"><tr>
+														<td colspan=4 class="borderHeader" width="703">Ringtones</td>
+													</tr><tr><td></td></tr></table></td>
+										</tr>
+									</table>
+								</div>
+								<div id="chart_photos" style="display: none;">
+									<table bgcolor="#DFE0E1" width="703" cellpadding="0" cellspacing="10" border="0" class="text">
+										<tr>
+											<td bgcolor="#ffffff"><table cellpadding="4" cellspacing="0" border="0" class="text"><tr>
+														<td colspan=3 class="borderHeader" width="703">Photos</td>
+													</tr><tr><td><p id="photo_display" class="photo_display"></p> </td></tr></table></td>
+										</tr>
+									</table>
+								</div>
+								<div id="chart_shows" style="display: none;">
+									<table bgcolor="#DFE0E1" width="703" cellpadding="0" cellspacing="10" border="0" class="text">
+										<tr>
+											<td bgcolor="#ffffff"><table cellpadding="4" cellspacing="0" border="0" class="text"><tr>
+													<td colspan=4 class="borderHeader" width="703">Shows</td>
+													</tr><tr><td></td></tr></table></td>
+										</tr>
+									</table>
+								</div>
+								<div id="chart_bio" style="display: none;">
+									<table bgcolor="#DFE0E1" width="703" cellpadding="0" cellspacing="10" border="0" class="text">
+										<tr>
+											<td bgcolor="#ffffff"><table cellpadding="4" cellspacing="0" border="0" class="text"><tr>
+														<td class="borderHeader" width="703">Biography</td>
+													</tr><tr><td>Alongside Peter Case and Jack Lee, Paul Collins was a founding member of legendary U.S. punk rock band The Nerves. The Nerves originally wrote and recorded the song Hanging On The Telephone, later recorded by Deborah Harry and Blondie. After The Nerves disbanded, Peter Case formed The Plimsouls and Paul Collins formed The Beat, also known as Paul Collins' Beat. Between his solo project, The Paul Collins Band and Paul Collins' Beat, he to tour and record new material in addition to touring, playing dates in Japan, USA, France, Australia, Germany, UK, Sweden, Italy and Spain. Catch The Paul Collins Band and Paul Collins' Beat on tour in a city near you!</td></tr></table></td>
+										</tr>
+									</table>
+								</div>
+								<div id="chart_forum" style="display: none;">
+									<table bgcolor="#DFE0E1" width="703" cellpadding="0" cellspacing="10" border="0" class="text">
+										<tr>
+											<td bgcolor="#ffffff"><table cellpadding="4" cellspacing="0" border="0" class="text"><tr>
+														<td colspan=4 class="borderHeader" width="703">Artist Forum</td>
+													</tr><tr><td><tr><td colspan=2 align=left>Interact with other fans of Paul Collins Band. <a href="http://www.isound.com/musiclove.php?id=690225&amp;type=message&amp;artist=Paul%20Collins%20Band"><u>Start a new discussion now!</u></a></td></tr></table></td>
+										</tr>
+									</table>
+								</div>
+								<div id="chart_friends" style="display: none;">
+									<table bgcolor="#DFE0E1" width="703" cellpadding="0" cellspacing="10" border="0" class="text">
+										<tr>
+												<td bgcolor="#ffffff"><table cellpadding="4" cellspacing="0" border="0" class="text"><tr>
+														<td colspan=5 class="borderHeader" width="703">Friends & Fans</td>
+													</tr><tr><td><p id="friend_display" class="friend_display"></p></td></tr></table></td>
+										</tr>
+									</table>
+								</div>
+								<div id="chart_blog" style="display: none;">
+									<table bgcolor="#DFE0E1" width="703" cellpadding="0" cellspacing="10" border="0" class="text">
+										<tr>
+												<td bgcolor="#ffffff"><table cellpadding="4" cellspacing="0" border="0" class="text"><tr>
+														<td class="borderHeader" width="703">Blog</td>
+													</tr><tr><td></td></tr></table></td>
+										</tr>
+									</table>
+								</div>
+								</td>
+							</tr>
+						</table>
+					</td>
+					<td width="11"><img src="spacer.gif" width="11" height="1"></td>
+				</tr>
+			</table>
+		</td>
+	</tr>
+	<tr>
+		<td width="725" height="56" valign="bottom">
+			<table width="725" height="56" cellpadding="0" cellspacing="0" border="0" class="text">
+				<tr>
+					<td width="725" height="10"><img src="spacer.gif" width="1" height="10"></td>
+				</tr>
+
+				<tr>
+					<td bgcolor="#D7E3F1" width="725" height="46" class="footer"><a href="http://www.isound.com/section/sitemap">SITE MAP</a> | <a href="http://www.isound.com/section/terms">TERMS</a> | <a href="http://www.isound.com/section/privacy">PRIVACY</a> | <a href="http://www.isound.com/info/advertising">ADVERTISE</a> | <a href="http://www.isound.com/section/link_to_us">LINK TO US</a> | <a href="http://www.isound.com/info/about">ABOUT</a> | <a href="http://www.isound.com/info/faq">HELP/FAQ</a> | <a href="http://www.isound.com/section/email">CONTACT iSOUND</a><br><br>
+					<span class="textVerySmall">© 2007 iSOUND.COM, LLC. All rights Reserved. iSOUND and "Live Life Loud" are trademarks of iSOUND.COM, LLC</span></td>
+				</tr>
+			</table>
+		</td>
+	</tr>
+</table>
+<script src="http://www.google-analytics.com/urchin.js" type="text/javascript">
+</script>
+<script type="text/javascript">
+_uacct = "UA-953055-1";
+urchinTracker();
+</script>
+</body>
+</html>

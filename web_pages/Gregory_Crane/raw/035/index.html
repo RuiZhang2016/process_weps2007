@@ -1,0 +1,760 @@
+<style>
+.note-header-text {font-family: Times, Times New Roman, serif;
+		color:#ff0000; font-size: .95em;
+		margin-left: .75em; margin-right: .75em;}
+</style>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+ "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+<head>
+<LINK REL=STYLESHEET TYPE="text/css" HREF="http://widit.slis.indiana.edu/irpub/DL/2003/css/dl.css">
+<title>: JCDL '03, Towards a cultural heritage ...</title>
+<style type="text/css"><!--
+ body {margin-left: 0em; margin-top: 0}
+ a:link {text-decoration: underline; 	Color: #006699;}
+ a:visited { color: #990033; text-decoration: underline;}
+ a:hover {color: red; text-decoration: none}
+ a.dLink1:link {color:#336699}
+ a.dLink1:visited {color:#666666}
+	a.isblack:link {text-decoration: underline; 	Color: #000000;}
+ a.isblack:visited { color: #000000; text-decoration: underline;}
+ a.isblack:hover {color: #000000; text-decoration: none}
+ h1 {font-size: 140%; margin-bottom: 0}
+	ul {margin-top: .25em; list-style-type: disc}
+	ol {margin-top: .25em;}
+	li {padding-bottom: .25em}
+ h2 {color: white; background-color: #069;
+ font-size: 100%; padding-left: 1em;
+		margin: 0}
+	h3 {color: black; background-color: yellow;
+ 	font-size: 100%;
+		margin: 0}
+	 h4 {color: black; background-color: #99c5e8;
+ font-size: 100%;
+		margin: 0}
+ hr {color: #39176d;}
+ form {margin-top: 10}
+	a {text-decoration: none; }
+	input {font-size: 1em;}
+	.chevron {color: #ff0000;}
+	.light-blue {color:#336699;}
+	.black {color:#000000;}
+	/* ### standard text styles, smallest to largest ### */
+	.footer-link-text {font-family: Arial, Helvetica, sans-serif;
+		color:#336699; font-size: .75em; line-height: 1.33em;
+		text-indent: -.75 em; margin-left: 2em; margin-right: .75em;}
+	.footer-copy-text {font-family: Arial, Helvetica, sans-serif;
+		color:#000000; font-size: .75em; line-height: 1.3em;
+		margin-left: .75em; margin-right: .75em;}
+	.small-link-text {font-family: Arial, Helvetica, sans-serif;
+		color:#000000; font-size: .83em; padding-bottom : 2px;
+	 	padding-top : 2px;}
+	.smaller-text {font-family: Arial, Helvetica, sans-serif;
+		color:#000000; font-size: .75em;}
+	.small-text {font-family: Arial, Helvetica, sans-serif;
+		color:#000000; font-size: .83em;}
+	.medium-text {font-family: Arial, Helvetica, sans-serif;
+		color:#000000; font-size: 1em;}
+	.mediumb-text {font-family: Arial, Helvetica, sans-serif;
+		color:#000000; font-size: 1em; font-weight: bold;}
+	.large-text {font-family: Arial, Helvetica, sans-serif;
+		color:#000000; font-size: 1.3em;}
+	.list-link-text {font-family: Arial, Helvetica, sans-serif;
+		color:#336699; font-size: .83em; line-height: 1.3em;}
+	.list-link-btext {font-family: Arial, Helvetica, sans-serif;
+		color:#000000; font-size: .83em; line-height: 1.3em;}
+	.searchbox-text {font-family: Arial, Helvetica, sans-serif;
+		color:#000066; font-size: 1em; font-weight: bold;}
+	.footer-header-text {font-family: Arial, Helvetica, sans-serif;
+		color:#000066; font-size: 1em; font-weight: bold;
+		margin-left: .75em; margin-right: .75em;}
+	.medium-link-text {font-family: Arial, Helvetica, sans-serif;
+		color:#000066; font-size: 1em; font-weight: bold; line-height: 1em;
+		text-indent: -1.25em; margin-left: 2em; margin-right: .75em;}
+	.small-copy-text {font-family: Times, Times New Roman, serif;
+		color:#000066; font-size: .75em; line-height: 1.2em;
+		margin-left: .75em; margin-right: .75em;}
+	.medium-copy-text {font-family: Times, Times New Roman, serif;
+		color:#000066; font-size: 1em; line-height: 1.2em;
+		margin-left: .75em; margin-right: .75em;}
+	.large-copy-text {font-family: Times, Times New Roman, serif;
+		color:#000066; font-size: 1.3em; line-height: 1.5em;
+		margin-left: .75em; margin-right: .75em;}
+	.medium-header-text {font-family: Times, Times New Roman, serif;
+		color:#ff0000; font-size: 1em;
+		margin-left: .75em; margin-right: .75em;}
+	.large-header-text {font-family: Times, Times New Roman, serif;
+		color:#ff0000; font-size: 1.5em;
+		margin-left: .75em; margin-right: .75em;}
+ --></style>
+<SCRIPT LANGUAGE="JavaScript">
+ /* <!-- Begin
+	if(document.layers || document.all) {
+	a = 1;
+	setInterval("Jump()", 10);
+	}
+	function Jump() {
+	a = a + 1;
+	//self.moveBy((Math.random() * a * 2 - a), (Math.random() * a * 2) - a);
+	}
+// End --> */
+</script>
+<script LANGUAGE=JAVASCRIPT TYPE="text/javascript" >
+<!--
+function _CF_onError(form_object, input_object, object_value, error_message)
+ {
+	alert(error_message);
+ 	return false;
+ }
+function _CF_hasValue(obj, obj_type)
+ {
+ if (obj_type == "TEXT" || obj_type == "PASSWORD")
+	{
+ 	if (obj.value.length == 0)
+ 		return false;
+ 	else
+ 		return true;
+ 	}
+ else if (obj_type == "SELECT")
+	{
+ for (i=0; i < obj.length; i++)
+	 	{
+		if (obj.options[i].selected)
+			return true;
+		}
+ 	return false;
+	}
+ else if (obj_type == "SINGLE_VALUE_RADIO" || obj_type == "SINGLE_VALUE_CHECKBOX")
+	{
+		if (obj.checked)
+			return true;
+		else
+ 		return false;
+	}
+ else if (obj_type == "RADIO" || obj_type == "CHECKBOX")
+	{
+ for (i=0; i < obj.length; i++)
+	 	{
+		if (obj[i].checked)
+			return true;
+		}
+ 	return false;
+	}
+	}
+function _CF_checkqiksearch(_CF_this)
+ {
+ if (!_CF_hasValue(_CF_this.query, "TEXT" ))
+ {
+ if (!_CF_onError(_CF_this, _CF_this.query, _CF_this.query.value, "Please enter your Search Criteria"))
+ {
+ return false;
+ }
+ }
+ return true;
+ }
+//-->
+</script>
+</head>
+<body bgcolor="#ffffff" onload="window.focus()">
+<div align="center">
+<a name="CIT"></a>
+<table border="0" width="85%" cellspacing="0" cellpadding="0">
+<tr>
+<td>
+<table width="100%" border="0" cellpadding="0" cellspacing="0">
+<col width="1%"><col width="99%">
+			</td>
+		</tr>
+		<tr>
+			<td height="6"><img src="blanks.gif" width=1 height=1 alt="" border="0"></td>
+		</tr>
+		<tr>
+			<td colspan="2" valign="top" height="1" background="http://widit.slis.indiana.edu/irpub/DL/2003/images/horiz-bar-long.jpg"></td>
+		</tr>
+		<tr>
+			<td height="6"><img src="blanks.gif" width=1 height=1 alt="" border="0"></td>
+		</tr>
+		</table>
+</td>
+</tr>
+<tr>
+	<td colspan="3" valign="top" height="1" background="http://widit.slis.indiana.edu/irpub/DL/2003/images/horiz-bar-long.jpg"></td>
+</tr>
+<tr>
+<td class="small-text">
+	<table border="0" width="100%" cellpadding="2">
+		<col width="1%">
+		<col width="8%">
+		<col width="91%">
+	<tr>
+		<td class="medium-text" colspan="3"><strong>Towards a cultural heritage digital library</strong></td>
+	</tr>
+			<tr valign="top">
+			</tr>
+			<tr valign="top">
+					<td class="small-text"><strong>Full text</strong></td>
+				<td class="smaller-text" colspan="2" >
+									 <A NAME="FullText" href="http://widit.slis.indiana.edu/irpub/DL/2003/pdf10.pdf" target="_blank"><img src="pdf_logo.gif" width="16" height="16" alt="pdf format" border="0" hspace="1" align="texttop">Pdf</A>
+									 (420&nbsp;KB)
+				</td>
+			</tr>
+		<tr valign="top">
+			<td class="small-text"><strong>Source</strong></td>
+			<td class="small-text" colspan="2">
+														<SPAN class="mediumb-text">International Conference on Digital Libraries</span>
+																			<a href="http://widit.slis.indiana.edu/irpub/DL/2003/toc.cfm?id=SERIES492&amp;type=series&amp;coll=GUIDE&amp;dl=ACM&amp;idx=827140&amp;part=Proceedings&amp;WantType=Proceedings&amp;title=International%20Conference%20on%20Digital%20Libraries&amp;CFID=13720957&amp;CFTOKEN=832591" target="_self" class="small-link-text">archive</a><br>
+													<SPAN class="mediumb-text">Proceedings of the third ACM/IEEE-CS joint conference on Digital libraries </span>
+										 								 <a href="http://widit.slis.indiana.edu/irpub/DL/2003/toc.cfm?id=827140&amp;type=proceeding&amp;coll=GUIDE&amp;dl=ACM&amp;idx=827140&amp;part=Proceedings&amp;WantType=Proceedings&amp;title=International%20Conference%20on%20Digital%20Libraries&amp;CFID=13720957&amp;CFTOKEN=832591" target="_self" class="small-link-text">table of contents</a><br>
+												<DIV class="small-text">
+													 Houston, Texas
+												</div>
+		<div class="medium-text">
+								SESSION: Managing resources and services
+				<a href="http://widit.slis.indiana.edu/irpub/DL/2003/toc.cfm?id=827140&amp;type=proceeding&amp;coll=GUIDE&amp;dl=ACM&amp;CFID=13720957&amp;CFTOKEN=832591#827149" target="_self" class="small-text">table of contents</a><br>
+		</div>
+			<div class="small-text">
+				 Pages: 75 - 86&nbsp;&nbsp;
+			</div>
+				<div class="small-text">
+					Year of Publication:&nbsp;2003
+				</div>
+				<div class="small-text">
+					ISBN:0-7695-1939-3
+				</div>
+			</td>
+		</tr>
+			<tr valign="top">
+				<td class="small-text">
+										 	<strong>Authors</strong>
+				</td>
+				<td colspan="2">
+				<div class="authors">
+					<table cellpadding="0" cellspacing="0">
+							<tr>
+								<td class="small-text">
+ 									<a href="http://widit.slis.indiana.edu/irpub/DL/2003/results.cfm?query=author%3AP99725&amp;querydisp=author%3AGregory%20%20Crane&amp;coll=GUIDE&amp;dl=ACM&amp;CFID=13720957&amp;CFTOKEN=832591" target="_self">Gregory Crane</a>
+								</td>
+								<td class="small-text">
+										<small>&nbsp;Tufts University, Perseus Project, Medford, MA</small>
+								</td>
+							</tr>
+							<tr>
+								<td class="small-text">
+ 									<a href="http://widit.slis.indiana.edu/irpub/DL/2003/results.cfm?query=author%3AP523234&amp;querydisp=author%3AClifford%20%20Wulfman&amp;coll=GUIDE&amp;dl=ACM&amp;CFID=13720957&amp;CFTOKEN=832591" target="_self">Clifford Wulfman</a>
+								</td>
+								<td class="small-text">
+										<small>&nbsp;Tufts University, Perseus Project, Medford, MA</small>
+								</td>
+							</tr>
+					</table>
+				</div>
+				</td>
+			</tr>
+				<tr valign="top">
+					<td class="small-text"><strong>Sponsors</strong></td>
+					<td>
+						<div class="sponsors">
+									 	 :
+									 IEEE Technical Committee on Digital Libraries (TC DL) <br>
+										<a href=" http://www.acm.org/sigir/" target="sponsor" title="Sponsor">SIGIR</a>:
+									 ACM Special Interest Group on Information Retrieval <br>
+										<a href=" http://www.acm.org/sigweb/" target="sponsor" title="Sponsor">SIGWEB</a>:
+									 ACM Special Interest Group on Hypertext, Hypermedia, and Web <br>
+						</div>
+					 </td>
+				</tr>
+					<tr valign="top">
+						<td class="small-text"><strong>Publisher</strong></td>
+						<td colspan="2">
+							<div class="publishers">
+									 	IEEE Computer Society &nbsp;
+										<small> Washington, DC, USA </small>
+							</div>
+						</td>
+					</tr>
+		</table>
+</td>
+</tr>
+<tr>
+<td>
+<!-- third main table: main content START -->
+	<table border="0" width="100%" cellspacing="0" cellpadding="0">
+	<tr>
+		<td height="6"><img src="blanks.gif" width=1 height=1 alt="" border="0"></td>
+	</tr>
+	<tr>
+		<td colspan="4" valign="top" height="1" background="http://widit.slis.indiana.edu/irpub/DL/2003/images/horiz-bar-long.jpg"></td>
+	</tr>
+	<tr>
+		<td height="6"><img src="blanks.gif" width=1 height=1 alt="" border="0"></td>
+	</tr>
+	<tr valign="top">
+	<!-- buttons -->
+		<td width="100%" colspan="4">
+	 <table border="0" cellspacing="0" cellpadding="0" width="100%">
+		<col width="22%">
+	 <col width="78%">
+		<tr>
+			<td class="small-text"><b>Additional Information:</b></td>
+			<td>
+			<p class="small-text">
+					<a href="cite10.htm#abstract">abstract</a>&nbsp;&nbsp;
+					<a href="cite10.htm#references">references</a>&nbsp;&nbsp;
+						<a href="cite10.htm#collab">collaborative colleagues</a>&nbsp;&nbsp;
+				</p>
+			</td>
+		</tr>
+		</table>
+		</td>
+	</tr>
+	<tr>
+		<td height="6"><img src="blanks.gif" width=1 height=1 alt="" border="0"></td>
+	</tr>
+	<tr valign="top">
+	<!-- buttons -->
+		<form name="popbinder">
+		<td width="100%" colspan="4">
+		<table border="0" cellspacing="0" cellpadding="2" width="100%" >
+		 <col width="22%">
+		 <col width="78%">
+		 <tr valign="top">
+		 	<td class="small-text"><b>Tools and Actions:</b></td>
+			<td>
+				 <a href="https://portal.acm.org/poplogin.cfm?dl=ACM&coll=GUIDE&comp_id=COMPONENT032&want_href=ocr%5Fdiscuss%2Ecfm%3Fid%3D827150&CFID=13720957&CFTOKEN=832591" class="small-link-text">
+			Discussions</a>
+			&nbsp;&nbsp;
+			<a href="http://widit.slis.indiana.edu/irpub/DL/2003/results.cfm?query=827150&amp;querydisp=Similar%20to%3A%20Towards%20a%20cultural%20heritage%20digital%20library&amp;coll=GUIDE&amp;dl=ACM&amp;CFID=13720957&amp;CFTOKEN=832591" target="_self" class="small-link-text">Find similar Articles</a>&nbsp;&nbsp;
+			<a href="http://www.reviews.com/reviewer/quickreview/frameset_toplevel.cfm?bib_id=827150" target="reviews" class="small-link-text">Review this Article</a>&nbsp;&nbsp;
+			 	<br><a href="cite10.htm#" onClick="window.alert('To use this Feature, you must login with your personal ACM Web Account.');" class="small-link-text">
+				Save this Article to a Binder</a><img src="blanks.gif" border="0" name="saved">
+			&nbsp;&nbsp;
+			<a href="cite10.htm#" onClick="window.open('popBibTex.cfm?id=827150&ids=SERIES492.827140.827149.827150&types=series.proceeding.section.article&reqtype=article&coll=GUIDE&dl=ACM&CFID=13720957&CFTOKEN=832591','BibTex','width=800,height=100,top=100,left=100,scrollbars=Yes,resizable=yes');" class="small-link-text">
+			Display in BibTex Format</a>
+			&nbsp;&nbsp;
+			</td>
+		</tr>
+		<tr>
+			<td height="10"><img src="blanks.gif" width=1 height=1 alt="" border="0"></td>
+		</tr>
+		</table>
+		</td>
+		</form>
+	</tr>
+	<tr>
+		<td height="6"><img src="blanks.gif" width=1 height=1 alt="" border="0"></td>
+	</tr>
+	<tr>
+		<td colspan="4" valign="top" height="1" background="http://widit.slis.indiana.edu/irpub/DL/2003/images/horiz-bar-long.jpg"></td>
+	</tr>
+	<tr>
+		<td height="6"><img src="blanks.gif" width=1 height=1 alt="" border="0"></td>
+	</tr>
+	</table>
+<!-- third main table: main content END -->
+		 	<div class="abstract">
+			</div>
+			<br>
+			<div class="abstract">
+			<A HREF="cite10.htm#CIT"><img name="top" src="arrowu.gif" hspace="10" border="0"></A><SPAN class=heading><A NAME="abstract">ABSTRACT</A></span>
+				<p class="abstract">
+				 This paper surveys research areas relevant to cultural heritage digital libraries. The emerging National Science Digital Library promises to establish the foundation on which those of us beyond the scientific and engineering community will likely build. This paper thus articulates the particular issues that we have encountered in developing cultural heritage collections. We provide a broad overview of audiences, collections, and services.
+				</p>
+			</div>
+			<br>
+			<div class="abstract">
+			<A HREF="cite10.htm#CIT"><img name="top" src="arrowu.gif" hspace="10" border="0"></A><SPAN class=heading><A NAME="references">REFERENCES</A></span>
+			<p class="abstract"><font color="Red">Note: OCR errors may be found in this Reference List extracted from the full text article. ACM has opted to expose the complete List rather than only correct and linked references.</font></p>
+				<p class="abstract">
+				 1&nbsp;&nbsp;
+				 M. Abolhassani, N. Fuhr, N. G&#246;vert, and K. Gro&#223;johann. HyREX: Hypermedia retrieval engine for XML. Technical report, University of Dortmund, 2002.
+				</p>
+				<p class="abstract">
+				 2&nbsp;&nbsp;
+				 ACE evaluation plan version 06, August 12 2002.
+				</p>
+				<p class="abstract">
+				 3&nbsp;&nbsp;
+				 P. Anand, D. Anderson, J. Burger, J. Griffith, M. Light, S. Ardis, and A. Morgan. Qanda and the Catalyst architecture. In E. M. Voorhees and D. K. Harman, editors, The Tenth Text REtrieval Conference (TREC 2001), page 5, Gaithersburg, MD, 2001. Department of Commerce, National Institute of Standards and Technology.
+				</p>
+				<p class="abstract">
+				 4&nbsp;&nbsp;
+				 D. Aucoin. Fast forward into the past: What do we learn when TV becomes our history teacher?, November 2, 1997.
+				</p>
+				<p class="abstract">
+				 5&nbsp;&nbsp;
+		 			 <a href="http://widit.slis.indiana.edu/irpub/DL/2003/citation.cfm?id=274700&amp;dl=ACM&amp;coll=GUIDE&amp;CFID=13720957&amp;CFTOKEN=832591">
+				 Michelle Q. Wang Baldonado , Terry Winograd, Hi-cites: dynamically created citations with active highlighting, Proceedings of the SIGCHI conference on Human factors in computing systems, p.408-415, April 18-23, 1998, Los Angeles, California, United States
+				 </a>
+				</p>
+				<p class="abstract">
+				 6&nbsp;&nbsp;
+		 			 <a href="http://widit.slis.indiana.edu/irpub/DL/2003/citation.cfm?id=371274&amp;dl=ACM&amp;coll=GUIDE&amp;CFID=13720957&amp;CFTOKEN=832591">
+				 Steven Bird , Mark Liberman, A formal framework for linguistic annotation, Speech Communication, v.33 n.1-2, p.23-60, Jan. 2001
+				 </a>
+				</p>
+				<p class="abstract">
+				 7&nbsp;&nbsp;
+				 S. Bird, K. Maeda, X. Ma, H. Lee, B. Randall, and S. Zayat. TableTrans, MultiTrans, InterTrans and TreeTrans: Diverse tools built on the Annotation Graph Toolkit. In Proceedings of the Third International Conference on Language Resources and Evaluation, European Language Resources Association, Paris, 2002.
+				</p>
+				<p class="abstract">
+				 8&nbsp;&nbsp;
+		 			 <a href="http://widit.slis.indiana.edu/irpub/DL/2003/citation.cfm?id=700217&amp;dl=ACM&amp;coll=GUIDE&amp;CFID=13720957&amp;CFTOKEN=832591">
+				 Kalina Bontcheva , Diana Maynard , Hamish Cunningham , Horacio Saggion, Using Human Language Technology for Automatic Annotation and Indexing of Digital Library Content, Proceedings of the 6th European Conference on Research and Advanced Technology for Digital Libraries, p.613-625, September 16-18, 2002
+				 </a>
+				</p>
+				<p class="abstract">
+				 9&nbsp;&nbsp;
+				 W. S. Brockman, L. Neumann, C. L. Palmer, and T. J. Tidline. Scholarly work in the humanities and the evolving information environment. Technical report, Digital Library Federation and the Council on Library and Information Resources, December 2001.
+				</p>
+				<p class="abstract">
+				 10&nbsp;&nbsp;
+				 K. Burns, D. G. McCullough, G. C. Ward, R. Burns, F. Films, and P. Video. The Civil War, 1989.
+				</p>
+				<p class="abstract">
+				 11&nbsp;&nbsp;
+				 F.-D. Chiou, D. Chiang, and M. Palmer. Facilitating treebank annotation using a statistical parser. In HLT2001, San Diego, 2001.
+				</p>
+				<p class="abstract">
+				 12&nbsp;&nbsp;
+				 G. S. Choudhury. Strike up the score: Deriving searchable and playable digital formats from sheet music. D-Lib Magazine, 7(2), 2001.
+				</p>
+				<p class="abstract">
+				 13&nbsp;&nbsp;
+				 G. Colati. Managing authority lists for customized linking and visualization: A service for the National STEM Digital Library, 2002.
+				</p>
+				<p class="abstract">
+				 14&nbsp;&nbsp;
+				 S. Cotton and S. Bird. An integrated framework for treebanks and multilayer annotations. In Third International Conference on Language Resources and Evaluation. European Language Resources Association, page 8, Paris, 2002.
+				</p>
+				<p class="abstract">
+				 15&nbsp;&nbsp;
+				 G. Crane. Redefining the book: Some preliminary problems. Academic Computing, 2(5), February 1988.
+				</p>
+				<p class="abstract">
+				 16&nbsp;&nbsp;
+				 G. Crane. Generating and parsing classical Greek. Literary and Linguistic Computing, 6(4):243--245, 1991.
+				</p>
+				<p class="abstract">
+				 17&nbsp;&nbsp;
+		 			 <a href="http://widit.slis.indiana.edu/irpub/DL/2003/citation.cfm?id=531264&amp;dl=ACM&amp;coll=GUIDE&amp;CFID=13720957&amp;CFTOKEN=832591">
+				 Gregory Crane, Perseus 1.0 Manual: Interactive Sources and Studies on Ancient Greece, Yale University Press, New Haven, CT, 1992
+				 </a>
+				</p>
+				<p class="abstract">
+				 18&nbsp;&nbsp;
+				 G. Crane. What is Perseus? What is it not? Comments on the Bryn Mawr review of Perseus 1.0. BMCR, 3(6):497--502, 1992.
+				</p>
+				<p class="abstract">
+				 19&nbsp;&nbsp;
+		 			 <a href="http://widit.slis.indiana.edu/irpub/DL/2003/citation.cfm?id=226932&amp;dl=ACM&amp;coll=GUIDE&amp;CFID=13720957&amp;CFTOKEN=832591">
+				 Gregory Crane, Building a digital library: the Perseus project as a case study in the humanities, Proceedings of the first ACM international conference on Digital libraries, p.3-10, March 20-23, 1996, Bethesda, Maryland, United States
+				 </a>
+				</p>
+				<p class="abstract">
+				 20&nbsp;&nbsp;
+				 G. Crane. New technologies for reading: The lexicon and the digital library. Classical World, pages 471--501, 1998.
+				</p>
+				<p class="abstract">
+				 21&nbsp;&nbsp;
+				 G. Crane. Designing documents to enhance the performance of digital libraries: Time, space, people and a digital library of London. D-Lib Magazine, 6(7/8), July/August 2000.
+				</p>
+				<p class="abstract">
+				 22&nbsp;&nbsp;
+				 G. Crane. Extending a digital library: Beginning a Roman Perseus. New England Classical Journal, 27(3):140--160, 2000.
+				</p>
+				<p class="abstract">
+				 23&nbsp;&nbsp;
+				 G. Crane. The Perseus Project: An evolving digital library, 2000.
+				</p>
+				<p class="abstract">
+				 24&nbsp;&nbsp;
+		 			 <a href="http://widit.slis.indiana.edu/irpub/DL/2003/citation.cfm?id=700068&amp;dl=ACM&amp;coll=GUIDE&amp;CFID=13720957&amp;CFTOKEN=832591">
+				 Gregory Crane, Cultural Heritage Digital Libraries: Needs and Components, Proceedings of the 6th European Conference on Research and Advanced Technology for Digital Libraries, p.626-637, September 16-18, 2002
+				 </a>
+				</p>
+				<p class="abstract">
+				 25&nbsp;&nbsp;
+				 G. Crane. In a digital world, no book is an island: Designing electronic primary sources and reference works for the humanities. In L. Breure and A. Dillon, editors, Creation, Use and Deployment of Digital Information, page forthcoming. Lawrence Earlbaum Associates, 2002.
+				</p>
+				<p class="abstract">
+				 26&nbsp;&nbsp;
+				 G. Crane, B. Fuchs, A. C. Smith, and C. E. Wulfman. The symbiosis between content and technology in the Perseus Digital Library. Culture Interactive, 2, 2000.
+				</p>
+				<p class="abstract">
+				 27&nbsp;&nbsp;
+		 			 <a href="http://widit.slis.indiana.edu/irpub/DL/2003/citation.cfm?id=336686&amp;dl=ACM&amp;coll=GUIDE&amp;CFID=13720957&amp;CFTOKEN=832591">
+				 Gregory Crane , Jeffrey A. Rydberg-Cox, New technology and new roles: the need for &ldquo;corpus editors&rdquo;, Proceedings of the fifth ACM conference on Digital libraries, p.252-253, June 02-07, 2000, San Antonio, Texas, United States
+				 </a>
+				</p>
+				<p class="abstract">
+				 28&nbsp;&nbsp;
+		 			 <a href="http://widit.slis.indiana.edu/irpub/DL/2003/citation.cfm?id=379756&amp;dl=ACM&amp;coll=GUIDE&amp;CFID=13720957&amp;CFTOKEN=832591">
+				 Gregory Crane , David A. Smith , Clifford E. Wulfman, Building a hypertextual digital library in the humanities: a case study on London, Proceedings of the first ACM/IEEE-CS joint conference on Digital libraries, p.426-434, January 2001, Roanoke, Virginia, United States
+				 </a>
+				</p>
+				<p class="abstract">
+				 29&nbsp;&nbsp;
+		 			 <a href="http://widit.slis.indiana.edu/irpub/DL/2003/citation.cfm?id=374333&amp;dl=ACM&amp;coll=GUIDE&amp;CFID=13720957&amp;CFTOKEN=832591">
+				 Gregory Crane , Robert F. Chavez , Anne Mahoney , Thomas L. Milbank , Jeffrey A. Rydberg-Cox , David A. Smith , Clifford E. Wulfman, Drudgery and deep thought, Communications of the ACM, v.44 n.5, p.34-40, May 2001
+				 </a>
+				</p>
+				<p class="abstract">
+				 30&nbsp;&nbsp;
+				 H. Cunningham, D. Maynard, K. Bontcheva, V. Tablan, C. Ursu, and M. Dimitrov. Developing language processing components with GATE (a user guide). Technical report, The University of Sheffield, 2002.
+				</p>
+				<p class="abstract">
+				 31&nbsp;&nbsp;
+				 M. Dabbadie, A. Hartley, M. King, K. J. Miller, W. M. E. Hadi, A. Popescu-Belis, F. Reeder, and M. Vanni. A handson study of the reliability and coherence of evaluation metrics. In Machine translation evaluation workshop: LREC 2002: Third International Conference on Language Resources and Evaluation, pages 8--6, Las Palmas, Canary Islands, 2002.
+				</p>
+				<p class="abstract">
+				 32&nbsp;&nbsp;
+				 L. Friedland, N. Kushigian, C. Powell, D. Seaman, N. Smith, and P. Willett. TEI Text Encoding in Libraries: Draft Guidelines for Best Encoding Practices, 30 July 1999.
+				</p>
+				<p class="abstract">
+				 33&nbsp;&nbsp;
+		 			 <a href="http://widit.slis.indiana.edu/irpub/DL/2003/citation.cfm?id=383985&amp;dl=ACM&amp;coll=GUIDE&amp;CFID=13720957&amp;CFTOKEN=832591">
+				 Norbert Fuhr , Kai Gross, XIRQL: a query language for information retrieval in XML documents, Proceedings of the 24th annual international ACM SIGIR conference on Research and development in information retrieval, p.172-180, September 2001, New Orleans, Louisiana, United States
+				 </a>
+				</p>
+				<p class="abstract">
+				 34&nbsp;&nbsp;
+		 			 <a href="http://widit.slis.indiana.edu/irpub/DL/2003/citation.cfm?id=700071&amp;dl=ACM&amp;coll=GUIDE&amp;CFID=13720957&amp;CFTOKEN=832591">
+				 Norbert Fuhr , Claus-Peter Klas , Andr&#233; Schaefer , Peter Mutschke, Daffodil: An Integrated Desktop for Supporting High-Level Search Activities in Federated Digital Libraries, Proceedings of the 6th European Conference on Research and Advanced Technology for Digital Libraries, p.597-612, September 16-18, 2002
+				 </a>
+				</p>
+				<p class="abstract">
+				 35&nbsp;&nbsp;
+				 N. Fuhr, M. Lalmas, and G. Kazai. INEX: Initiative for the evaluation of XML retrieval, 2002.
+				</p>
+				<p class="abstract">
+				 36&nbsp;&nbsp;
+				 N. Fuhr and G. Weikum. Classification and intelligent search on information in XML. IEEE Data Engineering Bulletin, 25(1):51--58, 2002.
+				</p>
+				<p class="abstract">
+				 37&nbsp;&nbsp;
+		 			 <a href="http://widit.slis.indiana.edu/irpub/DL/2003/citation.cfm?id=699907&amp;dl=ACM&amp;coll=GUIDE&amp;CFID=13720957&amp;CFTOKEN=832591">
+				 Richard Furuta , Siddarth Kalasapur , Rajiv Kochumman , Eduardo Urbina , Ricardo Vivancos-P&#233;rez, The Cervantes Project: Steps to a Customizable and Interlinked On-Line Electronic Variorum Edition Supporting Scholarship, Proceedings of the 5th European Conference on Research and Advanced Technology for Digital Libraries, p.71-82, September 04-09, 2001
+				 </a>
+				</p>
+				<p class="abstract">
+				 38&nbsp;&nbsp;
+				 R. Gaizauskas, P. Herring, M. Oakes, M. Beaulieu, P. Willett, H. Fowkes, and A. Jonsson. Intelligent access to text: Integrating information extraction technology into text browsers. In Proceedings of HLT, San Diego, CA, 2001.
+				</p>
+				<p class="abstract">
+				 39&nbsp;&nbsp;
+				 S. Hattunen and Satoshi. Diversity of scenarios in information extraction. In LREC 2002: Third International Conference on Language Resources and Evaluation, page 4, Las Palmas, Canary Islands, Spain, 2002.
+				</p>
+				<p class="abstract">
+				 40&nbsp;&nbsp;
+				 L. Hirschman, K. Concepcion, L. Damianos, D. Day, J. Delmore, J. G. L. Ferro, J. Henderson, J. Kurtz, I. Mani, S. Mardis, T. McEntee, K. Miller, B. Nunam, J. Ponte, F. Reeder, B. Wellner, G. Wilson, and A. Yeh. Integrated feasibility experiment for bio-security: IFE-bio, a TIDES demonstration. In HLT2001, San Diego, CA, 2001.
+				</p>
+				<p class="abstract">
+				 41&nbsp;&nbsp;
+				 S. Hitchcock, D. Bergmark, T. Brody, C. Gutteridge, L. Carr, W. Hall, C. Lagoze, and S. Harnad. Open citation linking: The way forward. D-Lib Magazine, 8(10), 2002.
+				</p>
+				<p class="abstract">
+				 42&nbsp;&nbsp;
+				 E. Hovy, M. King, and A. Popescu-Belis. An introduction to MT evaluation. In Machine Translation Evaluation Workshop: LREC 2002: Third International Conference on Language Resources and Evaluation, pages 1--7, Las Palmas, Canary Islands, 2002.
+				</p>
+				<p class="abstract">
+				 43&nbsp;&nbsp;
+				 R. U. Johnson, C. C. Buel, C. Company, and M. L. C. B. University). Battles and Leaders of the Civil War; Being for the Most Part Contributions by Union and Confederate Officers: based upon "The Century War Series" edited by Robert Underwood Johnson and Clarence Clough Buel. Century Co., New-York, 1887. Includes index. Brown University Library copy (LINC): J000647: 32 v. in 4.
+				</p>
+				<p class="abstract">
+				 44&nbsp;&nbsp;
+		 			 <a href="http://widit.slis.indiana.edu/irpub/DL/2003/citation.cfm?id=544262&amp;dl=ACM&amp;coll=GUIDE&amp;CFID=13720957&amp;CFTOKEN=832591">
+				 Rajiv Kochumman , Carlos Monroy , Richard Furuta , Arpita Goenka , Eduardo Urbina , Erendira Melgoza, Towards an electronic variorum edition of Cervantes' <i>Don Quixote</i>:: visualizations that support preparation, Proceedings of the second ACM/IEEE-CS joint conference on Digital libraries, July 14-18, 2002, Portland, Oregon, USA
+				 </a>
+				</p>
+				<p class="abstract">
+				 45&nbsp;&nbsp;
+				 R. R. Larson. Geographic information retrieval and spatial browsing. In L. C. Smith and M. Gluck, editors, Geographic Information Systems and Libraries: Patrons, Maps, and Spatial Information, pages 81--123, April 1995.
+				</p>
+				<p class="abstract">
+				 46&nbsp;&nbsp;
+				 A. Mahoney, J. A. Rydberg-Cox, D. A. Smith, and C. E. Wulfman. Generalizing the Perseus XML document manager. In Linguistic Exploration: Workshop on Web-based Language Documentation and Description, Philadelpha, December 2000.
+				</p>
+				<p class="abstract">
+				 47&nbsp;&nbsp;
+				 G. Marchionini. Evaluting digital libraries: A longitudinal and multi-faceted view. Library Trends, 49(2):304--333, 2001.
+				</p>
+				<p class="abstract">
+				 48&nbsp;&nbsp;
+				 M. Marcus, G. Kim, M. A. Marcinkiewicz, R. MacIntyre, A. Bies, M. Ferguson, K. Katz, and B. Schasberger. The Penn Treebank: Annotating predicate argument structure. In ARPA '94, 1994.
+				</p>
+				<p class="abstract">
+				 49&nbsp;&nbsp;
+				 M. P. Marcus, B. Santorini, and M. A. Marcinkiewicz. Building a large annotated corpus of English: The Penn Treebank. Computational Linguistics, 19(2):313--330, 1993.
+				</p>
+				<p class="abstract">
+				 50&nbsp;&nbsp;
+		 			 <a href="http://widit.slis.indiana.edu/irpub/DL/2003/citation.cfm?id=544230&amp;dl=ACM&amp;coll=GUIDE&amp;CFID=13720957&amp;CFTOKEN=832591">
+				 Catherine C. Marshall , Christine Ruotolo, Reading-in-the-small: a study of reading on small form factor devices, Proceedings of the second ACM/IEEE-CS joint conference on Digital libraries, July 14-18, 2002, Portland, Oregon, USA
+				 </a>
+				</p>
+				<p class="abstract">
+				 51&nbsp;&nbsp;
+		 			 <a href="http://widit.slis.indiana.edu/irpub/DL/2003/citation.cfm?id=677576&amp;dl=ACM&amp;coll=GUIDE&amp;CFID=13720957&amp;CFTOKEN=832591">
+				 Diana Maynard , Hamish Cunningham , Kalina Bontcheva , Marin Dimitrov, Adapting a Robust Multi-genre NE System for Automatic Content Extraction, Proceedings of the 10th International Conference on Artificial Intelligence: Methodology, Systems, and Applications, p.264-273, September 04-06, 2002
+				 </a>
+				</p>
+				<p class="abstract">
+				 52&nbsp;&nbsp;
+				 F. T. Miller and R. S. Lanier. The Photographic History of the Civil War. Review of Reviews, New York, 1911.
+				</p>
+				<p class="abstract">
+				 53&nbsp;&nbsp;
+		 			 <a href="http://widit.slis.indiana.edu/irpub/DL/2003/citation.cfm?id=700084&amp;dl=ACM&amp;coll=GUIDE&amp;CFID=13720957&amp;CFTOKEN=832591">
+				 Carlos Monroy , Rajiv Kochumman , Richard Furuta , Eduardo Urbina , Er&#233;ndira Melgoza , Arpita Goenka, Visualization of Variants in Textual Collations to Analyze the Evolution of Literary Works in the Cervantes Project, Proceedings of the 6th European Conference on Research and Advanced Technology for Digital Libraries, p.638-653, September 16-18, 2002
+				 </a>
+				</p>
+				<p class="abstract">
+				 54&nbsp;&nbsp;
+				 F. Moore and M. L. C. B. University). The Rebellion Record: a Diary of American Events. G. P. Putnam D. Van Nostrand, New York, 1861.
+				</p>
+				<p class="abstract">
+				 55&nbsp;&nbsp;
+				 E. Mylonas, G. Crane, K. Morrell, and N. Smith. The Perseus Project: Data in the electronic age. In Computing and the Classics, page forthcoming. University of Arizona Press, Tucson, 1991.
+				</p>
+				<p class="abstract">
+				 56&nbsp;&nbsp;
+				 C. Palmer and L. Neuman. The research work of interdisciplinary humanities and scholars: Exploration and translation. Library Quarterly, 72(1):85--117, 2002.
+				</p>
+				<p class="abstract">
+				 57&nbsp;&nbsp;
+		 			 <a href="http://widit.slis.indiana.edu/irpub/DL/2003/citation.cfm?id=700063&amp;dl=ACM&amp;coll=GUIDE&amp;CFID=13720957&amp;CFTOKEN=832591">
+				 Sandra Payette , Thornton Staples, The Mellon Fedora Project, Proceedings of the 6th European Conference on Research and Advanced Technology for Digital Libraries, p.406-421, September 16-18, 2002
+				 </a>
+				</p>
+				<p class="abstract">
+				 58&nbsp;&nbsp;
+				 R. Rosenzweig. Everyone a historian --- afterthoughts to the presence of the past, 2002.
+				</p>
+				<p class="abstract">
+				 59&nbsp;&nbsp;
+				 R. Rosenzweig and D. P. Thelen. The Presence of the Past: Popular Uses of History in American Life. Columbia University Press, New York, 1998. Roy Rosenzweig and David Thelen. 24 cm.
+				</p>
+				<p class="abstract">
+				 60&nbsp;&nbsp;
+				 R. Rosenzweig and D. P. Thelen. The presence of the past: Popular uses of history in American life -- supplementary web site, 1998.
+				</p>
+				<p class="abstract">
+				 61&nbsp;&nbsp;
+				 J. A. Rydberg-Cox. Word co-occurrence and lexical acquisition in Ancient Greek texts. Literary and Linguistic Computing, 15(2):121--129, 2000.
+				</p>
+				<p class="abstract">
+				 62&nbsp;&nbsp;
+		 			 <a href="http://widit.slis.indiana.edu/irpub/DL/2003/citation.cfm?id=379757&amp;dl=ACM&amp;coll=GUIDE&amp;CFID=13720957&amp;CFTOKEN=832591">
+				 Jeffrey A. Rydberg-Cox , Anne Mahoney , Gregory R. Crane, Document quality indicators and corpus editions, Proceedings of the first ACM/IEEE-CS joint conference on Digital libraries, p.435-436, January 2001, Roanoke, Virginia, United States
+				 </a>
+				</p>
+				<p class="abstract">
+				 63&nbsp;&nbsp;
+		 			 <a href="http://widit.slis.indiana.edu/irpub/DL/2003/citation.cfm?id=564391&amp;dl=ACM&amp;coll=GUIDE&amp;CFID=13720957&amp;CFTOKEN=832591">
+				 David A. Smith, Detecting and Browsing Events in Unstructured text, Proceedings of the 25th annual international ACM SIGIR conference on Research and development in information retrieval, August 11-15, 2002, Tampere, Finland
+				 </a>
+				</p>
+				<p class="abstract">
+				 64&nbsp;&nbsp;
+		 			 <a href="http://widit.slis.indiana.edu/irpub/DL/2003/citation.cfm?id=544260&amp;dl=ACM&amp;coll=GUIDE&amp;CFID=13720957&amp;CFTOKEN=832591">
+				 David A. Smith, Detecting events with date and place information in unstructured text, Proceedings of the second ACM/IEEE-CS joint conference on Digital libraries, July 14-18, 2002, Portland, Oregon, USA
+				 </a>
+				</p>
+				<p class="abstract">
+				 65&nbsp;&nbsp;
+		 			 <a href="http://widit.slis.indiana.edu/irpub/DL/2003/citation.cfm?id=699911&amp;dl=ACM&amp;coll=GUIDE&amp;CFID=13720957&amp;CFTOKEN=832591">
+				 David A. Smith , Gregory Crane, Disambiguating Geographic Names in a Historical Digital Library, Proceedings of the 5th European Conference on Research and Advanced Technology for Digital Libraries, p.127-136, September 04-09, 2001
+				 </a>
+				</p>
+				<p class="abstract">
+				 66&nbsp;&nbsp;
+		 			 <a href="http://widit.slis.indiana.edu/irpub/DL/2003/citation.cfm?id=544257&amp;dl=ACM&amp;coll=GUIDE&amp;CFID=13720957&amp;CFTOKEN=832591">
+				 David A. Smith , Anne Mahoney , Gregory Crane, Integrating harvesting into digital library content, Proceedings of the second ACM/IEEE-CS joint conference on Digital libraries, July 14-18, 2002, Portland, Oregon, USA
+				 </a>
+				</p>
+				<p class="abstract">
+				 67&nbsp;&nbsp;
+				 D. A. Smith, A. Mahoney, and J. A. Rydberg-Cox. Management of XML documents in an integrated digital library. In Proceedings of Extreme Markup Languages 2000, pages 219--224, Montreal, August 2000.
+				</p>
+				<p class="abstract">
+				 68&nbsp;&nbsp;
+				 D. A. Smith, J. A. Rydberg-Cox, and G. R. Crane. The Perseus Project: A digital library for the humanities. Literary and Linguistic Computing, 15(1):15--25, 2000.
+				</p>
+				<p class="abstract">
+				 69&nbsp;&nbsp;
+		 			 <a href="http://widit.slis.indiana.edu/irpub/DL/2003/citation.cfm?id=700078&amp;dl=ACM&amp;coll=GUIDE&amp;CFID=13720957&amp;CFTOKEN=832591">
+				 MacKenzie Smith, DSpace: An Institutional Repository from the MIT Libraries and Hewlett Packard Laboratories, Proceedings of the 6th European Conference on Research and Advanced Technology for Digital Libraries, p.543-549, September 16-18, 2002
+				 </a>
+				</p>
+				<p class="abstract">
+				 70&nbsp;&nbsp;
+				 D. Soergel. A framework for digital library research: Broadening the vision. D-Lib Magazine, 8(12), 2002.
+				</p>
+				<p class="abstract">
+				 71&nbsp;&nbsp;
+		 			 <a href="http://widit.slis.indiana.edu/irpub/DL/2003/citation.cfm?id=544222&amp;dl=ACM&amp;coll=GUIDE&amp;CFID=13720957&amp;CFTOKEN=832591">
+				 Helen R. Tibbo, Primarily history: historians and the search for primary source materials, Proceedings of the second ACM/IEEE-CS joint conference on Digital libraries, July 14-18, 2002, Portland, Oregon, USA
+				 </a>
+				</p>
+				<p class="abstract">
+				 72&nbsp;&nbsp;
+				 R. B. Toplin. Ken Burns's The Civil War: the Historian's Response. Oxford University Press, New York, 1996.
+				</p>
+				<p class="abstract">
+				 73&nbsp;&nbsp;
+				 E. M. Voorhees. Overview of TREC 2001. In TREC 2001, Gaithersburg, MD 20899, 2001. NIST.
+				</p>
+				<p class="abstract">
+				 74&nbsp;&nbsp;
+		 			 <a href="http://widit.slis.indiana.edu/irpub/DL/2003/citation.cfm?id=336620&amp;dl=ACM&amp;coll=GUIDE&amp;CFID=13720957&amp;CFTOKEN=832591">
+				 Joanna L. Wolfe, Effects of annotations on student readers and writers, Proceedings of the fifth ACM conference on Digital libraries, p.19-26, June 02-07, 2000, San Antonio, Texas, United States
+				 </a>
+				</p>
+				<p class="abstract">
+				 75&nbsp;&nbsp;
+				 C. E. Wulfman. The Perseus Garner: Early Modern resources in the digital age. Colleg Literature, forthcoming, 2004.
+				</p>
+				<p class="abstract">
+				 76&nbsp;&nbsp;
+		 			 <a href="http://widit.slis.indiana.edu/irpub/DL/2003/citation.cfm?id=699928&amp;dl=ACM&amp;coll=GUIDE&amp;CFID=13720957&amp;CFTOKEN=832591">
+				 Arkady B. Zaslavsky , Alejandro Bia , Kriszti&#225;n Monostori, Using Copy-Detection and Text Comparison Algorithms for Cross-Referencing Multiple Editions of Literary Works, Proceedings of the 5th European Conference on Research and Advanced Technology for Digital Libraries, p.103-114, September 04-09, 2001
+				 </a>
+				</p>
+			</div>
+			<div class="abstract">
+				<A HREF="cite10.htm#CIT"><img name="top" src="arrowu.gif" hspace="10" border="0"></A><SPAN class=heading><A NAME="collab">Collaborative Colleagues:</A></span>
+				<table border="0" style="margin-left: 2em" cellpadding="2">
+						<tr valign="top"><td><div class="abstract"><a href="http://widit.slis.indiana.edu/irpub/DL/2003/results.cfm?query=%2Bauthor%3AP99725&amp;querydisp=author%3AGregory%20Crane&amp;coll=GUIDE&amp;dl=GUIDE&amp;CFID=13720957&amp;CFTOKEN=832591" target="_self">Gregory Crane</a>:</div></td><td>
+						<div class="abstract"><a href="http://widit.slis.indiana.edu/irpub/DL/2003/results.cfm?query=%2Bauthor%3AP244432%20author%3AP99725&amp;querydisp=author%3ARobert%20F%2E%20Chavez&amp;coll=GUIDE&amp;dl=GUIDE&amp;CFID=13720957&amp;CFTOKEN=832591" target="_self">Robert F. Chavez</a></div>
+						<div class="abstract"><a href="http://widit.slis.indiana.edu/irpub/DL/2003/results.cfm?query=%2Bauthor%3AP221607%20author%3AP99725&amp;querydisp=author%3APaul%20Kahn&amp;coll=GUIDE&amp;dl=GUIDE&amp;CFID=13720957&amp;CFTOKEN=832591" target="_self">Paul Kahn</a></div>
+						<div class="abstract"><a href="http://widit.slis.indiana.edu/irpub/DL/2003/results.cfm?query=%2Bauthor%3AP316430%20author%3AP99725&amp;querydisp=author%3AAnne%20Mahoney&amp;coll=GUIDE&amp;dl=GUIDE&amp;CFID=13720957&amp;CFTOKEN=832591" target="_self">Anne Mahoney</a></div>
+						<div class="abstract"><a href="http://widit.slis.indiana.edu/irpub/DL/2003/results.cfm?query=%2Bauthor%3AP94189%20author%3AP99725&amp;querydisp=author%3AGary%20Marchionini&amp;coll=GUIDE&amp;dl=GUIDE&amp;CFID=13720957&amp;CFTOKEN=832591" target="_self">Gary Marchionini</a></div>
+						<div class="abstract"><a href="http://widit.slis.indiana.edu/irpub/DL/2003/results.cfm?query=%2Bauthor%3AP210290%20author%3AP99725&amp;querydisp=author%3ANorman%20Meyrowitz&amp;coll=GUIDE&amp;dl=GUIDE&amp;CFID=13720957&amp;CFTOKEN=832591" target="_self">Norman Meyrowitz</a></div>
+						<div class="abstract"><a href="http://widit.slis.indiana.edu/irpub/DL/2003/results.cfm?query=%2Bauthor%3AP316834%20author%3AP99725&amp;querydisp=author%3AThomas%20L%2E%20Milbank&amp;coll=GUIDE&amp;dl=GUIDE&amp;CFID=13720957&amp;CFTOKEN=832591" target="_self">Thomas L. Milbank</a></div>
+						<div class="abstract"><a href="http://widit.slis.indiana.edu/irpub/DL/2003/results.cfm?query=%2Bauthor%3AP77041%20author%3AP99725&amp;querydisp=author%3AElli%20Mylonas&amp;coll=GUIDE&amp;dl=GUIDE&amp;CFID=13720957&amp;CFTOKEN=832591" target="_self">Elli Mylonas</a></div>
+						<div class="abstract"><a href="http://widit.slis.indiana.edu/irpub/DL/2003/results.cfm?query=%2Bauthor%3AP133154%20author%3AP99725&amp;querydisp=author%3AJames%20M%2E%20Nyce&amp;coll=GUIDE&amp;dl=GUIDE&amp;CFID=13720957&amp;CFTOKEN=832591" target="_self">James M. Nyce</a></div>
+						<div class="abstract"><a href="http://widit.slis.indiana.edu/irpub/DL/2003/results.cfm?query=%2Bauthor%3AP282377%20author%3AP99725&amp;querydisp=author%3ATim%20Oren&amp;coll=GUIDE&amp;dl=GUIDE&amp;CFID=13720957&amp;CFTOKEN=832591" target="_self">Tim Oren</a></div>
+						<div class="abstract"><a href="http://widit.slis.indiana.edu/irpub/DL/2003/results.cfm?query=%2Bauthor%3AP137963%20author%3AP99725&amp;querydisp=author%3AJeffrey%20A%2E%20Rydberg%2DCox&amp;coll=GUIDE&amp;dl=GUIDE&amp;CFID=13720957&amp;CFTOKEN=832591" target="_self">Jeffrey A. Rydberg-Cox</a></div>
+							</td><td>
+						<div class="abstract"><a href="http://widit.slis.indiana.edu/irpub/DL/2003/results.cfm?query=%2Bauthor%3AP63856%20author%3AP99725&amp;querydisp=author%3ADavid%20A%2E%20Smith&amp;coll=GUIDE&amp;dl=GUIDE&amp;CFID=13720957&amp;CFTOKEN=832591" target="_self">David A. Smith</a></div>
+						<div class="abstract"><a href="http://widit.slis.indiana.edu/irpub/DL/2003/results.cfm?query=%2Bauthor%3AP172136%20author%3AP99725&amp;querydisp=author%3ALinda%20C%2E%20Smith&amp;coll=GUIDE&amp;dl=GUIDE&amp;CFID=13720957&amp;CFTOKEN=832591" target="_self">Linda C. Smith</a></div>
+						<div class="abstract"><a href="http://widit.slis.indiana.edu/irpub/DL/2003/results.cfm?query=%2Bauthor%3AP239285%20author%3AP99725&amp;querydisp=author%3ARandy%20Trigg&amp;coll=GUIDE&amp;dl=GUIDE&amp;CFID=13720957&amp;CFTOKEN=832591" target="_self">Randy Trigg</a></div>
+						<div class="abstract"><a href="http://widit.slis.indiana.edu/irpub/DL/2003/results.cfm?query=%2Bauthor%3AP523234%20author%3AP99725&amp;querydisp=author%3AClifford%20Wulfman&amp;coll=GUIDE&amp;dl=GUIDE&amp;CFID=13720957&amp;CFTOKEN=832591" target="_self">Clifford Wulfman</a></div>
+						<div class="abstract"><a href="http://widit.slis.indiana.edu/irpub/DL/2003/results.cfm?query=%2Bauthor%3AP316476%20author%3AP99725&amp;querydisp=author%3AClifford%20E%2E%20Wulfman&amp;coll=GUIDE&amp;dl=GUIDE&amp;CFID=13720957&amp;CFTOKEN=832591" target="_self">Clifford E. Wulfman</a></div>
+						</td>
+						</tr>
+						<tr valign="top"><td><div class="abstract"><a href="http://widit.slis.indiana.edu/irpub/DL/2003/results.cfm?query=%2Bauthor%3AP523234&amp;querydisp=author%3AClifford%20Wulfman&amp;coll=GUIDE&amp;dl=GUIDE&amp;CFID=13720957&amp;CFTOKEN=832591" target="_self">Clifford Wulfman</a>:</div></td><td>
+						<div class="abstract"><a href="http://widit.slis.indiana.edu/irpub/DL/2003/results.cfm?query=%2Bauthor%3AP99725%20author%3AP523234&amp;querydisp=author%3AGregory%20Crane&amp;coll=GUIDE&amp;dl=GUIDE&amp;CFID=13720957&amp;CFTOKEN=832591" target="_self">Gregory Crane</a></div>
+						</td>
+						</tr>
+				</table>
+			</div>
+<br>
+<DIV class=footer-copy-text align="center">
+</DIV>
+</td>
+</tr>
+</table>
+</div>
+</body>
+</html></html>

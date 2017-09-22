@@ -1,0 +1,518 @@
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=<A!CHARSET>">
+<title>:: ez2Find :: L</title>
+<meta name="description" content="ez2Find :: L">
+<style type="text/css">
+<!-- 
+a.link { font-family:Arial; font-size:8pt; color: #FFFFFF; text-decoration:none } 
+a.link:Visited { color: #FFFFFF;} A.link:Active {color: #FFFFFF;} A.link:Hover {color: #FFA400; text-decoration:none }
+a.grey { font-family:Arial; font-size:8pt; color: #525252; text-decoration:none } 
+a.grey:Visited { color: #996633; text-decoration:none }
+a.black { font-family:Arial; font-size:8pt; color: #525252; font-weight:bold; text-decoration:none } 
+a.black:Visited { font-family:Arial; font-size:8pt; color: #996633; font-weight:bold; text-decoration:none }
+a.title { font-family:Arial; color:#0000CC; font-size:16px; font-weight:bold; }
+a.title:Visited { color: #996633; }
+a.cat { font-family:Arial; font-size:10pt; color: #525252; } 
+a.cat:Visited { color: #996633; }
+a:hover{ text-decoration:underline; color:#FF6600 }
+u { font-family:Arial; font-size:8pt; color: #525252; text-decoration:none; cursor:hand }
+body { scrollbar-base-color : #505F94; scrollbar-arrow-color : #FFA200 }
+ -->
+ </style>
+<script>
+var ns6=document.getElementById&&!document.all
+var ie=document.all
+
+function show_text(thetext, whichdiv){
+if (ie) eval("document.all."+whichdiv).innerHTML=[thetext]
+else if (ns6) document.getElementById(whichdiv).innerHTML=[thetext]
+}
+function reset(whichdiv){
+if (ie) eval("document.all."+whichdiv).innerHTML=' '
+else if (ns6) document.getElementById(whichdiv).innerHTML=' '
+}
+</script>
+<script LANGUAGE="JavaScript">
+function addfav(){
+netscape="Please click OK and then hit CTRL+D to bookmark this page";
+if (document.all) { window.external.AddFavorite(location.href, document.title); }
+else if (navigator.appName=='Netscape') { alert(netscape); }
+}
+function Preview(url) {
+var link = url.parentElement.children[0];
+var win = document.all['if'+link.sourceIndex];
+	if(url.innerText == '[Preview]') {
+		if(win) { win.style.display = 'block'; win.location = link.href; } 
+		else { url.insertAdjacentHTML('AfterEnd', '<OBJECT id=if'+link.sourceIndex+' width=100% height=200px classid=clsid:8856F961-340A-11D0-A96B-00C04FD705A2 VIEWASTEXT><PARAM NAME="Location" VALUE=\"'+link.href+'\"></object>'); }
+
+url.innerText = '[Close]';
+
+} else {
+if(win) { win.style.display = 'none'; url.innerText = '[Preview]'; win.location = 'about:blank'; }
+}
+}
+
+function Click () {
+if (("U" == event.srcElement.tagName) && ("A" == event.srcElement.parentElement.children[0].tagName)) {
+var txt = event.srcElement.innerText;
+	if (('[Preview]' == txt) || ('[Close]' == txt)) { Preview(event.srcElement); return false; } 
+	else { return true; }
+
+} else { return true; }				
+}
+</script>
+</head>
+
+<body link="#0000CC" alink="#000099" vlink="#996633" topmargin="0" leftmargin="0" rightmargin="0">
+
+<table cellSpacing="0" cellPadding="0" width="100%" border="0" bgColor="#505F94">
+  <tr>
+    <td bgColor="#525252" colSpan="3" height="1"><img height="1" src="/images/test/blank.gif"></td>
+  </tr>
+  <tr>
+    <td><a href="/index.php"><img src="/images/logo.gif" border="0"></a></td>
+    <td><font face="Arial" size="3" color="#FFFFFF">Guide : <b>L</b></font></td>
+    <td align="right">
+
+<nolayer> 
+<IFRAME src="/banners/banner-fastclick.htm" width="468" height="60" marginwidth="0" marginheight="0" hspace="0" vspace="0" frameborder="0" scrolling="no"></IFRAME>
+</nolayer> 
+<ilayer id="ad1" width="468" height="60"></ilayer>
+
+</td>
+  </tr>
+  <tr>
+    <td bgColor="#525252" colSpan="3" height="1"><img height="1" src="/images/test/blank.gif"></td>
+  </tr>
+</table>
+
+<table border="0" cellspacing="0" cellpadding="3" width="100%" bgcolor="#FCC067">
+  <tr>
+    <td width="50"></td>
+    <td><table border="0" cellspacing="0" cellpadding="3" width="100%" bgcolor="#FCC067">
+  <tr>
+<form METHOD="POST" ACTION="http://ez2find.com/go2.php">
+<input type="hidden" name="type" value="Web">
+    <td rowspan="2" width="50"></td>
+    <td><font face="Verdana,Arial" size="2"><b>Global Metasearch</b></font><br>
+    <input TYPE="text" NAME="search" VALUE="" SIZE="30"> <select name="category" size="1">
+      <option value="Any Language">Any Language</option>
+      <option value="Any Language">-----------------------------</option>
+      <option value="English">English</option>
+      <option value="Any Language">-----------------------------</option>
+      <option value="Afrikaans">Afrikaans</option>
+      <option value="Arabic">Arabic</option>
+      <option value="Bahasa Melayu">Bahasa Melayu</option>
+      <option value="Belarusian">Belarusian</option>
+      <option value="Bulgarian">Bulgarian</option>
+      <option value="Catala">Catala</option>
+      <option value="Chinese Simplified">Chinese Simplified</option>
+      <option value="Chinese Traditional">Chinese Traditional</option>
+      <option value="Cymraeg">Cymraeg</option>
+      <option value="Czech">Czech</option>
+      <option value="Dansk">Dansk</option>
+      <option value="Deutsch">Deutsch</option>
+      <option value="Eesti">Eesti</option>
+      <option value="Espanol">Espanol</option>
+      <option value="Euskara">Euskara</option>
+      <option value="Faroese">Faroese</option>
+      <option value="Francais">Francais</option>
+      <option value="Frysk">Frysk</option>
+      <option value="Galego">Galego</option>
+      <option value="Greek">Greek</option>
+      <option value="Hebrew">Hebrew</option>
+      <option value="Hrvatski">Hrvatski</option>
+      <option value="Indonesia">Indonesia</option>
+      <option value="Islenska">Islenska</option>
+      <option value="Italiano">Italiano</option>
+      <option value="Japanese">Japanese</option>
+      <option value="Korean">Korean</option>
+      <option value="Latvian">Latvian</option>
+      <option value="Lietuviu">Lietuviu</option>
+      <option value="Lingua Latina">Lingua Latina</option>
+      <option value="Magyar">Magyar</option>
+      <option value="Netherlands">Netherlands</option>
+      <option value="Norsk">Norsk</option>
+      <option value="Polska">Polska</option>
+      <option value="Portugues">Portugues</option>
+      <option value="Romana">Romana</option>
+      <option value="Russian">Russian</option>
+      <option value="Shqip">Shqip</option>
+      <option value="Slovensko">Slovensko</option>
+      <option value="Slovensky">Slovensky</option>
+      <option value="Srpski">Srpski</option>
+      <option value="Suomi">Suomi</option>
+      <option value="Svenska">Svenska</option>
+      <option value="Thai">Thai</option>
+      <option value="Turkce">Turkce</option>
+      <option value="Ukrainian">Ukrainian</option>
+      <option value="Vietnamese">Vietnamese</option>
+    </select> <input type="submit" value="Search">
+
+</td>
+    <td align="right"><table border="0" cellpadding="0" bgcolor="#CCCFE0">
+      <tr>
+        <td width="100%"><table border="0" cellspacing="0" cellpadding="4" bgcolor="#FCC067" width="100%">
+          <tr>
+            <td><font face="Arial" size="1">Mode</font><br>
+            <select NAME="mode" size="1">
+              <option VALUE="all">All Words</option>
+              <option VALUE="any">Any Word</option>
+              <option VALUE="phrase">Phrase</option>
+            </select></td>
+            <td nowrap><font face="Arial" size="1">Results</font><br>
+            <select name="per_page" size="1">
+              <option>10</option>
+              <option SELECTED>20</option>
+              <option>30</option>
+              <option>50</option>
+              <option>100</option>
+            </select></td>
+            <td><font face="Arial" size="1">Timeout</font><br>
+            <select name="timeout" size="1">
+              <option>1</option>
+              <option SELECTED>2</option>
+              <option>5</option>
+              <option>10</option>
+              <option>30</option>
+              <option>60</option>
+            </select></td>
+            <td><font face="Arial" size="1">Depth</font><br>
+            <select name="depth" size="1">
+              <option SELECTED>1</option>
+              <option>2</option>
+              <option>3</option>
+              <option>5</option>
+              <option>10</option>
+            </select></td>
+            <td nowrap valign="bottom"><input TYPE="checkbox" NAME="safe" VALUE="1"> <font
+            face="Arial" size="1">Adult Filter</font></td>
+          </tr>
+        </table>
+        </td>
+      </tr>
+    </table>
+    </td>
+  </tr>
+</form>
+</table>
+</td>
+  </tr>
+</table>
+
+<table border="0" cellspacing="1" width="100%" bgcolor="#505F94" height="20" cellpadding="0">
+  <tr bgcolor="#CCCFE0">
+    <td align="center" width="120" nowrap><font face="Verdana,Arial" size="2"><a class="black" href=""
+    onclick="javascript:addfav();this.style.behavior='url(#default#homepage)';this.setHomePage('http://ez2find.com/');">Add to Favorites</a></font></td>
+    <td align="right" height="18"><font face="Verdana,Arial" size="2">Other Search&nbsp;&nbsp;</font></td>
+    <td align="center" width="120" nowrap><a class="black"
+    href="/go2.php?category=Web&search=L">Web</a></td>
+    <td align="center" width="120" nowrap><a class="black"
+    href="/go2.php?category=News&search=L">News</a></td>
+    <td align="center" width="120" nowrap><a class="black"
+    href="/go2.php?category=Newsgroups&search=L">Newsgroups</a></td>
+    <td align="center" width="120" nowrap><a class="black"
+    href="/go2.php?category=Images&search=L">Images</a></td>
+  </tr>
+</table><br>
+
+<nolayer>
+<IFRAME src="/include/modules/sponsors.php?search=L" width="120" height="600" marginwidth="0" marginheight="0" hspace="0" vspace="0" frameborder="0" scrolling="no" align="right"></IFRAME>
+</nolayer>
+<ilayer id="ad2" width="120" height="600"></ilayer>
+
+
+
+
+	
+<table cellSpacing="0" cellPadding="0" width="75%" border="0" style="margin-left: 10px">
+  <tr>
+    <td nowrap><font face="Verdana" size="4" color="#FF6600"><b>Guides</b></font></td>
+    <td align="right" width="90%"><font face="Verdana" size="2" color="#808080">L</font></td>
+  </tr>
+  <tr>
+    <td bgColor="#505F94" height="1" colspan="2"></td>
+  </tr>
+</table>
+
+<dl><font face="Verdana,Arial" size="2">
+<dd><a href="http://ez2find.com/">ez2Find Home</a> :: <a href="/cgi-bin/directory/meta/search.pl/">Directory</a> : 
+
+<a href="/cgi-bin/directory/meta/search.pl/Arts">Arts</a> : 
+
+<a href="/cgi-bin/directory/meta/search.pl/Arts/Music">Music</a> : 
+
+<a href="/cgi-bin/directory/meta/search.pl/Arts/Music/Songwriting">Songwriting</a> : 
+
+<a href="/cgi-bin/directory/meta/search.pl/Arts/Music/Songwriting/Songwriters">Songwriters</a> : 
+
+L <font color="#808080" size="1">(22)</font></dd>
+</font></dl>
+
+	
+	<div align="center">[ <font face="Verdana,Arial" size="2">
+	
+		<a href="/cgi-bin/directory/meta/search.pl/Arts/Music/Songwriting/Songwriters/A/">A</a> | 
+	
+		<a href="/cgi-bin/directory/meta/search.pl/Arts/Music/Songwriting/Songwriters/B/">B</a> | 
+	
+		<a href="/cgi-bin/directory/meta/search.pl/Arts/Music/Songwriting/Songwriters/C/">C</a> | 
+	
+		<a href="/cgi-bin/directory/meta/search.pl/Arts/Music/Songwriting/Songwriters/D/">D</a> | 
+	
+		<a href="/cgi-bin/directory/meta/search.pl/Arts/Music/Songwriting/Songwriters/E/">E</a> | 
+	
+		<a href="/cgi-bin/directory/meta/search.pl/Arts/Music/Songwriting/Songwriters/F/">F</a> | 
+	
+		<a href="/cgi-bin/directory/meta/search.pl/Arts/Music/Songwriting/Songwriters/G/">G</a> | 
+	
+		<a href="/cgi-bin/directory/meta/search.pl/Arts/Music/Songwriting/Songwriters/H/">H</a> | 
+	
+		<a href="/cgi-bin/directory/meta/search.pl/Arts/Music/Songwriting/Songwriters/I/">I</a> | 
+	
+		<a href="/cgi-bin/directory/meta/search.pl/Arts/Music/Songwriting/Songwriters/J/">J</a> | 
+	
+		<a href="/cgi-bin/directory/meta/search.pl/Arts/Music/Songwriting/Songwriters/K/">K</a> | 
+	
+		<a href="/cgi-bin/directory/meta/search.pl/Arts/Music/Songwriting/Songwriters/L/">L</a> | 
+	
+		<a href="/cgi-bin/directory/meta/search.pl/Arts/Music/Songwriting/Songwriters/M/">M</a> | 
+	
+		<a href="/cgi-bin/directory/meta/search.pl/Arts/Music/Songwriting/Songwriters/N/">N</a> | 
+	
+		<a href="/cgi-bin/directory/meta/search.pl/Arts/Music/Songwriting/Songwriters/O/">O</a> | 
+	
+		<a href="/cgi-bin/directory/meta/search.pl/Arts/Music/Songwriting/Songwriters/P/">P</a> | 
+	
+		<a href="/cgi-bin/directory/meta/search.pl/Arts/Music/Songwriting/Songwriters/Q/">Q</a> | 
+	
+		<a href="/cgi-bin/directory/meta/search.pl/Arts/Music/Songwriting/Songwriters/R/">R</a> | 
+	
+		<a href="/cgi-bin/directory/meta/search.pl/Arts/Music/Songwriting/Songwriters/S/">S</a> | 
+	
+		<a href="/cgi-bin/directory/meta/search.pl/Arts/Music/Songwriting/Songwriters/T/">T</a> | 
+	
+		<a href="/cgi-bin/directory/meta/search.pl/Arts/Music/Songwriting/Songwriters/U/">U</a> | 
+	
+		<a href="/cgi-bin/directory/meta/search.pl/Arts/Music/Songwriting/Songwriters/V/">V</a> | 
+	
+		<a href="/cgi-bin/directory/meta/search.pl/Arts/Music/Songwriting/Songwriters/W/">W</a> | 
+	
+		<a href="/cgi-bin/directory/meta/search.pl/Arts/Music/Songwriting/Songwriters/X/">X</a> | 
+	
+		<a href="/cgi-bin/directory/meta/search.pl/Arts/Music/Songwriting/Songwriters/Y/">Y</a> | 
+	
+		<a href="/cgi-bin/directory/meta/search.pl/Arts/Music/Songwriting/Songwriters/Z/">Z</a>
+	
+	</font>]</div><br>
+
+	
+<table border="0" width="75%" cellspacing="0" cellpadding="0">
+  <tr>
+    <td valign="top" width="33%"><dl><font face="Verdana,Arial" size="2">
+
+<dd><a href="/cgi-bin/directory/meta/search.pl/Arts/Music/Songwriting/Songwriters/L/Lane,_Burton/"><b>Lane, Burton</b></a>&nbsp;<font color="#808080" size="1">(4)</font></dd>
+
+
+<dd><a href="/cgi-bin/directory/meta/search.pl/Arts/Music/Composition/Composers/L/Lanier,_Nicholas/"><b>Lanier, Nicholas</b></a>&nbsp;<font color="#808080" size="1">(5)</font></dd>
+
+
+<dd><a href="/cgi-bin/directory/meta/search.pl/Arts/Music/Composition/Composers/L/Lawes,_Henry/"><b>Lawes, Henry</b></a>&nbsp;<font color="#808080" size="1">(4)</font></dd>
+
+
+<dd><a href="/cgi-bin/directory/meta/search.pl/Arts/Music/Composition/Composers/L/Lawes,_William/"><b>Lawes, William</b></a>&nbsp;<font color="#808080" size="1">(5)</font></dd>
+
+</font></dl></td><td valign="top" width="33%"><dl><font face="Verdana,Arial" size="2">
+
+
+<dd><a href="/cgi-bin/directory/meta/search.pl/Arts/Music/Composition/Composers/L/Lecuona,_Ernesto/"><b>Lecuona, Ernesto</b></a>&nbsp;<font color="#808080" size="1">(11)</font></dd>
+
+
+<dd><a href="/cgi-bin/directory/meta/search.pl/Arts/Music/Composition/Composers/L/Leoncavallo,_Ruggero/"><b>Leoncavallo, Ruggero</b></a>&nbsp;<font color="#808080" size="1">(6)</font></dd>
+
+
+<dd><a href="/cgi-bin/directory/meta/search.pl/Arts/Music/Composition/Composers/L/Leveridge,_Richard/"><b>Leveridge, Richard</b></a>&nbsp;<font color="#808080" size="1">(4)</font></dd>
+
+
+<dd><a href="/cgi-bin/directory/meta/search.pl/Arts/Music/Composition/Composers/L/Locke,_Matthew/"><b>Locke, Matthew</b></a>&nbsp;<font color="#808080" size="1">(6)</font></dd>
+
+</font></dl></td><td valign="top" width="33%"><dl><font face="Verdana,Arial" size="2">
+
+
+<dd><a href="/cgi-bin/directory/meta/search.pl/Arts/Music/Composition/Composers/L/Loesser,_Frank_Henry/"><b>Loesser, Frank</b></a>&nbsp;<font color="#808080" size="1">(12)</font></dd>
+
+
+<dd><a href="/cgi-bin/directory/meta/search.pl/Arts/Music/Composition/Composers/L/Loewe,_Frederick/"><b>Loewe, Fritz</b></a>&nbsp;<font color="#808080" size="1">(12)</font></dd>
+
+
+<dd><a href="/cgi-bin/directory/meta/search.pl/Arts/Music/Composition/Composers/L/Lortzing,_Gustav_Albert/"><b>Lortzing, Albert</b></a>&nbsp;<font color="#808080" size="1">(9)</font></dd>
+
+
+<dd><a href="/cgi-bin/directory/meta/search.pl/Arts/Music/Composition/Composers/L/Lutoslawski,_Witold/"><b>Lutoslawski, Witold</b></a>&nbsp;<font color="#808080" size="1">(11)</font></dd>
+
+
+</font></dl></td></tr></table>
+
+	<A!RESULTS.ODP_CATPAGE.SEEALSO>
+	<A!RESULTS.ODP_CATPAGE.OTHERLANGUAGES>
+	
+<table cellSpacing="0" cellPadding="0" width="75%" border="0" style="margin-left: 10px">
+  <tr>
+    <td nowrap><font face="Verdana" size="4" color="#FF6600"><b>Web Sites</b></font></td>
+    <td align="right" width="90%"></td>
+  </tr>
+  <tr>
+    <td bgColor="#505F94" height="1" colspan="2"></td>
+  </tr>
+</table>
+<ul><font face="Verdana,Arial" size="2">
+
+<li><a href="http://hometown.aol.com/folkstar1/"><b>LaFazia, Andrea</b></a>
+
+ - <a class="grey" href="http://www.alexa.com/data/details?amzn_id=hallmall&url=http://hometown.aol.com/folkstar1/" target="_blank">[Site Info]</a> - <a class="grey" href="/channel/translate.php?urltext=http://hometown.aol.com/folkstar1/">[Translate]</a> - <a class="grey" href="http://hometown.aol.com/folkstar1/" target="_blank">[Open New Window]</a></li>
+    <dt>Show dates, photos and links for the folk singer-songwriter.</dt>
+    <dt><font size="1" color="#808080">URL: http://hometown.aol.com/folkstar1/</font></dt>
+
+<li><a href="http://personal.inet.fi/koti/pentti.laitinen"><b>Laitinen, Pentti</b></a>
+
+ - <a class="grey" href="http://www.alexa.com/data/details?amzn_id=hallmall&url=http://personal.inet.fi/koti/pentti.laitinen" target="_blank">[Site Info]</a> - <a class="grey" href="/channel/translate.php?urltext=http://personal.inet.fi/koti/pentti.laitinen">[Translate]</a> - <a class="grey" href="http://personal.inet.fi/koti/pentti.laitinen" target="_blank">[Open New Window]</a></li>
+    <dt>Songwriter and producer of rock, pop and tango music. Provides lyrics and audio downloads.</dt>
+    <dt><font size="1" color="#808080">URL: http://personal.inet.fi/koti/pentti.laitinen</font></dt>
+
+<li><a href="http://joshlamkin.com/"><b>Lamkin, Josh</b></a>
+
+ - <a class="grey" href="http://www.alexa.com/data/details?amzn_id=hallmall&url=http://joshlamkin.com/" target="_blank">[Site Info]</a> - <a class="grey" href="/channel/translate.php?urltext=http://joshlamkin.com/">[Translate]</a> - <a class="grey" href="http://joshlamkin.com/" target="_blank">[Open New Window]</a></li>
+    <dt>Singer and songwriter from Black Mountain, North Carolina. Provides a biography, quotes, reviews, photos, lyrics and RealAudio samples.</dt>
+    <dt><font size="1" color="#808080">URL: http://joshlamkin.com/</font></dt>
+
+<li><a href="http://www.geocities.com/rolanus_cz/index.htm"><b>Lansky, Bob</b></a>
+
+ - <a class="grey" href="http://www.alexa.com/data/details?amzn_id=hallmall&url=http://www.geocities.com/rolanus_cz/index.htm" target="_blank">[Site Info]</a> - <a class="grey" href="/channel/translate.php?urltext=http://www.geocities.com/rolanus_cz/index.htm">[Translate]</a> - <a class="grey" href="http://www.geocities.com/rolanus_cz/index.htm" target="_blank">[Open New Window]</a></li>
+    <dt>Songwriter, bard and lead of the project Rolanus. Provides audio samples, lyrics and links.</dt>
+    <dt><font size="1" color="#808080">URL: http://www.geocities.com/rolanus_cz/index.htm</font></dt>
+
+<li><a href="http://home.insightbb.com/~llbryant/homepage"><b>Larry Bryant's Studio</b></a>
+
+ - <a class="grey" href="http://www.alexa.com/data/details?amzn_id=hallmall&url=http://home.insightbb.com/~llbryant/homepage" target="_blank">[Site Info]</a> - <a class="grey" href="/channel/translate.php?urltext=http://home.insightbb.com/~llbryant/homepage">[Translate]</a> - <a class="grey" href="http://home.insightbb.com/~llbryant/homepage" target="_blank">[Open New Window]</a></li>
+    <dt>A Christian songwriter.</dt>
+    <dt><font size="1" color="#808080">URL: http://home.insightbb.com/~llbryant/homepage</font></dt>
+
+<li><a href="http://mysite.freeserve.com/snodgrass/"><b>Lavery, Una</b></a>
+
+ - <a class="grey" href="http://www.alexa.com/data/details?amzn_id=hallmall&url=http://mysite.freeserve.com/snodgrass/" target="_blank">[Site Info]</a> - <a class="grey" href="/channel/translate.php?urltext=http://mysite.freeserve.com/snodgrass/">[Translate]</a> - <a class="grey" href="http://mysite.freeserve.com/snodgrass/" target="_blank">[Open New Window]</a></li>
+    <dt>Original Irish ballad and folk lyrics, not yet set to music. Ulster, Northern Ireland.</dt>
+    <dt><font size="1" color="#808080">URL: http://mysite.freeserve.com/snodgrass/</font></dt>
+
+<li><a href="http://www.wallylawder.com/"><b>Lawder, Wally</b></a>
+
+ - <a class="grey" href="http://www.alexa.com/data/details?amzn_id=hallmall&url=http://www.wallylawder.com/" target="_blank">[Site Info]</a> - <a class="grey" href="/channel/translate.php?urltext=http://www.wallylawder.com/">[Translate]</a> - <a class="grey" href="http://www.wallylawder.com/" target="_blank">[Open New Window]</a></li>
+    <dt>Performer and composer of acoustic folk-pop music. Provides a biography, photos and upcoming performance dates.</dt>
+    <dt><font size="1" color="#808080">URL: http://www.wallylawder.com/</font></dt>
+
+<li><a href="http://www.stormloader.com/hiramsmusic/"><b>Le Cedre, Hiram</b></a>
+
+ - <a class="grey" href="http://www.alexa.com/data/details?amzn_id=hallmall&url=http://www.stormloader.com/hiramsmusic/" target="_blank">[Site Info]</a> - <a class="grey" href="/channel/translate.php?urltext=http://www.stormloader.com/hiramsmusic/">[Translate]</a> - <a class="grey" href="http://www.stormloader.com/hiramsmusic/" target="_blank">[Open New Window]</a></li>
+    <dt>New age instrumental music by self-taught writer.  Recordings are in MP3, and RealAudio. Photos and biography.</dt>
+    <dt><font size="1" color="#808080">URL: http://www.stormloader.com/hiramsmusic/</font></dt>
+
+<li><a href="http://www.geocities.com/jgleavitt"><b>Leavitt, Jon Gilbert</b></a>
+
+ - <a class="grey" href="http://www.alexa.com/data/details?amzn_id=hallmall&url=http://www.geocities.com/jgleavitt" target="_blank">[Site Info]</a> - <a class="grey" href="/channel/translate.php?urltext=http://www.geocities.com/jgleavitt">[Translate]</a> - <a class="grey" href="http://www.geocities.com/jgleavitt" target="_blank">[Open New Window]</a></li>
+    <dt>Biography, reviews, photos and list of available songs from the songwriter and pianist.</dt>
+    <dt><font size="1" color="#808080">URL: http://www.geocities.com/jgleavitt</font></dt>
+
+<li><a href="http://www.timtrent.com/"><b>LeClaire, Tim and Trent</b></a>
+
+ - <a class="grey" href="http://www.alexa.com/data/details?amzn_id=hallmall&url=http://www.timtrent.com/" target="_blank">[Site Info]</a> - <a class="grey" href="/channel/translate.php?urltext=http://www.timtrent.com/">[Translate]</a> - <a class="grey" href="http://www.timtrent.com/" target="_blank">[Open New Window]</a></li>
+    <dt>Nashville-based songwriters. Includes news, biography, discography, schedule, photos, and merchandise.</dt>
+    <dt><font size="1" color="#808080">URL: http://www.timtrent.com/</font></dt>
+
+<li><a href="http://www.jefflehman.com/"><b>Lehman, Jeff</b></a>
+
+ - <a class="grey" href="http://www.alexa.com/data/details?amzn_id=hallmall&url=http://www.jefflehman.com/" target="_blank">[Site Info]</a> - <a class="grey" href="/channel/translate.php?urltext=http://www.jefflehman.com/">[Translate]</a> - <a class="grey" href="http://www.jefflehman.com/" target="_blank">[Open New Window]</a></li>
+    <dt>Biography, resume, lyrics and photos of the Warren, Michigan singer/songwriter.</dt>
+    <dt><font size="1" color="#808080">URL: http://www.jefflehman.com/</font></dt>
+
+<li><a href="http://www.digisweet.com/"><b>LeJune, Burt Avery</b></a>
+
+ - <a class="grey" href="http://www.alexa.com/data/details?amzn_id=hallmall&url=http://www.digisweet.com/" target="_blank">[Site Info]</a> - <a class="grey" href="/channel/translate.php?urltext=http://www.digisweet.com/">[Translate]</a> - <a class="grey" href="http://www.digisweet.com/" target="_blank">[Open New Window]</a></li>
+    <dt>Provides song downloads in several formats, credits, notes and lyrics.</dt>
+    <dt><font size="1" color="#808080">URL: http://www.digisweet.com/</font></dt>
+
+<li><a href="http://marylemanski.com/"><b>Lemanski, Mary</b></a>
+
+ - <a class="grey" href="http://www.alexa.com/data/details?amzn_id=hallmall&url=http://marylemanski.com/" target="_blank">[Site Info]</a> - <a class="grey" href="/channel/translate.php?urltext=http://marylemanski.com/">[Translate]</a> - <a class="grey" href="http://marylemanski.com/" target="_blank">[Open New Window]</a></li>
+    <dt>Independent singer, songwriter and pianist. Includes a biography, links and review.</dt>
+    <dt><font size="1" color="#808080">URL: http://marylemanski.com/</font></dt>
+
+<li><a href="http://home.claranet.de/lemonds/chuck.htm"><b>LeMonds, Chuck</b></a>
+
+ - <a class="grey" href="http://www.alexa.com/data/details?amzn_id=hallmall&url=http://home.claranet.de/lemonds/chuck.htm" target="_blank">[Site Info]</a> - <a class="grey" href="/channel/translate.php?urltext=http://home.claranet.de/lemonds/chuck.htm">[Translate]</a> - <a class="grey" href="http://home.claranet.de/lemonds/chuck.htm" target="_blank">[Open New Window]</a></li>
+    <dt>Expatriate American singer-songwriter. Provides a biography, discography, photos, links and audio samples.</dt>
+    <dt><font size="1" color="#808080">URL: http://home.claranet.de/lemonds/chuck.htm</font></dt>
+
+<li><a href="http://webhome.idirect.com/~lewisong/"><b>Lewis, Harry</b></a>
+
+ - <a class="grey" href="http://www.alexa.com/data/details?amzn_id=hallmall&url=http://webhome.idirect.com/~lewisong/" target="_blank">[Site Info]</a> - <a class="grey" href="/channel/translate.php?urltext=http://webhome.idirect.com/~lewisong/">[Translate]</a> - <a class="grey" href="http://webhome.idirect.com/~lewisong/" target="_blank">[Open New Window]</a></li>
+    <dt>Composer and lyricist. Includes lyrics, audio samples and merchandise.</dt>
+    <dt><font size="1" color="#808080">URL: http://webhome.idirect.com/~lewisong/</font></dt>
+
+<li><a href="http://www.gallusline.com/"><b>Line, Gallus</b></a>
+
+ - <a class="grey" href="http://www.alexa.com/data/details?amzn_id=hallmall&url=http://www.gallusline.com/" target="_blank">[Site Info]</a> - <a class="grey" href="/channel/translate.php?urltext=http://www.gallusline.com/">[Translate]</a> - <a class="grey" href="http://www.gallusline.com/" target="_blank">[Open New Window]</a></li>
+    <dt>Provides songs lyrics, MP3 samples and related links.</dt>
+    <dt><font size="1" color="#808080">URL: http://www.gallusline.com/</font></dt>
+
+<li><a href="http://www.netian.com/~luisl"><b>Luis L</b></a>
+
+ - <a class="grey" href="http://www.alexa.com/data/details?amzn_id=hallmall&url=http://www.netian.com/~luisl" target="_blank">[Site Info]</a> - <a class="grey" href="/channel/translate.php?urltext=http://www.netian.com/~luisl">[Translate]</a> - <a class="grey" href="http://www.netian.com/~luisl" target="_blank">[Open New Window]</a></li>
+    <dt>Korean music director, songwriter and composer. Includes a brief profile and audio samples.</dt>
+    <dt><font size="1" color="#808080">URL: http://www.netian.com/~luisl</font></dt>
+
+<li><a href="http://luvuluvumusic.iuma.com"><b>Luvu Luvu Music</b></a>
+
+ - <a class="grey" href="http://www.alexa.com/data/details?amzn_id=hallmall&url=http://luvuluvumusic.iuma.com" target="_blank">[Site Info]</a> - <a class="grey" href="/channel/translate.php?urltext=http://luvuluvumusic.iuma.com">[Translate]</a> - <a class="grey" href="http://luvuluvumusic.iuma.com" target="_blank">[Open New Window]</a></li>
+    <dt>Pop, rock, dance, country songs; free downloads for artists looking for material; from the catalog of a professional indie ASCAP songwriter with cuts.</dt>
+    <dt><font size="1" color="#808080">URL: http://luvuluvumusic.iuma.com</font></dt>
+
+</font></ul>
+
+	<A!RESULTS.ODP_CATPAGE.SITEMORELINKS>
+	<A!RESULTS.ODP_CATPAGE.USENET>
+	<A!RESULTS.ODP_CATPAGE.EDITORS>
+	
+<p align="center"><font color="#666666" face="Verdana,Arial" size="2">Last update: 2:33 PT, Friday, August  6, 2004</font></p>
+
+      
+<div align="center"><center>
+<table border="0" bgcolor="#6C6A67" cellspacing="0" cellpadding="0">
+  <tr>
+    <td><table width="100%" cellspacing="1" border="0" cellpadding="5">
+      <tr>
+        <td bgcolor="#FFFFFF" align="center"><font face="Verdana,Arial" size="2">Help build the
+        largest human-edited directory on the web.</font></td>
+      </tr>
+      <tr>
+        <td bgcolor="#FFFFFF" align="center"><font face="Verdana,Arial" size="2"><a
+        href="http://dmoz.org/cgi-bin/add.cgi?where=/Arts/Music/Songwriting/Songwriters/L/">Submit a Site</a> - <a
+        href="http://dmoz.org/about.html"><b>Open Directory Project</b></a> - <a
+        href="http://dmoz.org/cgi-bin/apply.cgi?where=/Arts/Music/Songwriting/Songwriters/L/">Become an Editor</a> </font></td>
+      </tr>
+    </table>
+    </td>
+  </tr>
+</table>
+</center></div><br>
+
+
+
+<p align="center"><font face="Arial" size="1">Portions powered by <img alt="DMOZ" src="/images/dmoz.gif" align="middle" border="0"> &copy;2003 <a href="http://ez2find.com">ez2find.com</a>, Holomedia - All rights reserved.</font></p>
+
+<layer clip="470,65" src="/banners/banner-fastclick.htm" onload="moveToAbsolute(ad1.pageX, ad1.pageY);"></layer>
+<layer clip="120,600" src="/include/modules/sponsors.php?search=L" onload="moveToAbsolute(ad2.pageX, ad2.pageY);"></layer>
+
+
+
+</body>
+</html>

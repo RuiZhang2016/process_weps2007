@@ -1,0 +1,217 @@
+
+    
+/********************************************************************* 
+Full Width Subpage Classes
+*********************************************************************/
+
+#body_contain {
+    position: relative;
+    background: #333; /* 7e0001 for red, we'll make this a variable */
+    margin-left: 3px;
+    margin-right: 3px;
+    padding: 15px 15px 35px 15px;
+    font-family: arial, san-serif;
+    font-size: 11px;
+    color: #333;
+}
+
+#body_contain_inner_full {
+background: transparent url(http://img.purevolume.com/profile_listener/full_width_bg.gif) no-repeat;
+width: 710px;
+padding: 10px;
+}
+
+.page_info {
+    width: 680px;
+    padding: 15px 15px 5px 15px;
+    background: #fff;
+    background: transparent url(http://img.purevolume.com/profile_listener/page_info_bg.gif) no-repeat;
+}
+
+.page_info_bottom {
+    height: 10px;
+    width: 710px;
+    margin-bottom: 10px;
+    background: transparent url(http://img.purevolume.com/profile_listener/page_info_bg.gif) bottom no-repeat;
+}
+
+#photo_full_size {
+    width: 710px;
+    text-align: center;
+}
+
+#photo_thumbs {
+    padding: 15px 0 15px 15px;
+    background: transparent url(http://img.purevolume.com/profile_listener/page_info_bg.gif) no-repeat;
+    width: 695px;
+}
+
+#photo_thumbs img {
+    margin-right: 14px;
+    margin-bottom: 15px;
+}
+
+div#body_contain_inner_bottom {
+height: 10px;
+width: 730px;
+background: transparent url(http://img.purevolume.com/profile_listener/full_width_bg_bottom.gif) no-repeat;
+}
+
+
+/********************************************************************* 
+Subpage Classes
+*********************************************************************/
+
+#photo_thumbs .thumb_wrap {
+    margin-right: 14px;
+}
+
+#photo_thumbs .thumb_wrap img {
+    margin-right: 0;
+    margin-top: 5px;
+}
+
+
+/********************************************************************* 
+General Links
+*********************************************************************/
+
+div#body_contain a.bold_link {
+    text-decoration: none;
+    font-weight: bold;
+    color: #333;
+}
+
+
+/*********************************************************************
+Prev - Next
+*********************************************************************/
+
+h6.next, h6.next_off, h6.prev, h6.prev_off {
+    text-indent: -9999px;
+    float: right;
+    width: 40px;
+    height: 15px;
+    margin: 0;
+    padding: 0;
+}
+
+h6.next a, h6.next_off a, h6.prev a, h6.prev_off a {
+    display: block;
+    width: 40px;
+    height: 15px;
+    text-decoration: none;
+    border: 0;
+}
+
+h6 b { display: none; }
+
+
+/********************************************************************* 
+Icon Tabs
+*********************************************************************/
+
+    #pro_Icons, #continue_to_profile {
+        position: absolute;
+        top: 20px;
+        right: 15px;
+        width: 245px; /* this width fits 5 tabs */
+        height: 45px;
+    }
+    #continue_to_profile {
+        text-align: right;
+        font-size: 11px;
+        color: #ccc;
+        height: 20px;
+        top: 50px;
+        right: 20px;
+    }
+        #video_header #continue_to_profile { top: 23px; }
+
+
+ul#pro_IconTabs {
+    border: none;
+    list-style-type: none;
+    height: 45px;
+    width: 245px;
+}
+
+    ul#pro_IconTabs li {
+        display: block;
+        float: right;
+        padding: 0;
+        margin: 0;
+        border: none;
+    }
+    
+    ul#pro_IconTabs li a, ul#pro_IconTabs li a:visited, ul#lis_IconTabs li a:hover  {
+        display: block;
+        width: 49px;
+        height: 45px;
+        border: none;
+    }
+
+ul#pro_NavTabs li a strong, ul#pro_MiniTabs li a strong, ul#pro_SkinnyTabs li a strong, ul#pro_IconTabs li a strong, ul#pro_PlayerTabs li a strong { display: none; }
+
+div#icon_addcomm, div#icon_addcomm_sm, div#icon_addfav, div#icon_addfav_sm, div#icon_addfriend, div#icon_addfriend_sm {
+    position: absolute;
+    left: 413px;
+    top: -160px;
+    width: 238px;
+    height: 103px;
+    z-index: 1000;
+    visibility: hidden;
+    background: transparent url(http://img.purevolume.com/profile_artist/icon_nologin_bg.png) no-repeat;
+}
+div#icon_addcomm {
+    top: -190px;
+    height: 135px;
+    background: transparent url(http://img.purevolume.com/profile_artist/icon_comment_bg.png) no-repeat;
+}
+div#icon_addfav, div#icon_addfav_sm {
+    left: 463px;
+}
+div#icon_addfriend, div#icon_addfriend_sm {
+    left: 513px;
+}
+div#icon_addcomm p, div#icon_addcomm_sm p, div#icon_addfav p, div#icon_addfav_sm p, div#icon_addfriend p, div#icon_addfriend_sm p {
+    font-size: 10px;
+    text-align: center;
+    margin: 20px 25px 0 25px;
+    color: #333;
+}
+div#icon_addcomm p.listener_says {
+    font-size: 12px;
+    margin: 7px 0 5px 0;
+}
+div#icon_addcomm textarea {
+    display: block;
+    width: 209px;
+    height: 65px;
+    padding: 0;
+    margin: 5px 14px 0 14px;
+    border: 1px solid #aaa;
+    font-size: 9px;
+    color: #333;
+    font-family: tahoma, arial, sans-serif;
+}
+img.icon_cancel {
+    position: absolute;
+    bottom: 14px;
+    right: 15px;
+}
+div#icon_addcomm img.icon_cancel, div#icon_addfav img.icon_cancel, div#icon_addfriend img.icon_cancel {
+    right: 65px;
+}
+input.icon_addit {
+    position: absolute;
+    bottom: 14px;
+    right: 1px;
+}
+
+
+/*********************************************************************
+* Photo Viewer Styles
+*********************************************************************/
+
+

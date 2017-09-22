@@ -1,0 +1,149 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<!-- saved from url=(0026)http://closed.netflix.com/ -->
+<HTML><HEAD><TITLE>Netflix</TITLE>
+<META http-equiv=Content-Type content="text/html; charset=windows-1252">
+<META http-equiv=REFRESH content="30; URL=http://www.netflix.com/'http://www.netflix.com'">
+<STYLE>.Normal {
+	FONT-SIZE: 12pt; COLOR: black; FONT-FAMILY: "Times New Roman"
+}
+.std { font-family : arial, sans-serif; color : #000000; font-size : 13px; }
+.stdbrn { font-family : arial, sans-serif; color : #574f3d; font-size : 13px; }
+.ar16rdbd { font-family : arial, sans-serif; color : #ff0008; font-size : 16px; font-weight : bold;}
+DIV {padding-bottom:15px;}
+</STYLE>
+
+<META content="MSHTML 6.00.2719.2200" name=GENERATOR>
+<script language="javascript">
+
+        // takes a name of a web element, and attempts to return
+        // a reference to the object and reference to the style of object
+        // while being as browser friendly as possible
+        function getObj(name) {
+                if ( (document.getElementById ) && (document.getElementById(name) ) ) {
+                        this.obj = document.getElementById(name);
+                        this.style = document.getElementById(name).style;
+                }
+                else if ( (document.all) && (document.all[name]) ) {
+                        this.obj = document.all[name];
+                        this.style = document.all[name].style;
+                }
+                else if (document.layers) {
+                        this.obj = getObjNN4(document,name);
+                        this.style = this.obj;
+                }
+        }
+
+	// Netscape v4 layers recursive search
+	function getObjNN4(obj,name) {
+		var x = obj.layers;
+		var foundLayer;
+		for (var i=0;i<x.length;i++)
+		{
+			if (x[i].id == name)
+				foundLayer = x[i];
+			else if (x[i].layers.length)
+				var tmp = getObjNN4(x[i],name);
+			if (tmp) foundLayer = tmp;
+		}
+		return foundLayer;
+	}
+
+
+        // takes a javascript Date object and builds a display string
+	//    based on the browser's timezone.
+        function buildDateString ( dateObj ) {
+                var hours, mins;
+                var AMPM = "AM";
+
+                hours = dateObj.getHours();
+		if ( hours >= 12 ) {
+			AMPM = "PM";
+                	if ( hours > 12 ) {
+                       		hours -= 12;
+			}
+                }
+                if ( hours < 10 ) {
+                        hours = "0" + hours;
+                }
+
+                mins = dateObj.getMinutes();
+                if ( mins < 10 ) {
+                        mins = "0" + mins;
+                }
+
+                return ( hours + ":" + mins + " " + AMPM );
+        }
+
+
+        function updateTime() {
+                //get a Date object representing NOW
+                var nowDate  = new Date ( );
+
+                //get a Date object representing the open time
+                var openDate = new Date ( 0 );
+
+                openDate.setUTCFullYear ( %%OPEN_YEAR%% );
+                openDate.setUTCMonth ( %%OPEN_MON%% );
+                openDate.setUTCDate ( %%OPEN_DATE%% );
+                openDate.setUTCHours ( %%OPEN_HOUR%% );
+                openDate.setUTCMinutes ( %%OPEN_MIN%% );
+                openDate.setUTCSeconds ( 0 ) ;
+
+                //get display strings for both dates...
+                var dateText = "at " + buildDateString ( openDate );
+                var nowText = buildDateString ( nowDate );
+		var deltaText = "";
+		//var deltaText = " ( ~ " + Math.ceil(( openDate.getTime() - nowDate.getTime() ) / (60 * 1000)) + " minutes )";
+
+                //we've somehow gone past our expected uptime, change message to " shortly "
+                if ( nowDate.getTime() > openDate.getTime() ) {
+                        dateText = " shortly.";
+			deltaText = "";
+                }
+
+                //grab the span we'll update and then update the innerHTML
+                var spanObj = new getObj("localtime");
+                if ( ( spanObj ) && ( spanObj.obj ) && ( dateText ) ){
+                        var spanText = "";
+                        spanText += "<br><br><B>According to your computer's clock, it is currently ";
+                        spanText += nowText;
+                        spanText += " </B>";
+                        spanText += "<br><br><B>It is anticipated that the site will be available again ";
+                        spanText += dateText + " " + deltaText;
+                        spanText += " </B>";
+                        spanObj.obj.innerHTML = spanText;
+                }
+        }
+</script>
+</HEAD>
+<BODY class=Normal lang=EN-US vLink=#330066 aLink=#003399 link=#003399 
+bgColor=#ffffff leftmargin="0" topmargin="0" bottommargin="0" rightmargin="0" marginwidth="0" marginheight="0">
+
+<table width=100% cellpadding=0 cellspacing=0 border=0>
+    <tr>
+        <td bgcolor="#dc181e"><a href="http://www.netflix.com/Default"><img src="http://cdn.nflximg.com/us/page_header/header_logo.gif" alt="Netflix" width=101 height=39 border=0></a></td>
+        <td bgcolor="#dc181e">&nbsp;</td>
+        <td align=right bgcolor="#dc181e">&nbsp;</td>
+        <td bgcolor="#dc181e">&nbsp;</td>
+    </tr>
+    <tr height=30><td colspan=4 class=stdbrn>
+        <div style="padding: 5px 5px 5px 20px;">DVD rentals delivered to your home - plans from only $5.99 a month! <nobr>No late fees - ever! Fast and free shipping both ways. FREE Trial.</nobr></div>
+    </td></tr>
+    <tr><td colspan=4 bgcolor=#000000 height=2><spacer type=block height=2 width=1></td></tr>
+</table>
+<table width=765 cellpadding=0 cellspacing=0 border=0>
+    <tr>
+        <td width=80>&nbsp;</td>
+        <td class=std>
+        <br><br>
+        <div class=ar16rdbd>The Netflix web site is temporarily unavailable due to scheduled maintenance.</div>
+        <div id="localtime" name="localtime"><B>It is anticipated that the site will be available again at 3:30 AM Pacific time.</B></div>
+        <div>We apologize for any inconvenience this causes you.</div>
+        <div>Please visit us again soon.</div>
+        </td>
+    </tr>
+</table>
+</DIV>
+<FONT color=#ffffff>Terms of Use</FONT>
+</BODY>
+</HTML>

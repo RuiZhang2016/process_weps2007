@@ -1,0 +1,984 @@
+<HTML>
+<HEAD>
+<TITLE>A Comparison of Schemas for Dublin Core-based Video Metadata Representation </TITLE>
+</HEAD>
+
+<BODY TEXT="#000000" BGCOLOR="#FFFFFF" LINK="#0000EE">
+
+<H1 ALIGN=CENTER>A Comparison of Schemas for Video Metadata Representation</H1>
+<P>
+<HR><P>
+Jane Hunter, CITEC, 317 Edward St Brisbane, Qld, 4001, Australia. Phone +617 33654310, Fax +617 33654311 <a href="mailto:jane@dstc.edu.au">jane@dstc.edu.au</a><BR>
+Liz Armstrong, DSTC, Level 7, GP South, Uni of Qld, Qld, 4072, Australia.  Phone +617 33654310, Fax +617 33654311 <a href="mailto:liz@dstc.edu.au">liz@dstc.edu.au</a>
+<HR>
+<H2>Abstract</H2>
+To enable the resource discovery of audiovisual documents over the WWW, it will be necessary to define content description standards or metadata standards for complex, multi-layered, time-dependent information-rich audiovisual data streams. In particular, this is the primary goal of the emerging MPEG-7 standard, the "Multimedia Content Description Interface" [<a href="comparison.html#REF1">1</a>], under development by the MPEG group. In the past, a lot of effort has gone into generating descriptors and description schemes for video indexing but comparatively little research has been done on schemas capable of defining the structure, content and semantics of video documents and enabling validation and higher levels of automated content checking.  This paper compares the capabilities of the RDF Schema, Extensible Markup Language (XML) Document Type Definitions (DTD's), Document Content Description (DCD) and Schema for Object-Oriented XML (SOX), for supporting and validating hierarchical video descriptions based on Dublin Core, MPEG-7 and a specific hierarchical structure. Finally this paper proposes a hybrid schema based on features from each of these schemas which will satisfy the MPEG-7 Description Definition Language (DDL) requirements.
+<P>
+<HR>
+<H2>Keywords</H2>
+Video, Metadata, Schema, Dublin Core, MPEG-7
+<P>
+<HR>
+<H2><A NAME="Introduction">1. Introduction</H2>
+<P>
+To enable the resource discovery of audiovisual documents over the WWW, it will be necessary to define content description standards or metadata standards for complex, multi-layered, time-dependent information-rich data streams. In particular, this is the primary goal of the developing MPEG-7 standard, the "Multimedia Content Description Interface" [<a href="comparison.html#REF1">1</a>], under development by the MPEG group.
+<P>
+A number of papers have considered the application of Dublin Core (DC) and the Resource Description Framework (RDF) to video indexing [<a href="comparison.html#REF2">2</a>, <a href="comparison.html#REF3">3</a>, <a href="comparison.html#REF4">4</a>, <a href="comparison.html#REF5">5</a>]. An example of such an application is described briefly below. However, very little work has been done on defining schemas which are capable of actually validating and constraining video descriptions and their associated data models. Such schemas will be necessary for the development of cost-efficient, user-friendly, semi-automatic metadata generation and editing tools for video. Such a schema would also provide a solution for the Description Definition Language (DDL) component of the MPEG7 requirements. 
+<P>
+This paper first briefly presents a video description scheme based on Dublin Core and MPEG-7. From this description format, a list of schema requirements are generated. It then compares the ability of a number of existing schemas and schema proposals, including the RDF Schema, XML DTDs, DCD and SOX, to satisfy descriptions of hierarchical video structures. Examples of schema definitions are given to illustrate their capabilities.
+<P>
+ Finally this paper proposes a hybrid schema based on specific features from each of these schemas and schema proposals which would satisfy the MPEG-7 Description Definition Language (DDL) requirements.
+<P>
+<HR>
+<H2><A NAME="Proposal">2. Proposed Video Description Scheme</H2>
+<P>
+Dublin Core was designed specifically for generating metadata to facilitate the resource discovery of textual documents. Although a number of workshops have been held to discuss the applicability of Dublin Core to non-textual documents such as images, sound and moving images, they have primarily focused on extensions to the 15 core elements through the use of subelements and schemes specific to audiovisual data, to describe bibliographic-type information rather than the actual content.<P>
+It has been shown  [<a href="comparison.html#REF2">2</a>] that it is possible to describe both the structure and fine-grained details of video content by using the fifteen Dublin Core elements plus qualifiers and encoding this within RDF . This "pure Dublin Core" approach provides multiple levels of descriptive information. At the top level the 15 basic Dublin Core elements can be used to describe the bibliographic type information about the complete document (e.g. Title, Author, Contributor, Date etc.). This enables non-specialist inter-disciplinary searching, independent of media type. Extensions or qualifiers to specific DC elements (Type, Description, Relation, Coverage) can be applied at the lower levels (scenes, shots, frames) to provide fine-grained, discipline- and media-specific searching (e.g. Description.Camera.Angle). The disadvantage of this approach is that the semantic refinement of Dublin Core through the use of qualifiers eventually leads to a loss of semantic interoperability.
+<P>
+The alternative is a "hybrid" approach in which RDF (or some other framework) is used to combine both simple unqualified Dublin Core and MPEG-7 descriptors within a single description container. Dublin Core can be used for generic media-independent search and retrieval while MPEG-7 can be used for object-specific fine-grained queries. Our future research will compare and evaluate these two approaches for multimedia resource discovery and determine the best balance between semantic interoperability, extensibility and modularity. At this stage, we don't know the specific attributes of each level, we can only assume that each structural component will possess both a set of Dublin Core attributes plus a set of MPEG-7 attributes, as illustrated in Figure 1 below.
+<P>
+For example, if DC.Type = "Image.Moving.TV.News.Scene" then valid descriptors will include both the DC simple elements plus MPEG-7 descriptors such as script, transcript, editlist, keyframe etc. If DC.Type = "Image.Moving.TV.News.Scene.Shot" then valid descriptors will include both the DC elements plus keyframe, camera_distance, camera_angle, camera_motion, opening_transition, closing_transition. If DC.Type = "Image.Moving.TV.News.Scene.Shot.Frame" then a valid descriptors will be the DC elements plus colour_histogram.
+<P>
+Figure 1 shows the logical structure, the structural components and their associated Dublin Core attributes and some assumed MPEG-7 attributes for the proposed video description scheme. 
+<P>
+<center>
+<TABLE>
+<TD><IMG SRC="mpeg7.gif"></TABLE>
+<CAPTION><B>Figure 1: Multilayered Hierarchical Structure and Attributes of Video</B></CAPTION>
+</center>
+
+<HR>
+
+<H2><A NAME="Requirements">3. Video Metadata Schema Requirements</A></H2>
+
+<P>
+In order to represent the video structure and Dublin Core descriptors outlined in Figure 1, a suitable schema must be able to support the following:
+<UL>
+<LI>Hierarchical structure definitions. The schema must be able to constrain the structure to a precise hierarchy in which complete video documents sit at the top level. These in turn contain sequences, which contain scenes, which contain shots, which contain frames, which contain objects or actors. Figure 1 illustrates this hierarchy.
+<LI>Each level (or class) within the hierarchy must be constrained to possess only specific attributes. In our description scheme, we assume that each layer possesses the 15 simple, optional and extensible DC elements plus a set of class-specific attributes unique to that layer. These represent the set of MPEG-7 descriptors for that class when they become available.
+<LI>Element and attribute inheritance. It should be possible to specify sub-classing with inheritance of attributes and elements from the upper to lower classes. In addition, sub-classes should be able to have their own additional attributes and elements. This allows efficient reuse and customization of document schemas. 
+<LI>Data Typing. It must be possible to constrain the values of attributes to certain data types. Data types supported should include primitive data types as well as Schemes (e.g. SMPTE), enumerated data types, controlled vocabularies, file types (images), URIs and complex data types (e.g.colour histograms, 3D vectors, graphs, RGB values etc.). It should also be possible to specify multiple alternative schemes or data types for a particular attribute.
+<LI>Cardinality within attributes should be representable. It must be possible to specify that an attribute can have zero, one or multiple values. Ideally the minimum and maximum number of attributes should also be specifiable e.g. a scene must contain between 2 and 5 shots.
+<LI>Spatio-temporal specifications. The Schema must be able to support the specification of temporal characteristics e.g. begin and end time of segments and their duration. Similarly, it should be able to support spatial representation e.g. regions within an image or motion along a line.
+<LI>Spatial, temporal and conceptual relations. Spatial relations such as neighbouring objects and temporal relations such as sequential or parallel segments should be supported. Given such a relationship between two classes, it should also be possible to constrain specific attribute values of these classes. For example, the start and end times of scenes contained within a sequence, must lie within the start and end time of that sequence.
+<LI>Human-readability. It is desirable rather than mandatory that both the schema and the description output from the schema should be human-readable.
+<LI>Availability of supporting technologies such as parsers (capable of validating input descriptions), databases and query languages.
+</UL>
+<P>
+These requirements are similar and compatible with the DDL requirements listed in section 4.1.1 of the MPEG-7 Requirements Document [<a href="comparison.html#REF7">7</a>].
+<P>
+<HR>
+
+<H2><A NAME="RDF">4. Resource Description Framework (RDF) Schema</H2>
+<p>
+The Resource Description Framework (RDF) enables interoperability between applications which exchange machine-understandable information on the Web. A model for representing metadata as well as a syntax for encoding RDF, based on XML has been defined in the RDF Model and Syntax Specification document [<a href="comparison.html#REF8">8</a>].
+<P>
+RDF is based on a resource and property data model system. A collection of classes (typically authored for a specific purpose or domain) and the definition of their properties (attributes) and corresponding semantics represent an RDF schema. A schema defines not only the properties of the resource or class (Title, Author, Subject, Size, Color etc.) but also may define the kinds of resources being described (books, webpages, people, companies, etc.). The details of RDF schemas have been defined in the RDF Schema Specification document [<a href="comparison.html#REF9">9</a>].
+<P>
+Classes are organized in a hierarchy, and offer extensibility through subclass refinement. This way, in order to create a schema slightly different from an existing one, one can just provide incremental modifications to the base schema. Through the sharability of schemas RDF will support the reusability of metadata definitions. Due to RDF's incremental extensibility, agents processing metadata will be able to trace the origins of schemes they are unfamiliar with back to known schemes, and perform meaningful actions on metadata they weren't originally designed to process. The sharability and extensibility of RDF also allows metadata authors to use multiple inheritance to "mix" definitions, to provide multiple views to their data, taking advantage of work done by others. The XML namespace mechanism serves to identify different RDF Schemas. 
+<P>
+RDF schemas can be compared to XML Document Type Descriptions (DTDs). Unlike an XML DTD, which gives specific constraints on the syntactical structure of a document, an RDF schema provides semantical information about the interpretation of the statements given in an RDF data model. Given its goals, RDF appears to be the ideal approach for supporting descriptors from multiple description schemes simultaneously, as required by the MPEG-7 DDL.
+<P>
+<HR>
+<H2><A NAME="RDF Schema Example">4.1 Example of a Suitable RDF Schema</H2>
+<p>
+This section describes an RDF schema definition that attempts to map to the diagram in Figure 1 and support the requirements listed above.
+<P>
+Since we want the DC simple attributes to be applicable to every component or layer, <i>videos</I>, <i>sequences</i>, <i>scenes</i>, <i>shots</i>, <i>frames</i> and <i>objects</I> are all sub-classes of a top level <i>document</i> class which possesses the DC attributes. In addition each sub-class has its own additional descriptive properties or attributes which will correspond to MPEG-7 descriptors when they become available.
+<P>
+<p><table cellpadding='5' border='1' bgcolor='#80ffff' width='70%'>
+<tr><td><code><small>
+<PRE>
+&lt;rdf: RDF
+	xmlns:rdf = "http://www.w3.org/TR/WD-rdf-syntax#"
+	xmlns:rdfs= "http://www.w3.org/TR/WD-rdf-schema#"
+	xmlns:dc= "http://purl.org/metadata/dublin_core#"&gt;
+
+&lt;rdfs:Class ID="MM_document"&gt;
+&lt;rdfs:comment&gt;Class for representing a generic multimedia document&lt;/rdfs:comment&gt;
+&lt;/rdfs:Class&gt;
+
+&lt;rdfs:comment&gt;Define all of the DC elements for MM_document &lt;/rdfs:comment&gt;
+<BR>
+&lt;rdf:PropertyType ID="Title"&gt;
+&lt;rdfs:comment&gt;This is the DC Title element &lt;/rdfs:comment&gt;
+&lt;rdfs:domain rdf:resource="#MM_document"&gt;
+&lt;rdfs:range rdf:resource="http://purl.org/metadata/dublin_core#Title"/&gt;
+&lt;/rdf:PropertyType&gt;
+<BR>
+&lt;rdf:PropertyType ID="Creator"&gt;
+&lt;rdfs:comment&gt;This is the DC Creator element &lt;/rdfs:comment&gt;
+&lt;rdfs:domain rdf:resource="#MM_document"&gt;
+&lt;rdfs:range rdf:resource="http://purl.org/metadata/dublin_core#Creator"/&gt;
+&lt;/rdf:PropertyType&gt;
+.
+etc. 
+.
+
+	
+&lt;rdfs:Class ID="Video"&gt;
+&lt;rdfs:comment&gt;Class for representing a video document. It is a subclass of MM_document&lt;/rdfs:comment&gt;
+&lt;rdfs:subClassOf  rdf:resource="#MM_document"/&gt;
+&lt;/rdfs:Class&gt;
+
+&lt;rdfs:Class ID="Sequence"&gt;
+&lt;rdfs:comment&gt;Class for representing a sequence from a video document. It is a subclass of MM_document&lt;/rdfs:comment&gt;
+&lt;rdfs:subClassOf  rdf:resource="#MM_document"/&gt;
+&lt;/rdfs:Class&gt;
+
+&lt;rdfs:Class ID="Scene"&gt;
+&lt;rdfs:comment&gt;Class for representing a scene. It is a subclass of MM_document&lt;/rdfs:comment&gt;
+&lt;rdfs:subClassOf  rdf:resource="#MM_document"/&gt;
+&lt;/rdfs:Class&gt;
+
+&lt;rdfs:Class ID="Shot"&gt;
+&lt;rdfs:comment&gt; Class representing a shot&lt;/rdfs:comment&gt;
+&lt;rdfs:subClassOf  rdf:resource="#MM_document"/&gt;
+&lt;/rdfs:Class&gt;
+	
+&lt;rdfs:Class ID="Frame"&gt;
+&lt;rdfs:comment&gt; Represents a single frame. It is a subclass of #MM_document&lt;/rdfs:comment&gt;
+&lt;rdfs:subClassOf rdf:resource="#MM_document"/&gt;
+&lt;/rdfs:Class&gt;
+
+&lt;rdfs:Class ID="Object"&gt;
+&lt;rdfs:comment&gt; Represents an object within a frame. It is a subclass of #MM_document&lt;/rdfs:comment&gt;
+&lt;rdfs:subClassOf rdf:resource="#MM_document"/&gt;
+&lt;/rdfs:Class&gt;
+
+</small></code></td></tr></table></PRE></p><p></p>
+<P>
+One of the problems with RDF is to create a generic property such as <i>contains</i> by which the hierarchical structure can be defined i.e. <i>videos</i> contain <i>sequences</i> which contain <i>shots</i> which contain <i>frames</i> which contain <i>objects</i> and <i>actors</i>. If you create a property <i>contains</i> for #video then how do you also apply it to #sequence, #scene and #shot? Since each property requires a single range, then generic relationships such as <i>contains</i> cannot be used. Instead, a separate property must be defined for each domain-range pair. This is tedious and repetitive. The lack of class-specific constraints on domain and range of properties is a major limitation of RDF, particularly when applied to complex multilayered documents in which you want to specify constraints on structural, spatial, temporal and conceptual relationships between components.
+<P>
+
+<p><table cellpadding='5' border='1' bgcolor='#80ffff' width='70%'>
+<tr><td><code><small>
+<PRE>
+
+&lt;rdf:PropertyType ID="contains_sequences"&gt;
+&lt;rdfs:comment&gt; Property related to a video asset stating that a video consists of a number of sequences. &lt;/rdfs:comment&gt;
+&lt;rdfs:domain rdf:resource="#Video"&gt;
+&lt;rdfs:range rdf: resource="#Sequence"&gt;
+&lt;/rdfs:PropertyType&gt;
+
+&lt;rdf:PropertyType ID="contains_scenes"&gt;
+&lt;rdfs:comment&gt; Property related to a sequence asset stating that a sequnce consists of a number of scenes. &lt;/rdfs:comment&gt;
+&lt;rdfs:domain rdf:resource="#Sequence"&gt;
+&lt;rdfs:range rdf: resource="#Scene"&gt;
+&lt;/rdfs:PropertyType&gt;
+
+&lt;rdf:PropertyType ID="contains_shots"&gt;
+&lt;rdfs:comment&gt; Property related to a scene asset stating that a scene consists of a number of shots. &lt;/rdfs:comment&gt;
+&lt;rdfs:domain rdf:resource="#Scene"&gt;
+&lt;rdfs:range rdf: resource="#Shot"&gt;
+&lt;/rdfs:PropertyType&gt;
+
+&lt;rdf:PropertyType ID="contains_frames"&gt;
+&lt;rdfs:comment&gt; Property related to a shot asset stating that a shot consists of a number of frames. &lt;/rdfs:comment&gt;
+&lt;rdfs:domain rdf:resource="#Shot"&gt;
+&lt;rdfs:range rdf: resource="#Frame"&gt;
+&lt;/rdfs:PropertyType&gt;
+
+&lt;rdf:PropertyType ID="contains_objects"&gt;
+&lt;rdfs:comment&gt; Property related to a frame asset stating that a frame consists of a number of objects. &lt;/rdfs:comment&gt;
+&lt;rdfs:domain rdf:resource="#Frame"&gt;
+&lt;rdfs:range rdf: resource="#Object"&gt;
+&lt;/rdfs:PropertyType&gt;
+
+</small></code></td></tr></table></PRE></p><p></p>
+
+<P>
+Another problem is the limited data typing within RDF. There are three ways of specifying data types within RDF:
+<UL>
+<LI>Use the primitive <i>Literal</i> data type available within the RDF schema definition. This is any quoted string.
+<LI>Implement a kind of enumerated data type by defining the range to be a class with a number of predefined instance values. This is used in the example below to define the possible values for shot transitions.
+<LI>Point to a separate namespace in which the data types have been defined. In the example below we refer to "http://www.w3.org/TR/datatypes" for any data types other than <i>literal</i>.  This namespace doesn't currently exist but it is intended to define this within the W3C XML Schema Working Group [<a href="comparison.html#REF10">10</a>] which has recently been set up.
+</UL>
+<P>
+Below is an example of the RDF Schema code defining some of the scene, shot , frame and object properties. It illustrates the three data typing methods available.
+<P>
+<p><table cellpadding='5' border='1' bgcolor='#80ffff' width='70%'>
+<tr><td><code><small>
+<PRE>
+
+&lt;rdf:PropertyType ID="startTime"&gt;
+&lt;rdfs:domain rdf:resource="#Scene"&gt;
+&lt;rdfs:domain rdf:resource="#Shot"&gt;
+&lt;rdfs:range rdf:resource="http://wwww.w3.org/TR/datatypes#Time"/&gt;
+&lt;/rdf:PropertyType&gt;
+
+&lt;rdfs:PropertyType ID="keyFrame"&gt;
+&lt;rdfs:domain rdf:resource="#Scene"&gt;
+&lt;rdfs:domain rdf:resource="#Shot"&gt;
+&lt;rdfs:range rdf:resource="http://www.w3.org/TR/datatypes#Image"/&gt;
+&lt;/rdfs:PropertyType&gt;
+
+&lt;rdfs:PropertyType ID="openTrans"&gt;
+&lt;rdfs:domain rdf:resource="#Shot"&gt;
+&lt;rdfs:range rdf:resource="#Transitions"&gt;
+&lt;/rdfs:PropertyType&gt;
+
+&lt;rdfs:PropertyType ID="closeTrans"&gt;
+&lt;rdfs:domain rdf:resource="#Shot"&gt;
+&lt;rdfs:range rdf:resource="#Transitions"&gt;
+&lt;/rdfs:PropertyType&gt;
+
+&lt;rdfs:Class ID="Transitions"/&gt;
+&lt;Transitions ID="Cut"/&gt;
+&lt;Transitions ID="Fade"/&gt;
+&lt;Transitions ID="Wipe"/&gt;
+&lt;Transitions ID="Dissolve"/&gt;
+
+&lt;rdfs:PropertyType ID="position"&gt;
+&lt;rdfs:domain rdf:resource="#Object"&gt;
+&lt;rdfs:range rdf:resource="http://www.w3.org/TR/datatypes#Point"&gt;
+&lt;/rdfs:PropertyType&gt;
+
+&lt;rdfs:PropertyType ID="shape"&gt;
+&lt;rdfs:domain rdf:resource="#Object"&gt;
+&lt;rdfs:range rdf:resource="http://www.w3.org/TR/datatypes#Polygon"&gt;
+&lt;/rdfs:PropertyType&gt;
+
+&lt;rdfs:PropertyType ID="colorHistogram "&gt;
+&lt;rdfs:domain rdf:resource="#Frame"&gt;
+&lt;rdfs:domain rdf:resource="#Object"&gt;
+&lt;rdfs:range rdf:resource="http://www.w3.org/TR/datatypes#Histogram"&gt;
+&lt;/rdfs:PropertyType&gt;
+
+</small></code></td></tr></table></PRE></p><p></p>
+<P>
+	
+
+<HR>
+<H2><A NAME="RDF Advantages">4.2 Advantages of the RDF Schema for Video Metadata</H2>
+<p>
+RDF Schemas, within the context of this application, have the following advantages:
+<UL>
+<LI>RDF Schema is able to provide meanings to elements or semantic structure not possible using purely syntactic schemas such as XML DTDs.. However the sorts of machine-understandable meanings provided in the current version of RDF Schema is very limited - so the advantage of "semantic validation" is virtually negligible.
+<LI>The other schemas really only provide implicit <i>child</i> or <i>contains</i> relationships between elements. With RDF you can specify any relationship types explicitly through properties but this is limited by the need to specify a single range. It isn't possible to constrain a particular relationship to multiple range/domain pairs e.g. sequences can only contains scenes which can only contain shots etc.
+<LI>Multiple namespaces. This enables the same feature to have different descriptors which correspond to different domains or description schemes. The ability to mix classification vocabularies within one XML-based encoding allows video authors or others to deliver richer domain-specific content descriptions thus increasing the re-usability of the video on the Web. This is a key requirement of the MPEG-7 DDL.
+<LI>Inheritance is supported through sub-classes and sub-properties. This provides easy extensibility and reuse of code.
+<LI>A simple RDF parser (SiRPAC [<a href="comparison.html#REF11">11</a>] ) exists but it has limited validation capabilities, checking only that the domain and range constraints are satisfied.
+<LI>It is human-readable, simple to understand and thus simple to extend or customize.
+</UL>
+<p>
+
+<HR>
+<H2><A NAME="RDF LImitations">4.3 Limitations of the RDF Schema for Video Metadata</H2>
+<p>
+RDF Schema has the following problems or limitations:
+<UL>
+<LI>Unstable. The RDF Schema specifications are still under development and change frequently.
+<LI>Limited or no data typing. Almost all data typing will need to be provided by external namespaces, which don't yet exist.
+<LI>No cardinality. It isn't possible to specify optional, zero or multiple values for an attribute.
+<LI>Range constraints such as minimum and maximum values are not supported.
+<LI>Class-specific range constraints are not possible. Only one range is possible for a given property. The only way to do provide multiple ranges is to create multiple properties e.g. secs_start_time, frame_start_time, SMPTE_start_time.
+<LI>RDF Schema can't describe multilayered structures using a single generic "contains" property. This requires multiple specific "contains" properties i.e. "contains_sequences", "contains_scenes", "contains_shots", "contains_frames". The alternative is to implement code outside of the schema which understands DC.Relation.HasParts semantics and can perform the validation.
+<LI>Property-centricity makes readability difficult. The link between properties and classes is defined within the property definitions not the class definitions. 
+<LI>No query language exists for RDF. Given a video structure, to find videos with similar structures, you need to be able to store RDF structures in a directed graph with associated attribute values in a database.
+<LI>The simplest way to specify spatial and temporal relationships is via the Collection elements: Seq, Bag and Alt, but these provide limited semantics. Since no &lt;Par&gt; element exists within RDF, the &lt;Bag&gt; element must be used to specify parallelism. For spatial relationships such as <i>neighbours</i>, if the list of neighbours is in a <Seq> collection, can we assume that the first one is the nearest neighbour?
+<LI>Cannot map relationship-type properties between classes to constraints on the attribute values of the classes involved. For example, if two scenes abutt then their respective end and start frame numbers must be consecutive. If a sequence "contains" a scene, then the start and end times of the scene, must lie within the start and end times of the sequence. This is not supported by RDF Schema.
+<LI>RDF Schema is an incomplete mapping of the RDF Syntax and Data model. There are very useful features available within the RDF Syntax and Data Model Spec. which aren't supported in the RDF Schema.
+</UL>
+<p>
+
+<HR>
+
+<H2><A NAME="XML DTDs">5. XML DTDs</H2>
+Extensible Markup Language (XML) Document Type Definitions (DTDs) provide a subset of SGML for describing documents. XML was developed by the XML Working Group under the World Wide Web Consortium (W3C) in 1996. The complete XML spec. is available from the W3C.[<A href="comparison.html#REF12">12</a>].
+<p>
+Each XML document has both a logical and a physical structure. Physically, the document is composed of units called entities. An entity may refer to other entities to cause their inclusion in the document. A document begins in a "root" or document entity. Logically, the document is composed of declarations, elements, comments, character references, and processing instructions, all of which are indicated in the document by explicit markup. The logical and physical structures must nest properly.
+<P>
+The function of the markup in an XML document is to describe its storage and logical structure and to associate attribute-value pairs with its logical structures. XML provides the <i>document type declaration</i>, to define constraints on the logical structure and to support the use of predefined storage units. An XML document is valid if it has an associated document type declaration and if the document complies with the constraints expressed in it. Document type declarations are made in a Document Type Definition (DTD) file. The DTD file then contains a formal definition of a particular type of document outlining the element names and the structure of the document.
+<P>
+<HR>
+<P>
+<H2><A NAME="XML DTD Example">5.1 An Example of an XML DTD for Video Documents</H2>
+
+<P>
+The structure is defined in the <i>element</i> definitions at the top of the DTD. Each element has a set of associated attributes. All elements have an ID attribute plus the DC attributes. In addition, sequences, scenes and shots also have a set of time attributes (begin, end, duration). Each element also has its own set of level-specific attributes (which will correspond to the MPEG-7 descriptors when they become available).
+
+<p><table cellpadding='5' border='1' bgcolor='#80ffff' width='70%'>
+<tr><td><code><small>
+<PRE>
+&lt;?xml version="1.0"?&gt;
+
+&lt;!DOCTYPE videodoc [
+
+&lt;!-- hierarchical structure of videodoc --!&gt;
+&lt;!ELEMENT videodoc (sequence*) &gt;
+&lt;!ELEMENT sequence (scene*)&gt;
+&lt;!ELEMENT scene (shot*)&gt;
+&lt;!ELEMENT shot (frame*)&gt;
+&lt;!ELEMENT frame(object*)&gt;
+&lt;!ELEMENT object(object*)&gt;
+
+&lt;!-- ID attribute for every element --!&gt;
+&lt;!ENTITY % id_attr "id ID #IMPLIED"&gt;
+
+
+&lt;!-- Set of Dublin Core Attributes --!&gt;
+&lt;!ENTITY % dc_attr "
+        Title    CDATA #IMPLIED
+        Creator  CDATA #IMPLIED
+        Subject  CDATA #IMPLIED
+        Description CDATA #IMPLIED
+        Publisher   CDATA #IMPLIED
+        Contributor CDATA #IMPLIED
+        Date        CDATA #IMPLIED
+        Type        CDATA #IMPLIED
+        Format      CDATA #IMPLIED
+        Identifier  CDATA #IMPLIED
+        Source      CDATA #IMPLIED
+        Language    CDATA #IMPLIED
+        Relation    CDATA #IMPLIED
+        Coverage    CDATA #IMPLIED
+        Rights      CDATA #IMPLIED"&gt;
+
+&lt;!ENTITY % scene_attr "
+        Transcript   CDATA #IMPLIED
+        Script       CDATA #IMPLIED
+        EditList     CDATA #IMPLIED
+        Keyframe     CDATA #IMPLIED
+        Locale       CDATA #IMPLIED
+        Cast         CDATA #IMPLIED
+        Objects      CDATA #IMPLIED"&gt;
+
+&lt;!ENTITY % shot_attr "
+        Keyframe     CDATA #IMPLIED
+        CameraDist   NMTOKEN #IMPLIED
+        CameraAngle  NMTOKEN #IMPLIED
+        CameraMotion NMTOKEN #IMPLIED
+        Lighting     NMTOKEN #IMPLIED
+        OpenTrans    NMTOKEN #IMPLIED
+        CloseTrans   NMTOKEN #IMPLIED"&gt;
+
+&lt;!ENTITY % frame_attr "
+        Image              CDATA #IMPLIED
+        Timestamp          CDATA #IMPLIED
+        ColourText         NMTOKEN #IMPLIED
+        ColourHistogram    CDATA #IMPLIED
+        Texture            CDATA #IMPLIED
+        Annotation         CDATA #IMPLIED
+        Anno_Position      CDATA #IMPLIED"&gt;
+
+&lt;!ENTITY % object_attr "
+        Position           CDATA #IMPLIED 
+        Shape              CDATA #IMPLIED
+        Trajectory         CDATA #IMPLIED
+        Speed              CDATA #IMPLIED
+        ColourText         NMTOKEN  #IMPLIED
+        ColourHistogram    CDATA #IMPLIED
+        Texture            CDATA #IMPLIED
+        Volume             CDATA #IMPLIED
+        Annotation         CDATA #IMPLIED
+        Anno_Position      CDATA #IMPLIED"&gt;
+
+&lt;!ENTITY % time_attr "
+     begin CDATA #IMPLIED
+     end   CDATA #IMPLIED
+     dur   CDATA #IMPLIED"&gt;
+
+&lt;!ATTLIST videodoc
+    %id_attr;
+    %dc_attr;&gt;
+
+&lt;!ATTLIST sequence
+      %id_attr;
+      %dc_attr;
+      %time_attr;&gt;
+
+&lt;!ATTLIST scene
+      %id_attr;
+      %dc_attr;
+      %scene_attr;
+      %time_attr;&gt;
+
+&lt;!ATTLIST shot
+      %id_attr;
+      %dc_attr;
+      %shot_attr;
+      %time_attr;&gt;
+
+&lt;!ATTLIST frame
+      %id_attr;
+      %dc_attr;
+      %frame_attr;&gt;
+
+&lt;!ATTLIST object
+      %id_attr;
+      %dc_attr;
+      %object_attr;&gt;
+
+]&gt;
+</small></code></td></tr></table></PRE></p><p></p>
+<P>
+
+<HR>
+
+<H2><A NAME="XML Schema">5.2 Advantages of XML DTDs for Video Metadata</H2>
+<p>
+<UL>
+<LI>Work is progressing on a query languages for XML e.g. XML-QL [<a href="comparison.html#REF13">13</a>].
+<LI>XML parsers exist.
+<LI>Simplicity associated with a single namespace. Users only have to understand one namespace.
+<LI>XML is simpler than SGML, HyTime etc.
+<LI>XML DTDs are easy to read and understand. Short and sweet without all that data typing.
+<LI>Hierarchical structures are supported but only on a syntactical basis.
+</UL>
+
+<HR>
+
+<H2><A NAME="XML Schema">5.3 Disadvantages of XML DTDs for Video Metadata</H2>
+<p>
+<UL>
+<LI>No name spaces. Since name spaces are not supported, definitions such as Dublin Core attributes will need to be redefined unless external entities are used. External entities provide a similar capability to namespaces. An external entity can be retrieved from an external DTD via a URI to this DTD and the entity's ID.
+<LI>Cardinality of attributes is zero or one in XML DTDs. This creates problems with DC attributes which are optional and repeatable. They may need to be declared as elements.
+<LI>There is very limited support for data typing. Only three kinds of attribute types are supported: a string type, a set of tokenized types and enumerated types. However Bray <a href="comparison.html#REF14">[14]</A> has shown that it is possible to attach strong type declarations to XML elements using reserved attributes.
+<LI>It is a purely 'syntactic' machine-understandable schema which can't provide any of the semantics associated with complex structured multimedia data or support object-oriented data modelling concepts.
+<LI>There is no inheritance.
+<LI>There are no relationships possible other than the implicit <i>contains</i>.
+</UL>
+
+<P>
+<HR>
+
+<H2><A NAME="DCD">6. Document Content Description (DCD) for XML</H2>
+<p>
+The Document Content Description (DCD) [<A HREF="comparison.html#REF15">15</a>] facility for XML is an RDF vocabulary designed for describing constraints to be applied to the structure and content of XML documents. It consists of a set of properties used to constrain the types of elements and names of attributes that may appear in an XML document, the contents of the elements and the values of the attributes. It was designed to provide semantics over and above the purely syntactical XML DTDs. It was also designed to be conformant with the RDF Model and Syntax Specification (with some simplifications). DCD also incorporates a subset of an earlier submission to W3C, the XML-Data Submission [<a href="comparison.html#REF16">16</a>].
+<P>
+The introduction to the XML-Data Submission says that it "describes an XML vocabulary for schemas, that is, for defining and documenting object classes. It can be used for classes which are strictly syntactic (for example, XML) or those which indicate concepts and relations among concepts (as used in relational databases, KR graphs and RDF). The former are called 'syntactic schemas;' the latter 'conceptual schemas'." Thus, XML-Data and DCD add object-oriented and data modelling concepts such as class inheritance to purely syntactic schemas such as XML DTDs.
+<P>
+DCD Schemas are based on <i>elements</i> and <i>attributes</i>. Elements correspond to RDF property types. DCD declarations constrain the content and attributes of elements in document instances, by assigning properties to objects of type <i>ElementDef</i> and <i>AttributeDef</i>.
+<P>
+<HR>
+
+<H2><A NAME="DCD Schema">6.1 Example of a DCD Schema</H2>
+<p>
+<P>
+The DCD Schema below is based on the following assumptions:
+<UL>
+<LI>The Dublin Core elements are all described in a separate name space.
+<LI>The root element <i>video_doc</i> contains <i>video_sequences</i> which contains <i>video_scenes</i> etc.
+<LI>The Dublin Core elements apply to every level. 
+<LI>In addition the sequence, scene and shot elements possess <i>start_time, end_time and duration</i> elements.
+<LI>In addition, each level has its own unique elements/attributes corresponding to MPEG-7 descriptors.
+</UL>
+<P>
+
+<TABLE cellpadding='5' border='1' bgcolor='#80ffff' width='100%'>
+  <TR>
+    <TD><CODE><SMALL><PRE>
+&lt;DCD
+   xmlns:DC="http://purl.org/metadata/dublin_core#"
+   xmlns:CDT="http://www.w3.org/TR/complex_datatypes#"&gt;
+
+   &lt;?DCD syntax="explicit"?&gt;
+
+   &lt;Description&gt;Example of a Video Document DCD&lt;/Description&gt;
+   &lt;Namespace&gt;http://www.dstc.edu.au/schemas/videodcd&lt;/Namespace&gt;
+
+   &lt;ElementDef Type="videodoc" Model="Elements" Root="True"&gt;
+      &lt;Description&gt;A video document structure.&lt;/Description&gt;
+      &lt;Group RDF:Order="Seq"&gt;
+         &lt;Element&gt;dc_values&lt;/Element&gt;
+         &lt;Group Occurs="ZeroOrMore" RDF:Order="Seq"&gt;
+             &lt;Element&gt;sequence&lt;/Element&gt;
+         &lt;/Group&gt;
+   &lt;/ElementDef&gt;
+
+   &lt;ElementDef Type="sequence" Model="Elements"&gt;
+      &lt;Description&gt;Description of a video sequence element&lt;/Description&gt;
+      &lt;AttributeDef Name="seqID" Occurs="Required"/&gt;
+      &lt;Group RDF:Order="Seq"&gt;
+         &lt;Element&gt;dc_values&lt;/Element&gt;         
+         &lt;Element&gt;time_attribs&lt;/Element&gt;
+         &lt;Group Occurs="ZeroOrMore" RDF:Order="Seq"&gt;
+             &lt;Element&gt;scene&lt;/Element&gt;
+         &lt;/Group&gt;          
+      &lt;/Group&gt;
+   &lt;/ElementDef&gt;
+
+   &lt;ElementDef Type="scene" Model="Elements"&gt;
+      &lt;Description&gt;Description of a video scene element&lt;/Description&gt;
+      &lt;AttributeDef Name="sceneID" Occurs="Required"/&gt;
+      &lt;Group RDF:Order="Seq"&gt;
+         &lt;Element&gt;dc_values&lt;/Element&gt;
+         &lt;Element&gt;time_attribs&lt;/Element&gt;
+         &lt;Element&gt;transcript&lt;/Element&gt;  
+         &lt;Element&gt;keyframe&lt;/Element&gt;  
+         &lt;Group Occurs="ZeroOrMore" RDF:Order="Seq"&gt;
+             &lt;Element&gt;shot&lt;/Element&gt;
+         &lt;/Group&gt;          
+      &lt;/Group&gt;
+   &lt;/ElementDef&gt;
+
+   &lt;ElementDef Type="shot" Model="Elements"&gt;
+      &lt;Description&gt;Description of a video shot element&lt;/Description&gt;
+      &lt;AttributeDef Name="shotID" Occurs="Required"/&gt;
+      &lt;Group RDF:Order="Seq"&gt;
+         &lt;Element&gt;dc_values&lt;/Element&gt;
+         &lt;Element&gt;time_attribs&lt;/Element&gt;
+         &lt;Element&gt;camera_distance&lt;/Element&gt;
+         &lt;Element&gt;camera_angle&lt;/Element&gt;
+         &lt;Element&gt;camera_motion&lt;/Element&gt;
+         &lt;Element&gt;lighting&lt;/Element&gt;
+         &lt;Element&gt;open_transition&lt;/Element&gt;
+         &lt;Element&gt;close_transition&lt;/Element&gt;
+         &lt;Group Occurs="ZeroOrMore" RDF:Order="Seq"&gt;
+             &lt;Element&gt;frame&lt;/Element&gt;
+         &lt;/Group&gt;          
+      &lt;/Group&gt;
+   &lt;/ElementDef&gt;
+
+   &lt;ElementDef Type="frame" Model="Elements"&gt;
+      &lt;Description&gt;Description of a video frame element&lt;/Description&gt;
+      &lt;AttributeDef Name="frameID" Occurs="Required"/&gt;
+      &lt;Group RDF:Order="Seq"&gt;
+         &lt;Element&gt;dc_values&lt;/Element&gt;
+         &lt;Element&gt;timestamp&lt;/Element&gt;
+         &lt;Element&gt;CDT:colourhistogram&lt;/Element&gt;
+         &lt;Element&gt;CDT:texture&lt;/Element&gt;
+         &lt;Element&gt;annotation&lt;/Element&gt;
+         &lt;Element&gt;CDT:anno_position&lt;/Element&gt;
+         &lt;Group Occurs="ZeroOrMore" RDF:Order="Seq"&gt;
+             &lt;Element&gt;object&lt;/Element&gt;
+         &lt;/Group&gt;          
+      &lt;/Group&gt;
+   &lt;/ElementDef&gt;
+
+   &lt;ElementDef Type="object" Model="Elements"&gt;
+      &lt;Description&gt;Description of a video object/actor element&lt;/Description&gt;
+      &lt;AttributeDef Name="objectID" Occurs="Required"/&gt;
+      &lt;Group RDF:Order="Seq"&gt;
+         &lt;Element&gt;dc_values&lt;/Element&gt;
+         &lt;Element&gt;CDT:position&lt;/Element&gt;
+         &lt;Element&gt;CDT:shape&lt;/Element&gt;
+         &lt;Element&gt;CDT:colourhistogram&lt;/Element&gt;
+         &lt;Element&gt;CDT:texture&lt;/Element&gt;
+         &lt;Element&gt;CDT:trajectory&lt;/Element&gt;
+         &lt;Element&gt;annotation&lt;/Element&gt;
+         &lt;Element&gt;CDT:anno_position&lt;/Element&gt;
+         &lt;Group Occurs="ZeroOrMore" RDF:Order="Seq"&gt;
+             &lt;Element&gt;object&lt;/Element&gt;
+         &lt;/Group&gt;          
+      &lt;/Group&gt;
+   &lt;/ElementDef&gt;
+
+   &lt;ElementDef Type="dc_values" Model="Elements"&gt;
+      &lt;Description&gt;List of Dublin Core Elements&lt;/Description&gt;
+      &lt;Group RDF:Order="Seq"&gt;
+         &lt;Element&gt;DC:Title&lt;/Element&gt;
+         &lt;Element&gt;DC:Creator&lt;/Element&gt;
+         &lt;Element&gt;DC:Subject&lt;/Element&gt;
+         ......
+      &lt;/Group&gt;
+   &lt;/ElementDef&gt;
+
+   &lt;ElementDef Type="time_attribs" Model="Elements"&gt;
+      &lt;Group RDF:Order="Seq"&gt;
+         &lt;Element&gt;start_time&lt;/Element&gt;
+         &lt;Element&gt;end_time&lt;/Element&gt;
+         &lt;Element&gt;duration&lt;/Element&gt;
+         ......
+      &lt;/Group&gt;
+   &lt;/ElementDef&gt; 
+
+   &lt;ElementDef Type="transcript" Model="Data" Datatype="string"&gt;
+   &lt;/ElementDef&gt;
+   &lt;ElementDef Type="keyframe" Model="Data" Datatype="uri"&gt;
+   &lt;/ElementDef&gt;
+
+   &lt;ElementDef Type="camera_distance" Model="Data" Datatype="enumeration"&gt;
+      &lt;Values&gt;close-up medium-shot long-shot&lt;/Values&gt;
+   &lt;/ElementDef&gt;
+
+   &lt;ElementDef Type="camera_angle" Model="Data" Datatype="enumeration"&gt;
+      &lt;Values&gt;low eye-level high&lt;/Values&gt;
+   &lt;/ElementDef&gt;
+  
+   &lt;ElementDef Type="open_transition" Model="Data" Datatype="enumeration"&gt;
+      &lt;Values&gt;cut fade wipe dissolve&lt;/Values&gt;
+   &lt;/ElementDef&gt;
+
+   &lt;ElementDef Type="annotation" Model="Data" Datatype="string"&gt;
+   &lt;/ElementDef&gt;
+
+
+&lt;/DCD&gt;</FONT></CODE></TD></TR>
+</PRE>
+</TABLE>
+<P>
+
+
+<HR>
+
+<H2><A NAME="DCD Pros">6.2 Advantages of DCD for Video Metadata</H2>
+<p>
+<UL>
+<LI>Human-readable and simple.
+<LI>Provides better data typing than RDF Schemas and XML DTDs (but still only basic). Also provides upper and lower bound constraints on attribute values.
+<LI>Provides cardinality.
+<LI>Supports multiple namespaces.
+<LI>As an RDF vocabulary, it inherits the advantages of the data modelling concepts in RDF, plus constructs such as RDF:Seq and RDF:Alt.
+</UL>
+
+<HR>
+
+<H2><A NAME="DCD Cons">6.3 Disadvantages of DCD for Video Metadata</H2>
+<p>
+<UL>
+<LI>Currently no subclassing or inheritance but this is planned for the future. The proposal is to create subclasses from existing elements through an <i>extends</i> property.
+<LI>Only basic data typing is supported , not complex data types. There is no support for multiple alternate data types, except if you create alternate elements with different data types e.g. start_time value can be SMPTE, secs, frames(int). Also there is no support for constraining the values of certain attributes of related elements.
+<LI>Doesn't support data types such as points, lines, polygons, colour histograms etc. These would all have to be described in a separate namespace e.g."http://www.w3.org/TR/complex_datatypes". It is not possible to specify that just the element's datatype is to be a value from another namespace. You need to specify that the element itself is totally described in another namespace.
+<LI>Only <i>Seq</i> and or <i>Alt</i> Groups are available. <i>Bag</i> is not a legal value for the RDF:Order property. <i>Seq</i> is fine for specifying sequential components but for multimedia, there is also a need to support groups of elements which run in parallel. The RDF <i>Bag</i> element is the most suitable for specifying this, (in the absence of any <i>Par</i> value), but it isn't supported in DCD.
+</UL>
+
+<P>
+<HR>
+
+<H2><A NAME="SOX">7. Schema for Object-Oriented XML (SOX)</H2>
+<p>
+Schema for Object-Oriented XML (SOX) [<a href="comparison.html#REF17">17</a>] provides a facility for defining the structure, content and semantics of XML documents to enable XML validation and automated content checking.<P>
+SOX provides an alternative to XML DTDs for modeling markup relationships. The introduction to the SOX specification says that it provides the following advantages over XML DTDs:
+<UL>
+<LI>More efficient software development processes for distributed applications;
+<LI>Basic intrinsic datatypes;
+<LI>An extensible datatyping mechanism;
+<LI>Content model and attribute interface inheritance;
+<LI>A powerful namespace mechanism;
+<LI>Embedded documentation. 
+</UL>
+<P>
+SOX supports three varieties of datatypes: <I>scalar datatypes</I>, <I>enumerated datatypes</I> and <I>format datatypes</I>. Scalar datatypes are derived from the basic <I>number</I> datatype, and support specification of the number of digits and decimal places, minimum and maximum value range, and a mask. An enumerated datatype may be derived from any of the intrinsic datatypes, and may specify an
+enumeration of valid values. A format datatype may be derived from any
+of the intrinsic datatypes, and must specify a mask. </P>
+
+        <P>In SOX, element types may inherit their content models and attribute
+          definitions directly from another named element type. An element type
+          may also inherit and extend an attribute list. Specialization of
+          attribute definitions allows refinement and restriction of attribute
+          datatype, enumeration list and default value. Additionally, an
+          attribute value may be defined to be inherited from the identically
+          named attribute on a parent or older ancestor element. Thus, for
+          example, namespaces can be inherited from superordinate elements.</P>
+
+        <P>The SOX namespace facility enables <I>Objects</I>
+          from any identifiable namespace to be used in building a SOX
+          document. That is, any element, attribute, datatype, enumeration,
+          entity, interface, notation, parameter, or processing instruction may
+          be imported from any namespace.</P>
+<P>A SOX document is a valid XML document, according to the SOX DTD. The
+        schema designer is free to employ the same XML
+        tools used for traditional XML documents. This means that a SOX document
+        can processed by a validating XML parser, formatted according to an XSL
+        stylesheet, and managed by any DOM-compliant or SAX-compliant
+        application.
+
+<HR>
+<H2><A NAME="SOX_Example">7.1 SOX Example</H2>
+<P>
+In this example, the structural elements, video_doc, video_sequence, video_scene, video_shot, video_frame and video_object are declared first. They each possess the DC attributes, plus their own specific elements and attributes.
+<P>
+<p><table cellpadding='5' border='1' bgcolor='#80ffff' width='70%'>
+<tr><td><code><small>
+<PRE>
+
+&lt;schema name=&quot;video_doc&quot; namespace=&quot;http://www.dstc.edu.au/schemas/video_doc.xml&quot; &gt;
+
+&lt;h1&gt;Video Metadata Document&lt;/h1&gt;
+
+&lt;h2&gt;Imported namespaces&lt;/h2&gt;
+
+&lt;namespace name=&quot;dc&quot; namespace=&quot;http://purl.org/metadata/dublin_core#&quot;/&gt;
+&lt;namespace name=&quot;dcq&quot; namespace=&quot;http://purl.org/metadata/dublin_core_qualifiers#&quot;/&gt;
+
+&lt;h2&gt;Structural Elements&lt;/h2&gt;
+
+&lt;elementtype name=&quot;video_doc&quot;&gt;
+    &lt;model&gt;
+       &lt;sequence&gt;
+              &lt;element name=&quot;dc_attributes&quot;/&gt;
+              &lt;element name=&quot;video_sequence&quot; occurs=&quot;*&quot;/&gt;
+      &lt;/sequence&gt;
+   &lt;/model&gt;
+&lt;/elementtype&gt;
+
+&lt;elementtype name=&quot;video_sequence&quot;&gt;
+    &lt;model&gt;
+       &lt;sequence&gt;
+              &lt;element name=&quot;seqID&quot;/&gt;
+              &lt;element name=&quot;dc_attributes&quot;/&gt;
+              &lt;element name=&quot;time_attributes&quot;/&gt;
+              &lt;element name=&quot;video_scene&quot; occurs=&quot;*&quot;/&gt;
+      &lt;/sequence&gt;
+   &lt;/model&gt;
+&lt;/elementtype&gt;
+
+&lt;elementtype name=&quot;video_scene&quot;&gt;
+    &lt;model&gt;
+       &lt;sequence&gt;
+              &lt;element name=&quot;sceneID&quot;/&gt;
+              &lt;element name=&quot;dc_attributes&quot;/&gt;
+              &lt;element name=&quot;time_attributes&quot;/&gt;
+              &lt;element name=&quot;transcript&quot;/&gt;
+              &lt;element name=&quot;key_frame&quot;/&gt;
+              &lt;element name=&quot;video_shot&quot; occurs=&quot;*&quot;/&gt;
+      &lt;/sequence&gt;
+   &lt;/model&gt;
+&lt;/elementtype&gt;
+
+&lt;elementtype name=&quot;video_shot&quot;&gt;
+    &lt;model&gt;
+       &lt;sequence&gt;
+              &lt;element name=&quot;shotID&quot;/&gt;
+              &lt;element name=&quot;dc_attributes&quot;/&gt;
+              &lt;element name=&quot;time_attributes&quot;/&gt;
+              &lt;element name=&quot;camera_distance&quot;/&gt;
+              &lt;element name=&quot;camera_angle&quot;/&gt;
+              &lt;element name=&quot;camera_motion&quot;/&gt;
+              &lt;element name=&quot;lighting&quot;/&gt;
+              &lt;element name=&quot;open_trans&quot;/&gt;
+              &lt;element name=&quot;close_trans&quot;/&gt;
+              &lt;element name=&quot;video_frame&quot; occurs=&quot;*&quot;/&gt;
+      &lt;/sequence&gt;
+   &lt;/model&gt;
+&lt;/elementtype&gt;
+
+&lt;elementtype name=&quot;video_frame&quot;&gt;
+    &lt;model&gt;
+       &lt;sequence&gt;
+              &lt;element name=&quot;frameID&quot;/&gt;
+              &lt;element name=&quot;dc_attributes&quot;/&gt;
+              &lt;element name=&quot;timestamp&quot;/&gt;
+              &lt;element name=&quot;colour_histogram&quot;/&gt;
+              &lt;element name=&quot;texture&quot;/&gt;
+              &lt;element name=&quot;video_object&quot; occurs=&quot;*&quot;/&gt;
+      &lt;/sequence&gt;
+   &lt;/model&gt;
+&lt;/elementtype&gt;
+
+&lt;elementtype name=&quot;video_object&quot;&gt;
+    &lt;model&gt;
+       &lt;sequence&gt;
+              &lt;element name=&quot;objectID&quot;/&gt;
+              &lt;element name=&quot;dc_attributes&quot;/&gt;
+              &lt;element name=&quot;position&quot;/&gt;
+              &lt;element name=&quot;shape&quot;/&gt;
+              &lt;element name=&quot;colour&quot;/&gt;
+              &lt;element name=&quot;texture&quot;/&gt;
+              &lt;element name=&quot;anno_text&quot;/&gt;
+              &lt;element name=&quot;anno_posn&quot;/&gt;
+              &lt;element name=&quot;video_object&quot; occurs=&quot;*&quot;/&gt;
+      &lt;/sequence&gt;
+   &lt;/model&gt;
+&lt;/elementtype&gt;
+
+</small></code></td></tr></table></PRE></p><p></p>
+<P>
+The next step is to break down the elements to sub-elements and eventually data types. SOX supports both intrinsic basic datatypes as well as user-defined scalar, enumeration and formatted datatypes, derived from the intrinsic datatypes. The code below illustrates some of the capabilities of SOX data typing for video description.
+
+<P>
+<table cellpadding='5' border='1' bgcolor='#80ffff' width='70%'>
+<tr><td><code><small>
+<PRE>
+
+&lt;h2&gt;Attribute Elements&lt;/h2&gt;
+
+&lt;elementtype name="dc_attributes"&gt;
+  &lt;model&gt;
+       &lt;sequence&gt;
+              &lt;element namespace=&quot;<B>dc</B>&quot; name=&quot;Title&quot;/&gt;
+              &lt;element namespace=&quot;<B>dc</B>&quot; name=&quot;Creator&quot;/&gt;
+              &lt;element namespace=&quot;<B>dc</B>&quot; name=&quot;Subject&quot;/&gt;
+              .....
+      &lt;/sequence&gt;        
+  &lt;/model&gt;
+&lt;/elementtype&gt;
+
+&lt;elementtype name="time_attributes"&gt;
+  &lt;model&gt;
+       &lt;sequence&gt;
+              &lt;element name=&quot;start_time&quot;/&gt;
+              &lt;element name=&quot;end_time&quot;/&gt;
+              &lt;element name=&quot;duration&quot;/&gt;
+      &lt;/sequence&gt;        
+  &lt;/model&gt;
+&lt;/elementtype&gt;
+
+&lt;elementtype name=&quot;start_time&quot;&gt;
+     &lt;instanceof name=&quot;time_val&quot;/&gt;
+&lt;/elementtype&gt;
+
+&lt;elementtype name=&quot;end_time&quot;&gt;
+     &lt;instanceof name=&quot;time_val&quot;/&gt;
+&lt;/elementtype&gt;
+
+&lt;elementtype name=&quot;duration&quot;&gt;
+     &lt;instanceof name=&quot;time_val&quot;/&gt;
+&lt;/elementtype&gt;
+
+&lt;elementtype name=&quot;time_val&quot;&gt;
+  &lt;model&gt;
+    &lt;choice occurs=1&gt;
+        &lt;element name=&quot;frame_num&quot;/&gt;
+        &lt;element name=&quot;SMPTE&quot;/&gt;
+        &lt;element name=&quot;abs_time&quot;/&gt;
+    &lt;/choice&gt;
+  &lt;/model&gt;
+&lt;/elementtype&gt;
+
+
+&lt;elementtype name=&quot;frame_num&quot;&gt;
+  &lt;model&gt;
+        &lt;string datatype=&quot;frame&quot;/&gt;
+  &lt;/model&gt;
+&lt;/elementtype&gt;
+
+&lt;datatype name=&quot;frame&quot;&gt;
+    &lt;scalar datatype=&quot;int&quot; min=&quot;1&quot; max=&quot;25&quot;/&gt;
+&lt;/datatype&gt;
+
+&lt;elementtype name=&quot;smpte&quot;&gt;
+  &lt;model&gt;
+    &lt;string&gt;
+        &lt;mask&gt;##:##:##;##&lt;/mask&gt;
+    &lt;/string&gt;
+  &lt;/model&gt;
+&lt;/elementtype&gt;
+
+&lt;elementtype name=&quot;abs_time&quot;&gt;
+  &lt;model&gt;
+        &lt;string datatype=&quot;time&quot;/&gt;
+  &lt;/model&gt;
+&lt;/elementtype&gt;
+
+&lt;elementtype name=&quot;key_frame&quot;&gt;
+  &lt;model&gt;
+        &lt;string datatype=&quot;URI&quot;/&gt;
+  &lt;/model&gt;
+&lt;/elementtype&gt;
+
+&lt;elementtype name=&quot;camera_dist&quot;&gt;
+    &lt;model&gt;
+        &lt;string datatype=&quot;camera_distances&quot; /&gt;
+    &lt;/model&gt;
+&lt;/elementtype&gt;
+
+&lt;datatype name=&quot;camera_distances&quot;&gt;
+    &lt;enumeration datatype=&quot;nmtoken&quot;&gt;
+        &lt;option&gt;close-up&lt;/option&gt;
+        &lt;option&gt;medium-shot&lt;/option&gt;
+        &lt;option&gt;long-shot&lt;/option&gt;
+    &lt;/enumeration &gt;
+&lt;/datatype&gt;
+
+&lt;/schema&gt;
+</small></code></td></tr></table></PRE></p><p></p>
+<P>
+
+<HR>
+
+<H2><A NAME="Advantages_SOX">7.2 Advantages of SOX for Video Metadata</H2>
+<p>
+<UL>
+<LI>XML query languages, when available, will work on SOX documents.
+<LI>XML parsers will work on SOX documents. In order to perform complete validation of SOX-specific constraints, extra parsing code will be required.
+<LI>Provides much better data typing capabilities than the other schemas - scalar, enumerated and formatted data types.
+<LI>SOX provides the best cardinality with "occurs n,m".
+<LI>Inheritance provides the possibility for reuse of code, elements and datatype definitions. Elements can inherit their definitions from existing elements (using <i>instanceof</i>) and also extend with new attributes (using <i>extends</i>).
+</UL>
+<HR>
+<H2><A NAME="Disadvantages_SOX">7.3 Disadvantages of SOX for Video Metadata</H2>
+<p>
+<UL>
+<LI>SOX was designed for validating business documents in e-commerce applications. Consequently it is more suitable for validating static forms than complex multimedia structures. It is element-focussed rather than entity-focussed.
+<LI>It only provides the implicit "contains" relationship. Structural constraints would require multiple "contains" elements.
+<LI>Inheritance is possible but users can only extend elements with new attributes. Ideally one should be able to extend elements with both new attributes and new elements.
+<LI>Not an RDF vocabulary.
+</UL>
+<HR>
+<H2><A NAME="Conclusions">8. Conclusions: the Ultimate Schema</H2>
+<p>
+
+None of the above schemas is ideal for describing complex multimedia documents. They all satisfy some of the requirements but fall down in other areas. None of them is designed for describing complex hierachical structures in which there are spatial, temporal, structural and conceptual relationships between the components and where these relationships map to constraints on the relative attribute values of the related components. For example, spatial relationships such as <i>neighbours</i>, <i>in-front-of</i>, <i>behind</i>, <i>overlapping</i> and <i>surrounds</i> correspond to certain constraints on the values of the shape, location or volume attributes of the related objects. Similarly temporal relationships such as <i>contains</i>, <i>sequential</i>, <i>parallel</i> and <i>overlapping</i> should be mapped to constraints on the start time, end time and duration of the components. None of the schemas support these capabilities.
+<P>RDF Schema claims to differ from the other schemas, in that it is not a "syntactic" schema but a "semantic schema". However the sorts of machine-understandable meanings provided in the current version of RDF Schema is very limited. So the advantage of "semantic validation" is negligible. RDF Schema is good at containing and combining descriptors from different name spaces/communities but it has virtually no data typing. Data types must be defined in a separate name space. This has yet to be done but the work is intended to be done within the W3C XML Schema Working Group [<a href="comparison.html#REF10">10</a>] which has recently been set up. RDF Schemas also don't easily support multi-layered hierarchical structures because of the inability to specify generic relationship types using properties and to apply these across multiple domain/range pairs. So although RDF is better than the other schemas because of its ability to specify relationships other than the implicit <i>child</i> or <i>contains</i> relationship (which is the only one that the other schemas offer), this facility is limited to a specific range and domain due to the lack of "class-specific constraints". 
+<P>
+XML DTDs offer simplicity and fast, cost-effective development due to the ready availability of parsers, tools and applications. However, as a data modelling language, they have limited semantics, which XML-Data, DCD and SOX schemas try to expand by adding things such as strong data typing and lexical constraints. 
+<P>
+DCD is an improvement on XML DTDs because it provides better data typing and also provides additional semantics via its RDF conformity. However it doesn't currently support inheritance - although this is a future goal.
+<P>
+SOX has the best data typing. It is also XML compliant so that XML parsers and XML-QL (when it becomes available) will work on it. It supports inheritance but with attribute extension only, not element extension. It is not RDF-conformant. SOX also provides the best cardinality -  enabling the minimum (other than 0 or 1) and maximum number of children of an element to be specified e.g. maximum of 10 shots per scene. DCD and XML DTDs can only specify zero or more or one or more children. RDF-Schema doesn't support cardinality.
+<P>
+An additional desirable schema feature would be the ability to define <i>equivalence</i> relationships between attributes and define constraints based on these relationships. For example, suppose there are two attributes, <i>ColourText</i> and <i>ColourHistogram</i>. Then in an ideal schema, users would be able to define an enumerated data type for ColourText (red, yellow, green, blue etc)  and for each of these possible values, a correponding permissable range of ColourHistograms would be defined. An even more complex example is the mapping of a textual description attribute to some combination of shape, colour and texture attribute value ranges. Such a schema could then be used to both validate the integrity of the input data but also automatically generate metadata where it is not provided. This ability to map from high-level features (such as text) to low level features (colour, shape, texture) is one of the requirements of the MPEG-7 DDL. It would also greatly improve the searchability of complex multimedia archives. None of the schemas examined provide such sophisticated capabilities.
+<P>
+
+Other relevant schemas not covered in this paper include: the XSchema specification [<a href="comparison.html#REF18">18</a>] and XML-Data  [<a href="comparison.html#REF16">16</a>]. XSchema is very similar to SOX. Formerly known as XSD, XSchema began as a proposal for the representation of XML DTDs as XML documents. The advantages of using XML document syntax to describe XML document structures include the ability to browse and edit XSchemas using XML-aware tools. This can't be done on DTDs which are not pure XML documents. Although XML-Data has some very useful features, it appears to have been superseded by DCD.
+<P>
+<HR>
+<H2>8.1 The Ideal Schema for Multimedia</H2>
+Based on the above analysis and comparisons, the best solution for video metadata representation is one which provides the object-oriented, semantical concepts of RDF but expresses them within an easily-understood, human-readable XML schema. We have proposed such a XML schema for the MPEG-7 DDL [<a href="comparison.html#REF19">19</a>] which provides the following features:
+<UL>
+<LI>The semantics and object-oriented concepts of inheritance provided by RDF through <i>classes</i>, <i>sub-classes</i>, <i>properties</i> and <i>sub-properties</i>;
+<LI>The extensible data typing capabilities of SOX;
+<LI>The addition of a <i>relation</i> entity which allows spatial, temporal, structural and conceptual relations to be defined between classes and constraints on the domain, range and property values to be specified;
+<LI>The XML namespace facility;
+<LI>Cardinality;
+<LI>Temporal and spatial controls and specifications;
+<LI>Linking mechanisms which enable links between descriptions and between content and descriptions;
+</UL>
+<P>
+The two major problems associated with this proposal are that it constitutes yet another schema or language and there are likely to be quite complex extensions necessary to the basic XML parser in order to perform complete validation of all of the constraints.
+<P>
+The W3C XML Schema Working Group [<a href="comparison.html#REF10">10</a>] is looking at a XML-based schema language which provides support for data typing and structural constraints, currently lacking in XML DTDs. Their charter includes delivering a recommendation on the best combination of DCD, XML-Data, SOX and RDF for validating document syntax. Based on the XML Schema Requirements document [<a href="comparison.html#REF20">20</a>], there is a very real possibility that the schema which they develop will satisfy the majority of the MPEG-7 DDL requirements.
+<HR>
+<P>
+<H2><A NAME="Acknowledgements">Acknowledgements</H2>
+<p>
+The authors wish to acknowledge that this work was carried out within the Cooperative Research Centre for Research Data Networks established under the Australian Government's Cooperative Research Centre (CRC) Program and acknowledge the support of CITEC and the Distributed Systems Technology CRC under which the work described in this paper is administered.
+<P>
+<HR>
+<P>
+<H2><A NAME="References">References</H2>
+<p>
+[1] <A NAME="REF1"> <a href="http://drogo.cselt.stet.it/mpeg/"> MPEG-7, the "Multimedia Content Description Interface"</a><BR>
+[2] <A NAME="REF2">Hunter J., Iannella R., <a href="http://www.dstc.edu.au/RDU/staff/jane-hunter/EuroDL/final.html">"The Application of Metadata Standards to Video Indexing"</a>, Second European Conference on Research and Advanced Technology for Digital Libraries, Crete, Greece, September, 1998.</a><BR>
+[3] <A NAME="REF3">Gonno Y., Nishio F., Haraoka K., Yamagishi Y., "Metadata Structuring of Audiovisual Data Streams on MPEG-2 System", <a href = "http://www.gca.org/conf/meta98/">Metastructures '98</a>,  Montreal, Canada, August, 1998.</a><BR>
+[4] <A NAME="REF4">Nishio F., Gonno Y., Haraoka K., Yamagishi Y.,  "Transporting RDF Metadata Associated with Structured Contents",  <a href = "http://www.gca.org/conf/meta98/">Metastructures '98</a>,  Montreal, Canada, August, 1998.</a><BR>
+[5] <A NAME="REF5">Bhat D., "On Representing Video Structure Using RDF", Doc ISO/IEC JTC1/SC29/WG11 MPEG98/M4132, MPEG Atlantic City Meeting, October 1998.</a><BR>
+[6] <A NAME="REF6" href="http://purl.org/DC/">Dublin Core Home Page</a><BR>
+[7] <A NAME="REF7" href="http://drogo.cselt.stet.it/mpeg/public/w2461.html">MPEG-7 Requirements Document V.7"</a>,  Doc ISO/IEC JTC1/SC29/WG11 MPEG98/N2461, MPEG Atlantic City Meeting, October 1998.</a><BR>
+[8] <A NAME="REF8" href="http://www.w3.org/TR/REC-rdf-syntax">"Resource Description Framework (RDF) Model and Syntax Specification"</a>, REC-rdf-syntax-19990222, W3C Recommendation, 22 February 1999.<BR>
+[9] <A NAME="REF9" HREF="http://www.w3.org/RDF/Group/WD-rdf-schema/">"Resource Description Framework (RDF) Schema Specification"</a>, WD-rdf-schema-19990218, W3C Working Draft, 18 February 1999.<BR>
+[10] <A NAME="REF10" href="http://www.w3.org/XML/Group/Schemas.html">XML Schema Working Group </a><BR>
+[11] <A NAME="REF11">Saarela J., <a  HREF="http://www.w3c.org/RDF/Implementations/SiRPAC">SiRPAC - Simple RDF Parser and Compiler</A>, 25 February 1999.<BR>
+[12] <A NAME="REF12" href="http://www.w3.org/TR/REC-xml">Extensible Markup Language (XML) 1.0</a>, REC-xml-19980210, W3C Recommendation 10 February 1998.<BR>
+[13] <A NAME="REF13">Deutsch A., Fernandez M., Florescu D., Levy A., Suciu D., <a href="http://www.w3.org/TR/NOTE-xml-ql">XML-QL: A Query Language for XML</a>, Submission to W3C, 19 August 1998. </a><BR>
+[14] <A NAME="REF14">Bray T., <a href = "http://www.textuality.com/xml/typing.html">"Adding Strong Data Typing to SGML and XML"</a>, May 1997.</a><BR>
+[15] <A NAME="REF15" href="http://www.w3.org/TR/NOTE-dcd">Document Content Description for XML</a>, Submission to W3C, 31 July 1998.</a><BR>
+[16] <A NAME="REF16" href="http://www.w3.org/TR/1998/NOTE-XML-Data/">XML-Data</a>, W3C Note, 5 January 1998.<BR>
+[17] <A NAME="REF17" href="http://www.w3.org/TR/NOTE-SOX/">Schema for Object-Oriented XML (SOX)</a>, NOTE-SOX-19980930, Submission to W3C, 15 September 1998.<BR>
+[18] <A NAME="REF18" href="http://www.simonstl.com/xschema/spec/xscspecv5.htm">XSchema Specification, Version 1.0, November 1998 </a><BR>
+[19] <A NAME="REF19">Hunter J., "A Proposal for an MPEG-7 Description Definition Language", P547, MPEG-7 Test and Evaluation AHG Meeting, Lancaster, February 1999. </a><BR>
+[20] <A NAME="REF20" HREF="http://www.w3.org/TR/NOTE-xml-schema-req">"XML Schema Requirements"</a>, NOTE-xml-schema-req-19990215, W3C Note, 15 February 1999.<BR>
+</UL>
+<P>
+
+<HR>
+<H2>Vitae</H2>
+<TABLE>
+<TR>
+<TD><IMG SRC="jane.jpg"></TD>
+<TD><b>Jane Hunter</b> is a Senior Research Scientist within the Resource Discovery Unit at DSTC, investigating international metadata standards and schemas for multimedia resources. She has extensive experience in multimedia indexing, through the development of applications using IBM's Digital Library and the DSTC's SuperNOVA project. She is currently involved in the development of the MPEG-7 Definition Description Language and is also an active participant within the Dublin Core and RDF standards communities. She received a PhD in Computer Animation from the University of Cambridge in 1994.</TD>
+</TR>
+<P>
+<TR>
+<TD><IMG SRC="liz.jpg"></TD>
+<TD><b>Liz Armstrong</b> is the Director of the Technology Transfer and Training Unit at the Cooperative Research Centre for Distributed Systems Technology (DSTC Pty Ltd) in Brisbane, Australia. The Unit's activities are centred on the process of transferring technology from the DSTC to the Centre's participant organisations through education, training, special events and secondment programmes. Liz holds a Bachelor of Commerce from Griffith University, with majors in public policy, marketing and video production and she is currently studying for a Masters of Commerce (Information Systems) at the University of Queensland.</TD>
+</TR>
+</TABLE>
+<P>
+<HR>
+
+</BODY>
+</HTML>

@@ -1,0 +1,844 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+<title>Muse - Welcome</title>
+<meta http-equiv="content-type" content="text/html; charset=iso-8859-1">
+<script type="text/javascript" src="http://muse-magazine.com/main/javascript"></script>
+<noscript><link rel="stylesheet" type="text/css" href="http://muse-magazine.com/main/stylesheet"></noscript>
+</head>
+<body>
+<script type="text/javascript">
+
+
+
+if(is_nav && (is_major >= 5))
+{
+	document.writeln('<table cellpadding="0" cellspacing="0" border="0" width="628">');
+}
+else
+{
+	document.writeln('<table cellpadding="0" cellspacing="0" border="0" width="628" align="center">');
+}
+
+
+
+</script>
+<noscript><table cellpadding="0" cellspacing="0" border="0" width="628" align="center"></noscript>
+<tr valign="top">
+	<td>
+		<table cellspacing="0" cellpadding="0" border="0" width="551">
+		<tr>
+			<td colspan="4">
+				<img src="http://muse-magazine.com/headers/header.jpg" width="551" height="125" border="0" alt=""></td>
+		</tr>
+		<tr>
+			<td>
+				<img src="http://muse-magazine.com/images/spacer.gif" width="24" height="20" border="0" alt=""></td>
+			<td colspan="3"><script language="javascript"><!--
+
+var NoOffFirstLineMenus=6;
+var LowBgColor='FF9900';
+var LowSubBgColor='FF9900';
+var HighBgColor='CC6600';
+var HighSubBgColor='CC6600';
+var FontLowColor='000000';
+var FontSubLowColor='000000';
+var FontHighColor='000000';
+var FontSubHighColor='000000';
+var BorderColor='656565';
+var BorderSubColor='656565';
+var BorderWidth=1;
+var BorderBtwnElmnts=1;
+var FontFamily="arial, sans-serif";
+var FontSize=8;
+var FontBold=0;
+var FontItalic=0;
+var MenuTextCentered='center';
+var MenuCentered='';
+var MenuVerticalCentered='';
+var ChildOverlap=.2;
+var ChildVerticalOverlap=.2;
+var StartTop=-2; // -2 needed for nn4
+var StartLeft=0;
+var VerCorrect=0;
+var HorCorrect=0;
+var LeftPaddng=3;
+var TopPaddng=4;
+var FirstLineHorizontal=1;
+var MenuFramesVertical=1;
+var DissapearDelay=500;
+var TakeOverBgColor=1;
+var FirstLineFrame='navig';
+var SecLineFrame='space';
+var DocTargetFrame='space';
+var TargetLoc='mainnav';
+var HideTop=0;
+var MenuWrap=1;
+var RightToLeft=0;
+var UnfoldsOnClick=0;
+var WebMasterCheck=0;
+var ShowArrow=0;
+var KeepHilite=1;
+
+function BeforeStart(){return}
+function AfterBuild(){return}
+function BeforeFirstOpen(){return}
+function AfterCloseAll(){return}
+
+
+
+Menu1 = new Array("HOME", "http://muse-magazine.com/main/home", "", 0, 20, 86);
+Menu2 = new Array("ARTICLES", "http://muse-magazine.com/main/articles", "", 0, 20, 86);
+Menu3 = new Array("MEDIA", "http://muse-magazine.com/main/media", "", 2, 20, 87);
+Menu3_1 = new Array("REVIEWS", "http://muse-magazine.com/main/reviews", "", 0, 20, 110);
+Menu3_2 = new Array("GALLERIES", "http://muse-magazine.com/main/galleries", "", 0, 20, 110);
+Menu4 = new Array("CALENDAR", "http://muse-magazine.com/main/calendar", "", 0, 20, 87);
+Menu5 = new Array("SPONSORS", "http://muse-magazine.com/main/sponsors", "", 0, 20, 87);
+Menu6 = new Array("CONTACT", "http://muse-magazine.com/main/contact", "", 2, 20, 87);
+Menu6_1 = new Array("MUSE BOARD", "http://muse-magazine.com/main/board", "", 0, 20, 110);
+Menu6_2 = new Array("STORY IDEAS", "http://muse-magazine.com/main/ideas", "", 0, 20, 110);
+if(is_mac && is_ie5up){StartTop = 15;StartLeft = 10;}
+/*********************************************************************************************************************************************
+*	(c) Ger Versluis 2000 version 5.411 24 December 2001 (updated Jan 31st, 2003 by Dynamic Drive for Opera7)
+*	HV Menu found on Dynamic Drive ONLY may be used on both commercial and non commerical sites	*
+*	For info write to menus@burmees.nl							        *
+*       This script featured on Dynamic Drive DHTML code library: http://www.dynamicdrive.com
+**********************************************************************************************************************************************/
+
+	var AgntUsr=navigator.userAgent.toLowerCase();
+	var DomYes=document.getElementById?1:0;
+	var NavYes=AgntUsr.indexOf('mozilla')!=-1&&AgntUsr.indexOf('compatible')==-1?1:0;
+	var ExpYes=AgntUsr.indexOf('msie')!=-1?1:0;
+	var Opr=AgntUsr.indexOf('opera')!=-1?1:0;
+	var Opr6orless=window.opera && navigator.userAgent.search(/opera.[1-6]/i)!=-1 //DynamicDrive.com added code
+	var DomNav=DomYes&&NavYes?1:0;
+ 	var DomExp=DomYes&&ExpYes?1:0;
+	var Nav4=NavYes&&!DomYes&&document.layers?1:0;
+	var Exp4=ExpYes&&!DomYes&&document.all?1:0;
+	var PosStrt=(NavYes||ExpYes)&&!Opr6orless?1:0;
+
+	var FrstLoc,ScLoc,DcLoc;
+	var ScWinWdth,ScWinHght,FrstWinWdth,FrstWinHght;
+	var ScLdAgainWin;
+	var FirstColPos,SecColPos,DocColPos;
+	var RcrsLvl=0;
+	var FrstCreat=1,Loadd=0,Creatd=0,IniFlg,AcrssFrms=1;
+	var FrstCntnr=null,CurrntOvr=null,CloseTmr=null;
+	var CntrTxt,TxtClose,ImgStr;
+	var Ztop=100;
+	var ShwFlg=0;
+	var M_StrtTp=StartTop,M_StrtLft=StartLeft;
+	var StaticPos=0;
+	var LftXtra=DomNav&&!Opr?LeftPaddng:0; //Changed for Opera
+	var TpXtra=DomNav?TopPaddng:0;
+	var M_Hide=Nav4?'hide':'hidden';
+	var M_Show=Nav4?'show':'visible';
+	var Par=parent.frames[0]&&FirstLineFrame!=SecLineFrame?parent:window;
+	var Doc=Par.document;
+	var Bod=Doc.body;
+	var Trigger=NavYes&&!Opr?Par:Bod; //Changed for Opera
+
+	MenuTextCentered=MenuTextCentered==1||MenuTextCentered=='center'?'center':MenuTextCentered==0||MenuTextCentered!='right'?'left':'right';
+	WbMstrAlrts=["Item not defined: ","Item needs height: ","Item needs width: "];
+
+	if(Trigger.onload)Dummy=Trigger.onload;
+	if(DomNav||Opr)Trigger.addEventListener('load',Go,false); //Changed for Opera
+	else Trigger.onload=Go;
+
+function Dummy(){return}
+
+function CnclSlct(){return false}
+
+function RePos(){
+	FrstWinWdth=ExpYes?FrstLoc.document.body.clientWidth:FrstLoc.innerWidth;
+	FrstWinHght=ExpYes?FrstLoc.document.body.clientHeight:FrstLoc.innerHeight;
+	ScWinWdth=ExpYes?ScLoc.document.body.clientWidth:ScLoc.innerWidth;
+	ScWinHght=ExpYes?ScLoc.document.body.clientHeight:ScLoc.innerHeight;
+	if(MenuCentered=='justify'&&FirstLineHorizontal){
+		FrstCntnr.style.width=FrstWinWdth;
+		ClcJus();
+		var P=FrstCntnr.FrstMbr,W=Menu1[5],i;
+		for(i=0;i<NoOffFirstLineMenus;i++){P.style.width=W;P=P.PrvMbr}}
+	StaticPos=-1;
+	if(TargetLoc)ClcTrgt();
+	if(MenuCentered)ClcLft();
+	if(MenuVerticalCentered)ClcTp();
+	PosMenu(FrstCntnr,StartTop,StartLeft)}
+
+function UnLoaded(){
+	if(CloseTmr)clearTimeout(CloseTmr);
+	Loadd=0; Creatd=0;
+	if(HideTop){
+		var FCStyle=Nav4?FrstCntnr:FrstCntnr.style;
+		FCStyle.visibility=M_Hide}}
+
+function ReDoWhole(){
+	if(ScWinWdth!=ScLoc.innerWidth||ScWinHght!=ScLoc.innerHeight||FrstWinWdth!=FrstLoc.innerWidth||FrstWinHght!=FrstLoc.innerHeight)Doc.location.reload()}
+
+function Check(WMnu,NoOf){
+	var i,array,ArrayLoc;
+	ArrayLoc=parent.frames[0]?parent.frames[FirstLineFrame]:self;
+	for(i=0;i<NoOf;i++){
+		array=WMnu+eval(i+1);
+		if(!ArrayLoc[array]){WbMstrAlrt(0,array); return false}
+		if(i==0){	if(!ArrayLoc[array][4]){WbMstrAlrt(1,array); return false}
+			if(!ArrayLoc[array][5]){WbMstrAlrt(2,array); return false}}
+		if(ArrayLoc[array][3])if(!Check(array+'_',ArrayLoc[array][3])) return false}
+	return true}
+
+function WbMstrAlrt(No,Xtra){
+	return confirm(WbMstrAlrts[No]+Xtra+'   ')}
+
+function Go(){
+	Dummy();
+	if(Loadd||!PosStrt)return;
+	BeforeStart();
+	Creatd=0; Loadd=1;
+	status='Building menu';
+	if(FrstCreat){
+		if(FirstLineFrame =="" || !parent.frames[FirstLineFrame]){
+			FirstLineFrame=SecLineFrame;
+			if(FirstLineFrame =="" || !parent.frames[FirstLineFrame]){
+				FirstLineFrame=SecLineFrame=DocTargetFrame;
+				if(FirstLineFrame =="" || !parent.frames[FirstLineFrame])FirstLineFrame=SecLineFrame=DocTargetFrame=''}}
+		if(SecLineFrame =="" || !parent.frames[SecLineFrame]){
+			SecLineFrame=DocTargetFrame;
+			if(SecLineFrame =="" || !parent.frames[SecLineFrame])SecLineFrame=DocTargetFrame=FirstLineFrame}
+		if(DocTargetFrame =="" || !parent.frames[DocTargetFrame])DocTargetFrame=SecLineFrame;
+		if(WebMasterCheck){	if(!Check('Menu',NoOffFirstLineMenus)){status='build aborted';return}}
+		FrstLoc=FirstLineFrame!=""?parent.frames[FirstLineFrame]:window;
+		ScLoc=SecLineFrame!=""?parent.frames[SecLineFrame]:window;
+		DcLoc=DocTargetFrame!=""?parent.frames[DocTargetFrame]:window;
+		if (FrstLoc==ScLoc) AcrssFrms=0;
+		if (AcrssFrms)FirstLineHorizontal=MenuFramesVertical?0:1;
+		FrstWinWdth=ExpYes?FrstLoc.document.body.clientWidth:FrstLoc.innerWidth;
+		FrstWinHght=ExpYes?FrstLoc.document.body.clientHeight:FrstLoc.innerHeight;
+		ScWinWdth=ExpYes?ScLoc.document.body.clientWidth:ScLoc.innerWidth;
+		ScWinHght=ExpYes?ScLoc.document.body.clientHeight:ScLoc.innerHeight;
+		if(Nav4){	CntrTxt=MenuTextCentered!='left'?"<div align='"+MenuTextCentered+"'>":"";
+			TxtClose="</font>"+MenuTextCentered!='left'?"</div>":""}}
+	FirstColPos=Nav4?FrstLoc.document:FrstLoc.document.body;
+	SecColPos=Nav4?ScLoc.document:ScLoc.document.body;
+	DocColPos=Nav4?DcLoc.document:ScLoc.document.body;
+	if (TakeOverBgColor)FirstColPos.bgColor=AcrssFrms?SecColPos.bgColor:DocColPos.bgColor;
+	if(MenuCentered=='justify'&&FirstLineHorizontal)ClcJus();
+	if(FrstCreat){
+		FrstCntnr=CreateMenuStructure('Menu',NoOffFirstLineMenus);
+		FrstCreat=AcrssFrms?0:1}
+	else CreateMenuStructureAgain('Menu',NoOffFirstLineMenus);
+	if(TargetLoc)ClcTrgt();
+	if(MenuCentered)ClcLft();
+	if(MenuVerticalCentered)ClcTp();
+	PosMenu(FrstCntnr,StartTop,StartLeft);
+	IniFlg=1;
+	Initiate();
+	Creatd=1;
+	if (AcrssFrms) 	//Added for Opera
+		{	 //Added for Opera
+		ScLdAgainWin=ExpYes?ScLoc.document.body:ScLoc;
+		ScLdAgainWin.onunload=UnLoaded;
+		}	 //Added for Opera
+	Trigger.onresize=Nav4?ReDoWhole:RePos;
+	AfterBuild();
+	if(MenuVerticalCentered=='static'&&!AcrssFrms)setInterval('KeepPos()',250);
+	status='Menu ready for use'}
+
+function KeepPos(){
+	var TS=ExpYes?FrstLoc.document.body.scrollTop:FrstLoc.pageYOffset;
+	if(TS!=StaticPos){
+		var FCStyle=Nav4?FrstCntnr:FrstCntnr.style;
+		FCStyle.top=FrstCntnr.OrgTop=StartTop+TS;StaticPos=TS}}
+
+function ClcJus(){
+	var a=BorderBtwnElmnts?1:2,b=BorderBtwnElmnts?BorderWidth:0;
+	var Size=Math.round(((FrstWinWdth-a*BorderWidth)/NoOffFirstLineMenus)-b),i,j;
+	for(i=1;i<NoOffFirstLineMenus+1;i++){j=eval('Menu'+i);j[5]=Size}
+	StartLeft=0}
+
+function ClcTrgt(){
+	var TLoc=(Nav4?FrstLoc.document.layers[TargetLoc]:(DomYes?FrstLoc.document.getElementById(TargetLoc):FrstLoc.document.all[TargetLoc]));
+	StartTop=M_StrtTp;
+	StartLeft=M_StrtLft;
+	if(DomYes){
+		while(TLoc){StartTop+=TLoc.offsetTop;StartLeft+=TLoc.offsetLeft;TLoc=TLoc.offsetParent}}
+	else{	StartTop+=Nav4?TLoc.pageY:TLoc.offsetTop;StartLeft+=Nav4?TLoc.pageX:TLoc.offsetLeft}}
+
+function ClcLft(){
+	if(MenuCentered!='left'&&MenuCentered!='justify'){
+		var Size=FrstWinWdth-(!Nav4?parseInt(FrstCntnr.style.width):FrstCntnr.clip.width);
+		StartLeft=M_StrtLft;
+		StartLeft+=MenuCentered=='right'?Size:Size/2}}
+
+function ClcTp(){
+	if(MenuVerticalCentered!='top'&&MenuVerticalCentered!='static'){
+		var Size=FrstWinHght-(!Nav4?parseInt(FrstCntnr.style.height):FrstCntnr.clip.height);
+		StartTop=M_StrtTp;
+		StartTop+=MenuVerticalCentered=='bottom'?Size:Size/2}}
+
+function PosMenu(CntnrPntr,Tp,Lt){
+	var Topi,Lefti,Hori;
+	var Cntnr=CntnrPntr;
+	var Mmbr=Cntnr.FrstMbr;
+	var CntnrStyle=!Nav4?Cntnr.style:Cntnr;
+	var MmbrStyle=!Nav4?Mmbr.style:Mmbr;
+	var PadL=Mmbr.value.indexOf('<')==-1?LftXtra:0;
+	var PadT=Mmbr.value.indexOf('<')==-1?TpXtra:0;
+	var MmbrWt=!Nav4?parseInt(MmbrStyle.width)+PadL:MmbrStyle.clip.width;
+	var MmbrHt=!Nav4?parseInt(MmbrStyle.height)+PadT:MmbrStyle.clip.height;
+	var CntnrWt=!Nav4?parseInt(CntnrStyle.width):CntnrStyle.clip.width;
+	var CntnrHt=!Nav4?parseInt(CntnrStyle.height):CntnrStyle.clip.height;
+	var SubTp,SubLt;
+	RcrsLvl++;
+	if (RcrsLvl==1 && AcrssFrms)!MenuFramesVertical?Tp=FrstWinHght-CntnrHt+(Nav4?4:0):Lt=RightToLeft?0:FrstWinWdth-CntnrWt+(Nav4?4:0);
+	if (RcrsLvl==2 && AcrssFrms)!MenuFramesVertical?Tp=0:Lt=RightToLeft?ScWinWdth-CntnrWt:0;
+	if (RcrsLvl==2 && AcrssFrms){Tp+=VerCorrect;Lt+=HorCorrect}
+	CntnrStyle.top=RcrsLvl==1?Tp:0;
+	Cntnr.OrgTop=Tp;
+	CntnrStyle.left=RcrsLvl==1?Lt:0;
+	Cntnr.OrgLeft=Lt;
+	if (RcrsLvl==1 && FirstLineHorizontal){
+		Hori=1;Lefti=CntnrWt-MmbrWt-2*BorderWidth;Topi=0}
+	else{	Hori=Lefti=0;Topi=CntnrHt-MmbrHt-2*BorderWidth}
+	while(Mmbr!=null){
+		MmbrStyle.left=Lefti+BorderWidth;
+		MmbrStyle.top=Topi+BorderWidth;
+		if(Nav4)Mmbr.CmdLyr.moveTo(Lefti+BorderWidth,Topi+BorderWidth);
+		if(Mmbr.ChildCntnr){
+			if(RightToLeft)ChldCntnrWdth=Nav4?Mmbr.ChildCntnr.clip.width:parseInt(Mmbr.ChildCntnr.style.width);
+			if(Hori){	SubTp=Topi+MmbrHt+2*BorderWidth;
+				SubLt=RightToLeft?Lefti+MmbrWt-ChldCntnrWdth:Lefti}
+			else{	SubLt=RightToLeft?Lefti-ChldCntnrWdth+ChildOverlap*MmbrWt+BorderWidth:Lefti+(1-ChildOverlap)*MmbrWt+BorderWidth;
+				SubTp=RcrsLvl==1&&AcrssFrms?Topi:Topi+ChildVerticalOverlap*MmbrHt}
+			PosMenu(Mmbr.ChildCntnr,SubTp,SubLt)}
+		Mmbr=Mmbr.PrvMbr;
+		if(Mmbr){	MmbrStyle=!Nav4?Mmbr.style:Mmbr;
+			PadL=Mmbr.value.indexOf('<')==-1?LftXtra:0;
+			PadT=Mmbr.value.indexOf('<')==-1?TpXtra:0;
+			MmbrWt=!Nav4?parseInt(MmbrStyle.width)+PadL:MmbrStyle.clip.width;
+			MmbrHt=!Nav4?parseInt(MmbrStyle.height)+PadT:MmbrStyle.clip.height;
+			Hori?Lefti-=BorderBtwnElmnts?(MmbrWt+BorderWidth):(MmbrWt):Topi-=BorderBtwnElmnts?(MmbrHt+BorderWidth):(MmbrHt)}}
+	RcrsLvl--}
+
+function Initiate(){
+	if(IniFlg){	Init(FrstCntnr);IniFlg=0;
+		if(ShwFlg)AfterCloseAll();ShwFlg=0}}
+
+function Init(CntnrPntr){
+	var Mmbr=CntnrPntr.FrstMbr;
+	var MCStyle=Nav4?CntnrPntr:CntnrPntr.style;
+	RcrsLvl++;
+	MCStyle.visibility=RcrsLvl==1?M_Show:M_Hide;
+	while(Mmbr!=null){
+		if(Mmbr.Hilite){Mmbr.Hilite=0;if(KeepHilite)LowItem(Mmbr)}
+		if(Mmbr.ChildCntnr) Init(Mmbr.ChildCntnr);
+		Mmbr=Mmbr.PrvMbr}
+	RcrsLvl--}
+
+function ClearAllChilds(Pntr){
+	var CPCCStyle;
+	while (Pntr){
+		if(Pntr.Hilite){
+			Pntr.Hilite=0;
+			if(KeepHilite)LowItem(Pntr);
+			if(Pntr.ChildCntnr){
+				CPCCStyle=Nav4?Pntr.ChildCntnr:Pntr.ChildCntnr.style;
+				CPCCStyle.visibility=M_Hide;
+				ClearAllChilds(Pntr.ChildCntnr.FrstMbr)}
+			break}
+		Pntr=Pntr.PrvMbr}}
+
+function GoTo(){
+	if(this.LinkTxt){
+		status='';
+		var HP=Nav4?this.LowLyr:this;
+		LowItem(HP);
+		this.LinkTxt.indexOf('javascript:')!=-1?eval(this.LinkTxt):DcLoc.location.href=this.LinkTxt}}
+
+function HiliteItem(P){
+	if(Nav4){
+		if(P.ro)P.document.images[P.rid].src=P.ri2;
+		else{	if(P.HiBck)P.bgColor=P.HiBck;
+			if(P.value.indexOf('<img')==-1){
+				P.document.write(P.Ovalue);
+				P.document.close()}}}
+	else{	if(P.ro){	var Lc=P.Level==1?FrstLoc:ScLoc;
+			Lc.document.images[P.rid].src=P.ri2}
+		else{	if(P.HiBck)P.style.backgroundColor=P.HiBck;
+			if(P.HiFntClr)P.style.color=P.HiFntClr}}
+	P.Hilite=1}
+
+function LowItem(P){
+	if(P.ro){	if(Nav4)P.document.images[P.rid].src=P.ri1;
+		else{	var Lc=P.Level==1?FrstLoc:ScLoc;
+			Lc.document.images[P.rid].src=P.ri1}}
+	else{	if(Nav4){	if(P.LoBck)P.bgColor=P.LoBck;
+			if(P.value.indexOf('<img')==-1){
+				P.document.write(P.value);
+				P.document.close()}}
+		else{	if(P.LoBck)P.style.backgroundColor=P.LoBck;
+			if(P.LwFntClr)P.style.color=P.LwFntClr}}}
+
+function OpenMenu(){
+	if(!Loadd||!Creatd) return;
+	var TpScrlld=ExpYes?ScLoc.document.body.scrollTop:ScLoc.pageYOffset;
+	var LScrlld=ExpYes?ScLoc.document.body.scrollLeft:ScLoc.pageXOffset;
+	var CCnt=Nav4?this.LowLyr.ChildCntnr:this.ChildCntnr;
+	var ThisHt=Nav4?this.clip.height:parseInt(this.style.height);
+	var ThisWt=Nav4?this.clip.width:parseInt(this.style.width);
+	var ThisLft=AcrssFrms&&this.Level==1&&!FirstLineHorizontal?0:Nav4?this.Container.left:parseInt(this.Container.style.left);
+	var ThisTp=AcrssFrms&&this.Level==1&&FirstLineHorizontal?0:Nav4?this.Container.top:parseInt(this.Container.style.top);
+	var HP=Nav4?this.LowLyr:this;
+	CurrntOvr=this;
+	IniFlg=0;
+	ClearAllChilds(this.Container.FrstMbr);
+	HiliteItem(HP);
+	if(CCnt!=null){
+		if(!ShwFlg){ShwFlg=1;	BeforeFirstOpen()}
+		var CCW=Nav4?this.LowLyr.ChildCntnr.clip.width:parseInt(this.ChildCntnr.style.width);
+		var CCH=Nav4?this.LowLyr.ChildCntnr.clip.height:parseInt(this.ChildCntnr.style.height);
+		var ChCntTL=Nav4?this.LowLyr.ChildCntnr:this.ChildCntnr.style;
+		var SubLt=AcrssFrms&&this.Level==1?CCnt.OrgLeft+ThisLft+LScrlld:CCnt.OrgLeft+ThisLft;
+		var SubTp=AcrssFrms&&this.Level==1?CCnt.OrgTop+ThisTp+TpScrlld:CCnt.OrgTop+ThisTp;
+		if(MenuWrap){
+			if(RightToLeft){
+				if(SubLt<LScrlld)SubLt=this.Level==1?LScrlld:SubLt+(CCW+(1-2*ChildOverlap)*ThisWt);
+				if(SubLt+CCW>ScWinWdth+LScrlld)SubLt=ScWinWdth+LScrlld-CCW}
+			else{	if(SubLt+CCW>ScWinWdth+LScrlld)SubLt=this.Level==1?ScWinWdth+LScrlld-CCW:SubLt-(CCW+(1-2*ChildOverlap)*ThisWt);
+				if(SubLt<LScrlld)SubLt=LScrlld}
+			if(SubTp+CCH>TpScrlld+ScWinHght)SubTp=this.Level==1?SubTp=TpScrlld+ScWinHght-CCH:SubTp-CCH+(1-2*ChildVerticalOverlap)*ThisHt;
+			if(SubTp<TpScrlld)SubTp=TpScrlld}
+		ChCntTL.top=SubTp;ChCntTL.left=SubLt;ChCntTL.visibility=M_Show}
+	status=this.LinkTxt}
+
+function OpenMenuClick(){
+	if(!Loadd||!Creatd) return;
+	var HP=Nav4?this.LowLyr:this;
+	CurrntOvr=this;
+	IniFlg=0;
+	ClearAllChilds(this.Container.FrstMbr);
+	HiliteItem(HP);
+	status=this.LinkTxt}
+
+function CloseMenu(){
+	if(!Loadd||!Creatd) return;
+	if(!KeepHilite){
+		var HP=Nav4?this.LowLyr:this;
+		LowItem(HP)}
+	status='';
+	if(this==CurrntOvr){
+		IniFlg=1;
+		if(CloseTmr)clearTimeout(CloseTmr);
+		CloseTmr=setTimeout('Initiate(CurrntOvr)',DissapearDelay)}}
+
+function CntnrSetUp(Wdth,Hght,NoOff){
+	var x=RcrsLvl==1?BorderColor:BorderSubColor;
+	this.FrstMbr=null;
+	this.OrgLeft=this.OrgTop=0;
+	if(x)this.bgColor=x;
+	if(Nav4){	this.visibility='hide';
+		this.resizeTo(Wdth,Hght)}
+	else{	if(x)this.style.backgroundColor=x;
+		this.style.width=Wdth;
+		this.style.height=Hght;
+		this.style.fontFamily=FontFamily;
+		this.style.fontWeight=FontBold?'bold':'normal';
+		this.style.fontStyle=FontItalic?'italic':'normal';
+		this.style.fontSize=FontSize+'pt';
+		this.style.zIndex=RcrsLvl+Ztop}}
+
+function MbrSetUp(MmbrCntnr,PrMmbr,WhatMenu,Wdth,Hght){
+	var Location=RcrsLvl==1?FrstLoc:ScLoc;
+	var MemVal=eval(WhatMenu+'[0]');
+	var t,T,L,W,H,S;
+	var a,b,c,d;
+	this.PrvMbr=PrMmbr;
+	this.Level=RcrsLvl;
+	this.LinkTxt=eval(WhatMenu+'[1]');
+	this.Container=MmbrCntnr;
+	this.ChildCntnr=null;
+	this.Hilite=0;
+	this.style.overflow='hidden';
+	this.style.cursor=ExpYes&&(this.LinkTxt||(RcrsLvl==1&&UnfoldsOnClick))?'hand':'default';
+	this.ro=0;
+	if(MemVal.indexOf('rollover')!=-1){
+		this.ro=1;
+		this.ri1=MemVal.substring(MemVal.indexOf(':')+1,MemVal.lastIndexOf(':'));
+		this.ri2=MemVal.substring(MemVal.lastIndexOf(':')+1,MemVal.length);
+		this.rid=WhatMenu+'i';MemVal="<img src='"+this.ri1+"' name='"+this.rid+"'>"}
+	this.value=MemVal;
+	if(RcrsLvl==1){
+		a=LowBgColor;
+		b=HighBgColor;
+		c=FontLowColor;
+		d=FontHighColor}
+	else{	a=LowSubBgColor;
+		b=HighSubBgColor;
+		c=FontSubLowColor;
+		d=FontSubHighColor}
+	this.LoBck=a;
+	this.LwFntClr=c;
+	this.HiBck=b;
+	this.HiFntClr=d;
+	this.style.color=this.LwFntClr;
+	if(this.LoBck)this.style.backgroundColor=this.LoBck;
+	this.style.textAlign=MenuTextCentered;
+	if(eval(WhatMenu+'[2]'))this.style.backgroundImage="url(\'"+eval(WhatMenu+'[2]')+"\')";
+	if(MemVal.indexOf('<')==-1){
+		this.style.width=Wdth-LftXtra;
+		this.style.height=Hght-TpXtra;
+		this.style.paddingLeft=LeftPaddng;
+		this.style.paddingTop=TopPaddng}
+	else{	this.style.width=Wdth;
+		this.style.height=Hght}
+	if(MemVal.indexOf('<')==-1&&DomYes){
+		t=Location.document.createTextNode(MemVal);
+		this.appendChild(t)}
+	else this.innerHTML=MemVal;
+	if(eval(WhatMenu+'[3]')&&ShowArrow){
+		a=RcrsLvl==1&&FirstLineHorizontal?3:RightToLeft?6:0;
+		S=Arrws[a];
+		W=Arrws[a+1];
+		H=Arrws[a+2];
+		T=RcrsLvl==1&&FirstLineHorizontal?Hght-H-2:(Hght-H)/2;
+		L=RightToLeft?2:Wdth-W-2;
+		if(DomYes){
+
+			t=Location.document.createElement('img');
+			this.appendChild(t);
+			t.style.position='absolute';
+			t.src=S;
+
+			t.style.width=W;
+			t.style.height=H;
+			t.style.top=T;
+			t.style.left=L}
+		else{	MemVal+="<div style='position:absolute; top:"+T+"; left:"+L+"; width:"+W+"; height:"+H+";visibility:inherit'><img src='"+S+"'></div>";
+			this.innerHTML=MemVal}}
+	if(ExpYes){this.onselectstart=CnclSlct;
+		this.onmouseover=RcrsLvl==1&&UnfoldsOnClick?OpenMenuClick:OpenMenu;
+		this.onmouseout=CloseMenu;
+		this.onclick=RcrsLvl==1&&UnfoldsOnClick&&eval(WhatMenu+'[3]')?OpenMenu:GoTo	}
+	else{	RcrsLvl==1&&UnfoldsOnClick?this.addEventListener('mouseover',OpenMenuClick,false):this.addEventListener('mouseover',OpenMenu,false);
+		this.addEventListener('mouseout',CloseMenu,false);
+		RcrsLvl==1&&UnfoldsOnClick&&eval(WhatMenu+'[3]')?this.addEventListener('click',OpenMenu,false):this.addEventListener('click',GoTo,false)}}
+
+function NavMbrSetUp(MmbrCntnr,PrMmbr,WhatMenu,Wdth,Hght){
+	var a,b,c,d;
+	if(RcrsLvl==1){
+		a=LowBgColor;
+		b=HighBgColor;
+		c=FontLowColor;
+		d=FontHighColor}
+	else {	a=LowSubBgColor;
+		b=HighSubBgColor;
+		c=FontSubLowColor;
+		d=FontSubHighColor	}
+	this.value=eval(WhatMenu+'[0]');
+	this.ro=0;
+	if(this.value.indexOf('rollover')!=-1){
+		this.ro=1;
+		this.ri1=this.value.substring(this.value.indexOf(':')+1,this.value.lastIndexOf(':'));
+		this.ri2=this.value.substring(this.value.lastIndexOf(':')+1,this.value.length);
+		this.rid=WhatMenu+'i';this.value="<img src='"+this.ri1+"' name='"+this.rid+"'>"}
+	if(LeftPaddng&&this.value.indexOf('<')==-1&&MenuTextCentered=='left')this.value='&nbsp\;'+this.value;
+	if(FontBold)this.value=this.value.bold();
+	if(FontItalic)this.value=this.value.italics();
+	this.Ovalue=this.value;
+	this.value=this.value.fontcolor(c);
+	this.Ovalue=this.Ovalue.fontcolor(d);
+	this.value=CntrTxt+"<font face='"+FontFamily+"' point-size='"+FontSize+"'>"+this.value+TxtClose;
+	this.Ovalue=CntrTxt+"<font face='"+FontFamily+"' point-size='"+FontSize+"'>"+this.Ovalue+TxtClose;
+	this.LoBck=a;
+	this.HiBck=b;
+	this.ChildCntnr=null;
+	this.PrvMbr=PrMmbr;
+	this.Hilite=0;
+	this.visibility='inherit';
+	if(this.LoBck)this.bgColor=this.LoBck;
+	this.resizeTo(Wdth,Hght);
+	if(!AcrssFrms&&eval(WhatMenu+'[2]'))this.background.src=eval(WhatMenu+'[2]');
+	this.document.write(this.value);
+	this.document.close();
+	this.CmdLyr=new Layer(Wdth,MmbrCntnr);
+	this.CmdLyr.Level=RcrsLvl;
+	this.CmdLyr.LinkTxt=eval(WhatMenu+'[1]');
+	this.CmdLyr.visibility='inherit';
+	this.CmdLyr.onmouseover=RcrsLvl==1&&UnfoldsOnClick?OpenMenuClick:OpenMenu;
+	this.CmdLyr.onmouseout=CloseMenu;
+	this.CmdLyr.captureEvents(Event.MOUSEUP);
+	this.CmdLyr.onmouseup=RcrsLvl==1&&UnfoldsOnClick&&eval(WhatMenu+'[3]')?OpenMenu:GoTo;
+	this.CmdLyr.LowLyr=this;
+	this.CmdLyr.resizeTo(Wdth,Hght);
+	this.CmdLyr.Container=MmbrCntnr;
+	if(eval(WhatMenu+'[3]')&&ShowArrow){
+		a=RcrsLvl==1&&FirstLineHorizontal?3:RightToLeft?6:0;
+		this.CmdLyr.ImgLyr=new Layer(Arrws[a+1],this.CmdLyr);
+		this.CmdLyr.ImgLyr.visibility='inherit';
+		this.CmdLyr.ImgLyr.top=RcrsLvl==1&&FirstLineHorizontal?Hght-Arrws[a+2]-2:(Hght-Arrws[a+2])/2;
+		this.CmdLyr.ImgLyr.left=RightToLeft?2:Wdth-Arrws[a+1]-2;
+		this.CmdLyr.ImgLyr.width=Arrws[a+1];
+		this.CmdLyr.ImgLyr.height=Arrws[a+2];
+		ImgStr="<img src='"+Arrws[a]+"' width='"+Arrws[a+1]+"' height='"+Arrws[a+2]+"'>";
+		this.CmdLyr.ImgLyr.document.write(ImgStr);
+		this.CmdLyr.ImgLyr.document.close()}}
+
+function CreateMenuStructure(MName,NumberOf){
+	RcrsLvl++;
+	var i,NoOffSubs,Mbr,Wdth=0,Hght=0;
+	var PrvMmbr=null;
+	var WMnu=MName+'1';
+	var MenuWidth=eval(WMnu+'[5]');
+	var MenuHeight=eval(WMnu+'[4]');
+	var Location=RcrsLvl==1?FrstLoc:ScLoc;
+	if (RcrsLvl==1&&FirstLineHorizontal){
+		for(i=1;i<NumberOf+1;i++){
+			WMnu=MName+eval(i);
+			Wdth=eval(WMnu+'[5]')?Wdth+eval(WMnu+'[5]'):Wdth+MenuWidth}
+		Wdth=BorderBtwnElmnts?Wdth+(NumberOf+1)*BorderWidth:Wdth+2*BorderWidth;Hght=MenuHeight+2*BorderWidth}
+	else{	for(i=1;i<NumberOf+1;i++){
+			WMnu=MName+eval(i);
+			Hght=eval(WMnu+'[4]')?Hght+eval(WMnu+'[4]'):Hght+MenuHeight}
+		Hght=BorderBtwnElmnts?Hght+(NumberOf+1)*BorderWidth:Hght+2*BorderWidth;Wdth=MenuWidth+2*BorderWidth}
+	if(DomYes){
+		var MmbrCntnr=Location.document.createElement("div");
+		MmbrCntnr.style.position='absolute';
+		MmbrCntnr.style.visibility='hidden';
+		Location.document.body.appendChild(MmbrCntnr)}
+	else{	if(Nav4) var MmbrCntnr=new Layer(Wdth,Location)
+		else{	WMnu+='c';
+			Location.document.body.insertAdjacentHTML("AfterBegin","<div id='"+WMnu+"' style='visibility:hidden; position:absolute;'><\/div>");
+			var MmbrCntnr=Location.document.all[WMnu]}}
+	MmbrCntnr.SetUp=CntnrSetUp;
+	MmbrCntnr.SetUp(Wdth,Hght,NumberOf);
+	if(Exp4){	MmbrCntnr.InnerString='';
+		for(i=1;i<NumberOf+1;i++){
+			WMnu=MName+eval(i);
+			MmbrCntnr.InnerString+="<div id='"+WMnu+"' style='position:absolute;'><\/div>"}
+		MmbrCntnr.innerHTML=MmbrCntnr.InnerString}
+	for(i=1;i<NumberOf+1;i++){
+		WMnu=MName+eval(i);
+		NoOffSubs=eval(WMnu+'[3]');
+		Wdth=RcrsLvl==1&&FirstLineHorizontal?eval(WMnu+'[5]')?eval(WMnu+'[5]'):MenuWidth:MenuWidth;
+		Hght=RcrsLvl==1&&FirstLineHorizontal?MenuHeight:eval(WMnu+'[4]')?eval(WMnu+'[4]'):MenuHeight;
+		if(DomYes){
+			Mbr=Location.document.createElement("div");
+			Mbr.style.position='absolute';
+			Mbr.style.visibility='inherit';
+			MmbrCntnr.appendChild(Mbr)}
+		else Mbr=Nav4?new Layer(Wdth,MmbrCntnr):Location.document.all[WMnu];
+		Mbr.SetUp=Nav4?NavMbrSetUp:MbrSetUp;
+		Mbr.SetUp(MmbrCntnr,PrvMmbr,WMnu,Wdth,Hght);
+		if(NoOffSubs) Mbr.ChildCntnr=CreateMenuStructure(WMnu+'_',NoOffSubs);
+		PrvMmbr=Mbr}
+	MmbrCntnr.FrstMbr=Mbr;
+	RcrsLvl--;
+	return(MmbrCntnr)}
+
+function CreateMenuStructureAgain(MName,NumberOf){
+	var i,WMnu,NoOffSubs,PrvMmbr,Mbr=FrstCntnr.FrstMbr;
+	RcrsLvl++;
+	for(i=NumberOf;i>0;i--){
+		WMnu=MName+eval(i);
+		NoOffSubs=eval(WMnu+'[3]');
+		PrvMmbr=Mbr;
+		if(NoOffSubs)Mbr.ChildCntnr=CreateMenuStructure(WMnu+'_',NoOffSubs);
+		Mbr=Mbr.PrvMbr}
+	RcrsLvl--}
+
+if(is_nav && (is_major <= 5)){document.writeln('<div id="mainnav" name="mainnav" style="position: relative;"><layer id="mainnav" name="mainnav"><img src="http://muse-magazine.com/images/spacer.gif" width="527" height="20" border="0" alt=""></layer></div>');}else{document.writeln('<div id="mainnav" name="mainnav"><img src="http://muse-magazine.com/images/spacer.gif" width="527" height="20" border="0" alt=""></div>');}// --></script><noscript><img src="http://muse-magazine.com/images/navigation.gif" width="527" height="22" border="0" alt="" usemap="#navigation"><map name="navigation"><area shape="rect" alt="HOME" coords="1,1,87,21" href="http://muse-magazine.com/main/" title="HOME"><area shape="rect" alt="ARTICLES" coords="88,1,174,21" href="http://muse-magazine.com/main/articles" title="ARTICLES"><area shape="rect" alt="MEDIA" coords="175,1,262,21" href="http://muse-magazine.com/main/media" title="MEDIA"><area shape="rect" alt="CALENDAR" coords="263,1,350,21" href="http://muse-magazine.com/main/calendar" title="CALENDAR"><area shape="rect" alt="SPONSORS" coords="351,1,438,21" href="http://muse-magazine.com/main/sponsors" title="SPONSORS"><area shape="rect" alt="CONTACT" coords="439,1,526,21" href="http://muse-magazine.com/main/contact" title="CONTACT"><area shape="default" nohref></map></noscript></td>
+		</tr>
+		<tr valign="top">
+			<td>
+				<img src="http://muse-magazine.com/images/spacer.gif" width="24" height="1" border="0" alt=""></td>
+			<td class="lightgrey">
+				<img src="http://muse-magazine.com/images/spacer.gif" width="1" height="75" border="0" alt=""></td>
+			<td class="black">
+				<img src="http://muse-magazine.com/images/spacer.gif" width="525" height="1" border="0" alt=""><br>
+				<div class="mainpadded">
+<table cellpadding="0" cellspacing="0" width="500" border="0" align="center">
+<tr>
+	<td>
+		<img src="http://muse-magazine.com/images/spacer.gif" width="325" height="1" border="0" alt=""></td>
+	<td>
+		<img src="http://muse-magazine.com/images/spacer.gif" width="175" height="1" border="0" alt=""></td>
+</tr>
+<tr valign="top">
+	<td>
+
+		<!-- MAIN CONTENT -->
+
+		 
+
+	<p><i>Muse</i> magazine, the Paramount Arts District, and Zepicon productions present:</p> <b><font size="4">ONE WORLD FESTIVAL<br>SATURDAY, SEPTEMBER 25, 2004</b></font><br>11 a.m. to 2 a.m. (over 14 hours of fun!)<br>Tickets $10 (children under 12 admitted FREE with a paid adult admission)<br><br><p>Tickets are on sale now at the Paramount box office, Al's Music, the Electric Fetus, SCSU - Atwood Memorial Center, Movies Etc., Cheap Thrills and Book-Ems. (<b><i>Advance tickets are highly recommended.</i></b></p><p><a href="http://www.muse-magazine.com/main/article/412/">Click here for the complete schedule, listings and bios of One World performers, artists and presenters.</a></p>One World Festival is a new festival for downtown St. Cloud featuring the largest array of musical talent, workshops and children's activities to ever gather downtown. Designed to provide unity in the community, and as a celebration of our diversity, the One World Festival is multi-generational, multi-cultural, and multi-media. A full day's activities are planned. The primary daytime location is the Paramount Arts District inside and out, throughout. The music will continue late into the night at downtown hot spots.</p><p>The Music? You can expect darn near anything. The morning starts out with a gospel choir, and continues with jazz great George Cartwright, world-renowned violinist Cristina Seaborn, West African native YAWO, the rhythmic dancing fun of Stearns County Pachanga Society, VH1 songwriter-of-the-year runner-up Mary Lemanski, roots-inspored soul folk artist trueboy, Uniite performing world based improv with classical pianist Mark Ochu, Al's Music teacher Mary Swank, up-and-coming folkster Tim Thole, veteran folkster Jimmy Dale Royal, published poets John "Doc" Smith, Maureen Skelly, Mary Willette-Hughes and Roy McBride, all-female punk band Eufio, Chicago transplant Little Man, Saint Paul's mega performing arts troupe F.I.R.E., Celtic-influenced work-in-progress Felonius Bosch, local Celtic-influenced group Ring of Kerry, and the world-wise rhythm section and the genre-bending saxophonics of 56 Hope Road.</p><p>The Art? We will be showcasing the finest in visual and interactive arts including Pamela "Tootsie" McIntosh. "Tootsie," as she is affectionately known, is a gifted world class painter and visual artist. You can meet with her from 3 to 5 p.m. and view her paintings, furniture and mosaic work. There will be beautiful artisan vending such as pottery, stained glass, clothing and jewelry. There will also be art demos held throughout the entire extravaganza.</p><p>The Workshops? There are five different writing workshops for all ages, ranging from "Spoken Word for Everyone Ages 2 and Up" to "How to use Poetry for Inspiration, Insight, and Personal Growth." Perhaps you are interested in learning how to play penny whistle, bodhran drum, or hammered dulcimer. You can check out the beginning belly dance, yoga or tai chi. Experience the potter's wheel, learn about stained glass, paper making, politics for beginners, or "ten natural ways to boost energy, health and vitality." Make a dreamcatcher, write a story, learn about journalism, or learn to sing!!!</p><p>The Food? Try something new! Everything from Mexican to Thai, Mediterranean to American, you name it! Experience a portabello mushroom sandwich or a Mediterranean samosa. You will find great coffee, tea, and a variety of libations throughout hthe downtown area and great specials at participating restaurants.</p><p>There are plenty of not-so-common activities too. You can take a tether ride with Freedom Flight hot air balloons from 6 to 8 p.m., or watch a tattoo or glass-blowing demonstration, New York caliber performance art, Zander Villayne's new film <i>Bluesman</i>, or art made before your eyes from recycled materials. The world-respected Stroia Ballet will perform "Divertimento." There will also be modern dance by Body Prayers Dance Troupe and World Dance and Global Dance club. Don't forget the Parade of the Little People from 1 to 2 p.m.!</p><p>One World participating locati
+ons are the Paramount Arts District, Holy Angels Performing Arts Center at Cathedral, The Oasis Fine Art Gallery, Yoga and Living Arts Studio, The Rox, The Tavern on Germain, Press Bar and Parlor, Radisson Lounge, Bo Diddley's, Great Times Bistro, Studio 505, Twisted Tattoo, St. Cloud Library, Books Revisited, Herberger's, Java Joint, Cheap Thrills, MC's Dugout, DB Searle's, Rumrunners and the Electric Fetus.</p><p>You can find more information and the schedule for the entire event online at <a href="http://www.themindjam.com/">www.themindjam.com</a> or by clicking <a href="http://www.muse-magazine.com/main/article/412/">here</a>.</p><p>The One World Festival is a fund-raiser for the Paramount Arts District.</p><p>Thank you for supporting the Arts!</p>Contact: ralo kaleo'okalani<br>Zepicon Productions<br>One World Festival<br>320-202-1361 phone<br>320-252-7732 fax<br><a href="http://www.themindjam.com/">www.themindjam.com</a><br><br><p><b>Now available:</b> Check out our new and improved <i>Muse</i> <a href="http://www.muse-magazine.com/galleries/">gallery</a> for Muse-exclusive galleries of work and photos from this issue's featured artists <a href="http://www.muse-magazine.com/main/gallery/chuck/">Charles Norwood</a>, <a href="http://www.muse-magazine.com/main/gallery/roger_webgallery/">roGer</a>, and <a href="http://www.muse-magazine.com/main/gallery/PabloWebGallery/">Paul Epple</a>.</p><p><b>Now available:</b> the complete transcript of our Muse-exclusive interview with the talent behind the <a href="http://www.muse-magazine.com/main/article/413/">George Maurer Trio</a>.</p><p><a href="http://www.muse-magazine.com/main/article/411/">Click here</a> for a calendar of this month's events presented by our member organizations!</p>
+
+	 
+					<p class="highlight"><a href="http://muse-magazine.com/main/article/413"></a></p>
+					<p class="highlight"><a href="http://muse-magazine.com/main/article/412">One World Festival Program</a></p>
+					<p class="highlight"><a href="http://muse-magazine.com/main/article/411"></a></p>
+					<p class="highlight"><a href="http://muse-magazine.com/main/article/409"></a></p>
+					<p class="highlight"><a href="http://muse-magazine.com/main/article/398"></a></p>
+					<p class="highlight"><a href="http://muse-magazine.com/main/article/399"></a></p>
+					<p class="highlight"><a href="http://muse-magazine.com/main/article/400"></a></p>
+					<p class="highlight"><a href="http://muse-magazine.com/main/article/401"></a></p>
+		
+		<!--<p class="highlight"><a href="http://muse-magazine.com/main/synesthesia" style="text-decoration: none"><b>Synesthesia,</b></a> a big word, with a bigger meaning.</p>
+		<p class="highlight">The arts also provide plenty of fun for <a href="http://muse-magazine.com/main/kids_big" style="text-decoration: none"><b>kids.</b></a></p>
+		<p class="highlight">There's a reason we're <a href="http://muse-magazine.com/main/smiles" style="text-decoration: none"><b>smiling</b></a> ear to ear.</p>
+		<p class="highlight">A deeper look into <a href="http://muse-magazine.com/main/massman" style="text-decoration: none"><b>St. Cloud's History</b></a></p>
+		<p class="highlight"><a href="http://muse-magazine.com/main/writers" style="text-decoration: none"><b>Word. </b></a><i>MUSE</i> is looking for talented writers to include in upcoming issues.</p>
+		<p class="highlight">Spring is here and <a href="http://muse-magazine.com/main/naw_ruz" style="text-decoration: none"><b>Naw-Ruz.</b></a> was a huge success!</p>
+		<p class="highlight">Its a <a href="http://muse-magazine.com/main/stonesoup" style="text-decoration: none"><b>stone soup</b></a> of free passes, enter to win.</p>
+		<p class="highlight">Some facts you may or may not have known about <a href="http://muse-magazine.com/main/porgy" style="text-decoration: none"><b>Gershwin's Porgy and Bess</b></a></p>-->
+
+		<!-- /MAIN CONTENT -->
+
+		</td>
+	<td>
+		<table cellpadding="0" cellspacing="0" border="0" width="175">
+		<tr>
+			<td colspan="3" class="lightgrey">
+				<img src="http://muse-magazine.com/images/spacer.gif" width="175" height="1" border="0" alt=""></td>
+		</tr>
+		<tr>
+			<td class="lightgrey">
+				<img src="http://muse-magazine.com/images/spacer.gif" width="1" height="1" border="0" alt=""></td>
+			<td class="header">
+				<img src="http://muse-magazine.com/images/spacer.gif" width="167" height="1" border="0" alt=""><br>
+				Current Issue</td>
+			<td class="lightgrey">
+				<img src="http://muse-magazine.com/images/spacer.gif" width="1" height="1" border="0" alt=""></td>
+		</tr>
+		<tr>
+			<td colspan="3" class="lightgrey">
+				<img src="http://muse-magazine.com/images/spacer.gif" width="175" height="1" border="0" alt=""></td>
+		</tr>
+		<tr>
+			<td class="lightgrey">
+				<img src="http://muse-magazine.com/images/spacer.gif" width="1" height="1" border="0" alt=""></td>
+			<td class="boxpadded">
+				<img src="http://muse-magazine.com/images/spacer.gif" width="167" height="1" border="0" alt=""><br>
+				<div align="center">
+					<a href="http://muse-magazine.com/main/about_muse"><img src="http://muse-magazine.com/images/current_issue.jpg" width="130" height="170" border="0" alt="Fall 2004"></a><br>
+					<font class="major">Fall 2004</font><br>
+					<a href="http://muse-magazine.com/main/distribute">Pick one up today!</a>
+					</div></td>
+			<td class="lightgrey">
+				<img src="http://muse-magazine.com/images/spacer.gif" width="1" height="1" border="0" alt=""></td>
+		</tr>
+		<tr>
+			<td colspan="3" class="lightgrey">
+				<img src="http://muse-magazine.com/images/spacer.gif" width="175" height="1" border="0" alt=""></td>
+		</tr>
+		</table>
+		<br>
+		<table cellpadding="0" cellspacing="0" border="0" width="175">
+		<tr>
+			<td colspan="3" class="lightgrey">
+				<img src="http://muse-magazine.com/images/spacer.gif" width="175" height="1" border="0" alt=""></td>
+		</tr>
+		<tr>
+			<td class="lightgrey">
+				<img src="http://muse-magazine.com/images/spacer.gif" width="1" height="1" border="0" alt=""></td>
+			<td class="header">
+				<img src="http://muse-magazine.com/images/spacer.gif" width="167" height="1" border="0" alt=""><br>
+				Newsletter Signup</td>
+			<td class="lightgrey">
+				<img src="http://muse-magazine.com/images/spacer.gif" width="1" height="1" border="0" alt=""></td>
+		</tr>
+		<tr>
+			<td colspan="3" class="lightgrey">
+				<img src="http://muse-magazine.com/images/spacer.gif" width="175" height="1" border="0" alt=""></td>
+		</tr>
+		<tr><form action="http://muse-magazine.com/signup.php" method="post">
+			<td class="lightgrey">
+				<img src="http://muse-magazine.com/images/spacer.gif" width="1" height="1" border="0" alt=""></td>
+			<td class="boxpadded" align="center">
+				<img src="http://muse-magazine.com/images/spacer.gif" width="167" height="1" border="0" alt=""><br>
+														Muse updates and area arts information sent directly to your email account!<br>
+					<img src="http://muse-magazine.com/images/spacer.gif" width="1" height="4" border="0" alt=""><br>
+					<input type="text" size="10" name="name" value="Your Name" style="width: 110px;"><br>
+					<img src="http://muse-magazine.com/images/spacer.gif" width="1" height="4" border="0" alt=""><br>
+					<input type="text" size="10" name="email" value="Email Address" style="width: 110px;"><br>
+					<img src="http://muse-magazine.com/images/spacer.gif" width="1" height="4" border="0" alt=""><br>
+					<input type="submit" value="Subscribe">
+				</td>
+			<td class="lightgrey">
+				<img src="http://muse-magazine.com/images/spacer.gif" width="1" height="1" border="0" alt=""></td>
+		</tr>
+		<tr></form>
+			<td colspan="3" class="lightgrey">
+				<img src="http://muse-magazine.com/images/spacer.gif" width="175" height="1" border="0" alt=""></td>
+		</tr>
+		</table></td>
+</tr>
+</table>
+
+					</div></td>
+			<td class="lightgrey">
+				<img src="http://muse-magazine.com/images/spacer.gif" width="1" height="75" border="0" alt=""></td>
+		</tr>
+		</table></td>
+	<td bgcolor="#3399FF">
+		<table cellspacing="0" cellpadding="0" border="0">
+		<tr valign="top">
+			<td class="darkgrey">
+				<img src="http://muse-magazine.com/images/spacer.gif" width="76" height="17" border="0" alt=""></td>
+		</tr>
+		<tr valign="top">
+			<td class="lightgrey">
+				<img src="http://muse-magazine.com/images/spacer.gif" width="76" height="1" border="0" alt=""></td>
+		</tr>
+		<tr valign="top">
+			<td>
+				<img src="http://muse-magazine.com/images/logo.gif" width="75" height="197" border="0" alt="Muse - Central Minnesota Arts Community"></td>
+		</tr>
+		</table></td>
+	<td class="lightgrey">
+		<img src="http://muse-magazine.com/images/right_top_shim.gif" width="1" height="17" border="0" alt=""><br>
+		<img src="http://muse-magazine.com/images/spacer.gif" width="1" height="1" border="0" alt=""><td>
+</tr>
+<tr>
+	<td>
+		<table cellspacing="0" cellpadding="0" border="0">
+		<tr>
+			<td>
+				<img src="http://muse-magazine.com/images/spacer.gif" width="24" height="1" border="0" alt=""></td>
+			<td class="lightgrey">
+				<img src="http://muse-magazine.com/images/spacer.gif" width="1" height="1" border="0" alt=""></td>
+			<td class="black">
+				<img src="http://muse-magazine.com/images/spacer.gif" width="525" height="1" border="0" alt=""><br>
+				<div class="footerpadded">
+
+					<font class="minor">&copy; 2004 Muse Magazine. All rights reserved.</font>
+
+					</div></td>
+			<td class="lightgrey">
+				<img src="http://muse-magazine.com/images/spacer.gif" width="1" height="1" border="0" alt=""></td>
+		</tr>
+		</table></td>
+	<td bgcolor="#3399FF" align="center">
+		<a href="">CREDITS</a></td>
+	<td class="lightgrey">
+		<img src="http://muse-magazine.com/images/spacer.gif" width="1" height="1" border="0" alt=""><td>
+</tr>
+<tr>
+	<td>
+		<table cellspacing="0" cellpadding="0" border="0">
+		<tr>
+			<td>
+				<img src="http://muse-magazine.com/images/spacer.gif" width="24" height="1" border="0" alt=""></td>
+			<td class="lightgrey">
+				<img src="http://muse-magazine.com/images/spacer.gif" width="1" height="1" border="0" alt=""></td>
+			<td class="lightgrey">
+				<img src="http://muse-magazine.com/images/spacer.gif" width="525" height="1" border="0" alt=""></td>
+			<td class="lightgrey">
+				<img src="http://muse-magazine.com/images/spacer.gif" width="1" height="1" border="0" alt=""></td>
+		</tr>
+		</table></td>
+	<td class="lightgrey" colspan="2">
+		<img src="http://muse-magazine.com/images/spacer.gif" width="1" height="1" border="0" alt=""></td>
+</tr>
+</table>
+</body>
+</html>

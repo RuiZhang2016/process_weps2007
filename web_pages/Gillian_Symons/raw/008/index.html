@@ -1,0 +1,511 @@
+<html>
+
+	<head>
+		<meta http-equiv="content-type" content="text/html;charset=iso-8859-1">
+		<title>Human scale economy</title>
+		<csscriptdict>
+			<script><!--
+CSInit = new Array;
+function CSScriptInit() {
+if(typeof(skipPage) != "undefined") { if(skipPage) return; }
+idxArray = new Array;
+for(var i=0;i<CSInit.length;i++)
+	idxArray[i] = i;
+CSAction2(CSInit, idxArray);}
+function CSClickReturn () {
+	var bAgent = window.navigator.userAgent; 
+	var bAppName = window.navigator.appName;
+	if ((bAppName.indexOf("Explorer") >= 0) && (bAgent.indexOf("Mozilla/3") >= 0) && (bAgent.indexOf("Mac") >= 0))
+		return true; // dont follow link
+	else return false; // dont follow link
+}
+CSAg = window.navigator.userAgent; CSBVers = parseInt(CSAg.charAt(CSAg.indexOf("/")+1),10);
+CSIsW3CDOM = ((document.getElementById) && !(IsIE()&&CSBVers<6)) ? true : false;
+function IsIE() { return CSAg.indexOf("MSIE") > 0;}
+function CSIEStyl(s) { return document.all.tags("div")[s].style; }
+function CSNSStyl(s) { if (CSIsW3CDOM) return document.getElementById(s).style; else return CSFindElement(s,0);  }
+CSIImg=false;
+function CSInitImgID() {if (!CSIImg && document.images) { for (var i=0; i<document.images.length; i++) { if (!document.images[i].id) document.images[i].id=document.images[i].name; } CSIImg = true;}}
+function CSFindElement(n,ly) { if (CSBVers<4) return document[n];
+	if (CSIsW3CDOM) {CSInitImgID();return(document.getElementById(n));}
+	var curDoc = ly?ly.document:document; var elem = curDoc[n];
+	if (!elem) {for (var i=0;i<curDoc.layers.length;i++) {elem=CSFindElement(n,curDoc.layers[i]); if (elem) return elem; }}
+	return elem;
+}
+function CSGetImage(n) {if(document.images) {return ((!IsIE()&&CSBVers<5)?CSFindElement(n,0):document.images[n]);} else {return null;}}
+CSDInit=false;
+function CSIDOM() { if (CSDInit)return; CSDInit=true; if(document.getElementsByTagName) {var n = document.getElementsByTagName('DIV'); for (var i=0;i<n.length;i++) {CSICSS2Prop(n[i].id);}}}
+function CSICSS2Prop(id) { var n = document.getElementsByTagName('STYLE');for (var i=0;i<n.length;i++) { var cn = n[i].childNodes; for (var j=0;j<cn.length;j++) { CSSetCSS2Props(CSFetchStyle(cn[j].data, id),id); }}}
+function CSFetchStyle(sc, id) {
+	var s=sc; while(s.indexOf("#")!=-1) { s=s.substring(s.indexOf("#")+1,sc.length); if (s.substring(0,s.indexOf("{")).toUpperCase().indexOf(id.toUpperCase())!=-1) return(s.substring(s.indexOf("{")+1,s.indexOf("}")));}
+	return "";
+}
+function CSGetStyleAttrValue (si, id) {
+	var s=si.toUpperCase();
+	var myID=id.toUpperCase()+":";
+	var id1=s.indexOf(myID);
+	if (id1==-1) return "";
+	s=s.substring(id1+myID.length+1,si.length);
+	var id2=s.indexOf(";");
+	return ((id2==-1)?s:s.substring(0,id2));
+}
+function CSSetCSS2Props(si, id) {
+	var el=document.getElementById(id);
+	if (el==null) return;
+	var style=document.getElementById(id).style;
+	if (style) {
+		if (style.left=="") style.left=CSGetStyleAttrValue(si,"left");
+		if (style.top=="") style.top=CSGetStyleAttrValue(si,"top");
+		if (style.width=="") style.width=CSGetStyleAttrValue(si,"width");
+		if (style.height=="") style.height=CSGetStyleAttrValue(si,"height");
+		if (style.visibility=="") style.visibility=CSGetStyleAttrValue(si,"visibility");
+		if (style.zIndex=="") style.zIndex=CSGetStyleAttrValue(si,"z-index");
+	}
+}
+function CSButtonReturn () { return !CSClickReturn(); }
+CSIm=new Object();
+function CSIShow(n,i) {
+	if (document.images) {
+		if (CSIm[n]) {
+			var img=CSGetImage(n);
+			if (img&&typeof(CSIm[n][i].src)!="undefined") {img.src=CSIm[n][i].src;}
+			if(i!=0) self.status=CSIm[n][3]; else self.status=" ";
+			return true;
+		}
+	}
+	return false;
+}
+function CSILoad(action) {
+	im=action[1];
+	if (document.images) {
+		CSIm[im]=new Object();
+		for (var i=2;i<5;i++) {
+			if (action[i]!='') {CSIm[im][i-2]=new Image(); CSIm[im][i-2].src=action[i];}
+			else CSIm[im][i-2]=0;
+		}
+		CSIm[im][3] = action[5];
+	}
+}
+CSStopExecution=false;
+function CSAction(array) {return CSAction2(CSAct, array);}
+function CSAction2(fct, array) { 
+	var result;
+	for (var i=0;i<array.length;i++) {
+		if(CSStopExecution) return false; 
+		var aa = fct[array[i]];
+		if (aa == null) return false;
+		var ta = new Array;
+		for(var j=1;j<aa.length;j++) {
+			if((aa[j]!=null)&&(typeof(aa[j])=="object")&&(aa[j].length==2)){
+				if(aa[j][0]=="VAR"){ta[j]=CSStateArray[aa[j][1]];}
+				else{if(aa[j][0]=="ACT"){ta[j]=CSAction(new Array(new String(aa[j][1])));}
+				else ta[j]=aa[j];}
+			} else ta[j]=aa[j];
+		}			
+		result=aa[0](ta);
+	}
+	return result;
+}
+CSAct = new Object;
+function CSGotoLink(action) {
+	if (action[2].length) {
+		var hasFrame=false;
+		for(i=0;i<parent.frames.length;i++) { if (parent.frames[i].name==action[2]) { hasFrame=true; break;}}
+		if (hasFrame==true)
+			parent.frames[action[2]].location = action[1];
+		else
+			window.open (action[1],action[2],"");
+	}
+	else location = action[1];
+}
+
+// --></script>
+		</csscriptdict>
+		<csactiondict>
+			<script type="text/javascript"><!--
+CSInit[CSInit.length] = new Array(CSILoad,/*CMP*/'categories button',/*URL*/'erc_images2/catag_but.GIF',/*URL*/'erc_images2/catag_but1.GIF',/*URL*/'erc_images2/catag_but2.GIF','');
+CSInit[CSInit.length] = new Array(CSILoad,/*CMP*/'index of books button',/*URL*/'erc_images2/Index_but.GIF',/*URL*/'erc_images2/Index_but1.GIF',/*URL*/'erc_images2/Index_but2.GIF','');
+CSInit[CSInit.length] = new Array(CSILoad,/*CMP*/'browse button',/*URL*/'erc_images2/browse_but.GIF',/*URL*/'erc_images2/browse_but1.GIF',/*URL*/'erc_images2/browse_but2.GIF','');
+CSInit[CSInit.length] = new Array(CSILoad,/*CMP*/'button4',/*URL*/'erc_images2/basket_but.GIF',/*URL*/'erc_images2/basket1_but.GIF',/*URL*/'erc_images2/basket2_but.GIF','');
+CSInit[CSInit.length] = new Array(CSILoad,/*CMP*/'button5',/*URL*/'erc_images2/home_but.GIF',/*URL*/'erc_images2/home_but1.GIF',/*URL*/'erc_images2/home_but2.GIF','');
+CSInit[CSInit.length] = new Array(CSILoad,/*CMP*/'categories',/*URL*/'erc_images2/catag_but.GIF',/*URL*/'erc_images2/catag_but1.GIF',/*URL*/'erc_images2/catag_but2.GIF','');
+CSInit[CSInit.length] = new Array(CSILoad,/*CMP*/'index',/*URL*/'erc_images2/Index_but.GIF',/*URL*/'erc_images2/Index_but1.GIF',/*URL*/'erc_images2/Index_but2.GIF','');
+CSInit[CSInit.length] = new Array(CSILoad,/*CMP*/'browse',/*URL*/'erc_images2/browse_but.GIF',/*URL*/'erc_images2/browse_but1.GIF',/*URL*/'erc_images2/browse_but2.GIF','');
+CSInit[CSInit.length] = new Array(CSILoad,/*CMP*/'button6',/*URL*/'erc_images2/basket_but.GIF',/*URL*/'erc_images2/basket1_but.GIF',/*URL*/'erc_images2/basket2_but.GIF','');
+CSInit[CSInit.length] = new Array(CSILoad,/*CMP*/'home',/*URL*/'erc_images2/home_but.GIF',/*URL*/'erc_images2/home_but1.GIF',/*URL*/'erc_images2/home_but2.GIF','');
+CSAct[/*CMP*/ 'B483E6AC70'] = new Array(CSGotoLink,/*URL*/ 'book_contents.htm','');
+CSAct[/*CMP*/ 'B483E6AC71'] = new Array(CSGotoLink,/*URL*/ 'book_list.html','');
+CSAct[/*CMP*/ 'B483E6AC72'] = new Array(CSGotoLink,/*URL*/ 'erc28.html','');
+CSAct[/*CMP*/ 'B483E6AC74'] = new Array(CSGotoLink,/*URL*/ '../main1.html','');
+CSAct[/*CMP*/ 'B483E6AC75'] = new Array(CSGotoLink,/*URL*/ 'book_contents.htm','');
+CSAct[/*CMP*/ 'B483E6AC76'] = new Array(CSGotoLink,/*URL*/ 'book_list.html','');
+CSAct[/*CMP*/ 'B483E6AC77'] = new Array(CSGotoLink,/*URL*/ 'erc28.html','');
+CSAct[/*CMP*/ 'B483E6AC79'] = new Array(CSGotoLink,/*URL*/ '../main1.html','');
+
+// --></script>
+		</csactiondict>
+		<csactions>
+			<csaction name="B483E6AC70" class="Goto Link" type="" val0="book_contents.htm" val1="" urlparams="1"></csaction>
+			<csaction name="B483E6AC71" class="Goto Link" type="" val0="book_list.html" val1="" urlparams="1"></csaction>
+			<csaction name="B483E6AC72" class="Goto Link" type="" val0="erc28.html" val1="" urlparams="1"></csaction>
+			<csaction name="B483E6AC74" class="Goto Link" type="" val0="../main1.html" val1="" urlparams="1"></csaction>
+			<csaction name="B483E6AC75" class="Goto Link" type="" val0="book_contents.htm" val1="" urlparams="1"></csaction>
+			<csaction name="B483E6AC76" class="Goto Link" type="" val0="book_list.html" val1="" urlparams="1"></csaction>
+			<csaction name="B483E6AC77" class="Goto Link" type="" val0="erc28.html" val1="" urlparams="1"></csaction>
+			<csaction name="B483E6AC79" class="Goto Link" type="" val0="../main1.html" val1="" urlparams="1"></csaction>
+		</csactions>
+		<meta name="generator" content="GoLive CyberStudio 3">
+	</head>
+
+	<body background="erc_images2/bgtile.GIF" onload="CSScriptInit();">
+		<center>
+			<font face="Times New Roman,Georgia,Times"><table border="0" cellpadding="2" cellspacing="2" frame width="780">
+				<tr>
+					<td colspan="3"><img src="erc_images2/ERCbanner.GIF" alt="ERC Banner" lowsrc="erc_images2/ERCbannerls.GIF" autolowsrc></td>
+				</tr>
+				<tr>
+					<td colspan="3">
+						<center>
+							<font size="3" face="Times New Roman,Georgia,Times" color="#006633"><b>HUMAN SCALE ECONOMY page 2</b></font> 
+							<p><font face="Times New Roman,Georgia,Times">
+							<hr width="778">
+							</font></center>
+					</td>
+				</tr>
+				<tr height="42">
+					<td height="42"></td>
+					<td width="759" height="42">
+						<center>
+							<table border="0" cellpadding="0" cellspacing="1" frame>
+								<tr>
+									<td>
+										<div align="left">
+											<a href="book_contents.htm"><font face="Arial,Helvetica,Geneva,Swiss,SunSans-Regular" color="white"><b><csobj w="150" h="28" t="Button" ht="erc_images2/catag_but1.GIF" cl="erc_images2/catag_but2.GIF" csclick="B483E6AC70"><a href="book_contents.htm" onmouseover="return CSIShow(/*CMP*/'categories button',1)" onmouseout="return CSIShow(/*CMP*/'categories button',0)" onclick="CSAction(new Array(/*CMP*/'B483E6AC70'));CSIShow(/*CMP*/'categories button',2);return CSClickReturn()"><img src="erc_images2/catag_but.GIF" width="150" height="28" name="categories button" border="0"></a></csobj></b></font></a> </div>
+									</td>
+									<td>
+										<center>
+											<a href="book_list.html"><font face="Arial,Helvetica,Geneva,Swiss,SunSans-Regular" color="white"><b><csobj w="150" h="28" t="Button" ht="erc_images2/Index_but1.GIF" cl="erc_images2/Index_but2.GIF" csclick="B483E6AC71"><a href="book_list.html" onmouseover="return CSIShow(/*CMP*/'index of books button',1)" onmouseout="return CSIShow(/*CMP*/'index of books button',0)" onclick="CSAction(new Array(/*CMP*/'B483E6AC71'));CSIShow(/*CMP*/'index of books button',2);return CSClickReturn()"><img src="erc_images2/Index_but.GIF" width="150" height="28" name="index of books button" border="0"></a></csobj></b></font></a></center>
+									</td>
+									<td><a href="https://www.proteusweb.com/permaculture/form.htm"><font face="Arial,Helvetica,Geneva,Swiss,SunSans-Regular" color="white"><b><csobj w="150" h="28" t="Button" ht="erc_images2/browse_but1.GIF" cl="erc_images2/browse_but2.GIF" csclick="B483E6AC72"><a href="erc28.html" onmouseover="return CSIShow(/*CMP*/'browse button',1)" onmouseout="return CSIShow(/*CMP*/'browse button',0)" onclick="CSAction(new Array(/*CMP*/'B483E6AC72'));CSIShow(/*CMP*/'browse button',2);return CSClickReturn()"><img src="erc_images2/browse_but.GIF" width="150" height="28" name="browse button" border="0"></a></csobj></b></font></a></td>
+									<td><a href="../main1.html"><font face="Arial,Helvetica,Geneva,Swiss,SunSans-Regular" color="white"><b><csobj w="150" h="28" t="Button" ht="erc_images2/basket1_but.GIF" cl="erc_images2/basket2_but.GIF"><a href="http://ww6.aitsafe.com/cf/review.cfm?userid=8244206" onmouseover="return CSIShow(/*CMP*/'button4',1)" onmouseout="return CSIShow(/*CMP*/'button4',0)" onclick="CSIShow(/*CMP*/'button4',2);return CSButtonReturn()"><img src="erc_images2/basket_but.GIF" width="150" height="28" name="button4" border="0"></a></csobj></b></font></a></td>
+									<td><csobj w="150" h="28" t="Button" ht="erc_images2/home_but1.GIF" cl="erc_images2/home_but2.GIF" csclick="B483E6AC74"><a href="../main1.html" onmouseover="return CSIShow(/*CMP*/'button5',1)" onmouseout="return CSIShow(/*CMP*/'button5',0)" onclick="CSAction(new Array(/*CMP*/'B483E6AC74'));CSIShow(/*CMP*/'button5',2);return CSClickReturn()"><img src="erc_images2/home_but.GIF" width="150" height="28" name="button5" border="0"></a></csobj></td>
+								</tr>
+							</table></center>
+					</td>
+					<td height="42"></td>
+				</tr>
+				<tr>
+					<td colspan="3">
+						<center>
+							<hr width="778">
+							<br>
+							<table border="0" cellpadding="0" cellspacing="2" frame width="100%">
+								<tr>
+									<td colspan="3">
+										<center>
+											<h3><font size="2" face="Times New Roman,Georgia,Times" color="#003100"><br>
+													</font></h3>
+										</center>
+									</td>
+								</tr>
+								<tr>
+									<td width="200" valign="top">
+										<center>
+											<img alt="LOW IMPACT DEVELOPMENT" height="150" width="102" src="book_images/LID.JPG" lowsrc="book_images/LIDls.gif" autolowsrc><br>
+											<br>
+										</center>
+									</td>
+									<td width="4"></td>
+									<td width="569" valign="top"><font size="2" face="Times New Roman,Georgia,Times"><b>LOW IMPACT DEVELOPMENT<br>
+										Planning &amp; People in a Sustainable Countryside<br>
+										<i>Simon Fairlie<br>
+										</i></b>Do we want intensive agriculture, loss of public access to land, diminishing biodiversity and dwindling rural services to continue? Simon Fairlie weaves a vision of what could be achieved if our planning systems were operated with sustainable development and social equity as the prime considerations. Gives a brief history of rural planning and four examples of low impact development. An excellent book which should be read by everyone who cares about our countryside. 154pp<br>
+										<b><br>
+										Code: LID </b>&pound;10.00<br>
+												<a href="http://ww6.aitsafe.com/cf/add.cfm?userid=8244206&product=LID+Low+Impact+Development&price=10.00">ADD TO BASKET<br>
+													<br>
+												</a></font></td>
+								</tr>
+								<tr>
+									<td width="200" valign="top">
+										<center>
+											<img alt="NATURAL CAPITALISM
+" height="150" width="98" src="book_images/NC1.JPG" lowsrc="book_images/NC1ls.gif" autolowsrc><br>
+											<br>
+										</center>
+									</td>
+									<td width="4"></td>
+									<td width="569" valign="top"><font size="2" face="Times New Roman,Georgia,Times"><b>NATURAL CAPITALISM<br>
+										The Next Industrial Revolution<br>
+										<i>Paul Hawken, Amory B Lovins &amp; L Hunter Lovins<br>
+										</i></b>Can the old battle between business and the environment reach a peaceful and constructive conclusion? Three world-class minds get to work on the subject of business sustainability, but not in a purely theoretical way &#150; it&#146;s packed with information and explanations about new developments and how they can take us forward. A major contribution to economic thinking for the new millennium. 396pp<br>
+										<br>
+										<b>Code: NC1 </b>&pound;12.99<br>
+												<a href="http://ww6.aitsafe.com/cf/add.cfm?userid=8244206&product=NC1+Natural+Capitalism&price=12.99">ADD TO BASKET<br>
+													<br>
+												</a></font></td>
+								</tr>
+								<tr>
+									<td width="200" valign="top">
+										<center>
+											<img alt="OUR ECOLOGICAL FOOTPRINT
+" height="150" width="102" src="book_images/OEF.JPG" lowsrc="book_images/OEFls.gif" autolowsrc><br>
+											<br>
+										</center>
+									</td>
+									<td width="4"></td>
+									<td width="569" valign="top"><font size="2" face="Times New Roman,Georgia,Times"><b>OUR ECOLOGICAL FOOTPRINT<br>
+										<i>Mathis Wackernagel &amp; William Rees</i></b><br>
+										Calculating eco-footprints is useful for determining everyday activities and measure in area how much land can sustainably support those activities. This makes a potentially complicated subject comprehensible to everyone, including schoolchildren who are taught this technique. An important book which debunks the illusion of unlimited growth. 160pp<br>
+										<br>
+										<b>Code: OEF </b>&pound;11.99<br>
+												<a href="http://ww6.aitsafe.com/cf/add.cfm?userid=8244206&product=OEF+Our+Eco+Footprint&price=11.99">ADD TO BASKET<br>
+													<br>
+												</a></font></td>
+								</tr>
+								<tr>
+									<td width="200" valign="top">
+										<center>
+											<img alt="SHARING NATURE&#146;S INTEREST
+" height="150" width="100" src="ERC5_2/SN1.jpg" lowsrc="ERC5_2/SN1ls.gif" autolowsrc><br>
+											<br>
+										</center>
+									</td>
+									<td width="4"></td>
+									<td width="569" valign="top"><font size="2" face="Times New Roman,Georgia,Times"><b>SHARING NATURE&#146;S INTEREST</b><br>
+										<b>Ecological Footprints as an Indicator of Sustainability</b><br>
+										<i>Nicky Chambers et al<br>
+										</i>Every organism, from human or whale to bacterium, has an impact which the Earth has to support. If our ecological bank account is too depleted, the Earth cannot sustain those organisms. This book explains a practical method of managing our impact on the environment by using ecological footprint analysis. It is the first book since Our Ecological Footprint, published in the mid-90s, that offers practical advice backed up by sound science to enable everyone to reduce their ecological impact. 185pp<br>
+										<br>
+										<b>Code: SNI</b>		&pound;13.95<br>
+												<a href="http://ww6.aitsafe.com/cf/add.cfm?userid=8244206&product=SN1+Sharing+Natures+Int&price=13.95">ADD TO BASKET<br>
+													<br>
+												</a></font></td>
+								</tr>
+								<tr>
+									<td width="200" valign="top">
+										<center>
+											<br>
+											<br>
+										</center>
+									</td>
+									<td width="4"></td>
+									<td width="569" valign="top"><font size="2" face="Times New Roman,Georgia,Times"><b>SHORT CIRCUIT<br>
+										Strengthening Local Economics for Security in an Unstable World<br>
+										<i>Richard Douthwaite<br>
+										</i></b>Describes the environmental and social havoc caused by the blind pursuit of economic growth. Short Circuit turns its attentions to practical steps needed to build stable, sustainable economies. Drawing on the experience of communities in the industrialised world which have already achieved greater self-reliance, Douthwaite shows how local currencies such as LETS and credit unions can be developed to create a social microclimate in which a wider range of local production for local uses becomes possible. Full of solutions. 386pp<br>
+										<br>
+										<b>Code: SC1 </b>&pound;14.95<br>
+												<a href="http://ww6.aitsafe.com/cf/add.cfm?userid=8244206&product=SCI+Short+Circuit&price=14.95">ADD TO BASKET<br>
+													<br>
+												</a></font></td>
+								</tr>
+								<tr>
+									<td width="200" valign="top">
+										<center>
+											<br>
+											<br>
+										</center>
+									</td>
+									<td width="4"></td>
+									<td width="569" valign="top"><font size="2" face="Times New Roman,Georgia,Times"><b>SMALL IS BEAUTIFUL<br>
+										A Study Of Economics As If People Mattered<br>
+										<i>E F Schumacher<br>
+										</i></b>The classic that began a movement, looking at our current pursuit of profit which promotes giant organ-isations and increased specialisation, and has resulted in economic inefficiency, environmental pollution and inhumane working conditions. Schumacher proposes a system of Intermediate Technology, based on smaller working units, and regional workplaces utilising local labour and resources. 260pp<br>
+										<br>
+										<b>Code: SIB </b>&pound;6.99<br>
+												<br>
+											</font><font size="2" color="#ee0000" face="Times New Roman,Georgia,Times"><b>OUT OF PRINT</b></font><font size="2" face="Times New Roman,Georgia,Times"><br>
+												<a href="http://ww6.aitsafe.com/cf/add.cfm?userid=8244206&product=SIB+Small+is+Beautiful&price=6.99"><br>
+												</a></font></td>
+								</tr>
+								<tr>
+									<td width="200" valign="top">
+										<center>
+											<img alt="SOCIAL DREAMS &amp; TECHNOLOGICAL NIGHTMARES
+" height="150" width="105" src="book_images/SDT.JPG" lowsrc="book_images/SDTls.gif" autolowsrc><br>
+											<br>
+										</center>
+									</td>
+									<td width="4"></td>
+									<td width="569" valign="top"><font size="2" face="Times New Roman,Georgia,Times"><b>SOCIAL DREAMS &amp; TECHNOLOGICAL NIGHTMARES <br>
+										<i>Edited by Nicholas Albery &amp; Stephanie Wienrich<br>
+										</i></b>The 200 best schemes sent in by members of the public from around the world to improve the quality of life. Covering all aspects of society, from economics and taxation to relationships and spirituality, these suggestions are just waiting to be taken up. 304pp<br>
+										<br>
+										<b>Code: SDT </b>&pound;14.85<br>
+												<a href="http://ww6.aitsafe.com/cf/add.cfm?userid=8244206&product=SDT+Social+Dreams&price=14.85">ADD TO BASKET<br>
+													<br>
+												</a></font></td>
+								</tr>
+								<tr>
+									<td width="200" valign="top">
+										<center>
+											<img alt="SUSTAINABLE CITIES
+" height="150" width="101" src="book_images/SC2.JPG" lowsrc="book_images/SC2ls.gif" autolowsrc><br>
+											<br>
+										</center>
+									</td>
+									<td width="4"></td>
+									<td width="569" valign="top"><font size="2" face="Times New Roman,Georgia,Times"><b>SUSTAINABLE CITIES<br>
+										<i>Edited by David Satterthwaite</i></b><br>
+										How can urban development meet human needs and ensure ecological sustainability? This collection brings together the most outstanding contributions from leading experts on the issues surrounding sustainable cities and urban development. 478pp<br>
+										<br>
+										<b>Code: SC2 </b>&pound;16.95<br>
+												<br>
+											</font><font size="2" color="#cc0000" face="Times New Roman,Georgia,Times"><b>NO LONGER AVAILABLE FROM US</b></font><font size="2" face="Times New Roman,Georgia,Times"><a href="http://ww6.aitsafe.com/cf/add.cfm?userid=8244206&product=SC2+Sustainable+Cities&price=16.95"><br>
+													<br>
+												</a></font></td>
+								</tr>
+								<tr>
+									<td width="200" valign="top">
+										<center>
+											<img alt="SUSTAINABLE DEVELOPMENT &amp; THE FUTURE OF CITIES
+" height="150" width="98" src="book_images/SDC.JPG" lowsrc="book_images/SDCls.gif" autolowsrc><br>
+											<br>
+										</center>
+									</td>
+									<td width="4"></td>
+									<td width="569" valign="top"><font size="2" face="Times New Roman,Georgia,Times"><b>SUSTAINABLE DEVELOPMENT &amp; THE FUTURE OF CITIES<br>
+										<i>Edited by Bernd Hamm &amp; Pandurang K. Muttagi<br>
+										</i></b>A worldwide examination of the social and environmental issues affecting our cities. How can we address the urgent problem of turning them from centres of major pollution into ecologically, economically and socially sustainable environments? Local solutions are considered from as far apart as Iran and Finland. 292pp<br>
+										<br>
+										<b>Code: SDC </b>&pound;14.95<br>
+												<a href="http://ww6.aitsafe.com/cf/add.cfm?userid=8244206&product=SDC+Sustainable+Development&price=14.95">ADD TO BASKET<br>
+													<br>
+												</a></font></td>
+								</tr>
+								<tr>
+									<td width="200" valign="top">
+										<center>
+											<img alt="SUSTAINABILITY IN ACTION IN BRITAIN
+" height="150" width="97" src="book_images/SAB.JPG" lowsrc="book_images/SABls.gif" autolowsrc><br>
+											<br>
+										</center>
+									</td>
+									<td width="4"></td>
+									<td width="569" valign="top"><font size="2" face="Times New Roman,Georgia,Times"><b>SUSTAINABILITY IN ACTION IN BRITAIN<br>
+										<i>Gillian Symons<br>
+										</i></b>Sustainability in Action in Britain provides a fascinating exploration of what sustainability might mean in practice. The case studies tell the story of the people involved in the projects, and answer key questions like &#145;How did it come about?&#146; and &#145;How does it help the environment?&#146;<i> 96pp<br>
+												</i><br>
+												<b>Code: SAB </b>&pound;6.99<br>
+												<a href="http://ww6.aitsafe.com/cf/add.cfm?userid=8244206&product=SAB+Sustainability+in+Action&price=6.99">ADD TO BASKET<br>
+													<br>
+												</a></font></td>
+								</tr>
+								<tr>
+									<td width="200" valign="top">
+										<center>
+											<img alt="THE SUSTAINABLE COMMUNITY
+" height="150" width="106" src="ERC5_2/SCP1.jpg" lowsrc="ERC5_2/SCP1ls.gif" autolowsrc><br>
+											<br>
+										</center>
+									</td>
+									<td width="4"></td>
+									<td width="569" valign="top"><font size="2" face="Times New Roman,Georgia,Times"><b>THE SUSTAINABLE COMMUNITY<br>
+										A Practical Guide<br>
+										</b><i>Hockerton Housing Project<br>
+										</i>An A4 colour guide to planning and establishing sustainable projects. Written by HPP, an experienced community group who live in an ecologically designed earth sheltered settlement in the UK, this guide identifies 52 key issues, including finance, planning, legalities, design and community living. It provides plenty of advice and tips from HPP&#146;s experience. There&#146;s are comprehensive directories of contacts, sources of information and a fun questionnaire to test your readiness for living in a sustainable community. <i>52pp<br>
+												</i><br>
+												<b>Code: SCP1</b>		&pound;7.50<br>
+												<a href="http://ww6.aitsafe.com/cf/add.cfm?userid=8244206&product=SCP1+Sustainable+Community&price=7.50">ADD TO BASKET<br>
+													<br>
+												</a></font></td>
+								</tr>
+								<tr>
+									<td width="200" valign="top">
+										<center>
+											<br>
+											<br>
+										</center>
+									</td>
+									<td width="4"></td>
+									<td width="569" valign="top"><font size="2" face="Times New Roman,Georgia,Times"><b>TOWARDS A SUSTAINABLE ECONOMY<br>
+										The Need For Fundamental Change<br>
+												</b><i>Ted Trainer<br>
+												</i>By a very readable economist who explains why our economic system makes a few people richer and the majority poorer and why, if we don&#146;t change our ways, we are heading for catastrophe. Having invalidated &#145;free enterprise capitalism&#146; and &#145;big state socialism&#146;, an alternative &#145;conserver society&#146; is presented which is a radical rethink of conventional economics. 182pp<br>
+										<br>
+										<b>Code: TSE </b>&pound;10.99<br>
+												<a href="http://ww6.aitsafe.com/cf/add.cfm?userid=8244206&product=TSE+Towards+a+Sustainable+Econ&price=10.99">ADD TO BASKET<br>
+													<br>
+												</a></font></td>
+								</tr>
+								<tr>
+									<td width="200" valign="top">
+											<div align="center">
+												<img alt="THE SUSTAINABLE COMMUNITY
+" height="150" width="102" src="ERC7_1/You_Can_Change_the_World.JPG" lowsrc="ERC7_1/You_Can_Change_the_Worldls.gif" autolowsrc><br>
+												<br>
+											</div>
+										</td>
+									<td width="4"></td>
+									<td width="569" valign="top"><font size="2" face="Times New Roman,Georgia,Times"><b>YOU CAN CHANGE THE WORLD<br>
+													
+										The Need For Fundamental Change<br>
+												</b><i>Ervine Laszlo<br>
+													&quot;</i>Read this book. It helps us to understand the current situation of our planet and to find the path we must take. The relationship between man and nature has become more complex and strained; the air has become poisoned, the rivers polluted and the forests decimated. Society is beginning to show the syptoms of sickness. <i>You Can Change The World</i> helps us to determine what we must do and how we must do it to ensure our common well-being. The future that confronts us is an open future and all of us can do our bit to decide it.&quot; <i>110pp.</i></font>
+											<div align="right">
+												<p><font size="2" face="Times New Roman,Georgia,Times"><i>Mikhail Gorbachev</i><br>
+													</font></p>
+											</div>
+											<div align="left">
+												<p><font size="2" face="Times New Roman,Georgia,Times"><b>Code: YCW </b>&pound;5.00<br>
+														<a href="http://ww6.aitsafe.com/cf/add.cfm?userid=8244206&product=YCW+You+Can+Change+World&price=5.00">ADD TO BASKET<br>
+															<br>
+														</a></font></p>
+											</div>
+										</td>
+								</tr>
+							</table><font face="Times New Roman,Georgia,Times"><br>
+							<hr>
+							<br>
+							</font></center>
+					</td>
+				</tr>
+				<tr>
+					<td colspan="3"><table width="778" border="0" cellspacing="0" cellpadding="10">
+							<tr>
+								<td align="left" colspan="2">
+									<center>
+										<table border="0" cellpadding="0" cellspacing="1" frame width="759" height="42">
+											<tr>
+												<td>
+													<center>
+														<csobj w="150" h="28" t="Button" ht="erc_images2/catag_but1.GIF" cl="erc_images2/catag_but2.GIF" csclick="B483E6AC75"><a href="book_contents.htm" onmouseover="return CSIShow(/*CMP*/'categories',1)" onmouseout="return CSIShow(/*CMP*/'categories',0)" onclick="CSAction(new Array(/*CMP*/'B483E6AC75'));CSIShow(/*CMP*/'categories',2);return CSClickReturn()"><img src="erc_images2/catag_but.GIF" width="150" height="28" name="categories" border="0"></a></csobj></center>
+												</td>
+												<td>
+													<center>
+														<csobj w="150" h="28" t="Button" ht="erc_images2/Index_but1.GIF" cl="erc_images2/Index_but2.GIF" csclick="B483E6AC76"><a href="book_list.html" onmouseover="return CSIShow(/*CMP*/'index',1)" onmouseout="return CSIShow(/*CMP*/'index',0)" onclick="CSAction(new Array(/*CMP*/'B483E6AC76'));CSIShow(/*CMP*/'index',2);return CSClickReturn()"><img src="erc_images2/Index_but.GIF" width="150" height="28" name="index" border="0"></a></csobj></center>
+												</td>
+												<td>
+													<center>
+														<csobj w="150" h="28" t="Button" ht="erc_images2/browse_but1.GIF" cl="erc_images2/browse_but2.GIF" csclick="B483E6AC77"><a href="erc28.html" onmouseover="return CSIShow(/*CMP*/'browse',1)" onmouseout="return CSIShow(/*CMP*/'browse',0)" onclick="CSAction(new Array(/*CMP*/'B483E6AC77'));CSIShow(/*CMP*/'browse',2);return CSClickReturn()"><img src="erc_images2/browse_but.GIF" width="150" height="28" name="browse" border="0"></a></csobj></center>
+												</td>
+												<td>
+													<center>
+														<csobj w="150" h="28" t="Button" ht="erc_images2/basket1_but.GIF" cl="erc_images2/basket2_but.GIF"><a href="http://ww6.aitsafe.com/cf/review.cfm?userid=8244206" onmouseover="return CSIShow(/*CMP*/'button6',1)" onmouseout="return CSIShow(/*CMP*/'button6',0)" onclick="CSIShow(/*CMP*/'button6',2);return CSButtonReturn()"><img src="erc_images2/basket_but.GIF" width="150" height="28" name="button6" border="0"></a></csobj></center>
+												</td>
+												<td>
+													<center>
+														<csobj w="150" h="28" t="Button" ht="erc_images2/home_but1.GIF" cl="erc_images2/home_but2.GIF" csclick="B483E6AC79"><a href="../main1.html" onmouseover="return CSIShow(/*CMP*/'home',1)" onmouseout="return CSIShow(/*CMP*/'home',0)" onclick="CSAction(new Array(/*CMP*/'B483E6AC79'));CSIShow(/*CMP*/'home',2);return CSClickReturn()"><img src="erc_images2/home_but.GIF" width="150" height="28" name="home" border="0"></a></csobj></center>
+												</td>
+											</tr>
+										</table></center>
+								</td>
+							</tr>
+							<tr>
+								<td align="center" colspan="2"></td>
+							</tr>
+							<tr>
+								<td align="center" colspan="2">
+									<hr width="750">
+									<p><font size="2">Contact <a href="mailto:enquiries@permaculture.co.uk">Permanent Publications</a></font></p>
+									<p><font size="2">This Page last updated <csobj w="97" h="16" t="DateTime" format="MedDate" region="2">Tue, May 25, 2004</csobj><br>
+												
+									Any comments to <a href="mailto:webmaster@permaculture.co.uk">webweaver@permaculture.co.uk</a></font></td>
+							</tr>
+						</table></td>
+				</tr>
+			</table></font></center>
+	</body>
+
+</html>

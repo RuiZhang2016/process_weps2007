@@ -1,0 +1,296 @@
+body {
+	margin:0px;
+	padding:0px;
+	width:100%;
+	height:100%;
+	text-align:center;
+	font-family: Arial, Helvetica, sans-serif;
+}
+.antifloat{clear:both;line-height:1px;}
+img {border:none;}
+h1{padding-top:3px;font-weight:normal;font-size:1.7em;margin:0;color:#FFFFFF;font-family: "Arial Narrow", Arial, Helvetica, sans-serif;}
+h2 {font-size:1em;margin-top:25px;}
+h3 {font-size:1em;color:#DE1E26;}
+a {color:#666666;}
+a:active {color:#666666;}
+a:visited {color:#000000;}
+a:hover {color:#666666;text-decoration:none;}
+
+.tachado {text-decoration:line-through; }
+.centrado {text-align:center;}
+
+.lista li{
+	list-style: url(graf/lista.gif);
+}
+.listawork li{
+	margin-bottom:2em;
+	text-align:left;
+}
+.listahotel li{	
+	margin-bottom:20px;
+}
+.listaorg {margin-left:0px;padding-left:0px;}
+.listaorg li{
+	list-style:none;
+	margin-bottom:10px;
+}
+.listaorg2 {margin-left:25px;}
+.listaorg2 li{
+	margin-bottom:10px;
+}
+.listanormal {list-style-type:disc;}
+.listanormal li {margin-bottom:0px;}
+#principal {background-color:#FFFFFF;height:95%;}
+#cabecera {
+	width:689px;
+	margin:auto;
+	text-align:left;
+}
+.listadoble {line-height:14px;}
+#cabecera .logo {
+	width:269px;
+	height:140px;
+	float:left;
+	margin-right:3px;
+}
+
+#cabecera .derecha {
+	float:right;
+	margin:0;
+	padding:0;
+}
+html>body #cabecera .derecha {float:none;margin-left:272px;}
+
+#cabecera .animacion {
+	height:112px;
+	margin-top:0px;
+}
+#cabecera .lema {
+	background-color:#DE1E26;
+	color:#FFFFFF;
+	font-size:85%;
+	padding-top:6px;
+	padding-bottom:6px;
+	text-align:center;
+	padding-right:12px;
+	font-weight:bold;
+	font-style:italic;
+}
+#cabecera .fecha {
+	color:#DE1E26;
+	font-size:75%;
+	padding-top:6px;
+	padding-bottom:6px;
+	text-align:right;
+	font-weight:bold;
+}
+#cabecera .buscador {
+	color:#949594;
+	font-size:70%;
+	padding-top:8px;
+	padding-bottom:8px;
+}
+
+#centro {	
+	/*width:760px;	*/
+	width:47.5em;
+	margin:auto;
+	text-align:left;
+	background-color:#949594;
+}
+
+#alojamenu {
+	background-color:#949594;
+	float:left;
+	width:9.5em;
+	text-align:left;
+}
+
+#alojamenu ul{color:#FFFFFF;font-size:80%;margin:0;padding:0;}
+#alojamenu li{
+	border-top:1px solid #FFFFFF;
+	background-color:#DE1E26;
+	list-style:none;
+	text-align:center;
+	font-weight:bold;
+	line-height:2em;
+}
+
+#alojamenu ul ul{font-size:95%;margin:0;padding:0;}
+#alojamenu li li{
+	margin-top:0;
+	margin-bottom:0;
+	color:#FFFFFF;
+	background-color:#949594;	
+	text-align:left;
+	font-weight:normal;
+	line-height:1.9em;
+	list-style: none;
+}
+#alojamenu li#primero {border-top:none;}
+#alojamenu li#ultimo {border-bottom:1px solid #FFFFFF;}
+
+#alojamenu li li {margin:0;padding-top:1px;padding-bottom:1px;}
+#alojamenu li li a{padding-top:0px;padding-bottom:0px;color:#FFFFFF;display:block;text-decoration:none;padding-left:10px;}
+html>body #alojamenu li li a {background-color:#949594;width:auto;}
+#alojamenu ul li li a:hover{background-color:#C3C2C2;text-decoration:none;}
+
+#alojamenu ul li li.inactivo {padding-left:10px;color:#C3C2C2;}
+#alojamenu ul li li.activo {padding-left:10px;background-color:#C3C2C2;}
+
+.migas {color:#CCCCCC;padding-left:15px;}
+.migas a {color:#CCCCCC;text-decoration:underline;}
+.migas a:visited {color:#CCCCCC;text-decoration:underline;}
+.migas a:hover {color:#CCCCCC;text-decoration:none;}
+.migas strong {color:#949594;}
+
+
+#contenido{
+	border-right:2.4em solid #DFDFDF;
+	border-left:2.4em solid #DFDFDF;
+	text-align:left;
+	background-color:#FFFFFF;
+	float:right;
+	margin-top:0px;
+	padding-top:0px;
+}
+html>body #contenido{width:70%;float:none;margin-left:9.5em;margin-top:0px;padding-top:0px;}
+
+.texto {
+	font-size:80%;
+	color:#666666;
+	padding:5px 20px 15px 20px;
+	text-align:justify;
+}
+.tabular {text-indent:30px;}
+
+
+#pie {
+	background-color:#DE1E26;
+	text-align:center;
+	font-size:70%;
+	width:100%;
+	margin-left:auto;
+	margin-right:auto;
+	color:#FFFFFF;
+	padding-left:0;
+	/*width:760px;	*/
+	padding-right:0;
+	padding-top:5px;
+	padding-bottom:5px;
+}
+
+#buscador {
+	margin:0px;
+	padding:0px;
+	font-size:70%;
+}
+#buscador input{
+	border:1px solid #949594;
+	height:20px;
+	padding:3px;
+}
+#buscador .find {font-size:12px;height:20px;}
+
+.barratitulo {height:2.5em;color:#FFFFFF;background-color:#DFDFDF;}
+.titulo {float:left;width:22em;}
+.url {padding-top:10px;float:right;font-weight:bold;font-size:110%;}
+html>body .url {float:none;margin-left:20em;}
+
+.gris {color:#949594;}
+.rojo {color:#DE1E26;}
+
+h2, .fondorojo {background-color:#DE1E26;color:#FFFFFF;padding:2px 0px 2px 20px;}
+a.blanco {color:#FFFFFF;}
+a.blanco:visited {color:#FFFFFF;}
+a.blanco:hover {color:#FFFFFF;text-decoration:none}
+.webmap li {
+	list-style: none;
+	color:#DE1E26;
+	margin-bottom:10px;
+	margin-top:10px;
+}
+.webmap li li {
+	color:#C3C2C2;
+	list-style: url(graf/lista.gif);
+}
+
+/* Formulario suscripción noticias */
+#formregister table {
+	width:95%;
+	margin:auto;
+}
+#formregister input {
+	border:1px solid #CCCCCC;
+	background-color:#F3F3F3;
+	font-size:90%;
+	font-family: Arial, Helvetica, sans-serif;
+}
+#formregister input#submit {
+	font-size:90%;
+	border:1px solid #DE1E26;
+	color:#DE1E26;
+}
+
+
+
+abbr, acronym, span.abbr {
+  cursor: help;
+  
+}
+
+.traduccion	{
+				float:right;
+				font-size:90%;
+			}
+.poster {text-align:right;font-size:90%;color:#DE1E26;}
+.poster a {color:#DE1E26;text-decoration:underline;}
+.poster a:visited {color:#DE1E26;text-decoration:underline;}
+.poster a:hover {color:#DE1E26;text-decoration:none;}
+
+.programa {
+	border:1px solid #EEEEEE;
+	font-size:0.83em;
+/*	DE1E26*/
+}
+.programa th {background-color:#EEEEEE;text-align:center;padding:1px 1px 1px 1px;}
+.programa td {border:1px solid #EEEEEE;padding:20px 1px 20px 1px;text-align:center;width:1%;background-color:#F6F1E7;}
+.programa td.lunch {background-color:#ffffff;}
+.programa td.keynote {background-color:#F2E0C0;}
+.programa td.panel {background-color:#F2EEC0;}
+.programa td.vacio {background-color:#ffffff;}
+
+
+.call {text-align:right;border-top:1px solid #EEEEEE;padding-top:10px;font-size:90%;}
+
+/*Estilos para las fotos del congreso*/
+
+table#album	{
+				padding-top:1.5em;
+							}
+
+table#album td	{
+					text-align:center;
+
+				}			
+			
+table#album img	{
+					border:0.07em solid #F4A81D;
+					padding:0.2em;
+					margin-bottom:0em;
+					margin-right:0em;
+				}
+			
+			
+div#ampliacion {
+					text-align:center;
+				}	
+				
+img.foto	{
+				border:0.07em solid #F4A81D;
+				padding:0.2em;
+			}				
+.volverimg {text-align:center;font-size:90%;color:#DE1E26;}
+.volverimg a {color:#DE1E26;text-decoration:underline;}
+.volverimg a:visited {color:#DE1E26;text-decoration:underline;}
+.volverimg a:hover {color:#DE1E26;text-decoration:none;}

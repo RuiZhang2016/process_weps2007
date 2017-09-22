@@ -1,0 +1,307 @@
+<html><!-- #BeginTemplate "/Templates/New HawaiiRun Template.dwt" --><!-- DW6 -->
+<head>
+<!-- #BeginEditable "doctitle" --> 
+<title>Hawaii Run Race Results St Theresas 2002</title>
+<!-- #EndEditable --> 
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<script language="JavaScript">
+<!--
+
+
+
+
+
+<!--
+function MM_reloadPage(init) {  //reloads the window if Nav4 resized
+  if (init==true) with (navigator) {if ((appName=="Netscape")&&(parseInt(appVersion)==4)) {
+    document.MM_pgW=innerWidth; document.MM_pgH=innerHeight; onresize=MM_reloadPage; }}
+  else if (innerWidth!=document.MM_pgW || innerHeight!=document.MM_pgH) location.reload();
+}
+MM_reloadPage(true);
+// -->
+
+</script>
+<script language="JavaScript1.2" src="fw_menu.js"></script>
+<script language="JavaScript1.2" src="fw_menu.js"></script>
+<script language="JavaScript1.2" src="fw_menu.js"></script>
+<script language="JavaScript">
+<!--
+function MM_preloadImages() { //v3.0
+  var d=document; if(d.images){ if(!d.MM_p) d.MM_p=new Array();
+    var i,j=d.MM_p.length,a=MM_preloadImages.arguments; for(i=0; i<a.length; i++)
+    if (a[i].indexOf("#")!=0){ d.MM_p[j]=new Image; d.MM_p[j++].src=a[i];}}
+}
+
+function MM_findObj(n, d) { //v4.0
+  var p,i,x;  if(!d) d=document; if((p=n.indexOf("?"))>0&&parent.frames.length) {
+    d=parent.frames[n.substring(p+1)].document; n=n.substring(0,p);}
+  if(!(x=d[n])&&d.all) x=d.all[n]; for (i=0;!x&&i<d.forms.length;i++) x=d.forms[i][n];
+  for(i=0;!x&&d.layers&&i<d.layers.length;i++) x=MM_findObj(n,d.layers[i].document);
+  if(!x && document.getElementById) x=document.getElementById(n); return x;
+}
+
+function MM_nbGroup(event, grpName) { //v3.0
+  var i,img,nbArr,args=MM_nbGroup.arguments;
+  if (event == "init" && args.length > 2) {
+    if ((img = MM_findObj(args[2])) != null && !img.MM_init) {
+      img.MM_init = true; img.MM_up = args[3]; img.MM_dn = img.src;
+      if ((nbArr = document[grpName]) == null) nbArr = document[grpName] = new Array();
+      nbArr[nbArr.length] = img;
+      for (i=4; i < args.length-1; i+=2) if ((img = MM_findObj(args[i])) != null) {
+        if (!img.MM_up) img.MM_up = img.src;
+        img.src = img.MM_dn = args[i+1];
+        nbArr[nbArr.length] = img;
+    } }
+  } else if (event == "over") {
+    document.MM_nbOver = nbArr = new Array();
+    for (i=1; i < args.length-1; i+=3) if ((img = MM_findObj(args[i])) != null) {
+      if (!img.MM_up) img.MM_up = img.src;
+      img.src = (img.MM_dn && args[i+2]) ? args[i+2] : args[i+1];
+      nbArr[nbArr.length] = img;
+    }
+  } else if (event == "out" ) {
+    for (i=0; i < document.MM_nbOver.length; i++) {
+      img = document.MM_nbOver[i]; img.src = (img.MM_dn) ? img.MM_dn : img.MM_up; }
+  } else if (event == "down") {
+    if ((nbArr = document[grpName]) != null)
+      for (i=0; i < nbArr.length; i++) { img=nbArr[i]; img.src = img.MM_up; img.MM_dn = 0; }
+    document[grpName] = nbArr = new Array();
+    for (i=2; i < args.length-1; i+=2) if ((img = MM_findObj(args[i])) != null) {
+      if (!img.MM_up) img.MM_up = img.src;
+      img.src = img.MM_dn = args[i+1];
+      nbArr[nbArr.length] = img;
+  } }
+}
+
+function MM_timelinePlay(tmLnName, myID) { //v1.2
+  //Copyright 1997, 2000 Macromedia, Inc. All rights reserved.
+  var i,j,tmLn,props,keyFrm,sprite,numKeyFr,firstKeyFr,propNum,theObj,firstTime=false;
+  if (document.MM_Time == null) MM_initTimelines(); //if *very* 1st time
+  tmLn = document.MM_Time[tmLnName];
+  if (myID == null) { myID = ++tmLn.ID; firstTime=true;}//if new call, incr ID
+  if (myID == tmLn.ID) { //if Im newest
+    setTimeout('MM_timelinePlay("'+tmLnName+'",'+myID+')',tmLn.delay);
+    fNew = ++tmLn.curFrame;
+    for (i=0; i<tmLn.length; i++) {
+      sprite = tmLn[i];
+      if (sprite.charAt(0) == 's') {
+        if (sprite.obj) {
+          numKeyFr = sprite.keyFrames.length; firstKeyFr = sprite.keyFrames[0];
+          if (fNew >= firstKeyFr && fNew <= sprite.keyFrames[numKeyFr-1]) {//in range
+            keyFrm=1;
+            for (j=0; j<sprite.values.length; j++) {
+              props = sprite.values[j]; 
+              if (numKeyFr != props.length) {
+                if (props.prop2 == null) sprite.obj[props.prop] = props[fNew-firstKeyFr];
+                else        sprite.obj[props.prop2][props.prop] = props[fNew-firstKeyFr];
+              } else {
+                while (keyFrm<numKeyFr && fNew>=sprite.keyFrames[keyFrm]) keyFrm++;
+                if (firstTime || fNew==sprite.keyFrames[keyFrm-1]) {
+                  if (props.prop2 == null) sprite.obj[props.prop] = props[keyFrm-1];
+                  else        sprite.obj[props.prop2][props.prop] = props[keyFrm-1];
+        } } } } }
+      } else if (sprite.charAt(0)=='b' && fNew == sprite.frame) eval(sprite.value);
+      if (fNew > tmLn.lastFrame) tmLn.ID = 0;
+  } }
+}
+
+<!--
+//-->
+
+function MM_initTimelines() { //v4.0
+    //MM_initTimelines() Copyright 1997 Macromedia, Inc. All rights reserved.
+    var ns = navigator.appName == "Netscape";
+    var ns4 = (ns && parseInt(navigator.appVersion) == 4);
+    var ns5 = (ns && parseInt(navigator.appVersion) > 4);
+    document.MM_Time = new Array(1);
+    document.MM_Time[0] = new Array(0);
+    document.MM_Time["TimelineA"] = document.MM_Time[0];
+    document.MM_Time[0].MM_Name = "TimelineA";
+    document.MM_Time[0].fps = 15;
+    document.MM_Time[0].lastFrame = 0;
+    for (i=0; i<document.MM_Time.length; i++) {
+        document.MM_Time[i].ID = null;
+        document.MM_Time[i].curFrame = 0;
+        document.MM_Time[i].delay = 1000/document.MM_Time[i].fps;
+    }
+}
+//-->
+</script>
+<script language="JavaScript1.2" src="fw_menu.js"></script>
+</head>
+<body bgcolor="#FFFFFF" text="#000000" link="#0099FF" vlink="#FF9900" alink="#0099FF" onLoad="MM_preloadImages('bnewhome_f3.gif','bnewhome_f2.gif','bnewhome_f4.gif','bnewnewsletter_f3.gif','bnewnewsletter_f2.gif','bnewnewsletter_f4.gif','bnewschedules_f3.gif','bnewschedules_f2.gif','bnewschedules_f4.gif','bnewmovieclips_f3.gif','bnewmovieclips_f2.gif','bnewmovieclips_f4.gif','bnewphotoalbum_f3.gif','bnewphotoalbum_f2.gif','bnewphotoalbum_f4.gif','bnewawards_f3.gif','bnewawards_f2.gif','bnewawards_f4.gif','bnewsitemap_f3.gif','bnewsitemap_f2.gif','bnewsitemap_f4.gif','bnewcontactus_f3.gif','bnewcontactus_f2.gif','bnewcontactus_f4.gif');MM_timelinePlay('TimelineA')">
+<table width="742" border="0" cellpadding="0" cellspacing="0">
+  <!--DWLayoutTable-->
+  <tr> 
+    <td height="19" colspan="2" align="center" valign="middle" bgcolor="#000000"> 
+      <div align="center"><font color="#FFFFFF" face="Verdana, Arial, Helvetica, sans-serif" size="2"><b>Running 
+        Race Schedules for the Hawaiian Islands</b> </font></div></td>
+  </tr>
+  <tr> 
+    <td width="524" height="142" valign="top"><div align="center"><br>
+        <img src="images/inewtop2.gif" width="266" height="170"> </div></td>
+    <td width="218" valign="top"><div align="center"><br>
+        <!-- #BeginEditable "TopRight" --><img src="images/SceneH.gif" width="200" height="133"><!-- #EndEditable --><br>
+      </div></td>
+  </tr>
+</table>
+<table width="742" border="0" cellpadding="0" cellspacing="0">
+  <tr bgcolor="#FFFFFF"> 
+    <td valign="top" height="30" colspan="2"> 
+      <div align="center"><a href="#" onMouseOut="MM_nbGroup('out');"  onMouseOver="MM_nbGroup('over','bnewhome','bnewhome_f2.gif','bnewhome_f4.gif',1);"  onClick="MM_nbGroup('down','navbar1','bnewhome','bnewhome_f3.gif',1);" > 
+        </a> <a href="main.html" onMouseOut="MM_nbGroup('out');"  onMouseOver="MM_nbGroup('over','bnewhome','bnewhome_f2.gif','bnewhome_f4.gif',1);"  onClick="MM_nbGroup('down','navbar1','bnewhome','bnewhome_f3.gif',1);" target="_self" ><img name="bnewhome" src="bnewhome.gif" width="72" height="15" border="0"> 
+        <!-- fwtable fwsrc="blackbutton.png" fwbase="bnewhome.gif" fwstyle="Dreamweaver" fwdocid = "742308039" fwnested="0" -->
+        </a> <a href="newsletter.htm" onMouseOut="MM_nbGroup('out');"  onMouseOver="MM_nbGroup('over','bnewnewsletter','bnewnewsletter_f2.gif','bnewnewsletter_f4.gif',1);"  onClick="MM_nbGroup('down','navbar1','bnewnewsletter','bnewnewsletter_f3.gif',1);" target="_self" ><img name="bnewnewsletter" src="bnewnewsletter.gif" width="72" height="15" border="0"> 
+        <!-- fwtable fwsrc="blackbutton.png" fwbase="bnewnewsletter.gif" fwstyle="Dreamweaver" fwdocid = "742308039" fwnested="0" -->
+        </a> 
+        <script language="JavaScript1.2">fwLoadMenus();</script>
+        <a href="#" onMouseOut="MM_nbGroup('out');FW_startTimeout();"  onMouseOver="window.FW_showMenu(window.fw_menu_0,100,10);MM_nbGroup('over','bnewschedules','bnewschedules_f2.gif','bnewschedules_f4.gif',1);"  onClick="MM_nbGroup('down','navbar1','bnewschedules','bnewschedules_f3.gif',1);" ><img name="bnewschedules" src="bnewschedules.gif" width="72" height="15" border="0"> 
+        <!-- fwtable fwsrc="blackbuttonmenu.png" fwbase="bnewschedules.gif" fwstyle="Dreamweaver" fwdocid = "742308039" fwnested="0" -->
+        </a> <a href="movieclips.htm" onMouseOut="MM_nbGroup('out');"  onMouseOver="MM_nbGroup('over','bnewmovieclips','bnewmovieclips_f2.gif','bnewmovieclips_f4.gif',1);"  onClick="MM_nbGroup('down','navbar1','bnewmovieclips','bnewmovieclips_f3.gif',1);" target="_self" ><img name="bnewmovieclips" src="bnewmovieclips.gif" width="72" height="15" border="0"> 
+        <!-- fwtable fwsrc="blackbutton.png" fwbase="bnewmovieclips.gif" fwstyle="Dreamweaver" fwdocid = "742308039" fwnested="0" -->
+        </a> <a href="photoalbum.htm" onMouseOut="MM_nbGroup('out');"  onMouseOver="MM_nbGroup('over','bnewphotoalbum','bnewphotoalbum_f2.gif','bnewphotoalbum_f4.gif',1);"  onClick="MM_nbGroup('down','navbar1','bnewphotoalbum','bnewphotoalbum_f3.gif',1);" target="_self" ><img name="bnewphotoalbum" src="bnewphotoalbum.gif" width="72" height="15" border="0"> 
+        <!-- fwtable fwsrc="blackbutton.png" fwbase="bnewphotoalbum.gif" fwstyle="Dreamweaver" fwdocid = "742308039" fwnested="0" -->
+        </a> <a href="awards.htm" onMouseOut="MM_nbGroup('out');"  onMouseOver="MM_nbGroup('over','bnewawards','bnewawards_f2.gif','bnewawards_f4.gif',1);"  onClick="MM_nbGroup('down','navbar1','bnewawards','bnewawards_f3.gif',1);" target="_self" ><img name="bnewawards" src="bnewawards.gif" width="72" height="15" border="0"> 
+        <!-- fwtable fwsrc="blackbutton.png" fwbase="bnewawards.gif" fwstyle="Dreamweaver" fwdocid = "742308039" fwnested="0" -->
+        </a> <a href="sitemap.htm" onMouseOut="MM_nbGroup('out');"  onMouseOver="MM_nbGroup('over','bnewsitemap','bnewsitemap_f2.gif','bnewsitemap_f4.gif',1);"  onClick="MM_nbGroup('down','navbar1','bnewsitemap','bnewsitemap_f3.gif',1);" target="_self" ><img name="bnewsitemap" src="bnewsitemap.gif" width="72" height="15" border="0"> 
+        <!-- fwtable fwsrc="blackbutton.png" fwbase="bnewsitemap.gif" fwstyle="Dreamweaver" fwdocid = "742308039" fwnested="0" -->
+        </a> <a href="contactus.htm" onMouseOut="MM_nbGroup('out');"  onMouseOver="MM_nbGroup('over','bnewcontactus','bnewcontactus_f2.gif','bnewcontactus_f4.gif',1);"  onClick="MM_nbGroup('down','navbar1','bnewcontactus','bnewcontactus_f3.gif',1);" target="_self" ><img name="bnewcontactus" src="bnewcontactus.gif" width="72" height="15" border="0"> 
+        <!-- fwtable fwsrc="blackbutton.png" fwbase="bnewcontactus.gif" fwstyle="Dreamweaver" fwdocid = "742308039" fwnested="0" -->
+        </a> </div>
+    </td>
+  </tr>
+  <tr> 
+    <td valign="top" height="114" width="227"> 
+      <div align="center"><!-- #BeginEditable "LeftHeader" --><font size="3" face="Comic Sans MS">Race 
+        Results</font><!-- #EndEditable --></div>
+    </td>
+    <td valign="top" width="515"><!-- #BeginEditable "MiddleImage" --> 
+      <div align="left"> 
+        <p><font size="4" face="Comic Sans MS">St Theresa's 5km &amp; 1 mile<br>
+          </font><font size="4" face="Comic Sans MS">April 13,2002</font></p>
+        </div>
+      <!-- #EndEditable --></td>
+  </tr>
+  <tr> 
+    <td height="372" colspan="2" valign="top"><!-- #BeginEditable "Body" -->
+      <table width="70%" border="0" cellpadding="0" align="center">
+        <tr> 
+          <td> <p><font face="Arial, Helvetica, sans-serif" size="2"> <b>5K Finishers</b><br>
+              <br>
+              1 Louis Tomsic 18:04:22<br>
+              2 Doug Rasmussen 19:56:09<br>
+              3 Steve Dean 20:53:04<br>
+              4 Janis Kamata-Lopez21:53:03<br>
+              5 Lex Mahler 21:31:02<br>
+              6 Astrid Tomsic 21:44:09<br>
+              7 Dennis Haack 21:53:07<br>
+              8 Cesare Lucente 22:12:02<br>
+              9 Dexter Sear 22:37:07<br>
+              10 Mark VanMaren 23:04:03<br>
+              </font><font face="Arial, Helvetica, sans-serif" size="2">11 Stu 
+              Howard 23:09:07<br>
+              12 Carina Bartlett 23:34:02<br>
+              13 John Baephke 24:08:06<br>
+              14 Denise Morrison 24:34:08<br>
+              15 Vince Sweetser 25:06:00<br>
+              16 Jerry Balderson 25:09:01<br>
+              17 Adam Moore 25:19:06<br>
+              18 Nick Castillo 25:27:02<br>
+              19 Charles Sullivan 25:59:09<br>
+              20 Robert Fry 26:02:04<br>
+              21 James Rocha 26:05:00<br>
+              22 Sumer Davis 26:10:08<br>
+              23 Nancy McAtee 26:40:02<br>
+              24 Lenette Vierrra 26:43:07<br>
+              25 J. Crouch 26:54:06<br>
+              26 Jeanne Wilson 26:55:02<br>
+              27 Denny Ortal 27:01:00<br>
+              28 Jim Johnson 27:04:07<br>
+              29 Jack Marshall 28:25:00<br>
+              30 Sephanie Young 28:35:03<br>
+              31 Dara Petrison 28:54:05<br>
+              32 Nancy Simon 29:11:00<br>
+              33 Bob Kranz 29:11:04<br>
+              34 Tony Canales 30:34:04<br>
+              35 Kelli Shigematsu 30:42:08<br>
+              36 Curtis Young 30:44:02<br>
+              37 Glenda Tamashiro 31:47:05<br>
+              38 Roy Tamashiro 31:48:03<br>
+              39 William Castillo 32:08:09<br>
+              40 Stacey Machorek 32:42:03<br>
+              41 Reagan Hooton 32:53:02<br>
+              42 Wendy Castillo 33:05:04<br>
+              43 Wayne Pieratt 33:08:07<br>
+              44 Laura Haack 33:40:09<br>
+              45 Jackie Mierta 33:41:09<br>
+              46 Barbara Pedersen 33:55:01<br>
+              47 Ave Soto 34:05:04<br>
+              48 Jeff Lewis 34:09:09<br>
+              49 Ori Soto 34:11:09<br>
+              50 Teri Teasdale 40:22:06<br>
+              51 Karia Anderson 40:24:09<br>
+              52 tephanie Howard 43:20:06<br>
+              53 Cheryl Johnson 43:21:01<br>
+              54 Jean Alexander 49:58:00<br>
+              <br>
+              <b>1 Mile Finishers</b><br>
+              <br>
+              1 Cody Mierta 07:25:03<br>
+              2 David Hesapene Jr.07:31:04<br>
+              3 Shigematsu 08:15:04<br>
+              4 Dorothy Silva 08:52:00<br>
+              5 B. Yadao-Lanning 09:34:07<br>
+              6 Natasha Abadila 09:42:02<br>
+              7 Georgia Silva 10:34:07<br>
+              8 Heather Haack 11:53:03<br>
+              9 Kelsey Hesapene 12:32:09<br>
+              10 Cole Moore 12:42:05<br>
+              11 David Biederman 12:50:03<br>
+              12 Sandra Mahler 13:05:06<br>
+              13 Judith Moore 15:24:05<br>
+              14 Madison Moore 15:26:02<br>
+              15 Deko Okada 16:05:06<br>
+              16 Abe Galvan 16:05:00</font></p>
+            <p>&nbsp;</p></td>
+        </tr>
+      </table>
+      <!-- #EndEditable --></td>
+  </tr>
+  <tr> 
+    <td height="47" colspan="2" valign="top" bgcolor="#000000"> 
+      <div align="center"><font face="Arial, Helvetica, sans-serif" size="1"><b><a href="main.html" target="_self"><font color="#FFFFFF"><br>
+        Home</font></a><font color="#FFFFFF"> | <a href="newsletter.htm" target="_self">Newsletter</a> 
+        | <a href="movieclips.htm" target="_self">Movie Clips</a> | <a href="photoalbum.htm" target="_self">Photo 
+        Album</a> | <a href="awards.htm">Awards</a> | <a href="contactus.htm" target="_self">Contact 
+        Us</a> | <a href="sitemap.htm" target="_self">Site Map</a><br>
+        Race Schedules &amp; Results - <a href="rschedule03hawaii.htm" target="_self">Hawaii</a> 
+        | <a href="rschedule03kauai.htm" target="_self">Kauai</a> | <a href="rschedulelanai.htm" target="_self">Lanai</a> 
+        | <a href="rschedule03maui.htm" target="_self">Maui</a> | <a href="rschedule03molokai.htm" target="_self">Molokai</a> 
+        | <a href="rschedule03oahu.htm">Oahu</a></font></b></font></div>
+    </td>
+  </tr>
+  <tr> 
+    <td height="55" colspan="2" valign="top"> 
+      <table width="100%" border="0" cellpadding="0" cellspacing="0">
+        <tr> 
+          <td width="742" height="1"></td>
+        </tr>
+        <tr> 
+          <td valign="top" height="54"> 
+            <p><font face="Arial, Helvetica, sans-serif" size="1"> Copyright &copy; 
+              2001 by HawaiiRun. All Rights Reserved.<br>
+              Proudly created by <a href="http://www.localproductions.com">Local 
+              Productions</a><br>
+              <!-- #BeginEditable "Bottom" --><!-- #EndEditable --> </font></p>
+          </td>
+        </tr>
+      </table>
+    </td>
+  </tr>
+  <tr> 
+    <td height="29"></td>
+    <td></td>
+  </tr>
+</table>
+</body>
+<!-- #EndTemplate --></html>

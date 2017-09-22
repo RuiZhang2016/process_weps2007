@@ -1,0 +1,475 @@
+<link rel="stylesheet" href="StyleSheets/EBS.css" type="text/css">
+
+<script language="javascript">
+
+function ShowSynopsis(){
+  if (SynopsisHolder.style.display == "none"){
+    Synopsis.value = "Hide Synopsis";
+    SynopsisHolder.style.display = "block";
+    }
+  else {
+    SynopsisHolder.style.display = "none";
+    Synopsis.value = "Show Synopsis";
+    }
+  }
+
+function ShowConference(){
+  if (ConferenceHolder.style.display == "none"){
+    Conference.value = "Hide Conference Info.";
+    ConferenceHolder.style.display = "block";
+    }
+  else {
+    ConferenceHolder.style.display = "none";
+    Conference.value = "Show Conference Info.";
+    }
+  }
+
+</script>
+
+   
+
+<title>View Solicitation</title>
+<META HTTP-EQUIV="Expires" CONTENT="0">
+<body topmargin=0 leftmargin=0 marginwidth=0 marginheight=0>
+
+<!-- To use your own logo, edit the following line -->
+
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN"
+"http://www.w3.org/TR/html4/loose.dtd">
+
+<html>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<table width="100%" border="0" cellpadding="0" cellspacing="1" height="20">
+<tr> 
+<td width=10% class=navbar>
+<a href="http://www.poh.usace.army.mil/pohct/org.asp" class="navlink">Organization</a>
+</td>
+<td width=20% class=navbar>
+<a href="http://www.poh.usace.army.mil/pohct/biz_op.asp" class="navlink">Business Opportunities</a> 
+</td>
+<td width=10% class=navbar>
+<a href="http://www.poh.usace.army.mil/pohct/hotlist.asp" class="navlink">Hot List</a> 
+</td>
+<td width=10% class=navbar>
+<a href="http://www.poh.usace.army.mil/pohct/resources.asp" class="navlink">Resources</a> 
+</td>
+<td width=20% class=navbar>
+<a href="http://www.poh.usace.army.mil/pohct/contracting.asp" class="navlink">HED Contracting Home</a>
+<td width=10% class=navbar>
+<a href="http://www.poh.usace.army.mil/" class="navlink">HED Home</a></td>
+<td width=20% class=navbar></td>
+</tr>
+  <tr>
+    <td bgcolor="#FFFFFF" height="1"></td>
+  </tr>
+</table>
+<table border="0" bgcolor="#0033CC" width="100%" cellpadding="0" cellspacing="0">
+<tr><td><TABLE BORDER=0 CELLPADDING=0 CELLSPACING=0>
+		<TR>
+		  <TD ROWSPAN=2> <IMG SRC="images/org_01.jpg" WIDTH=82 HEIGHT=68 alt="Segment 1 of USACE HED website masthead: USACE Castle logo"></TD>
+		  <TD ROWSPAN=2> <IMG SRC="images/org_02.gif" WIDTH=276 HEIGHT=68 alt="Segment 2 of USACE HED website masthead: Contracting Division"></TD>
+		  <TD> <IMG SRC="images/org_03.gif" WIDTH=241 HEIGHT=38 alt="Segment 3 of USACE HED website masthead: Blank area"></TD>
+	</TR>
+	<TR>
+		  <TD> <img src="images/biz_04.gif" width=241 height=30 alt="Segment 4 of USACE HED website masthead:Business Opportunities"></TD>
+	</TR>
+</TABLE></td>
+	<td width="100%" bgcolor="#0033CC"><img src="images/spacer.gif" width="1" height="1"></td>
+</tr>
+<tr bgcolor="#FFFFFF"><td colspan="2"><img src="images/spacer.gif" width="1" height="1"></td>
+</tr>
+</table>
+<!-- End Masthead -->
+
+<table width=100% border=0>
+ <tr>
+
+  <td width=10% class=navbar>
+   <a href="AdvertisedSolicitations.asp" title="View Advertised Solicitations" class=navlink>Advertised Solicitations</a>
+  </td>
+  <td width=7% class=navbar>
+   <a href="BidResults.asp" title="View Bid Results" class=navlink>Bid Results</a>
+  </td>
+  <td width=8% class=navbar>
+   <a href="AwardResults.asp" title="View Award Results" class=navlink>Award Results</a>
+  </td>
+  <td width=10% class=navbar>
+   <a href="ArchivedSolicitations.asp" title="View Archived Solicitations" class=navlink>Archived Solicitations</a>
+  </td>
+  <td width=5% class=navbar>
+   <a href="Help.asp" title="Help" class=navlink>
+   <img src="images/question.gif" border=0></a>
+  </td>
+  <td width=20% class=navbar>
+   <a href="OtherOpps.asp" title="View Other Opportunities" class=navlink>Other Opportunities</a>
+  </td>
+  <td width=10% class=navbar>
+   <a href="http://tsn.wes.army.mil/CentralEBS/AdvertisedSolicitations.asp" title="Central Solicitation Listing" class=navlink>Central Listing</a>
+<!--   <a href="http://tsn.wes.army.mil/TSNSolicitationPrinting.asp" title="View Printing Companies" class=navlink>Solicitation Printing</a> -->
+  </td>
+  <td width=8% class=navbar>
+   <a href="http://tsn.wes.army.mil/COMSoftware.asp" title="Download EBS Viewers" class=navlink>Viewers</a>
+  </td>
+  <td width=6% class=navbar>
+   <a href="http://tsn.wes.army.mil/Help.asp" title="View FAQs" class=navlink>FAQ</a>
+  </td>
+  <td width=6% class=navbar>
+   <a href="http://tsn.wes.army.mil/TSNLinks.asp" title="View Related Links" class=navlink>Links</a>
+  </td>
+  <td width=10% class=navbar>
+   <a href="http://tsn.wes.army.mil/" title="tsn.wes.army.mil" class=navlink>TSN Home</a>
+  </td>
+
+ </tr>
+</table>
+<!-- 
+This file is used to read Solicitation Data from the database.
+It is used by:
+ViewSolicitation.asp
+ViewPlanholders.asp
+ViewAmendment.asp
+EMail2.asp
+-->
+      
+
+
+<center>
+<div class=title>
+ 
+   View Solicitation
+ 
+</div>
+
+<!-- 
+This file is used to display the General Information table
+It is used by:
+ViewSolicitation.asp
+ViewPlanholders.asp
+ViewFiles.asp
+ViewAmendment.asp
+-->
+
+<table width=600 border=0>
+
+ <tr>
+  <th colspan=4 class=txt>
+   General Information
+  </th>
+ </tr>
+
+ <tr>
+  <td class=rtxt width=150>
+   <b>Solicitation Number:</b>
+  </td>
+  <td class=ltxt width=450 colspan=3>
+    DACA83-02-B-0008
+  </td>
+ </tr>
+
+ 
+
+ <tr>
+  <td class=rtxt width=150>
+   <b>Title:</b>
+  </td>
+  <td class=ltxt width=450 colspan=3>
+    FY02 OMA Pkg A-1, Relocate Water Connections by 162 & 163
+  </td>
+ </tr>
+
+ <tr>
+  <td class=rtxt width=150>
+   <b>Location:</b>
+  </td>
+  <td class=ltxt width=450 colspan=3>
+    Pohakuloa Training Area, Island of Hawaii, Hawaii
+  </td>
+ </tr>
+
+ <tr>
+  <td class=rtxt width=150>
+   <b>Issue Date:</b>
+  </td>
+  
+   <td class=ltxt width=450 colspan=3>
+   8/20/02
+  </td>
+ </tr>
+
+ <tr>
+  <td class=rtxt width=150>
+   <b>Closing Date:</b>
+  </td>
+  
+   <td class=ltxt width=450 colspan=3>
+   9/19/02 2:00 P.M.
+  </td>
+ </tr>
+
+ <tr>
+  <td class=rtxt width=150>
+   <b>Price Range:</b>
+  </td>
+  <td class=ltxt width=450 colspan=3>
+    $500,000 - $1,000,000
+  </td>
+ </tr>
+
+ 
+
+ <tr>
+  <td class=rtxt width=150>
+   <b>Media:</b>
+  </td>
+  <td class=ltxt width=450 colspan=3>
+    CD
+  </td>
+ </tr>
+
+
+
+ <tr>
+  <td class=rtxt width=150>
+   <b>Contracting POC:</b>
+  </td>
+  <td class=ltxt width=200>
+    <a href="mailto:julius.y.kaneshiro@poh01.usace.army.mil" title="Send E-mail to Contracting POC">Julius Kaneshiro</a>
+  </td>
+  <td class=rtxt width=50>
+   <b>Phone:</b>
+  </td>
+  <td class=ltxt width=200>
+    (808) 438-8567
+  </td>
+ </tr>
+
+
+
+ <tr>
+  <td class=rtxt width=150>
+   <b>Technical POC:</b>
+  </td>
+  <td class=ltxt width=200>
+    <a href="mailto:roy.j.tamashiro@poh01.usace.army.mil" title="Send E-mail to Technical POC">Roy Tamashiro</a>
+  </td>
+  <td class=rtxt width=50>
+   <b>Phone:</b>
+  </td>
+  <td class=ltxt width=200>
+    (808) 438-8531
+  </td>
+ </tr>
+
+
+</table>
+
+<table width=600 border=0>
+ <tr>
+  <th class=txt>
+   Results
+  </th>
+ </tr>
+ 
+ <tr>
+  <th class=txt>
+   Solicitation was Awarded
+  </th>
+ </tr>
+ <tr>
+ <td class=txt>
+  
+   <a href="Solicitations\DACA83-02-B-0008\BidResults.pdf">Bid Results</a>
+  
+ </td>
+ </tr>
+
+<!----------------------------------------------------------------------------------- Added 12/12/2002 -->
+
+<!----------------------------------------------------------------------------------- Added 12/12/2002 -->
+ <tr>
+ <td class=txt>
+  
+  <a href="Solicitations\DACA83-02-B-0008\AwardResults.pdf">Award Number: 1 - 9/26/02 - Results</a>
+  
+ </td>
+ </tr>
+<!----------------------------------------------------------------------------------- Added 12/12/2002 -->
+
+<!----------------------------------------------------------------------------------- Added 12/12/2002 -->
+ 
+
+</table>
+
+
+
+<table width=600 border=0>
+
+ <tr>
+ <th class=txt colspan=3>
+   Amendments
+  </th>
+ </tr>
+
+ <tr>
+  <th class=txt>
+   No.
+  </th>
+  <th class=txt>
+   Media
+  </th>
+  <th class=txt>
+   Date
+  </th>
+ </tr>
+
+
+
+ <tr>
+  <td class=txt width=25%>
+   <a href="ViewAmendment.asp?SolicitationNumber=DACA83-02-B-0008&AmendmentNumber=0001&RegisterOption=False">
+    0001
+   </a>
+  </td>
+
+  <td class=txt width=25%>
+  
+     <img src="images/CD.gif" alt="Image of Compact Disk">
+    
+  </td>
+
+  <td class=txt>
+   9/3/02
+  </td>
+ </tr>
+
+
+
+ <tr>
+  <td class=txt width=25%>
+   <a href="ViewAmendment.asp?SolicitationNumber=DACA83-02-B-0008&AmendmentNumber=0002&RegisterOption=False">
+    0002
+   </a>
+  </td>
+
+  <td class=txt width=25%>
+  
+     <img src="images/Paper.gif" alt="Image of Stack of Paper">
+    
+  </td>
+
+  <td class=txt>
+   9/10/02
+  </td>
+ </tr>
+
+
+
+ <tr>
+  <td class=txt width=25%>
+   <a href="ViewAmendment.asp?SolicitationNumber=DACA83-02-B-0008&AmendmentNumber=0003&RegisterOption=False">
+    0003
+   </a>
+  </td>
+
+  <td class=txt width=25%>
+  
+     <img src="images/Paper.gif" alt="Image of Stack of Paper">
+    
+  </td>
+
+  <td class=txt>
+   9/11/02
+  </td>
+ </tr>
+
+ 
+
+</table>
+
+
+
+<table width=600 border=0>
+
+
+
+ <th class=txt>
+  Synopsis
+ </th>
+
+ <tr>
+  <td class=ltxt>
+   FY02 OMA Package A-1, Relocate Water Connections by 162 & 163, Pohakuloa Training Area, Island of Hawaii, Hawaii.  This procurement involves providing for two new 5” waterlines, approximately 200’, from existing pump houses to a new truck off-loading site complete with an a.c. paved turnaround and remote pump controls.  Solicitation to be issued O/A August 15, 2002, utilizing Electronic Bid Sets (EBS).  The estimated cost of the proposed project is between $500,000 and $1 Million.  This is a Hubzone Competitive procurement and is being restricted to Hubzone firms certified for participation in the Hubzone program.  Traditional hard copies of plans and specifications will NOT be available for this project.  Solicitation documents will be provided on Compact Disks-Read Only Memory (CD-ROM) for a non-refundable charge of $67.92.  Solicitation documents shall be requested through any of the following methods:  a) mail requests to: Defense Automation & Production Service, Attn: Army Corps Solicitation, 1025 Quincy Ave. Suite 200, Pearl Harbor, Hawaii 96860-4512; b) via courier service (Fedex, UPS, etc.) to: Defense Automation & Production Service, Attn: Army Corps Solicitation, Pearl Harbor Naval Base Building 550, Pearl Harbor, Hawaii 96860; or c) via facsimile (if paying by credit card) to (808) 473-2604.  Requests must state company name, address, telephone number, facsimile number, solicitation number, project title, and company designation (prime contractor, subcontractor, supplier, or plan room).  Envelope front must show the solicitation number.  Checks shall be made out payable to Superintendent of Documents.  Provide separate check for each project requested.  Checks containing payment for multiple projects will be returned to requestor without action.  Facsimile requests must state (1) the above required company information, and (2) cardholder’s name, account number, and card expiration date.  VISA and MasterCard are the only credit cards accepted.  Firms requesting air express service shall furnish completed airbill showing recipient’s name, company name, telephone number, company billing account number, and type of delivery required.  Firms with foreign delivery addresses shall provide completed commercial or corporate invoices in addition to the completed airbills.  Failure to supply completed airbills and commercial or corporate invoices (if applicable) will result in solicitation documents being sent via regular US mail.  Failure to provide any of the foregoing information, documents, and/or payment may delay mailing of solicitation documents.  Solicitation documents are not available for purchase or pick-up over the counter at DAPS.  Please allow up to five days from the date DAPS receives requests for solicitation documents to be mailed out.  Address inquiries regarding issuance of solicitations, amendments, and plan holder listings to DAPS at (808) 473-0451.  Address technical and all other inquiries to the points of contact identified in this document.  Firms with Internet access are requested to obtain plan holder listings from DAPS website http://www.hawaii.wnbt.daps.mil/ARMY/corps.htm.  Project information, to include Bid Opening Dates, can be obtained from the Honolulu Engineer District website http://www.poh.usace.army.mil/pohct.
+  </td>
+ </tr>
+
+
+
+</table>
+
+<table width=600 border=0> <tr>
+  <th colspan=4 class=txt>
+   Plans
+  </th>
+ </tr>
+
+ <tr>
+  <th width=15% class=txt>
+   File Name
+  </th>
+
+  <th width=15% class=txt>
+   Amendment
+  </th>
+
+  <th width=55% class=txt>
+   Description
+  </th>
+
+  <th width="15%" class=txt>
+   Size
+  </th>
+ </tr>
+
+
+
+</table>
+<table width=600 border=0> <tr>
+  <th colspan=4 class=txt>
+   Specifications
+  </th>
+ </tr>
+
+ <tr>
+  <th width=15% class=txt>
+   File Name
+  </th>
+
+  <th width=15% class=txt>
+   Amendment
+  </th>
+
+  <th width=55% class=txt>
+   Description
+  </th>
+
+  <th width="15%" class=txt>
+   Size
+  </th>
+ </tr>
+
+ <tr>  <td class=ltxt>   <a class=lst href='Solicitations/DACA83-02-B-0008\Specifications/contract.pdf'>contract.pdf   </a>  </td>  <td class=ltxt>0  </td>  <td class=ltxt>Contract Clauses  </td>  <td class=rtxt>5.8 MB  </td> </tr> <tr>  <td class=ltxt>   <a class=lst href='Solicitations/DACA83-02-B-0008\Specifications/Watrline.pdf'>Watrline.pdf   </a>  </td>  <td class=ltxt>0  </td>  <td class=ltxt>Tech Specs  </td>  <td class=rtxt>963 KB  </td> </tr>
+
+</table>
+<form> <!-- Form Tags needed for Netscape Navigator to display pulldown -->
+<select class=pulldown onchange="window.location.href=this.options[selectedIndex].value; this.selectedIndex=0">
+  <option value="" selected>Go to:
+  <option value="AdvertisedSolicitations.asp">Advertised Solicitations
+  <option value="BidResults.asp">Bid Results
+  <option value="AwardResults.asp">Award Results
+  <option value="ArchivedSolicitations.asp">Archived Solicitations
+  <option value="OtherOpps.asp">Other Opportunities
+</select>
+</form>
+<div class=watermark>Version 2.10</div>
+</center>
+</body>

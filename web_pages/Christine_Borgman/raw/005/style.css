@@ -1,0 +1,124 @@
+/********** Base Style **********/
+body	{ background-color: #ffffff;
+		font-size: 12px;
+		line-height: 14px;
+		font-family: "lucida grande", helvetica, arial, sans-serif;
+		color: #000;
+}
+
+p		{ margin: 0px; }
+li 		{ list-style-type: circle; }
+.spacer	{ clear: both; font-size: 1px; line-height: 1px; }
+
+:link, :visited { text-decoration: none; color: #006633; }
+:link:hover, :visited:hover { text-decoration: underline;  color: #339966; }
+:link:active, :visited:active { color: #339966; }
+
+table.index {
+	border-collapse: separate;
+    border-spacing: 6pt;
+	border: none;
+}
+
+
+table.person {
+	border-spacing: 6px;
+}
+
+td.person {
+	text-align: left;
+	vertical-align: top;
+	width: 33%;
+}
+
+td.whatsnew {
+	background-color: #E5E5E5;
+}
+
+/********** Top Banner **********/
+/* 4.0 Browser only */
+#texttitle	{ display: none; } 
+
+#titlebar	{ 
+		background-color: white;
+		background-image: url(../Assets/images/ISR-logo.gif);
+		background-repeat: no-repeat;
+		height: 60px;
+		width: 541px; }
+		
+#titlebarright {
+	background-color: white;
+	background-image: url(../Assets/images/ISR2-picture.png);
+	background-repeat: no-repeat;
+	height: 60px;
+	width: 121px;
+}
+
+#subtitlebar { background-color: #cc9966;
+		/*Anita: FFCC66
+		  ISR:   ffff7f
+		  UCSD:  cc9966
+		*/
+		background-repeat: no-repeat; 
+		margin-top: 2px;
+		padding-left: 7px;
+		padding-right: 7px;
+		padding-bottom: 1px;
+		padding-top: 1px;
+		height: 20px;
+		min-height: 20px;
+		min-width: 720px;
+		border-style: solid;
+		border-top-width: 2px;
+		border-left-width: 0px;
+		border-bottom-width: 2px;
+		border-right-width: 0px; }
+
+#subtitlebar p { float: right;
+		padding-top: 3px; 
+		font-size: 11px;
+		font-weight: bold;
+		color: white;
+}
+
+#subtitlebar a {
+	color: white;
+}
+#subtitlebar a:link, a:visited {
+	text-decoration: none;
+}
+
+#subtitlebar a:hover, a:active, a:focus {
+	text-decoration: underline;
+}
+
+/********** Columns **********/
+
+/* Left column */
+
+#left	{
+	margin-top: 40px;
+	/*	margin: 40px 40px 20px 20px; */
+    /*  padding-right: 20px; */
+
+}
+
+#left .box {
+		float: left;
+}
+
+/********** Footer **********
+address { font-size: 11px;
+		font-style: normal; 
+		color: #999;
+		text-align: right; 
+		margin: 0px; 
+		padding: 0px; }
+
+address a:link, a:visited {
+		text-decoration: none; 
+		color: #999; }
+
+address a:hover, a:active, a:focus {
+		text-decoration: underline; 
+		color: #f60; }*/

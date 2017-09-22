@@ -1,0 +1,79 @@
+// - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+// - - - - - - ( event listener ) - - - - - - - -
+// by Scott Andrew - http://scottandrew.com
+// - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+function addEvent(obj, evType, fn)
+	{
+	if (obj.addEventListener)
+		{
+		obj.addEventListener(evType, fn, false); 
+		return true;
+		}
+	else if (obj.attachEvent)
+		{
+		var r = obj.attachEvent('on'+evType, fn);
+		return r;
+		}
+	else
+		{
+		return false;
+		}
+	}
+
+
+//
+// Other stuff
+//
+
+function getAvailableWidth()
+{
+	return screen.availWidth;
+}
+
+function getAvailableHeight()
+{
+	return screen.availHeight;
+}
+
+function getBrowserWidth()
+{
+	if (document.all)
+	{
+	   return document.body.clientWidth;
+	}
+
+	return window.outerWidth;
+}
+
+function getBrowserHeight()
+{
+	if (document.all)
+	{
+	   return document.body.clientHeight;
+	}
+
+	return window.outerHeight;
+}
+
+function getInnerWidth()
+{
+	if (document.all)
+	{
+	   return document.body.clientWidth;
+	}
+
+	return window.innerWidth;
+}
+
+function getInnerHeight()
+{
+	if (document.all)
+	{
+	   return document.body.clientHeight;
+	}
+
+	return window.innerHeight;
+}
+
+
+

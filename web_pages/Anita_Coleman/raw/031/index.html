@@ -1,0 +1,858 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN"                         "http://www.w3.org/TR/REC-html40/loose.dtd">
+
+<html>
+
+   <!-- Formatting 12/11/05, bw --> 
+
+  <head>     
+
+<title>Open Access Federation for Library and Information Science:  dLIST and DL-Harvest</title> 
+
+           <link rel="metadata" href="http://www.dlib.org/dlib/december05/coleman/12coleman.meta.xml"> 
+
+  
+
+ <link rel="stylesheet" type="text/css" href="main.css" title="Default Style Sheet"> 
+
+<style type="text/css">
+
+
+</style>
+
+                    
+
+<meta name="DOI" content="10.1045/december2005-coleman">            
+
+<meta HTTP-EQUIV="content-type" content="text/html; CHARSET=iso-8859-1">
+
+ 
+
+         <meta name="description" content="D-Lib Magazine"> 
+
+          
+
+  <meta name="keywords" content="D-Lib Magazine, Digital Libraries, Digital Library Research">
+
+ </head>   
+
+<body bgcolor="#ffffff"> 
+
+ <div class="center">  
+
+<table width="700" border="0" cellspacing="0" cellpadding="0" align="center">                                          
+
+<tr>                   
+<td class="center">      
+<p><font style="font-weight: bold;">
+<a class="menu" href="http://www.dlib.org/Architext/AT-dlib2query.html" target="_top">Search</a> &nbsp; <a name="Top">|</a>  &nbsp;
+<a class="menu" href="http://www.dlib.org/back.html" target="_top">Back Issues</a> &nbsp; |  &nbsp;            
+<a class="menu" href="http://www.dlib.org/author-index.html" target="_top">Author Index</a> &nbsp; | &nbsp;          
+<a class="menu" href="http://www.dlib.org/title-index.html" target="_top">Title Index</a> &nbsp; | &nbsp;           
+<a class="menu" href="http://www.dlib.org/dlib/december05/12contents.html" target="_top">Contents</a> 
+</font>
+</p>
+</td>   
+
+</tr> 
+</table>  
+
+<p align="center">
+<img src="articles00.gif" width="500" height="16" alt="Articles">
+</p>
+ </div>
+
+   <!-- Begin Article Header -->    
+
+ <table border="0" cellpadding="0" cellspacing="0" width="100%"> 
+
+ <colgroup>         
+
+ <col width="6%">         
+
+  <col width="94%"> </colgroup>           
+
+ <tr>                 
+
+   <td><img src="spacer00.gif" width="10" height="10" alt="spacer"></td> 
+
+                 <td>
+
+ <h3 class="blue">D-Lib Magazine<br>December 2005</h3>  
+
+                <h6 class="blue">Volume 11 Number 12<br><br>
+
+            ISSN 1082-9873</h6>           
+
+ 
+
+<H2 class="blue-space">Open Access Federation for Library and Information Science</H2>
+<H3 class="blue-space"><i>dLIST</i> and <i>DL-Harvest</i></H3>
+
+ </td>          
+
+ </tr>           
+
+ <tr>                   
+
+<td>&nbsp;</td>                  
+
+<td>
+
+  
+
+<p class="blue"> <a href="http://www.dlib.org/dlib/december05/authors/12authors.html#COLEMAN">Anita Coleman</a><br> 
+School of Information Resources and Library Science<br>
+University of Arizona<br>
+&lt;asc&#064;u.arizona.edu&gt;
+ </p>
+
+<p class="blue"> <a href="http://www.dlib.org/dlib/december05/authors/12authors.html#ROBACK">Joseph Roback</a><br> 
+Department of Computer Science<br>
+University of Arizona<br>
+&lt;robackja&#064;cs.arizona.edu&gt;
+ </p>
+
+
+
+
+
+</td>          </tr>  </table>      <div class="center">
+
+ <p><img src="redline00.gif" width="500" height="2" alt="Red Line"></p> </div> 
+
+  
+
+   <table border="0" cellpadding="0" cellspacing="0" width="90%"> <colgroup>
+
+         <col width="6%">          <col width="94%"> </colgroup>
+
+           <tr>                  
+
+<td><img src="spacer00.gif" width="10" height="10" alt="spacer"></td>                 
+
+<td>
+
+  <!-- Abstract or TOC goes here --> 
+
+<H3 class="blue">Abstract</H3>
+
+<p class="blue">
+Self-archiving, the practice of depositing one's works in an OAI-compliant archive, is a key strategy for innovating scholarly communication and achieving open access.   <i>DL-Harvest</i>, a subject service for Library and Information (LIS), based on the aggregation of OAI-PMH compliant metadata from both institutional and disciplinary digital repositories, including <i>dLIST</i>, is described.   Additionally, results from two studies that explored LIS journal publishers' stances towards self-archiving as expressed in copyright transfer agreements (CTAs) and the scholarly communication behaviors of LIS scholars, with regard to self-archiving and searching, are presented and some implications for the development of federated subject services are highlighted
+</p>
+
+<!-- Story goes next --> 
+
+
+<H3>Introduction</H3>
+
+<p>
+In 2002, approximately a year after release, <a href="12coleman.html#VandeSompel-Lagoze">Van de Sompel and Lagoze</a> (2002) reported optimistically about the acceptance of the Open Archives Initiative-Protocol for Metadata Harvesting (OAI-PMH) as a foundation for digital library interoperability.  Additionally, they highlighted the role of metadata, data providers and service providers as enabled by the OAI specification, and identified some of the services that could be built besides resource discovery:  longevity and risk management, personalization, and current awareness.  
+</p>
+
+<p>
+Today, less than five years after the OAI-PMH release, the Open Archives Initiative (OAI) website has registered 328 data providers (i.e., open access archives or digital repositories) that comply with OAI-PMH (<a href="12coleman.html#OAI">OAI</a>, 2005).  <a href="12coleman.html#OAIster">OAIster</a> (2005), a digital union catalog and an end-user data service harvests 575 OAI-compliant repositories.  While these numbers are striking, they don't reveal exactly how OAI-PMH is being used in "federating" institutional repositories "...a fruitful area for exploration and innovation" (<a href="12coleman.html#Lynch">Lynch</a>, 2003).<sup><a href="12coleman.html#1">1</a></sup>   To do so, in this article we report our experiences as an OAI-PMH data provider of <i>dLIST</i>, the <i>Digital Library of Information Science and Technology</i>, an open access archive and a cross-institutional Eprints-based, digital repository for Library and Information Science (LIS).  Issues for OAI-PMH service providers are explained using our development of <i>DL-Harvest</i>, a subject-based, open access aggregator and search engine for the information sciences, including LIS. We describe the modifications we made to the <i>PKP Harvester</i> software with regard to OAI-PMH flow control and sets, and the 13 OAI-compliant archives we currently aggregate, particularly in terms of new services that can be developed.  Finally, we share the preliminary results of two studies.  The first analyzed the copyright transfer agreements (CTAs) of LIS journals, and the second explored the self-archiving and scholarly communication behaviors of LIS Scholars. Findings from these studies, we hope, will help LIS scholars, decision-makers and leaders demarcate the differences between scholarly communication and publishing, and support the development of subject services that  "create a much more open field for a widened circle of researchers." (<a href="12coleman.html#Guedon">Guedon</a>, 2004, p. 325).
+</p>
+
+
+<h3>Open Access in Library and Information Science</h3>
+
+<p>
+Open access archiving, sometimes also referred to as self-archiving, and open access publishing through open access journals are two complementary ways to accomplish open access of the scholarly, refereed, research literature and other outputs of a field.  For <a href="12coleman.html#Harnad">Harnad</a> (2003), open access archives are the "green" and open access journals the "gold" roads to achieving open access of the refereed, research literature.  According to <a href="12coleman.html#Suber">Suber</a> (2005), "Open-access (OA) literature is digital, online, free of charge, and free of most copyright and licensing restrictions."  Open access to all the research outputs on a global scale is the goal of the OA movement (<a href="12coleman.html#Harnad-1995">Harnad</a>, (1995); <a href="12coleman.html#BOAI">BOAI</a>, 2002), and many solutions to reach this goal exist (<a href="12coleman.html#Hitchcock">Hitchcock</a>, 2003).  Yet, in 2002 &#150; although there were many experiments in open, electronic publishing &#150; there were no open access archives for LIS. 
+</p>
+
+Despite quick support and advocacy of the OA movement from the LIS community, open access to their own research outputs, except possibly in the area of digital libraries, remained to be accomplished. Considering that the majority of the Thomson-ISI ranked journals in the Information Science, Library Science category were closed,<sup><a href="12coleman.html#2">2</a></sup> this was a significant gap.  Hence, in June 2002 <i>dLIST</i> was established as a cross-institutional, disciplinary, open access archive to close the gap; scholars who were publishing in the closed journals now had an OAI-compliant venue for self-archiving.  <i>dLIST</i> was also a response to findings that were percolating even as early as 2002, the hallmark year when institutional repositories began to be adopted as a strategy for OA (<a href="12coleman.html#Lynch">Lynch</a> 2003, <a href="12coleman.html#Crow">Crow</a>, 2003).  Not all institutions may be able to afford institutional repositories, scholars in general adhere to disciplines rather than institutions, all types of scholarly materials need to be open to foster a strong scholarly communication network, and there will continue to be a need for subject-based aggregation, federated searching, preservation, and other services (<a href="12coleman.html#American">American OA Forum</a>, 2003; <a href="12coleman.html#Brogan">Brogan</a>, 2003; <a href="12coleman.html#Guedon">Guedon</a>, 2004; <a href="12coleman.html#Krichel">Krichel</a>, 1998; <a href="12coleman.html#Lynch">Lynch</a>, 2003; <a href="12coleman.html#Odlyzko">Odlyzko</a>, 2002).   Specific reasons for establishing <i>dLIST</i> as a subject archive, include the following: 
+
+<ol type="1" start="1">
+	<li>The relatively small size and location of many academic LIS units, in the United States and globally, means that they may not be able to afford their own institutional repositories; </li>
+	<li class="spacetop">The importance of connecting the LIS education, research and practice communities by means of a digital library that besides research materials had curriculum (syllabi) and practice (pathfinders, information literacy) materials<sup><a href="12coleman.html#3">3</a></sup> was recognized;  </li>
+	<li class="spacetop">We sought to improve visibility and cumulate the disciplinary research record by providing a repository for preliminary research findings and supporting supplementary research materials such as bibliometric datasets and evaluation protocols; and </li>
+	<li class="spacetop">We wished to work with professional, learned societies in the field to identify a sustainable business model for OA that positively affects LIS scholarly communication and maximizes economies of scale.    </li>
+</ol>
+
+<h3><i>DL-Harvest</i>, Aggregating Open Access LIS</h3>
+
+<p>
+<i>DL-Harvest</i>, a subject-based, open access aggregator and federated search service for LIS was established in May 2005.  It is indexed by <a href="12coleman.html#Google">Google</a> and <a href="12coleman.html#Google-Scholar">Google Scholar</a>, besides OAIster.  Figures 1-3 are screenshots of <i>DL-Harvest</i> showing the archives harvested and the two types of searches (Quick/Basic and Advanced) that are available.  As a service for the Information Sciences, <i>DL-Harvest</i> aggregates materials from selected repositories in Archival Science, Library and Information Science, Museum Informatics, and related subjects.  Currently, metadata from 13 OAI-PMH data providers are gathered and offered with search services.  
+</p>
+
+<p>
+For the harvesting software, we considered Old Dominion's <i>ARC</i> which we had used in another experiment to integrate non-OAI, structured websites (<a href="12coleman.html#Coleman-etal">Coleman et al.</a>, 2004).  In the end we selected the <a href="12coleman.html#Public">Public Knowledge Project's</a> <i>Open Archives Metadata Harvester</i>, henceforth referred to as <i>PKP Harvester</i> (2005).    (<a href="12coleman.html#Kellog">Kellog</a>, (2004) provides a list of eight OAI Metadata Harvesting Tools including a brief evaluation of the <i>PKP Harvester</i> and <i>Virginia Tech Perl Harvester</i>.)  We selected <i>PKP Harvester</i>, despite its limitations, because of its ease of use and potential for scalability.  It uses <a href="12coleman.html#PHP">PHP</a>, a standard web/database programming language, one that is easily integrated on the Apache Web Server under which <a href="12coleman.html#Eprints">Eprints</a> runs along with the <a href="12coleman.html#MySQL">MySQL</a> database and the Linux operating system<sup><a href="12coleman.html#4">4</a></sup>.  <i>PKP Harvester</i> is also open source, which allows us to freely modify the <i>PKP</i> application software.  
+</p>
+
+The official <i>PKP Harvester</i> does not implement all of the OAI protocol; that is, it supports neither OAI flow control<sup><a href="12coleman.html#5">5</a></sup> nor OAI sets<sup><a href="12coleman.html#6">6</a></sup>. To address this, we developed two software code patches for flow control and sets. Without flow control, it is impossible to harvest from archives like <i>arXiv</i>, and without sets, we would have to harvest all of <i>arXiv</i>'s 100,000+ articles. We run <i>DL-Harvest</i> with these two patches, and the patches have also been submitted for inclusion in the next release of the <i>PKP Harvester</i>.   In the meantime, our patches are available at <i>dLIST</i><sup><a href="12coleman.html#7">7</a></sup> and are being used in new services<sup><a href="12coleman.html#8">8</a></sup>.  Additionally, the <i>PKP Harvester</i> offers little or no logging support, although standard UNIX logging can be integrated. This makes it difficult to diagnose problems with archives during harvesting; for example, answers are ambiguous to questions such as: Are the archives down, or are there just no new items? 
+
+<h3>LIS Archives in <i>DL-Harvest</i></h3>
+
+<p>
+The 13 archives in <i>DL-Harvest</i> are: <i>&#064;rchiveSIC</i>, <i>ArXiv</i>, <i>Australian National Library Association (ALIA)</i>, <i>CalTech Library Systems Papers and Publications (Cal-Tech)</i>, <i>D-Lib Magazine</i>, <i>E-LIS</i>, <i>Librarians Digital Library (LDL)</i>, <i>OCLC Research Publications Repository</i>, <i>University of North Carolina-Chapel Hill, School of Information and Library Science Electronic Theses &amp; Dissertations</i>, and the <i>WWW Conference Archive</i>.  <a href="12coleman.html#Table1">Table 1</a> provides a quick overview of the type of repository, the software used, the coverage in terms of years and language, alerting service availability, and repository size.  The policies of most of the archives with regard to metadata, collection, storage formats, preservation, user privacy, audience, services, and coverage in terms of language, types, subject, etc. are not readily discernible, which provides an area for collaboration, cooperation, and coordination as OAI data providers proliferate. The subject schemes used are diverse, and <a href="12coleman.html#Table2">Table 2</a> summarizes the major types of self-developed subject schemes in the 13 archives.   
+</p>
+
+<p align="center">
+<b><a name="Table1">Table</a> 1: Characteristics of <i>DL-Harvest</i>  Archives</b> 
+</p>
+
+<table border="1" width="90%" cellspacing="0" cellpadding="6" align="center">
+	<tr>
+		<td align="center" valign="top"><i><b>Name of Archive (and type of repository, subject focus)</b></i></td>
+		<td align="center" valign="top"><i><b>Software Used</b></i></td>
+		<td align="center" colspan="3" valign="top"><i><b>Coverage &amp; Services</b></i></td>
+		<td align="center" valign="top"><i><b>Total Number of items</b></i></td>
+		<td align="center" valign="top"><i><b>Number of Full-Texts/Items in English in Multi-lingual Repositories**</b></i></td>
+	</tr>
+	<tr>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td><b>Language</b></td>
+		<td><b>Dates</b></td>
+		<td><b>Alerts</b></td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+	</tr>
+	<tr>
+		<td valign="middle"><i>&#064;rchiveSIC</i><br>(Cross-institutional, inter-disciplinary)</td>
+		<td valign="middle">Eprints</td>
+		<td valign="middle">French, English</td>
+		<td valign="middle">1993 - </td>
+		<td valign="middle" align="center">Yes</td>
+		<td valign="middle" align="center">627</td>
+		<td valign="middle" align="center">35</td>
+	</tr>
+	<tr>
+		<td valign="middle"><i>AxXiv</i><br>(Computing only, Cross-institutional, disciplinary, physics)</td>
+		<td valign="middle">Prop.</td>
+		<td valign="middle">English</td>
+		<td valign="middle">1993 - </td>
+		<td valign="middle" align="center">Yes</td>
+		<td valign="middle" align="center">6158</td>
+		<td valign="middle" align="center">-</td>
+	</tr>
+	<tr>
+		<td valign="middle"><i>ALIA</i><br>(Cross-institutional, disciplinary)</td>
+		<td valign="middle">Eprints</td>
+		<td valign="middle">English</td>
+		<td valign="middle">2000 - </td>
+		<td valign="middle" align="center">No</td>
+		<td valign="middle" align="center">22</td>
+		<td valign="middle" align="center">-</td>
+	</tr>
+	<tr>
+		<td valign="middle" nowrap><i>CalTech</i><br>(Institutional, academic unit is the library)</td>
+		<td valign="middle">Eprints</td>
+		<td valign="middle">English</td>
+		<td valign="middle">1999 - </td>
+		<td valign="middle" align="center">No</td>
+		<td valign="middle" align="center">35</td>
+		<td valign="middle" align="center">-</td>
+	</tr>
+	<tr>
+		<td valign="middle"><i>D-Lib Magazine</i><br>(Open access journal)</td>
+		<td valign="middle">Prop.</td>
+		<td valign="middle">English</td>
+		<td valign="middle">1995 - </td>
+		<td valign="middle" align="center">Yes</td>
+		<td valign="middle" align="center">319</td>
+		<td valign="middle" align="center">-</td>
+	</tr>
+	<tr>
+		<td valign="middle"><i>DLIST</i><br>(Cross-institutional, inter-disciplinary information sciences)</td>
+		<td valign="middle">Eprints</td>
+		<td valign="middle">English</td>
+		<td valign="middle">1987 - </td>
+		<td valign="middle" align="center">Yes</td>
+		<td valign="middle" align="center">499</td>
+		<td valign="middle" align="center">-</td>
+	</tr>
+	<tr>
+		<td valign="middle"><i>E-LIS</i><br>(Cross-institutional, disciplinary, LIS)</td>
+		<td valign="middle">Eprints</td>
+		<td valign="middle">Spanish, French, Italian, Portuguese</td>
+		<td valign="middle">1965 - </td>
+		<td valign="middle" align="center">Yes</td>
+		<td valign="middle" align="center">2949</td>
+		<td valign="middle" align="center">781</td>
+	</tr>
+	<tr>
+		<td valign="middle"><i>ERPAePRINTS</i><br>(Project-based, cross-institutional, digital preservation)</td>
+		<td valign="middle">Eprints</td>
+		<td valign="middle">English, Italian, etc.</td>
+		<td valign="middle">1995 - </td>
+		<td valign="middle" align="center">No</td>
+		<td valign="middle" align="center">48</td>
+		<td valign="middle" align="center">47</td>
+	</tr>
+	<tr>
+		<td valign="middle"><i>LDL</i><br>(Institutional, academic unit is LIS)</td>
+		<td valign="middle">DSpace</td>
+		<td valign="middle">English</td>
+		<td valign="middle">1999 - </td>
+		<td valign="middle" align="center">Yes</td>
+		<td valign="middle" align="center">188</td>
+		<td valign="middle" align="center">-</td>
+	</tr>
+	<tr>
+		<td valign="middle"><i>OCLC</i><br>(Institutional unit is the research dept.)</td>
+		<td valign="middle">Eprints</td>
+		<td valign="middle">English</td>
+		<td valign="middle">1979 - </td>
+		<td valign="middle" align="center">No</td>
+		<td valign="middle" align="center">349</td>
+		<td valign="middle" align="center">-</td>
+	</tr>
+	<tr>
+		<td valign="middle"><i>OpenMed</i><br>(Cross-institutional, disciplinary, medical sciences)</td>
+		<td valign="middle">Eprints</td>
+		<td valign="middle">English</td>
+		<td valign="middle">1952 - </td>
+		<td valign="middle" align="center">No</td>
+		<td valign="middle" align="center">749</td>
+		<td valign="middle" align="center">-</td>
+	</tr>
+	<tr>
+		<td valign="middle"><i>UNC-SILS ETD</i><br>(Institutional, academic unit is LIS)</td>
+		<td valign="middle">DSpace</td>
+		<td valign="middle">English</td>
+		<td valign="middle">2004 - </td>
+		<td valign="middle" align="center">No</td>
+		<td valign="middle" align="center">368</td>
+		<td valign="middle" align="center">-</td>
+	</tr>
+	<tr>
+		<td valign="middle"><i>WWW Conference Archive</i><br>(Conference papers from a single conference)</td>
+		<td valign="middle">Eprints</td>
+		<td valign="middle">English</td>
+		<td valign="middle">2001 - </td>
+		<td valign="middle" align="center">No</td>
+		<td valign="middle" align="center">504</td>
+		<td valign="middle" align="center">-</td>
+	</tr>
+</table>
+<p align="center">
+<b>**These numbers are based on <i>DL-Harvest</i> as of 1 November 2005.</b>
+</p>
+
+
+<p>&nbsp;</p>
+<p align="center">
+<b><a name="Table2">Table</a> 2. Archives and their subject schemes</b>
+</p>
+
+<table border="1" cellspacing="0" cellpadding="8" align="center">
+	<tr>
+		<td><i><b>Type of Subject Schemes</b></i></td>
+		<td><i><b>Name of Archive</b></i></td>
+	</tr>
+	<tr>
+		<td>Flat list (number of subjects vary from 22 to 60)</td>
+		<td><i>&#064;rchiveSIC, ALIA, dLIST</i></td>
+	</tr>
+	<tr>
+		<td>Hierarchical scheme (two tier)</td>
+		<td><i>AxXiv, CalTech, E-LIS, ERPAePRINTS, OpenMed, WWW</i></td>
+	</tr>
+	<tr>
+		<td>Communities and Collections</td>
+		<td><i>LDL, UNC-SILS ETD</i></td>
+	</tr>
+</table>
+
+
+
+
+
+
+
+<h3>Searching and Other Services in <i><i>DL-Harvest</i></i></h3>
+
+<p>
+There are two search options in <i><i>DL-Harvest</i></i>: 
+</p>
+ 
+
+<ol type="1" start="1">
+	<li>A Quick Search across all archives in all or specific fields such as Author, Title, and Abstract.   </li>
+	<li class="spacetop">An Advanced Search, which allows several fielded searching by Archive, Author, Subject, Date ranges,  or Language.  </li>
+</ol>
+
+
+<p>
+The search is a full-text search on the metadata in the database<sup><a href="12coleman.html#9">9</a></sup> and matches other non-text fields on a one-to-one basis. <i>DL-Harvest</i> is using the <i>PKP</i> search software, but <i>PKP</i>-out-of-the-box was not only simple, some search functions did not work.  We upgraded our MySQL to use a newer version 4.1.x, added SQL query optimizations (some MySQL4 specific) to our search interface, and modified the <i>PKP</i> search software by completely rewriting the code for the Advanced Search.  Our modifications improve the search services and allow for greater performance when the number of archives increases. At a low number of archives, say &lt;50,000, these optimizations don't affect the user's perception of the  search. 
+</p>
+
+<p>
+<a href="12coleman.html#Liu">Liu et al</a>. (2001) note, "The effort of maintaining a quality federation service is highly dependent on the quality of the data providers."  They mention four problems:  
+</p>
+
+
+<ol type="1" start="1">
+	<li>Data provider and metadata quality. Not all data providers follow the OAI-PMH protocol and thus some provide accurate metadata, but there are others who don't provide any metadata or incomplete metadata. </li>
+
+	<li class="spacetop">Update frequency, push model, and security. Too many harvests might burden the data provider while too few means the service provider's data may be stale. </li>
+
+	<li class="spacetop">Availability of data providers. </li>
+
+	<li class="spacetop">The need for controlled vocabularies for cross-archive subject searches.  </li>
+</ol>
+
+<p>
+We note a fifth problem: the way sets are described may be a limitation of the OAI-PMH protocol for setting up subject services and <a href="12coleman.html#Tennant">Tennant</a> (n.d) has also documented these and others. 
+</p>
+
+<p>
+Sets are defined by the OAI archive or data provider not by the harvester software of the service provider. This limits the selection that harvesters have when harvesting. (One advantage to this, or any other OAI defined filter, is that the data transfer and harvester processing time are reduced, because the archive does not return unwanted data.). One way to get around this problem is for the harvester to implement its own filters. Basically, the harvester could implement search criteria (after harvesting) and filter out metadata that either match or don't match  specified criteria. A simple example would be to filter out metadata that doesn't match a certain subject. Similarly, if one didn't want metadata created/modified before January 1, 1990, a filter could simply look at the date field in the metadata and ignore metadata before 1990. The drawback (but possibly also an advantage) with this approach is that each harvester could implement the filtering in its own way, instead of combining all efforts into improving it in the OAI protocol.  We have experimented with sets for one archive &#150; namely, the well-known <i>arXiv</i> for not only physics but also computer science and including the digital libraries and information retrieval communities.  <i>DL-Harvest</i> only harvests the Computer Science set from this archive, making available approximately 6,158 metadata records for searching.  We hope to refine harvesting of <i>arXiv</i> even further and harvest only specific subjects such as Digital Libraries, Human-Computer Interaction, and Information Retrieval.  For now, the <i>DL-Harvest</i> Advanced Search subject filter limits for these subjects at time of searching.   
+</p>
+
+Using examples from <i>DL-Harvest</i> searches, limitations of data provided, and new subject services that are needed for globally inclusive scholarly communication networks, are described in terms of language, dates, subjects, authors, and resource types.  
+
+<h4>Language</h4>
+
+<i>DL-Harvest</i> indexes three archives that allow materials in languages other than English:  <i>&#064;rchiveSIC</i>, <i>E-LIS</i>, and <i>ERPAePRINTS</i>.  8,978 of the 12,815 items now in <i>DL-Harvest</i> are in English; this means that about 4,000 materials are in other languages.  In <i>DL-Harvest</i>, these other language materials can be retrieved using Advanced Search and limiting by language for All Archives or in individual archives.   Example: In Advanced Search, selecting <i>&#064;rchiveSIC</i>, and entering the code "en" in the Language field, and leaving all other fields empty will retrieve 35 records (all in English) out of the total of 626.  A similar search in <i>E-LIS</i> retrieves 781 English language works from the total of 2,949.  Data providers can improve their search capabilities by offering language filters, but neither <i>&#064;rchiveSIC</i> nor <i>E-LIS</i> currently offer them.  This is another reason for scholars-as-readers to use a subject-based service like <i>DL-Harvest</i>.  A service for either <i>DL-Harvest</i> or the individual data providers to explore is the provision of English versions of summaries and references, at the very least, if not the full-text of the entire document itself.  Translations improve accessibility to open access materials in other languages.   
+
+<h4>Dates</h4>
+
+<p>
+The <i>DL-Harvest</i> metadata record date for the title, "Activity-based classification of university actors for the construction of a domain-oriented data warehouse" from <i>&#064;rchiveSIC</i> displays as 2006-07-27<sup><a href="12coleman.html#10">10</a></sup>.  Currently, it is unclear  from the record display whether this is date of publication or something else, though further investigation shows that this is the publication date.  The metadata record display needs improvement, but it is not always clear that all data providers are using the date field consistently.   Another scenario can be seen in the metadata from <i>D-Lib Magazine</i> and <i>OCLC Research Publications Repository</i>.  Dates for all titles in these archives display as December 31, 1969<sup><a href="12coleman.html#11">11</a></sup> because the archive (data provider) returns a NULL date for these two sources, and hence this field defaults to the lowest date allowed in the MySQL datetime field, 12.31.1969. This is another type of data that needs to be cleaned.  
+</p>
+
+
+<h4>Subject, Discipline, Topic</h4>
+
+<p>
+Each archive uses a different scheme for subjects.  Also, 10 of the 13 archives (exceptions are <i>dLIST</i>, <i>LDL</i>, and <i>WWW Conference Archive</i>) use subject and discipline metadata.  Sometimes other fields with subject metadata are also present: Keywords and Approach.  Finally, the subject fields are not used consistently in the archives.  For example, in <i>arXiv</i> the phrase "digital libraries" is both a subject and a discipline<sup><a href="12coleman.html#12">12</a></sup>.  The lack of a shared controlled vocabulary across repositories means that service providers and data providers need to collaborate.  More experimentation is needed with regard to automatic and human-mediated metadata generation and enhancement, and full-text indexing in these contexts.
+</p>
+
+
+<h4>Names</h4>
+
+<p>
+A Quick Search for "Marchionini" in All, retrieves 27 records; picking the name up in both the author and contributor metadata fields. A Quick Search of "Marchionini" as an Author search retrieves only two records.   As the archives grow, distinguishing between author roles, name searching and disambiguation will become important.   Names can also be included as part of an alerting service to notify users of additions; for example, we are currently experimenting with RSS feeds by subject for <i>DL-Harvest</i> and <i>dLIST</i><sup><a href="12coleman.html#13">13</a></sup>. Users can use web browsers, such as Mozilla Firefox and Apple Safari, standalone RSS feed readers or those embedded in mail clients like Thunderbird, and become notified of new materials submitted to <i>dLIST</i> by reading the feeds that include links to the original item.    Currently, the <i>dLIST</i> RSS feed notifies users of all additions; there's no facility for receiving only RSS feeds when materials in selected subjects of interest are added or specific scholars deposit.   Similarly, RSS-enabled feeds for <i>DL-Harvest</i> by subject, author names, and user-specified searches are added-value services.
+</p>
+
+<h4>Types</h4>
+
+<p>
+Most LIS data currently tends to be text based formats (HTML, PDF).  However, datasets (spreadsheet data) and other types of data and information objects such as multimedia files are finding their way into the archives improving the scope for the development of services based on resource types besides traditional bibliographic management (reference lists) and alerts, such as re-use, storage and preservation, search services for multimedia, and annotation/commentary. Adding communication tools to facilitate discussions of deposits, processing tools to manipulate specific types of resources self-archived, visualization and certification (online peer review processes for improving quality, increasing trust and reducing information overload) are value-added services. These have great potential for changing scholarly communication and enabling new forms of scholarship.    
+</p>
+
+<p align="center"><img src="Fig1dlharvest-archives-rev.jpg" width="600" height="637" alt="Screenshot of DL-Harvest" class="border"><br><br>
+<b>Figure 1:  <i>DL-Harvest</i> and the list of 13 archives currently being harvested.</b>
+</p>
+<p>&nbsp;</p>
+<hr width="80%" noshade size="1">
+<p>&nbsp;</p>
+<p align="center"><img src="Fig2dlharvest-search-shadow-rev.jpg" width="600" height="476" alt="Screen shot from DL-Harvest Advanced Search" class="border"><br><br>
+<b>Figure 2:  Simple search screen in <i>DL-Harvest</i>; there is also an Advanced Search option as the spotlight shows.</b> 
+</p>
+<p>&nbsp;</p>
+<hr width="80%" noshade size="1">
+<p>&nbsp;</p>
+<p align="center"><img src="Fig3dlharvest-advancedsearch-rev.jpg" width="600" height="637" alt="Screenshot of the Advanced Search screen displaying all fields" class="border"><br><br>
+<b>Figure 3:  Advanced Search Screen - showing all fields - in <i>DL-Harvest</i>.</b>  
+</p>
+
+<h3>The Practice of Self-Archiving in LIS</h3>
+
+<p>
+As we continue to develop <i>dLIST</i> as a cross-institutional repository for self-archiving and <i>DL-Harvest</i>, as a subject service, the practices of the communities we serve are also of great interest. Two studies, the <i>dLIST</i> Copyright Transfer Agreements (CTAs) analysis and the <i>dLIST</i> Scholarly Communication survey were undertaken in order to understand LIS publishers' stances as expressed in journal copyrights and the behaviors of LIS scholars as authors and readers.  
+</p>
+
+<p>
+What are the self-archiving policies reflected in the CTAs of LIS journals?  <a href="12coleman.html#Harnad-2005">Harnad</a> (2005) has persuasively argued against analyzing journal copyright policies in great detail. However, for LIS, the copyright barrier faced by authors must be examined in detail because our field is not just limited to scholarship in a particular subject; many are devoted to research about scholarly communication itself and being informed about the nuances of self-archiving is important for the subsequent health of the discipline.  The self-archiving definition is not quite as cut and dried as we think and this has implications for building research communities and improving individual and field impact through economies of scale.  <a href="12coleman.html#Swan">Swan's study</a> (2005) for example included definitions that ranged from the deposit of only scholarly works on a personal website to deposit in 
+OAI-compliant archives.   
+</p>
+
+<p>
+We defined self-archiving quite rigorously as the "practice of depositing digital copies of papers or other scholarly works in an OAI-compliant repository."  The RoMEO/SHERPA classification of publishers by color based on their support of self-archiving (<a href="12coleman.html#Gadd">Gadd et al.</a>, 2003) was modified in our data analysis to reflect both which version of a paper could be self-archived and where it could be self-archived.   A <i>dLIST CTA directory</i> showing the CTA location and interpreting the self-archiving stance is available for testing<sup><a href="12coleman.html#14">14</a></sup>.  Figures 4-5 are sample entries from the directory for two journals:  <i>Information Research</i> and <i>Information Systems Journal</i>, and a brief summary of what we found follows: 
+</p>
+
+<ol type="1" start="1">
+	<li>Of the 52 English-language, Thomson-Scientific ranked journals (Social Science Citation Index, Information Science, Library Science category), only two are open access journals: <i>Journal of the Medical Library Association</i> and <i>Information Research</i>.</li>
+
+	<li class="spacetop">Even journals that allow self-archiving of postprints (see the case of the entry shown in <a href="12coleman.html#fig5">Figure 5</a>) can be ambiguous or contradictory, leading the poor author to give up on the notion of depositing anything other than a preprint anywhere other than his website!</li>
+
+	<li class="spacetop">To add to the complexity, publishers use different names for the CTA: Author or Publisher Agreement, Copyright Agreement, Journal Article Record (Emerald), Transfer of Copyright Agreement (Elsevier, Taylor &amp; Francis), License (ALA).  More importantly, it became impossible to limit the analysis to the CTAs since many of them reference other documents.  For example, <i>Journal of Documentation</i> references the Author's Charter.  Again, <a href="12coleman.html#fig5">Figure 5</a> shows the presence of a separate self-archiving page.</li>
+
+	<li class="spacetop">Many LIS journals do not have a CTA available on the Web. </li>
+
+	<li class="spacetop">CTA analysis is a moving target; many journals changed policies even as we were carrying out the study, making data reported as recently as August 2005 no longer valid a few months later; for example, in November <i>College &amp; Research Libraries</i> became an open access journal with a 6-month embargo period and permits the immediate self-archiving of preprints and postprints.</li>
+</ol>
+
+<table border="0" width="90%"cellspacing="3" cellpadding="3" align="center">
+	<tr>
+		<td valign="top" colspan="2"><b>Figure 4: Sample entry for an  ISI-ranked open access journal</b></td>
+	</tr>
+	<tr>
+		<td valign="top">Journal URL:</td>
+		<td valign="bottom"><a href="http://informationr.net/ir/">http://informationr.net/ir/</a></td>
+	</tr>
+	<tr>
+		<td valign="top">Subject:</td>
+		<td valign="bottom">Library and Information Science</td>
+	</tr>
+	<tr>
+		<td valign="top">Type:</td>
+		<td valign="bottom">In ISI JCR, in ISI-SSCI, In DOAJ</td>
+	</tr>
+	<tr>
+		<td valign="top">Publisher:</td>
+		<td nowrap valign="bottom">Lund University Libraries and University of Sheffield, Dept. of Information Studies</td>
+	</tr>
+	<tr>
+		<td valign="top" nowrap>Publisher URL:</td>
+		<td valign="bottom"><a href="http://www.lub.lu.se/new_top/omlub/bd_eng.html">http://www.lub.lu.se/new_top/omlub/bd_eng.html</a></td>
+	</tr>
+	<tr>
+		<td valign="top">CTA URL:</td>
+		<td valign="bottom"><a href="http://creativecommons.org/licenses/by-nd-nc/1.0/">http://creativecommons.org/licenses/by-nd-nc/1.0/</a></td>
+	</tr>
+	<tr>
+		<td valign="top">Date:</td>
+		<td valign="bottom">02/25/2005</td>
+	</tr>
+	<tr>
+		<td valign="top">Last Update:</td>
+		<td valign="bottom">11/09/2005</td>
+	</tr>
+	<tr>
+		<td valign="top">Special Notes:</td>
+		<td valign="bottom">"You are free: to copy, distribute, display, and perform the work Under the following conditions: Attribution. You must attribute the work in the manner specified by the author or licensor. No Derivative Works. You may not alter, transform, or build upon this work. Noncommercial. You may not use this work for commercial purposes. For any reuse or distribution, you must make clear to others the license terms of this work. Any of these conditions can be waived if you get permission from the copyright holder. Your fair use and other rights are in no way affected by the above." </td>
+	</tr>
+	<tr>
+		<td valign="top" nowrap>Self-Archiving<br>Status:</td>
+		<td valign="bottom">Author can archive in open access archives. Author can archive pre-print and post-print</td>
+	</tr>
+	<tr>
+		<td valign="top" nowrap>Notes:</td>
+		<td valign="bottom">Authors retain copyright. A Creative Commons License (attribution, no derivatives, non-commercial, share-alike) is used.</td>
+	</tr>		
+</table>
+
+<p>&nbsp;</p>
+
+<table border="0" width="90%" cellspacing="3" cellpadding="3" align="center">
+	<tr>
+		<td valign="top" colspan="2"><b>Figure 5: <a name="fig5">Sample</a> entry for a journal that allows self-archiving of pre and post prints in open access archives; see contradiction in Notes.</b></td>
+	</tr>
+	<tr>
+		<td valign="top">Journal Name:</td>
+		<td valign="bottom">Information Systems Journal</td>
+	</tr>
+	<tr>
+		<td valign="top">Journal URL:</td>
+		<td valign="bottom"><a href="http://disc.brunel.ac.uk/isj/">http://disc.brunel.ac.uk/isj/</a></td>
+	</tr>
+	<tr>
+		<td valign="top">Subject:</td>
+		<td valign="bottom">Library and Information Science</td>
+	</tr>
+	<tr>
+		<td valign="top">Type:</td>
+		<td valign="bottom">In ISI JCR, in ISI-SSCI</td>
+	</tr>
+	<tr>
+		<td valign="top">Publisher:</td>
+		<td nowrap valign="bottom">Blackwell Publishing</td>
+	</tr>
+	<tr>
+		<td valign="top" nowrap>Publisher URL:</td>
+		<td valign="bottom"><a href="http://www.blackwellpublishing.com/">http://www.blackwellpublishing.com/</a></td>
+	</tr>
+	<tr>
+		<td valign="top">CTA URL:</td>
+		<td valign="bottom"><a href="http://www.blackwellpublishing.com/pdf/isj_caf.pdf">http://www.blackwellpublishing.com/pdf/isj_caf.pdf</a></td>
+	</tr>
+	<tr>
+		<td valign="top">Date:</td>
+		<td valign="bottom">02/25/2005</td>
+	</tr>
+	<tr>
+		<td valign="top">Last Update:</td>
+		<td valign="bottom">11/09/2005</td>
+	</tr>
+	<tr>
+		<td valign="top">Special Notes:</td>
+		<td valign="bottom">"In addition to the rights stated above the author shall retain the following rights: The right, after publication by Blackwell Publishing, to use all or part of the Article and abstract, without revision or modification, in personal compilations or other publications of the author's own works, and to make copies of all or part of such materials for the author's use for lecture or classroom . . . (b) Prior to publication, the author may share with colleagues print or electronic 'preprints' of the unpublished Article, in form and content as accepted by Blackwell Publishing for publication in the Journal. Such preprints may be posted as electronic files on the author's own website for personal or professional use, or on the author's internal university, college or corporate networks/intranet, or secure external website at the author's institution, but not for commercial sale or for any systematic external distribution by a third party (e.g. a listserve or database connected to a public access server). Prior to publication, the author must include the following notice on the preprint. . . . The preprint can be replaced with the published version of the Article. Posting of the published Article on any other electronic public server can only be done with written permission from Blackwell Publishing."</td>
+	</tr>
+	<tr>
+		<td valign="top" nowrap>Self-Archiving<br>Status:</td>
+		<td valign="bottom">Ambiguous classification. Author can archive in open access archives. Author can archive pre-print and post-print</td>
+	</tr>
+	<tr>
+		<td valign="top" nowrap>Notes:</td>
+		<td valign="bottom">Blackwell has a separate self-archiving page on its website which contradicts condition (b) above - http://www.blackwellpublishing.com/static/selfarchive.asp. According to it, 1) Authors are allowed to self-archive preprints and postprints in OAA but 2) postprints may have an embargo period depending on journal.  The CTA for ISJ mentions no embargo period.</td>
+	</tr>		
+</table>
+
+
+
+<p>
+Our analysis of the ISI-ranked LIS journals shows that irrespective of the type of publisher (learned societies, university presses, or commercial), many do not make their self-archiving stance unambiguously visible. <i>Annual Review of Information Science and Technology</i>, <i>Canadian Journal of Library and Information Science</i>, <i>Libraries &amp; Culture</i>, and <i>Library Quarterly</i>, are only a few of the professional society and university press journals that make no statement endorsing self-archiving, nor is a CTA publicly available for any of them. <i>Journal of the American Society for Information Science &amp; Technology</i> (published by Wiley for ASIS&amp;T) prohibits "systematic external distribution" but what exactly this means is called into question by the CTAs of other publishers.  On the other hand, commercially produced journals like <i>Journal of Documentation</i> (Emerald Publishing Group), <i>Information Systems Journal</i> (Blackwell), and <i>Serials Review</i> (Elsevier) appear to announce their self-archiving policies publicly &#150; albeit ambiguously. Elsevier journals still don't make their CTA publicly available but Elsevier has a Copyright Policy document web document; Blackwell's <i>Information Systems Journal</i>, as we saw in Figure 5, has contradictory elements. Journals published by Emerald appear to prohibit self-archiving in open access archives at first glance of the CTA, but a reading of related documents like Emerald's Author's Charter reveals that self-archiving is permitted. Leadership from major professional associations in the US and Canada, such as the American Library Association, American Society for Information Science &amp; Technology and Canadian Association for Information Science, has been slow. The Medical Library Association, on the other hand, signaled early and clearly; their journal went open in 2001/2002, and all back issues are openly available from 1911 onwards. <i>The majority of LIS journals, we speculate, are not averse to self-archiving although LIS scholars, in general, don't appear to be aware of this</i>, and how much LIS scholars-as-authors can self-archive in an OAI-compliant archive is still not crystal clear. Whether all LIS scholars hold the same definition of self-archiving as we do, how much they self-archive, and their strategies for locating content in open archives are questions the 2005 dLIST survey on self-archiving and scholarly communication in LIS sought to understand.
+</p>
+
+<p>
+The online survey of the scholarly communication behaviors of LIS scholars focused on self-archiving, and the instrument was adapted from <a href="12coleman.html#Swan">Swan and Brown</a> (2005).  The complete instrument, showing all the questions in the survey, has been self-archived in <i>dLIST</i> (<a href="12coleman.html#Coleman-2005">Coleman</a>, 2005), and we report only a few relevant, preliminary findings here.  
+</p>
+
+<p>
+Two hundred forty-four usable responses were received.  Ninety-nine of the 244 respondents were faculty in LIS schools.  One hundred thirty-one defined self-archiving, but only 3 (n=131) corroborated ours by mentioning deposit in an OAI-compliant archive as their definition of self-archiving.  While 55.1% (70 of n=127) said they self-archive, only 17 (n=72) admitted they self-archive in <i>dLIST</i>.  Where do the rest self-archive? The majority, 27 (n=40), deposit their papers on their personal website, shared-network drive, or laptop, 9 self-archive in institutional repositories, 3 self-archive in <i>E-LIS</i>, and 1 self-archives in Social Science Research Network.  Twenty-four (n=55) were unaware of the possibility of providing open access through self-archiving. Reasons for not self-archiving ranged from lack of time, lack of acceptance ("most of the scholars cite paid articles from paid journals only"), lack of institutional support, and lack of integration with workflow tools like "Google", as well as concerns about copyright and peer review.  A few candidly admitted, "don't know how." Another wrote: "I feel guilty not using <i>dLIST</i>. Find a way to make it easier and I'll participate." Many revealed understanding and support of <i>dLIST</i> goals to connect LIS research, education and practice communities through a disciplinary service for all types of scholarly work:  "I like how any type of work can be archived...journal articles, teaching materials..."; "mention D-LIST as a self-archiving option, esp. for those with no institutional repository, very frequently."  
+</p>
+
+<p>
+Eleven respondents use <i>DL-Harvest</i> to search for content in open access archives (n=106) and, not surprisingly, the majority, 84, used <i>Google Scholar</i>.  Finally, respondents had more questions than answers, as this quote from a single participant shows: "How can I do it? What is it? Where can I get it done? Will I have versioning control? Do I lose control of the article after I post it? How do I update as information changes? How do people who are using the archive know that something has been updated on an article they have read in the past? How can I create connections between my articles, or between my articles and other people's articles? What kind of visualizations and search interfaces are used to get people to my articles? How are they abstracted? Can I write my own <i>dLIST</i> specific abstract for display/browsing purposes? Who uses <i>dLIST</i>? Why would anyone bother? Am I wasting my time by putting my article there? How integrated with other services is <i>dLIST</i>? Is it indexed by Google and other search engines? If not, why not? Are there other ways I can access articles in <i>dLIST</i> without disrupting my workflow by going to <i>dLIST</i>'s webpage or whatever interface exists? How does it work? How is an article's relevancy to a particular search evaluated? How are search results returned?"    
+</p>
+
+<h3>Conclusion</h3>
+
+<p>
+Clearly there is a great deal of work to be done &#150; more educational or advocacy than technical &#150; if federated OAI-compliant archives and services are to achieve the economies of scale that OCLC did for cataloging, or that stimulate the sort of innovations that ISI citation indexes enabled.  Despite comments such as "<i>dLIST</i> is a wonderful espace" and "<i>DL-Harvest</i> is a much needed subject service", the low rate of actual self-archiving raises the question of the value of <i>dLIST</i> and <i>DL-Harvest</i>. How much access to the closed literature are they providing, and what new forms of scholarship or innovation are they facilitating?.  
+</p>
+
+<p>
+Besides sparking innovation and economies of scale subject aggregation and subsequent federation has the potential to bridge islands of disparities &#150; in this case, the many research communities and their collections that can be gathered under an LIS umbrella. But how close to this are we? The preceding discussion has implicitly assumed that data and service providers have niche roles; data providers offer self-archiving in an OAI-compliant repository. They build communities and may experiment to offer simpler deposit and metadata interfaces, as well as facilitate bulk-imports to make self-archiving easier for users. Far-sighted data providers may also link to services such as <i>DL-Harvest</i> and improve their individual institutional repository visibility and accessibility. Translations, current awareness alerts, certification (peer review, trust), and reports of usage (downloading) and impact (citing services) may contribute to shared developments with service providers. Service providers may build yet more federated and customized services. However, this might not happen. Uncoordinated institutional repositories in LIS may inhibit collaborative development and scholarly use of non-commercial OA subject services; roles may become blurred. Scholars and professional associations in LIS should think strategically about the development of repositories and subject federated services, because doing so may also improve public perceptions and funding for the field (<a href="12coleman.html#Armbruster">Armbruster</a>, 2005).
+
+</p>
+
+
+<h3>Acknowledgements</h3>
+
+<p>
+Thanks to Richard Hill and Carol Tenopir for insightful comments on an early draft. Thanks, also, to everyone who completed the <i>dLIST</i> 2005 survey and especially those who self-archive in OAI repositories.  Attempts to build the LIS intellectual commons will be successful because of pioneers and innovators like you.  Funding for <i>dLIST</i> is from the University of Arizona (Tucson), Prop 301 initiative.
+</p>
+
+<h3>Notes</h3>
+
+<p>
+<a name="1">1</a> Other novel uses of OAI-PMH are described by <a href="12coleman.html#VandeSompel-Hickey">Van de Sompel, Young and Hickey</a> (2003).
+</p>
+
+<p>
+<a name="2">2</a> One of the Thomson-ISI ranked journals (<a href="http://scientific.thomson.com/">http://scientific.thomson.com/</a>, <i>Journal of the Medical Library Association</i>, became open access in 2001/2002 (<a href="12coleman.html#Plutchak">Plutchak</a>, 2005).  Back issues, 1911 on, are openly available through PubMed.
+</p>
+
+<p>
+<a name="3">3</a> This does not mean that all the different materials must be in the collection or even use the same repository software; we envisioned working with communities on an as-needed basis.
+</p>
+
+<p>
+<a name="4">4</a> As <a href="12coleman.html#Kellog">Kellog</a> (2004) notes, the LAMP (Linux, Apache, MySQL, PHP) is the chosen platform for some of the largest web services: Amazon, Paypal, Slashdot, and Google.
+</p>
+
+<p>
+<a name="5">5</a> &lt;<a href="http://www.openarchives.org/OAI/openarchivesprotocol.html#FlowControl">http://www.openarchives.org/OAI/openarchivesprotocol.html#FlowControl</a>&gt;
+</p>
+
+<p>
+<a name="6">6</a> &lt;<a href="http://www.openarchives.org/OAI/openarchivesprotocol.html#ListSets">http://www.openarchives.org/OAI/openarchivesprotocol.html#ListSets</a>&gt;
+</p>
+
+<p>
+<a name="7">7</a> &lt;<a href="http://dlist.sir.arizona.edu/downloads.html">http://dlist.sir.arizona.edu/downloads.html</a>&gt;
+</p>
+
+<p>
+<a name="8">8</a> DAEDALUS, a scholarly communication project at the University of Glasgow Library, &lt;<a href="http://www.lib.gla.ac.uk/daedalus/">http://www.lib.gla.ac.uk/daedalus/</a>&gt; and Collib, a Master's LIS project in Norway, &lt;<a href="http://collib.info/">http://collib.info/</a>&gt;.
+</p>
+
+<p>
+<a name="9">9</a> &lt;<a href="http://dev.mysql.com/doc/internals/en/full-text-search.html">http://dev.mysql.com/doc/internals/en/full-text-search.html</a>&gt;
+</p>
+
+<p>
+<a name="10">10</a> URL: &lt;<a href="http://dlharvest.sir.arizona.edu/viewrecord.php?id=19732">http://dlharvest.sir.arizona.edu/viewrecord.php?id=19732</a>&gt;
+</p>
+
+<p>
+<a name="11">11</a> URL: &lt;<a href="http://dlharvest.sir.arizona.edu/archives.php?id=18">http://dlharvest.sir.arizona.edu/archives.php?id=18</a>&gt; and URL: &lt;<a href="http://dlharvest.sir.arizona.edu/archives.php?id=14">http://dlharvest.sir.arizona.edu/archives.php?id=14</a>&gt;
+</p>
+
+<p>
+<a name="12">12</a> URL: &lt;<a href="http://dlharvest.sir.arizona.edu/viewrecord.php?id=19102">http://dlharvest.sir.arizona.edu/viewrecord.php?id=19102</a>&gt; and  URL: &lt;<a href="http://dlharvest.sir.arizona.edu/viewrecord.php?id=18532">http://dlharvest.sir.arizona.edu/viewrecord.php?id=18532</a>&gt;.
+</p>
+
+<p>
+<a name="13">13</a>	Kristin Eschenfelder (University of Wisconsin at Madison) suggested the subject RSS  alerting service.
+</p>
+
+<p>
+<a name="14">14</a> &lt;<a href="http://dLIST.sir.arizona.edu/cta">http://dLIST.sir.arizona.edu/cta</a>&gt;
+</p>
+
+
+<h3>References</h3>
+
+<p>
+<a name="American">American</a> Scientist Open Access Forum.  (2003).  Discussion thread title:  Cliff Lynch on Institutional Archives. URL: &lt;<a href="http://www.ecs.soton.ac.uk/~harnad/Hypermail/Amsci/2744.html">http://www.ecs.soton.ac.uk/~harnad/Hypermail/Amsci/2744.html</a>&gt;. </p>
+
+<p><a name="Armbruster">Armbruster</a>, C.  (2005).  Open access in social and cultural science:  Innovative moves to enhance inclusion and impact in scholarly communication.  November 15.  URL:  &lt;<a href="http://ssrn.com/abstract=849305">http://ssrn.com/abstract=849305</a>&gt;.
+</p>
+
+<p>
+<a name="BOAI">BOAI</a>.  (2002).  Budapest Open Access Initiative.  URL:  &lt;<a href="http://www.soros.org/openaccess/">http://www.soros.org/openaccess/</a>&gt;.
+</p>
+
+<p>
+<a name="Brogan">Brogan</a>, Martha L.  (2003).  <i>A Survey of Digital Library Aggregation Services</i>.  Washington D.C.:  Digital Library Federation.  URL:  &lt;<a href="http://www.diglib.org/pubs/brogan/brogan2003.pdf">http://www.diglib.org/pubs/brogan/brogan2003.pdf</a>&gt;.
+</p>
+
+<p>
+<a name="Coleman-etal">Coleman</a>, A., Bracke, P., and Karthik, S. (2004). Integration of Non-OAI resources for federated searching in <i>dLIST</i>, an Eprints repository. <i>D-Lib Magazine</i>, 10 (7/8): July/August. &lt;<a href="http://dx.doi.org/10.1045/july2004-coleman">doi:10.1045/july2004-coleman</a>&gt;.  
+</p>
+
+<p>
+<a name="Coleman">Coleman</a>, A.  (2005).  <i>dLIST</i> 2005 Survey - Self-Archiving and Scholarly Communication Behaviors in LIS - Instrument.  URL:  &lt;<a href="http://dLIST.sir.arizona.edu/1000/">http://dLIST.sir.arizona.edu/1000/</a>&gt;.
+</p>
+
+<p>
+<a name="Crow">Crow</a>, Raym.  (2003).  The Case for Institutional Repositories:  A SPARC Position Paper.  URL:  &lt;<a href="http://www.arl.org/sparc/IR/ir.html">http://www.arl.org/sparc/IR/ir.html</a>&gt;.
+</p>
+
+<p>
+<a name="Eprints">Eprints</a>.  URL: &lt;<a href="http://eprints.org/">http://eprints.org/</a>&gt;.
+</p>
+
+<p>
+<a name="Gadd">Gadd</a>, Elizabeth, Oppenheim, C., and Probets, S.  (2003).  The Intellectual Property Rights Issues Facing Self-archiving:  Key Findings of the RoMEO Project. <i>D-Lib Magazine</i> 9(9).  &lt;<a href="http://dx.doi.org/10.1045/september2003-gadd">doi:10.1045/september2003-gadd</a>&gt;.
+</p>
+
+<p><a name="Google">Google</a>. URL: &lt;<a href="http://www.google.com/">http://www.google.com/</a>&gt;.</p>
+
+<p><a name="Google-Scholar">Google</a> Scholar. URL: &lt;<a href="http://scholar.google.com/">http://scholar.google.com/</a>&gt;.</p>
+
+<p>
+<a name="Guedon">Guedon</a>, J. C.  (2004).  The "Green" and "Gold" Roads to Open Access: The Case for Mixing and Matching.  <i>Serials Review</i> 30 (4):  315-328. 
+</p>
+
+<p><a name="Harnad-2005">Harnad</a>, Stevan (2005) Fast-Forward on the Green Road to Open Access: The Case Against Mixing Up Green and Gold. <i>Ariadne</i> 42. URL: &lt;<a href="http://eprints.ecs.soton.ac.uk/10675/">http://eprints.ecs.soton.ac.uk/10675/</a>&gt;.</p>
+
+<p>
+<a name="Harnad">Harnad</a>, Stevan. (2003) The Green and Gold Roads to Open Access.  URL:  &lt;<a href="http://www.ecs.soton.ac.uk/~harnad/Hypermail/Amsci/3148.html">http://www.ecs.soton.ac.uk/~harnad/Hypermail/Amsci/3148.html</a>&gt;.
+</p>
+
+<p><a name="Harnad-1995">Harnad</a>, Stevan (1995) A Subversive Proposal. In: Ann Okerson &amp; James O'Donnell (Eds.) Scholarly Journals at the Crossroads; A Subversive Proposal for Electronic Publishing. Washington, DC., Association of Research Libraries, June 1995. URL: &lt;<a href="http://www.arl.org/scomm/subversive/toc.html">http://www.arl.org/scomm/subversive/toc.html</a>&gt;.</p>
+
+<p>
+<a name="Hitchcock">Hitchcock</a>, S.  (2003).  Metalist of Open Access Archives: The Genesis of Institutional Archives and Independent Services.  <i>ARL Bimonthly Report 227</i>.  URL:  &lt;<a href="http://www.arl.org/newsltr/227/metalist.html">http://www.arl.org/newsltr/227/metalist.html</a>&gt;.
+</p>
+
+<p>
+<a name="Kellog">Kellog</a>, David.  (2004).  Open source OAI metadata harvesting tools.  URL:  &lt;<a href="http://www.diglib.org/aquifer/oct2504/harvesting.pdf">http://www.diglib.org/aquifer/oct2504/harvesting.pdf</a>&gt;.
+</p>
+
+<p>
+<a name="Krichel">Krichel</a>, Thomas. (1998).  Access to scientific literature on the WWW:  the RePEC concept.  URL:  &lt;<a href="http://openlib.org/home/krichel/osborne.html">http://openlib.org/home/krichel/osborne.html</a>&gt;.
+</p>
+
+<p>Liu, X, Maly, K, Zubair, M, and Nelson, M. 2001. <i>Arc</i> - An OAI Service
+Provider for Digital Library Federation. <i>D-Lib Magazine</i> 7 (4): April.
+<a href="http://dx.doi.org/10.1045/april2001-liu">doi:10.1045/april2001-liu</a>&gt;.</p>
+
+<p>
+<a name="Lynch">Lynch</a>, Clifford.  (2003).  Institutional Repositories:  Essential infrastructure for scholarship in the digital age.  <i>ARL Bimonthly Report 226</i>:  February.  URL:  &lt;<a href="http://www.arl.org/newsltr/226/ir.html">http://www.arl.org/newsltr/226/ir.html</a>&gt;.
+</p>
+
+<p>
+<a name="MySQL">MySQL</a>. URL: &lt;<a href="http://dev.mysql.com/">http://dev.mysql.com/</a>&gt;.
+</p>
+
+<p>
+<a name="MySQL-Search">MySQL Search</a>. URL: &lt;<a href="http://dev.mysql.com/doc/internals/en/full-text-search.html">http://dev.mysql.com/doc/internals/en/full-text-search.html</a>&gt;.
+</p>
+
+<p>
+<a name="OAI">OAI</a>, 2005.  Registered data providers. URL: &lt;<a href="http://www.openarchives.org/Register/BrowseSites">http://www.openarchives.org/Register/BrowseSites</a>&gt;.
+</p>
+
+<p>
+<a name="OAIster">OAIster</a>, 2005.  OAIster Home.  URL: &lt;<a href="http://oaister.umdl.umich.edu/o/oaister/">http://oaister.umdl.umich.edu/o/oaister/</a>&gt;.
+</p>
+
+<p>
+<a name="Odlyzko">Odlyzko</a>, A.  (2002).  <i>The Rapid Evolution of Scholarly Communication</i>.  Learned Publishing (15):  7-19.
+</p>
+
+<p>
+<a name="PHP">PHP</a>.  URL: &lt;<a href="http://www.php.net/">http://www.php.net/</a>&gt;.
+</p>
+
+<p>
+<a name="Plutchak">Plutchak</a>, Scott.  (2005).  The Impact of Open Access.  <i>J Med Libr Assoc.</i> 2005 October; 93(4): 419Ð421. URL: &lt;<a href="http://www.pubmedcentral.nih.gov/articlerender.fcgi?artid=1250314">http://www.pubmedcentral.nih.gov/articlerender.fcgi?artid=1250314</a>&gt;.
+</p>
+
+<p>
+<a name="Public">Public</a> Knowledge Project Open Archives Metadata Harvester. (2005). URL: &lt;<a href="http://pkp.sfu.ca/harvester/">http://pkp.sfu.ca/harvester/</a>&gt;.
+</p>
+
+<p><a name="Suber">Suber</a>, Peter.  (2005).  Open Access Overview.  URL:  &lt;<a href="http://www.earlham.edu/~peters/fos/overview.htm">http://www.earlham.edu/~peters/fos/overview.htm</a>&gt;.</p>
+
+<p>
+<a name="Swan">Swan</a>, Alma, and Brown, S. (2005).   <i>Open access self-archiving:  an author study</i>.   Technical Report.  UK: JISC.  URL:  <a href="http://eprints.ecs.soton.ac.uk/10999/">http://eprints.ecs.soton.ac.uk/10999/</a>.
+</p>
+
+<p><a name="Tennant">Tennant</a>, Roy.  (n.d.).  Bitter Harvest:  Problems and Suggested Solutions for OAI-PMH Data and Service Providers.  URL:  &lt;<a href="http://www.cdlib.org/inside/projects/harvesting/bitter_harvest.html">http://www.cdlib.org/inside/projects/harvesting/bitter_harvest.html</a>&gt;.</p>
+
+<p>
+<a name="VandeSompel-Lagoze">Van de Sompel, Herbert and Lagoze, Carl</a>. (2002). Notes from the Interoperability Front: A Progress Report from the Open Archives Initiative.  ECDL 2002: 144-157.  (The submitted draft is also available at:  &lt;<a href="http://public.lanl.gov/herbertv/papers/ecdl-submitted-draft.pdf">http://public.lanl.gov/herbertv/papers/ecdl-submitted-draft.pdf</a>&gt;).
+</p>
+
+<p>
+<a name="VandeSompel-Hickey">Van de Sompel</a>, Herbert, Young, Jeff and Hickey, Thomas. (2003)  Using the OAI-PMH differently. D-Lib Magazine 9(7-8). &lt;<a href="http://dx.doi.org/10.1045/july2003-young">doi:10.1045/july2003-young</a>&gt;.
+</p>
+
+
+
+
+
+ <!-- Standard Copyright line here  -->
+<center><h6>Copyright &copy; 2005 
+Anita Coleman, and Joseph Roback</h6> 
+
+<p class="smallregular"><em>(The spelling of the name Thomson was corrected in all places in the article from Thompson to the correct spelling of Thomson.)</em></p> 
+</center> 
+</td>     
+
+</tr>    
+
+<!-- Begin the bottom sections -->      
+
+<tr>      
+
+ <td><img src="spacer00.gif" width="10" height="10" alt="spacer"></td>
+
+     <td> <hr width="80%" noshade size="1"></td>   
+
+ </tr>    
+
+ <tr>      
+
+ <td><img src="spacer00.gif" width="10" height="10" alt="spacer"></td>     <td>     
+
+ <p class="cbs">     
+
+ <a href="12coleman.html#Top">Top</a>      | <a href="http://www.dlib.org/dlib/december05/12contents.html">Contents</a><br>
+
+
+
+      <a href="http://www.dlib.org/Architext/AT-dlib2query.html">Search</a>      |  <a href="http://www.dlib.org/author-index.html">Author Index</a>      |  <a href="http://www.dlib.org/title-index.html">Title Index</a>      |  <a href="http://www.dlib.org/back.html">Back Issues</a><br> 
+
+<a href="http://www.dlib.org/dlib/december05/kirriemuir/12kirriemuir.html">Previous Article</a>      |  <a href="http://www.dlib.org/dlib/december05/12inbrief.html">In Brief</a> <br><a href="http://www.dlib.org/dlib.html">Home</a>     | <a href="mailto:dlib@cnri.reston.va.us">E-mail the Editor</a></p>      </td>    </tr>     <tr>       <td><img src="spacer00.gif" width="10" height="10" alt="spacer"></td>     <td> <hr width="80%" noshade size="1"></td>    </tr>    
+
+ <tr>      
+
+<td><img src="spacer00.gif" width="10" height="10" alt="spacer"></td>
+
+
+
+      <td>     
+
+ <p class="small70"><a href="http://www.dlib.org/access.html">D-Lib Magazine Access Terms and Conditions</a></p> 
+
+      <p class="small70">doi:10.1045/december2005-coleman</p> 
+
+       <p> &nbsp;</p>  </td>
+
+     </tr> 
+
+   </table>  
+
+  </body>   
+
+</html>

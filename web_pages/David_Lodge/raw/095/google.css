@@ -1,0 +1,346 @@
+/*
+/web/sites/sfgate/templates/types/google/style/google.css
+google ads style
+ssaux     2006.07.08
+tmatthews 2006.07.10
+pfagan    2007.02.05
+*/
+
+/* === google colors ======================================================== */
+/* --- must override nested group divs also --------------------------------- */
+
+#google_container1 ul a, 
+#google_container1 ul a:link, 
+#google_container1 ul a:visited,
+#google_container2 ul a, 
+#google_container2 ul a:link, 
+#google_container2 ul a:visited
+{
+color:#333;
+}
+
+#google_container1 .google_url a, 
+#google_container1 .google_url a:link, 
+#google_container1 .google_url a:visited,
+#google_container2 .google_url a, 
+#google_container2 .google_url a:link, 
+#google_container2 .google_url a:visited
+{
+text-decoration: none;
+color: #008040;
+}
+#google_container1 .google_url a:hover,
+#google_container2 .google_url a:hover
+{
+text-decoration: underline;
+}
+
+#google_container1 .google_description a,
+#google_container2 .google_description a
+{
+text-decoration: none;
+color: #000;
+}
+#google_container1 .google_description a:hover,
+#google_container2 .google_description a:hover
+{
+text-decoration: none;
+}
+#google_container1 h4 a, 
+#google_container1 h4 a:link, 
+#google_container1 h4 a:visited,
+#google_container1 strong a, 
+#google_container1 strong a:link, 
+#google_container1 strong a:visited,
+#google_container2 h4 a, 
+#google_container2 h4 a:link, 
+#google_container2 h4 a:visited,
+#google_container2 strong a, 
+#google_container2 strong a:link, 
+#google_container2 strong a:visited
+{ 
+color: #006; 
+}
+
+/* === style for google afc and afs content ================================= */
+
+.google {
+clear:both;
+border:1px solid #ccc;
+font-family:verdana, arial, sans-serif;
+margin:10px 0 30px 0;
+text-align:left;
+}
+#google_container1,
+#google_container2
+{
+
+}
+#google_container1 p, 
+#google_container1 h4,
+#google_container2 p, 
+#google_container2 h4
+{
+margin:0;
+padding:0;
+}
+#google_container1 p strong, 
+#google_container1 dt strong,
+#google_container2 p strong, 
+#google_container2 dt strong
+{
+font-size:10px;
+}
+#google_container1 h4, #google_container2 h4 {
+font-family:geneva, arial, sans-serif;
+font-size:12px;
+text-transform:capitalize;
+}
+#google_container1 .google_url, 
+#google_container1 .google_description,
+#google_container2 .google_url, 
+#google_container2 .google_description
+{
+font-size:10px;
+}
+
+#google_container1 .google_item, 
+#google_container1 .google_firstitem, 
+#google_container1 .google_lastitem,
+#google_container2 .google_item, 
+#google_container2 .google_firstitem, 
+#google_container2 .google_lastitem
+{
+margin:0;
+padding:5px;
+clear:both;
+}
+#google_container1 ul,
+#google_container2 ul
+{
+margin:0;
+padding:0;
+}
+#google_container1 ul, 
+#google_container1 ul li,
+#google_container2 ul, 
+#google_container2 ul li
+{
+list-style-type:none;
+margin:0;
+}
+#google_container1 .google_header,
+#google_container2 .google_header
+{
+border-bottom: 1px solid #ddd;
+background-color:#fff;
+padding:5px;
+}
+#google_container1 ul,
+#google_container2 ul
+{
+margin:0;
+padding:0;
+font-size:10px;
+text-align:right;
+}
+#google_container1 h3,
+#google_container2 h3
+{
+font-family:geneva, arial, sans-serif;
+margin:0;
+padding:0 0 5px 0;
+color:#333;
+font-size:11px;
+float:left;
+border-top:none;
+border-right:none;
+border-bottom:none;
+border-left:none;
+background:none;
+}
+
+#google_container1 .google_item p.google_description, 
+#google_container1 .google_firstitem p.google_description, 
+#google_container1 .google_lastitem p.google_description, 
+#google_container1 .google_item p.google_url, 
+#google_container1 .google_firstitem p.google_url, 
+#google_container1 .google_lastitem p.google_url,
+#google_container2 .google_item p.google_description, 
+#google_container2 .google_firstitem p.google_description, 
+#google_container2 .google_lastitem p.google_description, 
+#google_container2 .google_item p.google_url, 
+#google_container2 .google_firstitem p.google_url, 
+#google_container2 .google_lastitem p.google_url 
+{
+margin:0;
+padding:0;
+}
+
+/* === style for unique item ================================================ */
+
+#google_container1 .google_uniqueitem,
+#google_container2 .google_uniqueitem {
+padding:10px;
+text-align:center;
+clear:both;
+}
+#google_container1 .google_uniqueitem h4,
+#google_container2 .google_uniqueitem h4 {
+font-size:18px;
+margin:36px 0 5px 0;
+}
+#google_container1 .google_uniqueitem p.google_description,
+#google_container2 .google_uniqueitem p.google_description
+{
+font-size:14px;
+margin:0 0 5px 0;
+}
+#google_container1 .google_uniqueitem p.google_url,
+#google_container2 .google_uniqueitem p.google_url
+{
+margin:0 0 45px 0;
+}
+
+
+/* === style for google_image box =========================================== */
+
+.google_image {
+border:0;
+}
+.google_image .google_header {
+border-bottom:none;
+border-top:none;
+padding:5px 0 5px 0;
+}
+/* ========================================================================== */
+/* === enclosing div style ================================================== */
+/* ========================================================================== */
+
+
+/* === define widths ======================================================== */
+
+#googlesky
+{
+width: 158px;
+}
+
+#googlebox
+{
+width: 220px;
+}
+
+/* === apply overflow hidden to fixed width enclosng divs =================== */
+
+#googlesky,
+#googlewide, 
+#googlewidenb,
+#googlebox
+{
+overflow:hidden;
+}
+
+/* === inline google ads ==================================================== */
+
+.boxad #googlebox
+{
+width: 305px;
+margin:0 auto;
+}
+
+/* === sky ================================================================== */
+
+#googlesky h3, #googlesky ul {
+float:none;
+text-align:left;
+padding:5px;
+}
+#googlesky .google_header {
+padding:0;
+}
+
+#googlesky ul {
+border-top:1px solid #ddd;
+}
+
+/* ========================================================================== */
+/* === "what's this" page =================================================== */
+/* ========================================================================== */
+
+#whatsthis {
+margin: 0;
+padding: 0;
+font-family: Geneva, Arial, sans-serif;
+font-size: 80%;
+}
+
+/* --- header: banner with an image ----------------------------------------- */
+
+#whatsthis #header {
+background-color: #668B8B;
+padding: 5px;
+}
+
+#whatsthis #banner-img {
+background-image: url(/templates/types/common/graphics/logo/sfgate-teal.gif);
+background-repeat: no-repeat;
+height: 23px;
+}
+#whatsthis div.img-link a {
+height:23px;
+}
+#whatsthis .banner-alt {
+display: none;
+}
+#whatsthis #banner {
+display: none;
+}
+
+#whatsthis #banner h1 {
+margin: 0;
+padding: 0;
+color: #668B8B;
+text-shadow: 0px 1px 1px white;
+white-space: nowrap;
+padding:.3em;
+font-size:1.2em;
+}
+
+/* --- contentbody ---------------------------------------------------------- */
+
+#whatsthis #group {
+padding: 10px;
+}
+
+#whatsthis h2 {
+margin: 0;
+padding: 0;
+font-size: 1.2em;
+}
+
+#whatsthis #groupfooter p {
+padding-right: 40px;
+text-align: right;
+}
+
+#whatsthis #google_advertise_here {
+float:left;
+width:130px;
+}
+#whatsthis #google_close_window {
+float:left;
+width:130px;
+}
+
+/* === search pages / qws =================================================== */
+
+#searchresults #google_container1 h3,
+#searchresults #google_container2 h3 {
+background:none;
+border:none;
+margin:0;
+padding:0;
+}
+#searchresults #googlesky {
+margin:0 0 30px 0;
+}

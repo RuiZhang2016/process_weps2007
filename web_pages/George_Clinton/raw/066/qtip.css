@@ -1,0 +1,196 @@
+dl.q_rep, dl.q_rep dt, dl.q_rep dd {
+  margin: 0;
+  padding: 0;
+}
+
+dl.q_rep {
+  position: relative;
+  display: inline;
+}
+
+dl.q_rep dt {
+  display: inline; /* wraps the -hot- rollover area around artist and album links exactly */
+}
+
+dd.q_rollover, dd.q_mini_rollover, iframe.q_mini_rollover {
+  position: absolute;
+  display: none;
+  width: 173px;
+  border: 1px solid black;
+  background-color: #ffffcc;
+}
+
+dd.q_mini_rollover {
+  width: 238px;
+}
+
+iframe.q_mini_rollover {
+  width: 247px;
+}
+
+dd.static_right {
+  left: -34px;
+  top: 82px;
+}
+
+dd.static_left {
+  left: -2px;
+  top: 82px;
+}
+
+iframe.static_left, iframe.static_right {
+  border: none;
+  top: 86px;
+}
+
+iframe.static_left {
+  left: -6px;
+}
+
+iframe.static_right {
+  left: -38px;
+}
+
+div.mini_img {
+  padding: 10px;
+  padding-left: 6px;
+  padding-top: 7px;
+  width: 65px;
+  float: left;
+}
+
+div.mini_tip {
+  position: absolute;
+  left: -59px;
+  /* hide normal position from ie5mac \*/
+  left: -62px;
+  /* end hide */
+  width: 59px;
+  height: 30px;
+  /* png transparency support for IE 5.5+ */
+  filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(src='/images/queue/qtip_tip.png', sizingMethod='image');
+}
+
+dd>div.mini_tip {
+  background-image: url(/images/queue/qtip_tip.gif);
+/* hide png from ie5mac; gets the gif \*/
+  background-image: url(/images/queue/qtip_tip.png);
+/* end hide */
+}
+
+div.mini_tip_up {
+  position: absolute;
+  left: 57px;
+  top: -59px;
+  /* hide normal position from ie5mac \*/
+  top: -60px;
+  /* end hide */
+  width: 30px;
+  height: 59px;
+  filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(src='/images/queue/qtip_tip_up.png', sizingMethod='image');
+}
+
+dd>div.mini_tip_up {
+  background-image: url(/images/queue/qtip_tip_up.gif);
+/* hide png from ie5mac; gets the gif \*/
+  background-image: url(/images/queue/qtip_tip_up.png);
+/* end hide */
+}
+
+/* shadow: top */
+dd.q_rollover div.mini_bg_top, dd.q_rollover div.mini_bg_mid, dd.q_rollover div.mini_bg_bot,
+dd.q_mini_rollover div.mini_bg_top, dd.q_mini_rollover div.mini_bg_mid, dd.q_mini_rollover div.mini_bg_bot {
+  position: absolute;
+  top: -3px;
+  left: -14px;
+  width: 265px;
+  height: 15px;
+  filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(src='/images/queue/mini_bg_top.png', sizingMethod='image');
+}
+
+dd.q_rollover div.mini_bg_top, dd.q_rollover div.mini_bg_mid, dd.q_rollover div.mini_bg_bot {
+  top: -3px;
+  width: 200px;
+  filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(src='/images/queue/mini_bgshort_top.png', sizingMethod='image');
+}
+
+/* moz and others with normal png support */
+dl>dd.q_rollover div.mini_bg_top, dl>dd.q_rollover div.mini_bg_mid, dl>dd.q_rollover div.mini_bg_bot,
+dl>dd.q_mini_rollover div.mini_bg_top, dl>dd.q_mini_rollover div.mini_bg_mid, dl>dd.q_mini_rollover div.mini_bg_bot {
+  background-image: url(/images/queue/mini_bg_top.png);
+}
+
+dl>dd.q_rollover div.mini_bg_top, dl>dd.q_rollover div.mini_bg_mid, dl>dd.q_rollover div.mini_bg_bot {
+  background-image: url(/images/queue/mini_bgshort_top.png);
+}
+
+/* shadow: middle */
+dd.q_mini_rollover div.mini_bg_mid {
+  top: 12px;
+  filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(src='/images/queue/mini_bg_mid.png', sizingMethod='scale');
+}
+
+dd.q_rollover div.mini_bg_mid {
+  top: 12px;
+  filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(src='/images/queue/mini_bgshort_mid.png', sizingMethod='scale');
+}
+
+dl>dd.q_mini_rollover div.mini_bg_mid {
+  background-image: url(/images/queue/mini_bg_mid.png);
+}
+
+dl>dd.q_rollover div.mini_bg_mid {
+  background-image: url(/images/queue/mini_bgshort_mid.png);
+}
+
+dd.q_mini_rollover div.mini_bg_bot {
+  height: 25px;
+  filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(src='/images/queue/mini_bg_bot.png', sizingMethod='image');
+}
+
+dd.q_rollover div.mini_bg_bot {
+  height: 25px;
+  filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(src='/images/queue/mini_bgshort_bot.png', sizingMethod='image');
+}
+
+dl>dd.q_mini_rollover div.mini_bg_bot {
+  background-image: url(/images/queue/mini_bg_bot.png);
+}
+
+dl>dd.q_rollover div.mini_bg_bot {
+  background-image: url(/images/queue/mini_bgshort_bot.png);
+}
+
+dd.q_rollover p.mini_content, dd.q_mini_rollover p.mini_content {
+  width: 165px;
+  margin: 0;
+  margin-left: 4px;
+  padding-top: 2px;
+  padding-bottom: 6px;
+  padding-right: 0;
+  color: black;
+}
+
+dd.q_mini_rollover p.mini_content {
+  float: left;
+  width: 153px;
+  margin-left: -5px;
+}
+
+p.mini_content a, p.mini_content a:link, p.mini_content a:hover, p.mini_content a:visited, p.mini_content span.blue_nav {
+  color: black;
+}
+
+span.blue_nav {
+  cursor: default;
+}
+
+p.mini_content a.enroll_album_text {
+  font-weight: bold;
+  font-style: italic;
+}
+
+p.mini_content img {
+  text-align: left;
+}
+

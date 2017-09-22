@@ -1,0 +1,651 @@
+
+<!DOCTYPE html public "-//w3c//dtd html 4.01 transitional//en">
+<HTML>
+	<HEAD>
+		<TITLE>GeorgeWBush.com :: Photo Album - Campaign Events</TITLE>
+		<META http-equiv="Content-Type" content="text/html; charset=windows-1252">
+		<LINK href="/styles/mainback.css" type="text/css" rel="stylesheet">
+			<LINK href="/styles/bc04.css" type="text/css" rel="stylesheet">
+				<SCRIPT language="JavaScript">
+			var aryImages = new Array();
+			var aryCaptions = new Array();
+			var intTotalItems = 0;
+			var intActiveImage = 0;
+
+			function swapGallery(imgID,strDir){
+				if (imgID == -1){
+					if (strDir == 'back'){
+						if (intActiveImage != 0)
+							imgID = intActiveImage - 1;	
+						else{
+							if (document.Gallery.hidCurPage.value != 1) {
+								var strLocation = 'photoalbum.aspx?gallery=' + document.Gallery.hidGalleryID.value + '&page=' + (document.Gallery.hidCurPage.value - 1);
+								location.href = strLocation;
+							}
+						}
+					}
+					if (strDir == 'next'){
+						if (intActiveImage != intTotalItems - 1)
+							imgID = intActiveImage + 1;							
+						else
+							if (document.Gallery.hidCurPage.value != document.Gallery.hidEndPage.value) {
+								var NewPage = new Number(document.Gallery.hidCurPage.value);
+								var strLocation = 'photoalbum.aspx?gallery=' + document.Gallery.hidGalleryID.value + '&page=' + (NewPage + 1);
+								location.href = strLocation;
+							}
+					}
+				}
+				if ((intActiveImage == 0 && strDir == 'back') || (intActiveImage == intTotalItems - 1 && strDir == 'next'))
+					imgID = intActiveImage;
+				document.imgBigImage.alt = aryCaptions[imgID];
+				document.imgBigImage.src = aryImages[imgID].src;				
+				var objDiv = eval('divCaption' + intActiveImage);
+				objDiv.style.visibility = 'hidden';
+				objDiv = eval('divCaption' + imgID);
+				objDiv.style.visibility = 'visible';
+				intActiveImage = imgID;
+				document.Gallery.hidActiveImage.value = aryImages[imgID].src;
+				document.Gallery.hidImageID.value = imgID;
+				
+			}
+
+			function InitalizePage(strImages, strCaptions, intImages){
+				var aryImageString;
+				var aryCaptionString;
+				aryImageString = strImages.split(',');
+				aryCaptionString = strCaptions.split('|');
+				for (var i=0;i<intImages;i++){
+					aryImages[i] = new Image();
+				}
+				for (var i=0;i<intImages;i++){
+					aryImages[i].src = aryImageString[i];
+					aryCaptions[i] = aryCaptionString[i];
+				}
+				intTotalItems = aryImages.length;
+				swapGallery(0,'')
+			}
+
+				</SCRIPT>
+				<STYLE>
+			.backnext { FONT-SIZE: 10pt; FONT-FAMILY: Verdana, Arial, Helvetica, sans-serif }
+			</STYLE>
+	</HEAD>
+	<BODY link="#cc0000" alink="#cc0000" vlink="#cc0000" leftMargin="0" background="/images/NewsItems/gwb_back_bckgrnd2.gif" topMargin="0" marginwidth="0" marginheight="0">
+		<TABLE id="Table1" cellSpacing="0" cellPadding="0" width="760" border="0">
+			<TR>
+				<TD vAlign="top" align="left">
+					<!--header -->
+<SCRIPT LANGUAGE="JavaScript">
+<!--
+  if (top.frames.length!=0)
+   top.location=self.document.location;
+// -->
+</SCRIPT>
+<TABLE id="Table1" cellSpacing="0" cellPadding="0" width="775" bgColor="#383a3f" border="0">
+	<tr align="left" valign="top">
+		<td height="24" bgcolor="#383a3f">
+			<table width="775" border="0" cellpadding="0" cellspacing="0">
+				<tr align="left" valign="top">
+					<td width="391"><a href="/blog/"><img src="/images/bc04/BC04_index_tiblog.gif" alt="Blog" width="74" height="30" border="0"></a><a href='http://www.georgewbush.com/Party'><img src='/images/bc04/BC04_index_tiparty.gif' alt='Party for the President' width="63" height="30" border="0"></a><a href="/GetActive/"><img src="/images/bc04/BC04_index_tiactncntr.gif" alt="Action Center" width="63" height="30" border="0"></a><a href="/VoteEarly/"><img src="/images/bc04/BC04_index_tivote.gif" alt="Vote Early" width="63" height="30" border="0"></a><a href="/WStuff/"><img src="/images/bc04/BC04_index_tiwstuff.gif" alt="Wstuff" width="62" height="30" border="0"></a><img src="/images/bc04/BC04_index_tispc.gif" width="17" height="30"></td>
+					<td width="204" valign="center" style="font-family: Verdana, Arial, Helvetica, sans-serif;	font-size: 7pt;	line-height: 8pt;color: #FFFFFF;"><font color="#ffffff">Sign 
+							up for<!-- SiteCatalyst code version: G.5.
+Copyright 1997-2003 Omniture, Inc. More info available at
+http://www.omniture.com --><script language="JavaScript"><!--
+/* You may give each page an identifying name, server, and channel on
+the next lines. */
+var s_pageName= document.title.slice(19);
+var s_server=""
+var s_channel=""
+var s_pageType=""
+var s_prop1=""
+var s_prop2=""
+var s_prop3=""
+var s_prop4=""
+var s_prop5=""
+var s_prop6=""
+var s_prop7=""
+var s_prop8=""
+var s_prop9=""
+var s_prop10=""
+/* E-commerce Variables */
+var s_campaign=""
+var s_state=""
+var s_zip=""
+var s_events=""
+var s_products=""
+var s_purchaseID=""
+var s_eVar1=""
+var s_eVar2=""
+var s_eVar3=""
+var s_eVar4=""
+var s_eVar5=""
+var s_eVar6=""
+var s_eVar7=""
+var s_eVar8=""
+var s_eVar9=""
+var s_eVar10=""
+/********* INSERT THE DOMAIN AND PATH TO YOUR CODE BELOW ************/
+//--></script>
+							<script language="JavaScript" src='http://www.georgewbush.com/WebHelper/Javascript/s_code_remote.js'></script>
+							<!-- End SiteCatalyst code version: G.5. --> breaking news, the inside scoop, 
+							action alerts, &amp; event notices!</font></td>
+					<form ID="HeaderEmailSignup" method="post" action="https://www.georgewbush.com/Secure/EmailSignUp.aspx">
+						<td width="114" height="24" valign="center"><div align="right">
+								<input name="emailInput" type="text" id="emailInput" style="BORDER-RIGHT:#333333 1px solid; BORDER-TOP:#333333 1px solid; BORDER-LEFT:#333333 1px solid; WIDTH:122px; BORDER-BOTTOM:#333333 1px solid; BACKGROUND-COLOR:#ffffff" onfocus="emailInput.value='';" value="Email Address" size="14">
+							</div>
+						</td>
+					</form>
+					<td><A tabIndex="101" href="javascript:HeaderEmailSignup.submit();"><img src="/images/bc04/BC04_index_tibjoin.gif" alt="Get News!" width="66" height="30" border="0"></A></td>
+				</tr>
+			</table>
+		</td>
+	</tr>
+	<TR vAlign="top" align="left">
+		<TD colSpan="4">
+			<table width="775" border="0" cellspacing="0" cellpadding="0">
+			<tr align="left" valign="top">
+				<td><a href="http://www.georgewbush.com/"><SCRIPT language="javascript">document.write("<img src=\"/images/BC04/headers/" + Math.floor(Math.random()*6) + ".jpg\" border=\"0\" alt=\"GeorgeWBush.com Home\">");</SCRIPT></a></td>
+				<td><img src="/images/BC04_index_thtag.jpg" width="290" height="95"></td>
+			</tr>
+				<!--
+				FOUST - convention switch.
+				<tr align="left" valign="top">
+					<td><a href="http://www.georgewbush.com/"><SCRIPT language="javascript">document.write("<img src=\"/images/BC04/headers/" + Math.floor(Math.random()*6) + ".jpg\" border=\"0\" alt=\"GeorgeWBush.com Home\">");</SCRIPT></a></td>
+					<td><img src="/images/BC04_index_thtag.jpg" width="290" height="95"></td>
+				</tr>
+				-->
+			</table>
+			<!--
+			<TABLE id="Table2" cellSpacing="0" cellPadding="0" width="775" border="0">
+				<TR vAlign="top" align="left">
+					<TD><A href="/Default.aspx"><SCRIPT language="javascript">document.write("<img src=\"/images/headers/" + Math.floor(Math.random()*6) + ".jpg\" width=\"387\" height=\"95\" border=\"0\" alt=\"GeorgeWBush.com Home\">");</SCRIPT></A></TD>
+					<TD><img src="/images/headers/GWB_palbum_title.jpg" width="388" height="95"></TD>
+				</TR>
+			</TABLE>
+			-->
+		</TD>
+	</TR>
+	<tr align="left" valign="top">
+		<td bgcolor="405075" colSpan="4"><table width="775" border="0" cellspacing="0" cellpadding="0">
+				<tr align="left" valign="top">
+					<td><img src="/images/BC04_index_ntop.gif" width="130" height="15"></td>
+					<td><img src="/images/BC04_index_atabs.gif" width="645" height="15" border="0" usemap="#TabMap" href="#"></td>
+				</tr>
+			</table>
+		</td>
+	</tr>
+	<!-- 
+	<TR vAlign="top" align="left">
+		<TD colSpan="4"><IMG height="15" src="/images/GWB_nwsrm_r4_c1.gif"><IMG height="15" src="/images/GWB_tabs2.gif" width="645" useMap="#TabMap" border="0"></TD>
+	</TR>
+		-->
+</TABLE>
+<MAP name="Map">
+	<area shape="RECT" coords="19,10,172,84" href="/Default.aspx" alt="GeorgeWBush.com Home"></MAP><map name="TabMap">	<area shape="RECT" alt="Environment & Energy" coords="512,2,642,14" href="/Environment/">
+	<area shape="RECT" alt="Safety & Security" coords="399,2,507,13" href="/Security/">
+	<area shape="RECT" alt="Education" coords="244,2,313,14" href="/Education/">
+	<area shape="RECT" alt="Compassion & Values" coords="116,2,236,14" href="/Compassion/">
+	<area shape="RECT" alt="Health Care" coords="318,1,394,14" href="/HealthCare/">
+	<area shape="RECT" alt="Jobs & Economy" coords="5,1,109,14" href="/Economy/">
+
+</map>
+
+					<!--header --></TD>
+			</TR>
+			<TR>
+				<TD vAlign="top" align="left">
+					<TABLE id="Table3" cellSpacing="0" cellPadding="0" width="775" border="0">
+						<TR vAlign="top" align="left">
+							<TD width="130" bgColor="#405075">
+								<!-- Left Nav Strip -->
+<TABLE id="Table1" cellSpacing="0" cellPadding="0" width="130" border="0" bgcolor="405075">
+	<TBODY>
+		<TR vAlign="top" align="left">
+			<TD colSpan="2"><IMG height="14" alt="Stay Informed" src="/images/GWB_hstayinformed.gif" width="130"></TD>
+		</TR>
+
+		<TR vAlign="top" align="left">
+			<TD width="8" height="17">&nbsp;</TD>
+			<TD onmouseover="this.style.backgroundColor='#536283'; this.style.cursor='hand'" onClick="document.location='/Agenda/'" onmouseout="this.style.backgroundColor='#405075'; this.style.cursor=''" vAlign="center" width="122"><FONT face="Arial, Helvetica, sans-serif" size="1">&nbsp;&nbsp;</FONT><A class="navtxt" href="/Agenda/">Agenda for America</A></TD>
+		</TR>
+		
+		<TR vAlign="top" align="left">
+			<TD height="17">&nbsp;</TD>
+			<TD onmouseover="this.style.backgroundColor='#536283'; this.style.cursor='hand'" onmouseout="this.style.backgroundColor='#405075'; this.style.cursor=''" vAlign="center" onClick="document.location='/Record/Default.aspx'"><FONT face="Arial, Helvetica, sans-serif" size="1">&nbsp;&nbsp;</FONT><A class="navtxt" href="/Record/Default.aspx">The Bush Record</A></TD>
+		</TR>
+
+		<TR vAlign="top" align="left">
+			<TD height="17">&nbsp;</TD>
+			<TD onmouseover="this.style.backgroundColor='#536283'; this.style.cursor='hand'" onmouseout="this.style.backgroundColor='#405075'; this.style.cursor=''" vAlign="center" onClick="document.location='/Bios/GeorgeWBush.aspx'"><FONT face="Arial, Helvetica, sans-serif" size="1">&nbsp;&nbsp;</FONT><A class="navtxt" href="/Bios/GeorgeWBush.aspx">Pres. 
+					George W. Bush</A></TD>
+		</TR>
+
+		<TR vAlign="top" align="left">
+			<TD height="17">&nbsp;</TD>
+			<TD onmouseover="this.style.backgroundColor='#536283'; this.style.cursor='hand'" onmouseout="this.style.backgroundColor='#405075'; this.style.cursor=''" vAlign="center" onClick="document.location='/Bios/DickCheney.aspx'"><FONT face="Arial, Helvetica, sans-serif" size="1">&nbsp;&nbsp;</FONT><A class="navtxt" href="/Bios/DickCheney.aspx">Vice 
+					President Cheney</A></TD>
+		</TR>
+
+		<TR vAlign="top" align="left">
+			<TD height="17">&nbsp;</TD>
+			<TD onmouseover="this.style.backgroundColor='#536283'; this.style.cursor='hand'" onmouseout="this.style.backgroundColor='#405075'; this.style.cursor=''" vAlign="center" onClick="document.location='/Bios/LauraBush.aspx'"><FONT face="Arial, Helvetica, sans-serif" size="1">&nbsp;&nbsp;</FONT><A class="navtxt" href="/Bios/LauraBush.aspx">Laura 
+					Bush</A></TD>
+		</TR>
+
+		<TR vAlign="top" align="left">
+			<TD height="17">&nbsp;</TD>
+			<TD onmouseover="this.style.backgroundColor='#536283'; this.style.cursor='hand'" onmouseout="this.style.backgroundColor='#405075'; this.style.cursor=''" vAlign="center" onClick="document.location='/Bios/LynneCheney.aspx'"><FONT face="Arial, Helvetica, sans-serif" size="1">&nbsp;&nbsp;</FONT><A class="navtxt" href="/Bios/LynneCheney.aspx">Lynne 
+					Cheney</A></TD>
+		</TR>
+
+		<TR vAlign="top" align="left">
+			<TD height="17">&nbsp;</TD>
+			<TD onmouseover="this.style.backgroundColor='#536283'; this.style.cursor='hand'" onmouseout="this.style.backgroundColor='#405075'; this.style.cursor=''" vAlign="center" onClick="document.location='/News/'"><FONT face="Arial, Helvetica, sans-serif" size="1">&nbsp;&nbsp;</FONT><A class="navtxt" href="/News/">News 
+					Room</A></TD>
+		</TR>
+		
+
+		<TR vAlign="top" align="left">
+			<TD height="17">&nbsp;</TD>
+			<TD onmouseover="this.style.backgroundColor='#536283'; this.style.cursor='hand'" onmouseout="this.style.backgroundColor='#405075'; this.style.cursor=''" vAlign="center" onClick="document.location='/KerryMediaCenter/'"><FONT face="Arial, Helvetica, sans-serif" size="1">&nbsp;&nbsp;</FONT><A class="navtxt" href="/KerryMediaCenter/">Kerry 
+					Media Center</A></TD>
+		</TR>
+		
+		<TR vAlign="top" align="left">
+			<TD height="17">&nbsp;</TD>
+			<TD onmouseover="this.style.backgroundColor='#536283'; this.style.cursor='hand'" onmouseout="this.style.backgroundColor='#405075'; this.style.cursor=''" vAlign="center" onClick="document.location='/VideoandAudio/'"><FONT face="Arial, Helvetica, sans-serif" size="1">&nbsp;&nbsp;</FONT><A class="navtxt" href="/VideoAndAudio/">Video & Audio</A></TD>
+		</TR>
+		
+
+		<TR vAlign="top" align="left">
+			<TD height="17">&nbsp;</TD>
+			<TD onmouseover="this.style.backgroundColor='#536283'; this.style.cursor='hand'" onmouseout="this.style.backgroundColor='#405075'; this.style.cursor=''" vAlign="center" onClick="document.location='/News/PhotoAlbum.aspx'"><FONT face="Arial, Helvetica, sans-serif" size="1">&nbsp;&nbsp;</FONT><A class="navtxt" href="/News/PhotoAlbum.aspx">Photo 
+					Album</A></TD>
+		</TR>
+		
+			<TR vAlign="top" align="left">
+				<TD colSpan="2">
+					<TABLE id="Table5" cellSpacing="0" cellPadding="0" width="130" bgColor="#fffbce" border="0">
+						<TR vAlign="top" align="left">
+							<TD width="17"><IMG height="17" src="/images/NewsItems/gwb_back_yellow.gif" width="17"></TD>
+							<TD onmouseover="this.style.backgroundColor='#F1EA9D'" onmouseout="this.style.backgroundColor='#FFFBCE'" vAlign="center" width="113" onClick="document.location='/News/photogallery.aspx?type=4'"><A class="subnavtxt" href="/News/photogallery.aspx?type=4">Leadership</A></TD>
+						</TR>
+						<TR vAlign="top" align="left">
+							<TD colSpan="2"><IMG height="1" src="/images/NewsItems/gwb_back_yellblkln.gif" width="130"></TD>
+						</TR>
+						<TR vAlign="top" align="left">
+							<TD width="17"><IMG height="17" src="/images/NewsItems/gwb_back_yellow.gif" width="17"></TD>
+							<TD onmouseover="this.style.backgroundColor='#F1EA9D'" onmouseout="this.style.backgroundColor='#FFFBCE'" vAlign="center" width="113" onClick="document.location='/News/photogallery.aspx?type=2'"><A class="subnavtxt" href="/News/photogallery.aspx?type=2">Grassroots</A></TD>
+						</TR>
+						<TR vAlign="top" align="left">
+							<TD colSpan="2"><IMG height="1" src="/images/NewsItems/gwb_back_yellblkln.gif" width="130"></TD>
+						</TR>
+						<TR vAlign="top" align="left">
+							<TD width="17"><IMG height="17" src="/images/NewsItems/gwb_back_yellow.gif" width="17"></TD>
+							<TD onmouseover="this.style.backgroundColor='#F1EA9D'" onmouseout="this.style.backgroundColor='#FFFBCE'" vAlign="center" width="113" onClick="document.location='/News/photogallery.aspx?type=3'"><A class="subnavtxt" href="/News/photogallery.aspx?type=3">Agenda</A></TD>
+						</TR>
+						<TR vAlign="top" align="left">
+							<TD colSpan="2"><IMG height="1" src="/images/NewsItems/gwb_back_yellblkln.gif" width="130"></TD>
+						</TR>
+						<TR vAlign="top" align="left">
+							<TD width="17"><IMG height="17" src="/images/NewsItems/gwb_back_yellow.gif" width="17"></TD>
+							<TD onmouseover="this.style.backgroundColor='#F1EA9D'" onmouseout="this.style.backgroundColor='#FFFBCE'" vAlign="center" width="113" onClick="document.location='/News/photogallery.aspx?type=8'"><A class="subnavtxt" href="/News/photogallery.aspx?type=8">Coalition</A></TD>
+						</TR>
+						<!--TR vAlign="top" align="left">
+							<TD colSpan="2"><IMG height="1" src="/images/NewsItems/gwb_back_yellblkln.gif" width="130"></TD>
+						</TR>
+						<TR vAlign="top" align="left">
+							<TD width="17"><IMG height="17" src="/images/NewsItems/gwb_back_yellow.gif" width="17"></TD>
+							<TD onmouseover="this.style.backgroundColor='#F1EA9D'" onmouseout="this.style.backgroundColor='#FFFBCE'" vAlign="center" width="113" onClick="document.location='/News/photogallery.aspx?type=9'"><A class="subnavtxt" href="/News/photogallery.aspx?type=9">State</A></TD>
+						</TR-->
+					</TABLE>
+				</TD>
+			</TR>
+		
+
+		<TR vAlign="top" align="left">
+			<TD height="17">&nbsp;</TD>
+			<TD onmouseover="this.style.backgroundColor='#536283'; this.style.cursor='hand'" onmouseout="this.style.backgroundColor='#405075'; this.style.cursor=''" vAlign="center" onClick="document.location='/blog/'"><FONT face="Arial, Helvetica, sans-serif" size="1">&nbsp;&nbsp;</FONT><A class="navtxt" href="/blog/">Blog</A></TD>
+		</TR>
+
+		<TR vAlign="top" align="left">
+			<TD height="17">&nbsp;</TD>
+			<TD onmouseover="this.style.backgroundColor='#536283'; this.style.cursor='hand'" onmouseout="this.style.backgroundColor='#405075'; this.style.cursor=''" vAlign="center" onClick="document.location='/Chat/'"><FONT face="Arial, Helvetica, sans-serif" size="1">&nbsp;&nbsp;</FONT><A class="navtxt" href="/Chat/">Chat 
+					Center</A></TD>
+		</TR>
+
+		<TR vAlign="top" align="left">
+			<TD height="17">&nbsp;</TD>
+			<TD onmouseover="this.style.backgroundColor='#536283'; this.style.cursor='hand'" onmouseout="this.style.backgroundColor='#405075'; this.style.cursor=''" vAlign="center" onClick="document.location='/Espanol/'"><FONT face="Arial, Helvetica, sans-serif" size="1">&nbsp;&nbsp;</FONT><A class="navtxt" href="/Espanol/">En 
+					Español</A></TD>
+		</TR>
+
+		<TR vAlign="top" align="left">
+			<TD colSpan="2"><IMG height="36" src="/images/GWB_hjointheteam.gif" width="130"></TD>
+		</TR>
+
+		<TR vAlign="top" align="left">
+			<TD height="17">&nbsp;</TD>
+			<TD onmouseover="this.style.backgroundColor='#536283'; this.style.cursor='hand'" onmouseout="this.style.backgroundColor='#405075'; this.style.cursor=''" vAlign="center" onClick="document.location='https://www.georgewbush.com/Secure/BushTeamLeaderSignUp.aspx'"><FONT face="Arial, Helvetica, sans-serif" size="1">&nbsp;&nbsp;</FONT><a class=navtxt href='https://www.georgewbush.com/Secure/BushTeamLeaderSignUp.aspx'>Be a Volunteer</a></TD>
+		</TR>
+		
+		<TR vAlign="top" align="left">
+			<TD height="17">&nbsp;</TD>
+			<TD onmouseover="this.style.backgroundColor='#536283'; this.style.cursor='hand'" onmouseout="this.style.backgroundColor='#405075'; this.style.cursor=''" vAlign="center"><FONT face="Arial, Helvetica, sans-serif" size="1">&nbsp;&nbsp;</FONT><a class=navtxt target="_blank" href='https://www.donationreport.com/init/controller/ProcessEntryCmd?key=I5B7P3F2B6'>Donate to GELAC</a></TD>
+		</TR>	
+
+		
+			<TR vAlign="top" align="left">
+				<TD>&nbsp;</TD>
+				<TD onmouseover="this.style.backgroundColor='#536283'; this.style.cursor='hand'" onmouseout="this.style.backgroundColor='#405075'; this.style.cursor=''" vAlign="center" onClick="document.location='/GetActive/'"><FONT face="Arial, Helvetica, sans-serif" size="1">&nbsp;&nbsp;</FONT><A class="navtxt" href="/GetActive/">Action 
+						Center</A></TD>
+			</TR>
+		
+
+		<TR vAlign="top" align="left">
+			<TD height="17">&nbsp;</TD>
+			<TD onmouseover="this.style.backgroundColor='#536283'; this.style.cursor='hand'" onmouseout="this.style.backgroundColor='#405075'; this.style.cursor=''" vAlign="center" onClick="document.location='/Party/'"><FONT face="Arial, Helvetica, sans-serif" size="1">&nbsp;&nbsp;</FONT><A class="navtxt" href="/Party/">Party 
+					for President</A></TD>
+		</TR>
+		
+		
+
+		<TR vAlign="top" align="left">
+			<TD height="17">&nbsp;</TD>
+			<TD onmouseover="this.style.backgroundColor='#536283'; this.style.cursor='hand'" onmouseout="this.style.backgroundColor='#405075'; this.style.cursor=''" vAlign="center" onClick="document.location='/Calendar/'"><FONT face="Arial, Helvetica, sans-serif" size="1">&nbsp;&nbsp;</FONT><A class="navtxt" href="/Calendar/">Calendar</A></TD>
+		</TR>
+		<TR vAlign="top" align="left">
+			<TD height="17">&nbsp;</TD>
+			<TD onmouseover="this.style.backgroundColor='#536283'; this.style.cursor='hand'" onmouseout="this.style.backgroundColor='#405075'; this.style.cursor=''" vAlign="center" onClick="document.location='/VoteEarly/'"><FONT face="Arial, Helvetica, sans-serif" size="1">&nbsp;&nbsp;</FONT><A class="navtxt" href="/VoteEarly/">Vote Early</A></TD>
+		</TR>
+		<TR vAlign="top" align="left">
+			<TD height="17">&nbsp;</TD>
+			<TD onmouseover="this.style.backgroundColor='#536283'; this.style.cursor='hand'" onmouseout="this.style.backgroundColor='#405075'; this.style.cursor=''" vAlign="center" onClick="document.location='/Vote/'"><FONT face="Arial, Helvetica, sans-serif" size="1">&nbsp;&nbsp;</FONT><A class="navtxt" href="/Vote/">Register 
+					to Vote</A></TD>
+		</TR>
+
+		<TR vAlign="top" align="left">
+			<TD height="17">&nbsp;</TD>
+			<TD onmouseover="this.style.backgroundColor='#536283'; this.style.cursor='hand'" onmouseout="this.style.backgroundColor='#405075'; this.style.cursor=''" vAlign="center" onClick="document.location='/WStuff/'"><FONT face="Arial, Helvetica, sans-serif" size="1">&nbsp;&nbsp;</FONT><A class="navtxt" href="/WStuff/">W 
+					Stuff</A></TD>
+		</TR>
+		
+
+		<TR vAlign="top" align="left">
+			<TD colSpan="2"><IMG height="36" src="/images/GWB_hservices.gif" width="130"></TD>
+		</TR>
+
+		<TR vAlign="top" align="left">
+			<TD height="17">&nbsp;</TD>
+			<TD onmouseover="this.style.backgroundColor='#536283'; this.style.cursor='hand'" onmouseout="this.style.backgroundColor='#405075'; this.style.cursor=''" vAlign="center" onClick="document.location='https://www.georgewbush.com/Secure/Profile/Login.aspx'"><FONT face="Arial, Helvetica, sans-serif" size="1">&nbsp;&nbsp;</FONT><A class="navtxt" href="https://www.georgewbush.com/Secure/Profile/Login.aspx">Volunteer 
+					Login</A></TD>
+		</TR>
+
+		<TR vAlign="top" align="left">
+			<TD height="17">&nbsp;</TD>
+			<TD onmouseover="this.style.backgroundColor='#536283'; this.style.cursor='hand'" onmouseout="this.style.backgroundColor='#405075'; this.style.cursor=''" vAlign="center" onClick="document.location='/Donors/'"><FONT face="Arial, Helvetica, sans-serif" size="1">&nbsp;&nbsp;</FONT><A class="navtxt" href="/Donors/">Donor 
+					Information</A></TD>
+		</TR>
+		
+
+		<TR vAlign="top" align="left">
+			<TD height="17">&nbsp;</TD>
+			<TD onmouseover="this.style.backgroundColor='#536283'; this.style.cursor='hand'" onmouseout="this.style.backgroundColor='#405075'; this.style.cursor=''" vAlign="center" onClick="document.location='/SiteMap.aspx'"><FONT face="Arial, Helvetica, sans-serif" size="1">&nbsp;&nbsp;</FONT><A class="navtxt" href="/SiteMap.aspx">Site 
+					Map</A></TD>
+		</TR>
+
+		<TR vAlign="top" align="left">
+			<TD height="17">&nbsp;</TD>
+			<TD onmouseover="this.style.backgroundColor='#536283'; this.style.cursor='hand'" onmouseout="this.style.backgroundColor='#405075'; this.style.cursor=''" vAlign="center" onClick="document.location='/ContactUs/'"><FONT face="Arial, Helvetica, sans-serif" size="1">&nbsp;&nbsp;</FONT><A class="navtxt" href="/ContactUs/">Contact 
+					Us</A></TD>
+		</TR>
+		
+
+		<TR vAlign="top" align="left">
+			<TD height="17">&nbsp;</TD>
+			<TD onmouseover="this.style.backgroundColor='#536283'; this.style.cursor='hand'" onmouseout="this.style.backgroundColor='#405075'; this.style.cursor=''" vAlign="center" onClick="document.location='/PrivacyPolicy.aspx'"><FONT face="Arial, Helvetica, sans-serif" size="1">&nbsp;&nbsp;</FONT><A class="navtxt" href="/PrivacyPolicy.aspx">Privacy 
+					Policy</A></TD>
+		</TR>
+
+		<TR vAlign="top" align="left">
+			<TD colSpan="2"><IMG height="35" src="/images/BC04_index_nhcltns.gif" width="130"></TD>
+		</TR>
+		<tr valign=top align=left>
+		<td colspan="2">&nbsp;&nbsp;<select class="subnavtxt" id="coalitionSelection" name="coalitionSelection" style="WIDTH:113px;" onChange="javascript:if(this.selectedIndex > 0) { window.location.href='http://www.georgewbush.com' + this.options[this.selectedIndex].value;}">
+					<option value="">Coalitions</option>
+					<option value="/AfricanAmericans">African Americans</option>
+					<option value="/APA">Asian Pacific</option>
+					<option value="/Catholics">Catholics</option>
+					<option value="/Values">Conservative Values</option>
+					<option value="/Democrats">Democrats</option>
+					<option value="/Educators">Educators</option>
+					<option value="/FarmAndRanch">Farm and Ranch</option>
+					<option Value="/FirstResponders">First Responders</option>
+					<option Value="/Health">Health Professionals</option>
+					<option Value="/Hispanics">Hispanics</option>
+					<option Value="/Seniors">Seniors</option>
+					<option Value="/SmallBusiness">Small Business</option>
+					<option Value="/Sportsmen">Sportsmen</option>
+					<option value="/Students">Students</option>
+					<option value="/Veterans">Veterans</option>
+					<option value="/Women">W Stands for Women</option>
+				</select>
+
+		</td>
+		</tr>
+
+		<TR vAlign="top" align="left">
+			<TD colSpan="2"><IMG height="35" src="/images/GWB_hsearch.gif" width="130"></TD>
+		</TR>
+
+		<FORM id="searchForm" name="searchForm" action="/search/search.aspx" method="post">
+			<TR>
+				<TD bgColor="#536283" colSpan="2">
+					<DIV align="center"><INPUT id="keyword" style="BORDER-RIGHT: #333333 1px solid; BORDER-TOP: #333333 1px solid; BORDER-LEFT: #333333 1px solid; WIDTH: 115px; BORDER-BOTTOM: #333333 1px solid; BACKGROUND-COLOR: #ffffff" onfocus="keyword.value='';" type="text" size="15" value="Keyword(s)" name="keyword">
+					</DIV>
+				</TD>
+			</TR>
+			<TR vAlign="top" align="left" bgColor="#536283">
+				<TD colSpan="2">
+					<DIV align="center"><INPUT id="Image1" type="image" src="/images/gwb_back_bfindit.gif" border="0" name="Image1"><BR>
+						<A href="/search/search.aspx"><FONT face="arial" color="white" size="1">Advanced Search</FONT></A></DIV>
+				</TD>
+			</TR>
+		</FORM>
+
+		<TR vAlign="top" align="left">
+			<TD colSpan="2">
+				<DIV align="center"><IMG height="30" src="/images/t.gif"></DIV>
+			</TD>
+		</TR>
+		
+			<TR vAlign="top" align="left">
+				<TD colSpan="2"><A href="/party/default.aspx"><IMG height="94" src="/images/navad_blockparty.gif" width="130" border="0"></A></TD>
+			</TR>
+			<TR vAlign="top" align="left" bgColor="405075">
+				<TD colSpan="2">
+					<DIV align="center"><A href="/WStuff/BPAdFeed.aspx"><FONT face="arial" color="white" size="1">Put 
+								this on your site</FONT></A></DIV>
+				</TD>
+			</TR>
+			<TR vAlign="top" align="left">
+				<TD colSpan="2">
+					<DIV align="center"><IMG height="30" src="/images/t.gif"></DIV>
+				</TD>
+			</TR>
+		
+	</TBODY>
+</TABLE>
+
+								<!-- Left Nav Strip --></TD>
+							<TD width="645" bgColor="#ffffff">
+								<form name="Gallery" method="post" action="PhotoAlbum.aspx?gallery=34&amp;page=2" id="Gallery">
+<input type="hidden" name="__EVENTTARGET" value="" />
+<input type="hidden" name="__EVENTARGUMENT" value="" />
+<input type="hidden" name="__VIEWSTATE" value="dDw4MDg2MTUwNzY7dDw7bDxpPDE+O2k8Mz47aTw1PjtpPDc+O2k8OT47PjtsPHQ8cDxsPFRleHQ7PjtsPCAtIENhbXBhaWduIEV2ZW50czs+Pjs7Pjt0PDtsPGk8MD47aTwxPjs+O2w8dDxwPGw8VGV4dDs+O2w8XDxpbWcgc3JjPSIvaW1hZ2VzL2hlYWRlcnMvR1dCX3BhbGJ1bV90aXRsZS5qcGciIHdpZHRoPSIzODgiIGhlaWdodD0iOTUiXD47Pj47Oz47dDxwPGw8VGV4dDs+O2w8XDxhcmVhIHNoYXBlPSJSRUNUIiBjb29yZHM9IjE5LDEwLDE3Miw4NCIgaHJlZj0iL0RlZmF1bHQuYXNweCIgYWx0PSJHZW9yZ2VXQnVzaC5jb20gSG9tZSJcPjs+Pjs7Pjs+Pjt0PDtsPGk8Mz47aTwxMj47PjtsPHQ8cDxsPFZpc2libGU7PjtsPG88dD47Pj47Oz47dDxwPGw8VmlzaWJsZTs+O2w8bzx0Pjs+Pjs7Pjs+Pjt0PDtsPGk8MT47aTwzPjs+O2w8dDxwPGw8VmlzaWJsZTs+O2w8bzxmPjs+PjtsPGk8NT47aTw2PjtpPDc+Oz47bDx0PDtsPGk8Mz47PjtsPHQ8QDA8Ozs7Ozs7Ozs+Ozs+Oz4+O3Q8O2w8aTwzPjs+O2w8dDxAMDw7Ozs7Ozs7Oz47Oz47Pj47dDw7bDxpPDM+Oz47bDx0PEAwPDs7Ozs7Ozs7Pjs7Pjs+Pjs+Pjt0PDtsPGk8MT47aTwzPjtpPDU+O2k8Nj47PjtsPHQ8cDxsPFRleHQ7PjtsPFw8U1BBTiBjbGFzcz0iSGVhZGxpbmUiXD5DYW1wYWlnbiBFdmVudHNcPC9TUEFOXD4gXDxzcGFuIGNsYXNzPSJIZWFkbGluZUNhcnJvdCJcPiBcPCBcPC9zcGFuXD4gXDxhIGhyZWY9InBob3RvYWxidW0uYXNweCIgY2xhc3M9IkhlYWRsaW5lTGlua3MiXD5QaG90byBBbGJ1bVw8L2FcPiBcPHNwYW4gY2xhc3M9IkhlYWRsaW5lQ2Fycm90Ilw+IFw8IFw8L3NwYW5cPiBcPGEgaHJlZj0iLi4vIiBjbGFzcz0iSGVhZGxpbmVMaW5rcyJcPkhvbWVcPC9hXD47Pj47Oz47dDxwPGw8VmlzaWJsZTs+O2w8bzx0Pjs+PjtsPGk8MT47aTwzPjtpPDQ+Oz47bDx0PHA8bDxUZXh0Oz47bDxcPHRhYmxlIHdpZHRoPSIyMDYiIGJvcmRlcj0iMCIgY2VsbHNwYWNpbmc9IjAiIGNlbGxwYWRkaW5nPSIwIlw+XDx0clw+XDx0ZFw+XDxhIG9uQ2xpY2s9InN3YXBHYWxsZXJ5KDAsJycpIiBjbGFzcz0iR2FsbGVyeVBob3RvIlw+XDxpbWcgaWQ9ImltZ1NtYWxsMTIiIHNyYz0iL2ltYWdlcy9nYWxsZXJ5L0VkdWNhdG9ycy1Sb2xsb3V0MnQuanBnIiBoZWlnaHQ9IjQ3IiB3aWR0aD0iNjIiIHZzcGFjZT0iMSIgYWx0PSJPaGlvIHN0YXRlIFNlbmF0b3IgUm9iZXJ0IEdhcmRuZXIgKFItTWFkaXNvbiksIGNoYWlyIG9mIHRoZSBPaGlvIFNlbmF0ZSBFZHVjYXRpb24gQ29tbWl0dGVlLCB3ZWxjb21lcyB0aGUgSG9ub3JhYmxlIFJvZCBQYWlnZSB0byB0aGUgQnVzaC1DaGVuZXkgJzA0IE5hdGlvbmFsIEVkdWNhdG9ycyBmb3IgQnVzaCBzdGVlcmluZyBjb21taXR0ZWUgYW5ub3VuY2VtZW50IGF0IHRoZSBPaGlvIFN0YXRlaG91c2UgaW4gQ29sdW1idXMuIlw+XDwvYVw+XDwvdGRcPlw8dGRcPlw8aW1nIHNyYz0iLi4vL2ltYWdlcy9nd2JfYmxhbms5eDkuZ2lmIiBoZWlnaHQ9IjkiIHdpZHRoPSI3Ilw+XDwvdGRcPlw8dGRcPlw8YSBvbkNsaWNrPSJzd2FwR2FsbGVyeSgxLCcnKSIgY2xhc3M9IkdhbGxlcnlQaG90byJcPlw8aW1nIGlkPSJpbWdTbWFsbDEzIiBzcmM9Ii9pbWFnZXMvZ2FsbGVyeS8yMDA0LTA1LTE4MXQuanBnIiBoZWlnaHQ9IjQ3IiB3aWR0aD0iNjIiIHZzcGFjZT0iMSIgYWx0PSJGbG9yaWRhIEZpcnN0IExhZHkgQ29sdW1iYSBCdXNoIGpvaW5lZCBGbG9yaWRhIEx0LiBHb3YuIFRvbmkgSmVubmluZ3MgYW5kIFJlcHVibGljYW4gUGFydHkgb2YgRmxvcmlkYSBDaGFpcndvbWFuIENhcm9sZSBKZWFuIEpvcmRhbiBhbm5vdW5jZSB0aGUgQnVzaC1DaGVuZXkgJzA0IEZsb3JpZGEgIlcgU3RhbmRzIGZvciBXb21lbiIgTGVhZGVyc2hpcCBUZWFtLiJcPlw8L2FcPlw8L3RkXD5cPHRkXD5cPGltZyBzcmM9Ii4uLy9pbWFnZXMvZ3diX2JsYW5rOXg5LmdpZiIgaGVpZ2h0PSI5IiB3aWR0aD0iNyJcPlw8L3RkXD5cPHRkXD5cPGEgb25DbGljaz0ic3dhcEdhbGxlcnkoMiwnJykiIGNsYXNzPSJHYWxsZXJ5UGhvdG8iXD5cPGltZyBpZD0iaW1nU21hbGwxNCIgc3JjPSIvaW1hZ2VzL2dhbGxlcnkvMjAwNC0wNS0xODN0LmpwZyIgaGVpZ2h0PSI0NyIgd2lkdGg9IjYyIiB2c3BhY2U9IjEiIGFsdD0iRmxvcmlkYSBGaXJzdCBMYWR5IENvbHVtYmEgQnVzaCBraWNrcyBvZmYgdGhlIEJ1c2gtQ2hlbmV5ICcwNCBGbG9yaWRhICJXIFN0YW5kcyBmb3IgV29tZW4iIExlYWRlcnNoaXAgVGVhbS4iXD5cPC9hXD5cPC90ZFw+XDwvdHJcPlw8dHJcPlw8dGQgY29sc3Bhbj0iNSJcPlw8aW1nIHNyYz0iLi4vL2ltYWdlcy9nd2JfYmxhbms5eDkuZ2lmIiBoZWlnaHQ9IjUiIHdpZHRoPSI5Ilw+XDwvdGRcPlw8L3RyXD5cPHRyXD5cPHRkXD5cPGEgb25DbGljaz0ic3dhcEdhbGxlcnkoMywnJykiIGNsYXNzPSJHYWxsZXJ5UGhvdG8iXD5cPGltZyBpZD0iaW1nU21hbGwxNSIgc3JjPSIvaW1hZ2VzL2dhbGxlcnkvMjAwNC0wNS0xODJ0LmpwZyIgaGVpZ2h0PSI0NyIgd2lkdGg9IjYyIiB2c3BhY2U9IjEiIGFsdD0iRmxvcmlkYSBMdC4gR292LiBUb25pIEplbm5pbmdzIHNwZWFrcyBhYm91dCB3aHkgUHJlc2lkZW50IEJ1c2ggaXMgdGhlIHJpZ2h0IGxlYWRlciBmb3Igd29tZW4gYW5kIGFsbCBBbWVyaWNhIGF0IHRoZSBhbm5vdW5jZW1lbnQgb2YgdGhlIEJ1c2gtQ2hlbmV5ICcwNCBGbG9yaWRhICJXIFN0YW5kcyBmb3IgV29tZW4iIExlYWRlcnNoaXAgVGVhbS4iXD5cPC9hXD5cPC90ZFw+XDx0ZFw+XDxpbWcgc3JjPSIuLi8vaW1hZ2VzL2d3Yl9ibGFuazl4OS5naWYiIGhlaWdodD0iOSIgd2lkdGg9IjciXD5cPC90ZFw+XDx0ZFw+XDxhIG9uQ2xpY2s9InN3YXBHYWxsZXJ5KDQsJycpIiBjbGFzcz0iR2FsbGVyeVBob3RvIlw+XDxpbWcgaWQ9ImltZ1NtYWxsMTYiIHNyYz0iL2ltYWdlcy9nYWxsZXJ5LzA1MTIwNHdvbWVuMVQuanBnIiBoZWlnaHQ9IjQ3IiB3aWR0aD0iNjIiIHZzcGFjZT0iMSIgYWx0PSJUaGUgSG9ub3JhYmxlIEVsYWluZSBDaGFvLCBEb3JvIEJ1c2ggS29jaCBhbmQgTGl6IENoZW5leSBraWNrIG9mZiB0aGUgIlcgU3RhbmRzIGZvciBXb21lbiIgQ29hbGl0aW9uIGpvaW5lZCBieSBodW5kcmVkcyBvZiB3b21lbiBzdXBwb3J0ZXJzLiJcPlw8L2FcPlw8L3RkXD5cPHRkXD5cPGltZyBzcmM9Ii4uLy9pbWFnZXMvZ3diX2JsYW5rOXg5LmdpZiIgaGVpZ2h0PSI5IiB3aWR0aD0iNyJcPlw8L3RkXD5cPHRkXD5cPGEgb25DbGljaz0ic3dhcEdhbGxlcnkoNSwnJykiIGNsYXNzPSJHYWxsZXJ5UGhvdG8iXD5cPGltZyBpZD0iaW1nU21hbGwxNyIgc3JjPSIvaW1hZ2VzL2dhbGxlcnkvMDUxMjA0d29tZW4yVC5qcGciIGhlaWdodD0iNDciIHdpZHRoPSI2MiIgdnNwYWNlPSIxIiBhbHQ9IkNhdGh5IEdpbGxlc3BpZSBkaXNjdXNzZXMgd2h5ICJXIiBTdGFuZHMgZm9yIFdvbWVuIGF0IHRoZSBCdXNoLUNoZW5leSAnMDQgV29tZW4ncyBMZWFkZXJzaGlwIFRlYW0gcm9sbC1vdXQuIlw+XDwvYVw+XDwvdGRcPlw8L3RyXD5cPHRyXD5cPHRkIGNvbHNwYW49IjUiXD5cPGltZyBzcmM9Ii4uLy9pbWFnZXMvZ3diX2JsYW5rOXg5LmdpZiIgaGVpZ2h0PSI1IiB3aWR0aD0iOSJcPlw8L3RkXD5cPC90clw+XDx0clw+XDx0ZFw+XDxhIG9uQ2xpY2s9InN3YXBHYWxsZXJ5KDYsJycpIiBjbGFzcz0iR2FsbGVyeVBob3RvIlw+XDxpbWcgaWQ9ImltZ1NtYWxsMTgiIHNyYz0iL2ltYWdlcy9nYWxsZXJ5LzA1MTIwNHdvbWVuM1QuanBnIiBoZWlnaHQ9IjQ3IiB3aWR0aD0iNjIiIHZzcGFjZT0iMSIgYWx0PSJUaGUgSG9ub3JhYmxlIEVsYWluZSBDaGFvIHNwZWFrcyB0byB0aGUgY3Jvd2QgYXQgdGhlIEJ1c2gtQ2hlbmV5ICcwNCAiVyBTdGFuZHMgZm9yIFdvbWVuIiBMZWFkZXJzaGlwIFRlYW0gYW5ub3VuY2VtZW50LiJcPlw8L2FcPlw8L3RkXD5cPHRkXD5cPGltZyBzcmM9Ii4uLy9pbWFnZXMvZ3diX2JsYW5rOXg5LmdpZiIgaGVpZ2h0PSI5IiB3aWR0aD0iNyJcPlw8L3RkXD5cPHRkXD5cPGEgb25DbGljaz0ic3dhcEdhbGxlcnkoNywnJykiIGNsYXNzPSJHYWxsZXJ5UGhvdG8iXD5cPGltZyBpZD0iaW1nU21hbGwxOSIgc3JjPSIvaW1hZ2VzL2dhbGxlcnkvdmF0YW1wYTF0LmpwZyIgaGVpZ2h0PSI0NyIgd2lkdGg9IjYyIiB2c3BhY2U9IjEiIGFsdD0iU2VuYXRvciBCb2IgRG9sZSBncmVldHMgYSBmZWxsb3cgdmV0ZXJhbiBhbmQgQnVzaCBzdXBwb3J0ZXIgYXQgdGhlIEJ1c2gtQ2hlbmV5ICcwNCBOYXRpb25hbCBWZXRlcmFucyBMZWFkZXJzaGlwIFRlYW0ga2ljay1vZmYgaW4gVGFtcGEsIEZsb3JpZGEuIlw+XDwvYVw+XDwvdGRcPlw8dGRcPlw8aW1nIHNyYz0iLi4vL2ltYWdlcy9nd2JfYmxhbms5eDkuZ2lmIiBoZWlnaHQ9IjkiIHdpZHRoPSI3Ilw+XDwvdGRcPlw8dGRcPlw8YSBvbkNsaWNrPSJzd2FwR2FsbGVyeSg4LCcnKSIgY2xhc3M9IkdhbGxlcnlQaG90byJcPlw8aW1nIGlkPSJpbWdTbWFsbDIwIiBzcmM9Ii9pbWFnZXMvZ2FsbGVyeS92YXRhbXBhMnQuanBnIiBoZWlnaHQ9IjQ3IiB3aWR0aD0iNjIiIHZzcGFjZT0iMSIgYWx0PSJTZW4uIERvbGUgam9pbnMgdGhlIEhvbm9yYWJsZSBBbnRob255IFByaW5jaXBpLCBVLlMuIENvbmdyZXNzbWFuIFNhbSBKb2huc29uLCBNZWRhbCBvZiBIb25vciBSZWNpcGllbnQgR2VuZXJhbCBQYXQgQnJhZHksIEFkbWlyYWwgSmVyZW1pYWggRGVudG9uLCBTdGFmZiBTZXJnZWFudCBEb25vdmFuIENoYXBtYW4sIENvbG9uZWwgSm9yZ2UgUm9kcmlndWV6IGFuZCBDaGllZiBXYXJyYW50IE9mZmljZXIgTWljaGFlbCBEdXJhbnQgdG8ga2ljayBvZmYgVmV0ZXJhbnMgZm9yIEJ1c2guICJcPlw8L2FcPlw8L3RkXD5cPC90clw+XDx0clw+XDx0ZCBjb2xzcGFuPSI1Ilw+XDxpbWcgc3JjPSIuLi8vaW1hZ2VzL2d3Yl9ibGFuazl4OS5naWYiIGhlaWdodD0iNSIgd2lkdGg9IjkiXD5cPC90ZFw+XDwvdHJcPlw8dHJcPlw8dGRcPlw8YSBvbkNsaWNrPSJzd2FwR2FsbGVyeSg5LCcnKSIgY2xhc3M9IkdhbGxlcnlQaG90byJcPlw8aW1nIGlkPSJpbWdTbWFsbDIxIiBzcmM9Ii9pbWFnZXMvZ2FsbGVyeS92YXRhbXBhM3QuanBnIiBoZWlnaHQ9IjQ3IiB3aWR0aD0iNjIiIHZzcGFjZT0iMSIgYWx0PSJVLlMuIENvbmdyZXNzbWFuIFNhbSBKb2huc29uIG9mIFRleGFzIChVLlMuIEFpciBGb3JjZSwgUmV0LikgdGVsbHMgd2h5IFByZXNpZGVudCBCdXNoIGlzIHRoZSByaWdodCBsZWFkZXIgZm9yIEFtZXJpY2EncyB2ZXRlcmFucyBhdCB0aGUga2ljay1vZmYgb2YgdGhlIEJ1c2gtQ2hlbmV5ICcwNCBWZXRlcmFucyBDb2FsaXRpb24uIlw+XDwvYVw+XDwvdGRcPlw8dGRcPlw8aW1nIHNyYz0iLi4vL2ltYWdlcy9nd2JfYmxhbms5eDkuZ2lmIiBoZWlnaHQ9IjkiIHdpZHRoPSI3Ilw+XDwvdGRcPlw8dGRcPlw8YSBvbkNsaWNrPSJzd2FwR2FsbGVyeSgxMCwnJykiIGNsYXNzPSJHYWxsZXJ5UGhvdG8iXD5cPGltZyBpZD0iaW1nU21hbGwyMiIgc3JjPSIvaW1hZ2VzL2dhbGxlcnkvZ2VubHluY2hULmpwZyIgaGVpZ2h0PSI0NyIgd2lkdGg9IjYyIiB2c3BhY2U9IjEiIGFsdD0iTWFqb3IgR2VuZXJhbCBCaWxsIEx5bmNoIChSZXQuKSBjb250aW51ZXMgdGhlIFw8SVw+V2lubmluZyB0aGUgV2FyIG9uIFRlcnJvciBUb3VyXDwvSVw+IGF0IGEgcHJlc3MgY29uZmVyZW5jZSBpbiBZb3JrLiJcPlw8L2FcPlw8L3RkXD5cPHRkXD5cPGltZyBzcmM9Ii4uLy9pbWFnZXMvZ3diX2JsYW5rOXg5LmdpZiIgaGVpZ2h0PSI5IiB3aWR0aD0iNyJcPlw8L3RkXD5cPHRkXD5cPGEgb25DbGljaz0ic3dhcEdhbGxlcnkoMTEsJycpIiBjbGFzcz0iR2FsbGVyeVBob3RvIlw+XDxpbWcgaWQ9ImltZ1NtYWxsMjMiIHNyYz0iL2ltYWdlcy9nYWxsZXJ5L3JlcHBsYXR0c1QuanBnIiBoZWlnaHQ9IjQ3IiB3aWR0aD0iNjIiIHZzcGFjZT0iMSIgYWx0PSJDb25ncmVzc21hbiBUb2RkIFBsYXR0cyAoUi1QQSkgc3BlYWtzIHRvIEJ1c2gtQ2hlbmV5IHN1cHBvcnRlcnMgYWJvdXQgSm9obiBLZXJyeSdzIHRyb3VibGluZyByZWNvcmQgb24gbmF0aW9uYWwgc2VjdXJpdHkgYXQgYSBcPElcPldpbm5pbmcgdGhlIFdhciBvbiBUZXJyb3IgVG91clw8L0lcPiBldmVudCBpbiBZb3JrLCBQZW5uc3lsdmFuaWEuIlw+XDwvYVw+XDwvdGRcPlw8L3RyXD5cPHRyXD5cPHRkIGNvbHNwYW49IjUiXD5cPGltZyBzcmM9Ii4uLy9pbWFnZXMvZ3diX2JsYW5rOXg5LmdpZiIgaGVpZ2h0PSI1IiB3aWR0aD0iOSJcPlw8L3RkXD5cPC90clw+XDx0clw+XDx0ZCBjb2xzcGFuPSI1IiBhbGlnbj0iY2VudGVyIiBjbGFzcz0iY29udGVudCJcPlBhZ2VzOiBcPGEgaHJlZj0iUGhvdG9BbGJ1bS5hc3B4P2dhbGxlcnk9MzQmcGFnZT0xIiBjbGFzcz0iYmFja25leHQiXD4xXDwvYVw+Jm5ic3BcO1w8YSBocmVmPSJQaG90b0FsYnVtLmFzcHg/Z2FsbGVyeT0zNCZwYWdlPTIiIGNsYXNzPSJiYWNrbmV4dCJcPjJcPC9hXD4mbmJzcFw7XDxhIGhyZWY9IlBob3RvQWxidW0uYXNweD9nYWxsZXJ5PTM0JnBhZ2U9MyIgY2xhc3M9ImJhY2tuZXh0Ilw+M1w8L2FcPiZuYnNwXDtcPGEgaHJlZj0iUGhvdG9BbGJ1bS5hc3B4P2dhbGxlcnk9MzQmcGFnZT00IiBjbGFzcz0iYmFja25leHQiXD40XDwvYVw+Jm5ic3BcO1w8YSBocmVmPSJQaG90b0FsYnVtLmFzcHg/Z2FsbGVyeT0zNCZwYWdlPTUiIGNsYXNzPSJiYWNrbmV4dCJcPjVcPC9hXD4mbmJzcFw7XDxhIGhyZWY9IlBob3RvQWxidW0uYXNweD9nYWxsZXJ5PTM0JnBhZ2U9NiIgY2xhc3M9ImJhY2tuZXh0Ilw+Nlw8L2FcPiZuYnNwXDtcPGEgaHJlZj0iUGhvdG9BbGJ1bS5hc3B4P2dhbGxlcnk9MzQmcGFnZT03IiBjbGFzcz0iYmFja25leHQiXD43XDwvYVw+Jm5ic3BcO1w8L3RkXD5cPC90clw+XDx0clw+XDx0ZCBjb2xzcGFuPSI1IiBhbGlnbj0iY2VudGVyIiBjbGFzcz0iY29udGVudCJcPlw8YSBocmVmPSJqYXZhc2NyaXB0OnN3YXBHYWxsZXJ5KC0xLCdiYWNrJykiIGNsYXNzPSJiYWNrbmV4dCJcPlByZXZpb3VzIEltYWdlXDwvYVw+IHwgXDxhIGhyZWY9ImphdmFzY3JpcHQ6c3dhcEdhbGxlcnkoLTEsJ25leHQnKSIgY2xhc3M9ImJhY2tuZXh0Ilw+TmV4dCBJbWFnZVw8L2FcPlw8L3RkXD5cPC90clw+XDwvdGFibGVcPjs+Pjs7Pjt0PHA8cDxsPEltYWdlVXJsOz47bDx+L2ltYWdlcy9nYWxsZXJ5L012Yy0wMThzTC5qcGc7Pj47Pjs7Pjt0PHA8bDxUZXh0Oz47bDxcPGRpdiBjbGFzcz0iR2FsbGVyeUhvbGRlciJcPgpcPGRpdiBpZD0iZGl2Q2FwdGlvbjAiIGNsYXNzPSJHYWxsZXJ5Q2FwdGlvbiJcPk9oaW8gc3RhdGUgU2VuYXRvciBSb2JlcnQgR2FyZG5lciAoUi1NYWRpc29uKSwgY2hhaXIgb2YgdGhlIE9oaW8gU2VuYXRlIEVkdWNhdGlvbiBDb21taXR0ZWUsIHdlbGNvbWVzIHRoZSBIb25vcmFibGUgUm9kIFBhaWdlIHRvIHRoZSBCdXNoLUNoZW5leSAnMDQgTmF0aW9uYWwgRWR1Y2F0b3JzIGZvciBCdXNoIHN0ZWVyaW5nIGNvbW1pdHRlZSBhbm5vdW5jZW1lbnQgYXQgdGhlIE9oaW8gU3RhdGVob3VzZSBpbiBDb2x1bWJ1cy5cPC9kaXZcPgpcPGRpdiBpZD0iZGl2Q2FwdGlvbjEiIGNsYXNzPSJHYWxsZXJ5Q2FwdGlvbiJcPkZsb3JpZGEgRmlyc3QgTGFkeSBDb2x1bWJhIEJ1c2ggam9pbmVkIEZsb3JpZGEgTHQuIEdvdi4gVG9uaSBKZW5uaW5ncyBhbmQgUmVwdWJsaWNhbiBQYXJ0eSBvZiBGbG9yaWRhIENoYWlyd29tYW4gQ2Fyb2xlIEplYW4gSm9yZGFuIGFubm91bmNlIHRoZSBCdXNoLUNoZW5leSAnMDQgRmxvcmlkYSAiVyBTdGFuZHMgZm9yIFdvbWVuIiBMZWFkZXJzaGlwIFRlYW0uXDwvZGl2XD4KXDxkaXYgaWQ9ImRpdkNhcHRpb24yIiBjbGFzcz0iR2FsbGVyeUNhcHRpb24iXD5GbG9yaWRhIEZpcnN0IExhZHkgQ29sdW1iYSBCdXNoIGtpY2tzIG9mZiB0aGUgQnVzaC1DaGVuZXkgJzA0IEZsb3JpZGEgIlcgU3RhbmRzIGZvciBXb21lbiIgTGVhZGVyc2hpcCBUZWFtLlw8L2Rpdlw+Clw8ZGl2IGlkPSJkaXZDYXB0aW9uMyIgY2xhc3M9IkdhbGxlcnlDYXB0aW9uIlw+RmxvcmlkYSBMdC4gR292LiBUb25pIEplbm5pbmdzIHNwZWFrcyBhYm91dCB3aHkgUHJlc2lkZW50IEJ1c2ggaXMgdGhlIHJpZ2h0IGxlYWRlciBmb3Igd29tZW4gYW5kIGFsbCBBbWVyaWNhIGF0IHRoZSBhbm5vdW5jZW1lbnQgb2YgdGhlIEJ1c2gtQ2hlbmV5ICcwNCBGbG9yaWRhICJXIFN0YW5kcyBmb3IgV29tZW4iIExlYWRlcnNoaXAgVGVhbS5cPC9kaXZcPgpcPGRpdiBpZD0iZGl2Q2FwdGlvbjQiIGNsYXNzPSJHYWxsZXJ5Q2FwdGlvbiJcPlRoZSBIb25vcmFibGUgRWxhaW5lIENoYW8sIERvcm8gQnVzaCBLb2NoIGFuZCBMaXogQ2hlbmV5IGtpY2sgb2ZmIHRoZSAiVyBTdGFuZHMgZm9yIFdvbWVuIiBDb2FsaXRpb24gam9pbmVkIGJ5IGh1bmRyZWRzIG9mIHdvbWVuIHN1cHBvcnRlcnMuXDwvZGl2XD4KXDxkaXYgaWQ9ImRpdkNhcHRpb241IiBjbGFzcz0iR2FsbGVyeUNhcHRpb24iXD5DYXRoeSBHaWxsZXNwaWUgZGlzY3Vzc2VzIHdoeSAiVyIgU3RhbmRzIGZvciBXb21lbiBhdCB0aGUgQnVzaC1DaGVuZXkgJzA0IFdvbWVuJ3MgTGVhZGVyc2hpcCBUZWFtIHJvbGwtb3V0Llw8L2Rpdlw+Clw8ZGl2IGlkPSJkaXZDYXB0aW9uNiIgY2xhc3M9IkdhbGxlcnlDYXB0aW9uIlw+VGhlIEhvbm9yYWJsZSBFbGFpbmUgQ2hhbyBzcGVha3MgdG8gdGhlIGNyb3dkIGF0IHRoZSBCdXNoLUNoZW5leSAnMDQgIlcgU3RhbmRzIGZvciBXb21lbiIgTGVhZGVyc2hpcCBUZWFtIGFubm91bmNlbWVudC5cPC9kaXZcPgpcPGRpdiBpZD0iZGl2Q2FwdGlvbjciIGNsYXNzPSJHYWxsZXJ5Q2FwdGlvbiJcPlNlbmF0b3IgQm9iIERvbGUgZ3JlZXRzIGEgZmVsbG93IHZldGVyYW4gYW5kIEJ1c2ggc3VwcG9ydGVyIGF0IHRoZSBCdXNoLUNoZW5leSAnMDQgTmF0aW9uYWwgVmV0ZXJhbnMgTGVhZGVyc2hpcCBUZWFtIGtpY2stb2ZmIGluIFRhbXBhLCBGbG9yaWRhLlw8L2Rpdlw+Clw8ZGl2IGlkPSJkaXZDYXB0aW9uOCIgY2xhc3M9IkdhbGxlcnlDYXB0aW9uIlw+U2VuLiBEb2xlIGpvaW5zIHRoZSBIb25vcmFibGUgQW50aG9ueSBQcmluY2lwaSwgVS5TLiBDb25ncmVzc21hbiBTYW0gSm9obnNvbiwgTWVkYWwgb2YgSG9ub3IgUmVjaXBpZW50IEdlbmVyYWwgUGF0IEJyYWR5LCBBZG1pcmFsIEplcmVtaWFoIERlbnRvbiwgU3RhZmYgU2VyZ2VhbnQgRG9ub3ZhbiBDaGFwbWFuLCBDb2xvbmVsIEpvcmdlIFJvZHJpZ3VleiBhbmQgQ2hpZWYgV2FycmFudCBPZmZpY2VyIE1pY2hhZWwgRHVyYW50IHRvIGtpY2sgb2ZmIFZldGVyYW5zIGZvciBCdXNoLiBcPC9kaXZcPgpcPGRpdiBpZD0iZGl2Q2FwdGlvbjkiIGNsYXNzPSJHYWxsZXJ5Q2FwdGlvbiJcPlUuUy4gQ29uZ3Jlc3NtYW4gU2FtIEpvaG5zb24gb2YgVGV4YXMgKFUuUy4gQWlyIEZvcmNlLCBSZXQuKSB0ZWxscyB3aHkgUHJlc2lkZW50IEJ1c2ggaXMgdGhlIHJpZ2h0IGxlYWRlciBmb3IgQW1lcmljYSdzIHZldGVyYW5zIGF0IHRoZSBraWNrLW9mZiBvZiB0aGUgQnVzaC1DaGVuZXkgJzA0IFZldGVyYW5zIENvYWxpdGlvbi5cPC9kaXZcPgpcPGRpdiBpZD0iZGl2Q2FwdGlvbjEwIiBjbGFzcz0iR2FsbGVyeUNhcHRpb24iXD5NYWpvciBHZW5lcmFsIEJpbGwgTHluY2ggKFJldC4pIGNvbnRpbnVlcyB0aGUgXDxJXD5XaW5uaW5nIHRoZSBXYXIgb24gVGVycm9yIFRvdXJcPC9JXD4gYXQgYSBwcmVzcyBjb25mZXJlbmNlIGluIFlvcmsuXDwvZGl2XD4KXDxkaXYgaWQ9ImRpdkNhcHRpb24xMSIgY2xhc3M9IkdhbGxlcnlDYXB0aW9uIlw+Q29uZ3Jlc3NtYW4gVG9kZCBQbGF0dHMgKFItUEEpIHNwZWFrcyB0byBCdXNoLUNoZW5leSBzdXBwb3J0ZXJzIGFib3V0IEpvaG4gS2VycnkncyB0cm91YmxpbmcgcmVjb3JkIG9uIG5hdGlvbmFsIHNlY3VyaXR5IGF0IGEgXDxJXD5XaW5uaW5nIHRoZSBXYXIgb24gVGVycm9yIFRvdXJcPC9JXD4gZXZlbnQgaW4gWW9yaywgUGVubnN5bHZhbmlhLlw8L2Rpdlw+Clw8L2Rpdlw+Cjs+Pjs7Pjs+Pjt0PHA8bDxWaXNpYmxlOz47bDxvPGY+Oz4+Ozs+O3Q8cDxsPFZpc2libGU7PjtsPG88dD47Pj47bDxpPDE0Pjs+O2w8dDxwPGw8VmlzaWJsZTs+O2w8bzxmPjs+PjtsPGk8MT47PjtsPHQ8cDxwPGw8Q2hlY2tlZDtWaXNpYmxlOz47bDxvPGY+O288Zj47Pj47Pjs7Pjs+Pjs+Pjs+Pjs+Pjt0PHA8bDxUZXh0Oz47bDxcPHNjcmlwdCBsYW5ndWFnZT0iamF2YXNjcmlwdCJcPkluaXRhbGl6ZVBhZ2UoJy9pbWFnZXMvZ2FsbGVyeS9FZHVjYXRvcnMtUm9sbG91dDIuanBnLC9pbWFnZXMvZ2FsbGVyeS8yMDA0LTA1LTE4MUwuanBnLC9pbWFnZXMvZ2FsbGVyeS8yMDA0LTA1LTE4M0wuanBnLC9pbWFnZXMvZ2FsbGVyeS8yMDA0LTA1LTE4MkwuanBnLC9pbWFnZXMvZ2FsbGVyeS8wNTEyMDR3b21lbjFMLmpwZywvaW1hZ2VzL2dhbGxlcnkvMDUxMjA0d29tZW4yTC5qcGcsL2ltYWdlcy9nYWxsZXJ5LzA1MTIwNHdvbWVuM0guanBnLC9pbWFnZXMvZ2FsbGVyeS92YXRhbXBhMUwuanBnLC9pbWFnZXMvZ2FsbGVyeS92YXRhbXBhMkwuanBnLC9pbWFnZXMvZ2FsbGVyeS92YXRhbXBhM0wuanBnLC9pbWFnZXMvZ2FsbGVyeS9nZW5seW5jaEwuanBnLC9pbWFnZXMvZ2FsbGVyeS9yZXBwbGF0dHNMLmpwZywnLCdPaGlvIHN0YXRlIFNlbmF0b3IgUm9iZXJ0IEdhcmRuZXIgKFItTWFkaXNvbiksIGNoYWlyIG9mIHRoZSBPaGlvIFNlbmF0ZSBFZHVjYXRpb24gQ29tbWl0dGVlLCB3ZWxjb21lcyB0aGUgSG9ub3JhYmxlIFJvZCBQYWlnZSB0byB0aGUgQnVzaC1DaGVuZXkgYDA0IE5hdGlvbmFsIEVkdWNhdG9ycyBmb3IgQnVzaCBzdGVlcmluZyBjb21taXR0ZWUgYW5ub3VuY2VtZW50IGF0IHRoZSBPaGlvIFN0YXRlaG91c2UgaW4gQ29sdW1idXMufEZsb3JpZGEgRmlyc3QgTGFkeSBDb2x1bWJhIEJ1c2ggam9pbmVkIEZsb3JpZGEgTHQuIEdvdi4gVG9uaSBKZW5uaW5ncyBhbmQgUmVwdWJsaWNhbiBQYXJ0eSBvZiBGbG9yaWRhIENoYWlyd29tYW4gQ2Fyb2xlIEplYW4gSm9yZGFuIGFubm91bmNlIHRoZSBCdXNoLUNoZW5leSBgMDQgRmxvcmlkYSAiVyBTdGFuZHMgZm9yIFdvbWVuIiBMZWFkZXJzaGlwIFRlYW0ufEZsb3JpZGEgRmlyc3QgTGFkeSBDb2x1bWJhIEJ1c2gga2lja3Mgb2ZmIHRoZSBCdXNoLUNoZW5leSBgMDQgRmxvcmlkYSAiVyBTdGFuZHMgZm9yIFdvbWVuIiBMZWFkZXJzaGlwIFRlYW0ufEZsb3JpZGEgTHQuIEdvdi4gVG9uaSBKZW5uaW5ncyBzcGVha3MgYWJvdXQgd2h5IFByZXNpZGVudCBCdXNoIGlzIHRoZSByaWdodCBsZWFkZXIgZm9yIHdvbWVuIGFuZCBhbGwgQW1lcmljYSBhdCB0aGUgYW5ub3VuY2VtZW50IG9mIHRoZSBCdXNoLUNoZW5leSBgMDQgRmxvcmlkYSAiVyBTdGFuZHMgZm9yIFdvbWVuIiBMZWFkZXJzaGlwIFRlYW0ufFRoZSBIb25vcmFibGUgRWxhaW5lIENoYW8sIERvcm8gQnVzaCBLb2NoIGFuZCBMaXogQ2hlbmV5IGtpY2sgb2ZmIHRoZSAiVyBTdGFuZHMgZm9yIFdvbWVuIiBDb2FsaXRpb24gam9pbmVkIGJ5IGh1bmRyZWRzIG9mIHdvbWVuIHN1cHBvcnRlcnMufENhdGh5IEdpbGxlc3BpZSBkaXNjdXNzZXMgd2h5ICJXIiBTdGFuZHMgZm9yIFdvbWVuIGF0IHRoZSBCdXNoLUNoZW5leSBgMDQgV29tZW5gcyBMZWFkZXJzaGlwIFRlYW0gcm9sbC1vdXQufFRoZSBIb25vcmFibGUgRWxhaW5lIENoYW8gc3BlYWtzIHRvIHRoZSBjcm93ZCBhdCB0aGUgQnVzaC1DaGVuZXkgYDA0ICJXIFN0YW5kcyBmb3IgV29tZW4iIExlYWRlcnNoaXAgVGVhbSBhbm5vdW5jZW1lbnQufFNlbmF0b3IgQm9iIERvbGUgZ3JlZXRzIGEgZmVsbG93IHZldGVyYW4gYW5kIEJ1c2ggc3VwcG9ydGVyIGF0IHRoZSBCdXNoLUNoZW5leSBgMDQgTmF0aW9uYWwgVmV0ZXJhbnMgTGVhZGVyc2hpcCBUZWFtIGtpY2stb2ZmIGluIFRhbXBhLCBGbG9yaWRhLnxTZW4uIERvbGUgam9pbnMgdGhlIEhvbm9yYWJsZSBBbnRob255IFByaW5jaXBpLCBVLlMuIENvbmdyZXNzbWFuIFNhbSBKb2huc29uLCBNZWRhbCBvZiBIb25vciBSZWNpcGllbnQgR2VuZXJhbCBQYXQgQnJhZHksIEFkbWlyYWwgSmVyZW1pYWggRGVudG9uLCBTdGFmZiBTZXJnZWFudCBEb25vdmFuIENoYXBtYW4sIENvbG9uZWwgSm9yZ2UgUm9kcmlndWV6IGFuZCBDaGllZiBXYXJyYW50IE9mZmljZXIgTWljaGFlbCBEdXJhbnQgdG8ga2ljayBvZmYgVmV0ZXJhbnMgZm9yIEJ1c2guIHxVLlMuIENvbmdyZXNzbWFuIFNhbSBKb2huc29uIG9mIFRleGFzIChVLlMuIEFpciBGb3JjZSwgUmV0LikgdGVsbHMgd2h5IFByZXNpZGVudCBCdXNoIGlzIHRoZSByaWdodCBsZWFkZXIgZm9yIEFtZXJpY2FgcyB2ZXRlcmFucyBhdCB0aGUga2ljay1vZmYgb2YgdGhlIEJ1c2gtQ2hlbmV5IGAwNCBWZXRlcmFucyBDb2FsaXRpb24ufE1ham9yIEdlbmVyYWwgQmlsbCBMeW5jaCAoUmV0LikgY29udGludWVzIHRoZSBcPElcPldpbm5pbmcgdGhlIFdhciBvbiBUZXJyb3IgVG91clw8L0lcPiBhdCBhIHByZXNzIGNvbmZlcmVuY2UgaW4gWW9yay58Q29uZ3Jlc3NtYW4gVG9kZCBQbGF0dHMgKFItUEEpIHNwZWFrcyB0byBCdXNoLUNoZW5leSBzdXBwb3J0ZXJzIGFib3V0IEpvaG4gS2VycnlgcyB0cm91YmxpbmcgcmVjb3JkIG9uIG5hdGlvbmFsIHNlY3VyaXR5IGF0IGEgXDxJXD5XaW5uaW5nIHRoZSBXYXIgb24gVGVycm9yIFRvdXJcPC9JXD4gZXZlbnQgaW4gWW9yaywgUGVubnN5bHZhbmlhLnwnLDEyKVw8L3NjcmlwdFw+Oz4+Ozs+Oz4+O2w8aW1nU3VibWl0Oz4+LGmyc8SrzVfFtwjAV/MxJ/2ZBOM=" />
+
+<script language="javascript" type="text/javascript">
+<!--
+	function __doPostBack(eventTarget, eventArgument) {
+		var theform;
+		if (window.navigator.appName.toLowerCase().indexOf("microsoft") > -1) {
+			theform = document.Gallery;
+		}
+		else {
+			theform = document.forms["Gallery"];
+		}
+		theform.__EVENTTARGET.value = eventTarget.split("$").join(":");
+		theform.__EVENTARGUMENT.value = eventArgument;
+		theform.submit();
+	}
+// -->
+</script>
+
+									
+									
+										<TABLE id="Table6" cellSpacing="0" cellPadding="0" width="645" bgColor="#ffffff" border="0">
+											<TR vAlign="top" align="left">
+												<TD><IMG height="8" src="/images/NewsItems/gwb_nwsrm_r5_c5.gif" width="8"></TD>
+												<TD><IMG height="8" src="/images/NewsItems/gwb_nwsrm_r5_c6.gif" width="628"></TD>
+												<TD><IMG height="8" src="/images/NewsItems/gwb_nwsrm_r5_c33.gif" width="9"></TD>
+											</TR>
+											<TR vAlign="top" align="left">
+												<TD>&nbsp;</TD>
+												<TD bgColor="white" height="100%"><!-- content -->
+													<SPAN class="Headline">Campaign Events</SPAN> <span class="HeadlineCarrot"> < </span> <a href="photoalbum.aspx" class="HeadlineLinks">Photo Album</a> <span class="HeadlineCarrot"> < </span> <a href="../" class="HeadlineLinks">Home</a><BR>
+													<BR>
+													<TABLE cellSpacing="0" cellPadding="0" width="627" border="0">
+														
+															<TBODY>
+																<TR>
+																	<TD vAlign="top" width="204">
+																		<table width="206" border="0" cellspacing="0" cellpadding="0"><tr><td><a onClick="swapGallery(0,'')" class="GalleryPhoto"><img id="imgSmall12" src="/images/gallery/Educators-Rollout2t.jpg" height="47" width="62" vspace="1" alt="Ohio state Senator Robert Gardner (R-Madison), chair of the Ohio Senate Education Committee, welcomes the Honorable Rod Paige to the Bush-Cheney '04 National Educators for Bush steering committee announcement at the Ohio Statehouse in Columbus."></a></td><td><img src="..//images/gwb_blank9x9.gif" height="9" width="7"></td><td><a onClick="swapGallery(1,'')" class="GalleryPhoto"><img id="imgSmall13" src="/images/gallery/2004-05-181t.jpg" height="47" width="62" vspace="1" alt="Florida First Lady Columba Bush joined Florida Lt. Gov. Toni Jennings and Republican Party of Florida Chairwoman Carole Jean Jordan announce the Bush-Cheney '04 Florida "W Stands for Women" Leadership Team."></a></td><td><img src="..//images/gwb_blank9x9.gif" height="9" width="7"></td><td><a onClick="swapGallery(2,'')" class="GalleryPhoto"><img id="imgSmall14" src="/images/gallery/2004-05-183t.jpg" height="47" width="62" vspace="1" alt="Florida First Lady Columba Bush kicks off the Bush-Cheney '04 Florida "W Stands for Women" Leadership Team."></a></td></tr><tr><td colspan="5"><img src="..//images/gwb_blank9x9.gif" height="5" width="9"></td></tr><tr><td><a onClick="swapGallery(3,'')" class="GalleryPhoto"><img id="imgSmall15" src="/images/gallery/2004-05-182t.jpg" height="47" width="62" vspace="1" alt="Florida Lt. Gov. Toni Jennings speaks about why President Bush is the right leader for women and all America at the announcement of the Bush-Cheney '04 Florida "W Stands for Women" Leadership Team."></a></td><td><img src="..//images/gwb_blank9x9.gif" height="9" width="7"></td><td><a onClick="swapGallery(4,'')" class="GalleryPhoto"><img id="imgSmall16" src="/images/gallery/051204women1T.jpg" height="47" width="62" vspace="1" alt="The Honorable Elaine Chao, Doro Bush Koch and Liz Cheney kick off the "W Stands for Women" Coalition joined by hundreds of women supporters."></a></td><td><img src="..//images/gwb_blank9x9.gif" height="9" width="7"></td><td><a onClick="swapGallery(5,'')" class="GalleryPhoto"><img id="imgSmall17" src="/images/gallery/051204women2T.jpg" height="47" width="62" vspace="1" alt="Cathy Gillespie discusses why "W" Stands for Women at the Bush-Cheney '04 Women's Leadership Team roll-out."></a></td></tr><tr><td colspan="5"><img src="..//images/gwb_blank9x9.gif" height="5" width="9"></td></tr><tr><td><a onClick="swapGallery(6,'')" class="GalleryPhoto"><img id="imgSmall18" src="/images/gallery/051204women3T.jpg" height="47" width="62" vspace="1" alt="The Honorable Elaine Chao speaks to the crowd at the Bush-Cheney '04 "W Stands for Women" Leadership Team announcement."></a></td><td><img src="..//images/gwb_blank9x9.gif" height="9" width="7"></td><td><a onClick="swapGallery(7,'')" class="GalleryPhoto"><img id="imgSmall19" src="/images/gallery/vatampa1t.jpg" height="47" width="62" vspace="1" alt="Senator Bob Dole greets a fellow veteran and Bush supporter at the Bush-Cheney '04 National Veterans Leadership Team kick-off in Tampa, Florida."></a></td><td><img src="..//images/gwb_blank9x9.gif" height="9" width="7"></td><td><a onClick="swapGallery(8,'')" class="GalleryPhoto"><img id="imgSmall20" src="/images/gallery/vatampa2t.jpg" height="47" width="62" vspace="1" alt="Sen. Dole joins the Honorable Anthony Principi, U.S. Congressman Sam Johnson, Medal of Honor Recipient General Pat Brady, Admiral Jeremiah Denton, Staff Sergeant Donovan Chapman, Colonel Jorge Rodriguez and Chief Warrant Officer Michael Durant to kick off Veterans for Bush. "></a></td></tr><tr><td colspan="5"><img src="..//images/gwb_blank9x9.gif" height="5" width="9"></td></tr><tr><td><a onClick="swapGallery(9,'')" class="GalleryPhoto"><img id="imgSmall21" src="/images/gallery/vatampa3t.jpg" height="47" width="62" vspace="1" alt="U.S. Congressman Sam Johnson of Texas (U.S. Air Force, Ret.) tells why President Bush is the right leader for America's veterans at the kick-off of the Bush-Cheney '04 Veterans Coalition."></a></td><td><img src="..//images/gwb_blank9x9.gif" height="9" width="7"></td><td><a onClick="swapGallery(10,'')" class="GalleryPhoto"><img id="imgSmall22" src="/images/gallery/genlynchT.jpg" height="47" width="62" vspace="1" alt="Major General Bill Lynch (Ret.) continues the <I>Winning the War on Terror Tour</I> at a press conference in York."></a></td><td><img src="..//images/gwb_blank9x9.gif" height="9" width="7"></td><td><a onClick="swapGallery(11,'')" class="GalleryPhoto"><img id="imgSmall23" src="/images/gallery/repplattsT.jpg" height="47" width="62" vspace="1" alt="Congressman Todd Platts (R-PA) speaks to Bush-Cheney supporters about John Kerry's troubling record on national security at a <I>Winning the War on Terror Tour</I> event in York, Pennsylvania."></a></td></tr><tr><td colspan="5"><img src="..//images/gwb_blank9x9.gif" height="5" width="9"></td></tr><tr><td colspan="5" align="center" class="content">Pages: <a href="PhotoAlbum.aspx?gallery=34&page=1" class="backnext">1</a>&nbsp;<a href="PhotoAlbum.aspx?gallery=34&page=2" class="backnext">2</a>&nbsp;<a href="PhotoAlbum.aspx?gallery=34&page=3" class="backnext">3</a>&nbsp;<a href="PhotoAlbum.aspx?gallery=34&page=4" class="backnext">4</a>&nbsp;<a href="PhotoAlbum.aspx?gallery=34&page=5" class="backnext">5</a>&nbsp;<a href="PhotoAlbum.aspx?gallery=34&page=6" class="backnext">6</a>&nbsp;<a href="PhotoAlbum.aspx?gallery=34&page=7" class="backnext">7</a>&nbsp;</td></tr><tr><td colspan="5" align="center" class="content"><a href="javascript:swapGallery(-1,'back')" class="backnext">Previous Image</a> | <a href="javascript:swapGallery(-1,'next')" class="backnext">Next Image</a></td></tr></table></TD>
+																	<TD>&nbsp;</TD>
+																	<TD>
+																		<img id="imgBigImage" class="GalleryPhoto" name="imgBigImage" src="../images/gallery/Mvc-018sL.jpg" alt="" border="0" height="300" width="414" /><div class="GalleryHolder">
+<div id="divCaption0" class="GalleryCaption">Ohio state Senator Robert Gardner (R-Madison), chair of the Ohio Senate Education Committee, welcomes the Honorable Rod Paige to the Bush-Cheney '04 National Educators for Bush steering committee announcement at the Ohio Statehouse in Columbus.</div>
+<div id="divCaption1" class="GalleryCaption">Florida First Lady Columba Bush joined Florida Lt. Gov. Toni Jennings and Republican Party of Florida Chairwoman Carole Jean Jordan announce the Bush-Cheney '04 Florida "W Stands for Women" Leadership Team.</div>
+<div id="divCaption2" class="GalleryCaption">Florida First Lady Columba Bush kicks off the Bush-Cheney '04 Florida "W Stands for Women" Leadership Team.</div>
+<div id="divCaption3" class="GalleryCaption">Florida Lt. Gov. Toni Jennings speaks about why President Bush is the right leader for women and all America at the announcement of the Bush-Cheney '04 Florida "W Stands for Women" Leadership Team.</div>
+<div id="divCaption4" class="GalleryCaption">The Honorable Elaine Chao, Doro Bush Koch and Liz Cheney kick off the "W Stands for Women" Coalition joined by hundreds of women supporters.</div>
+<div id="divCaption5" class="GalleryCaption">Cathy Gillespie discusses why "W" Stands for Women at the Bush-Cheney '04 Women's Leadership Team roll-out.</div>
+<div id="divCaption6" class="GalleryCaption">The Honorable Elaine Chao speaks to the crowd at the Bush-Cheney '04 "W Stands for Women" Leadership Team announcement.</div>
+<div id="divCaption7" class="GalleryCaption">Senator Bob Dole greets a fellow veteran and Bush supporter at the Bush-Cheney '04 National Veterans Leadership Team kick-off in Tampa, Florida.</div>
+<div id="divCaption8" class="GalleryCaption">Sen. Dole joins the Honorable Anthony Principi, U.S. Congressman Sam Johnson, Medal of Honor Recipient General Pat Brady, Admiral Jeremiah Denton, Staff Sergeant Donovan Chapman, Colonel Jorge Rodriguez and Chief Warrant Officer Michael Durant to kick off Veterans for Bush. </div>
+<div id="divCaption9" class="GalleryCaption">U.S. Congressman Sam Johnson of Texas (U.S. Air Force, Ret.) tells why President Bush is the right leader for America's veterans at the kick-off of the Bush-Cheney '04 Veterans Coalition.</div>
+<div id="divCaption10" class="GalleryCaption">Major General Bill Lynch (Ret.) continues the <I>Winning the War on Terror Tour</I> at a press conference in York.</div>
+<div id="divCaption11" class="GalleryCaption">Congressman Todd Platts (R-PA) speaks to Bush-Cheney supporters about John Kerry's troubling record on national security at a <I>Winning the War on Terror Tour</I> event in York, Pennsylvania.</div>
+</div>
+<BR>
+																	</TD>
+																</TR>
+														
+														<TR>
+															<TD colSpan="3">&nbsp;<BR>
+																&nbsp;</TD>
+														</TR>
+														<TR>
+															<TD colSpan="3">
+																
+																	<TABLE cellSpacing="0" cellPadding="9" width="100%" border="0">
+																		<TR>
+																			<TD colSpan="3" style="FONT-WEIGHT: bold; FONT-SIZE: 12pt; COLOR: #fffbcf; FONT-FAMILY: Verdana, Arial, Helvetica, sans-serif; BACKGROUND-COLOR: #cc0000">FORWARD 
+																				THIS IMAGE TO FRIENDS &amp; FAMILY!</TD>
+																		</TR>
+																		
+																		<TR>
+																			<TD align="middle" style="BACKGROUND-COLOR: #fffbce">
+																				
+																				<TABLE>
+																					<TR>
+																						<TD class="content" vAlign="top"><STRONG>Your Name</STRONG><BR>
+																							<input name="hidActiveImage" id="hidActiveImage" type="hidden" /><input name="hidImageID" id="hidImageID" type="hidden" /><input name="hidCurPage" id="hidCurPage" type="hidden" value="2" /><input name="hidEndPage" id="hidEndPage" type="hidden" value="7" /><input name="hidGalleryID" id="hidGalleryID" type="hidden" value="34" /><input name="txtName" id="txtName" type="text" class="InputStyle" /><BR>
+																							<STRONG>Your Email Address</STRONG><BR>
+																							<input name="txtEmailAddress" id="txtEmailAddress" type="text" class="InputStyle" /><BR>
+																							<BR>
+																							<BR>
+																							</TD>
+																						<TD class="content" align="right"><STRONG>Email 1:</STRONG> <input name="txtEmail1" id="txtEmail1" type="text" class="InputStyle" /><BR>
+																							<STRONG>Email 2:</STRONG> <input name="txtEmail2" id="txtEmail2" type="text" class="InputStyle" /><BR>
+																							<STRONG>Email 3:</STRONG> <input name="txtEmail3" id="txtEmail3" type="text" class="InputStyle" /><BR>
+																							<STRONG>Email 4:</STRONG> <input name="txtEmail4" id="txtEmail4" type="text" class="InputStyle" /><BR>
+																							<STRONG>Email 5:</STRONG> <input name="txtEmail5" id="txtEmail5" type="text" class="InputStyle" /></TD>
+																					</TR>
+																					<TR>
+																						<TD class="content" colSpan="2"><STRONG>Comments for your message</STRONG><BR>
+																							<textarea name="txtComments" id="txtComments" class="InputStyle" style="WIDTH: 459px; HEIGHT: 75px"></textarea></TD>
+																					</TR>
+																					<TR>
+																						<TD align="middle" colSpan="2">
+																							<input src="../images/gwb_email_bsendit.gif" language="javascript" onclick="if (typeof(Page_ClientValidate) == 'function') Page_ClientValidate(); " name="imgSubmit" id="imgSubmit" type="image" height="31" width="68" /></TD>
+																					</TR>
+																				</TABLE>
+																			</TD>
+																		</TR>
+																	</TABLE>
+																</TD>
+														</TR>
+													</TABLE>
+												</TD>
+											</TR>
+										</TABLE>
+									</form>
+								<script language="javascript">InitalizePage('/images/gallery/Educators-Rollout2.jpg,/images/gallery/2004-05-181L.jpg,/images/gallery/2004-05-183L.jpg,/images/gallery/2004-05-182L.jpg,/images/gallery/051204women1L.jpg,/images/gallery/051204women2L.jpg,/images/gallery/051204women3H.jpg,/images/gallery/vatampa1L.jpg,/images/gallery/vatampa2L.jpg,/images/gallery/vatampa3L.jpg,/images/gallery/genlynchL.jpg,/images/gallery/repplattsL.jpg,','Ohio state Senator Robert Gardner (R-Madison), chair of the Ohio Senate Education Committee, welcomes the Honorable Rod Paige to the Bush-Cheney `04 National Educators for Bush steering committee announcement at the Ohio Statehouse in Columbus.|Florida First Lady Columba Bush joined Florida Lt. Gov. Toni Jennings and Republican Party of Florida Chairwoman Carole Jean Jordan announce the Bush-Cheney `04 Florida "W Stands for Women" Leadership Team.|Florida First Lady Columba Bush kicks off the Bush-Cheney `04 Florida "W Stands for Women" Leadership Team.|Florida Lt. Gov. Toni Jennings speaks about why President Bush is the right leader for women and all America at the announcement of the Bush-Cheney `04 Florida "W Stands for Women" Leadership Team.|The Honorable Elaine Chao, Doro Bush Koch and Liz Cheney kick off the "W Stands for Women" Coalition joined by hundreds of women supporters.|Cathy Gillespie discusses why "W" Stands for Women at the Bush-Cheney `04 Women`s Leadership Team roll-out.|The Honorable Elaine Chao speaks to the crowd at the Bush-Cheney `04 "W Stands for Women" Leadership Team announcement.|Senator Bob Dole greets a fellow veteran and Bush supporter at the Bush-Cheney `04 National Veterans Leadership Team kick-off in Tampa, Florida.|Sen. Dole joins the Honorable Anthony Principi, U.S. Congressman Sam Johnson, Medal of Honor Recipient General Pat Brady, Admiral Jeremiah Denton, Staff Sergeant Donovan Chapman, Colonel Jorge Rodriguez and Chief Warrant Officer Michael Durant to kick off Veterans for Bush. |U.S. Congressman Sam Johnson of Texas (U.S. Air Force, Ret.) tells why President Bush is the right leader for America`s veterans at the kick-off of the Bush-Cheney `04 Veterans Coalition.|Major General Bill Lynch (Ret.) continues the <I>Winning the War on Terror Tour</I> at a press conference in York.|Congressman Todd Platts (R-PA) speaks to Bush-Cheney supporters about John Kerry`s troubling record on national security at a <I>Winning the War on Terror Tour</I> event in York, Pennsylvania.|',12)</script>
+							</TD>
+						</TR>
+						<TR>
+							<TD vAlign="top" align="left" colSpan="2">
+								<!-- footer nav -->
+<TABLE id="Table1" cellSpacing="0" cellPadding="0" width="775" border="0">
+	<TR vAlign="top" align="left">
+		<TD width="130" bgcolor="#405075" rowSpan="2"><A href="/Default.aspx"><IMG height="63" alt="GeorgeWBush.com" src="/images/BC04_back_btmflag.gif" width="130" border="0"></A></TD>
+		<TD colSpan="4" bgcolor="white">&nbsp;</TD>
+	</TR>
+	<TR vAlign="top" align="left">
+		<TD bgcolor="#405075">&nbsp;</TD>
+		<TD vAlign="middle" bgcolor="#405075"><FONT face="Verdana, Arial, Helvetica, sans-serif" color="#ffffff" size="1">Sign 
+				up for breaking news, the inside scoop, action alerts, &amp; event notices!</FONT></TD>
+		<form id=FooterEmailSignup 
+    action='https://www.georgewbush.com/Secure/EmailSignUp.aspx' 
+    method=post>
+			<TD vAlign="middle" bgcolor="#405075"><INPUT id="email" style="BORDER-RIGHT: #333333 1px solid; BORDER-TOP: #333333 1px solid; BORDER-LEFT: #333333 1px solid; WIDTH: 250px; BORDER-BOTTOM: #333333 1px solid; BACKGROUND-COLOR: #ffffff" onfocus="email.value='';" type="text" size="14" value="Email Address" name="email">
+			</TD>
+		</form>
+		<TD vAlign="middle" bgcolor="#405075"><A href="javascript:FooterEmailSignup.submit();"><IMG alt="Get News!" src="/images/BC04_back_btmbjoin.gif" border="0"></A></TD>
+	</TR>
+	<TR vAlign="top" align="left" bgColor="#ffffff">
+		<TD colspan="5"><DIV align="center" class="copyrighttxt">
+				<STRONG>BUSH-CHENEY '04, Inc</STRONG>.| P.O. BOX 10648 | Arlington, VA 22210<BR>
+				Phone: 703.647.2700 | Fax: 703.647.2993 | Email: <A href="mailto:BushCheney04@GeorgeWBush.com" class="copyrightlnks">
+					BushCheney04@GeorgeWBush.com</A>
+				<P></P>
+				<TABLE width="430" class="content">
+					<TR>
+						<TD align="left">
+							<TABLE width="210" border="1" cellpadding="2" cellspacing="0" bordercolor="#020236">
+								<TR>
+									<TD class="copyrighttxt">Paid for by BUSH-CHENEY '04, Inc.</TD>
+								</TR>
+							</TABLE>
+						</TD>
+						<TD align="left">&nbsp;<A href="/copyright.aspx" style="TEXT-DECORATION:none">©</A> 
+							2004 Bush-Cheney ’04, Inc.</TD>
+					</TR>
+				</TABLE>
+				
+			</DIV>
+		</TD>
+	</TR>
+	<TR align="left" valign="top" bgcolor="#ffffff">
+		<TD colspan="5"><IMG src="/images/GWB_nwsrm_r47_c6.gif" width="265" height="7"></TD>
+	</TR>
+</TABLE>
+
+								<!-- footer nav --></TD>
+						</TR>
+					</TABLE>
+				</TD>
+			</TR>
+			</TBODY></TABLE>
+	</BODY>
+</HTML>

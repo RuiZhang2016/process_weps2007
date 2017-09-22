@@ -1,0 +1,628 @@
+
+<?xml version="1.0" encoding="UTF-8" ?>
+<!-- 0609 -->
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html id="ctl00_Html1" xmlns="http://www.w3.org/1999/xhtml" dir="ltr" lang="en-us">
+<head id="ctl00_Head1"><link href="http://msdn2.microsoft.com/css/global.css" rel="stylesheet" type="text/css" />
+<script language="javascript" type="text/javascript" src="http://msdn2.microsoft.com/msdn/Controls/MTPS_SurveyLauncherCtrl/en-us/broker.js" ></script>
+
+    <script type="text/javascript">
+      <!--
+      function GetLocalTimeOffset()
+      {
+        var now = new Date();
+        var date1 = new Date(now.getFullYear(), 0, 1, 0, 0, 0, 0);
+        var temp = date1.toGMTString();
+        var date2 = new Date(temp.substring(0, temp.lastIndexOf(" ")-1));
+        var hoursDiffStdTime = (date1 - date2) / (1000 * 60 * 60);
+        setCookie("timeZone", hoursDiffStdTime, 0); 
+      }
+
+      function setCookie(name,value,days) {
+        if (days && days > 0) {
+          var date = new Date();
+          date.setTime(date.getTime()+(days*24*60*60*1000));
+          var expires = "; expires="+date.toGMTString();
+        }
+        else var expires = "";
+          document.cookie = name+"="+value+expires+"; path=/";
+      }
+       GetLocalTimeOffset();
+      //-->
+    </script>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="ms.locale" content="en-us" />
+<meta name="robots" content="NOINDEX,NOFOLLOW" />
+<meta name="MN" content="948-4:15:41 PM" /><meta name="MSHKeywordA" content="secure11152004" />
+<meta name="Search.MSHKeywordA" content="secure11152004" />
+<meta name="MSHKeywordA" content="secure11152004" />
+<meta name="Search.MSHKeywordA" content="secure11152004" />
+<meta name="MSHAttr" content="DocSetTitle:Code Secure" />
+<meta name="Search.DocSetTitle" content="Code Secure" />
+<meta name="MSHAttr" content="DocSetRoot:ms972827" />
+<meta name="Search.DocSetRoot" content="ms972827" />
+<meta name="MSHAttr" content="Description:Michael Howard discusses how you can run as an administrator and access Internet data safely by dropping unnecessary administrative privileges when using any tool to access the Internet." />
+<meta name="Search.Description" content="Michael Howard discusses how you can run as an administrator and access Internet data safely by dropping unnecessary administrative privileges when using any tool to access the Internet." />
+<meta name="MSHAttr" content="DevLang:CSharp" />
+<meta name="Search.DevLang" content="CSharp" />
+<meta name="MSHAttr" content="DocSet:kbmsdn" />
+<meta name="Search.DocSet" content="kbmsdn" />
+<meta name="MSHAttr" content="Locale:kbEnglish" />
+<meta name="Search.Locale" content="kbEnglish" />
+<meta name="MSHAttr" content="Product:kbwindows" />
+<meta name="Search.Product" content="kbwindows" />
+<meta name="MSHAttr" content="Product:VC" />
+<meta name="Search.Product" content="VC" />
+<meta name="MSHAttr" content="ProductVers:kbvcdotnet" />
+<meta name="Search.ProductVers" content="kbvcdotnet" />
+<meta name="MSHAttr" content="Product:VS" />
+<meta name="Search.Product" content="VS" />
+<meta name="MSHAttr" content="ProductVers:kbvsnet" />
+<meta name="Search.ProductVers" content="kbvsnet" />
+<meta name="MSHAttr" content="ProductVers:kbwindows" />
+<meta name="Search.ProductVers" content="kbwindows" />
+<meta name="MSHAttr" content="TargetCPU:kbx86" />
+<meta name="Search.TargetCPU" content="kbx86" />
+<meta name="MSHAttr" content="TargetOS:Windows" />
+<meta name="Search.TargetOS" content="Windows" />
+<meta name="MSHAttr" content="TargetOSVers:kbWinOS" />
+<meta name="Search.TargetOSVers" content="kbWinOS" />
+<meta name="MSHAttr" content="Technology:kbNetFramewk" />
+<meta name="Search.Technology" content="kbNetFramewk" />
+<meta name="MSHAttr" content="Technology:kbnetsecure" />
+<meta name="Search.Technology" content="kbnetsecure" />
+<meta name="MSHAttr" content="Technology:Security" />
+<meta name="Search.Technology" content="Security" />
+<meta name="MSHAttr" content="TechnologyVers:kbSecurity" />
+<meta name="Search.TechnologyVers" content="kbSecurity" />
+<meta name="MSHAttr" content="TopicType:kbArticle" />
+<meta name="Search.TopicType" content="kbArticle" />
+<meta name="MSHAttr" content="MScategory:ms972827" />
+<meta name="Search.MScategory" content="ms972827" />
+<meta name="MSHAttr" content="ShippedIn:MSDN.10" />
+<meta name="Search.ShippedIn" content="MSDN10" />
+<meta name="MSHAttr" content="OnlineHelp:VS2005" />
+<meta name="Search.OnlineHelp" content="VS2005" />
+<meta name="Search.ShortId" content="ms972827" />
+<link rel="stylesheet" type="text/css" href="http://msdn2.microsoft.com/msdn/MasterPages/DeepTreePageType/DeepTreePageType_master.css" />
+<link rel="alternate" media="print" href="http://msdn2.microsoft.com/en-us/library/ms972827(d=printer).aspx" />
+<link rel="stylesheet" type="text/css" href="http://msdn2.microsoft.com/css.aspx?i=en-us&amp;ct=msdn&amp;cl=instrumentedlink;mtps_surveylauncherctrl;mtps_pagemetadata;userrecognitionflyout;localemanagementflyout;templatedflyout;quicklinksflyout;removeanonymousprofile;integratedbannerctrl;mtps_toolbarctrl;resizablearea;tocloader;rating;toolbar;eyebrowmenubar;expandcollapseall;dropdownfilter;vsbar;relatedpages;communitycontent;codesnippet;collapsiblearea;mtpscontentplaceholder;ktablecontrol;mtps_footerctrl;memberlink;webmetrix;webtrends;mtpsmanageprofile;contentfallback;bpglobal;mtpsloginstatus;bumperpage;multiviewtable;popupwindow;altpage;contentinclude;mtpspersonalizedrssskinner;rssskinner;bulletedlist;mtpsloginview;basicheadlines;rolloverimage" />
+<script src="http://msdn2.microsoft.com/js.aspx?i=en-us&amp;ct=msdn&amp;cl=instrumentedlink;mtps_surveylauncherctrl;mtps_pagemetadata;userrecognitionflyout;localemanagementflyout;templatedflyout;quicklinksflyout;removeanonymousprofile;integratedbannerctrl;mtps_toolbarctrl;resizablearea;tocloader;rating;toolbar;eyebrowmenubar;expandcollapseall;dropdownfilter;vsbar;relatedpages;communitycontent;codesnippet;collapsiblearea;mtpscontentplaceholder;ktablecontrol;mtps_footerctrl;memberlink;webmetrix;webtrends;mtpsmanageprofile;contentfallback;bpglobal;mtpsloginstatus;bumperpage;multiviewtable;popupwindow;altpage;contentinclude;mtpspersonalizedrssskinner;rssskinner;bulletedlist;mtpsloginview;basicheadlines;rolloverimage" type="text/javascript"></script>
+
+    <!--[if IE]>
+       <style>
+        pre { white-space: normal; }
+
+	body {overflow-x:auto}
+.head {}
+        </style><![endif]-->
+        
+<title>
+	Browsing the Web and Reading E-mail Safely as an Administrator
+</title><style type="text/css">
+	.atlas__delta { font-family:Lucida Console; }
+
+</style></head>
+<body id="ctl00_MTPS_Body" onload="DoControlSetup(); windowLoaded(event); document.body.onresize=FetchResizableAreaCells; window.onresize=FetchResizableAreaCells;; SetFilterText(); CheckDropDownClientCookie(); ">
+    <form name="aspnetForm" method="post" action="ms972827.aspx.1.html" id="aspnetForm">
+<div>
+<input type="hidden" name="__EVENTTARGET" id="__EVENTTARGET" value="" />
+<input type="hidden" name="__EVENTARGUMENT" id="__EVENTARGUMENT" value="" />
+<input type="hidden" name="__VIEWSTATE" id="__VIEWSTATE" value="/wEPDwUBMA9kFgJmD2QWAgIBD2QWAgIDDxYCHgZvbmxvYWQFrwFEb0NvbnRyb2xTZXR1cCgpOyB3aW5kb3dMb2FkZWQoZXZlbnQpOyBkb2N1bWVudC5ib2R5Lm9ucmVzaXplPUZldGNoUmVzaXphYmxlQXJlYUNlbGxzOyB3aW5kb3cub25yZXNpemU9RmV0Y2hSZXNpemFibGVBcmVhQ2VsbHM7OyBTZXRGaWx0ZXJUZXh0KCk7IENoZWNrRHJvcERvd25DbGllbnRDb29raWUoKTsgFgICAQ9kFgICBQ9kFgJmD2QWBmYPD2QWAh4Fc3R5bGUFDFdpZHRoOjI1MHB4O2QCAg8PFgIeB1Rvb2xUaXAFSUNsaWNrIGFuZCBkcmFnIHRvIHJlc2l6ZS4gRG91YmxlIGNsaWNrIG9yIHByZXNzICd0JyB0byB0b2dnbGUgdmlzaWJpbGl0eS4WAh8BBR1Qb3NpdGlvbjpBYnNvbHV0ZTtMZWZ0OjI1MHB4O2QCAw8PZBYCHwEFC0xlZnQ6MjU1cHg7FgYCAQ9kFgJmD2QWBAIBD2QWBgIBDw8WBB4LTmF2aWdhdGVVcmwFQWh0dHA6Ly9tc2RuMi5taWNyb3NvZnQuY29tL2VuLXVzL2xpYnJhcnkvbXM5NzI4MjcoZD1wcmludGVyKS5hc3B4HwIFElByaW50IFRoaXMgQ29udGVudBYCHgdvbmNsaWNrBWlqYXZhc2NyaXB0OiBXZWJGb3JtX0RvQ2FsbGJhY2soJ2N0bDAwJExpYkZyYW1lJHRiMScsJ3ByaW50ZXJGcmllbmRseVBhZ2UnLEdldFNlcnZlckRhdGEsbnVsbCxudWxsLGZhbHNlKTsWBGYPDxYCHghJbWFnZVVybAUqL21zZG4vQ29udHJvbHMvVG9vbGJhci9lbi11cy9ydGdfcHJpbnQuZ2lmZGQCAg8WAh4EVGV4dAUYUHJpbnRlciBGcmllbmRseSBWZXJzaW9uZAIDDw8WAh4HVmlzaWJsZWhkZAIFDw8WBB8DBcMBbWFpbHRvOj9zdWJqZWN0PUJyb3dzaW5nIHRoZSBXZWIgYW5kIFJlYWRpbmcgRS1tYWlsIFNhZmVseSBhcyBhbiBBZG1pbmlzdHJhdG9yJmJvZHk9VGhpcyBVUkwgcG9pbnRzIHRvIGEgcGFnZSBvbiBNU0ROIHRoYXQgbWF5IGludGVyZXN0IHlvdTogaHR0cDovL21zZG4yLm1pY3Jvc29mdC5jb20vZW4tdXMvbGlicmFyeS9tczk3MjgyNy5hc3B4HwIFEVNlbmQgVGhpcyBDb250ZW50FgIfBAViamF2YXNjcmlwdDogV2ViRm9ybV9Eb0NhbGxiYWNrKCdjdGwwMCRMaWJGcmFtZSR0YjEnLCdzZW5kVGhpc1BhZ2UnLEdldFNlcnZlckRhdGEsbnVsbCxudWxsLGZhbHNlKTsWBGYPDxYCHwUFKi9tc2RuL0NvbnRyb2xzL1Rvb2xiYXIvZW4tdXMvcnRnX2VtYWlsLmdpZmRkAgIPFgIfBgUEU2VuZGQCAw9kFgJmD2QWAgIBD2QWAgIBD2QWBGYPZBYCZg8PFgIfAgU4VHVybiBzY3JpcHRpbmcgb24gIHRvIHN1Ym1pdCBhIHJhdGluZyBhbmQgc2VuZCBmZWVkYmFjay5kFgICAQ9kFgJmDxQrAAJkFCoSU3lzdGVtLldlYi5VSS5QYWlyAQ9mFgQeCU1heFJhdGluZwIFHgNUYWcFPWNvbnRlbnRSYXRpbmcyZTc1ZDZkMy02OWNhLTQ1MjYtYWU4Yi1lYzcyNjE2ODYzZWFNU0ROLjEwZW4tdXNkAgEPZBYEZg8PFgIfBgURT3B0aW9uYWwgRmVlZGJhY2tkZAICDw8WBh8GBQRTZW5kHwIFEVNlbmQgVGhpcyBDb250ZW50Hg1PbkNsaWVudENsaWNrBZcBcmV0dXJuIElzUGFnZVJhdGVkKGN0bDAwX0xpYkZyYW1lX3RiMV9GbHlvdXRfUmF0aW5nMSxjdGwwMF9MaWJGcmFtZV90YjFfRmx5b3V0X2xiT3B0VGV4dCwnUGxlYXNlIHJhdGUgdGhlIHBhZ2UgZmlyc3QuJywgY3RsMDAkTGliRnJhbWUkdGIxJEZseW91dCx0aGlzKWRkAgUPZBYIAgEPZBYCAgEPDxYCHwdoZGQCAw8PFgIfB2hkZAIFDw8WAh8HaGQWAmYPZBYCAgEPFgIeCWlubmVyaHRtbAUNUmVsYXRlZCBQYWdlc2QCCw8PFgIfB2hkZAIHD2QWBAIBDxYCHgVjbGFzcwUUTVRQU19Gb290ZXJGYWRlX21zZG4WCgIBDw8WBB4IQ3NzQ2xhc3MFFU1UUFNfRm9vdGVyTGlua3NfbXNkbh4EXyFTQgICZGQCAw8PFggfBgU2JmNvcHk7MjAwNyBNaWNyb3NvZnQgQ29ycG9yYXRpb24uIEFsbCByaWdodHMgcmVzZXJ2ZWQuHwIFMsKpMjAwNyBNaWNyb3NvZnQgQ29ycG9yYXRpb24uIEFsbCByaWdodHMgcmVzZXJ2ZWQuHw0FGU1UUFNfRm9vdGVyQ29weXJpZ2h0X21zZG4fDgICZGQCBQ8PFgofAwUraHR0cDovL3d3dy5taWNyb3NvZnQuY29tL2luZm8vY3B5cmlnaHQubXNweB8CBQxUZXJtcyBvZiBVc2UfBgUMVGVybXMgb2YgVXNlHw0FFU1UUFNfRm9vdGVyTGlua3NfbXNkbh8OAgJkZAIHDw8WCh8DBUJodHRwOi8vd3d3Lm1pY3Jvc29mdC5jb20vbGlicmFyeS90b29sYmFyLzMuMC90cmFkZW1hcmtzL2VuLXVzLm1zcHgfAgUKVHJhZGVtYXJrcx8GBQpUcmFkZW1hcmtzHw0FFU1UUFNfRm9vdGVyTGlua3NfbXNkbh8OAgJkZAIJDw8WCh8DBSpodHRwOi8vd3d3Lm1pY3Jvc29mdC5jb20vaW5mby9wcml2YWN5Lm1zcHgfAgURUHJpdmFjeSBTdGF0ZW1lbnQfBgURUHJpdmFjeSBTdGF0ZW1lbnQfDQUVTVRQU19Gb290ZXJMaW5rc19tc2RuHw4CAmRkAgMPFgIfDAUUTVRQU19Gb290ZXJMb2dvX21zZG4WAgIBDw8WBh4NQWx0ZXJuYXRlVGV4dAUVTWljcm9zb2Z0IENvcnBvcmF0aW9uHwUFMy9tc2RuL0NvbnRyb2xzL01UUFNfRm9vdGVyQ3RybC9lbi11cy9tc2RubXNsb2dvLmpwZx8CBRVNaWNyb3NvZnQgQ29ycG9yYXRpb25kZBgBBR5fX0NvbnRyb2xzUmVxdWlyZVBvc3RCYWNrS2V5X18WBgUzY3RsMDAkTGliRnJhbWUkZGRmUGxhY2VIb2xkZXIkRHJvcERvd25MbmdGaWx0ZXJDdHJsBTNjdGwwMCRMaWJGcmFtZSRkZGZQbGFjZUhvbGRlciREcm9wRG93bkxuZ0ZpbHRlckN0cmwFM2N0bDAwJExpYkZyYW1lJGRkZlBsYWNlSG9sZGVyJERyb3BEb3duTG5nRmlsdGVyQ3RybAUzY3RsMDAkTGliRnJhbWUkZGRmUGxhY2VIb2xkZXIkRHJvcERvd25MbmdGaWx0ZXJDdHJsBTNjdGwwMCRMaWJGcmFtZSRkZGZQbGFjZUhvbGRlciREcm9wRG93bkxuZ0ZpbHRlckN0cmwFM2N0bDAwJExpYkZyYW1lJGRkZlBsYWNlSG9sZGVyJERyb3BEb3duTG5nRmlsdGVyQ3RybE5m3nTaVHiGCQbrIW/sglFL8YHg" />
+</div>
+
+<script type="text/javascript">
+<!--
+var theForm = document.forms['aspnetForm'];
+if (!theForm) {
+    theForm = document.aspnetForm;
+}
+function __doPostBack(eventTarget, eventArgument) {
+    if (!theForm.onsubmit || (theForm.onsubmit() != false)) {
+        theForm.__EVENTTARGET.value = eventTarget;
+        theForm.__EVENTARGUMENT.value = eventArgument;
+        theForm.submit();
+    }
+}
+// -->
+</script>
+
+
+<script src="http://msdn2.microsoft.com/WebResource.axd?d=y48MEe_dRk_v_rnD4dSyAA2&amp;t=632805136141979285" type="text/javascript"></script>
+
+
+<script type="text/javascript">
+<!--
+var detectedLocale = 'en-US';
+var wtsp="msdnlib_hp";
+var gTrackEvents = 0;
+// -->
+</script>
+
+<script src="http://msdn2.microsoft.com/WebResource.axd?d=sizx_4X9i09wXM-RXSs50fhbtl6SDLCcbunG6V2ltxliltZ7XWSrvlomadG2OU3R1RZbjEOxw40iT82wUC2J3kUHSwCoFD699GlSX-lMbl01&amp;t=632974592456496627" type="text/javascript"></script>
+<script src="http://msdn2.microsoft.com/WebResource.axd?d=sizx_4X9i09wXM-RXSs50fhbtl6SDLCcbunG6V2ltxliltZ7XWSrvlomadG2OU3R1RZbjEOxw40iT82wUC2J3p7cuZvUyH5O356OezjnH981&amp;t=632974592456496627" type="text/javascript"></script>
+        
+        <div id="ctl00_header" class="head">
+	
+            
+
+<div style="display:inline">
+
+   <table cellpadding="0" cellspacing="0" border="0" width="100%">
+      <tr style="height:26px">
+	      <td id="ctl00_BannerControl1_BrandTopLeft" style="white-space:nowrap;" align="left" class="IntegratedBannerTopLeft_msdn">
+					&nbsp;
+					
+    <span id="ctl00_BannerControl1_UserRecognitionFlyout_loginView_lblWelcomeAnonymous" class="UserRecognitionFlyoutStaticText_msdn">Welcome</span>
+  					
+
+					<span id="ctl00_BannerControl1_lblSeparatorLeft" class="IntegratedBannerSeparator_msdn">&nbsp;|&nbsp;</span>
+					<span id="ctl00_BannerControl1_lblLoginStatus" class="IntegratedBannerLink_msdn"><a href="https://profile.microsoft.com/RegSysProfileCenter/wizard.aspx?wizid=b28a479f-4189-428a-8f89-4ace6507a68c&amp;lcid=1033&amp;fu=http%253a%252f%252fprofile.microsoft.com%252fpersonalization%252fapplications%252fmsdnsync%252fSyncProfile.aspx%253fst%253d1%2526ru%253dhttp%253a%252f%252fmsdn2.microsoft.com%252fen-us%252flibrary%252fms972827.aspx&amp;cu=&amp;wp=MCLBI"><span class="MTPS_GlobalToolbarLinks_msdn">Sign In</span></a></span>
+					&nbsp;&nbsp;</td>
+	
+	      <td id="ctl00_BannerControl1_BrandTopMiddle" style="height:26px;white-space:nowrap;" class="IntegratedBannerTopMiddle_msdn">
+	      	<img id="ctl00_BannerControl1_TopFadeImage" src="http://msdn2.microsoft.com/msdn/Controls/IntegratedBannerCtrl/en-us/msdntop.jpg" style="height:100%;width:100%;border-width:0px;" /></td>
+	
+	      <td id="ctl00_BannerControl1_BrandTopRight" style="white-space:nowrap;" align="right" class="IntegratedBannerTopRight_msdn">
+					
+
+<div style="display:inline;vertical-align:middle">
+	<div class="LocaleManagementFlyoutStatic_msdn" style="position:relative;" id="ctl00$BannerControl1$LocaleManagement$ctl00"><a class="LocaleManagementFlyoutStaticLink_msdn" href="javascript:void(0)">United States - English&nbsp;</a><img class="LocaleManagementFlyoutPopArrow" src="http://msdn2.microsoft.com/msdn/Controls/LocaleManagementFlyout/en-us/popdownarrow-msdn-right.gif" alt="Dropdown Arrow" style="height:4px;width:7px;border-width:0px;" /><div id="ctl00$BannerControl1$LocaleManagement$ctl00_Popup" class="LocaleManagementFlyoutPopup" style="position: absolute;visibility:hidden;left:-65534px;">
+			<table border="0" style="width:175px;">
+				<tr>
+					<td><a href="javascript:__doPostBack('ctl00$BannerControl1$LocaleManagement$ctl00$ctl05','')">Australia (English)</a></td>
+				</tr><tr>
+					<td><a href="javascript:__doPostBack('ctl00$BannerControl1$LocaleManagement$ctl00$ctl06','')">Brasil (Portugués)</a></td>
+				</tr><tr>
+					<td><a href="javascript:__doPostBack('ctl00$BannerControl1$LocaleManagement$ctl00$ctl07','')">Canada (English)</a></td>
+				</tr><tr>
+					<td><a href="javascript:__doPostBack('ctl00$BannerControl1$LocaleManagement$ctl00$ctl08','')">Canada (Français)</a></td>
+				</tr><tr>
+					<td><a href="javascript:__doPostBack('ctl00$BannerControl1$LocaleManagement$ctl00$ctl09','')">中国 (简体中文)</a></td>
+				</tr><tr>
+					<td><a href="javascript:__doPostBack('ctl00$BannerControl1$LocaleManagement$ctl00$ctl10','')">Deutschland (Deutsch)</a></td>
+				</tr><tr>
+					<td><a href="javascript:__doPostBack('ctl00$BannerControl1$LocaleManagement$ctl00$ctl11','')">France (Français)</a></td>
+				</tr><tr>
+					<td><a href="javascript:__doPostBack('ctl00$BannerControl1$LocaleManagement$ctl00$ctl12','')">India (English)</a></td>
+				</tr><tr>
+					<td><a href="javascript:__doPostBack('ctl00$BannerControl1$LocaleManagement$ctl00$ctl13','')">Россия (Pусский)</a></td>
+				</tr><tr>
+					<td><a href="javascript:__doPostBack('ctl00$BannerControl1$LocaleManagement$ctl00$ctl14','')">United Kingdom (English)</a></td>
+				</tr><tr>
+					<td><a href="javascript:__doPostBack('ctl00$BannerControl1$LocaleManagement$ctl00$ctl15','')">United States (English)</a></td>
+				</tr><tr>
+					<td class="LocaleManagementFlyoutPopupHr"></td>
+				</tr><tr>
+					<td><a href="http://msdn2.microsoft.com/en-us/preferences/lang/">More...</a></td>
+				</tr>
+			</table></div><div id="ctl00$BannerControl1$LocaleManagement$ctl00_Anim" class="TFlyPopupAnimate"></div>
+	</div>
+	
+</div>
+
+
+					<span id="ctl00_BannerControl1_lblSeparatorRight" class="IntegratedBannerSeparator_msdn">&nbsp;|&nbsp;</span>
+					
+
+<div style="display:inline;vertical-align:middle">
+  <div class="QuickLinksFlyoutStatic_msdn" style="position:relative;" id="ctl00$BannerControl1$QuickLinks$ctrlFlyout"><a id="ctl00_BannerControl1_QuickLinks_ctrlFlyout_ctrlTitle" title="Microsoft.com Quick Links" class="QuickLinksFlyoutStaticLink_msdn" href="javascript:void(0)"><span>Microsoft.com&nbsp;</span><img class="QuickLinksPopArrow" src="http://msdn2.microsoft.com/msdn/Controls/QuickLinksFlyout/en-us/popdownarrow-msdn-right.gif" alt="Dropdown arrow" style="height:4px;width:7px;border-width:0px;" /></a><div id="ctl00$BannerControl1$QuickLinks$ctrlFlyout_Popup" class="QuickLinksFlyoutPopup" style="position: absolute;visibility:hidden;left:-65534px;">
+			<?xml version="1.0" encoding="utf-16"?><table><tr><td valign="top"><h4>Product Families</h4><div class="list"><div class="listitem"><a href="http://go.microsoft.com/?linkid=4447412">Office</a></div><div class="listitem"><a href="http://go.microsoft.com/?linkid=4447413">Windows</a></div><div class="listitem"><a href="http://go.microsoft.com/?linkid=4447414">Windows Server System</a></div><div class="listitem"><a href="http://go.microsoft.com/?linkid=4447415">Windows Mobile</a></div><div class="listitem"><a href="http://go.microsoft.com/?linkid=4447416">Developer Tools</a></div><div class="listitem"><a href="http://go.microsoft.com/?linkid=4447417">Business Solutions</a></div><div class="listitem"><a href="http://go.microsoft.com/?linkid=4447418">Games &amp; Xbox</a></div><div class="listitem"><a href="http://go.microsoft.com/?linkid=4447419">MSN</a></div></div></td><td valign="top"><h4>Resources</h4><div class="list"><div class="listitem"><a href="http://go.microsoft.com/?linkid=4447420">Microsoft Update</a></div><div class="listitem"><a href="http://go.microsoft.com/?linkid=4447421">Office Update</a></div><div class="listitem"><a href="http://go.microsoft.com/?linkid=4447422">Download Center</a></div><div class="listitem"><a href="http://go.microsoft.com/?linkid=4447423">Help &amp; Support</a></div><div class="listitem"><a href="http://go.microsoft.com/?linkid=4447424">Security</a></div><div class="listitem"><a href="http://go.microsoft.com/?linkid=4447425">Volume Licensing</a></div></div><h4>About Microsoft</h4><div class="list"><div class="listitem"><a href="http://go.microsoft.com/?linkid=4447426">Company Information</a></div><div class="listitem"><a href="http://go.microsoft.com/?linkid=4447427">Investor Relations</a></div><div class="listitem"><a href="http://go.microsoft.com/?linkid=4447428">PressPass for journalists</a></div></div></td><td valign="top"><h4>Popular Places</h4><div class="list"><div class="listitem"><a href="http://go.microsoft.com/?linkid=4447429">MSDN (Developers)</a></div><div class="listitem"><a href="http://go.microsoft.com/?linkid=4447430">TechNet (IT Pros)</a></div><div class="listitem"><a href="http://go.microsoft.com/?linkid=4447431">Microsoft At Home</a></div><div class="listitem"><a href="http://go.microsoft.com/?linkid=4447432">Microsoft At Work</a></div><div class="listitem"><a href="http://go.microsoft.com/?linkid=4447433">Business &amp; Industry</a></div><div class="listitem"><a href="http://go.microsoft.com/?linkid=4447434">Microsoft partners</a></div><div class="listitem"><a href="http://go.microsoft.com/?linkid=4447435">Microsoft hardware</a></div><div class="listitem"><a href="http://go.microsoft.com/?linkid=4447436">Product catalog</a></div><div class="listitem"><a href="http://go.microsoft.com/?linkid=4447437">Mactopia</a></div><div class="listitem"><a href="http://go.microsoft.com/?linkid=4447438">Microsoft.com site map</a></div></div></td></tr><tr><td colspan="10" class="QuickLinksFlyoutPopupHr" /></tr><tr><td valign="top"><h4>Popular Searches</h4><div class="list"><div class="listitem"><a href="http://search.microsoft.com/results.aspx?mkt=en-US&amp;setlang=en-US&amp;q=templates">Templates</a></div><div class="listitem"><a href="http://search.microsoft.com/results.aspx?q=activesync&amp;l=1&amp;mkt=en-US&amp;FORM=QBME1">ActiveSync</a></div><div class="listitem"><a href="http://search.microsoft.com/results.aspx?q=clip+art&amp;l=1&amp;mkt=en-US&amp;FORM=QBME1">Clip art</a></div></div></td><td valign="top"><h4>Popular Downloads</h4><div class="list"><div class="listitem"><a href="http://www.microsoft.com/downloads/details.aspx?FamilyID=435bfce7-da2b-4a6a-afa4-f7f14e605a0d&amp;displaylang=en">Windows Defender Beta 2</a></div><div class="listitem"><a href="http://www.microsoft.com/downloads/results.aspx?pocId=&amp;freetext=directx&amp;DisplayLang=en">DirectX End-User Runtime</a></div><div class="listitem"><a href="http://www.microsoft.com/downloads">More popular downloads</a></div></div></td></tr></table></div><div id="ctl00$BannerControl1$QuickLinks$ctrlFlyout_Anim" class="TFlyPopupAnimate"></div>
+	</div>
+	
+</div>
+
+</td>
+	
+      </tr>
+
+      <tr style="height:42px">
+	      <td id="ctl00_BannerControl1_BrandLogoBackground" style="width:225px;white-space:nowrap;">
+					<a onclick="javascript:Track('ctl00_BannerControl1_BrandLogoBackground|ctl00_BannerControl1_BrandLink',this);" title="MSDN" class="MTPS_BrandLink1" href="http://msdn2.microsoft.com/"><img border="0" src="http://msdn2.microsoft.com/msdn/Controls/IntegratedBannerCtrl/en-us/msdn.jpg" alt="MSDN" /></a></td>
+	
+	      <td style="height:42px;white-space:nowrap;">
+					<img id="ctl00_BannerControl1_BottomFadeImage" src="http://msdn2.microsoft.com/msdn/Controls/IntegratedBannerCtrl/en-us/msdnbottom.jpg" style="height:100%;width:100%;border-width:0px;" /></td>
+	      <td id="ctl00_BannerControl1_BrandBottomRight" align="right" style="white-space:nowrap;" valign="top" class="IntegratedBannerBottomRight_msdn">
+	            <div id="ctl00_BannerControl1_SearchBar" class="MTPS_GlobalSearchBar1" onkeypress="javascript:return WebForm_FireDefaultButton(event, 'ctl00_BannerControl1_SearchBarButton')">
+		
+	               <span id="ctl00_BannerControl1_SearchBarLabel" class="SearchBarLabelText"></span>
+	               <input name="ctl00$BannerControl1$SearchBarTextbox" type="text" maxlength="200" id="ctl00_BannerControl1_SearchBarTextbox" class="SearchBarTextbox1" />
+	               <input type="button" name="ctl00$BannerControl1$SearchBarButton" value="Search" onclick="javascript:__doPostBack('ctl00$BannerControl1$SearchBarButton','')" id="ctl00_BannerControl1_SearchBarButton" title="Click here to search" class="SearchBarGoButton1" /><br/>
+	            
+	</div>
+	       </td>
+	
+      </tr>
+   </table>
+
+</div>
+            <div id="ctl00_ToolbarControl1_MPTS_Toolbar" class="MPTS_ToolbarPane1">
+		
+
+<a onclick="javascript:Track('|T1|ctl00_ToolbarControl1_MPTS_Toolbar|ctl00_ToolbarControl1_LocalToolbarLink0',this);" title="MSDN Home" class="MPTS_ToolbarPane1_first_item" href="http://msdn2.microsoft.com/en-us/">MSDN Home</a>&nbsp;|&nbsp;<a onclick="javascript:Track('|T1|ctl00_ToolbarControl1_MPTS_Toolbar|ctl00_ToolbarControl1_LocalToolbarLink1',this);" title="Developer Centers" href="http://msdn.microsoft.com/developercenters/">Developer Centers</a>&nbsp;|&nbsp;<a onclick="javascript:Track('|T1|ctl00_ToolbarControl1_MPTS_Toolbar|ctl00_ToolbarControl1_LocalToolbarLink2',this);" title="MSDN Library" href="http://msdn2.microsoft.com/en-us/library/">Library</a>&nbsp;|&nbsp;<a onclick="javascript:Track('|T1|ctl00_ToolbarControl1_MPTS_Toolbar|ctl00_ToolbarControl1_LocalToolbarLink3',this);" title="Downloads" href="http://msdn.microsoft.com/downloads/">Downloads</a>&nbsp;|&nbsp;<a onclick="javascript:Track('|T1|ctl00_ToolbarControl1_MPTS_Toolbar|ctl00_ToolbarControl1_LocalToolbarLink4',this);" title="How To Buy" href="http://msdn.microsoft.com/howtobuy/">How To Buy</a>&nbsp;|&nbsp;<a onclick="javascript:Track('|T1|ctl00_ToolbarControl1_MPTS_Toolbar|ctl00_ToolbarControl1_LocalToolbarLink5',this);" title="Subscribers" href="http://msdn2.microsoft.com/subscriptions/">Subscribers</a>&nbsp;|&nbsp;<a onclick="javascript:Track('|T1|ctl00_ToolbarControl1_MPTS_Toolbar|ctl00_ToolbarControl1_LocalToolbarLink6',this);" title="My MSDN" href="http://msdn2.microsoft.com/en-us/my">My MSDN</a>
+	</div>
+        
+</div>
+        <div id="ctl00_LibFrame_ResizeContainer">
+	<div id="ctl00_LibFrame_tocPanel" class="tocPanel" style="Width:250px;">
+		
+                <div id="ctl00_LibFrame_Panel1" class="tocInner" style="height:100%;">
+			
+                    
+    <div id="tocLoadingMessage" class="tocFrame"  style="position:absolute;display:none;">
+      <span id="ctl00_LibFrame_tocLoader1_lbLoadingMessage" class="loadingMessage">Loading...</span>
+    </div>
+      <div id="iframeContainer" style="width:100%;height:100%;">
+        <noscript>
+          <iframe onload="TocLoader_HideMessage();" id="tocIFrame" class="tocFrame" src="http://msdn2.microsoft.com/en-us/library/ms972827(d=toc).aspx" frameborder="0" ></iframe>
+        </noscript>
+      </div>
+    
+    <script type="text/javascript">
+      <!--
+        function Toc_LoadIframe(){
+          var html = "<iframe onload=\"TocLoader_HideMessage();\" id=\"tocIFrame\" class=\"tocFrame\" src=\"/en-us/library/ms972827(d=toc).aspx\" frameborder=\"0\" />";
+          document.getElementById("iframeContainer").innerHTML+=html;
+          tocOpenCollapseHandler = null
+        }
+        function Toc_PageLoad(){
+          if(!isTocCollapsed){
+            window.setTimeout(Toc_LoadIframe,100);
+          }
+          tocOpenCollapseHandler = function(isCollapsed){
+            if(!isCollapsed){
+             window.setTimeout(Toc_LoadIframe,100);
+            }
+          }          
+        }
+      document.getElementById("tocLoadingMessage").style.display= "block";
+      window.attachEvent("onload",Toc_PageLoad)
+      //-->
+    </script>
+
+                
+		</div>
+            
+	</div>
+    <div id="ctl00_LibFrame_ResizeSplitter" title="Click and drag to resize. Double click or press 't' to toggle visibility." class="SplitterBar" ondblclick="OpenClosePanel();" onmouseover="HighlightSplitterBar(this.id,0);" onmouseout="HighlightSplitterBar(this.id,1);" onmousedown="SelectSplitter();" onmouseup="ReleaseSplitter();" style="Position:Absolute;Left:250px;">
+		
+            <div id="ctl00_LibFrame_SplitterInside" class="innerSplitter">
+
+		</div>
+    
+	</div><div id="ctl00_LibFrame_contentPanel" class="contentPanel" style="Left:255px;">
+		
+                <div id="ctl00_LibFrame_tb1_Panel1" class="miniRatings">
+			
+  <div id="ctl00_LibFrame_tb1_miniRatings_left" class="miniRatings_left">
+				
+    <a id="ctl00_LibFrame_tb1_hlPrint" title="Print This Content" onclick="javascript: WebForm_DoCallback('ctl00$LibFrame$tb1','printerFriendlyPage',GetServerData,null,null,false);" href="http://msdn2.microsoft.com/en-us/library/ms972827(d=printer).aspx"><img id="ctl00_LibFrame_tb1_imgPrint" src="http://msdn2.microsoft.com/msdn/Controls/Toolbar/en-us/rtg_print.gif" style="border-width:0px;" />&nbsp;
+      Printer Friendly Version</a>
+    
+    <a id="ctl00_LibFrame_tb1_hlSendCont" title="Send This Content" onclick="javascript: WebForm_DoCallback('ctl00$LibFrame$tb1','sendThisPage',GetServerData,null,null,false);" href="mailto:?subject=Browsing the Web and Reading E-mail Safely as an Administrator&amp;body=This URL points to a page on MSDN that may interest you: http://msdn2.microsoft.com/en-us/library/ms972827.aspx"><img id="ctl00_LibFrame_tb1_imgSendCont" src="http://msdn2.microsoft.com/msdn/Controls/Toolbar/en-us/rtg_email.gif" style="border-width:0px;" />&nbsp;
+      Send</a>
+    
+  
+			</div>
+  <div id="ctl00_LibFrame_tb1_up1">
+				
+      <div id="ctl00_LibFrame_tb1_miniRatings_right" class="miniRatings_right">
+					
+        <div class="ratingFlyoutStatic" style="position:relative;" id="ctl00$LibFrame$tb1$Flyout"><div id="ctl00_LibFrame_tb1_Flyout_rtgContainer" title="Turn scripting on  to submit a rating and send feedback." style="display: inline;">
+							
+              <div id="ctl00_LibFrame_tb1_Flyout_Rating1" dir="ltr">
+								<input type="hidden" name="ctl00$LibFrame$tb1$Flyout$Rating1_RatingExtender_ClientState0" id="ctl00_LibFrame_tb1_Flyout_Rating1_RatingExtender_ClientState0" value="4" />
+              <span id="ctl00_LibFrame_tb1_Flyout_Rating1_Star_1" class="ratingStar filledRatingStar" style="float:left;">&nbsp;</span><span id="ctl00_LibFrame_tb1_Flyout_Rating1_Star_2" class="ratingStar filledRatingStar" style="float:left;">&nbsp;</span><span id="ctl00_LibFrame_tb1_Flyout_Rating1_Star_3" class="ratingStar filledRatingStar" style="float:left;">&nbsp;</span><span id="ctl00_LibFrame_tb1_Flyout_Rating1_Star_4" class="ratingStar filledRatingStar" style="float:left;">&nbsp;</span><span id="ctl00_LibFrame_tb1_Flyout_Rating1_Star_5" class="ratingStar emptyRatingStar" style="float:left;">&nbsp;</span>
+							</div>
+            
+						</div>
+            <div style="display: block; float: none; clear: both;">
+            </div>
+          <div id="ctl00$LibFrame$tb1$Flyout_Popup" class="ratingFlyoutPopup" style="position: absolute;visibility:hidden;left:-65534px;">
+							<span id="ctl00_LibFrame_tb1_Flyout_lbOptText" class="OptionalText">Optional Feedback</span><textarea name="ctl00$LibFrame$tb1$Flyout$tbComments" rows="2" cols="20" id="ctl00_LibFrame_tb1_Flyout_tbComments" class="Comment"></textarea><input type="submit" name="ctl00$LibFrame$tb1$Flyout$btnSubmit" value="Send" onclick="return IsPageRated(ctl00_LibFrame_tb1_Flyout_Rating1,ctl00_LibFrame_tb1_Flyout_lbOptText,'Please rate the page first.', ctl00$LibFrame$tb1$Flyout,this);" id="ctl00_LibFrame_tb1_Flyout_btnSubmit" title="Send This Content" class="Button" /></div><div id="ctl00$LibFrame$tb1$Flyout_Anim" class="TFlyPopupAnimate"></div>
+					</div>
+					
+      
+				</div>
+    
+			</div>
+  <div style="display: block; clear: both; visibility: hidden;"></div>
+
+		</div>
+
+                <div id="ctl00_LibFrame_EyebrowMenu_Panel1" class="EyebrowMenuBar">
+			
+<div class="stat">Browsing the Web and Read...</div>  <span style="float:none;clear:both;display:block;"></span>
+		</div>
+
+                <div id="ctl00_LibFrame_MtpsContentPanel" class="RightPanel">
+			
+                    <div id="ctl00_LibFrame_VsBar1" class="VsBar">
+				
+                        
+                        <div id="ctl00_LibFrame_ddfPlaceHolder_DropDownFilterMain" class="DropDownFilterStyle"><img id="ctl00_LibFrame_ddfPlaceHolder_MTPS_DD_ImageArrow" title="Language Filter" class="MTPS_DropDownImage" onclick="DDFilterOn(event);" onmouseover="ChangeDropDownImage(true);" onmouseout="ChangeDropDownImage(false);" src="http://msdn2.microsoft.com/msdn/Controls/DropDownFilter/en-us/Arrow-off.gif" alt="Language Filter" style="border-width:0px;" /><a id="ctl00_LibFrame_ddfPlaceHolder_Mtps_DropDownFilterText" title="Language Filter" class="DropDownFilterOff" onclick="DDFilterOn(event);" onmouseover="ChangeDropDownImage(true);" onmouseout="ChangeDropDownImage(false);" href="ms972827.aspx.1.html#Mtps_DropDownFilterText">Language Filter</a><div id="ctl00_LibFrame_ddfPlaceHolder_Mtps_DropDownPopUp" style="display:none" class="MTPS_PopupDivPanel"><div class="DivCbxLabelLanguage">
+					<input name="ctl00$LibFrame$ddfPlaceHolder$DropDownLngFilterCtrl" type="checkbox" id="ctl00_LibFrame_ddfPlaceHolder_DropDownLngFilterCtrl" checked="checked" value="Visual Basic" arrayValue="visualbasic" onclick="SetLangFilter(null);" /><span id="ctl00_LibFrame_ddfPlaceHolder_ctl00_LibFrame_ddfPlaceHolder_DropDownLngFilterCtrl_0" title="Visual Basic">Visual Basic<br/></span>
+				</div><div class="DivCbxLabelLanguage">
+					<input name="ctl00$LibFrame$ddfPlaceHolder$DropDownLngFilterCtrl" type="checkbox" id="ctl00_LibFrame_ddfPlaceHolder_DropDownLngFilterCtrl" checked="checked" value="C#" arrayValue="csharp" onclick="SetLangFilter(null);" /><span id="ctl00_LibFrame_ddfPlaceHolder_ctl00_LibFrame_ddfPlaceHolder_DropDownLngFilterCtrl_1" title="C#">C#<br/></span>
+				</div><div class="DivCbxLabelLanguage">
+					<input name="ctl00$LibFrame$ddfPlaceHolder$DropDownLngFilterCtrl" type="checkbox" id="ctl00_LibFrame_ddfPlaceHolder_DropDownLngFilterCtrl" checked="checked" value="C++" arrayValue="managedcplusplus" onclick="SetLangFilter(null);" /><span id="ctl00_LibFrame_ddfPlaceHolder_ctl00_LibFrame_ddfPlaceHolder_DropDownLngFilterCtrl_2" title="C++">C++<br/></span>
+				</div><div class="DivCbxLabelLanguage">
+					<input name="ctl00$LibFrame$ddfPlaceHolder$DropDownLngFilterCtrl" type="checkbox" id="ctl00_LibFrame_ddfPlaceHolder_DropDownLngFilterCtrl" checked="checked" value="J#" arrayValue="jsharp" onclick="SetLangFilter(null);" /><span id="ctl00_LibFrame_ddfPlaceHolder_ctl00_LibFrame_ddfPlaceHolder_DropDownLngFilterCtrl_3" title="J#">J#<br/></span>
+				</div><div class="DivCbxLabelLanguage">
+					<input name="ctl00$LibFrame$ddfPlaceHolder$DropDownLngFilterCtrl" type="checkbox" id="ctl00_LibFrame_ddfPlaceHolder_DropDownLngFilterCtrl" checked="checked" value="JScript" arrayValue="jscript" onclick="SetLangFilter(null);" /><span id="ctl00_LibFrame_ddfPlaceHolder_ctl00_LibFrame_ddfPlaceHolder_DropDownLngFilterCtrl_4" title="JScript">JScript<br/></span>
+				</div><div class="DivCbxLabelLanguage">
+					<input name="ctl00$LibFrame$ddfPlaceHolder$DropDownLngFilterCtrl" type="checkbox" id="ctl00_LibFrame_ddfPlaceHolder_DropDownLngFilterCtrl" checked="checked" value="XAML" arrayValue="xaml" onclick="SetLangFilter(null);" /><span id="ctl00_LibFrame_ddfPlaceHolder_ctl00_LibFrame_ddfPlaceHolder_DropDownLngFilterCtrl_5" title="XAML">XAML<br/></span>
+				</div></div>
+<script type="text/Javascript">
+var ArrowOffPath="/msdn/Controls/DropDownFilter/en-us/Arrow-off.gif";
+var ArrowOnPath="/msdn/Controls/DropDownFilter/en-us/Arrow-on.gif";
+var strConstLangFilterAll ="All";
+var strConstLangFilterMulti ="Multiple";
+var strConstLangFilterNone ="None";
+var strConstLangFilterText ="Language Filter";
+var oMTPS_DD_ImgArrow = document.getElementById("ctl00_LibFrame_ddfPlaceHolder_MTPS_DD_ImageArrow");
+var oMTPS_DD_PanelLink = document.getElementById("ctl00_LibFrame_ddfPlaceHolder_Mtps_DropDownFilterText");
+var oMTPS_DD_Div = document.getElementById("ctl00_LibFrame_ddfPlaceHolder_DropDownFilterMain");
+var oMTPS_DD_PopUpDiv = document.getElementById("ctl00_LibFrame_ddfPlaceHolder_Mtps_DropDownPopUp");
+</script>
+</div>
+<script type="text/Javascript">
+</script>
+
+                    
+			</div>
+                    <div class="ContentArea">
+                        
+                        
+                        <div id="ctl00_LibFrame_MainContent">
+				<div class="topic"   ><div class="majorTitle">Code Secure</div><div class="title">Browsing the Web and Reading E-mail Safely as an Administrator</div><!--Content type: PSDK_8. Transform: msdneditorial2mtps.xslt.--><a name="secure11152004"><!----></a>  <div id="nstext" valign="bottom"> 
+<p>Michael Howard<br />
+Microsoft Security Engineering</p> <p>November 15, 2004</p> <p><b>Summary:</b> Michael Howard discusses how you can run as an administrator and access Internet data safely by dropping unnecessary administrative privileges when using any tool to access the Internet. (10 printed pages)</p> <br /> <p><a onclick="javascript:Track('ctl00_LibFrame_ctl01|ctl00_LibFrame_ctl02',this);" href="http://download.microsoft.com/download/f/2/e/f2e49491-efde-4bca-9057-adc89c476ed4/dropmyrights.msi">Download the DropMyRights.msi file</a>.</p> <p>I've said this many times, but I'll say it again, "Running with an administrative account is dangerous to the health of your computer and your data." So, whenever someone says they must operate their computers as administrators, I always try to persuade them it's not the correct thing to do from a security perspective. That said, every once in a while I meet someone who has a valid reason. For example, I use one of the computers in my office to install the latest daily build of Windows, and I need to be an administrator to install the OS. However, and this is a big point, I do not read e-mail, browse the Web, or access the Internet in any form when running as an administrator on that machine. And I do not do so because the Web is the source of most of the nasty attacks today.</p> <p>What if someone does want to browse the Web? Or read e-mail? Or do Instant Messaging and so on, and for some reason must run in an administrative context? If you look at the major threats to computers, they are from user interaction with the Web through tools like browsers and e-mail clients. Sure, there are non-user interaction attacks, such as Blaster (<a onclick="javascript:Track('ctl00_LibFrame_ctl01|ctl00_LibFrame_ctl03',this);" href="http://www.cert.org/advisories/ca-2003-20.html">http://www.cert.org/advisories/CA-2003-20.html</a>) and Lion (<a onclick="javascript:Track('ctl00_LibFrame_ctl01|ctl00_LibFrame_ctl04',this);" href="http://www.sans.org/y2k/lion.htm">http://www.sans.org/y2k/lion.htm</a>), but that's in part why we turned on the firewall in Windows XP SP2!</p> <blockquote class="dtBlock"> <b>Note   </b>For Best practices on running as a non-admin, I urge you to look over <a onclick="javascript:Track('ctl00_LibFrame_ctl01|ctl00_LibFrame_ctl05',this);" href="http://weblogs.asp.net/aaron_margosis/">Aaron Margosis' blog</a> to glean tips on running as a non-admin in Windows.</blockquote> <h2 class="dtH1">An Example of Why Running as an Admin Is Bad</h2> <p>Some nasty <i>malware</i> works only because the user browsing the Web is an administrator. A good example is a recent variation of the Bagle/Beagle worm named W32.Beagle.AV@mm. I would recommend you read up on what the worm does once it is invited onto a computer system. Symantec has a good write-up at <a onclick="javascript:Track('ctl00_LibFrame_ctl01|ctl00_LibFrame_ctl06',this);" href="http://securityresponse.symantec.com/avcenter/venc/data/w32.beagle.av@mm.html">http://securityresponse.symantec.com/avcenter/venc/data/w32.beagle.av@mm.html</a>. I say invited because the malware is not taking advantage of a coding or design defect. It is using simple human error to execute. </p> <p>Amongst the many things this malware does, all of which require admin rights, are:
+
+</p><ul type="disc"> <li>Creating files in the system32 directory.</li> <li>Terminating various processes.</li> <li>Disabling the Windows Firewall.</li> <li>Downloading and writing files to the system32 directory.</li> <li>Deletes registry values in HKLM.</li> </ul> <p>All these fail if the user running the e-mail client is not an administrator. </p> <p>So wouldn't it be useful (read: safer) if you could browse the Web, read e-mail, and so on as a non-admin, even though you need to perform your normal daily tasks as an admin? Luckily, Windows XP and Windows Server 2003 and later support this capability using restricted tokens.</p> <h2 class="dtH1">Further Detail</h2> <p>Windows XP and Windows Server 2003 and later support functionality called <i>Software Restriction Policy</i>, also known as <a onclick="javascript:Track('ctl00_LibFrame_ctl01|ctl00_LibFrame_ctl07',this);" href="http://msdn.microsoft.com/library/default.asp?url=/library/en-us/security/security/safer.asp">SAFER</a>, which allows a user or software developer to run code at a lower privilege without having the user enter credential information when the application starts. For example, an administrator could run an application as a normal user by stripping out certain SIDs and privileges from the application's token as the application is launched. Some applications, most notably Internet-facing applications, such as a Web browser, instant messaging, or e-mail client, should never be run under an administrative context.</p> <h2 class="dtH1">The DropMyRights Application</h2> <p><i>DropMyRights</i> is a very simple application to help users who must run as an administrator run applications in a much-safer context—that of a non-administrator. It does this by taking the current user's token, removing various privileges and SIDs from the token, and then using that token to start another process, such as Internet Explorer or Outlook. This tool works just as well with Mozilla's Firefox, Eudora, or Lotus Notes e-mail. </p> <p>The code couldn't be simpler. Here's the core code:</p> <div class="code" id="ctl00_LibFrame_ctl08_" ><div class="CodeSnippetTitleBar"><div class="CodeDisplayLanguage"></div></div><pre class="code" id="ctl00_LibFrame_ctl08" space="preserve">//////////////////////////////////////////////////////////////////////////////////
+DWORD wmain(int argc, wchar_t **argv) {
+
+   DWORD fStatus = ERROR_SUCCESS;
+
+   if (2 != argc &amp;&amp; 3 != argc) {
+      Usage();
+      return ERROR_INVALID_PARAMETER;
+   }
+
+   // get the SAFER level
+   DWORD hSaferLevel = SAFER_LEVELID_NORMALUSER;
+   if (3 == argc &amp;&amp; argv[2]) {
+      switch(argv[2][0]) {
+         case 'C' : 
+         case 'c' :  hSaferLevel = SAFER_LEVELID_CONSTRAINED; 
+                  break;
+         case 'U' :
+         case 'u' :   hSaferLevel = SAFER_LEVELID_UNTRUSTED;
+                  break;
+
+         default  :   hSaferLevel = SAFER_LEVELID_NORMALUSER;
+                  break;
+      }
+   }
+
+   // get the command line, and make sure it's not bogus
+   wchar_t *wszPath = argv[1];
+   size_t cchLen = 0;
+   if (FAILED(StringCchLength(wszPath,MAX_PATH,&amp;cchLen)))
+      return ERROR_INVALID_PARAMETER;
+
+    SAFER_LEVEL_HANDLE hAuthzLevel = NULL;
+    if (SaferCreateLevel(SAFER_SCOPEID_USER,
+                         hSaferLevel,
+                         0, 
+             &amp;hAuthzLevel, NULL)) {
+
+        //  Generate the restricted token we will use.
+        HANDLE hToken = NULL;
+        if (SaferComputeTokenFromLevel(
+            hAuthzLevel,    // SAFER Level handle
+            NULL,           // NULL is current thread token.
+            &amp;hToken,        // Target token
+            0,              // No flags
+            NULL)) {        // Reserved
+
+         STARTUPINFO si;
+         ZeroMemory(&amp;si, sizeof(STARTUPINFO));
+         si.cb = sizeof(STARTUPINFO);
+         si.lpDesktop = NULL;
+       
+         // Spin up the new process
+         PROCESS_INFORMATION pi;
+         if (CreateProcessAsUser( 
+            hToken,
+            wszPath, NULL,
+            NULL, NULL,
+            FALSE, CREATE_NEW_CONSOLE,
+            NULL, NULL,  
+            &amp;si, &amp;pi)) {
+
+               CloseHandle(pi.hProcess);
+               CloseHandle(pi.hThread);
+
+         } else {
+            fStatus = GetLastError();
+            fwprintf(stderr,L"CreateProcessAsUser failed (%lu)\n",fStatus);
+         } 
+      } else {
+         fStatus = GetLastError();
+      }
+
+      SaferCloseLevel(hAuthzLevel);
+
+   } else {
+      fStatus = GetLastError();
+   }
+
+   return fStatus;
+}
+</pre></div> <p>The source code and executable are available at the top of this article. Now let's look at configuring the application to run applications in lower privilege.</p> <h3 class="dtH1">Setup</h3> <p>Simply copy DropMyRights.exe to a folder. Then for each application you want to run in lower privilege, follow the steps in the next three sections.</p> <h3 class="dtH1">Create a Shortcut</h3> <p>Create a shortcut and enter DropMyRights.exe as the target executable, followed by the path to the application you want to execute in lower privilege.</p> <p>For example:</p> <div class="code" id="ctl00_LibFrame_ctl09_" ><div class="CodeSnippetTitleBar"><div class="CodeDisplayLanguage"></div></div><pre class="code" id="ctl00_LibFrame_ctl09" space="preserve">C:\warez\dropmyrights.exe "c:\program files\internet explorer\iexplore.exe"
+</pre></div> <p>Figure 1 shows what this will look like on your screen.</p> <p class="fig"><img alt="" border="0" src="http://msdn2.microsoft.com/en-us/library/ms972827.secure11152004-fig1(en-us,MSDN.10).gif" /></p> <p class="label"><b>Figure 1. Path to application that you want to run in lower privilege</b></p> <h3 class="dtH1">Updating the Shortcut Name</h3> <p>Next, update the name of the shortcut to represent the executable target, and not <i>dropmyrights</i>. I usually put the word "(Safer)" after the application name to denote this application will run in a safer security context. "(Non-admin)" is another common addition, as shown in Figure 2. </p> <p class="fig"><img alt="" border="0" src="http://msdn2.microsoft.com/en-us/library/ms972827.secure11152004-fig2(en-us,MSDN.10).gif" /></p> <p class="label"><b>Figure 2. Updating the shortcut name</b></p> <h3 class="dtH1">Setting the Icon and Run Mode</h3> <p>Finally, once the shortcut is created, set the <b>Run</b> option for the shortcut to <b>Minimized</b> and if you want, select a new icon. </p> <p class="fig"><img alt="" border="0" src="http://msdn2.microsoft.com/en-us/library/ms972827.secure11152004-fig3(en-us,MSDN.10).gif" /></p> <p class="label"><b>Figure 3. Setting the Run option to Minimized and optionally changing the icon</b></p> <h3 class="dtH1">Advanced Options</h3> <p>The arguments to <b>DropMyRights</b> are:</p> <div class="code" id="ctl00_LibFrame_ctl10_" ><div class="CodeSnippetTitleBar"><div class="CodeDisplayLanguage"></div></div><pre class="code" id="ctl00_LibFrame_ctl10" space="preserve">DropMyRights {path} [N|C|U]
+</pre></div> <p>The meanings of the variables are:
+
+</p><ul type="disc"> <li><code class="ce">Path</code> is the full path of the application to launch. </li> <li><code class="ce">N</code> means run the application as a normal user. This is the default if you provide no argument.</li> <li><code class="ce">C</code> means run the application as a constrained user.</li> <li><code class="ce">U</code> means run the application as an untrusted user. Chances are, this will cause some applications to fail.</li> </ul> <p>The best way to identify what each of these settings does is to look at the resulting process token. The following tables show the changes made to the process token.</p> <p class="label"><b>Table 1. Administrative Account</b></p> <table class="data"> <tr valign="top"> <th width="175" class="data" align="left">SIDS</th> <th width="175" class="data" align="left">Restricting SIDS</th> <th width="250" class="data" align="left">Privileges</th> </tr> <tr valign="top"> <td width="175" class="data">DOMAIN\Domain Users
+<p>Everyone            </p> <p>BUILTIN\Administrators </p> <p>BUILTIN\Users</p> <p>NT AUTHORITY<br />
+    \INTERACTIVE         </p> <p>NT AUTHORITY<br />
+    \Authenticated Users </p> <p>\LOCAL               </p> </td> <td width="175" class="data">None</td> <td width="250" class="data">SeChangeNotifyPrivilege
+<p>SeSecurityPrivilege</p> <p>SeBackupPrivilege </p> <p>SeRestorePrivilege </p> <p>SeSystemtimePrivilege</p> <p>SeShutdownPrivilege</p> <p>SeRemoteShutdownPrivilege </p> <p>SeTakeOwnershipPrivilege</p> <p>SeDebugPrivilege</p> <p>SeSystemEnvironmentPrivilege </p> <p>SeSystemProfilePrivilege</p> <p>SeProfileSingleProcessPrivilege</p> <p>SeIncreaseBasePriorityPrivilege</p> <p>SeLoadDriverPrivilege</p> <p>SeCreatePagefilePrivilege</p> <p>SeIncreaseQuotaPrivilege</p> <p>SeUndockPrivilege </p> <p>SeManageVolumePrivilege </p> <p>SeCreateGlobalPrivilege</p> <p>SeImpersonatePrivilege</p> </td> </tr> </table> <p class="label"><b>Table 2. Normal User ('N')</b></p> <table class="data"> <tr valign="top"> <th width="175" class="data" align="left">SIDS</th> <th width="175" class="data" align="left">Restricting SIDS</th> <th width="250" class="data" align="left">Privileges</th> </tr> <tr valign="top"> <td width="175" class="data">DOMAIN\Domain Users
+<p>Everyone </p> <p>BUILTIN<br />
+    \Administrators <img src="http://msdn2.microsoft.com/en-us/library/ms972827.secure11152004-fig04(en-us,MSDN.10).gif" /> </p> <p>BUILTIN\Users</p> <p>NT AUTHORITY<br />
+     \INTERACTIVE</p> <p>NT AUTHORITY<br />
+    \Authenticated Users </p> <p>LOCAL </p> </td> <td width="175" class="data">None</td> <td width="250" class="data">SeChangeNotifyPrivilege</td> </tr> </table> <p class="label"><b>Table 3. Constrained ('C')</b></p> <p /><table class="data"> <tr valign="top"> <th width="175" class="data" align="left">SIDS</th> <th width="175" class="data" align="left">Restricting SIDS</th> <th width="250" class="data" align="left">Privileges</th> </tr> <tr valign="top"> <td width="175" class="data">DOMAIN\Domain Users
+<p>Everyone</p> <p>BUILTIN<br />
+    \Administrators <img src="http://msdn2.microsoft.com/en-us/library/ms972827.secure11152004-fig04(en-us,MSDN.10).gif" /> </p> <p>BUILTIN\Users</p> <p>NT AUTHORITY<br />
+    \INTERACTIVE</p> <p>NT AUTHORITY<br />
+    \Authenticated Users</p> <p>LOCAL</p> </td> <td width="175" class="data">DOMAIN\Domain Users
+<p>Everyone</p> <p>BUILTIN\Users</p> <p>NT AUTHORITY<br />
+    \INTERACTIVE</p> <p>NT AUTHORITY<br />
+    \Authenticated Users</p> <p>LOCAL</p> <p>NT AUTHORITY<br />
+    \RESTRICTED</p> </td> <td width="250" class="data">SeChangeNotifyPrivilege </td> </tr> </table> <b>Table 4. Untrusted ('U')</b> <p /><table class="data"> <tr valign="top"> <th width="175" class="data" align="left">SIDS</th> <th width="175" class="data" align="left">Restricting SIDS</th> <th width="250" class="data" align="left">Privileges</th> </tr> <tr valign="top"> <td width="175" class="data">DOMAIN\Domain Users <img src="http://msdn2.microsoft.com/en-us/library/ms972827.secure11152004-fig04(en-us,MSDN.10).gif" /> <p>Everyone</p> <p>BUILTIN<br />
+    \Administrators <img src="http://msdn2.microsoft.com/en-us/library/ms972827.secure11152004-fig04(en-us,MSDN.10).gif" /> </p> <p>BUILTIN\Users</p> <p>NT AUTHORITY<br />
+     \INTERACTIVE</p> <p>NT AUTHORITY<br />
+     \Authenticated Users<br />
+LOCAL <img src="http://msdn2.microsoft.com/en-us/library/ms972827.secure11152004-fig04(en-us,MSDN.10).gif" /> </p> </td> <td width="175" class="data">NT AUTHORITY<br />
+    \RESTRICTED
+<p>Everyone</p> <p>NT AUTHORITY<br />
+    \INTERACTIVE</p> <p>NT AUTHORITY<br />
+    \Authenticated Users</p> <p>BUILTIN\Users</p> </td> <td width="250" class="data">SeChangeNotifyPrivilege</td> </tr> </table>
+The red cross mark means the SID is still in the token, but it is a deny SID. A SID with this attribute is a deny-only SID. When the system performs an access check, it checks for access-denied ACEs that apply to the SID, but it ignores access-allowed ACEs for the SID.
+
+<p>The biggest privilege and SIDs delta is between the administrative account and the normal user account. As you can see, all privileges are stripped from the token except the Bypass Traverse Checking privilege (also know as <b>SeChangeNotifyPrivilege</b>.) Constrained and untrusted are smaller deltas from normal user, and you may start to see some applications fail with security restriction errors. My opinion is use Normal (the default) for most things, and Constrained if you think you'll be browsing hostile or potentially dangerous Web sites.</p> <h3 class="dtH1">Spot the Security Defect</h3> <p>A good number of people worked out the bug in my last article. The <b>CreateFile</b> function is opening the file for all access, when the code only reads from the file. FILE_ALL_ACCESS should be replaced with GENERIC_READ or similar. This is bad because in all likelihood only an administrator can use this code, not a normal user. I see this error often.</p> <p>Can you spot this code flaw? This came across my desk the other day as a bug in some Java DNS stuff. It's an interesting bug, which I rewrote in C# and generalized the flaw.</p> <div class="code" id="ctl00_LibFrame_ctl11_" ><div class="CodeSnippetTitleBar"><div class="CodeDisplayLanguage"></div></div><pre class="code" id="ctl00_LibFrame_ctl11" space="preserve">Int16 req;
+...
+while (true) {
+    getRequest();
+    req++;
+    arr[req] = DateTime.Now;
+}
+</pre></div>  <p><b>Michael Howard </b>is a Senior Security Program Manager in the Secure Engineering group at Microsoft and is the coauthor of <a onclick="javascript:Track('ctl00_LibFrame_ctl01|ctl00_LibFrame_ctl12',this);" href="http://www.microsoft.com/mspress/books/5957.asp">Writing Secure Code</a>, now in its second edition, and the main author of <i>Designing Secure Web-based Applications for Windows 2000</i>. He is also a co-editor of <i>Basic Training</i> in IEEE Security &amp; Privacy Magazine. His main focus in life is making sure people design, build, test, and document nothing short of a secure system. His favorite line is "One person's feature is another's exploit."</p>  </div> </div>
+			</div>
+                        
+                        
+                    </div>
+                    
+                    <br style="clear: both;" />
+                
+		</div>
+                
+
+<table cellpadding="0" cellspacing="0" border="0" width="100%">
+<tr>
+	<td id="ctl00_LibFrame_BottomControl1_FooterFadeCell" class="MTPS_FooterFade_msdn">
+		<div id="ctl00_LibFrame_BottomControl1_SiteLinks" class="MTPS_FooterLinks_msdn">
+			<a onclick="javascript:Track('ctl00_LibFrame_BottomControl1_SiteLinks|ctl00_LibFrame_BottomControl1_LocalFooterLink0',this);" title="Manage Your Profile" href="https://profile.microsoft.com/regsysprofilecenter/default.aspx?lcid=1033">Manage Your Profile</a>&nbsp;|&nbsp;<a onclick="javascript:Track('ctl00_LibFrame_BottomControl1_SiteLinks|ctl00_LibFrame_BottomControl1_LocalFooterLink1',this);" title="Legal" href="http://www.microsoft.com/legal/">Legal</a>&nbsp;|&nbsp;<a onclick="javascript:Track('ctl00_LibFrame_BottomControl1_SiteLinks|ctl00_LibFrame_BottomControl1_LocalFooterLink2',this);" title="Contact Us" href="http://go.microsoft.com/?linkid=2028439">Contact Us</a>&nbsp;|&nbsp;<a onclick="javascript:Track('ctl00_LibFrame_BottomControl1_SiteLinks|ctl00_LibFrame_BottomControl1_LocalFooterLink3',this);" title="MSDN Flash Newsletter" href="http://msdn.microsoft.com/flash/">MSDN Flash Newsletter</a>
+		</div>
+		<span id="ctl00_LibFrame_BottomControl1_MSFT_copyright" title="©2007 Microsoft Corporation. All rights reserved." class="MTPS_FooterCopyright_msdn">&copy;2007 Microsoft Corporation. All rights reserved.</span>
+		
+		<a id="ctl00_LibFrame_BottomControl1_MSFT_Terms" title="Terms of Use" class="MTPS_FooterLinks_msdn" href="http://www.microsoft.com/info/cpyright.mspx">Terms of Use</a>
+		&nbsp;|&nbsp;		
+		<a id="ctl00_LibFrame_BottomControl1_MSFT_Trademarks" title="Trademarks" class="MTPS_FooterLinks_msdn" href="http://www.microsoft.com/library/toolbar/3.0/trademarks/en-us.mspx">Trademarks</a>		
+		&nbsp;|&nbsp;
+		<a id="ctl00_LibFrame_BottomControl1_MSFT_PrivacyStatement" title="Privacy Statement" class="MTPS_FooterLinks_msdn" href="http://www.microsoft.com/info/privacy.mspx">Privacy Statement</a>
+	</td>
+		
+	<td id="ctl00_LibFrame_BottomControl1_FooterLogoCell" class="MTPS_FooterLogo_msdn">
+		<img id="ctl00_LibFrame_BottomControl1_MSFT_LOGO" title="Microsoft Corporation" src="http://msdn2.microsoft.com/msdn/Controls/MTPS_FooterCtrl/en-us/msdnmslogo.jpg" alt="Microsoft Corporation" style="border-width:0px;" />
+	</td>
+		
+</tr>
+</table>
+
+
+            
+	</div>
+
+</div>
+<div id="ctl00_LibFrame_overlay" class="OverlayHidden" style="height:100%;width:100%;">
+	
+&nbsp;
+
+</div>
+
+    
+
+<script type="text/javascript">
+<!--
+
+WebForm_InitCallback(); RegisterAutoSubmit( 'ctl00_LibFrame_tb1_Flyout_Rating1', 'ctl00_LibFrame_tb1_Flyout_btnSubmit','contentRating2e75d6d3-69ca-4526-ae8b-ec72616863eaMSDN.10en-us');
+// -->
+</script>
+<script type="text/javascript" language="javascript">
+<!--
+ function GetContentWnd(){ return parent; } function OnInitPage(){var oWnd = GetContentWnd();} function GetServerData(arg, context){} function OnSave(){ var oWnd = GetContentWnd(); window.external.addFavorite('http://msdn2.microsoft.com/en-us/library/ms972827.aspx', oWnd.document.title ); }
+
+-->
+</script>
+<script type="text/javascript">
+<!--
+document.getElementById('ctl00_LibFrame_tb1_Flyout_rtgContainer').title="Rate This Content";
+// -->
+</script>
+<script type="text/xml-script">
+<page xmlns:script="http://schemas.microsoft.com/xml-script/2005" xmlns:mtpstoolkit="mtpstoolkit">
+  <references>
+    <add src="/WebResource.axd?d=XUvPg8jaQoFTHuwMknG-I3qapUG_cQ2jRsxtG1UNF4C7uCtQvEmKVAeyXNH_YQNb_ba33NknT0r2Wk4ZzK8GiJa2sveKawRqNlOpEScnnj4DMrQ62R7ReH-zF0o-u43D0&amp;t=633015504148444928" />
+    <add src="/WebResource.axd?d=XUvPg8jaQoFTHuwMknG-I3qapUG_cQ2jRsxtG1UNF4C7uCtQvEmKVAeyXNH_YQNb_ba33NknT0r2Wk4ZzK8GiNH-ZtDtY6tViZBJN-0QYO7_uF7M9703dhmQDftrd35D0&amp;t=633015504148444928" />
+  </references>
+  <components>
+    <pageRequestManager id="_PageRequestManager" updatePanelIDs="ctl00$LibFrame$tb1$up1" asyncPostbackControlIDs="" scriptManagerID="ctl00$ScriptManager1" form="aspnetForm" />
+    <control id="ctl00_LibFrame_tb1_Flyout_Rating1">
+      <behaviors>
+        <mtpstoolkit:RatingBehavior MaxRating="5" WaitingStarCssClass="savedRatingStar" PageRequestManagerID="_PageRequestManager" StarCssClass="ratingStar" ReadOnly="False" FilledStarCssClass="filledRatingStar" Tag="contentRating2e75d6d3-69ca-4526-ae8b-ec72616863eaMSDN.10en-us" id="Rating1_RatingProperties" ClientStateFieldID="ctl00_LibFrame_tb1_Flyout_Rating1_RatingExtender_ClientState0" Rating="4" RatingDirection="0" EmptyStarCssClass="emptyRatingStar" />
+      </behaviors>
+    </control>
+  </components>
+</page></script>
+<script type="text/javascript">
+</script>
+
+<script type="text/javascript">
+<!--
+TFly_Init('ctl00$BannerControl1$LocaleManagement$ctl00',0,0,1, 4,60,'LocaleManagementFlyoutStaticHover_msdn','',100,400,'','','');
+TFly_Init('ctl00$BannerControl1$QuickLinks$ctrlFlyout',0,0,1, 4,60,'QuickLinksFlyoutStaticHover_msdn','',100,400,'','','');
+TFly_Init('ctl00$LibFrame$tb1$Flyout',5,8,1, 4,60,'','',100,400,'','','');
+var TocPaneNameId = 'ctl00_LibFrame_tocPanel';
+var px = 'px';
+var browser = window.navigator.appName;
+var sDocDir = document.dir;
+var sContainerCell = 'ctl00_LibFrame_overlay';
+var oContainerCell = null;
+var oNavCell = null;
+var sNavCell = 'ctl00_LibFrame_tocPanel';
+var oSplitterCell = null;
+var sSplitterCell = 'ctl00_LibFrame_ResizeSplitter';
+var sSplitterCookieX = 0;
+var sSplitterDefault = '250px';
+var sTmpNavCellWidth = '250px';
+var sNameTmpNavCellWidth = sTmpNavCellWidth;
+var oContentCell = null;
+var sContentCell = 'ctl00_LibFrame_contentPanel';
+var winWidth;
+var winHeight;
+var cookieName = 'tocPanelWidth';
+var days = 60;
+var isTocCollapsed= false;
+var tocOpenCollapseHandler;
+// -->
+</script>
+</form>
+    <div style="display:none"><img src="http://c.microsoft.com/trans_pixel.asp?source=msdn2&amp;TYPE=PV&amp;uri=%2fen-us%2flibrary(d%3ddefault)%2fms972827(l%3den-us%2cv%3dMSDN.10).aspx&amp;p=_en-us_library(d=default)_ms972827(l=en-us,v=MSDN.10).aspx" width="0" height="0" hspace="0" vspace="0" border="0" alt="Page view tracker" /></div>
+    
+<script type="text/javascript">
+var gDomain="m.webtrends.com";
+var gDcsId="dcsmgru7m99k7mqmgrhudo0k8_8c6m";
+var gFpc="WT_FPC";
+/*<![CDATA[*/
+if(document.cookie.indexOf(gFpc+"=")==-1){document.write("<scr"+"ipt type='text/javascript' src='"+"http"+(window.location.protocol.indexOf('https:')==0?'s':'')+"://"+gDomain+"/"+gDcsId+"/wtid.js"+"'><\/scr"+"ipt>");}
+/*]]>*/
+</script>
+<script src="http://msdn2.microsoft.com/msdn/Controls/webtrends/webtrends.js" type="text/javascript"></script>
+<noscript>
+<div><img alt="DCSIMG" id="Img1" width="1" height="1" src="http://m.webtrends.com/dcsmgru7m99k7mqmgrhudo0k8_8c6m/njs.gif?dcsuri=/nojavascript&amp;WT.js=No" /></div>
+</noscript>
+
+</body>
+</html>

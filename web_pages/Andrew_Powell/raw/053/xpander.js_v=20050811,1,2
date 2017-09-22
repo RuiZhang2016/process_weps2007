@@ -1,0 +1,170 @@
+/*
+divId: id of the block to be expanded
+name: global javascript name of this object (This is a super-lame hack, please fix)
+height: collapsed height
+time: time (in milliseconds) that the expansion should take
+part: the number of partial expansions which add up to the complete expansion
+imgId: id of an image to be swapped during expansion/collapsing
+cImage: image data for the collapsed image
+eImage: image data for the expanded image
+*/
+function Xpander( divId, name, height, time, part, imgId, cImage, eImage)
+{
+  this.Id = divId;
+  this.name = name;
+  this.defaultHeight = height;
+  this.defaultTime = time;
+  this.partitions = part;
+  this.imageId = imgId;
+  this.collapsedImage = cImage;
+  this.expandedImage = eImage;
+
+  this.elem = document.getElementById( this.Id);
+}
+
+Xr = Xpander.prototype;
+
+Xr.expandRecursion = function()
+{
+  diff = this.elem.scrollHeight - this.elem.offsetHeight;
+  if (diff > 0)
+  {
+    //alert( "recurse, diff :"+diff+", this.partSize: "+Math.floor(this.partSize)+", height: "+this.elem.style.height+", off: "+this.elem.offsetHeight+", scroll: "+this.elem.scrollHeight);
+    if (diff >= this.partSize)
+    {
+      this.elem.style.height = this.elem.offsetHeight + Math.floor(this.partSize) + "px";
+    }
+    else
+    {
+      this.elem.style.height = this.elem.scrollHeight;
+    }
+    setTimeout( this.name+".expandRecursion()", Math.floor(this.defaultTime/(this.partitions + 1)));
+  }
+}
+
+Xr.expand = function()
+{
+  origDiff = this.elem.scrollHeight - this.elem.offsetHeight;
+  this.partSize = Math.floor( origDiff/this.partitions);
+
+  this.expandRecursion();
+  if (this.expandedImage != null)
+    this.setImage( this.expandedImage);
+}
+
+Xr.collapse = function()
+{
+  elem = this.elem;
+  if (elem.offsetHeight >= elem.scrollHeight)
+  {
+    elem.style.height = this.defaultHeight;
+    elem.style.overflow = "hidden";    
+    if (this.collapsedImage != null)
+      this.setImage( this.collapsedImage);
+  }
+}
+
+Xr.isCollapsed = function()
+{
+    return (this.elem.style.height == this.defaultHeight);
+}
+
+Xr.needMoreButton = function()
+{
+    if (this.isCollapsed())
+    {
+	return this._needMoreButton();
+    }
+    else
+    {
+	this.collapse();
+	nmb = this._needMoreButton();
+	if (nmb) { this.expand(); }
+	return nmb;
+    }
+}
+Xr._needMoreButton = function()
+{
+    return (this.elem.scrollHeight > this.elem.offsetHeight);
+}
+
+Xr.displayMoreButton = function()
+{
+    if (!this.needMoreButton())
+    {
+	moreButton = document.getElementById( this.imageId);
+	moreButton.style.display = 'none';
+    }
+}
+
+
+Xr.toggle = function()
+{
+  if (this.elem.offsetHeight >= this.elem.scrollHeight)
+  {
+    this.collapse();
+  }
+  else
+  {
+    this.expand();
+  }  
+}
+
+Xr.setImage = function( image)
+{
+  imageElem = document.getElementById( this.imageId);
+  imageElem.src = image.src; 
+  imageElem.alt = image.alt; 
+}
+
+
+///////////////////////////////
+// For Backwards Compatibility
+
+var sDiv="";
+var inEm = 1;
+
+btnMore0 = new Image(); btnMore0.src = "/images/buttons/btnMore.gif"; btnMore0.alt = "more";
+btnMore1 = new Image(); btnMore1.src = "/images/buttons/btnHide.gif"; btnMore1.alt = "hide";
+
+	
+function xpnd(x, button)
+{
+	sDiv = x;
+	
+	if (sDiv.offsetHeight >= sDiv.scrollHeight)
+	{
+		sDiv.style.height="1px";
+		sDiv.style.overflow="hidden";
+		
+		flipImg(button, 0);
+	}
+	else
+	{
+		xpndAn();
+		
+		flipImg(button, 1);
+	}
+
+}
+
+function xpndAn()
+{
+	if (sDiv.offsetHeight < sDiv.scrollHeight)
+	{
+		sDiv.style.height= inEm + "em";
+		inEm += 2.5;
+		setTimeout("xpndAn()","10");
+	}
+	else
+	{
+		inEm = 1;
+	}
+}
+
+
+function flipImg(imgName, mode) 
+{
+	document[imgName].src = eval(imgName + mode + ".src");
+	document[imgName].alt = eval(imgName + mode + ".alt");
+}

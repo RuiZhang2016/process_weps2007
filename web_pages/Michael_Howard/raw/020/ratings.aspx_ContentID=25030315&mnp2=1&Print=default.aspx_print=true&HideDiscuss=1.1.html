@@ -1,0 +1,239 @@
+
+<!DOCTYPE html public "-//w3c//dtd html 4.0 transitional//en" >
+<HTML>
+	<HEAD>
+		<TITLE>Page Stats</TITLE>
+		<META name="robots" content="noindex"/>
+		<META content="build" name="168"/>
+		<LINK href="ie4.css" type="text/css" rel="stylesheet">
+		<STYLE>.RatingsData { BEHAVIOR: url(#default#userdata) }</STYLE>
+		<SCRIPT language="javascript" defer>
+		<!--
+			var strPrintPage = ValidatePrintPage("default.aspx?print=true");
+			var bMNP2 = true;
+			var strEmailString = "_r=1";
+			window.onload = OnInitPage;
+			function GetContentWnd(){ return parent; }
+			function OnInitPage(){
+				var oWnd = GetContentWnd();
+				var strQuery = oWnd.location.search;
+				
+				if( document.getElementById("RatingsServerCmd").value == "" ) // first time only
+				{
+					document.getElementById("RatingsServerCmd").value = "/";
+					document.getElementById("RatingsContentURL").value = oWnd.location.href;
+					document.getElementById("RatingsContentTitle").value = oWnd.document.title;
+
+					if(strQuery.indexOf(strEmailString) >= 0){
+						document.getElementById("RatingsServerCmd").value = "SaveReturnFromEmail";
+						document.forms(0).submit();
+						return;
+					}
+				}
+			}
+			function ValidatePrintPage(sz){
+				if( (sz.indexOf("\\") >=0) || (sz.indexOf("/") >=0) )
+					return "print.asp";
+				return sz;
+			}
+			function OnPrint(){
+				if(bMNP2) OnPrintPage();
+				else OnPrintFrame();
+			}
+			function OnPrintPage(){
+				var oWnd = GetContentWnd();
+				var oDoc = oWnd.document;
+				var strLoc = oWnd.location.href;
+				strLoc = strLoc.substr(0, strLoc.lastIndexOf("/")+1)+strPrintPage;
+				if (window.navigator.userAgent.indexOf("MSIE ")!=-1 && navigator.appVersion.substr(0, 1) >= 4){
+					if( oWnd.printHiddenFrame == null){
+						oDoc.body.insertAdjacentHTML("beforeEnd", "<iframe name='printHiddenFrame' width='0' height='0'></iframe>");
+						framedoc = oWnd.printHiddenFrame.document;
+						framedoc.open();
+						framedoc.write(
+							"<frameset name=test onload='printMe.focus();printMe.print();' rows=\"100%\">" +
+							"<frame name=printMe src=\""+strLoc+"\">" +
+							"</frameset>");
+						framedoc.close();
+					}
+					else{
+						oWnd.printHiddenFrame.printMe.focus();
+						oWnd.printHiddenFrame.printMe.print();
+					}
+				}
+				else{
+					oWnd.location.href = strLoc;
+				}
+				return true;
+			}
+			function OnPrintFrame(){
+				var oWnd = GetContentWnd();
+				oWnd.focus();
+				oWnd.print();
+				return true;
+			}
+			function OnEmail(){
+				var oWnd = 	GetContentWnd();
+				var oDoc = oWnd.document;
+				var oDescription = oDoc.getElementById("Description");
+				var strDescription = ( (oDescription == null) || (oDescription.content == "") ) ? oDoc.title : oDescription.content;
+				if( oDoc.title == "" )
+					oWnd.location.href = "mailto:?body="+BuildEmailDescription(strDescription, AddParamToURL(oWnd.location.href, strEmailString));
+				else
+					oWnd.location.href = "mailto:?subject="+escape(oDoc.title)+"&body="+BuildEmailDescription(strDescription, AddParamToURL(oWnd.location.href, strEmailString));
+				return true;
+			}
+			function BuildEmailDescription(strDescription,hRef){
+				return escape("Here's a great article you might be interested in:" +
+							String.fromCharCode(13)+ String.fromCharCode(13) + strDescription + String.fromCharCode(13) + "URL: " + hRef);
+			}
+			function AddParamToURL(strLoc,strParam){
+				var i = strLoc.lastIndexOf("?");
+				if(strLoc.indexOf(strParam, i) >= 0)
+					return strLoc;
+
+				strLoc += ((i >= 0) && (i > strLoc.lastIndexOf("/"))) ? "&" : "?";
+				return strLoc + strParam;
+			}
+			function OnDiscuss(ContentID){
+				var strCmd = "/library/shared/comments/asp/threadedcomments.asp?";
+				strCmd += "aID=" + ContentID;
+
+				var nHeight = (window.screen.availHeight < 560) ? window.screen.availHeight-50 : 560;
+				var nWidth = (window.screen.availWidth < 640) ? window.screen.availWidth-50 : 640;
+				var nTop = window.screen.availHeight*2/5 - nHeight/2;
+				var nLeft = window.screen.availWidth/2 - nWidth/2;
+				if(nTop < 0) nTop = 0;
+				if(nLeft < 0) nLeft = 0;
+
+				var strOpts = "resizable=yes,menubar=yes,status=yes,toolbar=no,height="+String(nHeight)+",width="+String(nWidth);
+				if(navigator.appName.toUpperCase() == "NETSCAPE")
+					strOpts = "screenX=" + String( nLeft ) + ",screenY=" + String( nTop ) + "," + strOpts;
+				else
+					strOpts = "left=" + String( nLeft ) + ",top=" + String( nTop ) + "," + strOpts;
+
+				var oWnd = window.open(strCmd, "RatingsForum", strOpts);
+				if(oWnd == null)
+					return false;
+
+				oWnd.focus();
+				return true;
+			}
+			function OnSave(){
+				var oWnd = GetContentWnd();
+				window.external.addFavorite( oWnd.location.href, oWnd.document.title );
+				return true;
+			}
+			function OnRate(){
+				var oWnd = GetContentWnd();
+				oWnd.scrollBy(0, 9999999);
+				return false;
+			}
+			function OnStats(ContentID){
+				var strCmd = window.location.href+"&stats=1";
+				var nHeight = 270;
+				var nWidth = 357
+				var nTop = window.screen.availHeight*2/5 - nHeight/2;
+				var nLeft = window.screen.availWidth/2 - nWidth/2;
+				if(nTop < 0) nTop = 0;
+				if(nLeft < 0) nLeft = 0;
+
+				var strOpts = "resizable=no,menubar=no,status=no,toolbar=no,height="+String(nHeight)+",width="+String(nWidth);
+				if(navigator.appName.toUpperCase() == "NETSCAPE")
+					strOpts = "screenX=" + String( nLeft ) + ",screenY=" + String( nTop ) + "," + strOpts;
+				else
+					strOpts = "left=" + String( nLeft ) + ",top=" + String( nTop ) + "," + strOpts;
+
+				var oWnd = window.open(strCmd, "RatingsStats", strOpts);
+				if(oWnd == null)
+					return false;
+
+				oWnd.focus();
+				return true;
+			}
+			function SetRateID(sContentID){
+				if( (sContentID == null) && (sContentID == "") )
+					return;
+				oInput = document.getElementById("RatingsStatus")
+				oInput.setAttribute("Rate", oInput.value);
+				oInput.save(sContentID);
+			}
+			function GetRateID(sContentID){
+				oInput = document.getElementById("RatingsStatus")
+				oInput.load(sContentID);
+				oInput.value = oInput.getAttribute("Rate");
+			}
+					//-->
+		</SCRIPT>
+	</HEAD>
+	<BODY style="MARGIN: 0px" ms_positioning="GridLayout"  bgcolor="#f1f1f1">
+		<form name="ratings_tmp" method="post" action="ratings.aspx%3FContentID=25030315&amp;mnp2=1&amp;Print=default.aspx%3Fprint=true&amp;HideDiscuss=1.1.html" id="ratings_tmp">
+<input type="hidden" name="__EVENTTARGET" value="" />
+<input type="hidden" name="__EVENTARGUMENT" value="" />
+<input type="hidden" name="__VIEWSTATE" value="dDwxMDM3Mjg1ODQ5O3Q8cDxsPEhpZGVEaXNjdXNzO1JhdGVMb3c7Q291bnRUZXh0O1JhdGVDb3VudDtDb3VudEZpcnN0VGV4dDtOb1JhdGluZztGZWVkYmFja1RleHQ7UGFnZVJhdGU7SGlzdG9ncmFtO0JvcmRlckNvbG9yO1BhZ2VSYW5nZTtSYXRlSGlnaDtSYXRlVGhpc1BhZ2U7QmFja0NvbG9yO0F2ZXJhZ2VUZXh0Oz47bDxcZTtQb29yO1w8U1RST05HXD57MDpHfVw8L1NUUk9OR1w+IHBlb3BsZSBoYXZlIHJhdGVkIHRoaXMgcGFnZTtpPDE2PjtcPFNUUk9OR1w+MVw8L1NUUk9OR1w+IHBlcnNvbiBoYXMgcmF0ZWQgdGhpcyBwYWdlO1w8U1RST05HXD5CZSB0aGUgZmlyc3QgdG8gcmF0ZSB0aGlzIHBhZ2UhXDwvU1RST05HXD47XDxTVFJPTkdcPlRlbGwgdXMgd2h5IHlvdSByYXRlZCB0aGUgY29udGVudCB0aGlzIHdheS4gKG9wdGlvbmFsKVw8L1NUUk9OR1w+O1N5c3RlbS5TaW5nbGUsIG1zY29ybGliLCBWZXJzaW9uPTEuMC41MDAwLjAsIEN1bHR1cmU9bmV1dHJhbCwgUHVibGljS2V5VG9rZW49Yjc3YTVjNTYxOTM0ZTA4OTw2Mi40OTgxMjMyPjtsPGk8Mz47aTwxPjtpPDI+O2k8MD47aTwxPjtpPDE+O2k8MT47aTwyPjtpPDU+O2k8NT47PjsjOTk5OTk5O2k8OT47T3V0c3RhbmRpbmc7XDxTVFJPTkdcPkhvdyB3b3VsZCB5b3UgcmF0ZSB0aGUgcXVhbGl0eSBvZiB0aGlzIGNvbnRlbnQ/XDwvU1RST05HXD47I2YxZjFmMTtBdmVyYWdlIHJhdGluZzpcPEJSXD5cPFNUUk9OR1w+ezA6R31cPC9TVFJPTkdcPiBvdXQgb2YgezE6R307Pj47bDxpPDE+Oz47bDx0PDtsPGk8OT47PjtsPHQ8cDxwPGw8QmFja0NvbG9yO0NlbGxQYWRkaW5nO0NlbGxTcGFjaW5nO1dpZHRoO0hlaWdodDtfIVNCOz47bDwyPCcjZjFmMWYxJz47aTwwPjtpPDA+OzE8MTAwJT47MTwxMDAlPjtpPDM5MzYwOD47Pj47Pjs7Pjs+Pjs+PjtsPFByaW50SWNvbjtFbWFpbEljb247UmF0ZTE7UmF0ZTE7UmF0ZTI7UmF0ZTI7UmF0ZTM7UmF0ZTM7UmF0ZTQ7UmF0ZTQ7UmF0ZTU7UmF0ZTU7UmF0ZTY7UmF0ZTY7UmF0ZTc7UmF0ZTc7UmF0ZTg7UmF0ZTg7UmF0ZTk7UmF0ZTk7Pj5BKRv6GwFK7lOiaw0g6G/1G2FzVA==" />
+
+<script language="javascript" type="text/javascript">
+<!--
+	function __doPostBack(eventTarget, eventArgument) {
+		var theform;
+		if (window.navigator.appName.toLowerCase().indexOf("microsoft") > -1) {
+			theform = document.ratings_tmp;
+		}
+		else {
+			theform = document.forms["ratings_tmp"];
+		}
+		theform.__EVENTTARGET.value = eventTarget.split("$").join(":");
+		theform.__EVENTARGUMENT.value = eventArgument;
+		theform.submit();
+	}
+// -->
+</script>
+
+			<input name="RatingsServerCmd" id="RatingsServerCmd" type="hidden" size="1" />
+			<input name="RatingsStatus" id="RatingsStatus" type="hidden" class="RatingsData" size="1" />
+			<input name="RatingsContentURL" id="RatingsContentURL" type="hidden" size="1" />
+			<input name="RatingsContentTitle" id="RatingsContentTitle" type="hidden" size="1" />
+			<table id="tbRatings" cellspacing="0" cellpadding="0" border="0" bgcolor="#f1f1f1" height="100%" width="100%">
+	<tr valign="Top">
+		<td colspan="2"><table cellspacing="2" cellpadding="0" border="0" style="BORDER-TOP:#999999 1px solid;BORDER-BOTTOM:#999999 1px solid;">
+			<tr>
+				<td><input type="image" name="PrintIcon" id="PrintIcon" title="Print a printer-friendly version of this page" OnClick="return OnPrint();" src="rtg_print.gif" alt="Print a printer-friendly version of this page" border="0" style="margin-left:8px;padding-right:2px;display:inline;" /></td><td nowrap="nowrap"><a id="Print" title="Print a printer-friendly version of this page" OnClick="return OnPrint();" href="javascript:__doPostBack('Print','')" style="padding-left:2px;margin-right:8px;color:#000;">Print</a></td><td><input type="image" name="EmailIcon" id="EmailIcon" title="E-mail this page" OnClick="return OnEmail();" src="rtg_email.gif" alt="E-mail this page" border="0" style="margin-left:8px;padding-right:2px;display:inline;" /></td><td nowrap="nowrap"><a id="Email" title="E-mail this page" OnClick="return OnEmail();" href="javascript:__doPostBack('Email','')" style="padding-left:2px;margin-right:8px;color:#000;">E-Mail</a></td><td width="100%"></td>
+			</tr>
+		</table></td>
+	</tr><tr valign="Top">
+		<td width="400" style="BORDER-RIGHT:#999999 1px dotted;"><table cellspacing="4" cellpadding="0" border="0" style="MARGIN-LEFT:10px;">
+			<tr>
+				<td><P><STRONG>How would you rate the quality of this content?</STRONG></P><table cellspacing="0" cellpadding="0" border="0" style="MARGIN-BOTTOM:12px;">
+					<tr align="Center">
+						<td></td><td>1</td><td>2</td><td>3</td><td>4</td><td>5</td><td>6</td><td>7</td><td>8</td><td>9</td><td></td>
+					</tr><tr align="Center">
+						<td>Poor&nbsp;</td><td><input id="Rate1" type="radio" name="Rate" value="Rate1" /></td><td><input id="Rate2" type="radio" name="Rate" value="Rate2" /></td><td><input id="Rate3" type="radio" name="Rate" value="Rate3" /></td><td><input id="Rate4" type="radio" name="Rate" value="Rate4" /></td><td><input id="Rate5" type="radio" name="Rate" value="Rate5" /></td><td><input id="Rate6" type="radio" name="Rate" value="Rate6" /></td><td><input id="Rate7" type="radio" name="Rate" value="Rate7" /></td><td><input id="Rate8" type="radio" name="Rate" value="Rate8" /></td><td><input id="Rate9" type="radio" name="Rate" value="Rate9" /></td><td>&nbsp;Outstanding</td>
+					</tr>
+				</table></td>
+			</tr><tr>
+				<td><STRONG>Tell us why you rated the content this way. (optional)</STRONG></td>
+			</tr><tr>
+				<td><textarea name="txtFeedback" id="txtFeedback" rows="4" cols="42"></textarea></td>
+			</tr><tr>
+				<td><input type="submit" name="btnSend" value="Submit" id="btnSend" /></td>
+			</tr>
+		</table></td><td><table cellspacing="4" cellpadding="0" border="0" width="190" style="MARGIN-LEFT:10px;">
+			<tr>
+				<td colspan="2">Average rating:<BR><STRONG>6</STRONG> out of 9</td>
+			</tr><tr>
+				<td colspan="2"><table cellspacing="1" cellpadding="0" border="0">
+					<tr valign="Bottom">
+						<td><IMG src="rtg_Bar.gif" ALIGN="BOTTOM" WIDTH=12 HEIGHT=24></td><td><IMG src="rtg_Bar.gif" ALIGN="BOTTOM" WIDTH=12 HEIGHT=8></td><td><IMG src="rtg_Bar.gif" ALIGN="BOTTOM" WIDTH=12 HEIGHT=16></td><td><IMG src="rtg_Bar.gif" ALIGN="BOTTOM" WIDTH=12 HEIGHT=0></td><td><IMG src="rtg_Bar.gif" ALIGN="BOTTOM" WIDTH=12 HEIGHT=8></td><td><IMG src="rtg_Bar.gif" ALIGN="BOTTOM" WIDTH=12 HEIGHT=8></td><td><IMG src="rtg_Bar.gif" ALIGN="BOTTOM" WIDTH=12 HEIGHT=8></td><td><IMG src="rtg_Bar.gif" ALIGN="BOTTOM" WIDTH=12 HEIGHT=16></td><td><IMG src="rtg_Bar.gif" ALIGN="BOTTOM" WIDTH=12 HEIGHT=40></td>
+					</tr><tr>
+						<td align="Center">1</td><td align="Center">2</td><td align="Center">3</td><td align="Center">4</td><td align="Center">5</td><td align="Center">6</td><td align="Center">7</td><td align="Center">8</td><td align="Center">9</td>
+					</tr>
+				</table></td>
+			</tr><tr>
+				<td><STRONG>16</STRONG> people have rated this page</td>
+			</tr>
+		</table></td>
+	</tr>
+</table>
+		</form>
+	</BODY>
+</HTML>

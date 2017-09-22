@@ -1,0 +1,1125 @@
+@import "/staticstyles.css";
+@import "/styles/livescore.css";
+
+/* layout and images */
+body {
+	text-align:center;
+	margin:0;
+	background-image:url(/assets/images/bg.gif);
+}
+#frame {
+	width:718px;
+	margin-right:auto;
+	margin-left:auto;
+	padding:0 12px 0 12px;
+	text-align:left;
+	background-image:url(/assets/images/frame_bg.gif);
+}
+
+#contentleft {
+	background-image:url(/assets/images/nav_top_bg.gif);
+	background-repeat:no-repeat;
+	width:144px;
+	padding:0px;
+	float:left;
+}
+#contentleft.silver {
+	background-image:url(/assets/images/silvernav_top_bg.gif);
+}
+#contentcentre {
+	width:430px;
+	padding:0px;
+	float:left;
+}
+
+#contentright {
+	background-image:url(/assets/images/rightcol_bg.jpg);
+	background-repeat:no-repeat;
+	width:144px;
+	padding:0px;
+	float:left;
+}
+
+#contentright.silver {
+	background-image:url(/assets/images/silverright_top.gif);
+}
+
+#contentheader {
+	background-image:url(/assets/images/header.jpg);
+	background-repeat:no-repeat;
+	height:250px	
+}
+#contentheader.silverheader {
+	background-image:url(/assets/images/silverheader.jpg);
+	height:248px;
+}
+#contentheader #newsticker {
+	top:212px;
+	position:relative;
+}
+#footer {
+	width:718px;
+	height:71px;
+	background-image:url(/assets/images/footer_bg.gif);
+	background-repeat:repeat-x;
+	text-align:right;
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 11px;
+	font-weight: normal;
+	color: #FFFFFF;
+}
+#footer.silverfooter {
+	background-image:url(/assets/images/silverfooter.gif);
+}
+#footer a {
+	color: #D7C080;	
+}
+#footercontent a.silverlink {
+	color:#a7b9c5;
+}
+#footercontent {
+	position:relative;
+	top:23px;
+	margin-right:10px;
+}
+#randomplayer {
+	position:relative;
+	left:275px;
+}
+#smslink {
+	position:relative;
+	left:7px;
+	top:138px;
+	float:left
+}
+img {
+	border:0;
+}
+/* begin navigation */
+#leftnav {
+	margin:0;
+	padding:0;
+	background-image:url(/assets/images/lhs-menu-bg.gif);
+	background-repeat:repeat-y;
+	background-position:2px 0;
+}
+#innerbg {
+	background-image:url(/assets/images/lhs-menu-leftedge.gif);
+	background-repeat:no-repeat;
+	margin:0px;
+	padding:0;
+}
+#innerbg.silverinnerbg {
+	background-image:url(/assets/images/lhssilver-menu-leftedge.gif);
+}
+#leftnavlist {
+	margin:0 0 0 15px;
+	padding:0px 0 0 0;
+	border-top-color:#7b6a3e;
+	border-width:1px 0 0px 0;
+	border-style:solid;
+	width:101px;
+}
+#leftnavlist.silverlist {
+	padding:0 0 40px 0;
+	border-top-color:#fff;
+}
+#leftnavlist li {
+	border-bottom-color:#7b6a3e;
+	border-top-color:#000;
+	border-width:0px 0 1px 0;
+	border-style:solid;
+	width:101px;
+	margin:0;
+	padding:0 0 2px 0;
+	list-style-type:none;
+	line-height:0.9em;
+}
+#leftnavlist li.silverlistitem {
+	border-bottom-color:#fff;
+}
+#leftnavlist li.currentarea {
+	background-image:url(/assets/images/lhs-menu-li-selected-bg.jpg);
+	background-repeat:repeat-y;
+}
+#leftnavlist li.silvercurrentarea {
+	background-color:#bec9cd;
+	border-bottom-color:#fff;
+}
+#leftnavlist li.currentarea a {
+	color:#000
+}
+#leftnavlist li.currentarea a:hover {
+	color:#000
+}
+#leftnavlist li.silvercurrentarea a {
+	color:#000
+}
+#leftnavlist li.silvercurrentarea a:hover {
+	color:#000
+}
+#leftnavlist a {
+	font-family: Arial, Helvetica, sans-serif;
+	color: #fff;
+	text-decoration:none;
+	font-size:0.7em;
+	font-weight:bold;
+	margin-left:5px;
+}
+#leftnavlist a:hover {
+	color:#A5883C
+}
+#leftnavlist a.silvernavlink {
+	color:#fff
+}
+#leftnavlist a.silvernavlink:hover {
+	color:#ccc
+}
+#leftmenufooter {
+	margin-left:2px;
+}
+/* league table styles */
+#leaguetable {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 65%;
+	color: #fff;
+	margin:0 0 0 21px;
+	width:110px;
+	padding:0;
+}
+#leagueheader {
+	display:none;
+}
+#leaguetable th {
+	display:none;
+}
+#leaguetablewrapper {
+  background-image: url(/assets/images/minileaugue-bg.jpg);
+  padding:0;
+  margin:0;
+}
+
+#leaguetable td {
+	padding:1px 10px 1px 3px;
+}
+
+#leaguetable td.label {
+	padding:1px 1px 1px 10px;
+}
+
+#leaguetable tr.tophalf td {
+  background: #3666B2 url(/assets/images/minileaugue-tophalf-right.jpg) repeat-y right;
+}
+#leaguetable tr.tophalf td.label {
+  background: #3666B2 url(/assets/images/minileaugue-tophalf-left.jpg) repeat-y left;
+}
+#leaguetable tr.bottomhalf td {
+  background: #0E275F url(/assets/images/minileaugue-bottomhalf-right.jpg) repeat-y right;
+}
+#leaguetable tr.bottomhalf td.label {
+  background: #0E275F url(/assets/images/minileaugue-bottomhalf-left.jpg) repeat-y left;
+}
+
+h2#leaguetableheader {
+  background-image: url(/assets/images/minileaugue-header.jpg);
+  height:40px;
+  text-indent:-900em;
+  margin-top:10px;
+  margin-bottom:0;
+  width:100%;
+}
+
+div#leaguetablefooter {
+  background-image: url(/assets/images/minileaugue-footer.jpg);
+  height:14px;
+  text-indent:-900em;
+  font-size:1px;
+}
+#leaguetable a {
+	color: #fff;
+}
+
+#leaguetable tr.tophalf {
+ background-color: #3465B2;
+}
+
+#leaguetable tr.bottomhalf {
+ background-color: #102662;
+}
+
+/* Keep links inside the league looking like "normal" text" and hide the text
+   decoration on the summary view. */
+
+#leaguetable a {
+  text-decoration: none;
+}
+
+.league-table a:link, .league-table a:hover, .league-table a:visited {
+  color: #fff;
+}
+
+/* newsletter styles adapted from http://www.superleague.co.uk/styles/styles.css */
+#newsletter {
+	padding-left:5px;
+	padding-right:15px;
+	color: #DEE6EC;
+	font-size: 11px;
+	font-family: Arial, Helvetica, sans-serif;
+}
+
+#newsletter #button {
+	background-image: url(/assets/images/newsletter_submit.gif);
+	border:0;
+	width: 59px;
+	height: 16px;
+	background-color: #003;
+}
+
+#newsletter p {
+	 margin-top:3px;
+}
+
+#newsletter h3 {
+	margin-bottom:0;
+	font-size: 12px;
+	font-weight:bold;
+}
+
+#newsletter .nl_textinput {
+	width: 110px;
+	border: 1px solid #7C6933;
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 11px;
+	color: #000;
+	background-color: #fff;
+	padding:2px 5px;
+	margin-bottom:10px;
+}
+/* end newsletter */
+/* news page */
+#newsheader { 
+	background-image: url(/assets/images/header_news_bg.gif);
+	background-position:bottom;
+	background-repeat:repeat-x;
+	height:24px;
+}
+.newsitem {
+	font-size:11px;
+	color: #003;
+	padding-top:8px;
+	padding-bottom:8px;
+	border-bottom: 1px solid #aab6bf;
+}
+.newsitem a {
+	color: #D9072E;
+}
+.newsitem h3 {
+	font-size: 11px;
+	padding:0;
+	margin:0 0 4px 0;
+}
+.newsitem img {
+	width:48px;
+	height:42px;
+	background-image: url(/assets/images/news_image_bg.gif);
+	background-repeat:no-repeat;
+	padding:1px 5px 5px 1px;
+	float:left;
+}
+.newstext {
+	margin-left:100px;
+}
+.newsitem p {
+	margin:0 0 4px 0;;
+}
+#newsnav {
+	text-align:center;
+}
+#newsnav a {
+	font-size:11px;
+	color: #D9072E;	
+}
+.newscategory {
+	width: 200px;
+	border: 1px solid #D7C080;
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 11px;
+	font-weight: bold;
+	color: #000;
+	background-color: #FFF;
+	margin-left:10px;
+}
+/* end news page */
+/* shopping basket styles */
+#shopping {
+	background-image:url(/assets/images/shopping_bg.jpg);
+	background-repeat:repeat-y;
+	margin-top:16px;
+}
+#shopping img {
+	margin-left:28px;
+}
+#basket {
+	margin-top:7px;
+	float:left;
+}
+#baskettable {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size:10px;
+	color:#fff;
+	margin-top:2px;
+}
+#baskettable td {
+	margin:0;
+	padding:0 0 0 5px;
+	line-height:10px;
+}
+#baskettable th {
+	margin:0;
+	padding:0 0 0 5px;
+	color:#BBD2FA;
+	font-weight:normal;
+	text-align:left;
+}
+#checkout {
+	margin-top:13px;
+	margin-bottom:10px;
+}
+#baskettablefooter {
+	margin:0px;
+	background-image:url(/assets/images/shopping_bg.jpg);
+	background-repeat:repeat-y;
+}
+#checkhelp {
+	margin:10px 0 0 14px;
+}
+#basketfooter {
+	margin-left:14px;
+}
+/* end shopping basket styles */
+/* 2005 season styles */
+div.season {
+	font-size:85%
+}
+div.season h2 {
+ background-image: url(/assets/images/ticket-rhsbox-header.jpg);
+ background-repeat:no-repeat;
+ height:40px;
+ width:144px;
+ margin:12px 0 0 0;
+ text-indent:-900em;
+}
+
+div.season h3 {
+ background-image: url(/assets/images/ticket-rhsbox-rowbg.jpg);
+ background-repeat:repeat-y;
+ color:#FFF;
+ margin: 0 0 0 0;
+ padding:2px 20px 2px 34px;
+ font-size:70%;
+ font-family: Arial, Helvetica, sans-serif;
+}
+
+div.season h4 {
+ background-image: url(/assets/images/ticket-rhsbox-bg.jpg);
+ background-repeat:repeat-y;
+ color:#FFF;
+ margin: 0 0 0 0;
+ padding:4px 20px 3px 34px;
+ font-size:70%;
+ font-family: Arial, Helvetica, sans-serif;
+ font-weight:normal;
+}
+
+div.matchdetails {
+ background-image: url(/assets/images/ticket-rhsbox-bg.jpg);
+ background-repeat:repeat-y;
+ color:#FFF;
+ margin: 0 0 0 0;
+ padding:0 20px 0 34px;
+ font-size:70%;
+ font-family: Arial, Helvetica, sans-serif;
+}
+div.season div.footer {
+ background-image: url(/assets/images/ticket-rhsbox-footer.jpg);
+ background-repeat:no-repeat;
+ height:23px;
+ width:144px;
+}
+
+div.season a {
+ color: #fff;
+ text-decoration: none;
+}
+
+div.season a:hover {
+   text-decoration: underline;
+}
+div.season a.matchlink {
+ color: #bbd2fa
+}
+/* end 2005 season styles */
+/* styles for tickets content */
+#content.silvercontent {
+	padding:0 5px 0px 0px;
+}
+#left.silverleft {
+	width:236px;
+	background-color:#fff;
+}
+#left.silverleft p {
+	margin:0 6px 20px 3px;
+	padding:0;
+	border:0;
+	color: #003;
+	font-size:87%;
+	background-color:transparent;
+	text-transform:none;
+}
+#left.silverleft h3 {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size:89%;
+	color: #003;
+	font-weight: bold;
+	background-color: transparent;
+	border:0;
+	padding:0;
+	margin:3px 6px 0 3px;
+}
+#left.silverleft a {
+	color:#D9072E;
+}
+#right.silverright {
+	width:171px;
+	margin-left:246px;
+	background-color:#3163B5;
+}
+#right.silverright h3 {
+	margin:22px 4px 0 4px;
+	font-family: Arial, Helvetica, sans-serif;
+	font-size:89%;
+	color:#fff;
+}
+#right.silverright p {
+	margin:0px 4px 22px 4px;
+	font-family: Arial, Helvetica, sans-serif;
+	font-size:87%;
+	color:#fff;
+}
+#right.silverright span.grey {
+	margin:0px 4px 0px 4px;
+	font-family: Arial, Helvetica, sans-serif;
+	font-size:87%;
+	color:#A7B9C5;	
+}
+#right.silverright #bluediv {
+	background-color:#0E2660;
+	width:171px;
+	text-align:center;
+	padding:18px 0 405px 0;
+}
+#bookingcontent {
+	padding:0px;
+	font-family: Arial, Geneva, "Bitstream Vera Sans", Helvetica, sans-serif;
+	font-size: 79%;
+	color: #333;
+	background-color:#DEE6EC
+}
+#bookingleft {
+	float:left;
+	width: 301px;
+	background-image:url(/assets/images/booking_leftcol_bg.jpg);
+	background-repeat:repeat-y;  
+}
+#bookingright {
+	width: 121px;
+	margin-left:301px;
+	background-color:#BCCCE1
+}
+#bookingright p {
+	font-size:10px;
+	color:#fff;
+	margin:0;
+	background-color:#3564B5;
+	width:113px;
+	padding:5px 4px 5px 4px;
+}
+img.cupheader {
+	margin:12px 0 0px 0px;
+}
+/* taken verbatim from http://www.superleague.co.uk/styles/styles.css */
+SPAN.versus {
+  color: red;
+}
+
+#content {
+  font-family: Arial, Geneva, "Bitstream Vera Sans", Helvetica, sans-serif;
+  font-size: 79%;
+  color: #333;
+}
+
+#content * {
+  margin-top:0;
+}
+
+#mainstory DIV {
+  margin-left: 183px;
+	font-size:95%
+}
+
+#mainstory H1 {
+	font-family: Arial, Helvetica, sans-serif;
+  font-size:100%;
+	color: #000033;
+	font-weight: bold;
+  margin:0 0 0.4em 183px;
+
+}
+
+#mainstory IMG {
+  float:left;
+  border:1px solid #FFFFFF;
+}
+
+DIV.clear {
+  clear:both;
+}
+
+#left {
+  float:left;
+  width: 161px;
+}
+
+#right {
+  width: 232px;
+  margin-left:180px;
+}
+
+#right H2 {
+  font-family: Verdana, Arial, Helvetica, sans-serif;
+  font-size:89%;
+  color: #FFF;
+  font-weight: bold;
+  background-image: url(/assets/images/header-bg-blue.gif);
+  border: 1px solid #000;
+  padding: 1px 0 2px 3px;
+  margin:0 0 5px 0;
+}
+
+#left H2 {
+  font-family: Verdana, Arial, Helvetica, sans-serif;
+  font-size:89%;
+  color: #FFF;
+  font-weight: bold;
+  border: 1px solid #000;
+  padding: 1px 0 2px 3px;
+  margin:0 0 5px 0;
+}
+
+#previews H2 {
+  background-image: url(/assets/images/header-bg-mauve.gif);
+}
+
+#reports H2 {
+  background-image: url(/assets/images/header-bg-cyan.gif);
+}
+
+
+#left H3 {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size:89%;
+  color: #003;
+  font-weight: normal;
+  background-repeat: repeat-y;
+  background-color: #C3CFE9;
+  border: 1px solid #A2A8B6;
+  padding-left:20px;
+  margin:0;
+  background-position: left;
+}
+
+#previews H3 {
+  background-image: url(/assets/images/icon-preview.gif);
+}
+
+#reports H3 {
+  background-image: url(/assets/images/icon-report.gif);
+}
+
+#news {
+  background-color: #FFF;
+  border: 1px solid #A2A8B6;
+  padding-bottom: 10px;
+  font-size: 89%;
+}
+
+#news DIV {
+  color: #003;
+  margin-left: 70px;  
+  margin-bottom:10px;
+  margin-right:5px;
+}
+
+#news H3 {
+	font-family: Arial, Helvetica, sans-serif;
+  font-size:100%;
+	color: #003;
+	font-weight: bold;
+  padding-top: 10px;
+  margin:0 5px 0.4em 70px;
+}
+
+#news IMG {
+  float:left;
+  border:1px solid #FFFFFF;
+  padding:10px 5px 10px 10px;
+}
+
+#news HR {
+  width:212px;
+  height: 1px;
+  border-top:0;
+}
+
+#left P {
+  margin:0 0 5px 0;
+  color: #003;
+  font-size:80%;
+  background-color:#F3F7F1;
+  padding:10px 10px 10px 18px;
+  border-left: 1px solid #A2A8B6;
+  border-right: 1px solid #A2A8B6;
+  border-bottom: 1px solid #A2A8B6;
+  text-transform: uppercase;
+}  
+
+#left A {
+  text-transform: none;
+}
+
+
+#newsarchive IMG {
+  margin:0 0 0 5px;
+  padding:0;
+  float: none;
+}
+
+.awayteam A {
+float:right;
+margin-left:3px;
+}
+
+#hospitality {
+    text-align:left;
+	margin-left:60px;
+}
+
+#hospitality LI,#hospitality UL {
+    list-style:none;
+	margin:0;
+	padding:0;
+}
+
+.linkred {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 11px;
+	color: #D9072E;
+}
+
+
+
+
+
+
+
+/* Styles for Fixtures and Results */
+
+
+
+  H2.round {
+    width:406px;
+    font-family:arial, geneva, helvetica, sans-serif;
+    font-size:95%;
+    color:#FFF;
+    background-color:#3564B5;
+    padding:3px 0 3px 10px;
+    margin:0 0 0 5px;
+  }
+  
+  H3.date {
+    width:406px;
+    font-family:arial, geneva, helvetica, sans-serif;
+    font-size:75%;
+    color:#000;
+	background-color:#D7C080;
+    padding:3px 0 3px 10px;
+    margin:4px 0 8px 5px;
+	text-align:center;
+  }
+  
+  DIV.fixturecanvas {
+    background-color:#FFF;
+	padding:8px 2px 2px 2px;
+  font-size:110%;
+  }
+  
+  TABLE.fixture {
+    width:406px;
+    font-family:arial, geneva, helvetica, sans-serif;
+    font-size:90%;
+    margin:0 0 10px 10px;
+    background-color:#FFF;
+    color:#003;
+  }
+  
+  TD.hometeam {
+    width:200px;
+    font-family:arial, geneva, helvetica, sans-serif;
+	text-align:right;
+	border-bottom:2px solid #999;
+	font-weight:bold;
+    font-size:90%;
+  }
+  
+  TD.awayteam {
+    width:200px;
+    font-family:arial, geneva, helvetica, sans-serif;
+	border-bottom:2px solid #999;
+	font-weight:bold;
+    font-size:90%;
+  }
+
+  TD.versus {
+    color:#900;
+	border-bottom:2px solid #999;
+	font-size:90%;
+	padding-bottom:3px;
+  }
+
+  
+  SPAN.homehalftimescore {
+    color:#777;
+	font-size:90%;
+	padding-left:5px;
+  }
+
+  SPAN.awayhalftimescore {
+    color:#777;
+	font-size:90%;
+	padding-right:5px;
+  }
+
+  SPAN.homefulltimescore {
+	font-size:100%;	
+	padding-left:5px;
+  }
+
+  SPAN.awayfulltimescore {
+	font-size:100%;
+	padding-right:5px;
+  }
+
+  
+  TD.triesheader, TD.goalsheader  {
+    border-bottom:1px solid #ccc;
+    font-size:80%;
+	text-align:center;
+	font-style:italic;
+  }
+  
+  TD.hometries, TD.homegoals {
+    padding-left:10px;
+    font-size:80%;
+	text-align:right;
+	vertical-align:top;
+	padding-right:40px;
+  }
+  
+  TD.awaytries, TD.awaygoals {
+    padding-left:35px;
+    font-size:80%;
+	vertical-align:top;
+}
+
+
+DIV.playoffs DIV.title {
+  font-family:arial, verdana, helvetica;
+  background-color:#0C2763;
+  color:#FFF;
+  font-size:11px;
+  padding:2px 0 2px 6px;
+}
+
+DIV.playoffs DIV.body {
+  background-color:#FFF;
+  border:1px solid #B2B9C9;
+  border-top:0;
+  padding:7px;
+  font-size:11px;
+  font-family:arial, verdana, helvetica;
+}
+
+DIV.playoffs DIV.body IMG {
+  float: left;
+  padding-right:8px;
+  border: 0;
+}
+
+DIV.playoffs DIV.content {position: relative;}
+DIV.playoffs DIV.content P {margin: 0 0 3px 0;}
+
+.redhead {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 14px;
+	font-weight: bold;
+	color: #FF0000;
+}
+.whitesml {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 10px;
+	font-weight: normal;
+	color: #FFFFFF;
+	line-height: 15px;
+}
+.bluebody {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 11px;
+	color: #000033;
+}
+.whitebld {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 11px;
+	font-weight: bold;
+	color: #FFFFFF;
+}
+.whitebody {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 11px;
+	font-weight: normal;
+	color: #FFFFFF;
+}
+.lightbluebld {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 11px;
+	font-weight: bold;
+	color: #6699CC;
+}
+.bluebld {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 11px;
+	color: #000033;
+	font-weight: bold;
+}
+#contentleaguetable {
+    padding:0;
+    margin:0;
+    border:0;
+    width:430px;
+}
+#contentleaguetable td {
+    padding:4px 1px 4px 1px;
+    margin:0;
+}
+.tran_title_block {
+	background-image: url(/transfers/bg1.gif);
+}
+.tran_name {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 12px;
+	font-weight: bold;
+	color: #0C1C3E;
+	line-height: 15px;
+}
+.tran_team {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 10px;
+	color: #0C1C3E;
+	line-height: 8px;
+	font-style: italic;
+}
+.tran_club {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 12px;
+	font-weight: bold;
+	color: #FFFFFF;
+}
+.tran_in_out {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 10px;
+	font-weight: bold;
+	color: #FFFFFF;
+}
+#clubcontact th {
+    text-align:left;
+}
+#clubdirections th {
+    text-align:left;
+}
+#striptable th {
+    text-align:left;
+}
+#clubhonours th {
+    text-align:left;
+}
+
+.archive-years {
+  margin: 1em 0.25em;
+  padding-bottom: 0px;
+  border-top: 1px solid #87703e;
+  border-bottom: 1px solid #87703e;
+  text-align: center;
+}
+
+.archive-years ol {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.archive-years ol li {
+  display: inline;
+  margin-left: 1em;
+}
+
+.archive-years ol li a:hover, .archive-years ol li a:link, .archive-years ol li
+a:visited {
+  text-decoration: none;
+  color: #000;
+}
+
+.archive-years ol li.selected a:hover, .archive-years ol li.selected a:link,
+.archive-years ol li.selected a:visited { 
+  border-bottom: 4px solid #87703e;
+}
+
+.archive-years ol li a:hover {
+  border-bottom: 4px solid #87703e;
+}
+
+
+
+
+/* Player page */
+
+#statplayerpage {float:left; width:429px; clear:both;  background-image:url(/assets/images/bg_2.gif);}
+#statplayerdropdown {float:left; width:429px; height:40px; clear:both; background-color:#DEE6EC;}
+.statplayerdropdownlist {float:right;}
+#statplayertop {float:left; width:429px; background-image:url(/assets/images/bg_1.gif); background-repeat:no-repeat; clear:both; }
+#statplayermiddle {float:left; width:429px; background-image:url(/assets/images/player_table.gif); background-repeat:no-repeat; clear:both; padding-top:35px; padding-bottom:35px; }
+#statplayerbottom {float:left; width:429px; height:50px; background-image:url(/assets/images/bg_3.gif); clear:both; }
+#statplayerbottom P {font-size:80%;}
+#statplayerbottomcontainer {float:right; width:300px; }
+.statplayerimagemargin {margin-left:18px; }
+.statplayerimage {float:left; width:240px; padding-top:20px; }
+#statplayerleftcol {float:left; width:173px;}
+#statplayerleftcol P {font:Arial, Helvetica, sans-serif; }
+.statplayername {color:#FFFFFF; font-weight: bold; padding-left:10px; padding-top:7px; }
+.statplayerdetailtitle {color:#666666; background-color:#CCCCCC; width:100%; clear:both; }
+.statplayerdetailtitle P {padding-left:10px; margin:0px; font-size:90%; padding-top:2px; padding-bottom:2px; line-height:100%; }
+.statplayerdetail {color:#666666; clear:both; }
+.statplayerdetail P {padding-left:10px; margin:0px; font-size:90%; padding-top:2px; padding-bottom:2px; line-height:100%; }
+.statplayerclublogo {float:left; padding-bottom:15px; padding-top:5px; clear:both; }
+.statplayertablecontainer {float:right; padding-right:9px; }
+.statplayertablerow {float:left; width:316px; clear:both; padding-top:6px; padding-bottom:6px; }
+.statplayertablerow P {font-size:90%; }
+.statplayertabletotal {float:left; text-align:center; width:49px; height:14px; }
+.statplayertablegameaverage {float:left; text-align:center; width:83px; height:14px; }
+.statplayertable5average {float:left; text-align:center; width:83px; height:14px; }
+.statplayertableclubpercent {float:left; text-align:center; width:95px; height:14px; }
+.statplayertableclear {clear:both; }
+.statplayerheadtoheadimg {float:left; padding-left:20px; padding-right:20px; padding-bottom:30px; }
+
+
+.statplayerbiography {float:left; width:396px; background-image:url(/assets/images/bg_biog.gif); background-repeat:no-repeat; }
+.statplayerbiographymargin {padding-left:18px; }
+.statplayerbiography P {padding-left:15px; font-size:90%; padding-right:15px; padding-top:2px; padding-bottom:8px; margin:0px; }
+.statplayerbiography P STRONG {color:#FFFFFF; padding:0px}
+
+#statplayerheadtohead1 {float:left; width:396px;}
+#statplayerheadtohead1 P {font-size:80%; }
+
+
+/* Club Page */
+#statclubpage {float:left; width:429px; clear:both;  background-image:url(/assets/images/bg_2.gif);}
+#statclubtop {float:left; width:429px; background-image:url(/assets/images/club_bg1.gif); background-repeat:no-repeat; clear:both; padding-bottom:30px; }
+#statclubtopleftcol {float:left; width:315px; }
+#statclubtoprightcol {float:left; width:104px; padding-top:70px; }
+#statclubtoprightcol P {margin-top:1px; margin-bottom:1px; }
+#statclubtoprightcol A {font-size:80%; color:#FFFFFF; text-decoration:underline; }
+#statclubtoprightcol A :HOVER {color:#000000; }
+.statclubimage {float:left; width:132px; padding-top:20px; }
+.statclubname {color:#FFFFFF; font-weight: bold; padding-left:10px; padding-top:7px; }
+#statclubdetails {float:left; width:160px;}
+#statclubdetails P {font:Arial, Helvetica, sans-serif; }
+#statclubdetails P A {color:#FF0000; }
+#statclubnews {padding-left:7px; padding-right:22px; padding-top:20px; }
+#statclubnews P {font-size:90%; margin:0px; }
+#statclubnewscontent {padding-top:20px; clear:both; }
+#statclubnewsheadlines {padding-top:20px; clear:both; padding-left:8px; padding-bottom:20px;}
+#statclubnewsheadlines A {color:#000000; }
+#statclubnewsheadlines UL {margin: 0; padding: 0; list-style-type: none; }
+#statclubnewsheadlines UL LI {background-image: url(/assets/images/bullet.gif); background-position: left top; background-repeat: no-repeat; padding: 0px 0px 3px 9px; }
+#statclubnewsheadlines UL LI P {display: block; text-decoration: none; width: 100%; }
+.statclubnewstitle {color:#F4B132; background-color:#000000; width:100%; clear:both;  }
+.statclubnewstitle P {padding-left:5px; margin:0px; font-size:90%; padding-top:2px; padding-bottom:2px; line-height:100%; font-weight:bold; }
+.statclubhonourscontainer {float:left; width:421px; background-image:url(/assets/images/club_honours.gif); background-repeat:no-repeat; }
+.statclubhonourscontainer P {font-size:80%; margin:0px; }
+.statclubhonourstitle  {float:left; clear:both; }
+.statclubhonourstitle  P {color:#FFFFFF; padding-left:15px; font-size:90%; padding-right:15px; padding-top:2px; padding-bottom:8px; margin:0px; }
+.statclubhonourscolstart {float:left; width:80px; height:140px; }
+.statclubhonourscolend {float:left; width:5px; height:140px; }
+.statclubhonourscol1 {float:left; width:140px; padding-top:30px; }
+.statclubhonourscol2 {float:left; width:135px; padding-top:30px; }
+.statclubhonourscol3 {float:left; width:50px; padding-top:30px; }
+#statclubdivide {float:left; width:429px; clear:both;  background-image:url(/assets/images/bg_2.gif); height:20px;}
+#statclubbottom {float:left; width:429px; height:100px; background-image:url(/assets/images/club_bg3.gif); clear:both; }
+#statclublocaterimg {margin-left:7px; margin-top:10px; }
+.statclubnewsimg {float:left; margin-right:10px; margin-bottom:10px; margin-left:5px; }
+#statclubcontacts {padding-left:7px; padding-top:10px; }
+#statclubcontacts P {font-size:90%; margin:0px; padding-top:3px; }
+#statclubcontacts A {color:#FF0000; }
+#statclubcontacts A:HOVER {color:#000000; }
+.statclubcontactspt1 {float:left; width:83px; }
+.statclubcontactspt2 {float:left; width:195px; }
+#statclubstrip {padding-bottom:20px; }
+.statclubimage {text-align: center; }
+.statclubimagemargin {margin-left:5px; }
+
+#statclubstrip {
+  min-height: 90px;
+  _height: 100px; /* IE hack */
+  position: relative;
+  background: url(/assets/images/club-strip-background.gif) no-repeat;
+  padding-top: 10px;
+  padding-left: 165px;
+}
+
+#statclubstrip h3 {
+  display: none;
+}
+
+#statclubstrip h4 {
+  padding: 0;
+  margin: 0;
+  font-size: 100%;
+  font-weight: bold;
+}
+
+#statclubstrip p {
+  margin-bottom: 5px;
+}
+
+#statclubstrip .home_image, #statclubstrip .away_image {
+  position: absolute;
+  top: 30px;
+}
+
+#statclubstrip .home_image {
+  left: 8px;
+}
+
+#statclubstrip .away_image {
+  left: 85px;
+}
+
+

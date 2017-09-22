@@ -1,0 +1,527 @@
+/*
+article style
+pfagan 02/2007
+*/
+
+/* display hacks ------------------------------------------------------------ */
+
+.clear {
+    clear: both;
+}
+p.clear {
+    margin: 0;
+    padding: 0;
+}
+
+/* viewport ----------------------------------------------------------------- */
+
+body {
+    margin: 0;
+    padding: 0;
+    font-size:80%;
+    color:#000;
+}
+
+#container {
+    margin: 0;
+    padding: 0;
+    width:964px;
+}
+
+/* link styles -------------------------------------------------------------- */
+
+a:link {
+    color: #015660;
+    text-decoration: none;
+}
+a:visited {
+    color: #667B7B;
+    text-decoration: none;
+}
+a:hover, a:visited:hover { 
+    text-decoration: underline;
+}
+
+/* main article content ----------------------------------------------------- */
+
+/* Layout Widths:
+    Left    Left     Article    Right   Vertical  Articlebox   Groupmenu
+    Border  Margin   Content    Margin  Rule      Margin       Content
+    8px     10px     VARIABLE   10px    1px       10px         VARIABLE
+*/
+
+#contentbody {
+    border-left: 8px solid #EFEFEF;
+    padding:10px 0 10px 10px;
+}
+
+table.article tr {
+    vertical-align: top;
+}
+
+#contentcol {
+    width:100%;
+    padding-right:10px;
+}
+
+#contentcol h1, #contentcol h2, #contentcol h3 {
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+#contentcol h1 {
+    margin:11px 0 0 0;
+    font-size:1.44em;
+}
+
+#contentcol h2 {
+    margin:2px 0 0 0;
+    font-size:1.26em;
+}
+
+#contentcol div.headlines {
+    margin: 0 0 11px 0;
+    padding: 0;
+}
+
+#contentcol p.byline,
+#contentcol p.date {
+    margin:0 0 3px 0;
+    font-family: Verdana, Arial, Helvetica, sans-serif;
+    font-size:.86em;
+}
+
+#contentcol #divider hr  {display: none;}
+#contentcol #divider img {margin-top: 5px;}
+
+/* articletools ------------------------------------------------------------- */
+
+#articletools {
+    margin-top:12px;
+    background: url('/templates/types/article/graphics/tools_dashline.gif') repeat-x;
+    padding-top:1px;  /* extra top pixel compensates for dashline */
+}
+
+#articletools #utilitymenu {
+    width:320px;
+    height:20px;
+    padding-top:5px;
+}
+
+#articletools ul {
+    margin:0;
+    padding-left:0;
+    list-style-type:none;
+}
+
+#articletools li {
+    display:inline;
+}
+
+#articletools li a {
+    display:block;
+    float:left;
+    height: 0px !important;
+    height /**/:15px;  /* IE5.5Win fix */
+    background-image: url('/templates/types/article/graphics/tools_email.gif');
+    background-repeat: no-repeat;
+    padding: 15px 0 0 0;
+    overflow: hidden;
+    margin-right:20px;
+}
+
+#articletools li.print a {
+    width:109px;
+    background-image: url('/templates/types/article/graphics/tools_printable.gif');
+}
+
+#email_article h1.email {
+    width:86px;
+    color: #666;
+}
+
+#toolsponsor {
+    float:right;
+}
+
+#toolsponsor a img {
+    border:0;
+}
+
+#articletools #loweredge {
+    height: 1px;
+    background: url('/templates/types/article/graphics/tools_dashline.gif') repeat-x;
+    font-size:1.2em;     /* matches #articlebody   below */
+    margin-bottom:.75em; /* matches #articlebody p below */
+}
+
+/* body of article ---------------------------------------------------------- */
+
+#articlecontent {
+    clear:both;
+    margin-top: .75em;
+}
+
+* html #articlecontent {
+    margin-top:-13px;
+}
+
+#articlebody {
+    clear:left;
+    font-family: Georgia, "Times New Roman", Times, serif;
+    font-size:1.2em;
+    line-height:1.44em;
+}
+
+#articlebody p {
+margin:.75em 0 0 0;
+/* Until paragraphs are proper containers, we can't count on the first
+   paragraph being identified as such. so the leading after the first
+   paragraph is handled by the top of the second, and so on. The leading
+   ABOVE the first paragraph is handled by #articletools #loweredge */ 
+padding: 0;
+}
+
+#articlebody .dropcap {
+display: inline;
+float:left;
+font-size: 3.1em;
+line-height: .9em;
+padding-top: .02em;
+padding-right: .15em;
+}
+
+/* article footers ---------------------------------------------------------- */
+
+#articlefooter {
+    font-family: Verdana, Arial, Helvetica, sans-serif;
+    font-size: .74em;
+    line-height: 1.2em;
+}
+
+#articlefooter .imgleft {
+    float:left;
+    border:1px solid #000;
+}
+
+#articlefooter .imgright {
+    float:right;
+    border:1px solid #000;
+}
+
+/* charts ---------------------------------------------------------------- */
+
+#chart_start pre {
+    clear:both;
+    font-family: 'Andale Mono', 'Lucida Console', monospace;
+    font-size:.98em;
+}
+
+#chart_start hr {
+    border:0px;
+    background-color: #666;
+    height: 1px;
+    color:#666;
+}
+
+#chartlink {
+    border: 1px solid #999;
+    padding: 6px;
+    font-size:.86em;
+}
+
+#chart_display div.view_article {
+margin-top: 11px;
+}
+
+/* page number -------------------------------------------------------------- */
+
+#contentcol #pageno {
+    color: #555;
+    font-family: Verdana, Arial, Helvetica, sans-serif;
+    font-size:.86em;
+    font-style: italic;
+}
+
+/* google ad, wide ---------------------------------------------------------- */
+
+#contentcol .google {
+/* margin:10px 0 30px 0; -- defaults from google.css */
+       margin:25px 0 15px 0;
+}
+
+/* buy chronicle ------------------------------------------------------------ */
+
+#buychronicle {
+    font-family: Verdana, Arial, Helvetica, sans-serif;
+    font-size:.86em;
+    line-height:2.6em;
+}
+
+#buychronicle img {
+    float:left;
+    margin-right:5px;
+    border:0;
+}
+
+#buychronicle img {
+    float:left;
+    border:0;
+}
+
+/* back to top -------------------------------------------------------------- */
+
+#toplink {
+    clear: both;
+    margin: 40px 0 0 0;
+    padding: 0;
+    font-family: Verdana, Arial, Helvetica, sans-serif;
+    font-size:.82em;
+}
+
+/* article box -------------------------------------------------------------- */
+
+#articlebox {
+    display:inline;
+    float:right;
+    width:160px;
+    margin-left: 15px;
+    font-family: Verdana, Arial, Helvetica, sans-serif;
+}
+
+#articlebox .boxitem, #objbox, #chartlink {
+    margin-bottom: 10px;
+}
+
+#articlecontent div.dropin {
+    margin-top: 10px;
+    border:1px solid #000;
+    padding:8px;
+    font-size:.82em;
+}
+* html #articlecontent .dropin {width: 100%;}
+#articlecontent .dropin a         {color: #006; text-decoration: none;}
+#articlecontent .dropin a:visited {color: #369;}
+#articlecontent .dropin a:hover   {text-decoration: underline;}
+
+#articlecontent .dropin h1 {
+    margin:-8px -8px .5em -8px;
+    padding:4px;
+    background:#666;
+    text-align:center;
+    font-family: Verdana, Arial, sans-serif;
+    font-size: 1em;
+    color: #FFF;
+}
+#articlecontent .dropin h2 {
+    margin:0 0 .5em 0;
+    padding:0;
+    font-family: Verdana, Arial, sans-serif;
+    font-size: 1em;
+    text-align: center;
+}
+#articlecontent .dropin p {
+    margin:0 0 .5em 0;
+    padding:0;
+}
+#articlecontent .dropin hr {
+    border:0;
+    height:1px;
+    color: #999;
+    background-color: #999;
+}
+#articlecontent .dropin .bold a {
+    font-weight: bold;
+}
+#articlecontent .dropin .center {
+    text-align: center;
+}
+
+/* LEGACY TEXT STYLES */
+    #articlecontent .text1sm, #articlecontent .text2sm,
+    #articlecontent .text1smb, #articlecontent .text2smb {
+    font-size:.82em; line-height:1.25em;}
+    #articlecontent .text1smb, #articlecontent .text2smb {
+    font-weight:bold;}
+
+/* object thumbs ------------------------------------------------------------ */
+
+#objbox {
+    border: 1px solid #999;
+    padding: 6px 0 0 6px;
+}
+
+#objbox img {
+    display:inline;
+    float:left;
+    margin: 2px 8px 8px 2px;
+    border: 1px solid #000;
+}
+
+/* the vspace in the img tags is unwanted, but ignored by all but IE6Win.
+    Remove this IE6Win ahck when the vspace in the img tags is gone. */
+* html #objbox img {    
+    margin: 1px 8px 7px 2px;
+}
+
+#objbox a.more {
+    clear:both;
+    margin:2px;
+    font-size:.86em;
+    line-height:.75em;
+}
+
+#objbox div.clear {
+    clear:both;
+    margin-top:6px;
+}
+
+/* groupmenu ---------------------------------------------------------------- */
+
+#groupmenu {
+    margin-top:10px;
+    padding: 0 0 0 11px;
+    background: #FFF url('/templates/types/article/graphics/vertical_rule.gif') repeat-y;
+}
+
+#adpos3,#topmost,#adjacency,#adpos2,#adpos4 {
+    margin-bottom:10px;
+}
+
+table.groupmenu {
+    width:300px;
+}
+
+table.groupmenu tr {
+    vertical-align: top;
+}
+
+table.groupmenu td.leftcol {
+    padding-right:10px;
+}
+
+/* ADDITIONAL: Column Banner Defaults --------------------------------------- */
+
+#divider {
+    margin-top: 5px;
+}
+
+#divider #bylinelogo, #divider #columnlogo {
+    border-top: 1px solid #BBB;
+    padding: .5em 0;
+    font-family: Arial, Helvetica, sans-serif;
+    border-bottom: 1px solid #BBB;
+    margin-bottom:11px;
+}
+#divider #bylinelogo img, #divider #columnlogo img {
+    display:inline;
+    vertical-align:middle;
+    margin:0 1.4em 0 0;
+}
+#divider #bylinelogo h3, #divider #columnlogo h3 {
+    display:inline;
+    vertical-align:middle;
+    margin:0;
+    padding:0;
+    line-height:2em;
+    font-size:1.52em;
+    text-transform: uppercase;
+    color: #293173;
+}
+    #divider #bylinelogo h4, #divider #columnlogo h4 {
+    display:inline;
+    vertical-align:middle;
+    margin:0 0 0 1.4em;
+    padding:0;
+    line-height:2em;
+    color:#666;
+}
+
+/* ADDITIONAL: TopMost Widget ----------------------------------------------- */
+
+#topmost .tabs {
+    height:20px;
+    background: url('/templates/types/topmost/images/fill_tabs.gif');
+}
+
+#topmost img {
+    border: 0;
+}
+
+#topmost .content {
+    border-right:  1px solid #B4C7C7;
+    border-left:   1px solid #B4C7C7;
+    background: #EEF6F6;
+    padding: 10px 10px 6px 10px;
+    font-family: Verdana, Arial, Helvetica, sans-serif;
+    font-size: .86em;
+}
+
+#topmost ul {
+    margin: 0px 0px 0px 12px;   
+    padding: 2px 2px 0px 2px;
+}
+
+#topmost ol {
+    margin: 0px 0px 0px 18px;
+    padding: 2px 2px 0px 2px;
+}
+* html #topmost ol {
+    margin: 0px 0px 0px 21px;
+}
+
+#topmost li {
+    padding: 0px 0px 4px 0px;
+}
+
+#topmost ul li {
+    list-style-type: square;
+}
+
+#topmost .footer {
+    background: #EEF6F6 url('/templates/types/topmost/images/fill_footer.gif') repeat-x;
+}
+
+#topmost .footer img {
+    width:4px;
+    height:4px;
+}
+
+#topmost img.botleftcorner {
+    float:left;
+}
+
+#topmost img.botrightcorner {
+    float:right;
+}
+
+/* text ads ----------------------------------------------------------------- */
+
+#adpos4 .textads {
+    width: 160px;
+    border-top:   1px solid #666;
+    background: #F9F8F8;
+    font: .97em Geneva, Arial, sans-serif;
+    color:#333;
+    border-bottom:1px solid #666;
+}
+
+#adpos4 .textads .heading {
+    background-color:#F4F4DA;
+    padding:10px 5px;
+    font-family: Arial, sans-serif;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+#adpos4 .textads a {
+    color:#666;
+    text-decoration:none;
+    padding:8px 5px 8px 5px ;
+    display: block;
+}
+
+#adpos4 .textads a:hover {
+    background: #ECEBEB;
+}
+
+/* -------------------------------------------------------------------------- */

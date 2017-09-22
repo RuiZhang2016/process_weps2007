@@ -1,0 +1,153 @@
+<html>
+<head>
+   <meta http-equiv="Content-Type" content="text/html; charset=windows-1250">
+   <link rel="SHORTCUT ICON" href="vicos.ico">
+   <link REL="icon" HREF="http://cogvis.fri.uni-lj.si/images/vicos_icon.png" TYPE="image/png">
+   <link href="cogvis.css" rel="stylesheet" type="text/css">
+   <!-- #BeginEditable "doctitle" --><title>Conservative visual learning for object detection with minimal hand labeling effort</title> <!-- #EndEditable -->
+</head>
+
+<body bgcolor=white>
+<table BORDER=0 CELLPADDING=0 CELLSPACING=0 BGCOLOR=white>
+	<tr>
+		<td height=1 width=1 bgcolor=White> </td>
+		<td height=1 width=25 bgcolor=White> </td>
+		<td height=1 width=1 bgcolor=White> </td>
+		<td height=1 width=183 bgcolor=White> </td>
+		<td height=1 width=1 bgcolor=White> </td>
+		<td height=1 width=530 bgcolor=White> </td>
+		<td height=1 width=1 bgcolor=White> </td>
+	</tr>
+	<tr>
+		<td height=1 bgcolor=Gray colspan=7> </td>
+	</tr>
+	<tr>
+		<td width=1 background="border_pix.gif" bgColor=Black> </td>
+		<td COLSPAN=5 WIDTH=740 align=left>
+			<table width="100%" height="100%" border="0" cellpadding=5>
+			  <tr>
+				<td><a href="http://cogvis.fri.uni-lj.si"><img src="vicos.png" alt="Visual Cognitive Systems Laboratory"  border=0 align=left></a></td>
+			  </tr>
+			</table>
+		</td>
+		<td width=1 background="border_pix.gif" bgColor=Black> </td>
+	</tr>
+	<tr>
+		<td height=1 bgcolor=Gray colspan=7> </td>
+	</tr>
+	<tr>
+		<td height=10 COLSPAN=7 bgcolor=#E53906> </td>
+	</tr>
+	<tr>
+		<td width=1 background="border_pix.gif" bgColor=Black> </td>
+		<td COLSPAN=1>&nbsp;</td>
+		<td width=1 background="border_pix.gif" bgColor=Black> </td>
+		<td COLSPAN=1 VALIGN=top> </td>
+		<td width=1 background="border_pix.gif" bgColor=Black> </td>
+		<td COLSPAN=1 align=right> </td>
+		<td width=1 background="border_pix.gif" bgColor=Black> </td>
+	</tr>
+	<tr>
+		<!-- z višino te celice določimo najmanjšo višino celotne strani -->
+		<td width=1 height=400 background="border_pix.gif" bgColor=Black> </td>
+		<td COLSPAN=1>&nbsp;</td>
+		<td width=1 background="border_pix.gif" bgColor=Black> </td>
+		<td COLSPAN=1 VALIGN=top>
+			<table WIDTH="183" HEIGHT="100%" CELLPADDING=5 BORDER=0>
+				<tr>
+					<td ALIGN=left HEIGHT="50%" valign=top>
+						<!-- #BeginEditable "Navigator" --><!-- #EndEditable -->
+					</td>
+				</tr>
+				<tr>
+					<td HEIGHT="50%" valign=bottom>
+						<!-- #BeginEditable "Additional%20Links" --><A href='http://cogvis.fri.uni-lj.si/index.asp' class=menulink>Home</A><br>
+<A href='http://cogvis.fri.uni-lj.si/people.asp' class=menulink>People</A><br>
+<A href='http://cogvis.fri.uni-lj.si/research.asp' class=menulink>Research</A><br>
+<A href='http://cogvis.fri.uni-lj.si/news.asp' class=menulink>News</A><br>
+<A href='http://cogvis.fri.uni-lj.si/events/index.asp' class=menulink>Events</A><br>
+<A href='http://cogvis.fri.uni-lj.si/projects.asp' class=menulink>Projects</A><br>
+<A href='http://cogvis.fri.uni-lj.si/publications.asp' class=menulink>Publications</A><br>
+<A href='http://cogvis.fri.uni-lj.si/teaching.asp' class=menulink>Teaching</A><br>
+<A href='http://cogvis.fri.uni-lj.si/downloads.asp' class=menulink>Downloads</A><br>
+<A href='http://cogvis.fri.uni-lj.si/partners.asp' class=menulink>Links</A><br>
+<A href='http://cogvis.fri.uni-lj.si/intranet/index.asp' class=menulink>Intranet</A><br>
+<!-- #EndEditable -->
+					</td>
+				</tr>
+			</table>
+		</td>
+		<td width=1 background="border_pix.gif" bgColor=Black> </td>
+		<td COLSPAN=1 align=right valign=top>
+			<table width=500 border=0 align=left>
+				<tr>
+					<td width=10>&nbsp;</td>
+					<td>
+						<span class=contents><!-- #BeginEditable "Contents" --><h1 align="center">Conservative visual learning for object detection with minimal hand labeling effort (2005)</h1>
+<p align="center">Peter Roth and Helmut Grabner and Danijel Skočaj and Horst Bischof and Aleš Leonardis<br>
+  Proceedings of 27th DAGM Symposium, LNCS no. 3663, Walter G. Kropatsch and Robert Sablatnig and Allan Hanbury, pp. 293-300, Springer-Verlag, 
+  Vienna, Austria, August 31 – September 2,<br>
+  <br>
+</p>
+<p><b>Abstract</b>: We present a novel framework for unsupervised  training of an object detection system. The basic idea is to (1) exploit a huge amount of unlabeled video data by being very conservative in selecting training examples; and (2) to start with a very simple object detection system and using generative and discriminative classifiers in an iterative co-training fashion to arrive at increasingly better object detectors. We demonstrate the framework on a surveillance task where we learn a person detector. We start with a simple moving object classifier and proceed with robust PCA (on shape and appearance) as a generative classifier which in turn generates a training set for a discriminative AdaBoost classifier. The results obtained by AdaBoost are again filtered by PCA which produces an even better training set. We demonstrate that by using this approach  we avoid hand labeling training data and still achieve a state of the art detection rate. </p><P><A href='http://cogvis.fri.uni-lj.si/publications/ds_dagm05.pdf'><IMG src='http://www.fri.uni-lj.si/Pictures/PDFIcon.gif' border=0> Download  ds_dagm05.pdf</A><P><A href="http://cogvis.fri.uni-lj.si/view_bibtex.asp?id=39" target="Bibtex">Bibtex entry</A></P><p align=right><font size=-2><A href="http://cogvis.fri.uni-lj.si/view_publication.asp?TextOnly=1">Print this page</A></font></p><!-- #EndEditable --></span>
+					</td>
+				</tr>
+			</table>
+		</td>
+<td width=1 background="border_pix.gif" bgColor=Black> </td>
+	</tr>
+<tr>
+		<td height=1 bgcolor=Gray colspan=7> </td>
+</tr>
+
+
+<tr>
+<td width=1 background="border_pix.gif" bgColor=Black> </td>
+		<td COLSPAN=1>&nbsp;</TD>
+<td width=1 background="border_pix.gif" bgColor=Black> </td>
+		<td COLSPAN=3 align=right bgcolor= #E53906>
+			<table width=250 align=left>
+				<tr>
+					<td>
+						&nbsp;<br>
+						<font face=helvetica size=2><DIV id="projects" WIDTH=250 HEIGHT=80></div></font>
+					</td>
+				</tr>
+			</table>
+			&nbsp;<br>
+			<A href="http://cogvis.fri.uni-lj.si/learn_recog/viewbasedlearning.asp">
+			<img WIDTH=80 HEIGHT=80 border="0" src="eigen.jpg" alt="Visual Learning and Recognition" ></A>
+
+			<IMG border="0" src="spacer.gif" ALT="" width=30>
+
+			<A href="http://cogvis.fri.uni-lj.si/robotlocalisation.asp">
+			<img WIDTH=80 HEIGHT=80 border="0" src="localization.jpg" alt="Robot Localization" ></A>
+
+			<IMG border="0" src="spacer.gif" ALT="" width=30>
+
+			<A href="http://cogvis.fri.uni-lj.si/panoramic.asp">
+			<IMG WIDTH=80 HEIGHT=80 border="0" src="panoramic.jpg" ALT="Omnidirectionl vision"></A>
+
+			<IMG border="0" src="spacer.gif" ALT="" width=30>
+			<br>
+			&nbsp;
+		</td>
+		<td width=1 background="border_pix.gif" bgColor=Black> </td>
+	</tr>
+	<tr>
+		<td height=1 bgcolor=Gray colspan=7> </td>
+	</tr>
+	<!-- vrstica, ki prepreči skrčitev stolpcev na 0 -->
+	<tr>
+		<td height=1 width=1 bgcolor=White> <img src="http://cogvis.fri.uni-lj.si/images/prosojen.gif" width=1 height=1> </td>
+		<td height=1 width=25 bgcolor=White>  <img src="http://cogvis.fri.uni-lj.si/images/prosojen.gif" width=25 height=1>  </td>
+		<td height=1 width=1 bgcolor=White> <img src="http://cogvis.fri.uni-lj.si/images/prosojen.gif" width=1 height=1> </td>
+		<td height=1 width=183 bgcolor=White> </td>
+		<td height=1 width=1 bgcolor=White> <img src="http://cogvis.fri.uni-lj.si/images/prosojen.gif" width=1 height=1> </td>
+		<td height=1 align=right width=530 bgcolor=White> <font size=-3><b>Page last modified:</b> 2.11.2005 12:17:05</font> </td>
+		<td height=1 width=1 bgcolor=White> <img src="http://cogvis.fri.uni-lj.si/images/prosojen.gif" width=1 height=1> </td>
+	</tr>
+</table>
+
+</body>
+</html>

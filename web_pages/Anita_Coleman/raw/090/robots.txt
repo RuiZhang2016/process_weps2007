@@ -1,0 +1,162 @@
+# disallow, too intensive http://www.authoritativeweb.com/crawl
+User-agent: ConveraCrawler
+Disallow: /
+#
+### end ConveraCrawler
+
+
+# disallow, access too fast, www.nameprotect.com/botinfo.html
+User-agent: BPBot
+Disallow: /
+#
+### end BPBot
+
+
+# disallow, access too fast, www.nameprotect.com/botinfo.html
+User-agent: NPBot
+Disallow: /
+#
+### end NPBot
+
+
+# disallow, access too fast, http://www.openfind.com.tw/robot.html
+User-agent: Openbot
+Disallow: /
+#
+### end Openbot
+
+
+# disallow, access too fast, http://dir.com/pompos.html
+User-agent: pompos
+Disallow: /
+#
+### end pompos
+
+
+# disallow, access too fast, http://www.aipbot.com
+User-agent: aipbot
+Disallow: /
+#
+### end aipbot
+
+
+# disallow, access too fast, http://
+User-agent: BlitzBOT@tricus.net
+Disallow: /
+#
+### end BlitzBOT
+
+
+# slow down Teoma (ask jeeves)
+User-agent: Teoma
+Crawl-delay: 1
+#
+# Disallow these pages, contain many links to search_engine - resource intensive
+Disallow: /commercial/resources/categories.shtml
+Disallow: /commercial/resources/publishers.shtml
+Disallow: /commercial/resources/titles.shtml
+#
+# Disallow script directories (except free-scripts)
+Disallow: /admin_tools/
+Disallow: /cgi-scripts/
+Disallow: /eiu-ipadmin/
+Disallow: /ip-scripts/
+Disallow: /ppv-scripts/
+Disallow: /secure-scripts/
+Disallow: /toolbox/
+Disallow: /utilities/
+#
+### end Teoma
+
+
+# allow AdSense to access free-scripts for advertising links related to content
+User-agent: Mediapartners-Google*
+Disallow: /aboutecnext/seminar/2002/
+#
+# Disallow these pages, contain many links to search_engine - resource intensive
+Disallow: /commercial/resources/categories.shtml
+Disallow: /commercial/resources/publishers.shtml
+Disallow: /commercial/resources/titles.shtml
+#
+# Disallow script directories (except free-scripts)
+Disallow: /admin_tools/
+Disallow: /cgi-scripts/
+Disallow: /eiu-ipadmin/
+Disallow: /ip-scripts/
+Disallow: /ppv-scripts/
+Disallow: /secure-scripts/
+Disallow: /toolbox/
+Disallow: /utilities/
+#
+### end Mediapartners-Google
+
+
+# allow Yahoo to access free-scripts for advertising links related to content
+##User-agent: YahooYSMcm/2.0.0
+##Disallow: /aboutecnext/seminar/2002/
+#
+# Disallow these pages, contain many links to search_engine - resource intensive
+##Disallow: /commercial/resources/categories.shtml
+##Disallow: /commercial/resources/publishers.shtml
+##Disallow: /commercial/resources/titles.shtml
+#
+# Disallow script directories (except free-scripts)
+##Disallow: /admin_tools/
+##Disallow: /cgi-scripts/
+##Disallow: /eiu-ipadmin/
+##Disallow: /ip-scripts/
+##Disallow: /ppv-scripts/
+##Disallow: /secure-scripts/
+##Disallow: /toolbox/
+##Disallow: /utilities/
+#
+### end Yahoo
+
+
+# PageBull.com - same as defaults, needs own stanza, won't honor User-agnet: *
+User-agent: pagebullbot
+# forbid seminar
+Disallow: /aboutecnext/seminar/2002/
+#
+# Disallow these pages, contain many links to search_engine - resource intensive
+Disallow: /commercial/resources/categories.shtml
+Disallow: /commercial/resources/publishers.shtml
+Disallow: /commercial/resources/titles.shtml
+#
+# Disallow script directories (except free-scripts)
+Disallow: /free-scripts/
+Disallow: /admin_tools/
+Disallow: /cgi-scripts/
+Disallow: /eiu-ipadmin/
+Disallow: /ip-scripts/
+Disallow: /ppv-scripts/
+Disallow: /secure-scripts/
+Disallow: /toolbox/
+Disallow: /utilities/
+Disallow: /comsite5/bin/
+#
+## end PageBull
+
+
+# Defaults for rest of crawlers
+User-agent: *
+# forbid seminar
+Disallow: /aboutecnext/seminar/2002/
+#
+# Disallow these pages, contain many links to search_engine - resource intensive
+Disallow: /commercial/resources/categories.shtml
+Disallow: /commercial/resources/publishers.shtml
+Disallow: /commercial/resources/titles.shtml
+#
+# Disallow script directories
+Disallow: /free-scripts/
+Disallow: /admin_tools/
+Disallow: /cgi-scripts/
+Disallow: /eiu-ipadmin/
+Disallow: /ip-scripts/
+Disallow: /ppv-scripts/
+Disallow: /secure-scripts/
+Disallow: /toolbox/
+Disallow: /utilities/
+Disallow: /comsite5/bin/
+

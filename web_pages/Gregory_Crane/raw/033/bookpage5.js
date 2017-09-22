@@ -1,0 +1,11 @@
+document.write("	<tr  bgcolor='#666666'>");
+document.write("		<td align=center nowrap>");
+document.write("			<font face=\"Helvetica,Arial\" size=1 color=white>");
+document.write("				[");
+document.write("				<a href=\"#top\"><font color=white>Back to Top</font></a>");
+document.write("				| You will have full access to this document in your browser, immediate after purchase. |");
+document.write("				<a href=\"#top\"><font color=white>Back to Top</font></a>");
+document.write("				]");
+document.write("			</font>");
+document.write("		</td>");
+document.write("	</tr>");

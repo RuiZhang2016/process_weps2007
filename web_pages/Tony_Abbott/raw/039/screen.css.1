@@ -1,0 +1,223 @@
+/* Screen */
+.hresume {
+	width: 76em;
+	margin: 32px auto 0;
+	position: relative;
+}
+.basic .hresume {
+	position: static;
+	overflow: hidden;
+}
+#overview, #summary, #experience, #education, #additional-information, #contact-settings {
+	width: 44em;
+}
+a {
+	color: #003399;
+}
+a:link, a:visited {
+	text-decoration: none;
+}
+a:hover {
+	text-decoration: underline;
+}
+img {
+	border: none;
+}
+.basic #masthead, div#nameplate, div#nameplate h1, div#nameplate .fn, div#nameplate div.adr, .basic #overview  { 
+	background: #fff url(/img/bg/bg_box_yellow_1600x1600.gif) no-repeat bottom right; 
+} 
+.basic div#nameplate div.adr, .basic div#nameplate .fn  { 
+	background: none;
+}
+.basic #masthead {
+	width: 44.5em;
+	float: left;
+	padding: 0 4px 0 0; /* the gap on the right edge of the image (not content padding) */ 
+	margin: 0; /* use to position the box */ 
+}
+div#nameplate { 
+	padding: 0 20px 0 0; /* the gap on the right edge of the image (not content padding) */ 
+	margin: 0; /* use to position the box */ 
+} 
+div#nameplate h1 { 
+	background-position: top right; 
+	margin: 0 -20px 0 0; /* pull the right image over on top of border */ 
+	padding: 0 20px 0 0; /* right-image-gap + right-inside padding */ 
+} 
+.basic div#nameplate { 
+	background-position: top right; 
+	margin: 0 -4px 0 0; /* pull the right image over on top of border */ 
+	padding: 0 4px 0 0; /* right-image-gap + right-inside padding */ 
+} 
+div#nameplate .fn { 
+	display: block;
+	background-position: top left; 
+	margin: 0; 
+	border: 0; 
+	padding: 12px 0 0 14px; /* padding-left = image gap + interior padding ... no padding-right */ 
+} 
+.basic div#nameplate h1 { 
+	background-position: top left; 
+	margin: 0; 
+	border: 0; 
+	padding: 12px 0 0 14px; /* padding-left = image gap + interior padding ... no padding-right */ 
+} 
+.basic div#nameplate .fn { 
+	display: inline;
+	margin: 0;
+	padding: 0;
+} 
+div#nameplate p.headline { 
+	border-left: 2px solid #FFCE84;
+	margin: 0;
+	padding: 6px 0 3px 12px;
+	width: 50%;
+} 
+.basic div#nameplate p.headline { 
+	width: auto;
+} 
+div#nameplate div.adr  { 
+	background-position: bottom left; 
+	margin-right: 0; /* interior-padding right */ 
+	padding: 0 0 16px 14px; 
+} 
+#overview { 
+	overflow: hidden;
+} 
+.basic #overview { 
+	background-position: bottom left; 
+	margin-right: 0; /* interior-padding right */ 
+	padding: 0 0 12px 12px; 
+	width: 42.25em;
+} 
+.basic div#nameplate div.adr { 
+	border-left: 2px solid #FFCE84;
+	padding: 0 0 12px 12px; 
+} 
+.basic #overview dl { 
+	border-top: 1px solid #ccc;
+	margin: 0;
+	padding: 22px 0 12px 0;
+} 
+.hresume h2 {
+	padding-left: 40px;
+	background-position: left center;
+	background-repeat: no-repeat;
+}
+.recommended, .connections {
+	line-height: 1.8;
+}
+.recommended img, .connections img  {
+	float: left;
+	margin-right: .5em;
+	vertical-align: middle;
+}
+.connections img {
+	margin-left: .9em;
+}
+#summary h2 {
+	background-image: url(/img/icon/icon_summary_34x24.gif);
+}
+#experience h2 {
+	background-image: url(/img/icon/icon_experience_34x24.gif);
+}
+#education h2 {
+	background-image: url(/img/icon/icon_education_34x24.gif);
+}
+#additional-information h2 {
+	background-image: url(/img/icon/icon_info_34x24.gif);
+}
+#contact-settings h2 {
+	background-image: url(/img/icon/icon_contact_34x24.gif);
+}
+
+/* Control Panel */
+#control { 
+	width: 30em;
+	position: absolute;
+	top: 0;
+	right: 0;
+}
+.basic #control { 
+	position: static;
+	float: right;
+}
+
+/* Footer */
+#footer {
+	border-top: 1px solid #ccc;
+	text-align: center;
+	width: 76em;
+	margin: 1.5em auto 0;
+	padding: 1.5em 0 0;
+}
+#footer a {
+	text-decoration: underline;
+}
+#footer li {
+	display: inline;
+	border-right: 1px solid #000;
+	font-size: 1.2em;
+	padding-right: .5em;
+	margin-right: .5em;
+}
+#footer li.last {
+	border: none;
+}
+div.links {
+	text-align: center;
+}
+div.links a {
+	text-decoration: none;
+	color: #bbb;
+}
+
+/* IE Stuff */
+#overview dd {
+	*margin-top: -1.25em;
+}
+.recommended, .connections {
+	*line-height: 1.2;
+}
+#nameplate {
+	zoom: 1;
+}
+
+/* Legacy */
+.viewfull { margin: 20px 0; border: 1px solid #C3DEF5; padding: 10px; width: 41.75em; }
+.viewfull h2 { margin: 0; border: 0; padding: 0; color: #069; font-size: 1.9em; }
+.viewfull h2 strong { color: #09C; }
+.viewfull ul { margin: 10px 0 5px;  }
+.viewfull ul li { list-style: none; margin-left: 20px; background: url(/img/icon/icon_arrow_green_16x16.gif) 0 0 no-repeat; padding: 0 0 10px 22px; font-size: 1.4em; }
+.viewfull a { display: block; margin-left: 40px; }
+
+#control .actions { margin: 10px 0 57px 0;}
+#control .actions .buttonbox { width: 284px; background: url(/img/bg/bg_buttonbox_bot_284x100.gif) 0 100% no-repeat; margin-bottom: 8px; }
+#control .actions .buttonbox-in { background: url(/img/bg/bg_buttonbox_top_284x7.gif) no-repeat; padding: 10px; text-align: center; }
+#control .actions .buttonbox-in img { vertical-align: top; }
+
+#control .rndbox { background: #DAECF3 url(/img/bg/bg_trans_top_300x7.gif) no-repeat; margin-bottom: 20px; }
+#control .rndbox-in { background: url(/img/bg/bg_trans_bot_300x7.gif) 0 100% no-repeat; padding: 10px; }
+
+#control .powered { margin-bottom: 20px; text-align: center; }
+#control .powered h3 { margin: 0 0 10px; }
+#control .powered p { margin-top: 0; font-size:  1.2em; color: #666; }
+
+#control #search h3 { margin: 0; }
+#control #search p { font-size: 1.2em; margin: 8px 0; }
+#control #search .field input { width: 128px; }
+#control #search .labeloff { color: #999; }
+#control #search .example { color: #666; }
+#control #search .example input { float: right; width: 61px; vertical-align: middle; margin-right: 5px; }
+
+#readmore h3, #readmore h2 { margin: 0; font-size: 1.6em; color: #C60; }
+#readmore ul { margin: 5px 0 8px .7em; padding: 0 0 0 .7em; font-size: 1.2em; list-style-type: disc; }
+#readmore li { margin-bottom: 5px; }
+#readmore p { margin: 0; }
+
+#masthead .basicpitch { margin: 0; width: 42.5em; background: #FFF8DB url(/img/bg/bg_trans_bot_425x7.gif) 0 100% no-repeat; }
+#masthead .basicpitch-in { background: url(/img/bg/bg_trans_top_425x7.gif) no-repeat; padding: 10px; }
+#masthead .basicpitch h2 { margin: 0; padding: 0; border: 0; }
+
+#control #readmore { margin-top: 20px; background-color: #FFF8DB; }
+#control #readmore p { text-align: center}

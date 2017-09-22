@@ -1,0 +1,87 @@
+h3 a:active, h3 a:visited, h3 a {
+	text-decoration: none;
+}
+
+h3 a:hover {
+	text-decoration: none;
+	color: #000;
+}
+h3 { margin: .8em 0 0 0; }
+h2 { color: #6f2404; }
+.cRight, .cLeft {
+	float: right;
+	padding: 2px;
+	margin: 0 10px 0 0px;
+}
+
+.cRight {
+	margin: 0 13px 0 4px;
+	padding: 6px;
+	color: #000;
+	font-size: .84em;
+}
+		
+.cLeft {
+	float: left;
+	padding: 2px;
+	margin: 0 10px 0 0px;
+	border: 1px solid #ddd;
+}
+.cLeft:hover { 
+	border-color: #000;
+	background: #fff;
+}
+
+.dd { color: #B63108; }
+
+#pageNumsTop, #pageNumsBottom, #crumbs {
+	margin: 1em 0 2em 0; font-size: .86em;
+	padding: .6em .6em .6em 2em;
+	height: 1%; border: none;
+}
+#pageNumsBottom {
+	margin: 2em 0 2em 0;
+}
+#pageNumsTop, #pageNumsBottom { font-weight: bold; }
+#pageNumsTop a, #pageNumsBottom a {
+	background: transparent;
+	padding: 2px 3px;
+	border: 1px solid;
+	border-color: #ddd;
+}
+#pageNumsTop a:hover, #pageNumsBottom a:hover {
+	background: #fff;
+	border: 1px solid #999;
+}
+
+#authBox {
+	width: 150px; padding: 0;
+	border-left: 1px solid #ddd;
+	margin: 1em 1.4em 1em 1em; float: right;
+}
+#authBox h2 { 
+	font: bold 1em verdana, sans-serif; margin: 0; 
+	border-top: 1px solid #ddd; padding: 3px; 
+	border-bottom: 1px solid #ddd;
+}
+#authBox ul { list-style-type: none; width: 100%; padding: 0; margin: 0; }
+#authBox ul li { margin: 0 0 0 .5em; height: 1%; font-size: .86em; padding: 0; }	
+#authBox ul li a {
+	display: block; border-top: 1px solid #fefefe; border-bottom: 1px solid #fefefe;
+	background: transparent url(../../images/whatsNewArrow.gif) 1% 50% no-repeat;;
+	padding: 2px 2px 2px 16px; margin: 0; height: 1%; line-height: 1.3em;
+}
+#authBox ul li a:hover, body.collins a#collins, body.chamish a#chamish, 
+body.fortman a#fortman, body.fasciani a#fasciani, body.owen a#owen,
+body.melanson a#melanson, body.kirwan a#kirwan, body.dLyte a#dLyte {
+	background: #f7f7f7 url(../../images/recentLinksBg.gif) 2% 50% no-repeat;
+	text-decoration: none; border-top: 1px solid #eee; border-bottom: 1px solid #eee;
+	color: #3B3A3F;
+}
+
+.rp, .rp em { /* Real Player links in Collins.php */
+	color: #6f2404;
+}
+.rp a { background: #fff; font-size: .86em; padding: 3px; border: 1px solid #ddd; }
+.rp a:hover { background: #eee; border: 1px solid #999; }
+body.collins #center h3 { color: #428F1F; }

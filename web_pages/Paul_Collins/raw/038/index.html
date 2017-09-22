@@ -1,0 +1,364 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<HTML>
+<HEAD>
+<TITLE>Untitled</TITLE>
+<STYLE TYPE="TEXT/CSS"><!--
+body,td{
+font-family:Arial,Helvetica,Sans-serif;
+}
+--></STYLE>
+</HEAD>
+<BODY BGCOLOR="#FFFFFF" TEXT="#006633" LINK="#E5B700" VLINK="#E5B700" LEFTMARGIN="0" TOPMARGIN="0">
+<!-- '"AWS"' -->
+<!-- Auto Banner Insertion Begin -->
+<div id=aws_7383 align=center><style>
+  .mwsb{ background-color: 3366CC; border-width: 1px; border-color: 3366CC; border-style: solid; }
+  .mwst, .mwst a{ font-family: arial,sans-serif; font-size: 8pt; background-color: white; color: blue;}
+  </style>
+  <!------ OAS SETUP begin ------>
+  <img src="http://track.untd.com/s/oasrdb?pid=MWS&profile=,," width="1" height="1">
+  <SCRIPT LANGUAGE=JavaScript>
+  <!--
+  //configuration
+  OAS_url = 'http://cyclops.prod.untd.com/';
+  //OAS_sitepage values can be found in the excel spreadsheet showing position and pagenames.
+  OAS_sitepage = 'webservices/general'; //CHANGED
+  //OAS_sitepage = window.location.hostname + window.location.pathname;
+  // must list every Ad position on the page or they will not show.  Also you can't have line items that are not on the page or a impression will be counted even though it was actually shown. 
+  OAS_listpos = 'Top,Bottom,Frame1,Frame2,Right,TopLeft,TopRight';
+  OAS_query = '&';
+  OAS_target = '_Blank';
+  //end of configuration
+  OAS_version = 10;
+  OAS_rn = '001234567890'; OAS_rns = '1234567890';
+  OAS_rn = new String (Math.random()); OAS_rns = OAS_rn.substring (2, 11);
+  function OAS_NORMAL(pos) {
+    document.write('<A HREF="' + OAS_url + 'click_nx.ads/' + OAS_sitepage + '/1' + OAS_rns + '@' + OAS_listpos + '!' + pos + '?' + OAS_query + '" TARGET=' + OAS_target + '>');
+    document.write('<IMG SRC="' + OAS_url + 'adstream_nx.ads/' + OAS_sitepage + '/1' + OAS_rns + '@' + OAS_listpos + '!' + pos + '?' + OAS_query + '" BORDER=0></A>');
+  }
+  //-->
+  </SCRIPT>
+
+
+  <SCRIPT LANGUAGE=JavaScript1.1>
+  <!--
+  OAS_version = 11;
+  if ((navigator.userAgent.indexOf('Mozilla/3') != -1) || (navigator.userAgent.indexOf('Mozilla/4.0 WebTV') != -1))
+    OAS_version = 10;
+  if (OAS_version >= 11)
+    document.write('<SCR' + 'IPT LANGUAGE=JavaScript1.1 SRC="' + OAS_url + 'adstream_mjx.ads/' + OAS_sitepage + '/1' + OAS_rns + '@' + OAS_listpos + '?' + OAS_query + '"><\/SCRIPT>');//-->
+  </SCRIPT>
+
+  <SCRIPT LANGUAGE=JavaScript>
+  <!--
+  document.write('');
+  function OAS_AD(pos) {
+    if ((OAS_version >= 11) && (typeof OAS_RICH != 'undefined')) {
+      OAS_RICH(pos);
+    } else {
+      OAS_NORMAL(pos);
+    }
+  }
+
+  //-->
+  </SCRIPT>
+  <!-- start /fs_img/about_pop.txt -->
+<!-- The only pops this script can generate now are:
+			1. Pops from UOL
+			2. In-house popup
+-->
+<script language="JavaScript">
+<!--
+var isUS = "0";
+var keyword = escape("");
+var compname='freeservers';
+var ourExitPop=true;
+
+function popSlot(slot){
+    // OAS AD 'Frame1' begin
+    if(window.OAS_AD) OAS_AD('Frame1');
+    // OAS AD 'Frame1' begin
+}
+
+function checkPopunderCookie() {
+	var cookieVal = 0;
+	cookieExpDays = (1/24);  
+	var expDate = new Date();
+	expDate.setTime(expDate.getTime() + (86400000 * cookieExpDays));
+	cookieDate = ";Expires=" + expDate.toGMTString();
+	if (document.cookie) {
+		var cookieInfo = document.cookie.split(";");
+		for (i=0; i<cookieInfo.length; i++) {
+			cName = cookieInfo[i].split("=")[0];
+			if (cName.indexOf("pixelpop") >= 0) {
+				cookieVal = cookieInfo[i].split("=")[1];
+			}
+		}
+	}
+	cookieVal++;
+	document.cookie="pixelpopslot="+cookieVal+";path=/;"+cookieDate;
+ 	if (cookieVal== 1) { popSlot(1); }
+ 	if (cookieVal== 2) { popSlot(2); }
+ 	if (cookieVal== 3) { popSlot(3); }
+ 	if (cookieVal== 4) { popSlot(4); }
+ 	if (cookieVal== 5) { popSlot(5); }
+ 	if (cookieVal== 6) { popSlot(6); }
+ 	if (cookieVal== 7) { popSlot(7); }
+ 	if (cookieVal== 8) { popSlot(8); }
+}
+
+if (!window.sprs) checkPopunderCookie();
+
+if (!window.sprs && ourExitPop && (navigator.appName.indexOf('etscape')==-1)){
+	window.onunload=staycheck;
+	StayingOnSite=false;
+	DadLinkURLs="";
+	BabyLink="";
+	DadWindow=window.parent;
+	DadLinks=DadWindow.document.links;
+	DadHost="http://"+location.hostname;
+	DadWindow.document.onclick=linktellerDad;
+	document.onclick=linktellerThis;
+	function linkteller(){
+		while (EventTag.parentElement&&(EventTag.tagName!="A")){
+				EventTag=EventTag.parentElement;
+		}
+		if ((EventTag.tagName=="A")&&(!EventTag.target)){
+			if (EventTag.href.indexOf(DadHost)>-1){
+				StayingOnSite=true;
+			} else {
+				StayingOnSite=false;
+			}
+		}
+	}
+	function linktellerThis(){
+		EventTag=window.event.srcElement;
+		linkteller();
+	}
+	function linktellerDad(){
+		EventTag=DadWindow.event.srcElement;
+		linkteller();
+	}
+	function staycheck(){
+		if (StayingOnSite){
+		} else {
+		}
+	}
+}
+-->
+</SCRIPT>
+<!-- end /fs_img/about_pop.txt -->
+  <table cellpadding="0" cellspacing="0" width="980">
+
+    <!-- start: related resources -->
+    <tr>
+      <td colspan="3">
+        <table cellpadding="0" cellspacing="0" align="center" width="100%" class="mwsb">
+          <tr>
+						<td class="mwst" align="right"><A href="http://paulcollinsbeat.freeservers.com/fs_img/site_list/previous.html"><IMG src="previous.gif" alt="Previous FreeServers Sites" width="4" height="7" border="0" align="absmiddle"></A></td>
+            <td class="mwst" align="center">
+              <a href="http://www.freeservers.com" class="mwst" target="_top">Free Web Hosting Provider</a> 
+              - <a href="http://www.globalservers.com" target="_top">Web Hosting</a>
+              - <a href="http://www.bizhosting.com" target="_top">E-commerce</a>
+              - <a href="http://www.netzero.com/?refcd=MWS0404NWP11" target="_top">High Speed Internet</a>
+              - <a href="http://www.freeservers.com/Free-Web-Page.html" target="_top">Free Web Page</a>
+              - <a href="http://www.photosite.com" target="_top">Photo Sharing</a>
+            </td>
+						<td class="mwst"><A href="http://paulcollinsbeat.freeservers.com/fs_img/site_list/index.html"><IMG src="more.gif" alt="More FreeServers Sites" width="4" height="7" border="0" align="absmiddle"></A></td>
+          </tr>
+        </table>
+      </td>
+    </tr>
+    <!-- end: related resources -->
+
+    <tr>
+      <td width="130">
+        <table cellpadding="0" cellspacing="0" width="130" style="margin-top:2px;">
+          <tr>
+            <td class="mwst" nowrap="1">
+              <a href="http://freeservers.com/?refcd=MWS_20040713_Banner_bar"
+                ><img src="http://paulcollinsbeat.freeservers.com/cgi-bin/image/images/bannertype/100X22.gif" width="100" height="22" border="0"
+                ></a
+              ><a href="http://paulcollinsbeat.freeservers.com/cgi-bin/login" target="_blank"
+                ><img src="http://paulcollinsbeat.freeservers.com/cgi-bin/image/images/bannertype/login_chunkx.gif" width="30" height="22" border="0"
+                ></a
+             ></td>
+          </tr>
+        </table>
+        
+        <table class="mwsb" cellpadding="0" cellspacing="0" width="100%" style="margin-top:2px;">
+          <tr>
+            <td align="center">
+              <!------ OAS AD 'TopLeft' begin ------>
+              <SCRIPT LANGUAGE=JavaScript>
+              <!--
+              OAS_AD('TopLeft');
+              //-->
+              </SCRIPT>
+              <!------ OAS AD 'TopLeft' end ------>
+            </td>
+          </tr>
+        </table>
+      </td>
+
+      <td>
+        <table cellspacing="0" class="mwsb" style="margin:2px;margin-bottom:0px;table-layout:fixed;"> 
+          <tr>
+            <td class="mwst" align="center" style="width:730px;">
+    <!------ OAS AD 'Top' begin ------>
+    <SCRIPT LANGUAGE=JavaScript>
+    <!--
+    if(window.OAS_AD) OAS_AD('Top');
+    //-->
+    </SCRIPT>
+    <!------ OAS AD 'Top' end ------></td>
+          </tr>
+        </table>
+      </td>
+
+      <td width="120">
+        <table class="mwsb" cellpadding="0" cellspacing="0" width="120" style="margin-top:2px;">
+          <tr>
+            <td class="mwst" nowrap="1">
+              <a href="http://paulcollinsbeat.freeservers.com/cgi-bin/util/upgrade?account_type=[upgrade.partner_prefix]_ac_bannr_x&amp;refcd=WS1005NBP99"
+              ><img src="120x24_get_rid_of_banners_01.gif" 
+                width="120" height="24" class="mwsbbar" border="0"
+              ></a
+             ></td>
+          </tr>
+        </table>
+        
+        <table class="mwsb" cellpadding="0" cellspacing="0" width="100%" style="margin-top:2px;">
+          <tr>
+            <td align="center">
+            <!------ OAS AD 'TopRight' begin ------>
+            <SCRIPT LANGUAGE=JavaScript>
+            <!--
+            OAS_AD('TopRight');
+            //-->
+            </SCRIPT>
+            <!------ OAS AD 'TopRight' end ------>
+            </td>
+          </tr>
+        </table>
+      </td>
+
+    </tr>
+    <tr>
+      <td colspan="3" align="center">
+        
+        <!-- search powered by yahoo -->
+        <table width="100%" cellpadding="0" cellspacing="0" class="mwsb" style="border-width:2px; margin-top:10px; background-color:white; height:10px;">
+          <tr valign="top">
+            <td align="center">
+              <form action="http://paulcollinsbeat.freeservers.com/cgi-bin/mysearch" style="margin:0;">
+              <span style="position:relative;top:-5px;font-family:arial;font-size:12px;color:#000;"><b>Search the Web</b></span>
+              <input type="hidden" name="type" value="bannerbar">
+              <input name="Keywords" accesskey="s" style="width:400px; height:21px; background:white; border:1px #A4ABB1 solid; font-family: arial, sans-serif; font-size: 10pt; color: #000000; position:relative; top:-6px;">
+              <input type="image" src="yahoo_sp_go.gif">
+              <img src="yahoo_sp3.gif" style="position:relative;top:4px;left:10px;">
+              </form>
+            </td>
+            <td width="5%"></td>
+          </tr>
+        </table>
+        
+      </td>
+    </tr>
+  </table><DIV id=sideFrame 
+	style="MARGIN-TOP: 27px; RIGHT: 5px; WIDTH: 120px; COLOR: #ffffff; POSITION: absolute; BACKGROUND-COLOR: #CCCCCC; Z-INDEX: 10000; TEXT-ALIGN: right"><A 
+	href="javascript:void%20(sideFrameOff())"><IMG src="xout.gif" title="Close"
+	border=0></A><BR>
+  <!------ OAS AD 'Right' begin ------>
+  <SCRIPT LANGUAGE=JavaScript>
+  <!--
+  OAS_AD('Right');
+  // -->
+  </SCRIPT>
+  <!------ OAS AD 'Right' end ------>
+	<SCRIPT>
+		origRightPadding=document.body.style.paddingRight;
+		document.body.style.paddingRight="130px";
+		function sideFrameOff(){
+			document.getElementById('sideFrame').style.display='none';
+			document.body.style.paddingRight=origRightPadding;
+		}
+	</SCRIPT>
+	</DIV></div><!-- Auto Banner Insertion Complete THANK YOU -->
+
+<TABLE WIDTH="100%" CELLSPACING="0" CELLPADDING="0" BORDER="0">
+<TR>
+<TD BGCOLOR="#006633" COLSPAN="2"><IMG SRC="spacer.gif" WIDTH="150" HEIGHT="40"></TD>
+<TD BGCOLOR="#006633">&nbsp;</TD>
+<TD BGCOLOR="#006633" COLSPAN="2" ALIGN="center"><FONT SIZE="6" COLOR="#FFFFFF"><B><!--begin page_title-->PAUL COLLINS' BEAT OFFICIAL FANSITE FOR THE NERVES THE BEAT<!--end page_title--></B></FONT></TD>
+<TD BGCOLOR="#FFFFFF" VALIGN="top"><IMG SRC="endcurve.gif"></TD>
+</TR>
+<TR>
+<TD BGCOLOR="#006633">&nbsp;</TD>
+<TD BGCOLOR="#006633">&nbsp;</TD>
+<TD BGCOLOR="#FFFFFF" VALIGN="top"><IMG SRC="midcurve.gif"></TD>
+<TD COLSPAN="3">&nbsp;</TD>
+</TR>
+<TR>
+<TD BGCOLOR="#006633" COLSPAN="2" ALIGN="center" VALIGN="top"><B><a class="menulinks" href="http://paulcollinsbeat.freeservers.com/index.html">Home&nbsp;Page</a><p>
+<a class="menulinks" href="http://paulcollinsbeat.freeservers.com/about.html">About&nbsp;Page</a><p>
+<a class="menulinks" href="http://paulcollinsbeat.freeservers.com/whats_new.html">What's&nbsp;New Page</a><p>
+<a class="menulinks" href="http://paulcollinsbeat.freeservers.com/contact.html">Contact&nbsp;Page</a><p>
+<a class="menulinks" href="http://paulcollinsbeat.freeservers.com/favorite_links.html">Favorite&nbsp;Links</a><p>
+</B></TD>
+<TD>&nbsp;</TD>
+<TD COLSPAN="2">
+<TABLE WIDTH="100%" CELLPADDING="5">
+<TR>
+<TD WIDTH="50%"><!--begin image_1--><a href="http://www.paulcollinsbeat.com"><img src="paulbeatsinge.jpg" border=0 width=324 height=668></a><!--end image_1--></TD>
+<TD WIDTH="50%"><FONT SIZE="4"><B><!--begin heading_1-->Welcome To The Paul Collins' Beat official Fan Club 1979-Present<!--end heading_1--></B></FONT><BR>
+<!--begin text_1--><P><TABLE cellSpacing=0 cellPadding=0 width="100%">
+<TBODY>
+<TR>
+<TD class=title align=left>Biography</TD>
+<TD class=author align=right>by Chris Woodstra</TD></TR>
+<TR>
+<TD colSpan=2>
+<P>A Los Angeles-based power pop outfit formed by Paul Collins (ex-Nerves), the Beat recorded its self-titled debut LP after signing to Columbia Records in 1979. Despite good reviews and some regional success, the album sold&nbsp;less than a million copies worldwide. The Beat toured with various&nbsp;stadium and club acts, including The Jam, The Police and The Ramones.&nbsp;A second attempt, 1982's <I>The Kids Are the Same</I> (this time credited to Paul Collins' Beat),&nbsp;sold approxamately&nbsp;1 million copies worldwide&nbsp;but briefly&nbsp;broke up the band. However, Collins returned the following year with a harder-rocking lineup including Patti Smith Group drummer Jay Dee Daugherty. Their EP, <I>To Beat or Not to Beat</I>, was again an internatational hit; it proved to be the band's last recording until their reformation in 1989. While it seemed that the Beat's only claim to fame would be forcing the (English)&nbsp;Beat to change its name in the U.S., their albums are now seen as classic examples of 70s punk rock and power pop. Paul Collins &nbsp;returned to a solo career into the '90s, signing to Wagon Wheel Records, but has continued to tour and record with Paul Collins' Beat, into the 21st century. The&nbsp;Paul Collins' Beat official website is <A href="http://www.paulcollinsbeat.com">http://www.paulcollinsbeat.com</A></P>
+<P>&nbsp;</P></TD></TR></TBODY></TABLE></P>
+<!--end text_1--></TD>
+</TR>
+<TR>
+<TD><FONT SIZE="4"><B><!--begin heading_2-->PAUL COLLINS' BEAT RECORD NEW ALBUM<!--end heading_2--></B></FONT><BR>
+<!--begin text_2--><P align=left><STRONG><FONT color=#ff0000>Here at the Paul Collins' Beat fanclub, we have confirmed that Paul Collins' Beat have recently finished recording a new album. Though we have few details, the release date is set for 2005. Paul Collins' Beat will conduct a world tour in support of the new album, entitled "Flying High."</FONT></STRONG></P><!--end text_2--></TD>
+<TD><FONT SIZE="4"><B><!--begin heading_3--><P>PAUL COLLINS' BEAT RECALL TOURING WITH THE RAMONES</P><!--end heading_3--></B></FONT><BR>
+<!--begin text_3--><P><FONT face="Sans Serif" color=#c10000 size=4>Hello, Great site!!! Would like to talk to you. Please call me at number listed below. Thank you, Paul Collins (212) ***-****</FONT></P>
+<P><FONT color=#c10000 size=4></FONT>&nbsp;</P>
+<P><FONT color=#c10000 size=4>"Once&nbsp;one time when&nbsp;we were on tour, there was this huge venue we played. It was a concert hall, almost as big as a full-scale arena. The crowds were really bad and there were mobs of girls outside waiting to get their hands on us. That night, our manager had to double the band, which means they found look-alikes for each of us. While the&nbsp;4 of us&nbsp;left through the side door and&nbsp;left in a cramped, small&nbsp;2-door sedan,&nbsp;the 4 guys impersonating us (The Beat) exited through the back door of the club."&nbsp;</FONT></P>
+<P><FONT color=#c10000 size=4>"Those were good times," says Paul Collins. "I remember one time when the club we were at set 2 tables up as part of the backstage autograph session and industry meet. The Ramones were seated on the table to the left and we (The Beat) were seated on the table to the right. Joey (Ramone) kept complaining about the loud noises&nbsp;coming from the other room and when I looked up, 50 or 60 girls came running backstage, passing right through security.&nbsp;Somehow, a wild boar had gotten into the club and was terrorizing the fans. There were girls running everywhere, screaming for their lives. We must've been stuck there for 6 hours after the show that night but it was a good bonding experience for everyone. Afterwards, I had dinner with Joey (Ramone)&nbsp;and then we called some of the girls. We spent the rest of&nbsp;the night at a party&nbsp;Joey (Ramone) was invited to."&nbsp;</FONT></P><!--end text_3--></TD>
+</TR>
+<TR>
+<TD><P><FONT SIZE="4"><B><!--begin heading_4-->PAUL COLLINS' BEAT MUSIC VIDEOS FROM THE RAMONES ROCK N ROLL HIGH SCHOOL TOUR AVAILABLE FOR FREE DOWNLOAD<!--end heading_4--></B></FONT><BR>
+<!--begin text_4--><P>These videos are taken from The Ramones Rock N Roll High School Tour in 1979. Paul Collins' Beat toured with The Ramones in support of this film and album soundtrack. Please visit the official Paul Collins' Beat website PAULCOLLINSBEAT.COM for further details. The official website&nbsp;includes rare photos, interviews, tour dates,&nbsp;merchandise and other&nbsp;information for fans.&nbsp;</P><!--end text_4--><BR>
+<B><!--begin link_1--><a href='http://www.geocities.com/huwgowerhasthepower/longtimegone.html'>Paul Collins' Beat Fan site</a><!--end link_1--></B></P>
+<P><FONT SIZE="4"><B><!--begin heading_6-->Paul Collins' Beat 2 albums on 1 cd reissue!<!--end heading_6--></B></FONT><BR>
+<!--begin text_6--><P>Wounded Bird Records has just released a special cd containing the two albums To Beat or Not To Beat and Long Time Gone. This&nbsp;cd boasts several bonus tracks and all of the songs have been digitally remastered using the latest in today's technology. Please refer to&nbsp;the official site for Wounded Bird Records <A href="http://www.woundedbird.com">http://www.woundedbird.com</A> for ordering information, photos&nbsp;and tracklistings.&nbsp;</P><!--end text_6--></P></TD>
+<TD COLSPAN="2" ALIGN="center"><P><!--begin image_2--><a href="http://www.geocities.com/paulcollinsbeat/"><img src="nerves1.jpg" border=0 width=252 height=252></a><!--end image_2--></P>
+<FONT SIZE="4"><B><!--begin heading_5-->THE NERVES PAUL COLLINS, JACK LEE AND PETER CASE!<!--end heading_5--></B></FONT><BR>
+<!--begin text_5--><P><STRONG>PAUL COLLINS' BEAT "ALL OVER THE WORLD" TOUR 2005</STRONG></P><!--end text_5--><BR>
+<B><!--begin link_2--><a href='http://www.paulcollinsbeat.com'>Send an email</a><!--end link_2--></B></TD>
+</TR>
+</TABLE>
+</TD>
+<TD>&nbsp;</TD>
+</TR>
+<TR>
+<TD BGCOLOR="#006633"><IMG SRC="spacer.gif" WIDTH="116" HEIGHT="1"></TD>
+<TD><IMG SRC="bottomcurve.gif"></TD>
+<TD>&nbsp;</TD>
+<TD COLSPAN="3">&nbsp;</TD>
+</TR>
+</TABLE>
+&nbsp;
+<br><br>
+<div align="center">
+<!--begin search-->CATCH PAUL COLLINS' BEAT ON LITTLE STEVEN'S UNDERGROUND GARAGE!<!--end search-->
+</div>
+</body>
+</HTML>
+<TABLE ALIGN=CENTER STYLE="clear:both"><TR><TD ALIGN=CENTER> <!------ OAS AD 'Bottom' begin ------> <SCRIPT LANGUAGE=JavaScript> if(window.OAS_AD) OAS_AD('Bottom'); </SCRIPT> <!------ OAS AD 'Bottom' end ------> </TD></TR></TABLE>

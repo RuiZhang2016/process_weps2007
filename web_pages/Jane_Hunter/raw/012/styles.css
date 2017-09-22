@@ -1,0 +1,706 @@
+.topic {position:absolute; background-color:#FBFBFB; width:300; height:32; left:10; z-index:5;}
+.subtopic {background-color:#D6D6D6; font-size: 11px;font-family: "Verdana","Arial","Helvetica";font-weight: normal;color: #898989;}
+.specialheadbyline {font-size:16px; color:#000; font-family:"Georgia", "Times New Roman", "Times", "serif"; text-decoration:none; font-weight: normal; }
+	
+a {color: #003366;text-decoration:underline}
+a:hover {color: #990000;}
+a.specialheadline {font-size:24px; color:#CC0000; font-family: "Georgia", "Times New Roman", Times, serif;  text-decoration : none;  line-height : 30px;   }
+a.headline {font-size:22px; font-family: "Georgia", "Times New Roman", Times, serif;  text-decoration : none;  line-height:28px}
+a.topiclink {font-weight:bold; font-size:12px;}	
+a.fulltext {color:#B44242;}
+a.connect {text-decoration:none;color:#000000; font-family: "Georgia", "Times New Roman", Times, serif; font-size:10px;font-weight:normal;}
+a.browse {font-weight:bold;font-size:13px; text-decoration:none;}
+a.copyright {font-size:10px; color:#898989;text-decoration:underline; font-family:"Verdana","Arial","Helvetica";}
+a.bold {font-weight:bold;color: #003366;}
+a.smallbold {font-weight:bold;font-size:10px;color: #003366;}
+a.purchase {font-size:11px;}
+a.sectiontitle {font-size: 12px;font-family: "Georgia", "Times New Roman", Times, serif; font-weight: bold;color: #000000;}
+a.navsmall {font-family:"Verdana","Arial","Helvetica";font-size:10px;color: #003366;}
+a.navsmallbold {font-weight:bold; font-family:"Verdana","Arial","Helvetica";font-size:10px;color: #003366;}
+
+.pagination a {
+	text-decoration: none;
+	}
+.pagination, .pagebrowse {
+	text-transform: uppercase;
+	padding: 2px 2px 2px 2px;
+	font-size: 80%;
+	text-decoration: none;
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-weight: bold;
+	}
+	
+.pagebrowse a {
+	text-decoration: none;
+	padding: 2px 2px 2px 2px;
+	margin: 0 6px;
+	border:1px solid #003366
+}
+	
+/* p.pagehead added by Tom 4/7/2003; designed to mimic the a.headline style; for use with unlinked page heads */
+p.pagehead {font-size:16px; font-family: "Georgia", "Times New Roman", Times, serif; font-weight:bold;}
+
+ol#bestsellers {margin-left:35px;margin-right:0px;	padding-left:0px;margin-top:0px;text-indent : 0px;}
+
+.input { font-size: 10px; width:79px; font-family: "Verdana","Arial","Helvetica";font-weight: normal;color: #000000;}
+.inputLarge { font-size: 12px; width:250px; font-family: "Verdana","Arial","Helvetica";font-weight: normal;color: #000000;}
+.inputMedLarge { font-size: 12px; width:150px; font-family: "Verdana","Arial","Helvetica";font-weight: normal;color: #000000;}
+.inputMed { font-size: 12px; width:100px; font-family: "Verdana","Arial","Helvetica";font-weight: normal;color: #000000;}
+.inputSmMed { font-size: 12px; width:70px; font-family: "Verdana","Arial","Helvetica";font-weight: normal;color: #000000;}
+.inputSmall { font-size: 12px; width:55px; font-family: "Verdana","Arial","Helvetica";font-weight: normal;color: #000000;}
+
+.BackOrderForm { font-size: 12px; font-family: "Verdana","Arial","Helvetica"; font-weight: normal;color: #000000; width:75px;}
+
+/* byline follows the blurbs for the featured articles on the home page */
+.byline {color: rgb(147, 147, 147); font-family: 'Lucida Sans Unicode', arial, sans-serif; text-transform:uppercase; font-size:10px; letter-spacing: 1px; margin: 0;  line-height: 14px; }
+.byline2 {color: rgb(147, 147, 147); font-family: 'Lucida Sans Unicode', arial, sans-serif;  font-size:12px;  margin: 0;  line-height: 14px; }
+
+.author {font-style:italic;}
+.permissions {font-size: 12px;font-family:"Verdana","Arial","Helvetica";font-weight: normal;color: #000000;}
+.permissionsBold {font-size: 12px;font-family:"Verdana","Arial","Helvetica";font-weight: bold;color: #000000;}
+.title  { font-size: 20px;font-family: "Georgia", "Times New Roman", Times, serif;font-weight: bold;color: #333333;}
+.sectiontitle {font-size: 12px;font-family: "Georgia", "Times New Roman", Times, serif;font-weight: bold;color: #000000;}
+.regular  {	font-size: 14px;font-family: "Georgia", "Times New Roman", Times, serif; font-weight: normal;color: #000000;}
+.italics  {	font-style:italic;font-size: 14px;font-family: "Georgia", "Times New Roman", Times, serif; font-weight: normal;color: #000000;}
+.summary {font-size:12px; color:#646464; font-family:"Verdana","Arial","Helvetica"; font-weight: normal; }
+.authorGray  {	font-style:italic; font-size: 14px;font-family: "Georgia", "Times New Roman", Times, serif; font-weight: normal;color: #646464;}
+.bold  { font-size: 14px;font-family: "Georgia", "Times New Roman", Times, serif; font-weight: bold;color: #000000;}
+.red {color:#8A2126;font-weight:bold;font-size:12px}
+.smallresults {font-size:12px}
+.formbold { font-size: 12px;font-family: "Georgia", "Times New Roman", Times, serif; font-weight: bold;color: #000000;}
+
+.flag { font-size: 10px;font-family: "Verdana","Arial","Helvetica";font-weight: bold;text-transform:uppercase;color:#8A2126;border-top: 1px solid #dfdfdf; border-left: 5px solid #dfdfdf;border-bottom: 1px solid #dfdfdf;border-right: 1px solid #dfdfdf;  padding : 2px; }
+.date { font-size: 10px;font-family: "Verdana","Arial","Helvetica";font-weight: bold;color: #898989;}
+.datestamp { font-size: 12px;font-family: "Georgia", "Times New Roman", Times, serif;font-weight: normal; font-style:italic}
+.small { font-size: 10px;font-family: "Arial", "serif";font-weight: normal;color: #000000;}
+.navsmall { font-size: 10px;font-family: "Arial", "serif";font-weight: normal;color: #000000;}
+.subscribeborder {BORDER:#DCDCDC 1px solid;}
+.contentborder {BORDER:#BBBBBB 1px solid;}
+.copyright {font-size:10px; color:#898989;text-decoration:none; font-family:"Verdana","Arial","Helvetica";}
+
+/* added by Frank for newsstand finder box */
+.zip {background : #fbfbfa; font-family : "Georgia", "Times New Roman", Times, serif; font-size : 10px; border : 1px solid #dfdfdf; width : 145px; margin-bottom : 10px; }
+.zip p{margin-left : 5px; margin-right : 5px; line-height : 13px; }
+.zipinput {font-size: 9px; width:90px; font-family: Verdana, Geneva, Arial, Helvetica, sans-serif; font-weight: normal; color: #000000; display : inline; margin-bottom : 3px; }
+img.header {margin-bottom : 10px }
+
+.rightSidebar {background : #fbfbfa; font-family : Verdana, Geneva, Arial, Helvetica, sans-serif; font-size : 9px; border : 1px solid #dfdfdf; width : 145px; margin-bottom : 10px;  margin-top : 10px;  }
+.rightSidebarContent {margin-left : 5px; margin-right : 5px; line-height : 13px;  font-family : Verdana, Geneva, Arial, Helvetica, sans-serif;  margin-top : 3px;  margin-bottom : 3px;    }
+.blueHeader {
+	text-transform : uppercase;
+	background-color : #204864;
+	color : #ffffff;
+	font-weight : bold;
+	font-family : Verdana, Geneva, Arial, Helvetica, sans-serif;
+	font-size : 10px;
+	line-height : 20px;
+	text-align : center;
+	margin-top : 0px;
+	margin-bottom : 10px;
+}
+.blueHeaderSerif {
+	text-transform : uppercase;
+	background-color : #204864;
+	color : #ffffff;
+	font-weight : bold;
+	font-family : "Georgia", "Times New Roman", Times, serif;
+	font-size : 11px;
+	line-height : 24px;
+	text-align : center;
+	margin-top : 18px;
+	margin-bottom : 10px;
+	text-decoration : none;
+}
+.rightSidebar a {
+	font-family : Verdana, Geneva, Arial, Helvetica, sans-serif;
+	font-size : 10px;
+	}
+
+.grayBox {
+	border : 1px solid #dfdfdf;
+	background-color : #fbfbfa;
+	font-size: 14px;
+	font-family:"Georgia, serif";
+	font-weight: normal;
+	color: #000000;
+}
+
+.grayBox p {
+	margin-left:5px;
+	margin-right: 5px;
+}
+
+.redHeader {
+	color:#8A2126;
+	font-weight:bold;
+	padding : 0px;
+	border-bottom : 1px solid #dfdfdf;
+	text-transform : uppercase;
+	margin-bottom : 10px;
+	margin-left : 0px;
+	margin-right : 0px;
+	margin-top : 0px;
+	font-family: "Georgia", "Times New Roman", Times, serif
+}
+
+.redBullet {
+	list-style-image : url(../images/redBullet.gif);
+}
+
+.grayHeader {
+	color:#000000;
+	font-weight:bold;
+	padding :0px;
+	border-bottom : 1px solid #dfdfdf;
+	margin-bottom : 10px;
+	margin-left : 0px;
+	margin-right : 0px;
+	margin-top : 0px;
+	font-family: "Georgia", "Times New Roman", Times, serif
+}
+
+.standardList {margin-left:25px;
+	margin-right:10px;
+	padding-left:0px;
+	margin-top:0px;
+	text-indent : 0px;
+	list-style-type : square;
+	list-style-position : outside;
+}
+
+/*experimental for Marshall Plan*/
+
+.featureHomeBox {width:228px;
+	border:1px solid #c4c4c4;
+	margin-right:20px;
+	margin-top:5px;
+}
+
+.featurePhotoBox {width:228px;
+	border:1px solid #c4c4c4;
+	margin-left:10px;
+	margin-top:16px;
+}
+
+.featurePhotoBox p {margin:10px
+}
+
+.featureHomeBox H1 {border-bottom:1px solid #c4c4c4;
+text-align:center;
+margin-top:0px;
+margin-bottom:5px;
+}
+
+.featureHomeBox p {margin:10px
+}
+
+.featureHomeBox ul {margin-left:25px;
+	margin-right:10px;
+	padding-left:0px;
+	margin-top:0px;
+	text-indent : 0px;
+	list-style-type : square;
+	list-style-position : outside;
+}
+
+.featureHomeBoxWide {width:100%;
+	border:1px solid #c4c4c4;
+	margin-right:20px;
+	margin-left:0px;
+	margin-top:5px;
+
+}
+
+.featureHomeBoxWide H1 {border-bottom:1px solid #c4c4c4;
+text-align:center;
+margin-top:0px;
+margin-bottom:5px;
+}
+
+.featureHomeBoxWide p {margin:10px;
+	margin-right:0px;
+	margin-left:0px;
+	padding:10px;
+}
+.specHeader {
+	padding-bottom:5px;
+	margin-top:45px;
+	margin-bottom:0px;
+	color : #333333;
+	font-size : 18px;
+	border-bottom : 1px solid #c4c4c4;
+}
+
+.specTitle {
+	padding:0px;
+	margin-bottom:0px;
+	margin-top:16px
+}
+
+.specDate {
+	padding:0;
+	margin-bottom:5px;
+	margin-top:5px;
+	color : #646464
+}
+
+.months-on {
+	padding:4;
+	margin-bottom:2px;
+	margin-top:10px;
+	text-align : right;
+	color:#999999
+}
+
+.specAuthor {
+	padding:0px;
+	margin-bottom:0px;
+	margin-top:5px;
+	font-size : 15px;
+}
+
+.hidden {
+	display: none
+}
+
+#CFR-Source-Header {
+	background-image : url(../images/cfr_source_banner6.gif);
+	background-repeat : no-repeat;
+	border-bottom : 1px solid #dfdfdf;
+	margin: 1px;
+	height: 58px;
+	cursor : hand;
+}
+
+/* ARP Section Styles */
+
+#ARP-Wrapper {
+	width:675px;padding-top:20px;height:900px
+}
+
+.ARP-FeaturedProducts {
+	background-color:#4A7693;position:absolute;width:155px;height:300px;color : #ffffff;
+}
+
+.ARP-FeaturedProducts a {
+	color : #ffffff
+}
+
+.ARP-FeaturedProducts a:hover{
+	color : #ffffff
+}
+
+.ARP-FeaturedProducts p {
+	text-align:center;margin:3px;font-family:verdana,arial,sans-serif;font-size:12px
+}
+
+.ARP-FeaturedProductLink {
+	position:absolute;bottom:10px;width:155px;text-align:center;
+}
+
+.ARP-FeaturedProductLink a {
+font-family:verdana,arial,sans-serif;font-weight:bold
+}
+
+#ARP-WhiteHeader {
+	font-family:"Georgia","Times New Roman",Times,serif;text-transform:uppercase;font-weight:bold;
+	font-size : 1em;margin-bottom:20px;
+}
+
+#ARP-Textbooks {
+	left:135px
+}
+
+#ARP-Books {
+	left:295px
+}
+
+#ARP-ERG {
+	left:455px
+}
+
+#ARP-Subs {
+	left:615px
+}
+
+.ARP-LowerColumn {
+	position:absolute;top:500px;width:207px
+}
+
+#ARP-Column1 {
+	left:135px
+}
+
+#ARP-Column2 {
+	left:349px
+}
+
+#ARP-Column3 {
+	left:565px;margin-top:18px
+}
+
+.ARP-List {margin-left:25px;
+	margin-right:10px;
+	padding-left:0px;
+	margin-top:0px;
+	text-indent:0px;
+	list-style-type:square;
+	list-style-position:outside;
+	list-style-image:url(/images/icon_arrow.gif);
+}
+
+.ARP-List li {
+	margin-bottom:10px
+}
+
+#ARP-WhatsNew {
+	border:1px solid #c4c4c4;margin-top:0px;padding:7px;font-size:11px;font-family:georgia,times,serif
+}
+
+#ARP-WhatsNew a {
+	font-weight:bold;font-size:12px;text-decoration:none
+}
+
+#ARP-SampleTextbooks {
+	border:1px solid #c4c4c4;margin-top:15px
+}
+
+#ARP-SampleTextbooks h3 {
+border-bottom:1px solid #c4c4c4;margin-top:0px;text-transform:uppercase;text-align:center;margin-bottom:5px;font-size:11px;line-height:24px;color:#8A2126
+}
+
+#ARP-SampleTextbooks p {
+	margin:10px
+}
+
+#ARP-SampleTextbooks li {
+	margin-bottom:5px
+}
+
+#ARP-Testimonials {
+	border:1px solid #c4c4c4;padding-left:10px;padding-right:10px;;padding-bottom:10px
+}
+
+#ARP-Testimonials h3 {
+margin-top:5px;color:#8A2126;font-weight:bold;font-size:1em
+}
+
+#ARP-Testimonials blockquote {
+	font-size:12px;line-height:16px;margin:0px;
+	font-style : italic;
+}
+
+#ARP-CFR {
+	border:2px solid #204864;margin-top:15px;background-color:#efefef
+}
+
+#ARP-CFR h3 {
+background-color:#204864;border-bottom:2px solid #CD0100;margin-top:0px;text-transform:uppercase;text-align:center;margin-bottom:5px;font-size:11px;line-height:15px;color:#ffffff;padding:5px
+}
+
+#ARP-CFR p {
+margin:10px;font-size:11px;font-family:verdana,sans serif
+}
+
+#ARP-CFR ul {
+list-style-type:none;text-indent:0px;margin-left:10px;padding-left:0px
+}
+
+#ARP-CFR a {
+color:#CD0100
+}
+
+#ARP-CFR li {
+margin-bottom:5px
+}
+
+.faq dt {
+	font-weight: bold;
+	margin: 2em 0 0 0;
+	padding 0;
+}
+
+.faq dd {
+	margin: 0 1em;
+}
+
+/* bestsellers styles */
+
+	#bestseller-table {
+		font-family: Verdana;
+		font-size: 10px;
+	}
+	#bestseller-table tbody tr td a {
+		font-family: Verdana;
+		font-size: 10px;
+	}
+	#bestseller-table tbody tr td span.title {
+      	font-family: Verdana;
+		font-size: 11px;
+		font-weight: bold;
+		font-style: italic;
+    }
+	#bestseller-table thead tr td {
+      background-color: #fff;
+	  font-weight:bold;
+	  padding:5px;
+    }
+    #bestseller-table tbody tr td {
+      background-color: #fff;
+	  padding:5px;
+	  
+    }
+    #bestseller-table tbody tr.odd  td {
+      background-color: #eee;
+    }
+	 
+	/* Dashboard styles */
+	
+	a#dashboard, p#dashboard {
+		font-family: Verdana, Geneva, Arial, Helvetica, sans-serif;
+		margin: 0 0 0 0;
+		font-size: 12px; 
+		}
+		
+	#dashboard div {
+		background-color : #fbfbfa;; 
+		font-family : Verdana, Geneva, Arial, Helvetica, sans-serif; 
+		border : 1px solid #dfdfdf; 
+		width : 100%; 
+		padding: 0px;
+		}
+		
+				
+	#dashboard div div {
+		background: #FFF;
+		border-top : 1px solid #dfdfdf;
+		border-bottom : 1px solid #dfdfdf;
+		border-left: none;
+		border-right: none;
+		margin-top: 0;
+		}
+
+	#dashboard h1 {
+		font-size: 1.3em;
+		font-weight: bold;
+		font-family: Verdana, Geneva, Arial, Helvetica, sans-serif;
+		margin: 0 0 0 0;
+		} 
+
+	#dashboard h2 {
+		text-transform : uppercase;
+		background-color : #204864;
+		color : #ffffff;
+		font-weight : bold;
+		font-family : Verdana, Geneva, Arial, Helvetica, sans-serif;
+		font-size : 10px;
+		line-height : 20px;
+		text-align : left;
+		padding-left: 10px;
+		margin: 0 0 0 0;
+		}
+		
+		#dashboard h3 {
+		font-size: 1em; 
+		margin-top: 7px;
+		margin-bottom: 5px;
+		padding-left: 1em;
+		font-weight: bold;
+		font-family: Verdana, Geneva, Arial, Helvetica, sans-serif;
+		} 
+		
+		#dashboard div ul {
+		margin-top: 0;
+		margin-bottom: .5em;
+		font-size: .9em;
+		}
+		
+		#dashboard div p {
+		margin-top: .5em;
+		margin-bottom: .5em; 
+		font-size: .9em; 
+		padding-left: 1em;
+		}
+		
+		/* styles for OLSA section pages */
+		
+	.olsa_text_white  {	
+		font-size: 14px;
+		font-family: Georgia, Times New Roman, Times, serif; 
+		font-weight: normal;
+		color: #FFFFFF;}
+
+
+	.olsaform {
+		font-family: Verdana, Geneva, Arial, Helvetica, sans-serif;
+		width: 479px;
+		font-size : 12px;
+		font-weight : bold;
+		color : #333333;
+		}
+		
+	.olsaform td {
+		padding: 5px;
+		}
+			
+.olsaforminfo {
+		font-size: 10px; 
+		color: #666666;
+		font-family: Verdana, Geneva, Arial, Helvetica, sans-serif;
+		font-weight: normal;
+		line-height: 1 em;
+		}
+	
+
+	
+.olsaforminfo2 {
+		font-size: 14px; 
+		color: #666666;
+		font-family: Verdana, Geneva, Arial, Helvetica, sans-serif;
+		font-weight: normal;
+		}
+	
+.olsaforminfo3 {
+		font-size: 14px; 
+		color: #3366cc;
+		font-family: Verdana, Geneva, Arial, Helvetica, sans-serif;
+		font-weight: normal;
+		line-height: 1em;
+		}
+			
+.olsaformlabel {
+	text-align : right;
+	vertical-align : top;
+	width: 125px;
+}
+
+.olsaerror {
+	color: #f00;
+	font-weight: bold;
+	font-family: Verdana, Geneva, Arial, Helvetica, sans-serif;
+	font-size: 12px;
+}
+
+.olsaerror a {
+	color: #f00;
+	font-weight: bold;
+	font-family: Verdana, Geneva, Arial, Helvetica, sans-serif;
+	font-size: 12px;
+	text-decoration : underline;
+}
+
+.olsasubbutton {
+	text-align : right;
+	margin-top:15px;
+	padding-top: 15px;
+}
+
+div.olsaoptionlist p {
+	margin-left: 90px;
+	font-size: 12px;
+	font-family: Verdana, Geneva, Arial, Helvetica, sans-serif;
+}
+
+/* olsaheaderbar class mimcs graphical header bars used on OLSA pages, used on My Account page */
+
+.olsaheaderbar {
+	font-family : "Georgia", Times New Roman, Times, serif;
+	color : #333;
+	font-weight : bold;
+	font-size : 14px;
+	background-color : #EFEFEF;
+	margin-top: 2em;
+	padding: 4px;
+	
+}
+
+.olsacart {
+	font-size: 12px;
+	font-family: Verdana, Geneva, Arial, Helvetica, sans-serif;
+	width:100%;
+}
+
+.olsacart td {
+	padding-bottom:5px;
+	border-bottom : 1px solid #999;
+	margin-bottom: 10px;
+	border-left: 0;
+	border-right: 0;
+}
+
+.olsadivider {
+	border-top: 1px solid #999; 
+	color:  #999; 
+	margin: 15px 0;
+	padding: 0;
+	   }
+	   
+table#olsadiscount_pop tr td {
+	border-top: 1px solid #999;
+	padding: 15px 0;
+	color: #fff;
+	font-size: 12px;
+	font-family: Verdana, Geneva, Arial, Helvetica, sans-serif;
+}
+
+.olsabox {
+	background-color:#4A7593;
+	background-image : url(/olsa/images/tout_box_top.gif);
+	background-position : top;
+	background-repeat : no-repeat;
+	padding: 10px;
+	color: #fff;
+	font-family: Verdana, Geneva, Arial, Helvetica, sans-serif;
+	font-size: 12px;
+}
+
+.olsabox h3 {
+	font-family : Georgia, "Times New Roman", Times, serif;
+	font-size:20px;
+}
+
+.olsabox li {
+	margin: 10px 0;
+	font-weight: bold;
+}
+
+.olsabox a {
+	color: #fff;
+	font-family: Verdana, Geneva, Arial, Helvetica, sans-serif;
+	font-size: 12px;
+}
+
+#olsaCustService a {
+	font-weight:bold;font-size:12px;text-decoration:none
+}
+
+ol.faq li {
+	margin:1em
+}
+.LeftContent {margin-left : 7px; margin-right : 2px; margin-top : 5px;  margin-bottom : 5px; line-height : 13px;  font-family : Verdana, Geneva, Arial, Helvetica, sans-serif; font-size:10px;    }
+
+/* media site styles added by frank 6.1.06 */
+#mediasite {font-family: Georgia, serif; font-size: 14px; line-height: 1.5em}
+#mediasite h3 {font-weight: normal; font-size: 22px; margin-top:1.5em; margin-bottom: 0.25em; border-top: 1px dotted silver; padding-top:1em}
+#mediasite .pagehead {font-weight: normal; font-size: 22px; margin-top:1.5em; margin-bottom: 0.25em; border-top: 1px dotted silver; padding-top:1em}
+#mediasite h3 a {text-decoration: none}
+#mediasite .bold {font-weight:normal; font-family: "Lucida Sans Unicode", Arial, sans-seif; letter-spacing:1px; text-align: center; font-size:16px}
+#mediasite .olsaerror {margin: 3em; font-family: "Lucida Sans Unicode", Arial, sanserif; color:red; font-size:12px; font-weight: normal; border-top: 1px dotted red; border-bottom: 1px dotted red;}
+#navlist { list-style-position: outside; }
+
+/* new homepage styles added by frank 11.1.06 */
+#newhome {font-size:14px; line-height:18px; position:relative}
+#newhome a {font-weight:normal; text-decoration:none}
+#newhome a:hover {text-decoration:underline}
+#newhome a.headline {font-family: 'Lucida Sans Unicode', arial, sans-serif; font-size:1.2em}
+#newhome h3 {margin:2em 0 0 0; padding:0; text-align:left; color:#CC0000; font-weight:normal; font-family: Georgia, 'Times New Roman', serif; font-size:1.2em; text-transform:uppercase; letter-spacing:1px}
+#newhome h4 {margin: 0 0 0 0; padding:0; font-size:1.1em;}
+	
+#newhome p {font-family: 'Lucida Sans Unicode', arial, sans-serif; margin:0; padding:0}
+#newhome p#toclink {text-transform:uppercase; letter-spacing: 1px; text-align:left; margin-top:.5em}
+#newhome .tocentry {position:relative; margin: .5em 0 0 1em}
+#newhome .tocentry span.status {float:right; margin:0.25em 1em 0 0; font-family: 'Lucida Sans Unicode'; font-size:24px; padding:5px}
+#newhome .byline {color: rgb(100,100,100); font-family: 'Lucida Sans Unicode', arial, sans-serif; text-transform:uppercase; font-size:12px; letter-spacing: 1px; line-height: 15px; margin: 0 0 0 0;}
+#newhome .blurb {font-family: 'Lucida Sans Unicode', arial, sans-serif; margin-top: .2em; font-size: 13px;}
+#newhome .tocentry#full:hover {background:#efefef url(/images/full.gif) top right no-repeat}
+#newhome .tocentry#prev:hover {background:#efefef url(/images/prev.gif) top right no-repeat}

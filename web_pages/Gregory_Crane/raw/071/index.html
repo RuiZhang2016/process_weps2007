@@ -1,0 +1,938 @@
+<HTML>
+<HEAD>
+<TITLE> CNI Spring 2000 Task Force Meeting: Project Briefing Schedule </TITLE>
+<META NAME="DC.title" CONTENT="Title Here" LANG="en">
+<META NAME="DC.creator" CONTENT="Maurice-Angelo F. Cruz" LANG="en">
+<META NAME="DC.keywords" CONTENT="Keywords Here" LANG="en">
+<META NAME="DC.date" SCHEME="ISO 31.1" CONTENT="1999-03-09">
+<BASE HREF=""></HEAD>
+
+<HTML>
+<HEAD>
+<TITLE>(none)</TITLE>
+<META HTTP-EQUIV="Content-Type" CONTENT="text/html; CHARSET=iso-8859-1">
+<LINK REL="stylesheet" HREF="style.css">
+<LINK REL="shortcut icon" HREF="favicon.ico">
+<SCRIPT LANGUAGE="JavaScript" TYPE="text/javascript">
+
+<!--
+
+
+/*************************************************************
+ * fade script ver0.1 by Kouichirou@Eto.com 1996/02/20
+ * Copyright (c) 1996 Kouichirou Eto. All Rights Reserved.
+ * You can freely copy, use, modify this script,
+ * if the credit is given in the source.
+ * If you would like to get information for this script,
+ * please access <http://eto.com/JavaScript/>
+ *************************************************************/
+
+function makearray(n) {
+    this.length = n;
+    for(var i = 1; i <= n; i++)
+        this[i] = 0;
+    return this;
+}
+
+
+hexa = new makearray(16);
+for(var i = 0; i < 10; i++)
+
+    hexa[i] = i;
+
+hexa[10]="a"; hexa[11]="b"; hexa[12]="c";
+hexa[13]="d"; hexa[14]="e"; hexa[15]="f";
+
+
+function hex(i) {
+    if (i < 0)
+	return "00";
+    else if (i > 255)
+	return "ff";
+    else
+	return "" + hexa[Math.floor(i/16)] + hexa[i%16];
+}
+
+
+function setbgColor(r, g, b) {
+    var hr = hex(r); var hg = hex(g); var hb = hex(b);
+    document.bgColor = "#"+hr+hg+hb;
+}
+
+
+function fade(sr, sg, sb, er, eg, eb, step) {
+    for(var i = 0; i <= step; i++) {
+	setbgColor(
+	Math.floor(sr * ((step-i)/step) + er * (i/step)),
+	Math.floor(sg * ((step-i)/step) + eg * (i/step)),
+	Math.floor(sb * ((step-i)/step) + eb * (i/step)));
+    }
+}
+
+
+
+/*************************************************************
+ * Usage:
+ *   fade(inr,ing,inb, outr,outg,outb, step);
+ * example.
+ *   fade(0,0,0, 255,255,255, 255);
+ * fade from black to white with very slow speed.
+ *   fade(255,0,0, 0,0,255, 50);
+ *   fade(0xff,0x00,0x00, 0x00,0x00,0xff, 50); // same as above
+ * fade from red to blue with fast speed.
+ * step 2 is very fast and step 255 is very slow.
+ *************************************************************/
+
+
+function fadein() {
+    fade(0,0,0, 255,255,255, 64);
+}
+
+function fadeout() {
+    fade(255,255,255, 0,0,0, 64);
+}
+
+
+/* do fadein */
+
+fadein();
+
+/***** end fade script *****/
+
+/************************************************************/
+
+
+// set document colors
+
+document.bgColor="#FFFFFF";
+document.fgColor="#000000";
+document.textColor="#000000";
+document.linkColor="#0000CC";
+document.vlinkColor="#BB0000";
+document.alinkColor="#BB0000";
+
+
+
+/*************************************************************
+ * This part of the script ver1.0 by UMD design team 2000/11/01
+ * Copyright (c) 2000 CNI.org. All Rights Reserved.
+ * You can freely copy, use, modify this script,
+ * if the credit is given in the source.
+ *************************************************************/
+
+function MM_swapImgRestore() { //v3.0
+  var i,x,a=document.MM_sr; for(i=0;a&&i<a.length&&(x=a[i])&&x.oSrc;i++) x.src=x.oSrc;
+}
+
+function MM_preloadImages() { //v3.0
+  var d=document; if(d.images){ if(!d.MM_p) d.MM_p=new Array();
+    var i,j=d.MM_p.length,a=MM_preloadImages.arguments; for(i=0; i<a.length; i++)
+    if (a[i].indexOf("#")!=0){ d.MM_p[j]=new Image; d.MM_p[j++].src=a[i];}}
+}
+
+function MM_findObj(n, d) { //v3.0
+  var p,i,x;  if(!d) d=document; if((p=n.indexOf("?"))>0&&parent.frames.length) {
+    d=parent.frames[n.substring(p+1)].document; n=n.substring(0,p);}
+  if(!(x=d[n])&&d.all) x=d.all[n]; for (i=0;!x&&i<d.forms.length;i++) x=d.forms[i][n];
+  for(i=0;!x&&d.layers&&i<d.layers.length;i++) x=MM_findObj(n,d.layers[i].document); return x;
+}
+
+function MM_swapImage() { //v3.0
+  var i,j=0,x,a=MM_swapImage.arguments; document.MM_sr=new Array; for(i=0;i<(a.length-2);i+=3)
+   if ((x=MM_findObj(a[i]))!=null){document.MM_sr[j++]=x; if(!x.oSrc) x.oSrc=x.src; x.src=a[i+2];}
+}
+//-->
+
+</SCRIPT>
+
+
+<style type="text/css">
+<!--
+.style1 {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: smaller;
+}
+-->
+</style>
+</HEAD>
+
+
+<!-- body bgcolor="#FFFFFF"  marginwidth=0 marginheight=0 leftmargin=0 topmargin=0 onLoad="MM_preloadImages('/Images/CNI_collaborations_over.gif','/Images/conferences_over.gif','/Images/task_force_over.gif','/Images/presentations_over.gif','/Images/projects_over.gif','/Images/site_map_over.gif','/Images/about_CNI_over.gif')" -->
+<!-- body bgcolor="#FFFFFF" background="/Images/header_background.gif" onLoad="MM_preloadImages('/Images/CNI_collaborations_over.gif','/Images/conferences_over.gif','/Images/task_force_over.gif','/Images/presentations_over.gif','/Images/projects_over.gif','/Images/site_map_over.gif','/Images/about_CNI_over.gif')" -->
+<body bgcolor="#FFFFFF" BACKGROUND="background-cni.gif" onLoad="MM_preloadImages('/Images/CNI_collaborations_over.gif','/Images/conferences_over.gif','/Images/task_force_over.gif','/Images/presentations_over.gif','/Images/projects_over.gif','/Images/site_map_over.gif','/Images/about_CNI_over.gif')">
+ <!-- form name="form1" -->
+  <table border="0" cellspacing="0" cellpadding="0">
+    <tr> 
+      <td width="140" bgcolor="#FFCD00" align="center" valign="middle"><br><img src="sponsored_by.gif" width="127" height="18"><br>
+        <a href="http://www.arl.org/" onMouseOver="window.status='Association of Research Libraries'; return true"><img src="arl_logo.gif" width="54" height="63" alt="Association of Research Libraries; &lt;http://www.arl.org/&gt;" border="0"></a><a href="http://www.educause.edu/" onMouseOver="window.status='EDUCAUSE'; return true"><img src="educause_logo.gif" width="73" height="63" alt="EDUCAUSE; &lt;http://www.educause.edu/&gt;" border="0"></a><br>
+        <nobr> </nobr></td>
+
+      <td align="center" valign="middle" rowspan="3"> &nbsp; &nbsp;</td>
+
+      <td align="center" valign="middle"><br><A HREF="http://www.cni.org/"  onMouseOver="window.status='CNI - Coalition for Networked Information'; return true"><img src="cni_logo_pantone_exact.gif" border="0" width="229" height="87" alt="CNI - Coalition for Networked Information; &lt;http://www.cni.org/&gt;"></A><br> &nbsp; <br></td>
+    </tr>
+
+    <tr> 
+      <td width="140" bgcolor="#FFCD00" valign="top"> 
+        <table border="0" width="140" cellspacing="0" cellpadding="0">
+          <tr> 
+            <td><a href="http://www.cni.org/organization.html" onMouseOut="MM_swapImgRestore()" onMouseOver="MM_swapImage('Image1','','/Images/about_CNI_over.gif',1)"><img name="Image1" border="0" src="about_CNI.gif" width="139" height="15" vspace="9" alt="About CNI"></a></td>
+          </tr>
+          <tr> 
+            <td><a href="http://www.cni.org/tfms/tf.meetings.html" onMouseOut="MM_swapImgRestore()" onMouseOver="MM_swapImage('Image4','','/Images/task_force_over.gif',1)"><img name="Image4" border="0" src="task_force.gif" width="139" height="31" vspace="9" alt="Task Force Meetings"></a></td>
+          </tr>
+          <tr> 
+            <td><a href="http://www.cni.org/regconfs/" onMouseOut="MM_swapImgRestore()" onMouseOver="MM_swapImage('Image3','','/Images/conferences_over.gif',1)"><img name="Image3" border="0" src="conferences.gif" width="139" height="17" vspace="9" alt="Conferences"></a></td>
+          </tr>
+          <tr> 
+            <td><a href="http://www.cni.org/publications/" onMouseOut="MM_swapImgRestore()" onMouseOver="MM_swapImage('Image5','','/Images/presentations_over.gif',1)"><img name="Image5" border="0" src="presentations.gif" width="139" height="30" vspace="9" alt="Presentations and Publications"></a></td>
+          </tr>
+          <tr> 
+            <td><a href="http://www.cni.org/projects/" onMouseOut="MM_swapImgRestore()" onMouseOver="MM_swapImage('Image6','','/Images/projects_over.gif',1)"><img name="Image6" border="0" src="projects.gif" width="139" height="17" vspace="9" alt="Projects"></a></td>
+          </tr>
+          <tr> 
+            <td><a href="http://www.cni.org/collaborations/" onMouseOut="MM_swapImgRestore()" onMouseOver="MM_swapImage('Image2','','/Images/CNI_collaborations_over.gif',1)"><img name="Image2" border="0" src="CNI_collaborations.gif" width="139" height="31" vspace="9" alt="CNI Collaborations"></a></td>
+          </tr>
+          <tr> 
+            <td><a href="http://www.cni.org/archives/" onMouseOut="MM_swapImgRestore()" onMouseOver="MM_swapImage('Image7','','/Images/site_map_over.gif',1)"><img name="Image7" border="0" src="site_map.gif" width="139" height="18" vspace="9" alt="Site Map"></a>
+                <BR></td>
+          </tr>
+          <tr>
+            <td bgcolor="#FFFFFF" align="center"><!-- Search Google -->
+
+<TABLE bgcolor="#FFCD00" cellspacing=0 border=0>
+
+
+   <TABLE border="2" bordercolor="#FFCD00"><tr><td>  
+   <center>
+
+   <a href="http://www.google.com/">
+   <img src="powered_by_google_135x35.gif" alt="Google" border="0" align=middle></a>
+
+      <FORM method=GET action="http://www.google.com/custom">
+
+      <INPUT TYPE=text name=q size=17 maxlength=200 value="">
+	  <br>
+      <INPUT type=submit name=sa VALUE="Google Search">
+      <font size=-1>
+      <input type=hidden name=cof value="S:http://www.cni.org;GL:0;VLC:red;AH:center;BGC:white;LH:87;LC:blue;L:http://www.cni.org/Images/cni_logo_pantone_exact.gif;ALC:blue;LW:229;T:black;AWFID:c13451ac757ed139;">
+   </center>
+      <input type=hidden name=domains value="www.cni.org">
+	  <center><input type=radio name=sitesearch value="http://www.cni.org" checked> www.cni.org</center>
+	  <center><input type=radio name=sitesearch value=""> the web</center>
+
+      </FORM>
+   </td></tr>
+   </TABLE>
+
+
+<!-- SiteSearch Google --></td>
+          </tr>
+          <tr> 
+            <td> 
+              <div align="center">
+              <img src="spacer.gif" width="1" height="1" vspace="0" alt="">                
+			  </div>
+              <div align="center"><a href="http://www.cni.org/aboutrss.html"><br>              
+			  <img src="cnirss.gif" alt="Information about CNI RSS news feed." width="58" height="31" border="0"></a>
+			  <br> 
+              &nbsp; <br>
+              </div></td>
+          </tr>
+        </table>
+      </td>
+      <td valign="top"> 
+        <table width="100%" border="0" cellspacing="0" cellpadding="7">
+          <tr valign="top"> 
+            <td> 
+
+
+
+<!--
+      HTML Author:            Maurice-Angelo F. Cruz
+      Company:                Coalition for Networked Information
+-->
+
+<CENTER>
+<TABLE BORDER="0">
+<TR><TD HEIGHT="8" BGCOLOR="#2A2A7F" ALIGN="center" VALIGN="middle" COLSPAN="3">
+<CENTER><FONT COLOR="#2A2A7F" SIZE="-2">.</FONT></CENTER>
+</TD></TR>
+<TR><TD WIDTH="12" BGCOLOR="#2A2A7F" ALIGN="center" VALIGN="middle"><FONT COLOR="#2A2A7F">.</FONT></TD>
+<!-- TD BGCOLOR="#FFAA00" -->
+<TD BGCOLOR="#FFFFFF">
+     <table border="5" width="100%">
+     <td bgcolor="#D3D3D3" valign="top">
+	<font size="4" color="#2A2A7F">
+     <CENTER><B>
+		<BR><font size="6">CNI SPRING 2000 TASK FORCE MEETING</font><P>
+			<P>
+			PROJECT &nbsp;BRIEFING &nbsp;SCHEDULE<P>
+                  MONDAY, &nbsp;MARCH  27, 2000<BR>
+                  3:15 - 4:15 PM <BR><BR>
+     </B></CENTER>
+     </font></td>
+     </table>
+</TD>
+<TD WIDTH="12" BGCOLOR="#2A2A7F" ALIGN="center" VALIGN="middle"><FONT COLOR="#2A2A7F">.</FONT></TD>
+<TR><TD HEIGHT="8" BGCOLOR="#000077" ALIGN="center" VALIGN="middle" COLSPAN="3">
+<FONT COLOR="#2A2A7F" SIZE="-2"><CENTER>.</CENTER></FONT></TD>
+</TR>
+</TR>
+</TABLE>
+</CENTER>
+
+<A NAME="2000TF"> </A>
+
+<BLOCKQUOTE>
+
+<BR>
+      <A HREF="http://www.cni.org/tfms/2000a.spring/"><IMG SRC="cniS-logosm.gif"  
+       border="0" align="bottom" alt="[CNI Spring '99 Icon]"></A>
+<BR>
+</BLOCKQUOTE>
+<BR>
+<CENTER>
+<table border="0" width="540">
+
+
+     <tr><td width="540" align="center" valign="top" colspan="4">
+          <TABLE BORDER="3" BGCOLOR="#D3D3D3"><TR><TD WIDTH="200" ALIGN="center" VALIGN="middle">
+          <font size="4"><B>
+           Congressional Hall A
+          </B></font>
+          </TD></TR></TABLE>
+     <BR>
+     </td></tr>
+     
+
+<tr><td width="540" align="center" valign="top" colspan="4">
+<A NAME="WTabb">
+<font color="#2A2A7F" size="4"><B>
+Archiving the Open Access Web
+</B></font><BR><BR></A>
+</td></tr>
+
+<tr><td width="55"  align="center" valign="top"><BR>		</td>
+<td width="210" valign="top">
+<B>William Y. Arms</B> <BR>
+Professor, Computer Science <BR>
+Cornell University <BR>
+
+</td>
+<td width="210" valign="top">
+<B>Winston Tabb</B> <BR>
+Associate Librarian, Library Services <BR>
+Library of Congress <BR>
+
+</td>
+<td width="55"  align="center" valign="top"><BR>		</td>
+</tr>
+
+
+<tr><td width="55"  align="center" valign="top"><BR>		</td>
+<td colspan="2" valign="top"><P><BR>
+The Library of Congress has the mission to collect and preserve the 
+world's intellectual output for future generations.  For this purpose it 
+has a special national responsibility and a privileged legal position, and 
+is supported by public funding.  This talk will discuss the Library's plans 
+for preserving one category of material -- open access information on the 
+web.  This is seen as a community activity to which many partners will each 
+contribute.  What are the challenges?  What can we each contribute?
+
+</td>
+<td width="55"  align="center" valign="top"><BR>		</td>
+</tr>
+<tr></tr><tr></tr><tr></tr>
+<tr>
+<td width="540" align="right" valign="top" colspan="4"><I>
+<!-- A HREF="/tfms/2000a.spring/handout/">handout</A -->
+</I><BR><BR><P><BR></td>
+</tr>
+
+
+     <tr><td width="540" align="center" valign="top" colspan="4">
+          <TABLE BORDER="3" BGCOLOR="#D3D3D3"><TR><TD WIDTH="200" ALIGN="center" VALIGN="middle">
+          <font size="4"><B>
+           Congressional Hall B
+          </B></font>
+          </TD></TR></TABLE>
+     <BR>
+     </td></tr>
+     
+
+<tr><td width="540" align="center" valign="top" colspan="4">
+<A NAME="HStrauss-WP">
+<font color="#2A2A7F" size="4"><B>
+Web Portals: A Home Page Doth Not A Portal Make
+</B></font><BR><BR></A>
+</td></tr>
+
+<tr><td width="55"  align="center" valign="top"><BR>		</td>
+<td width="420" colspan="2" valign="top">
+<B>Howard Strauss</B> <BR>
+Manager of Academic Applications <BR>
+Princeton University <BR>
+
+</td>
+<td width="55"  align="center" valign="top"><BR>		</td>
+</tr>
+
+
+<tr><td width="55"  align="center" valign="top"><BR>		</td>
+<td colspan="2" valign="top"><P><BR>
+The web has reinvented itself several times.  It is about to do it again,
+with web portals.  You've seen web portals on the web because everyone is
+calling anything new they put on the web a portal.  While some sites such
+as Excite and Net Center are at least real portals, they are horizontal
+portals.  The portals that will change the way universities and
+corporations deal with their data, applications, and web sites are
+vertical portals.  If we build our portals right we will change the web
+from institution-centric to user- centric.  This session will describe
+what a portal is, why you must have one, what the components of portals
+are, and technical issues related to portals.
+
+</td>
+<td width="55"  align="center" valign="top"><BR>		</td>
+</tr>
+<tr></tr><tr></tr><tr></tr>
+<tr>
+<td width="540" align="right" valign="top" colspan="4"><I>
+<A HREF="http://www.cni.org/tfms/2000a.spring/handout/Strauss-WP2000Stf.pdf">handout
+(in PDF format) 105K file size</A>
+&nbsp;  
+<A HREF="http://www.cni.org/tfms/2000a.spring/handout/Strauss-WP2000Stf.pdf">
+<IMG SRC="pdf.gif" BORDER="0" ALIGN="absmiddle" ALT="[Image: Acrobat PDF Icon!]"></A>
+</I><BR><BR><P><BR></td>
+</tr>
+
+
+     <tr><td width="540" align="center" valign="top" colspan="4">
+          <TABLE BORDER="3" BGCOLOR="#D3D3D3"><TR><TD WIDTH="200" ALIGN="center" VALIGN="middle">
+          <font size="4"><B>
+           Congressional Hall C
+          </B></font>
+          </TD></TR></TABLE>
+     <BR>
+     </td></tr>
+     
+
+<tr><td width="540" align="center" valign="top" colspan="4">
+<A NAME="DGreenstein">
+<font color="#2A2A7F" size="4"><B>
+The Digital Library Federation:  &nbsp;Retrospect and Future Program
+</B></font><BR><BR></A>
+</td></tr>
+
+<tr><td width="55"  align="center" valign="top"><BR>		</td>
+<td width="420" colspan="2" valign="top">
+<B>Daniel Greenstein</B> <BR>
+Director <BR>
+Digital Library Federation
+ <BR>
+
+</td>
+<td width="55"  align="center" valign="top"><BR>		</td>
+</tr>
+
+
+<tr><td width="55"  align="center" valign="top"><BR>		</td>
+<td colspan="2" valign="top"><P><BR>
+The Digital Library Federation - a consortium of 
+libraries and other organizations committed to joint 
+exploration of their digital library research and 
+development agenda, has recently undergone a 
+comprehensive and extensively consultative review of 
+activities and of the needs and interests of the 
+digital library community.  The process has resulted 
+in a substantially revised program for the DLF which 
+is given its first public presentation at the Spring 
+2000 CNI Task Force meeting.  The talk will briefly 
+review the organization and activities of the DLF 
+since its establishment and outline its aims and 
+objectives as its moves forward into the new 
+millennium.
+
+</td>
+<td width="55"  align="center" valign="top"><BR>		</td>
+</tr>
+<tr></tr><tr></tr><tr></tr>
+<tr>
+<td width="540" align="right" valign="top" colspan="4"><I>
+<!-- A HREF="/tfms/2000a.spring/handout/">handout</A -->
+</I><BR><BR><P><BR></td>
+</tr>
+
+
+     <tr><td width="540" align="center" valign="top" colspan="4">
+          <TABLE BORDER="3" BGCOLOR="#D3D3D3"><TR><TD WIDTH="200" ALIGN="center" VALIGN="middle">
+          <font size="4"><B>
+           Grand Ballroom South
+          </B></font>
+          </TD></TR></TABLE>
+     <BR>
+     </td></tr>
+     
+
+<tr><td width="540" align="center" valign="top" colspan="4">
+<A NAME="GCrane">
+<font color="#2A2A7F" size="4"><B>
+Discussion Session with Gregory Crane 
+</B></font><BR><BR></A>
+</td></tr>
+
+<tr><td width="55"  align="center" valign="top"><BR>		</td>
+<td width="420" colspan="2" valign="top">
+<B>Gregory Crane</B> <BR>
+Professor of Classics, 
+Winnick Family Chair in Technology and Entrepreneurship <BR>
+Editor-in-Chief Perseus Project <BR>
+Tufts University <BR>
+
+</td>
+<td width="55"  align="center" valign="top"><BR>		</td>
+</tr>
+
+
+<tr><td width="55"  align="center" valign="top"><BR>		</td>
+<td colspan="2" valign="top"><P><BR>
+As a follow-on to his plenary session, Gregory Crane will answer
+questions and discuss topics raised in his presentation.
+Participants can informally interact  with Crane and learn more about
+his projects and ideas.
+
+</td>
+<td width="55"  align="center" valign="top"><BR>		</td>
+</tr>
+<tr></tr><tr></tr><tr></tr>
+<tr>
+<td width="540" align="right" valign="top" colspan="4"><I>
+<!-- A HREF="/tfms/2000a.spring/handout/">handout</A -->
+</I><BR><BR><P><BR></td>
+</tr>
+
+
+
+     <tr><td width="540" align="center" valign="top" colspan="4">
+          <TABLE BORDER="3" BGCOLOR="#D3D3D3"><TR><TD WIDTH="200" ALIGN="center" VALIGN="middle">
+          <font size="4"><B>
+           Rooms 10-11
+          </B></font>
+          </TD></TR></TABLE>
+     <BR>
+     </td></tr>
+     
+
+<tr><td width="540" align="center" valign="top" colspan="4">
+<A NAME="PStevens">
+<font color="#2A2A7F" size="4"><B>
+NISO Circulation Interchange Protocol:  &nbsp;<BR>
+Progress Report from the Standard Trenches  
+</B></font><BR><BR></A>
+</td></tr>
+
+<tr><td width="55"  align="center" valign="top"><BR>		</td>
+<td width="210" valign="top">
+<B>Pat Stevens</B> <BR>
+Manager, Product Planning and Special Projects OCLC, <BR>
+and Chair, NISO Committee AT <BR>
+
+</td>
+<td width="210" valign="top">
+<B>Julie Nye</B> <BR>
+State Library of North Carolina, Committee Member <BR>
+ <BR>
+
+</td>
+<td width="55"  align="center" valign="top"><BR>		</td>
+</tr>
+
+<tr><td width="55"  align="center" valign="top"><BR>		</td>
+<td width="420" colspan="2" valign="top">
+<B>Mark Needleman</B> <BR>
+Product Development Specialist, Standards <BR>
+Data Research Associates, Committee Member <BR>
+
+</td>
+<td width="55"  align="center" valign="top"><BR>		</td>
+</tr>
+
+
+<tr><td width="55"  align="center" valign="top"><BR>		</td>
+<td colspan="2" valign="top"><P><BR>
+Julie Nye will discuss why this standard is 
+needed by the library community, Pat Stevens 
+will describe the approach taken by the 
+committee, work to date, and timeline for 
+completion, Mark Needleman will discuss what 
+is required from librarians and vendors to 
+bring the standard to reality in products from 
+vendors and implementations in libraries.
+
+</td>
+<td width="55"  align="center" valign="top"><BR>		</td>
+</tr>
+<tr></tr><tr></tr><tr></tr>
+<tr>
+<td width="540" align="right" valign="top" colspan="4"><I>
+<!-- A HREF="/tfms/2000a.spring/handout/">handout</A -->
+</I><BR><BR><P><BR></td>
+</tr>
+
+
+     <tr><td width="540" align="center" valign="top" colspan="4">
+          <TABLE BORDER="3" BGCOLOR="#D3D3D3"><TR><TD WIDTH="200" ALIGN="center" VALIGN="middle">
+          <font size="4"><B>
+           Rooms 12-14
+          </B></font>
+          </TD></TR></TABLE>
+     <BR>
+     </td></tr>
+     
+
+<tr><td width="540" align="center" valign="top" colspan="4">
+<A NAME="MPittinsky">
+<font color="#2A2A7F" size="4"><B>
+Deploying "Enterprise" Scale Instructional Management Systems
+</B></font><BR><BR></A>
+</td></tr>
+
+<tr><td width="55"  align="center" valign="top"><BR>		</td>
+<td width="210" valign="top">
+<B>Matthew Pittinsky</B> <BR>
+Chairman, <BR>
+Blackboard, Inc. <BR>
+
+</td>
+<td width="210" valign="top">
+<B>Deborah Everhart</B> <BR>
+Producer for Higher Education Blackboard.com, 
+and formerly Senior Internet Development Coordinator, <BR>
+Georgetown University <BR>
+
+</td>
+<td width="55"  align="center" valign="top"><BR>		</td>
+</tr>
+
+<tr><td width="55"  align="center" valign="top"><BR>		</td>
+<td width="420" colspan="2" valign="top">
+<!--  B>Larry D. Conrad</B> <BR>
+Assistant Vice-President and CIO <BR>
+Florida State University <BR -->
+
+</td>
+<td width="55"  align="center" valign="top"><BR>		</td>
+</tr>
+
+
+<tr><td width="55"  align="center" valign="top"><BR>		</td>
+<td colspan="2" valign="top"><P><BR>
+It's one thing to deliver a few classes via the web.  
+It's another thing entirely to scale this across the 
+institution.  This session will present a second 
+generation scaleable Web-based course delivery system 
+that integrates with other enterprise systems.  This 
+system will be discussed in the context of the 
+Instructional Management System standards from two 
+perspectives:  (1) the development of software from 
+instructor-based course tools to institution-wide 
+mission-critical systems; and (2) the progression of 
+teaching and learning technologies from highly 
+decentralized approaches to the adoption of packaged 
+software.  Comparisons of Blackboard CourseInfo 
+Standard Edition and CourseInfo Enterprise Edition 
+will be made to illustrate concepts. Examples of 
+enterprise integration will be provided from 
+successful implementations at  
+<A HREF="http://www.oti.fsu.edu/powerpoint/ed_online/">Florida State University</A> 
+and Georgetown University.
+
+</td>
+<td width="55"  align="center" valign="top"><BR>		</td>
+</tr>
+<tr></tr><tr></tr><tr></tr>
+<tr>
+<td width="540" align="right" valign="top" colspan="4"><I>
+
+<A HREF="http://www.cni.org/tfms/2000a.spring/handout/Everhart-Pittinsky-Ed_Online.pdf">handout
+(in PDF format) 1,653K file size</A>
+&nbsp;  
+<A HREF="http://www.cni.org/tfms/2000a.spring/handout/Everhart-Pittinsky-Ed_Online.pdf">
+<IMG SRC="pdf.gif" BORDER="0" ALIGN="absmiddle" ALT="[Image: Acrobat PDF Icon!]"></A>
+<BR>
+<A HREF="http://www.cni.org/tfms/2000a.spring/handout/Everhart-Pittinsky-Ed_Online.ppt">handout
+(in PPT format) 2,830K file size</A>
+&nbsp;  
+<A HREF="http://www.cni.org/tfms/2000a.spring/handout/Everhart-Pittinsky-Ed_Online.pppt">
+<IMG SRC="ppview.gif" BORDER="0" ALIGN="absmiddle" ALT="[Image: MS PPT Icon!]"></A>
+
+</I><BR><BR><P><BR></td>
+</tr>
+
+
+     <tr><td width="540" align="center" valign="top" colspan="4">
+          <TABLE BORDER="3" BGCOLOR="#D3D3D3"><TR><TD WIDTH="200" ALIGN="center" VALIGN="middle">
+          <font size="4"><B>
+           Room 15
+          </B></font>
+          </TD></TR></TABLE>
+     <BR>
+     </td></tr>
+     
+
+<tr><td width="540" align="center" valign="top" colspan="4">
+<A NAME="FPack">
+<font color="#2A2A7F" size="4"><B>
+Public Key Infrastructure Initiative at the University of Pittsburgh
+</B></font><BR><BR></A>
+</td></tr>
+
+<tr><td width="55"  align="center" valign="top"><BR>		</td>
+<td width="420" colspan="2" valign="top">
+<B>Robert F. Pack</B> <BR>
+Vice Provost <BR>
+University of Pittsburgh <BR>
+
+</td>
+<td width="55"  align="center" valign="top"><BR>		</td>
+</tr>
+
+
+<tr><td width="55"  align="center" valign="top"><BR>		</td>
+<td colspan="2" valign="top"><P><BR>
+In recognition of the significant benefits of Public 
+Key Infrastructure (PKI) technology, the University of 
+Pittsburgh became one of the first higher education 
+institutions in the U.S. to outsource its PKI needs to 
+VeriSign, Inc.  The VeriSign partnership enabled the 
+University to begin offering PKI services within 
+weeks.  Thousands of students, faculty, and staff at 
+the University have received co-branded digital 
+certificates as a result of this arrangement, 
+permitting access to the University's online computer 
+reseller, the e-Store.  A Public Key Infrastructure 
+(PKI) solution was identified, chosen, and implemented 
+at a time when PKI was just gaining industry 
+acceptance and adoption.  The implementation of a PKI 
+solution posed many challenges to University IT staff 
+and users, but provides a  stable foundation upon 
+which to develop advanced technology services.  The 
+presentation will focus on lessons learned, PKI 
+decision-making process, and future plans for this 
+technology.
+
+</td>
+<td width="55"  align="center" valign="top"><BR>		</td>
+</tr>
+<tr></tr><tr></tr><tr></tr>
+<tr>
+<td width="540" align="right" valign="top" colspan="4"><I>
+<!-- A HREF="/tfms/2000a.spring/handout/">handout</A -->
+</I><BR><BR><P><BR></td>
+</tr>
+
+
+     <tr><td width="540" align="center" valign="top" colspan="4">
+          <TABLE BORDER="3" BGCOLOR="#D3D3D3"><TR><TD WIDTH="200" ALIGN="center" VALIGN="middle">
+          <font size="4"><B>
+           Room 16
+          </B></font>
+          </TD></TR></TABLE>
+     <BR>
+     </td></tr>
+     
+
+<tr><td width="540" align="center" valign="top" colspan="4">
+<A NAME="THanss">
+<font color="#2A2A7F" size="4"><B>
+Internet2 Update
+</B></font><BR><BR></A>
+</td></tr>
+
+<tr><td width="55"  align="center" valign="top"><BR>		</td>
+<td width="420" colspan="2" valign="top">
+<B>Ted Hanss</B> <BR>
+Applications Lead <BR>
+Internet2 <BR>
+
+</td>
+<td width="55"  align="center" valign="top"><BR>		</td>
+</tr>
+
+
+<tr><td width="55"  align="center" valign="top"><BR>		</td>
+<td colspan="2" valign="top"><P><BR>
+This presentation will provide an update on Internet2 
+activities, covering organization status, applications 
+efforts, networking engineering, and international 
+partnerships.  The focus will be on applications 
+highlights, which include the increased use of high 
+quality digital video, for both real-time and on-
+demand applications; outreach to discipline-specific 
+groups, such as the new health sciences initiative; 
+the growing interest by the arts community in high 
+performance networks; and an overview of the demos 
+underway this week.  The engineering update will 
+provide the latest news on the Abilene network, 
+including its addition of new services, and 
+relationships with network peers both in the U.S. and 
+internationally.
+
+</td>
+<td width="55"  align="center" valign="top"><BR>		</td>
+</tr>
+<tr></tr><tr></tr><tr></tr>
+<tr>
+<td width="540" align="right" valign="top" colspan="4"><I>
+<!-- A HREF="/tfms/2000a.spring/handout/">handout</A -->
+</I><BR><BR><P><BR></td>
+</tr>
+
+
+
+
+</table>
+</CENTER>
+
+<BR>
+
+<P><BR>
+
+<BLOCKQUOTE>
+<HR>
+<P>
+<CENTER>
+<a href="http://www.cni.org/tfms/2000a.spring/agenda2000Stf.html#PB1"><img align=center src="larrw.gif" alt="[Backward]"></a>
+<a href="http://www.cni.org/tfms/2000a.spring/#2000TF"><img align=center src="index.gif" alt="[To Index]"></a>
+<a href="http://www.cni.org/tfms/2000a.spring/PBrief2-2000Stf.html"><img align=center src="rarrw.gif" alt="[Forward]"></a>
+<a href="http://www.cni.org/"><img align=center src="home.gif" alt="[CNI Home Page]"></a>
+</CENTER>
+
+</BLOCKQUOTE>
+
+
+<!--  This is the BEGINNING of CNI Footer!  -->
+
+<CENTER><P><BR>
+<HR SIZE="4"><P>
+<TABLE BORDER="2" CELLPADDING="7" CELLSPACING="2">
+
+
+<TR VALIGN="middle" ALIGN="center">
+
+<TD WIDTH="140" BGCOLOR="#AAAAAA">
+<A HREF="http://www.cni.org/organization.html" onMouseOver="window.status='What&nbsp; is&nbsp; CNI?'; return true">
+<B><FONT FACE="Arial,Helvetica">What&nbsp; is&nbsp; CNI?</FONT></B></A>
+</TD>
+
+<TD WIDTH="140" BGCOLOR="#D3D3D3">
+<A HREF="http://www.cni.org/projects/" onMouseOver="window.status='CNI: Projects'; return true">
+<B><FONT FACE="Arial,Helvetica">Projects</B></FONT></A>
+</TD>
+
+<TD WIDTH="140" BGCOLOR="#AAAAAA">
+<A HREF="http://www.cni.org/tfms/tf.meetings.html" onMouseOver="window.status='CNI Task Force Meetings'; return true">
+<B><FONT FACE="Arial,Helvetica">Meetings</FONT></B></A>
+</TD>
+
+<TD WIDTH="140" BGCOLOR="#D3D3D3">
+<A HREF="http://www.cni.org/regconfs/" onMouseOver="window.status='CNI Regional Conferences'; return true">
+<B><FONT FACE="Arial,Helvetica">Conferences</B></FONT></A>
+</TD>
+
+</TR>
+
+<TR VALIGN="middle" ALIGN="center">
+
+<TD WIDTH="140" BGCOLOR="#D3D3D3">
+<A HREF="http://www.cni.org/#cni" onMouseOver="window.status='CNI: What`s&nbsp; New?'; return true">
+<B><FONT FACE="Arial,Helvetica">What&#39;s&nbsp; New?</B></FONT></A>
+</TD>
+
+<TD WIDTH="140" BGCOLOR="#AAAAAA">
+<A HREF="http://www.cni.org/services.html" onMouseOver="window.status='CNI: Network Services'; return true">
+<B><FONT FACE="Arial,Helvetica">Net Services</B></FONT></A>
+</TD>
+
+<TD WIDTH="140" BGCOLOR="#D3D3D3">
+<A HREF="http://www.cni.org/search/" onMouseOver="window.status='CNI: SWISH-E Search Form'; return true">
+<B><FONT FACE="Arial,Helvetica">Search</B></FONT></A>
+</TD>
+
+<TD WIDTH="140" BGCOLOR="#AAAAAA">
+<A HREF="http://www.cni.org/archives/" onMouseOver="window.status='CNI: Resources Archives &amp; Web Site Map'; return true">
+<B><FONT FACE="Arial,Helvetica">Archives</B></FONT></A>
+</TD>
+
+
+</TR>
+
+</TABLE>
+<P>
+
+<!-- Start of CNI Text Object! -->
+
+<B><FONT SIZE="+3">CNI</FONT></B><BR>
+<FONT SIZE="-1"><B>21 Dupont Circle &nbsp; Suite #800<BR>
+Washington, DC&nbsp; 20036-1109<BR>
+202.296.5098<BR>
+&lt;<A HREF="http://www.cni.org/" onMouseOver="window.status='Coalition for Networked Information'; return true">http://www.cni.org/</A>&gt;</B></FONT>
+
+<!-- End CNI Text Object! -->
+
+
+</CENTER>
+<P>
+
+<!-- Start of Copyright Text Object! -->
+<P><CENTER>
+<TABLE BORDER="0" WIDTH="100%">
+
+<TR><TD ALIGN="center" VALIGN="middle" WIDTH="5%" ROWSPAN="1">
+<A HREF="mailto:webmgr@cni.org?Subject=Comments about &lt;http://www.cni.org/tfms/2000a.spring/PBrief1-2000Stf.html&gt;" 
+onMouseOver="window.status='[Send the CNI webmgr@cni.org an e-mail message]'; return true">
+<img src="mailbox.gif" border="0" alt="[Image: mailbox.gif; Send the CNI webmgr@cni.org an e-mail message]"></A>
+</TD>
+
+<TD ALIGN="left" VALIGN="middle" WIDTH="25%">
+<FONT SIZE="-1"><B>Developed &amp; Maintained by:<BR>
+<A HREF="mailto:webmgr@cni.org?Subject=Comments about &lt;http://www.cni.org/tfms/2000a.spring/PBrief1-2000Stf.html&gt;" 
+onMouseOver="window.status='[Send the CNI webmgr@cni.org an e-mail message]'; 
+return true">webmgr@cni.org</A></FONT>
+</B><BR></FONT></TD>
+
+
+<TD ALIGN="right" VALIGN="middle" WIDTH="70%">
+<FONT><B>&copy;</B></FONT>
+<FONT SIZE="-1"><B>  
+
+2006 
+ Coalition for Networked Information<BR>
+ALL RIGHTS RESERVED.</B><BR></FONT>
+</TD></TR>
+
+<TR>
+<TD ALIGN="left" VALIGN="middle" WIDTH="30%" COLSPAN="2">
+<FONT SIZE="-1">
+<A HREF="http://www.cni.org/forms/feedback/" onMouseOver="window.status='CNI: Web Site Feedback Form'; return true">
+<B>Any comments, or feedback?</B></A></FONT>
+</TD>
+
+<TD ALIGN="right" VALIGN="middle" WIDTH="70%">
+<FONT ALIGN="RIGHT" SIZE="2"><B>Last Update: &nbsp </B>
+
+Wednesday, 03 July, 2002 - 04:19 PM - EDT</FONT>
+</TD></TR>
+
+</TABLE>
+</CENTER><P>
+<!-- End Copyright Text Object! -->
+
+</BODY>
+
+<!--  This is the END of CNI Footer!  -->
+
+
+
+</HTML>
+

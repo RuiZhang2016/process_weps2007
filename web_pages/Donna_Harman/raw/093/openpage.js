@@ -1,0 +1,1 @@
+function openpage(pageurl){newwin=window.open(pageurl,target="_self");}

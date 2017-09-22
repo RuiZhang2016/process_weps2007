@@ -1,0 +1,283 @@
+/* modified 20 May 2003 Thanasis Kinias */
+
+
+body {
+    background-color: #fff;
+    color: #000;
+    margin: 0;
+    padding: 0;
+    padding-bottom: 1em;
+}
+
+body, caption, div, h1, h2, h3, h4, h5, h6, p, th, td, dl, dt, dd, ol, ul, li,
+input {
+    font-family: Arial, "Times New Roman", Times, Roman, serif;
+    font-size: small;
+}
+
+.nowrap {
+    white-space: nowrap;
+}
+
+.hidden {
+    display: none;
+}
+
+.left {
+    text-align: left;
+}
+
+.center {
+    text-align: center;
+}
+
+.right {
+    text-align: right;
+}
+
+
+/* -------------------------- links ---------------------------------------- */
+
+a.current { color: #666 }
+a:link, a:visited, a:active, a:hover { font-weight: bold }
+
+a:link { color: #369 }
+a:visited { color: #036 }
+a.head:link { color: #fff }
+a.head:visited { color: #ccc }
+a.dlink:link { color: #fff }
+a.dlink:visited { color: #fff }
+
+a:active, a.head:active, a.dlink:active { color: #393 }
+a:hover, a.head:hover, a.dlink:hover {
+    background-color: #000000;
+    color: #cfc;
+    text-decoration: overline underline;
+}
+
+
+/* -------------------------- divisions ------------------------------------ */
+
+div.eg {
+  text-align: left;
+  }
+
+	div.eg p, div.eg pre {
+	  margin-left: 1em;
+	  margin-right: 1em;
+	  }
+
+div.head {
+    color: #339933;
+    text-align: center;
+}
+
+div.dextra {
+  float: left;
+}
+
+div.sinistra {
+  float: left;
+}
+
+/* -------------------------- headings ------------------------------------- */
+
+h1 { 
+    color: #339933;
+    font-size: 250%;
+    font-weight: bold;
+    margin: 0 1% 0;
+    padding: 0;
+    text-align: left;
+}
+
+h2 { 
+    color: #69c;
+    font-family: sans-serif;
+    font-size: 150%;
+    font-weight: bold;
+    letter-spacing: 0.05em;
+    margin-left: 1%;
+    margin-right: 1%;
+    padding: 5px 1%;
+    text-align: left;
+    text-transform: uppercase;
+}
+
+h3 {  
+    color: #339933;
+    font-family: sans-serif;
+    font-size: 125%;
+    font-weight: bold;
+    font-variant: small-caps;
+    margin-left: 1%;
+    margin-right: 1%;
+    padding: 0 1%;
+    text-align: left;
+}
+
+h4 {  
+    color: #339933;
+    font-size: 110%;
+    font-style: italic;
+    font-weight: bold;
+    margin-bottom: 0;
+    margin-left: 1%;
+    margin-right: 1%;
+    padding: 0 1%;
+    text-align: left;
+}
+
+h5 {
+    font-size: 100%;
+    font-style: italic;
+    font-weight: normal;
+    margin-bottom: -1em;
+    margin-left: 1%;
+    margin-right: 1%;
+    padding: 0 1%;
+    text-align: left;
+}
+
+
+/* -------------------------- paragraphs ----------------------------------- */
+
+blockquote {
+    font-size: 90%;
+}
+
+p, dl, pre {
+    margin-left: 1%;
+    margin-right: 1%;
+    padding: 0 1%;
+}
+
+p.greybox, p.printnote {
+    color: #000000;
+    font-weight: bold;
+}
+
+p.headnav { 
+    clear: both;
+    margin: 0;
+    padding: 5px;
+}
+
+p.nav { 
+    clear: both;
+    text-align: center;
+}
+
+p.postdate { 
+    text-align: center;
+}
+
+
+/* -------------------------- tables --------------------------------------- */
+
+table.reduced {
+    margin-bottom: 1em;
+    margin-left: 2%;
+    margin-right: 2%;
+}
+
+    table.reduced th, table.reduced thead th, table.reduced tbody th, 
+            table.reduced td, table.reduced tbody td {
+        font-size: 90%;
+    }
+
+tr.top {
+    background-color: #69c;
+}
+
+tbody.odd tr, tr.odd { background-color: #eef }
+
+th.top {
+    color: #fff;
+    font-weight: bold;
+}
+
+tbody th {
+    font-weight: bold;
+}
+
+table.head { 
+    background: #000000;
+}
+
+table.head td img {
+    display: block;
+}
+
+.mastnav {
+    background: #69c;
+}
+
+/* -------------------------- lists ---------------------------------------- */
+
+dt {
+    font-weight: bold;
+}
+
+
+/* -------------------------- images --------------------------------------- */
+
+
+/* -------------------------- forms ---------------------------------------- */
+
+
+/* -------------------------- type styles etc. ----------------------------- */
+
+.red {
+    color: #ff0000;
+}
+
+em.red {
+    font-style: normal;
+}  
+
+em.u {
+    font-style: normal;
+    text-decoration: underline;
+}
+
+code {
+    color: #990033;
+    font-family: "Lucida Console", monospace;
+    font-size: 0.9em;
+}
+
+kbd {
+    font-family: "Courier New", monospace;
+}
+
+kbd.domain {
+    font-weight: inherit;
+    text-transform: uppercase;
+}
+
+samp {
+    font-family: Pica, monospace;
+}
+
+var {
+    font-style: italic;
+}
+
+acronym {
+    font-size: 90%;
+    text-transform: uppercase;
+}
+
+acronym.nosmall, 
+        h1 acronym, h2 acronym, h3 acronym, h4 acronym, h5 acronym, h6 acronym, 
+        table.reduced acronym {
+    font-size: 100%;
+    font-variant: normal;
+    text-transform: none;
+}
+
+.fyi {
+    font-weight: bolder;
+}
+

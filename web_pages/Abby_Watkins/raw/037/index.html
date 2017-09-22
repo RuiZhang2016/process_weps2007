@@ -1,0 +1,356 @@
+<html>
+    <head>
+        <link type="text/css" rel="stylesheet" href="http://a1072.g.akamai.net/f/1072/2062/1h/gallery.rei.com/rei/css/nav.css">
+        <title>REI: Newsroom</title>
+    </head>
+    <body topmargin="0" marginwidth="0" marginheight="0" leftmargin="0" bgcolor="#ffffff">
+        <a name="top"></a><script language="JavaScript" src="http://a1072.g.akamai.net/f/1072/2062/1h/gallery.rei.com/rei/javascript/gr_cookie.js" type="text/javascript"></script>
+<script language="JavaScript" src="http://a1072.g.akamai.net/f/1072/2062/1h/gallery.rei.com/rei/javascript/querystring.js" type="text/javascript"></script>
+
+<script type="text/javascript" src="/javascript/coremetrics/rei/env/env.js"></script>
+<script type="text/javascript" src="http://a1072.g.akamai.net/f/1072/2062/1h/gallery.rei.com/rei/javascript/coremetrics/eluminate.js"></script>
+<script type="text/javascript" src="http://a1072.g.akamai.net/f/1072/2062/1h/gallery.rei.com/rei/javascript/coremetrics/cmdatatagutils.js"></script>
+<script type="text/javascript" src="http://a1072.g.akamai.net/f/1072/2062/1h/gallery.rei.com/rei/javascript/coremetrics/rei/rei.js"></script>
+<script type="text/javascript" src="http://a1072.g.akamai.net/f/1072/2062/1h/gallery.rei.com/rei/javascript/querystring.js"></script>
+
+<script language="javascript" type="text/javascript">
+// sitedocs/rei/include/reihdr.inc
+function setCookie(name, value){
+    var expdate = "Fri, 31-Dec-99 11:59:59 GMT"
+    document.cookie=name+"="+escape(value)+"; expires="+expdate+"; path=/" ;
+}
+function logout(){
+    setCookie("SESSION_ID","");
+    setCookie("loggedin","0");
+    setCookie("rei_cart","0");
+    setCookie("GiftRegistrySetup","0");
+
+ }
+function getCookieVal(offset) {
+    var endstr = document.cookie.indexOf(";", offset);
+    if (endstr == -1)
+      endstr = document.cookie.length;
+    return unescape(document.cookie.substring(offset, endstr));
+}
+
+function getCookie(name) {
+    var arg = name + "=";
+    var alen = arg.length;
+    var clen = document.cookie.length;
+    var i = 0;
+    while (i < clen) {
+      var j = i + alen;
+      if (document.cookie.substring(i, j) == arg)
+        return getCookieVal(j);
+      i = document.cookie.indexOf(" ", i) + 1;
+      if (i == 0) break;
+    }
+    return null;
+}
+
+    function getAffiliateID() {
+    var PAT = getCookie("PAT");
+    var ID = 0;
+    if(PAT != null) {
+      var i = PAT.indexOf("=", 0) + 1;
+      var j = PAT.indexOf(":", i);
+      ID = PAT.substring(i, j);
+    }
+    return ID;
+}
+
+var affiliateID = getAffiliateID();
+
+if ((affiliateID == "9048" || affiliateID == "11917" || affiliateID == "14028" || affiliateID == "14172") && window.location.protocol == "https:") {
+  if (top.location != self.location) {
+    top.location = self.location;
+  }
+}
+
+var multipleItems = "s";
+var numOfItems = getCookie("rei_cart");
+var loggedIn = getCookie("loggedin");
+if (!numOfItems ) numOfItems = 0;
+if( numOfItems == 1 ) multipleItems = "";
+
+</script>
+
+
+
+
+<table width="734" border="0" cellpadding="0" cellspacing="0">
+<tr>
+<td width="149" rowspan="3" class="bgColBlk"><a href="/index.jsp?stat=header_rei"><img src="http://a1072.g.akamai.net/f/1072/2062/1h/gallery.rei.com/common/rei_logo.gif" width="149" height="90" border="0" alt="www.rei.com"></a></td>
+<td width="585" colspan="3" class="bgColYel"><img src="http://a1072.g.akamai.net/f/1072/2062/1h/gallery.rei.com/common/white.gif" width="585" height="1" border="0" alt=""><br>
+<form method="get" action="/online/store/Search" name="psearch"><input type="hidden" name="vcat" value="REI_SEARCH">
+<input value="7889" name="stat" type="hidden"><input value="-1" name="langId" type="hidden"><input value="8000" name="storeId" type="hidden">
+
+<table width="585" border="0" cellpadding="0" cellspacing="0">
+<tr>
+<td width="27"><img src="http://a1072.g.akamai.net/f/1072/2062/1h/gallery.rei.com/common/white.gif" width="27" height="17" border="0" alt=""></td>
+<td width="227" valign="bottom"><img src="http://a1072.g.akamai.net/f/1072/2062/1h/gallery.rei.com/common/search.gif" width="153" height="17" border="0" alt="Search REI.com"></td>
+<td width="82" valign="top"><img src="http://a1072.g.akamai.net/f/1072/2062/1h/gallery.rei.com/common/white.gif" width="82" height="17" border="0" alt=""></td>
+<td width="137" valign="top"><img src="http://a1072.g.akamai.net/f/1072/2062/1h/gallery.rei.com/common/white.gif" width="137" height="17" border="0" alt=""></td>
+<script language="javascript" type="text/javascript">
+if (loggedIn == 1) {
+  document.write('<td width="112" align="center" valign="top" class="smText"><a href="/online/store/REILogoffCmd?storeId=8000&langId=-1&catalogId=40000008000&URL=' + location.href + '">Log out</a></td></tr>');
+} else {
+  document.write('<td width="112" align="center" valign="top" class="smText"><a href="https://' + location.host + '/online/store/YourAccountLoginView?catalogId=40000008000&storeId=8000&langId=-1&URL=' + location.href + '">Log in</a></td></tr>');
+}
+</script>
+
+<tr>
+<td width="27" rowspan="2"><img src="http://a1072.g.akamai.net/f/1072/2062/1h/gallery.rei.com/common/white.gif" width="27" height="24" border="0" alt=""></td>
+<td width="227" valign="top" rowspan="2" class="smText">
+<table width="150" border="0" cellpadding="0" cellspacing="0">
+<tr><td class="smText"><input type="text" name="textQuery" value="Enter a word or item #" onFocus="javascript:document.psearch.textQuery.value='';" size="23" maxlength="60"></td><td><input type="image" src="http://a1072.g.akamai.net/f/1072/2062/1h/gallery.rei.com/common/button_go.gif" border="0" alt="GO"></td></tr></table></td>
+<td width="82" align="center" valign="middle" class="smText">
+<script language="javascript" type="text/javascript">
+
+   var setup_cook_obj = ReadGRCookie("GiftRegistrySetup");
+if (setup_cook_obj !=null && loggedIn == 1) {
+   document.write('<a href="http://' + window.location.hostname + '/online/store/GiftRegistryEditProductsDisplay?registryId=' + setup_cook_obj.id + '&URL=GiftRegistryManage&errorViewName=GiftRegistryErrorView"><img src="http://a1072.g.akamai.net/f/1072/2062/1h/gallery.rei.com/common/nav/btn_reg.gif" width="72 " height="22" border="0" alt="Back to Registry List"></a>');
+} else {
+  document.write('<img src="http://a1072.g.akamai.net/f/1072/2062/1h/gallery.rei.com/common/white.gif" width="82" height="17" border="0">');
+}
+</script></td>
+<td width="137" align="center" valign="middle" class="smText"><a href="/online/store/ShoppingBasket?storeId=8000&langId=-1&catalogId=40000008000&stat=header_cart"><img src="http://a1072.g.akamai.net/f/1072/2062/1h/gallery.rei.com/common/nav/btn_sc.gif" width="127" height="22" border="0" alt="Shopping Cart"></a></td>
+<script language="javascript" type="text/javascript">
+if(loggedIn == 1){
+document.write('<td width="112" align="center" valign="middle" class="smText"><a href="/online/store/YourAccountInfoInView?storeId=8000&langId=-1&catalogId=40000008000&stat=header_account"><img src="http://a1072.g.akamai.net/f/1072/2062/1h/gallery.rei.com/common/nav/btn_ya.gif" width="102" height="22" border="0" alt="Your Account"></a></td></tr>');
+}else{
+document.write('<td width="112" align="center" valign="middle" class="smText"><a href="/online/store/YourAccountInfoOutView?storeId=8000&langId=-1&catalogId=40000008000&stat=header_account"><img src="http://a1072.g.akamai.net/f/1072/2062/1h/gallery.rei.com/common/nav/btn_ya.gif" width="102" height="22" border="0" alt="Your Account"></a></td></tr>');
+}
+</script>
+
+<tr>
+<td width="82" align="center" valign="middle" class="smText"><img src="http://a1072.g.akamai.net/f/1072/2062/1h/gallery.rei.com/common/white.gif" width="82" height="15" border="0" alt=""></td>
+<script language="javascript" type="text/javascript">
+if(document.title != "REI.com: Shopping Basket"){
+document.write('<td width="137" align="center" valign="middle" class="smText">(contains ' + numOfItems + ' item' + multipleItems + ')</td>');
+}
+else{
+document.write('<td width="137" align="center" valign="middle" class="smText"></td>');
+}
+
+if(loggedIn == 1){
+document.write('<td width="112" align="center" valign="middle" class="smText">You are logged in.</td></tr>');
+}
+else{
+document.write('<td width="112" align="center" valign="middle" class="smText">You are not logged in.</td></tr>');
+}
+</script>
+
+</table>
+
+</td></tr></form>
+<tr>
+<td width="585" colspan="3" valign="bottom" class="bgColYel"><img src="http://a1072.g.akamai.net/f/1072/2062/1h/gallery.rei.com/common/white.gif" width="585" height="5" border="0" alt="spacer"></td></tr>
+<tr>
+<td width="585" colspan="3" valign="bottom" class="bgColYel">
+<table width="492" border="0" cellpadding="0" cellspacing="0">
+<tr>
+<td width="14"><img src="http://a1072.g.akamai.net/f/1072/2062/1h/gallery.rei.com/common/white.gif" width="14" height="26" border="0" alt=""></td>
+<td width="69"><a href="/index.jsp?stat=header_rei"><img src="http://a1072.g.akamai.net/f/1072/2062/1h/gallery.rei.com/common/tab_rei4.gif" width="69" height="26" border="0" alt="REI.com"></a></td>
+<td width="113"><a href="/outlet/index.html?stat=header_outlet"><img src="http://a1072.g.akamai.net/f/1072/2062/1h/gallery.rei.com/common/tab_outlet4.gif" width="113" height="26" border="0" alt="REI-OUTLET.com"></a></td>
+<td width="104"><a href="/adventures/index.html?stat=header_adventures"><img src="http://a1072.g.akamai.net/f/1072/2062/1h/gallery.rei.com/common/tab_adventures4.gif" width="104" height="26" border="0" alt="REI Adventures"></a></td>
+<td width="105"><a href="/stores/index.jsp?stat=header_stores"><img src="http://a1072.g.akamai.net/f/1072/2062/1h/gallery.rei.com/common/tab_stores4.gif" width="105" height="26" border="0" alt="Store Locator"></a></td><td width="87"><a href="/online/store/GiftRegistryHomeView?storeId=8000&stat=header_gr"><img src="http://a1072.g.akamai.net/f/1072/2062/1h/gallery.rei.com/common/tab_giftreg4.gif" width="87" height="26" border="0" alt="Gift Registry"></a></td></tr>
+</table>
+</td></tr>
+
+<tr>
+<td width="585" colspan="3" class="bgColDGr"><img src="http://a1072.g.akamai.net/f/1072/2062/1h/gallery.rei.com/common/white.gif" width="585" height="1" border="0" alt=""></td></tr>
+
+<tr>
+<td width="149" rowspan="2" class="bgSmTopo"><img src="http://a1072.g.akamai.net/f/1072/2062/1h/gallery.rei.com/common/white.gif" width="149" height="20" border="0" alt=""></td>
+<td class="bgColGr"><img src="http://a1072.g.akamai.net/f/1072/2062/1h/gallery.rei.com/common/white.gif" width="1" height="10" border="0" alt=""></td>
+<td width="585" class="bgColGr"><table width="585" border="0" cellpadding="0" cellspacing="0">
+<tr>
+<td width="15"><img src="http://a1072.g.akamai.net/f/1072/2062/1h/gallery.rei.com/common/white.gif" width="15" height="1" border="0" alt=""></td>
+<td width="49" align="center" class="smWhText"><a href="/index.jsp?stat=header_home" class="white">Home</a></td>
+
+<td width="5" align="center" class="smWhText">|</td>
+<td width="118" align="center" class="smText"><a href="/rei/gearshop/index.jsp?stat=header_shop_all" class="white">Shop All Categories</a></td>
+<td width="5" align="center" class="smWhText">|</td>
+<td width="118" align="center" class="smText"><a href="/shared/help/orderhelp.html?storeId=8000&stat=header_ordering" class="white">Ordering Questions</a></td>
+<td width="5" align="center" class="smWhText">|</td>
+<td width="96" align="center" class="smWhText"><a href="/shared/help/shipping.html?storeId=8000&stat=header_shipping" class="white">Shipping Info</a></td>
+<td width="5" align="center" class="smWhText">|</td>
+<td width="73" align="center" class="smText"><a href="/shared/help/feedback/feedback.html?storeId=8000&stat=header_contact" class="white">Contact Us</a></td>
+<td width="5" align="center" class="smWhText">|</td>
+<td width="50" align="center" class="smText"><a href="/rei/help/hintro.html?stat=header_help" class="white">Help</a></td>
+<td width="45"><img src="http://a1072.g.akamai.net/f/1072/2062/1h/gallery.rei.com/common/white.gif" width="45" height="1" border="0" alt=""></td></tr>
+</table>
+</td>
+<td class="bgColDGr"><img src="http://a1072.g.akamai.net/f/1072/2062/1h/gallery.rei.com/common/white.gif" width="1" height="21" border="0" alt=""></td></tr>
+
+<tr>
+<td width="585" colspan="3" class="bgColDGr"><img src="http://a1072.g.akamai.net/f/1072/2062/1h/gallery.rei.com/common/white.gif" width="585" height="1" border="0" alt=""></td></tr>
+
+</table>
+
+<table width="734" cellspacing="0" cellpadding="0" border="0">
+            <tr>
+                <td width="149" valign="top" class="bgTopo"><!--BEGIN include file aboutsbr.inc-->
+
+<table width="149" border="0" cellpadding="0" cellspacing="0">
+<tr>
+<td width="14"><img src="http://a1072.g.akamai.net/f/1072/2062/1h/gallery.rei.com/common/white.gif" width="14" height="1" border="0" alt=""></td>
+<td width="135" valign="top" class="regBText">
+<a href="/aboutrei/about_rei.html" class="yellow">About REI</a><br><br></td></tr>
+<tr>
+<td width="14"><img src="http://a1072.g.akamai.net/f/1072/2062/1h/gallery.rei.com/common/white.gif" width="14" height="1" border="0" alt=""></td>
+<td width="135" valign="top" class="regText">
+<font class="smyellow"><span class="regBText">Report to Members</span></font>
+<a href="/aboutrei/president.html" class="smyellow">President's Message</a><br>
+<a href="/aboutrei/chairman.html" class="smyellow">Chairman's Message</a><br>
+<a href="/aboutrei/financial.pdf" class="smyellow">Financial Information</a>&nbsp;<span class="smyellow">(PDF)</span><br>
+<a href="/aboutrei/officers.html" class="smyellow">Corporate Officers</a><br>
+<a href="/aboutrei/bod.html" class="smyellow">Board of Directors</a><br><br></td></tr>
+<tr>
+<td width="14"><img src="http://a1072.g.akamai.net/f/1072/2062/1h/gallery.rei.com/common/white.gif" width="14" height="1" border="0" alt=""></td>
+<td width="135" valign="top" class="regBText">
+<a href="/aboutrei/business.html" class="yellow">REI Facts</a></td></tr>
+<tr>
+<td width="14"><img src="http://a1072.g.akamai.net/f/1072/2062/1h/gallery.rei.com/common/white.gif" width="14" height="1" border="0" alt=""></td>
+<td width="135" valign="top" class="regText">
+<a href="/aboutrei/business.html#rei_culture" class="smyellow">REI Culture</a><br>
+<a href="/aboutrei/business.html#100_best" class="smyellow">100 Best Employer</a><br>
+<a href="/aboutrei/business.html#rei_crafted" class="smyellow">REI Crafted Gear</a><br><br></td></tr>
+<tr>
+<td width="14"><img src="http://a1072.g.akamai.net/f/1072/2062/1h/gallery.rei.com/common/white.gif" width="14" height="1" border="0" alt=""></td>
+<td width="135" valign="top" class="regBText">
+<a href="/aboutrei/newsroom.html" class="yellow">Newsroom</a></td></tr>
+<tr>
+<td width="14"><img src="http://a1072.g.akamai.net/f/1072/2062/1h/gallery.rei.com/common/white.gif" width="14" height="1" border="0" alt=""></td>
+<td width="135" valign="top" class="regText">
+<a href="/aboutrei/newsroom.html#current" class="smyellow">Current press releases</a><br>
+<a href="/aboutrei/archived_news.html" class="smyellow">Archived press releases</a><br><br></td></tr>
+<tr>
+<td width="14"><img src="http://a1072.g.akamai.net/f/1072/2062/1h/gallery.rei.com/common/white.gif" width="14" height="1" border="0" alt=""></td>
+<td width="135" valign="top" class="regBText">
+<a href="/aboutrei/gives02.html" class="yellow">REI Gives</a></td></tr>
+<tr>
+<td width="14"><img src="http://a1072.g.akamai.net/f/1072/2062/1h/gallery.rei.com/common/white.gif" width="14" height="1" border="0" alt=""></td>
+<td width="135" valign="top" class="regText"><a href="/aboutrei/grants02.html" class="smyellow">Grants</a><br>
+<a href="/aboutrei/conservation02.html" class="smyellow">Conservation Projects</a><br>
+<a href="/aboutrei/outdoor02.html#OutdoorRecreationProjects" class="smyellow">Outdoor Recreation Projects</a><br>
+<a href="/aboutrei/foundation02.html" class="smyellow">REI Foundation Grants</a><br><br></td></tr>
+<tr>
+<td width="14"><img src="http://a1072.g.akamai.net/f/1072/2062/1h/gallery.rei.com/common/white.gif" width="14" height="1" border="0" alt=""></td>
+<td width="135" valign="top" class="regBText">
+<a href="/aboutrei/commserv02.html" class="yellow">Community Service</a></td></tr>
+<tr>
+<td width="14"><img src="http://a1072.g.akamai.net/f/1072/2062/1h/gallery.rei.com/common/white.gif" width="14" height="1" border="0" alt=""></td>
+<td width="135" valign="top" class="regText">
+<a href="/aboutrei/serviceproj02.html" class="smyellow">Service Projects</a><br><br></td></tr>
+<tr>
+<td width="14"><img src="http://a1072.g.akamai.net/f/1072/2062/1h/gallery.rei.com/common/white.gif" width="14" height="1" border="0" alt=""></td>
+<td width="135" valign="top" class="regBText">
+<a href="/aboutrei/reikids02.html" class="yellow">REI &amp; Youth</a><br><br></td></tr>
+<tr>
+<td width="14"><img src="http://a1072.g.akamai.net/f/1072/2062/1h/gallery.rei.com/common/white.gif" width="14" height="1" border="0" alt=""></td>
+<td width="135" valign="top" class="regYelBText">
+Related REI links:</td></tr>
+<tr>
+<td width="14"><img src="http://a1072.g.akamai.net/f/1072/2062/1h/gallery.rei.com/common/white.gif" width="14" height="1" border="0" alt=""></td>
+<td width="135" valign="top" class="regText">
+<a href="/jobs/index.html" class="smyellow">Jobs at REI</a><br>
+<a href="/aboutrei/research02.html" class="smyellow">Research Links</a><br></td></tr>
+<tr><td width="149" colspan="2">
+<br>
+<img src="http://a1072.g.akamai.net/f/1072/2062/1h/gallery.rei.com/common/white.gif" width="149" height="1" border="0" alt="">
+<br>
+
+</td></tr></table>
+
+<!--END include file aboutsbr.inc-->
+</td><td width="1" class="bgColDGr"><img width="1" src="http://a1072.g.akamai.net/f/1072/2062/1h/gallery.rei.com/common/white.gif" height="20" border="0" alt=""></td><td width="14"><img width="14" src="http://a1072.g.akamai.net/f/1072/2062/1h/gallery.rei.com/common/white.gif" height="20" border="0" alt=""></td><td width="570" valign="top">
+                    <br>
+                    <table width="570" cellspacing="0" cellpadding="0" border="0">
+                        <tr>
+                            <td width="570" valign="top">
+                                <p>
+                                    <img width="570" src="http://a1072.g.akamai.net/f/1072/2062/1h/gallery.rei.com/graphics/about_rei/hdl_newsroom.gif" height="35" border="0" alt="Newsroom"></p>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td width="570" valign="top"><font size="2" face="geneva, arial, helvetica"><a href="javascript:history.back(1)">Return to directory</a>
+                                    <br>
+                                    <br>
+                                </font></td>
+                        </tr>
+                        <tr>
+                            <td width="570" valign="top"><font size="2" face="geneva, arial, helvetica">
+                                    <p>
+                                        <font size="2" face="geneva, arial, helvetica">
+                                            <p>September 16, 2003</p>
+                                        </font>
+                                    </p>
+                                    <p>
+                                        <b>CONTACT:</b> REI Public Affairs (253) 395-5958</p>
+                                    <p align="center">
+                                        <b>FOR IMMEDIATE RELEASE:</b>
+                                    </p>
+                                </font>
+                                <br>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td width="570" valign="top" align="center"><font size="2" face="geneva, arial, helvetica">
+                                    <p>
+                                        <b>REI Partners with Black Diamond to Take HERA Climb for Life on the Road</b>
+                                    </p>
+                                </font>
+                                <br>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td width="570" valign="top"><font size="2" face="geneva, arial, helvetica">
+                                    <p>Black Diamond Equipment Ltd. and Recreational Equipment, Inc. (REI) today announced a partnership which will take the HERA (Health Empowerment, Research and Advocacy) Ovarian Cancer Climb for Life Road Tour to six cities this winter.</p>
+                                </font><font size="2" face="geneva, arial, helvetica">
+                                    <p>The HERA Ovarian Cancer Climb for Life REI Road Tour will promote ovarian cancer awareness and raise money for cancer research as part of month-long events in Seattle, Denver, Minneapolis and Salt Lake City, as well as two California stops &#8211; Fremont and Manhattan Beach. Entire families can participate in the promotion, earning points from climbing on climbing pinnacles at REI retail stores and at local gyms. Points will be tallied in participant scorebooks with incentives to gain pledges from friends, family and community members. </p>
+<p>Each promotion will begin with an event at REI, featuring Black Diamond product raffles, IZZE Beverage Company sparkling fruit drinks, climbing clinics and demos, and a talk by a local medical expert on ovarian cancer. At the end of the month- long promotion in each city, awards will be presented to the top finishers in each age and ability category. Black Diamond climbers Steph Davis, Kim Csizmasia, Abby Watkins, Heidi Wirtz and Tiffany Campbell will also visit each REI location to present slide shows and climbing clinics.</p>
+<p>Sean Patrick, ovarian cancer survivor and founder of HERA Women&#8217;s Cancer Foundation comments, &#8220;We are very excited to welcome REI as our newest 7 Summits Partner with the announcement of the HERA Ovarian Cancer Climb for Life REI Road Tour. With REI&#8217;s support we will be able to reach a broader audience to raise awareness for ovarian cancer and will hopefully be able to save more women's lives.&#8221;</p>
+<p>Dennis Madsen, CEO of REI adds, "Every once in a while, an opportunity comes along that combines REI's efforts to promote outdoor stewardship or to engage people in outdoor recreation, with an equally important cause - which is why REI is proud to partner with Black Diamond as a sponsor of HERA's Ovarian Cancer Climb for Life REI Road Tour." </p>
+<p>The second annual HERA Climb for Life event will kick off in Salt Lake City, September 11 &#8211; 14, 2003, hosted by Black Diamond. This flagship event, which last year raised more than $80,000, will be highlighted by the Governor of Utah proclaiming September as State of Utah Ovarian Cancer Month, and kicking off the national REI Road Tour which will begin in Southern California in January. For more detailed information on the event in your local area go to www.ovariancancer.jhmi.edu/climb</p>
+<p>Black Diamond Equipment Ltd. is an employee-owned manufacturer of equipment for rock climbing, alpinism and backcountry skiing. By consistently building innovative products and actively preserving the mountain environment, Black Diamond has assumed a leadership role in the international outdoor community. For more information on Black Diamond and the company's family of brands, including Ascension, Beal Ropes, Bibler Tents, Franklin Climbing Equipment and Scarpa Footwear, go to <a href="http://www.BlackDiamondEquipment.com">www.BlackDiamondEquipment.com</a>.</p>
+<p>REI, founded in 1938 as a consumer co-op by a group of Pacific Northwest mountaineers, is a national multi-channel retailer of quality outdoor products. &nbsp;REI sells all of the top outdoor brands, including its own line of award-winning gear and apparel for hiking, camping, climbing, cycling, paddling and winter sports. &nbsp;While anyone may join or shop at REI, members pay a one-time $15 fee and receive a share in the company's profits through an annual patronage refund based on their purchases. &nbsp;A portion of REI's profits is set aside each year for support of conservation, outdoor recreation and environmental stewardship causes, with $1.8 million to be awarded this year and more than $9 million since 1976, to such efforts around the country. &nbsp;REI currently operates 67 retail stores in 24 states; two online stores -- <a href="http://www.REI.com">REI.com</a> and <a href="http://REI-OUTLET.com">REI-OUTLET.com</a> -- and an adventure travel company, REI Adventures.</p>
+<p>The mission of the HERA Women&#8217;s Cancer Foundation is to empower women to take control of their health, to empower scientists to seek new directions in ovarian cancer research, and to empower communities to provide support. The HERA Foundation is a 501(c) 3 not for profit organization. No salaries are paid, board members pay their own way so that at least 90 percent of the money raised goes to research, awareness and to provide support. HERA is named for the Greek goddess who was a protector of women and shook up the status quo. It is also an acronym for Women's Health, Empowerment, Research and Advocacy. </p>
+                                </font></td>
+                        </tr>
+                    </table>
+                    <br>
+<script language="javascript" type="text/javascript">
+// sitedocs/rei/include/reiftr.inc
+if(loggedIn == 1){
+	var yaView = "<a href=\"/online/store/YourAccountInfoInView?storeId=8000&langId=-1&catalogId=40000008000&stat=footer_account\" target=\"_parent\">Your Account</a>";
+} else {
+	var yaView = "<a href=\"/online/store/YourAccountInfoOutView?storeId=8000&langId=-1&catalogId=40000008000&stat=footer_account\" target=\"_parent\">Your Account</a>";
+}
+</script>
+
+<table width="570" border="0" cellpadding="0" cellspacing="5">
+<tr>
+<td width="570" align="center" class="regGrText"><br>
+<img src="http://a1072.g.akamai.net/f/1072/2062/1h/gallery.rei.com/common/white.gif" width="560" height="1" border="0" alt="">
+<br>
+<a href="/index.jsp?stat=footer_home" target="_parent">REI.com Home</a>&nbsp; | &nbsp;<a href="/online/store/ShoppingBasket?storeId=8000&langId=-1&catalogId=40000008000&stat=footer_cart" target="_parent">Shopping Cart</a>&nbsp; | &nbsp;<script language="javascript" type="text/javascript">
+document.write(yaView);</script>&nbsp; | &nbsp;<a href="/webservices/rei/ExternalLink?stat=footer_visa&url=http://www.reivisa.com/62rei" target="_parent">Apply for an REI Visa&reg;</a></td></tr>
+<tr>
+<td width="570" align="center" class="regGrText"><a href="/rei/help/hintro.html?storeId=8000?stat=footer_help" target="_parent">Help</a>&nbsp; | &nbsp;<a href="/shared/help/feedback/feedback.html?storeId=8000&stat=footer_contact" target="_parent">Contact Us</a>&nbsp; | &nbsp;<a href="/rei/livehelp/genstart.html" target="_parent">Live Help</a>&nbsp; | &nbsp;<a href="/shared/help/feedback/feedback.html?storeId=8000&stat=footer_email#email" target="_parent">E-mail</a>&nbsp; | &nbsp;<a href="http://ww2.rei.com" target="_parent">Shop All Categories</a>&nbsp; | &nbsp;<a href="/jobs/index.html?stat=footer_jobs" target="_parent">Jobs</a></td></tr>
+<tr>
+<td width="570" align="center" class="regGrText"><a href="/outlet/index.html?stat=footer_outlet"  target="_parent">REI-OUTLET.com</a>&nbsp; | &nbsp;<a href="/adventures/index.html?stat=footer_adventures" target="_parent">REI Adventures</a>&nbsp; | &nbsp;<a href="/cgs/index.html?stat=footer_corp_sales" target="_parent">Corporate Sales</a>&nbsp; | &nbsp;<a href="/stores/index.jsp?stat=footer_store" target="_parent">Find an REI Store</a></td></tr>
+<tr>
+<td width="570" align="center" class="regGrText" valign="bottom"><table width="570" border="0" cellpadding="0" cellspacing="0"><tr><td width="570"><img src="http://a1072.g.akamai.net/f/1072/2062/1h/gallery.rei.com/common/white.gif" width="560" height="3" border="0" alt=""></td></tr>
+<tr><td width="570" align="center" class="regGrText" valign="bottom"><a href="/shared/help/copyright.html?storeId=8000&stat=footer_copyright" target="_parent"><img src="http://a1072.g.akamai.net/f/1072/2062/1h/gallery.rei.com/common/nav/footer_copyright.gif" width="94" height="11" border="0" alt="&#169; 1996-2004 REI"></a>&nbsp; | &nbsp;<a href="/shared/help/privacy.html?storeId=8000&stat=footer_privacy" target="_parent"><img src="http://a1072.g.akamai.net/f/1072/2062/1h/gallery.rei.com/common/nav/footer_privacy_policy.gif" width="73" height="11" border="0" alt="Privacy Policy"></a>&nbsp; | &nbsp;<a href="/shared/help/returns.html?storeId=8000&stat=footer_100#guarantee" target="_parent"><img src="http://a1072.g.akamai.net/f/1072/2062/1h/gallery.rei.com/common/nav/footer_guarantee.gif" width="160" height="11" border="0" alt="100% Guarantee"></a></td></tr>
+</table>
+</td></tr></table>
+
+<script type="text/javascript" src="http://a1072.g.akamai.net/f/1072/2062/1h/gallery.rei.com/rei/javascript/coremetrics/rei/rei_basic.js"></script>
+
+</td>
+            </tr>
+        </table>
+    </body>
+</html>

@@ -1,0 +1,389 @@
+BODY {font-family:Verdana,Arial,sans-serif; margin:0px; font-size: 8pt; background-color: #fff; color: #000}
+A:link,A:visited,A:active {font-family:Verdana,Arial,sans-serif; color:#000; text-decoration:underline; font-weight:bold}
+A:hover {color:#4C82A6}
+A[name] {text-decoration:none; color:#000}
+
+TABLE {border-collapse: collapse; font-size: 8pt}
+IMG {border: 0px}
+TD {vertical-align: top}
+INPUT {font-size: 8pt; font-family: Verdana,sans-serif; color: #000000}
+SELECT {font-size: 8pt; font-family: Verdana,sans-serif; color: #000000}
+TEXTAREA {font-size: 8pt; font-family: Verdana,sans-serif; color: #000000}
+FIELDSET {font-size:9pt; font-weight:bold; color:#000000; margin-top:20px}
+LEGEND {font-size:9pt; font-weight:bold; color:#000000}
+
+H2,H3,H4 {display:inline}
+
+/*----- global -----*/
+.tabvc TD {vertical-align: middle}
+.headnav TD {vertical-align: middle; background-color: #F4E2A5; height: 32px}	/* header of data */
+.headnav_portal TD {vertical-align: middle; background-color: #F4E2A5; height: 28px}	/* header of data */
+.maindat {background-color: #FDFBF4; vertical-align: top; text-align: left}	/* body of data */
+.title {font-size: 13.5pt}
+.dash {border: 1px dotted #C0C0C0}
+.unavailable {text-decoration: line-through; color: #999}
+.foottxt {font-size:7.5pt}
+.footlnk A {font-size:7.5pt; padding:0px 1px}
+.pubtit {color:#666; font-size:12pt; font-weight:700}
+.legallist1 {list-style-type:decimal}
+.legallist1 LI {margin-top:15px}
+.legallist2 {list-style-type:lower-roman}
+.legallist2 LI {margin-top:15px}
+.legallist3 {list-style-type:lower-alpha}
+.legallist3 LI {margin-top:15px}
+.greftext A {color:#0000FF}
+
+/* nav */
+/*
+.navs {width:320px; font-size:10.5pt; font-weight:700; padding:3px; background-color:#EBE6D6}
+*/
+.navc {background-color:#EBE6D6}
+.navch {background-color:#B6B1A1}
+.navt {width:320px; font-size:10pt; font-weight:700; text-decoration: none}
+
+/*home*/
+.couns A {width:144px; text-decoration:none ! important; font-weight:normal ! important; display:block; padding:1px 0 2 0}
+.couns A:hover		{color:#000; text-decoration:none; font-weight:normal; background:#F8ECC4}
+A.contnt {background-color:transparent ! important;}
+.menudat {visibility:hidden; position:absolute;}
+
+/*subject indexes*/
+.counsubndx A {display:block; width:160px; padding:2px 0 3 0}
+
+/*cities indexes*/
+.citiesndx A {display:block; padding:2px 0 3 0}
+.citiesndxsub {font-size:10pt; font-weight:bold; padding:10px 0 10 0}
+
+
+/* sites */
+	/*.s_nm {font-size: 13.5pt}*/
+.s_nm {font-size: 13.5pt; display:inline; font-weight:normal; text-align:left}
+	/*.s_nmb {border: 1px dotted #C0C0C0}*/
+.s_tit {text-align: left; font-weight: 700; font-size: 8pt; padding-right: 10px}
+.s_mgn {text-align: left; font-weight: 700; font-size: 8pt; width: 80px}
+.s_dat {font-size: 8pt}
+.s_datr {font-size: 8pt; text-align: right}
+.s_desc {text-align: justify}
+.s_lst {padding-left: 10px; margin-left: 8px; margin-bottom: 0px; list-style-image: url(../i/bullet_small.gif)}
+														/* URL is relative to style sheet, not document */
+.s_day {width: 46px; vertical-align: top}
+.whatints {font-size:7.5pt}
+.s_pinpoint {float:right ! important; width:200px; height:40px; text-align:right; padding-top:10px}
+.s_spc {height:13px}
+
+
+/* towns */
+.tn_hdr {text-align: left; background-color: #F3E1A4}
+.tn_dat {}
+.tn_hid {color: #FBF7EA; font-size: 6pt}
+.towntblcontainer {
+	border: 0px;
+	border-collapse: separate;
+}
+.towntblcontainer TD {
+/*	width:225px;*/
+	width:215px;
+	background-image:url(/i/test-towns-flag-bg.gif);
+	background-repeat:no-repeat;
+	background-color:#F1EEDD;
+	padding-left:35px;
+	padding-top:1px;
+	padding-bottom:5px;
+	padding-right: 0px;
+}
+.tn_emt {
+	background-image:none ! important;
+	background-color:#FDFBF4 ! important;
+}
+.tn_ltr {
+	font-size:13pt;
+	font-weight:bold;
+	margin-top:8px;
+	margin-left:6px;
+}
+.tn_alpha {
+	text-align:center;
+	font-size:8pt;
+	letter-spacing:-0.1em;
+	margin:0px;
+	padding:0px;
+}
+.tn_alpha A {
+	font-weight:bold;
+}
+
+/* tours & passes */
+.tu_bod {background-color: #FFFBEA; margin-left:8; margin-top:8}
+.tu_mgn {width: 24px}
+.tu_pnm {font-size: 10pt; font-weight: 700; color: #000080}
+.tu_abs {font-weight: 700}
+.tu_step {font-weight: 700}
+.tours_list	{list-style-type:disc; font-weight:normal; line-height:150%; padding-left:20px; margin-left:20px}
+.tour_list	{list-style-type:disc; font-weight:normal; line-height:150%; padding-left:20px; margin-left:20px}
+
+/* trees */
+.tr_step {font-weight: 700}
+.tr_bod {background-color: #FFFBEA; margin-left:8; margin-top:8}
+.tr_top {font-weight: 700; font-size:150%}
+.tr_top_s {font-weight: 700; font-size:115%}
+.tr_main {font-weight: 700 ! important; vertical-align:top}
+.tr_master {font-size:150%}	/* top of tree */
+.tr_data {vertical-align:middle; line-height:150%}
+
+.tr_pagecontents {margin:0px 1px 0px 7px}
+.tr_pagecontents A {font-weight:normal}
+.tr_pagecontents A:visited {font-weight:normal}
+.tr_pagecontents A:active {font-weight:normal}
+
+.tr_geninfo {font-weight:700 ! important}
+.tr_expand {font-size:7.5pt ! important; font-family:Arial,sans ! important; white-space:nowrap}
+
+/*.tr_list {white-space: nowrap}*/
+.tr_list {}
+/*.tr_listmain {white-space: nowrap; font-weight: 700}*/
+.tr_listmain {font-weight: 700; background-color:#F2EEDE}
+.tr_listmain TD {vertical-align:middle}
+.tr_up {vertical-align:top ! important}
+.tr_dn {vertical-align:bottom ! important}
+
+.trlist_section {margin:0px 1px 0px 20px}
+.tr_s {width:16px; height:18px}
+.tr_gc {width:16px; background-image:url(/i/gc2.gif);}
+.tr_gm {width:16px; background-image:url(/i/gm2.gif);}
+.tr_ge {width:16px; background-image:url(/i/ge2.gif);}
+
+/*.tr_listsub			{padding-left:15px; margin-top:1px; padding-top:2px; background-image:url(/i/ge2.gif); background-repeat:no-repeat}*/
+.tr_listsub			{padding-left:15px; margin-top:1px; padding-top:2px; background:url(/i/trjoin.gif) no-repeat 0px -18px}
+.tr_listsubjoin	{padding-left:15px; margin-top:1px; padding-top:20px; background:url(/i/trjoin.gif) no-repeat}
+
+/* toprated */
+.ra_mgn {width:60px}
+.ra_main {font-weight: 700; font-size:9pt}
+.ra_lst {font-weight: 700}
+.ra_city		{list-style-image:url(/i/plus.gif); font-weight:bold; line-height:150%}
+.ra_sum		{font-weight:normal; font-style:italic}
+.ra_other5	{list-style-type:disc; font-weight:normal; line-height:150%}
+.ra_other4	{list-style-type:disc; font-weight:normal; line-height:150%}
+
+/* coun info */
+.cn_toc {font-weight: 700; font-size:9pt}
+.cn_arw {width:20px; text-align: right}
+.cn_off {font-weight: 700}
+.cn_mgn {text-align: left; font-weight: 700; font-size: 8pt; width: 116px}
+.cn_hdr TD {background-color: #F4E2A5; font-weight: 700}
+
+/* coun portal */
+.cp_thmb {color:#FFFFFF; font-size: 7.5pt}
+.cp_thmbclk {font-weight:700; color: #FFFFFF ! important}
+.cp_nm {font-size: 18pt; font-weight: 700}
+.cp_nm2 {font-size: 10pt}
+.cp_par {text-align: justify}
+.cp_clk {font-weight: 700}
+.cp_desc {background-color: #FDFBF4; height:80px; vertical-align:top}
+
+/* search */
+.errmsg {border: 1px dotted #f00; margin: 5px}
+.errmsg TD {color:#f00; font-weight:700; padding: 5px}
+.srchcnlnk {color:#808080}
+.srch_subtext {font-style:italic}
+
+/* maps */
+.mp_img {cursor: crosshair}
+.mp_bod {background-color: #FFFBEA; margin-left:8; margin-top:8}
+.mp_top {font-weight: 700; font-size:140%}
+.mp_list	{list-style-type:disc; font-weight:normal; line-height:150%}
+.mp_city {font-size:10pt}
+
+/* photos */
+.cap {font-size:7pt; font-weight:normal ! important}
+
+/* sitendx */
+.sitendx {font-size:8.5pt; margin:5px; line-height:140%; font-weight:bold}
+.sitendx I {font-size:7pt; font-style:normal; font-weight:normal; letter-spacing:-0.1em; margin-left:8px}
+.sitendxjump A {font-size:8pt; font-weight:bold}
+.sitendxjump IMG {vertical-align:middle}
+
+
+.navcoun TD {
+	color:#000;
+	padding-left:4px;
+	background-color:#F5E3A5;
+	background-repeat:no-repeat;
+	border:0px none;
+/*	width:144px;*/
+	width:50%;
+}
+.navcoun TD A {
+	font-family:arial,Helvetica,sans-serif;
+	text-decoration:none;
+	width:138px;
+	font-weight:bold;
+	font-size:8pt;
+	color:#000;
+	display:block;
+}
+.navcoun TD A:link {font-family:arial,Helvetica,sans-serif; font-size:8pt; color:#000000; text-decoration:none}
+.navcoun TD A:visited {font-family:arial,Helvetica,sans-serif; font-size:8pt; color:#000000; text-decoration:none}
+.navcoun TD A:hover {color:#4C82A6 ! important; text-decoration:none}
+.navcity TD A:hover {color:#6B9A4B ! important}
+
+.navcountop {
+	height:3px;
+/*	width:144px;*/
+	width:50%;
+/*	background-image:url(/i/navbtn20060706_01.gif);*/
+	background-image:url(/i/navbtn4_01.gif);
+	background-color:#F6E6B2;
+	background-repeat:no-repeat;
+}
+.navcounbot {
+	height:5px;
+/*	width:144px;*/
+	width:50%;
+/*	background-image:url(/i/navbtn20060706_03.gif);*/
+	background-image:url(/i/navbtn4_03.gif);
+	background-color:#F6E6B2;
+	background-repeat:no-repeat;
+}
+.navcounbtn {
+/*	width:144px;*/
+	width:50%;
+/*	background-image:url(/i/navbtn20060706_02tall.gif);*/
+	background-image:url(/i/navbtn4-tall.gif);
+	background-color:#F6E6B2;
+}
+.navcounbtn IMG {
+	vertical-align:top;
+}
+
+.counnm {
+	font-size:10pt;
+	font-weight:bold;
+	color:#FBF7EA;
+	word-wrap:break-word;
+	overflow:hidden;
+	width:268px;
+}
+.counnm A {
+	text-decoration:none ! important;
+	color:#FBF7EA ! important;
+}
+.counnm A:hover {
+	text-decoration:none ! important;
+	color:#ffffff ! important;
+}
+
+
+.navcounleft {
+	background-image:url(/i/navcoun-left.gif);
+	width:11px;
+}
+.navcounright {
+	background-image:url(/i/navcoun-right.gif);
+	width:10px;
+}
+.navcounbg {
+	background-image:url(/i/navcoun-bg.gif);
+	background-color:#4D7A95;
+	background-repeat:no-repeat;
+	background-position: bottom right;
+	width:279px;
+	cursor:pointer;
+}
+
+.navcityleft {
+	background-image:url(/i/navcity-left.gif);
+	width:11px;
+}
+.navcityright {
+	background-image:url(/i/navcity-right.gif);
+	width:10px;
+}
+.navcitybg {
+	background-image:url(/i/navcity-bg.gif);
+	background-color:#6E9E4D;
+	background-repeat:no-repeat;
+	background-position: bottom right;
+	width:279px;
+	cursor:pointer;
+}
+
+.navcounopt {text-decoration:none ! important; font-size:7pt; color:#000 ! important; font-weight:bold}
+.navcounopt:hover {color:#4C82A6 ! important; text-decoration:none}
+.navcounopt IMG {vertical-align:top; margin:1px}
+.navcityopt:hover {color:#6B9A4B ! important}
+
+.navcountab {padding-left:14px; color:#FBF7EA; font-size:7.5pt}
+
+
+/*----- img sizes -----*/
+	/* shared */
+.i_coun {width:91px; height:15px}	/* country portal */
+.i_ncoun {width:110px; height:15px}	/* new coun */
+.i_top {width:51px; height:11px}
+.i_view {width:51px; height:11px}
+.i_1 {width:15px; height:14px}
+.i_2 {width:15px; height:14px}
+	/* sites */
+.s_bview {width:51px; height:11px}
+.s_bgeo {width:102px; height:16px}
+.s_bgeo2 {width:107px; height:16px}
+.s_bgeo3 {width:113px; height:22px}
+.s_bagn {width:84px; height:16px}
+.s_bagn2 {width:5px; height:5px; background-color: #91C600}
+.s_bprn {width:84px; height:16px}
+.s_bprnt {width:113px; height:22px}
+.s_book {width:113px; height:22px}
+.s_star {width:16px; height:16px}
+.s_star2 {width:11px; height:10px}
+.s_bd {width: 28px; height: 13px; margin-top: 3px; margin-bottom: 3px}
+	/* passes */
+.pa_tit {width:203px; height:15px}
+	/* towns */
+.tn_tit {width:154px; height:18px}
+	/* tours & passes */
+.tu_tit {width:162px; height:17px}
+.tu_lst {width:14px; height:14px}
+	/* trees */
+.tr_tit {width:167px; height:17px}
+.tr_bar2 {width:10px; height:21px; vertical-align: middle; margin-left: 4px; margin-right: 4px}
+.tr_nul {width:1px; height:21px; vertical-align: middle}
+.tr_imgs IMG {width:10px; height:21px; vertical-align: middle; margin-left: 4px; margin-right: 4px}
+.trf {width:24px ! important; height:21px ! important; margin:0px ! important; vertical-align:middle ! important}
+
+.trd {width:12px ! important; height:21px ! important; margin:0px ! important; vertical-align:top ! important}
+/*.trd {width:11px ! important; height:15px ! important; margin:0px ! important; vertical-align:top ! important}*/	/* plus/minus */
+
+.trtl {width:9px ! important; height:10px ! important; margin:0px ! important; vertical-align:top ! important}
+.trbl {width:9px ! important; height:10px ! important; margin:0px ! important; vertical-align:bottom ! important}
+.trtr {width:8px ! important; height:10px ! important; margin:0px ! important; vertical-align:top ! important}
+.trbr {width:8px ! important; height:10px ! important; margin:0px ! important; vertical-align:bottom ! important}
+	/* toprated */
+.ra_tit {width:189px; height:19px}
+.ra_star {width:16px; height:14px}
+	/* coun portal */
+.cp_thimg {border: solid #000000 1px}
+.cp_iloc {width:189px; height:17px}
+.cp_igeo {width:119px; height:19px}
+.cp_imap {width:72px; height:20px}
+.cp_iph {width:134px; height:19px}
+.cp_iact {width:185px; height:15px}
+.cp_itop {width:205px; height:20px}
+.cp_itp {width:154px; height:14px}
+.cp_icr {width:119px; height:17px}
+.cp_itn {width:146px; height:20px}
+.cp_isrch {width:151px; height:20px}
+.cp_idyt {width:186px; height:20px}
+	/* city portal */
+.ctp_iloc {width:188px; height:19px}
+.ctp_igeo {width:118px; height:20px}
+.ctp_imap {width:73px; height:21px}
+.ctp_iph {width:135px; height:19px}
+.ctp_iact {width:186px; height:17px}
+.ctp_itop {width:204px; height:19px}
+.ctp_itp {width:154px; height:14px}
+.ctp_icr {width:119px; height:17px}
+.ctp_isrch {width:183px; height:20px}
+.ctp_idyt {width:186px; height:20px}
+	/* maps */
+.mp_tit {width:110px; height:21px}

@@ -1,0 +1,217 @@
+/* CSS Document for top section of page: page banner + navigation section
+
+Nathan W says:
+The we used Century Gothic, Helvetica and Verdana in the header. As you know anything with Century Gothic
+will need to become a graphic.
+*/
+
+#topnav {
+    font-family: Century Gothic, Helvetica, sans-serif;
+    width: 900px;
+    background-color: #fff;
+    padding: 0 0 8px 0;
+}
+
+#topnav  a img {
+    border-width: 0;
+}
+
+
+#topnav .member {
+    font-family: Verdana, Geneva, Helvetica, sans-serif;
+    font-size: xx-small;
+}
+
+#topnav td.member {
+    vertical-align: top;
+    padding-top: 10px;
+    padding-right: 18px;
+    width: 55%; /* changed 12/1 aroy, old value 33% */
+}
+#topnav .member .welcome {
+    text-align: right; /* changed 12/1 aroy, old value left */
+    font-weight: 900;
+    color: #666666;
+    border-right-width: 1px;
+    border-right-style: solid;
+    border-right-color: #CCCCCC;
+    padding-right: 6px;
+    width: 48%; /* changed 12/1 aroy, old value 5% */
+    white-space: nowrap;
+}
+
+/* following added 12/1 aroy */
+#topnav .member .account {
+    text-align: center;
+    color: #69C5D2;
+    padding-left: 6px;
+    padding-right: 6px;
+    text-decoration: none;
+    width: 20%;
+    border-right-width: 1px;
+    border-right-style: solid;
+    border-right-color: #CCCCCC;
+    margin: 0;
+    white-space: nowrap;
+}
+
+/* following added 12/1 aroy */
+#topnav .member .account a {
+    color: #69C5D2;
+    text-decoration: none;
+}
+
+#topnav .member .signout {
+    text-align: left;
+    color: #69C5D2;
+    padding-left: 6px;
+    width: 30%; /* changed 12/1 aroy, old value 80% */
+}
+#topnav .member .signout a {
+    color: #69C5D2;
+    text-decoration: none;
+}
+#topnav .member .signout a:hover {
+    text-decoration: underline;
+}
+
+#topnav .member .saved {
+    color: #69C5D2;
+    text-align: right;
+    padding-right: 9px;
+    background-image: url( ../img/header/arrowBlueRight.gif );
+    background-repeat: no-repeat;
+    background-position: right;
+    width: 10%;
+    white-space: nowrap;
+}
+#topnav .member .saved a {
+    color: #69C5D2;
+    text-decoration: none;
+}
+#topnav .member .saved a:hover {
+    text-decoration: underline;
+}
+
+/* Search area */
+
+#topnav div.search {
+    margin-top:24px;
+    float: right; /* added 12/1 aroy */
+}
+
+#topnav .searchLabel {
+    font-size: 9px;
+    color: #666;
+    text-transform: uppercase;
+    white-space: nowrap;
+    vertical-align: bottom;
+    font-family: Arial, Helvetica, san-serif;
+    padding: 0px 0px 1px 0px;
+}
+
+#topnav .stateSelect {
+    font-size: 11px;
+}
+
+#topnav td.searchRadios {
+    vertical-align: top;
+    text-align: left;
+}
+
+#topnav .searchRadios span {
+    font-family: Helvetica, sans-serif;
+    font-size: x-small;
+    font-weight: 900;
+    color: #888;
+    margin: 0;
+    padding: 0;
+    vertical-align: middle;
+}
+
+* html #topnav .searchRadios span { /* IE ONLY */
+    font-size: xx-small;
+}
+
+#topnav .searchRadios input {
+    margin: 0;
+    padding: 0;
+    vertical-align: middle;
+}
+
+#topnav input.button {
+    margin: 0 0 10px 6px;
+}
+
+
+
+
+/* GLOBAL NAV MENUS */
+
+#topnav table#nav {
+    background-color: #99cc67;
+    height: 30px;
+    width: 864px;
+    margin: 0 0 0 18px;
+    padding: 0;
+}
+
+#topnav table#nav td a {
+    display: block;
+    text-align: center;
+    text-decoration: none;
+    font-family: Lucinda Grande, Lucida Grande, lucida, verdana,sans-serif;
+    font-size: 12px;
+    font-weight: 800;
+    height: 14px;
+    margin: 0px;
+    border-right: 1px dashed #99CC67;
+    border-left: 1px dashed #99CC67;
+    padding: 8px 15px 8px 15px;
+}
+
+* html #topnav table#nav td a {
+    font-family: Lucinda Grande, Lucida Grande, lucida, verdana,sans-serif;
+    font-weight: 900;
+    font-size: 12px;
+}
+
+#topnav table#nav td a:link,
+    #topnav table#nav td a:visited {
+    color: #FFFFFF;
+}
+
+#topnav table#nav td a.active {
+    color: #FFFFFF;
+    background-color: #639c31;
+    border-left-color: #639c31;
+    border-right-color: #639c31;
+}
+
+#topnav table#nav td a.lactive {
+    border-left-color: #FFFFFF;
+}
+
+#topnav table#nav td a.ractive {
+    border-right-color: #FFFFFF;
+}
+
+#topnav table#nav td a.inactive:hover,
+#topnav table#nav td a.inactive:active {
+    color: #FFFFFF;
+    background-color: #639c31;
+    border-right-color: #FFFFFF;
+    border-left-color: #FFFFFF;
+}
+
+#topnav #subnav {
+    font-family: Century Gothic, Helvetica, sans-serif;
+    font-size: 14px;
+    height: 16px;
+    width: 880px;
+    padding-top: 8px;
+    padding-right: 10px;
+    padding-bottom: 8px;
+    padding-left: 10px;
+}
+

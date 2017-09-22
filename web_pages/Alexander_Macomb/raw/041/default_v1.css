@@ -1,0 +1,1267 @@
+/***********************************************/
+/* 2col_leftNav.css                            */
+/* Use with template 2col_leftNav.html          */
+/***********************************************/
+
+/***********************************************/
+/* HTML tag styles                             */
+/***********************************************/ 
+
+body{
+	font-family: Arial,sans-serif;
+	color: #333333;
+	line-height: 1.166;	
+	margin: 0px;
+	padding: 0px;
+}
+
+a:link, a:visited, a:hover {
+	color: #006699;
+	text-decoration: none;
+}
+
+a:hover {
+	text-decoration: underline;
+}
+/* overrides decoration from previous rule for hovered links */
+
+h1, h2, h3, h4, h5, h6 {
+	font-family: Arial,sans-serif;
+	margin: 0px;
+	padding: 0px;
+}
+
+h1{
+ font-family: Verdana,Arial,sans-serif;
+ font-size: 120%;
+ color: #334d55;
+}
+
+h2{
+ font-size: 114%;
+ color: #006699;
+}
+
+h3{
+ font-size: 100%;
+ color: #334d55;
+}
+
+h4{
+ font-size: 100%;
+ font-weight: normal;
+ color: #333333;
+}
+
+h5{
+ font-size: 100%;
+ color: #334d55;
+}
+
+ul{
+ list-style-type: square;
+}
+
+ul ul{
+ list-style-type: disc;
+}
+
+ul ul ul{
+ list-style-type: none;
+}
+
+label{
+ font: bold 100% Arial,sans-serif;
+ color: #334d55;
+}
+				
+
+/***********************************************/
+/* Layout Divs                                 */
+/***********************************************/
+
+#masthead{
+	margin: 0;
+	padding: 10px 0px;
+	border-bottom: 1px solid #cccccc;
+	width: 100%;
+}
+
+#navBar{
+	margin: 0 0 0 0;
+	padding: 0 3% 0 0;
+	width: 95%;
+	border-right: 1px solid #3D5599;
+	border-bottom: 1px solid #3D5599;
+}
+
+#content{
+  	float:left;
+	width: 99%;
+	margin: 0 0 0 0;
+	padding: 0 0 0 0;
+}
+
+
+/***********************************************/
+/*Component Divs                               */
+/***********************************************/
+
+#siteName{
+	margin: 0px;
+	padding: 0px 0px 10px 10px;
+}
+
+
+/*************** #pageName styles **************/
+
+#pageName{
+	padding: 0px 0px 10px 10px;
+}
+
+
+/************* #globalNav styles **************/
+
+#globalNav{
+color: #cccccc;
+padding: 0px 0px 0px 10px;
+white-space: nowrap;
+}
+/* 'nowrap' prevents links from line-wrapping if there are too many to fit in one line
+   this will force a horizontal scrollbar if there isn't enough room for all links
+   remove rule or change value to 'normal' if you want the links to line-wrap */
+
+#globalNav img{
+ display: block;
+}
+
+#globalNav a {
+	font-size: 90%;
+	padding: 0px 4px 0px 0px; 
+}
+
+
+/************* #breadCrumb styles *************/
+
+#breadCrumb{
+	font-size: 80%;
+	padding: 0px 0px 0px 0px;
+}
+
+
+/************** .feature styles ***************/
+
+.feature{
+	padding: 0px 0px 10px 10px;
+	font-size: 80%;
+}
+
+.feature h3{
+	padding: 30px 0px 5px 0px;
+	text-align: center;
+}
+
+.feature img{
+	float: left;
+	padding: 0px 10px 0px 0px;
+	margin: 0 5px 5px 0;
+}
+/* adjust margins to change separation between the feature image and text flowing around it */
+
+
+/************** .story styles *****************/
+
+.story{
+	clear: both;
+	padding: 10px 0px 0px 10px;
+	font-size: 80%;
+}
+
+.story p{
+	padding: 0px 0px 10px 0px;
+}
+
+.MainBody{
+	clear: both;
+	padding: 10px 0px 0px 0px;
+	font-size: 90%;
+}
+
+.MainBody p{
+	padding: 20px 0px 20px 0px;
+}
+
+
+
+
+/************* #siteInfo styles ***************/
+
+#siteInfo{
+	clear: both;
+	border: 1px solid #cccccc;
+	font-size: 75%;
+	color: #cccccc;
+	padding: 10px 10px 10px 10px;
+	margin-top: -1px;
+}
+/* negative top margin pulls siteinfo up so its top border overlaps (and thus lines up with)
+	the bottom border of the navBar in cases where they "touch" */
+
+#siteInfo img{
+	padding: 4px 4px 4px 0px;
+	vertical-align: middle;
+}
+
+
+/************* #search styles ***************/
+
+#search{
+	padding: 5px 0px 5px 10px;
+	border-bottom: 1px solid #cccccc;
+	font-size: 90%;
+}
+
+#search form{
+ margin: 0px;
+ padding: 0px;
+}
+
+#search label{
+	display: block;
+	margin: 0px;
+	padding: 0px;
+}
+
+
+/*********** #navBar link styles ***********/
+
+#navBar ul a:link, #navBar ul a:visited {display: block;}
+#navBar ul {list-style: none; margin: 0; padding: 0;}
+
+
+/* hack to fix IE/Win's broken rendering of block-level anchors in lists */
+#navBar li {border-bottom: 1px solid #EEE;}
+
+/* fix for browsers that don't need the hack */
+html>body #navBar li {border-bottom: none;}
+
+
+/*********** #sectionLinks styles ***********/
+
+#sectionLinks{
+	position: relative;
+	margin: 0px;
+	padding: 0px;
+	border-bottom: 1px solid #cccccc;
+	font-size: 90%;
+}
+
+#sectionLinks h3{
+	padding: 10px 0px 2px 10px;
+}
+
+#sectionLinks a:link{
+	padding: 2px 0px 2px 10px;
+	border-top: 1px solid #cccccc;
+	width: 100%;
+  voice-family: "\"}\""; 
+  voice-family:inherit;
+	width: auto;
+}
+
+#sectionLinks a:visited{
+	border-top: 1px solid #cccccc;
+	padding: 2px 0px 2px 10px;
+}
+
+#sectionLinks a:hover{
+	border-top: 1px solid #cccccc;
+	background-color: #dddddd;
+	padding: 2px 0px 2px 10px;
+}
+
+
+/*********** .relatedLinks styles ***********/
+
+.relatedLinks{
+	margin: 0px;
+	padding: 0px 0px 10px 10px;
+	font-size: 90%;
+}
+
+.relatedLinks h3{
+	padding: 10px 0px 2px 0px;
+}
+
+/******************#Subbanner ***************/
+
+
+/************** #advert styles **************/
+
+#advert{
+	padding: 10px 0px 0px 10px;
+	font-size: 80%;
+	border-top: 1px solid #cccccc;
+}
+
+#advert img{
+	display: block;
+}
+
+
+/************** #headlines styles **************/
+
+#headlines{
+	margin: 0px;
+	padding: 0px 0px 0px 0px;
+	font-size: 70%;
+}
+
+#headlines p{
+	padding: 5px 0px 5px 0px;
+	width:100%;
+}
+
+
+#banners{
+	margin: 0px;
+	padding: 10px 0px 20px 10px;
+	font-size: 80%;
+}
+#banners p{
+	padding: 5px 0px 5px 0px;
+}
+
+
+form {
+	background-color:#fff;
+	padding: 0px;
+	line-height: 100%;
+}
+
+/* Form Sections ======================================================================== */
+
+/* Fieldset  */
+fieldset {
+	position:relative;
+	margin: 1em 0px 20px 20px;
+	padding: 2em 10px 10px 10px;
+	background-color:#e9f9ac;
+	border-width:2px 2px 2px 10px;
+	border-style:solid;
+	border-color:#6699CC;
+	overflow: auto;
+	font-family:Arial, Helvetica, sans-serif ;
+	font-size:small;
+}
+legend {
+	line-height: 100%;
+	position:absolute;
+	padding: 3px 5px;
+	top: -10px;	
+	background-color:#6699CC;
+	border-width:1px 1px 1px 10px;
+	border-color:#ff9900;
+	border-style:solid;	
+	color:#000000;
+	font-weight:bold;
+	text-transform:uppercase;
+	font-size:90%;
+	text-align:center;
+} 	 
+/* Nested Fieldset  */
+fieldset fieldset  {
+}
+fieldset fieldset legend {
+}
+/* Inline Section */
+.inlineSection {
+	overflow: auto;
+	width: 100%;	
+}
+/* Grid Section */
+form table {
+	border-collapse: collapse;
+}
+form td {
+	padding: 0 4px;
+	border-left: 1px solid #DFDED2;
+	border-right: 1px solid #DFDED2;	
+	line-height: normal;	
+}
+form th {
+	padding: 0 4px;
+}
+form .alternate-1 {
+	background-color:#ecefcb;
+}
+form .alternate-1 td {
+	border-left: 1px solid #DFDED2;
+	border-right: 1px solid #DFDED2;	
+}
+form .alternate-0 {
+}
+/* Combo Label + Input Field =========================================================== */
+form .oneField {
+	margin: 6px 0;
+	display: block;
+	vertical-align: middle;
+}
+form .inlineSection .oneField {
+	margin-right: 2px;
+	white-space: nowrap;	
+	display: inline;
+}
+/* Ties together a label and its checkbox or radio */
+form .oneChoice {
+	white-space: nowrap; 	
+}
+
+/* Field Labels ======================================================================== */
+
+/* Base */
+label, form .label {	
+	margin:0 5px 0 0;
+	color:#5c71a2;
+	line-height: normal;
+}
+/* Text inputs / Select label */
+label.preField {
+	font-size:90%;
+	font-weight:bold;
+	display: -moz-inline-box;
+	display: inline-block;	
+	min-width:100px;
+	text-align:right;
+	white-space: nowrap;
+}
+/* Radio / Checkbox group label */
+form .label  {
+	display: block; 
+	margin: 0.6em 4px 0 0;
+	padding: 2px;
+}
+/* Individual Checkbox / Radio label */
+label.postField  {
+	padding: 0 4px;
+	font-size:90%;
+	color:#5c71a2;
+}
+/* Label when inside an inline section */
+form .inlineSection .oneField .inlineLabel {
+	display: -moz-inline-box;
+	display: inline-block;	
+	font-size:90%;
+	font-weight:bold;
+	text-align:right;
+	min-width:100px;
+}
+
+/* Inputs ======================================================================== */
+
+textarea {
+	padding: 0;
+	vertical-align: top;
+	margin: 0px 0px 0px 0;
+}
+input {
+	background-color:#ADBBD5;
+	margin:0px 0px 0 0;
+	border-width: 0px 0px 0px 0px;
+	border-style: solid solid dotted solid;
+	border-color:#809431;
+	color:#000000;
+	font-family:"Courier New", Courier, mono;
+	padding:0px 0px;
+}
+input[type='text'] {		
+}
+input[type='checkbox'] {		
+	margin-right: 0px;
+}
+select {
+	margin: 2px 2px 1px 0;
+	padding: 0;
+}
+.inlineSection .oneField select {
+	margin: 0 2px 1px 0 !important;
+}
+.gridSection select  {
+	margin: 0 !important;
+}
+.gridSection input[type='checkbox'] {
+	margin: 0 !important;
+}
+form .alternate-1 input {
+	background-color:#ecefcb;
+}
+
+/* Buttons ======================================================================= */
+
+form .actions {
+	padding-top: 1px;
+	text-align: right;
+	clear: right;
+}
+/* Submit button */
+form .primaryAction {
+	background-color:#e9f9ac;
+	border:1px solid #809431;
+	font-weight:bold;
+	font-family:Arial, Helvetica, sans-serif;
+	padding:2px;
+	margin:0px 0px 0px 20px
+}
+form .primaryAction:hover {
+	background-color:#E9FDD7;
+}
+/* Cancel button */
+form .secondaryAction {
+	color: grey;
+	background-color:#e9f9ac;
+	border:1px solid #809431;
+	font-weight:bold;
+	font-family:Arial, Helvetica, sans-serif;
+	padding:2px;
+	margin:0px 0px 0px 20px	
+}
+form .secondaryAction:hover {
+	color: black;
+}
+
+/* Form Builder Related Rules ===================================================== */
+
+/* Form or Fieldset instruction paragraph. */
+form .instructions {
+	margin: 1.5em 0;
+	line-height: 130%;
+}
+/* Asterisk on required fields */
+form .reqMark {
+	color: #F00;
+	padding: 0 4px;
+}
+/* wForms Related Rules ========================================================== */
+
+/* Field w/ a validation error */
+form .errFld {
+	padding: 1px;
+	border: 1px solid #F00;
+}
+/* Styling for message associated with a validation error. */
+form .errMsg {	
+	color: #CC3333 !important;
+	display: block;
+}
+/* Field-Hint with focus */
+form .field-hint {
+	position: absolute;
+	width: 180px;
+	z-index: 50;
+	background-image: url(/images/v2/hint_topborder.gif);
+	background-repeat: no-repeat;
+	background-position: left top;	
+	padding: 14px 0 0 0;
+	margin:  2px 0 0 10px;
+	color: #000;
+}
+form .field-hint div {
+	background-color: #0066FF;
+	border-left: 1px solid #ffc20d;
+	border-right: 1px solid #ffc20d;
+	border-bottom: 1px solid #ffc20d;
+	padding: 1px;
+	line-height: normal;
+}
+/* Field-Hint without focus */
+form .field-hint-inactive {
+	visibility: hidden;
+	position: absolute;
+}
+/* Repeat Behavior divs (when not set on a fieldset) */
+div.repeat {
+	margin: 3px 0;
+	padding-right: 6px;
+	border: 1px dotted #ddd;
+	background-color: #FFFFFF;
+}
+div.removeable {
+	margin: 3px 0;
+	padding-right: 6px;	
+	border: 1px dotted #ccc;
+	background-color: #F3F3F3;
+	
+}
+/* Links generated by the Repeat Behavior */
+form .duplicateLink {
+	line-height: 260%;
+	font-weight: bold;
+}
+form .removeLink {
+	line-height: 260%;
+}
+form td .duplicateLink, form td .removeLink  {
+	margin: 0;
+	line-height: 100%;
+}
+/* Switch Behavior Classes */
+.onstate-a,  .onstate-b,  .onstate-c,  .onstate-d,
+.onstate-e,  .onstate-f,  .onstate-g,  .onstate-h, 
+.onstate-i,  .onstate-j,  .onstate-k,  .onstate-l, 
+.onstate-m,  .onstate-n,  .onstate-o,  .onstate-p, 
+.onstate-q,  .onstate-r,  .onstate-s,  .onstate-t,
+.onstate-u,  .onstate-v,  .onstate-w,  .onstate-x,  
+.onstate-y,  .onstate-z,  .onstate-aa, .onstate-ab,
+.onstate-ac, .onstate-ad, .onstate-ae, .onstate-af,
+.onstate-ag, .onstate-ah, .onstate-ai, .onstate-aj,
+.onstate-ak, .onstate-al, .onstate-am, .onstate-an {
+	display: block;
+}
+/* offstate classes for the Switch Behavior are in wforms-jsonly.css */
+
+
+ 
+/* IE6 BUG FIXES ==================================================================== */
+form {
+	height:expression('1%'); /* IE Pick-a-boo bug fix */
+}
+form fieldset {
+	overflow: expression('visible');
+}
+
+form .inlineSection .oneField {
+	display: expression('inline-block');		
+}
+label.preField, form .inlineSection .oneField .inlineLabel {
+	width: expression('7em');
+	white-space: expression('nowrap');
+}
+
+ul#minitabs{list-style: none;margin: 0;padding: 7px 0;
+  border-bottom: 1px solid #CCC;font-weight: bold;
+  text-align: center;white-space: nowrap}
+ul#minitabs li{display: inline;margin: 0 2px}
+ul#minitabs a{text-decoration: none;padding: 0 0 3px;
+  border-bottom: 4px solid #FFF;color: #999}
+ul#minitabs a#current{border-color: #F60;color: #06F}
+ul#minitabs a:hover{border-color: #F60;color: #666} 
+
+/*- Menu Tabs--------------------------- */ 
+
+
+    #tabs {
+      float:left;
+      width:100%;
+      background:#BBD9EE;
+      font-size:93%;
+      line-height:normal;
+      }
+    #tabs ul {
+	margin:0;
+	padding:10px 10px 0 50px;
+	list-style:none;
+      }
+    #tabs li {
+      display:inline;
+      margin:0;
+      padding:0;
+      }
+    #tabs a {
+      float:left;
+      background:url("tableft.gif") no-repeat left top;
+      margin:0;
+      padding:0 0 0 4px;
+      text-decoration:none;
+      }
+    #tabs a span {
+      float:left;
+      display:block;
+      background:url("tabright.gif") no-repeat right top;
+      padding:5px 15px 4px 6px;
+      color:#666;
+      }
+    /* Commented Backslash Hack hides rule from IE5-Mac \*/
+    #tabs a span {float:none;}
+    /* End IE5-Mac hack */
+    #tabs a:hover span {
+      color:#FF9834;
+      }
+    #tabs a:hover {
+      background-position:0% -42px;
+      }
+    #tabs a:hover span {
+      background-position:100% -42px;
+      }
+
+
+	  
+/*- Menu Tabs B--------------------------- */
+
+    #tabsB {
+      float:left;
+      width:100%;
+      background:#F4F4F4;
+      font-size:93%;
+      line-height:normal;
+      }
+    #tabsB ul {
+	margin:0;
+	padding:10px 10px 0 50px;
+	list-style:none;
+      }
+    #tabsB li {
+      display:inline;
+      margin:0;
+      padding:0;
+      }
+    #tabsB a {
+      float:left;
+      background:url("tableftB.gif") no-repeat left top;
+      margin:0;
+      padding:0 0 0 4px;
+      text-decoration:none;
+      }
+    #tabsB a span {
+      float:left;
+      display:block;
+      background:url("tabrightB.gif") no-repeat right top;
+      padding:5px 15px 4px 6px;
+      color:#666;
+      }
+    /* Commented Backslash Hack hides rule from IE5-Mac \*/
+    #tabsB a span {float:none;}
+    /* End IE5-Mac hack */
+    #tabsB a:hover span {
+      color:#000;
+      }
+    #tabsB a:hover {
+      background-position:0% -42px;
+      }
+    #tabsB a:hover span {
+      background-position:100% -42px;
+      }
+	
+	
+	
+/*- Menu Tabs C--------------------------- */
+
+    #tabsC {
+      float:left;
+      width:100%;
+      background:#EDF7E7;
+      font-size:93%;
+      line-height:normal;
+      }
+    #tabsC ul {
+	margin:0;
+	padding:10px 10px 0 50px;
+	list-style:none;
+      }
+    #tabsC li {
+      display:inline;
+      margin:0;
+      padding:0;
+      }
+    #tabsC a {
+      float:left;
+      background:url("tableftC.gif") no-repeat left top;
+      margin:0;
+      padding:0 0 0 4px;
+      text-decoration:none;
+      }
+    #tabsC a span {
+      float:left;
+      display:block;
+      background:url("tabrightC.gif") no-repeat right top;
+      padding:5px 15px 4px 6px;
+      color:#464E42;
+      }
+    /* Commented Backslash Hack hides rule from IE5-Mac \*/
+    #tabsC a span {float:none;}
+    /* End IE5-Mac hack */
+    #tabsC a:hover span {
+      color:#FFF;
+      }
+    #tabsC a:hover {
+      background-position:0% -42px;
+      }
+    #tabsC a:hover span {
+      background-position:100% -42px;
+      }  
+	
+	
+	
+/*- Menu Tabs D--------------------------- */
+
+    #tabsD {
+      float:left;
+      width:100%;
+      background:#FCF3F8;
+      font-size:93%;
+      line-height:normal;
+	  border-bottom:1px solid #F4B7D6;
+      }
+    #tabsD ul {
+	margin:0;
+	padding:10px 10px 0 50px;
+	list-style:none;
+      }
+    #tabsD li {
+      display:inline;
+      margin:0;
+      padding:0;
+      }
+    #tabsD a {
+      float:left;
+      background:url("tableftD.gif") no-repeat left top;
+      margin:0;
+      padding:0 0 0 4px;
+      text-decoration:none;
+      }
+    #tabsD a span {
+      float:left;
+      display:block;
+      background:url("tabrightD.gif") no-repeat right top;
+      padding:5px 15px 4px 6px;
+      color:#C7377D;
+      }
+    /* Commented Backslash Hack hides rule from IE5-Mac \*/
+    #tabsD a span {float:none;}
+    /* End IE5-Mac hack */
+    #tabsD a:hover span {
+      color:#C7377D;
+      }
+    #tabsD a:hover {
+      background-position:0% -42px;
+      }
+    #tabsD a:hover span {
+      background-position:100% -42px;
+      }  
+	
+	
+	
+/*- Menu Tabs E--------------------------- */
+
+    #tabsE {
+      float:left;
+      width:100%;
+      background:#000;
+      font-size:93%;
+      line-height:normal;
+
+      }
+    #tabsE ul {
+	margin:0;
+	padding:10px 10px 0 50px;
+	list-style:none;
+      }
+    #tabsE li {
+      display:inline;
+      margin:0;
+      padding:0;
+      }
+    #tabsE a {
+      float:left;
+      background:url("tableftE.gif") no-repeat left top;
+      margin:0;
+      padding:0 0 0 4px;
+      text-decoration:none;
+      }
+    #tabsE a span {
+      float:left;
+      display:block;
+      background:url("tabrightE.gif") no-repeat right top;
+      padding:5px 15px 4px 6px;
+      color:#FFF;
+      }
+    /* Commented Backslash Hack hides rule from IE5-Mac \*/
+    #tabsE a span {float:none;}
+    /* End IE5-Mac hack */
+    #tabsE a:hover span {
+      color:#FFF;
+      }
+    #tabsE a:hover {
+      background-position:0% -42px;
+      }
+    #tabsE a:hover span {
+      background-position:100% -42px;
+      }  
+	
+	
+	
+/*- Menu Tabs F--------------------------- */
+
+    #tabsF {
+      float:left;
+      width:100%;
+      background:#efefef;
+      font-size:93%;
+      line-height:normal;
+	  border-bottom:1px solid #666;
+      }
+    #tabsF ul {
+	margin:0;
+	padding:10px 10px 0 50px;
+	list-style:none;
+      }
+    #tabsF li {
+      display:inline;
+      margin:0;
+      padding:0;
+      }
+    #tabsF a {
+      float:left;
+      background:url("tableftF.gif") no-repeat left top;
+      margin:0;
+      padding:0 0 0 4px;
+      text-decoration:none;
+      }
+    #tabsF a span {
+      float:left;
+      display:block;
+      background:url("tabrightF.gif") no-repeat right top;
+      padding:5px 15px 4px 6px;
+      color:#666;
+      }
+    /* Commented Backslash Hack hides rule from IE5-Mac \*/
+    #tabsF a span {float:none;}
+    /* End IE5-Mac hack */
+    #tabsF a:hover span {
+      color:#FFF;
+      }
+    #tabsF a:hover {
+      background-position:0% -42px;
+      }
+    #tabsF a:hover span {
+      background-position:100% -42px;
+      }
+	
+	
+	
+/*- Menu Tabs G--------------------------- */
+
+    #tabsG {
+      float:left;
+      width:100%;
+      background:#666;
+      font-size:93%;
+      line-height:normal;
+      }
+    #tabsG ul {
+	margin:0;
+	padding:10px 10px 0 50px;
+	list-style:none;
+      }
+    #tabsG li {
+      display:inline;
+      margin:0;
+      padding:0;
+      }
+    #tabsG a {
+      float:left;
+      background:url("tableftG.gif") no-repeat left top;
+      margin:0;
+      padding:0 0 0 4px;
+      text-decoration:none;
+      }
+    #tabsG a span {
+      float:left;
+      display:block;
+      background:url("tabrightG.gif") no-repeat right top;
+      padding:5px 15px 4px 6px;
+      color:#FFF;
+      }
+    /* Commented Backslash Hack hides rule from IE5-Mac \*/
+    #tabsG a span {float:none;}
+    /* End IE5-Mac hack */
+    #tabsG a:hover span {
+      color:#FFF;
+      }
+    #tabsG a:hover {
+      background-position:0% -42px;
+      }
+    #tabsG a:hover span {
+      background-position:100% -42px;
+      } 
+
+
+/*- Menu Tabs H--------------------------- */
+
+    #tabsH {
+      float:left;
+      width:100%;
+      background:#000;
+      font-size:93%;
+      line-height:normal;
+      }
+    #tabsH ul {
+	margin:0;
+	padding:10px 10px 0 50px;
+	list-style:none;
+      }
+    #tabsH li {
+      display:inline;
+      margin:0;
+      padding:0;
+      }
+    #tabsH a {
+      float:left;
+      background:url("tableftH.gif") no-repeat left top;
+      margin:0;
+      padding:0 0 0 4px;
+      text-decoration:none;
+      }
+    #tabsH a span {
+      float:left;
+      display:block;
+      background:url("tabrightH.gif") no-repeat right top;
+      padding:5px 15px 4px 6px;
+      color:#FFF;
+      }
+    /* Commented Backslash Hack hides rule from IE5-Mac \*/
+    #tabsH a span {float:none;}
+    /* End IE5-Mac hack */
+    #tabsH a:hover span {
+      color:#FFF;
+      }
+    #tabsH a:hover {
+      background-position:0% -42px;
+      }
+    #tabsH a:hover span {
+      background-position:100% -42px;
+      }
+
+
+/*- Menu Tabs I--------------------------- */
+
+    #tabsI {
+      float:left;
+      width:100%;
+      background:#EFF4FA;
+      font-size:93%;
+      line-height:normal;
+	  border-bottom:1px solid #DD740B;
+      }
+    #tabsI ul {
+	margin:0;
+	padding:10px 10px 0 50px;
+	list-style:none;
+      }
+    #tabsI li {
+      display:inline;
+      margin:0;
+      padding:0;
+      }
+    #tabsI a {
+      float:left;
+      background:url("tableftI.gif") no-repeat left top;
+      margin:0;
+      padding:0 0 0 5px;
+      text-decoration:none;
+      }
+    #tabsI a span {
+      float:left;
+      display:block;
+      background:url("tabrightI.gif") no-repeat right top;
+      padding:5px 15px 4px 6px;
+      color:#FFF;
+      }
+    /* Commented Backslash Hack hides rule from IE5-Mac \*/
+    #tabsI a span {float:none;}
+    /* End IE5-Mac hack */
+    #tabsI a:hover span {
+      color:#FFF;
+      }
+    #tabsI a:hover {
+      background-position:0% -42px;
+      }
+    #tabsI a:hover span {
+      background-position:100% -42px;
+      }
+
+
+/*- Menu Tabs J--------------------------- */
+
+    #tabsJ {
+      float:left;
+      width:100%;
+      background:#ffffff;
+      font-size:85%;
+      line-height:normal;
+	  border-bottom:1px solid #24618E;
+      }
+    #tabsJ ul {
+	margin:0;
+	padding:5px 5px 0 5px;
+	list-style:none;
+      }
+    #tabsJ li {
+      display:inline;
+      margin:0;
+      padding:0;
+      }
+    #tabsJ a {
+      float:left;
+      background:url("../images/tableftJ.gif") no-repeat left top;
+      margin:0;
+      padding:0 0 0 5px;
+      text-decoration:none;
+      }
+    #tabsJ a span {
+      float:left;
+      display:block;
+      background:url("../images/tabrightJ.gif") no-repeat right top;
+      padding:5px 15px 4px 6px;
+      color:#24618E;
+      }
+    /* Commented Backslash Hack hides rule from IE5-Mac \*/
+    #tabsJ a span {float:none;}
+    /* End IE5-Mac hack */
+    #tabsJ a:hover span {
+      color:#FFF;
+      }
+    #tabsJ a:hover {
+      background-position:0% -42px;
+      }
+    #tabsJ a:hover span {
+      background-position:100% -42px;
+      }
+
+
+/*- Menu Tabs K--------------------------- */ 	
+
+    #tabsK {
+      float:left;
+      width:100%;
+      background:#E7E5E2;
+      font-size:93%;
+      line-height:normal;
+	  border-bottom:1px solid #54545C;
+      }
+    #tabsK ul {
+	margin:0;
+	padding:10px 10px 0 50px;
+	list-style:none;
+      }
+    #tabsK li {
+      display:inline;
+      margin:0;
+      padding:0;
+      }
+    #tabsK a {
+      float:left;
+      background:url("tableftK.gif") no-repeat left top;
+      margin:0;
+      padding:0 0 0 4px;
+      text-decoration:none;
+      }
+    #tabsK a span {
+      float:left;
+      display:block;
+      background:url("tabrightK.gif") no-repeat right top;
+      padding:5px 15px 4px 6px;
+      color:#FFF;
+      }
+    /* Commented Backslash Hack hides rule from IE5-Mac \*/
+    #tabsK a span {float:none;}
+    /* End IE5-Mac hack */
+    #tabsK a:hover span {
+      color:#FFF;
+	  background-position:100% -42px;
+      }
+    #tabsK a:hover {
+      background-position:0% -42px;
+      }
+    #tabsK a:hover span {
+      background-position:100% -42px;
+	  }
+	  	
+	
+	#ddblueblockmenu{
+border: 1px solid black;
+border-bottom-width: 0;
+width: 170px;
+}
+
+#ddblueblockmenu ul{
+margin: 0;
+padding: 0;
+list-style-type: none;
+font: normal 80% 'Trebuchet MS', 'Lucida Grande', Arial, sans-serif;
+}
+
+#ddblueblockmenu li a{
+display: block;
+padding: 3px 0;
+padding-left: 9px;
+width: 154px; /*185px minus all left/right paddings and margins*/
+text-decoration: none;
+color: white;
+background-color: #3D5599;
+border-bottom: 1px solid #90bade;
+border-left: 7px solid #1958b7;
+}
+
+* html #ddblueblockmenu li a{ /*IE only */
+width: 170px; /*IE 5*/
+w\idth: 154px; /*185px minus all left/right paddings and margins*/
+}
+
+#ddblueblockmenu li a:hover {
+background-color: #0F6F9F;
+border-left-color: #1c64d1;
+}
+
+#ddblueblockmenu div.menutitle{
+color: white;
+border-bottom: 1px solid black;
+padding: 1px 0;
+padding-left: 5px;
+background-color: black;
+font: bold 90% 'Trebuchet MS', 'Lucida Grande', Arial, sans-serif;
+}
+.Subbanner{
+
+	font-family: "Century Gothic";
+	font-size: 21px;
+	color: #006699;
+}
+.contentslide{
+border: 10px solid navy;
+border-bottom-width: 6px;
+padding: 4px;
+width: 336px;
+height: 178px;
+}
+
+
+
+.contentslide .contentdiv{
+display: none;
+}
+
+.pagination{
+width: 344px; /*Width of pagination DIV. To equal that of Content Slider's width, take into account the later's left/right paddings!*/
+text-align: right;
+background-color: navy;
+border: 10px solid navy;
+border-width: 0 10px; /*Left/ right border width of pagination DIV.*/
+padding: 0 0 4px 0;
+}
+
+* html .pagination{ /*Simplified box model hack to get IE5 to display width equal to that of Content Slider's*/
+width: 344px; /*IE5 width*/
+w\idth: 344px; /*IE6 width*/
+}
+
+.pagination a{
+padding: 0 5px;
+text-decoration: none; 
+color: #2e6ab1;
+background-color: white;
+}
+
+.pagination a:hover, .pagination a.selected{
+color: #000;
+background-color: #FEE496;
+}

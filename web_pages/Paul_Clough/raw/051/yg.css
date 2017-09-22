@@ -1,0 +1,528 @@
+/* copyright ©: yorkshiregrit.com 2001-6 */
+
+/* red:  main #991100 highlight dd8800 light ffcc77 very-light ffdd99 */
+
+body
+{
+	font-family: verdana, sans-serif;
+	font-size: 0.8em;
+	background-color: white; color: black;
+	margin: 5px;
+}
+
+p
+{
+	padding-bottom: 5px; padding-top: 0px;
+	margin-bottom: 0px; margin-top: 0px;
+}
+
+a 			{ color: #991100; text-decoration: none }
+a:visited	{ text-decoration: none }
+a:hover		{ text-decoration: underline }
+
+.text
+{
+	background-color: #ffcc77;
+	padding: 4px;
+	margin-bottom: 20px
+}
+
+div.admin-description { font-size: 80%; margin-bottom: 5px }
+
+
+/* ============== banner ============== */
+
+div#title
+{
+	padding: 10px 0px 10px 10px;
+}
+
+div#banner
+{
+	height: 65px;
+	font-weight: bold;
+	background-color: #991100; color: white;
+	-moz-border-radius: 10px 10px 0px 0px;
+}
+
+.login
+{
+	font-weight: bold;
+	font-size: 0.8em;
+	text-align: right;
+	color: white;
+}
+
+.login a
+{
+	color: white;
+}
+
+/* ============== trail ============== */
+
+div#trail
+{
+	display: block; width: 100%;
+	height: 20px; 
+	background-color: #ffcc77;
+	padding: 5px 0px 5px 0px;
+	-moz-border-radius: 0px 0px 10px 10px;
+}
+
+div#trail .items
+{
+	margin: 2px 5px 0px 10px;
+	font-size: 0.9em;
+}
+
+div#trail a
+{
+	color: black;
+}
+
+.item-trail
+{
+	float: right;
+	margin-bottom: 10px;
+	text-align: right;
+}
+
+/* ============== search box ============== */
+
+form#search
+{
+	float: right;
+	font-weight: normal;
+	display: inline;
+	margin-right: 5px;
+}
+
+form#search div .sinput
+{
+	background-color: white; color: black;
+	border: 1px solid #991100;
+	width: 100px;
+	font-size: 0.9em;
+}
+
+form#search div .ssubmit
+{
+	border: 1px solid #991100;
+	background-color: #ffdd99; color: black;
+	width: 30px;
+	font-size: 0.9em;
+}
+
+form#search .ssubmit:hover
+{
+	background-color: #dd8800;
+}
+
+/* ============== index ============== */
+
+div#index-left
+{
+	position: absolute;
+	top: 110px; 
+	width: 140px;
+	font-size: 0.8em;
+}
+
+div#index-right 
+{
+	position: absolute;
+	top: 110px; right: 5px;
+	width: 140px;
+	font-size: 0.8em;
+}
+
+div#index-right .section,
+div#index-left .section
+{
+	color: black; background-color: #ffcc77;
+	margin-bottom: 8px;
+	padding-bottom: 4px;
+	-moz-border-radius: 8px 8px 8px 8px;
+}
+
+div#index-right h1,
+div#index-left h1
+{
+	color: white; background-color: #991100;
+	font-weight: bold;
+	padding: 2px 0px 2px 8px;
+	margin: 0px 0px 2px 0px;
+	-moz-border-radius: 8px 8px 0px 0px;
+}
+
+div#index-left  .subtitle, 
+div#index-right .subtitle
+{
+	font-weight: bold;
+	padding: 2px 0px 0px 8px;
+}
+
+div#index-left > .section > .normal, 
+div#index-right > .section > .normal
+{
+}
+
+.nolink 		{ padding-left: 12px; display: block; color: black; }
+
+.normal a 		{ padding-left: 12px; display: block; color: black; }
+.normal a:hover { text-decoration: none; background-color: #dd8800; color: black;}
+
+.highlight a 	{ padding-left: 12px; display: block; background-color: #dd8800; color: black; }
+.highlight a:hover { text-decoration: none; background-color: #dd8800; }
+
+.photo-normal
+{
+	padding: 1px;
+	text-align: center;
+	display: block;
+}
+
+.photo-normal:hover
+{
+	background-color: #dd8800;
+}
+
+.photo-normal img
+{
+	border-width: 0px; 
+}
+
+.photo-highlight
+{
+	display: block;
+	text-align: center;
+	background-color: #dd8800
+}
+
+.photo-highlight img
+{
+	padding: 1px;
+	border-width: 0px;
+}
+
+
+/* ============== main ============== */
+
+div#content 
+{
+	margin: 5px 155px 0px 155px;
+	width: auto;
+}
+
+div#content h1
+{
+	font-size: 180%;
+}
+
+.photo-caption 	{ color: #444444; font-size: 0.8em; }
+img.main-photo 	{ border-width: 1px; border-style: solid; border-color: black; }
+.main-intro		{ margin-bottom: 40px; }
+.section 		{ margin-bottom: 15px; }
+.overview-thumbnail { border-color: #991100; float: right; margin-left: 7px; margin-bottom: 7px; }
+
+h1
+{
+	font-size: 1em;
+}
+
+h2
+{
+	font-size: 1.1em; font-weight: bold;
+	margin-bottom: 3px;
+	padding-top: 3px; padding-bottom: 3px;
+	border-width: 1px 0px 1px 0px;
+	border-style: solid;
+	border-color: #991100;
+}
+
+h3
+{
+	font-size: 1em;
+	font-weight: bold;
+	margin-bottom: 3px;
+	padding-top: 3px; padding-bottom: 3px;
+	border-width: 1px 0px 1px 0px;
+	border-style: dashed;
+	border-color: #991100;
+}
+
+h4
+{
+	font-size: 1em;
+	font-weight: bold;
+	margin-bottom: 2px;
+}
+
+div.tag
+{
+	border:1px solid;
+	border-color: #FC9 #630 #330 #F96;
+	font-size: 0.8em; font-weight: bold;
+	background-color: #ED3800; color: white;
+	padding: 0px 2px;
+	float: right; 
+	margin-right: 0px;
+}
+
+div.tag a
+{
+	background-color: #ED3800; color: white;
+	text-decoration: none; 
+}
+
+div.more
+{
+	text-align: right;
+	font-size: 0.8em;	
+}
+
+div.left-cell
+{
+	float: left;
+	margin-top: 4px;
+}
+
+.table-header
+{
+	background-color: #dddddd; color: black;
+	font-weight: bold;
+	padding: 2px;
+	border-width: 0px 1px 0px 1px;
+	border-style: dotted;
+	border-color: #991100;
+}
+
+.table-cell
+{
+	padding-left: 2px;
+}
+
+.table-row-highlight 
+{
+}
+
+.table-row-highlight:hover
+{
+	background-color: #dddddd;	
+}
+
+.search-result-title
+{
+	font-weight: bold;
+	font-size: 120%;
+	padding-bottom: 8px;
+}
+
+
+/* ============== item ============== */
+
+.item-no-thumbnail
+{
+	margin-bottom: 8px;
+}
+
+.item-with-thumbnail
+{
+	min-height: 86px;
+	margin-bottom: 2px;
+}
+
+.item-no-thumbnail .thumbnail, .item-with-thumbnail .thumbnail
+{
+	 float: left;
+}
+
+.item-no-thumbnail .info, .item-with-thumbnail .info
+{
+	margin-left: 88px;
+}
+
+.item-no-thumbnail .number, .item-with-thumbnail .number 
+{
+	font-weight: bold; 
+	font-size: 0.8em; 
+}
+
+.item-no-thumbnail .area, .item-with-thumbnail .area
+{
+	color: #444444; 
+	background-color: white;
+}
+
+.smalltext  { font-size: x-small; }
+
+
+/* ============== footer ============== */
+
+div#footer
+{
+	margin-top: 2px; margin-bottom: 10px;
+	color: #666666;
+	font-size: 0.8em;
+	text-align: center;
+	padding-top: 3px; padding-bottom: 3px;
+	border-width: 1px 0px 0px 0px;
+	border-style: solid;
+	border-color: #991100;
+}
+
+.footer-item
+{
+	margin: 0px 6px 0px 6px;
+}
+
+/* ============== general ============== */
+
+.button
+{
+	border-width: 1px; border-style: solid; border-color: #aaaaaa;
+	background-color: #FDC89D; color: black;
+	font-weight: bold;
+	text-align: center;
+}
+
+.button a
+{
+	padding: 2px 2px 2px 2px;
+	display: block;
+	text-decoration: none;
+	color: black;
+}
+
+.button a:hover
+{
+	text-decoration: none;
+	background-color: #991100; color: black;
+}
+
+.input 
+{
+	border: 1px solid #991100;
+	background-color: #ffdd99; color: black;
+	font-family: verdana, sans-serif;
+	font-size: 0.9em;
+	margin-top: 5px;
+}
+
+.input-submit
+{
+	border: 1px solid #991100;
+	margin-top: 5px;
+	background-color: #ffdd99; color: black;
+	font-family: verdana, sans-serif;
+	font-weight: bold;
+	width: 100px; height: 25px;
+}
+
+.input-submit:hover
+{
+	background-color:#dd8800; color: black;
+}
+
+.input-submit-small
+{
+	border: 1px solid #991100;
+	font-size: 0.7em;
+	font-family: verdana, sans-serif;
+	font-weight: bold;
+	background-color: #ffdd99; color: black;
+}
+
+.input-submit-small:hover
+{
+	background-color:#dd8800; color: black;
+}
+
+.input-submit-ec
+{
+	border: 1px solid #F68E55;
+	background-color: white; color: black;
+	font-family: verdana, sans-serif;
+	font-size: 0.9em;
+	margin-top:5px;
+	background-color: #ffdd99; color: black;
+}
+
+div.rule 
+{
+	width: 100%;
+	border-width: 0px 0px 1px 0px;
+	border-color: #dd8800;
+	border-style: dashed;
+}
+
+/* ============== comments ============== */
+
+.comments-section
+{
+	margin-bottom: 10px;
+}
+
+.comments-section-title 
+{
+	border-width: 0px 0px 1px 0px; border-color: #991100; border-style: dashed;
+	margin-bottom: 2px;
+}
+
+.comments-text
+{
+	margin-bottom: 10px;
+}
+
+.thumbnail-photo
+{
+	border-width: 1px; 
+	border-color: #991100
+}
+
+/* ============== highlight ============== */
+
+.highlight-action		{ background-color: #ffdd99; color: black; }
+.highlight-admin		{ background-color: #EDE5F9; color: black; }
+.highlight-error		{ background-color: #dddddd; color: black; }
+.highlight-none			{ background-color: white; color: black; }
+
+/* ============== editor ============== */
+
+.editor-block
+{
+	border-width: 1px 0px 0px 0px; 
+	border-style: solid;
+	border-color: black;
+	margin-bottom: 20px;
+	padding-left: 10px;
+}
+
+
+.editor-section
+{
+}
+
+.editor-section:hover
+{
+	background-color: #eeeeee;
+}
+
+.editor-item
+{
+}
+
+.editor-item:hover
+{
+	background-color: #dddddd;
+}
+
+.editor-photo
+{
+}
+
+.editor-photo:hover
+{
+	background-color: #cccccc;
+}
+

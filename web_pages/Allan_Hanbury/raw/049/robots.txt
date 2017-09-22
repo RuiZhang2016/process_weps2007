@@ -1,0 +1,20 @@
+# Keep everyone out of the calendar and statistics pages
+User-agent: *
+Disallow: /calendar/ 
+Disallow: /stats/
+Disallow: /cgi-bin/
+Disallow /~kiewit/docs/
+
+# Exclude a library section
+User-agent: *
+Disallow: /~library/infosys/dciswww/prod
+Disallow: /library/infosys/dciswww/prod
+
+
+# Don't index personal directories
+User-agent: Dartmouth Search
+Disallow: /people/
+
+# Roverbot is evil  <http://www.roverbot.com>
+User-agent: Roverbot
+Disallow: /

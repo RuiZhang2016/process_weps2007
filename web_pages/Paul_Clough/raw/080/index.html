@@ -1,0 +1,1091 @@
+<?xml version="1.0" encoding="iso-8859-1"?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "DTD/xhtml1-transitional.dtd">
+<html lang="EN">
+  <head>
+    <style type="text/css">
+      /* Element level classes */
+
+body
+{
+    color: Black;
+    font-size: 12px;
+    font-family: "Bitstream Vera Sans", "Lucida Sans Unicode", "Lucida Grande", Arial;
+    background-color: White;
+    margin: 8px;
+}
+
+td, th
+{
+    color: Black;
+    font-size: 12px;
+    font-family: "Bitstream Vera Sans", "Lucida Sans Unicode", "Lucida Grande", Arial;
+}
+
+img
+{
+    border-width: 0px;
+    vertical-align: middle;
+}
+
+a
+{
+    color: #000099;
+    text-decoration: none;
+}
+a:active
+{
+    color: #FF6600;
+    text-decoration: none;
+}
+a:visited
+{
+    color: #000099;
+    text-decoration: none;
+}
+
+a:hover
+{
+    color: #FF6600;
+}
+
+input[type=text], input[type=password], input[type=file], select
+{
+    background-color: White;
+    color: Black;
+    font-size: 12px;
+    font-family: "Bitstream Vera Sans", "Lucida Sans Unicode", "Lucida Grande", Arial;
+
+    vertical-align: middle;
+
+}
+
+textarea
+{
+    background-color: White;
+    color: Black;
+    font-size: 12px;
+    font-family: Lucida Console, Andale Mono, Courier New, Courier;
+}
+
+input[type=submit]
+{
+    border: 1px dotted #808080;
+    background-color: #EEEEEE;
+    font-size: 12px;
+    font-family: "Bitstream Vera Sans", "Lucida Sans Unicode", "Lucida Grande", Arial;
+    vertical-align: middle;
+}
+
+input
+{
+    vertical-align: middle;
+}
+
+
+/* new styles */
+
+#phorum-index
+{
+    width: 100%;
+    border: 1px solid #808080;
+    border-bottom-width: 0px;
+    text-align: left;
+}
+
+#phorum-index th
+{
+    border-bottom: 1px solid #808080;
+    background-color: #EEEEEE;
+    padding: 3px 0 3px 0;
+}
+
+#phorum-index td
+{
+    font-family: "Bitstream Vera Sans", "Trebuchet MS", Verdana, Arial, sans-serif;
+    background-color: White;
+    padding: 3px 0 3px 0;
+    border-bottom: 1px solid #808080;
+}
+
+#phorum-index th.forum-name
+{
+    font-family: "Bitstream Vera Sans", "Trebuchet MS", Verdana, Arial, sans-serif;
+    font-size: 16px;
+    padding: 3px 0 3px 3px;
+}
+
+#phorum-index th.forum-name a
+{
+    color: Black;
+}
+
+#phorum-index th.forum-threads
+{
+    width: 120px;
+    text-align: center;
+    vertical-align: middle;
+}
+
+#phorum-index th.forum-posts
+{
+    width: 120px;
+    text-align: center;
+    vertical-align: middle;
+}
+
+#phorum-index th.forum-last-post
+{
+    padding: 3px 15px 3px 3px;
+    vertical-align: middle;
+}
+
+#phorum-index td.forum-name
+{
+    font-family: "Bitstream Vera Sans", "Trebuchet MS", Verdana, Arial, sans-serif;
+    font-size: 13px;
+    font-weight: bold;
+    padding: 5px 0 5px 15px;
+}
+
+#phorum-index td.forum-name p
+{
+    font-size: 13px;
+    font-weight: normal;
+    font-family: "Bitstream Vera Sans", "Lucida Sans Unicode", "Lucida Grande", Arial;
+    margin: 0 15px 0 0;
+}
+
+#phorum-index td.forum-name small
+{
+    font-weight: normal;
+    font-family: "Bitstream Vera Sans", "Lucida Sans Unicode", "Lucida Grande", Arial;
+}
+
+#phorum-index td.forum-threads
+{
+    width: 120px;
+    text-align: center;
+}
+
+#phorum-index td.forum-posts
+{
+    width: 120px;
+    text-align: center;
+}
+
+#phorum-index td.forum-last-post
+{
+    width: 120px;
+    padding: 0 15px 0 0;
+}
+
+#phorum-menu-table
+{
+    width: 100%;
+    border-width: 0px;
+}
+
+#phorum-menu
+{
+    padding: 5px 3px 0 0;
+    vertical-align: top;
+    width: 200px;
+}
+
+#phorum-content
+{
+    padding: 5px 0 0 2px;
+    vertical-align: top;
+}
+
+div.phorum-menu
+{
+    font-size: 12px;
+    font-family: "Bitstream Vera Sans", "Lucida Sans Unicode", "Lucida Grande", Arial;
+    background-color: White;
+    border: 1px solid #808080;
+    padding: 3px;
+}
+
+div.phorum-menu ul
+{
+    font-weight: bold;
+    list-style: none;
+    padding: 0;
+    margin: 0 0 10px 0;
+}
+
+div.phorum-menu li
+{
+    font-weight: bold;
+    font-family: Lucida Sans Unicode, Lucida Grande, Arial;
+    font-size: 12px;
+    padding: 0 0 0 15px;
+    margin-top:3px;
+    background-image: url('templates/default/images/square_bullet.png');
+    background-repeat: no-repeat;
+    background-position: 1px 2px;
+}
+
+div.phorum-menu a
+{
+    font-weight: normal;
+    color: #000000;
+}
+
+div.phorum-menu a:hover
+{
+    color: #FF6600;
+}
+
+div.phorum-menu a.phorum-current-page
+{
+    font-weight: bold;
+}
+
+#phorum-post-form ul
+{
+    padding: 0 0 0 20px;
+    margin: 3px 0px 8px 0px;
+    font-size: 11px;
+}
+
+#phorum-post-form li
+{
+    margin-bottom: 3px;
+}
+
+#phorum-attachment-list td
+{
+    font-size: 11px;
+}
+
+    /* Standard classes for use in any page */
+    /* PhorumDesignDiv - a div for keeping the forum-size size */
+    .PDDiv
+    {
+        width: 100%;
+        text-align: left;
+    }
+    /* new class for layouting the submit-buttons in IE too */
+    .PhorumSubmit {
+        border: 1px dotted #808080;
+        color: Black;
+        background-color: #EEEEEE;
+        font-size: 12px;
+        font-family: "Bitstream Vera Sans", "Lucida Sans Unicode", "Lucida Grande", Arial;
+        vertical-align: middle;
+    }
+
+    .PhorumTitleText
+    {
+        float: right;
+    }
+
+    .PhorumStdBlock
+    {
+        font-size: 12px;
+        font-family: "Bitstream Vera Sans", "Lucida Sans Unicode", "Lucida Grande", Arial;
+        background-color: White;
+        border: 1px solid #808080;
+/*        width: 100%; */
+        padding: 3px;
+        text-align: left;
+    }
+
+    .PhorumStdBlockHeader
+    {
+        font-size: 12px;
+        font-family: "Bitstream Vera Sans", "Lucida Sans Unicode", "Lucida Grande", Arial;
+        background-color: #EEEEEE;
+/*        width: 100%; */
+        border-left: 1px solid #808080;
+        border-right: 1px solid #808080;
+        border-top: 1px solid #808080;
+        padding: 3px;
+        text-align: left;
+    }
+
+    .PhorumHeaderText
+    {
+        font-weight: bold;
+    }
+
+    .PhorumNavBlock
+    {
+        font-size: 12px;
+        font-family: Lucida Sans Unicode, Lucida Grande, Arial;
+        border: 1px solid #808080;
+        margin-top: 1px;
+        margin-bottom: 1px;
+/*        width: 100%; */
+        background-color: #EEEEEE;
+        padding: 2px 3px 2px 3px;
+    }
+
+    .PhorumNavHeading
+    {
+        font-weight: bold;
+    }
+
+    A.PhorumNavLink
+    {
+        color: #000000;
+        text-decoration: none;
+        font-weight: normal;
+        font-family: Lucida Sans Unicode, Lucida Grande, Arial;
+        font-size: 12px;
+        border-style: solid;
+        border-color: #EEEEEE;
+        border-width: 1px;
+        padding: 0px 4px 0px 4px;
+    }
+
+    .PhorumSelectedFolder
+    {
+        color: #000000;
+        text-decoration: none;
+        font-weight: normal;
+        font-family: Lucida Sans Unicode, Lucida Grande, Arial;
+        font-size: 12px;
+        border-style: solid;
+        border-color: #EEEEEE;
+        border-width: 1px;
+        padding: 0px 4px 0px 4px;
+    }
+
+    A.PhorumNavLink:hover
+    {
+        background-color: #FFFFFF;
+        font-weight: normal;
+        font-family: Lucida Sans Unicode, Lucida Grande, Arial;
+        font-size: 12px;
+        border-style: solid;
+        border-color: #808080;
+        border-width: 1px;
+        color: #FF6600;
+    }
+
+    .PhorumFloatingText
+    {
+        padding: 10px;
+    }
+
+    .PhorumHeadingLeft
+    {
+        padding-left: 3px;
+        font-weight: bold;
+    }
+
+    .PhorumUserError
+    {
+        padding: 10px;
+        text-align: center;
+        color: Red;
+        font-size: 16px;
+        font-family: "Bitstream Vera Sans", "Trebuchet MS", Verdana, Arial, sans-serif;
+        font-weight: bold;
+    }
+
+    .PhorumOkMsg
+    {
+        padding: 10px;
+        text-align: center;
+        color: DarkGreen;
+        font-size: 16px;
+        font-family: "Bitstream Vera Sans", "Trebuchet MS", Verdana, Arial, sans-serif;
+        font-weight: bold;
+    }
+
+   .PhorumNewFlag
+    {
+        font-family: "Bitstream Vera Sans", "Lucida Sans Unicode", "Lucida Grande", Arial;
+        font-size: 10px;
+        font-weight: bold;
+        color: #CC0000;
+    }
+
+    .PhorumNotificationArea
+    {
+        float: right;
+        border-style: dotted;
+        border-color: #808080;
+        border-width: 1px;
+    }
+
+    /* PSUEDO Table classes                                       */
+    /* In addition to these, each file that uses them will have a */
+    /* column with a style property to set its right margin       */
+
+    .PhorumColumnFloatXSmall
+    {
+        float: right;
+        width: 75px;
+    }
+
+    .PhorumColumnFloatSmall
+    {
+        float: right;
+        width: 100px;
+    }
+
+    .PhorumColumnFloatMedium
+    {
+        float: right;
+        width: 150px;
+    }
+
+    .PhorumColumnFloatLarge
+    {
+        float: right;
+        width: 200px;
+    }
+
+    .PhorumColumnFloatXLarge
+    {
+        float: right;
+        width: 400px;
+    }
+
+    .PhorumRowBlock
+    {
+        background-color: White;
+        border-bottom: 1px solid #F2F2F2;
+        padding: 5px 0px 0px 0px;
+    }
+
+    .PhorumRowBlockAlt
+    {
+        background-color: #EEEEEE;
+        border-bottom: 1px solid #F2F2F2;
+        padding: 5px 0px 0px 0px;
+    }
+
+    /************/
+
+
+    /* All that is left of the tables */
+
+    .PhorumStdTable
+    {
+        border-style: solid;
+        border-color: #808080;
+        border-width: 1px;
+        width: 100%;
+    }
+
+    .PhorumTableHeader
+    {
+        background-color: #EEEEEE;
+        border-bottom-style: solid;
+        border-bottom-color: #808080;
+        border-bottom-width: 1px;
+        color: #000000;
+        font-size: 12px;
+        font-family: Lucida Sans Unicode, Lucida Grande, Arial;
+        font-weight: bold;
+        padding: 3px;
+    }
+
+    .PhorumTableRow
+    {
+        background-color: White;
+        border-bottom-style: solid;
+        border-bottom-color: #F2F2F2;
+        border-bottom-width: 1px;
+        color: Black;
+        font-size: 12px;
+        font-family: "Bitstream Vera Sans", "Lucida Sans Unicode", "Lucida Grande", Arial;
+        height: 35px;
+        padding: 3px;
+    }
+
+    .PhorumTableRowAlt
+    {
+        background-color: #EEEEEE;
+        border-bottom-style: solid;
+        border-bottom-color: #F2F2F2;
+        border-bottom-width: 1px;
+        color: #000000;
+        font-size: 12px;
+        font-family: "Bitstream Vera Sans", "Lucida Sans Unicode", "Lucida Grande", Arial;
+        height: 35px;
+        padding: 3px;
+    }
+
+    table.PhorumFormTable td
+    {
+        height: 26px;
+    }
+
+    /**********************/
+
+
+    /* Read Page specifics */
+
+    .PhorumReadMessageBlock
+    {
+        margin-bottom: 5px;
+    }
+
+   .PhorumReadBodySubject
+    {
+        color: Black;
+        font-size: 16px;
+        font-family: "Bitstream Vera Sans", "Trebuchet MS", Verdana, Arial, sans-serif;
+        font-weight: bold;
+        padding-left: 3px;
+    }
+
+    .PhorumReadBodyHead
+    {
+        padding-left: 5px;
+    }
+
+    .PhorumReadBodyText
+    {
+        font-size: 12px;
+        font-family: "Bitstream Vera Sans", "Lucida Sans Unicode", "Lucida Grande", Arial;
+        padding: 5px;
+    }
+
+    .PhorumReadNavBlock
+    {
+        font-size: 12px;
+        font-family: Lucida Sans Unicode, Lucida Grande, Arial;
+        border-left: 1px solid #808080;
+        border-right: 1px solid #808080;
+        border-bottom: 1px solid #808080;
+/*        width: 100%; */
+        background-color: #EEEEEE;
+        padding: 2px 3px 2px 3px;
+    }
+
+    /********************/
+
+    /* List page specifics */
+
+    .PhorumListSubText
+    {
+        color: #707070;
+        font-size: 10px;
+        font-family: "Bitstream Vera Sans", Arial, sans-serif;
+    }
+
+    .PhorumListPageLink
+    {
+        color: #707070;
+        font-size: 10px;
+        font-family: "Bitstream Vera Sans", Arial, sans-serif;
+    }
+
+    .PhorumListSubjPrefix
+    {
+        font-weight: bold;
+    }
+
+    /********************/
+
+    /* Posting editor specifics */
+
+    .PhorumListModLink, .PhorumListModLink a
+    {
+        color: #707070;
+        font-size: 10px;
+        font-family: "Bitstream Vera Sans", Arial, sans-serif;
+    }
+
+    .PhorumAttachmentRow {
+        border-bottom: 1px solid #EEEEEE;
+        padding: 3px 0px 3px 0px;
+    }
+
+    /********************/
+
+    /* PM specifics */
+
+    .phorum-recipientblock
+    {
+        border: 1px solid black;
+        position:relative;
+        float:left;
+        padding: 1px 1px 1px 5px;
+        margin: 0px 5px 5px 0px;
+        font-size: 11px;
+        background-color: White;
+        border: 1px solid #808080;
+        white-space: nowrap;
+    }
+
+    .phorum-pmuserselection
+    {
+        padding-bottom: 5px;
+    }
+
+    .phorum-gaugetable {
+        border-collapse: collapse;
+    }
+
+    .phorum-gauge {
+        border: 1px solid #808080;
+        background-color: #EEEEEE;
+    }
+
+    .phorum-gaugeprefix {
+        border: none;
+        background-color: white;
+        padding-right: 10px;
+    }
+
+    /********************/
+
+    /* Override classes - Must stay at the end */
+
+    .PhorumNarrowBlock
+    {
+        width: 600px;
+    }
+
+    .PhorumSmallFont
+    {
+        font-size: 11px;
+    }
+
+    .PhorumLargeFont
+    {
+        color: Black;
+        font-size: 16px;
+        font-family: "Bitstream Vera Sans", "Trebuchet MS", Verdana, Arial, sans-serif;
+        font-weight: bold;
+    }
+
+
+    .PhorumFooterPlug
+    {
+        margin-top: 10px;
+        font-size: 10px;
+        font-family: "Bitstream Vera Sans", Arial, sans-serif;
+    }
+
+
+
+    /*   BBCode styles  */
+
+    blockquote.bbcode
+    {
+        font-size: 11px;
+        margin: 0 0 0 10px;
+    }
+
+    blockquote.bbcode div
+    {
+        margin: 0;
+        padding: 5px;
+        border: 1px solid #808080;
+    }
+
+    blockquote.bbcode strong
+    {
+        font-style: italic;
+        margin: 0 0 3px 0;
+    }
+
+    </style>
+                <title>Lemur Phorum :: Lemur Toolkit Discussion</title>
+      </head>
+  <body onload="">
+    <div align="center">
+      <div class="PDDiv">
+                <span class="PhorumTitleText PhorumLargeFont">
+          <a href="http://www.lemurproject.org/phorum/list.php?11">Lemur Toolkit Discussion</a>&nbsp;:&nbsp;          The Lemur Project        </span>
+        <a href="http://www.lemurproject.org/"><img src="logo.png" alt="The Lemur Toolkit Phorum" title="The Lemur Toolkit Phorum" /></a>
+        <div class="PhorumFloatingText"><font size=+1>Lemur Toolkit Discussion: </font><br>A place for users of the Lemur toolkit to discuss their experiences and problems with the software.<p>&nbsp;</div>
+<div class="PhorumNavBlock" style="text-align: left;">
+  <span class="PhorumNavHeading PhorumHeadingLeft">Goto:</span>&nbsp;<a class="PhorumNavLink" href="http://www.lemurproject.org/phorum/index.php">Forum List</a>&bull;<a class="PhorumNavLink" href="http://www.lemurproject.org/phorum/posting.php?11">New Topic</a>&bull;<a class="PhorumNavLink" href="http://www.lemurproject.org/phorum/search.php?11">Search</a>&bull;<a class="PhorumNavLink" href="http://www.lemurproject.org/phorum/login.php?11">Log In</a></div>
+<div class="PhorumNavBlock" style="text-align: left;">
+      <div style="float: right;">
+      <span class="PhorumNavHeading">Goto Page:</span>&nbsp;<a class="PhorumNavLink" href="http://www.lemurproject.org/phorum/list.php?11,page=23">Previous</a><a class="PhorumNavLink" href="http://www.lemurproject.org/phorum/list.php?11,page=1">First...</a><a class="PhorumNavLink" href="http://www.lemurproject.org/phorum/list.php?11,page=19">19</a><a class="PhorumNavLink" href="http://www.lemurproject.org/phorum/list.php?11,page=20">20</a><a class="PhorumNavLink" href="http://www.lemurproject.org/phorum/list.php?11,page=21">21</a><a class="PhorumNavLink" href="http://www.lemurproject.org/phorum/list.php?11,page=22">22</a><a class="PhorumNavLink" href="http://www.lemurproject.org/phorum/list.php?11,page=23">23</a><span class="PhorumNavLink"><strong>24</strong></span><a class="PhorumNavLink" href="http://www.lemurproject.org/phorum/list.php?11,page=25">25</a><a class="PhorumNavLink" href="http://www.lemurproject.org/phorum/list.php?11,page=26">26</a><a class="PhorumNavLink" href="http://www.lemurproject.org/phorum/list.php?11,page=27">27</a><a class="PhorumNavLink" href="http://www.lemurproject.org/phorum/list.php?11,page=28">28</a><a class="PhorumNavLink" href="http://www.lemurproject.org/phorum/list.php?11,page=29">29</a><a class="PhorumNavLink" href="http://www.lemurproject.org/phorum/list.php?11,page=25">Next</a>    </div>
+    <span class="PhorumNavHeading PhorumHeadingLeft">Current Page: </span>24 of 29</div>
+
+<table border="0" cellspacing="0" class="PhorumStdTable">
+  <tr>
+    <th class="PhorumTableHeader" align="left">Subject</th>
+        <th class="PhorumTableHeader" align="center" nowrap="nowrap" width="80">Posts&nbsp;</th>
+    <th class="PhorumTableHeader" align="left" nowrap="nowrap" width="150">Started By&nbsp;</th>
+    <th class="PhorumTableHeader" align="left" nowrap="nowrap" width="150">Last Post&nbsp;</th>
+  </tr>
+            <tr>
+      <td class="PhorumTableRow">
+        <img src="carat.gif" border="0" width="8" height="8" alt="" style="vertical-align: middle;" />&nbsp;                                <a href="http://www.lemurproject.org/phorum/read.php?11,554">how to user DistRetEval?</a>
+                              </td>
+            <td class="PhorumTableRow" align="center" nowrap="nowrap">2&nbsp;</td>
+      <td class="PhorumTableRow" nowrap="nowrap"><a href="&#109;&#97;&#105;&#108;&#116;&#111;&#58;&#103;&#97;&#110;&#103;&#122;&#104;&#97;&#110;&#103;&#64;&#105;&#99;&#116;&#46;&#97;&#99;&#46;&#99;&#110;">zhanggang</a>&nbsp;</td>
+      <td class="PhorumTableRow PhorumSmallFont" nowrap="nowrap">
+        05/18/2004 11:14AM&nbsp;<br />
+        <span class="PhorumListSubText">
+          <a href="http://www.lemurproject.org/phorum/read.php?11,554,555#msg-555">Last Post</a> by <a href="http://www.lemurproject.org/phorum/profile.php?11,4">Paul Ogilvie</a>        </span>
+      </td>
+    </tr>
+          <tr>
+      <td class="PhorumTableRowAlt">
+        <img src="carat.gif" border="0" width="8" height="8" alt="" style="vertical-align: middle;" />&nbsp;                                <a href="http://www.lemurproject.org/phorum/read.php?11,548">help:a retrieval problem</a>
+                              </td>
+            <td class="PhorumTableRowAlt" align="center" nowrap="nowrap">3&nbsp;</td>
+      <td class="PhorumTableRowAlt" nowrap="nowrap"><a href="&#109;&#97;&#105;&#108;&#116;&#111;&#58;&#103;&#97;&#110;&#103;&#122;&#104;&#97;&#110;&#103;&#64;&#105;&#99;&#116;&#46;&#97;&#99;&#46;&#99;&#110;">zhanggang</a>&nbsp;</td>
+      <td class="PhorumTableRowAlt PhorumSmallFont" nowrap="nowrap">
+        05/12/2004 10:23PM&nbsp;<br />
+        <span class="PhorumListSubText">
+          <a href="http://www.lemurproject.org/phorum/read.php?11,548,553#msg-553">Last Post</a> by zhanggang        </span>
+      </td>
+    </tr>
+          <tr>
+      <td class="PhorumTableRow">
+        <img src="carat.gif" border="0" width="8" height="8" alt="" style="vertical-align: middle;" />&nbsp;                                <a href="http://www.lemurproject.org/phorum/read.php?11,552">Bug fixes for example retrieval application</a>
+                              </td>
+            <td class="PhorumTableRow" align="center" nowrap="nowrap">1&nbsp;</td>
+      <td class="PhorumTableRow" nowrap="nowrap"><a href="&#109;&#97;&#105;&#108;&#116;&#111;&#58;&#108;&#101;&#105;&#102;&#111;&#115;&#109;&#97;&#120;&#105;&#109;&#117;&#115;&#64;&#104;&#111;&#116;&#109;&#97;&#105;&#108;&#46;&#99;&#111;&#109;">Leifos</a>&nbsp;</td>
+      <td class="PhorumTableRow PhorumSmallFont" nowrap="nowrap">
+        05/12/2004 06:25AM&nbsp;<br />
+        <span class="PhorumListSubText">
+          <a href="http://www.lemurproject.org/phorum/read.php?11,552,552#msg-552">Last Post</a> by Leifos        </span>
+      </td>
+    </tr>
+          <tr>
+      <td class="PhorumTableRowAlt">
+        <img src="carat.gif" border="0" width="8" height="8" alt="" style="vertical-align: middle;" />&nbsp;                                <a href="http://www.lemurproject.org/phorum/read.php?11,550">Lemur ranking formula / Minimal span?</a>
+                              </td>
+            <td class="PhorumTableRowAlt" align="center" nowrap="nowrap">1&nbsp;</td>
+      <td class="PhorumTableRowAlt" nowrap="nowrap"><a href="&#109;&#97;&#105;&#108;&#116;&#111;&#58;&#108;&#101;&#105;&#100;&#110;&#101;&#114;&#64;&#108;&#105;&#110;&#103;&#117;&#105;&#116;&#46;&#99;&#111;&#109;">Jochen Leidner</a>&nbsp;</td>
+      <td class="PhorumTableRowAlt PhorumSmallFont" nowrap="nowrap">
+        05/11/2004 03:28PM&nbsp;<br />
+        <span class="PhorumListSubText">
+          <a href="http://www.lemurproject.org/phorum/read.php?11,550,550#msg-550">Last Post</a> by Jochen Leidner        </span>
+      </td>
+    </tr>
+          <tr>
+      <td class="PhorumTableRow">
+        <img src="carat.gif" border="0" width="8" height="8" alt="" style="vertical-align: middle;" />&nbsp;                                <a href="http://www.lemurproject.org/phorum/read.php?11,549">Twostage smoothing</a>
+                              </td>
+            <td class="PhorumTableRow" align="center" nowrap="nowrap">1&nbsp;</td>
+      <td class="PhorumTableRow" nowrap="nowrap"><a href="&#109;&#97;&#105;&#108;&#116;&#111;&#58;&#97;&#108;&#97;&#110;&#110;&#97;&#98;&#97;&#105;&#64;&#104;&#111;&#116;&#109;&#97;&#105;&#108;&#46;&#99;&#111;&#109;">Tur</a>&nbsp;</td>
+      <td class="PhorumTableRow PhorumSmallFont" nowrap="nowrap">
+        05/09/2004 04:54PM&nbsp;<br />
+        <span class="PhorumListSubText">
+          <a href="http://www.lemurproject.org/phorum/read.php?11,549,549#msg-549">Last Post</a> by Tur        </span>
+      </td>
+    </tr>
+          <tr>
+      <td class="PhorumTableRowAlt">
+        <img src="carat.gif" border="0" width="8" height="8" alt="" style="vertical-align: middle;" />&nbsp;                                <a href="http://www.lemurproject.org/phorum/read.php?11,547">Lemur 2.2.1 available</a>
+                              </td>
+            <td class="PhorumTableRowAlt" align="center" nowrap="nowrap">1&nbsp;</td>
+      <td class="PhorumTableRowAlt" nowrap="nowrap"><a href="http://www.lemurproject.org/phorum/profile.php?11,5">Thi Nhu Truong</a>&nbsp;</td>
+      <td class="PhorumTableRowAlt PhorumSmallFont" nowrap="nowrap">
+        05/05/2004 04:38PM&nbsp;<br />
+        <span class="PhorumListSubText">
+          <a href="http://www.lemurproject.org/phorum/read.php?11,547,547#msg-547">Last Post</a> by <a href="http://www.lemurproject.org/phorum/profile.php?11,5">Thi Nhu Truong</a>        </span>
+      </td>
+    </tr>
+          <tr>
+      <td class="PhorumTableRow">
+        <img src="carat.gif" border="0" width="8" height="8" alt="" style="vertical-align: middle;" />&nbsp;                                <a href="http://www.lemurproject.org/phorum/read.php?11,542">VS .NET problem</a>
+                              </td>
+            <td class="PhorumTableRow" align="center" nowrap="nowrap">5&nbsp;</td>
+      <td class="PhorumTableRow" nowrap="nowrap"><a href="http://www.lemurproject.org/phorum/profile.php?11,49">Claudia Hauff</a>&nbsp;</td>
+      <td class="PhorumTableRow PhorumSmallFont" nowrap="nowrap">
+        05/04/2004 02:15PM&nbsp;<br />
+        <span class="PhorumListSubText">
+          <a href="http://www.lemurproject.org/phorum/read.php?11,542,546#msg-546">Last Post</a> by <a href="http://www.lemurproject.org/phorum/profile.php?11,5">Thi Nhu Truong</a>        </span>
+      </td>
+    </tr>
+          <tr>
+      <td class="PhorumTableRowAlt">
+        <img src="carat.gif" border="0" width="8" height="8" alt="" style="vertical-align: middle;" />&nbsp;                                <a href="http://www.lemurproject.org/phorum/read.php?11,371">Trec5-6 chinese data bigram segmentation</a>
+                              </td>
+            <td class="PhorumTableRowAlt" align="center" nowrap="nowrap">2&nbsp;</td>
+      <td class="PhorumTableRowAlt" nowrap="nowrap"><a href="&#109;&#97;&#105;&#108;&#116;&#111;&#58;&#98;&#114;&#97;&#118;&#101;&#114;&#110;&#117;&#100;&#116;&#50;&#48;&#48;&#48;&#64;&#115;&#105;&#110;&#97;&#46;&#99;&#111;&#109;">bigram</a>&nbsp;</td>
+      <td class="PhorumTableRowAlt PhorumSmallFont" nowrap="nowrap">
+        04/27/2004 10:10PM&nbsp;<br />
+        <span class="PhorumListSubText">
+          <a href="http://www.lemurproject.org/phorum/read.php?11,371,541#msg-541">Last Post</a> by bird        </span>
+      </td>
+    </tr>
+          <tr>
+      <td class="PhorumTableRow">
+        <img src="carat.gif" border="0" width="8" height="8" alt="" style="vertical-align: middle;" />&nbsp;                                <a href="http://www.lemurproject.org/phorum/read.php?11,327">character n-gram tokenization</a>
+                              </td>
+            <td class="PhorumTableRow" align="center" nowrap="nowrap">7&nbsp;</td>
+      <td class="PhorumTableRow" nowrap="nowrap"><a href="&#109;&#97;&#105;&#108;&#116;&#111;&#58;&#106;&#97;&#109;&#101;&#115;&#46;&#109;&#97;&#121;&#102;&#105;&#101;&#108;&#100;&#64;&#106;&#104;&#117;&#97;&#112;&#108;&#46;&#101;&#100;&#117;">James Mayfield</a>&nbsp;</td>
+      <td class="PhorumTableRow PhorumSmallFont" nowrap="nowrap">
+        04/27/2004 10:07PM&nbsp;<br />
+        <span class="PhorumListSubText">
+          <a href="http://www.lemurproject.org/phorum/read.php?11,327,540#msg-540">Last Post</a> by bird        </span>
+      </td>
+    </tr>
+          <tr>
+      <td class="PhorumTableRowAlt">
+        <img src="carat.gif" border="0" width="8" height="8" alt="" style="vertical-align: middle;" />&nbsp;                                <a href="http://www.lemurproject.org/phorum/read.php?11,539">Chinese Bigram Segmentation</a>
+                              </td>
+            <td class="PhorumTableRowAlt" align="center" nowrap="nowrap">1&nbsp;</td>
+      <td class="PhorumTableRowAlt" nowrap="nowrap"><a href="&#109;&#97;&#105;&#108;&#116;&#111;&#58;&#122;&#104;&#121;&#119;&#97;&#110;&#103;&#64;&#115;&#105;&#110;&#97;&#49;&#48;&#48;&#46;&#99;&#111;&#109;">bird</a>&nbsp;</td>
+      <td class="PhorumTableRowAlt PhorumSmallFont" nowrap="nowrap">
+        04/27/2004 09:58PM&nbsp;<br />
+        <span class="PhorumListSubText">
+          <a href="http://www.lemurproject.org/phorum/read.php?11,539,539#msg-539">Last Post</a> by bird        </span>
+      </td>
+    </tr>
+          <tr>
+      <td class="PhorumTableRow">
+        <img src="carat.gif" border="0" width="8" height="8" alt="" style="vertical-align: middle;" />&nbsp;                                <a href="http://www.lemurproject.org/phorum/read.php?11,532">What is 'table-of-content file'?</a>
+                              </td>
+            <td class="PhorumTableRow" align="center" nowrap="nowrap">6&nbsp;</td>
+      <td class="PhorumTableRow" nowrap="nowrap"><a href="&#109;&#97;&#105;&#108;&#116;&#111;&#58;&#107;&#46;&#97;&#104;&#110;&#64;&#115;&#109;&#115;&#46;&#101;&#100;&#46;&#97;&#99;&#46;&#117;&#107;">Needhelp</a>&nbsp;</td>
+      <td class="PhorumTableRow PhorumSmallFont" nowrap="nowrap">
+        04/27/2004 02:09PM&nbsp;<br />
+        <span class="PhorumListSubText">
+          <a href="http://www.lemurproject.org/phorum/read.php?11,532,538#msg-538">Last Post</a> by Needhelp        </span>
+      </td>
+    </tr>
+          <tr>
+      <td class="PhorumTableRowAlt">
+        <img src="carat.gif" border="0" width="8" height="8" alt="" style="vertical-align: middle;" />&nbsp;                                <a href="http://www.lemurproject.org/phorum/read.php?11,529">How to access document manager?</a>
+                              </td>
+            <td class="PhorumTableRowAlt" align="center" nowrap="nowrap">3&nbsp;</td>
+      <td class="PhorumTableRowAlt" nowrap="nowrap"><a href="http://www.lemurproject.org/phorum/profile.php?11,46">Kisuh Ahn</a>&nbsp;</td>
+      <td class="PhorumTableRowAlt PhorumSmallFont" nowrap="nowrap">
+        04/23/2004 07:20PM&nbsp;<br />
+        <span class="PhorumListSubText">
+          <a href="http://www.lemurproject.org/phorum/read.php?11,529,531#msg-531">Last Post</a> by <a href="http://www.lemurproject.org/phorum/profile.php?11,46">Kisuh Ahn</a>        </span>
+      </td>
+    </tr>
+          <tr>
+      <td class="PhorumTableRow">
+        <img src="carat.gif" border="0" width="8" height="8" alt="" style="vertical-align: middle;" />&nbsp;                                <a href="http://www.lemurproject.org/phorum/read.php?11,527">Question on bigram LM</a>
+                              </td>
+            <td class="PhorumTableRow" align="center" nowrap="nowrap">2&nbsp;</td>
+      <td class="PhorumTableRow" nowrap="nowrap"><a href="&#109;&#97;&#105;&#108;&#116;&#111;&#58;&#97;&#108;&#97;&#110;&#110;&#97;&#98;&#97;&#105;&#64;&#104;&#111;&#116;&#109;&#97;&#105;&#108;&#46;&#99;&#111;&#109;">Tur</a>&nbsp;</td>
+      <td class="PhorumTableRow PhorumSmallFont" nowrap="nowrap">
+        04/23/2004 09:08AM&nbsp;<br />
+        <span class="PhorumListSubText">
+          <a href="http://www.lemurproject.org/phorum/read.php?11,527,528#msg-528">Last Post</a> by <a href="http://www.lemurproject.org/phorum/profile.php?11,4">Paul Ogilvie</a>        </span>
+      </td>
+    </tr>
+          <tr>
+      <td class="PhorumTableRowAlt">
+        <img src="carat.gif" border="0" width="8" height="8" alt="" style="vertical-align: middle;" />&nbsp;                                <a href="http://www.lemurproject.org/phorum/read.php?11,520">Export term Document Matrix</a>
+                              </td>
+            <td class="PhorumTableRowAlt" align="center" nowrap="nowrap">2&nbsp;</td>
+      <td class="PhorumTableRowAlt" nowrap="nowrap"><a href="&#109;&#97;&#105;&#108;&#116;&#111;&#58;&#109;&#105;&#99;&#104;&#97;&#101;&#108;&#112;&#64;&#104;&#105;&#111;&#46;&#110;&#111;">Michael Preminger</a>&nbsp;</td>
+      <td class="PhorumTableRowAlt PhorumSmallFont" nowrap="nowrap">
+        04/21/2004 03:02AM&nbsp;<br />
+        <span class="PhorumListSubText">
+          <a href="http://www.lemurproject.org/phorum/read.php?11,520,525#msg-525">Last Post</a> by Michael Preminge        </span>
+      </td>
+    </tr>
+          <tr>
+      <td class="PhorumTableRow">
+        <img src="carat.gif" border="0" width="8" height="8" alt="" style="vertical-align: middle;" />&nbsp;                                <a href="http://www.lemurproject.org/phorum/read.php?11,521">MatchInfo</a>
+                              </td>
+            <td class="PhorumTableRow" align="center" nowrap="nowrap">2&nbsp;</td>
+      <td class="PhorumTableRow" nowrap="nowrap"><a href="&#109;&#97;&#105;&#108;&#116;&#111;&#58;&#102;&#101;&#100;&#111;&#114;&#97;&#64;&#118;&#105;&#114;&#103;&#105;&#110;&#105;&#109;&#97;&#103;&#101;&#46;&#111;&#114;&#103;">Cristy</a>&nbsp;</td>
+      <td class="PhorumTableRow PhorumSmallFont" nowrap="nowrap">
+        04/19/2004 03:39PM&nbsp;<br />
+        <span class="PhorumListSubText">
+          <a href="http://www.lemurproject.org/phorum/read.php?11,521,524#msg-524">Last Post</a> by Cristy        </span>
+      </td>
+    </tr>
+          <tr>
+      <td class="PhorumTableRowAlt">
+        <img src="carat.gif" border="0" width="8" height="8" alt="" style="vertical-align: middle;" />&nbsp;                                <a href="http://www.lemurproject.org/phorum/read.php?11,519">structure retrieval &amp;amp; boolean retrieval</a>
+                              </td>
+            <td class="PhorumTableRowAlt" align="center" nowrap="nowrap">2&nbsp;</td>
+      <td class="PhorumTableRowAlt" nowrap="nowrap"><a href="&#109;&#97;&#105;&#108;&#116;&#111;&#58;&#108;&#105;&#109;&#105;&#110;&#103;&#64;&#121;&#97;&#104;&#111;&#111;&#46;&#99;&#111;&#109;">Ming</a>&nbsp;</td>
+      <td class="PhorumTableRowAlt PhorumSmallFont" nowrap="nowrap">
+        04/19/2004 02:58PM&nbsp;<br />
+        <span class="PhorumListSubText">
+          <a href="http://www.lemurproject.org/phorum/read.php?11,519,523#msg-523">Last Post</a> by <a href="http://www.lemurproject.org/phorum/profile.php?11,5">Thi Nhu Truong</a>        </span>
+      </td>
+    </tr>
+          <tr>
+      <td class="PhorumTableRow">
+        <img src="carat.gif" border="0" width="8" height="8" alt="" style="vertical-align: middle;" />&nbsp;                                <a href="http://www.lemurproject.org/phorum/read.php?11,518">A link Error</a>
+                              </td>
+            <td class="PhorumTableRow" align="center" nowrap="nowrap">2&nbsp;</td>
+      <td class="PhorumTableRow" nowrap="nowrap"><a href="&#109;&#97;&#105;&#108;&#116;&#111;&#58;&#108;&#111;&#117;&#108;&#117;&#113;&#117;&#110;&#64;&#115;&#111;&#104;&#117;&#46;&#99;&#111;&#109;">louluqu</a>&nbsp;</td>
+      <td class="PhorumTableRow PhorumSmallFont" nowrap="nowrap">
+        04/19/2004 02:45PM&nbsp;<br />
+        <span class="PhorumListSubText">
+          <a href="http://www.lemurproject.org/phorum/read.php?11,518,522#msg-522">Last Post</a> by <a href="http://www.lemurproject.org/phorum/profile.php?11,5">Thi Nhu Truong</a>        </span>
+      </td>
+    </tr>
+          <tr>
+      <td class="PhorumTableRowAlt">
+        <img src="carat.gif" border="0" width="8" height="8" alt="" style="vertical-align: middle;" />&nbsp;                                <a href="http://www.lemurproject.org/phorum/read.php?11,517">RetEval output format &amp;amp; document manager</a>
+                              </td>
+            <td class="PhorumTableRowAlt" align="center" nowrap="nowrap">1&nbsp;</td>
+      <td class="PhorumTableRowAlt" nowrap="nowrap"><a href="http://www.lemurproject.org/phorum/profile.php?11,45">Horacio Saggion</a>&nbsp;</td>
+      <td class="PhorumTableRowAlt PhorumSmallFont" nowrap="nowrap">
+        04/08/2004 05:26AM&nbsp;<br />
+        <span class="PhorumListSubText">
+          <a href="http://www.lemurproject.org/phorum/read.php?11,517,517#msg-517">Last Post</a> by <a href="http://www.lemurproject.org/phorum/profile.php?11,45">Horacio Saggion</a>        </span>
+      </td>
+    </tr>
+          <tr>
+      <td class="PhorumTableRow">
+        <img src="carat.gif" border="0" width="8" height="8" alt="" style="vertical-align: middle;" />&nbsp;                                <a href="http://www.lemurproject.org/phorum/read.php?11,514">3 question</a>
+                              </td>
+            <td class="PhorumTableRow" align="center" nowrap="nowrap">3&nbsp;</td>
+      <td class="PhorumTableRow" nowrap="nowrap"><a href="http://www.lemurproject.org/phorum/profile.php?11,44">chen</a>&nbsp;</td>
+      <td class="PhorumTableRow PhorumSmallFont" nowrap="nowrap">
+        04/08/2004 04:23AM&nbsp;<br />
+        <span class="PhorumListSubText">
+          <a href="http://www.lemurproject.org/phorum/read.php?11,514,516#msg-516">Last Post</a> by <a href="http://www.lemurproject.org/phorum/profile.php?11,44">chen</a>        </span>
+      </td>
+    </tr>
+          <tr>
+      <td class="PhorumTableRowAlt">
+        <img src="carat.gif" border="0" width="8" height="8" alt="" style="vertical-align: middle;" />&nbsp;                                <a href="http://www.lemurproject.org/phorum/read.php?11,503">VS.net</a>
+                              </td>
+            <td class="PhorumTableRowAlt" align="center" nowrap="nowrap">2&nbsp;</td>
+      <td class="PhorumTableRowAlt" nowrap="nowrap"><a href="&#109;&#97;&#105;&#108;&#116;&#111;&#58;&#119;&#119;&#108;&#101;&#101;&#49;&#64;&#117;&#105;&#117;&#99;&#46;&#101;&#100;&#117;">Will Lee</a>&nbsp;</td>
+      <td class="PhorumTableRowAlt PhorumSmallFont" nowrap="nowrap">
+        04/06/2004 01:35PM&nbsp;<br />
+        <span class="PhorumListSubText">
+          <a href="http://www.lemurproject.org/phorum/read.php?11,503,513#msg-513">Last Post</a> by <a href="http://www.lemurproject.org/phorum/profile.php?11,5">Thi Nhu Truong</a>        </span>
+      </td>
+    </tr>
+          <tr>
+      <td class="PhorumTableRow">
+        <img src="carat.gif" border="0" width="8" height="8" alt="" style="vertical-align: middle;" />&nbsp;                                <a href="http://www.lemurproject.org/phorum/read.php?11,508">visual c++ project file</a>
+                              </td>
+            <td class="PhorumTableRow" align="center" nowrap="nowrap">2&nbsp;</td>
+      <td class="PhorumTableRow" nowrap="nowrap"><a href="&#109;&#97;&#105;&#108;&#116;&#111;&#58;&#104;&#117;&#97;&#120;&#105;&#97;&#108;&#101;&#111;&#110;&#64;&#121;&#97;&#104;&#111;&#111;&#46;&#99;&#111;&#109;">Morgan</a>&nbsp;</td>
+      <td class="PhorumTableRow PhorumSmallFont" nowrap="nowrap">
+        04/06/2004 01:32PM&nbsp;<br />
+        <span class="PhorumListSubText">
+          <a href="http://www.lemurproject.org/phorum/read.php?11,508,512#msg-512">Last Post</a> by <a href="http://www.lemurproject.org/phorum/profile.php?11,5">Thi Nhu Truong</a>        </span>
+      </td>
+    </tr>
+          <tr>
+      <td class="PhorumTableRowAlt">
+        <img src="carat.gif" border="0" width="8" height="8" alt="" style="vertical-align: middle;" />&nbsp;                                <a href="http://www.lemurproject.org/phorum/read.php?11,509">HOT TO GET FILE CONTENT</a>
+                              </td>
+            <td class="PhorumTableRowAlt" align="center" nowrap="nowrap">2&nbsp;</td>
+      <td class="PhorumTableRowAlt" nowrap="nowrap"><a href="http://www.lemurproject.org/phorum/profile.php?11,44">chen</a>&nbsp;</td>
+      <td class="PhorumTableRowAlt PhorumSmallFont" nowrap="nowrap">
+        04/06/2004 01:31PM&nbsp;<br />
+        <span class="PhorumListSubText">
+          <a href="http://www.lemurproject.org/phorum/read.php?11,509,511#msg-511">Last Post</a> by <a href="http://www.lemurproject.org/phorum/profile.php?11,5">Thi Nhu Truong</a>        </span>
+      </td>
+    </tr>
+          <tr>
+      <td class="PhorumTableRow">
+        <img src="carat.gif" border="0" width="8" height="8" alt="" style="vertical-align: middle;" />&nbsp;                                <a href="http://www.lemurproject.org/phorum/read.php?11,394">where's the location of webparser_extended.l ?</a>
+                              </td>
+            <td class="PhorumTableRow" align="center" nowrap="nowrap">4&nbsp;</td>
+      <td class="PhorumTableRow" nowrap="nowrap">Arthit Suriyawongkul&nbsp;</td>
+      <td class="PhorumTableRow PhorumSmallFont" nowrap="nowrap">
+        04/04/2004 05:59PM&nbsp;<br />
+        <span class="PhorumListSubText">
+          <a href="http://www.lemurproject.org/phorum/read.php?11,394,510#msg-510">Last Post</a> by Arthit        </span>
+      </td>
+    </tr>
+          <tr>
+      <td class="PhorumTableRowAlt">
+        <img src="carat.gif" border="0" width="8" height="8" alt="" style="vertical-align: middle;" />&nbsp;                                <a href="http://www.lemurproject.org/phorum/read.php?11,504">trouble using BuildKeyfileIncIndex</a>
+                              </td>
+            <td class="PhorumTableRowAlt" align="center" nowrap="nowrap">3&nbsp;</td>
+      <td class="PhorumTableRowAlt" nowrap="nowrap"><a href="http://www.lemurproject.org/phorum/profile.php?11,41">Bjoern Aldag</a>&nbsp;</td>
+      <td class="PhorumTableRowAlt PhorumSmallFont" nowrap="nowrap">
+        03/30/2004 12:50PM&nbsp;<br />
+        <span class="PhorumListSubText">
+          <a href="http://www.lemurproject.org/phorum/read.php?11,504,506#msg-506">Last Post</a> by <a href="http://www.lemurproject.org/phorum/profile.php?11,41">Bjoern Aldag</a>        </span>
+      </td>
+    </tr>
+          <tr>
+      <td class="PhorumTableRow">
+        <img src="carat.gif" border="0" width="8" height="8" alt="" style="vertical-align: middle;" />&nbsp;                                <a href="http://www.lemurproject.org/phorum/read.php?11,490">POS tagging with Lemur</a>
+                              </td>
+            <td class="PhorumTableRow" align="center" nowrap="nowrap">3&nbsp;</td>
+      <td class="PhorumTableRow" nowrap="nowrap"><a href="http://www.lemurproject.org/phorum/profile.php?11,34">Kostas Fragos</a>&nbsp;</td>
+      <td class="PhorumTableRow PhorumSmallFont" nowrap="nowrap">
+        03/24/2004 08:19AM&nbsp;<br />
+        <span class="PhorumListSubText">
+          <a href="http://www.lemurproject.org/phorum/read.php?11,490,502#msg-502">Last Post</a> by <a href="http://www.lemurproject.org/phorum/profile.php?11,34">Kostas Fragos</a>        </span>
+      </td>
+    </tr>
+          <tr>
+      <td class="PhorumTableRowAlt">
+        <img src="carat.gif" border="0" width="8" height="8" alt="" style="vertical-align: middle;" />&nbsp;                                <a href="http://www.lemurproject.org/phorum/read.php?11,486">reuters format</a>
+                              </td>
+            <td class="PhorumTableRowAlt" align="center" nowrap="nowrap">7&nbsp;</td>
+      <td class="PhorumTableRowAlt" nowrap="nowrap"><a href="&#109;&#97;&#105;&#108;&#116;&#111;&#58;&#97;&#108;&#97;&#110;&#110;&#97;&#98;&#97;&#105;&#64;&#104;&#111;&#116;&#109;&#97;&#105;&#108;&#46;&#99;&#111;&#109;">Tur</a>&nbsp;</td>
+      <td class="PhorumTableRowAlt PhorumSmallFont" nowrap="nowrap">
+        03/24/2004 07:38AM&nbsp;<br />
+        <span class="PhorumListSubText">
+          <a href="http://www.lemurproject.org/phorum/read.php?11,486,501#msg-501">Last Post</a> by <a href="http://www.lemurproject.org/phorum/profile.php?11,14">David Fisher</a>        </span>
+      </td>
+    </tr>
+          <tr>
+      <td class="PhorumTableRow">
+        <img src="carat.gif" border="0" width="8" height="8" alt="" style="vertical-align: middle;" />&nbsp;                                <a href="http://www.lemurproject.org/phorum/read.php?11,488">Lemur CGI</a>
+                              </td>
+            <td class="PhorumTableRow" align="center" nowrap="nowrap">3&nbsp;</td>
+      <td class="PhorumTableRow" nowrap="nowrap"><a href="&#109;&#97;&#105;&#108;&#116;&#111;&#58;&#106;&#112;&#99;&#104;&#101;&#110;&#64;&#117;&#110;&#116;&#46;&#101;&#100;&#117;">Jiangping Chen</a>&nbsp;</td>
+      <td class="PhorumTableRow PhorumSmallFont" nowrap="nowrap">
+        03/22/2004 10:10PM&nbsp;<br />
+        <span class="PhorumListSubText">
+          <a href="http://www.lemurproject.org/phorum/read.php?11,488,499#msg-499">Last Post</a> by Jiangping Chen        </span>
+      </td>
+    </tr>
+          <tr>
+      <td class="PhorumTableRowAlt">
+        <img src="carat.gif" border="0" width="8" height="8" alt="" style="vertical-align: middle;" />&nbsp;                                <a href="http://www.lemurproject.org/phorum/read.php?11,491">BuildInvertedIndex problem</a>
+                              </td>
+            <td class="PhorumTableRowAlt" align="center" nowrap="nowrap">4&nbsp;</td>
+      <td class="PhorumTableRowAlt" nowrap="nowrap"><a href="&#109;&#97;&#105;&#108;&#116;&#111;&#58;&#119;&#101;&#105;&#95;&#116;&#101;&#99;&#64;&#115;&#111;&#104;&#117;&#46;&#99;&#111;&#109;">maco</a>&nbsp;</td>
+      <td class="PhorumTableRowAlt PhorumSmallFont" nowrap="nowrap">
+        03/22/2004 09:29PM&nbsp;<br />
+        <span class="PhorumListSubText">
+          <a href="http://www.lemurproject.org/phorum/read.php?11,491,498#msg-498">Last Post</a> by maco        </span>
+      </td>
+    </tr>
+          <tr>
+      <td class="PhorumTableRow">
+        <img src="carat.gif" border="0" width="8" height="8" alt="" style="vertical-align: middle;" />&nbsp;                                <a href="http://www.lemurproject.org/phorum/read.php?11,474">Centroid of a set of documents</a>
+                              </td>
+            <td class="PhorumTableRow" align="center" nowrap="nowrap">2&nbsp;</td>
+      <td class="PhorumTableRow" nowrap="nowrap"><a href="&#109;&#97;&#105;&#108;&#116;&#111;&#58;&#119;&#105;&#115;&#97;&#109;&#64;&#99;&#115;&#46;&#99;&#111;&#108;&#117;&#109;&#98;&#105;&#97;&#46;&#101;&#100;&#117;">Wism</a>&nbsp;</td>
+      <td class="PhorumTableRow PhorumSmallFont" nowrap="nowrap">
+        03/10/2004 10:34AM&nbsp;<br />
+        <span class="PhorumListSubText">
+          <a href="http://www.lemurproject.org/phorum/read.php?11,474,485#msg-485">Last Post</a> by Wism        </span>
+      </td>
+    </tr>
+          <tr>
+      <td class="PhorumTableRowAlt">
+        <img src="carat.gif" border="0" width="8" height="8" alt="" style="vertical-align: middle;" />&nbsp;                                <a href="http://www.lemurproject.org/phorum/read.php?11,484">Tiny Suggestion...</a>
+                              </td>
+            <td class="PhorumTableRowAlt" align="center" nowrap="nowrap">1&nbsp;</td>
+      <td class="PhorumTableRowAlt" nowrap="nowrap"><a href="http://www.lemurproject.org/phorum/profile.php?11,39">Phil Cowans</a>&nbsp;</td>
+      <td class="PhorumTableRowAlt PhorumSmallFont" nowrap="nowrap">
+        03/10/2004 09:39AM&nbsp;<br />
+        <span class="PhorumListSubText">
+          <a href="http://www.lemurproject.org/phorum/read.php?11,484,484#msg-484">Last Post</a> by <a href="http://www.lemurproject.org/phorum/profile.php?11,39">Phil Cowans</a>        </span>
+      </td>
+    </tr>
+  </table>
+<div class="PhorumNavBlock" style="text-align: left;">
+      <div style="float: right;">
+      <span class="PhorumNavHeading">Goto Page:</span>&nbsp;<a class="PhorumNavLink" href="http://www.lemurproject.org/phorum/list.php?11,page=23">Previous</a><a class="PhorumNavLink" href="http://www.lemurproject.org/phorum/list.php?11,page=1">First...</a><a class="PhorumNavLink" href="http://www.lemurproject.org/phorum/list.php?11,page=19">19</a><a class="PhorumNavLink" href="http://www.lemurproject.org/phorum/list.php?11,page=20">20</a><a class="PhorumNavLink" href="http://www.lemurproject.org/phorum/list.php?11,page=21">21</a><a class="PhorumNavLink" href="http://www.lemurproject.org/phorum/list.php?11,page=22">22</a><a class="PhorumNavLink" href="http://www.lemurproject.org/phorum/list.php?11,page=23">23</a><span class="PhorumNavLink"><strong>24</strong></span><a class="PhorumNavLink" href="http://www.lemurproject.org/phorum/list.php?11,page=25">25</a><a class="PhorumNavLink" href="http://www.lemurproject.org/phorum/list.php?11,page=26">26</a><a class="PhorumNavLink" href="http://www.lemurproject.org/phorum/list.php?11,page=27">27</a><a class="PhorumNavLink" href="http://www.lemurproject.org/phorum/list.php?11,page=28">28</a><a class="PhorumNavLink" href="http://www.lemurproject.org/phorum/list.php?11,page=29">29</a><a class="PhorumNavLink" href="http://www.lemurproject.org/phorum/list.php?11,page=25">Next</a>    </div>
+    <span class="PhorumNavHeading PhorumHeadingLeft">Current Page: </span>24 of 29</div>
+
+<div class="PhorumNavBlock" style="text-align: left;">
+  <span class="PhorumNavHeading PhorumHeadingLeft">Options:</span>
+  </div>
+        <div class="PhorumFooterPlug" align="center">
+          This <a href="http://www.phorum.org/">forum</a> powered by <a href="http://www.phorum.org/">Phorum</a>.
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

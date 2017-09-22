@@ -1,0 +1,838 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+
+<base href="">
+<link rel="SHORTCUT ICON" href="favicon.ico">
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<script type="text/javascript" language="javascript" src="window_functions.js"></script>
+<script type="text/javascript" language="javascript" src="MM_Functions.js"></script>
+<link href="SWCstyles.css" rel="stylesheet" type="text/css">
+<style type="text/css">
+.altTextInput
+{
+  background-color: #666666;
+  color: #FFFFFF;
+  font-family: arial, verdana, ms sans serif;
+  font-size: xx-small;
+  border: 1px solid #999999;
+  font-weight: bold;
+  margin: 0px;
+  padding: 0px;
+}
+
+.altSubmit
+{
+  background-color: #1F538D;
+  color: #FFFFFF;
+  border: 1px solid #999999;
+  font-family: arial, verdana, ms sans serif;
+  font-size: xx-small;
+  font-weight: bold;
+  margin: 0px;
+  padding: 0px;
+}
+
+div#rightColumn {
+  float: left;
+  width: 240px;
+  background-image: url('/images/LEFT_GRAPHIC.jpg');
+  background-repeat: no-repeat;
+  text-align: center;
+}
+
+div#leftColumn {
+  float: left;
+  width: 530px;
+  border-right: 1px solid #666666;
+  border-left: 1px solid #666666;
+  padding: 32px 0px 0px 10px;
+  margin: 0px 0px 0px 0px;
+}
+
+div#header {
+  width: 780px;
+}
+
+div#footer {
+  width: 780px;
+  clear: left;
+  border-right: 1px solid #666666;
+}
+
+div#adSense {
+  float: left;
+  width: 120px;
+  text-align: left;
+}
+
+#video_menu
+{
+  font-family: Arial, sans-serif;
+  font-size: smaller;
+  border: 1px solid #F9FEFF;
+  background: #0D092E;
+  position: absolute;
+  z-index: 201;
+  top: 100px;
+  left: 160px;
+  display: none;
+  visibility: hidden;
+  width: 115px;
+}
+</style>
+<script language="javascript">
+function OpenComments (c) {
+    window.open(c,
+               'comments',
+               'width=500,height=480,scrollbars=yes,status=yes');
+}
+</script>
+<style type="text/css">
+<!--
+.style2 {	font-size: 11px;
+	text-decoration: none;
+	font-family: Arial, Helvetica, sans-serif;
+	color: #FFFFFF;
+}
+-->
+</style>
+<script type="text/javascript" language="javascript">
+<!--
+function OpenMovie(movie) {
+	var newwin = window.open("", "moviewin", 'height=255,width=320');
+	
+	var movieString = '<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"><html><head><title></title></head><body><div style="position: absolute;top: 0px; left: 0px;"';
+	    movieString += '<OBJECT CLASSID="clsid:02BF25D5-8C17-4B23-BC80-D3488ABDDC6B" WIDTH="320" HEIGHT="256" CODEBASE="http://www.apple.com/qtactivex/qtplugin.cab#version=6,0,2,0">';
+			movieString += '<PARAM NAME="controller" VALUE="TRUE">';
+			movieString += '<PARAM NAME="type" VALUE="video/quicktime">';
+			movieString += '<PARAM NAME="autoplay" VALUE="true">';
+			movieString += '<PARAM NAME="target" VALUE="myself">';
+			movieString += '<PARAM NAME="src" VALUE="http://dev.shipwreckcentral.com/livedive/media/' + movie + '">';
+			movieString += '<PARAM NAME="HREF" VALUE="http://dev.shipwreckcentral.com/livedive/media/' + movie + '">';
+			movieString += '<PARAM NAME="pluginspage" VALUE="http://www.apple.com/quicktime/download/indext.html">';
+			movieString += '<EMBED WIDTH="320" HEIGHT="256" CONTROLLER="TRUE" SRC="http://dev.shipwreckcentral.com/livedive/media/' + movie + '"></EMBED></OBJECT>';
+			movieString += '</div></body></html>';
+	
+	newwin.document.write(movieString);
+}
+
+function OpenChat() {
+ var url = "http://dev.shipwreckcentral.com/livedive/livedive_chat.php";
+ window.open( url, '', "height=520,width=520");
+}
+-->
+</script>
+
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="generator" content="http://www.movabletype.org/" />
+
+<title>Shipwreck Central - Live Dive Blog: Alexander Macomb and U-215 Anniversary Today</title>
+
+<link rel="stylesheet" href="styles-site.css" type="text/css" />
+<link rel="alternate" type="application/rss+xml" title="RSS" href="http://www.shipwreckcentral.com/livedive/index.rdf" />
+<link rel="alternate" type="application/atom+xml" title="Atom" href="http://www.shipwreckcentral.com/livedive/atom.xml" />
+
+<link rel="start" href="http://www.shipwreckcentral.com/livedive/" title="Home" />
+<link rel="prev" href="http://www.shipwreckcentral.com/livedive/archives/u215/#000012" title="First Dive Debriefing" />
+
+<link rel="next" href="http://www.shipwreckcentral.com/livedive/archives/u215/#000015" title="Homeland Security - circa 1942" />
+
+
+<script type="text/javascript" language="javascript">
+<!--
+
+var HOST = 'www.shipwreckcentral.com';
+
+// Copyright (c) 1996-1997 Athenia Associates.
+// http://www.webreference.com/js/
+// License is granted if and only if this entire
+// copyright notice is included. By Tomer Shiran.
+
+function setCookie (name, value, expires, path, domain, secure) {
+    var curCookie = name + "=" + escape(value) + (expires ? "; expires=" + expires : "") + (path ? "; path=" + path : "") + (domain ? "; domain=" + domain : "") + (secure ? "secure" : "");
+    document.cookie = curCookie;
+}
+
+function getCookie (name) {
+    var prefix = name + '=';
+    var c = document.cookie;
+    var nullstring = '';
+    var cookieStartIndex = c.indexOf(prefix);
+    if (cookieStartIndex == -1)
+        return nullstring;
+    var cookieEndIndex = c.indexOf(";", cookieStartIndex + prefix.length);
+    if (cookieEndIndex == -1)
+        cookieEndIndex = c.length;
+    return unescape(c.substring(cookieStartIndex + prefix.length, cookieEndIndex));
+}
+
+function deleteCookie (name, path, domain) {
+    if (getCookie(name))
+        document.cookie = name + "=" + ((path) ? "; path=" + path : "") + ((domain) ? "; domain=" + domain : "") + "; expires=Thu, 01-Jan-70 00:00:01 GMT";
+}
+
+function fixDate (date) {
+    var base = new Date(0);
+    var skew = base.getTime();
+    if (skew > 0)
+        date.setTime(date.getTime() - skew);
+}
+
+function rememberMe (f) {
+    var now = new Date();
+    fixDate(now);
+    now.setTime(now.getTime() + 365 * 24 * 60 * 60 * 1000);
+    if (f.author != undefined)
+       setCookie('mtcmtauth', f.author.value, now, '/', HOST, '');
+    if (f.email != undefined)
+       setCookie('mtcmtmail', f.email.value, now, '/', HOST, '');
+    if (f.url != undefined)
+       setCookie('mtcmthome', f.url.value, now, '/', HOST, '');
+}
+
+function forgetMe (f) {
+    deleteCookie('mtcmtmail', '', HOST);
+    deleteCookie('mtcmthome', '', HOST);
+    deleteCookie('mtcmtauth', '', HOST);
+    f.email.value = '';
+    f.author.value = '';
+    f.url.value = '';
+}
+
+//-->
+</script>
+
+
+
+
+
+</head>
+
+<link href="http://www.shipwreckcentral.com/../swcentralstyle_main.css" rel="stylesheet" type="text/css"> 
+<link href="http://www.shipwreckcentral.com/../../SWCstyles.css" rel="stylesheet" type="text/css">
+<script type="text/javascript" language="javascript" src="frames.js"></script>
+<body onLoad="frameReLoader();MM_preloadImages('./images/navigation/nav_home_over.gif','./images/navigation/nav_map_over.gif','./images/navigation/nav_live_over.gif','./images/navigation/nav_teach_over.gif','./images/navigation/nav_shop_over.gif','./images/navigation/nav_comm_over.gif','./images/navigation/nav_articles_over.gif','./images/navigation/nav_about_over.gif','./images/navigation/nav_help_over.gif')">
+
+<table width="782" border="0" cellpadding="0" cellspacing="0" style="border-right: 1px solid #666666;border-left: 1px solid #666666;">
+
+  <tr> 
+    <td height="100" valign="top" colspan="3"> 
+      <table width="780" border="0" cellpadding="0" cellspacing="0">
+    <tr>
+      <td height="78" colspan="9" valign="top">
+        <object classid="clsid:D27CDB6E-AE6D-11cf-96B8-444553540000" codebase="http://download.macromedia.com/pub/shockwave/cabs/flash/swflash.cab#version=6,0,29,0" width="780" height="78">
+          <param name="movie" value="../navBar6-4.swf">
+          <param name="quality" value="high">
+          <embed src="http://www.shipwreckcentral.com/../navBar6-4.swf" quality="high" pluginspage="http://www.macromedia.com/go/getflashplayer" type="application/x-shockwave-flash" width="780" height="78"></embed>
+        </object>
+      </td>
+    </tr>
+    <tr>
+     <td>
+			<a href="http://www.shipwreckcentral.com/../index.php"
+				onmouseover="MM_swapImage('nav_home','','../images/navigation/nav_home_over.gif',1);"
+				onmouseout="MM_swapImgRestore()">
+				<img name="nav_home" id="nav_home" src="http://www.shipwreckcentral.com/../images/navigation/nav_home.gif" width="66" height="22" alt="Home" title="Home"></A>
+		</td>
+		<td>
+			<a href="http://www.shipwreckcentral.com/../map/index.php"
+				onmouseover="MM_swapImage('nav_map','','../images/navigation/nav_map_over.gif',1);"
+				onmouseout="MM_swapImgRestore();">
+				<img name="nav_map" id="nav_map" src="http://www.shipwreckcentral.com/../images/navigation/nav_map.gif" width="106" height="22" alt="Interactive Map" title="Interactive Map"></A>
+		</td>
+		<td>
+			<a href="http://www.shipwreckcentral.com/../livedive/index.html">
+				<img name="nav_live" id="nav_live" src="http://www.shipwreckcentral.com/../images/navigation/nav_live_over.gif" width="128" height="22" alt="Live From the Dive" title="Live From the Dive"></A>
+		</td>
+		<td>
+			<a href="http://www.shipwreckcentral.com/../teachMod.htm"
+				onmouseover="MM_swapImage('nav_teach','','../images/navigation/nav_teach_over.gif',1);"
+				onmouseout="MM_swapImgRestore();">
+				<img name="nav_teach" id="nav_teach" src="http://www.shipwreckcentral.com/../images/navigation/nav_teach.gif" width="79" height="22" alt="For Teachers" title="For Teachers"></A>
+		</td>
+		<td>
+			<a href="http://www.shipwreckcentral.com/../store/store.php"
+				onmouseover="MM_swapImage('nav_shop','','../images/navigation/nav_shop_over.gif',1); showDropDown();"
+				onmouseout="DropDownTimer(); MM_swapImgRestore();">
+				<img name="nav_shop" id="nav_shop" src="http://www.shipwreckcentral.com/../images/navigation/nav_shop.gif" width="60" height="22" alt="Shipwreck Central Store" title="Shipwreck Central Store"></A>
+		</td>
+		<td>
+			<a href="http://www.shipwreckcentral.com/../forum/index.php"
+				onmouseover="MM_swapImage('nav_comm','','../images/navigation/nav_comm_over.gif',1);"
+				onmouseout="MM_swapImgRestore();">
+				<img name="nav_comm" id="nav_comm" src="http://www.shipwreckcentral.com/../images/navigation/nav_comm.gif" width="92" height="22" alt="Community Forums" title="Community Forums"></A>
+		</td>
+		<td>
+			<a href="http://www.shipwreckcentral.com/../shipPres.htm"
+				onmouseover="MM_swapImage('nav_articles','','../images/navigation/nav_articles_over.gif',1);"
+				onmouseout="MM_swapImgRestore();">
+				<img name="nav_articles" id="nav_articles" src="http://www.shipwreckcentral.com/../images/navigation/nav_articles.gif" width="112" height="22" alt="Articles" title="Articles"></A>
+		</td>
+		<td>
+			<a href="http://www.shipwreckcentral.com/../about2.htm"
+				onmouseover="MM_swapImage('nav_about','','../images/navigation/nav_about_over.gif',1);"
+				onmouseout="MM_swapImgRestore();">
+				<img name="nav_about" id="nav_about" src="http://www.shipwreckcentral.com/../images/navigation/nav_about.gif" width="66" height="22" alt="About Shipwreck Central" title="About Shipwreck Central"></A>
+		</td>
+		<td>
+			<a href="http://www.shipwreckcentral.com/../help.php"
+				onmouseover="MM_swapImage('nav_help','','../images/navigation/nav_help_over.gif',1);"
+				onmouseout="MM_swapImgRestore();">
+				<img name="nav_help" id="nav_help" src="http://www.shipwreckcentral.com/../images/navigation/nav_help.gif" width="71" height="22" alt="Help" title="Help"></A>
+		</td>
+    </tr>
+  </table>
+    </td>
+  </tr>
+  <tr> 
+    <td width="241" height="180" valign="top"> 
+      <table width="100%" border="0" cellpadding="0" cellspacing="0" bgcolor="#000000" background="http://www.shipwreckcentral.com/../images/livedive1.jpg" style="border-bottom: 1px solid #666666; background-repeat: no-repeat;">
+       <tr align="left"> 
+          <td width="26" height="41" ></td>
+          <td width="201" >&nbsp;</td>
+          <td width="13" ></td>
+        </tr>
+        <tr align="center"> 
+          <td>&nbsp;  </td>
+		  <td width="201" >&nbsp; </td>
+          <td width="13" ></td>
+        </tr>
+        <tr> 
+          
+        <td height="40" colspan="3" >&nbsp; </td>
+        </tr>
+        <tr> 
+          <td height="78" style="margin: 0px 8px 0px 8px; padding: 0px 8px 0px 8px;" colspan="3" valign="bottom" class="smallerBody" ><strong><div align=center>Welcome to our Sea Hunters video weblog.   Read entries and watch video live from the dive! </div></strong></td>
+        </tr>
+      </table>
+ 	</td>
+    <td width="540" valign="top">
+      <table width="538" height="180" border="0" cellpadding="0" cellspacing="0"  bgcolor="#000000" class="blueboldsmall" style="border-left: 1px solid #666666; background-image: url('../images/livedive3.jpg'); background-repeat: no-repeat;" >
+      <!--DWLayoutTable-->
+      <tr> 
+        <td width="197" height="11"></td>
+        <td width="12"></td>
+        <td width="41"></td>
+        <td width="6"></td>
+        <td width="149"></td>
+        <td width="21"></td>
+        <td width="111"></td>
+      </tr>
+      <tr> 
+        <td height="21"></td>
+        <td></td>
+        <td colspan="3" align="left" valign="top" class="largeHead"><!--DWLayoutEmptyCell-->&nbsp; </td>
+        <td></td>
+        <td></td>
+      </tr>
+      <tr> 
+        <td height="19"></td>
+        <td colspan="2" valign="top" class="smallwhite"><div align="right"></div></td>
+        <td>&nbsp;</td>
+        <td valign="top" class="smallwhite"><div align="left"></div></td>
+        <td></td>
+        <td></td>
+      </tr>
+      <tr> 
+        <td height="28"></td>
+        <td colspan="2" valign="top" class="smallwhite"><div align="right"></div></td>
+        <td>&nbsp;</td>
+        <td valign="top" class="smallwhite"><div align="left"> </div></td>
+        <td></td>
+        <td></td>
+      </tr>
+      <tr> 
+        <td height="28"></td>
+        <td colspan="2" valign="top" class="smallwhite"><div align="right"></div></td>
+        <td>&nbsp;</td>
+        <td valign="top" class="smallwhite"><div align="left"> </div></td>
+        <td></td>
+        <td></td>
+      </tr>
+      <tr height="28"> 
+        <td height="34"></td>
+        <td colspan="2" valign="top" class="smallBlack"><div align="right">&nbsp;</div></td>
+        <td>&nbsp;</td>
+        <td valign="top" class="darksmall"><div align="left">&nbsp;</div></td>
+        <td></td>
+        <td></td>
+      </tr>
+      <tr> 
+        <td height="42">&nbsp;</td>
+        <td>&nbsp;</td>
+        <td>&nbsp;</td>
+        <td>&nbsp;</td>
+        <td>&nbsp;</td>
+        <td>&nbsp;</td>
+        <td align="center" valign="middle" class="largeHead"><a href="http://www.shipwreckcentral.com/members.html" class="largeHead">more 
+          info &gt;&gt;</a></td>
+        </tr>
+    </table>
+     </td>
+    <td width="1">&nbsp;</td>
+  </tr>
+  <tr> 
+    <td height="391" colspan="3" width="780" valign="top">
+
+
+<div id="container">
+
+<div id="banner">
+<h1><a href="http://www.shipwreckcentral.com/livedive/" accesskey="1">Shipwreck Central - Live Dive Blog</a></h1>
+<h2>SHIPWRECK CENTRAL - The "Sea Hunters" reporting live from their latest shipwreck hunting dive.</h2>
+</div>
+
+<div id="center">
+<div class="content">
+
+<p align="right">
+<a href="http://www.shipwreckcentral.com/livedive/archives/u215/#000012">&laquo; First Dive Debriefing</a> |
+
+<a href="http://www.shipwreckcentral.com/livedive/">Main</a>
+| <a href="http://www.shipwreckcentral.com/livedive/archives/u215/#000015">Homeland Security - circa 1942 &raquo;</a>
+
+</p>
+
+<h2>July 03, 2004</h2>
+
+<h3>Alexander Macomb and U-215 Anniversary Today</h3>
+
+<p>July 3, 1942. It was 62 years ago today that the Alexander Macomb and the U-215 went down. The &quot;<a href="http://www.harry-tates.org.uk/veteranstales28.htm" target=_blank title="Harry Tate's Navy">Harry Tate's Navy</a>&quot; website has an account of the day, as told to the son of a crewman on HMT Le Tiger, the ship credited with the U-215 kill. </p>
+<p align="center"><img src="hmtle-tiger.jpg" width="502" height="300"></p>
+<p align="center"><strong>HMT Le Tiger</strong></p>
+<p>&quot;While in convoy BA-2 from New York to Halifax, Nova Scotia on the 3rd July 1942, Liberty ship ss Alexander Macomb was attacked and sunk by U-215. Two escorts rescued the survivors. HMCS Regina recovered 25 men and HMT. Le Tiger found 31. It was while she was carrying out this mercy mission that the ASDIC operator detected positive responses from a submerged U-Boat and Le Tiger went to action stations sinking U-215, her commander K.K. Hoeckner and his crew of 47.&quot; - from <a href="http://www.harry-tates.org.uk/index2.htm" target=_blank>Harry Tate's Navy</a></p>
+
+<p>Also, Jimmy Brown wrote the following history of Le Tiger for the Lowestoft Journal, which he has allowed us reproduce here below.</p>
+
+<a name="a000011more"></a>
+<a id="more"></a>
+<p>CHAPTER ELEVEN (10LT)<br />
+HMS LE TIGER</p>
+
+<p>But what happened to our trusty ship, HMS Le Tiger (correct spelling), after we left her in the hands of Belfast’s dockyard mateys in October 1945?<br />
+To begin at the beginning, Le Tiger was built by Cochrane of Selby in 1937 with a gross tonnage of 516 tons, slightly bigger than many of the new ships arriving in Grimsby in that year. Her first owner was Sir Alec Black of the Earl Steam Fishing Company, who liked to name his ships after famous racehorses and comic book characters. This might explain her unusual name.  She reached an unprecedented speed of 14 knots on her trials and on her maiden voyage to the White Sea she fetched home a catch of 3,400 boxes of fish, 1,200 of them haddock. Trawlers changed owners frequently in those days, possibly because of some quirk in the tax laws of the time, and Le Tiger is shown as being owned by the Hellyer Steam Fishing company in August, 1938, but back with Sir Alec Black in December of the same year.  She retained her original name and port number of GY 398 throughout these moves.  She remained with Sir Alec Black until January 1940, when he sold her to the Admiralty.<br />
+With the pennant number of FY 243, HMS Le Tiger became an anti-submarine trawler employed on convoy escort duties in the Western Approaches to the UK until early 1942 when she sailed for America as one of 24 such ships loaned to the United State Navy to help combat the German U-boat menace off the American East Coast.<br />
+Le Tiger had her moment of glory on July 3rd 1942 when she sank U 215 while escorting Convoy BA-2 from New York to Halifax, Nova Scotia.<br />
+Early in 1943 she sailed for Durban in South Africa and for the rest of the war she was employed escorting convoys round the Cape of Good Hope and onwards to Madagascar and Mombassa. I joined her at Durban in March 1945.<br />
+We sailed her home at the war’s end and after refitting in Belfast she finally returned to her homeport of Grimsby on Monday, July 29th, 1946 with a new fishing number, GY 312.  Sir Alec Black had died in June 1942, and Le Tiger was now owned by Hellyer Brothers of Hull, although she continued to fish from Grimsby.<br />
+ <br />
+She passed to the Loyal Steam Fishing Company in November 1946, after a reminder of her glory days on Monday 9th September 1946 when her trawl exploded either a mine or a torpedo on the seabed. Her gear was completely destroyed by the explosion but there was no damage to the ship or her crew.<br />
+She kept her original name until July 1947, when she was renamed Regal.  She left Grimsby for good when she passed to Hull owners in September 1948. These new owners changed her name yet again to Othello and gave her a new fishing number, H 581.<br />
+Le Tiger/Regal/Othello worked steadily from then on till she was sent to be broken up at Gwent in 1964.  Her final claim to fame is that when she was scrapped she was the last coal-burning trawler to have sailed from the port of Hull.</p>
+
+<p class="posted">Posted by administrator at July  3, 2004 03:40 PM</p>
+
+
+
+
+<h2><a id="comments"></a>Comments</h2>
+
+
+
+
+
+<h2>Post a comment</h2>
+
+
+<div id="thanks">
+<p>Thanks for signing in, 
+<script type="text/javascript" src="mt-comments.cgi%3F__mode=cmtr_name_js.1.html"></script><script>document.write(commenter_name);</script>.
+Now you can comment. (<a href="http://www.shipwreckcentral.com/cgi-bin/mt/mt-comments.cgi?__mode=handle_sign_in&amp;static=1&amp;entry_id=11&amp;logout=1">sign out</a>)</p>
+
+(If you haven't left a comment here before, you may need to be approved by the site owner before your comment will appear. Until then, it won't appear on the entry. Thanks for waiting.)
+
+<form method="post" action="http://www.shipwreckcentral.com/cgi-bin/mt/mt-comments.cgi" name="comments_form" onsubmit="if (this.bakecookie[0].checked) rememberMe(this)">
+<input type="hidden" name="static" value="1" />
+<input type="hidden" name="entry_id" value="11" />
+
+<p><label for="url">URL:</label><br />
+<input tabindex="1" type="text" name="url" id="url" />
+Remember me?
+<input type="radio" id="remember" name="bakecookie" /><label for="remember">Yes</label><input type="radio" id="forget" name="bakecookie" onclick="forgetMe(this.form)" value="Forget Info" style="margin-left: 15px;" /><label for="forget">No</label><br style="clear: both;" />
+
+</p>
+
+<p><label for="text">Comments:</label><br />
+<textarea tabindex="2" id="text" name="text" rows="10" cols="50"></textarea></p>
+
+<div align="center">
+<input type="submit" tabindex="3" name="preview" value="&nbsp;Preview&nbsp;" />
+<input style="font-weight: bold;" tabindex="4" type="submit" name="post" value="&nbsp;Post&nbsp;" />
+</div>
+</form>
+
+</div>
+
+<script language="javascript" type="text/javascript">
+<!--
+if (commenter_name) {
+    document.getElementById('thanks').style.display = 'block';
+} else {
+    document.write('You are not signed in. You need to be registered to comment on this site. <a href="https://www.typekey.com/t/typekey/login?&amp;t=Ul61pcULrhbDq8eluzIE&amp;_return=http://www.shipwreckcentral.com/cgi-bin/mt/mt-comments.cgi%3f__mode=handle_sign_in%26static=1%26entry_id=11"> Sign in</a>');
+    document.getElementById('thanks').style.display = 'none';
+}
+// -->
+</script>
+
+
+
+
+
+
+
+
+<script type="text/javascript" language="javascript">
+<!--
+if (document.comments_form.email != undefined)
+    document.comments_form.email.value = getCookie("mtcmtmail");
+if (document.comments_form.author != undefined)
+    document.comments_form.author.value = getCookie("mtcmtauth");
+if (document.comments_form.url != undefined)
+    document.comments_form.url.value = getCookie("mtcmthome");
+if (getCookie("mtcmtauth") || getCookie("mtcmthome")) {
+    document.comments_form.bakecookie[0].checked = true;
+} else {
+    document.comments_form.bakecookie[1].checked = true;
+}
+//-->
+</script>
+
+
+
+</div>
+</div>
+
+<div id="right">
+<div class="sidebar">
+
+<div id="calendar">
+
+<table summary="Monthly calendar with links to each day's posts">
+<caption>December 2006</caption>
+<tr>
+<th abbr="Sunday">Sun</th>
+<th abbr="Monday">Mon</th>
+<th abbr="Tuesday">Tue</th>
+<th abbr="Wednesday">Wed</th>
+<th abbr="Thursday">Thu</th>
+<th abbr="Friday">Fri</th>
+<th abbr="Saturday">Sat</th>
+</tr>
+
+<tr>
+
+<td>&nbsp;</td>
+
+
+<td>&nbsp;</td>
+
+
+<td>&nbsp;</td>
+
+
+<td>&nbsp;</td>
+
+
+<td>&nbsp;</td>
+
+
+<td>1</td>
+
+
+<td><a href="http://www.shipwreckcentral.com/livedive/archives/shipwreck_central/#000427">2</a></td></tr>
+<tr>
+
+<td>3</td>
+
+
+<td>4</td>
+
+
+<td>5</td>
+
+
+<td><a href="http://www.shipwreckcentral.com/livedive/archives/shipwreck_central/#000428">6</a></td>
+
+
+<td><a href="http://www.shipwreckcentral.com/livedive/archives/shipwreck_central/#000430">7</a></td>
+
+
+<td>8</td>
+
+
+<td>9</td></tr>
+<tr>
+
+<td>10</td>
+
+
+<td>11</td>
+
+
+<td>12</td>
+
+
+<td>13</td>
+
+
+<td>14</td>
+
+
+<td>15</td>
+
+
+<td>16</td></tr>
+<tr>
+
+<td>17</td>
+
+
+<td>18</td>
+
+
+<td>19</td>
+
+
+<td>20</td>
+
+
+<td>21</td>
+
+
+<td>22</td>
+
+
+<td>23</td></tr>
+<tr>
+
+<td>24</td>
+
+
+<td>25</td>
+
+
+<td>26</td>
+
+
+<td>27</td>
+
+
+<td>28</td>
+
+
+<td>29</td>
+
+
+<td>30</td></tr>
+<tr>
+
+<td>31</td>
+
+
+<td>&nbsp;</td>
+
+
+<td>&nbsp;</td>
+
+
+<td>&nbsp;</td>
+
+
+<td>&nbsp;</td>
+
+
+<td>&nbsp;</td>
+
+
+<td>&nbsp;</td></tr>
+
+
+</table>
+</div>
+
+<h2>Search</h2>
+ 
+<div class="link-note">
+<form method="get" action="http://www.shipwreckcentral.com/cgi-bin/mt/mt-search.cgi">
+<input type="hidden" name="IncludeBlogs" value="2" />
+<label for="search" accesskey="4">Search this site:</label><br />
+<input id="search" name="search" size="20" /><br />
+<input type="submit" value="Search" />
+</form>
+</div>
+
+<h2>Categories</h2>
+<ul>
+  <li><a href="http://www.shipwreckcentral.com/livedive/archives/alexander_macomb/">Alexander Macomb</a></li>  
+  <li><a href="http://www.shipwreckcentral.com/livedive/archives/bonhomme_richard/">Bonhomme Richard</a></li>  
+  <li><a href="http://www.shipwreckcentral.com/livedive/archives/doterel/">Doterel</a></li>  
+  <li><a href="http://www.shipwreckcentral.com/livedive/archives/early_subs/">Early Subs</a></li>  
+  <li><a href="http://www.shipwreckcentral.com/livedive/archives/fox/">Fox</a></li>  
+  <li><a href="http://www.shipwreckcentral.com/livedive/archives/goliathtriumph/">Goliath/Triumph</a></li>  
+  <li><a href="http://www.shipwreckcentral.com/livedive/archives/habbakuk/">Habbakuk</a></li>  
+  <li><a href="http://www.shipwreckcentral.com/livedive/archives/hmcs_canada/">HMCS Canada</a></li>  
+  <li><a href="http://www.shipwreckcentral.com/livedive/archives/james_p_delgado/">James P. Delgado</a></li>  
+  <li><a href="http://www.shipwreckcentral.com/livedive/archives/juno_beach/">Juno Beach</a></li>  
+  <li><a href="http://www.shipwreckcentral.com/livedive/archives/on_location/">On Location</a></li>  
+  <li><a href="http://www.shipwreckcentral.com/livedive/archives/prince_of_walesrepulse/">Prince of Wales/Repulse</a></li>  
+  <li><a href="http://www.shipwreckcentral.com/livedive/archives/russalka/">Russalka</a></li>  
+  <li><a href="http://www.shipwreckcentral.com/livedive/archives/shipwreck_central/">Shipwreck Central</a></li>  
+  <li><a href="http://www.shipwreckcentral.com/livedive/archives/the_sea_hunters/">The Sea Hunters</a></li>  
+  <li><a href="http://www.shipwreckcentral.com/livedive/archives/u215/">U-215</a></li>  
+  <li><a href="http://www.shipwreckcentral.com/livedive/archives/uss_mississinewa/">USS Mississinewa</a></li>  
+
+</ul>
+
+<h2>Archives</h2>
+
+<ul>
+<li><a href="http://www.shipwreckcentral.com/livedive/archives/2006/12/">December 2006</a></li>
+<li><a href="http://www.shipwreckcentral.com/livedive/archives/2006/11/">November 2006</a></li>
+<li><a href="http://www.shipwreckcentral.com/livedive/archives/2006/10/">October 2006</a></li>
+<li><a href="http://www.shipwreckcentral.com/livedive/archives/2006/09/">September 2006</a></li>
+<li><a href="http://www.shipwreckcentral.com/livedive/archives/2006/08/">August 2006</a></li>
+<li><a href="http://www.shipwreckcentral.com/livedive/archives/2006/07/">July 2006</a></li>
+<li><a href="http://www.shipwreckcentral.com/livedive/archives/2006/06/">June 2006</a></li>
+<li><a href="http://www.shipwreckcentral.com/livedive/archives/2006/05/">May 2006</a></li>
+<li><a href="http://www.shipwreckcentral.com/livedive/archives/2006/04/">April 2006</a></li>
+<li><a href="http://www.shipwreckcentral.com/livedive/archives/2006/03/">March 2006</a></li>
+<li><a href="http://www.shipwreckcentral.com/livedive/archives/2006/02/">February 2006</a></li>
+<li><a href="http://www.shipwreckcentral.com/livedive/archives/2006/01/">January 2006</a></li>
+<li><a href="http://www.shipwreckcentral.com/livedive/archives/2005/12/">December 2005</a></li>
+<li><a href="http://www.shipwreckcentral.com/livedive/archives/2005/11/">November 2005</a></li>
+<li><a href="http://www.shipwreckcentral.com/livedive/archives/2005/10/">October 2005</a></li>
+<li><a href="http://www.shipwreckcentral.com/livedive/archives/2005/09/">September 2005</a></li>
+<li><a href="http://www.shipwreckcentral.com/livedive/archives/2005/08/">August 2005</a></li>
+<li><a href="http://www.shipwreckcentral.com/livedive/archives/2005/07/">July 2005</a></li>
+<li><a href="http://www.shipwreckcentral.com/livedive/archives/2005/06/">June 2005</a></li>
+<li><a href="http://www.shipwreckcentral.com/livedive/archives/2005/05/">May 2005</a></li>
+<li><a href="http://www.shipwreckcentral.com/livedive/archives/2005/04/">April 2005</a></li>
+<li><a href="http://www.shipwreckcentral.com/livedive/archives/2005/03/">March 2005</a></li>
+<li><a href="http://www.shipwreckcentral.com/livedive/archives/2005/02/">February 2005</a></li>
+<li><a href="http://www.shipwreckcentral.com/livedive/archives/2005/01/">January 2005</a></li>
+<li><a href="http://www.shipwreckcentral.com/livedive/archives/2004/12/">December 2004</a></li>
+<li><a href="http://www.shipwreckcentral.com/livedive/archives/2004/11/">November 2004</a></li>
+<li><a href="http://www.shipwreckcentral.com/livedive/archives/2004/10/">October 2004</a></li>
+<li><a href="http://www.shipwreckcentral.com/livedive/archives/2004/09/">September 2004</a></li>
+<li><a href="http://www.shipwreckcentral.com/livedive/archives/2004/08/">August 2004</a></li>
+<li><a href="http://www.shipwreckcentral.com/livedive/archives/2004/07/">July 2004</a></li>
+<li><a href="http://www.shipwreckcentral.com/livedive/archives/2004/06/">June 2004</a></li>
+<li><a href="http://www.shipwreckcentral.com/livedive/archives/2003/08/">August 2003</a></li>
+<li><a href="http://www.shipwreckcentral.com/livedive/archives/2003/04/">April 2003</a></li>
+<li><a href="http://www.shipwreckcentral.com/livedive/archives/2003/03/">March 2003</a></li>
+
+</ul>
+
+<h2>Recent Entries</h2>
+
+<ul>
+<li><a href="http://www.shipwreckcentral.com/livedive/archives/shipwreck_central/#000430">Pearl Harbor Remembered</a></li>
+<li><a href="http://www.shipwreckcentral.com/livedive/archives/shipwreck_central/#000428">Halifax Explosion</a></li>
+<li><a href="http://www.shipwreckcentral.com/livedive/archives/shipwreck_central/#000427">DOXA CONTEST</a></li>
+<li><a href="http://www.shipwreckcentral.com/livedive/archives/shipwreck_central/#000426">Lest We Forget</a></li>
+<li><a href="http://www.shipwreckcentral.com/livedive/archives/shipwreck_central/#000425">Remembrance Day</a></li>
+<li><a href="http://www.shipwreckcentral.com/livedive/archives/shipwreck_central/#000424">Force Z - HMS Prince of Wales and HMS Repulse</a></li>
+<li><a href="http://www.shipwreckcentral.com/livedive/archives/shipwreck_central/#000423">Remembrance Day</a></li>
+<li><a href="http://www.shipwreckcentral.com/livedive/archives/shipwreck_central/#000421">Shipwreck Week</a></li>
+<li><a href="http://www.shipwreckcentral.com/livedive/archives/shipwreck_central/#000422">Beached Shipwreck Peter Iredale</a></li>
+<li><a href="http://www.shipwreckcentral.com/livedive/archives/shipwreck_central/#000418">South African sea treasures losing cultural heritage</a></li>
+
+</ul>
+
+<div class="link-note">
+<a href="http://www.shipwreckcentral.com/livedive/index.rdf">Syndicate this site (XML)</a>
+</div>
+
+
+
+<div id="powered">
+Powered by<br /><a href="http://www.movabletype.org">Movable Type 3.2</a><br />    
+</div>
+
+</div>
+</div>
+
+<div style="clear: both;">&#160;</div>
+
+</div>
+
+    </td>
+  </tr>
+  <tr>
+    <td height="25">&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+  </tr>
+  <tr> 
+    <td height="63" valign="top" colspan="3"> 
+ <table width="780" border="0"  bordercolor="#333333" cellpadding="0" cellspacing="0" style="border-top: 1px solid #666666; border-bottom: 1px solid #666666;">
+    <!--DWLayoutTable-->
+    <tr> 
+      <td width="83" height="50">&nbsp;</td>
+        <td width="97" valign="MIDDLE" align="CENTER"><a href="http://www.nationalgeographic.ca/" title="National Geographic Channel" alt="National Geographic Channel" target="_blank"><img src="http://www.shipwreckcentral.com/../images/natgeo2.gif" width="86" height="33"></a></td>
+        <td width="93" valign="middle" bordercolor="#000000" align="CENTER"><a href="http://www.ipf.ca/Bell/English/BellFund.html" title="Bell New Media Fund" alt="Bell New Media Fund" target="_blank"><img src="http://www.shipwreckcentral.com/../images/bellSmall.gif" width="84" height="30" border="0"></a></td>
+        <td width="87" valign="middle" bordercolor="#000000" align="CENTER"><a href="http://www.film.ns.ca/" title="Nova Scotia Film Development Corporation" alt="Nova Scotia Film Development Corporation" target="_blank"><img src="http://www.shipwreckcentral.com/../images/NSFDCsmall.gif" width="85" height="23" border="0"></a></td>
+      <td width="1">&nbsp;</td>
+        <td width="88" valign="MIDDLE" bordercolor="#000000" align="CENTER"><a href="http://www.historytelevision.ca/" title="History Television" alt="History Television" target="_blank"><img src="http://www.shipwreckcentral.com/../images/historySmall.gif" width="78" height="26" border="0"></a></td>
+        <td width="107" valign="middle" bordercolor="#000000" align="CENTER"><a href="http://www.telefilm.gc.ca/accueil.asp" title="Telefilm Canada" alt="Telefilm Canada" target="_blank"><img src="http://www.shipwreckcentral.com/../images/telefilmSmall.gif" width="99" height="19" border="0"></a></td>
+        <td width="137" valign="MIDDLE" bordercolor="#000000" align="CENTER"><a href="http://www.shipwreckcentral.com/about3.htm" title="Eco-Nova Productions" alt="Eco-Nova Productions" ><img src="http://www.shipwreckcentral.com/../images/ecoLogo.gif" width="121" height="36" border="0"></a></td>
+      <td width="87">&nbsp;</td>
+    </tr>
+    <tr> 
+      <td class="SWCstyle" colspan="9" height="60" valign="top" bordercolor="#000000" style="border-bottom: 1px solid #666666;"> 
+        <div align="center" class="SWCstyle"> <a href="http://www.shipwreckcentral.com/index.php" title="Home" class="SWCstyle">Home</a> 
+          | <a href="http://www.shipwreckcentral.com/map/index.php" title="Interactive Map" class="SWCstyle">Interactive 
+          Map</a> | <a href="http://www.shipwreckcentral.com/livedive/index.html" title="Live From the Dive" class="SWCstyle">Live 
+          From the Dive</a> | <a href="http://www.shipwreckcentral.com/teachMod.htm" title="For Teachers" class="SWCstyle">Teachers</a> 
+          | <a href="http://www.shipwreckcentral.com/store/store.php" title="Shipwreck Central Store" class="SWCstyle">Store</a> 
+          | <a href="http://www.shipwreckcentral.com/forum/index.php" title="Community Forums" class="SWCstyle">Community</a> 
+          | <a href="http://www.shipwreckcentral.com/shipPres.htm" title="Articles &amp; Links" class="SWCstyle">Articles 
+          &amp; Links</a> | <a href="http://www.shipwreckcentral.com/about2.htm" title="About Shipwreck Central" class="SWCstyle">About</a> 
+          | <a href="http://www.shipwreckcentral.com/help.php" title="Help" class="SWCstyle">Help</a> </div>
+        <br> <div align="center" class="SWCstyle">Website created and maintained 
+          by <a href="http://www.ghostship.ca" target="_blank" class="swcstyleWhiteLink"> 
+          Ghostship Studio</a> a member of <a href="http://www.shipwreckcentral.com/about3.htm" class="swcstyleGreyLink"> 
+          Eco-Nova Media Group</a></div></td>
+    </tr>
+  </table>
+			</td>
+  </tr>
+</table>
+
+<!-- START video menu drop down -->
+<div id="video_menu" onmouseover="clearDropDownTimer();" onmouseout="DropDownTimer();">
+<ul style="list-style: none; margin: 0px 5px 5px 5px; padding: 0px 5px 5px 5px;">
+  <li><a style="font-family: Arial, Verdana, sans-serif;font-weight: bold;font-size: x-small; color: #FCFBFF; text-decoration: underline;" title="Shipwreck Central Store - Videos &amp; DVDS" href="http://www.shipwreckcentral.com/video.html">VIDEO &amp; DVD</a></li>
+  <li><a style="font-family: Arial, Verdana, sans-serif;font-weight: bold;font-size: x-small; color: #FCFBFF; text-decoration: underline;" title="Shipwreck Central Store" href="http://www.shipwreckcentral.com/store/store.php">MERCHANDISE</a></li>
+  <li><a style="font-family: Arial, Verdana, sans-serif;font-weight: bold;font-size: x-small; color: #FCFBFF; text-decoration: underline;" title="Shipwreck Central Stock Footage" href="http://www.shipwreckcentral.com/../footage.html">STOCK FOOTAGE</a></li>
+</ul>
+
+</div>
+
+<script src="http://www.google-analytics.com/urchin.js" type="text/javascript">
+</script>
+<script type="text/javascript">
+_uacct = "UA-507423-1";
+urchinTracker();
+</script>
+<script type="text/javascript"><!--
+google_ad_client = "pub-8778232494711138";
+google_ad_width = 728;
+google_ad_height = 90;
+google_ad_format = "728x90_as";
+google_ad_type = "text_image";
+google_ad_channel = "";
+google_color_border = "666666";
+google_color_bg = "000000";
+google_color_link = "3399CC";
+google_color_text = "FFFFFF";
+google_color_url = "3399CC";
+//--></script>
+<script type="text/javascript"
+  src="http://pagead2.googlesyndication.com/pagead/show_ads.js">
+</script>
+
+</body>
+</html>

@@ -1,0 +1,687 @@
+<style>
+.note-header-text {font-family: Times, Times New Roman, serif;
+		color:#ff0000; font-size: .95em;
+		margin-left: .75em; margin-right: .75em;}
+</style>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+ "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+<head>
+<LINK REL=STYLESHEET TYPE="text/css" HREF="http://widit.slis.indiana.edu/irpub/SIGIR/2000/css/dl.css">
+<title>: SIGIR '00, Evaluating evaluation measure stability </title>
+<style type="text/css"><!--
+ body {margin-left: 0em; margin-top: 0}
+ a:link {text-decoration: underline; 	Color: #006699;}
+ a:visited { color: #990033; text-decoration: underline;}
+ a:hover {color: red; text-decoration: none}
+ a.dLink1:link {color:#336699}
+ a.dLink1:visited {color:#666666}
+	a.isblack:link {text-decoration: underline; 	Color: #000000;}
+ a.isblack:visited { color: #000000; text-decoration: underline;}
+ a.isblack:hover {color: #000000; text-decoration: none}
+ h1 {font-size: 140%; margin-bottom: 0}
+	ul {margin-top: .25em; list-style-type: disc}
+	ol {margin-top: .25em;}
+	li {padding-bottom: .25em}
+ h2 {color: white; background-color: #069;
+ font-size: 100%; padding-left: 1em;
+		margin: 0}
+	h3 {color: black; background-color: yellow;
+ 	font-size: 100%;
+		margin: 0}
+	 h4 {color: black; background-color: #99c5e8;
+ font-size: 100%;
+		margin: 0}
+ hr {color: #39176d;}
+ form {margin-top: 10}
+	a {text-decoration: none; }
+	input {font-size: 1em;}
+	.chevron {color: #ff0000;}
+	.light-blue {color:#336699;}
+	.black {color:#000000;}
+	/* ### standard text styles, smallest to largest ### */
+	.footer-link-text {font-family: Arial, Helvetica, sans-serif;
+		color:#336699; font-size: .75em; line-height: 1.33em;
+		text-indent: -.75 em; margin-left: 2em; margin-right: .75em;}
+	.footer-copy-text {font-family: Arial, Helvetica, sans-serif;
+		color:#000000; font-size: .75em; line-height: 1.3em;
+		margin-left: .75em; margin-right: .75em;}
+	.small-link-text {font-family: Arial, Helvetica, sans-serif;
+		color:#000000; font-size: .83em; padding-bottom : 2px;
+	 	padding-top : 2px;}
+	.smaller-text {font-family: Arial, Helvetica, sans-serif;
+		color:#000000; font-size: .75em;}
+	.small-text {font-family: Arial, Helvetica, sans-serif;
+		color:#000000; font-size: .83em;}
+	.medium-text {font-family: Arial, Helvetica, sans-serif;
+		color:#000000; font-size: 1em;}
+	.mediumb-text {font-family: Arial, Helvetica, sans-serif;
+		color:#000000; font-size: 1em; font-weight: bold;}
+	.large-text {font-family: Arial, Helvetica, sans-serif;
+		color:#000000; font-size: 1.3em;}
+	.list-link-text {font-family: Arial, Helvetica, sans-serif;
+		color:#336699; font-size: .83em; line-height: 1.3em;}
+	.list-link-btext {font-family: Arial, Helvetica, sans-serif;
+		color:#000000; font-size: .83em; line-height: 1.3em;}
+	.searchbox-text {font-family: Arial, Helvetica, sans-serif;
+		color:#000066; font-size: 1em; font-weight: bold;}
+	.footer-header-text {font-family: Arial, Helvetica, sans-serif;
+		color:#000066; font-size: 1em; font-weight: bold;
+		margin-left: .75em; margin-right: .75em;}
+	.medium-link-text {font-family: Arial, Helvetica, sans-serif;
+		color:#000066; font-size: 1em; font-weight: bold; line-height: 1em;
+		text-indent: -1.25em; margin-left: 2em; margin-right: .75em;}
+	.small-copy-text {font-family: Times, Times New Roman, serif;
+		color:#000066; font-size: .75em; line-height: 1.2em;
+		margin-left: .75em; margin-right: .75em;}
+	.medium-copy-text {font-family: Times, Times New Roman, serif;
+		color:#000066; font-size: 1em; line-height: 1.2em;
+		margin-left: .75em; margin-right: .75em;}
+	.large-copy-text {font-family: Times, Times New Roman, serif;
+		color:#000066; font-size: 1.3em; line-height: 1.5em;
+		margin-left: .75em; margin-right: .75em;}
+	.medium-header-text {font-family: Times, Times New Roman, serif;
+		color:#ff0000; font-size: 1em;
+		margin-left: .75em; margin-right: .75em;}
+	.large-header-text {font-family: Times, Times New Roman, serif;
+		color:#ff0000; font-size: 1.5em;
+		margin-left: .75em; margin-right: .75em;}
+ --></style>
+<SCRIPT LANGUAGE="JavaScript">
+ /* <!-- Begin
+	if(document.layers || document.all) {
+	a = 1;
+	setInterval("Jump()", 10);
+	}
+	function Jump() {
+	a = a + 1;
+	//self.moveBy((Math.random() * a * 2 - a), (Math.random() * a * 2) - a);
+	}
+// End --> */
+</script>
+<script LANGUAGE=JAVASCRIPT TYPE="text/javascript" >
+<!--
+function _CF_onError(form_object, input_object, object_value, error_message)
+ {
+	alert(error_message);
+ 	return false;
+ }
+function _CF_hasValue(obj, obj_type)
+ {
+ if (obj_type == "TEXT" || obj_type == "PASSWORD")
+	{
+ 	if (obj.value.length == 0)
+ 		return false;
+ 	else
+ 		return true;
+ 	}
+ else if (obj_type == "SELECT")
+	{
+ for (i=0; i < obj.length; i++)
+	 	{
+		if (obj.options[i].selected)
+			return true;
+		}
+ 	return false;
+	}
+ else if (obj_type == "SINGLE_VALUE_RADIO" || obj_type == "SINGLE_VALUE_CHECKBOX")
+	{
+		if (obj.checked)
+			return true;
+		else
+ 		return false;
+	}
+ else if (obj_type == "RADIO" || obj_type == "CHECKBOX")
+	{
+ for (i=0; i < obj.length; i++)
+	 	{
+		if (obj[i].checked)
+			return true;
+		}
+ 	return false;
+	}
+	}
+function _CF_checkqiksearch(_CF_this)
+ {
+ if (!_CF_hasValue(_CF_this.query, "TEXT" ))
+ {
+ if (!_CF_onError(_CF_this, _CF_this.query, _CF_this.query.value, "Please enter your Search Criteria"))
+ {
+ return false;
+ }
+ }
+ return true;
+ }
+//-->
+</script>
+</head>
+<body bgcolor="#ffffff" onload="window.focus()">
+<div align="center">
+<a name="CIT"></a>
+<table border="0" width="85%" cellspacing="0" cellpadding="0">
+<tr>
+<td>
+<table width="100%" border="0" cellpadding="0" cellspacing="0">
+<col width="1%"><col width="99%">
+			</td>
+		</tr>
+		<tr>
+			<td height="6"><img src="blanks.gif" width=1 height=1 alt="" border="0"></td>
+		</tr>
+		<tr>
+			<td colspan="2" valign="top" height="1" background="http://widit.slis.indiana.edu/irpub/SIGIR/2000/images/horiz-bar-long.jpg"></td>
+		</tr>
+		<tr>
+			<td height="6"><img src="blanks.gif" width=1 height=1 alt="" border="0"></td>
+		</tr>
+		</table>
+</td>
+</tr>
+<tr>
+	<td colspan="3" valign="top" height="1" background="http://widit.slis.indiana.edu/irpub/SIGIR/2000/images/horiz-bar-long.jpg"></td>
+</tr>
+<tr>
+<td class="small-text">
+	<table border="0" width="100%" cellpadding="2">
+		<col width="1%">
+		<col width="8%">
+		<col width="91%">
+	<tr>
+		<td class="medium-text" colspan="3"><strong>Evaluating evaluation measure stability</strong></td>
+	</tr>
+			<tr valign="top">
+			</tr>
+			<tr valign="top">
+					<td class="small-text"><strong>Full text</strong></td>
+				<td class="smaller-text" colspan="2" >
+									 <A NAME="FullText" href="http://widit.slis.indiana.edu/irpub/SIGIR/2000/pdf6.pdf" target="_blank"><img src="pdf_logo.gif" width="16" height="16" alt="pdf format" border="0" hspace="1" align="texttop">Pdf</A>
+									 (869&nbsp;KB)
+				</td>
+			</tr>
+		<tr valign="top">
+			<td class="small-text"><strong>Source</strong></td>
+			<td class="small-text" colspan="2">
+														<SPAN class="mediumb-text">Annual ACM Conference on Research and Development in Information Retrieval</span>
+																			<a href="http://widit.slis.indiana.edu/irpub/SIGIR/2000/toc.cfm?id=SERIES278&amp;type=series&amp;coll=GUIDE&amp;dl=ACM&amp;idx=345508&amp;part=Proceedings&amp;WantType=Proceedings&amp;title=Annual%20ACM%20Conference%20on%20Research%20and%20Development%20in%20Information%20Retrieval&amp;CFID=13720957&amp;CFTOKEN=832591" target="_self" class="small-link-text">archive</a><br>
+													<SPAN class="mediumb-text">Proceedings of the 23rd annual international ACM SIGIR conference on Research and development in information retrieval </span>
+										 								 <a href="http://widit.slis.indiana.edu/irpub/SIGIR/2000/toc.cfm?id=345508&amp;type=proceeding&amp;coll=GUIDE&amp;dl=ACM&amp;idx=345508&amp;part=Proceedings&amp;WantType=Proceedings&amp;title=Annual%20ACM%20Conference%20on%20Research%20and%20Development%20in%20Information%20Retrieval&amp;CFID=13720957&amp;CFTOKEN=832591" target="_self" class="small-link-text">table of contents</a><br>
+												<DIV class="small-text">
+													 Athens, Greece
+												</div>
+		<div class="medium-text">
+		</div>
+			<div class="small-text">
+				 Pages: 33 - 40&nbsp;&nbsp;
+			</div>
+				<div class="small-text">
+					Year of Publication:&nbsp;2000
+				</div>
+				<div class="small-text">
+					ISBN:1-58113-226-3
+				</div>
+			</td>
+		</tr>
+			<tr valign="top">
+				<td class="small-text">
+										 	<strong>Authors</strong>
+				</td>
+				<td colspan="2">
+				<div class="authors">
+					<table cellpadding="0" cellspacing="0">
+							<tr>
+								<td class="small-text">
+ 									<a href="http://widit.slis.indiana.edu/irpub/SIGIR/2000/results.cfm?query=author%3AP45945&amp;querydisp=author%3AChris%20%20Buckley&amp;coll=GUIDE&amp;dl=ACM&amp;CFID=13720957&amp;CFTOKEN=832591" target="_self">Chris Buckley</a>
+								</td>
+								<td class="small-text">
+								</td>
+							</tr>
+							<tr>
+								<td class="small-text">
+ 									<a href="http://widit.slis.indiana.edu/irpub/SIGIR/2000/results.cfm?query=author%3AP77019&amp;querydisp=author%3AEllen%20M%2E%20Voorhees&amp;coll=GUIDE&amp;dl=ACM&amp;CFID=13720957&amp;CFTOKEN=832591" target="_self">Ellen M. Voorhees</a>
+								</td>
+								<td class="small-text">
+								</td>
+							</tr>
+					</table>
+				</div>
+				</td>
+			</tr>
+				<tr valign="top">
+					<td class="small-text"><strong>Sponsors</strong></td>
+					<td>
+						<div class="sponsors">
+									 	Athens U of Econ &amp; Business :
+									 Athens University of Economics and Business <br>
+									 	Greek Com Soc :
+									 Greek Computer Society <br>
+										<a href=" http://www.acm.org/sigir/" target="sponsor" title="Sponsor">SIGIR</a>:
+									 ACM Special Interest Group on Information Retrieval <br>
+						</div>
+					 </td>
+				</tr>
+					<tr valign="top">
+						<td class="small-text"><strong>Publisher</strong></td>
+						<td colspan="2">
+							<div class="publishers">
+									 	ACM Press &nbsp;
+										<small> New York, NY, USA </small>
+							</div>
+						</td>
+					</tr>
+		</table>
+</td>
+</tr>
+<tr>
+<td>
+<!-- third main table: main content START -->
+	<table border="0" width="100%" cellspacing="0" cellpadding="0">
+	<tr>
+		<td height="6"><img src="blanks.gif" width=1 height=1 alt="" border="0"></td>
+	</tr>
+	<tr>
+		<td colspan="4" valign="top" height="1" background="http://widit.slis.indiana.edu/irpub/SIGIR/2000/images/horiz-bar-long.jpg"></td>
+	</tr>
+	<tr>
+		<td height="6"><img src="blanks.gif" width=1 height=1 alt="" border="0"></td>
+	</tr>
+	<tr valign="top">
+	<!-- buttons -->
+		<td width="100%" colspan="4">
+	 <table border="0" cellspacing="0" cellpadding="0" width="100%">
+		<col width="22%">
+	 <col width="78%">
+		<tr>
+			<td class="small-text"><b>Additional Information:</b></td>
+			<td>
+			<p class="small-text">
+					<a href="cite6.htm#abstract">abstract</a>&nbsp;&nbsp;
+					<a href="cite6.htm#references">references</a>&nbsp;&nbsp;
+					<a href="cite6.htm#citings">citings</a>&nbsp;&nbsp;
+					<a href="cite6.htm#IndexTerms">index terms</a>&nbsp;&nbsp;
+						<a href="cite6.htm#collab">collaborative colleagues</a>&nbsp;&nbsp;
+					<a href="cite6.htm#peers">peer to peer</a>&nbsp;&nbsp;
+				</p>
+			</td>
+		</tr>
+		</table>
+		</td>
+	</tr>
+	<tr>
+		<td height="6"><img src="blanks.gif" width=1 height=1 alt="" border="0"></td>
+	</tr>
+	<tr valign="top">
+	<!-- buttons -->
+		<form name="popbinder">
+		<td width="100%" colspan="4">
+		<table border="0" cellspacing="0" cellpadding="2" width="100%" >
+		 <col width="22%">
+		 <col width="78%">
+		 <tr valign="top">
+		 	<td class="small-text"><b>Tools and Actions:</b></td>
+			<td>
+				 <a href="https://portal.acm.org/poplogin.cfm?dl=ACM&coll=GUIDE&comp_id=COMPONENT032&want_href=ocr%5Fdiscuss%2Ecfm%3Fid%3D345543&CFID=13720957&CFTOKEN=832591" class="small-link-text">
+			Discussions</a>
+			&nbsp;&nbsp;
+			<a href="http://widit.slis.indiana.edu/irpub/SIGIR/2000/results.cfm?query=345543&amp;querydisp=Similar%20to%3A%20Evaluating%20evaluation%20measure%20stability&amp;coll=GUIDE&amp;dl=ACM&amp;CFID=13720957&amp;CFTOKEN=832591" target="_self" class="small-link-text">Find similar Articles</a>&nbsp;&nbsp;
+			<a href="http://www.reviews.com/reviewer/quickreview/frameset_toplevel.cfm?bib_id=345543" target="reviews" class="small-link-text">Review this Article</a>&nbsp;&nbsp;
+			 	<br><a href="cite6.htm#" onClick="window.alert('To use this Feature, you must login with your personal ACM Web Account.');" class="small-link-text">
+				Save this Article to a Binder</a><img src="blanks.gif" border="0" name="saved">
+			&nbsp;&nbsp;
+			<a href="cite6.htm#" onClick="window.open('popBibTex.cfm?id=345543&ids=SERIES278.345508.345543&types=series.proceeding.article&reqtype=article&coll=GUIDE&dl=ACM&CFID=13720957&CFTOKEN=832591','BibTex','width=800,height=100,top=100,left=100,scrollbars=Yes,resizable=yes');" class="small-link-text">
+			Display in BibTex Format</a>
+			&nbsp;&nbsp;
+			</td>
+		</tr>
+		<tr>
+			<td height="10"><img src="blanks.gif" width=1 height=1 alt="" border="0"></td>
+		</tr>
+		<tr valign="top">
+			<td class="small-text"><b>DOI Bookmark:</b></td>
+			<td class="small-text">
+				<small>Use this link to bookmark this Article:&nbsp;</small><a href="http://doi.acm.org/10.1145/345508.345543">http://doi.acm.org/10.1145/345508.345543</a><br><small><a href="http://www.doi.org/">What is a DOI?</a></small>
+			</td>
+		</tr>
+		</table>
+		</td>
+		</form>
+	</tr>
+	<tr>
+		<td height="6"><img src="blanks.gif" width=1 height=1 alt="" border="0"></td>
+	</tr>
+	<tr>
+		<td colspan="4" valign="top" height="1" background="http://widit.slis.indiana.edu/irpub/SIGIR/2000/images/horiz-bar-long.jpg"></td>
+	</tr>
+	<tr>
+		<td height="6"><img src="blanks.gif" width=1 height=1 alt="" border="0"></td>
+	</tr>
+	</table>
+<!-- third main table: main content END -->
+		 	<div class="abstract">
+			</div>
+			<br>
+			<div class="abstract">
+			<A HREF="cite6.htm#CIT"><img name="top" src="arrowu.gif" hspace="10" border="0"></A><SPAN class=heading><A NAME="abstract">ABSTRACT</A></span>
+				<p class="abstract">
+				</p>
+			</div>
+			<br>
+			<div class="abstract">
+			<A HREF="cite6.htm#CIT"><img name="top" src="arrowu.gif" hspace="10" border="0"></A><SPAN class=heading><A NAME="references">REFERENCES</A></span>
+			<p class="abstract"><font color="Red">Note: OCR errors may be found in this Reference List extracted from the full text article. ACM has opted to expose the complete List rather than only correct and linked references.</font></p>
+				<p class="abstract">
+				 1&nbsp;&nbsp;
+				 James Allan, Jamie Callan, Fang-Fang Feng, and Daniella Malin. INQUERY and TREC-8. In Voorhees and Harman [26].
+				</p>
+				<p class="abstract">
+				 2&nbsp;&nbsp;
+				 Chris Buckley and Janet Walz. SMART in TREC 8. In Voorhees and Harman [26].
+				</p>
+				<p class="abstract">
+				 3&nbsp;&nbsp;
+				 C. W. Cleverdon, J. Mills, and E. M. Keen. Factors determining the performance of indexing systems. Two volumes, Cranfield, England, 1968.
+				</p>
+				<p class="abstract">
+				 4&nbsp;&nbsp;
+		 			 <a href="http://widit.slis.indiana.edu/irpub/SIGIR/2000/citation.cfm?id=275554&amp;dl=ACM&amp;coll=GUIDE&amp;CFID=13720957&amp;CFTOKEN=832591">
+				 William S. Cooper, On selecting a measure of retrieval effectiveness. Part I., Readings in information retrieval, Morgan Kaufmann Publishers Inc., San Francisco, CA, 1997
+				 </a>
+				</p>
+				<p class="abstract">
+				 5&nbsp;&nbsp;
+		 			 <a href="http://widit.slis.indiana.edu/irpub/SIGIR/2000/citation.cfm?id=291009&amp;dl=ACM&amp;coll=GUIDE&amp;CFID=13720957&amp;CFTOKEN=832591">
+				 Gordon V. Cormack , Christopher R. Palmer , Charles L. A. Clarke, Efficient construction of large test collections, Proceedings of the 21st annual international ACM SIGIR conference on Research and development in information retrieval, p.282-289, August 24-28, 1998, Melbourne, Australia
+				 </a>
+				</p>
+				<p class="abstract">
+				 6&nbsp;&nbsp;
+		 			 <a href="http://widit.slis.indiana.edu/irpub/SIGIR/2000/citation.cfm?id=290941&amp;dl=ACM&amp;coll=GUIDE&amp;CFID=13720957&amp;CFTOKEN=832591">
+				 Proceedings of the 21st annual international ACM SIGIR conference on Research and development in information retrieval, August 1998
+				 </a>
+				</p>
+				<p class="abstract">
+				 7&nbsp;&nbsp;
+				 D.K. Harman, editor. Proceedings of the Fourth Text RE- trieval Conference (TREC-4), October 1996. NIST Special Publication 500-236.
+				</p>
+				<p class="abstract">
+				 8&nbsp;&nbsp;
+				 Donna Harman. Overview of the fourth Text REtrieval Conference (TREC-4). In Harman [7], pages 1-23. NIST Special Publication 500-236.
+				</p>
+				<p class="abstract">
+				 9&nbsp;&nbsp;
+				 David Hawking, Peter Bailey, and Nick Craswell. ACSys TREC-8 experiments. In Voorhees and Harman [26].
+				</p>
+				<p class="abstract">
+				 10&nbsp;&nbsp;
+		 			 <a href="http://widit.slis.indiana.edu/irpub/SIGIR/2000/citation.cfm?id=160758&amp;dl=ACM&amp;coll=GUIDE&amp;CFID=13720957&amp;CFTOKEN=832591">
+				 David Hull, Using statistical testing in the evaluation of retrieval experiments, Proceedings of the 16th annual international ACM SIGIR conference on Research and development in information retrieval, p.329-338, June 27-July 01, 1993, Pittsburgh, Pennsylvania, United States
+				 </a>
+				</p>
+				<p class="abstract">
+				 11&nbsp;&nbsp;
+		 			 <a href="http://widit.slis.indiana.edu/irpub/SIGIR/2000/citation.cfm?id=149515&amp;dl=ACM&amp;coll=GUIDE&amp;CFID=13720957&amp;CFTOKEN=832591">
+				 E. Michael Keen, Presenting results of experimental retrieval comparisons, Information Processing and Management: an International Journal, v.28 n.4, p.491-502, July-Aug. 1992
+				 </a>
+				</p>
+				<p class="abstract">
+				 12&nbsp;&nbsp;
+				 K.L. Kwok, L. Grunfeld, and M. Chart. TREC-8 ad-hoc, query and filtering track experiments using PIRCS. In Voorhees and Harman [26].
+				</p>
+				<p class="abstract">
+				 13&nbsp;&nbsp;
+		 			 <a href="http://widit.slis.indiana.edu/irpub/SIGIR/2000/citation.cfm?id=215366&amp;dl=ACM&amp;coll=GUIDE&amp;CFID=13720957&amp;CFTOKEN=832591">
+				 David D. Lewis, Evaluating and optimizing autonomous text classification systems, Proceedings of the 18th annual international ACM SIGIR conference on Research and development in information retrieval, p.246-254, July 09-13, 1995, Seattle, Washington, United States
+				 </a>
+				</p>
+				<p class="abstract">
+				 14&nbsp;&nbsp;
+				 David D. Lewis. The TREC-4 filtering track. In Harman [7], pages 165-180. NIST Special Publication 500-236.
+				</p>
+				<p class="abstract">
+				 15&nbsp;&nbsp;
+				 J. Mayfiled, P. McNamee, and C. Piatko. The JHU/APL HAIRCUT system at TREC-8. In Voorhees and Harman [26].
+				</p>
+				<p class="abstract">
+				 16&nbsp;&nbsp;
+		 			 <a href="http://widit.slis.indiana.edu/irpub/SIGIR/2000/citation.cfm?id=149511&amp;dl=ACM&amp;coll=GUIDE&amp;CFID=13720957&amp;CFTOKEN=832591">
+				 Gerard Salton, The state of retrieval system evaluation, Information Processing and Management: an International Journal, v.28 n.4, p.441-449, July-Aug. 1992
+				 </a>
+				</p>
+				<p class="abstract">
+				 17&nbsp;&nbsp;
+				 K. Sparck Jones and C.J. van Rijsbergen. Information retrieval test collections. Journal of Documentation, 32(1):59-75, 1976.
+				</p>
+				<p class="abstract">
+				 18&nbsp;&nbsp;
+				 Karen Sparck Jones. Automatic indexing. Journal of Documentation, 30:393-432, 1974.
+				</p>
+				<p class="abstract">
+				 19&nbsp;&nbsp;
+				 Jean M. Tague. The pragmatics of information retrieval experimentation. In Karen Sparck Jones, editor, Information Retrieval Experiment, pages 59-102. Butterworths, 1981.
+				</p>
+				<p class="abstract">
+				 20&nbsp;&nbsp;
+		 			 <a href="http://widit.slis.indiana.edu/irpub/SIGIR/2000/citation.cfm?id=149514&amp;dl=ACM&amp;coll=GUIDE&amp;CFID=13720957&amp;CFTOKEN=832591">
+				 Jean Tague-Sutcliffe, The pragmatics of information retrieval experimentation, revisited, Information Processing and Management: an International Journal, v.28 n.4, p.467-490, July-Aug. 1992
+				 </a>
+				</p>
+				<p class="abstract">
+				 21&nbsp;&nbsp;
+				 Jean Tague-Sutcliffe and James Blustein. A statistical analysis of the TREC-3 data. In D. K. Harman, editor, Overview of the Third Text REtrieval Conference (TREC- 3) [Proceedings of TREC-3.], pages 385-398, April 1995. NIST Special Publication 500-225.
+				</p>
+				<p class="abstract">
+				 22&nbsp;&nbsp;
+		 			 <a href="http://widit.slis.indiana.edu/irpub/SIGIR/2000/citation.cfm?id=539927&amp;dl=ACM&amp;coll=GUIDE&amp;CFID=13720957&amp;CFTOKEN=832591">
+				 C. J. Van Rijsbergen, Information Retrieval, Butterworth-Heinemann, Newton, MA, 1979
+				 </a>
+				</p>
+				<p class="abstract">
+				 23&nbsp;&nbsp;
+		 			 <a href="http://widit.slis.indiana.edu/irpub/SIGIR/2000/citation.cfm?id=291017&amp;dl=ACM&amp;coll=GUIDE&amp;CFID=13720957&amp;CFTOKEN=832591">
+				 Ellen M. Voorhees, Variations in relevance judgments and the measurement of retrieval effectiveness, Proceedings of the 21st annual international ACM SIGIR conference on Research and development in information retrieval, p.315-323, August 24-28, 1998, Melbourne, Australia
+				 </a>
+				</p>
+				<p class="abstract">
+				 24&nbsp;&nbsp;
+		 			 <a href="http://widit.slis.indiana.edu/irpub/SIGIR/2000/citation.cfm?id=342531&amp;dl=ACM&amp;coll=GUIDE&amp;CFID=13720957&amp;CFTOKEN=832591">
+				 Ellen M. Voorhees , Donna Harman, Overview of the sixth text REtrieval conference (TREC-6), Information Processing and Management: an International Journal, v.36 n.1, p.3-35, Jan. 2000
+				 </a>
+				</p>
+				<p class="abstract">
+				 25&nbsp;&nbsp;
+				 Ellen M. Voorhees and Donna Harman. Overview of the seventh Text REtrieVal Conference (TREC-7). In E.M. Voorhees and D.K. Harman, editors, Proceedings of the Seventh Text REtrieval Conference (TREC-7), pages 1-23, August 1999. NIST Special Publication 500-242. Electronic version available at http://trec.nist.gov/pubs.html.
+				</p>
+				<p class="abstract">
+				 26&nbsp;&nbsp;
+				 E.M. Voorhees and D.K. Harman, editors. Proceedings of the Eighth Text REtrieval Conference (TREC-8). Electronic version available at http://trec.nist.gov/pubs.html, 2000.
+				</p>
+				<p class="abstract">
+				 27&nbsp;&nbsp;
+				 D. Williamson, R. Williamson, and M. Lesk. The Cornell implementation of the Smart system. In G. Salton, editor, The SMART Retrieval System: Experiments in Automatic Document Processing, chapter 2, pages 43-44. Prentice- Hall, Inc. Englewood Cliffs, New Jersey, 1971.
+				</p>
+				<p class="abstract">
+				 28&nbsp;&nbsp;
+		 			 <a href="http://widit.slis.indiana.edu/irpub/SIGIR/2000/citation.cfm?id=291014&amp;dl=ACM&amp;coll=GUIDE&amp;CFID=13720957&amp;CFTOKEN=832591">
+				 Justin Zobel, How reliable are the results of large-scale information retrieval experiments?, Proceedings of the 21st annual international ACM SIGIR conference on Research and development in information retrieval, p.307-314, August 24-28, 1998, Melbourne, Australia
+				 </a>
+				</p>
+			</div>
+			<br>
+			<div class="abstract">
+			<A HREF="cite6.htm#CIT"><img name="top" src="arrowu.gif" hspace="10" border="0"></A><SPAN class=heading><A NAME="citings">CITINGS</A>&nbsp;&nbsp;<i>10</i></span>
+				<p class="abstract">
+	 				 <a href="http://widit.slis.indiana.edu/irpub/SIGIR/2000/citation.cfm?id=564432&amp;dl=ACM&amp;coll=GUIDE&amp;CFID=13720957&amp;CFTOKEN=832591">
+					Ellen M. Voorhees , Chris Buckley, The effect of topic set size on retrieval experiment error, Proceedings of the 25th annual international ACM SIGIR conference on Research and development in information retrieval, August 11-15, 2002, Tampere, Finland
+				 </a>
+				</p>
+				<p class="abstract">
+	 				 <a href="http://widit.slis.indiana.edu/irpub/SIGIR/2000/citation.cfm?id=383987&amp;dl=ACM&amp;coll=GUIDE&amp;CFID=13720957&amp;CFTOKEN=832591">
+					Tetsuya Sakai , Karen Sparck-Jones, Generic summaries for indexing in information retrieval, Proceedings of the 24th annual international ACM SIGIR conference on Research and development in information retrieval, p.190-198, September 2001, New Orleans, Louisiana, United States
+				 </a>
+				</p>
+				<p class="abstract">
+	 				 <a href="http://widit.slis.indiana.edu/irpub/SIGIR/2000/citation.cfm?id=584812&amp;dl=ACM&amp;coll=GUIDE&amp;CFID=13720957&amp;CFTOKEN=832591">
+					Renato O. Stehling , Mario A. Nascimento , Alexandre X. Falc&#227;o, A compact and efficient image retrieval approach based on border/interior pixel classification, Proceedings of the eleventh international conference on Information and knowledge management, November 04-09, 2002, McLean, Virginia, USA
+				 </a>
+				</p>
+				<p class="abstract">
+	 				 <a href="http://widit.slis.indiana.edu/irpub/SIGIR/2000/citation.cfm?id=563911&amp;dl=ACM&amp;coll=GUIDE&amp;CFID=13720957&amp;CFTOKEN=832591">
+					Vo Ngoc Anh , Alistair Moffat, Improved retrieval effectiveness through impact transformation, Australian Computer Science Communications, v.24 n.2, p.41-47, January-February 2002
+				 </a>
+				</p>
+				<p class="abstract">
+	 				 <a href="http://widit.slis.indiana.edu/irpub/SIGIR/2000/citation.cfm?id=383963&amp;dl=ACM&amp;coll=GUIDE&amp;CFID=13720957&amp;CFTOKEN=832591">
+					Ellen M. Voorhees, Evaluation by highly relevant documents, Proceedings of the 24th annual international ACM SIGIR conference on Research and development in information retrieval, p.74-82, September 2001, New Orleans, Louisiana, United States
+				 </a>
+				</p>
+				<p class="abstract">
+	 				 <a href="http://widit.slis.indiana.edu/irpub/SIGIR/2000/citation.cfm?id=779015&amp;dl=ACM&amp;coll=GUIDE&amp;CFID=13720957&amp;CFTOKEN=832591">
+					Nega Alemayehu, Analysis of performance variation using query expansion, Journal of the American Society for Information Science and Technology, v.54 n.5, p.379-391, March 2003
+				 </a>
+				</p>
+				<p class="abstract">
+	 				 <a href="http://widit.slis.indiana.edu/irpub/SIGIR/2000/citation.cfm?id=564380&amp;dl=ACM&amp;coll=GUIDE&amp;CFID=13720957&amp;CFTOKEN=832591">
+					Vo Ngoc Anh , Alistair Moffat, Impact transformation: effective and efficient web retrieval, Proceedings of the 25th annual international ACM SIGIR conference on Research and development in information retrieval, August 11-15, 2002, Tampere, Finland
+				 </a>
+				</p>
+				<p class="abstract">
+	 				 <a href="http://widit.slis.indiana.edu/irpub/SIGIR/2000/citation.cfm?id=635488&amp;dl=ACM&amp;coll=GUIDE&amp;CFID=13720957&amp;CFTOKEN=832591">
+					Jack G. Conrad , Joanne R. S. Claussen, Early user---system interaction for database selection in massive domain-specific online environments, ACM Transactions on Information Systems (TOIS), v.21 n.1, p.94-131, January 2003
+				 </a>
+				</p>
+				<p class="abstract">
+	 				 <a href="http://widit.slis.indiana.edu/irpub/SIGIR/2000/citation.cfm?id=383992&amp;dl=ACM&amp;coll=GUIDE&amp;CFID=13720957&amp;CFTOKEN=832591">
+					Andrew H. Turpin , William Hersh, Why batch and user evaluations do not give the same results, Proceedings of the 24th annual international ACM SIGIR conference on Research and development in information retrieval, p.225-231, September 2001, New Orleans, Louisiana, United States
+				 </a>
+				</p>
+				<p class="abstract">
+	 				 <a href="http://widit.slis.indiana.edu/irpub/SIGIR/2000/citation.cfm?id=567296&amp;dl=ACM&amp;coll=GUIDE&amp;CFID=13720957&amp;CFTOKEN=832591">
+					Stephen Robertson, Evaluation in information retrieval, Lectures on information retrieval, Springer-Verlag New York, Inc., New York, NY, 2001
+				 </a>
+				</p>
+			</div>
+		 	<br>
+			<div class="indterms">
+			<A HREF="cite6.htm#CIT"><img name="top" src="arrowu.gif" hspace="10" border="0"></A><SPAN class=heading><A NAME="IndexTerms">INDEX TERMS</A></span>
+					<p class="Categories">
+						<SPAN class=heading><A NAME="GenTerms">Primary Classification:</A></span>
+							<br>&nbsp;
+									<b>H.</b>
+									<a href="http://widit.slis.indiana.edu/irpub/SIGIR/2000/results.cfm?query=CCS%3AH%2E%2A&amp;coll=GUIDE&amp;dl=ACM&amp;CFID=13720957&amp;CFTOKEN=832591" target="_self">
+									Information Systems</a><br>
+										&nbsp;
+										<img src="tree.gif" border="0" height="20" width="20">
+									<b>H.3</b>
+									<a href="http://widit.slis.indiana.edu/irpub/SIGIR/2000/results.cfm?query=CCS%3A%22H%2E3%22&amp;coll=GUIDE&amp;dl=ACM&amp;CFID=13720957&amp;CFTOKEN=832591" target="_self">
+									 INFORMATION STORAGE AND RETRIEVAL</a><br>
+										&nbsp;
+										&nbsp;
+										&nbsp;
+										<img src="tree.gif" border="0" height="20" width="20">
+									<b>H.3.3</b>
+									<a href="http://widit.slis.indiana.edu/irpub/SIGIR/2000/results.cfm?query=CCS%3A%22H%2E3%2E3%22&amp;coll=GUIDE&amp;dl=ACM&amp;CFID=13720957&amp;CFTOKEN=832591" target="_self">
+									 Information Search and Retrieval</a><br>
+												&nbsp;
+												&nbsp;
+												&nbsp;
+												&nbsp;
+												&nbsp;
+												<img src="tree.gif" border="0" height="20" width="20">
+											<b>Subjects:</b>
+												<a href="http://widit.slis.indiana.edu/irpub/SIGIR/2000/results.cfm?query=CCS%3A%22Retrieval%20models%22&amp;coll=GUIDE&amp;dl=ACM&amp;CFID=13720957&amp;CFTOKEN=832591" target="_self">Retrieval models</a>
+										<br>
+					 </p>
+				<br>
+					<p class="GenTerms">
+						<SPAN class=heading><A NAME="GenTerms">General Terms:</A></span>
+						<BR>
+							<a href="http://widit.slis.indiana.edu/irpub/SIGIR/2000/results.cfm?query=genterm%3A%22Experimentation%22&amp;coll=GUIDE&amp;dl=ACM&amp;CFID=13720957&amp;CFTOKEN=832591" target="_self">
+							Experimentation</a>,
+							<a href="http://widit.slis.indiana.edu/irpub/SIGIR/2000/results.cfm?query=genterm%3A%22Human%20Factors%22&amp;coll=GUIDE&amp;dl=ACM&amp;CFID=13720957&amp;CFTOKEN=832591" target="_self">
+							 Human Factors</a>,
+							<a href="http://widit.slis.indiana.edu/irpub/SIGIR/2000/results.cfm?query=genterm%3A%22Performance%22&amp;coll=GUIDE&amp;dl=ACM&amp;CFID=13720957&amp;CFTOKEN=832591" target="_self">
+							 Performance</a>,
+							<a href="http://widit.slis.indiana.edu/irpub/SIGIR/2000/results.cfm?query=genterm%3A%22Reliability%22&amp;coll=GUIDE&amp;dl=ACM&amp;CFID=13720957&amp;CFTOKEN=832591" target="_self">
+							 Reliability</a>
+					</p>
+			</div>
+			<div class="abstract">
+				<A HREF="cite6.htm#CIT"><img name="top" src="arrowu.gif" hspace="10" border="0"></A><SPAN class=heading><A NAME="collab">Collaborative Colleagues:</A></span>
+				<table border="0" style="margin-left: 2em" cellpadding="2">
+						<tr valign="top"><td><div class="abstract"><a href="http://widit.slis.indiana.edu/irpub/SIGIR/2000/results.cfm?query=%2Bauthor%3AP45945&amp;querydisp=author%3AChris%20Buckley&amp;coll=GUIDE&amp;dl=GUIDE&amp;CFID=13720957&amp;CFTOKEN=832591" target="_self">Chris Buckley</a>:</div></td><td>
+						<div class="abstract"><a href="http://widit.slis.indiana.edu/irpub/SIGIR/2000/results.cfm?query=%2Bauthor%3AP119876%20author%3AP45945&amp;querydisp=author%3AJ%2E%20Allan&amp;coll=GUIDE&amp;dl=GUIDE&amp;CFID=13720957&amp;CFTOKEN=832591" target="_self">J. Allan</a></div>
+						<div class="abstract"><a href="http://widit.slis.indiana.edu/irpub/SIGIR/2000/results.cfm?query=%2Bauthor%3AP131548%20author%3AP45945&amp;querydisp=author%3AJames%20Allan&amp;coll=GUIDE&amp;dl=GUIDE&amp;CFID=13720957&amp;CFTOKEN=832591" target="_self">James Allan</a></div>
+						<div class="abstract"><a href="http://widit.slis.indiana.edu/irpub/SIGIR/2000/results.cfm?query=%2Bauthor%3AP48730%20author%3AP45945&amp;querydisp=author%3AClaire%20Cardie&amp;coll=GUIDE&amp;dl=GUIDE&amp;CFID=13720957&amp;CFTOKEN=832591" target="_self">Claire Cardie</a></div>
+						<div class="abstract"><a href="http://widit.slis.indiana.edu/irpub/SIGIR/2000/results.cfm?query=%2Bauthor%3AP75202%20author%3AP45945&amp;querydisp=author%3AEdward%20A%2E%20Fox&amp;coll=GUIDE&amp;dl=GUIDE&amp;CFID=13720957&amp;CFTOKEN=832591" target="_self">Edward A. Fox</a></div>
+						<div class="abstract"><a href="http://widit.slis.indiana.edu/irpub/SIGIR/2000/results.cfm?query=%2Bauthor%3AP209943%20author%3AP45945&amp;querydisp=author%3ANorbert%20Fuhr&amp;coll=GUIDE&amp;dl=GUIDE&amp;CFID=13720957&amp;CFTOKEN=832591" target="_self">Norbert Fuhr</a></div>
+						<div class="abstract"><a href="http://widit.slis.indiana.edu/irpub/SIGIR/2000/results.cfm?query=%2Bauthor%3AP69113%20author%3AP45945&amp;querydisp=author%3ADonna%20Harman&amp;coll=GUIDE&amp;dl=GUIDE&amp;CFID=13720957&amp;CFTOKEN=832591" target="_self">Donna Harman</a></div>
+						<div class="abstract"><a href="http://widit.slis.indiana.edu/irpub/SIGIR/2000/results.cfm?query=%2Bauthor%3AP299187%20author%3AP45945&amp;querydisp=author%3AWilliam%20Hersh&amp;coll=GUIDE&amp;dl=GUIDE&amp;CFID=13720957&amp;CFTOKEN=832591" target="_self">William Hersh</a></div>
+						<div class="abstract"><a href="http://widit.slis.indiana.edu/irpub/SIGIR/2000/results.cfm?query=%2Bauthor%3AP62006%20author%3AP45945&amp;querydisp=author%3ADavid%20Hickam&amp;coll=GUIDE&amp;dl=GUIDE&amp;CFID=13720957&amp;CFTOKEN=832591" target="_self">David Hickam</a></div>
+						<div class="abstract"><a href="http://widit.slis.indiana.edu/irpub/SIGIR/2000/results.cfm?query=%2Bauthor%3AP154054%20author%3AP45945&amp;querydisp=author%3AK%2E%20Lam&amp;coll=GUIDE&amp;dl=GUIDE&amp;CFID=13720957&amp;CFTOKEN=832591" target="_self">K. Lam</a></div>
+						<div class="abstract"><a href="http://widit.slis.indiana.edu/irpub/SIGIR/2000/results.cfm?query=%2Bauthor%3AP275274%20author%3AP45945&amp;querydisp=author%3AT%2E%20J%2E%20Leone&amp;coll=GUIDE&amp;dl=GUIDE&amp;CFID=13720957&amp;CFTOKEN=832591" target="_self">T. J. Leone</a></div>
+							</td><td>
+						<div class="abstract"><a href="http://widit.slis.indiana.edu/irpub/SIGIR/2000/results.cfm?query=%2Bauthor%3AP200563%20author%3AP45945&amp;querydisp=author%3AMike%20Lesk&amp;coll=GUIDE&amp;dl=GUIDE&amp;CFID=13720957&amp;CFTOKEN=832591" target="_self">Mike Lesk</a></div>
+						<div class="abstract"><a href="http://widit.slis.indiana.edu/irpub/SIGIR/2000/results.cfm?query=%2Bauthor%3AP12595%20author%3AP45945&amp;querydisp=author%3AAlan%20F%2E%20Lewit&amp;coll=GUIDE&amp;dl=GUIDE&amp;CFID=13720957&amp;CFTOKEN=832591" target="_self">Alan F. Lewit</a></div>
+						<div class="abstract"><a href="http://widit.slis.indiana.edu/irpub/SIGIR/2000/results.cfm?query=%2Bauthor%3AP186659%20author%3AP45945&amp;querydisp=author%3AMandar%20Mitra&amp;coll=GUIDE&amp;dl=GUIDE&amp;CFID=13720957&amp;CFTOKEN=832591" target="_self">Mandar Mitra</a></div>
+						<div class="abstract"><a href="http://widit.slis.indiana.edu/irpub/SIGIR/2000/results.cfm?query=%2Bauthor%3AP96664%20author%3AP45945&amp;querydisp=author%3AGerard%20Salton&amp;coll=GUIDE&amp;dl=GUIDE&amp;CFID=13720957&amp;CFTOKEN=832591" target="_self">Gerard Salton</a></div>
+						<div class="abstract"><a href="http://widit.slis.indiana.edu/irpub/SIGIR/2000/results.cfm?query=%2Bauthor%3AP16124%20author%3AP45945&amp;querydisp=author%3AAmit%20Singhal&amp;coll=GUIDE&amp;dl=GUIDE&amp;CFID=13720957&amp;CFTOKEN=832591" target="_self">Amit Singhal</a></div>
+						<div class="abstract"><a href="http://widit.slis.indiana.edu/irpub/SIGIR/2000/results.cfm?query=%2Bauthor%3AP77019%20author%3AP45945&amp;querydisp=author%3AEllen%20M%2E%20Voorhees&amp;coll=GUIDE&amp;dl=GUIDE&amp;CFID=13720957&amp;CFTOKEN=832591" target="_self">Ellen M. Voorhees</a></div>
+						<div class="abstract"><a href="http://widit.slis.indiana.edu/irpub/SIGIR/2000/results.cfm?query=%2Bauthor%3AP134882%20author%3AP45945&amp;querydisp=author%3AJanet%20Walz&amp;coll=GUIDE&amp;dl=GUIDE&amp;CFID=13720957&amp;CFTOKEN=832591" target="_self">Janet Walz</a></div>
+						<div class="abstract"><a href="http://widit.slis.indiana.edu/irpub/SIGIR/2000/results.cfm?query=%2Bauthor%3AP257906%20author%3AP45945&amp;querydisp=author%3AS%2E%20K%2E%20M%2E%20Wong&amp;coll=GUIDE&amp;dl=GUIDE&amp;CFID=13720957&amp;CFTOKEN=832591" target="_self">S. K. M. Wong</a></div>
+						<div class="abstract"><a href="http://widit.slis.indiana.edu/irpub/SIGIR/2000/results.cfm?query=%2Bauthor%3AP108050%20author%3AP45945&amp;querydisp=author%3AHarry%20Wu&amp;coll=GUIDE&amp;dl=GUIDE&amp;CFID=13720957&amp;CFTOKEN=832591" target="_self">Harry Wu</a></div>
+						<div class="abstract"><a href="http://widit.slis.indiana.edu/irpub/SIGIR/2000/results.cfm?query=%2Bauthor%3AP304091%20author%3AP45945&amp;querydisp=author%3AY%2E%20Y%2E%20Yao&amp;coll=GUIDE&amp;dl=GUIDE&amp;CFID=13720957&amp;CFTOKEN=832591" target="_self">Y. Y. Yao</a></div>
+							</td><td>
+						<div class="abstract"><a href="http://widit.slis.indiana.edu/irpub/SIGIR/2000/results.cfm?query=%2Bauthor%3AP39575%20author%3AP45945&amp;querydisp=author%3AC%2E%20T%2E%20Yu&amp;coll=GUIDE&amp;dl=GUIDE&amp;CFID=13720957&amp;CFTOKEN=832591" target="_self">C. T. Yu</a></div>
+						<div class="abstract"><a href="http://widit.slis.indiana.edu/irpub/SIGIR/2000/results.cfm?query=%2Bauthor%3AP578056%20author%3AP45945&amp;querydisp=author%3AZhongnan%20Zhao&amp;coll=GUIDE&amp;dl=GUIDE&amp;CFID=13720957&amp;CFTOKEN=832591" target="_self">Zhongnan Zhao</a></div>
+						</td>
+						</tr>
+						<tr valign="top"><td><div class="abstract"><a href="http://widit.slis.indiana.edu/irpub/SIGIR/2000/results.cfm?query=%2Bauthor%3AP77019&amp;querydisp=author%3AEllen%20M%2E%20Voorhees&amp;coll=GUIDE&amp;dl=GUIDE&amp;CFID=13720957&amp;CFTOKEN=832591" target="_self">Ellen M. Voorhees</a>:</div></td><td>
+						<div class="abstract"><a href="http://widit.slis.indiana.edu/irpub/SIGIR/2000/results.cfm?query=%2Bauthor%3AP45945%20author%3AP77019&amp;querydisp=author%3AChris%20Buckley&amp;coll=GUIDE&amp;dl=GUIDE&amp;CFID=13720957&amp;CFTOKEN=832591" target="_self">Chris Buckley</a></div>
+						<div class="abstract"><a href="http://widit.slis.indiana.edu/irpub/SIGIR/2000/results.cfm?query=%2Bauthor%3AP75202%20author%3AP77019&amp;querydisp=author%3AEdward%20A%2E%20Fox&amp;coll=GUIDE&amp;dl=GUIDE&amp;CFID=13720957&amp;CFTOKEN=832591" target="_self">Edward A. Fox</a></div>
+						<div class="abstract"><a href="http://widit.slis.indiana.edu/irpub/SIGIR/2000/results.cfm?query=%2Bauthor%3AP207368%20author%3AP77019&amp;querydisp=author%3ANarendra%20K%2E%20Gupta&amp;coll=GUIDE&amp;dl=GUIDE&amp;CFID=13720957&amp;CFTOKEN=832591" target="_self">Narendra K. Gupta</a></div>
+						<div class="abstract"><a href="http://widit.slis.indiana.edu/irpub/SIGIR/2000/results.cfm?query=%2Bauthor%3AP69113%20author%3AP77019&amp;querydisp=author%3ADonna%20Harman&amp;coll=GUIDE&amp;dl=GUIDE&amp;CFID=13720957&amp;CFTOKEN=832591" target="_self">Donna Harman</a></div>
+						<div class="abstract"><a href="http://widit.slis.indiana.edu/irpub/SIGIR/2000/results.cfm?query=%2Bauthor%3AP28631%20author%3AP77019&amp;querydisp=author%3ABen%20Johnson%2DLaird&amp;coll=GUIDE&amp;dl=GUIDE&amp;CFID=13720957&amp;CFTOKEN=832591" target="_self">Ben Johnson-Laird</a></div>
+						<div class="abstract"><a href="http://widit.slis.indiana.edu/irpub/SIGIR/2000/results.cfm?query=%2Bauthor%3AP221612%20author%3AP77019&amp;querydisp=author%3APaul%20B%2E%20Kantor&amp;coll=GUIDE&amp;dl=GUIDE&amp;CFID=13720957&amp;CFTOKEN=832591" target="_self">Paul B. Kantor</a></div>
+						<div class="abstract"><a href="http://widit.slis.indiana.edu/irpub/SIGIR/2000/results.cfm?query=%2Bauthor%3AP49057%20author%3AP77019&amp;querydisp=author%3AClaudia%20Leacock&amp;coll=GUIDE&amp;dl=GUIDE&amp;CFID=13720957&amp;CFTOKEN=832591" target="_self">Claudia Leacock</a></div>
+						<div class="abstract"><a href="http://widit.slis.indiana.edu/irpub/SIGIR/2000/results.cfm?query=%2Bauthor%3AP96664%20author%3AP77019&amp;querydisp=author%3AGerard%20Salton&amp;coll=GUIDE&amp;dl=GUIDE&amp;CFID=13720957&amp;CFTOKEN=832591" target="_self">Gerard Salton</a></div>
+						<div class="abstract"><a href="http://widit.slis.indiana.edu/irpub/SIGIR/2000/results.cfm?query=%2Bauthor%3AP64624%20author%3AP77019&amp;querydisp=author%3ADawn%20M%2E%20Tice&amp;coll=GUIDE&amp;dl=GUIDE&amp;CFID=13720957&amp;CFTOKEN=832591" target="_self">Dawn M. Tice</a></div>
+						<div class="abstract"><a href="http://widit.slis.indiana.edu/irpub/SIGIR/2000/results.cfm?query=%2Bauthor%3AP243164%20author%3AP77019&amp;querydisp=author%3ARichard%20M%2E%20Tong&amp;coll=GUIDE&amp;dl=GUIDE&amp;CFID=13720957&amp;CFTOKEN=832591" target="_self">Richard M. Tong</a></div>
+							</td><td>
+						<div class="abstract"><a href="http://widit.slis.indiana.edu/irpub/SIGIR/2000/results.cfm?query=%2Bauthor%3AP95073%20author%3AP77019&amp;querydisp=author%3AGeoffrey%20Towell&amp;coll=GUIDE&amp;dl=GUIDE&amp;CFID=13720957&amp;CFTOKEN=832591" target="_self">Geoffrey Towell</a></div>
+						</td>
+						</tr>
+				</table>
+			</div>
+			<br>
+			<div class="abstract">
+				<A HREF="cite6.htm#CIT"><img name="top" src="arrowu.gif" hspace="10" border="0"></A><SPAN class=heading><A NAME="peers">Peer to Peer - Readers of this Article have also read:</cite></A></span>
+		<ul type="disc">
+			<li>
+				<A HREF="http://widit.slis.indiana.edu/irpub/SIGIR/2000/citation.cfm?id=512248&amp;dl=ACM&amp;coll=GUIDE&amp;CFID=13720957&amp;CFTOKEN=832591" target="_self">		 	 M<sup>4</sup>:&nbsp;a metamodel for data preprocessing</a>
+				<br>
+					 <b>Proceedings of the fourth ACM international workshop on Data warehousing and OLAP</b><br>
+					Anca Vaduva
+					, &nbsp;J&#246;rg-Uwe Kietz
+					, &nbsp;Regina Z&#252;cker
+				<br>
+			<br>
+			</li>
+			<li>
+				<A HREF="http://widit.slis.indiana.edu/irpub/SIGIR/2000/citation.cfm?id=179627&amp;dl=ACM&amp;coll=GUIDE&amp;CFID=13720957&amp;CFTOKEN=832591" target="_self">		 	 MBONE: the multicast backbone</a>
+				<br>
+						<b>Communications of the ACM</b>&nbsp;&nbsp;
+						<font size="-1">37,&nbsp;8</font><br>
+					Hans Eriksson
+				<br>
+			<br>
+			</li>
+		</ul>
+		</div>
+<br>
+<DIV class=footer-copy-text align="center">
+</DIV>
+</td>
+</tr>
+</table>
+</div>
+</body>
+</html></html>

@@ -1,0 +1,117 @@
+# HealthGrades Robots.txt file tells spiders and bots which directories not to search and/or index.
+# Created 07/23/04 - Judd Exley
+#
+# This is a sample of allowing all Spiders to crawl a all directories.
+#User-agent: *
+#Disallow:
+#
+# These are ALL the different BOTS/SPIDERS that I've found.
+#
+#User-agent: Mozilla/3.01 (hotwired-test/0.1)
+#User-agent: Slurp
+#User-agent: Scooter
+#User-agent: Ultraseek
+#User-agent: smallbear
+#User-agent: GoogleBot
+#
+#
+# If we wish to exclude any of them, we can with:
+#
+#User-agent: UserAgentName
+#Disallow:
+#
+# And we will, for this one:
+User-agent: NextGenSearchBot
+Disallow: /
+#
+#
+#This is to tell Yahoo Slurp to only come back as often as 10 seconds in hopes it will lessen our server loads.
+#User-agent: Slurp
+#Crawl-delay: 10
+#
+# We are currently disallowing everything but the Consumer site and its corresponding static pages,
+# the Products site, Public, and AboutUs while allowing all BOTS/SPIDERS
+#
+# HG Sites (sans Consumer, Public, AboutUs, and Products)
+User-agent: *
+Disallow: /Medizine/
+Disallow: /Rmn/
+Disallow: /WebTv/
+Disallow: /Sleepsolution/
+Disallow: /Professional/
+Disallow: /logos/
+Disallow: /geoaccess/
+Disallow: /kgw/
+Disallow: /discoveryhealth/
+Disallow: /hcpc/
+Disallow: /leapfrog/
+Disallow: /Albertsons/
+Disallow: /xmldemo/
+Disallow: /ge/
+Disallow: /IBSYS/
+Disallow: /Hgmain/
+Disallow: /sales/
+Disallow: /W3C/
+Disallow: /qualitynet/
+Disallow: /bcbsmn/
+Disallow: /mbgh/
+Disallow: /Providence/
+Disallow: /qualityguidesuite/
+Disallow: /Hewitt/
+Disallow: /dataselection/
+Disallow: /HGcompany/
+Disallow: /towersperrin/
+Disallow: /apwu/
+Disallow: /Advisen/
+Disallow: /MOO/
+Disallow: /Honeywell/
+Disallow: /HealthSolutions/
+Disallow: /BPM/
+Disallow: /Riverside/
+Disallow: /btauxdir/
+Disallow: /useragreement/
+Disallow: /Towers/
+Disallow: /Christus/
+Disallow: /Physicians/
+Disallow: /IBX/
+# Disallow all the files in the root directory (except for the defaults)
+Disallow: 404_template.html
+Disallow: agent_test.cfm
+Disallow: agreement.cfm
+Disallow: application.cfm
+Disallow: application_down.html
+Disallow: Dispatcher.js
+Disallow: Dispatcher.vbs
+Disallow: DispatcherConferenceCall.js
+Disallow: DispatcherDHP.js
+Disallow: enter.html
+Disallow: enterbut.gif
+Disallow: error.cfm
+Disallow: help.gif
+Disallow: iisstart.asp
+Disallow: localstart.asp
+Disallow: maintenance.cfm
+Disallow: mmc.gif
+Disallow: mqinterconnect.ini
+Disallow: mqinterconnect.lic
+Disallow: mqinterconnect_error.log
+Disallow: mqtriplus.ini
+Disallow: mqtriplus.lic
+Disallow: OnRequestEnd.cfm
+Disallow: ourheafriends.html
+Disallow: pagerror.gif
+Disallow: print.gif
+Disallow: read_me.html
+Disallow: robots.old
+Disallow: rogue_session.cfm
+Disallow: SessionTest.cfm
+Disallow: splash.swf
+Disallow: splash_bottom.swf
+Disallow: splash_bottom_dhp.swf
+Disallow: splash_bottom_phys.swf
+Disallow: splash_bottom_phys2.swf
+Disallow: splash_bottom3.swf
+Disallow: splash_header.swf
+Disallow: warning.gif
+Disallow: web.gif
+Disallow: win2000.gif

@@ -1,0 +1,37 @@
+html
+{ /* a problem with the http header is causing the first css block to be ignored
+   * thus we provide an empty block here */
+}
+
+
+.float-left
+{ float: left;
+  clear: left;
+}
+
+.float-right
+{ float: right;
+  clear: right;
+}
+
+.clearfix:after
+{ content: "."; 
+  display: block; 
+  height: 0; 
+  clear: both; 
+  visibility: hidden;
+}
+
+.clearfix
+{ display: inline-table;
+}
+
+/* Hides from IE-mac \*/
+* html .clearfix
+{ height: 1%;
+}
+
+.clearfix
+{ display: block;
+}
+/* End hide from IE-mac */

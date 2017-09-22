@@ -1,0 +1,510 @@
+// declarations and definitions
+var overtureDataArray;
+
+// these are the default divs to try in the event that our sepecified div is not in the document
+var defaultDivs = new Array('OvertureArtTrailDiv','OvertureStandaloneDiv','OvertureDiv');
+
+
+function isProduction()
+{
+  var result = 0;
+
+  if (1 == 1) {
+          result = 1;
+  }
+
+
+  return result;
+}
+
+function buildOvertureURL(overtureID, maxAdCount, geoLocation, isProduction) {
+	var geo;
+	switch (geoLocation) {
+		case 'gbr':
+			geo = 'uk';
+			break;
+		case 'usa':
+		case 'can':
+			geo = 'us';
+			break;
+		case 'fra':
+			geo = 'fr';
+			break;
+		case 'deu':
+			geo = 'de';
+			break;
+		default:
+			geo = 'row';
+	}
+	var market = geo;
+	if (market == 'row') {
+		market = 'uk';
+	}
+
+	if (market  == 'us') {
+		return usOvertureURL(market, geo, overtureID);
+	} 
+	return originalOvertureURL(market, maxAdCount, isProduction, geo, overtureID);
+}
+
+function originalOvertureURL(market, maxAdCount, isProduction, geo, overtureID) {
+	var url = 'http://cmhtml.overture.com/d/search/p/guardian/js/' + market + '/ctxt/';
+
+	url += '?maxCount=' + maxAdCount;
+	url += '&keywordCharEnc=latin1';
+	url += '&outputCharEnc=latin1';
+	url += '&adultFilter=clean';
+	url += '&mkt=' + market;
+
+	if (isProduction) {
+		url += '&Partner=' + 'guardian_js_' + geo + '_ctxt';
+		url += '&type=' + overtureID;
+	} else {
+		url += '&Partner=guardian_js_uk_ctxt_test';
+	}
+
+	url += '&ctxtId=' + 'guardian_' + geo + '_' +overtureID;
+
+	// Cache busting parameter. Generate some randomness.
+
+	url += '&cb=' + (new Date()).getTime();
+
+	return url;
+}
+
+function usOvertureURL(market, geo, overtureID ) {
+	var url = 'http://cm.guardian.overture.com/js_flat_1_0/?config=4701683509&source=guardian_js_us_ctxt';
+	url += '&mkt=' + market;
+	url += '&type=' + overtureID;
+	url += '&ctxtId=guardian_' + geo + '_' + overtureID;
+	return url;
+}
+
+function buildHotspotsURL(overtureID, maxAdCount, geoLocation, isProduction) {
+	var geo;
+	switch (geoLocation) {
+		case 'gbr':
+			geo = 'uk';
+			break;
+		case 'usa':
+		case 'can':
+			geo = 'us';
+			break;
+		case 'fra':
+			geo = 'fr';
+			break;
+		case 'deu':
+			geo = 'de';
+			break;
+		default:
+			geo = 'row';
+	}
+
+	var url = 'http://cmhtml.uk.overture.com/d/search/p/standard/eu/js/flat/ctxt/ls/';
+
+	url += '?ctxtId=' + 'guardian_' + geo + '_' + overtureID;
+
+	if (isProduction) {
+		url += '&Partner=' + 'guardian_js_' + geo + '_linkspot_implem';
+	} else {
+		url += '&Partner=guardian_js_uk_ctxt_test';
+	}
+
+	url += '&NGrp=1';
+
+	url += '&NKw=5';
+
+	url += '&Pg=1';
+
+	// Cache busting parameter. Generate some randomness.
+	url += '&cb=' + (new Date()).getTime();
+
+	return url;
+}
+
+// Replace the portion of the string after last space before the trimPoint with ellipses
+function trimAndEllipses(string, trimPoint) {
+	if (string.length > trimPoint) {
+		var spaceBeforeTrimPoint = string.lastIndexOf(" ", trimPoint);
+
+		var trimmedString = string.substring(0, spaceBeforeTrimPoint);
+
+		return trimmedString.concat("...");
+	} else {
+		return string;
+	}
+}
+
+// abstraction for element containing Overture results table
+function OvertureDocument(targetDivID) {
+
+	/*
+
+	 This ugly logic is just a simple test to ensure that the parent domain and this domain are the same.
+	 They may not be ....
+	 MPU ads by necessity have to reset the domain to the base domain in order to work, if this happens
+	 on an Overture page, some functions such as getElementById will fail because they are using the subdomain.
+	 The try/catch tells us if we need to reset the domain here
+
+	*/
+
+	try {
+			var foo = window.parent.document.domain;
+	}
+
+	catch (e) {
+		//	if the comparison failed we need to reset our domain
+			document.domain = 'guardian.co.uk';
+	}
+
+	// Default the target div to write to.
+
+	if (targetDivID == null) {
+		targetDivID = 'OvertureDiv'
+	}
+
+	// properties
+	this.htmlText = new String();
+
+	if(overtureIsIECompatible) {
+		// writing to iframe
+		this.document = parent.document;
+	} else if(overtureIsDOM) {
+		// will be in iframe at this point
+		this.document = parent.document;
+	} else {
+		// will be in main body
+		this.document = document;
+	}
+
+	// methods
+	this.inspect = function() {
+		alert(this.htmlText);
+	};
+	this.writeln = function(text) {
+		this.htmlText += text + '\n';
+	};
+	this.write = function(text) {
+		this.htmlText += text;
+	};
+	this.flush = function(isSearch) {
+		setOvertureContent(this.htmlText, isSearch, targetDivID);
+		this.htmlText = '';
+	};
+	// Old versions of IE do not support getElementById; therefore define this function.
+	// function(name) line defines this new function as been a method of OvertureDocument rather than the document.
+	// name is a placeholder for an argument.
+	this.getElementById = function(name) {
+		if(overtureIsDOM) {
+			return this.document.getElementById(name);
+		} else {
+			if(overtureIsIECompatible) {
+				return this.document.all[name];
+			} else {
+				return eval('this.document.'+name);
+			}
+		}
+	};
+}
+
+
+// The following function is used for the old drop-down display method, no longer used
+// render the text of overture result
+function overtureDataRenderFunction(mouseOverId) {
+
+	overtureDocument.write('<font face="Verdana,Geneva,Arial,sans-serif" size="1" color="black">');
+	if(overtureCanDoMouseovers) overtureDocument.write('<div style="overflow: hidden; width: 121px;" onmouseover="overtureMouseOver(\'' + mouseOverId + '\')" onmouseout="overtureMouseOut(\'' + mouseOverId + '\')">');
+
+	if(overtureIsNetscape4Compatible) {
+		// Netscape et al.
+          overtureDocument.write(this.clickableTitle()+'<a href="'+this.clickURL+'" target="_blank"><font color="black">'+this.trimmedHost+'</font></a>');
+	} else {
+		overtureDocument.write(this.clickableTitle()+'<a style="color: black;" href="'+this.clickURL+'" target="_blank">'+this.trimmedHost+'</a>');
+	}
+
+	if(overtureCanDoMouseovers) {
+		overtureDocument.write('</div>');
+		overtureDocument.write('<div id="'+mouseOverId+'" style="z-index: 10000; width: 121px; visibility: hidden; background-color: #efefef; position: absolute; border-top: thin solid #cccccc; border-left: thin solid #cccccc; border-right: 2px solid black; border-bottom: 2px solid black;">'+this.description+'</div>');
+	}
+	overtureDocument.write('</font>');
+	return 0;
+}
+
+// OvertureData constructor
+function OvertureData(title, description, siteHost, clickURL) {
+	this.title = title;
+	this.description = description;
+	this.siteHost = siteHost;
+ 	this.clickURL = clickURL;
+
+	this.clickableTitle = function (){
+          return "<a href=" + this.clickURL + ">" + this.title + "</a>";}
+
+	if (this.siteHost.indexOf('www.') == 0) {
+		this.trimmedHost = this.siteHost.substring(4);
+	} else {
+		this.trimmedHost = this.siteHost;
+	}
+
+	// Trim overly long descriptions
+	this.description = trimAndEllipses(this.description, 60);
+
+	// Methods
+	this.renderData = overtureDataRenderFunction;
+	return 0;
+}
+
+
+// this function is called by the code generated by the Overture CGI
+function renderOvertureDataArray(overtureDataArray, mapkey, isSearch, displayMode) {
+	switch(displayMode) {
+	case 'dropdown' :
+		// CSS for other browsers
+		var renderSize = 128;
+		// unfortunately IE 5 doesn't do the right things with table cellpadding in CSS...
+		overtureDocument.writeln('<table id="overtureResultTable" bgcolor="#efefd6" cellpadding="0" cellspacing="0" width="' + renderSize +'" border="0">');
+
+		overtureDocument.writeln('<tr style="background-color: #666666;"><th style="padding-left: 3px; padding-right: 1px; text-align: left;"><font color="white" face="Verdana,Geneva,Arial,sans-serif" size="2"><b>Advertiser links</b></font></th></tr>');
+		var mouseOverId;
+
+		for (var i=0;i < overtureDataArray.length;i++)
+		{
+			var data = overtureDataArray[i];
+			overtureDocument.writeln('<tr style="background-color: #efefd6;"><td><img src="http://image.guardian.co.uk/sp.gif" height="2" width="' + renderSize + '" /></td></tr>');
+			overtureDocument.writeln('<tr style="background-color: #efefd6;">');
+			overtureDocument.write('<td style="padding-left: 3px; padding-right: 1px; margin: 0px; width: 121px; text-overflow: clip; vertical-align: top;">');
+
+			mouseOverId = 'overtureResult' + i;
+			data.renderData(mouseOverId);
+			overtureDocument.writeln('</td></tr>');
+
+			overtureDocument.writeln('<tr style="background-color: #efefd6;"><td><img src="http://image.guardian.co.uk/sp.gif" height="5" width="' + renderSize + '" /></td></tr>');
+
+			if(i < overtureDataArray.length-1) {
+				overtureDocument.writeln('<tr style="background-color: #ffffff;"><td><img src="http://image.guardian.co.uk/sp.gif" height="2" width="' + renderSize +'" /></td></tr>');
+			}
+		}
+
+		overtureDocument.writeln('</table>');
+	break;
+
+	case 'trail':
+		if (overtureDataArray.length > 1) {
+			overtureDocument.writeln('<h1>Advertiser links </h1>');
+			// Start index at 0 instead of 1, as slot 0 always contains an Overture 'house ad', which we don't display
+			for (var i=1; i < overtureDataArray.length; i++)
+			{
+				var data = overtureDataArray[i];
+				overtureDocument.writeln('<h2>' + data.clickableTitle() + '</h2>');
+				overtureDocument.writeln('<p><a href="' + data.clickURL + '" style="text-decoration: none">' + data.description + '</a></p>');
+				overtureDocument.writeln('<a href="' + data.clickURL + '">' + data.trimmedHost + '</a>');
+
+			}
+			overtureDocument.writeln('<div style="margin-top:10px;padding-left:2px;padding-right:2px;">');
+
+				// Now do hotspots.
+			if (mapkey.length > 0) {
+				var output = "";
+				for (var i=0; i < mapkey.length; i++) {
+					var keywords = mapkey[i].keywords.split(", ");
+					for (var j = 0; j < keywords.length; j++) {
+						if (i > 0 || j > 0) output += ' | ';
+						output += '<a style="display:inline;padding:0px;" href="http://uk.search.yahoo.com/search?fr=cb-guardian-linkspots&p=' + escape(keywords[j]) + '">';
+						output += '<b>' + keywords[j] + '</b>';
+						output += '</a>';
+					}
+				}
+				overtureDocument.writeln(output);
+			}
+			overtureDocument.writeln('</div>');
+		}
+	break;
+
+	}
+
+	return 0;
+}
+
+function createOvertureDataArray (originalArray) {
+	var newArray = new Array();
+	var counter = 0;
+	var title = '';
+	var description = '';
+	var siteHost = '';
+	var clickURL = '';
+	for (i in originalArray) {
+
+		switch (counter) {
+			case 0:
+				description = originalArray[i];
+				break;
+			case 2:
+				clickURL = originalArray[i];
+				break;
+			case 3:
+				title = originalArray[i];
+				break;
+			case 4:
+				siteHost = originalArray[i];
+				break;
+			case 5:
+				var overtureObj = new OvertureData(title, description, siteHost, clickURL);
+				newArray[newArray.length] = overtureObj;
+				counter = -1;
+		}
+
+		counter++;
+	}
+	return newArray;
+}
+
+function overtureMouseOver(name) {
+	if(overtureCanDoMouseovers) {
+		overtureShow(name);
+		if(overtureIsBadIEVersion) overtureResize(name,true);
+	}
+	return 0;
+}
+
+function overtureMouseOut(name) {
+	if(overtureCanDoMouseovers) {
+		overtureHide(name);
+		if(overtureIsBadIEVersion) overtureResize(name,false);
+	}
+	return 0;
+}
+
+// called by iframe to set content of overture div
+var overtureText;
+function setOvertureContent(text, isSearch, targetDivID) {
+	// Don't bother doing anything if there's no content to set
+
+	if (text != '') {
+		overtureText = text;
+		if(overtureIsBadIEVersion) {
+			window.setTimeout('setOvertureContent2(' + isSearch + ', ' + targetDivID +')', 500);
+		} else {
+			setOvertureContent2(isSearch, targetDivID);
+		}
+	}
+}
+
+function setOvertureContent2(isSearch, targetDivID) {
+	var obj = overtureGetElementById(targetDivID);
+	var hldobj = overtureGetElementById(targetDivID + 'Holder');
+
+	// try our nominated div
+
+	if (obj && hldobj) {
+		obj.innerHTML = overtureText;
+		hldobj.style.display = 'block';
+		hldobj.style.visibility = 'visible';
+		return;
+	};
+
+	// on the off chance that our div cannot be found try looping through the default divs
+	for (var i=0; i < defaultDivs.length; i++)
+			{
+				obj = overtureGetElementById(defaultDivs[i]);
+				hldobj = overtureGetElementById(defaultDivs[i] + 'Holder');
+
+				// try the specified div
+				if (obj && hldobj) {
+					obj.innerHTML = overtureText;
+					hldobj.style.display = 'block';
+					hldobj.style.visibility = 'visible';
+					break;
+				};
+
+	}
+
+	return;
+
+}
+
+function overtureFindPosY(obj)
+{
+	var curtop = 0;
+	if (document.getElementById || document.all)
+	{
+		while (obj.offsetParent)
+		{
+			curtop += obj.offsetTop
+			obj = obj.offsetParent;
+		}
+	}
+	else if (document.layers)
+		curtop += obj.y;
+	return curtop;
+}
+
+
+
+
+// fix-up for IE 5.x's inability to have elements overlap frames
+var overtureOriginalHeight = 0;
+function overtureResize(name,expand) {
+	var x = document.getElementById('overture');
+	var y = document.getElementById(name);
+	if(expand) {
+		overtureOriginalHeight = x.offsetHeight;
+		var xoff = overtureFindPosY(x);
+		var yoff = overtureFindPosY(y);
+		var diff = (yoff+y.offsetHeight) - (xoff+x.offsetHeight);
+		if(diff > 0) {
+			x.style.height = (x.offsetHeight + diff) + 'px';
+		}
+	} else {
+		x.style.height = overtureOriginalHeight + 'px';
+	}
+}
+
+var overtureIsNetscape4Compatible = (document.layers ? 1 : 0) == 1;
+var overtureIsNetscape4 = overtureIsNetscape4Compatible && (navigator.userAgent.indexOf('Mozilla/4.') != -1) && (navigator.userAgent.indexOf('OmniWeb/4.') == -1);
+var overtureIsIECompatible = (document.all ? 1 : 0) == 1;
+var overtureIsBadIEVersion = overtureIsIECompatible && (navigator.userAgent.indexOf('MSIE 5') != -1);
+var overtureIsMacIEVersion = overtureIsIECompatible && (navigator.platform.indexOf('Mac') != -1) && (navigator.userAgent.indexOf('MSIE 5') != -1) ;
+var overtureIsFatalMacIEVersion = overtureIsIECompatible && (navigator.platform.indexOf('Mac') != -1) && ((navigator.userAgent.indexOf('MSIE 4.5') != -1));
+var overtureIsDOM = !overtureIsIECompatible && (document.getElementById ? 1 : 0) == 1;
+var overtureCanDoMouseovers = 0;
+var overtureIsBadMacIEVersion = false;
+
+if(overtureIsBadMacIEVersion) {
+	// render simple version without rollovers
+	overtureIsIECompatible = false;
+	overtureIsNetscape4Compatible = true;
+}
+
+if (overtureIsDOM) {
+	// use W3C DOM standards (or at least as much as is needed)
+	overtureGetElementById = function(name) {
+		// Specify top in case we're called from an iframe
+		return top.document.getElementById(name);
+	}
+} else {
+	if(overtureIsIECompatible) {
+		// use Microsoft IE 5 'standards'
+		overtureGetElementById = function(name) {
+			return top.document.all[name];
+		}
+	}
+}
+
+if (overtureIsDOM || overtureIsIECompatible) {
+	overtureHide = function(name) {
+		overtureGetElementById(name).style.visibility = 'hidden';
+	}
+	overtureShow = function(name) {
+		overtureGetElementById(name).style.visibility = 'visible';
+	}
+
+	overtureCanDoMouseovers = 1;
+}
+
+if(!overtureIsDOM && !overtureIsIECompatible) {
+	// dummy functions for dummy browsers
+	overtureHide = function(name) {return 0;}
+	overtureShow = function(name) {return 0;}
+	overtureGetElementById = function(name) {return 0;}
+	overtureCanDoMouseovers = 0;
+}

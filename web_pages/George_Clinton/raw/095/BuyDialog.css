@@ -1,0 +1,264 @@
+
+#divBuyDialog {
+	position:absolute;
+	top:200px;
+	left:-1000px;
+	width:209px;
+	overflow:hidden;
+	z-index:99999;
+	font-family:Tahoma;
+	font-size:11px;
+}
+	/*
+	#divBuyDialog div {
+		position:relative;
+	}
+	*/
+	#divBuyDialog_ArrowContainer {
+		position:relative;
+		width:14px;
+		float:left;
+		height:100%;
+		z-index:3;
+	}
+		#divBuyDialog_arrow {
+			position:relative;
+			top:30px;
+			left:1px;
+			width:14px; 
+			height:30px; 
+			overflow:hidden;
+			background:transparent url("http://us.music1.yimg.com/music.yahoo.com/common/resources/images/BuyDialog/ovrly_arrow.png") no-repeat; *background:transparent;
+			filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(src='http://us.music1.yimg.com/music.yahoo.com/common/resources/images/BuyDialog/ovrly_arrow.png', sizingMethod='scale');
+		}
+	#divBuyDialog_NotArrow {
+		position:relative;
+		float:left;
+	}
+		#divBuyDialog_TopContainer {
+			position:relative;
+			width:100%;
+			overflow:hidden;
+		}
+			#divBuyDialogContentContainer {
+				position:relative;
+				float:left;
+				width:187px; *width:189px;
+				height:100%;
+				overflow:hidden;
+				background-color:#D4D4F9;
+				border:solid 1px #000;
+			}
+				#divBuyDialogCloseBox {
+					position:relative;
+					top:7px;
+					left:169px; *left:170px;
+					height:13px;
+					width:13px;
+					margin-bottom:2px;
+					cursor:pointer;
+					background:transparent url("http://us.music1.yimg.com/music.yahoo.com/common/resources/images/BuyDialog/ovrly_btn_close.gif") no-repeat right;
+				}
+				#divBuyDialogContent {
+					position:relative;
+					margin:10px 0 15px 15px;
+					width:160px;
+				}
+					.BuyDialog_content_headline {
+						position:relative;
+						font-weight:bold;
+						margin-bottom:10px;
+					}
+					.BuyDialog_headerImage {
+						position:relative;
+						margin-bottom:10px;
+					}
+					.BuyDialog_content_text_strong {
+						font-weight:bold;
+					}
+					.BuyDialog_errorText {
+						position:relative;
+						width:160px;
+						margin-top:4px;
+						overflow:hidden;
+						word-break:break-all;
+					}
+					.BuyDialog_radioOptionContainer {
+						position:relative;
+						clear:both;
+						float:none;
+						margin-bottom:10px;
+						margin-left:-7px;
+					}
+					/*
+					#BuyDialog_radioOptionContainer_2 {
+						top:10px;
+					}
+					*/
+						.BuyDialog_radioOptionContainer input {
+							position:relative;
+						}
+						.BuyDialog_radioLabel {
+							position:relative;
+							left:24px;
+							width:141px;
+							margin-top:-15px;
+							overflow:hidden;
+						}
+							.BuyDialog_radioOptionContainer .BuyDialog_content_headline {
+								position:relative;
+								margin:0;
+							}
+					#divLogInContainer {
+						position:relative;
+						left:17px;
+						width:141px;
+						overflow:hidden;
+						font-size:10px;
+					}
+						.logInLink a {
+							font-weight:bold;
+							color:#4742B8;
+						}
+					.BuyDialog_checkboxContainer {
+						position:relative;
+						margin:10px 0;
+					}
+						.BuyDialog_checkbox_label {
+							position:relative;
+							left:23px;
+							margin-top:-16px;
+						}
+					.BuyDialog_wait_container {
+						position:relative;
+					}
+						.BuyDialog_wait_text {
+							position:relative;
+							font-weight:bold;
+							text-align:center;
+						}
+						.BuyDialog_wait_image {
+							position:relative;
+							text-align:center;
+							margin-top:10px;
+						}
+			#divBuyDialogOkContainer {
+				position:relative;
+				background-color:#9494CF;
+				height:30px;
+			}
+				#divBuyDialogYesNoButtonContainer {
+					position:relative;
+					display:none;
+					height:30px;
+					width:189px;
+					overflow:hidden;
+				}
+				#divBuyDialogOkButton,
+				#divBuyDialogYesButton,
+				#divBuyDialogNoButton {
+					top:5px;
+					height:20px;
+					width:35px;
+					overflow:hidden;
+				}
+				#divBuyDialogOkButton {
+					position:relative;
+					margin-left:145px;
+				}
+					#divBuyDialogYesButton {
+						position:absolute;
+						left:100px;
+					}
+					#divBuyDialogNoButton {
+						position:absolute;
+						left:145px;
+					}
+				#divBuyDialogOkButton a,
+				#divBuyDialogYesButton a,
+				#divBuyDialogNoButton a {
+					position:relative;
+					height:20px;
+					width:35px;
+					overflow:hidden;
+					display:block;
+					color:#000;
+					font-weight:bold;
+					text-decoration:none;
+					background:transparent url("http://us.music1.yimg.com/music.yahoo.com/common/resources/images/BuyDialog/btn_short.gif") no-repeat;
+				}
+				#divBuyDialogOkButton a:hover,
+				#divBuyDialogYesButton a:hover,
+				#divBuyDialogNoButton a:hover {
+					background-position:0 -20px;
+				}
+				#divBuyDialogOkButton a span,
+				#divBuyDialogYesButton a span,
+				#divBuyDialogNoButton a span {
+					position:relative;
+					top:3px;
+					left:9px; *left:auto;
+					width:35px; *width:100%;
+					text-align:center;
+					cursor:pointer;
+				}
+				#divBuyDialogYmeButton {
+					position:relative;
+					left:11px;
+					top:5px;
+					height:20px;
+					width:168px;
+					overflow:hidden;
+					display:none;
+				}
+				#divBuyDialogYmeButton a {
+					position:relative;
+					height:20px;
+					width:168px;
+					overflow:hidden;
+					display:block;
+					color:#000;
+					font-weight:bold;
+					text-decoration:none;
+					background:transparent url("http://us.music1.yimg.com/music.yahoo.com/common/resources/images/BuyDialog/btn_wider.gif") no-repeat;
+				}
+				#divBuyDialogYmeButton a:hover {
+					background-position:0 -20px;
+				}
+				#divBuyDialogYmeButton a span {
+					position:relative;
+					top:3px;
+					left:3px; *left:auto;
+					width:100%;
+					font-size:10px;
+					text-align:center;
+					cursor:pointer;
+				}
+			#divBuyDialog_bd_r {
+				position:relative;
+				float:left;
+				width:6px; 
+				height:300px;
+				overflow:hidden;
+				background:transparent url("http://us.music1.yimg.com/music.yahoo.com/common/resources/images/BuyDialog/edge_rtside.png") no-repeat; *background:none;
+				*filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(src='http://us.music1.yimg.com/music.yahoo.com/common/resources/images/BuyDialog/edge_rtside.png', sizingMethod='scale');
+			}
+		#divBuyDialog_bd_b {
+			position:relative;
+			clear:both;
+			float:left;
+			width:189px; 
+			height:8px;
+			overflow:hidden;
+			background:transparent url("http://us.music1.yimg.com/music.yahoo.com/common/resources/images/BuyDialog/edge_bottom.png") no-repeat; *background:none;
+			*filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(src='http://us.music1.yimg.com/music.yahoo.com/common/resources/images/BuyDialog/edge_bottom.png', sizingMethod='scale');
+		}
+		#divBuyDialog_cn_br {
+			position:relative;
+			float:left;
+			width:6px; 
+			height:7px;
+			overflow:hidden;
+			background:transparent url("http://us.music1.yimg.com/music.yahoo.com/common/resources/images/BuyDialog/cnr_bottomrt.png") no-repeat; *background:none;
+			*filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(src='http://us.music1.yimg.com/music.yahoo.com/common/resources/images/BuyDialog/cnr_bottomrt.png', sizingMethod='scale');
+		}

@@ -1,0 +1,96 @@
+/*  CSS file for highwire testing */
+
+#tablewrapper td {
+	height: 50px;
+}
+
+.disabled_text {
+	color: #696969;
+}
+
+/* 
+This is used on browse.dtl - they had some multiple class thing
+that doesn't seem to work with javascript.
+*/
+.formbutton_disabled {
+    color: #fff;
+    font-size: 10px;
+    text-decoration: none;
+    font-weight: bold;
+    border: 0;
+    padding:3px;
+	background-color: #777;
+}
+/*  I'm replacing the above with this on browse.dtl - Safari doesn't obey
+CSS stuff and so the "hidden" buttons look exactly the same. */
+.formbutton_hidden {
+	display: none !important;
+}
+
+.contentarea .leftcol .browsetable {
+    width: 600px;
+}
+
+
+/* 
+This is used on the browsejournals.dtl page - the option dropdown
+list size was too big after we took out the stupid form1 thing.
+*/
+.jnlbrowse input, .jnlbrowse select {
+    /*border: 1px solid #333;*/
+    font-family: arial;
+    font-size: 10px;
+	width: auto;
+    }
+
+/* 
+This is used on the browsejournals.dtl page - the floaty box is too small
+to handle the long collection names, and it wraps in IE
+*/
+.contentarea .rightcallout {
+    width: 250px;
+}
+
+/* 
+This is used in the headers to avoid underlining/outlining of links (I added
+a link to the banner gif)
+*/
+td#sjobrand img {
+	text-decoration: none;
+	border: none;
+}
+
+/* 
+This is used in the headers to avoid underlining/outlining of links (I added
+a link to the banner gif)
+*/
+#universityarea img {
+	text-decoration: none;
+	border: none;
+}
+
+/* This is used to make certain links look like regular text */
+a.no_underline         { text-decoration: none; color: inherit} 
+a.no_underline:link    { text-decoration: none; color: inherit} 
+a.no_underline:visited { text-decoration: none; color: inherit} 
+a.no_underline:hover   { text-decoration: none; color: inherit} 
+a.no_underline:active  { text-decoration: none; color: inherit} 
+
+/*  This appears on the folders template - there's a default "width="80%"" on one of the table 
+cells that's making the right box thingie jump around since "80%" apparently gets redefined
+once you click on a link.  This makes the frame a single width.  */
+#folders_frame {
+	width: 800px;
+
+}
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,206 @@
+#SKIN #profile_full_container {  
+  display: block;
+}
+
+#SKIN #profile_teaser_container {  
+  display: none;
+}
+
+#SKIN .profile_list {
+	margin: 0;
+	padding: 5px;
+}
+
+#SKIN .event_list li {
+	padding: 0 5px;
+	margin: 0;
+}
+
+#SKIN .profile_image,
+#SKIN .rss_image {
+	float: right;
+	margin: 5px;
+	border: 1px solid gray;
+}
+
+/* IE only */
+* html #SKIN .circle_group {
+	width: 49%;
+}
+
+#SKIN .event_list {
+	list-style: none;
+	padding: 5px;
+	margin: 0;
+}
+
+#SKIN .event_pane_right #ajax {
+	border: 1px solid gray;
+	padding: 5px;
+	margin: 5px;
+}
+
+#SKIN .event_pane_right #ajax table {
+	width: 100%;
+}
+
+#SKIN #widget_event2 h3 {
+	background: #063C89;
+	color: white;
+	margin: 5px 5px 0 5px;
+}
+
+/* remove after soclainet widget switched to ajax pagination */
+#SKIN .friend_list_container {
+	margin: 5px;
+	padding: 5px;
+	height: 200px;
+	border: 1px solid gray;
+	overflow: auto;
+}
+
+/* IE only */
+* html #SKIN .friend_list_container {
+	height: 200px;
+}
+
+#SKIN .friend_list_box {
+	width: 50%;
+	float: left;
+	margin-bottom: 5px;
+}
+
+/* IE <= 6 */
+/* ugly ugly ugly... IE wraps the floats because the vertical scrollbar is there */
+* html #SKIN #widget_friend_list_box .friend_list_box {
+	width: 45%;
+}
+
+/* IE = 7 */
+*:first-child+html #SKIN #widget_friend_list_box .friend_list_box {
+	width: 45%;
+}
+
+#SKIN .friend_list_container .row {
+	clear: both;
+}
+
+#SKIN .friend_list_box div {
+	float: left;
+}
+
+#SKIN .friend_profile_image {
+	width: 30px;
+	padding-right: 5px;
+}
+
+#SKIN .friend_checkbox {
+	width: 15px;
+	padding-right: 5px;
+}
+
+#SKIN .friend_name {
+	width: 60px;
+}
+
+#SKIN #widget_outreach .widget_outreach_totals {
+	border-bottom: 1px solid #FFD9B1;
+	margin-bottom: 2px;
+}
+#SKIN #widget_outreach .widget_outreach_totals_data {
+	background: #FFF1D4;
+}
+
+#SKIN #widget_outreach .widget_outreach_totals h3 {
+	background: #FFD9B1;
+	border-bottom: 1px solid #F9942A;
+}
+
+/* IE Only.  I can't explain this.  Some wierd inheritance going on here that has to do 
+with the .container class in global.css.  I have not found this problem documented online anywhere. */
+* html #SKIN #widget_outreach .widget_outreach_totals h3 {
+	height: 100%;
+}
+
+#SKIN #widget_outreach #outreach_total_raised {
+	display: block;
+	color: #CC3300;
+	font-size: 12px;
+}
+
+#SKIN #widget_outreach .widget_outreach_campaign h3 {
+	padding-left: 15px;
+	background: #D1E0FF url(/skins/dnc/images/blue-arrow.gif) no-repeat 5px 50%;
+}
+
+#SKIN #widget_outreach .widget_outreach_campaign_data,
+#SKIN #widget_outreach .widget_outreach_totals_data {
+	list-style: none;
+	display: block;
+}
+
+#SKIN #widget_outreach .widget_outreach_campaign_data {
+	margin: 1px 0 5px 0;
+	border-top: 1px solid #6699FF;
+	padding: 0 15px;
+}
+
+#SKIN #widget_outreach .widget_outreach_campaign_actions {
+	margin: 0 0 5px 0;
+	padding: 0 15px;
+}
+
+#SKIN #widget_outreach .widget_outreach_campaign_actions a {
+	color: #0066CC;
+}
+
+/*#SKIN #widget_outreach .outreach_manage_button {
+	position: absolute;
+	right: 15px;
+	top: 1px;
+	display: block;
+	height: 13px;
+	width: 50px;
+	overflow: hidden;
+	text-indent: -5000px;
+	background: url(/skins/dnc/images/manage-button.gif) no-repeat left top;
+}*/
+
+#SKIN #widget_outreach .widget_outreach_totals_data {
+	padding: 0 25px 0 5px;
+	margin: 0;
+}
+
+#SKIN #widget_outreach .widget_outreach_campaign_data li,
+#SKIN #widget_outreach .widget_outreach_totals_data li {
+	display: block;
+	float: left;
+	width: 50%;
+	padding: 0;
+	margin: 0;
+}
+
+#SKIN #widget_outreach .widget_outreach_campaign_data li .form_value,
+#SKIN #widget_outreach .widget_outreach_totals_data li .form_value{
+	color: #CC3300;
+}
+
+/**
+ * Used by overlib
+ */
+
+.what_is_this_container {
+	border: 1px solid #000000;
+	background: #FFFFCC;
+	width: 250px;
+	padding: 5px;
+}
+
+.what_is_this_content {
+	text-align: left;
+	color: #CC0000;
+}
+
+.what_is_this_content dt {
+	font-weight: bold;
+}

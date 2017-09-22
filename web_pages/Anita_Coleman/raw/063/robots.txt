@@ -1,0 +1,22 @@
+# Block google from dynamic content
+User-agent: Googlebot
+Disallow: /*?
+
+User-agent: Fasterfox
+Disallow: /
+
+User-agent: *
+Robot-version: 2.0
+# should be 8pm - 5am gmt
+Visit-time: 0100 - 1000 
+# Disallow: /cfapps/
+Disallow: /template/
+Disallow: /test/
+Disallow: /image*
+Disallow: /img/
+Disallow: /old/
+Disallow: /stats/
+Disallow: /submission/
+Disallow: /PrinterTemplate.cfm*
+
+

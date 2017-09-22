@@ -1,0 +1,290 @@
+/* HTML Defined Elements */
+
+body {
+  font-family: Verdana, Arial, Helvetica, sans-serif;
+  color: #666;
+  margin-left: 0;
+  margin-top: 0;
+}
+
+h4 {
+  color: #6084c8;
+  font-family: sans-serif;
+}
+
+ul.industry {
+  margin-top: 0px;
+  margin-bottom: 5px;
+  padding-top: 0px;
+  padding-bottom: 5px;
+}
+
+/* Pseudo-Classes */
+  /* NONE - this is for things like A:visited and such */
+
+/* Pseudo-Elements */
+  /* NONE - this is for things like the first letter or line of a paragraph and such */
+
+/* Left Navigation Links */
+
+.navlinx_table {
+  font-family: Verdana, Arial, Helvetica, sans-serif;
+  text-decoration: none;
+  text-align: left;
+  vertical-align: top;
+  width: 150px;
+  border-bottom: solid #ffffff 2px;
+  background-color: #6098c8;
+}
+.navlinx_td  {
+  height: 43px;
+  text-align: left;
+  vertical-align: top;
+  border-bottom: solid #ffffff 2px;
+  background-color: #6098c8;
+}
+.navlinx_table a {
+  height: 41px;
+  display: block;
+  font-family: Verdana, Arial, Helvetica, sans-serif;
+  text-decoration: none;
+  color: #000;
+  font-weight: bold;
+  padding-left: 5px;
+  padding-bottom: 3px;
+  background-color: #6098c8;
+}
+.navlinx_table a:hover {
+  background-color: #70a8d8;
+}
+
+/* HTML Element Classes */
+
+a.help {
+  font-size: 11px;
+  font-style: normal;
+  line-height: 16px;
+  font-weight: normal;
+  vertical-align: middle;
+  color: #CC0000;
+  text-decoration: none;
+}
+
+a.textlink {
+  font-size: 12px;
+  font-style: normal;
+  line-height: 16px;
+  font-weight: bold;
+  vertical-align: middle;
+  color: #000080;
+  text-decoration: none;
+}
+
+a.sitemap_topic_link {
+  font-size: 12px;
+  font-style: normal;
+  line-height: 16px;
+  font-weight: bold;
+  vertical-align: middle;
+  color: #999999;
+  text-decoration: none;
+}
+
+.textTitles {
+  font-size: 14px;
+  line-height: 18px;
+  font-weight: bold;
+  color: #006699;
+  text-decoration: none;
+}
+
+.pieceTitles {
+  font-size: 12px;
+  line-height: 18px;
+  font-weight: bold;
+  color: #006699;
+  text-decoration: none;
+}
+
+a.captionlink {
+  font-size: 10px;
+  font-style: normal;
+  line-height: 16px;
+  font-weight: normal;
+  vertical-align: middle;
+  color: #CC0000;
+  text-decoration: none;
+}
+
+a.titlelink {
+  font-size: 14px;
+  font-style: normal;
+  line-height: 18px;
+  font-weight: bold;
+  vertical-align: middle;
+  color: #CC0000;
+  text-decoration: none;
+}
+
+a.topiclink {
+  font-family: Arial, Verdana, Helvetica, sans-serif;
+  color: #0D40A6;
+  font-size: 12px;
+  font-style: normal;
+  line-height: 18px;
+  font-weight: bold;
+  vertical-align: middle;
+  text-decoration: none;
+}
+
+a.topiclink:hover {
+  color: #666666;
+}
+
+/* Non-Element Classes */
+table.MainTable {
+  background-color: #FFFFFF;
+}
+
+table.table_middle {
+  vertical-align: top;
+  width: 573px;
+}
+
+table.td_middle {
+  vertical-align: top;
+  width: 95%;
+}
+
+table.table_middle td.td_middle {
+  /* have to use this instead of td.td_middle because comsite2.pl applies td_middle class twice! */
+  padding-left: 0px;
+  padding-top: 1px;
+}
+
+td.td_left {
+  vertical-align: top;
+  background-color: #FFFFFF;
+  width: 187px;
+  margin: 0px;
+}
+
+td.td_middle {
+  vertical-align: top;
+}
+
+td.td_right {}
+
+.table_cc_list_outer {}
+
+table.table_cc_list_inner {
+  vertical-align: top;
+  border: solid white 2px;
+}
+
+table.table_cc_list_inner td {
+  width: 200 ;
+}
+
+/* content map stylization */
+
+.seotext                { font-size: 12px; font-style: normal; font-weight: normal; line-height: 16px; text-align: justify; vertical-align: middle; color: #000000; text-decoration: none; margin-left: 12px; }
+
+.seocm_range, .branch_link { font-size: 12px; margin-left: 12px }
+.seocm_report, .node_link { font-size: 11px; margin-left: 12px }
+
+.seocm_range a, .branch_link a, .seocm_report a, .node_link a { color: #0d40a6 }
+.seocm_range a:hover, .branch_link a:hover, .seocm_report a:hover, .node_link a:hover { color: #666666 }
+
+/* misc */
+
+.searchResultTitle, .searchResultLink, .detaillink { font-size: 12px; line-height: 15px; font-weight: bold; color: #004D94; text-decoration: none; }
+.detaillink { color: #990000; }
+.text                { font-size: 12px; font-style: normal; font-weight: normal; line-height: 16px; text-align: justify; vertical-align: middle; color: #000000; text-decoration: none; }
+.embedText	     { font-size: 9px; font-style: normal; font-weight: normal; line-height: 10px; }
+.textCartItem        { font-size: 13px; line-height: 18px; font-weight: bold; color: #006699; text-decoration: none; }
+.textCartParentItem  { font-size: 13px; line-height: 18px; font-weight: bold; color: #006699; text-decoration: none; }
+.summaryText         { font-size: 12px; line-height: 22px; font-weight: normal; color: #000000; left: auto; top: auto ; text-decoration: none; }
+.pageheading         
+{
+        font-family: Arial, Verdana, Helvetica, sans-serif;
+        font-size: 24px;
+        color: #0D40A6;
+        font-weight: bold;
+        text-decoration: none;
+        line-height: 22px;
+        margin-top: 0px;
+        margin-bottom: 13px;
+        margin-left: 12px;
+        margin-right: 12px;
+}
+.sectionheading      { font-size: 14px; font-style: normal; font-weight: bold; line-height: 20px; /*text-align: justify;*/ vertical-align: top; color: #0080ff; left: auto; top: auto ; text-decoration: none; margin-left: 12px; }
+.captionText         { font-size: 10px; font-style: normal; line-height:12px; font-weight: normal; color: #000000; left: auto; top: auto ; text-decoration: none; }
+.crumbText           { font-size: 10px; font-style: normal; font-weight: normal; line-height: 13px; text-align: left;
+vertical-align: middle; }
+.caption	{
+  font-size: 10px;
+  font-style: normal;
+  line-height: 12px;
+  font-weight: normal;
+  color: #000000;
+  background-color: #efefef;
+  left: auto;
+  top: auto;
+  text-decoration: none;
+  padding: 2px;
+  border: 3px solid #ffffff;
+}
+
+.browsemaptext
+{
+	font-family: Arial, Verdana, Helvetica, sans-serif;
+	font-size: 11px;
+	color: #666666;
+	font-weight: normal;
+	text-decoration: none;
+	line-height: 13px;
+	margin-top: 0px;
+	margin-bottom: 12px;
+	margin-left: 12px;
+	margin-right: 12px;
+}
+
+.browsemaplink
+{
+	font-family: Arial, Verdana, Helvetica, sans-serif;
+	font-size: 11px;
+	color: #0d40a6;
+	font-weight: normal;
+	text-decoration: underline;
+	line-height: 13px;
+}
+
+.browsemaplink:hover
+{
+	color: #666666;
+}
+
+/* The following are the style for order list displaying TOC in description page */
+ol.toc_level1
+{
+  list-style-type: decimal; /* default -- you can set it to none for no number */
+}
+ol.toc_level2
+{
+  list-style-type: lower-roman;
+}
+ol.toc_level3
+{
+  list-style-type: upper-alpha;
+}
+ol.toc_level4up
+{
+  list-style-type: disc;
+}
+/* End of ol style */
+
+table.transactions td.item { font-size: 11px; color: 000000; background-color: c0ddfa }
+table.transactions td.subtotal { font-size: 11px; color: 000000; background-color: cccccc }
+table.transactions td.total { font-size: 11px; color: 000000; background-color: dddddd }
+

@@ -1,0 +1,180 @@
+div.pager a {
+	float: left;
+	width: 15px;
+	height: 15px;
+	display: block;
+	text-align: center;
+	/* vertical-align: middle; */
+}
+
+div.pager a, div.pager adiv.pager a:link, div.pager a:visited {
+	cursor: pointer;
+}
+
+div.pager a.inactive {
+	cursor: default;
+}
+
+div.pager a:hover {
+}
+
+div.pager a.inactive:hover {
+}
+
+.pg {
+	float: left;
+	position:relative;
+	top: 0px;
+	width:20px;
+	text-align: center;
+	cursor: default;
+	font-weight: bold;
+	/*color: #8B919E;*/
+    color:#333; /* added */
+	font-size:9px; /* added */
+	margin-right:5px;
+	letter-spacing: -2px;
+	margin-top:1px;
+}
+
+div.pager button {
+	background: none;
+	border: none;
+	margin: 0px;
+	padding: 0px;
+	top:1px;
+	float:left;
+
+	display: inline;
+	width: 13px;
+	height: 14px;
+	
+	cursor: pointer;
+}
+
+div.pager button.rt_inactive,
+div.pager button.lf_inactive {
+	cursor: default;
+}
+
+div.pager button.rt,
+div.pager button.rt_inactive,
+div.pager button.rt_on {
+	background-position: right;
+}
+
+/* note, the on and off states got
+reversed in a last minute design decision */
+
+div.pager button.rt_on {
+	background-image: url(/XSL/mb_us/images/c2/images/panels/lozenge_rt_on.jpg);
+}
+
+div.pager button.rt_inactive{
+	background-image: url(/XSL/mb_us/images/c2/images/panels/lozenge_rt_inact.jpg);
+}
+
+div.pager button.rt {
+	background-image: url(/XSL/mb_us/images/c2/images/panels/lozenge_rt_off.jpg);
+}
+
+div.pager button.lf,
+div.pager button.lf_inactive,
+div.pager button.lf_on {
+	background-position: left;
+}
+
+div.pager button.lf_on {
+	background-image: url(/XSL/mb_us/images/c2/images/panels/lozenge_lf_on.jpg);
+}
+
+div.pager button.lf_inactive{
+	background-image: url(/XSL/mb_us/images/c2/images/panels/lozenge_lf_inact.jpg);
+}
+
+div.pager button.lf {
+	background-image: url(/XSL/mb_us/images/c2/images/panels/lozenge_lf_off.jpg);
+}
+
+.banner {
+	color: #8B919E;
+}
+
+div.banner {
+	float: left;
+	position: relative;
+	top: 3px;
+	left: 0px;
+	height: 21px;
+}
+           
+div.banner div {
+	float: left;
+	height: 21px;
+	text-align:center;
+}
+
+.banner span, 
+.banner a, .banner a:link, .banner a:visited {
+	display:block;
+	float:left;
+	text-align: center;
+	padding-top: 3px;
+	height:21px;
+	width: 85px;
+	font-size: 10px;
+	font-weight: bold;
+	color: #555555;
+	background-image: url(/XSL/mb_us/images/c2/images/buttons/full_buttons/btn_tab_off.jpg);
+	background-repeat: no-repeat;
+}
+
+.banner span.current, 
+.banner a.current, .banner a.current:link, .banner a.current:visited {
+	cursor: default;
+	color: #8B919E;
+	background-image: url(/XSL/mb_us/images/c2/images/buttons/full_buttons/btn_tab_on.jpg);
+	background-repeat: no-repeat;
+}
+
+.banner a:hover {
+	color: #8B919E;
+	background-image: url(/XSL/mb_us/images/c2/images/buttons/full_buttons/btn_tab_on.jpg);
+	background-repeat: no-repeat;
+}
+
+/* not really necessary, but might change later */
+.banner a.current:hover {
+	color: #555555;
+}
+
+.banner span, .banner a {
+	position:relative;
+	top:0px;
+}
+
+.head {
+	height: 24px;
+	top:2px;
+	padding-left:10px;
+	position:absolute;
+}
+
+h4 {
+	z-index: 10;
+	top: 1px;
+	color: #555555;
+	position:absolute;
+}
+
+span.shdw {
+	top:2px;
+	color: #FFFFFF;
+	filter:alpha(opacity=50);
+	-moz-opacity:.25;
+	opacity:.50;
+}
+
+span.light {
+	font-weight: normal;
+}

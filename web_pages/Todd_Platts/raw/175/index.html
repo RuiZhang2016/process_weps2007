@@ -1,0 +1,275 @@
+<html>
+<HTML>
+<HEAD>
+<TITLE>RMSP</TITLE>
+<META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=iso-8859-1">
+<SCRIPT TYPE="text/javascript">
+<!--
+
+function newImage(arg) {
+	if (document.images) {
+		rslt = new Image();
+		rslt.src = arg;
+		return rslt;
+	}
+}
+
+function changeImages() {
+	if (document.images && (preloadFlag == true)) {
+		for (var i=0; i<changeImages.arguments.length; i+=2) {
+			document[changeImages.arguments[i]].src = changeImages.arguments[i+1];
+		}
+	}
+}
+
+var preloadFlag = false;
+function preloadImages() {
+	if (document.images) {
+		menu_home_over = newImage("graphics/menu_home-over.gif"/*tpa=http://www.republicanmainstreet.org/graphics/menu_home-over.gif*/);
+		menu_involved_over = newImage("graphics/menu_involved-over.gif"/*tpa=http://www.republicanmainstreet.org/graphics/menu_involved-over.gif*/);
+		menu_contact_over = newImage("graphics/menu_contact-over.gif"/*tpa=http://www.republicanmainstreet.org/graphics/menu_contact-over.gif*/);
+		menu_links_over = newImage("graphics/menu_links-over.gif"/*tpa=http://www.republicanmainstreet.org/graphics/menu_links-over.gif*/);
+		menu_contribute_over = newImage("graphics/menu_contribute-over.gif"/*tpa=http://www.republicanmainstreet.org/graphics/menu_contribute-over.gif*/);
+		menu_about_over = newImage("graphics/menu_about-over.gif"/*tpa=http://www.republicanmainstreet.org/graphics/menu_about-over.gif*/);
+		menu_agenda_over = newImage("graphics/menu_agenda-over.gif"/*tpa=http://www.republicanmainstreet.org/graphics/menu_agenda-over.gif*/);
+		menu_dinner_over = newImage("graphics/menu_dinner-over.gif"/*tpa=http://www.republicanmainstreet.org/graphics/menu_dinner-over.gif*/);
+		menu_retreat_over = newImage("graphics/menu_retreat-over.gif"/*tpa=http://www.republicanmainstreet.org/graphics/menu_retreat-over.gif*/);
+		menu_breakfast_over = newImage("graphics/menu_breakfast-over.gif"/*tpa=http://www.republicanmainstreet.org/graphics/menu_breakfast-over.gif*/);
+		menu_memo_over = newImage("graphics/menu_memo-over.gif"/*tpa=http://www.republicanmainstreet.org/graphics/menu_memo-over.gif*/);
+		menu_pac_over = newImage("graphics/menu_pac-over.gif"/*tpa=http://www.republicanmainstreet.org/graphics/menu_pac-over.gif*/);
+		menu_chapters_over = newImage("graphics/menu_chapters-over.gif"/*tpa=http://www.republicanmainstreet.org/graphics/menu_chapters-over.gif*/);
+		preloadFlag = true;
+	}
+}
+function selectHandler() {
+	var URL = document.form.site.options[document.form.site.selectedIndex].value;
+	if (document.form.site.selectedIndex != 0) {
+		window.location.href = URL;
+	}
+}
+// -->
+</SCRIPT>
+<LINK REL="STYLESHEET" TYPE="text/css" HREF="rmsp.css" tppabs="http://www.republicanmainstreet.org/rmsp.css">
+</HEAD>
+<BODY BGCOLOR=#FFFFFF background="graphics/background.gif" tppabs="http://www.republicanmainstreet.org/graphics/background.gif" LEFTMARGIN=0 TOPMARGIN=0 MARGINWIDTH=0 MARGINHEIGHT=0 ONLOAD="preloadImages();">
+<TABLE WIDTH="91%" BORDER=0 CELLPADDING=0 CELLSPACING=0>
+	<TR>
+	<td>
+		<table cellspacing="0" cellpadding="0" border="0" width="800">
+		<tr>
+		<TD valign="top"><A HREF="index.htm" tppabs="http://www.republicanmainstreet.org/"><IMG SRC="graphics/logo.jpg" tppabs="http://www.republicanmainstreet.org/graphics/logo.jpg" WIDTH=150 HEIGHT=155 ALT="" BORDER="0"></A></TD>
+		
+		<TD valign="top" ONMOUSEOVER="javascript: this.style.cursor='hand';" ONCLICK="javascript:location.href='feature.asp.htm'/*tpa=http://www.republicanmainstreet.org/feature.asp*/;" CLASS="tinytext" WIDTH="665" HEIGHT="144">
+			<br>
+			<IMG SRC="graphics/spacer.gif" tppabs="http://www.republicanmainstreet.org/graphics/spacer.gif" WIDTH=145 HEIGHT=3 ALT="">
+			<IMG SRC="graphics/spacer.gif" tppabs="http://www.republicanmainstreet.org/graphics/spacer.gif" WIDTH=145 HEIGHT=3 ALT=""><br>
+			&nbsp;&nbsp;</TD>
+		
+		</tr>
+		</table>
+	</td>
+	</TR>
+	<tr>
+	<td bgcolor="FE0000">
+		<table cellspacing="0" cellpadding="0" border="0">
+		<tr>
+		<TD>
+			<IMG SRC="graphics/redmenuleft.gif" tppabs="http://www.republicanmainstreet.org/graphics/redmenuleft.gif" WIDTH=150 HEIGHT=20 ALT=""></TD>
+		<TD>
+			<A HREF="index.htm" tppabs="http://www.republicanmainstreet.org/"
+				ONMOUSEOVER="changeImages('menu_home', 'graphics/menu_home-over.gif'/*tpa=http://www.republicanmainstreet.org/graphics/menu_home-over.gif*/); return true;"
+				ONMOUSEOUT="changeImages('menu_home', 'graphics/menu_home.gif'/*tpa=http://www.republicanmainstreet.org/graphics/menu_home.gif*/); return true;">
+				<IMG NAME="menu_home" SRC="graphics/menu_home.gif" tppabs="http://www.republicanmainstreet.org/graphics/menu_home.gif" WIDTH=60 HEIGHT=20 BORDER=0 ALT=""></A></TD>
+		<TD>
+			<IMG SRC="graphics/star1.gif" tppabs="http://www.republicanmainstreet.org/graphics/star1.gif" WIDTH=16 HEIGHT=20 ALT=""></TD>
+		<TD>
+			<A HREF="contact.asp-g=1.htm" tppabs="http://www.republicanmainstreet.org/contact.asp?g=1"
+				ONMOUSEOVER="changeImages('menu_involved', 'graphics/menu_involved-over.gif'/*tpa=http://www.republicanmainstreet.org/graphics/menu_involved-over.gif*/); return true;"
+				ONMOUSEOUT="changeImages('menu_involved', 'graphics/menu_involved.gif'/*tpa=http://www.republicanmainstreet.org/graphics/menu_involved.gif*/); return true;">
+				<IMG NAME="menu_involved" SRC="graphics/menu_involved.gif" tppabs="http://www.republicanmainstreet.org/graphics/menu_involved.gif" WIDTH=123 HEIGHT=20 BORDER=0 ALT=""></A></TD>
+		<TD>
+			<IMG SRC="graphics/star2.gif" tppabs="http://www.republicanmainstreet.org/graphics/star2.gif" WIDTH=16 HEIGHT=20 ALT=""></TD>
+		<TD>
+			<A HREF="contact.asp.htm" tppabs="http://www.republicanmainstreet.org/contact.asp"
+				ONMOUSEOVER="changeImages('menu_contact', 'graphics/menu_contact-over.gif'/*tpa=http://www.republicanmainstreet.org/graphics/menu_contact-over.gif*/); return true;"
+				ONMOUSEOUT="changeImages('menu_contact', 'graphics/menu_contact.gif'/*tpa=http://www.republicanmainstreet.org/graphics/menu_contact.gif*/); return true;">
+				<IMG NAME="menu_contact" SRC="graphics/menu_contact.gif" tppabs="http://www.republicanmainstreet.org/graphics/menu_contact.gif" WIDTH=108 HEIGHT=20 BORDER=0 ALT=""></A></TD>
+		<TD>
+			<IMG SRC="graphics/star3.gif" tppabs="http://www.republicanmainstreet.org/graphics/star3.gif" WIDTH=16 HEIGHT=20 ALT=""></TD>
+		<TD>
+			<A HREF="links.asp.htm" tppabs="http://www.republicanmainstreet.org/links.asp"
+				ONMOUSEOVER="changeImages('menu_links', 'graphics/menu_links-over.gif'/*tpa=http://www.republicanmainstreet.org/graphics/menu_links-over.gif*/); return true;"
+				ONMOUSEOUT="changeImages('menu_links', 'graphics/menu_links.gif'/*tpa=http://www.republicanmainstreet.org/graphics/menu_links.gif*/); return true;">
+				<IMG NAME="menu_links" SRC="graphics/menu_links.gif" tppabs="http://www.republicanmainstreet.org/graphics/menu_links.gif" WIDTH=59 HEIGHT=20 BORDER=0 ALT=""></A></TD>
+		<TD>
+			<IMG SRC="graphics/star4.gif" tppabs="http://www.republicanmainstreet.org/graphics/star4.gif" WIDTH=16 HEIGHT=20 ALT=""></TD>
+		<TD>
+			<A HREF="contribute.asp.htm" tppabs="http://www.republicanmainstreet.org/contribute.asp"
+				ONMOUSEOVER="changeImages('menu_contribute', 'graphics/menu_contribute-over.gif'/*tpa=http://www.republicanmainstreet.org/graphics/menu_contribute-over.gif*/); return true;"
+				ONMOUSEOUT="changeImages('menu_contribute', 'graphics/menu_contribute.gif'/*tpa=http://www.republicanmainstreet.org/graphics/menu_contribute.gif*/); return true;">
+				<IMG NAME="menu_contribute" SRC="graphics/menu_contribute.gif" tppabs="http://www.republicanmainstreet.org/graphics/menu_contribute.gif" WIDTH=108 HEIGHT=20 BORDER=0 ALT=""></A></TD>
+		<TD>
+			<IMG SRC="graphics/redmenuright.gif" tppabs="http://www.republicanmainstreet.org/graphics/redmenuright.gif" WIDTH=88 HEIGHT=20 ALT=""></TD>
+		</tr>
+		</table>
+	</td>
+	</tr>
+	<tr>
+	<td>
+		<table cellspacing="0" cellpadding="0" border="0">
+		<tr>
+		<td bgcolor="00349A" valign="top"><IMG SRC="graphics/spacer.gif" tppabs="http://www.republicanmainstreet.org/graphics/spacer.gif" WIDTH=150 HEIGHT=5 ALT=""><br>
+		<A HREF="about.asp.htm" tppabs="http://www.republicanmainstreet.org/about.asp"
+				ONMOUSEOVER="changeImages('menu_about', 'graphics/menu_about-over.gif'/*tpa=http://www.republicanmainstreet.org/graphics/menu_about-over.gif*/); return true;"
+				ONMOUSEOUT="changeImages('menu_about', 'graphics/menu_about.gif'/*tpa=http://www.republicanmainstreet.org/graphics/menu_about.gif*/); return true;">
+				<IMG NAME="menu_about" SRC="graphics/menu_about.gif" tppabs="http://www.republicanmainstreet.org/graphics/menu_about.gif" WIDTH=150 HEIGHT=24 BORDER=0 ALT=""></A><br>
+				
+		<A HREF="legislative.asp.htm" tppabs="http://www.republicanmainstreet.org/legislative.asp"
+				ONMOUSEOVER="changeImages('menu_agenda', 'graphics/menu_agenda-over.gif'/*tpa=http://www.republicanmainstreet.org/graphics/menu_agenda-over.gif*/); return true;"
+				ONMOUSEOUT="changeImages('menu_agenda', 'graphics/menu_agenda.gif'/*tpa=http://www.republicanmainstreet.org/graphics/menu_agenda.gif*/); return true;">
+				<IMG NAME="menu_agenda" SRC="graphics/menu_agenda.gif" tppabs="http://www.republicanmainstreet.org/graphics/menu_agenda.gif" WIDTH=150 HEIGHT=24 BORDER=0 ALT=""></A><br>
+				
+		<A HREF="events.asp-catID=1022.htm" tppabs="http://www.republicanmainstreet.org/events.asp?catID=1022"
+				ONMOUSEOVER="changeImages('menu_dinner', 'graphics/menu_dinner-over.gif'/*tpa=http://www.republicanmainstreet.org/graphics/menu_dinner-over.gif*/); return true;"
+				ONMOUSEOUT="changeImages('menu_dinner', 'graphics/menu_dinner.gif'/*tpa=http://www.republicanmainstreet.org/graphics/menu_dinner.gif*/); return true;">
+				<IMG NAME="menu_dinner" SRC="graphics/menu_dinner.gif" tppabs="http://www.republicanmainstreet.org/graphics/menu_dinner.gif" WIDTH=150 HEIGHT=21 BORDER=0 ALT=""></A><br>
+				
+		<A HREF="events.asp-catID=1024.htm" tppabs="http://www.republicanmainstreet.org/events.asp?catID=1024"
+				ONMOUSEOVER="changeImages('menu_retreat', 'graphics/menu_retreat-over.gif'/*tpa=http://www.republicanmainstreet.org/graphics/menu_retreat-over.gif*/); return true;"
+				ONMOUSEOUT="changeImages('menu_retreat', 'graphics/menu_retreat.gif'/*tpa=http://www.republicanmainstreet.org/graphics/menu_retreat.gif*/); return true;">
+				<IMG NAME="menu_retreat" SRC="graphics/menu_retreat.gif" tppabs="http://www.republicanmainstreet.org/graphics/menu_retreat.gif" WIDTH=150 HEIGHT=22 BORDER=0 ALT=""></A><br>
+				
+		<A HREF="events.asp-catID=1023.htm" tppabs="http://www.republicanmainstreet.org/events.asp?catID=1023"
+				ONMOUSEOVER="changeImages('menu_breakfast', 'graphics/menu_breakfast-over.gif'/*tpa=http://www.republicanmainstreet.org/graphics/menu_breakfast-over.gif*/); return true;"
+				ONMOUSEOUT="changeImages('menu_breakfast', 'graphics/menu_breakfast.gif'/*tpa=http://www.republicanmainstreet.org/graphics/menu_breakfast.gif*/); return true;">
+				<IMG NAME="menu_breakfast" SRC="graphics/menu_breakfast.gif" tppabs="http://www.republicanmainstreet.org/graphics/menu_breakfast.gif" WIDTH=150 HEIGHT=22 BORDER=0 ALT=""></A><br>
+				
+		<A HREF="./news/news.asp-section=41.htm" tppabs="http://www.republicanmainstreet.org/news.asp?section=41"
+				ONMOUSEOVER="changeImages('menu_memo', 'graphics/menu_memo-over.gif'/*tpa=http://www.republicanmainstreet.org/graphics/menu_memo-over.gif*/); return true;"
+				ONMOUSEOUT="changeImages('menu_memo', 'graphics/menu_memo.gif'/*tpa=http://www.republicanmainstreet.org/graphics/menu_memo.gif*/); return true;">
+				<IMG NAME="menu_memo" SRC="graphics/menu_memo.gif" tppabs="http://www.republicanmainstreet.org/graphics/menu_memo.gif" WIDTH=150 HEIGHT=22 BORDER=0 ALT=""></A><br>
+				
+		<A HREF="chapters.asp.htm" tppabs="http://www.republicanmainstreet.org/chapters.asp"
+				ONMOUSEOVER="changeImages('menu_chapters', 'graphics/menu_chapters-over.gif'/*tpa=http://www.republicanmainstreet.org/graphics/menu_chapters-over.gif*/); return true;"
+				ONMOUSEOUT="changeImages('menu_chapters', 'graphics/menu_chapters.gif'/*tpa=http://www.republicanmainstreet.org/graphics/menu_chapters.gif*/); return true;">
+				<IMG NAME="menu_chapters" SRC="graphics/menu_chapters.gif" tppabs="http://www.republicanmainstreet.org/graphics/menu_chapters.gif" WIDTH=150 HEIGHT=22 BORDER=0 ALT=""></A><br>
+				
+		<br>
+		
+		<IMG SRC="graphics/bluemenubtm.gif" tppabs="http://www.republicanmainstreet.org/graphics/bluemenubtm.gif" WIDTH=150 HEIGHT=241 ALT="">		
+		</td>
+		<td valign="top">
+			<table width="600" cellspacing="0" cellpadding="15" border="0">
+			<tr>
+			<td valign="top">
+		
+
+<table cellpadding=5><tr><td>
+
+<p><H1><FONT size=2>Elected Members</FONT></H1>
+<P align=center><FONT color=#000077><B>Elected officials who are members of the Partnership</B></FONT><BR></P>
+<P>Rep. Charles Bass, New Hampshire (<A href="javascript:if(confirm('http://www.house.gov/bass/  \n\nThis file was not retrieved by Teleport Pro, because it is addressed on a domain or path outside the boundaries set for its Starting Address.  \n\nDo you want to open it from the server?'))window.location='http://www.house.gov/bass/'" tppabs="http://www.house.gov/bass/" target=_blank>http://www.house.gov/bass/</A>)</P>
+<P>Rep. Douglas Bereuter, Nebraska (<A href="javascript:if(confirm('http://www.house.gov/bereuter/  \n\nThis file was not retrieved by Teleport Pro, because it is addressed on a domain or path outside the boundaries set for its Starting Address.  \n\nDo you want to open it from the server?'))window.location='http://www.house.gov/bereuter/'" tppabs="http://www.house.gov/bereuter/" target=_blank>http://www.house.gov/bereuter/</A>)</P>
+<P>Rep. Judy Biggert, Illinois (<A href="javascript:if(confirm('http://www.house.gov/biggert/  \n\nThis file was not retrieved by Teleport Pro, because it is addressed on a domain or path outside the boundaries set for its Starting Address.  \n\nDo you want to open it from the server?'))window.location='http://www.house.gov/biggert/'" tppabs="http://www.house.gov/biggert/" target=_blank>http:www.house.gov/biggert/</A>)</P>
+<P>Rep. Sherwood Boehlert, New York (<A href="javascript:if(confirm('http://www.house.gov/boehlert/  \n\nThis file was not retrieved by Teleport Pro, because it is addressed on a domain or path outside the boundaries set for its Starting Address.  \n\nDo you want to open it from the server?'))window.location='http://www.house.gov/boehlert/'" tppabs="http://www.house.gov/boehlert/" target=_blank>http://www.house.gov/boehlert/</A>)</P>
+<P>Rep. Mary Bono, California (<A href="javascript:if(confirm('http://www.house.gov/bono/  \n\nThis file was not retrieved by Teleport Pro, because it is addressed on a domain or path outside the boundaries set for its Starting Address.  \n\nDo you want to open it from the server?'))window.location='http://www.house.gov/bono/'" tppabs="http://www.house.gov/bono/">http://www.house.gov/bono/</A>) </P>
+<P>Rep. Jeb Bradley, New Hampshire (<A href="javascript:if(confirm('http://www.house.gov/bradley/  \n\nThis file was not retrieved by Teleport Pro, because it is addressed on a domain or path outside the boundaries set for its Starting Address.  \n\nDo you want to open it from the server?'))window.location='http://www.house.gov/bradley/'" tppabs="http://www.house.gov/bradley/" target=_blank>http://www.house.gov/bradley/</A>)</P>
+<P>Rep. Ginny Brown-Waite, Florida (<A href="javascript:if(confirm('http://www.house.gov/brown-waite/  \n\nThis file was not retrieved by Teleport Pro, because it is addressed on a domain or path outside the boundaries set for its Starting Address.  \n\nDo you want to open it from the server?'))window.location='http://www.house.gov/brown-waite/'" tppabs="http://www.house.gov/brown-waite/">http://www.house.gov/brown-waite/</A>)</P>
+<P>Rep. Ken Calvert, California (<A href="javascript:if(confirm('http://www.house.gov/calvert/  \n\nThis file was not retrieved by Teleport Pro, because it is addressed on a domain or path outside the boundaries set for its Starting Address.  \n\nDo you want to open it from the server?'))window.location='http://www.house.gov/calvert/'" tppabs="http://www.house.gov/calvert/" target=_blank>http://www.house.gov/calvert/</A>)</P>
+<P>Rep. Dave Camp, Michigan (<A href="javascript:if(confirm('http://www.house.gov/camp/  \n\nThis file was not retrieved by Teleport Pro, because it is addressed on a domain or path outside the boundaries set for its Starting Address.  \n\nDo you want to open it from the server?'))window.location='http://www.house.gov/camp/'" tppabs="http://www.house.gov/camp/" target=_blank>http://www.house.gov/camp/</A>)</P>
+<P>Rep. Mike Castle, Delaware (<A href="javascript:if(confirm('http://www.house.gov/castle/  \n\nThis file was not retrieved by Teleport Pro, because it is addressed on a domain or path outside the boundaries set for its Starting Address.  \n\nDo you want to open it from the server?'))window.location='http://www.house.gov/castle/'" tppabs="http://www.house.gov/castle/" target=_blank>http://www.house.gov/castle/</A>)</P>
+<P>Rep. Shelley Moore Capito, West Virginia (<A href="javascript:if(confirm('http://www.house.gov/capito/  \n\nThis file was not retrieved by Teleport Pro, because it is addressed on a domain or path outside the boundaries set for its Starting Address.  \n\nDo you want to open it from the server?'))window.location='http://www.house.gov/capito/'" tppabs="http://www.house.gov/capito/" target=_blank>http://www.house.gov/capito/</A>)</P>
+<P>Sen. Lincoln Chafee, Rhode Island (<A href="javascript:if(confirm('http://www.senate.gov/~chafee/  \n\nThis file was not retrieved by Teleport Pro, because it is addressed on a domain or path outside the boundaries set for its Starting Address.  \n\nDo you want to open it from the server?'))window.location='http://www.senate.gov/~chafee/'" tppabs="http://www.senate.gov/~chafee/" target=_blank>http://www.senate.gov/~chafee/</A>)</P>
+<P>Sen. Norm Coleman, Minnesota (<A href="javascript:if(confirm('http://coleman.senate.gov/  \n\nThis file was not retrieved by Teleport Pro, because it is addressed on a domain or path outside the boundaries set for its Starting Address.  \n\nDo you want to open it from the server?'))window.location='http://coleman.senate.gov/'" tppabs="http://coleman.senate.gov/">http://coleman.senate.gov/</A>)</P>
+<P>Sen. Susan Collins, Maine (<A href="javascript:if(confirm('http://www.senate.gov/~collins/  \n\nThis file was not retrieved by Teleport Pro, because it is addressed on a domain or path outside the boundaries set for its Starting Address.  \n\nDo you want to open it from the server?'))window.location='http://www.senate.gov/~collins/'" tppabs="http://www.senate.gov/~collins/" target=_blank>http://www.senate.gov/~collins/</A>)</P>
+<P>Rep. Tom Davis, Virginia (<A href="javascript:if(confirm('http://www.house.gov/tomdavis/  \n\nThis file was not retrieved by Teleport Pro, because it is addressed on a domain or path outside the boundaries set for its Starting Address.  \n\nDo you want to open it from the server?'))window.location='http://www.house.gov/tomdavis/'" tppabs="http://www.house.gov/tomdavis/" target=_blank>http://www.house.gov/tomdavis/</A>)</P>
+<P>Rep. David Dreier, California (<A href="javascript:if(confirm('http://dreier.house.gov/  \n\nThis file was not retrieved by Teleport Pro, because it is addressed on a domain or path outside the boundaries set for its Starting Address.  \n\nDo you want to open it from the server?'))window.location='http://dreier.house.gov/'" tppabs="http://dreier.house.gov/">http://dreier.house.gov</A>/)</P>
+<P>Rep. Vern Ehlers, Michigan (<A href="javascript:if(confirm('http://www.house.gov/ehlers/  \n\nThis file was not retrieved by Teleport Pro, because it is addressed on a domain or path outside the boundaries set for its Starting Address.  \n\nDo you want to open it from the server?'))window.location='http://www.house.gov/ehlers/'" tppabs="http://www.house.gov/ehlers/" target=_blank>http://www.house.gov/ehlers/</A>)</P>
+<P>Gov. Robert Ehrlich, Maryland (<A href="javascript:if(confirm('http://www.gov.state.md.us/  \n\nThis file was not retrieved by Teleport Pro, because it is addressed on a domain or path outside the boundaries set for its Starting Address.  \n\nDo you want to open it from the server?'))window.location='http://www.gov.state.md.us/'" tppabs="http://www.gov.state.md.us/" target=_blank>http://www.gov.state.md.us/</A>)</P>
+<P>Rep. Phil English, Pennsylvania (<A href="javascript:if(confirm('http://www.house.gov/english/  \n\nThis file was not retrieved by Teleport Pro, because it is addressed on a domain or path outside the boundaries set for its Starting Address.  \n\nDo you want to open it from the server?'))window.location='http://www.house.gov/english/'" tppabs="http://www.house.gov/english/" target=_blank>http://www.house.gov/english/</A>)</P>
+<P>Rep. Michael Ferguson, New Jersey (<A href="javascript:if(confirm('http://www.house.gov/ferguson/  \n\nThis file was not retrieved by Teleport Pro, because it is addressed on a domain or path outside the boundaries set for its Starting Address.  \n\nDo you want to open it from the server?'))window.location='http://www.house.gov/ferguson/'" tppabs="http://www.house.gov/ferguson/" target=_blank>http://www.house.gov/ferguson/</A>)</P>
+<P>Rep. Mark Foley, Florida (<A href="javascript:if(confirm('http://www.house.gov/foley/  \n\nThis file was not retrieved by Teleport Pro, because it is addressed on a domain or path outside the boundaries set for its Starting Address.  \n\nDo you want to open it from the server?'))window.location='http://www.house.gov/foley/'" tppabs="http://www.house.gov/foley/" target=_blank>http://www.house.gov/foley/</A>)</P>
+<P>Rep. Rodney Frelinghuysen, New Jersey (<A href="javascript:if(confirm('http://www.house.gov/frelinghuysen/  \n\nThis file was not retrieved by Teleport Pro, because it is addressed on a domain or path outside the boundaries set for its Starting Address.  \n\nDo you want to open it from the server?'))window.location='http://www.house.gov/frelinghuysen/'" tppabs="http://www.house.gov/frelinghuysen/" target=_blank>http://www.house.gov/frelinghuysen/</A>)</P>
+<P>Governor Jim Geringer, Wyoming (<A href="javascript:if(confirm('http://www.state.wy.us/governor/governor_home.html  \n\nThis file was not retrieved by Teleport Pro, because it is addressed on a domain or path outside the boundaries set for its Starting Address.  \n\nDo you want to open it from the server?'))window.location='http://www.state.wy.us/governor/governor_home.html'" tppabs="http://www.state.wy.us/governor/governor_home.html" target=_blank>http://www.state.wy.us/governor/governor_home.html</A>)</P>
+<P>Rep. Wayne Gilchrest, Maryland (<A href="javascript:if(confirm('http://www.house.gov/gilchrest/  \n\nThis file was not retrieved by Teleport Pro, because it is addressed on a domain or path outside the boundaries set for its Starting Address.  \n\nDo you want to open it from the server?'))window.location='http://www.house.gov/gilchrest/'" tppabs="http://www.house.gov/gilchrest/" target=_blank>http://www.house.gov/gilchrest/</A>)</P>
+<P>Rep. Paul Gillmor, Ohio (<A href="javascript:if(confirm('http://www.house.gov/gillmor/  \n\nThis file was not retrieved by Teleport Pro, because it is addressed on a domain or path outside the boundaries set for its Starting Address.  \n\nDo you want to open it from the server?'))window.location='http://www.house.gov/gillmor/'" tppabs="http://www.house.gov/gillmor/" target=_blank>http://www.house.gov/gillmor/</A>)</P>
+<P>Rep. Porter Goss, Florida (<A href="javascript:if(confirm('http://www.house.gov/goss/  \n\nThis file was not retrieved by Teleport Pro, because it is addressed on a domain or path outside the boundaries set for its Starting Address.  \n\nDo you want to open it from the server?'))window.location='http://www.house.gov/goss/'" tppabs="http://www.house.gov/goss/" target=_blank>http://www.house.gov/goss/</A>)</P>
+<P>Rep. Kay Granger, Texas (<A href="javascript:if(confirm('http://www.house.gov/granger/  \n\nThis file was not retrieved by Teleport Pro, because it is addressed on a domain or path outside the boundaries set for its Starting Address.  \n\nDo you want to open it from the server?'))window.location='http://www.house.gov/granger/'" tppabs="http://www.house.gov/granger/" target=_blank>http://www.house.gov/granger/</A>)</P>
+<P>Rep. Jim Greenwood, Pennsylvania (<A href="javascript:if(confirm('http://www.house.gov/greenwood/  \n\nThis file was not retrieved by Teleport Pro, because it is addressed on a domain or path outside the boundaries set for its Starting Address.  \n\nDo you want to open it from the server?'))window.location='http://www.house.gov/greenwood/'" tppabs="http://www.house.gov/greenwood/" target=_blank>http://www.house.gov/greenwood/</A>)</P>
+<P>Rep. David Hobson, Ohio (<A href="javascript:if(confirm('http://www.house.gov/hobson/  \n\nThis file was not retrieved by Teleport Pro, because it is addressed on a domain or path outside the boundaries set for its Starting Address.  \n\nDo you want to open it from the server?'))window.location='http://www.house.gov/hobson/'" tppabs="http://www.house.gov/hobson/" target=_blank>http://www.house.gov/hobson/</A>)</P>
+<P>Rep. Amo Houghton, New York (<A href="javascript:if(confirm('http://www.house.gov/houghton/  \n\nThis file was not retrieved by Teleport Pro, because it is addressed on a domain or path outside the boundaries set for its Starting Address.  \n\nDo you want to open it from the server?'))window.location='http://www.house.gov/houghton/'" tppabs="http://www.house.gov/houghton/" target=_blank>http://www.house.gov/houghton/</A>)</P>
+<P>Rep. Johnny Isakson, Georgia (<A href="javascript:if(confirm('http://www.house.gov/isakson/  \n\nThis file was not retrieved by Teleport Pro, because it is addressed on a domain or path outside the boundaries set for its Starting Address.  \n\nDo you want to open it from the server?'))window.location='http://www.house.gov/isakson/'" tppabs="http://www.house.gov/isakson/" target=_blank>http://www.house.gov/isakson/</A>)</P>
+<P>Rep. Nancy Johnson, Connecticut (<A href="javascript:if(confirm('http://www.house.gov/nancyjohnson/  \n\nThis file was not retrieved by Teleport Pro, because it is addressed on a domain or path outside the boundaries set for its Starting Address.  \n\nDo you want to open it from the server?'))window.location='http://www.house.gov/nancyjohnson/'" tppabs="http://www.house.gov/nancyjohnson/" target=_blank>http://www.house.gov/nancyjohnson/</A>)</P>
+<P>Rep. Tim Johnson, Illinois (<A href="javascript:if(confirm('http://www.house.gov/timjohnson/  \n\nThis file was not retrieved by Teleport Pro, because it is addressed on a domain or path outside the boundaries set for its Starting Address.  \n\nDo you want to open it from the server?'))window.location='http://www.house.gov/timjohnson/'" tppabs="http://www.house.gov/timjohnson/" target=_blank>http://www.house.gov/timjohnson/</A>)</P>
+<P>Rep. Sue Kelly, New York (<A href="javascript:if(confirm('http://www.house.gov/suekelly/  \n\nThis file was not retrieved by Teleport Pro, because it is addressed on a domain or path outside the boundaries set for its Starting Address.  \n\nDo you want to open it from the server?'))window.location='http://www.house.gov/suekelly/'" tppabs="http://www.house.gov/suekelly/" target=_blank>http://www.house.gov/suekelly/</A>)</P>
+<P>Rep. Mark Kirk, Illinois (<A href="javascript:if(confirm('http://www.house.gov/kirk/  \n\nThis file was not retrieved by Teleport Pro, because it is addressed on a domain or path outside the boundaries set for its Starting Address.  \n\nDo you want to open it from the server?'))window.location='http://www.house.gov/kirk/'" tppabs="http://www.house.gov/kirk/" target=_blank>http://www.house.gov/kirk/</A>)</P>
+<P>Rep. Jim Kolbe, Arizona (<A href="javascript:if(confirm('http://www.house.gov/kolbe/  \n\nThis file was not retrieved by Teleport Pro, because it is addressed on a domain or path outside the boundaries set for its Starting Address.  \n\nDo you want to open it from the server?'))window.location='http://www.house.gov/kolbe/'" tppabs="http://www.house.gov/kolbe/" target=_blank>http://www.house.gov/kolbe/</A>)</P>
+<P>Rep. Ray LaHood, Illinois (<A href="javascript:if(confirm('http://www.house.gov/lahood/  \n\nThis file was not retrieved by Teleport Pro, because it is addressed on a domain or path outside the boundaries set for its Starting Address.  \n\nDo you want to open it from the server?'))window.location='http://www.house.gov/lahood/'" tppabs="http://www.house.gov/lahood/" target=_blank>http://www.house.gov/lahood/</A>)</P>
+<P>Rep. Steve LaTourette, Ohio (<A href="javascript:if(confirm('http://www.house.gov/latourette/  \n\nThis file was not retrieved by Teleport Pro, because it is addressed on a domain or path outside the boundaries set for its Starting Address.  \n\nDo you want to open it from the server?'))window.location='http://www.house.gov/latourette/'" tppabs="http://www.house.gov/latourette/" target=_blank>http://www.house.gov/latourette/</A>)</P>
+<P>Rep. James Leach, Iowa (<A href="javascript:if(confirm('http://www.house.gov/leach/  \n\nThis file was not retrieved by Teleport Pro, because it is addressed on a domain or path outside the boundaries set for its Starting Address.  \n\nDo you want to open it from the server?'))window.location='http://www.house.gov/leach/'" tppabs="http://www.house.gov/leach/" target=_blank>http://www.house.gov/leach/</A>)</P>
+<P>Rep. Jerry Lewis, California (<A href="javascript:if(confirm('http://www.house.gov/jerrylewis/  \n\nThis file was not retrieved by Teleport Pro, because it is addressed on a domain or path outside the boundaries set for its Starting Address.  \n\nDo you want to open it from the server?'))window.location='http://www.house.gov/jerrylewis/'" tppabs="http://www.house.gov/jerrylewis/" target=_blank>http://www.house.gov/jerrylewis/</A>)</P>
+<P>Gov. Linda Lingle, Hawaii (<A href="javascript:if(confirm('http://www.hawaii.gov/gov/  \n\nThis file was not retrieved by Teleport Pro, because it is addressed on a domain or path outside the boundaries set for its Starting Address.  \n\nDo you want to open it from the server?'))window.location='http://www.hawaii.gov/gov/'" tppabs="http://www.hawaii.gov/gov/" target=_blank>http://www.hawaii.gov/gov/</A>)</P>
+<P>Rep. Frank LoBiondo, New Jersey (<A href="javascript:if(confirm('http://www.house.gov/lobiondo  \n\nThis file was not retrieved by Teleport Pro, because it is addressed on a domain or path outside the boundaries set for its Starting Address.  \n\nDo you want to open it from the server?'))window.location='http://www.house.gov/lobiondo'" tppabs="http://www.house.gov/lobiondo">www.house.gov/lobiondo</A>) </P>
+<P>Sen. John McCain, Arizona (<A href="javascript:if(confirm('http://www.senate.gov/~mccain/  \n\nThis file was not retrieved by Teleport Pro, because it is addressed on a domain or path outside the boundaries set for its Starting Address.  \n\nDo you want to open it from the server?'))window.location='http://www.senate.gov/~mccain/'" tppabs="http://www.senate.gov/~mccain/" target=_blank>http://www.senate.gov/~mccain/</A>)</P>
+<P>Rep. Jim McCrery, Louisiana (<A href="javascript:if(confirm('http://www.house.gov/mccrery/  \n\nThis file was not retrieved by Teleport Pro, because it is addressed on a domain or path outside the boundaries set for its Starting Address.  \n\nDo you want to open it from the server?'))window.location='http://www.house.gov/mccrery/'" tppabs="http://www.house.gov/mccrery/" target=_blank>http://www.house.gov/mccrery/</A>)</P>
+<P>Rep. George Nethercutt, Washington (<A href="javascript:if(confirm('http://www.house.gov/nethercutt/  \n\nThis file was not retrieved by Teleport Pro, because it is addressed on a domain or path outside the boundaries set for its Starting Address.  \n\nDo you want to open it from the server?'))window.location='http://www.house.gov/nethercutt/'" tppabs="http://www.house.gov/nethercutt/" target=_blank>http://www.house.gov/nethercutt/</A>)</P>
+<P>Rep. Tom Osborne, Nebraska (<A href="javascript:if(confirm('http://www.house.gov/osborne/  \n\nThis file was not retrieved by Teleport Pro, because it is addressed on a domain or path outside the boundaries set for its Starting Address.  \n\nDo you want to open it from the server?'))window.location='http://www.house.gov/osborne/'" tppabs="http://www.house.gov/osborne/" target=_blank>http://www.house.gov/osborne/</A>)</P>
+<P>Rep. Doug Ose, California (<A href="javascript:if(confirm('http://www.house.gov/ose/  \n\nThis file was not retrieved by Teleport Pro, because it is addressed on a domain or path outside the boundaries set for its Starting Address.  \n\nDo you want to open it from the server?'))window.location='http://www.house.gov/ose/'" tppabs="http://www.house.gov/ose/" target=_blank>http://www.house.gov/ose/</A>)</P>
+<P>Gov. George E. Pataki, New York (<A href="javascript:if(confirm('http://www.state.ny.us/governor/  \n\nThis file was not retrieved by Teleport Pro, because it is addressed on a domain or path outside the boundaries set for its Starting Address.  \n\nDo you want to open it from the server?'))window.location='http://www.state.ny.us/governor/'" tppabs="http://www.state.ny.us/governor/" target=_blank>http://www.state.ny.us/governor/</A>)</P>
+<P>Rep. Thomas Petri, Wisconsin (<A href="javascript:if(confirm('http://www.house.gov/petri/  \n\nThis file was not retrieved by Teleport Pro, because it is addressed on a domain or path outside the boundaries set for its Starting Address.  \n\nDo you want to open it from the server?'))window.location='http://www.house.gov/petri/'" tppabs="http://www.house.gov/petri/" target=_blank>http://www.house.gov/petri/</A>)</P>
+<P>Rep. Todd Platts, Pennsylvania (<A href="javascript:if(confirm('http://www.house.gov/platts  \n\nThis file was not retrieved by Teleport Pro, because it is addressed on a domain or path outside the boundaries set for its Starting Address.  \n\nDo you want to open it from the server?'))window.location='http://www.house.gov/platts'" tppabs="http://www.house.gov/platts">www.house.gov/platts</A>) </P>
+<P>Rep. Jon Porter, Nevada (<A href="javascript:if(confirm('http://www.house.gov/porter/  \n\nThis file was not retrieved by Teleport Pro, because it is addressed on a domain or path outside the boundaries set for its Starting Address.  \n\nDo you want to open it from the server?'))window.location='http://www.house.gov/porter/'" tppabs="http://www.house.gov/porter/">http://www.house.gov/porter/</A>)</P>
+<P>Rep. Deborah Pryce, Ohio (<A href="javascript:if(confirm('http://www.house.gov/pryce/  \n\nThis file was not retrieved by Teleport Pro, because it is addressed on a domain or path outside the boundaries set for its Starting Address.  \n\nDo you want to open it from the server?'))window.location='http://www.house.gov/pryce/'" tppabs="http://www.house.gov/pryce/" target=_blank>http://www.house.gov/pryce/</A>)</P>
+<P>Rep. Jack Quinn, New York (<A href="javascript:if(confirm('http://www.house.gov/quinn/  \n\nThis file was not retrieved by Teleport Pro, because it is addressed on a domain or path outside the boundaries set for its Starting Address.  \n\nDo you want to open it from the server?'))window.location='http://www.house.gov/quinn/'" tppabs="http://www.house.gov/quinn/" target=_blank>http://www.house.gov/quinn/</A>)</P>
+<P>Rep. Jim Ramstad, Minnesota (<A href="javascript:if(confirm('http://www.house.gov/ramstad/  \n\nThis file was not retrieved by Teleport Pro, because it is addressed on a domain or path outside the boundaries set for its Starting Address.  \n\nDo you want to open it from the server?'))window.location='http://www.house.gov/ramstad/'" tppabs="http://www.house.gov/ramstad/" target=_blank>http://www.house.gov/ramstad/</A>)</P>
+<P>Rep. Ralph Regula, Ohio (<A href="javascript:if(confirm('http://www.house.gov/regula/  \n\nThis file was not retrieved by Teleport Pro, because it is addressed on a domain or path outside the boundaries set for its Starting Address.  \n\nDo you want to open it from the server?'))window.location='http://www.house.gov/regula/'" tppabs="http://www.house.gov/regula/" target=_blank>http://www.house.gov/regula/</A>)</P>
+<P>Sen. Pat Roberts, Kansas (<A href="javascript:if(confirm('http://www.senate.gov/~roberts/  \n\nThis file was not retrieved by Teleport Pro, because it is addressed on a domain or path outside the boundaries set for its Starting Address.  \n\nDo you want to open it from the server?'))window.location='http://www.senate.gov/~roberts/'" tppabs="http://www.senate.gov/~roberts/" target=_blank>http://www.senate.gov/~roberts/</A>)</P>
+<P>Gov. Arnold Schwarzenegger, California (<A href="javascript:if(confirm('http://www.governor.ca.gov/  \n\nThis file was not retrieved by Teleport Pro, because it is addressed on a domain or path outside the boundaries set for its Starting Address.  \n\nDo you want to open it from the server?'))window.location='http://www.governor.ca.gov/'" tppabs="http://www.governor.ca.gov/">http://www.governor.ca.gov</A>)</P>
+<P>Rep. E. Clay Shaw, Jr., Florida (<A href="javascript:if(confirm('http://www.house.gov/shaw/  \n\nThis file was not retrieved by Teleport Pro, because it is addressed on a domain or path outside the boundaries set for its Starting Address.  \n\nDo you want to open it from the server?'))window.location='http://www.house.gov/shaw/'" tppabs="http://www.house.gov/shaw/" target=_blank>http://www.house.gov/shaw/</A>)</P>
+<P>Rep. Christopher Shays, Connecticut (<A href="javascript:if(confirm('http://www.house.gov/shays/  \n\nThis file was not retrieved by Teleport Pro, because it is addressed on a domain or path outside the boundaries set for its Starting Address.  \n\nDo you want to open it from the server?'))window.location='http://www.house.gov/shays/'" tppabs="http://www.house.gov/shays/" target=_blank>http://www.house.gov/shays/</A>)</P>
+<P>Rep. Rob Simmons, Connecticut (<A href="javascript:if(confirm('http://www.house.gov/simmons/  \n\nThis file was not retrieved by Teleport Pro, because it is addressed on a domain or path outside the boundaries set for its Starting Address.  \n\nDo you want to open it from the server?'))window.location='http://www.house.gov/simmons/'" tppabs="http://www.house.gov/simmons/">http://www.house.gov/simmons/</A>)</P>
+<P>Sen. Gordon Smith, Oregon (<A href="javascript:if(confirm('http://www.senate.gov/~gsmith/  \n\nThis file was not retrieved by Teleport Pro, because it is addressed on a domain or path outside the boundaries set for its Starting Address.  \n\nDo you want to open it from the server?'))window.location='http://www.senate.gov/~gsmith/'" tppabs="http://www.senate.gov/~gsmith/" target=_blank>http://www.senate.gov/~gsmith/</A>)</P>
+<P>Sen. Olympia Snowe, Maine (<A href="javascript:if(confirm('http://www.senate.gov/~snowe/  \n\nThis file was not retrieved by Teleport Pro, because it is addressed on a domain or path outside the boundaries set for its Starting Address.  \n\nDo you want to open it from the server?'))window.location='http://www.senate.gov/~snowe/'" tppabs="http://www.senate.gov/~snowe/" target=_blank>http://www.senate.gov/~snowe/</A>)</P>
+<P>Sen. Arlen Specter, Pennsylvania (<A href="javascript:if(confirm('http://www.senate.gov/~specter/  \n\nThis file was not retrieved by Teleport Pro, because it is addressed on a domain or path outside the boundaries set for its Starting Address.  \n\nDo you want to open it from the server?'))window.location='http://www.senate.gov/~specter/'" tppabs="http://www.senate.gov/~specter/" target=_blank>http://www.senate.gov/~specter/</A>)</P>
+<P>Sen. Ted Stevens, Alaska (<A href="javascript:if(confirm('http://www.senate.gov/~stevens/  \n\nThis file was not retrieved by Teleport Pro, because it is addressed on a domain or path outside the boundaries set for its Starting Address.  \n\nDo you want to open it from the server?'))window.location='http://www.senate.gov/~stevens/'" tppabs="http://www.senate.gov/~stevens/" target=_blank>http://www.senate.gov/~stevens/</A>)</P>
+<P>Rep. Fred Upton, Michigan (<A href="javascript:if(confirm('http://www.house.gov/upton/  \n\nThis file was not retrieved by Teleport Pro, because it is addressed on a domain or path outside the boundaries set for its Starting Address.  \n\nDo you want to open it from the server?'))window.location='http://www.house.gov/upton/'" tppabs="http://www.house.gov/upton/" target=_blank>http://www.house.gov/upton/</A>)</P>
+<P>Rep. Greg Walden, Oregon (<A href="javascript:if(confirm('http://www.house.gov/walden/  \n\nThis file was not retrieved by Teleport Pro, because it is addressed on a domain or path outside the boundaries set for its Starting Address.  \n\nDo you want to open it from the server?'))window.location='http://www.house.gov/walden/'" tppabs="http://www.house.gov/walden/">http://www.house.gov/walden/</A>)</P>
+<P>Rep. Jim Walsh, New York (<A href="javascript:if(confirm('http://www.house.gov/walsh/  \n\nThis file was not retrieved by Teleport Pro, because it is addressed on a domain or path outside the boundaries set for its Starting Address.  \n\nDo you want to open it from the server?'))window.location='http://www.house.gov/walsh/'" tppabs="http://www.house.gov/walsh/" target=_blank>http://www.house.gov/walsh/</A>)</P>
+<P>Rep. Curt Weldon, Pennsylvania (<A href="javascript:if(confirm('http://www.house.gov/curtweldon/  \n\nThis file was not retrieved by Teleport Pro, because it is addressed on a domain or path outside the boundaries set for its Starting Address.  \n\nDo you want to open it from the server?'))window.location='http://www.house.gov/curtweldon/'" tppabs="http://www.house.gov/curtweldon/" target=_blank>http://www.house.gov/curtweldon/</A>)</P>
+<P>Rep. Jerry Weller, Illinois (<A href="javascript:if(confirm('http://www.house.gov/weller/  \n\nThis file was not retrieved by Teleport Pro, because it is addressed on a domain or path outside the boundaries set for its Starting Address.  \n\nDo you want to open it from the server?'))window.location='http://www.house.gov/weller/'" tppabs="http://www.house.gov/weller/" target=_blank>http://www.house.gov/weller/</A>)</P>
+
+</td><td valign=top>
+
+	<p><a href="about.asp-id=1.htm" tppabs="http://www.republicanmainstreet.org/about.asp?id=1">Our Mission</a>
+	<p><a href="about.asp-id=2.htm" tppabs="http://www.republicanmainstreet.org/about.asp?id=2">History</a>
+	<p><a href="about.asp-id=3.htm" tppabs="http://www.republicanmainstreet.org/about.asp?id=3">Board of Directors</a>
+	<p><a href="about.asp-id=4.htm" tppabs="http://www.republicanmainstreet.org/about.asp?id=4">Elected Members</a>
+	<p><a href="about.asp-id=5.htm" tppabs="http://www.republicanmainstreet.org/about.asp?id=5">Supporters</a>
+
+</td></tr></table>
+
+			</td>
+			</tr>
+			</table>
+		</td>
+		</tr>
+		</table>
+</td>
+</tr>
+</table>
+</body>
+</html>
+
+<!-- 		</td>
+	</tr>
+	<tr>
+		<td colspan=2 bgcolor="#dadada">
+			<p><font size="1" face="arial" color="#ffffff">&copy; Copyright Republican Main Street - Sprydata &nbsp;&nbsp;&nbsp;All Rights Reserved<br>
+			<font size="1" face="arial" color="#ffffff">Web Development by <a href="http://www.infomedia.com" class="imedia">Infomedia</a>
+		</td>
+	</tr>
+</table>
+</center>
+</body>
+</html>
+ -->

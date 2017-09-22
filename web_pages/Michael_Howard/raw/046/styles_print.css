@@ -1,0 +1,21 @@
+/* =========================================== */
+/* this stylesheet applies only to print media */
+/* =========================================== */
+
+/* remove non-content columns */
+#left_tbl, #right_tbl {display: none;}
+
+/* remove content search form from header */
+#tdContentSearch {display: none;}
+
+/* remove print listing gif's and links from printouts */
+#printListingGif, #printListingLink {display: none;}
+
+/* remove any outer page body margins before printing */
+body {margin: 0;}
+
+/* correct background colors for Firefox */
+#tblHeader {background: #fff; color: #000;}
+
+/* center the table, once left and right columns are removed */
+#tbl {margin-left: auto; margin-right: auto;}

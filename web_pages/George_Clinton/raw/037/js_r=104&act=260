@@ -1,0 +1,2424 @@
+/*
+    SHOP.COM Javascript utilities
+    by Jordan Zimmerman
+    (c)2006 by SHOP.COM
+    All rights reserved worldwide
+*/
+var     sc_data_map = new Array();
+
+var		sc_ajax_data_tab = new Array();
+var		sc_ajax_data_callback_tab = new Array();
+
+var     SC_DISPLAY_MODE_STANDARD = 0;
+var     SC_DISPLAY_MODE_FADE = 1;
+var     SC_DISPLAY_MODE_SLIDE_DOWN = 2;
+var     SC_DISPLAY_MODE_SLIDE_UP = 3;
+var     SC_DISPLAY_MODE_SLIDE_LEFT = 4;
+var     SC_DISPLAY_MODE_SLIDE_RIGHT = 5;
+var     SC_DISPLAY_MODE_ZOOM = 6;
+
+var     SC_SLIDE_INCREMENT = 5;
+var     SC_SLIDE_INTERVAL = 10;
+
+var	    SC_FADE_IN_RATES = Array(1, 1, 1, 1, 1, 5, 5, 5, 10, 25);
+var	    SC_FADE_OUT_RATES = Array(1, 1, 1, 1, 1, 1, 1, 1, 5);
+var     SC_FADE_INTERVAL = 50;
+
+var     SC_ZOOM_STEP = 5;
+var     SC_ZOOM_MIN = 25;
+var     SC_ZOOM_STEP_QTY = 25;
+
+var     SC_POPUP_CLOSE_TIME = 2500;
+
+var     SC_TRANSPORT_STOP = 0;
+var     SC_TRANSPORT_NEXT = 1;
+var     SC_TRANSPORT_PREVIOUS = 2;
+var     SC_TRANSPORT_PLAY = 3;
+
+var		SC_POPUP_WINDOW_LEFT_OFFSET = 200;
+var		SC_POPUP_WINDOW_TOP_OFFSET = 0;
+
+var		SC_IMMEDIATE_SCRIPT_HEADER_PREFIX = "AMOS_IMMEDIATE_SCRIPT_";
+var		SC_REDIRECT_HEADER = "AMOS_AJAX_REDIRECT";
+var		SC_HREF_HEADER = "AMOS_AJAX_HREF";
+var     SC_VEIL_ID = 'veil';
+
+function sc_on_load(script)
+{
+    var local_on_load = function() {
+        eval(script);
+    }
+
+    sc_add_listener(window,"load",local_on_load);
+}
+
+function sc_change_via_form_request(id, url, form_name, prefix, caller)
+{
+    var     item = document.getElementById(id);
+    var     data = sc_get_data(id);
+
+    var form = document.forms[form_name];
+    var values = sc_get_form_data(form,prefix);
+    if( caller.id )
+        eval("values['" + caller.id + "'] = true");
+
+    sc_force_change_via_request(id,url,sc_url_encode_object(values));
+}
+
+function sc_get_form_data(form,prefix)
+{
+    var map = new Object();
+    var form_node = eval(form);
+
+    for (var i in form_node)
+    {
+        if( i.indexOf(prefix) == 0 )
+        {
+            var value;
+
+            if( form_node[i].type == 'checkbox' && !form_node[i].checked )
+                continue;
+            value = form_node[i].value;
+
+            map[i] = value;
+        }
+    }
+
+    return map;
+}
+
+function sc_url_encode(plaintext)
+{
+	// I found this at http://www.albionresearch.com/misc/urlencode.php -- JZ
+
+	// The Javascript escape and unescape functions do not correspond
+	// with what browsers actually do...
+	var SAFECHARS = "0123456789" +					// Numeric
+					"ABCDEFGHIJKLMNOPQRSTUVWXYZ" +	// Alphabetic
+					"abcdefghijklmnopqrstuvwxyz" +
+					"-_.!~*'()";					// RFC2396 Mark characters
+	var HEX = "0123456789ABCDEF";
+
+	var encoded = "";
+	for (var i = 0; i < plaintext.length; i++ ) {
+		var ch = plaintext.charAt(i);
+	    if (ch == " ") {
+		    encoded += "+";				// x-www-urlencoded, rather than %20
+		} else if (SAFECHARS.indexOf(ch) != -1) {
+		    encoded += ch;
+		} else {
+		    var charCode = ch.charCodeAt(0);
+			if (charCode > 255) {
+				encoded += "+";
+			} else {
+				encoded += "%";
+				encoded += HEX.charAt((charCode >> 4) & 0xF);
+				encoded += HEX.charAt(charCode & 0xF);
+			}
+		}
+	} // for
+
+	return encoded;
+}
+
+function sc_url_encode_object(obj)
+{
+    var str = new String();
+
+    for (var i in obj)
+    {
+        str += escape(i) + "=" + escape(obj[i]) + "&";
+    }
+
+    return str;
+}
+
+function sc_add_listener(obj, evType, fn)
+{
+    if (obj.addEventListener)
+    {
+        obj.addEventListener(evType, fn, false);
+        return true;
+    }
+    else if (obj.attachEvent)
+        return obj.attachEvent('on' + evType, fn);
+    else
+        return false;
+}
+
+var SC_VEIL_PAD = 10;
+function sc_show_hide_veil(show_it)
+{
+   var veilOverlay = document.getElementById(SC_VEIL_ID);
+   if( show_it )
+   {
+       if( veilOverlay ) //Already up
+        return;
+       veilOverlay = document.createElement('div');
+       veilOverlay.id = SC_VEIL_ID;
+       veilOverlay.style.zIndex = 1000;
+       veilOverlay.innerHTML = '&nbsp;';
+       var setVeilWidth = function() {
+            veilOverlay.style.width = (document.body.scrollWidth+SC_VEIL_PAD) + "px";
+            veilOverlay.style.height = (document.body.scrollHeight+SC_VEIL_PAD) + "px";
+       }
+       setVeilWidth();
+       sc_add_listener(window, "resize", setVeilWidth);
+       document.body.appendChild(veilOverlay);
+       veilOverlay.style.display = "block";
+       sc_z_compare_and_enable(veilOverlay,false);
+   }
+   else
+   {
+       if( !veilOverlay ) //Already down
+        return;
+
+       sc_z_compare_and_enable(veilOverlay,true);
+       veilOverlay.parentNode.removeChild(veilOverlay);
+   }
+}
+
+var SC_SELECT_BOX_STATE = new Object();
+
+function sc_z_compare_and_enable(item, enable)
+{
+    if( !sc_is_ie_6_or_earlier() )
+     return;
+
+   var selects = document.getElementsByTagName("select");
+   for (var i in selects)
+   {
+       var select = selects[i];
+
+       if( sc_z_compare(item, select) )
+       {
+           if( SC_SELECT_BOX_STATE[select.name] )
+           {
+               select.disabled = SC_SELECT_BOX_STATE[select.name];
+               SC_SELECT_BOX_STATE[select.name] = null;
+           }
+           else
+           {
+               SC_SELECT_BOX_STATE[select.name] = select.disabled;
+               select.disabled = !enable;
+           }
+       }
+   }
+
+    var inputs = document.getElementsByTagName("input");
+    for (var i in inputs)
+    {
+        var input = inputs[i];
+
+        if( sc_z_compare(item, input) )
+        {
+            input.disabled = !enable;
+        }
+    }
+
+    var as = document.getElementsByTagName("a");
+    for (var i in as)
+    {
+        var a = as[i];
+
+        a.disabled = !enable;
+    }
+}
+
+function sc_hide_selects(item)
+{
+    if( !sc_is_ie_6_or_earlier() )
+     return;
+
+   var selects = document.getElementsByTagName("select");
+   for (var i in selects)
+   {
+       var select = selects[i];
+
+       if( sc_is_overlapping(item, select) && !sc_is_parent(item, select) )
+       {
+           select.style.visibility = "hidden";
+       }
+   }
+
+    // if the veil is up ignore the text boxes
+    var veilOverlay = document.getElementById(SC_VEIL_ID);
+    if( veilOverlay != null )
+        return;
+
+    if( sc_child_has_style(item,"backgroundColor") || sc_child_has_style(item,"backgroundImage") )
+    {
+
+       var inputs = document.getElementsByTagName("input");
+       for (var i in inputs)
+       {
+           var input = inputs[i];
+
+           if( input.type == 'text' && sc_is_overlapping(item, input) && !sc_is_parent(item, input) )
+           {
+               input.disabled = true;
+           }
+       }
+    }
+}
+
+function sc_show_selects(item)
+{
+    if( !sc_is_ie_6_or_earlier() )
+        return;
+
+    // If the veil is up never ignore
+    var veilOverlay = document.getElementById(SC_VEIL_ID);
+    if( veilOverlay != null )
+        return;
+
+   var selects = document.getElementsByTagName("select");
+   for (var i in selects)
+   {
+       var select = selects[i];
+       if( sc_is_overlapping(item, select) && !sc_is_parent(item, select) )
+       {
+           select.style.visibility = "visible";
+       }
+   }
+
+    if( veilOverlay != null )
+        return;
+
+   if( sc_child_has_style(item,"backgroundColor") || sc_child_has_style(item,"backgroundImage") )
+   {
+       var inputs = document.getElementsByTagName("input");
+       for (var i in inputs)
+       {
+           var input = inputs[i];
+
+           if( input.type == 'text' && sc_is_overlapping(item, input) && !sc_is_parent(item, input) )
+               input.disabled = false;
+       }
+   }
+}
+
+function linked_cell(p){location.href=p; return false;}
+function sc_child_has_style(item,style)
+{
+    if( item && item.nodeType && item.nodeType == 1 )
+    {
+        var value;
+
+        if( item.style )
+        {
+            value = eval("item.style." + style);
+
+            if( value )
+                return value;
+        }
+
+        for(var c in item.childNodes )
+        {
+            if( (value = sc_child_has_style(item.childNodes[c],style)) )
+            {
+                return value;
+            }
+        }
+    }
+
+    return null;
+}
+
+function sc_z_compare(item1, item2)
+{
+    var item1_z_index = sc_has_style(item1,"zIndex");
+    var item2_z_index = sc_has_style(item2,"zIndex");
+
+    if( !item1_z_index && item2_z_index )
+        return false;
+
+    if( item1_z_index && !item2_z_index )
+        return true;
+
+    if( !item1_z_index && !item2_z_index )
+        return false;
+
+    if( item1_z_index && item2_z_index )
+        return (item1_z_index*1) > (item2_z_index*1);
+}
+
+var SC_MAX_PARENT_DEPTH = 15;
+
+function sc_is_parent(parent, child)
+{
+    // Clip this depth test
+    var depth = 0;
+
+    var is_parent = false;
+    if (child.parentNode)
+    {
+        while (child.parentNode)
+        {
+            if( depth > SC_MAX_PARENT_DEPTH )
+                return false;
+
+            if( child.parentNode == parent )
+                return true;
+
+            child = child.parentNode;
+            depth += 1;
+        }
+    }
+
+    return false;
+}
+
+function sc_has_style(item, style)
+{
+    // Clip this depth test
+    var depth = 0;
+
+    var is_parent = false;
+    if (item.offsetParent)
+    {
+        while (item.offsetParent)
+        {
+            if( depth > SC_MAX_PARENT_DEPTH )
+                return null;
+
+            if( item && item.nodeType && item.nodeType == 1 )
+            {
+                value = eval("item.style." + style);
+
+                if( value )
+                    return value;
+
+                item = item.offsetParent;
+                depth += 1;
+            }
+        }
+    }
+
+    return null;
+}
+
+function sc_is_overlapping(obj1, obj2)
+{
+   var pos1 = sc_get_pos(obj1);
+   var pos2 = sc_get_pos(obj2);
+
+   // get the radi of each rect
+   var width1  = pos1.width/2;
+   var height1 = pos1.height/2;
+   var width2  = pos2.width/2;
+   var height2 = pos2.height/2;
+
+   // compute center of each rect
+   var cx1 = pos1.left + width1;
+   var cy1 = pos1.top + height1;
+   var cx2 = pos2.left + width2;
+   var cy2 = pos2.top + height2;
+
+   // compute deltas
+   var dx = Math.abs(cx2 - cx1);
+   var dy = Math.abs(cy2 - cy1);
+
+   // test if rects overlap
+   if (dx < (width1+width2) && dy < (height1+height2))
+       return true;
+   else
+   // else no collision
+       return false;
+
+}
+
+function sc_get_pos(obj)
+{
+   var pos = new Object();
+   var x = sc_get_posx(obj,false);
+   var y = sc_get_posy(obj,false);
+   pos.top = y;
+   pos.left = x;
+   pos.width = obj.offsetWidth;
+   pos.height = obj.offsetHeight;
+   return pos;
+}
+
+function sc_get_posx(obj1, use_style_info)
+{
+	var curleft = 0;
+	if (obj1.offsetParent)
+	{
+		while (obj1.offsetParent)
+		{
+			curleft += obj1.offsetLeft
+
+            if( use_style_info && obj1.style.left )
+            {
+                var left = obj1.style.left.match(/.*[0-9]/);
+                if( left[0] )
+                    curleft -= left[0];
+            }
+
+            obj1 = obj1.offsetParent;
+		}
+	}
+	else if (obj1.x)
+		curleft += obj1.x;
+
+	return curleft;
+}
+
+function sc_get_posy(obj1, use_style_info)
+{
+	var curtop = 0;
+	if (obj1.offsetParent)
+	{
+		while (obj1.offsetParent)
+		{
+			curtop += obj1.offsetTop
+
+            if( use_style_info && obj1.style.top )
+            {
+                var top = obj1.style.top.match(/.*[0-9]/);
+                if( top[0] )
+                    curtop -= top[0];
+            }
+
+            obj1 = obj1.offsetParent;
+		}
+	}
+	else if (obj1.y)
+		curtop += obj1.y;
+
+	return curtop;
+}
+
+function sc_attach(objName1, objName2, offsetx, offsety,side)
+{
+	var obj1 = document.getElementById(objName1);
+	var obj2 = document.getElementById(objName2);
+
+	var x = sc_get_posx(obj1,true);
+	var y = sc_get_posy(obj1,true);
+
+	if( side == "TOP" )
+	{
+		obj2.style.left = (x + offsetx + "px");
+		obj2.style.top = (y - (obj1.offsetHeight + offsety) + "px");
+	}
+    else if( side == "RIGHT" )
+	{
+		obj2.style.left = (x + obj1.offsetWidth + offsetx + "px");
+		obj2.style.top = (y + offsety + "px");
+	}
+	else if( side == "BELOW" )
+	{
+		obj2.style.left = (x + offsetx + "px");
+		obj2.style.top = (y + (obj1.offsetHeight + offsety) + "px");
+	}
+	else if( side == "LEFT" )
+	{
+		obj2.style.left = (x + (-(obj1.offsetWidth*2)) + offsetx + "px");
+		obj2.style.top = (y + offsety + "px");
+	}
+}
+
+function sc_delayed_reload(ticks)
+{
+    window.setTimeout(_reload, ticks);
+    function _reload()
+    {
+	window.location.reload(true);
+    }
+}
+
+function sc_get_data(id)
+{
+    var         data = sc_data_map[id];
+    if ( !data )
+    {
+        var     item = document.getElementById(id);
+
+        data = new Object();
+        sc_data_map[id] = data;
+
+        data.request_key = "";
+        data.request_in_progress = false;
+        data.display_method = 0;
+        data.display_method_arguments = null;
+        data.has_been_faded = false;
+        data.has_been_slid = false;
+        data.is_busy = false;
+        data.is_in_popup = false;
+        data.rotate_data = null;
+        data.on_show_inset_id = null;
+        data.on_show_inset_padding = null;
+        data.toggle_id = null;
+        data.wait_timeout = null;
+        data.style_display = item.style.display;
+        if ( data.style_display == "none" )
+        {
+            data.style_display = "";
+        }
+    }
+
+    return data;
+}
+
+function sc_change_visibility(item, data, visible_flag)
+{
+    if ( visible_flag )
+    {
+        item.style.display = data.style_display;
+    }
+    else
+    {
+        item.style.display = "none";
+    }
+}
+
+function sc_is_invisible(item)
+{
+    return (item.style.display == "none") || (item.style.visibility == "hidden");
+}
+
+function sc_reset(item, data)
+{
+    if ( sc_is_invisible(item) )
+    {
+        if ( data.has_been_slid )
+        {
+            item.style.left = 0;
+            item.style.top = 0;
+        }
+    }
+    else
+    {
+        if ( data.has_been_faded )
+        {
+            sc_set_opacity(item, 100);
+        }
+    }
+}
+
+function sc_get_top_left(item)
+{
+    var     top_left = new Object();
+    top_left.top = 0;
+    top_left.left = 0;
+    while ( item )
+    {
+        top_left.top += item.offsetTop;
+        top_left.left += item.offsetLeft;
+
+        item = item.offsetParent;
+    }
+
+    return top_left;
+}
+
+function sc_make_width_height(width, height, wait)
+{
+    var     o = new Object();
+    o.width = width;
+    o.height = height;
+    o.wait = wait;
+    return o;
+}
+
+function sc_make_zoom_data(zoom_id, zoom_point_left, zoom_point_top)
+{
+    var     o = new Object();
+    o.zoom_id = zoom_id;
+    o.zoom_point_left = zoom_point_left;
+    o.zoom_point_top = zoom_point_top;
+    return o;
+}
+
+function sc_make_zoom_data_alt(zoom_id, from_id)
+{
+    var     from_item = document.getElementById(from_id);
+    var     from_top_left = sc_get_top_left(from_item);
+    return sc_make_zoom_data(zoom_id, from_top_left.left, from_top_left.top);
+}
+
+function sc_set_toggle_id(id, toggle_id)
+{
+    var     data = sc_get_data(id);
+    data.toggle_id = toggle_id;
+}
+
+function sc_set_on_show_inset_id(id, inset_id)
+{
+    var     data = sc_get_data(id);
+    data.on_show_inset_id = inset_id;
+
+    var     inset_item = document.getElementById(inset_id);
+    data.on_show_inset_padding = inset_item.style.padding;
+}
+
+function sc_set_display_method(id, method, arguments)
+{
+    var     data = sc_get_data(id);
+
+    data.display_method = method;
+    data.display_method_arguments = arguments;
+}
+
+function sc_unescape(str)
+{
+	if ( !str || !str.length )
+	{
+		return "";
+	}
+
+	while ( true )
+	{
+		var i = str.indexOf('+');
+		if ( i < 0 )
+		{
+			break;
+		}
+		str = str.substring (0, i) + '%20' +
+ 		str.substring (i + 1, str.length);
+	}
+	return unescape(str);
+}
+
+function sc_parse_query_string(str)
+{
+	var	map = new Array();
+
+	var	items = str.split("&");
+	for ( var i = 0; i < items.length; ++i )
+	{
+		var	spec = items[i].split("=");
+		map[sc_unescape(spec[0])] = sc_unescape(spec[1]);
+	}
+
+	return map;
+}
+
+function sc_parse_structured(str)
+{
+	var		map = new Array();
+
+	do
+	{
+		var		index = str.indexOf("\r\n");
+		if ( index < 0 )
+		{
+			break;
+		}
+		var		separator = "\r\n" + str.substring(0, index) + "\r\n";
+
+		var		split_map = str.substring(index + 2).split(separator);
+		for ( var i = 0; i < split_map.length; ++i )
+		{
+			var		work_str = split_map[i];
+			index = work_str.indexOf("\r\n");
+			if ( index < 0 )
+			{
+				break;
+			}
+			var		field_name = work_str.substring(0, index);
+			var		value = work_str.substring(index + 2);
+
+			map[field_name] = value;
+		}
+	} while ( false );
+
+	return map;
+}
+
+function sc_set_loaded_data(name, structured_data)
+{
+	sc_ajax_data_tab[name] = sc_parse_structured(structured_data);
+	if ( sc_ajax_data_callback_tab[name] )
+	{
+		var		callback_tab = sc_ajax_data_callback_tab[name];
+		for ( var i = 0; i < callback_tab.length; ++i )
+		{
+			var		callback = callback_tab[i];
+			callback();
+		}
+		sc_ajax_data_callback_tab[name] = null;
+	}
+}
+
+function sc_get_redirect_url(xmlhttp)
+{
+	try
+	{
+		return xmlhttp.getResponseHeader(SC_REDIRECT_HEADER);
+	}
+	catch ( ignore )
+	{
+	}
+	return null;
+}
+
+function sc_load_via_request(name, url, post_data)
+{
+    var     xmlhttp = null;
+    var     is_post = post_data != undefined;
+
+	sc_ajax_data_tab[name] = null;
+
+	function _handler()
+    {
+        if ( xmlhttp && (xmlhttp.readyState == 4) )
+        {
+			var			redirect_url = sc_get_redirect_url(xmlhttp);
+			if ( redirect_url && (redirect_url.length > 0) )
+			{
+				window.location.href = redirect_url;
+			}
+			else
+			{
+				sc_set_loaded_data(name, xmlhttp.responseText);
+			}
+        }
+    }
+
+	xmlhttp = sc_make_xmlhttp(_handler, url, is_post, post_data);
+}
+
+function sc_make_xmlhttp(the_handler, url, is_post, post_data)
+{
+	var xmlhttp = window.XMLHttpRequest ? (new XMLHttpRequest()) : (new ActiveXObject("Msxml2.XMLHTTP.3.0"));
+	xmlhttp.onreadystatechange = the_handler;
+	xmlhttp.open(is_post ? "POST" : "GET", url, true);
+	xmlhttp.setRequestHeader(SC_HREF_HEADER, window.location.href);
+	if ( is_post )
+	{
+		xmlhttp.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
+	}
+	xmlhttp.send(is_post ? post_data : "");
+
+	return xmlhttp;
+}
+
+function sc_get_data_loaded_via_request(name, object_name)
+{
+	if ( sc_ajax_data_tab[name] )
+	{
+		var		value_map = sc_ajax_data_tab[name];
+		var		value = value_map[object_name];
+		return value ? value : "";
+	}
+	return "";
+}
+
+function sc_execute_when_loaded_data_arrives(name, object_name, callback)
+{
+	if ( sc_ajax_data_tab[name] )
+	{
+		callback();
+	}
+	else
+	{
+		if ( !sc_ajax_data_callback_tab[name] )
+		{
+			sc_ajax_data_callback_tab[name] = new Array();
+		}
+
+		var		callback_tab = sc_ajax_data_callback_tab[name];
+		callback_tab[callback_tab.length] = callback;
+	}
+}
+
+function sc_eval_when_loaded_data_arrives(name, object_name)
+{
+	function _callback()
+	{
+		eval(sc_get_data_loaded_via_request(name, object_name));
+	}
+	sc_execute_when_loaded_data_arrives(name, object_name, _callback);
+}
+
+function sc_change_when_loaded_data_arrives(id, name, object_name)
+{
+	function _callback()
+	{
+		sc_change(id, sc_get_data_loaded_via_request(name, object_name));
+	}
+	sc_execute_when_loaded_data_arrives(name, object_name, _callback);
+}
+
+function sc_force_change_via_request(id, url,post_data)
+{
+	sc_internal_change_via_request(id, url, post_data, true);
+}
+
+function sc_change_via_request(id, url, post_data)
+{
+	sc_internal_change_via_request(id, url, post_data, false);
+}
+
+function sc_internal_change_via_request(id, url, post_data, force_it)
+{
+    var     item = document.getElementById(id);
+    var     data = sc_get_data(id);
+    var     is_post = (post_data != undefined) && (post_data != null);
+
+    var     xmlhttp = null;
+
+    function _handler()
+    {
+        if ( xmlhttp && (xmlhttp.readyState == 4) )
+        {
+			data.request_in_progress = false;
+
+			var			redirect_url = sc_get_redirect_url(xmlhttp);
+			if ( redirect_url && (redirect_url.length > 0) )
+			{
+				window.location.href = redirect_url;
+			}
+			else
+			{
+				item.innerHTML = xmlhttp.responseText;
+
+				for ( var i = 0; /* no check */; ++i )
+				{
+					try
+					{
+						var		script = xmlhttp.getResponseHeader(SC_IMMEDIATE_SCRIPT_HEADER_PREFIX + i);
+						if ( !script || (script.length == 0) )
+						{
+							break;
+						}
+						eval(script);
+					}
+					catch ( e )
+					{
+						// ignore any errors
+						break;
+					}
+				}
+			}
+		}
+    }
+
+	var		ok_to_request = false;
+	if ( (data.request_key == url) && data.request_in_progress )
+	{
+		ok_to_request = false;
+	}
+	else if ( (data.request_key != url) || force_it )
+	{
+		ok_to_request = true;
+	}
+
+	if ( ok_to_request )
+    {
+        data.request_key = force_it ? null : url;
+		data.request_in_progress = true;
+
+		xmlhttp = sc_make_xmlhttp(_handler, url, is_post, post_data);
+    }
+}
+
+function sc_valueof(id)
+{
+	var     item = document.getElementById(id);
+	return item.value ? item.value : "";
+}
+
+function sc_connect_to(id, script, event_name)
+{
+	var     item = document.getElementById(id);
+
+	function _runner()
+	{
+		eval(script);
+	}
+
+	eval("item." + event_name + " = _runner");
+}
+
+function sc_change(id, new_content)
+{
+    var     item = document.getElementById(id);
+	item.innerHTML = new_content;
+}
+
+function sc_make_rollover_area(image_id, rollover_image_src)
+{
+    // pre-load rollover image
+    var     rollover_image = new Image();
+    rollover_image.src = rollover_image_src;
+
+    var     rollover_item = document.getElementById(image_id);
+    var     standard_image_src = rollover_item.src;
+
+    rollover_item.onmouseover = _mouseover;
+    rollover_item.onmouseout = _mouseout;
+
+    function _mouseover()
+    {
+        rollover_item.src = rollover_image_src;
+    }
+
+    function _mouseout()
+    {
+        rollover_item.src = standard_image_src;
+    }
+}
+
+function sc_make_popup_area(area_id, popup_id)
+{
+    sc_make_popup_area_with_delay(area_id, popup_id, 0);
+}
+
+function sc_make_popup_area_with_delay(area_id, popup_id, delay)
+{
+    var     area_item = document.getElementById(area_id);
+    var     popup_item = document.getElementById(popup_id);
+    var     popup_interval = null;
+    var     requested_visibility = false;
+
+    var     area_item_mouseover_proc = area_item.onmouseover;
+
+    if ( delay != 0 )
+    {
+        area_item.onmouseover = _delay_mouseover;
+    }
+    else
+    {
+        area_item.onmouseover = _mouseover;
+    }
+
+    area_item.onmouseout = _mouseout;
+    area_item.style.cursor = "pointer";
+
+    function _clear_interval()
+    {
+        if ( popup_interval != null )
+        {
+            window.clearInterval(popup_interval);
+            popup_interval = null;
+        }
+    }
+
+    function _close()
+    {
+        _clear_interval();
+        if ( !requested_visibility )
+        {
+            sc_hide_show(popup_id, false);
+            popup_item.onmouseover = null;
+            popup_item.onmouseout = null;
+        }
+    }
+
+    function _popup_mouseover()
+    {
+        _clear_interval();
+        if ( !requested_visibility )
+        {
+            requested_visibility = true;
+            sc_hide_show(popup_id, true);
+        }
+    }
+
+    function _popup_mouseout()
+    {
+        if ( requested_visibility )
+        {
+            requested_visibility = false;
+            _clear_interval();
+            popup_interval = window.setInterval(_close, 100);
+        }
+    }
+
+    function _delay_mouseover()
+    {
+        _clear_interval();
+        window.setTimeout(_mouseover, delay);
+    }
+
+    function _mouseover()
+    {
+        if ( area_item_mouseover_proc )
+        {
+            area_item_mouseover_proc();
+        }
+
+        if ( !requested_visibility )
+        {
+            popup_item.onmouseover = _popup_mouseover;
+            popup_item.onmouseout = _popup_mouseout;
+
+            requested_visibility = true;
+            sc_hide_show(popup_id, true);
+        }
+    }
+
+    function _mouseout()
+    {
+        _clear_interval();
+        if ( requested_visibility )
+        {
+            requested_visibility = false;
+            if ( SC_POPUP_CLOSE_TIME > 0 )
+            {
+                popup_interval = window.setInterval(_close, SC_POPUP_CLOSE_TIME);
+            }
+            else
+            {
+                popup_interval = window.setInterval(_close, 100);
+            }
+        }
+    }
+}
+
+function sc_rotate_allocate(id)
+{
+    var     data = sc_get_data(id);
+    if ( !data.rotate_data )
+    {
+        data.rotate_data = new Object();
+        data.rotate_data.entries = new Array();
+        data.rotate_data.index = -1;
+        data.rotate_data.is_playing = false;
+        data.rotate_data.current_nested_id = null;
+    }
+
+    return data;
+}
+
+function sc_rotate_add_content(id, transition_ticks, content)
+{
+    sc_rotate_add_internal(id, transition_ticks, null, null, content);
+}
+
+function sc_rotate_add_id(id, transition_ticks, source_id)
+{
+    sc_rotate_add_internal(id, transition_ticks, source_id, null, null);
+}
+
+function sc_rotate_add_nested_id(id, transition_ticks, nested_id)
+{
+    var     item = document.getElementById(nested_id);
+    var     data = sc_get_data(id);
+
+    sc_change_visibility(item, data, false);
+    item.style.position = "absolute";
+    item.style.top = 0;
+    item.style.left = 0;
+
+    var     parent = document.getElementById(id);
+    if ( parent.offsetHeight < item.offsetHeight )
+    {
+        parent.style.height = item.offsetHeight + "px";
+    }
+
+    sc_rotate_add_internal(id, transition_ticks, null, nested_id, null);
+}
+
+function sc_rotate_add_internal(id, transition_ticks, source_id, nested_id, content)
+{
+    var     data = sc_rotate_allocate(id);
+
+    var     entry_data = new Object();
+    entry_data.transition_ticks = transition_ticks;
+    entry_data.source_id = source_id;
+    entry_data.nested_id = nested_id;
+    entry_data.content = content;
+    entry_data.interval = null;
+
+    data.rotate_data.entries[data.rotate_data.entries.length] = entry_data;
+}
+
+function sc_rotate_change_content(id, index, transition_ticks, content)
+{
+    sc_rotate_change_internal(id, index, transition_ticks, null, content);
+}
+
+function sc_rotate_change_id(id, index, transition_ticks, source_id)
+{
+    sc_rotate_change_internal(id, index, transition_ticks, source_id, null);
+}
+
+function sc_rotate_change_internal(id, index, transition_ticks, source_id, content)
+{
+    var     data = sc_rotate_allocate(id);
+    if ( (index >= 0) && (index < data.rotate_data.entries.length) )
+    {
+        var     entry_data = data.rotate_data.entries[index];
+        entry_data.transition_ticks = transition_ticks;
+        entry_data.source_id = source_id;
+        entry_data.content = content;
+    }
+}
+
+function sc_rotate_transport(id, opcode)
+{
+    var     item = document.getElementById(id);
+    var     data = sc_rotate_allocate(id);
+
+    function _rotate_interval()
+    {
+        if ( data.rotate_data.interval )
+        {
+            window.clearInterval(data.rotate_data.interval);
+            data.rotate_data.interval = null;
+        }
+
+        if ( data.rotate_data.current_nested_id )
+        {
+            var     nested_item = document.getElementById(data.rotate_data.current_nested_id);
+            var     nested_data = sc_get_data(data.rotate_data.current_nested_id);
+            sc_change_visibility(nested_item, nested_data, false);
+            data.rotate_data.current_nested_id = null;
+        }
+
+        ++data.rotate_data.index;
+        if ( data.rotate_data.index >= data.rotate_data.entries.length )
+        {
+            data.rotate_data.index = 0;
+        }
+        else if ( data.rotate_data.index < 0 )
+        {
+            data.rotate_data.index = data.rotate_data.entries.length - 1;
+        }
+
+        if ( (data.rotate_data.index >= 0) && (data.rotate_data.index < data.rotate_data.entries.length) )
+        {
+            var     this_entry = data.rotate_data.entries[data.rotate_data.index];
+
+            if ( this_entry.nested_id )
+            {
+                var     nested_item = document.getElementById(this_entry.nested_id);
+                var     nested_data = sc_get_data(this_entry.nested_id);
+                sc_change_visibility(nested_item, nested_data, true);
+                data.rotate_data.current_nested_id = this_entry.nested_id;
+            }
+            else if ( this_entry.content )
+            {
+                item.innerHTML = this_entry.content;
+            }
+            else
+            {
+                var     source_item = document.getElementById(this_entry.source_id);
+                item.innerHTML = source_item.innerHTML;
+            }
+
+            if ( data.rotate_data.is_playing )
+            {
+                data.rotate_data.interval = window.setInterval(_rotate_interval, this_entry.transition_ticks);
+            }
+        }
+    }
+
+    sc_hide_show(id, true);
+
+    data.rotate_data.is_playing = (opcode == SC_TRANSPORT_PLAY);
+    if ( opcode == SC_TRANSPORT_STOP )
+    {
+        --data.rotate_data.index;
+    }
+    else if ( opcode == SC_TRANSPORT_PREVIOUS )
+    {
+        if ( data.rotate_data.index <= 0 )
+        {
+            data.rotate_data.index = data.rotate_data.entries.length - 2;
+        }
+        else
+        {
+            data.rotate_data.index -= 2;
+        }
+    }
+
+    _rotate_interval();
+}
+
+function sc_pre_show_hide(item, data, show_it)
+{
+    if ( data.toggle_id && show_it )
+    {
+        var     toggle_item = document.getElementById(data.toggle_id);
+        var     toggle_data = sc_get_data(data.toggle_id);
+        sc_change_visibility(toggle_item, toggle_data, false);
+    }
+}
+
+function sc_post_show_hide(item, data, show_it)
+{
+    sc_check_on_show_inset(item, data, show_it);
+    if ( data.toggle_id && !show_it )
+    {
+        var     toggle_item = document.getElementById(data.toggle_id);
+        var     toggle_data = sc_get_data(data.toggle_id);
+        sc_change_visibility(toggle_item, toggle_data, true);
+    }
+    data.is_busy = false;
+}
+
+function sc_check_on_show_inset(item, data, show_it)
+{
+    if ( data.on_show_inset_id )
+    {
+        var     inset_item = document.getElementById(data.on_show_inset_id);
+        if ( show_it )
+        {
+            inset_item.style.padding = "0px 0px 0px " + item.offsetWidth + "px";
+        }
+        else
+        {
+            inset_item.style.padding = data.on_show_inset_padding;
+        }
+    }
+}
+
+function sc_wait_hide_show(id, show_it, ticks)
+{
+    var     data = sc_get_data(id);
+    if ( data.wait_timeout )
+    {
+	return;
+    }
+
+    data.wait_timeout = window.setTimeout(_hide_show, ticks);
+    function _hide_show()
+    {
+	data.wait_timeout = null;
+
+        var     item = document.getElementById(id);
+        var     should_be_invisible = !show_it;
+        if ( sc_is_invisible(item) != should_be_invisible )
+        {
+            sc_hide_show(id, show_it);
+        }
+    }
+}
+
+function sc_force_hide_show(id,show_it)
+{
+    var     item = document.getElementById(id);
+    var     data = sc_get_data(id);
+
+    data.display_method = SC_DISPLAY_MODE_STANDARD;
+
+    sc_hide_show(id,show_it);
+
+}
+
+function sc_hide_show(id, show_it)
+{
+    var     item = document.getElementById(id);
+    var     data = sc_get_data(id);
+
+    if ( data.is_busy || data.is_in_popup )
+    {
+        return;
+    }
+
+    sc_hide_show_internal(id, item, data, show_it);
+}
+
+function sc_hide_show_internal(id, item, data, show_it)
+{
+    if ( data.wait_timeout )
+    {
+	window.clearTimeout(data.wait_timeout);
+	data.wait_timeout = null;
+    }
+
+    data.is_busy = true;
+
+    sc_pre_show_hide(item, data, show_it);
+
+    if( !show_it )
+        sc_show_selects(item);
+
+    switch ( data.display_method )
+    {
+        default:
+        case SC_DISPLAY_MODE_STANDARD:
+        {
+            sc_reset(item, data);
+            sc_change_visibility(item, data, show_it);
+            sc_post_show_hide(item, data, show_it);
+            break;
+        }
+
+        case SC_DISPLAY_MODE_FADE:
+        {
+            sc_fade(id, show_it);
+            break;
+        }
+
+        case SC_DISPLAY_MODE_SLIDE_DOWN:
+        case SC_DISPLAY_MODE_SLIDE_UP:
+        case SC_DISPLAY_MODE_SLIDE_LEFT:
+        case SC_DISPLAY_MODE_SLIDE_RIGHT:
+        {
+            if( data.display_method_arguments.wait && show_it)
+            {
+                sc_slide_wait(id, data.display_method_arguments.width, data.display_method_arguments.height, data.display_method, show_it,data.display_method_arguments.wait);
+            }
+            else
+                sc_slide(id, data.display_method_arguments.width, data.display_method_arguments.height, data.display_method, show_it);
+            break;
+        }
+
+        case SC_DISPLAY_MODE_ZOOM:
+        {
+            sc_zoom(id, data.display_method_arguments.zoom_id, data.display_method_arguments.zoom_point_left, data.display_method_arguments.zoom_point_top, show_it);
+            break;
+        }
+    }
+
+    if( show_it )
+        sc_hide_selects(item);
+}
+
+function sc_slide_wait(id, width, height, mode, show, wait)
+{
+    var     item = document.getElementById(id);
+    item.slide_wait_id = id;
+    item.slide_wait_width = width;
+    item.slide_wait_height = height;
+    item.slide_wait_mode = mode;
+    item.slide_wait_show = show;
+
+    setTimeout('sc_slide_wait_internal(\''+id+'\');',wait);
+}
+
+function sc_slide_wait_internal(id)
+{
+    var     item = document.getElementById(id);
+    sc_slide(item.slide_wait_id,item.slide_wait_width,item.slide_wait_height,item.slide_wait_mode,item.slide_wait_show);
+}
+
+function sc_slide(id, width, height, mode, show)
+{
+    var     item = document.getElementById(id);
+    var     data = sc_get_data(id);
+    sc_reset(item, data);
+
+    data.has_been_slid = true;
+
+    var	    current_top = 0;
+    var     current_left = 0;
+    switch ( mode )
+    {
+        case SC_DISPLAY_MODE_SLIDE_DOWN:
+        {
+            current_top = show ? (-1 * height) : 0;
+            break;
+        }
+
+        case SC_DISPLAY_MODE_SLIDE_UP:
+        {
+            current_top = show ? sc_window_height() : sc_window_height() - height;
+            current_left = 100;
+            break;
+        }
+
+        case SC_DISPLAY_MODE_SLIDE_RIGHT:
+        {
+            current_left = show ? (-1 * width) : 0;
+            break;
+        }
+
+        case SC_DISPLAY_MODE_SLIDE_LEFT:
+        {
+            current_left = show ? width : 0;
+            break;
+        }
+    }
+
+    var     interval = window.setInterval(_slide, SC_SLIDE_INTERVAL);
+	function _slide()
+	{
+        var         is_done = false;
+        switch ( mode )
+        {
+            case SC_DISPLAY_MODE_SLIDE_DOWN:
+            {
+                if ( show )
+                {
+                    current_top += SC_SLIDE_INCREMENT;
+                    if ( current_top >= 0 )
+                    {
+                        is_done = true;
+                    }
+                }
+                else
+                {
+                    current_top -= SC_SLIDE_INCREMENT;
+                    if ( current_top <= (-1 * height) )
+                    {
+                        is_done = true;
+                    }
+                }
+                break;
+            }
+
+            case SC_DISPLAY_MODE_SLIDE_UP:
+            {
+                if ( show )
+                {
+                    current_top -= SC_SLIDE_INCREMENT;
+                    if ( current_top <= (sc_window_height() - height)  )
+                    {
+                        is_done = true;
+                    }
+                }
+                else
+                {
+                    current_top += SC_SLIDE_INCREMENT;
+                    if ( current_top >= sc_window_height() )
+                    {
+                        is_done = true;
+                    }
+                }
+                break;
+            }
+
+            case SC_DISPLAY_MODE_SLIDE_RIGHT:
+            {
+                if ( show )
+                {
+                    current_left += SC_SLIDE_INCREMENT;
+                    if ( current_left >= 0 )
+                    {
+                        is_done = true;
+                    }
+                }
+                else
+                {
+                    current_left -= SC_SLIDE_INCREMENT;
+                    if ( current_left <= (-1 * width) )
+                    {
+                        is_done = true;
+                    }
+                }
+                break;
+            }
+
+            case SC_DISPLAY_MODE_SLIDE_LEFT:
+            {
+                if ( show )
+                {
+                    current_left -= SC_SLIDE_INCREMENT;
+                    if ( current_left <= 0 )
+                    {
+                        is_done = true;
+                    }
+                }
+                else
+                {
+                    current_left += SC_SLIDE_INCREMENT;
+                    if ( current_left >= width )
+                    {
+                        is_done = true;
+                    }
+                }
+                break;
+            }
+        }
+
+		if ( is_done )
+		{
+			window.clearInterval(interval);
+
+            if ( !show )
+            {
+                sc_change_visibility(item, data, false);
+            }
+
+	        if( mode != SC_DISPLAY_MODE_SLIDE_UP )
+	        {
+                item.style.top = "0px";
+                item.style.left = "0px";
+            }
+
+            sc_post_show_hide(item, data, show);
+        }
+        else
+        {
+            item.style.top = current_top + "px";
+            item.style.left = current_left + "px";
+            sc_change_visibility(item, data, true);
+        }
+    }
+}
+
+function sc_set_opacity(item, percent)
+{
+    percent = (percent >= 100) ? 100 : percent;
+	var     firefox_percent = (percent >= 100) ? 99.999 : percent;
+
+	// IE/Win
+    item.style.filter = "alpha(opacity=" + percent + ")";
+
+    // Safari<1.2, Konqueror
+	item.style.KHTMLOpacity = percent / 100;
+
+	// Older Mozilla and Firefox
+	item.style.MozOpacity = firefox_percent / 100;
+
+	// Safari 1.2, newer Firefox and Mozilla, CSS3
+    item.style.opacity = firefox_percent / 100;
+}
+
+function sc_fade(id, fade_in)
+{
+    var     item = document.getElementById(id);
+    var     data = sc_get_data(id);
+
+	var	    fade_rates = fade_in ? SC_FADE_IN_RATES : SC_FADE_OUT_RATES;
+	var	    rate = 0;
+	var	    percent = fade_in ? 0 : 100;
+    var     direction = fade_in ? 1 : -1;
+
+    sc_reset(item, data);
+
+    data.has_been_faded = true;
+
+    var     interval = window.setInterval(_fade, SC_FADE_INTERVAL);
+    function _fade()
+	{
+		percent += direction * fade_rates[rate];
+		if ( ++rate >= fade_rates.length )
+		{
+			rate = fade_rates.length - 1;
+		}
+
+        sc_set_opacity(item, percent);
+        sc_change_visibility(item, data, true);
+		if ( (percent >= 100) || (percent <= 0) )
+		{
+			if ( percent <= 0 )
+			{
+                sc_change_visibility(item, data, false);
+                sc_set_opacity(item, 100);
+			}
+			window.clearInterval(interval);
+            sc_post_show_hide(item, data, fade_in);
+		}
+	}
+}
+
+function sc_zoom(id, zoom_id, zoom_point_left, zoom_point_top, show_it)
+{
+    var     item = document.getElementById(id);
+    var     data = sc_get_data(id);
+    var     zoom_item = document.getElementById(zoom_id);
+    var     zoom_data = sc_get_data(zoom_id);
+
+    sc_reset(item, data);
+
+    var     item_top_left = sc_get_top_left(item);
+
+    var     zoom_left = show_it ? zoom_point_left : item_top_left.left;
+    var     zoom_top = show_it ? zoom_point_top : item_top_left.top;
+    var     zoom_width = show_it ? SC_ZOOM_MIN : item.offsetWidth;
+    var     zoom_height = show_it ? SC_ZOOM_MIN : item.offsetHeight;
+
+    var     zoom_end_left = show_it ? item_top_left.left : zoom_point_left;
+    var     zoom_end_top = show_it ? item_top_left.top : zoom_point_top;
+
+    var     number_of_steps = SC_ZOOM_STEP_QTY;
+
+    var     needed_width_change = item.offsetWidth - SC_ZOOM_MIN;
+    var     needed_height_change = item.offsetHeight - SC_ZOOM_MIN;
+    var     width_change = Math.max(Math.round(needed_width_change / SC_ZOOM_STEP_QTY), 1);
+    var     height_change = Math.max(Math.round(needed_height_change / SC_ZOOM_STEP_QTY), 1);
+
+    var     needed_left_change = Math.abs(zoom_point_left - item_top_left.left);
+    var     needed_top_change = Math.abs(zoom_point_top - item_top_left.top);
+    var     left_change = Math.max(Math.round(needed_left_change / SC_ZOOM_STEP_QTY), 1);
+    var     top_change = Math.max(Math.round(needed_top_change / SC_ZOOM_STEP_QTY), 1);
+    if ( show_it )
+    {
+        if ( zoom_point_left > item_top_left.left )
+        {
+            left_change = -1 * left_change;
+        }
+        if ( zoom_point_top > item_top_left.top )
+        {
+            top_change = -1 * top_change;
+        }
+    }
+    else
+    {
+        width_change = -1 * width_change;
+        height_change = -1 * height_change;
+        if ( item_top_left.left > zoom_point_left )
+        {
+            left_change = -1 * left_change;
+        }
+        if ( item_top_left.top > zoom_point_top )
+        {
+            top_change = -1 * top_change;
+        }
+    }
+
+    sc_change_visibility(item, data, false);
+
+    var         interval = window.setInterval(_zoom, 1);
+    function _zoom()
+    {
+        zoom_item.style.left = zoom_left + "px";
+        zoom_item.style.top = zoom_top + "px";
+        zoom_item.style.width = zoom_width + "px";
+        zoom_item.style.height = zoom_height + "px";
+        sc_change_visibility(zoom_item, zoom_data, true);
+
+        if ( number_of_steps-- <= 0 )
+        {
+            sc_change_visibility(zoom_item, zoom_data, false);
+            sc_change_visibility(item, data, show_it);
+
+            window.clearInterval(interval);
+            sc_post_show_hide(item, data, show_it);
+        }
+        else
+        {
+            zoom_left += left_change;
+            zoom_top += top_change;
+            zoom_width += width_change;
+            zoom_height += height_change;
+
+            if ( zoom_width > item.offsetWidth )
+            {
+                zoom_width = item.offsetWidth;
+            }
+            else if ( zoom_width < SC_ZOOM_MIN )
+            {
+                zoom_width = SC_ZOOM_MIN;
+            }
+            if ( zoom_height > item.offsetHeight )
+            {
+                zoom_height = item.offsetHeight;
+            }
+            else if ( zoom_height < SC_ZOOM_MIN )
+            {
+                zoom_height = SC_ZOOM_MIN;
+            }
+
+            if ( left_change < 0 )
+            {
+                if ( zoom_left < zoom_end_left )
+                {
+                    zoom_left = zoom_end_left;
+                }
+            }
+            else
+            {
+                if ( zoom_left > zoom_end_left )
+                {
+                    zoom_left = zoom_end_left;
+                }
+            }
+            if ( top_change < 0 )
+            {
+                if ( zoom_top < zoom_end_top )
+                {
+                    zoom_top = zoom_end_top;
+                }
+            }
+            else
+            {
+                if ( zoom_top > zoom_end_top )
+                {
+                    zoom_top = zoom_end_top;
+                }
+            }
+        }
+    }
+}
+
+function sc_window_height()
+{
+    return document.documentElement.clientHeight;
+}
+
+function sc_window_width()
+{
+    return document.documentElement.clientWidth;
+}
+
+function sc_match_height(resize_id, source_id)
+{
+    var     resize_item = document.getElementById(resize_id);
+    var     source_item = document.getElementById(source_id);
+
+    resize_item.style.height = source_item.offsetHeight + "px";
+}
+
+function sc_match_width(resize_id, source_id)
+{
+    var     resize_item = document.getElementById(resize_id);
+    var     source_item = document.getElementById(source_id);
+
+    resize_item.style.width = source_item.offsetWidth + "px";
+}
+
+function sc_is_ie()
+{
+    return navigator.platform == "Win32" && navigator.appName == "Microsoft Internet Explorer" && window.attachEvent;
+}
+
+function sc_is_ie_6_or_earlier()
+{
+    var rslt = navigator.appVersion.match(/MSIE (\d+\.\d+)/, '');
+    return sc_is_ie() && (rslt != null && Number(rslt[1]) < 7);
+}
+
+function sc_resize_window_content(width, height)
+{
+	var isXPSP2 = (navigator.userAgent.indexOf("NT 5.1")!=-1 && navigator.appMinorVersion.indexOf("SP2")!=-1);
+	if ( isXPSP2 )
+	{
+		height += 30;
+	}
+
+	if ( document.all )
+	{
+		width += 12;
+		height += 31;
+	}
+
+	window.resizeTo(width, height);
+}
+
+
+// --- popup stuff
+
+window.onunload = popup_close;
+
+var		popup_image_window = null;
+var		popup_scroll_window = new Array();
+var		popup_depth = 0;
+
+function popup_close()
+{
+    if ( popup_image_window != null )
+    {
+        if ( !popup_image_window.closed )
+        {
+			try
+			{
+				popup_image_window.close();
+				popup_image_window.opener = null;
+			}
+			catch ( ignore )
+			{
+			}
+        }
+    }
+    if ( popup_scroll_window != null )
+    {
+        for ( var i = 0; i < popup_scroll_window.length; i++ )
+        {
+            if ( !popup_scroll_window[i].closed )
+            {
+				try
+				{
+					popup_scroll_window[i].close();
+                	popup_scroll_window[i].opener = null;
+				}
+				catch ( ignore )
+				{
+				}
+			}
+        }
+    }
+    return false;
+}
+
+function popup_open_scroll(url, width, height, under)
+{
+	if ( popup_depth == 0 && window.opener != null )
+        popup_depth = window.opener.popup_depth + 1;
+    var		depth = popup_depth + 1;
+    var		popup_name;
+    var		index = popup_scroll_window.length;
+    if ( popup_depth > 0 )
+        popup_name = 'cc_scroll' + depth;
+    else
+        popup_name = 'cc_scroll';
+	var popup_window = window.open(url, popup_name, 'status=no,directories=no,location=no,toolbar=no,menubar=no,scrollbars=yes,resizable=yes,width=' + width + ',height=' + height);
+	if (typeof popup_window == "undefined" || popup_window == null) return;
+    popup_scroll_window[index] = popup_window;
+    window.name='the_opener';
+    if ( popup_scroll_window != null )
+    {
+        if ( under == 1 )
+        {
+            popup_scroll_window[index].blur();
+        }
+        else
+        {
+            popup_scroll_window[index].focus();
+        }
+    }
+    else
+    {
+        window.href = url;
+    }
+}
+
+function popup_blank_offset(url)
+{
+	popup_named_offset(url, "_blank");
+}
+
+function popup_named_offset(url, name)
+{
+	var		window_left = window.screenX ? window.screenX : window.screenLeft;
+	var		window_top = window.screenY ? window.screenY : window.screenTop;
+	var		window_width = window.innerWidth ? window.innerWidth : document.body.clientWidth;
+	var		window_height = window.innerHeight ? window.innerHeight : document.body.clientHeight;
+
+	var		w = window.open
+	(
+		url,
+		name,
+		'status=yes,directories=yes,location=yes,toolbar=yes,menubar=yes,scrollbars=yes,resizable=yes'
+			+ ',left=' + (window_left + SC_POPUP_WINDOW_LEFT_OFFSET)
+			+ ',top=' + (window_top + SC_POPUP_WINDOW_TOP_OFFSET)
+			+ ',width=' + (window_width - SC_POPUP_WINDOW_LEFT_OFFSET)
+			+ ',height=' + (window_height - SC_POPUP_WINDOW_TOP_OFFSET)
+	);
+	w.focus();
+}
+
+function popup_shipping(form_name, field_name, prod_options_form_name, prod_options_field_quantity)
+{
+	var prod_field = document.forms[form_name].elements[field_name];
+	if (prod_field == null)
+		return;
+	var prod_field_str = '';
+	var quantity_str = "1";
+	for(i=0;i < prod_field.length; ++i)
+	{
+		var i_field = prod_field.item(i);
+		var i_prod = prod_field.item(i).value;
+		if( i_field != null && i_field.checked )
+		{
+			prod_field_str = prod_field_str + i_prod;
+			if( i != prod_field.length -1 )
+				prod_field_str = prod_field_str + ',';
+		}
+		else
+		{
+			var m_field = prod_options_field_quantity + i_prod;
+			if (m_field != null)
+			{
+				var m_field_value = document.forms[form_name].elements[m_field].value;
+				if ( m_field_value != null)
+				{
+					quantity_str = m_field_value;
+					prod_field_str = prod_field_str + i_prod;
+					if( i != prod_field.length -1 )
+						prod_field_str = prod_field_str + ','
+				}
+			}
+		}
+	}
+    if (prod_field_str.length <=0 )
+        prod_field_str = prod_field.value;
+
+	var internal_url = document.forms[form_name].elements['internal_blank_url'].value.replace(/internal_prod_ids/gi,prod_field_str);
+
+    if( document.forms[prod_options_form_name] != null)
+    {
+        var quantity = document.forms[prod_options_form_name].elements[prod_options_field_quantity + prod_field_str];
+        if( quantity != null && quantity.value.length > 0)
+            quantity_str = quantity.value;
+    }
+	else if( document.forms[form_name] != null)
+	{
+	    var field_qty = document.forms[form_name].elements[prod_options_field_quantity + prod_field_str];
+	    if( field_qty != null && field_qty.value.length > 0)
+	        quantity_str = field_qty.value;
+	}
+
+	var field = document.forms[form_name].elements['field_shipping_calc_zip'];
+    if( field != null && field.value.length > 0)
+    {
+        internal_url = document.forms[form_name].elements['internal_zip_url'].value.replace(/internal_code/gi,field.value);
+        internal_url = internal_url.replace(/internal_prod_ids/gi,prod_field_str);
+    }
+
+    internal_url = internal_url.replace(/internal_quantity/gi,quantity_str);
+    popup_open_scroll(internal_url,600,400,0);
+	return false;
+}
+
+function popup_shipping_link(form_name, field_name, prod_options_form_name, prod_options_field_quantity)
+{
+    var prod_field = document.forms[form_name].elements[field_name];
+    var prod_field_str = '';
+    if( document.forms[form_name].elements['field_quantity'].value != '1' )
+    {
+        for(i=0;i < prod_field.length; ++i)
+        {
+            if( prod_field.item(i).checked )
+            {
+                prod_field_str = prod_field_str + prod_field.item(i).value;
+                if( i != prod_field.length -1 )
+                    prod_field_str = prod_field_str + ','
+            }
+        }
+    }
+    else
+        prod_field_str = prod_field.value;
+
+    var quantity_str = "1";
+    if( document.forms[form_name] != null)
+    {
+        var quantity = document.forms[form_name].elements[prod_options_field_quantity + prod_field_str];
+        if( quantity != null && quantity.value.length > 0)
+            quantity_str = quantity.value;
+    }
+
+    var internal_url = document.forms[form_name].elements['internal_link_url'].value.replace(/internal_prod_ids/gi,prod_field_str);
+    internal_url = internal_url.replace(/internal_quantity/gi,quantity_str);
+    popup_open_scroll(internal_url,600,400,0);
+    return false;
+}
+
+// --- end popup stuff
+
+function no_close_window(window_id, url, width, height)
+{
+    my_window = window.open(url, window_id,'status=no,directories=no,status=no,directories=no,location=no,toolbar=no,menubar=no,scrollbars=yes,resizable=yes,width=' + width + ',height=' +height);
+    my_window.focus();
+}
+
+function make_tag(tag_name)
+{
+    return '<' +
+    tag_name +
+    '>';
+}
+
+function popup_open_image(title, image, width, height, under, scrollable)
+{
+	var				url = "/op/img-" + sc_url_encode(image) + '-' + width + '-' + height + '-' + sc_url_encode(title);
+	popup_image_window = window.open(url, 'cc_image', 'status=no,directories=no,status=no,directories=no,location=no,toolbar=no,menubar=no,scrollbars='+scrollable+',resizable=yes,width=' + width + ',height=' + height);
+    if ( under == 1 )
+    {
+        popup_image_window.blur();
+    }
+    else
+    {
+        popup_image_window.focus();
+    }
+}
+
+function popup_open_zap_image(image, width, height)
+{
+    popup_window_javascript =
+        '<' + 'script language="javascript">		\r\n' +
+        '<!--										\r\n' +
+        '	function size_window(width, height)		\r\n' +
+        '	{										\r\n' +
+        '       	var isXPSP2 = (navigator.userAgent.indexOf("NT 5.1")!=-1 && navigator.appMinorVersion.indexOf("SP2")!=-1); \r\n' +
+	'		if ( isXPSP2 )					    \r\n' +
+	'			height += 30;					\r\n' +
+        '											\r\n' +
+        '		if ( document.all )					\r\n' +
+        '		{									\r\n' +
+        '			width += 12;					\r\n' +
+        '			height += 31;					\r\n' +
+        '		}									\r\n' +
+        '											\r\n' +
+        '		window.resizeTo(width, height);		\r\n' +
+        '	}										\r\n' +
+        '/' + '/' + '-' + '-' + '>					\r\n' +
+        '<' + '/script>								\r\n';
+
+    document_data =
+        '<body bgcolor="#FFFFFF" marginwidth="0" marginheight="0" topmargin="0" leftmargin="0" onload="size_window('
+        + width
+        + ','
+        + height
+        + ')">'
+        + '<table cellspacing="0" width="100%" cellpadding="0" border="0"><tr><td align="center"> '
+        + '<object classid=\"clsid:D27CDB6E-AE6D-11cf-96B8-444553540000 '
+                + 'codebase=\"http://download.macromedia.com/pub/shockwave/cabs/flash/swflash.cab#version=4,0,2,0 '
+                + 'width="500" height="500" border="0" vspace="0" hspace="0" name="zap"> '
+                + '<param name="movie" value="http://sdc.liquifire.com/zap/ZAP-500x500.swf?server=sdc.liquifire.com&uri=sdc&chain=source=url['+image+']|sink=format[jpeg]&quality=80&forcecache=true"> '
+                + '<param name="quality" value="high"> '
+                + '<embed src=\"http://sdc.liquifire.com/zap/ZAP-500x500.swf?server=sdc.liquifire.com&uri=sdc&chain=source=url['+image+']|sink=format[jpeg]&quality=80&forcecache=true" '
+                + 'quality="high" bgcolor="#FFFFFF" '
+                + 'pluginspage="http://www.macromedia.com/shockwave/download/index.cgi?P1_Prod_Version=ShockwaveFlash" '
+                + 'type="application/x-shockwave-flash" '
+                + 'width="500" height="500" '
+                + 'border="0" name="zap" vspace="0" hspace="0"> '
+                + '</embed>'
+        + '</object>'
+        + '</td></tr></table>'
+        + '</body></html>';
+
+    popup_image_window = window.open('', 'cc_image', 'status=no,directories=no,status=no,directories=no,location=no,toolbar=no,menubar=no,scrollbars=no,resizable=yes,width=' + width + ',height=' + height);
+    popup_image_window.document.writeln(make_tag('html') + make_tag('head') + make_tag('title') + 'image' + make_tag('/title') + make_tag('/head'));
+    popup_image_window.document.writeln(popup_window_javascript);
+    popup_image_window.document.writeln(document_data);
+    popup_image_window.document.close();
+}
+
+
+function set_domain(domain_str)
+{
+    // Don't do this for IE.
+    if ( !document.all )
+    {
+        document.domain = domain_str;
+    }
+}
+
+function load_from_popup(url)
+{
+    window.location=url;
+}
+
+function load_opener(url)
+{
+    if ( document.all )
+    {
+        window.open(url,'the_opener');
+    }
+    else
+    {
+        window.opener.load_from_popup(url);
+    }
+    window.close();
+}
+
+// text submit stuff
+
+function ccts_clear_all_fields(the_field, the_form)
+{
+    the_elements = the_form.elements;
+    for ( j = 0; j < the_elements.length; ++j )
+    {
+        this_element = the_elements[j];
+        if ( this_element != the_field )
+        {
+            this_element_name = this_element.name;
+            if ( this_element_name.length > 6 )
+            {
+                this_element_base_name = this_element_name.substring(0, 6);
+                if ( this_element_base_name == "_ccts_" )
+                {
+                    this_element.value = "";
+                }
+            }
+        }
+    }
+    return true;
+}
+
+function ccts_text_submit(the_field)
+{
+    the_form = the_field.form;
+    ccts_clear_all_fields(the_field, the_form);
+
+    the_field.value = the_field.name;
+    the_form.submit();
+}
+
+// phone format stuff
+
+function cc_format_phone(current_value,format_value)
+{
+    var hash_size       = charCount(format_value,'#');
+    var format_size     = format_value.length;
+    var filtered_value  = cc_filter_value(current_value,hash_size);
+    var filtered_size   = filtered_value.length;
+    var output          ='';
+    var written         = 0;
+
+    if( filtered_value.length == 0)
+        return '';
+
+    for( i=0; i < format_size; ++i)
+    {
+        var c = format_value.charAt(i);
+        if( c != '#')
+        {
+            output += c;
+            continue;
+        }
+
+        if( written >= filtered_size )
+        {
+            return output;
+        }
+
+        output += filtered_value.charAt(written);
+        written++;
+    }
+
+    if( filtered_size > written )
+    {
+        return output + filtered_value.substring(written,filtered_size);
+    }
+
+    return output;
+}
+
+function cc_filter_value(value,end)
+{
+    var size = value.length;
+    var output = '';
+    for( i=0; i < size; ++i)
+    {
+        var c = value.charAt(i);
+        if( output.length >= end ||
+            isChar(c,"1234567890") ||
+            isChar(c.toLowerCase(),"abcdefghijklmnopqrstuvwxyz"))
+        {
+            output += c;
+        }
+    }
+
+    return output;
+}
+
+function isChar(num,chars)
+{
+    if (num.length>1){return false;}
+    if (chars.indexOf(num)!=-1){return true;}
+        return false;
+}
+
+function charCount(format,chars)
+{
+    var size = format.length;
+    var cnt = 0;
+    for( i=0; i < size && i < size; ++i)
+    {
+        var c = format.charAt(i);
+        if( isChar(c,chars))
+        {
+            cnt++;
+        }
+    }
+
+    return cnt;
+}
+
+// don't go stuff....
+
+var sc_dg_cleared = false;
+
+function sc_dg_set()
+{
+	sc_dg_cleared = true;
+}
+
+function sc_dg_check()
+{
+	if ( !sc_db_cleared )
+	{
+		window.alert("If you go away...");
+	}
+}
+
+function sc_init_dg()
+{
+	if ( window.onunload )
+	{
+		window.onunload = window.onunload + ";sc_dg_check();";
+	}
+	else
+	{
+		window.onunload = "sc_dg_check();";
+	}
+
+	var 	anchors = document.getElementsByTagName("A");
+	for ( var i = 0; i < anchors.length; i++ )
+	{
+		if ( anchors[i].onclick )
+		{
+			anchors[i].onclick = anchors[i].onclick + ";sc_dg_set();";
+		}
+		else
+		{
+			anchors[i].onclick = "sc_dg_set();";
+		}
+	}
+
+	var 	forms = document.getElementsByTagName("FORM");
+	for ( var i = 0; i < forms.length; i++ )
+	{
+		if ( forms[i].onsubmit )
+		{
+			forms[i].onsubmit = forms[i].onsubmit + ";sc_dg_set();";
+		}
+		else
+		{
+			forms[i].onsubmit = "sc_dg_set();";
+		}
+	}
+}
+
+// ..................Transparent PNG fix for IE
+if (sc_is_ie())
+{
+	window.attachEvent("onload", fnLoadPngs);
+}
+
+function fnLoadPngs() {
+	var rslt = navigator.appVersion.match(/MSIE (\d+\.\d+)/, '');
+	var itsAllGood = (rslt != null && Number(rslt[1]) >= 5.5);
+	for (var i = document.all.length - 1, obj = null; (obj = document.all[i]); i--) {
+		if (itsAllGood && obj.currentStyle.backgroundImage.match(/\.png/i) != null) {
+			this.fnFixPng(obj);
+			obj.attachEvent("onpropertychange", this.fnPropertyChanged);
+		}
+	}
+}
+
+function fnPropertyChanged() {
+	if (window.event.propertyName == "style.backgroundImage") {
+		var el = window.event.srcElement;
+		if (!el.currentStyle.backgroundImage.match(/x\.gif/i)) {
+			var bg	= el.currentStyle.backgroundImage;
+			var src = bg.substring(5,bg.length-2);
+			el.filters.item(0).src = src;
+			el.style.backgroundImage = "url(/ps.gif)";
+		}
+	}
+}
+
+function fnFixPng(obj) {
+	var bg	= obj.currentStyle.backgroundImage;
+	var src = bg.substring(5,bg.length-2);
+	obj.style.filter = "progid:DXImageTransform.Microsoft.AlphaImageLoader(src='" + src + "', sizingMethod='scale')";
+	obj.style.backgroundImage = "url(/ps.gif)";
+}
+
+
+function select_country(the_form,prefix)
+{
+    var    	selected_index = the_form[prefix +'.field_state'].selectedIndex;
+    var    	country_index = state_to_country_tab[selected_index];
+    if ( country_index != -1 )
+    {
+        the_form[prefix +'.field_country'].selectedIndex = country_index;
+    }
+
+    var     region_element = the_form[prefix +'.field_region']
+    if( region_element )
+    {
+        region_element.readOnly = selected_index != 0;
+        region_element.disabled = selected_index != 0;
+        if( region_element.readOnly )
+            region_element.value = '';
+    }
+}
+
+function select_state(the_form, prefix)
+{
+    var    	state_index = country_to_state_tab[the_form[prefix +'.field_country'].selectedIndex];
+
+
+    the_form[prefix +'.field_state'].selectedIndex = state_index;
+
+    var     region_element = the_form[prefix +'.field_region']
+    if( region_element )
+    {
+        region_element.readOnly = state_index != 0;
+        region_element.disabled = state_index != 0;
+        if( region_element.readOnly )
+            region_element.value = '';
+    }
+}
+
+function region_check_for_change(the_form, prefix)
+{
+    if ( the_form[prefix +'.field_region'].value.length != 0 )
+    {
+        the_form[prefix +'.field_state'].selectedIndex = 0;
+    }
+}
+
+function cc_checkout_single_new_user_ship_calc(zip_id,state_id,country_id,javascript_eval_str)
+{
+    var zip = document.getElementById(zip_id);
+    var state = document.getElementById(state_id);
+
+    if( state.selectedIndex != 0 && zip.value.length > 0 )
+    {
+        eval(javascript_eval_str);
+    }
+}
+
+function cc_checkout_single_new_user_add_payment(account_number_id,javascript_eval_str)
+{
+    var account_number = document.getElementById(account_number_id);
+
+    if( account_number && account_number.value.length > 0 )
+    {
+        eval(javascript_eval_str);
+    }
+}
+
+function sc_hide_class_pair(className, childClassName)
+{
+    var divs = document.getElementsByTagName("div");
+    for (var i in divs)
+    {
+        var div = divs[i];
+
+        if( div.className && div.className.toLowerCase() == className.toLowerCase() )
+        {
+            for( var k in div.childNodes )
+            {
+                var child = div.childNodes[k];
+
+                if( child.className && child.className.toLowerCase() == childClassName.toLowerCase() )
+                {
+                    sc_force_hide_show(child.id,false);
+                }
+            }
+        }
+    }
+}
+
+function sc_intra_page_scroll(anchor_name)
+{
+	window.location.href = "#" + anchor_name;
+}
+
+function sc_set_focus(form_id, field_id)
+{
+    var form = document.forms[form_id];
+    if( form )
+    {
+        var field = form.elements[field_id];
+        if( field )
+            field.focus();
+    }
+}
+
+function sc_submit_form(form_id)
+{
+    var form = document.getElementById(form_id);
+
+    if( !form )
+    {
+        // May have given the form a name and not an ID
+        var forms = document.getElementsByTagName('form');
+        for (var i in forms)
+        {
+            var local_form = forms[i];
+            if( local_form.name && local_form.name == form_id )
+            {
+                form = local_form;
+                break;
+            }
+        }
+    }
+
+    if( form ) form.submit();
+}

@@ -1,0 +1,451 @@
+/******************************************
+			Tag Classes
+******************************************/
+body { 	margin: 10px 0px 0px; }
+p { 	margin-top: 0px; 	margin-bottom: 12px;  }
+ul {
+	margin-left: 0px;
+	padding-left: 20px;
+	margin-top: 0px;
+	margin-bottom: 8px;
+	
+}
+
+ol {
+	margin-left: 0px;
+	padding-left: 15px;
+	margin-top: 0px;
+	margin-bottom: 8px;
+}
+
+li {  margin-top: 0px;  margin-bottom: 5px;  }
+
+hr {
+	border-top: 1px solid #ccc;
+	border-bottom: 1px none;
+	border-right: 1px none;
+	border-left: 1px none;
+	background-color: #fff;
+   height: 1px;
+}
+/*td { vertical-align: top; } This style is buggy and may not work properly. */
+
+/******************************************
+			Header Classes
+******************************************/
+.template-display-title {
+	color: #e9e9f5;
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 14px;
+	margin-top: 0px;
+	padding-top: 6px;
+	font-weight: bold;
+	background-color: #1e1e7c;
+	padding-left: 4px;
+	margin-bottom: 0px;
+	
+}
+
+.template-post-date {
+	color:#999999;
+	padding-left:4px;
+}
+
+.template-catsnap-td {
+	background-color:#f1f1dc; padding-right:120px;
+}
+
+.template-artist-td {
+	background-color:#cccccc;
+}
+
+
+.template-content-type-title {
+	font-family:Verdana, Arial, Helvetica, sans-serif;
+	font-size:13px;
+	font-weight:bold;
+	color:#1e1e7c;
+}
+
+.template-catsnap-infobar {
+	background-color:#e9e9ea;
+	color:#1e1e7c;
+	font-family:Arial, Helvetica, sans-serif;
+	font-size:11px;
+	padding-left:6px;
+	padding-right:14px;
+	margin-top:7px;
+}
+
+.template-catsnap-td-news {
+	background-color:#f1f1dc;
+}
+.template-catsnap-td-new {
+	background-color:#e9e9ea;
+}
+
+h1 {
+	color: #e9e9f5;
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 14px;
+	margin-top: 0px;
+	padding-top: 6px;
+	font-weight: bold;
+	background-color: #1e1e7c;
+	padding-left: 4px;
+	margin-bottom: 0px;
+}
+h2 {
+	color: #5B5B5B;
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: 12px;
+	margin-top: 6px;
+	margin-bottom: 2px;
+	padding:0px;
+	padding-left:3px;
+}
+h3 {
+	color: #527143;
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 12px;
+	font-weight:300;
+	margin: 0px;
+	padding: 0px;
+	padding-left:3px;
+}
+
+
+/******************************************
+			Background Classes
+******************************************/
+.bg-black { background-color: #000000; }
+.bg-gray3 { background-color: #333333; }
+.bg-gray2 {	background-color: #666666; }
+.bg-gray1 { background-color: #eaeaea; }
+.bg-white { background-color: #FFFFFF; }
+.bg-blue1 { background-color: #1e1e7c; }
+.bg-green1 { background-color: #e9e9ea; }
+.bg-green2 { background-color: #f1f1dc; }
+
+.bg-x-green {
+	background-image: url(../../images/bg-x.gif);
+	background-color: #f1f1dc;
+}
+.bg-m1-dbl-lines {
+	background-image:	url(../../images/m1_dbl_lines.gif);
+	background-repeat: repeat-x;
+}
+.bg-dots1 { background-image:url(../../images/bg-dots1.gif); background-repeat: repeat-x; }
+
+/******************************************
+			Text Classes
+******************************************/
+.txt-small-lt {
+	color: #f0f0f0;
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 11px;
+}
+.txt-small-blue1 {
+	color: #000066;
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 11px;
+}
+.txt-small-blue2 {
+	color: #191747;
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 11px;
+}
+
+
+/******************************************
+			Menu Classes   
+			
+		.m1 = Menu Level 1, 
+		.m2 = menu level 2, 
+		etc.
+		the ".m" classes should control everything but "color" and "text-decoration" styles 
+		which should be controlled by link classes, ie: ".a-m1"
+
+******************************************/
+.m1 {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 11px;
+	padding: 10px 0px 5px 10px;
+	background-color: #89c42c;
+}
+.m2 {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 11px;
+	padding: 0px;
+	margin: 0px;
+}
+
+.m3 {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 11px;
+	padding: 0px;
+	margin: 0px;
+}
+.m-article {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 11px;
+	color: #1e1e7c;
+	text-align: right;
+	padding-right: 20px;
+	text-transform: uppercase;
+}
+
+.m-func {        /* function menu formatting */
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 11px;
+	color: #eeeeee;
+	text-align: right;
+	padding-right: 20px;
+}
+
+.m-urhere {  /*  class for a "You Are Here" indicator */
+	padding-top: 5px;
+	padding-left: 4px;
+	padding-right: 4px;
+}
+
+/******************************************
+			Link Classes
+******************************************/
+a:link { text-decoration: none; color: #1e1e7c; }
+a:visited { text-decoration: none; color: #095BA6; }
+a:active { text-decoration: none; color: #095BA6;}
+a:hover{ text-decoration: underline;  color: #095BA6; }
+
+/* the "a-lt-span" class is used as a span withing the links so that the color of the underline is different from the text */
+.a-lt-span { color: #f0f0f0; } 
+a.a-lt:link { text-decoration: none; color: #969696; }
+a.a-lt:visited { text-decoration: none; color: #969696; }
+a.a-lt:active { text-decoration: none; color: #969696;}
+a.a-lt:hover{ text-decoration: underline;  color: #969696; }
+
+a.a-template-article-title:link { text-decoration: none; color: #1e1e7c; font-family:Arial, Helvetica, sans-serif; font-size:12px; }
+a.a-template-article-title:visited { text-decoration:none;  color: #1e1e7c; font-family:Arial, Helvetica, sans-serif; font-size:12px; }
+a.a-template-article-title:active { text-decoration:none; color: #1e1e7c; font-family:Arial, Helvetica, sans-serif; font-size:12px;}
+a.a-template-article-title:hover{ text-decoration: underline; color: #1e1e7c; font-family:Arial, Helvetica, sans-serif; font-size:12px; }
+
+a.a-template-article-title-feat:link { text-decoration: none; color: #1e1e7c; font-family:Arial, Helvetica, sans-serif; font-size:15px; }
+a.a-template-article-title-feat:visited { text-decoration:none;  color: #1e1e7c; font-family:Arial, Helvetica, sans-serif; font-size:15px; }
+a.a-template-article-title-feat:active { text-decoration:none; color: #1e1e7c; font-family:Arial, Helvetica, sans-serif; font-size:15px;}
+a.a-template-article-title-feat:hover{ text-decoration: underline; color: #1e1e7c; font-family:Arial, Helvetica, sans-serif; font-size:15px; }
+
+a.a-template-article-title-feat2:link { text-decoration: none; color: #1e1e7c; font-family:Arial, Helvetica, sans-serif; font-size:13px; }
+a.a-template-article-title-feat2:visited { text-decoration:none;  color: #1e1e7c; font-family:Arial, Helvetica, sans-serif; font-size:13px; }
+a.a-template-article-title-feat2:active { text-decoration:none; color: #1e1e7c; font-family:Arial, Helvetica, sans-serif; font-size:13px;}
+a.a-template-article-title-feat2:hover{ text-decoration: underline; color: #1e1e7c; font-family:Arial, Helvetica, sans-serif; font-size:13px; }
+
+.a-blue1-span { color: #000066; } 
+a.a-blue1:link { text-decoration: none; color: #969696; }
+a.a-blue1:visited { text-decoration: none; color: #969696; }
+a.a-blue1:active { text-decoration: none; color: #969696;}
+a.a-blue1:hover{ text-decoration: underline;  color: #969696; }
+
+.a-blue2-span { color: #191747; } 
+a.a-blue2:link { text-decoration: none; color: #969696; }
+a.a-blue2:visited { text-decoration: none; color: #969696; }
+a.a-blue2:active { text-decoration: none; color: #969696;}
+a.a-blue2:hover{ text-decoration: underline;  color: #969696; }
+
+
+a.a-m-article:link { text-decoration: none; color: #1e1e7c; }
+a.a-m-article:visited { text-decoration: none; color: #1e1e7c; }
+a.a-m-article:active { text-decoration: none; color: #1e1e7c;}
+a.a-m-article:hover{ text-decoration: underline;  color: #1e1e7c; }
+
+a.a-func:link { text-decoration: none; color: #eee; }  /* function menu colors and underline info */
+a.a-func:visited { text-decoration: none; color: #eee; }
+a.a-func:active { text-decoration: none; color: #eee; }
+a.a-func:hover{ text-decoration: underline; color: #eee; }
+
+
+/******************************************
+			Page Layout Class
+******************************************/
+.pagebody {
+	margin-left: 0px;
+	margin-right: 14px;
+	color: #333333;
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 12px;
+	margin-top: 0px;
+}
+
+/******************************************
+			Homepage Classes
+******************************************/
+.pad-home1 {
+	padding-right: 35px;
+}
+/******************************************
+			Footer Classes
+******************************************/
+.footer {
+	font-family: Arial, Helvetica, sans-serif;
+	color: #8b8b8b;
+	font-size: 11px;
+	padding-top: 9px;
+	padding-right: 20px;
+	padding-bottom: 9px;
+	padding-left: 0px;
+	text-align: right;
+}
+
+a.a-foot:link { text-decoration: underline; color: #666666; }
+a.a-foot:visited { text-decoration: underline;  color: #666666; }
+a.a-foot:active { text-decoration: underline; color: #666666; }
+a.a-foot:hover{ text-decoration: underline;  color: #333333; }
+
+/******************************************
+			Search Form Classes
+******************************************/
+#search{
+ /* this is the div that the search form is in */
+ 	margin-left: 15px;
+	margin-top: 20px;
+	margin-bottom: 30px;
+ }
+#search form{
+  /* this is the html tag */
+ }
+.form-searchbox {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 11px;
+	color: #666666;
+	width: 100px;
+	border: none;
+	height: 16px;
+	vertical-align: baseline;
+}
+.form-searchsubmit {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 11px;
+	color: #ffffff;
+	background-color: #666666;
+	border: 1px solid #717171;
+	height: 19px;
+	width: 50px;
+	margin-right: 20px;
+	text-transform: uppercase;
+	vertical-align:middle;
+	vertical-align: baseline;
+}
+/******************************************
+			Misc Classes
+******************************************/
+.ul-nopad {
+	margin: 0px;
+}
+.ul-lt {
+	margin-left: 0px;
+	padding-left: 15px;
+	margin-top: 0px;
+	margin-bottom: 8px;
+	color: #F0f0f0;
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 11px;
+	list-style-image: url(../../images/bullet-lt.gif);
+}
+.ul-blue1 {
+	margin-left: 0px;
+	padding-left: 15px;
+	margin-top: 0px;
+	margin-bottom: 8px;
+	color: #000066;
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 11px;
+	list-style-image: url(../../images/bullet-blue.gif);
+}
+
+.ul-blue2 {
+	margin-left: 0px;
+	padding-left: 15px;
+	margin-top: 0px;
+	margin-bottom: 8px;
+	color: #000066;
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 11px;
+	list-style-image: url(../../images/bullet-blue.gif);
+}
+
+.no-margin {
+	margin: 0px;
+}
+.pad-logo {
+	margin: 17px 29px 10px 28px;
+}
+.pad-leaderboard {
+	margin: 0px 7px 0px 0px;
+}
+.author-info {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 11px;
+	color: #d4d4d4;
+	background-color: #1e1e7c;
+	padding-top: 6px;
+	padding-right: 6px;
+	padding-bottom: 6px;
+	padding-left: 5px;
+}
+.article-author {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 12px;
+	color: #527143;
+	margin-left: 4px;
+}
+.article-date {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 11px;
+	color: #a9a9a9;
+	margin-bottom: 10px;
+	margin-left: 4px;
+}
+.bodytext1 {
+	width:616px;
+	margin-left: 4px;
+	color: #293822;
+}
+.pad-box1 {
+	padding-top: 15px;
+	padding-right: 15px;
+	padding-bottom: 15px;
+	padding-left: 7px;
+}
+.article-type-blue {
+	font-size: 10px;
+	background-color: #2e2e4e;
+	padding: 0px 2px;
+	margin-right: 3px;
+	text-transform: uppercase;
+}
+.article-type-green {
+	font-size: 10px;
+	background-color: #9aae91;
+	padding: 0px 2px;
+	margin-right: 3px;
+	text-transform: uppercase;
+}
+.img-right {
+	margin-left: 4px;
+	border: 1px solid #1e1e7c;
+}
+.img-left {
+	margin-right: 5px;
+	border: 1px solid #1e1e7c;
+}
+.template-content-type {
+	font-family:Arial, Helvetica, sans-serif;
+	font-size:11px;
+	font-weight:bold;
+	color:#171643;	
+}
+
+
+.error{
+	color:#FF0000;
+	text-transform:uppercase;
+}

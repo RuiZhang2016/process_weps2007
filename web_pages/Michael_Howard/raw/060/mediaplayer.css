@@ -1,0 +1,227 @@
+#playerContainer
+{
+	width:305px;
+	height:295px;
+	float:left;
+	background-image:url(../images/mediaplayer/container_bgd.jpg);
+	background-repeat:no-repeat;
+}
+#playerContainerClear
+{
+	width:300px;
+	height:289px;
+	float:left;	
+}
+#playerContainer input, #playerContainerClear input
+{
+	width:190px;
+}
+#playerContainer img, #playerContainerClear img
+{
+	cursor:hand;
+}
+
+#playerContainer #smudge, #playerContainerClear #smudge
+{
+	position:relative;
+}
+
+#playerContainer #savedClips, #playerContainerClear #savedClips
+{
+	border:solid 1px #000;	
+	background-image: url(../images/mediaplayer/savedClips_bgd.jpg);
+	position:absolute;	
+	left:300px;
+	z-index:11;
+	width:245px;
+	height:288px;
+	display:none;
+}
+#playerContainer #savedClipsForm, #playerContainerClear #savedClipsForm
+{
+	margin:10px;
+	margin-top:12px;
+	height:201px;
+	padding:6px;
+	overflow:auto;
+	
+    scrollbar-arrow-color:#fac501;
+	scrollbar-base-color:#6b695e;	
+}
+#playerContainer #savedClipsControls, #playerContainerClear #savedClipsControls
+{
+	margin-top:30px;
+	margin-right:8px;
+	text-align:right;
+	height:44px;	
+}
+
+
+#playerContainer #playerPreview, #clipPreview, #playerContainerClear #playerPreview, #clipPreview
+{
+	position:absolute;
+	display: block;
+	left:0px;
+	z-index:10;
+	border:solid 1px #000;
+	border-bottom-width:0px;
+}
+#playerContainer #playerPreview img, #playerContainerClear #playerPreview img
+{
+	width:298px;
+	height:224px;	
+}
+#clipPreview
+{
+	color:White;	
+	width:300px;
+	height:226px;
+	background-image:url(../images/mediaplayer/preview_clip.jpg);
+	padding-top:60px;
+	padding-left:80px;
+	line-height:18px;
+}
+#clipPreview a
+{
+	color:White;
+}
+#clipPreview a:hover
+{
+	color:#a55506;
+}
+#clipPreview #back
+{
+	padding-top:35px;
+}
+#playerContainer #ScaleBarPanel, #playerContainerClear #ScaleBarPanel
+{	
+	width:300px;	
+	height:28px;
+	padding-top:5px;
+	padding-left:7px;	
+	background:#68665b url(../images/mediaplayer/scalepanel_bgd.jpg);
+	border:solid 1px #000;
+}
+#playerContainer #ScaleBar, #playerContainerClear #ScaleBar
+{
+	line-height: 8px; /*needed for IE/win*/
+	font-size: 8px; /*needed for IE/win*/
+	height: 8px;	
+	width:284px;	
+	background-Image:url(../images/mediaplayer/scale_bgd.jpg);
+	background-Repeat:no-repeat;
+	background-Position:-284px;
+	cursor:hand;
+}
+#playerContainer #ControlPanel, #playerContainerClear #ControlPanel
+{	
+	width:300px;	
+	height:36px;
+	background:#68665b url(../images/mediaplayer/controlpanel_bgd.jpg);	
+	border:solid 1px #000;
+	border-top-width:0px;
+	vertical-align:top;	
+}
+
+#playerContainer #mediaTime, #playerContainerClear #mediaTime
+{
+	font-family:Courier New;
+	font-size:12px;
+	width:127px;
+	height:31px;
+	padding-top:6px;
+	padding-left:6px;
+	cursor:default;	
+}
+
+#playerContainer #mediaRec, #playerContainerClear #mediaRec
+{	
+	height:31px;
+	width:30px;	
+	padding-top:8px;
+	padding-left:5px;
+}
+
+#playerContainer .mediaStartCaret, #playerContainer .mediaEndCaret, #playerContainerClear .mediaStartCaret, #playerContainerClear .mediaEndCaret
+{
+	width:8px;
+	height:20px;
+	position:absolute;
+	background-image:url(../images/mediaplayer/startCaret.gif)
+}
+#playerContainer .mediaEndCaret, #playerContainerClear .mediaEndCaret
+{
+	background-image:url(../images/mediaplayer/endCaret.gif)
+}
+
+#unsupportedContainer 
+{
+	width:305px;
+	height:231px;
+	float:left;
+	background-image:url(../images/mediaplayer/unsupported_bgd.jpg);
+	background-repeat:no-repeat;
+}
+
+#unsupportedContainerClear
+{
+	width:300px;
+	height:230px;
+	float:left;
+}
+
+#unsupportedContainer #smudge, #unsupportedContainerClear #smudge
+{
+	position:relative;
+}
+
+#unsupportedContainer #playerPreview, #unsupportedContainerClear #playerPreview
+{
+	position:absolute;
+	display: block;
+	left:0px;
+	z-index:10;
+	width:298px;
+	height:224px;
+	border:solid 1px #000;	
+}
+#unsupportedContainer  #clipPreview, #unsupportedContainerClear  #clipPreview
+{
+	width:218px;
+	height:163px;
+}
+#unsupportedContainer #playerPreview img, #unsupportedContainerClear #playerPreview img
+{
+	width:298px;
+	height:224px;	
+}
+
+#unsupportedContainer #clipPreview #back, #unsupportedContainerClear #clipPreview #back
+{
+	padding-top:5px;	
+}
+#unsupportedContainer #clipPreview #back span, #unsupportedContainerClear #clipPreview #back span
+{
+	color:Yellow;
+	line-height:14px;
+}
+#unsupportedContainer #clipPreview #back span a, #unsupportedContainerClear #clipPreview #back span a
+{
+	color:Yellow;
+	text-decoration:underline;
+	
+}
+
+#mediaFinder
+{
+	border:1px solid #a6adba;
+	overflow:auto;
+	width:300px;
+	height:300px;
+	padding:4px;
+}
+
+#mediaFinder .taggedVideos
+{
+	padding:4px;
+}

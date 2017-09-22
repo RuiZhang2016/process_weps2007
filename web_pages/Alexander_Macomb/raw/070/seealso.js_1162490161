@@ -1,0 +1,41 @@
+function setPanel(parentObj, thisPanel)
+{
+	// setup a parent object for positioning
+	var parentX = parentObj.offsetLeft;
+	var parentH = parentObj.offsetHeight;
+	var parentY = parentObj.offsetTop;
+	var parentW = parentObj.offsetWidth;
+
+	// if we're more than halfway over, split to left otherwise split right
+	if(parentX > (getInnerWidth() / 2))
+	{
+		var xStart = (parentX + parentW) - thisPanel.offsetWidth;
+	}
+	else
+	{
+		var xStart = parentX;
+	}
+
+	thisPanel.style.top = ((parentY + parentH) - thisPanel.offsetHeight) + "px";
+	thisPanel.style.left = xStart + "px";
+
+    // Iterate through and turn all seealso's off if on
+    var allDivs = document.getElementsByTagName('span');
+    for(var i = 0; i < allDivs.length; i++)
+    {
+        if(allDivs[i].className == "seealso" && allDivs[i].id != thisPanel.id)
+        {
+            allDivs[i].style.display = 'none';
+        }
+    }  
+
+    // Turn on/off "this" panel
+    if(thisPanel.style.display == 'block')
+    {
+        thisPanel.style.display = 'none';
+    }
+    else
+    {
+        thisPanel.style.display = 'block';
+    }
+}

@@ -1,0 +1,669 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html lang="">
+<head>
+<META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=UTF-8">
+<META HTTP-EQUIV="Content-Style-Type" CONTENT="text/css">
+<META HTTP-EQUIV="Content-Script-Type" CONTENT="text/javascript">
+
+<meta name="ad-spaceid" content="2011300130">
+<meta name="ad-location" content="HEAD,FOOT">
+<meta name="ad-property" content="360">
+<meta name="ad-nopageview" content="DOC.AD_MIME_NOPAGEVIEW">
+<meta name="ad-site_attribute" content="DOC.AD_MIME_SITE_ATTRIBUTE">
+<meta name="ad-dma" content="807">
+<meta name="ad-state" content="ca">
+<meta name="ad-city" content="Sunnyvale">
+<meta name="ad-zip" content="94089">
+<meta name="ad-geocode" content="DOC.AD_MIME_GEOCODE">
+
+
+<title>Yahoo! 360&#176; - Home</title>
+<link type="text/css" rel="stylesheet" href="http://us.js2.yimg.com/us.js.yimg.com/lib/cmty/ymgl_global_200608161000.css" media="screen">
+
+<style type="text/css">
+    .profile .body #ymgl-customize-links {
+   margin-top: 7px;
+}
+
+body.calendar-iframe {padding:0;}
+#doc-body.doc-iframe-body {padding:0; margin:1px 0 0 0; *margin:0; min-height:0;}
+
+#calendar {margin:-1px 0 0 0; *margin:0; width:203px; *width:auto;}
+#calendar .ct {margin-bottom:-3px;}
+#calendar .cb {margin-top:-3px;}
+#blog-calendar {
+	font: 74% verdana, arial, helvetica;
+	margin:0;
+}
+
+#blog-calendar caption {
+	font-weight:bold;
+	margin:0;
+	padding:5px 0 0 0;
+	background:#e0e6f0;
+}
+
+#blog-calendar caption span {display:block; clear:none; float:left; text-align:center; width:140px;}
+
+#blog-calendar caption a {font-size:130%;}
+#blog-calendar caption a:visited {color:#247CD4;}
+#blog-calendar caption .prev {display:block; clear:right; float:left; width:29px; text-align:center;}
+#blog-calendar caption .next {display:block; clear:left; clear:none; float:right; width:29px; *width:26px; text-align:center;}
+#blog-calendar th {font-weight:normal; background:#e0e6f0; padding: 2px 0;}
+      
+#blog-calendar td {
+	color:#999;
+	border-right:1px solid #e0e6f0;
+	border-top:1px solid #e0e6f0;
+	text-align:center;
+	height:30px;
+	width:29px;
+}
+
+#blog-calendar td.today{background:#e0e6f0;}
+#blog-calendar td.last {border-right:0; padding-right:1px;}
+#blog-calendar td.selected {}
+
+#blog-calendar td span a {display:block; height:29px; line-height:29px;}
+#blog-calendar td span a span {position:absolute; visibility:hidden;}
+
+#blog-calendar td .highlight {
+	font-weight:bold;
+}
+
+</style>
+<script type="text/javascript">logd = function() { };</script><style type="text/css" id="custom_style" >
+/*set defaults*/
+#doc-body #doc-1 {
+   padding-bottom:400px;
+}
+
+#doc-body .ct,
+#doc-body .cl,
+#doc-body .cb {
+   visibility:hidden;
+}
+
+/*pagination*/
+#doc-body .pagination {
+   padding-left:6px;
+   padding-right:6px;
+   background-color:#fff;
+   position:relative;
+   z-index:2000000000;
+   *width:99%;
+   height:1.3em;
+   *left:1px;
+}
+
+#doc-body .top {
+   *margin-bottom:-15px;
+   padding-top:2px;
+   border-width:1px;
+   border-style:solid;
+   border-color:#7d9c54;
+   border-bottom:0;
+   *border:0;
+}
+
+#doc-body .bottom {
+   bottom:20px;
+   border-width:1px;
+   border-style:solid;
+   border-color:#7d9c54;
+   border-top:0;
+   border-bottom:0;
+   *border:0;
+}
+
+/*pagination - component spacing details*/
+#doc-body #ymgl-blog .thm-box,
+#doc-body #ymgl-local-reviews .thm-box,
+#doc-body #ymgl-friends .thm-box,
+#doc-body #ymgl-guestbook .thm-box {
+   padding-bottom:25px;
+   *padding-top:19px;
+}
+
+#doc-body #ymgl-friends.intro .thm-box,
+#doc-body #ymgl-guestbook.intro .thm-box {
+   padding-bottom:0;
+   padding-top:0;
+}
+
+#doc-body #ymgl-blog,
+#doc-body #ymgl-friends,
+#doc-body #ymgl-local-reviews,
+#doc-body #ymgl-guestbook {
+   margin-top:-14px;
+   *margin-top:0;
+}
+
+#doc-body #ymgl-blog.post {
+   margin-top:0;
+}
+
+#doc-body #ymgl-blog.post .thm-box {
+   padding-top:0;
+   padding-bottom:0;
+}
+
+#doc-body #ymgl-friends.intro,
+#doc-body #ymgl-guestbook.intro {
+   margin-top:0;
+}
+/*end pagination*/
+
+#doc-body #ymgl-blast .ct,
+#doc-body #ymgl-blast .cl {
+   visibility:visible;
+}
+
+#doc-body #ymgl-blast .highlight {
+   color:#404040;
+}
+
+#doc-body .tip {
+   color:#404040;
+   font:100% arial;
+   border:1px solid #b1e397;
+   background-color:#f4ffe5;
+}
+
+#doc-body .tip h3 {
+   font:118% arial;
+   font-weight:bold;
+   color:#628c2a;
+}
+
+#doc-body #doc-1 #ymgl-blogroll,
+#doc-body #doc-2 #ymgl-sticky-post {
+   border:1px solid #7d9c54
+}
+
+#doc-body #doc-1 #ymgl-blogroll h4,
+#doc-body #doc-2 #ymgl-sticky-post h4 {
+   margin:2px 5px 5px 5px;
+}
+
+#doc-body #doc-1 #ymgl-blogroll ul,
+#doc-body #doc-2 #ymgl-sticky-post ul {
+   margin:0 5px 5px 5px;
+}
+
+#doc-body #ymgl-blog-calendar iframe {
+   height:220px;
+}
+
+
+#doc-body #blog-calendar caption {
+   background-color:#295c7d;
+}
+
+#doc-body #blog-calendar caption span,
+#doc-body #blog-calendar th,
+#doc-body #blog-calendar caption a:link,
+#doc-body #blog-calendar caption a:visited {
+   color:#e6ecf2;
+}
+
+#doc-body #blog-calendar td span {
+   color:#404040;
+}
+
+/*end defaults*/
+/*BEGIN page background*/
+#doc-body {
+   background: #CDD582 url(http://us.f6.yahoofs.com/blog/43f8fed2zb95256f8/12/__hr_/d7c1.jpg?mgg2DeFBivMY218k) no-repeat 0 0;
+   padding-top: 70px;
+}
+
+#doc-body #doc-1 {
+   top: 70px;
+   *top: 0;
+}
+
+#doc-body .thm-wrapper {
+   background: transparent url(http://us.f6.yahoofs.com/blog/43f8fed2zb95256f8/13/__hr_/79fe.jpg?mgg2DeFBsoR3fIzN) no-repeat 0 100%;
+   padding-bottom: 120px;
+}
+
+/*popup & iframes get solid bgs. no images*/
+#doc-body.doc-popup-body,
+#doc-body.doc-iframe-body #calendar {
+   background-color:#CDD582;
+}
+/*END page background*/
+
+/*BEGIN container background*/
+/* default container bg color*/
+#doc-body .publish,
+#doc-body .message,
+#doc-body .pagination,
+#doc-body #blog-calendar,
+#doc-body #doc-1 #ymgl-blogroll,
+#doc-body #doc-2 #ymgl-sticky-post,
+#doc-body #ymgl-blog dd.post-body .poll dd {
+   background-color:transparent;
+}
+
+/* left-col profile bg (if different from default) */
+#doc-body #ymgl-profile {
+   background-color:#A5B9CB;
+}
+
+#doc-body #ymgl-profile .user-card-shadow .user-card {
+   background-color:#E5E8CB;
+}
+
+/* left-col profile nickname & calendar background color */
+#doc-body #ymgl-profile h2,
+#doc-body #blog-calendar caption,
+#doc-body #blog-calendar th,
+#doc-body #blog-calendar td.today{
+   background-color:#959C76;
+}
+
+/* blast bg */
+#doc-body #ymgl-blast.container-0,
+#doc-body #ymgl-blast .thm-box,
+#doc-body #ymgl-blast.whisper .thm-box {
+   background-color:#999999;
+}
+
+#doc-body #ymgl-blast.whisper {
+   background:transparent;
+}
+
+/* blog comments, poll, action buttons bg */
+#doc-body #ymgl-profile .body .action-shadow .action,
+#doc-body #ymgl-profile .body .action-menu,
+#doc-body #ymgl-blog .comments,
+#doc-body #ymgl-blog .poll {
+   background-color:transparent;
+}
+
+/* blog poll bar color = main text color */
+#doc-body #ymgl-blog dd.post-body .poll dd div {
+   background-color:#458945;
+}
+
+/*END container background*/
+
+/*BEGIN text color*/
+/* main text color */
+#doc-body,
+#doc-body table,
+#doc-body .rnr dt,
+#doc-body .user-card .vitals .user-name,
+#doc-body #ymgl-profile .head p,
+#doc-body .publish .snippet,
+#doc-body .publish h4,
+#doc-body #ymgl-blog dt,
+#doc-body #ymgl-blog dd.post-body .content-wrapper,
+#doc-body #ymgl-blog .comments .row .comment,
+#doc-body #ymgl-feed .body dd .snippet,
+#doc-body #ymgl-local-reviews .rnr .bd .posting p,
+#doc-body #ymgl-local-reviews .rnr .bd .posting h5,
+#doc-body #ymgl-guestbook .body .row .wrapper .comment,
+#doc-body #ymgl-feed dt,
+#doc-body #ymgl-profile-detail .quote,
+#doc-body .intro .footnote {
+   color:#458945;
+   font-family:Arial, Helvetica, Sans Serif;
+}
+
+/* small text color */
+#doc-body .footnote,
+#doc-body cite,
+#doc-body .datestamp,
+#doc-body .caption,
+#doc-body .profile .body,
+#doc-body #ymgl-profile-detail dt,
+#doc-body #blog-calendar td,
+#doc-body #blog-calendar td span,
+#doc-body .intro h6,
+#doc-body .intro .previous,
+#doc-body .time,
+#doc-body .pagination,
+#doc-body #ymgl-local-reviews .rnr .score,
+#doc-body #ymgl-blog dd.post-body .foot,
+#doc-body #ymgl-comment-add label,
+#doc-body .user-card .vitals {
+   color:#BE141A;
+}
+
+/* blast text color (gets main text color by default) */
+#doc-body #ymgl-blast .content .snippet {
+   color:#DFEB8E;
+}
+
+/* module headline text color */
+#doc-body h3,
+#doc-body #ymgl-profile-detail .head h3,
+#doc-body #ymgl-blog .comments .head h4 {
+   font-family:Verdana, Arial, Helvetica, Sans Serif;
+   color:#F4FBD1;
+}
+
+#doc-body .my-links h4 {
+   color:#F4FBD1;
+}
+
+/* body link color */
+#doc-body a:link,
+#doc-body #ymgl-profile a:visited,
+#doc-body .pagination a:visited,
+#doc-body .publish p.footnote a:visited,
+#doc-body .doc-layout-4 .publish .head a:visited,
+#doc-body .doc-layout-4 .publish .foot a:visited,
+#doc-body .publish .user-card a:visited,
+#doc-body #ymgl-blog-promo a:visited,
+#doc-body #ymgl-blog dd.post-body .poll a:visited,
+#doc-body #ymgl-blast p a:link,
+#doc-body #ymgl-blast p a:visited {
+   color:#3A4EB1;
+}
+
+/* body visited link color */
+#doc-body a:visited,
+#doc-body .publish .user-card strong a:visited,
+#doc-body #ymgl-feed a:visited,
+#doc-body table a:visited {
+   color:#6A25F4;
+}
+
+/* nickname  & calendar options text color */
+#doc-body #ymgl-profile h2,
+#doc-body #blog-calendar caption span,
+#doc-body #blog-calendar th,
+#doc-body #blog-calendar caption a:link,
+#doc-body #blog-calendar caption a:visited,
+#doc-body.doc-iframe-body #calendar caption a:visited,
+#doc-body.doc-iframe-body #calendar caption a:link {
+   color:#E9FBA2;
+}
+
+/*END text color*/
+
+/*BEGIN line colors*/
+/* outside line colors */
+#doc-body .container-1,
+#doc-body .container-0,
+#doc-body #ymgl-blog .head,
+#doc-body #ymgl-local-reviews .head,
+#doc-body #ymgl-blog .comments,
+#doc-body #ymgl-journal-slideshow .wrapper,
+#doc-body.doc-iframe-body #calendar,
+#doc-body #ymgl-profile-detail dd,
+#doc-body #ymgl-photos .body .flickr,
+#doc-body #ymgl-blog dd.post-body,
+#doc-body #ymgl-blog .comments .row,
+#doc-body #ymgl-feed dl,
+#doc-body #ymgl-local-reviews td,
+#doc-body #ymgl-local-reviews th,
+#doc-body #ymgl-local-reviews li,
+#doc-body #ymgl-local-reviews .rnr,
+#doc-body #ymgl-lists .row,
+#doc-body #ymgl-blog li .body,
+#doc-body #doc-1 #ymgl-blogroll,
+#doc-body #doc-2 #ymgl-sticky-post,
+#doc-body #ymgl-local-reviews .sub-rating,
+#doc-body #ymgl-profile .foot,
+#doc-body #ymgl-profile .user-card-shadow .user-card,
+#doc-body #ymgl-profile .body .action-shadow .action,
+#doc-body #ymgl-profile .body .action-menu,
+#doc-body #ymgl-profile .body .action-menu li,
+#doc-body #ymgl-blog .add-rss,
+#doc-body #ymgl-guestbook .body .form-wrapper,
+#doc-body #ymgl-guestbook .body .row,
+#doc-body #blog-calendar td,
+#doc-body .top,
+#doc-body .bottom {
+   border-color:#80A1B7;
+}
+
+
+/*END line colors*/
+
+/* my page thumbnail */
+#doc-head.my-page #ymgl-viewer-options .current-theme .thumbnail {
+   background-image:url(http://l.yimg.com/us.yimg.com/i/us/cmty/thm2/customize_th.gif);
+}
+
+/*BEGIN blast images*/
+#doc-body #ymgl-blast .ct,
+#doc-body #ymgl-blast .ct .cl {
+   background-image: url(http://l.yimg.com/us.yimg.com/i/us/cmty/thm2/999999_blast_cr.gif);
+}
+
+#doc-body #ymgl-blast .tail {
+   background-image: url(http://l.yimg.com/us.yimg.com/i/us/cmty/thm2/999999_blast_tail.gif);
+}
+
+/*shout*/
+#doc-body #ymgl-blast.shout .ct,
+#doc-body #ymgl-blast.shout .ct .cl {
+   background-image: url(http://l.yimg.com/us.yimg.com/i/us/cmty/thm2/999999_blsh_cr.gif);
+}
+
+/*thought*/
+#doc-body #ymgl-blast.thought .ct,
+#doc-body #ymgl-blast.thought .ct .cl {
+   background-image: url(http://l.yimg.com/us.yimg.com/i/us/cmty/thm2/999999_blth_cr.gif);
+}
+
+#doc-body #ymgl-blast.thought .tail {
+   background-image: url(http://l.yimg.com/us.yimg.com/i/us/cmty/thm2/999999_blth_tail.gif);
+}
+
+/*quote*/
+#doc-body #ymgl-blast.quote .ct,
+#doc-body #ymgl-blast.quote .ct .cl {
+   background-image: url(http://l.yimg.com/us.yimg.com/i/us/cmty/thm2/999999_blqo_cr.gif);
+}
+
+/*question*/
+#doc-body #ymgl-blast.question .ct,
+#doc-body #ymgl-blast.question .ct .cl {
+   background-image: url(http://l.yimg.com/us.yimg.com/i/us/cmty/thm2/999999_blqu_cr.gif);
+}
+
+/*sale*/
+#doc-body #ymgl-blast.sale .tail {
+   background-image: url(http://l.yimg.com/us.yimg.com/i/us/cmty/thm2/999999_blsa_tail.gif);
+}
+/*END blast images*/
+
+</style>
+
+</head>
+<body class="calendar-iframe" onload=" hlx_js_init(); ">
+
+<div class="doc-iframe-body" id="doc-body">
+    
+<div class="default" id="calendar">
+<span class="ct"><span class="cl"></span></span>
+<table cellpadding="0" cellspacing="0" class="calendar" id="blog-calendar">
+<caption class="clearfix"><a href="http://blog.360.yahoo.com/blog/calendar_content.html?id=gj219eUhdLHaIszQRVoo&cyy=2006&cmm=11" class="prev">&#139;</a> <span>December 2006</span> <a href="http://blog.360.yahoo.com/blog/calendar_content.html?id=gj219eUhdLHaIszQRVoo&cyy=2007&cmm=1" class="next">&#155;</a></caption>
+<tbody>
+<tr><th>Su</th>
+<th>Mo</th>
+<th>Tu</th>
+<th>We</th>
+<th>Th</th>
+<th>Fr</th>
+<th>Sa</th>
+</tr><tr>
+<td><span>&nbsp;</span></td>
+<td><span>&nbsp;</span></td>
+<td><span>&nbsp;</span></td>
+<td><span>&nbsp;</span></td>
+<td><span>&nbsp;</span></td><td><span>1</span></td>
+<td class="last" ><span>2</span></td>
+
+</tr>
+<tr>
+<td><span>3</span></td>
+<td><span>4</span></td>
+<td><span>5</span></td>
+<td><span>6</span></td>
+<td><span>7</span></td>
+<td><span>8</span></td>
+<td class="last" ><span>9</span></td>
+
+</tr>
+<tr>
+<td><span>10</span></td>
+<td><span>11</span></td>
+<td><span>12</span></td>
+<td><span>13</span></td>
+<td><span>14</span></td>
+<td><span>15</span></td>
+<td class="last" ><span>16</span></td>
+
+</tr>
+<tr>
+<td><span>17</span></td>
+<td><span>18</span></td>
+<td><span>19</span></td>
+<td><span>20</span></td>
+<td><span>21</span></td>
+<td><span>22</span></td>
+<td class="last" ><span>23</span></td>
+
+</tr>
+<tr>
+<td><span>24</span></td>
+<td><span>25</span></td>
+<td><span>26</span></td>
+<td><span>27</span></td>
+<td><span>28</span></td>
+<td><span>29</span></td>
+<td class="last" ><span>30</span></td>
+
+</tr>
+<tr>
+<td><span>31</span></td>
+
+<td><span>&nbsp;</span></td>
+<td><span>&nbsp;</span></td>
+<td><span>&nbsp;</span></td>
+<td><span>&nbsp;</span></td>
+<td><span>&nbsp;</span></td>
+<td class="last" ><span>&nbsp;</span></td></tr>
+</tbody>
+</table>
+<span class="cb"><span class="cl"></span></span>
+</div>
+</div>
+
+</body>
+<head>
+<script type="text/javascript" language="JavaScript" src="http://us.js2.yimg.com/us.js.yimg.com/lib/cmty/utils/y360_200609191600.js"></script>
+<script type="text/javascript" language="JavaScript" src="http://us.js2.yimg.com/us.yimg.com/lib/g/yg_browser.js"></script>
+
+<script type="text/javascript">
+function hlx_js_init() {
+    YAHOO.y360.CustomThemeDisabler('style_toggle', 'custom_style', {"turn_on":"<b>View page with theme<\/b>","turn_off":"<b>View page without theme<\/b>"});
+YAHOO.util.Event.addListener('make_it_mine', 'click', function(e) { if (!confirm("Clicking \"OK\" will make this theme yours, excluding custom images.\n\nYour current theme settings will not be saved.")) { YAHOO.util.Event.stopEvent(e); } });
+
+  
+  var timeout_varsec=4000;
+  var the_timeout='';
+
+  function getScroll() {
+  	if (document.body.scrollTop != undefined) {	// IE model
+  		var ieBox = document.compatMode != "CSS1Compat";
+  		var cont = ieBox ? document.body : document.documentElement;
+      return {x : cont.scrollLeft, y : cont.scrollTop};
+  	} else {
+  		return {x : window.pageXOffset, y : window.pageYOffset};
+  	}
+  }
+  
+  function showNote(e) {
+    var objEvent = e ? e : event;
+    var objTip = parent.document.getElementById('tooltip');
+   if(objTip) 
+   {
+    objTip.style.visibility = 'hidden';
+    clearTimeout(the_timeout);
+    var scroll = getScroll();
+     //get pos of iframe on parent page
+    objIFrame = parent.document.getElementById("blog-calendar-iframe"); 
+    var aS = YAHOO.util.Dom.getXY(objIFrame);
+    // position tooltip
+    var dw = document.width ? document.width : document.documentElement.offsetWidth - 25;
+    //alert("dw is: " + dw);
+    if (objEvent.clientX > dw - objTip.offsetWidth) {
+      objTip.style.left = dw - objTip.offsetWidth + scroll.x + "px"; 
+    } 
+    else {
+      objTip.style.left = objEvent.clientX - 2 + scroll.x + "px";
+      objTip.style.top = objEvent.clientY + 15 + scroll.y + "px";
+    }
+    objTip.style.left = objEvent.clientX + aS[0]-2;
+    objTip.style.top = objEvent.clientY + aS[1]+5;
+    //get hidden span content
+    theTip = this.getElementsByTagName('span');
+    //objTip.innerHTML = '<a href='http://blog.360.yahoo.com/blog/+%20this.href%20+' target=_parent >' + theTip[0].innerHTML + '</a>';
+    objTip.innerHTML = theTip[0].innerHTML;
+    objTip.style.visibility = (objTip.style.visibility == 'visible') ? 'hidden' : 'visible';
+    the_timeout=setTimeout(function(){parent.document.getElementById('tooltip').style.visibility = 'hidden';  },timeout_varsec);
+   
+   }
+  }
+  
+  function hideNote(e) {
+    if(parent.document.getElementById('tooltip')) {
+      parent.document.getElementById('tooltip').style.visibility = 'hidden';
+    }
+  }
+  
+  function hideSelf(){
+    parent.document.getElementById('tooltip').style.visibility = 'hidden';
+  }
+  
+  function init() {
+     /* create a dynamic layer and attach it to the parent HTML document. */
+  	objBody = parent.document.getElementsByTagName("body").item(0);
+  	objContainer = parent.document.createElement('div');
+  	objContainer.setAttribute('id', 'tooltip');
+  	objBody.appendChild(objContainer);
+ 
+  	objTag = document.getElementById('calendar').getElementsByTagName('a');
+  	for (i=0; i<objTag.length; i++) {
+  		if (objTag[i].className != 'miniblogComment') {
+                  objTag[i].setAttribute('id','link'+i);
+  		  objTag[i].onmouseover = showNote; 
+                  if (i<2) objTag[i].onmouseover = hideNote; //first two links are month nav arrows
+  		}
+  	}
+        objTag = document.getElementById('calendar').getElementsByTagName('th');
+  	for (i=0; i<objTag.length; i++) {
+          objTag[i].onmouseover = hideNote;
+  	}
+    
+       objTd = document.getElementById('calendar').getElementsByTagName('td');
+  	for (i=2; i<objTd.length; i++) {
+  	  objTd[i].onclick = hideNote;
+  	}
+  }
+
+  //CHECK to see that the parent document is loaded 
+  function init_when_ready(){
+     if(window.parent.gPAGELOADED){
+        init();
+     } else {
+        setTimeout(init_when_ready,100);
+     }
+  } 
+  init_when_ready();
+
+}
+</script>
+</head>
+</html>
+<!-- 0.26284 -->
+<!-- feblg9.mgl.re2.yahoo.com uncompressed Thu Dec  7 07:47:05 PST 2006 -->

@@ -1,0 +1,946 @@
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head profile="http://gmpg.org/xfn/11">
+
+	<title>  Abbott&#8217;s Accountability   at  Larvatus Prodeo</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+	<meta name="generator" content="WordPress 2.1" />
+	<meta name="template" content="K2 Beta One 96" />
+ 	<meta name="description" content="Blogging politics, culture, sociology and life from Brisvegas" />
+ 
+	<link rel="stylesheet" type="text/css" media="screen" href="style.css" />
+	<link rel="stylesheet" type="text/css" media="screen" href="lp.css" />
+
+	<link rel="alternate" type="application/rss+xml" title="RSS 2.0" href="http://larvatusprodeo.net/feed/" />
+	<link rel="alternate" type="text/xml" title="RSS .92" href="http://larvatusprodeo.net/feed/rss/" />
+	<link rel="alternate" type="application/atom+xml" title="Atom 0.3" href="http://larvatusprodeo.net/feed/atom/" />
+    <LINK REL="SHORTCUT ICON" HREF="http://www.larvatusprodeo.net/favicon.ico" />
+	<link rel="pingback" href="http://larvatusprodeo.net/xmlrpc.php" />
+	
+		<script type="text/javascript" src="prototype.js"></script>
+	<script type="text/javascript" src="effects.js"></script>
+	<script type="text/javascript" src="ajax_comments.js"></script>
+	
+		<!--http://larvatusprodeo.net/wp-content/themes/k2-->
+	<script type="text/javascript">//<![CDATA[
+		//  Copyright (c) 2004 Bitflux GmbH                                      
+
+//  Licensed under the Apache License, Version 2.0 (the "License");      
+//  you may not use this file except in compliance with the License.     
+//  You may obtain a copy of the License at                              
+//  http://www.apache.org/licenses/LICENSE-2.0                           
+//  Unless required by applicable law or agreed to in writing, software  
+//  distributed under the License is distributed on an "AS IS" BASIS,    
+//  WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or      
+//  implied. See the License for the specific language governing         
+//  permissions and limitations under the License.                       
+
+//  Author: Bitflux GmbH                             
+
+
+
+var liveSearchReq = false;
+var t = null;
+var liveSearchLast = "";
+var isIE = false;
+// on !IE we only have to initialize it once
+if (window.XMLHttpRequest) {
+	liveSearchReq = new XMLHttpRequest();
+}
+
+function liveSearchInit() {
+	
+	if (navigator.userAgent.indexOf("Safari") > 0) {
+		document.getElementById('livesearch').addEventListener("keydown",liveSearchKeyPress,false);
+	} else if (navigator.product == "Gecko") {
+		document.getElementById('livesearch').addEventListener("keypress",liveSearchKeyPress,false);
+	} else {
+		document.getElementById('livesearch').attachEvent('onkeydown',liveSearchKeyPress);
+		isIE = true;
+	}
+
+}
+
+function liveSearchKeyPress(event) {
+	if (event.keyCode == 40 )
+	//KEY DOWN
+	{
+		highlight = document.getElementById("LSHighlight");
+		if (!highlight) {
+			highlight = document.getElementById("LSResult").firstChild.firstChild.nextSibling.firstChild;
+		} else {
+			highlight.removeAttribute("id");
+			highlight = highlight.nextSibling;
+		}
+		if (highlight) {
+			highlight.setAttribute("id","LSHighlight");
+		} 
+		if (!isIE) { event.preventDefault(); }
+	} 
+	//KEY UP
+	else if (event.keyCode == 38 ) {
+		highlight = document.getElementById("LSHighlight");
+		if (!highlight) {
+			highlight = document.getElementById("LSResult").firstChild.firstChild.nextSibling.nextSibling.lastChild;
+		} 
+		else {
+			highlight.removeAttribute("id");
+			highlight = highlight.previousSibling;
+		}
+		if (highlight) {
+				highlight.setAttribute("id","LSHighlight");
+		}
+		if (!isIE) { event.preventDefault(); }
+	} 
+	//ESC
+	else if (event.keyCode == 27) {
+		highlight = document.getElementById("LSHighlight");
+		if (highlight) {
+			highlight.removeAttribute("id");
+		}
+		document.getElementById("LSResult").style.display = "none";
+		document.forms.searchform.s.value = '';
+	} 
+}
+function liveSearchStart() {
+	if (t) {
+		window.clearTimeout(t);
+	}
+	t = window.setTimeout("liveSearchDoSearch()",200);
+}
+
+function liveSearchDoSearch() {
+	if (liveSearchLast != document.forms.searchform.s.value) {
+	if (liveSearchReq && liveSearchReq.readyState < 4) {
+		liveSearchReq.abort();
+		// Fade the background of the results box
+	}
+	if ( document.forms.searchform.s.value == "") {
+		document.getElementById("LSResult").style.display = "none";
+		highlight = document.getElementById("LSHighlight");
+		if (highlight) {
+			highlight.removeAttribute("id");
+		}
+		return false;
+	}
+	if (window.XMLHttpRequest) {
+	// branch for IE/Windows ActiveX version
+	} else if (window.ActiveXObject) {
+		liveSearchReq = new ActiveXObject("Microsoft.XMLHTTP");
+	}
+	liveSearchReq.onreadystatechange= liveSearchProcessReqChange;
+	liveSearchReq.open("GET", "http://larvatusprodeo.net/wp-content/themes/k2/livesearch.php?s=" + document.forms.searchform.s.value);
+	liveSearchLast = document.forms.searchform.s.value;
+	liveSearchReq.send(null);
+	}
+}
+
+function liveSearchProcessReqChange() {
+	
+	if (liveSearchReq.readyState == 4) {
+		var  res = document.getElementById("LSResult");
+		res.style.display = "block";
+		/* res.firstChild.innerHTML = liveSearchReq.responseText; */
+		res.firstChild.innerHTML = '<div id="searchcontrols"><small>Arrow keys, enter & <a href="javascript://" title="Close results" onclick="closeLiveSearch()">escape</a></small><br /></div>'+liveSearchReq.responseText;
+	}
+	
+	getDDSize();
+	setListenLinks();
+}
+
+function liveSearchSubmit() {
+	var highlight = document.getElementById("LSHighlight");
+	if (highlight && highlight.firstChild) {
+		window.location = highlight.firstChild.getAttribute("href");
+		return false;
+	} 
+	else {
+		return true;
+	}
+}
+
+function closeResults() {
+    document.getElementById("LSResult").style.display = "none";
+}	//]]></script>
+	
+
+		<link rel='archives' title='February 2007' href='http://larvatusprodeo.net/2007/02/' />
+	<link rel='archives' title='January 2007' href='http://larvatusprodeo.net/2007/01/' />
+	<link rel='archives' title='December 2006' href='http://larvatusprodeo.net/2006/12/' />
+	<link rel='archives' title='November 2006' href='http://larvatusprodeo.net/2006/11/' />
+	<link rel='archives' title='October 2006' href='http://larvatusprodeo.net/2006/10/' />
+	<link rel='archives' title='September 2006' href='http://larvatusprodeo.net/2006/09/' />
+	<link rel='archives' title='August 2006' href='http://larvatusprodeo.net/2006/08/' />
+	<link rel='archives' title='July 2006' href='http://larvatusprodeo.net/2006/07/' />
+	<link rel='archives' title='June 2006' href='http://larvatusprodeo.net/2006/06/' />
+	<link rel='archives' title='May 2006' href='http://larvatusprodeo.net/2006/05/' />
+	<link rel='archives' title='April 2006' href='http://larvatusprodeo.net/2006/04/' />
+	<link rel='archives' title='March 2006' href='http://larvatusprodeo.net/2006/03/' />
+	<link rel='archives' title='February 2006' href='http://larvatusprodeo.net/2006/02/' />
+	<link rel='archives' title='January 2006' href='http://larvatusprodeo.net/2006/01/' />
+	<link rel='archives' title='December 2005' href='http://larvatusprodeo.net/2005/12/' />
+	<link rel='archives' title='November 2005' href='http://larvatusprodeo.net/2005/11/' />
+	<link rel='archives' title='October 2005' href='http://larvatusprodeo.net/2005/10/' />
+	<link rel='archives' title='September 2005' href='http://larvatusprodeo.net/2005/09/' />
+	<link rel='archives' title='August 2005' href='http://larvatusprodeo.net/2005/08/' />
+	<link rel='archives' title='July 2005' href='http://larvatusprodeo.net/2005/07/' />
+	<link rel='archives' title='June 2005' href='http://larvatusprodeo.net/2005/06/' />
+	<link rel='archives' title='May 2005' href='http://larvatusprodeo.net/2005/05/' />
+	<link rel='archives' title='April 2005' href='http://larvatusprodeo.net/2005/04/' />
+	<link rel='archives' title='March 2005' href='http://larvatusprodeo.net/2005/03/' />
+
+		<link rel="EditURI" type="application/rsd+xml" title="RSD" href="http://larvatusprodeo.net/xmlrpc.php?rsd" />
+<script language="javascript1.4" type="text/javascript" src="audio-player.js"></script>
+<script src="quicktags.js" type="text/javascript"></script>
+<script src="comment_quicktags.php.1.html" type="text/javascript"></script>
+<style type="text/css">/* To fix kubrick: */
+#commentform #ed_toolbar input.ed_button {
+	width:auto;
+}</style>
+		
+    <!-- Added By Democracy Plugin. Version 1.2 -->
+    <script type="text/javascript" src="js.php"></script>
+    <link rel="stylesheet" href="democracy.css" type="text/css" />
+	 <script type="text/javascript">
+/* Start Of Javascript Generated By WP-EMail 2.07 */
+/* <![CDATA[ */
+	function email_popup(email_url) {
+		window.open(email_url, "_blank", "width=500,height=500,toolbar=0,menubar=0,location=0,resizable=0,scrollbars=1,status=0");
+	}
+/* ]]> */
+/* End Of Javascript Generated By WP-EMail 2.07 */
+</script>
+<script src="commentPreview.js" type="text/javascript"></script>
+	
+</head>
+
+<body  onload="liveSearchInit();" class=" flex">
+
+<div id="page">
+
+	<div id="header" style="background: #700070 url(http://larvatusprodeo.net/wp-content/themes/k2/styles/lp/header2.jpg) bottom;">
+
+		<div id="header1">
+<div id="headersearch">
+			
+		<div class="livesearchform">
+		<form onsubmit="return liveSearchSubmit()" id="searchform" name="searchform" method="get" action="http://larvatusprodeo.net/index.php" autocomplete="off">
+			<input width="200" type="search" id="livesearch" name="s" value="search" onkeypress="liveSearchStart()" onblur="setTimeout('closeResults()',2000); if (this.value == '') {this.value = 'search';}"  onfocus="if (this.value == 'search') {this.value = '';}" />
+			<input type="submit" id="searchsubmit" style="display: none;" value="Search" />
+			<!--[if IE]><div><![endif]--><div id="LSResult" style="display: none;"><div id="LSShadow"></div></div><!--[if IE]></div><br /><![endif]-->
+		</form>
+		</div>
+
+	
+
+
+</div>
+</div>
+
+<h1><a href="http://larvatusprodeo.net" title="Larvatus Prodeo"><img src="logo-rosewood.png" alt="Larvatus Prodeo" /></a></h1>
+
+
+		
+	
+			
+	
+	</div>
+
+		<hr />
+<div class="primary">
+
+	
+
+
+
+
+
+		
+	
+		
+	
+			
+	<hr />
+
+	
+	<div class="navigation">
+		<p class="alignleft">&laquo; <a href="http://larvatusprodeo.net/2006/02/06/agony-aunts-of-the-blogosphere/">Agony Aunts of the blogosphere</a></p>
+		<p class="alignright"> <a href="http://larvatusprodeo.net/2006/02/06/blog-birthdays-and-milestones/">Blog birthdays and milestones</a> &raquo;</p>
+		<div class="clear"></div>
+	</div>
+
+	
+	<hr />	
+	
+			
+			<div id="post-1416" class="item entry">
+				<div class="itemhead">
+
+
+<img src="http://www.gravatar.com/avatar.php?gravatar_id=915a0bde231ae43aaee2978fd7fe1583&amp;rating=X&amp;size=40&amp;default=http://www.larvatusprodeo.net/uploads/blank_gravatar.png" alt="Gravatar icon" class="gravatar" />
+
+
+
+					<div class="exceptgravatar"><h3><a href="index.html" rel="bookmark" title='Permanent Link to "Abbott&#8217;s Accountability"'>Abbott&#8217;s Accountability</a></h3>
+					
+	
+					<!-- The following two sections are for a noteworthy plugin currently in alpha. They'll get cleaned up and integrated better -->
+										
+					<span class="metalink"></span>
+ 
+					
+					
+					<small class="metadata">
+						Published by <a href="http://larvatusprodeo.net/author/mark/" title="Posts by Mark">Mark</a> on 6 February 2006 at 11:45 am in <a href="http://larvatusprodeo.net/topic/politics/" title="View all posts in Politics" rel="category tag">Politics</a>.
+													<br />						<a href="index.html#comments" title="17 comments so far">17&nbsp;comments.</a> <span></span>
+					</small>
+				</div>
+
+</div> <!-- except gravatar -->
+	
+				<div class="itemtext">
+											<p>In Tony Abbott&#8217;s nanny state, you look to politicians for medical advice not doctors. Father knows best, and is just <strike>patriarchally</strike> paternally concerned for the health of the women of Australia. As the Senate prepares to vote on whether powers to approve RU486 should be stripped from the Health Minister and handed to the Therapeutic Goods Administration, not content with conjuring up yet more medical horror stories, <a href="http://www.theaustralian.news.com.au/common/story_page/0,5744,18051902%255E2702,00.html">Tony Abbott</a> now frames the issue as one of democratic accountability.</p>
+<p>Interesting departure from the Howard government&#8217;s standard perspective on Ministerial accountability.</p>
+<p><b>Elsewhere</b>: More from <a href="http://stoush.net/liam/169/ru486-science-vs-non-science">Liam at Stoush.net</a> and <a href="http://machinegunkeyboard.com/shao/?p=292">Suki</a>.</p>
+						
+					
+
+<div class="postfooter"><a href="index.html#comments" title="17 comments so far">17&nbsp;comments</a>&nbsp;&middot;&nbsp;<a href="http://larvatusprodeo.net/2006/02/06/abbotts-accountability/emailpopup/" onclick="email_popup(this.href); return false" title="Send to a friend" rel="nofollow">Send to a friend</a></div>
+				</div>
+	
+
+
+				<!--
+				<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+			xmlns:dc="http://purl.org/dc/elements/1.1/"
+			xmlns:trackback="http://madskills.com/public/xml/rss/module/trackback/">
+		<rdf:Description rdf:about="http://larvatusprodeo.net/2006/02/06/abbotts-accountability/"
+    dc:identifier="http://larvatusprodeo.net/2006/02/06/abbotts-accountability/"
+    dc:title="Abbott&#8217;s Accountability"
+    trackback:ping="http://larvatusprodeo.net/2006/02/06/abbotts-accountability/trackback/" />
+</rdf:RDF>				-->
+			</div>
+
+        
+
+				
+		
+
+
+	
+
+	
+<script type="text/javascript">
+	// Used for showing and hiding user information in the comment form
+
+	function ShowUtils() {
+		document.getElementById("authorinfo").style.display = "";
+		document.getElementById("showinfo").style.display = "none";
+		document.getElementById("hideinfo").style.display = "";
+	}
+	
+	function HideUtils() {
+		document.getElementById("authorinfo").style.display = "none";
+		document.getElementById("showinfo").style.display = "";
+
+		document.getElementById("hideinfo").style.display = "none";
+	}
+</script>
+
+		
+
+<!-- You can start editing here. -->
+
+
+<hr />
+
+<div class="comments" id="comments">
+
+	<h4><a name="comments"></a><a href="index.html#comments">17 Responses to &#8220;Abbott&#8217;s Accountability&#8221;</a></h4>
+	<div class="metalinks">
+		<span class="metalink"><a href='http://larvatusprodeo.net/2006/02/06/abbotts-accountability/feed/'>RSS</a></span>
+			</div>
+	
+	<ol class="commentlist" id="commentlist">
+
+	
+			
+	
+		
+				<li class="alt  item" id="comment-49993">
+					<a name="comment-49993"></a>
+
+<a href='http://larvatusprodeo.net/' title='Visit Anna Winter'><img src='http://www.gravatar.com/avatar.php?gravatar_id=615ff25d6e9d32a5f3aae793fb3c1fcb&amp;rating=X&amp;size=40&amp;default=http://www.larvatusprodeo.net/uploads/blank_gravatar.png' alt='Gravatar icon' class='gravatar' /></a>
+
+					
+					<div class="commentdata"><span class="commentauthor" style="font-weight: bold;"><a href='http://larvatusprodeo.net/' rel='external nofollow'>Anna Winter</a></span>&nbsp;
+					<small class="commentmetadata">on <a href="index.html#comment-49993" title="1 year ago">6 February 2006 at 11:51 am</a> </small></div>
+	
+					<div class="itemtext">
+					
+						<p>Actually it pretty much sums up perfectly the Coalition&#8217;s view of democratic accountability - one man without medical expertise making the decision, rather than the whole Parliament; or better still, the State Parliaments, whose job it actually is to decide on abortion.</p>
+<p>But yeah - it&#8217;s reassuring that the Health Minister believes in democratic medicine. I feel safer already!</p>
+ 
+					
+					</div>
+	
+						
+				</li>
+		
+			
+	
+		
+				<li class="  item" id="comment-49996">
+					<a name="comment-49996"></a>
+
+<a href='http://www.gravatar.com' title='What is this?'><img src='http://www.gravatar.com/avatar.php?gravatar_id=168806378d6fd2e2e1263cf28df0a733&amp;rating=X&amp;size=40&amp;default=http://www.larvatusprodeo.net/uploads/blank_gravatar.png' alt='Gravatar icon' class='gravatar' /></a>
+
+					
+					<div class="commentdata"><span class="commentauthor" style="font-weight: bold;">Cliff</span>&nbsp;
+					<small class="commentmetadata">on <a href="index.html#comment-49996" title="1 year ago">6 February 2006 at 12:18 pm</a> </small></div>
+	
+					<div class="itemtext">
+					
+						<p>&#8220;HEALTH Minister Tony Abbott says that giving women access to the abortion drug RU486 could lead to a spate of &#8220;backyard miscarriages&#8221; and an internet-based black market in &#8220;medical abortion&#8221;.&#8221;</p>
+<p>It is much more probable that a black market will form around the drug if it continues to be prohibited.</p>
+ 
+					
+					</div>
+	
+						
+				</li>
+		
+			
+	
+		
+				<li class="alt authorcomment item" id="comment-49997">
+					<a name="comment-49997"></a>
+
+<a href='http://larvatusprodeo.net' title='Visit Mark'><img src='http://www.gravatar.com/avatar.php?gravatar_id=915a0bde231ae43aaee2978fd7fe1583&amp;rating=X&amp;size=40&amp;default=http://www.larvatusprodeo.net/uploads/blank_gravatar.png' alt='Gravatar icon' class='gravatar' /></a>
+
+					
+					<div class="commentdata"><span class="commentauthor" style="font-weight: bold;"><a href='http://larvatusprodeo.net' rel='external nofollow'>Mark</a></span>&nbsp;
+					<small class="commentmetadata">on <a href="index.html#comment-49997" title="1 year ago">6 February 2006 at 12:19 pm</a> </small></div>
+	
+					<div class="itemtext">
+					
+						<p>Yes, bizarre, isn&#8217;t it? Making something legal encourages a black market whereas banning it doesn&#8217;t?</p>
+ 
+					
+					</div>
+	
+						
+				</li>
+		
+			
+	
+		
+				<li class="  item" id="comment-49999">
+					<a name="comment-49999"></a>
+
+<a href='http://meika.loofs-samorzewski.com' title='Visit meika'><img src='http://www.gravatar.com/avatar.php?gravatar_id=466954d919f42703c9889d4298ae0384&amp;rating=X&amp;size=40&amp;default=http://www.larvatusprodeo.net/uploads/blank_gravatar.png' alt='Gravatar icon' class='gravatar' /></a>
+
+					
+					<div class="commentdata"><span class="commentauthor" style="font-weight: bold;"><a href='http://meika.loofs-samorzewski.com' rel='external nofollow'>meika</a></span>&nbsp;
+					<small class="commentmetadata">on <a href="index.html#comment-49999" title="1 year ago">6 February 2006 at 12:49 pm</a> </small></div>
+	
+					<div class="itemtext">
+					
+						<p>you mean daddy state</p>
+ 
+					
+					</div>
+	
+						
+				</li>
+		
+			
+	
+		
+				<li class="alt  item" id="comment-50000">
+					<a name="comment-50000"></a>
+
+<a href='http://www.gravatar.com' title='What is this?'><img src='http://www.gravatar.com/avatar.php?gravatar_id=69c449f6af31cf2a67bba983000349fc&amp;rating=X&amp;size=40&amp;default=http://www.larvatusprodeo.net/uploads/blank_gravatar.png' alt='Gravatar icon' class='gravatar' /></a>
+
+					
+					<div class="commentdata"><span class="commentauthor" style="font-weight: bold;">Kate</span>&nbsp;
+					<small class="commentmetadata">on <a href="index.html#comment-50000" title="1 year ago">6 February 2006 at 12:58 pm</a> </small></div>
+	
+					<div class="itemtext">
+					
+						<p>Shorter Abbot: &#8220;I want to make getting an abortion as difficult as I can in Australia, because of my religious views. However, I can&#8217;t possibly suggest banning it because the vast majority of Australians are in favour of legal abortion and it would be political suicide to try to ban it outright. Instead, I will bang on about protecting women. Because in our society it is still acceptable to insist that women can&#8217;t make medical decisions for themselves.&#8221;</p>
+ 
+					
+					</div>
+	
+						
+				</li>
+		
+			
+	
+		
+				<li class=" authorcomment item" id="comment-50001">
+					<a name="comment-50001"></a>
+
+<a href='http://larvatusprodeo.net' title='Visit Mark'><img src='http://www.gravatar.com/avatar.php?gravatar_id=915a0bde231ae43aaee2978fd7fe1583&amp;rating=X&amp;size=40&amp;default=http://www.larvatusprodeo.net/uploads/blank_gravatar.png' alt='Gravatar icon' class='gravatar' /></a>
+
+					
+					<div class="commentdata"><span class="commentauthor" style="font-weight: bold;"><a href='http://larvatusprodeo.net' rel='external nofollow'>Mark</a></span>&nbsp;
+					<small class="commentmetadata">on <a href="index.html#comment-50001" title="1 year ago">6 February 2006 at 1:00 pm</a> </small></div>
+	
+					<div class="itemtext">
+					
+						<p>Congrats on the 50 000th comment here, Kate!</p>
+ 
+					
+					</div>
+	
+						
+				</li>
+		
+			
+	
+		
+				<li class="alt  item" id="comment-50002">
+					<a name="comment-50002"></a>
+
+<a href='http://larvatusprodeo.net' title='Visit dk.au'><img src='http://www.gravatar.com/avatar.php?gravatar_id=25baeceeb5a3819fdec81945b4b8b872&amp;rating=X&amp;size=40&amp;default=http://www.larvatusprodeo.net/uploads/blank_gravatar.png' alt='Gravatar icon' class='gravatar' /></a>
+
+					
+					<div class="commentdata"><span class="commentauthor" style="font-weight: bold;"><a href='http://larvatusprodeo.net' rel='external nofollow'>dk.au</a></span>&nbsp;
+					<small class="commentmetadata">on <a href="index.html#comment-50002" title="1 year ago">6 February 2006 at 1:11 pm</a> </small></div>
+	
+					<div class="itemtext">
+					
+						<blockquote><p>Congrats on the 50 000th comment here, Kate!</p></blockquote>
+<p>Hooray!<br />
+<img src="http://users.tpg.com.au/fiftee3b/Fireworks.jpg"/></p>
+ 
+					
+					</div>
+	
+						
+				</li>
+		
+			
+	
+		
+				<li class="  item" id="comment-50003">
+					<a name="comment-50003"></a>
+
+<a href='http://www.bitemylatte.org.au' title='Visit Lefty Elitist'><img src='http://www.gravatar.com/avatar.php?gravatar_id=564ba3b6c2b3536737f9bfe4e44192e3&amp;rating=X&amp;size=40&amp;default=http://www.larvatusprodeo.net/uploads/blank_gravatar.png' alt='Gravatar icon' class='gravatar' /></a>
+
+					
+					<div class="commentdata"><span class="commentauthor" style="font-weight: bold;"><a href='http://www.bitemylatte.org.au' rel='external nofollow'>Lefty Elitist</a></span>&nbsp;
+					<small class="commentmetadata">on <a href="index.html#comment-50003" title="1 year ago">6 February 2006 at 1:13 pm</a> </small></div>
+	
+					<div class="itemtext">
+					
+						<p>And a good comment it was too. </p>
+<p>Yes, Abbott should get with the punters on this one. Ive had enough of these Right Wing elitist viewpoints, out of touch with ordinary battler concerns.</p>
+<p>the people have spoken Abbott. And while you&#8217;re at it, there&#8217; about 10% support for the monarchy here, so you can dump that elitist totem as well.</p>
+ 
+					
+					</div>
+	
+						
+				</li>
+		
+			
+	
+		
+				<li class="alt  item" id="comment-50004">
+					<a name="comment-50004"></a>
+
+<a href='http://larvatusprodeo.net' title='Visit dk.au'><img src='http://www.gravatar.com/avatar.php?gravatar_id=25baeceeb5a3819fdec81945b4b8b872&amp;rating=X&amp;size=40&amp;default=http://www.larvatusprodeo.net/uploads/blank_gravatar.png' alt='Gravatar icon' class='gravatar' /></a>
+
+					
+					<div class="commentdata"><span class="commentauthor" style="font-weight: bold;"><a href='http://larvatusprodeo.net' rel='external nofollow'>dk.au</a></span>&nbsp;
+					<small class="commentmetadata">on <a href="index.html#comment-50004" title="1 year ago">6 February 2006 at 1:16 pm</a> </small></div>
+	
+					<div class="itemtext">
+					
+						<p>Re: the black market thing, I read an article a while back on how kids these days are swapping prescription medicines to get them through exams, bouts of depression etc.  One of the lines was &#8216;why buy speed illegally when I can get uppers and downers through my mates?&#8217;</p>
+<p>It&#8217;s a long hop to suggesting this would apply equally to RU-486 though.  And anyway - why does the government want to see women suffer unnecessarily?  <a href='http://www.abc.net.au/rn/talks/8.30/helthrpt/stories/s268.htm'>[link]</a>  ie. Are they sadists or do they Hate Science?  (I&#8217;d say both)</p>
+ 
+					
+					</div>
+	
+						
+				</li>
+		
+			
+	
+		
+				<li class="  item" id="comment-50005">
+					<a name="comment-50005"></a>
+
+<a href='http://www.gravatar.com' title='What is this?'><img src='http://www.gravatar.com/avatar.php?gravatar_id=0f27c28441dc6474e5a90c31aa5b9205&amp;rating=X&amp;size=40&amp;default=http://www.larvatusprodeo.net/uploads/blank_gravatar.png' alt='Gravatar icon' class='gravatar' /></a>
+
+					
+					<div class="commentdata"><span class="commentauthor" style="font-weight: bold;">Geoff Honnor</span>&nbsp;
+					<small class="commentmetadata">on <a href="index.html#comment-50005" title="1 year ago">6 February 2006 at 1:29 pm</a> </small></div>
+	
+					<div class="itemtext">
+					
+						<p>The drug  needs to be handled within the normal prescription medicine guidelines of the TGA. I&#8217;ve yet to  see anyone offer a cogent case as to why this drug - out of thousands - requires a political rather than the normal clinical/regulatory handling parameter. There are many far more potentially harmful drugs in the national formulary and the Minister doesn&#8217;t choose to intervene in the licensing/precribing of any of them. </p>
+<p>Mifepristone entered it&#8217;s current shadowland in 1996 as a sop to Brian Harridine and there it remains. Stuck in a bizarre, politically-constructed vacuum that has absolutely nothing to do with &#8220;patient safety&#8221;<br />
+or any other politically convenient  evasion that Abbott et al come up with. </p>
+<p>For all the fearless, warrior persona that Abbott affects it seems impossible for him to summon up the courage to state the obvious: &#8221; I am adamantly opposed to pregnancy termination under most circumstances and I will do all in my power to ensure that my personal view prevails.&#8221; </p>
+<p>It would certainly help clarify thinking before the Senate votes.</p>
+ 
+					
+					</div>
+	
+						
+				</li>
+		
+			
+	
+		
+				<li class="alt authorcomment item" id="comment-50006">
+					<a name="comment-50006"></a>
+
+<a href='http://larvatusprodeo.net' title='Visit Mark'><img src='http://www.gravatar.com/avatar.php?gravatar_id=915a0bde231ae43aaee2978fd7fe1583&amp;rating=X&amp;size=40&amp;default=http://www.larvatusprodeo.net/uploads/blank_gravatar.png' alt='Gravatar icon' class='gravatar' /></a>
+
+					
+					<div class="commentdata"><span class="commentauthor" style="font-weight: bold;"><a href='http://larvatusprodeo.net' rel='external nofollow'>Mark</a></span>&nbsp;
+					<small class="commentmetadata">on <a href="index.html#comment-50006" title="1 year ago">6 February 2006 at 1:34 pm</a> </small></div>
+	
+					<div class="itemtext">
+					
+						<p>Precisely, Geoff. Why RU486 and nothing else? Abbott is being fundamentally dishonest on this.</p>
+ 
+					
+					</div>
+	
+						
+				</li>
+		
+			
+	
+		
+				<li class="  item" id="comment-50007">
+					<a name="comment-50007"></a>
+
+<a href='http://www.gravatar.com' title='What is this?'><img src='http://www.gravatar.com/avatar.php?gravatar_id=ac9cb906853818dc0b564219c73b73ba&amp;rating=X&amp;size=40&amp;default=http://www.larvatusprodeo.net/uploads/blank_gravatar.png' alt='Gravatar icon' class='gravatar' /></a>
+
+					
+					<div class="commentdata"><span class="commentauthor" style="font-weight: bold;">Aidan</span>&nbsp;
+					<small class="commentmetadata">on <a href="index.html#comment-50007" title="1 year ago">6 February 2006 at 1:43 pm</a> </small></div>
+	
+					<div class="itemtext">
+					
+						<blockquote><p>Precisely, Geoff. Why RU486 and nothing else?</p></blockquote>
+<p>Because he can. Pollies like Abbott will abuse what little power they have. All the more reason not to give them any.</p>
+<blockquote><p>Abbott is being fundamentally dishonest on this.</p></blockquote>
+<p>And you sound surprised!</p>
+<p>Politics, if it was ever different, is now an exercise in judging what the punter will swallow. Many politicians lie habitually. I sometimes wonder if they even realise they are doing it.</p>
+<p>To expect any different is to court disappointment. Sad eh?</p>
+ 
+					
+					</div>
+	
+						
+				</li>
+		
+			
+	
+		
+				<li class="alt authorcomment item" id="comment-50008">
+					<a name="comment-50008"></a>
+
+<a href='http://larvatusprodeo.net' title='Visit Mark'><img src='http://www.gravatar.com/avatar.php?gravatar_id=915a0bde231ae43aaee2978fd7fe1583&amp;rating=X&amp;size=40&amp;default=http://www.larvatusprodeo.net/uploads/blank_gravatar.png' alt='Gravatar icon' class='gravatar' /></a>
+
+					
+					<div class="commentdata"><span class="commentauthor" style="font-weight: bold;"><a href='http://larvatusprodeo.net' rel='external nofollow'>Mark</a></span>&nbsp;
+					<small class="commentmetadata">on <a href="index.html#comment-50008" title="1 year ago">6 February 2006 at 1:55 pm</a> </small></div>
+	
+					<div class="itemtext">
+					
+						<p>By the way, if your comment takes a while to appear, don&#8217;t panic. I think the spaminator is assuming the name of the drug indicates the typical Canadian pharmacy type spam.</p>
+ 
+					
+					</div>
+	
+						
+				</li>
+		
+			
+	
+		
+				<li class="  item" id="comment-50009">
+					<a name="comment-50009"></a>
+
+<a href='http://pavlovblog.blogspot.com' title='Visit Pavlov's Cat'><img src='http://www.gravatar.com/avatar.php?gravatar_id=52f1d3ee627d49496934ab047bee71d5&amp;rating=X&amp;size=40&amp;default=http://www.larvatusprodeo.net/uploads/blank_gravatar.png' alt='Gravatar icon' class='gravatar' /></a>
+
+					
+					<div class="commentdata"><span class="commentauthor" style="font-weight: bold;"><a href='http://pavlovblog.blogspot.com' rel='external nofollow'>Pavlov's Cat</a></span>&nbsp;
+					<small class="commentmetadata">on <a href="index.html#comment-50009" title="1 year ago">6 February 2006 at 1:56 pm</a> </small></div>
+	
+					<div class="itemtext">
+					
+						<p>&#8216;Mifepristone entered it’s current shadowland in 1996 as a sop to Brian Harridine and there it remains. Stuck in a bizarre, politically-constructed vacuum that has absolutely nothing to do with “patient safety”.&#8217;</p>
+<p>Damn right, Geoff. This fact needs to be brought right into the middle of the ring and unrelentingly kept there so nobody will forget it. It was and remains a testament to political cyncism and expediency.</p>
+ 
+					
+					</div>
+	
+						
+				</li>
+		
+			
+	
+		
+				<li class="alt  item" id="comment-50011">
+					<a name="comment-50011"></a>
+
+<a href='http://www.gravatar.com' title='What is this?'><img src='http://www.gravatar.com/avatar.php?gravatar_id=57a2bec050011cb1495e6bce4523118c&amp;rating=X&amp;size=40&amp;default=http://www.larvatusprodeo.net/uploads/blank_gravatar.png' alt='Gravatar icon' class='gravatar' /></a>
+
+					
+					<div class="commentdata"><span class="commentauthor" style="font-weight: bold;">Paul Norton</span>&nbsp;
+					<small class="commentmetadata">on <a href="index.html#comment-50011" title="1 year ago">6 February 2006 at 2:01 pm</a> </small></div>
+	
+					<div class="itemtext">
+					
+						<p>Here&#8217;s some informative background reading on RU486, especially for those intending to write to their local Federal MP:</p>
+<p><a href='http://www.mja.com.au/public/issues/183_07_031005/dec10429fm.html'>[link]</a></p>
+<p>Some other links in a similar vein are:</p>
+<p><a href='http://www.ranzcog.edu.au/publications/statements/C-gyn14.pdf'>[link]</a></p>
+<p><a href='http://www.ama.com.au/web.nsf/doc/WEEN-6GP283'>[link]</a></p>
+<p><a href='http://www.ama.com.au/web.nsf/doc/WEEN-6HW5DZ'>[link]</a></p>
+<p><a href='http://www.ama.com.au/web.nsf/doc/WEEN-6HX2LE'>[link]</a></p>
+<p><a href='http://www.ama.com.au/web.nsf/doc/WEEN-6J6AF4'>[link]</a></p>
+<p><a href='http://www.ama.com.au/web.nsf/doc/WEEN-6JLSY2'>[link]</a></p>
+ 
+					
+					</div>
+	
+						
+				</li>
+		
+			
+	
+		
+				<li class="  item" id="comment-50012">
+					<a name="comment-50012"></a>
+
+<a href='http://larvatusprodeo.net/' title='Visit Anna Winter'><img src='http://www.gravatar.com/avatar.php?gravatar_id=615ff25d6e9d32a5f3aae793fb3c1fcb&amp;rating=X&amp;size=40&amp;default=http://www.larvatusprodeo.net/uploads/blank_gravatar.png' alt='Gravatar icon' class='gravatar' /></a>
+
+					
+					<div class="commentdata"><span class="commentauthor" style="font-weight: bold;"><a href='http://larvatusprodeo.net/' rel='external nofollow'>Anna Winter</a></span>&nbsp;
+					<small class="commentmetadata">on <a href="index.html#comment-50012" title="1 year ago">6 February 2006 at 2:07 pm</a> </small></div>
+	
+					<div class="itemtext">
+					
+						<p>I think we shouldn&#8217;t be too eager to spread that line - it was supported by almost every Senator. </p>
+<p>It&#8217;s also not really relevant to the very good arguments to remove the veto power.</p>
+ 
+					
+					</div>
+	
+						
+				</li>
+		
+			
+	
+		
+				<li class="alt  item" id="comment-50013">
+					<a name="comment-50013"></a>
+
+<a href='http://larvatusprodeo.net/' title='Visit Anna Winter'><img src='http://www.gravatar.com/avatar.php?gravatar_id=615ff25d6e9d32a5f3aae793fb3c1fcb&amp;rating=X&amp;size=40&amp;default=http://www.larvatusprodeo.net/uploads/blank_gravatar.png' alt='Gravatar icon' class='gravatar' /></a>
+
+					
+					<div class="commentdata"><span class="commentauthor" style="font-weight: bold;"><a href='http://larvatusprodeo.net/' rel='external nofollow'>Anna Winter</a></span>&nbsp;
+					<small class="commentmetadata">on <a href="index.html#comment-50013" title="1 year ago">6 February 2006 at 2:08 pm</a> </small></div>
+	
+					<div class="itemtext">
+					
+						<p>Following on from Paul&#8217;s comment - the Senate votes this Thursday - so get writing!!</p>
+ 
+					
+					</div>
+	
+						
+				</li>
+		
+				
+		</ol>
+						
+	
+	
+
+
+	<!-- Reply Form -->
+		<div id="loading" style="display: none;">
+		Posting your comment...
+	</div>
+		<h4>Leave a Reply</h4>
+
+<p><small>Please read the <a href="http://larvatusprodeo.redrag.net/about-larvatus-prodeo/comments-policy/">comments policy</a>. If you would like an icon beside your comment, please register a <a href="http://gravatar.com/">Gravatar</a>.</small></p>
+<!-- <p><small><strong>XHTML:</strong> You can use these tags: &lt;a href=&quot;&quot; title=&quot;&quot;&gt; &lt;abbr title=&quot;&quot;&gt; &lt;acronym title=&quot;&quot;&gt; &lt;b&gt; &lt;blockquote cite=&quot;&quot;&gt; &lt;code&gt; &lt;em&gt; &lt;i&gt; &lt;strike&gt; &lt;strong&gt; </small></p>   -->
+<p><small><strong>There is a Comments Preview function below the typing box which activates when you start typing.</strong></small></p>		
+				
+
+<form id="commentform" action="http://larvatusprodeo.net/wp-comments-post.php" method="post" onsubmit="new Ajax.Updater({success: 'commentlist'}, 'http://larvatusprodeo.net/wp-content/themes/k2/comments-ajax.php', {asynchronous: true, evalScripts: true, insertion: Insertion.Bottom, onComplete: function(request){complete(request)}, onFailure: function(request){failure(request)}, onLoading: function(request){loading()}, parameters: Form.serialize(this)}); return false;">
+
+		<div id="error" style="display:none">
+		There was an error with your comment, please try again.
+	</div>
+		
+					
+			<p><input type="text" name="author" id="author" value="" size="22" tabindex="1" />
+			<label for="author"><small><strong>Name</strong> (required)</small></label></p>
+			
+			<p><input type="text" name="email" id="email" value="" size="22" tabindex="2" />
+			<label for="email"><small><strong>Mail</strong> (will not be published) (required)</small></label></p>
+			
+			<p><input type="text" name="url" id="url" value="" size="22" tabindex="3" />
+			<label for="url"><small><strong>Website</strong></small></label></p>
+			
+				
+		
+	
+		
+			<p><script type="text/javascript">edToolbar();</script><textarea name="comment" id="comment" cols="100%" rows="10" tabindex="4"></textarea><script type="text/javascript">var edCanvas = document.getElementById('comment');</script></p>
+		
+	          
+		
+			<p>
+				<input name="submit" type="submit" id="submit" tabindex="5" value="Submit" />
+				<input type="hidden" name="comment_post_ID" value="1416" />
+				<br class="clear" />
+			</p>
+
+
+
+	
+			<div id="commentPreview"></div>
+
+			</form>
+
+
+
+
+</div> <!-- Close .comments container -->
+
+</div>
+
+<hr />
+
+<div class="secondary">
+
+
+
+<div class="sb_highlightbox">
+<p class="donate"><a href="http://larvatusprodeo.net/about-larvatus-prodeo/#donate"><img src="donate.jpg" alt="Donate! Thankyou for your generosity" /></a></p>
+<p><cite>Larvatus Prodeo</cite> is an Australian group blog which discusses politics, sociology, culture, life, religion and science from a left of centre perspective. <a href="http://larvatusprodeo.net/about-larvatus-prodeo/">more&raquo;</a></p>
+</div>
+
+<div class="sb_navigation">
+<h2>Navigation</h2>
+<ul><li class="page_item"><a href="http://larvatusprodeo.net">Home</a></li>
+<li class="page_item"><a href="http://larvatusprodeo.net/about-larvatus-prodeo/" title="About Larvatus Prodeo">About Larvatus Prodeo</a>
+	<ul>
+	<li class="page_item"><a href="http://larvatusprodeo.net/about-larvatus-prodeo/about-lp-bloggers/" title="About LP Bloggers">About LP Bloggers</a></li>
+	<li class="page_item"><a href="http://larvatusprodeo.net/about-larvatus-prodeo/about-mark-bahnisch/" title="About Mark Bahnisch">About Mark Bahnisch</a></li>
+	<li class="page_item"><a href="http://larvatusprodeo.net/about-larvatus-prodeo/comments-policy/" title="Comments Policy">Comments Policy</a></li>
+	<li class="page_item"><a href="http://larvatusprodeo.net/about-larvatus-prodeo/email-me/" title="Email LP">Email LP</a></li>
+	</ul>
+</li>
+<li class="page_item"><a href="http://larvatusprodeo.net/accolades-for-lp/" title="Accolades for LP">Accolades for LP</a></li>
+</ul>
+</div>
+
+
+	
+
+
+
+	 
+	<div class="sb_comments"><h2>Comments</h2>
+		<span class="metalink"><a href="http://larvatusprodeo.net/comments/feed/" title="RSS Feed for all Comments">RSS</a></span>
+		<ul>
+			<li><a href="http://larvatusprodeo.net/2007/02/14/three-lazy-pieces/" title="Last comment was 2 minutes ago" class="activityentry">Three Lazy Pieces </a>&nbsp;(9)<br />
+<small><a href="http://larvatusprodeo.net/2007/02/14/three-lazy-pieces/#comment-347429" title="Posted 2 minutes ago">Kim</a>, <a href="http://larvatusprodeo.net/2007/02/14/three-lazy-pieces/#comment-347428" title="Posted 4 minutes ago">Nabakov</a>, <a href="http://larvatusprodeo.net/2007/02/14/three-lazy-pieces/#comment-347424" title="Posted 15 minutes ago">professor rat</a>, <a href="http://larvatusprodeo.net/2007/02/14/three-lazy-pieces/#comment-347398" title="Posted 2 hours, 23 minutes ago">Christine Keeler</a>, <a href="http://larvatusprodeo.net/2007/02/14/three-lazy-pieces/#comment-347395" title="Posted 2 hours, 30 minutes ago">Mark</a>, <a href="http://larvatusprodeo.net/2007/02/14/three-lazy-pieces/#comment-347393" title="Posted 2 hours, 34 minutes ago">Mark</a> <a href="http://larvatusprodeo.net/2007/02/14/three-lazy-pieces/#comments" title="Go to the comments of this entry">[...]</a></small></li>
+<li class='alternate'><a href="http://larvatusprodeo.net/2007/02/14/casuistry-challenge-viii/" title="Last comment was 9 minutes ago" class="activityentry">Casuistry Challenge VIII</a>&nbsp;(8)<br />
+<small><a href="http://larvatusprodeo.net/2007/02/14/casuistry-challenge-viii/#comment-347427" title="Posted 9 minutes ago">Kim</a>, <a href="http://larvatusprodeo.net/2007/02/14/casuistry-challenge-viii/#comment-347425" title="Posted 14 minutes ago">Robin Goodfellow</a>, <a href="http://larvatusprodeo.net/2007/02/14/casuistry-challenge-viii/#comment-347369" title="Posted 4 hours, 3 minutes ago">professor rat</a>, <a href="http://larvatusprodeo.net/2007/02/14/casuistry-challenge-viii/#comment-347359" title="Posted 4 hours, 38 minutes ago">Angharad</a>, <a href="http://larvatusprodeo.net/2007/02/14/casuistry-challenge-viii/#comment-347353" title="Posted 5 hours, 28 minutes ago">wbb</a>, <a href="http://larvatusprodeo.net/2007/02/14/casuistry-challenge-viii/#comment-347351" title="Posted 5 hours, 42 minutes ago">wpd</a> <a href="http://larvatusprodeo.net/2007/02/14/casuistry-challenge-viii/#comments" title="Go to the comments of this entry">[...]</a></small></li>
+<li><a href="http://larvatusprodeo.net/2007/02/13/giving-comfort-to-the-terrsts/" title="Last comment was 13 minutes ago" class="activityentry">Giving comfort to the terrsts</a>&nbsp;(78)<br />
+<small><a href="http://larvatusprodeo.net/2007/02/13/giving-comfort-to-the-terrsts/#comment-347426" title="Posted 13 minutes ago">Kim</a>, <a href="http://larvatusprodeo.net/2007/02/13/giving-comfort-to-the-terrsts/#comment-347423" title="Posted 17 minutes ago">Nabakov</a>, <a href="http://larvatusprodeo.net/2007/02/13/giving-comfort-to-the-terrsts/#comment-347422" title="Posted 25 minutes ago">Nabakov</a>, <a href="http://larvatusprodeo.net/2007/02/13/giving-comfort-to-the-terrsts/#comment-347419" title="Posted 35 minutes ago">Kim</a>, <a href="http://larvatusprodeo.net/2007/02/13/giving-comfort-to-the-terrsts/#comment-347418" title="Posted 35 minutes ago">Kim</a>, <a href="http://larvatusprodeo.net/2007/02/13/giving-comfort-to-the-terrsts/#comment-347417" title="Posted 41 minutes ago">Nabakov</a> <a href="http://larvatusprodeo.net/2007/02/13/giving-comfort-to-the-terrsts/#comments" title="Go to the comments of this entry">[...]</a></small></li>
+<li class='alternate'><a href="http://larvatusprodeo.net/2007/02/12/super-hornet-acquisition-plan-gets-bollocking/" title="Last comment was 33 minutes ago" class="activityentry">Super Hornet acquisition plan gets bollocking</a>&nbsp;(44)<br />
+<small><a href="http://larvatusprodeo.net/2007/02/12/super-hornet-acquisition-plan-gets-bollocking/#comment-347421" title="Posted 33 minutes ago">Kim</a>, <a href="http://larvatusprodeo.net/2007/02/12/super-hornet-acquisition-plan-gets-bollocking/#comment-347420" title="Posted 34 minutes ago">Nabakov</a>, <a href="http://larvatusprodeo.net/2007/02/12/super-hornet-acquisition-plan-gets-bollocking/#comment-347414" title="Posted 56 minutes ago">Kim</a>, <a href="http://larvatusprodeo.net/2007/02/12/super-hornet-acquisition-plan-gets-bollocking/#comment-347409" title="Posted 1 hour, 9 minutes ago">Nabakov</a>, <a href="http://larvatusprodeo.net/2007/02/12/super-hornet-acquisition-plan-gets-bollocking/#comment-347406" title="Posted 1 hour, 13 minutes ago">threadmaster</a>, <a href="http://larvatusprodeo.net/2007/02/12/super-hornet-acquisition-plan-gets-bollocking/#comment-347404" title="Posted 1 hour, 34 minutes ago">Nabakov</a> <a href="http://larvatusprodeo.net/2007/02/12/super-hornet-acquisition-plan-gets-bollocking/#comments" title="Go to the comments of this entry">[...]</a></small></li>
+<li><a href="http://larvatusprodeo.net/2007/02/14/a-non-novel-gift-idea/" title="Last comment was 53 minutes ago" class="activityentry">A non-novel gift idea</a>&nbsp;(6)<br />
+<small><a href="http://larvatusprodeo.net/2007/02/14/a-non-novel-gift-idea/#comment-347415" title="Posted 53 minutes ago">Kim</a>, <a href="http://larvatusprodeo.net/2007/02/14/a-non-novel-gift-idea/#comment-347410" title="Posted 1 hour, 5 minutes ago">Christine Keeler</a>, <a href="http://larvatusprodeo.net/2007/02/14/a-non-novel-gift-idea/#comment-347407" title="Posted 1 hour, 12 minutes ago">Nabakov</a>, <a href="http://larvatusprodeo.net/2007/02/14/a-non-novel-gift-idea/#comment-347375" title="Posted 3 hours, 48 minutes ago">Shaun</a>, <a href="http://larvatusprodeo.net/2007/02/14/a-non-novel-gift-idea/#comment-347373" title="Posted 3 hours, 55 minutes ago">Mark</a>, <a href="http://larvatusprodeo.net/2007/02/14/a-non-novel-gift-idea/#comment-347368" title="Posted 4 hours, 4 minutes ago">Pinguthepenguin</a></small></li>
+<li class='alternate'><a href="http://larvatusprodeo.net/2007/02/13/she-sends-me-blue-valentines/" title="Last comment was 2 hours, 13 minutes ago" class="activityentry">She sends me blue valentines...</a>&nbsp;(68)<br />
+<small><a href="http://larvatusprodeo.net/2007/02/13/she-sends-me-blue-valentines/#comment-347400" title="Posted 2 hours, 13 minutes ago">sublime cowgirl</a>, <a href="http://larvatusprodeo.net/2007/02/13/she-sends-me-blue-valentines/#comment-347399" title="Posted 2 hours, 22 minutes ago">Mark</a>, <a href="http://larvatusprodeo.net/2007/02/13/she-sends-me-blue-valentines/#comment-347396" title="Posted 2 hours, 27 minutes ago">sublime cowgirl</a>, <a href="http://larvatusprodeo.net/2007/02/13/she-sends-me-blue-valentines/#comment-347391" title="Posted 2 hours, 40 minutes ago">Mark</a>, <a href="http://larvatusprodeo.net/2007/02/13/she-sends-me-blue-valentines/#comment-347389" title="Posted 2 hours, 47 minutes ago">Mark</a>, <a href="http://larvatusprodeo.net/2007/02/13/she-sends-me-blue-valentines/#comment-347385" title="Posted 3 hours, 1 minute ago">sublime cowgirl</a> <a href="http://larvatusprodeo.net/2007/02/13/she-sends-me-blue-valentines/#comments" title="Go to the comments of this entry">[...]</a></small></li>
+<li><a href="http://larvatusprodeo.net/2007/02/11/post-modernist-relativism-windschuttle-style/" title="Last comment was 2 hours, 48 minutes ago" class="activityentry">Post-Modernist Relativism, Windschuttle Style </a>&nbsp;(71)<br />
+<small><a href="http://larvatusprodeo.net/2007/02/11/post-modernist-relativism-windschuttle-style/#comment-347388" title="Posted 2 hours, 48 minutes ago">Gummo Trotsky</a>, <a href="http://larvatusprodeo.net/2007/02/11/post-modernist-relativism-windschuttle-style/#comment-347379" title="Posted 3 hours, 29 minutes ago">Nabakov</a>, <a href="http://larvatusprodeo.net/2007/02/11/post-modernist-relativism-windschuttle-style/#comment-347360" title="Posted 4 hours, 29 minutes ago">Mark</a>, <a href="http://larvatusprodeo.net/2007/02/11/post-modernist-relativism-windschuttle-style/#comment-347356" title="Posted 5 hours, 11 minutes ago">GregM</a>, <a href="http://larvatusprodeo.net/2007/02/11/post-modernist-relativism-windschuttle-style/#comment-347346" title="Posted 6 hours, 35 minutes ago">aml</a>, <a href="http://larvatusprodeo.net/2007/02/11/post-modernist-relativism-windschuttle-style/#comment-347343" title="Posted 6 hours, 39 minutes ago">John Greenfield</a> <a href="http://larvatusprodeo.net/2007/02/11/post-modernist-relativism-windschuttle-style/#comments" title="Go to the comments of this entry">[...]</a></small></li>
+<li class='alternate'><a href="http://larvatusprodeo.net/2007/02/14/the-beat-goes-on/" title="Last comment was 3 hours, 5 minutes ago" class="activityentry">The beat goes on...</a>&nbsp;(2)<br />
+<small><a href="http://larvatusprodeo.net/2007/02/14/the-beat-goes-on/#comment-347384" title="Posted 3 hours, 5 minutes ago">Christine Keeler</a>, <a href="http://larvatusprodeo.net/2007/02/14/the-beat-goes-on/#comment-347366" title="Posted 4 hours, 9 minutes ago">hannah</a></small></li>
+<li><a href="http://larvatusprodeo.net/2007/02/11/mr-brown-do-you-really-want-our-kids-smoking-marijuana/" title="Last comment was 3 hours, 13 minutes ago" class="activityentry">Mr Brown, do you really want our kids smoking marijuana?</a>&nbsp;(139)<br />
+<small><a href="http://larvatusprodeo.net/2007/02/11/mr-brown-do-you-really-want-our-kids-smoking-marijuana/#comment-347381" title="Posted 3 hours, 13 minutes ago">GregM</a>, <a href="http://larvatusprodeo.net/2007/02/11/mr-brown-do-you-really-want-our-kids-smoking-marijuana/#comment-347362" title="Posted 4 hours, 28 minutes ago">Mark</a>, <a href="http://larvatusprodeo.net/2007/02/11/mr-brown-do-you-really-want-our-kids-smoking-marijuana/#comment-347357" title="Posted 4 hours, 41 minutes ago">adrian</a>, <a href="http://larvatusprodeo.net/2007/02/11/mr-brown-do-you-really-want-our-kids-smoking-marijuana/#comment-347354" title="Posted 5 hours, 19 minutes ago">GregM</a>, <a href="http://larvatusprodeo.net/2007/02/11/mr-brown-do-you-really-want-our-kids-smoking-marijuana/#comment-347352" title="Posted 5 hours, 41 minutes ago">Greta</a>, <a href="http://larvatusprodeo.net/2007/02/11/mr-brown-do-you-really-want-our-kids-smoking-marijuana/#comment-347350" title="Posted 5 hours, 45 minutes ago">GregM</a> <a href="http://larvatusprodeo.net/2007/02/11/mr-brown-do-you-really-want-our-kids-smoking-marijuana/#comments" title="Go to the comments of this entry">[...]</a></small></li>
+<li class='alternate'><a href="http://larvatusprodeo.net/2007/02/13/howards-quandary-are-the-american-people-al-qaedas-allies/" title="Last comment was 4 hours, 11 minutes ago" class="activityentry">Howard's quandary: are the American people Al Qaeda's allies?</a>&nbsp;(29)<br />
+<small><a href="http://larvatusprodeo.net/2007/02/13/howards-quandary-are-the-american-people-al-qaedas-allies/#comment-347365" title="Posted 4 hours, 11 minutes ago">Shaun</a>, <a href="http://larvatusprodeo.net/2007/02/13/howards-quandary-are-the-american-people-al-qaedas-allies/#comment-347358" title="Posted 4 hours, 40 minutes ago">Evan</a>, <a href="http://larvatusprodeo.net/2007/02/13/howards-quandary-are-the-american-people-al-qaedas-allies/#comment-347347" title="Posted 6 hours, 13 minutes ago">Megan</a>, <a href="http://larvatusprodeo.net/2007/02/13/howards-quandary-are-the-american-people-al-qaedas-allies/#comment-347251" title="Posted 13 hours, 5 minutes ago">chris</a>, <a href="http://larvatusprodeo.net/2007/02/13/howards-quandary-are-the-american-people-al-qaedas-allies/#comment-347242" title="Posted 13 hours, 39 minutes ago">Youie</a>, <a href="http://larvatusprodeo.net/2007/02/13/howards-quandary-are-the-american-people-al-qaedas-allies/#comment-347206" title="Posted 17 hours ago">Mark</a> <a href="http://larvatusprodeo.net/2007/02/13/howards-quandary-are-the-american-people-al-qaedas-allies/#comments" title="Go to the comments of this entry">[...]</a></small></li>
+<li><a href="http://larvatusprodeo.net/2007/02/13/the-ipcc-4th-assessment-report-a-planet-in-play/" title="Last comment was 4 hours, 29 minutes ago" class="activityentry">The IPCC 4th Assessment Report: a planet in play</a>&nbsp;(23)<br />
+<small><a href="http://larvatusprodeo.net/2007/02/13/the-ipcc-4th-assessment-report-a-planet-in-play/#comment-347361" title="Posted 4 hours, 29 minutes ago">Brian</a>, <a href="http://larvatusprodeo.net/2007/02/13/the-ipcc-4th-assessment-report-a-planet-in-play/#comment-347334" title="Posted 7 hours, 39 minutes ago">Kim</a>, <a href="http://larvatusprodeo.net/2007/02/13/the-ipcc-4th-assessment-report-a-planet-in-play/#comment-347322" title="Posted 8 hours, 59 minutes ago">Greta</a>, <a href="http://larvatusprodeo.net/2007/02/13/the-ipcc-4th-assessment-report-a-planet-in-play/#comment-347201" title="Posted 17 hours, 25 minutes ago">Paul Norton</a>, <a href="http://larvatusprodeo.net/2007/02/13/the-ipcc-4th-assessment-report-a-planet-in-play/#comment-347188" title="Posted 18 hours, 47 minutes ago">Brian</a>, <a href="http://larvatusprodeo.net/2007/02/13/the-ipcc-4th-assessment-report-a-planet-in-play/#comment-347184" title="Posted 18 hours, 58 minutes ago">Brian</a> <a href="http://larvatusprodeo.net/2007/02/13/the-ipcc-4th-assessment-report-a-planet-in-play/#comments" title="Go to the comments of this entry">[...]</a></small></li>
+<li class='alternate'><a href="http://larvatusprodeo.net/2007/02/12/balanced-television/" title="Last comment was 6 hours, 59 minutes ago" class="activityentry">Balanced television</a>&nbsp;(60)<br />
+<small><a href="http://larvatusprodeo.net/2007/02/12/balanced-television/#comment-347340" title="Posted 6 hours, 59 minutes ago">John Greenfield</a>, <a href="http://larvatusprodeo.net/2007/02/12/balanced-television/#comment-347339" title="Posted 7 hours, 1 minute ago">John Greenfield</a>, <a href="http://larvatusprodeo.net/2007/02/12/balanced-television/#comment-347321" title="Posted 9 hours, 2 minutes ago">adrian</a>, <a href="http://larvatusprodeo.net/2007/02/12/balanced-television/#comment-347319" title="Posted 9 hours, 6 minutes ago">glen</a>, <a href="http://larvatusprodeo.net/2007/02/12/balanced-television/#comment-347309" title="Posted 9 hours, 43 minutes ago">Dazza</a>, <a href="http://larvatusprodeo.net/2007/02/12/balanced-television/#comment-347298" title="Posted 10 hours, 42 minutes ago">John Greenfield</a> <a href="http://larvatusprodeo.net/2007/02/12/balanced-television/#comments" title="Go to the comments of this entry">[...]</a></small></li>
+		</ul>
+	</div>
+	
+
+	
+	
+
+	
+
+	
+
+	
+
+	
+		
+	<div class="sb_themeswitcher"><h2>Themes</h2>
+<ul id="themeswitcher">
+<li>
+	<select name="themeswitcher" onchange="location.href='http://larvatusprodeo.net/?wptheme=' + this.options[this.selectedIndex].value;">
+		<option value="Modern Style" selected="selected">Modern Style</option>
+		<option value="Nostalgic">Nostalgic</option>
+		<option value="WordPress Classic">WordPress Classic</option>
+		<option value="WordPress Default">WordPress Default</option>
+	</select>
+</li>
+</ul>
+
+<br><br><br>
+<!-- Site Meter XHTML Strict 1.0 -->
+<script type="text/javascript" src="http://s28.sitemeter.com/js/counter.js?site=s28larvatus">
+</script>
+<!-- Copyright (c)2006 Site Meter -->
+
+
+</div>
+
+</div>
+
+
+
+<script type="text/javascript" src="http://embed.technorati.com/embed/z69kgai9d5.js"></script>	<br class="clear" />
+
+
+<hr />
+
+<p id="footer"><small>
+	Larvatus Prodeo is powered by <a href="http://wordpress.org" title="Where children sing songs of binary bliss">WordPress</a> and a modified version of <a href="http://binarybonsai.com/k2/" title="Is to WordPress what math is to reality; hard to understand.">K2</a>, with a borrowed <a href="http://larvatusprodeo.net/about-larvatus-prodeo/#header-image">header image</a>.<br />
+	<a href="http://larvatusprodeo.net/feed/">RSS Entries</a> and <a href="http://larvatusprodeo.net/comments/feed/">RSS Comments</a><br />
+Admin: <a href="http://larvatusprodeo.net/wp-login.php">Login</a>	<!-- 63 queries. 0.230 seconds. -->
+</small></p>
+
+</div> <!-- Close Page -->
+
+
+	
+</body>
+</html>

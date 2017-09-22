@@ -1,0 +1,292 @@
+/*
+ *
+ */
+
+
+/*
+ * margins of body and browser boarder
+ */
+body 
+{ 
+  margin-top:10px; 
+  margin-bottom:10px; 
+  color:#000000; 
+  background-color:#FFFFFF; 
+/*
+  background-image:url(/Images/page_background.gif);
+  background-attachment:fixed; 
+*/
+}
+
+p, h1, h2, h3, h4, ul, ol, li, div, td, th, address, blockquote, nobr, b, i, a 
+{ 
+  font-family:Arial,sans-serif;
+} 
+
+
+#content { 
+  font-family:Arial,sans-serif;
+  font-size:10pt; 
+/*	position: absolute;
+	top: 100px;
+	left: 280px;
+	width: 500px; */
+}
+
+
+h1 
+{ 
+  font-size:18pt; 
+}
+
+h2 
+{ 
+  font-size:16pt; 
+}
+
+h3
+{ 
+  font-size:12pt; 
+}
+
+h4 
+{ 
+  font-size:10pt; 
+}
+
+p, ul, ol, li, div, td, th, address, nobr, b, i 
+{ 
+  font-size:10pt; 
+}
+
+/* Contents bar */
+p.contents
+{
+  font-size: 10pt;
+}
+
+
+/* source code */
+pre 
+{ 
+  font-family:Courier New,Courier; 
+  font-size:10pt; 
+  color:#0000C0; 
+}
+
+/* source code in text */
+tt 
+{ 
+  font-family:Courier New,Courier; 
+  font-size:10pt; 
+  color:#0000C0; 
+}
+
+/* source code in tabelle */
+td.xmpcode 
+{ 
+  border-width:1pt; 
+  border-style:solid; 
+  border-color:#999999; 
+  background-color:#FFFFE0; 
+}
+
+/* tabelle mit source code */
+.code { background-color:#FFFFE0; }
+
+/* tabelle with explanation */
+td.xplcode 
+{ 	
+  font-family:Arial,sans-serif; 
+/*
+  font-family:Verdana; 
+*/
+  font-size:10pt; 
+  border-width:0pt; 
+  border-style:solid; 
+  border-color:#999999; 
+  background-color:#EEEEFF; 
+}
+
+
+/* Layout-Elemente mit hellgrauem Hintergrund */
+/* background-color = Hintergrundfarbe */
+/* #EEEEEE = helles Grau, Wert aenderbar */
+.doc 
+{ 
+  background-color:#EEEEEE; 
+}
+
+
+
+
+.qbar { background-color:#FFFFE0; font-size:9pt; font-family:Arial,sans-serif; }
+
+/* Layout-Elemente mit hellgrauem Hintergrund */
+/* nur MS IE 4, Netscape 4.0 ignoriert diese Angaben */
+/* background-color = Hintergrundfarbe */
+/* #FFFFE0 = helles Gelb, Wert aenderbar */
+/* font-family = Schriftart */
+/* Arial,sans-serif = Schriftarten, Wert aenderbar */
+/* font-size = Schriftgroesse */
+/* 9pt = 9 Punkt, Wert aenderbar */
+
+
+pre.normal { color:#000000; }
+
+/* normale praeformatierte Bereiche, nicht fuer Quelltexte */
+/* color = Farbe */
+/* #000000 = schwarz, Wert aenderbar */
+
+
+/* hyper links */
+a 
+{ 
+  font-size=10pt; 
+}
+
+a.contents
+{
+  font-size=6pt;
+}
+
+a.namelist
+{
+  font-size=9pt;
+}
+
+/* not visited urls */
+a:link 
+{ 
+  color:#AA5522; 
+  text-decoration:none; 
+}
+
+/* visited urls */
+a:visited 
+{ 
+  color:#772200; 
+  text-decoration:none; 
+}
+
+/* on klick urls */
+a:active 
+{ 
+  color:#000000; 
+  text-decoration:none; 
+}
+
+
+table 
+{ 
+}
+
+table.tr
+{
+  margin-left:20px; 
+  margin-right:20px; 
+  width:96%;
+}
+
+table.namelist
+{
+  width:100%;
+}
+
+td.namelistright
+{
+  text-align:right;
+  margin-left:20px;
+  margin-right:20px;
+/*
+  vertical-align:rigth;
+*/
+  font-family:Arial,sans-serif; 
+  font-size:9pt; 
+/*  border-width:1pt;        out-commented by nob, Feb 20, 2001 */
+/*  border-style:solid;      out-commented by nob, Feb 20, 2001 */
+/*  border-color:#999999;    out-commented by nob, Feb 20, 2001 */
+  background-color:#EEEEFF; 
+}
+
+td.namelistleft
+{
+  margin-left:10px;
+  text-align:left;
+  vertical-align:middle;
+  font-family:Arial,sans-serif; 
+  font-size:10pt; 
+/*  border-width:1pt;        out-commented by nob, Feb 20, 2001 */
+/*  border-style:solid;      out-commented by nob, Feb 20, 2001 */
+/*  border-color:#999999;    out-commented by nob, Feb 20, 2001 */
+  background-color:#EEEEFF; 
+}
+
+td.trheadleft
+{
+  font-family:Arial,sans-serif; 
+/*
+  font-family:Verdana; 
+*/
+  font-size:10pt; 
+  border-width:1pt; 
+  border-style:solid; 
+  border-color:#999999; 
+  background-color:#EEEEFF; 
+}
+
+td.trheadright
+{
+  width:25%;
+  text-align:right;
+  font-family:Arial,sans-serif; 
+/*
+  font-family:Verdana; 
+*/
+  font-size:10pt; 
+  border-width:1pt; 
+  border-style:solid; 
+  border-color:#999999; 
+  background-color:#EEEEFF; 
+}
+
+td.trabstract
+{
+  width:100%;
+  border-width:1pt; 
+  border-style:solid; 
+  border-color:#999999; 
+  background-color:#FFFFE0; 
+}
+td.searchresults
+{
+  font-size:14pt;	 
+  color:#FFFFFF;
+  background-color:#118BBE;
+}
+
+/* Stundenplaneintrag */
+
+td.timetable 
+{ 
+  font-size:10pt; 
+  background-color:#eeeeff;
+}
+
+td.time
+{ 
+  font-size:10pt; 
+}
+
+
+
+p.trabstract
+{
+  margin-left:20px; 
+  margin-top:5px; 
+  margin-right:20px; 
+  margin-bottom:10px; 
+  text-align:justify;
+  color:#0000FF;
+}
+

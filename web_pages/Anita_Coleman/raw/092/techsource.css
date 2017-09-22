@@ -1,0 +1,553 @@
+/*
+
+ALA Techsource Layout
+last update: 1/24/2007
+author: Fred Simmons
+Gulo Solutions LLC
+http://www.gulosolutions.com
+
+*/
+
+Body {
+	margin: 0;
+	padding: 0;
+	font-family: verdana, "Lucida Grande", Tahoma, sans-serif;
+	font-size: 80%;
+	background: #fff url(../images/bg.gif) repeat-y top left;
+}
+
+#technorati {
+	padding: 10px 0 10px 16px;
+}
+
+#wrap {
+	float: left;
+	margin: 0 auto;
+	padding: 0;
+	width: 100%;
+	min-width: 880px;
+	background: url(../images/computer.gif) no-repeat top left;
+}
+
+a {
+	color: #000;
+	text-decoration: underline;
+}
+
+a:link { color: #558800; }
+a:visited { color: #558800; }
+a:hover { color: #000; }
+
+/* Big ups to Stu Nicholls @ cssplay.co.uk */
+* html .IEminwidth {
+	margin-left: 900px;
+}
+
+* html .IEcontainer {
+	margin-left:-900px;
+	position: relative;
+}
+
+/* Hide from MacIE5 */
+/*\*/
+* html .IEminwidth, * html .IEcontainer {
+	height: 1px;
+}
+/**/
+
+#header {
+	margin: 0;
+	height: 70px;
+	padding: 0;
+	background: #99cc00 url(../images/topbg.gif) no-repeat;
+}
+
+#header h1 {
+	float: left;
+	padding: 0;
+	margin: 0;
+	width: 360px;
+}
+
+#header h1 a {
+	padding: 0;
+	border-bottom: none;
+	height: 70px;
+	display: block;
+	text-decoration: none;
+	color: #000;
+	text-indent: -1200px;
+}
+
+/*------------------------------------------------------------------Topnav-----------*/
+
+#topnav {
+	float: right;
+	margin: 55px 20px 0 0;
+	padding: 0 0 5px 0;
+}
+
+#topnav li {
+	list-style: none;
+	display: inline;
+
+}
+
+#topnav a:link, #topnav a:visited, #topnav a:active {
+	color: #fff;
+	margin: 0;
+	padding: 6px 10px;
+	font-size: 70%;
+	font-weight: bold;
+	text-transform: uppercase;
+	text-decoration: none;
+	background: #89B700;
+}
+
+#topnav a:hover {
+	background: #B3D940;
+}
+
+#topnav a:link.current, #topnav a:active.current, #topnav a:visited.current,
+#topnav a:hover.current {
+	color: #fff;
+	background: #ff33cc;
+}
+
+
+
+/*---------*/
+
+#subheader {
+	margin: 0 0 0 180px;
+	padding: 0 16px;
+	line-height: 2.2;
+	background: #ff33cc url(../images/subheader-bg.gif) repeat-x top left;
+	font-size: 85%;
+	font-weight: bold;
+	color: #fff;
+}
+/*-------------------------------------leftside and------main nav----------------*/
+
+#left {
+	margin: 0;
+	padding: 0;
+	float: left;
+	display: inline;
+}
+
+#left p {
+	padding: 0 8px;
+	color: #000;
+	font-size: 80%;
+}
+
+#mainnav {
+	padding: 0;
+	margin: 16px 0 0 0;
+	float: left;
+}
+
+#mainnav li {
+	list-style: none;
+}
+
+#mainnav a {
+	color: #000;
+	margin: 0;
+	padding: 0 0 0 10px;
+	line-height: 2.1;
+	font-size: 80%;
+	width: 170px;
+	display: block;
+	font-weight: bold;
+	text-decoration: none;
+	background: url(../images/bg.gif) repeat-x;
+	border-bottom: 1px solid #89B700;
+}
+
+
+#mainnav a:hover {
+	background: #B3D940;
+	color: #000;
+}
+
+#mainnav a:link.current, #mainnav a:active.current, #mainnav a:visited.current,
+#mainnav a:hover.current {
+	color: #fff;
+	background: #0099ff url(../images/nav-onstate-bg.gif) top left;
+}
+
+/*-----------------------------------------------------------CONTENT----------*/
+
+#right {
+	margin: 0 0 0 180px;
+}
+
+#content {
+	float: left;
+	display: inline;
+	position: relative;
+	margin: 0;
+	width: 60%;
+	padding: 16px;
+	clear: none;
+}
+
+/* Mac IE 5 Filter \*//*/
+#content {
+	width: 300px;
+	margin: -170px 0 0 0;
+}
+/* End Filter */
+
+#content p {
+	margin: 0 0 1.2em 0;
+}
+
+/*Protects against really wide images in IE.
+yuck, i didn't want to do this */
+* html #content {
+	overflow: hidden;
+	word-wrap: break-word;
+}
+
+#content img {
+	max-width: 100%;
+}
+
+/*--------------------------------------------------------RIGHT-SIDE----------*/
+
+#right-side {
+	float: left;
+	display: inline;
+	margin: 24px 16px;
+	width: 204px;
+	padding: 0;
+	border-right: 1px solid #ff9900;
+	border-bottom: 1px solid #ff9900;
+	border-left: 1px solid #ff9900;
+	background: #fff;
+}
+
+/* Mac IE 5 Filter \*//*/
+#right-side {
+	margin: -150px 0 0 0;
+}
+/* End Filter */
+
+#right-side ul {
+	margin: 16px 8px;
+	padding: 0;
+	font-size: 85%;
+	list-style: none;
+}
+
+#right-side li {
+	background: url(../images/right-side-arrow.gif) no-repeat;
+	background-position: 3px 5px;
+	margin: 6px 0;
+	padding: 0 12px 0 12px;
+}
+
+#right-side-blog-items {
+	padding: 0;
+}
+
+#right-side-blog-items p {
+	padding: 16px;
+	margin: 0;
+	font-size: 85%;
+}
+
+#right-side-sponsors {
+	padding: 0;
+}
+
+#right-side-sponsors p {
+	padding: 8px 16px;
+	margin: 0;
+	font-size: 85%;
+	text-align: left;
+}
+
+#right-side-sponsors img{
+	padding: 12px 12px 0 12px;
+	width: 180px;
+}
+
+
+
+/*--------------------------------------------------------FOOTER--------------*/
+
+#footer {
+	clear: both;
+	margin: 0 16px 0 196px;
+	line-height: 2.1;
+	border-top: 1px solid #e5e5e5;
+	font-size: 80%;
+}
+
+#gulo_footer {
+	clear: both;
+	margin: 0 16px 0 196px;
+	line-height: 2.1;
+	font-size: 80%;
+}
+
+/*--------------------------------------------------------HEADERS-------------*/
+h1 {
+	color: #000;
+	font-family: arial, helvetica, sans-serif;
+	padding: 0 0 4px 0;
+	font-size: 2em;
+	margin: 0;
+}
+
+h2 {
+	padding: 0;
+	margin: 0 0 12px 0;
+	color: #000;
+	font-size: 1.8em;
+	font-family: arial, helvetica, sans-serif;
+}
+
+/* used on right side box*/
+h3 {
+	padding: 0 16px;
+	margin: 0;
+	color: #fff;
+	line-height: 2.1;
+	font-size: 85%;
+	background: #ff9900 url(../images/right-side-header-bg.gif) repeat-x top left;
+}
+
+/* used for detail pages */
+h4 {
+	color: #000;
+	margin: -8px 0 8px 0;
+	font-size: 120%;
+}
+
+h5 {
+	color: #000;
+	margin: 0 0 12px 0;
+	padding: 0;
+	font-size: 120%;
+}
+
+/* press releases */
+h6 {font-size: 100%; font-weight: normal; margin: 0 0 .25em 0; padding: 0;} /* cal list */
+h6 cite {text-align: right; padding-right: .75em; font-style: normal; width: 6em; float: left; display: block;}
+p span.city {text-transform: uppercase;}
+
+/*------------------------------------------------------------BLOG------------*/
+
+
+.blog-entry-title a {
+	text-decoration: none;
+	border: 0;
+	color: #000;
+}
+
+.blog-entry-title a:hover {
+	color: #ff9900;
+	text-decoration: underline;
+}
+
+.auth {
+	font-size: 80%;
+	color: #999;
+	padding: 0;
+	margin: -10px 16px 16px 0;
+}
+
+.captcha-msg {
+	font-size: 90%;
+	color: #999;
+	padding: 0;
+}
+
+#comments {
+	 background: #f5f5f5;
+	 padding: 12px;
+	 border: 1px solid #ccc;
+	 margin: 4px 0;
+	 /*margin: 0 16px 0 0;
+	 width: 100%;*/
+}
+
+/*html>body #comments { width: 97%; }*/
+
+#comments hr {
+	color: #ccc;
+	background-color: #ccc;
+	width: 100%;
+	height: 1px;
+	border: none;
+}
+
+
+.commentby {
+	 color: #666;
+	 background: transparent;
+}
+
+.comment-postline {
+	padding: 0 0 5px 0;
+}
+
+.posted {
+	color: #666;
+}
+
+.asterick {
+	color: #ff9900;
+	margin: 0 2px 0 0;
+}
+
+label {
+	margin: 0 0 8px 0;
+	line-height: 1.8;
+}
+
+textarea {
+	width: 80%;
+}
+
+button {
+	margin: 2px 0;
+}
+
+/*--------------------------------------------------------ERRORS-N-ACTIONS----*/
+
+#error {
+	padding: 4px 2px;
+	margin: 6px 0;
+	font-size: 1em;
+	font-weight: bold;
+	background: #ffffcc;
+	color: #cc0000;
+}
+
+#error ul {
+	margin: 0;
+	padding: 4px 16px;
+}
+
+#action {
+	padding: 4px 2px;
+	margin: 6px 0;
+	font-size: 1em;
+	font-weight: bold;
+	background: #ffffcc;
+	color: #006600;
+}
+
+#action ul {
+	margin: 0;
+	padding: 4px 16px;
+}
+
+hr {
+	color: #e5e5e5;
+	background-color: #e5e5e5;
+	width: 100%;
+	height: 1px;
+	border: none;
+}
+
+#gulo {
+	 clear: both;
+	 margin: 0 0 0 186px;
+	 line-height: 2.1;
+	 font-size: 80%;
+	 color: #fff;
+	 text-indent: -5000px;
+}
+
+/*---------------------------------------------------------SLN---LTR_----*/
+
+table a{
+	color: #000;
+	line-height: 150%;
+}
+
+table a:hover{
+	color: #ff9900;
+}
+
+ul#aggregate-list {
+	list-style: none;
+	margin: 0 0 0 4px;
+	padding: 0;
+}
+
+ul#aggregate-list li {
+	list-style: none;
+	line-height: 180%;
+	font-weight: bold;
+	margin: 0;
+	padding-left: 18px;
+	background: url(../images/document.png) no-repeat 0px 6px;
+}
+
+ul#aggregate-list ul li {
+	margin-left: -24px;
+}
+
+
+a.buythis {
+	background: #0069AF;
+	color: #fff;
+	font-weight: bold;
+	padding: 6px 12px;
+	text-decoration: none;
+}
+
+/*-----------------------------------------------------------------CONTACT----*/
+
+form fieldset {
+	border: 0;
+	margin: 16px 0;
+	padding: 0;
+}
+
+fieldset legend {
+	font-weight: bold;
+	margin: 0 0 6px 0;
+	padding: 0;
+}
+
+fieldset label {
+	font-size: 90%;
+	font-weight: bold;
+	line-height: 180%;
+}
+
+fieldset input, form textarea {
+	padding: 5px;
+	margin-bottom: 6px;
+	border: 1px solid #bbb;
+	font-family: verdana, "Lucida Grande", Tahoma, sans-serif;
+	font-size: 100%;
+}
+
+fieldset input:focus, form textarea:focus {
+	/*background-color: #EFF9FF;*/
+	border: 1px solid #888;
+}
+
+/*-------------------------------------------------------------------ADS------*/
+
+#banner-ad-top {float: left; margin: 4px 4px 0 45px;}
+
+
+
+
+
+
+
+
+
+

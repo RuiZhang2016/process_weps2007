@@ -1,0 +1,710 @@
+<style>
+.note-header-text {font-family: Times, Times New Roman, serif;
+		color:#ff0000; font-size: .95em;
+		margin-left: .75em; margin-right: .75em;}
+</style>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+ "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+<head>
+<LINK REL=STYLESHEET TYPE="text/css" HREF="http://widit.slis.indiana.edu/irpub/DL/2001/css/dl.css">
+<title>DL: JCDL '01, The Alexandria digital earth ...</title>
+<style type="text/css"><!--
+ body {margin-left: 0em; margin-top: 0}
+ a:link {text-decoration: underline; 	Color: #006699;}
+ a:visited { color: #990033; text-decoration: underline;}
+ a:hover {color: red; text-decoration: none}
+ a.dLink1:link {color:#336699}
+ a.dLink1:visited {color:#666666}
+	a.isblack:link {text-decoration: underline; 	Color: #000000;}
+ a.isblack:visited { color: #000000; text-decoration: underline;}
+ a.isblack:hover {color: #000000; text-decoration: none}
+ h1 {font-size: 140%; margin-bottom: 0}
+	ul {margin-top: .25em; list-style-type: disc}
+	ol {margin-top: .25em;}
+	li {padding-bottom: .25em}
+ h2 {color: white; background-color: #069;
+ font-size: 100%; padding-left: 1em;
+		margin: 0}
+	h3 {color: black; background-color: yellow;
+ 	font-size: 100%;
+		margin: 0}
+	 h4 {color: black; background-color: #99c5e8;
+ font-size: 100%;
+		margin: 0}
+ hr {color: #39176d;}
+ form {margin-top: 10}
+	a {text-decoration: none; }
+	input {font-size: 1em;}
+	.chevron {color: #ff0000;}
+	.light-blue {color:#336699;}
+	.black {color:#000000;}
+	/* ### standard text styles, smallest to largest ### */
+	.footer-link-text {font-family: Arial, Helvetica, sans-serif;
+		color:#336699; font-size: .75em; line-height: 1.33em;
+		text-indent: -.75 em; margin-left: 2em; margin-right: .75em;}
+	.footer-copy-text {font-family: Arial, Helvetica, sans-serif;
+		color:#000000; font-size: .75em; line-height: 1.3em;
+		margin-left: .75em; margin-right: .75em;}
+	.small-link-text {font-family: Arial, Helvetica, sans-serif;
+		color:#000000; font-size: .83em; padding-bottom : 2px;
+	 	padding-top : 2px;}
+	.smaller-text {font-family: Arial, Helvetica, sans-serif;
+		color:#000000; font-size: .75em;}
+	.small-text {font-family: Arial, Helvetica, sans-serif;
+		color:#000000; font-size: .83em;}
+	.medium-text {font-family: Arial, Helvetica, sans-serif;
+		color:#000000; font-size: 1em;}
+	.mediumb-text {font-family: Arial, Helvetica, sans-serif;
+		color:#000000; font-size: 1em; font-weight: bold;}
+	.large-text {font-family: Arial, Helvetica, sans-serif;
+		color:#000000; font-size: 1.3em;}
+	.list-link-text {font-family: Arial, Helvetica, sans-serif;
+		color:#336699; font-size: .83em; line-height: 1.3em;}
+	.list-link-btext {font-family: Arial, Helvetica, sans-serif;
+		color:#000000; font-size: .83em; line-height: 1.3em;}
+	.searchbox-text {font-family: Arial, Helvetica, sans-serif;
+		color:#000066; font-size: 1em; font-weight: bold;}
+	.footer-header-text {font-family: Arial, Helvetica, sans-serif;
+		color:#000066; font-size: 1em; font-weight: bold;
+		margin-left: .75em; margin-right: .75em;}
+	.medium-link-text {font-family: Arial, Helvetica, sans-serif;
+		color:#000066; font-size: 1em; font-weight: bold; line-height: 1em;
+		text-indent: -1.25em; margin-left: 2em; margin-right: .75em;}
+	.small-copy-text {font-family: Times, Times New Roman, serif;
+		color:#000066; font-size: .75em; line-height: 1.2em;
+		margin-left: .75em; margin-right: .75em;}
+	.medium-copy-text {font-family: Times, Times New Roman, serif;
+		color:#000066; font-size: 1em; line-height: 1.2em;
+		margin-left: .75em; margin-right: .75em;}
+	.large-copy-text {font-family: Times, Times New Roman, serif;
+		color:#000066; font-size: 1.3em; line-height: 1.5em;
+		margin-left: .75em; margin-right: .75em;}
+	.medium-header-text {font-family: Times, Times New Roman, serif;
+		color:#ff0000; font-size: 1em;
+		margin-left: .75em; margin-right: .75em;}
+	.large-header-text {font-family: Times, Times New Roman, serif;
+		color:#ff0000; font-size: 1.5em;
+		margin-left: .75em; margin-right: .75em;}
+ --></style>
+<SCRIPT LANGUAGE="JavaScript">
+ /* <!-- Begin
+	if(document.layers || document.all) {
+	a = 1;
+	setInterval("Jump()", 10);
+	}
+	function Jump() {
+	a = a + 1;
+	//self.moveBy((Math.random() * a * 2 - a), (Math.random() * a * 2) - a);
+	}
+// End --> */
+</script>
+<script LANGUAGE=JAVASCRIPT TYPE="text/javascript" >
+<!--
+function _CF_onError(form_object, input_object, object_value, error_message)
+ {
+	alert(error_message);
+ 	return false;
+ }
+function _CF_hasValue(obj, obj_type)
+ {
+ if (obj_type == "TEXT" || obj_type == "PASSWORD")
+	{
+ 	if (obj.value.length == 0)
+ 		return false;
+ 	else
+ 		return true;
+ 	}
+ else if (obj_type == "SELECT")
+	{
+ for (i=0; i < obj.length; i++)
+	 	{
+		if (obj.options[i].selected)
+			return true;
+		}
+ 	return false;
+	}
+ else if (obj_type == "SINGLE_VALUE_RADIO" || obj_type == "SINGLE_VALUE_CHECKBOX")
+	{
+		if (obj.checked)
+			return true;
+		else
+ 		return false;
+	}
+ else if (obj_type == "RADIO" || obj_type == "CHECKBOX")
+	{
+ for (i=0; i < obj.length; i++)
+	 	{
+		if (obj[i].checked)
+			return true;
+		}
+ 	return false;
+	}
+	}
+function _CF_checkqiksearch(_CF_this)
+ {
+ if (!_CF_hasValue(_CF_this.query, "TEXT" ))
+ {
+ if (!_CF_onError(_CF_this, _CF_this.query, _CF_this.query.value, "Please enter your Search Criteria"))
+ {
+ return false;
+ }
+ }
+ return true;
+ }
+//-->
+</script>
+</head>
+<body bgcolor="#ffffff" onload="window.focus()">
+<div align="center">
+<a name="CIT"></a>
+<table border="0" width="85%" cellspacing="0" cellpadding="0">
+<tr>
+<td>
+<table width="100%" border="0" cellpadding="0" cellspacing="0">
+<col width="1%"><col width="99%">
+			</td>
+		</tr>
+		<tr>
+			<td height="6"><img src="blanks.gif" width=1 height=1 alt="" border="0"></td>
+		</tr>
+		<tr>
+			<td colspan="2" valign="top" height="1" background="http://widit.slis.indiana.edu/irpub/DL/2001/images/horiz-bar-long.jpg"></td>
+		</tr>
+		<tr>
+			<td height="6"><img src="blanks.gif" width=1 height=1 alt="" border="0"></td>
+		</tr>
+		</table>
+</td>
+</tr>
+<tr>
+	<td colspan="3" valign="top" height="1" background="http://widit.slis.indiana.edu/irpub/DL/2001/images/horiz-bar-long.jpg"></td>
+</tr>
+<tr>
+<td class="small-text">
+	<table border="0" width="100%" cellpadding="2">
+		<col width="1%">
+		<col width="8%">
+		<col width="91%">
+	<tr>
+		<td class="medium-text" colspan="3"><strong>The Alexandria digital earth prototype</strong></td>
+	</tr>
+			<tr valign="top">
+			</tr>
+			<tr valign="top">
+					<td class="small-text"><strong>Full text</strong></td>
+				<td class="smaller-text" colspan="2" >
+									 <A NAME="FullText" href="http://widit.slis.indiana.edu/irpub/DL/2001/pdf23.pdf" target="_blank"><img src="pdf_logo.gif" width="16" height="16" alt="pdf format" border="0" hspace="1" align="texttop">Pdf</A>
+									 (141&nbsp;KB)
+				</td>
+			</tr>
+		<tr valign="top">
+			<td class="small-text"><strong>Source</strong></td>
+			<td class="small-text" colspan="2">
+														<SPAN class="mediumb-text">International Conference on Digital Libraries</span>
+																			<a href="http://widit.slis.indiana.edu/irpub/DL/2001/toc.cfm?id=SERIES492&amp;type=series&amp;coll=GUIDE&amp;dl=ACM&amp;idx=SERIES492&amp;part=Proceedings&amp;WantType=Proceedings&amp;title=International%20Conference%20on%20Digital%20Libraries&amp;CFID=13720957&amp;CFTOKEN=832591" target="_self" class="small-link-text">archive</a><br>
+													<SPAN class="mediumb-text">Proceedings of the first ACM/IEEE-CS joint conference on Digital libraries </span>
+										 								 <a href="http://widit.slis.indiana.edu/irpub/DL/2001/toc.cfm?id=379437&amp;type=proceeding&amp;coll=GUIDE&amp;dl=ACM&amp;idx=SERIES492&amp;part=Proceedings&amp;WantType=Proceedings&amp;title=International%20Conference%20on%20Digital%20Libraries&amp;CFID=13720957&amp;CFTOKEN=832591" target="_self" class="small-link-text">table of contents</a><br>
+												<DIV class="small-text">
+													 Roanoke, Virginia, United States
+												</div>
+		<div class="medium-text">
+		</div>
+			<div class="small-text">
+				 Pages: 118 - 119&nbsp;&nbsp;
+			</div>
+				<div class="small-text">
+					Year of Publication:&nbsp;2001
+				</div>
+				<div class="small-text">
+					ISBN:1-58113-345-6
+				</div>
+			</td>
+		</tr>
+			<tr valign="top">
+				<td class="small-text">
+										 	<strong>Authors</strong>
+				</td>
+				<td colspan="2">
+				<div class="authors">
+					<table cellpadding="0" cellspacing="0">
+							<tr>
+								<td class="small-text">
+ 									<a href="http://widit.slis.indiana.edu/irpub/DL/2001/results.cfm?query=author%3AP279025&amp;querydisp=author%3ATerence%20R%2E%20Smith&amp;coll=GUIDE&amp;dl=ACM&amp;CFID=13720957&amp;CFTOKEN=832591" target="_self">Terence R. Smith</a>
+								</td>
+								<td class="small-text">
+								</td>
+							</tr>
+							<tr>
+								<td class="small-text">
+ 									<a href="http://widit.slis.indiana.edu/irpub/DL/2001/results.cfm?query=author%3AP335455&amp;querydisp=author%3AGreg%20%20Janee&amp;coll=GUIDE&amp;dl=ACM&amp;CFID=13720957&amp;CFTOKEN=832591" target="_self">Greg Janee</a>
+								</td>
+								<td class="small-text">
+								</td>
+							</tr>
+							<tr>
+								<td class="small-text">
+ 									<a href="http://widit.slis.indiana.edu/irpub/DL/2001/results.cfm?query=author%3AP132251&amp;querydisp=author%3AJames%20%20Frew&amp;coll=GUIDE&amp;dl=ACM&amp;CFID=13720957&amp;CFTOKEN=832591" target="_self">James Frew</a>
+								</td>
+								<td class="small-text">
+								</td>
+							</tr>
+							<tr>
+								<td class="small-text">
+ 									<a href="http://widit.slis.indiana.edu/irpub/DL/2001/results.cfm?query=author%3AP335289&amp;querydisp=author%3AAnita%20%20Coleman&amp;coll=GUIDE&amp;dl=ACM&amp;CFID=13720957&amp;CFTOKEN=832591" target="_self">Anita Coleman</a>
+								</td>
+								<td class="small-text">
+								</td>
+							</tr>
+					</table>
+				</div>
+				</td>
+			</tr>
+				<tr valign="top">
+					<td class="small-text"><strong>Sponsor </strong></td>
+					<td>
+						<div class="sponsors">
+										<a href=" http://www.acm.org/" target="sponsor" title="Sponsor">ACM</a>:
+									 Association for Computing Machinery <br>
+						</div>
+					 </td>
+				</tr>
+					<tr valign="top">
+						<td class="small-text"><strong>Publisher</strong></td>
+						<td colspan="2">
+							<div class="publishers">
+									 	ACM Press &nbsp;
+										<small> New York, NY, USA </small>
+							</div>
+						</td>
+					</tr>
+		</table>
+</td>
+</tr>
+<tr>
+<td>
+<!-- third main table: main content START -->
+	<table border="0" width="100%" cellspacing="0" cellpadding="0">
+	<tr>
+		<td height="6"><img src="blanks.gif" width=1 height=1 alt="" border="0"></td>
+	</tr>
+	<tr>
+		<td colspan="4" valign="top" height="1" background="http://widit.slis.indiana.edu/irpub/DL/2001/images/horiz-bar-long.jpg"></td>
+	</tr>
+	<tr>
+		<td height="6"><img src="blanks.gif" width=1 height=1 alt="" border="0"></td>
+	</tr>
+	<tr valign="top">
+	<!-- buttons -->
+		<td width="100%" colspan="4">
+	 <table border="0" cellspacing="0" cellpadding="0" width="100%">
+		<col width="22%">
+	 <col width="78%">
+		<tr>
+			<td class="small-text"><b>Additional Information:</b></td>
+			<td>
+			<p class="small-text">
+					<a href="cite23.htm#abstract">abstract</a>&nbsp;&nbsp;
+					<a href="cite23.htm#references">references</a>&nbsp;&nbsp;
+					<a href="cite23.htm#citings">citings</a>&nbsp;&nbsp;
+					<a href="cite23.htm#IndexTerms">index terms</a>&nbsp;&nbsp;
+						<a href="cite23.htm#collab">collaborative colleagues</a>&nbsp;&nbsp;
+					<a href="cite23.htm#peers">peer to peer</a>&nbsp;&nbsp;
+				</p>
+			</td>
+		</tr>
+		</table>
+		</td>
+	</tr>
+	<tr>
+		<td height="6"><img src="blanks.gif" width=1 height=1 alt="" border="0"></td>
+	</tr>
+	<tr valign="top">
+	<!-- buttons -->
+		<form name="popbinder">
+		<td width="100%" colspan="4">
+		<table border="0" cellspacing="0" cellpadding="2" width="100%" >
+		 <col width="22%">
+		 <col width="78%">
+		 <tr valign="top">
+		 	<td class="small-text"><b>Tools and Actions:</b></td>
+			<td>
+				 <a href="https://portal.acm.org/poplogin.cfm?dl=ACM&coll=GUIDE&comp_id=COMPONENT032&want_href=ocr%5Fdiscuss%2Ecfm%3Fid%3D379463&CFID=13720957&CFTOKEN=832591" class="small-link-text">
+			Discussions</a>
+			&nbsp;&nbsp;
+			<a href="http://widit.slis.indiana.edu/irpub/DL/2001/results.cfm?query=379463&amp;querydisp=Similar%20to%3A%20The%20Alexandria%20digital%20earth%20prototype&amp;coll=GUIDE&amp;dl=ACM&amp;CFID=13720957&amp;CFTOKEN=832591" target="_self" class="small-link-text">Find similar Articles</a>&nbsp;&nbsp;
+			<a href="http://www.reviews.com/reviewer/quickreview/frameset_toplevel.cfm?bib_id=379463" target="reviews" class="small-link-text">Review this Article</a>&nbsp;&nbsp;
+			 	<br><a href="cite23.htm#" onClick="window.alert('To use this Feature, you must login with your personal ACM Web Account.');" class="small-link-text">
+				Save this Article to a Binder</a><img src="blanks.gif" border="0" name="saved">
+			&nbsp;&nbsp;
+			<a href="cite23.htm#" onClick="window.open('popBibTex.cfm?id=379463&ids=SERIES492.379437.379463&types=series.proceeding.article&reqtype=article&coll=GUIDE&dl=ACM&CFID=13720957&CFTOKEN=832591','BibTex','width=800,height=100,top=100,left=100,scrollbars=Yes,resizable=yes');" class="small-link-text">
+			Display in BibTex Format</a>
+			&nbsp;&nbsp;
+			</td>
+		</tr>
+		<tr>
+			<td height="10"><img src="blanks.gif" width=1 height=1 alt="" border="0"></td>
+		</tr>
+		<tr valign="top">
+			<td class="small-text"><b>DOI Bookmark:</b></td>
+			<td class="small-text">
+				<small>Use this link to bookmark this Article:&nbsp;</small><a href="http://doi.acm.org/10.1145/379437.379463">http://doi.acm.org/10.1145/379437.379463</a><br><small><a href="http://www.doi.org/">What is a DOI?</a></small>
+			</td>
+		</tr>
+		</table>
+		</td>
+		</form>
+	</tr>
+	<tr>
+		<td height="6"><img src="blanks.gif" width=1 height=1 alt="" border="0"></td>
+	</tr>
+	<tr>
+		<td colspan="4" valign="top" height="1" background="http://widit.slis.indiana.edu/irpub/DL/2001/images/horiz-bar-long.jpg"></td>
+	</tr>
+	<tr>
+		<td height="6"><img src="blanks.gif" width=1 height=1 alt="" border="0"></td>
+	</tr>
+	</table>
+<!-- third main table: main content END -->
+		 	<div class="abstract">
+			</div>
+			<br>
+			<div class="abstract">
+			<A HREF="cite23.htm#CIT"><img name="top" src="arrowu.gif" hspace="10" border="0"></A><SPAN class=heading><A NAME="abstract">ABSTRACT</A></span>
+				<p class="abstract">
+				 <par>This note summarizes the system development activities of the Alexandr ia Digital Earth Prototype (ADEPT) Project.5 ADEPT and the Alexandria Digital Library (ADL) are, respectively, the research and operational components of the Alexandria Digital Library Project. The goal of ADEPT is to build a distributed digital library (DL) of personalized collections of geospatially referenced information. This DL is characterized by: (1) services for building, searching, and using personalized collections; (2) collections of georeferenced multimedia information, including dynamic simulation models of spatially distributed processes; and (3) user interfaces employing the concept of a &ldquo;Digital Earth&rdquo;. Important near-term objectives for ADEPT are to build prototype collections that support undergraduate learning in physical, human, and cultural geography and related disciplines, and then to evaluate whether using such resources helps students learn to reason scientifically. Collections and services developed by ADEPT researchers will migrate to ADL as they mature.</par>
+				</p>
+			</div>
+			<br>
+			<div class="abstract">
+			<A HREF="cite23.htm#CIT"><img name="top" src="arrowu.gif" hspace="10" border="0"></A><SPAN class=heading><A NAME="references">REFERENCES</A></span>
+			<p class="abstract"><font color="Red">Note: OCR errors may be found in this Reference List extracted from the full text article. ACM has opted to expose the complete List rather than only correct and linked references.</font></p>
+				<p class="abstract">
+				 1&nbsp;&nbsp;
+				 The Alexandria Digital Earth Modeling System (ADEPT). http://www.alexandria.ucsb.edu/adept/proposal.pdf.
+				</p>
+				<p class="abstract">
+				 2&nbsp;&nbsp;
+				 Federal Geographic Data Committee. Content Standard for Digital Geospatial Metadata. http://www.fgdc.gov/metadata/csdgm/.
+				</p>
+				<p class="abstract">
+				 3&nbsp;&nbsp;
+				 Dublin Core Metadata Initiative. Dublin Core Metadata Element Set. http://dublincore.org/documents/dces/.
+				</p>
+				<p class="abstract">
+				 4&nbsp;&nbsp;
+				 IMS Global Learning Consortium. IMS Learning Resource Meta-Data Information Model. http://www.imsproject.org/metadata/mdinfov1p1.html.
+				</p>
+				<p class="abstract">
+				 5&nbsp;&nbsp;
+				 DLESE. http://www.dlese.org/.
+				</p>
+				<p class="abstract">
+				 6&nbsp;&nbsp;
+				 IEEE Learning Technology Standards Committee. LOM: Base Scheme - v3.5. http://ltsc.ieee.org/doc/wg12/scheme.html.
+				</p>
+				<p class="abstract">
+				 7&nbsp;&nbsp;
+				 Crosier, S. Content Standard for Computer Model Metadata. http://www.geog.ucsb.edu/~scott/metadata/standard/.
+				</p>
+			</div>
+			<br>
+			<div class="abstract">
+			<A HREF="cite23.htm#CIT"><img name="top" src="arrowu.gif" hspace="10" border="0"></A><SPAN class=heading><A NAME="citings">CITINGS</A>&nbsp;&nbsp;<i>3</i></span>
+				<p class="abstract">
+	 				 <a href="http://widit.slis.indiana.edu/irpub/DL/2001/citation.cfm?id=544307&amp;dl=ACM&amp;coll=GUIDE&amp;CFID=13720957&amp;CFTOKEN=832591">
+					Ee-Peng Lim , Dion Hoe-Lian Goh , Zehua Liu , Wee-Keong Ng , Christopher Soo-Guan Khoo , Susan Ellen Higgins, G-Portal: a map-based digital library for distributed geospatial and georeferenced resources, Proceedings of the second ACM/IEEE-CS joint conference on Digital libraries, July 14-18, 2002, Portland, Oregon, USA
+				 </a>
+				</p>
+				<p class="abstract">
+	 				 <a href="http://widit.slis.indiana.edu/irpub/DL/2001/citation.cfm?id=827182&amp;dl=ACM&amp;coll=GUIDE&amp;CFID=13720957&amp;CFTOKEN=832591">
+					Zehua Liu , Ee-Peng Lim , Wee-Keong Ng , Dion H. Goh, On querying geospatial and georeferenced metadata resources in G-portal, Proceedings of the thirdd ACM/IEEE-CS joint conference on Digital libraries, May 27-31, 2003, Houston, Texas
+				 </a>
+				</p>
+				<p class="abstract">
+	 				 <a href="http://widit.slis.indiana.edu/irpub/DL/2001/citation.cfm?id=544306&amp;dl=ACM&amp;coll=GUIDE&amp;CFID=13720957&amp;CFTOKEN=832591">
+					Greg Jan&#233;e , James Frew, The ADEPT digital library architecture, Proceedings of the second ACM/IEEE-CS joint conference on Digital libraries, July 14-18, 2002, Portland, Oregon, USA
+				 </a>
+				</p>
+			</div>
+		 	<br>
+			<div class="indterms">
+			<A HREF="cite23.htm#CIT"><img name="top" src="arrowu.gif" hspace="10" border="0"></A><SPAN class=heading><A NAME="IndexTerms">INDEX TERMS</A></span>
+					<p class="Categories">
+						<SPAN class=heading><A NAME="GenTerms">Primary Classification:</A></span>
+							<br>&nbsp;
+									<b>K.</b>
+									<a href="http://widit.slis.indiana.edu/irpub/DL/2001/results.cfm?query=CCS%3AK%2E%2A&amp;coll=GUIDE&amp;dl=ACM&amp;CFID=13720957&amp;CFTOKEN=832591" target="_self">
+									Computing Milieux</a><br>
+										&nbsp;
+										<img src="tree.gif" border="0" height="20" width="20">
+									<b>K.6</b>
+									<a href="http://widit.slis.indiana.edu/irpub/DL/2001/results.cfm?query=CCS%3A%22K%2E6%22&amp;coll=GUIDE&amp;dl=ACM&amp;CFID=13720957&amp;CFTOKEN=832591" target="_self">
+									 MANAGEMENT OF COMPUTING AND INFORMATION SYSTEMS</a><br>
+										&nbsp;
+										&nbsp;
+										&nbsp;
+										<img src="tree.gif" border="0" height="20" width="20">
+									<b>K.6.1</b>
+									<a href="http://widit.slis.indiana.edu/irpub/DL/2001/results.cfm?query=CCS%3A%22K%2E6%2E1%22&amp;coll=GUIDE&amp;dl=ACM&amp;CFID=13720957&amp;CFTOKEN=832591" target="_self">
+									 Project and People Management</a><br>
+												&nbsp;
+												&nbsp;
+												&nbsp;
+												&nbsp;
+												&nbsp;
+												<img src="tree.gif" border="0" height="20" width="20">
+											<b>Subjects:</b>
+												<a href="http://widit.slis.indiana.edu/irpub/DL/2001/results.cfm?query=CCS%3A%22Systems%20development%22&amp;coll=GUIDE&amp;dl=ACM&amp;CFID=13720957&amp;CFTOKEN=832591" target="_self">Systems development</a>
+										<br>
+					 </p>
+				 <p class="Categories">
+					<SPAN class=heading><A NAME="GenTerms">Additional&nbsp;Classification:</A></span>
+							<br>&nbsp;
+									<b>H.</b>
+									<a href="http://widit.slis.indiana.edu/irpub/DL/2001/results.cfm?query=CCS%3AH%2E%2A&amp;coll=GUIDE&amp;dl=ACM&amp;CFID=13720957&amp;CFTOKEN=832591" target="_self">
+									Information Systems</a><br>
+										&nbsp;
+										<img src="tree.gif" border="0" height="20" width="20">
+									<b>H.2</b>
+									<a href="http://widit.slis.indiana.edu/irpub/DL/2001/results.cfm?query=CCS%3A%22H%2E2%22&amp;coll=GUIDE&amp;dl=ACM&amp;CFID=13720957&amp;CFTOKEN=832591" target="_self">
+									 DATABASE MANAGEMENT</a><br>
+										&nbsp;
+										&nbsp;
+										&nbsp;
+										<img src="tree.gif" border="0" height="20" width="20">
+									<b>H.2.8</b>
+									<a href="http://widit.slis.indiana.edu/irpub/DL/2001/results.cfm?query=CCS%3A%22H%2E2%2E8%22&amp;coll=GUIDE&amp;dl=ACM&amp;CFID=13720957&amp;CFTOKEN=832591" target="_self">
+									 Database applications</a><br>
+											&nbsp;
+											&nbsp;
+											&nbsp;
+											&nbsp;
+											&nbsp;
+											<img src="tree.gif" border="0" height="20" width="20">
+										<b>Subjects:</b>
+											<a href="http://widit.slis.indiana.edu/irpub/DL/2001/results.cfm?query=CCS%3A%22Spatial%20databases%20and%20GIS%22&amp;coll=GUIDE&amp;dl=ACM&amp;CFID=13720957&amp;CFTOKEN=832591" target="_self">Spatial databases and GIS</a>
+									<br>
+										&nbsp;
+										<img src="tree.gif" border="0" height="20" width="20">
+									<b>H.3</b>
+									<a href="http://widit.slis.indiana.edu/irpub/DL/2001/results.cfm?query=CCS%3A%22H%2E3%22&amp;coll=GUIDE&amp;dl=ACM&amp;CFID=13720957&amp;CFTOKEN=832591" target="_self">
+									 INFORMATION STORAGE AND RETRIEVAL</a><br>
+							<br>&nbsp;
+									<b>J.</b>
+									<a href="http://widit.slis.indiana.edu/irpub/DL/2001/results.cfm?query=CCS%3AJ%2E%2A&amp;coll=GUIDE&amp;dl=ACM&amp;CFID=13720957&amp;CFTOKEN=832591" target="_self">
+									 Computer Applications</a><br>
+					</p>
+				<br>
+					<p class="GenTerms">
+						<SPAN class=heading><A NAME="GenTerms">General Terms:</A></span>
+						<BR>
+							<a href="http://widit.slis.indiana.edu/irpub/DL/2001/results.cfm?query=genterm%3A%22Design%22&amp;coll=GUIDE&amp;dl=ACM&amp;CFID=13720957&amp;CFTOKEN=832591" target="_self">
+							Design</a>,
+							<a href="http://widit.slis.indiana.edu/irpub/DL/2001/results.cfm?query=genterm%3A%22Documentation%22&amp;coll=GUIDE&amp;dl=ACM&amp;CFID=13720957&amp;CFTOKEN=832591" target="_self">
+							 Documentation</a>,
+							<a href="http://widit.slis.indiana.edu/irpub/DL/2001/results.cfm?query=genterm%3A%22Human%20Factors%22&amp;coll=GUIDE&amp;dl=ACM&amp;CFID=13720957&amp;CFTOKEN=832591" target="_self">
+							 Human Factors</a>,
+							<a href="http://widit.slis.indiana.edu/irpub/DL/2001/results.cfm?query=genterm%3A%22Management%22&amp;coll=GUIDE&amp;dl=ACM&amp;CFID=13720957&amp;CFTOKEN=832591" target="_self">
+							 Management</a>,
+							<a href="http://widit.slis.indiana.edu/irpub/DL/2001/results.cfm?query=genterm%3A%22Performance%22&amp;coll=GUIDE&amp;dl=ACM&amp;CFID=13720957&amp;CFTOKEN=832591" target="_self">
+							 Performance</a>,
+							<a href="http://widit.slis.indiana.edu/irpub/DL/2001/results.cfm?query=genterm%3A%22Theory%22&amp;coll=GUIDE&amp;dl=ACM&amp;CFID=13720957&amp;CFTOKEN=832591" target="_self">
+							 Theory</a>
+					</p>
+			</div>
+			<div class="abstract">
+				<A HREF="cite23.htm#CIT"><img name="top" src="arrowu.gif" hspace="10" border="0"></A><SPAN class=heading><A NAME="collab">Collaborative Colleagues:</A></span>
+				<table border="0" style="margin-left: 2em" cellpadding="2">
+						<tr valign="top"><td><div class="abstract"><a href="http://widit.slis.indiana.edu/irpub/DL/2001/results.cfm?query=%2Bauthor%3AP335289&amp;querydisp=author%3AAnita%20Coleman&amp;coll=GUIDE&amp;dl=GUIDE&amp;CFID=13720957&amp;CFTOKEN=832591" target="_self">Anita Coleman</a>:</div></td><td>
+						<div class="abstract"><a href="http://widit.slis.indiana.edu/irpub/DL/2001/results.cfm?query=%2Bauthor%3AP484314%20author%3AP335289&amp;querydisp=author%3AOlha%20A%2E%20Buchel&amp;coll=GUIDE&amp;dl=GUIDE&amp;CFID=13720957&amp;CFTOKEN=832591" target="_self">Olha A. Buchel</a></div>
+						<div class="abstract"><a href="http://widit.slis.indiana.edu/irpub/DL/2001/results.cfm?query=%2Bauthor%3AP132251%20author%3AP335289&amp;querydisp=author%3AJames%20Frew&amp;coll=GUIDE&amp;dl=GUIDE&amp;CFID=13720957&amp;CFTOKEN=832591" target="_self">James Frew</a></div>
+						<div class="abstract"><a href="http://widit.slis.indiana.edu/irpub/DL/2001/results.cfm?query=%2Bauthor%3AP335455%20author%3AP335289&amp;querydisp=author%3AGreg%20Janee&amp;coll=GUIDE&amp;dl=GUIDE&amp;CFID=13720957&amp;CFTOKEN=832591" target="_self">Greg Janee</a></div>
+						<div class="abstract"><a href="http://widit.slis.indiana.edu/irpub/DL/2001/results.cfm?query=%2Bauthor%3AP242528%20author%3AP335289&amp;querydisp=author%3ARichard%20E%2E%20Mayer&amp;coll=GUIDE&amp;dl=GUIDE&amp;CFID=13720957&amp;CFTOKEN=832591" target="_self">Richard E. Mayer</a></div>
+						<div class="abstract"><a href="http://widit.slis.indiana.edu/irpub/DL/2001/results.cfm?query=%2Bauthor%3AP279025%20author%3AP335289&amp;querydisp=author%3ATerence%20R%2E%20Smith&amp;coll=GUIDE&amp;dl=GUIDE&amp;CFID=13720957&amp;CFTOKEN=832591" target="_self">Terence R. Smith</a></div>
+						</td>
+						</tr>
+						<tr valign="top"><td><div class="abstract"><a href="http://widit.slis.indiana.edu/irpub/DL/2001/results.cfm?query=%2Bauthor%3AP132251&amp;querydisp=author%3AJames%20Frew&amp;coll=GUIDE&amp;dl=GUIDE&amp;CFID=13720957&amp;CFTOKEN=832591" target="_self">James Frew</a>:</div></td><td>
+						<div class="abstract"><a href="http://widit.slis.indiana.edu/irpub/DL/2001/results.cfm?query=%2Bauthor%3AP280219%20author%3AP132251&amp;querydisp=author%3AThomas%20E%2E%20Anderson&amp;coll=GUIDE&amp;dl=GUIDE&amp;CFID=13720957&amp;CFTOKEN=832591" target="_self">Thomas E. Anderson</a></div>
+						<div class="abstract"><a href="http://widit.slis.indiana.edu/irpub/DL/2001/results.cfm?query=%2Bauthor%3AP489018%20author%3AP132251&amp;querydisp=author%3ARajendra%20Bose&amp;coll=GUIDE&amp;dl=GUIDE&amp;CFID=13720957&amp;CFTOKEN=832591" target="_self">Rajendra Bose</a></div>
+						<div class="abstract"><a href="http://widit.slis.indiana.edu/irpub/DL/2001/results.cfm?query=%2Bauthor%3AP168419%20author%3AP132251&amp;querydisp=author%3ALarry%20Carver&amp;coll=GUIDE&amp;dl=GUIDE&amp;CFID=13720957&amp;CFTOKEN=832591" target="_self">Larry Carver</a></div>
+						<div class="abstract"><a href="http://widit.slis.indiana.edu/irpub/DL/2001/results.cfm?query=%2Bauthor%3AP335289%20author%3AP132251&amp;querydisp=author%3AAnita%20Coleman&amp;coll=GUIDE&amp;dl=GUIDE&amp;CFID=13720957&amp;CFTOKEN=832591" target="_self">Anita Coleman</a></div>
+						<div class="abstract"><a href="http://widit.slis.indiana.edu/irpub/DL/2001/results.cfm?query=%2Bauthor%3AP196732%20author%3AP132251&amp;querydisp=author%3AMichael%20D%2E%20Dahlin&amp;coll=GUIDE&amp;dl=GUIDE&amp;CFID=13720957&amp;CFTOKEN=832591" target="_self">Michael D. Dahlin</a></div>
+						<div class="abstract"><a href="http://widit.slis.indiana.edu/irpub/DL/2001/results.cfm?query=%2Bauthor%3AP248655%20author%3AP132251&amp;querydisp=author%3ARon%20Dolin&amp;coll=GUIDE&amp;dl=GUIDE&amp;CFID=13720957&amp;CFTOKEN=832591" target="_self">Ron Dolin</a></div>
+						<div class="abstract"><a href="http://widit.slis.indiana.edu/irpub/DL/2001/results.cfm?query=%2Bauthor%3AP137229%20author%3AP132251&amp;querydisp=author%3AJeff%20Dozier&amp;coll=GUIDE&amp;dl=GUIDE&amp;CFID=13720957&amp;CFTOKEN=832591" target="_self">Jeff Dozier</a></div>
+						<div class="abstract"><a href="http://widit.slis.indiana.edu/irpub/DL/2001/results.cfm?query=%2Bauthor%3AP596500%20author%3AP132251&amp;querydisp=author%3AJoel%20A%2E%20Fine&amp;coll=GUIDE&amp;dl=GUIDE&amp;CFID=13720957&amp;CFTOKEN=832591" target="_self">Joel A. Fine</a></div>
+						<div class="abstract"><a href="http://widit.slis.indiana.edu/irpub/DL/2001/results.cfm?query=%2Bauthor%3AP449612%20author%3AP132251&amp;querydisp=author%3AChristoph%20Fischer&amp;coll=GUIDE&amp;dl=GUIDE&amp;CFID=13720957&amp;CFTOKEN=832591" target="_self">Christoph Fischer</a></div>
+						<div class="abstract"><a href="http://widit.slis.indiana.edu/irpub/DL/2001/results.cfm?query=%2Bauthor%3AP197017%20author%3AP132251&amp;querydisp=author%3AMichael%20Freeston&amp;coll=GUIDE&amp;dl=GUIDE&amp;CFID=13720957&amp;CFTOKEN=832591" target="_self">Michael Freeston</a></div>
+							</td><td>
+						<div class="abstract"><a href="http://widit.slis.indiana.edu/irpub/DL/2001/results.cfm?query=%2Bauthor%3AP483075%20author%3AP132251&amp;querydisp=author%3ANathan%20Freitas&amp;coll=GUIDE&amp;dl=GUIDE&amp;CFID=13720957&amp;CFTOKEN=832591" target="_self">Nathan Freitas</a></div>
+						<div class="abstract"><a href="http://widit.slis.indiana.edu/irpub/DL/2001/results.cfm?query=%2Bauthor%3AP159868%20author%3AP132251&amp;querydisp=author%3AKenn%20Gardels&amp;coll=GUIDE&amp;dl=GUIDE&amp;CFID=13720957&amp;CFTOKEN=832591" target="_self">Kenn Gardels</a></div>
+						<div class="abstract"><a href="http://widit.slis.indiana.edu/irpub/DL/2001/results.cfm?query=%2Bauthor%3AP171996%20author%3AP132251&amp;querydisp=author%3ALinda%20Hill&amp;coll=GUIDE&amp;dl=GUIDE&amp;CFID=13720957&amp;CFTOKEN=832591" target="_self">Linda Hill</a></div>
+						<div class="abstract"><a href="http://widit.slis.indiana.edu/irpub/DL/2001/results.cfm?query=%2Bauthor%3AP171994%20author%3AP132251&amp;querydisp=author%3ALinda%20L%2E%20Hill&amp;coll=GUIDE&amp;dl=GUIDE&amp;CFID=13720957&amp;CFTOKEN=832591" target="_self">Linda L. Hill</a></div>
+						<div class="abstract"><a href="http://widit.slis.indiana.edu/irpub/DL/2001/results.cfm?query=%2Bauthor%3AP99427%20author%3AP132251&amp;querydisp=author%3AGreg%20Jan%26%23233%3Be&amp;coll=GUIDE&amp;dl=GUIDE&amp;CFID=13720957&amp;CFTOKEN=832591" target="_self">Greg Jan&#233;e</a></div>
+						<div class="abstract"><a href="http://widit.slis.indiana.edu/irpub/DL/2001/results.cfm?query=%2Bauthor%3AP335455%20author%3AP132251&amp;querydisp=author%3AGreg%20Janee&amp;coll=GUIDE&amp;dl=GUIDE&amp;CFID=13720957&amp;CFTOKEN=832591" target="_self">Greg Janee</a></div>
+						<div class="abstract"><a href="http://widit.slis.indiana.edu/irpub/DL/2001/results.cfm?query=%2Bauthor%3AP577821%20author%3AP132251&amp;querydisp=author%3ARandall%20B%2E%20Kemp&amp;coll=GUIDE&amp;dl=GUIDE&amp;CFID=13720957&amp;CFTOKEN=832591" target="_self">Randall B. Kemp</a></div>
+						<div class="abstract"><a href="http://widit.slis.indiana.edu/irpub/DL/2001/results.cfm?query=%2Bauthor%3AP193189%20author%3AP132251&amp;querydisp=author%3AMary%20Larsgaard&amp;coll=GUIDE&amp;dl=GUIDE&amp;CFID=13720957&amp;CFTOKEN=832591" target="_self">Mary Larsgaard</a></div>
+						<div class="abstract"><a href="http://widit.slis.indiana.edu/irpub/DL/2001/results.cfm?query=%2Bauthor%3AP472702%20author%3AP132251&amp;querydisp=author%3AKevin%20Lovette&amp;coll=GUIDE&amp;dl=GUIDE&amp;CFID=13720957&amp;CFTOKEN=832591" target="_self">Kevin Lovette</a></div>
+						<div class="abstract"><a href="http://widit.slis.indiana.edu/irpub/DL/2001/results.cfm?query=%2Bauthor%3AP137340%20author%3AP132251&amp;querydisp=author%3AJeff%20Meredith&amp;coll=GUIDE&amp;dl=GUIDE&amp;CFID=13720957&amp;CFTOKEN=832591" target="_self">Jeff Meredith</a></div>
+							</td><td>
+						<div class="abstract"><a href="http://widit.slis.indiana.edu/irpub/DL/2001/results.cfm?query=%2Bauthor%3AP437452%20author%3AP132251&amp;querydisp=author%3ARobert%20Nideffer&amp;coll=GUIDE&amp;dl=GUIDE&amp;CFID=13720957&amp;CFTOKEN=832591" target="_self">Robert Nideffer</a></div>
+						<div class="abstract"><a href="http://widit.slis.indiana.edu/irpub/DL/2001/results.cfm?query=%2Bauthor%3AP373719%20author%3AP132251&amp;querydisp=author%3AMichael%20Olson&amp;coll=GUIDE&amp;dl=GUIDE&amp;CFID=13720957&amp;CFTOKEN=832591" target="_self">Michael Olson</a></div>
+						<div class="abstract"><a href="http://widit.slis.indiana.edu/irpub/DL/2001/results.cfm?query=%2Bauthor%3AP63248%20author%3AP132251&amp;querydisp=author%3ADavid%20A%2E%20Patterson&amp;coll=GUIDE&amp;dl=GUIDE&amp;CFID=13720957&amp;CFTOKEN=832591" target="_self">David A. Patterson</a></div>
+						<div class="abstract"><a href="http://widit.slis.indiana.edu/irpub/DL/2001/results.cfm?query=%2Bauthor%3AP193415%20author%3AP132251&amp;querydisp=author%3AMary%2DAnna%20Rae&amp;coll=GUIDE&amp;dl=GUIDE&amp;CFID=13720957&amp;CFTOKEN=832591" target="_self">Mary-Anna Rae</a></div>
+						<div class="abstract"><a href="http://widit.slis.indiana.edu/irpub/DL/2001/results.cfm?query=%2Bauthor%3AP577784%20author%3AP132251&amp;querydisp=author%3AJason%20Simpson&amp;coll=GUIDE&amp;dl=GUIDE&amp;CFID=13720957&amp;CFTOKEN=832591" target="_self">Jason Simpson</a></div>
+						<div class="abstract"><a href="http://widit.slis.indiana.edu/irpub/DL/2001/results.cfm?query=%2Bauthor%3AP541055%20author%3AP132251&amp;querydisp=author%3ATerence%20Smith&amp;coll=GUIDE&amp;dl=GUIDE&amp;CFID=13720957&amp;CFTOKEN=832591" target="_self">Terence Smith</a></div>
+						<div class="abstract"><a href="http://widit.slis.indiana.edu/irpub/DL/2001/results.cfm?query=%2Bauthor%3AP279025%20author%3AP132251&amp;querydisp=author%3ATerence%20R%2E%20Smith&amp;coll=GUIDE&amp;dl=GUIDE&amp;CFID=13720957&amp;CFTOKEN=832591" target="_self">Terence R. Smith</a></div>
+						<div class="abstract"><a href="http://widit.slis.indiana.edu/irpub/DL/2001/results.cfm?query=%2Bauthor%3AP198980%20author%3AP132251&amp;querydisp=author%3AMichael%20Stonebraker&amp;coll=GUIDE&amp;dl=GUIDE&amp;CFID=13720957&amp;CFTOKEN=832591" target="_self">Michael Stonebraker</a></div>
+						<div class="abstract"><a href="http://widit.slis.indiana.edu/irpub/DL/2001/results.cfm?query=%2Bauthor%3AP379660%20author%3AP132251&amp;querydisp=author%3ADavid%20Valentine&amp;coll=GUIDE&amp;dl=GUIDE&amp;CFID=13720957&amp;CFTOKEN=832591" target="_self">David Valentine</a></div>
+						<div class="abstract"><a href="http://widit.slis.indiana.edu/irpub/DL/2001/results.cfm?query=%2Bauthor%3AP577748%20author%3AP132251&amp;querydisp=author%3AAlex%20Wells&amp;coll=GUIDE&amp;dl=GUIDE&amp;CFID=13720957&amp;CFTOKEN=832591" target="_self">Alex Wells</a></div>
+							</td><td>
+						<div class="abstract"><a href="http://widit.slis.indiana.edu/irpub/DL/2001/results.cfm?query=%2Bauthor%3AP228617%20author%3AP132251&amp;querydisp=author%3AQi%20Zheng&amp;coll=GUIDE&amp;dl=GUIDE&amp;CFID=13720957&amp;CFTOKEN=832591" target="_self">Qi Zheng</a></div>
+						</td>
+						</tr>
+						<tr valign="top"><td><div class="abstract"><a href="http://widit.slis.indiana.edu/irpub/DL/2001/results.cfm?query=%2Bauthor%3AP335455&amp;querydisp=author%3AGreg%20Janee&amp;coll=GUIDE&amp;dl=GUIDE&amp;CFID=13720957&amp;CFTOKEN=832591" target="_self">Greg Janee</a>:</div></td><td>
+						<div class="abstract"><a href="http://widit.slis.indiana.edu/irpub/DL/2001/results.cfm?query=%2Bauthor%3AP298519%20author%3AP335455&amp;querydisp=author%3AWilliam%20Y%2E%20Arms&amp;coll=GUIDE&amp;dl=GUIDE&amp;CFID=13720957&amp;CFTOKEN=832591" target="_self">William Y. Arms</a></div>
+						<div class="abstract"><a href="http://widit.slis.indiana.edu/irpub/DL/2001/results.cfm?query=%2Bauthor%3AP577713%20author%3AP335455&amp;querydisp=author%3ARobert%20Brandriff&amp;coll=GUIDE&amp;dl=GUIDE&amp;CFID=13720957&amp;CFTOKEN=832591" target="_self">Robert Brandriff</a></div>
+						<div class="abstract"><a href="http://widit.slis.indiana.edu/irpub/DL/2001/results.cfm?query=%2Bauthor%3AP335289%20author%3AP335455&amp;querydisp=author%3AAnita%20Coleman&amp;coll=GUIDE&amp;dl=GUIDE&amp;CFID=13720957&amp;CFTOKEN=832591" target="_self">Anita Coleman</a></div>
+						<div class="abstract"><a href="http://widit.slis.indiana.edu/irpub/DL/2001/results.cfm?query=%2Bauthor%3AP197017%20author%3AP335455&amp;querydisp=author%3AMichael%20Freeston&amp;coll=GUIDE&amp;dl=GUIDE&amp;CFID=13720957&amp;CFTOKEN=832591" target="_self">Michael Freeston</a></div>
+						<div class="abstract"><a href="http://widit.slis.indiana.edu/irpub/DL/2001/results.cfm?query=%2Bauthor%3AP483075%20author%3AP335455&amp;querydisp=author%3ANathan%20Freitas&amp;coll=GUIDE&amp;dl=GUIDE&amp;CFID=13720957&amp;CFTOKEN=832591" target="_self">Nathan Freitas</a></div>
+						<div class="abstract"><a href="http://widit.slis.indiana.edu/irpub/DL/2001/results.cfm?query=%2Bauthor%3AP132251%20author%3AP335455&amp;querydisp=author%3AJames%20Frew&amp;coll=GUIDE&amp;dl=GUIDE&amp;CFID=13720957&amp;CFTOKEN=832591" target="_self">James Frew</a></div>
+						<div class="abstract"><a href="http://widit.slis.indiana.edu/irpub/DL/2001/results.cfm?query=%2Bauthor%3AP171994%20author%3AP335455&amp;querydisp=author%3ALinda%20L%2E%20Hill&amp;coll=GUIDE&amp;dl=GUIDE&amp;CFID=13720957&amp;CFTOKEN=832591" target="_self">Linda L. Hill</a></div>
+						<div class="abstract"><a href="http://widit.slis.indiana.edu/irpub/DL/2001/results.cfm?query=%2Bauthor%3AP40812%20author%3AP335455&amp;querydisp=author%3ACarl%20Lagoze&amp;coll=GUIDE&amp;dl=GUIDE&amp;CFID=13720957&amp;CFTOKEN=832591" target="_self">Carl Lagoze</a></div>
+						<div class="abstract"><a href="http://widit.slis.indiana.edu/irpub/DL/2001/results.cfm?query=%2Bauthor%3AP239720%20author%3AP335455&amp;querydisp=author%3ARay%20Larson&amp;coll=GUIDE&amp;dl=GUIDE&amp;CFID=13720957&amp;CFTOKEN=832591" target="_self">Ray Larson</a></div>
+						<div class="abstract"><a href="http://widit.slis.indiana.edu/irpub/DL/2001/results.cfm?query=%2Bauthor%3AP472702%20author%3AP335455&amp;querydisp=author%3AKevin%20Lovette&amp;coll=GUIDE&amp;dl=GUIDE&amp;CFID=13720957&amp;CFTOKEN=832591" target="_self">Kevin Lovette</a></div>
+							</td><td>
+						<div class="abstract"><a href="http://widit.slis.indiana.edu/irpub/DL/2001/results.cfm?query=%2Bauthor%3AP577612%20author%3AP335455&amp;querydisp=author%3ABertram%20Ludaescher&amp;coll=GUIDE&amp;dl=GUIDE&amp;CFID=13720957&amp;CFTOKEN=832591" target="_self">Bertram Ludaescher</a></div>
+						<div class="abstract"><a href="http://widit.slis.indiana.edu/irpub/DL/2001/results.cfm?query=%2Bauthor%3AP262030%20author%3AP335455&amp;querydisp=author%3ASergey%20Melnik&amp;coll=GUIDE&amp;dl=GUIDE&amp;CFID=13720957&amp;CFTOKEN=832591" target="_self">Sergey Melnik</a></div>
+						<div class="abstract"><a href="http://widit.slis.indiana.edu/irpub/DL/2001/results.cfm?query=%2Bauthor%3AP299627%20author%3AP335455&amp;querydisp=author%3AWilliam%20H%2E%20Mischo&amp;coll=GUIDE&amp;dl=GUIDE&amp;CFID=13720957&amp;CFTOKEN=832591" target="_self">William H. Mischo</a></div>
+						<div class="abstract"><a href="http://widit.slis.indiana.edu/irpub/DL/2001/results.cfm?query=%2Bauthor%3AP437452%20author%3AP335455&amp;querydisp=author%3ARobert%20Nideffer&amp;coll=GUIDE&amp;dl=GUIDE&amp;CFID=13720957&amp;CFTOKEN=832591" target="_self">Robert Nideffer</a></div>
+						<div class="abstract"><a href="http://widit.slis.indiana.edu/irpub/DL/2001/results.cfm?query=%2Bauthor%3AP577653%20author%3AP335455&amp;querydisp=author%3AGinger%20Ogle&amp;coll=GUIDE&amp;dl=GUIDE&amp;CFID=13720957&amp;CFTOKEN=832591" target="_self">Ginger Ogle</a></div>
+						<div class="abstract"><a href="http://widit.slis.indiana.edu/irpub/DL/2001/results.cfm?query=%2Bauthor%3AP17440%20author%3AP335455&amp;querydisp=author%3AAndreas%20Paepcke&amp;coll=GUIDE&amp;dl=GUIDE&amp;CFID=13720957&amp;CFTOKEN=832591" target="_self">Andreas Paepcke</a></div>
+						<div class="abstract"><a href="http://widit.slis.indiana.edu/irpub/DL/2001/results.cfm?query=%2Bauthor%3AP266637%20author%3AP335455&amp;querydisp=author%3ASriram%20Raghavan&amp;coll=GUIDE&amp;dl=GUIDE&amp;CFID=13720957&amp;CFTOKEN=832591" target="_self">Sriram Raghavan</a></div>
+						<div class="abstract"><a href="http://widit.slis.indiana.edu/irpub/DL/2001/results.cfm?query=%2Bauthor%3AP279025%20author%3AP335455&amp;querydisp=author%3ATerence%20R%2E%20Smith&amp;coll=GUIDE&amp;dl=GUIDE&amp;CFID=13720957&amp;CFTOKEN=832591" target="_self">Terence R. Smith</a></div>
+						<div class="abstract"><a href="http://widit.slis.indiana.edu/irpub/DL/2001/results.cfm?query=%2Bauthor%3AP261182%20author%3AP335455&amp;querydisp=author%3AScott%20Stevens&amp;coll=GUIDE&amp;dl=GUIDE&amp;CFID=13720957&amp;CFTOKEN=832591" target="_self">Scott Stevens</a></div>
+						<div class="abstract"><a href="http://widit.slis.indiana.edu/irpub/DL/2001/results.cfm?query=%2Bauthor%3AP228617%20author%3AP335455&amp;querydisp=author%3AQi%20Zheng&amp;coll=GUIDE&amp;dl=GUIDE&amp;CFID=13720957&amp;CFTOKEN=832591" target="_self">Qi Zheng</a></div>
+						</td>
+						</tr>
+						<tr valign="top"><td><div class="abstract"><a href="http://widit.slis.indiana.edu/irpub/DL/2001/results.cfm?query=%2Bauthor%3AP279025&amp;querydisp=author%3ATerence%20R%2E%20Smith&amp;coll=GUIDE&amp;dl=GUIDE&amp;CFID=13720957&amp;CFTOKEN=832591" target="_self">Terence R. Smith</a>:</div></td><td>
+						<div class="abstract"><a href="http://widit.slis.indiana.edu/irpub/DL/2001/results.cfm?query=%2Bauthor%3AP16253%20author%3AP279025&amp;querydisp=author%3AAmr%20El%20Abbadi&amp;coll=GUIDE&amp;dl=GUIDE&amp;CFID=13720957&amp;CFTOKEN=832591" target="_self">Amr El Abbadi</a></div>
+						<div class="abstract"><a href="http://widit.slis.indiana.edu/irpub/DL/2001/results.cfm?query=%2Bauthor%3AP361065%20author%3AP279025&amp;querydisp=author%3AOlga%20Agapova&amp;coll=GUIDE&amp;dl=GUIDE&amp;CFID=13720957&amp;CFTOKEN=832591" target="_self">Olga Agapova</a></div>
+						<div class="abstract"><a href="http://widit.slis.indiana.edu/irpub/DL/2001/results.cfm?query=%2Bauthor%3AP67582%20author%3AP279025&amp;querydisp=author%3ADivyakant%20Agrawal&amp;coll=GUIDE&amp;dl=GUIDE&amp;CFID=13720957&amp;CFTOKEN=832591" target="_self">Divyakant Agrawal</a></div>
+						<div class="abstract"><a href="http://widit.slis.indiana.edu/irpub/DL/2001/results.cfm?query=%2Bauthor%3AP100750%20author%3AP279025&amp;querydisp=author%3AGustavo%20Alonso&amp;coll=GUIDE&amp;dl=GUIDE&amp;CFID=13720957&amp;CFTOKEN=832591" target="_self">Gustavo Alonso</a></div>
+						<div class="abstract"><a href="http://widit.slis.indiana.edu/irpub/DL/2001/results.cfm?query=%2Bauthor%3AP451316%20author%3AP279025&amp;querydisp=author%3ADan%20Ancona&amp;coll=GUIDE&amp;dl=GUIDE&amp;CFID=13720957&amp;CFTOKEN=832591" target="_self">Dan Ancona</a></div>
+						<div class="abstract"><a href="http://widit.slis.indiana.edu/irpub/DL/2001/results.cfm?query=%2Bauthor%3AP58489%20author%3AP279025&amp;querydisp=author%3ADaniel%20Andresen&amp;coll=GUIDE&amp;dl=GUIDE&amp;CFID=13720957&amp;CFTOKEN=832591" target="_self">Daniel Andresen</a></div>
+						<div class="abstract"><a href="http://widit.slis.indiana.edu/irpub/DL/2001/results.cfm?query=%2Bauthor%3AP30896%20author%3AP279025&amp;querydisp=author%3ABj%26%23246%3Brn%20Birnir&amp;coll=GUIDE&amp;dl=GUIDE&amp;CFID=13720957&amp;CFTOKEN=832591" target="_self">Bj&#246;rn Birnir</a></div>
+						<div class="abstract"><a href="http://widit.slis.indiana.edu/irpub/DL/2001/results.cfm?query=%2Bauthor%3AP30949%20author%3AP279025&amp;querydisp=author%3ABjorn%20Birnir&amp;coll=GUIDE&amp;dl=GUIDE&amp;CFID=13720957&amp;CFTOKEN=832591" target="_self">Bjorn Birnir</a></div>
+						<div class="abstract"><a href="http://widit.slis.indiana.edu/irpub/DL/2001/results.cfm?query=%2Bauthor%3AP361066%20author%3AP279025&amp;querydisp=author%3AOlha%20Buchel&amp;coll=GUIDE&amp;dl=GUIDE&amp;CFID=13720957&amp;CFTOKEN=832591" target="_self">Olha Buchel</a></div>
+						<div class="abstract"><a href="http://widit.slis.indiana.edu/irpub/DL/2001/results.cfm?query=%2Bauthor%3AP484314%20author%3AP279025&amp;querydisp=author%3AOlha%20A%2E%20Buchel&amp;coll=GUIDE&amp;dl=GUIDE&amp;CFID=13720957&amp;CFTOKEN=832591" target="_self">Olha A. Buchel</a></div>
+						<div class="abstract"><a href="http://widit.slis.indiana.edu/irpub/DL/2001/results.cfm?query=%2Bauthor%3AP13432%20author%3AP279025&amp;querydisp=author%3AAlejandro%20P%2E%20Buchmann&amp;coll=GUIDE&amp;dl=GUIDE&amp;CFID=13720957&amp;CFTOKEN=832591" target="_self">Alejandro P. Buchmann</a></div>
+						<div class="abstract"><a href="http://widit.slis.indiana.edu/irpub/DL/2001/results.cfm?query=%2Bauthor%3AP168419%20author%3AP279025&amp;querydisp=author%3ALarry%20Carver&amp;coll=GUIDE&amp;dl=GUIDE&amp;CFID=13720957&amp;CFTOKEN=832591" target="_self">Larry Carver</a></div>
+						<div class="abstract"><a href="http://widit.slis.indiana.edu/irpub/DL/2001/results.cfm?query=%2Bauthor%3AP306324%20author%3AP279025&amp;querydisp=author%3AYongmao%20Chen&amp;coll=GUIDE&amp;dl=GUIDE&amp;CFID=13720957&amp;CFTOKEN=832591" target="_self">Yongmao Chen</a></div>
+						<div class="abstract"><a href="http://widit.slis.indiana.edu/irpub/DL/2001/results.cfm?query=%2Bauthor%3AP335289%20author%3AP279025&amp;querydisp=author%3AAnita%20Coleman&amp;coll=GUIDE&amp;dl=GUIDE&amp;CFID=13720957&amp;CFTOKEN=832591" target="_self">Anita Coleman</a></div>
+							</td><td>
+						<div class="abstract"><a href="http://widit.slis.indiana.edu/irpub/DL/2001/results.cfm?query=%2Bauthor%3AP577717%20author%3AP279025&amp;querydisp=author%3AScott%20J%2E%20Crosier&amp;coll=GUIDE&amp;dl=GUIDE&amp;CFID=13720957&amp;CFTOKEN=832591" target="_self">Scott J. Crosier</a></div>
+						<div class="abstract"><a href="http://widit.slis.indiana.edu/irpub/DL/2001/results.cfm?query=%2Bauthor%3AP248655%20author%3AP279025&amp;querydisp=author%3ARon%20Dolin&amp;coll=GUIDE&amp;dl=GUIDE&amp;CFID=13720957&amp;CFTOKEN=832591" target="_self">Ron Dolin</a></div>
+						<div class="abstract"><a href="http://widit.slis.indiana.edu/irpub/DL/2001/results.cfm?query=%2Bauthor%3AP212145%20author%3AP279025&amp;querydisp=author%3AOmer%20Egecioglu&amp;coll=GUIDE&amp;dl=GUIDE&amp;CFID=13720957&amp;CFTOKEN=832591" target="_self">Omer Egecioglu</a></div>
+						<div class="abstract"><a href="http://widit.slis.indiana.edu/irpub/DL/2001/results.cfm?query=%2Bauthor%3AP16254%20author%3AP279025&amp;querydisp=author%3AAmr%20El%20Abbadi&amp;coll=GUIDE&amp;dl=GUIDE&amp;CFID=13720957&amp;CFTOKEN=832591" target="_self">Amr El Abbadi</a></div>
+						<div class="abstract"><a href="http://widit.slis.indiana.edu/irpub/DL/2001/results.cfm?query=%2Bauthor%3AP492887%20author%3AP279025&amp;querydisp=author%3ASara%20Irina%20Fabrikant&amp;coll=GUIDE&amp;dl=GUIDE&amp;CFID=13720957&amp;CFTOKEN=832591" target="_self">Sara Irina Fabrikant</a></div>
+						<div class="abstract"><a href="http://widit.slis.indiana.edu/irpub/DL/2001/results.cfm?query=%2Bauthor%3AP449612%20author%3AP279025&amp;querydisp=author%3AChristoph%20Fischer&amp;coll=GUIDE&amp;dl=GUIDE&amp;CFID=13720957&amp;CFTOKEN=832591" target="_self">Christoph Fischer</a></div>
+						<div class="abstract"><a href="http://widit.slis.indiana.edu/irpub/DL/2001/results.cfm?query=%2Bauthor%3AP197017%20author%3AP279025&amp;querydisp=author%3AMichael%20Freeston&amp;coll=GUIDE&amp;dl=GUIDE&amp;CFID=13720957&amp;CFTOKEN=832591" target="_self">Michael Freeston</a></div>
+						<div class="abstract"><a href="http://widit.slis.indiana.edu/irpub/DL/2001/results.cfm?query=%2Bauthor%3AP483075%20author%3AP279025&amp;querydisp=author%3ANathan%20Freitas&amp;coll=GUIDE&amp;dl=GUIDE&amp;CFID=13720957&amp;CFTOKEN=832591" target="_self">Nathan Freitas</a></div>
+						<div class="abstract"><a href="http://widit.slis.indiana.edu/irpub/DL/2001/results.cfm?query=%2Bauthor%3AP132251%20author%3AP279025&amp;querydisp=author%3AJames%20Frew&amp;coll=GUIDE&amp;dl=GUIDE&amp;CFID=13720957&amp;CFTOKEN=832591" target="_self">James Frew</a></div>
+						<div class="abstract"><a href="http://widit.slis.indiana.edu/irpub/DL/2001/results.cfm?query=%2Bauthor%3AP140340%20author%3AP279025&amp;querydisp=author%3AJim%20Frew&amp;coll=GUIDE&amp;dl=GUIDE&amp;CFID=13720957&amp;CFTOKEN=832591" target="_self">Jim Frew</a></div>
+						<div class="abstract"><a href="http://widit.slis.indiana.edu/irpub/DL/2001/results.cfm?query=%2Bauthor%3AP211806%20author%3AP279025&amp;querydisp=author%3AOliver%20G%26%23252%3Bnther&amp;coll=GUIDE&amp;dl=GUIDE&amp;CFID=13720957&amp;CFTOKEN=832591" target="_self">Oliver G&#252;nther</a></div>
+						<div class="abstract"><a href="http://widit.slis.indiana.edu/irpub/DL/2001/results.cfm?query=%2Bauthor%3AP223145%20author%3AP279025&amp;querydisp=author%3APeng%20Gao&amp;coll=GUIDE&amp;dl=GUIDE&amp;CFID=13720957&amp;CFTOKEN=832591" target="_self">Peng Gao</a></div>
+						<div class="abstract"><a href="http://widit.slis.indiana.edu/irpub/DL/2001/results.cfm?query=%2Bauthor%3AP629696%20author%3AP279025&amp;querydisp=author%3ASteven%20Paul%20Geffner&amp;coll=GUIDE&amp;dl=GUIDE&amp;CFID=13720957&amp;CFTOKEN=832591" target="_self">Steven Paul Geffner</a></div>
+						<div class="abstract"><a href="http://widit.slis.indiana.edu/irpub/DL/2001/results.cfm?query=%2Bauthor%3AP413051%20author%3AP279025&amp;querydisp=author%3AMichael%20Goodchild&amp;coll=GUIDE&amp;dl=GUIDE&amp;CFID=13720957&amp;CFTOKEN=832591" target="_self">Michael Goodchild</a></div>
+							</td><td>
+						<div class="abstract"><a href="http://widit.slis.indiana.edu/irpub/DL/2001/results.cfm?query=%2Bauthor%3AP629914%20author%3AP279025&amp;querydisp=author%3ASucharita%20C%2E%20Gopal&amp;coll=GUIDE&amp;dl=GUIDE&amp;CFID=13720957&amp;CFTOKEN=832591" target="_self">Sucharita C. Gopal</a></div>
+						<div class="abstract"><a href="http://widit.slis.indiana.edu/irpub/DL/2001/results.cfm?query=%2Bauthor%3AP171996%20author%3AP279025&amp;querydisp=author%3ALinda%20Hill&amp;coll=GUIDE&amp;dl=GUIDE&amp;CFID=13720957&amp;CFTOKEN=832591" target="_self">Linda Hill</a></div>
+						<div class="abstract"><a href="http://widit.slis.indiana.edu/irpub/DL/2001/results.cfm?query=%2Bauthor%3AP171994%20author%3AP279025&amp;querydisp=author%3ALinda%20L%2E%20Hill&amp;coll=GUIDE&amp;dl=GUIDE&amp;CFID=13720957&amp;CFTOKEN=832591" target="_self">Linda L. Hill</a></div>
+						<div class="abstract"><a href="http://widit.slis.indiana.edu/irpub/DL/2001/results.cfm?query=%2Bauthor%3AP212400%20author%3AP279025&amp;querydisp=author%3AOscar%20H%2E%20Ibarra&amp;coll=GUIDE&amp;dl=GUIDE&amp;CFID=13720957&amp;CFTOKEN=832591" target="_self">Oscar H. Ibarra</a></div>
+						<div class="abstract"><a href="http://widit.slis.indiana.edu/irpub/DL/2001/results.cfm?query=%2Bauthor%3AP335455%20author%3AP279025&amp;querydisp=author%3AGreg%20Janee&amp;coll=GUIDE&amp;dl=GUIDE&amp;CFID=13720957&amp;CFTOKEN=832591" target="_self">Greg Janee</a></div>
+						<div class="abstract"><a href="http://widit.slis.indiana.edu/irpub/DL/2001/results.cfm?query=%2Bauthor%3AP193189%20author%3AP279025&amp;querydisp=author%3AMary%20Larsgaard&amp;coll=GUIDE&amp;dl=GUIDE&amp;CFID=13720957&amp;CFTOKEN=832591" target="_self">Mary Larsgaard</a></div>
+						<div class="abstract"><a href="http://widit.slis.indiana.edu/irpub/DL/2001/results.cfm?query=%2Bauthor%3AP472702%20author%3AP279025&amp;querydisp=author%3AKevin%20Lovette&amp;coll=GUIDE&amp;dl=GUIDE&amp;CFID=13720957&amp;CFTOKEN=832591" target="_self">Kevin Lovette</a></div>
+						<div class="abstract"><a href="http://widit.slis.indiana.edu/irpub/DL/2001/results.cfm?query=%2Bauthor%3AP242528%20author%3AP279025&amp;querydisp=author%3ARichard%20E%2E%20Mayer&amp;coll=GUIDE&amp;dl=GUIDE&amp;CFID=13720957&amp;CFTOKEN=832591" target="_self">Richard E. Mayer</a></div>
+						<div class="abstract"><a href="http://widit.slis.indiana.edu/irpub/DL/2001/results.cfm?query=%2Bauthor%3AP495827%20author%3AP279025&amp;querydisp=author%3ASubhakar%20Menon&amp;coll=GUIDE&amp;dl=GUIDE&amp;CFID=13720957&amp;CFTOKEN=832591" target="_self">Subhakar Menon</a></div>
+						<div class="abstract"><a href="http://widit.slis.indiana.edu/irpub/DL/2001/results.cfm?query=%2Bauthor%3AP271033%20author%3AP279025&amp;querydisp=author%3ASudhakar%20Menon&amp;coll=GUIDE&amp;dl=GUIDE&amp;CFID=13720957&amp;CFTOKEN=832591" target="_self">Sudhakar Menon</a></div>
+						<div class="abstract"><a href="http://widit.slis.indiana.edu/irpub/DL/2001/results.cfm?query=%2Bauthor%3AP95775%20author%3AP279025&amp;querydisp=author%3AGeorge%20E%2E%20Merchant&amp;coll=GUIDE&amp;dl=GUIDE&amp;CFID=13720957&amp;CFTOKEN=832591" target="_self">George E. Merchant</a></div>
+						<div class="abstract"><a href="http://widit.slis.indiana.edu/irpub/DL/2001/results.cfm?query=%2Bauthor%3AP145207%20author%3AP279025&amp;querydisp=author%3AJohn%20Moody&amp;coll=GUIDE&amp;dl=GUIDE&amp;CFID=13720957&amp;CFTOKEN=832591" target="_self">John Moody</a></div>
+						<div class="abstract"><a href="http://widit.slis.indiana.edu/irpub/DL/2001/results.cfm?query=%2Bauthor%3AP437452%20author%3AP279025&amp;querydisp=author%3ARobert%20Nideffer&amp;coll=GUIDE&amp;dl=GUIDE&amp;CFID=13720957&amp;CFTOKEN=832591" target="_self">Robert Nideffer</a></div>
+						<div class="abstract"><a href="http://widit.slis.indiana.edu/irpub/DL/2001/results.cfm?query=%2Bauthor%3AP193415%20author%3AP279025&amp;querydisp=author%3AMary%2DAnna%20Rae&amp;coll=GUIDE&amp;dl=GUIDE&amp;CFID=13720957&amp;CFTOKEN=832591" target="_self">Mary-Anna Rae</a></div>
+							</td><td>
+						<div class="abstract"><a href="http://widit.slis.indiana.edu/irpub/DL/2001/results.cfm?query=%2Bauthor%3AP16136%20author%3AP279025&amp;querydisp=author%3AAmitabh%20Saran&amp;coll=GUIDE&amp;dl=GUIDE&amp;CFID=13720957&amp;CFTOKEN=832591" target="_self">Amitabh Saran</a></div>
+						<div class="abstract"><a href="http://widit.slis.indiana.edu/irpub/DL/2001/results.cfm?query=%2Bauthor%3AP15909%20author%3AP279025&amp;querydisp=author%3AAmbuj%20Singh&amp;coll=GUIDE&amp;dl=GUIDE&amp;CFID=13720957&amp;CFTOKEN=832591" target="_self">Ambuj Singh</a></div>
+						<div class="abstract"><a href="http://widit.slis.indiana.edu/irpub/DL/2001/results.cfm?query=%2Bauthor%3AP361041%20author%3AP279025&amp;querydisp=author%3ALaura%20Smart&amp;coll=GUIDE&amp;dl=GUIDE&amp;CFID=13720957&amp;CFTOKEN=832591" target="_self">Laura Smart</a></div>
+						<div class="abstract"><a href="http://widit.slis.indiana.edu/irpub/DL/2001/results.cfm?query=%2Bauthor%3AP139945%20author%3AP279025&amp;querydisp=author%3AJianwen%20Su&amp;coll=GUIDE&amp;dl=GUIDE&amp;CFID=13720957&amp;CFTOKEN=832591" target="_self">Jianwen Su</a></div>
+						<div class="abstract"><a href="http://widit.slis.indiana.edu/irpub/DL/2001/results.cfm?query=%2Bauthor%3AP361105%20author%3AP279025&amp;querydisp=author%3ATim%20Tierney&amp;coll=GUIDE&amp;dl=GUIDE&amp;CFID=13720957&amp;CFTOKEN=832591" target="_self">Tim Tierney</a></div>
+						<div class="abstract"><a href="http://widit.slis.indiana.edu/irpub/DL/2001/results.cfm?query=%2Bauthor%3AP335272%20author%3AP279025&amp;querydisp=author%3AAlex%20Ushakov&amp;coll=GUIDE&amp;dl=GUIDE&amp;CFID=13720957&amp;CFTOKEN=832591" target="_self">Alex Ushakov</a></div>
+						<div class="abstract"><a href="http://widit.slis.indiana.edu/irpub/DL/2001/results.cfm?query=%2Bauthor%3AP503078%20author%3AP279025&amp;querydisp=author%3AY%2E%2DF%2E%20Wang&amp;coll=GUIDE&amp;dl=GUIDE&amp;CFID=13720957&amp;CFTOKEN=832591" target="_self">Y.-F. Wang</a></div>
+						<div class="abstract"><a href="http://widit.slis.indiana.edu/irpub/DL/2001/results.cfm?query=%2Bauthor%3AP307601%20author%3AP279025&amp;querydisp=author%3AYuan%2DFang%20Wang&amp;coll=GUIDE&amp;dl=GUIDE&amp;CFID=13720957&amp;CFTOKEN=832591" target="_self">Yuan-Fang Wang</a></div>
+						<div class="abstract"><a href="http://widit.slis.indiana.edu/irpub/DL/2001/results.cfm?query=%2Bauthor%3AP59544%20author%3AP279025&amp;querydisp=author%3ADaniel%20Wu&amp;coll=GUIDE&amp;dl=GUIDE&amp;CFID=13720957&amp;CFTOKEN=832591" target="_self">Daniel Wu</a></div>
+						<div class="abstract"><a href="http://widit.slis.indiana.edu/irpub/DL/2001/results.cfm?query=%2Bauthor%3AP278397%20author%3AP279025&amp;querydisp=author%3ATao%20Yang&amp;coll=GUIDE&amp;dl=GUIDE&amp;CFID=13720957&amp;CFTOKEN=832591" target="_self">Tao Yang</a></div>
+						<div class="abstract"><a href="http://widit.slis.indiana.edu/irpub/DL/2001/results.cfm?query=%2Bauthor%3AP361047%20author%3AP279025&amp;querydisp=author%3AMarcia%20L%2E%20Zeng&amp;coll=GUIDE&amp;dl=GUIDE&amp;CFID=13720957&amp;CFTOKEN=832591" target="_self">Marcia L. Zeng</a></div>
+						<div class="abstract"><a href="http://widit.slis.indiana.edu/irpub/DL/2001/results.cfm?query=%2Bauthor%3AP48697%20author%3AP279025&amp;querydisp=author%3ACixiang%20Zhan&amp;coll=GUIDE&amp;dl=GUIDE&amp;CFID=13720957&amp;CFTOKEN=832591" target="_self">Cixiang Zhan</a></div>
+						<div class="abstract"><a href="http://widit.slis.indiana.edu/irpub/DL/2001/results.cfm?query=%2Bauthor%3AP228617%20author%3AP279025&amp;querydisp=author%3AQi%20Zheng&amp;coll=GUIDE&amp;dl=GUIDE&amp;CFID=13720957&amp;CFTOKEN=832591" target="_self">Qi Zheng</a></div>
+						</td>
+						</tr>
+				</table>
+			</div>
+			<br>
+			<div class="abstract">
+				<A HREF="cite23.htm#CIT"><img name="top" src="arrowu.gif" hspace="10" border="0"></A><SPAN class=heading><A NAME="peers">Peer to Peer - Readers of this Article have also read:</cite></A></span>
+		<ul type="disc">
+			<li>
+				<A HREF="http://widit.slis.indiana.edu/irpub/DL/2001/citation.cfm?id=166086&amp;dl=ACM&amp;coll=GUIDE&amp;CFID=13720957&amp;CFTOKEN=832591" target="_self">		 	 Constructing reality</a>
+				<br>
+					 <b>Proceedings of the 11th annual international conference on Systems documentation</b><br>
+					Douglas A. Powell
+					, &nbsp;Norman R. Ball
+					, &nbsp;Mansel W. Griffiths
+				<br>
+			<br>
+			</li>
+			<li>
+				<A HREF="http://widit.slis.indiana.edu/irpub/DL/2001/citation.cfm?id=512248&amp;dl=ACM&amp;coll=GUIDE&amp;CFID=13720957&amp;CFTOKEN=832591" target="_self">		 	 M<sup>4</sup>:&nbsp;a metamodel for data preprocessing</a>
+				<br>
+					 <b>Proceedings of the fourth ACM international workshop on Data warehousing and OLAP</b><br>
+					Anca Vaduva
+					, &nbsp;J&#246;rg-Uwe Kietz
+					, &nbsp;Regina Z&#252;cker
+				<br>
+			<br>
+			</li>
+			<li>
+				<A HREF="http://widit.slis.indiana.edu/irpub/DL/2001/citation.cfm?id=4290&amp;dl=ACM&amp;coll=GUIDE&amp;CFID=13720957&amp;CFTOKEN=832591" target="_self">		 	 Data structures for quadtree approximation and compression</a>
+				<br>
+						<b>Communications of the ACM</b>&nbsp;&nbsp;
+						<font size="-1">28,&nbsp;9</font><br>
+					Hanan Samet
+				<br>
+			<br>
+			</li>
+			<li>
+				<A HREF="http://widit.slis.indiana.edu/irpub/DL/2001/citation.cfm?id=255524&amp;dl=ACM&amp;coll=GUIDE&amp;CFID=13720957&amp;CFTOKEN=832591" target="_self">		 	 Toward a real-time Ada design methodology</a>
+				<br>
+					 <b>Proceedings of the conference on TRI-ADA '90</b><br>
+					Norman R. Howes
+				<br>
+			<br>
+			</li>
+			<li>
+				<A HREF="http://widit.slis.indiana.edu/irpub/DL/2001/citation.cfm?id=255523&amp;dl=ACM&amp;coll=GUIDE&amp;CFID=13720957&amp;CFTOKEN=832591" target="_self">		 	 Fashioning conceptual constructs in Ada</a>
+				<br>
+					 <b>Proceedings of the conference on TRI-ADA '90</b><br>
+					Robert C. Shock
+				<br>
+			<br>
+			</li>
+		</ul>
+		</div>
+<br>
+<DIV class=footer-copy-text align="center">
+</DIV>
+</td>
+</tr>
+</table>
+</div>
+</body>
+</html></html>

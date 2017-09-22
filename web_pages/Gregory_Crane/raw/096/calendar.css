@@ -1,0 +1,80 @@
+﻿/************************************************************************
+* 
+* Calendar specific formatting 
+*
+************************************************************************/
+
+/* Surrounds the calendar */
+.eventmonth
+{
+    width: 800px;
+    border: 2px solid #959595;
+    margin-right: auto;
+    margin-left: auto;
+    background: #ffffff url(images/background_fullwidth.jpg) repeat-y;
+    margin-bottom: 10px;
+    text-align: center;
+}
+
+/* used as the cssclass of the actual calendar */
+.eventmonthtable
+{
+    width: 780px;
+    position: relative;
+    border: 1px solid #959595;
+    border-collapse:collapse;
+}
+
+
+.dayNumber
+{
+    float: right;
+    border-bottom: 1px solid #707070;
+    border-left: 1px solid #707070;
+    clear: none;
+    padding: 2px;
+    /*font-family: arial, sans-serif; font-size: 11px; color: #660000; 
+    text-decoration: none;*/
+    font-family: arial, sans-serif; font-size: 11px; color: #000000; font-weight: normal; 
+}
+.dayNumber a:link { color: #660000; text-decoration: underline; font-weight: normal; }
+.dayNumber a:visited { color: #660000; text-decoration: underline; font-weight: normal; }
+.dayNumber a:hover { color: #333333; text-decoration: underline; font-weight: normal; }
+
+.calcurrentmonth
+{
+    /* no styles needed at this time */
+}
+.calothermonth
+{
+    background-color: #8c8c8c;
+}
+.calweekend
+{
+    background-color: #DDDDDD;
+  /*  width: 15%; */
+}
+
+.calcurrentmonth , .calcurrentmonth , .calothermonth , .calcurrentday , .calweekend
+{
+    text-align: left;
+    border: 1px solid #BEBEBE;
+    height: 60px;
+    vertical-align: top;
+    /* needed for positioning the dayNumber part */
+    position:relative;
+    border-collapse:separate;
+    border-spacing: 1px; 
+}
+.calcurrentday
+{
+    background-color: #FFFFFF;
+    border: 2px solid #aa0303;
+}
+.eventHover
+{
+	background-color: #FFFFFF;
+	border: 2px solid #000000;
+	width: 200px;
+	height: 300px;
+}

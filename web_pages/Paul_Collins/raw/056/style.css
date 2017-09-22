@@ -1,0 +1,343 @@
+
+/* Basic HTML Elements */
+body {
+	margin:0;
+	padding:0;
+	color:#000000;
+	font-family: Verdana, Arial, sans-serif;
+	font-size:11px;
+	line-height:18px;
+	background-image: url(/shared/lounge/loung_bg_grey.gif);
+	background-position: left top;
+	text-align:center;
+}
+a {
+	text-decoration:none;
+	border-bottom:dashed 1px #3366CC;
+	color:#003366;
+}
+a:hover {
+	color:#3366CC;
+	border-bottom:dashed 1px #003366;
+}
+small {
+	font-size:9px;
+}
+p {
+	margin:0;
+	padding:0;
+	margin-bottom:10px;
+}
+.center {
+	text-align:center;
+}
+.spacer {
+	clear:both;
+	height:0;
+	margin:0;
+	padding:0;
+}
+form {
+	margin: 0;
+}
+
+#accessibility {
+	position: absolute;
+	left: -9999px;
+}
+h1, h2, h3, h4, h5, h6 {
+	margin:0 0 5px 0;
+	padding:0;
+	line-height:normal;
+}
+h2 {
+	font-size:14px;
+}
+h3, h4, h5, h6 {
+	margin-bottom:0;
+	font-weight:normal;
+	font-size:12px;
+}
+body.home #content h1, body.list #content h1 {
+	background:url(/shared/lounge/header_home_grey.gif) no-repeat;
+}
+body.bio #content h1 {
+	background:url(/shared/lounge/header_bio_grey.gif) no-repeat;
+}
+body.music #content h1 {
+	background:url(/shared/lounge/header_music_grey.gif) no-repeat;
+}
+body.contact #content h1 {
+	background:url(/shared/lounge/header_contact_grey.gif) no-repeat;
+}
+body.press #content h1 {
+	background:url(/shared/lounge/header_press_grey.gif) no-repeat;
+}
+body.news #content h1 {
+	background:url(/shared/lounge/header_news_grey.gif) no-repeat;
+}
+body.calendar #content h1 {
+	background:url(/shared/lounge/header_calendar_grey.gif) no-repeat;
+}
+body.photos #content h1 {
+	background:url(/shared/lounge/header_photos_grey.gif) no-repeat;
+}
+body.products #content h1 {
+	background:url(/shared/lounge/header_store_grey.gif) no-repeat;
+}
+body.guestbook #content h1 {
+	background:url(/shared/lounge/header_guestbook_grey.gif) no-repeat;
+}
+body.links #content h1 {
+	background:url(/shared/lounge/header_links_grey.gif) no-repeat;
+}
+
+/* general */
+#container {
+	width:650px;
+	height: auto; 
+	background: repeat-y center url(/shared/lounge/middlebg2_wb.gif) transparent;
+	margin: 0 auto;
+	padding:0;
+	text-align:left;
+	position:absolute;
+	left:100px;
+	border-bottom:none;
+}
+
+#content {
+	margin: 0 0 0 190px;
+	padding:115px 10px 25px 45px;
+	min-height:600px;
+	voice-family: "\"}\"";
+	voice-family:inherit;
+	min-height:410px;
+}
+
+html>#content {
+	min-height:410px;
+}
+#content h1 {
+	position:absolute;
+	top:55px;
+	left:250px;
+	width:392px;
+	height: 100%;
+	overflow:hidden;
+	padding-top:50px;
+	height:0px !important;
+	height /**/:50px;
+}
+#content h1 span {
+	display:none;
+}
+#content li {
+	list-style-image:url(/shared/lounge/bullet_grey.gif);
+}
+#content div.entry {
+	padding-bottom:20px;
+}
+#content h2 {
+	border-bottom:dashed 1px #CCCCCC;
+}
+/* -- banner area -- */
+#banner .photo {
+	width: 200px;
+	height: 200px;
+	background: url(/images/idrismuhammad-200x200.jpg) top right no-repeat;
+	position: absolute;
+	left: 10px;
+	top: 55px;
+	border:1px;
+	border-thickness: 1px;
+	border-color: #000000;
+	border-style: dashed;
+}
+#banner .band {
+	width: 625px;
+	height: 50px;
+	position: absolute;
+	position: absolute;
+	left: 10px;
+	top: 0px;
+	border-bottom:dashed 1px #000000;
+		
+}
+#banner .band span {
+	display: none;
+}
+#banner .photo span {
+	display: none;
+}
+#emailsignup {
+	top: 260px;
+	left: 10px;
+	text-align: left;
+	text-transform: lowercase;
+	font-size: x-small;
+	width: 200px;
+	position: absolute;
+	voice-family: "\"}\"";
+	voice-family:inherit;
+	font-size: small;
+}
+
+#content form{
+	text-align: center;
+	display: block;
+	padding: 10px;
+	position: relative;
+	margin: 10px 0;
+	_margin-top: 12px;
+}
+
+#content label{
+	font-weight: bold;
+	color: #FFFFF;
+	width: 200px;
+	text-align: left;
+	margin: auto;
+}
+
+#content input, #content textarea{
+	display: block;
+	margin: 0 auto 6px auto;
+}
+
+#emailsignup input {
+	margin-left: 5px;
+	border: 1px solid #999999;
+	background-color: #CCCCCC;
+	padding: 1px;
+	font-weight: bold;
+	color: #000000;
+}
+
+#footer {
+	clear: both;
+	padding:0px 4px 5px 239px;
+	font-size:.85em;
+	color:#666;
+}
+
+/* -- navigation -- */
+
+#navigation ul {
+	float:left;
+	width: 200px;
+	font-family: impact;
+	font-size: 20px;
+	background: url(/shared/lounge/lounge_navback_grey.gif) left top;
+	list-style-type: none;
+	padding: 0px;
+	margin: 350px 0 6em 5px;
+}
+/* ie5/mac hack \*/
+#navigation ul {
+	margin-top: 310px;
+}
+/* end hack */
+#navigation li {
+	height:30px;
+	}
+#navigation li a {
+	text-decoration: none;
+	display: block;
+	white-space: nowrap;
+	padding: 5px 0 3px 28px;
+}
+#navigation li a:hover {
+	background: url(/shared/lounge/dot_grey.gif) 5px 4px no-repeat;
+}
+
+/* home + news */
+body.home p {
+	padding-bottom:20px;
+}
+body.home div.entry p {
+	padding-bottom:0;
+}
+
+/* music */
+body.music div.details {
+	padding-bottom:20px;
+}
+body.music div.artist {
+	font-size:.85em;
+	line-height:normal;
+	display:block;
+	border-bottom:dashed 1px #000000;
+}
+
+/* contact */
+body.contact #content li {
+	list-style-image:none;
+	list-style-type:none;
+}
+
+/* press */
+body.press div.entry blockquote {
+	margin:10px;
+}
+body.press div.entry .caption {
+	margin:10px;
+	font-weight:bold;
+}
+
+/* photos */
+body.photos dt {
+	width:400px;
+	padding-bottom:3px;
+	margin-bottom:5px;
+	border-bottom:dashed 1px #000000;
+}
+body.photos dd {
+	width:400px;
+	float:left;
+	margin:0;
+	text-align:center;
+	padding-bottom:20px;
+}
+
+/* products */
+body.products hr {
+	display:none;
+}
+
+/* guestbook */
+body.guestbook div#postForm {
+	border:solid 1px #364397;
+	padding:0px;
+	margin-bottom:20px;
+	text-align:center;
+}
+body.guestbook div#postForm input, body.guestbook div#postForm textarea {
+	margin-top:5px;
+	width:265px;
+}
+
+/* links */
+body.links #content dl {
+	margin:0 25px 20px 25px;
+}
+body.links #content dt {
+	padding-bottom:3px;
+}
+ 
+/* =========== TWEAKS =========== */
+
+/* -- selected links --*/
+.home #navhome, .index #navindex, .music #navmusic, .contact #navcontact,   .press #navpress, .news #navnews, .photos #navphotos, .guestbook #navguestbook,  .links #navlinks, .calendar #navcalendar, .bio #navbio, .products #navproducts {
+	padding: 5px 0 3px 28px;
+}
+
+/* -- selected links --*/
+.home #navhome, .index #navindex, .music #navmusic, .contact #navcontact,   .press #navpress, .news #navnews, .photos #navphotos, .guestbook #navguestbook,  .links #navlinks, .calendar #navcalendar, .bio #navbio, .products #navproducts {
+	text-transform: uppercase;
+	}
+
+#splashimage { text-align: center; margin: 100px auto; }
+#splashimage a img { border: 0; }
+
+
+

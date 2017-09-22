@@ -1,0 +1,2281 @@
+
+
+
+
+if (typeof(prependDomain) == "undefined") {
+	prependDomain = "";
+}
+
+/**
+  * Set, Get, and Delete Cookie utils
+  *
+  */
+function GetCookieUtil (name) {
+	var result = null;
+	var myCookie = " " + document.cookie + ";";
+	var searchName = " " + name + "=";
+	var startOfCookie = myCookie.indexOf(searchName);
+	var endOfCookie;
+	if (startOfCookie != -1) {
+		startOfCookie += searchName.length;
+		endOfCookie = myCookie.indexOf(";", startOfCookie);
+		result = unescape(myCookie.substring(startOfCookie, endOfCookie));
+	}
+	return result;
+}
+
+function SetCookieUtil (name,value,expires,path,domain,secure) {
+	document.cookie = name + "=" + escape (value) +
+	((expires) ? "; expires=" + expires.toGMTString() : "") +
+	((path) ? "; path=" + path : "; path=/") +
+	((domain) ? "; domain=" + domain : "; domain="+document.location.hostname) +
+	((secure) ? "; secure" : "");
+}
+
+function DeleteCookieUtil (name,path,domain) {
+	if (GetCookieUtil(name)) {
+		document.cookie = name + "=" +
+		((path) ? "; path=" + path : "") +
+		((domain) ? "; domain=" + domain : "") +
+		"; expires=Thu, 01-Jan-70 00:00:01 GMT";
+	}
+}
+var today = new Date();
+var oneDay = new Date(today.getTime() + 24 * 60 *60 * 1000);
+var oneWeek = new Date(today.getTime() + 24 * 60 *60 * 1000 * 7);
+var oneYear = new Date(today.getTime() + 24 * 60 *60 * 1000 * 365);
+
+
+
+
+
+
+<!-- March 9, 2006 - when updating please kill line 51 and uncomment line 52 -->
+
+
+
+
+
+
+
+/***** droplet src="/sitewide/droplets/downloadPop.jhtml" *****/
+
+/***** MEDIAPLAYER LAUNCH SCRIPTS *****/ 
+
+		
+
+
+
+
+
+
+if (typeof additionalVals == "undefined") {
+	additionalVals="";
+}
+
+function launchVideo(clipy){
+
+prependDomain = "";	
+
+	players = new Array();
+	player = "defaultPlayer";
+	players['defaultPlayer'] = new Array("mtvmediaplayer","720","540");
+	
+	clipyNew = clipy
+	clipy = clipyNew
+
+	if(clipyNew.indexOf('channelID=')<0 && window.channelID)
+	   clipy = clipy + "&" + "channelID=" + channelID
+	if(clipyNew.indexOf('orgID=')<0 && window.orgID)
+	   clipy = clipy + "&" + "orgID=" + orgID		
+	if(clipyNew.indexOf('gateway=')<0 && window.gateway)
+	  clipy = clipy + "&" + "gateway=" + gateway 
+	if(clipyNew.indexOf('portal=')<0 && window.portal)
+	  clipy = clipy + "&" + "portal=" + portal; 
+	if(clipyNew.indexOf('paid=')<0 && window.paid)
+	  clipy = clipy + "&" + "paid=" + paid
+	if(clipyNew.indexOf('seriesID=')<0 && window.seriesID)
+	  clipy = clipy + "&" + "seriesID=" + seriesID
+	if(clipyNew.indexOf('episodeID=')<0 && window.episodeID)
+	  clipy = clipy + "&" + "episodeID=" + episodeID
+	if(clipyNew.indexOf('albumid=')<0 && window.albumid)
+	  clipy = clipy + "&" + "albumid=" + albumid
+
+	ap = "&adPth=" + escape("");
+	ap = ap.substring(0,ap.length-17);
+	ap = ap + "&adPN=" + escape("");
+
+	refURL = document.location.pathname;
+	pieces = refURL.split("/");
+	if (pieces.length == 2) pieces[1] = "home";
+	var ss = '';
+	for (var i = 1; i < pieces.length; i++) {
+		sIndex = i - 1;
+		ss = ss + "&section_" + sIndex + "=" + pieces[i];
+	}
+	ss = ss + "&refURL=" + refURL;
+	
+	clipy = clipy.replace(/'/g,'\\\'')
+	
+
+		attSw = 'no';
+	
+	
+
+
+	
+	if(document.referrer.indexOf("yahoo")>=0)
+			additionalVals += '&partner=yahoo';
+
+	sUrl =  prependDomain + "/sitewide/apps/mediaplayer/index.jhtml?" + clipy + ss + ap + additionalVals;
+	
+	attrs = 'width=' + players[player][1] + ',';
+	attrs += 'height=' + players[player][2] + ',';
+	attrs += 'left=25,top=25,';
+	attrs += 
+		'scrollbars=' + attSw + 
+		',resizable=' + attSw + 
+		',toolbar=' + attSw + 
+		',location=' + attSw + 
+		',directories=' + attSw + 
+		',status=' + attSw + 
+		',menubar=' + attSw;
+		
+var pWin = false;
+pWin = window.open(sUrl, players[player][0], attrs);	
+// popCheck(pWin);
+// pWin.focus();
+
+}
+
+{
+  function launchTrailer(stuff){
+    launchVideo(stuff)
+  }
+}
+
+
+	
+
+	
+
+/***** URGE LAUNCH SCRIPTS *****/ 
+
+
+
+
+
+		
+		
+
+var urge_referrer = "[no referrer provided]";
+
+/*************************************************************************
+*	URGE Launch: Launch the URGE player
+*************************************************************************/
+
+function launchUrge (paramString) {
+
+	var hash = {};
+	var pairs = paramString.split("&");
+	for (var i=0;i<pairs.length;i++) {
+		if(!pairs[i]) continue;
+		var nameValue = pairs[i].split("=");
+		var name = nameValue[0];
+		var value = pairs[i].substring(name.length+1);
+		hash[name] = value;
+	}
+
+	var url = "http://www.urge.com/launch/?";
+
+	if(typeof hash["referrer"] == "undefined")
+		hash["referrer"] = urge_referrer;
+
+	var query = new Array();
+	for(var n in hash) {
+		if(hash[n])
+			query.push(n+"="+hash[n]);
+	}
+
+	url += query.join("&");
+
+	window.open(url, "launch_urge", "width=300,height=200,toobar=no,status=no,scrollbars=no,resizable=no,location=no");
+}
+	
+	
+	
+
+
+/***** OVERDRIVE LAUNCH SCRIPTS *****/ 
+
+function showAlertsPromo() {}; // overiding shared function that displays OD alert promo
+var parentWindowVar		= "parent=";
+var detectSuccessUrl 	= "/overdrive/player.jhtml";
+var detectFailUrl 		= "/overdrive/index.jhtml";
+var detectFailUrlWin	= "/overdrive/player_detect.jhtml";
+var winWidth 			= "996";
+var winHeight 			= "555";
+	
+
+/**
+ * Constructor OSDetector
+ */
+function OSDetector()
+{
+  //properties
+  this.os                       = navigator.userAgent.toLowerCase();
+  this.appVer                   = navigator.appVersion.toLowerCase();
+  this.minorVersion             = parseFloat(this.appVer);
+  this.majorVersion             = parseInt(this.minorVersion)
+
+  this._isWindows               = false;
+  this._isWindows16             = false;
+  this._isWindows31             = false;  
+  this._isWindows95             = false;
+  this._isWindows98             = false;
+  this._isWindowsME             = false;
+  this._isWindowsNT             = false;
+  this._isWindows2K             = false;
+  this._isWindowsXP             = false;
+  this._isWindows32             = false;         
+  this._isWindowsDotNet         = false;
+	this._isWindowsVista          = false;
+  
+  this._isMac                   = false;
+  this._isMac68K                = false;
+  this._isMacPPC                = false;
+  this._isMacOS8                = false;
+  this._isMacOS9                = false;
+  this._isMacOSX                = false;
+             
+  //methods
+  this.isWindows                = isWindows;
+  this.isWindows16              = isWindows16;
+  this.isWindows31              = isWindows31;  
+  this.isWindows95              = isWindows95;
+  this.isWindows98              = isWindows98;
+  this.isWindowsME              = isWindowsME;
+  this.isWindowsNT              = isWindowsNT;
+  this.isWindows2K              = isWindows2K;
+  this.isWindowsXP              = isWindowsXP;
+  this.isWindows32              = isWindows32;
+  this.isWindowsDotNet          = isWindowsDotNet;
+  this.isWindowsVista           = isWindowsVista;
+  
+  this.isMac                    = isMac;
+  this.isMac68K                 = isMac68K;
+  this.isMacPPC                 = isMacPPC;
+  this.isMacOS8                 = isMacOS8;  
+  this.isMacOS9                 = isMacOS9;  
+  this.isMacOSX                 = isMacOSX;  
+  
+  this.getOs                    = getOs;  
+  this.detect                   = detect;
+  this.isPlayerPossible         = isPlayerPossible;
+}//end constructor
+
+/**
+ * detect
+ */
+function detect()
+{
+  //windows os
+  this._isWindows               = ((this.getOs().indexOf("win") != -1) || (this.getOs().indexOf("16bit") != -1));
+  this._isWindows95             = ((this.getOs().indexOf("win95") != -1) || (this.getOs().indexOf("windows 95") != -1));
+  this._isWindows16             = ((this.getOs().indexOf("win16") != -1) || (this.getOs().indexOf("16bit") != -1) || (this.getOs().indexOf("windows 3.1") != -1) || (this.getOs().indexOf("windows 16-bit") != -1) );
+  this._isWindows31             = ((this.getOs().indexOf("windows 3.1") != -1) || (this.getOs().indexOf("win16") != -1) || (this.getOs().indexOf("windows 16-bit") != -1));	
+  this._isWindowsME             = ((this.getOs().indexOf("win 9x 4.90") != -1));
+  this._isWindows98             = ((this.getOs().indexOf("win98") != -1) || (this.getOs().indexOf("windows 98") != -1));
+  this._isWindowsNT             = ((this.getOs().indexOf("winnt") != -1));  
+  this._isWindows2K             = ((this.getOs().indexOf("windows nt 5.0") != -1) || (this.getOs().indexOf("windows 2000") != -1));
+  this._isWindowsXP             = ((this.getOs().indexOf("windows nt 5.1") != -1) || (this.getOs().indexOf("windows xp") != -1));
+  this._isWindowsDotNet         = ((this.getOs().indexOf("windows nt 5.2") != -1));
+  this._isWindowsVista          = ((this.getOs().indexOf("vista") != -1) || (this.getOs().indexOf("windows nt 6") != -1));
+  this._isWindows32             = (this.isWindows95() || this.isWindowsNT() || this.isWindows98() || ((navigator.appVersion >= 4) && (navigator.platform == "Win32")) || (this.os.indexOf("win32") != -1) || (this.os.indexOf("32bit") != -1));
+
+  
+  //mac os  
+  this._isMac                   = (this.getOs().indexOf("mac") != -1);
+  this._isMac68K                = (this.isMac() && ((this.getOs().indexOf("68k") != -1) || (this.getOs().indexOf("68000") != -1)));
+  this._isMacPPC                = (this.isMac() && ((this.getOs().indexOf("ppc") != -1) || (this.getOs().indexOf("powerpc") != -1)));
+  this._isMacOS8                = (this.isMac() && ((this.getOs().indexOf("os 8") != -1) || (this.getOs().indexOf("os8") != -1)));
+  this._isMacOS9                = (this.isMac() && ((this.getOs().indexOf("os 9") != -1) || (this.getOs().indexOf("os9") != -1)));
+  this._isMacOSX                = (this.isMac() && ((this.getOs().indexOf("powerpc") != -1) || (this.getOs().indexOf("osx") != -1) || (this.getOs().indexOf("os x") != -1)));    
+  
+  if (this.isMac()) this._isWindows =! this._isMac;
+
+}//end method
+
+/**
+ * getOs - returns the os property
+ */
+function getOs()
+{
+  return this.os;
+}//end method
+
+/**
+ * isWindows - is windows, any version
+ */
+function isWindows()
+{
+  return this._isWindows;
+}//end method
+
+/**
+ * isWindows16 - is windows 16 bit
+ */
+function isWindows16()
+{
+  return this._isWindows16;
+}//end method
+
+/**
+ * isWindows31 - is windows 3.1
+ */
+function isWindows31()
+{
+  return this._isWindows31;
+}//end method
+
+/**
+ * isWindows95 - is windows 95
+ */
+function isWindows95()
+{
+  return this._isWindows95;
+}//end method
+
+/**
+ * isWindows98 - is windows 98
+ */
+function isWindows98()
+{ 
+  return this._isWindows98;
+}//end method
+
+/**
+ * isWindowsME - is windows me
+ */
+function isWindowsME()
+{
+  return this._isWindowsME;
+}//end method
+
+/**
+ * isWindowsNT - is windows NT
+ */
+function isWindowsNT()
+{
+  return this._isWindowsNT;
+}//end method
+
+/**
+ * isWindows2K - is windows 2000
+ */
+function isWindows2K()
+{
+  return this._isWindows2K;
+}//end method
+
+/**
+ * isWindowsXP - is windows xp
+ */
+function isWindowsXP()
+{
+  return this._isWindowsXP;
+}//end method
+
+/**
+ * isWindows32 - is windows 32 bit
+ */
+function isWindows32()
+{
+  return this._isWindows32;
+}//end method
+
+/**
+ * isWindows64 - is windows 64 bit
+ */
+function isWindows64()
+{
+  return this._isWindows64;
+}//end method
+
+/**
+ * isWindowsDotNet - is windows dot net
+ */
+function isWindowsDotNet()
+{
+  return this._isWindowsDotNet;
+}//end method
+
+/**
+ * isWindowsVista - is windows vista
+ */
+function isWindowsVista()
+{
+  return this._isWindowsVista;
+}//end method
+
+
+/**
+ * isMac - is mac os any version
+ */
+function isMac()
+{
+  return this._isMac;
+}//end method
+
+/**
+ * isMac68K is mac 6800 series
+ */
+function isMac68K()
+{
+  return this._isMac68K;
+}//end method
+
+/**
+ * isMacPPC is mac power pc
+ */
+function isMacPPC()
+{  
+  return this._isMacPPC;
+}//end method
+
+/**
+ * isMacOS8 is mac os 8
+ */ 
+function isMacOS8()
+{
+  return this._isMacOS8;
+}//end method
+
+/**
+ * isMacOS9 is mac os 9
+ */
+function isMacOS9()
+{
+  return this._isMacOS9;
+}//end method
+
+/**
+ * isMacOSX is mac os x
+ */
+function isMacOSX()
+{
+  return this._isMacOSX;
+}//end method
+
+/**
+ * isPlayerPossible
+ */
+function isPlayerPossible()
+{
+  //all these platforms cant get wmp 9
+  if (this.isWindows95() || 
+      this.isWindowsNT() || 
+      this.isWindows98() || 
+      this.isWindowsME() || 
+      this.isMacOS9() || 
+      this.isMacOS9() || 
+      this.isMacOS8() || 
+      this.isMacPPC() || 
+      this.isMac68K() )
+  {    
+    return false;
+  }
+  return true;
+}//end method
+
+os = new OSDetector();
+os.detect();
+
+
+//for wmp detection
+/*
+if (os.isWindows())
+{
+  if (isPlayerPossible())
+  {
+    //player possible, do player detection  
+  }
+  else
+  {
+    //no player possible, download vmc
+  }
+}
+*/
+
+		
+
+/*************************************************************************/
+//  Requires the following script libraries.
+//
+//	/global/apps/mediaplayer/scripts/os_detect.js
+//	/shared/scripts/flash_detect.js
+//	/sitewide/droplets/scripts/detect_overdrive.js
+//
+/*************************************************************************/
+var od_win;
+var detectState="";
+var fn="";
+var ok="";
+
+function launchOverdriveDetect(){
+
+	var resultStatus = getOverdriveState().detectState;
+
+	if (resultStatus == "ok"){
+		return true;
+	} else{
+		window.location.href = detectFailUrlWin + "?error=" + resultStatus;
+	}
+}
+
+function launchOverdrive(){
+	if (flashVersion >= 8 && GetCookieUtil("sitePreferenceSet") == "false") {
+		if (getOverdriveState().detectState == "XXXok") {
+			var broadband_parent = parentWindowVar;
+			var url = detectSuccessUrl;
+			var width;
+			var height;
+			var odscrollbars;
+			var odresizable;
+			var purlArray = null;
+	
+			if (getOverdriveState().dim == "lowres"){
+				width = 800;
+				height = 600;
+				odscrollbars = "yes";
+				odresizable = "yes";
+			} else {
+				width = winWidth;
+				height = winHeight;
+				odscrollbars = "no";
+				odresizable = "no";
+			}
+	
+			// CONSTRUCT DEEP LINK ARGS
+	
+			var qs = "";
+			if(arguments.length > 0){
+				qs = "?"+arguments[0];
+				for(i=1; i<arguments.length; i++){
+	
+					if (arguments[i].indexOf(broadband_parent) == -1){
+						qs = qs + "&" + arguments[i];
+					} else {
+						qs = qs + "&" + arguments[i];
+						purlArray = arguments[i].split(/=/);
+						}
+					}
+				}
+	
+			var docloc = window.location.pathname;
+			// for fbml urls
+				fullLoc = window.location.toString();
+				if ((typeof browserManager != "undefined") && (fullLoc.indexOf('#') > 0)) {
+					docloc = fullLoc.substr(fullLoc.indexOf('#') +1, fullLoc.length).split("?")[0];
+				}
+	
+	
+		      if(qs.length > 0){
+		         qs += "&launchedFrom=" + docloc;
+		      } else{
+		         qs += "?launchedFrom=" + docloc;
+		      }
+	
+			var path = 	url+qs;
+	
+			od_win = window.open(path, "player", "width=" + width + ", height=" + height + ", left=" + (Math.round(window.screen.width/2) - Math.round(width/2)) + ", top=" + (Math.round(window.screen.height/2) - Math.round(height/2)) + ",scrollbars=" + odscrollbars + ", resizable=" + odresizable + ", menubar=no, location=no, toolbar=no, status=no, directories=no" );
+	
+			if (purlArray != null) window.location.href = purlArray[1];
+	
+			broadbandWindowPopped(od_win, path);
+	
+		} else{
+	
+		//	window.location.href = detectFailUrl;
+				var qs = "";
+			if(arguments.length > 0){
+				qs = arguments[0];
+				for(i=1; i<arguments.length; i++){
+	
+					if (arguments[i].indexOf(broadband_parent) == -1){
+						qs = qs + "&" + arguments[i];
+					} else {
+						qs = qs + "&" + arguments[i];
+						purlArray = arguments[i].split(/=/);
+						}
+					}
+				}
+			launchShell(qs);
+		}
+		
+		return false;
+	}
+	else{ return true; }
+}
+
+function broadbandWindowPopped(win, path) {}
+
+
+
+function launchOverdriveHome(){
+	var u = window.location + "";
+	var q = u.indexOf('?') + 1;
+	var p = u.substring(q,u.length);
+	var param = p.split("&");
+	var args = "";
+
+	if (q > 0)
+	{
+		args = param[0];
+
+		if (param.length > 1)
+		{
+			for (i=1; i<param.length;i++)
+			{
+				args = args + "&" + param[i];
+			}
+		}
+		launchOverdrive(args);
+	}
+	else
+	{
+		launchOverdrive();
+	}
+}
+
+
+
+function getOverdriveState(){
+	var dim;
+
+		if( ( !os.isMac()) && (!os.isWindows())){
+			detectState =  "os_other";
+			fn	= "display_error_os_other";
+		}
+		else if(os.isMac()){
+		   detectState = "macintosh";
+		   fn = "display_error_os_mac";
+		}
+		else if ((!os.isWindowsXP()) && (!os.isWindows2K()) && (!os.isWindowsVista())){
+		   detectState = "oldwindows";
+		   fn = "display_error_os_old";
+		}
+		else if (isNetscape) {
+			detectState = "netscape";
+	  		fn = "display_error_browser";
+		}
+		else if (isFirefox) {
+			detectState = firefoxX().detectState;
+	  		fn = firefoxX().fn;
+		}
+		else if(!hasIE55plus()) {
+		   detectState = "oldie";
+		   fn = "display_error_browser_oldie";
+		}
+		else if (flashVersion < 7 ) {
+		   detectState = "oldflash";
+		   fn = "display_error_flash";
+		}
+		else if ((hasWMP9() == false ) ) {
+		   detectState = "oldwmp";
+		   fn = "display_error_wmp";
+		}
+		else if ((window.screen.width < 1024) || (window.screen.height < 768) ) {
+			//detectState = "lowres";
+			//fn = "display_error_resolution";
+			detectState = "ok";
+			dim = "lowres";
+			fn = "display_enter";
+		} else {
+			detectState = "ok";
+			fn = "display_enter";
+		}
+
+		// DETECT DISPLAY
+		var pn = fn + ".js";
+		// PAGE REPORTING
+		var rpn = fn + ".jhtml";
+		// launchOverdrive uses "detectState"
+
+	return {detectState : detectState, pn : pn, rpn : rpn, dim : dim};
+}
+
+
+
+
+function firefoxX(){
+
+	if(firefoxXInstall().version == "1.5" && isActiveXInstalled()) {
+		detectState = "ok";
+    	fn = "display_enter";
+	} else if (navigator.appName == "Netscape") {
+		detectState 	= firefoxXInstall().detectState;
+	  	fn 				= firefoxXInstall().fn;
+	}
+
+	return {detectState:detectState, fn:fn};
+}
+
+function isActiveXInstalled() {
+	// Checks if ActiveX is installed
+	var geckoax=new Object();
+	geckoax.installed=false;
+	var isInstalled=false;
+
+	if (navigator.plugins && navigator.plugins.length)
+	{
+		for (x=0; x<navigator.plugins.length; x++)
+		{
+			if (navigator.plugins[x].name.indexOf('ActiveX') != -1 && window.GeckoActiveXObject) {
+				geckoax.installed=true;
+			}
+		}
+	}
+
+	if (window.ActiveXObject || geckoax.installed){
+		isInstalled=true;
+	} else {
+		isInstalled=false;
+	}
+
+	return isInstalled;
+}
+
+function firefoxXInstall() {
+
+	var versionindex 	= 	navigator.userAgent.indexOf("Firefox")+8;
+	var version 		= 	navigator.userAgent.substring(versionindex,(versionindex+3));
+	var fullversion 	=   navigator.userAgent.substring(versionindex,(versionindex+7))
+
+	fn="display_error_browser";
+	detectState="firefox";
+
+	if (version == "1.5") {
+ 		fn = "display_error_firefox_1.5";
+	} else {
+		fn = "display_error_firefox";
+	}
+	return {detectState: detectState, fn : fn, version:version, fullversion:fullversion};
+}
+
+function hasWMP9(){
+
+	var wm_player;
+
+	try {
+		if (window.ActiveXObject) {
+			wm_player = new ActiveXObject("WMPlayer.OCX.7");
+		} else if (window.GeckoActiveXObject) {
+			wm_player = new GeckoActiveXObject("WMPlayer.OCX.7");
+		}
+      if (wm_player && parseInt(wm_player.versionInfo) >= 9) {
+         return true;
+      } else {
+         return false;
+      }
+	} catch(e) { return false; }
+
+}
+
+function hasIE55plus(){
+
+   var version=0;
+   if (navigator.appVersion.indexOf("MSIE")!=-1){
+      temp=navigator.appVersion.split("MSIE");
+      version=parseFloat(temp[1]);
+   }
+   if (version >= 5.5) {
+      return true;
+   } else {
+      return false;
+   }
+}
+	
+	
+function broadbandWindowPopped(win, path) {
+	try {
+		win.focus();
+		showAlertsPromo();
+	} catch (e) {
+		window.location.replace(path);
+	}
+}
+
+function launchContentOn(){
+	document.getElementById('flaunchContent').style.visibility = "visible"; 
+}
+	
+	
+
+
+function launchShell(){
+
+		var hostname = "";
+		var hpA = window.location.host.split(".");
+		var hp;
+		hp = (hpA[0].substr(0,1) == "o" && hpA[0].indexOf("-") == -1) ? hpA[2]: hpA[1].replace("x", "");
+		if ( (hp != "mtv") && (hp != "mtv-d") && (hp != "mtv-q"))
+			hostname = "http://www.mtv.com";
+
+		var broadband_parent = parentWindowVar;
+		var url = hostname + "/overdrive/";
+		var width = 1034;
+		var height = 768;
+		var odscrollbars;
+		var odresizable;
+		var purlArray = null;
+
+
+		// CONSTRUCT DEEP LINK ARGS
+
+		var qs = "";
+		if(arguments.length > 0){
+			qs = "?" +arguments[0];
+			for(i=1; i<arguments.length; i++){
+
+				if (arguments[i].indexOf(broadband_parent) == -1){
+					qs = qs + "&" + arguments[i];
+				} else {
+					qs = qs + "&" + arguments[i];
+					purlArray = arguments[i].split(/=/);
+					}
+				}
+			}
+
+		var docloc = window.location.pathname;
+		// for fbml urls
+			fullLoc = window.location.toString();
+			if ((typeof browserManager != "undefined") && (fullLoc.indexOf('#') > 0)) {
+				docloc = fullLoc.substr(fullLoc.indexOf('#') +1, fullLoc.length).split("?")[0];
+			}
+
+
+		var path = 	url+qs;
+			shell_win = window.open(path, "shell", "width=" + width + ", height=" + height + ", left=" + (Math.round(window.screen.width/2) - Math.round(width/2)) + ", top=" + (Math.round(window.screen.height/2) - Math.round(height/2)) + ",scrollbars=yes"  + ", resizable=yes"  + ", menubar=yes, location=yes, toolbar=yes, status=yes, directories=yes" );
+			shell_win.focus();
+			if (purlArray != null) window.location.href = purlArray[1];
+			broadbandWindowPopped(od_win, path);
+}
+
+function broadbandWindowPopped(win, path) {}
+
+
+
+
+
+
+
+/***** RADIO LAUNCH SCRIPTS *****/ 
+function launchRSNu(getUrl){
+	var tuner = false;
+	tuner = window.open(getUrl,'TUNERLogin','width=700,height=312,toolbar=no,resizable=no,scrollbars=no');
+	tuner.focus();
+}
+
+function launchRSN(varStationID){
+	var tuner = false;
+	tuner = window.open(prependDomain + '/mtvradio/radiolaunch.jhtml?oparam=radio&serviceSubjectID='+ varStationID + '&A='+ varStationID ,'TUNERLogin','width=700,height=312,toolbar=no,resizable=no,scrollbars=no');
+	tuner.focus();
+	// popCheck(tuner);
+}
+
+/***** FLIPBOOK LAUNCH SCRIPTS *****/ 
+/*
+ * @description	Opens the sitewide flipbook player.
+ * @param fbKey Flipbook ID or URL.
+ * @param obj, Object, used to customize the flipbook skin and values.
+ */
+function popFlip(fbKey, obj){
+	if (flashVersion >= 8 && 
+		(siteVersion=="FBML" || (GetCookieUtil("sitePreferenceSet") == "false" && siteVersion == "HTML"))) {
+		var fbArgs = "";
+		for (var p in obj){
+			fbArgs += "&" + p + "=" + obj[p];
+		}
+	
+		var lfArg;
+	
+		// for fbml urls
+		fullLoc = window.location.toString();
+		if ((typeof browserManager != "undefined") && (fullLoc.indexOf('#') > 0)) {
+			lfArg = "&launchedFrom=" + fullLoc.substr(fullLoc.indexOf('#') +1, fullLoc.length).split("?")[0];
+		} else {
+			lfArg = "&launchedFrom=" + window.location.pathname;
+		}
+	     
+		var pWin = false;
+		if (fbKey.indexOf("fid=")>=0) {
+			// new flip pop, old w=556, h=486
+			pWin = window.open('/sitewide/flipbook/index.jhtml?'+fbKey+fbArgs+lfArg,'flipbook','width=747,height=505,scrollbars=no');
+		}
+		else {
+			var flipLoc  = fbKey.split("?");
+			flipLocPath  = flipLoc[0].split("index.jhtml");
+			var flipLocFull  =  flipLocPath[0];
+			if (flipLoc[1] != "" && flipLoc[1] != null) flipLocFull += "&" + flipLoc[1];
+			pWin = window.open('/sitewide/flipbook/index.jhtml?pf='+flipLocFull+fbArgs+lfArg+'','flipbook','width=747,height=505,scrollbars=no');
+		}
+		// popCheck(pWin);
+		return false;
+	}
+	else{ return true; }
+
+}
+
+function popFlipMedia(fid, mid){
+	pWin = window.open('/sitewide/flipbook/index.jhtml?fid=' + fid + '&mid=' + mid,'flipbook' + fid,'width=747,height=505,scrollbars=no');
+}
+
+function popFlipById(fid){
+	popFlip('fid=' + fid);
+}
+
+/***** SEND TO FRIEND LAUNCH SCRIPTS *****/
+function sendtofriend(){
+	var title = document.title.replace('\u2014', '--');
+	var url = "/sitewide/forms/sendtofriend/form.jhtml?";
+	var image = "";
+	
+	var metatags = document.getElementsByTagName("meta");
+	for (i = 0; i < metatags.length; i++){
+		if (metatags[i].getAttribute("name") == "thumbnail"){
+			image = metatags[i].getAttribute("content");
+		}
+	}	
+	
+	// check if function was called with arguments (ex: audvidId=123)
+	// supported types: audvidId (video), contentId (overdrive show)
+	if (arguments.length > 0){ url = url + arguments[0]; }
+	else{ url = url + "title=" + escape(title) + "&image=" + escape(image) + "&url=" + escape(document.location.toString()); }
+	window.open(url, 'sendtofriend', 'width=578,height=465,location=no');
+}
+
+
+/***** COMMUNITY LAUNCH SCRIPTS *****/ 
+// Library used for community services
+var thisHost = window.location.host;
+
+if (typeof(prependDomain) == "undefined") {
+	prependDomain = "";
+}
+
+var Prefix = prependDomain;
+var SIGNPAGE = Prefix + '/community/account/signin.jhtml';
+var REGPAGE =  Prefix + '/community/account/join.jhtml';
+var BOARDPAGE = Prefix + '/community/message_boards/adredirect.jhtml';
+var MYPROFILEPAGE = Prefix + '/community/profiles/myProfile.jhtml';
+var BOARDTHREADPAGE = Prefix + '/community/message_boards/viewthread.jhtml';
+var REDFLAGPAGE = Prefix + '/community/message_boards/redflag.jhtml';
+var ARTISTBOARDPAGE = Prefix + '/community/message_boards/artistboard.jhtml';
+var CHATPAGE = Prefix + '/community/chat/chat.jhtml';
+var IMPAGE = Prefix + '/community/im/imlaunch.jhtml';
+var IMDOWNLOAD = Prefix + '/community/im/imdownload.jhtml';
+var INFOPAGE = Prefix + '/community/account/smryinfo.jhtml';
+var mcPAGE = Prefix + '/community/messages/mclaunch.jhtml';
+var VMPHONEPAGE = Prefix + '/secure/vmu/editvmu.jhtml?returnPage='+escape('http://'+thisHost+'/community/account/editvmusuccess.jhtml');
+var VMPHONETEXT = Prefix + '/secure/vmu/editvmu.jhtml?returnPage='+escape('http://'+thisHost+'/community/account/editvmutext.jhtml?updateVMUser=true');
+var winTarget= "im";
+
+ 
+var openPARAMS = 'resizable=yes,menubar=yes,location=yes,toolbar=yes,status=yes,scrollbars,directories=no,width=805,height=500';
+// This is the default for winPARAMS
+var winPARAMS = 'resizable=no,menubar=no,location=no,toolbar=no,status=no,scrollbars=no,directories=no,width=260,height=425';
+var mcPARAMS = openPARAMS;
+var vmPARAMS = 'resizable=no,menubar=no,location=no,toolbar=no,status=no,scrollbars=no,directories=no,width=376,height=260';
+
+var USER_BROWSER = (((navigator.appName == "Netscape") && (parseInt(navigator.appVersion) >= 3 )) || ((navigator.appName == "Microsoft Internet Explorer") && (parseInt(navigator.appVersion) >= 4 )))
+
+function popMsg(daURL){
+	newwin = window.open(daURL,'messages','width=556,height=486,scrollbars,resizable');
+}
+
+function signin(){
+	signinPop();
+}
+
+function signinMsg(mtvparams, service){
+	if(arguments.length != 2) {
+		mtvparams="";
+		service="";
+	}
+	editwindow = window.open(SIGNPAGE + '?serv=signin&mtvparams=' + mtvparams + '&oparam=' + service + '&target=', 'SignIn', openPARAMS); 
+}
+
+function signinPop(){
+	editwindow = window.open(SIGNPAGE + '?serv=signin&mtvparams=&target=', 'SignIn', openPARAMS); 
+}
+
+function popSignin(){
+	editwindow = window.open(SIGNPAGE + '?serv=signin&mtvparams=&target=', 'SignIn', openPARAMS); }
+
+function editProfile(){
+	if(USER_BROWSER){
+		var editwindow;
+		editwindow = window.open(SIGNPAGE + '?serv=profile&mtvparams=&target=&oparam=edit_profile&mesg=', 'SignIn', openPARAMS); 
+	}else{	
+		editwindow = window.open(SIGNPAGE + '?serv=signin&mtvparams=&oparam=edit_profile&target=', 'mtv', openPARAMS);
+		//window.open(SIGNPAGE + '?serv=profile&mtvparams=&target=self&mesg=','EditProfile',IEPARAMS); 
+	}
+}
+
+function goToMyProfile(){
+	var editwindow;
+	editwindow = window.open(MYPROFILEPAGE, 'mtv', openPARAMS);
+}
+
+function boardPop(bid,tid,mid,offset){
+	var mbPARAMS = 'resizable=yes,menubar=no,location=no,toolbar,status,scrollbars,directories=no,width=760,height=435';
+	if(arguments.length == 2){editwindow = window.open(BOARDPAGE + '?bID=' + bid + '&tID=' + tid, 'Board' + bid, mbPARAMS);}
+	else if(arguments.length == 4){editwindow = window.open(BOARDTHREADPAGE + '?bID=' + bid + '&tID=' + tid + '&mID=' + mid + '&offset=' + offset, 'Board' + bid, mbPARAMS);}
+	else{editwindow = window.open(BOARDPAGE + '?bID=' + bid, 'Board' + bid, mbPARAMS);}
+	editwindow.focus;
+	
+	popCheck(editwindow);
+}
+
+function popCheck(obj){
+	if (!obj) {
+		alert("Some content on MTV.com is displayed using pop-ups.  \n\nIf you're using a Pop-up Blocker, you'll need to permit pop-ups \nfrom MTV.com in order to view Videos, photos and other content on our site.");
+	}
+}
+
+function redFlag(bid,mid) {
+	open(REDFLAGPAGE + '?mID=' + mid + '&bID=' + bid, 'RedFlag', 'width=400,height=200');
+}
+
+function artistBoardPop(artistid){
+var mbPARAMS = 'resizable=yes,menubar=no,location=no,toolbar,status,scrollbars,directories=no,width=600,height=440';
+	editwindow = window.open(ARTISTBOARDPAGE + '?artistid=' + artistid, 'Board' + artistid, mbPARAMS); }
+
+function popChat(room){
+	var chatPARAMS = 'resizable=yes,menubar=no,location=no,toolbar=no,status=no,scrollbars,directories=no,width=605,height=560';
+	editwindow = window.open(CHATPAGE + '?oparam=chat&room=' + room, 'chat' + room,chatPARAMS); }
+
+// legacy chat opener
+function launchPopUpApp(p,room){
+	l = room.length; var room = room.substring(5,l) 
+	var chatPARAMS = 'resizable=yes,menubar=no,location=no,toolbar=no,status=no,scrollbars,directories=no,width=605,height=560';
+	editwindow = window.open(CHATPAGE + '?room=' + room, 'chat' + room,chatPARAMS);
+		}
+
+function popIm(){
+	randid = new String(Math.random());
+	var editwindow;
+	popimwin = window.open(IMPAGE + '?rnd=' + randid,winTarget,winPARAMS); }
+
+function popImDownload(){
+	editwindow = window.open(IMDOWNLOAD, 'imdownload',openPARAMS); 	}
+
+function sendMessage(username){
+	randid = new String(Math.random());
+	editwindow = window.open(IMPAGE + '?rnd=' + randid + '&sendto=' + username,'im',openPARAMS); }
+
+function popEmailLogin(){
+	editwindow = window.open(SIGNPAGE + '?serv=mail&mtvparams=email&target=self&mesg=', 'EmailLogin', openPARAMS); }
+
+function popEmailRegister(){
+	editwindow = window.open(REGPAGE + '?serv=mail&mtvparams=email&target=self&mesg=', 'EmailLogin', openPARAMS); }
+
+function popMessageCenter(){
+	editwindow = window.open(mcPAGE, 'messages', mcPARAMS); }
+
+function editAccount(){
+	editwindow = window.open(INFOPAGE, 'EditAccount', openPARAMS); }
+
+function linkPhone(host){
+	window.open(host+VMPHONEPAGE, 'LinkPhone', vmPARAMS); }
+	
+function linkPhoneForText(host){
+	window.location.href = host+VMPHONETEXT; 
+}
+
+
+function popMessageCenterFromNav(page, params)
+{
+	editwindow = window.open('/community/messages/inbox.jhtml', 'messages', 'width=556,height=486,scrollbars=yes,resizable');
+}
+
+
+function logoutFromNav()
+{
+    document.logoutform.submit();
+}
+
+function signInFromNav()
+{
+    var thisUrl = document.location;
+    signinMsg(thisUrl,'default');
+}
+
+function joinFromNav()
+{
+    var thisUrl = escape(document.location);
+
+    genPop('/community/account/join.jhtml?serv=url&mtvparams=' + thisUrl, 'account', 'width=605,height=535,resizable,scrollbars');
+}
+
+function editProfileFromNav()
+{
+    location.href = '/community/profiles/profile.jhtml?username=' + if_nt_userName;
+}
+
+function editProfileWrapper()
+{
+    editProfileFromNav();
+}
+
+function editNewsletters()
+{
+	genPop('http://ebm.cheetahmail.com/r/regf2?aid=409502673&n=102&a=0', 'newsletters', 'width=690,height=550,resizable,scrollbars');
+}
+
+function editProfileWrapper()
+{
+	editProfile();
+}
+
+
+/***** SHELL SCRIPTS *****/ 
+
+function toggleFBML() {
+	if(document.getElementById('flashObj').style.display == 'none') {
+		document.getElementById('noFlash').style.display='none';
+		document.getElementById('flashObj').style.display='block';
+	} else {
+		document.getElementById('noFlash').style.display='block';
+		document.getElementById('flashObj').style.display='none';
+	}
+}
+
+
+function setHTML() {
+
+	SetCookieUtil("sitePreferenceSet", "true", oneWeek);
+	SetCookieUtil("cSiteVersion", "HTML", oneWeek);
+
+	var loc = window.location+"";
+	var hash = loc.indexOf('#');
+	(hash >= 0) && ((hash +1) < loc.length) ? url = loc.substr(hash + 1): url = window.location.pathname + window.location.search;
+	window.location = url;
+
+}	
+
+function setFBML() {
+	SetCookieUtil("sitePreferenceSet", "true", oneWeek);
+	SetCookieUtil("cSiteVersion", "FBML", oneWeek);
+	window.location.reload();
+}
+
+function setUpgradeFlash() {
+	document.getElementById('flashObj').style.display='none';
+	document.getElementById('noFlash').style.display='none';
+	if (typeof document.getElementById('upgradeFlash') != "undefined") {
+		document.getElementById('upgradeFlashImage').src = "/relaunch/sitewide/images/flashupgrade/promo_02_html.jpg";
+		document.getElementById('upgradeFlash').style.display='block';
+	}
+}	
+
+
+function report() {
+	var reportingObj = new Object();
+	reportingObj.tVars  = new Object();
+	var pageKeyVals = new Array();
+	if (typeof pageVals != "undefined") 
+		pageKeyVals = pageVals.split(";");
+	if (typeof additionalValues == "undefined") 
+		additionalValues = "";
+	if (typeof clientEnvironmentVars == "undefined") 
+		clientEnvironmentVars = "";
+	if (typeof personalizationVars == "undefined") 
+		personalizationVars = "";
+		
+	for (var item in pageKeyVals) {
+		var p = pageKeyVals[item].split("=");
+		if (p[0] != null && p[0] != undefined && p[0] !="")
+			reportingObj[p[0]] = p[1];
+	}
+	otherVals = additionalValues + ";" +  clientEnvironmentVars + ";" + personalizationVars;
+	var otherKeyVals = otherVals.split(";");
+	for (var item in otherKeyVals) {
+		var p = otherKeyVals[item].split("=");
+		if (p[0] != null && p[0] != undefined && p[0] !="")
+			reportingObj.tVars[p[0]] = p[1];
+	}
+	REPORTING.makeCall('fbml_pv', reportingObj);
+}
+
+
+function reportUpgrade() {
+		var reportingObj = new Object();
+		reportingObj.tVars  = new Object();
+		reportingObj["pageName"]="upgradeFlash.jhtml"
+		REPORTING.makeCall('fbml_pv', reportingObj);
+}
+
+// WMP Detection
+// **************************************
+function getWMPVer() {
+	var version = "undefined";
+	var gkoaxwma = detectMozillaActiveXObject();
+	
+	if (window.ActiveXObject || gkoaxwma) {
+		try	{
+			if (window.ActiveXObject && navigator.userAgent.indexOf('Win') != -1) {
+				var axo = new ActiveXObject("WMPlayer.OCX.7");
+			} else if (gkoaxwma) {
+				var axo = new GeckoActiveXObject("WMPlayer.OCX.7");
+			}
+			if (axo) {
+				parseFloat(axo.versionInfo);
+	
+				version=parseFloat(axo.versionInfo);
+			}
+		}
+		catch(e) {}
+	} 
+	
+	return version;
+}
+
+
+function detectWMPVer(reqVer) {
+	var version = getWMPVer();
+
+	if (parseInt(version) != NaN &&
+		parseInt(version) >= parseFloat(reqVer)) {
+		return true;
+		
+	} else if (parseInt(version) != NaN && 
+		parseInt(version) < parseFloat(reqVer)) {
+		return false;
+		
+	} else if (navigator.plugins && navigator.plugins.length) {
+		for (var i=0; i < navigator.plugins.length; i++) {
+			if (navigator.plugins[i].name.indexOf('Windows Media') != -1) {
+				// WMP installed but cannot detect version.  hope for the best
+				return true;
+			}
+		}
+	} else {
+		return false;
+	}
+}
+
+
+function detectMozillaActiveXObject() {
+	var hasaxo;
+	if (navigator.plugins && navigator.plugins.length) { 
+		var hasaxo = false;
+		for (var i=0; i < navigator.plugins.length; i++) { 
+			if (navigator.plugins[i].name.indexOf('ActiveX') != -1 && window.GeckoActiveXObject) { 
+				hasaxo = true; 
+				break; 
+			} 
+		} 
+	}
+	return hasaxo;
+}
+
+
+
+// Flash Detection
+// **************************************
+function getFlashVer() {
+
+	PlayerVersion = function(arrVersion){
+		this.major = arrVersion[0] != null ? parseInt(arrVersion[0]) : 0;
+		this.minor = arrVersion[1] != null ? parseInt(arrVersion[1]) : 0;
+		this.revision = arrVersion[2] != null ? parseInt(arrVersion[2]) : 0;
+	}
+
+	var version = new PlayerVersion([0,0,0]);
+	if(navigator.plugins && navigator.mimeTypes.length){
+		var x = navigator.plugins["Shockwave Flash"];
+		if(x && x.description) {
+			version = new PlayerVersion(x.description.replace(/([a-zA-Z]|\s)+/, "").replace(/(\s+r|\s+b[0-9]+)/, ".").split("."));
+		}
+	}else{
+		try{
+			var axo = new ActiveXObject("ShockwaveFlash.ShockwaveFlash.7");
+		}catch(e){
+			try {
+				var axo = new ActiveXObject("ShockwaveFlash.ShockwaveFlash.6");
+				version = new PlayerVersion([6,0,21]);
+				axo.AllowScriptAccess = "always";
+			} catch(e) {
+				if (PlayerVersion.major == 6) {
+					return version;
+				}
+			}
+			try {
+				axo = new ActiveXObject("ShockwaveFlash.ShockwaveFlash");
+			} catch(e) {}
+		}
+		if (axo != null) {
+			version = new PlayerVersion(axo.GetVariable("$version").split(" ")[1].split(","));
+		}
+	}
+	return version;
+}
+
+
+function detectFlashVer(reqMajorVer, reqMinorVer, reqRevision) {
+	var versionArr = getFlashVer();
+
+	if (versionArr.major > parseFloat(reqMajorVer)) {
+		return true;
+	} else if (versionArr.major == parseFloat(reqMajorVer)) {
+		if (versionArr.minor > parseFloat(reqMinorVer)) {
+			return true;
+		} else if (versionArr.minor == parseFloat(reqMinorVer)) {
+			if (versionArr.revision >= parseFloat(reqRevision)) {
+				return true;
+			}
+		}
+	}
+	return false;
+}
+<!-- taconite scripts -->	
+/**
+    @fileoverview
+    This JavaScript file represents the core browser-side functionality
+    supplied by Taconite. In general, the tools in this file wrap an instance
+    of XMLHttpRequest object and provide utility methods for gather data from
+    form elements to be sent to the server as par of an Ajax request.
+*/
+
+/**
+    Constructor for the AjaxRequest class. 
+
+    <br><br>
+    Example:
+
+    <br><br>
+    var ajaxRequest = new AjaxRequest("YOUR_URL");
+
+    @class The AjaxRequest object wraps an instance of XMLHttpRequest and provides 
+    facilities for setting functions that are called before a request is made
+    and after a request returns. By default, AjaxRequest handles the server
+    response by simply calling eval(), passing to it the responseText from 
+    the XMLHttpRequestObject, of course assuming that the response was 
+    generated by Taconite on the server side and that running eval() will 
+    update the web page.<br><br>Example Usage:<br><br>var ajaxRequest = new AjaxRequest("YOUR_URL");
+    <br>ajaxRequest.addFormElements("form_element_id_attribute_value");
+    <br>ajaxRequest.sendRequest();
+
+    @constructor
+    @param {String} a String repesenting the URL to which the Ajax request
+    will be sent.
+*/
+var taconite_client_version=1.6;
+function AjaxRequest(url) {
+    /** @private */
+    var self = this;
+
+    /** @private */
+    var xmlHttp = createXMLHttpRequest();
+    
+    /** @private */
+    var queryString = "";
+
+    /** @private */
+    var requestURL = url;
+
+    /** @private */
+    var method = "GET";
+
+    /** @private */
+    var preRequest = null;
+
+    /** @private */
+    var postRequest = null;
+
+    /** @private */
+    var debugResponse = false;
+	
+    /** @private */
+    var async = true;
+
+    /** @private errorHandler*/ 
+    var errorHandler = null;
+
+	/** @private */ 
+    var useCacheBust = false;
+
+    /**
+        Return the instance of the XMLHttpRequest object wrapped by this object.
+        @return XMLHttpRequest
+    */
+    this.getXMLHttpRequestObject = function() {
+        return xmlHttp;
+    }
+
+    /**
+        Set the pre-request function. This function will be called prior to 
+        sending the Ajax request. The pre-request function is passed a reference
+        to this object.
+        @param {Function} The function to be called prior to sending the Ajax
+        request. The function is passed a refernce of this object.
+    */
+    this.setPreRequest = function(func) {
+        preRequest = func;
+    }
+
+    /**
+        Set the post-request function. This function will be called after the
+        response has been received and after eval() has been called using the 
+        XMLHttpRequest object's responseText. The post-request function is passed 
+        a reference to this object.
+        @param {Function} The function to be called after receiving the Ajax
+        response. The function is passed a refernce of this object.
+    */
+    this.setPostRequest = function(func) {
+        postRequest = func;
+    }
+    
+    /**
+        Return the post request function.
+    */
+    this.getPostRequest = function() {
+        return postRequest;
+    }
+
+    /**
+        Send the Ajax request using the POST method. Use with caution -- some
+        browsers do not support the POST method with the XMLHttpRequest object.
+    */
+    this.setUsePOST = function() {
+        method = "POST";
+    }
+
+    /**
+        Send the Ajax request using the GET method, where parameters are sent
+        as a query string appended to the URL. This is the default behavior.
+    */
+    this.setUseGET = function() {
+        method = "GET";
+    }
+
+    /**
+        Enable client-side debugging.  The server's response will be written
+        to a text area appended to the bottom of the page.  If parsing is
+        performed on the client side, then the results of the parsing operations
+        are shown in their own text areas.
+    */
+    this.setEchoDebugInfo = function() {
+        debugResponse = true;
+    }
+
+    /**
+        Indicate if debugging is enabled.
+        @return boolean
+    */
+    this.isEchoDebugInfo = function() {
+        return debugResponse;
+    }
+
+    /**
+        Set the query string that will be sent to the server. For GET
+        requests, the query string is appended to the URL. For POST
+        requests, the query string is sent in the request body. This 
+        method is useful, for example, if you want to send an XML string
+        or JSON string to the server.
+        @param {String} qa, the new query string value.
+    */
+    this.setQueryString = function(qs) {
+        queryString = qs;
+    }
+
+    /**
+        Return the query string.
+        @return The query string.
+    */
+    this.getQueryString = function() {
+        return queryString;
+    }
+
+    /** 
+        @param {Boolean} asyncBoolean, set to true if asynchronous request, false synchronous request. 
+    */
+    this.setAsync = function(asyncBoolean){
+            async = asyncBoolean;
+    }
+
+    /** 
+        @param {Function} Set the error handler function that is called if the 
+        server's HTTP response code is something other than 200.
+    */	
+    this.setErrorHandler = function(func){
+        errorHandler = func;
+    }
+	
+	 /**
+        Set cache busting on the request. (reifmanm)
+    */
+    this.setUseCacheBust = function() {
+		useCacheBust = true;
+    }
+	
+    /**
+        Add all of the form elements under the specified form to the query
+        string to be sent to the server as part of the Ajax request. The values
+        are automatically encoded.
+        @param {String} formID, the value of the id attribute of the form from
+        which you wish to accumulate the form values.
+    */
+    this.addFormElements = function(formID) {
+        var formElements = document.getElementById(formID).elements;
+        var values = toQueryString(formElements);
+        accumulateQueryString(values);
+    }
+
+    /** @private */
+    function accumulateQueryString(newValues) {
+        if(queryString == "") {
+            queryString = newValues; 
+        }
+        else {
+            queryString = queryString + "&" +  newValues;
+        }
+    }
+
+    /**
+        Add the name/value pair to the query string.
+        @param {String} name
+        @param {String} value
+    */
+    this.addNameValuePair = function(name, value) {
+        var nameValuePair = name + "=" + encodeURIComponent(value);
+        accumulateQueryString(nameValuePair);
+    }
+
+    
+
+   /**
+        Same as addNamedFormElements, except it will filter form elements by form's id.
+        For example, these are all valid uses:<br>
+        <br>ajaxRequest.addNamedFormElements("form-id""element-name-1");
+        <br>ajaxRequest.addNamedFormElements("form-id","element-name-1",
+        "element-name-2", "element-name-3");
+    */
+    this.addNamedFormElementsByFormID = function() {
+        var elementName = "";
+        var namedElements = null;
+
+        for(var i = 1; i < arguments.length; i++) {
+            elementName = arguments[i];
+            namedElements = document.getElementsByName(elementName);
+            var arNamedElements = new Array();
+            for(j = 0; j < namedElements.length; j++) {
+                if(namedElements[j].form  && namedElements[j].form.getAttribute("id") == arguments[0]){
+                    arNamedElements.push(namedElements[j]);				
+                }
+            }
+            if(arNamedElements.length > 0){
+                elementValues = toQueryString(arNamedElements);
+	        accumulateQueryString(elementValues);
+            }
+        }
+    }
+
+
+
+
+
+
+
+
+    /**
+        Add the values of the named form elements to the query string to be
+        sent to the server as part of the Ajax request. This method takes any 
+        number of Strings representing the form elements for wish you wish to 
+        accumulate the values. The Strings must be the value of the element's 
+        name attribute.<br><br>For example, these are all valid uses:<br>
+        <br>ajaxRequest.addNamedFormElements("element-name-1");
+        <br>ajaxRequest.addNamedFormElements("element-name-1", "element-name-2", "element-name-3");
+    */
+    this.addNamedFormElements = function() {
+        var elementName = "";
+        var namedElements = null;
+
+        for(var i = 0; i < arguments.length; i++) {
+            elementName = arguments[i];
+            namedElements = document.getElementsByName(elementName);
+
+            elementValues = toQueryString(namedElements);
+
+            accumulateQueryString(elementValues);
+        }
+
+    }
+
+    /**
+        Add the values of the id'd form elements to the query string to be
+        sent to the server as part of the Ajax request. This method takes any 
+        number of Strings representing the ids of the form elements for wish you wish to 
+        accumulate the values. The Strings must be the value of the element's 
+        name attribute.<br><br>For example, these are all valid uses:<br>
+        <br>ajaxRequest.addFormElementsById("element-id-1");
+        <br>ajaxRequest.addFormElementsById("element-id-1", "element-id-2", "element-id-3");
+    */
+    this.addFormElementsById = function() {
+        var id = "";
+        var element = null;
+        var elements = new Array();
+
+        for(var h = 0; h < arguments.length; h++) {
+            element = document.getElementById(arguments[h]);
+            if(element != null) {
+                elements[h] = element;
+            }
+        }
+
+        elementValues = toQueryString(elements);
+        accumulateQueryString(elementValues);
+    }
+
+    /**
+        Send the Ajax request.
+    */
+    this.sendRequest = function() {
+        if(preRequest) {
+            preRequest(self);
+        }
+
+        var obj = this;
+		if(async)
+	        xmlHttp.onreadystatechange = function () { handleStateChange(self) };
+
+        if(useCacheBust){
+			if(requestURL.indexOf("?") > 0) {
+	            requestURL = requestURL + "&ts=" + new Date().getTime();
+	        }
+	        else {
+	            requestURL = requestURL + "?ts=" + new Date().getTime();
+	        }
+		}
+
+        try {
+            if(method == "GET") {
+                if(queryString.length > 0) {
+                    var connector = (requestURL.indexOf("?") > 0) ? "&" : "?";
+					requestURL = requestURL + connector + queryString;
+                }
+                xmlHttp.open(method, requestURL, async);
+                xmlHttp.send(null);
+            }
+            else {
+                xmlHttp.open(method, requestURL, async);
+                //Fix a bug in Firefox when posting
+                try {
+                    if (xmlHttp.overrideMimeType) {
+                        xmlHttp.setRequestHeader("Connection", "close");//set header after open
+                    }			
+                }
+                catch(e) {
+                    // Do nothing
+                }
+                xmlHttp.setRequestHeader("Content-Type", "application/x-www-form-urlencoded"); 
+                xmlHttp.send(queryString);
+            }
+        }
+        catch(exception) {
+            if(errorHandler) {
+                errorHandler(self, exception);
+            }
+            else {
+                throw exception;
+            }
+        }
+
+        if(!async) {  //synchronous request, handle the state change
+            handleStateChange(self);
+        }
+
+        if(self.isEchoDebugInfo()) {
+            echoRequestParams();
+        }
+    }
+
+    handleStateChange = function(ajaxRequest) {
+        if(ajaxRequest.getXMLHttpRequestObject().readyState != 4) {
+            return;
+        }
+        try {
+            var debug = ajaxRequest.isEchoDebugInfo();
+            if(debug) {
+                echoResponse(ajaxRequest);
+            }
+
+            //handle null responseXML
+            var nodes = null;
+            if (ajaxRequest.getXMLHttpRequestObject().responseXML != null) {
+                nodes = ajaxRequest.getXMLHttpRequestObject().responseXML.documentElement.childNodes;
+            }
+            else {
+                nodes = new Array();
+            }
+
+            var parser = new XhtmlToDOMParser();
+            var parseInBrowser = "";
+            for(var i = 0; i < nodes.length; i++) {
+                if(nodes[i].nodeType != 1 || !isTaconiteTag(nodes[i])) {
+                    continue;
+                }
+
+                parseInBrowser = nodes[i].getAttribute("parseInBrowser");
+                if(parseInBrowser == "true") {
+                    parser.parseXhtml(nodes[i]);
+                    var js = parser.getJavaScript();
+                    if(debug) {
+                        echoParsedJavaScript(js);
+                    }
+                }
+                else {
+                    eval(nodes[i].firstChild.nodeValue);
+                }
+            }
+
+            if(ajaxRequest.getPostRequest()) {
+                var f = ajaxRequest.getPostRequest();
+                f(ajaxRequest);
+            }
+        }
+        catch(exception) {
+            if(errorHandler) {
+                errorHandler(self, exception);
+            }
+            else {
+                throw exception;
+            }
+        }
+    }
+
+    /** @private */
+    function isTaconiteTag(node) {
+        return node.tagName.substring(0, 9) == "taconite-";
+    }
+
+    /** @private */
+    function toQueryString(elements) {
+        var node = null;
+        var qs = "";
+        var name = "";
+
+        var tempString = "";
+        for(var i = 0; i < elements.length; i++) {
+            tempString = "";
+            node = elements[i];
+            name = node.getAttribute("name");
+
+            //use id if name is null
+            if (!name) {
+            	name = node.getAttribute("id");
+            }
+
+            if(node.tagName.toLowerCase() == "input") {
+                if(node.type.toLowerCase() == "radio" || node.type.toLowerCase() == "checkbox") {
+                    if(node.checked) {
+                        tempString = name + "=" + node.value;
+                    }
+                }
+
+                if(node.type.toLowerCase() == "text" || node.type.toLowerCase() == "hidden" || node.type.toLowerCase() == "password") {
+                    tempString = name + "=" + encodeURIComponent(node.value);
+                }
+            }
+            else if(node.tagName.toLowerCase() == "select") {
+                tempString = getSelectedOptions(node);
+            }
+
+            else if(node.tagName.toLowerCase() == "textarea") {
+                tempString = name + "=" + encodeURIComponent(node.value);
+            }
+
+            if(tempString != "") {
+                if(qs == "") {
+                    qs = tempString;
+                }
+                else {
+                    qs = qs + "&" + tempString;
+                }
+            }
+
+        }
+
+        return qs;
+
+    }
+
+    /** @private */
+    function getSelectedOptions(select) {
+        var options = select.options;
+        var option = null;
+        var qs = "";
+        var tempString = "";
+
+        for(var x = 0; x < options.length; x++) {
+            tempString = "";
+            option = options[x];
+
+            if(option.selected) {
+                tempString = select.name + "=" + option.value;
+            }
+
+            if(tempString != "") {
+                if(qs == "") {
+                    qs = tempString;
+                }
+                else {
+                    qs = qs + "&" + tempString;
+                }
+            }
+        }
+
+        return qs;
+    }
+
+    /** @private */
+    function echoResponse(ajaxRequest) {
+        var echoTextArea = document.getElementById("debugResponse");
+        if(echoTextArea == null) {
+            echoTextArea = createDebugTextArea("Server Response:", "debugResponse");
+        }
+        var debugText = ajaxRequest.getXMLHttpRequestObject().status 
+            + " " + ajaxRequest.getXMLHttpRequestObject().statusText + "\n\n\n";
+        echoTextArea.value = debugText + ajaxRequest.getXMLHttpRequestObject().responseText;
+    }
+
+    /** @private */
+    function echoParsedJavaScript(js) {
+        var echoTextArea = document.getElementById("debugParsedJavaScript");
+        if(echoTextArea == null) {
+            var echoTextArea = createDebugTextArea("Parsed JavaScript (by JavaScript Parser):", "debugParsedJavaScript");
+        }
+        echoTextArea.value = js;
+    }
+
+    /** @private */
+    function createDebugTextArea(label, id) {
+        echoTextArea = document.createElement("textarea");
+        echoTextArea.setAttribute("id", id);
+        echoTextArea.setAttribute("rows", "15");
+        echoTextArea.setAttribute("style", "width:100%");
+        echoTextArea.style.cssText = "width:100%";
+
+        document.getElementsByTagName("body")[0].appendChild(document.createTextNode(label));
+        document.getElementsByTagName("body")[0].appendChild(echoTextArea);
+        return echoTextArea;
+    }
+
+
+    /** @private */
+    function echoRequestParams() {
+        var qsTextBox = document.getElementById("qsTextBox");
+        if(qsTextBox == null) {
+            qsTextBox = createDebugTextBox("Query String:", "qsTextBox");
+        }
+        qsTextBox.value = queryString;
+
+        var urlTextBox = document.getElementById("urlTextBox");
+        if(urlTextBox == null) {
+            urlTextBox = createDebugTextBox("URL (Includes query string if GET request):", "urlTextBox");
+        }
+        urlTextBox.value = requestURL;
+    }
+
+    /** @private */
+    function createDebugTextBox(label, id) {
+        textBox = document.createElement("input");
+        textBox.setAttribute("type", "text");
+        textBox.setAttribute("id", id);
+        textBox.setAttribute("style", "width:100%");
+        textBox.style.cssText = "width:100%";
+
+        document.getElementsByTagName("body")[0].appendChild(document.createTextNode(label));
+        document.getElementsByTagName("body")[0].appendChild(textBox);
+        return textBox;
+    }
+
+
+}
+
+/**
+    Create an instance of the XMLHttpRequest object, using the appropriate
+    method for the type of browser in which this script is running. For Internet
+    Explorer, it's an ActiveX object, for all others it's a native JavaScript
+    object.
+    @return an instance of the XMLHttpRequest object.
+*/
+function createXMLHttpRequest() {
+    var req = false;
+    if (window.XMLHttpRequest) {
+        req = new XMLHttpRequest();
+    }
+    else if (window.ActiveXObject) {
+       	try {
+            req = new ActiveXObject("Msxml2.XMLHTTP");
+      	}
+        catch(e) {
+            try {
+                req = new ActiveXObject("Microsoft.XMLHTTP");
+            }
+            catch(e) {
+                req = false;
+            }
+        }
+    }
+    return req;
+}
+
+// JavaScript Document
+var taconite_parser_version=1.502;
+var isIE=document.uniqueID;
+String.prototype.trim = function() {
+    //skip leading and trailing whitespace
+    //and return everything in between
+    var x=this;
+    x=x.replace(/^\s*(.*)/, "$1");
+    x=x.replace(/(.*?)\s*$/, "$1");
+    return x;
+};
+
+function requiresContextNode(xmlTagName) {
+    return !(xmlTagName == "taconite-execute-javascript" || xmlTagName == "taconite-redirect");
+}
+
+
+function XhtmlToDOMParser(){
+    this.parseXhtml = function(xml){
+        var xmlTagName=xml.tagName.toLowerCase();
+        var contextNode=document.getElementById(xml.getAttribute("contextNodeID"));
+        if(contextNode == null && requiresContextNode(xmlTagName)){
+            return false;
+        }
+        switch (xmlTagName) {
+            case "taconite-append-as-children":
+                getReplaceChildren(contextNode,xml,false);
+                break;
+            case "taconite-delete":
+                getDelete(contextNode,xml);
+                break;
+            case "taconite-append-as-first-child":
+                getAppendAsFirstChild(contextNode,xml);
+                break;                         
+            case "taconite-insert-after":
+                getInsertAfter(contextNode,xml);
+                break;
+            case "taconite-insert-before":
+                getInsertBefore(contextNode,xml);
+                break;                         
+            case "taconite-replace-children":
+                getReplaceChildren(contextNode,xml,true);
+                break;
+            case "taconite-replace":
+                getReplace(contextNode,xml);
+                break;                         
+            case "taconite-set-attributes":
+                xml.removeAttribute("contextNodeID");
+                xml.removeAttribute("parseInBrowser");
+                handleAttributes(contextNode,xml);
+                break;
+            case "taconite-redirect":
+                handleRedirect(xml);
+                break;
+            case "taconite-execute-javascript":
+                executeJavascript(xml);
+                break;
+        }  
+        return true;
+    };
+    
+    function isInlineMode(node) {
+        var attrType;
+        if(!node.tagName.toLowerCase() == "input") {
+            return false;
+        }
+        attrType=node.getAttribute("type");
+        
+        if(attrType=="radio" || attrType=="checkbox") {
+            return true;
+        }
+        return false;
+    }  
+    this.getJavaScript= function() {
+        return "var dummy_taconite_variable=0";
+    }; 
+    function handleNode(xmlNode){
+        var nodeType = xmlNode.nodeType;               
+        switch(nodeType) {
+            case 1:  //ELEMENT_NODE
+                return handleElement(xmlNode);
+            case 3:  //TEXT_NODE
+            case 4:  //CDATA_SECTION_NODE
+                var textNode = document.createTextNode(xmlNode.nodeValue);
+                if(isIE) {
+                    textNode.nodeValue = textNode.nodeValue.replace(/\n/g, '\r'); 
+                }
+                return textNode;
+        }      
+        return null;
+    }
+    function handleElement(xmlNode){
+        var domElemNode=null;
+        var xmlNodeTagName=xmlNode.tagName.toLowerCase();
+        if(isIE){
+            if(isInlineMode(xmlNode)) {
+                return document.createElement("<INPUT " + handleAttributes(domElemNode,xmlNode,true) + ">");
+            }
+            if(xmlNodeTagName == "style"){
+                //In internet explorer, we have to use styleSheets array.		
+                var text,rulesArray,styleSheetPtr;
+                var regExp = /\s+/g;
+                text=xmlNode.text.replace(regExp, " ");
+                rulesArray=text.split("}");
+                
+                domElemNode=document.createElement("style");
+                styleSheetPtr=document.styleSheets[document.styleSheets.length-1];
+                for(var i=0;i<rulesArray.length;i++){
+                    rulesArray[i]=rulesArray[i].trim();
+                    var rulePart=rulesArray[i].split("{");
+                    if(rulePart.length==2) {//Add only if the rule is valid
+                        styleSheetPtr.addRule(rulePart[0],rulePart[1],-1);//Append at the end of stylesheet.
+                    }
+                }							
+                return domElemNode;			
+            }
+            
+        }
+        if(domElemNode == null){
+            if(useIEFormElementCreationStrategy(xmlNodeTagName)) {
+                domElemNode = createFormElementsForIEStrategy(xmlNode);
+            }
+            else {
+                domElemNode = document.createElement(xmlNodeTagName);
+            }
+            
+            handleAttributes(domElemNode,xmlNode);
+            //Fix for IE Script tag: Unexpected call to method or property access error
+            //IE don't allow script tag to have child
+            if(isIE && !domElemNode.canHaveChildren){
+                if(xmlNode.childNodes.length > 0){
+                    domElemNode.text=xmlNode.text;
+                }
+                
+            }                              
+            else{
+                for(var z = 0; z < xmlNode.childNodes.length; z++) {
+                    var domChildNode=handleNode(xmlNode.childNodes[z]);
+                    if(domChildNode!=null) {
+                        domElemNode.appendChild(domChildNode);
+                    }
+                }
+            }
+        }      
+        
+        return domElemNode;
+    }
+    
+    function useIEFormElementCreationStrategy(xmlNodeTagName) {
+        var useIEStrategy = false;
+        
+        if (isIE && ( xmlNodeTagName.toLowerCase() == "form" ||
+              xmlNodeTagName.toLowerCase() == "input" ||
+              xmlNodeTagName.toLowerCase() == "textarea" ||
+              xmlNodeTagName.toLowerCase() == "select" ||
+              xmlNodeTagName.toLowerCase() == "a" ||
+              xmlNodeTagName.toLowerCase() == "applet" ||
+              xmlNodeTagName.toLowerCase() == "button" ||
+              xmlNodeTagName.toLowerCase() == "img" ||
+              xmlNodeTagName.toLowerCase() == "link" ||
+              xmlNodeTagName.toLowerCase() == "map" ||
+              xmlNodeTagName.toLowerCase() == "object")) {
+                      
+            useIEStrategy = true;
+        }
+        
+        return useIEStrategy;
+    }
+    
+    function createFormElementsForIEStrategy(xmlNode) {
+        var attr = null;
+        var name = "";
+        var value = "";
+        for (var x = 0; x < xmlNode.attributes.length; x++) {
+            attr = xmlNode.attributes[x];
+            name = attr.name.trim();
+            if (name == "name") {
+                value = attr.value.trim();
+            }
+        }
+
+        domElemNode = document.createElement("<" + xmlNode.tagName + " name='" + value + "' />"); // e.g. document.createElement("<input name='slot2'>");
+        
+        return domElemNode;
+    }
+    
+    function handleAttributes(domNode, xmlNode) {
+        var attr = null;
+        var attrString = "";
+        var name = "";
+        var value = "";
+        var returnAsText = false;
+        if(arguments.length == 3) {
+            returnAsText = true;
+        }
+        
+        for(var x = 0; x < xmlNode.attributes.length; x++) {
+            attr = xmlNode.attributes[x];
+            name = cleanAttributeName(attr.name.trim());
+            value = attr.value.trim();
+            if(!returnAsText){
+                if(name == "style") {
+                    /* IE workaround */
+                    domNode.style.cssText = value;
+                    /* Standards compliant */
+                    domNode.setAttribute(name, value);
+                }
+                else if(name.trim().toLowerCase().substring(0, 2) == "on") {
+                    /* IE workaround for event handlers */
+                    //domNode.setAttribute(name,value);
+                    eval("domNode." + name.trim().toLowerCase() + "=function(){" + value + "}");
+                }
+                else if(name == "value") {
+                    /* IE workaround for the value attribute -- makes form elements selectable/editable */
+                    domNode.value = value;
+                }
+                else if(useIEFormElementCreationStrategy(xmlNode.tagName) && name == "name") {
+                    //Do nothing, as the "name" attribute was handled in the createFormElementsForIEStrategy function
+                    continue;
+                }
+                else {
+                    /* Standards compliant */
+                    domNode.setAttribute(name,value);
+                }
+                /* class attribute workaround for IE */
+                if(name == "class") {
+                    domNode.setAttribute("className",value);
+                }
+            }else{
+                attrString = attrString + name + "=\"" + value + "\" " ;
+            }
+        }
+        return attrString;
+    }
+    function getAppendAsFirstChild(domNode,xml){
+        var firstNode=null;
+        if(domNode.childNodes.length > 0) {
+            firstNode=domNode.childNodes[0];
+        }
+        
+        for(var i=0;i<xml.childNodes.length;i++){
+            domChildNode=handleNode(xml.childNodes[i]);
+            if(domChildNode!=null){
+                if(firstNode==null){
+                    domNode.appendChild(domChildNode);
+                    firstNode=domChildNode;
+                }
+                else {
+                    domNode.insertBefore(domChildNode,firstNode);
+                }
+                
+            }
+        }              
+    }
+    
+    function getInsertAfter(domNode,xml){
+        var domChildNode=null;
+        var nextSibling=domNode.nextSibling;
+        for(var i=0;i<xml.childNodes.length;i++){
+            domChildNode=handleNode(xml.childNodes[i]);
+            if(domChildNode!=null){
+                if(nextSibling!=null) {
+                    domNode.parentNode.insertBefore(domChildNode,nextSibling);
+                }
+                else {
+                    domNode.parentNode.appendChild(domChildNode);
+                }
+            }
+        }              
+    }
+    function getInsertBefore(domNode,xml){
+        var domChildNode=null;
+        for(var i=0;i<xml.childNodes.length;i++){
+            domChildNode=handleNode(xml.childNodes[i]);
+            if(domChildNode!=null) {
+                domNode.parentNode.insertBefore(domChildNode,domNode);
+            }
+        }              
+    }      
+    function getReplace(domNode,xml){
+        getInsertAfter(domNode,xml);
+        domNode.parentNode.removeChild(domNode);
+    }
+    function getDelete(domNode) {
+        domNode.parentNode.removeChild(domNode);
+    }
+    function getReplaceChildren(domNode,xml,doRemoveChildren) {
+        var domChildNode=null;
+        if(doRemoveChildren){
+            while(domNode.childNodes.length >0){
+                domNode.removeChild(domNode.childNodes[0]);
+            }      
+        }
+        for(var i=0;i<xml.childNodes.length;i++){
+            domChildNode=handleNode(xml.childNodes[i]);
+            if(domChildNode!=null) {
+                domNode.appendChild(domChildNode);
+            }
+        }              
+    }
+    
+    function handleRedirect(xmlNode) {
+        var targetUrl = xmlNode.getAttribute("targetUrl");
+        window.location.replace(targetUrl);
+    }
+    
+    function executeJavascript(xmlNode) {
+        var scripts = xmlNode.getElementsByTagName("script");
+        for (var i = 0; i < scripts.length; i++) {
+            var script = scripts[i];
+            if (script.getAttribute("type") == "text/javascript") {
+                var js = script.firstChild.nodeValue;
+                eval(js);
+            }
+        }
+    }
+
+    function cleanAttributeName(name) {
+        if(isIE == false) {
+            return;
+        }
+        
+        // IE workaround to change cellspacing to cellSpacing, etc
+        var cleanName = name.toLowerCase();
+        if(cleanName == "cellspacing") {
+            cleanName = "cellSpacing";
+        }
+        else if(cleanName == "cellpadding") {
+            cleanName = "cellPadding";
+        }
+        else if(cleanName == "colspan") {
+            cleanName = "colSpan";
+        }
+        else if(cleanName == "tabindex") {
+            cleanName = "tabIndex";
+        }
+        else if(cleanName == "readonly") {
+            cleanName = "readOnly";
+        }
+        return cleanName;
+    }
+    
+}
+			
+
+

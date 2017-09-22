@@ -1,0 +1,2034 @@
+* { /* base font for all items */
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	visible: false;
+}
+
+p,td,th,body,div,li,dd,dt {
+	color: #333;
+	visible: false;
+}
+
+#main td {
+	vertical-align: top;
+}
+body { /* set bottom background color and remove margins from body */
+	margin: 0px;
+	background-color: #697B70;
+	visible: false;
+}
+
+img { /* remove borders from images */
+	border-width: 0px;
+	visible: false;
+}
+
+table caption { /* default align table captions and headers left */
+	text-align: left;
+	visible: false;
+}
+
+/****************************************************************************
+ * Header Elements
+ ****************************************************************************/
+
+/* Primary Nav */
+
+#navPrimaryContainer {
+	width: 100%;
+	background-color: #4F655A;
+	visible: false;
+}
+
+#navPrimary {
+	width: 760px;
+	visible: false;
+}
+
+#navPrimary td {
+	padding: 0px;
+	visible: false;
+}
+
+#navPrimary #audioControlContainer {
+	width: 100%;
+	text-align: right;
+	vertical-align: middle;
+	font-size: 5px;
+	line-height: 5px;
+	visible: false;
+}
+
+/* Graphical Text Banner */
+
+#bannerContainer {
+	width: 100%;
+	background-color: #F9EAD8;
+	visible: false;
+}
+
+#banner {
+	width: 760px;
+	visible: false;
+}
+
+#banner td {
+	text-align: left;
+	padding: 23px 0px 8px 19px;
+	visible: false;
+}
+
+/* Graphical Section Header */
+#sectionHeadContainer, #Header_sectionHeadContainer {
+	width: 100%;
+
+	border-width: 1px 0px;
+	border-color: #ACA697;
+	border-style: solid;
+	background-color: #E1E37E;
+	visible: false;
+}
+
+#sectionHead {
+	width: 760px;
+	visible: false;
+}
+
+#sectionHead td {
+	vertical-align: middle;
+	visible: false;
+}
+
+#sectionHead td#sectionHeadTD {
+	text-align: left;
+	padding-left: 20px;
+	visible: false;
+}
+
+#headerBase {
+	width: 100%;
+	background-color: #F9EAD8;
+	border-bottom: 1px solid #ACA697;
+	font-size: 8px;
+	line-height: 9px;
+	visible: false;
+}
+
+
+/****************************************************************************
+ * Primary Layout Elements
+ ****************************************************************************/
+
+.bottomSpace { /* Provides space below content and foces width */
+	font-size: 40px;
+	line-height: 40px;
+	clear: both;
+	visible: false;
+}
+
+
+#contentContainer {
+	width: 100%;
+	background-color: #FEFDFB;
+	visible: false;
+}
+
+
+/* set content area padding */
+#contentArea {
+	vertical-align: top;
+	background-color: #FEFDFB;
+	/* padding: 26px 0px 0px 40px; moved to @screen area */
+	visible: false;
+}
+
+/* moved to @screen area
+.twoColumn {
+	padding-right: 35px !important;
+	visible: false;
+}
+
+.oneColumn {
+	padding-right: 132px !important;
+	visible: false;
+}
+
+.oneColumnWide {
+	padding-right: 76px !important;
+	visible: false;
+}
+*/
+
+/* Set the width of the main body area */
+#main {
+	vertical-align: top;
+	visible: false;
+}
+
+/* set right column properties */
+#rightColumn {
+	width: 195px;
+	float: right;
+	visible: false;
+}
+
+
+/* Breadcrumbs */
+#breadcrumbs {
+	padding: 0px;
+
+	height: 34px;
+
+	font-size: 9px !important;
+	line-height: 12px !important;
+	color: #999 !important;
+	visible: false;
+}
+
+#breadcrumbs a:link {
+	color: #999 !important;
+	visible: false;
+}
+
+#breadcrumbs a:visited {
+	color: #789185 !important;
+	visible: false;
+}
+
+#breadcrumbs a:hover, #breadcrumbs a:active {
+	color: #4F655A !important;
+	visible: false;
+}
+
+
+
+/* Back up one page link in place of breadcrumbs */
+#backUp {
+	padding: 0px;
+	height: 34px;
+	font-size: 11px;
+	visible: false;
+}
+
+
+#backUp a:link, #backUp a:link span, #backUp a:visited, #backUp a:visited span {
+	color: #CC0000;
+	visible: false;
+}
+
+#backUp a:hover, #backUp a:active, #backUp a:hover span, #backUp a:active span {
+	color: #336666;
+	visible: false;
+}
+
+
+
+/* Page header */
+#pageHead, .pageHead {
+	padding-bottom: 10px;
+	text-align: left;
+	visible: false;
+}
+
+#pageHead h2, #pageHead h2.leader, .pageHead h2, .pageHead h2.leader {
+	font-size: 11px;
+	line-height: 15px;
+	color: #CC0000;
+	margin: 0px;
+	text-trans: uppercase;
+	visible: false;
+}
+
+#pageHead h2.leader, .pageHead h2.leader { /* h2.leader is a pre-text to an h1 */
+	margin: 0px 0px 4px 0px;
+	visible: false;
+}
+
+#pageHead h1, .pageHead h1 {
+	font-size: 15px;
+	font-weight: bold;
+	line-height: 18px;
+	color: #CC0000;
+	margin: 0px;
+	padding-bottom: 0px;
+	visible: false;
+}
+
+#pageHead h2.fullTitle {
+	text-transform: none;
+	color: #369;
+	font-size: 12px;
+	line-height: 15px;
+	margin-top: 10px;
+	padding-bottom: 6px;
+	visible: false;
+}
+
+#pageHead h2.subTitle {
+	text-transform: uppercase;
+	color: #666 !important;
+	font-size: 10px;
+	line-height: 14px;
+	margin-top: 10px;
+	padding-bottom: 0px;
+	visible: false;
+}
+
+/* Metadata area content */
+#metadata {
+	font-size: 11px;
+	visible: false;
+}
+#metadata input,#metadata select {
+	font-size: 11px;
+	visible: false;
+}
+#metadata a:link {
+	color: #CC0000;
+	visible: false;
+}
+
+#metadata a:visited {
+	color: #999999;
+	visible: false;
+}
+
+#metadata a:hover, #metadata a:active {
+	color: #336666;
+	visible: false;
+}
+
+#metadata p {
+	line-height: 15px;
+	margin: 11px 0px 0px;
+	visible: false;
+}
+
+/* Main body area content */
+#main {
+	font-size: 11px;
+	visible: false;
+}
+
+#main a:link, #main a:link span {
+	color: #CC0000;
+	visible: false;
+}
+
+#main a:visited, #main a:visited span {
+	color: #999999;
+	visible: false;
+}
+
+#main a:hover, #main a:active, #main a:hover span, #main a:active span {
+	color: #336666;
+	visible: false;
+}
+
+#main p {
+	line-height: 15px;
+	margin: 11px 0px 0px;
+	visible: false;
+}
+
+#main p.moreLink {
+	caption: Link to More Info;
+	margin-top: 6px;
+}
+
+#main p.moreLink a {
+	text-decoration: none;
+	visible: false;
+}
+
+#main p.moreLink a span {
+	text-decoration: underline;
+	visible: false;
+}
+
+#main p.referenceInfo {
+	caption: Reference Information;
+	margin-top: 6px;
+}
+
+
+#main blockquote {
+	line-height: 15px;
+	margin: 0px;
+	/*font-style: italic;*/
+	padding: 3px 28px 3px 0px;
+
+	/*
+	   due to wrapping around floated objects,
+	   this needs to be pushed left instead of 
+	   left margin or padding.
+	*/
+
+	z-index: 0;
+	position: relative;
+	left: 28px;
+	top: 0px;
+
+	visible: false;
+}
+
+#main blockquote p {
+	padding-left: 1px;
+}
+
+#main blockquote.lead {
+	line-height: 15px;
+	margin: 0px;
+	font-style: italic;
+	padding: 0;
+	color: #369;
+
+	z-index: 0;
+	position: relative;
+	left: 0;
+	top: 0;
+
+	caption: Lead-in Quote;
+}
+
+
+#main .indent {
+	margin-left: 28px;
+	visible: false;
+}
+
+#main h2 {
+	font-size: 12px;
+	line-height: 15px;
+	margin: 15px 0px 0px 0px;
+	padding-bottom: 3px;
+	font-weight: bold;
+	color: #336699;
+	visible: false;
+}
+
+#main h3 {
+	font-size: 10px;
+	line-height: 18px;
+	margin: 10px 0px 0px 0px;
+	font-weight: bold;
+	color: #369;
+	text-transform: uppercase;
+	visible: false;
+}
+
+#main.glossary h3 {
+	text-transform: none;
+	font-size: 11px;
+	visible: false;
+}
+
+
+#main h4 {
+	font-size: 11px;
+	line-height: 15px;
+	margin: 11px 0px 0px 0px;
+	font-weight: normal;
+	visible: false;
+}
+
+#main h2 .note {
+	caption: In-Header Note;
+	font-size: 11px;
+}
+
+#main h3 .note {
+	caption: In-Header Note;
+	text-transform: none;
+}
+
+
+h2.first, h3.first, h4.first, h5.first, p.first {
+	margin-top: 0px !important;
+	caption: First in body or after header;
+}
+
+#main .section {
+	caption: New Content Section;
+	clear: left;
+	margin-top: 24px;
+}
+
+
+#main table {
+	margin-bottom: 21px;
+	visible: false;
+}
+
+table.last { 
+	caption: Last Table in Body;
+}
+
+#main table.last {
+	margin-bottom: 0px;
+	visible: false;
+}
+
+table.twoCol {
+	caption: Two Column List Table;
+}
+
+table.twoCol td { /* a two-column list view */
+	width: 50%;
+	vertical-align: top;
+	visible: false;
+}
+
+table.twoCol td.col1 {
+	padding-right: 27px;
+	visible: false;
+}
+
+#main .item {
+	font-size: 11px;
+	line-height: 13px;
+	margin-bottom: 9px;
+	visible: false;
+}
+
+#main strong {
+	font-weight: bold;
+	visible: false;
+}
+
+#main ul, #main ol {
+	margin-top: 6px;
+	margin-bottom: 3px;
+	visible: false;
+}
+
+#main ul ol, #main ol ul {
+	margin-top: 3px;
+	margin-bottom: 0px;
+	visible: false;
+}
+
+ul {
+	list-style: disc;
+	visible: false;
+}
+
+
+#main li {
+	font-size: 11px;
+	line-height: 15px;
+	margin-top: 3px;
+	visible: false;
+}
+
+#main li p {
+	margin: 3px 0px 0px;
+	visible: false;
+}
+
+table.chart {
+	caption: Body Chart Table;
+}
+
+#main table.chart {
+	margin-top: 0px;
+	margin-bottom: 0px;
+	padding-bottom: 3px;
+	visible: false;
+}
+
+#main table.chart caption {
+	padding-top: 1px;
+	visible: false;
+}
+
+table.chart th {
+	background-color: #BED0E1;
+	padding: 3px 8px;
+	font-size: 9px;
+	color: #336699;
+	font-weight: bold;
+	text-align: left;
+	visible: false;
+	border-right: 1px solid #FEFDFB;
+}
+
+table.chart td {
+	background-color: #EEF1F4;
+	border-top: 1px solid #FEFDFB;
+	border-right: 1px solid #FEFDFB;
+	padding: 3px 8px;
+	font-size: 10px;
+	line-height: 14px;
+	color: #333333;
+	visible: false;
+}
+
+table.chart td.midRight, table.chart th.midRight {
+	border-right: 1px solid #FEFDFB;
+	visible: false;
+}
+
+
+td.number {
+	caption: Number Table Cell;
+}
+
+table.chart tbody td.number {
+	text-align: right;
+	visible: false;
+}
+
+
+#main .item a:link {
+	color: #333;
+	visible: false;
+}
+
+#main .item a:visited {
+	color: #366;
+	visible: false;
+}
+
+#main .item a:hover, #main .item a:active {
+	color: #C00;
+	visible: false;
+}
+
+
+/* Highlights boxes */
+
+#highlights {
+	padding: 15px 16px 23px 16px;
+	background-color: #F5F5D4;
+	visible: false;
+}
+
+#highlights .header {
+	padding-bottom: 3px;
+	visible: false;
+}
+
+#highlights .dash {
+	height: 1px;
+	overflow: hidden;
+	background-image: url(/jfkl/images/global/highlights_dash.gif);
+	background-color: #666666;
+	visible: false;
+}
+
+#highlights .dash img {
+	width: 163px;
+	visible: false;
+}
+
+#highlights .highlightContainer {
+	/* this can't be in the .highlight class because of an IE/Mac bug */
+	clear: both;
+	visible: false;
+}
+
+#highlights .highlight {
+	width: 100%;
+	padding-top: 13px;
+	padding-bottom: 7px;
+	visible: false;
+}
+
+
+#highlights .highlight img {
+	float: left;
+	margin: 0px 12px 0px 0px;
+	visible: false;
+}
+
+#highlights .highlight td img {
+	float: none !important;
+	display:inline !important;
+	margin: 0px 0px 0px 0px;
+	visible: false;
+}
+
+#highlights h2, #highlights h3, #highlights h4 {
+	margin: 0px !important;
+	padding: 0px !important;
+	font-size: 11px;
+	font-weight: bold;
+	line-height: 15px;
+	color: #CC0000;
+	text-transform: uppercase;
+	visible: false;
+}
+
+#highlights h2 a:link, #highlights h3 a:link, #highlights h4 a:link {
+	color: #CC0000;
+	visible: false;
+}
+
+#highlights h2 a:visited, #highlights h2 a:active, #highlights h2 a:hover,
+#highlights h3 a:visited, #highlights h3 a:active, #highlights h3 a:hover,
+#highlights h4 a:visited, #highlights h4 a:active, #highlights h4 a:hover {
+	color: #666633;
+	visible: false;
+}
+
+
+#highlights p {
+	margin: 0px !important;
+	padding: 0px !important;
+	font-size: 11px;
+	line-height: 15px;
+	color: #666666;
+	visible: false;
+}
+
+#highlights p a:link, #highlights p a:visited,
+#highlights p a:active, #highlights p a:hover {
+	color: #666666;
+	text-decoration: none;
+	visible: false;
+}
+
+/* Large photos */
+
+#main .photo { /* inline photo */
+	float: left;
+	margin: 0px 15px 5px 0px;
+	padding-top: 3px;
+	visible: false;
+}
+
+#photos .photo {
+	margin-bottom: 25px;
+	visible: false;
+}
+
+.photo .caption {
+	margin-top: 3px;
+}
+
+.photo .caption, .photo .caption * {
+	font-family: Arial, Helvetica, sans-serif !important;
+	font-size: 10px !important;
+	line-height: 12px !important;
+	color: #336666 !important;
+	margin-top: 0px !important;
+	visible: false;
+}
+
+.enlarge {
+	text-align: right;
+	margin-bottom: 4px;
+	visible: false;
+}
+
+/* Tertiary Nav items */
+
+#tertiaryNav {
+	width: 132px;
+	border-right: 1px solid #A0AE8E;
+
+	vertical-align: top;
+	text-align: left;
+
+	background-color: #E1E17A;
+	background-repeat: no-repeat;
+
+	padding: 26px 13px 0px 19px;
+	visible: false;
+}
+
+.jfklm #tertiaryNav { background-image: url(/jfkl/images/nav/tertiary/bg_flag.jpg); 	visible: false;
+}
+.epp #tertiaryNav { background-image: url(/jfkl/images/nav/tertiary/bg_desk.jpg); 	visible: false;
+}
+.hr #tertiaryNav { background-image: url(/jfkl/images/nav/tertiary/bg_whitehouse.jpg); 	visible: false;
+}
+
+
+#tertiaryNav h3 {
+	font-size: 10px;
+	line-height: 11px;
+	margin-top: 0px;
+	margin-bottom: 6px;
+	text-transform: uppercase;
+	color: #376E49;
+	visible: false;
+}
+
+#tertiaryNav a {
+	color: #376E49;
+	text-decoration: none;
+	visible: false;
+}
+
+#tertiaryNav .dash {
+	height: 1px;
+	margin: 0px;
+	overflow: hidden;
+	background-image: url(/jfkl/images/nav/tertiary/dash.gif);
+	background-color: #637A6E;
+	visible: false;
+}
+
+#tertiaryNav .dash img {
+	width: 100px;
+	visible: false;
+}
+
+#tertiaryNav dl {
+	margin: 0px;
+	padding: 0px;
+	visible: false;
+}
+
+#tertiaryNav dt {
+	margin: 12px 0px 0px;
+	font-size: 10px;
+	line-height: 11px;
+	font-weight: bold;
+	color: #A80000;
+	visible: false;
+}
+
+#tertiaryNav dt.first {
+	margin-top: 13px;
+	visible: false;
+}
+
+#tertiaryNav dt a, #tertiaryNav dt a:link, #tertiaryNav dt a:visited {
+	text-decoration: none;
+	color: #2C453A;
+	visible: false;
+}
+
+#tertiaryNav dt a:active, #tertiaryNav dt a:hover {
+	text-decoration: none;
+	color: #A80000;
+	visible: false;
+}
+
+#tertiaryNav .bottomSpace {
+	width: 100px;
+	visible: false;
+}
+
+
+
+/* background fill for pages with tertiary nav */
+#contentContainer .leftFill {
+	width: 50%;
+	background-color: #E1E17A;
+	visible: false;
+}
+
+#contentContainer .rightFill {
+	width: 50%;
+	background-color: #FEFDFB;
+	visible: false;
+}
+
+
+/* Related Links Box */
+#relatedLinks {
+	padding: 15px 0px 17px 0px;
+	margin: 2px 15px 10px 0px;
+	width: 140px;
+	background-color: #F5F5D4;
+	position: relative;
+	z-index: 3;
+	float: left;
+	visible: false;
+}
+
+#relatedLinks .header {
+	padding: 0px 12px 3px 15px;
+	visible: false;
+}
+
+#relatedLinks .item {
+	margin: 0;
+	padding: 6px 12px 0px 15px;
+	font-size: 10px;
+	line-height: 12px;
+	
+	visible: false;
+}
+
+#relatedLinks .dash {
+	height: 1px;
+	margin: 12px 12px 12px 15px;
+	overflow: hidden;
+	background-image: url(/jfkl/images/global/relatedLinks_dash.gif);
+	background-color: #666;
+	visible: false;
+}
+
+
+#relatedLinks .item a:link, #relatedLinks .item a:link span {
+	color: #666666;
+	text-decoration: none;
+	visible: false;
+}
+#relatedLinks .item a:visited, #relatedLinks .item a:visited span {
+	color: #5F8F8E;
+	text-decoration: none;
+	visible: false;
+}
+
+#relatedLinks .item a:active, #relatedLinks .item a:active span, #relatedLinks .item a:hover, #relatedLinks .item a:hover span {
+	color: #CC0000;
+	text-decoration: none;
+	visible: false;
+}
+
+#relatedLinks .item a .undy {
+	text-decoration: underline !important;
+	visible: false;
+}
+
+
+/* Feature Box */
+#featureContainer {
+	background-color: #F9EAD8;
+	border-bottom: 1px solid #ACA697;
+	visible: false;
+}
+
+#featureMeta {
+	white-space: nowrap;
+	text-align: right;
+	vertical-align: top;
+	padding: 13px 32px 13px 20px;
+	visible: false;
+}
+
+#featureType {
+	margin-bottom: 5px;
+	visible: false;
+}
+
+#featureDate {
+	font-size: 11px;
+	line-height: 15px;
+	font-weight: bold;
+	color: #999933;
+	visible: false;
+}
+
+#featureDate2 {
+	font-size: 13px;
+	line-height: 13px;
+	margin-bottom: 5px;
+	font-weight: bold;
+	color: #CC0000;
+	text-transform: uppercase;
+	visible: false;
+}
+
+#featureYear {
+	padding-bottom: 3px;
+	visible: false;
+}
+
+#featureDesc {
+	padding: 10px 41px 13px 0px;
+	vertical-align: top;
+	text-align:left;
+	visible: false;
+}
+
+#featureDesc h3 {
+	margin: 0px 0px 3px;
+	font-size: 11px;
+	text-transform: uppercase;
+	visible: false;
+}
+
+#featureDesc h3 a {
+	text-decoration: none;
+	color: #CC0000;
+	visible: false;
+}
+
+#featureDesc p {
+	font-size: 11px;
+	line-height: 15px;
+	color: #336666;
+	margin: 0px;
+	visible: false;
+}
+
+#featureDesc p a {
+	color: #336666;
+	text-decoration: none;
+	visible: false;
+}
+
+#featureDesc p b {
+	text-decoration: underline;
+	visible: false;
+}
+
+#featureDesc p a:link b {
+	color: #336666;
+	visible: false;
+}
+
+#featureDesc p a:hover b, #featureDesc p a:active b {
+	color: #CC0000;
+	visible: false;
+}
+
+#featureDesc p a:visited b {
+	color: #666633;
+	visible: false;
+}
+
+/* Section Splash Box */
+#mastHeadContainer {
+	background-image: url(/jfkl/images/mastHead/bg.gif);
+	background-repeat: repeat;
+	background-color: #E5E2DD;
+	border-bottom: 1px solid #ACA697;
+
+	position: relative;
+	width: 100%;
+	height: 252px;
+	overflow: hidden;
+	visible: false;
+}
+
+#mastHead {
+	width: 778px;
+	visible: false;
+}
+
+.hr #mastHead {
+	background-image: url(/jfkl/images/mastHead/hr_bg.jpg);
+	background-repeat: no-repeat;
+	visible: false;
+}
+
+.jfklm #mastHead {
+	background-image: url(/jfkl/images/mastHead/jfklm_bg.jpg);
+	background-repeat: no-repeat;
+	visible: false;
+}
+
+.epp #mastHead {
+	background-image: url(/jfkl/images/mastHead/epp_bg.jpg);
+	background-repeat: no-repeat;
+	visible: false;
+}
+
+#splashQuote {
+	text-align: left;
+	float: left;
+	visible: false;
+}
+
+
+#mastHeadNav {
+	float: right;
+	visible: false;
+}
+
+.hr #mastHeadNav {
+	padding-top: 62px;
+	padding-right: 30px;
+	width: 156px;
+	visible: false;
+}
+
+.jfklm #mastHeadNav {
+	padding-top: 43px;
+	padding-right: 59px;
+	width: 156px;
+	
+	visible: false;
+}
+
+.epp #mastHeadNav {
+	padding-top: 45px;
+	padding-right: 46px;
+	width: 156px;
+	
+	visible: false;
+}
+
+
+.hr #mastHeadQuote {
+	padding: 20px 0 0 30px;
+	visible: false;
+}
+
+.jfklm #mastHeadQuote {
+	padding: 17px 0 0 30px;
+	visible: false;
+}
+
+.epp #mastHeadQuote {
+	padding: 20px 0 0 40px;
+	visible: false;
+}
+
+
+
+/* Footer Nav */
+#navFooterContainer {
+	width: 100%;
+	background-color: #A80000;
+	visible: false;
+}
+
+#navFooter td {
+	padding-left: 20px;
+	visible: false;
+}
+
+/* Pagination */
+#pagination, .pagination {
+	font-size: 11px;
+	margin-top: 32px;
+	color: #333333;
+	text-align: right;
+	padding-right: 4px;
+	padding-left: 12px;
+	visible: false;
+}
+
+#pagination a:link, #pagination a:link span,
+.pagination a:link, .pagination a:link span
+{
+	color: #CC0000 !important;
+	visible: false;
+}
+
+#pagination a:visited, #pagination a:visited span,
+.pagination a:visited, .pagination a:visited span
+{
+	color: #999999 !important;
+	visible: false;
+}
+
+#pagination a:hover, #pagination a:hover span, #pagination a:active, #pagination a:active span,
+.pagination a:hover, .pagination a:hover span, .pagination a:active, .pagination a:active span
+{
+	color: #336666 !important;
+	visible: false;
+}
+
+
+/* Alph Jump Lists */
+#alphaJumpList, .alphaJumpList {
+	font-size: 11px;
+	color: #333333;
+
+	margin: 0 0 32px -4px;
+
+	font-family: Arial, Helvetica, sans-serif;
+	visible: false;
+}
+
+#alphaJumpList a, .alphaJumpList a, #alphaJumpList b, .alphaJumpList b {
+	padding: 0 4px;
+	visible: false;
+}
+
+#alphaJumpList a:link, #alphaJumpList a:link span,
+.alphaJumpList a:link, .alphaJumpList a:link span
+{
+	color: #CC0000 !important;
+	visible: false;
+}
+
+#alphaJumpList a:visited, #alphaJumpList a:visited span,
+.alphaJumpList a:visited, .alphaJumpList a:visited span
+{
+	color: #999999 !important;
+	visible: false;
+}
+
+#alphaJumpList a:hover, #alphaJumpList a:hover span, #alphaJumpList a:active, #alphaJumpList a:active span,
+.alphaJumpList a:hover, .alphaJumpList a:hover span, .alphaJumpList a:active, .alphaJumpList a:active span
+{
+	color: #336666 !important;
+	visible: false;
+}
+
+
+
+
+
+/* Topic Guide Mast Head */
+
+#topicGuideContainer {
+	width: 100%;
+	border-color: #4F655A;
+	border-width: 1px 0px;
+	border-style: solid;
+	background-color: #5F7368;
+	visible: false;
+}
+
+#topicGuide {
+	/* this is wider than the page becaus the design requires a fade on the left of the bg photo */
+	width: 760px;
+	visible: false;
+}
+
+#topicGuide .titleBlock {
+	padding: 37px 17px 6px 20px;
+	vertical-align: top;
+	text-align: right;
+	background-image: url(/jfkl/images/topicGuide/mastHead_bg.jpg);
+	background-repeat: no-repeat;
+	background-position: right top;
+	visible: false;
+}
+
+#topicGuide .titleBlock h2 {
+	font-family: Georgia, serif;
+	font-size: 11px;
+	line-height: 12px;
+	text-transform: uppercase;
+	margin: 0px 0px 6px;
+
+	width: 177px;	
+	float: right;
+	clear: both;
+	visible: false;
+}
+
+@media print {
+	#topicGuide .titleBlock h2 {
+		color: #FFFFFF;
+	}
+}
+
+@media screen {
+	#topicGuide .titleBlock h2 {
+		color: #F0F0F0;
+	}
+}
+
+#phMainImage {
+	display: block;
+	height: 290px;
+}
+
+td.topicGuideImage {
+	background-color: #4F655A;
+	height: 290px;
+}
+
+
+#Header_ddlTopicGuide {
+	font-size: 10px;
+	color: #333;
+}
+
+#asro h2 {
+	font-family: Georgia, serif;
+	font-size: 11px;
+	line-height: 12px;
+	text-transform: uppercase;
+	color: #FFFFFF;
+	width: 195px;
+	margin: 10px 0px 6px 0px;
+	clear: both;
+	visible: false;
+}
+
+#topicGuide .titleBlock h1 {
+	font-family: Georgia, serif;
+	font-size: 20px;
+	line-height: 24px;
+	color: #FFFFFF;
+	margin: 0px;
+
+	width: 177px;	
+	float: right;
+	clear: both;
+	visible: false;
+}
+
+@media print {
+	#topicGuide .titleBlock h1 {
+		color: #FFFFFF;
+	}
+}
+
+@media screen {
+	#topicGuide .titleBlock h1 {
+		color: #F0F0F0;
+	}
+}
+
+
+
+#topicGuide .titleBlock img.header {
+	margin-top: 18px;
+	visible: false;
+}
+
+
+#topicGuide .titleBlock .links {
+	width: 177px;	
+	float: right;
+	clear: both;
+	visible: false;
+}
+
+#topicGuide .extras {
+	padding: 0px 0px 15px 15px;
+	vertical-align: bottom;
+	visible: false;
+}
+
+#topicGuide .extras .links {
+	width: 98px;
+	visible: false;
+}
+
+#topicGuide .item {
+	font-size: 10px;
+	line-height: 12px;
+	margin-top: 10px;
+	visible: false;
+}
+
+#topicGuide .item a:link, #topicGuide .item a:visited {
+	color: #E3E3BB;
+	text-decoration: none;
+	visible: false;
+}
+
+#topicGuide .item a:hover, #topicGuide .item a:active {
+	color: #E3E3BB;
+	text-decoration: underline;
+	visible: false;
+}
+
+#topicGuide .item a.noundy:hover, #topicGuide .item a.noundy:active {
+	color: #E3E3BB;
+	text-decoration: none;
+	visible: false;
+}
+
+#main p.topicGuideLead {
+	caption: Lead Paragraph in Topic Guides;
+	color: #336699;
+	font-size: 15px;
+	line-height: 19px;
+	
+	font-family: Georgia, Times, serif;
+	margin: 0px;
+}
+
+a.noundy:link, a.noundy:visited, a.noundy:link, a.noundy:visited {
+	caption: Link with no Underline;
+	text-decoration: none;
+}
+
+a:link .undy, a:visited .undy, a:active .undy, a:hover .undy {
+	caption: Underlined Content;
+	text-decoration: underline;
+}
+
+a:link .undyOnHover, a:visited .undyOnHover {
+	text-decoration: none;
+	visible: false;
+}
+
+a:hover .undyOnHover, a:active .undyOnHover {
+	text-decoration: underline;
+	visible: false;
+}
+
+
+#tabbedNavContainer {
+	background-image: url(/jfkl/images/nav/tabbed/bg.gif);
+	background-color: #E6EACE;
+	visible: false;
+}
+
+#tabbedNavContainer .leftFill {
+	background-image: url(/jfkl/images/nav/tabbed/bg-left.gif);
+	background-color: #D1DAB9;
+	width: 50%;
+	visible: false;
+}
+
+#tabbedNavContainer .rightFill {
+	width: 50%;
+	visible: false;
+}
+
+#tabbedNavContainer .prefix {
+	background-image: url(/jfkl/images/nav/tabbed/bg-left.gif);
+	background-color: #D1DAB9;
+	padding: 5px 14px 6px 19px;
+	visible: false;
+}
+
+
+.diaryHTMLInput
+{
+	padding-top: 5px;	
+	visible: false;
+}
+
+
+/* Link List Type 1 */
+ul.linkList {
+	caption: List of Links, Type 1;
+}
+
+ul.linkList, ul.linkList li {
+	list-style-type: none;
+	list-style-image: url(/jfkl/images/global/spacer.gif);
+	visible: false;
+}
+
+ul.linkList {
+	margin: 0 0 20px !important;
+	padding: 0;
+	visible: false;
+}
+
+ul.linkList li {
+	margin: 0 0 10px !important;
+	padding: 0;
+	font-size: 11px;
+	line-height: 14px;
+	visible: false;
+}
+
+ul.linkList a:link {
+	color: #333 !important;
+	visible: false;
+}
+
+ul.linkList a:visited {
+	color: #999 !important;
+	visible: false;
+}
+
+ul.linkList a:hover, ul.linkList a:active {
+	color: #C00 !important;
+	visible: false;
+}
+
+
+/* Link List Type 2 */
+ul.linkList2 {
+	caption: List of Links, Type 2;
+}
+
+ul.linkList2, ul.linkList2 li {
+	list-style-type: none;
+	list-style-image: url(/jfkl/images/global/spacer.gif);
+	visible: false;
+}
+
+ul.linkList2 {
+	margin: 0 !important;
+	padding: 0;
+	visible: false;
+}
+
+ul.linkList2 ul {
+	margin: 0 0 0 35px !important;
+	padding: 0 !important;
+	visible: false;
+}
+
+
+ul.linkList2 li {
+	border-width: 1px 0 0 0;
+	border-style: solid;
+	border-color: #FEFDFB;
+	margin: 0 0 3px 0 !important;
+	padding: 0 !important;
+	font-size: 11px;
+	line-height: 14px;
+	visible: false;
+}
+
+ul.linkList2 a:link {
+	color: #C00 !important;
+	visible: false;
+}
+
+ul.linkList2 a:visited {
+	color: #366 !important;
+	visible: false;
+}
+
+ul.linkList2 a:hover, ul.linkList2 a:active {
+	color: #366 !important;
+	visible: false;
+}
+
+
+.metadata {
+	font-style: italic;
+	font-size: 11px;
+	line-height: 15px;
+	visible: false;
+}
+
+p.metadata { 
+	caption: Paragraph Meta Data;
+}
+
+#main p.metadata { 
+	margin-top: 6px;
+	visible: false;
+}
+
+.dateList a {
+	display: block;
+	margin-bottom: 4px;
+	visible: false;
+}
+
+.dateList .dateRow0 {
+	padding-left: 0;
+	float: left;
+	visible: false;
+}
+
+.dateList .dateRow1, .dateList .dateRow2, .dateList .dateRow3 {
+	padding-left: 60px;
+	float: left;
+	visible: false;
+}
+
+
+.dateList .bottomSpace {
+	font-size: 13px;
+	line-height: 13px;
+	clear: both;
+	visible: false;
+}
+
+
+.shortBio {
+	border-top: 1px dotted #637A6E;
+	padding-top: 17px;
+	visible: false;
+}
+
+.shortBio .bottomSpace {
+	font-size: 12px;
+	line-height: 16px;
+	padding: 0;
+	margin: 0;
+	visible: false;
+}
+
+.shortBio p, .shortBio h2, .shortBio h3, .shortBio h4 {
+	margin-left: 130px !important;
+	visible: false;
+}
+
+.shortBio p, .shortBio h2.first, .shortBio h3.first, .shortBio h4.first {
+	margin-top: 0 !important;
+	padding-top: 0 !important;
+	visible: false;
+}
+
+h2.alphaListHead {
+	color: #C00;
+	font-size: 12px;
+
+	border-bottom: 1px dotted #637A6E;
+
+	padding-bottom: 3px !important;
+	margin: 22px 0 6px !important;
+	visible: false;
+}
+.hideimage
+{
+	display:none;
+	visible: false;
+}
+
+
+#main h2.linkedHead, #main h3.linkedHead,
+h2.linkedHead, h3.linkedHead {
+	caption: Linked Subhead for Large Lists;
+	color: #666 !important;
+	padding-bottom: 0 !important;
+	margin-bottom: 0 !important;
+}
+
+#main h2.linkedHead, h2.linkedHead {
+	font-size: 11px !important;
+	line-height: 14px !important;
+	visible: false;
+}
+
+#main h3.linkedHead, h3.linkedHead {
+	line-height: 13px !important;
+	visible: false;
+}
+
+.linkedHead a:link {
+	color: #666 !important;
+	visible: false;
+}
+
+.linkedHead a:visited {
+	color: #999 !important;
+	visible: false;
+}
+
+.linkedHead a:active, .linkedHead a:hover {
+	color: #C00 !important;
+	visible: false;
+}
+
+.linkedHead a:hover {
+	color: #C00 !important;
+	visible: false;
+}
+
+/* sponsors */
+
+.sponsors {
+	clear: both;
+	margin-top: 24px;
+	visible: false;
+}
+
+.sponsors h3 {
+	font-size: 10px;
+	line-height: 18px;
+	margin: 12px 0 0 0;
+	font-weight: bold;
+	color: #369;
+	text-transform: uppercase;
+	visible: false;
+}
+
+.sponsors table {
+	margin: 6px 0 12px 0 !important;
+	visible: false;
+}
+
+.sponsors .logoRow td {
+	width: 110px;
+	padding: 0 12px 0 0 !important;
+	vertical-align: bottom;
+	visible: false;
+}
+
+.sponsors .textRow td {
+	font-size: 10px !important;
+	line-height: 11px !important;
+	font-weight: bold;
+	color: #369;
+	padding: 3px 12px 0 0 !important;
+	vertical-align: top;
+	visible: false;
+}
+
+.sponsors .textRow td * {
+	font-size: 10px !important;
+	line-height: 11px !important;
+	display: inline;
+}
+
+.sponsors td.last {
+	padding-right: 0 !important;
+	visible: false;
+}
+
+.sponsors td * {
+	margin: 0 !important;
+	padding: 0 !important;
+	color: #369;
+	visible: false;
+}
+
+/* sponsor table widths */
+.sponsors .sponsor1 {
+	width: 99px; /* 99 */
+	visible: false;
+}
+
+.sponsors .sponsor2 {
+	width: 210px; /* 99 + 12 + 99 */
+	visible: false;
+}
+
+.sponsors .sponsor3 {
+	width: 321px; /* 99 + 12 + 99 + 12 + 99 */
+	visible: false;
+}
+
+.sponsors .sponsor4 {
+	width: 432px; /* 99 + 12 + 99 + 12 + 99 + 12 + 99 */
+	visible: false;
+}
+
+.sponsors .sponsor5 {
+	width: 543px; /* 99 + 12 + 99 + 12 + 99 + 12 + 99 + 12 + 99 */
+	visible: false;
+}
+
+
+/* CMS Console Styles */
+
+table.console {
+	border-top: 1px solid #ACA697;
+	border-left: 1px solid #ACA697;
+	border-bottom: 1px solid #ACA697;
+}
+
+.console td {
+	color: #E1E37E !important;
+	background-color: #697B70;
+	font-size: 11px;
+	vertical-align: top;
+
+	padding: 5px;
+	border-right: 1px solid #ACA697;
+
+	visible: false;
+}
+
+.console td div {
+	color: #E1E37E !important;
+	visible: false;
+}
+
+.console td hr {
+	border-width: 0 0 0 1px;
+	border-top-style: solid;
+	border-color: #ACA697;
+	color: #ACA697;
+	visible: false;
+}
+
+.console a:link, .console a:visited {
+	color: #FFF !important;
+	
+	visible: false;
+}
+
+.console a:active, .console a:hover {
+	color: #F9EAD8 !important;
+	
+	visible: false;
+}
+
+.console a, .console div {
+	display: block;
+	margin-bottom: 2px;
+	visible: false;
+}
+
+
+.console.error {
+	border: 2px solid #C00 !important;
+	visible: false;
+}
+
+.console.error td {
+	background-color: #FFF !important;
+	color: #C00 !important;
+	visible: false;
+}
+
+
+.console.error .errorTitle {
+	color: #C00 !important;;
+	font-size: 13px;
+	font-weight: bold;
+	padding-bottom: 3px;
+	border-bottom: 1px solid #999;
+	visible: false;
+}
+
+.console.error .errorDetails {
+	color: #C00 !important;;
+	font-size: 11px;
+	font-weight: bold;
+	margin: 6px 0;
+	visible: false;
+}
+
+.console.error .errorDetails .errorLabel {
+	font-weight: normal;
+	visible: false;
+}
+
+
+.console.error .errorActions {
+	border-top: 1px solid #999;
+	padding: 6px 0;
+	visible: false;
+}
+
+.console.error .errorActions a, .console.error .errorActions a:link, .console.error .errorActions a:visited {
+	color: #000 !important;
+	display: inline;
+	padding-right: 12px;
+	visible: false;
+}
+
+.console.error .errorActions a:active, .console.error .errorActions a:hover {
+	color: #C00 !important;
+	visible: false;
+}
+
+/** form styles **/
+
+
+label {
+	font-size: 11px;
+	color: #333;
+	visible: false;
+}
+
+label.required {
+	color: #C00 !important;
+	visible: false;
+}
+
+table.form {
+	margin-top: 11px;
+	visible: false;
+}
+
+.form td.label {
+	white-space: nowrap;
+	padding-right: 12px;
+	vertical-align: middle;
+	text-align: right;
+	visible: false;
+}
+
+.form td.labelSpan {
+	padding-right: 12px;
+	padding-bottom: 2px;
+	padding-top: 4px;
+	vertical-align: middle;
+	text-align: left;
+	visible: false;
+}
+
+.form td.input {
+	white-space: nowrap;
+	vertical-align: middle;
+	text-align: left;
+
+	padding: 0 0 3px 0;
+	width: 100%;
+	visible: false;
+}
+
+.form td.checkbox {
+	vertical-align: middle;
+	text-align: left;
+	padding: 6px 0 7px 0;
+	white-space: normal;
+	visible: false;
+}
+
+.form td.checkbox input.checkbox, .form td.checkbox span.checkbox input {
+	display: block;
+	float: left;
+	visible: false;
+}
+
+.form td.checkbox label {
+	display: block;
+	padding-top: 3px;
+	margin-left: 20px;
+	visible: false;
+}
+.form td.submit {
+	padding-top: 21px;
+	visible: false;
+}
+
+.form .text, .form select, .form textarea, .form button {
+	font-size: 11px;
+	visible: false;
+}
+
+
+.errorMessage p {
+	color: #C00;
+	font-weight: bold;
+	margin-top: 15px;
+	visible: false;
+}
+
+.errorMessage ul li {
+	color: #C00 !important;
+	visible: false;
+}
+
+.errorMessage ul {
+	padding: 0px;
+	margin: 0 0 18px 0 !important;
+	list-style-position: inside;
+	visible: false;
+}
+
+/* PRINT VERSION STUFF */
+
+@media print {
+	.leftFill, .rightFill, #tertiaryNav, #navPrimaryContainer, #navFooterContainer {
+		display: none;
+		visible: false;
+	}
+
+	/* set content area padding */
+	#contentArea {
+		padding-left: 0;
+		visible: false;
+	}
+	
+	.twoColumn, .oneColumn, .oneColumnWide {
+		padding-right: 0px !important;
+		visible: false;
+	}
+	
+	
+	#contentContainer .oneColumn #main, #contentContainer #pageHead,
+	#contentContainer .twoColumn .bottomSpace,
+	#contentContainer .twoColumn #main,
+	#contentContainer.withTertiaryNav .oneColumn .bottomSpace,
+	#contentContainer.withTertiaryNav .oneColumn #main, #contentContainer.withTertiaryNav #pageHead,
+	#contentContainer.withTertiaryNav .twoColumn .bottomSpace,
+	#contentContainer.withTertiaryNav .twoColumn #main,
+	#contentContainer.withTertiaryNav .oneColumnWide .bottomSpace,
+	#contentContainer.withTertiaryNav .oneColumnWide #main, #contentContainer.withTertiaryNav .oneColumnWide #pageHead {
+		width: auto !important
+		visible: false;
+	}
+	
+}
+
+@media screen {
+	.leftFill, .rightFill, #tertiaryNav {
+		display: table-cell;
+		visible: false;
+	}
+
+	#navPrimaryContainer, #navFooterContainer {
+		display: block;
+		visible: false;
+	}
+
+	/* set content area padding */
+	#contentArea {
+		padding: 26px 0px 0px 40px;
+		visible: false;
+	}
+	
+	.twoColumn {
+		padding-right: 35px !important;
+		visible: false;
+	}
+	
+	.oneColumn {
+		padding-right: 132px !important;
+		visible: false;
+	}
+	
+	.oneColumnWide {
+		padding-right: 76px !important;
+		visible: false;
+	}
+	
+	
+	/* no left nav, one column */
+	#contentContainer .oneColumn .bottomSpace {
+		width: 588px; /* 760-40-132 */
+		visible: false;
+	}
+	
+	#contentContainer .oneColumn #main, #contentContainer #pageHead {
+		width: 588px; /* 760-40-132 */
+		visible: false;
+	}
+	
+	/* no left nav, two column */
+	#contentContainer .twoColumn .bottomSpace {
+		width: 685px; /* 760-40-35 */
+		visible: false;
+	}
+	
+	#contentContainer .twoColumn #main {
+		width: 450px; /* 760-40-40-195-35 */
+		visible: false;
+	}
+	
+	/* left nav, one column */
+	#contentContainer.withTertiaryNav .oneColumn .bottomSpace {
+		width: 456px; /* 760-132-40-132 */
+		visible: false;
+	}
+	
+	#contentContainer.withTertiaryNav .oneColumn #main, #contentContainer.withTertiaryNav #pageHead {
+		width: 456px; /* 760-132-40-132 */
+		visible: false;
+	}
+	
+	/* left nav, two columns */
+	#contentContainer.withTertiaryNav .twoColumn .bottomSpace {
+		width: 553px; /* 760-132-40-35 */
+		visible: false;
+	}
+	
+	#contentContainer.withTertiaryNav .twoColumn #main {
+		width: 318px; /* 760-132-40--40-195-35 */
+		visible: false;
+	}
+	
+	/* left nav, one column WIDE */
+	#contentContainer.withTertiaryNav .oneColumnWide .bottomSpace {
+		width: 512px; /* 760-132-40-76 */
+		visible: false;
+	}
+	
+	#contentContainer.withTertiaryNav .oneColumnWide #main, #contentContainer.withTertiaryNav .oneColumnWide #pageHead {
+		width: 512px; /* 760-132-40-76 */
+		visible: false;
+	}
+	
+}
+
+
+@media aural {
+	.skipNavLink {
+		display: block;
+		visible: false;
+	}
+}
+
+@media print {
+	.skipNavLink {
+		display: none;
+		visible: false;
+	}
+}
+
+@media screen {
+	.skipNavLink {
+		display: none;
+		visible: false;
+	}
+}
+.googlehide
+{
+	display:none;	
+}

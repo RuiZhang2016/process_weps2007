@@ -1,0 +1,543 @@
+/* Scout Portal Toolkit Stylesheet */
+img { display: block; }
+body {
+    margin: 3px; /* Sets a margin of 3px around body.*/ 
+    font-size: 13px;
+    font-family: verdana, arial, helvetica, sans-serif;
+    }
+
+/* this redefines the font size and family for common text elements */
+div, span, h2, h1, h3, h4, h5, h6, ol, li, ul, form, td, p, .content, dt, dd {
+    font-family: verdana, arial, helvetica, sans-serif;
+    font-size: 13px
+   }
+
+input, select {
+    /* font-size within input and select boxes */
+    font-size: 11px; 
+    }
+dd {margin-bottom: 15px;}
+dl {margin-left: 20px;}
+dt {font-weight: bold;}
+
+#Limits select
+{
+	width: 150px;
+}
+
+.MDTNavCell {
+	background: white;
+	display: block
+	}
+
+/* Links in MDSideNav */
+.MDTNav {
+	display: block; 
+	border: 1px dotted #F90;
+	width: 132px;
+	background: white;
+	}
+
+/* links in navigation */
+.navlink {
+    font-family: verdana, arial, helvetica, sans-serif;
+    text-decoration: none;
+    font-size: 12px;
+    padding: 1px;
+    color: #600
+    }
+
+/* headline color and font-size, font-family declared above */    
+h1, .header {
+    font-size: 19px;
+    color: #600;
+    margin: 0px;
+    }
+
+h2 {
+    font-size: 17px;
+    color: #600;
+    margin: 0px;
+    }
+
+h3 {
+    font-size: 15px;
+    color: #600;
+    margin: 0px;
+    }
+
+/* styles for numbered lists, second two are for nested lists */
+OL {list-style-type: upper-alpha}
+OL OL { list-style-type: decimal}    
+OL OL OL { list-style-type: lower-alpha }
+
+.content {
+    padding: 5px
+    }
+    
+/* input and select characteristics within content block */
+.content input, select { 
+    font-family: verdana, arial, helvetica, sans-serif;
+    }
+
+#userloginfield {margin: 3px}
+
+/* These control the colors used on the SPT pages */
+
+   /* Color used in MetadataTool headers */     
+.colorHeader, .MDTable td.colorHeader {
+        background-color: #F7E8AA;
+        }
+
+   /* Color used in some table headers */     
+.SPTcolorHeader {
+        background-color: #EEEECC;
+        }
+
+   /* Light color used in content boxes */     
+.lightBody {
+        background-color: #F5F5F5;
+        }
+
+/* error messsage formatting */
+.ErrorMessage {
+    color: 660000;
+    font-size: 13px;
+    }
+
+a {color: #002277}
+
+/* option for medium sized font */
+.medium {
+    font-size: 13px;
+    font-family: verdana, arial, helvetica, sans-serif;
+    }
+
+/* small font, used in search boxes in nav */
+.small {
+    font-size: 11px;
+    font-family: verdana, arial, helvatica, sans-serif;
+    }
+
+/* news and announcements */
+.AnnouncementHeadline {
+    font-size: 14px;
+    font-weight: bold;
+    font-family: verdana, arial, helvetica, sans-serif;
+    margin-left: 13px;
+    margin-right: 13px;
+    }
+.AnnouncementInfo {
+    font-size: 9px;
+    color: #333;
+    font-family: verdana, arial, helvetica, sans-serif;
+    margin-left: 13px;
+    margin-right: 13px;
+    }
+.AnnouncementText {
+    font-size: 12px;
+    font-family: verdana, arial, helvetica, sans-serif;
+    margin-left: 13px;
+    margin-right: 13px;
+    margin-top: 8px;
+    margin-bottom: 18px;
+    }
+
+/* resource listings */
+.Resource {
+	margin: 5px 5px 15px 0px;
+	}
+.ResourceTitle {
+    font-size: 12px;
+    font-weight: bold;
+    font-family: verdana, arial, helvetica, sans-serif;
+    color: #003;
+    }
+.ResourceTitle:link {
+    font-size: 12px;
+    font-weight: bold;
+    font-family: verdana, arial, helvetica, sans-serif;
+    color: #003;
+    text-decoration: none;
+    }
+.ResourceTitle:visited {
+    font-size: 12px;
+    font-weight: bold;
+    font-family: verdana, arial, helvetica, sans-serif;
+    color: #633;
+    text-decoration: none;
+    }
+.ResourceTitle:HOVER {
+    font-size: 12px;
+    font-weight: bold;
+    font-family: verdana, arial, helvetica, sans-serif;
+    color: #006;
+    text-decoration: underline;
+    }
+.ResourceInfo {
+    font-size: 11px;
+    font-family: verdana, arial, helvetica, sans-serif;
+    color: #333333;
+	margin: 0px 13px 0px 13px;
+    }
+.ResourceText {
+    font-size: 12px;
+    font-family: verdana, arial, helvetica, sans-serif;
+	margin: 3px 13px 3px 13px;
+    }
+.ResourceLink {
+    font-size: 11px;
+    font-family: verdana, arial, helvetica, sans-serif;
+    color: #333333;
+    text-decoration: none;
+	}
+.ResourceLink a:HOVER {
+    font-size: 11px;
+    font-family: verdana, arial, helvetica, sans-serif;
+    color: #333333;
+    text-decoration: underline;
+    }
+.ThumbnailImage
+{
+    margin: 3px;
+}
+    
+
+/* browsing interface */
+.BrowsePageHeading {
+    font-size: 19px;
+    font-weight: bold;
+    font-family: verdana, arial, helvetica, sans-serif;
+    color: #600;
+    text-align: center;
+    text-decoration: none;
+    }
+.BrowsePageClassHeading {
+    font-size: 16px;
+    font-weight: bold;
+    font-family: verdana, arial, helvetica, sans-serif;
+    color: #000000;
+    text-align: center;
+    text-decoration: none;
+    }
+.BrowsePageClassHeading:HOVER {
+    font-size: 16px;
+    font-weight: bold;
+    font-family: verdana, arial, helvetica, sans-serif;
+    color: #000000;
+    text-align: center;
+    text-decoration: underline;
+    }
+.BrowsePageSectionHeading {
+    font-size: 16px;
+    font-family: verdana, arial, helvetica, sans-serif;
+    color: #000000;
+    text-align: left;
+    text-decoration: none;
+    }
+.BrowsePageInfoHeading {
+    font-size: 12px;
+    font-family: verdana, arial, helvetica, sans-serif;
+    color: #000000;
+    text-align: center;
+    }
+.BrowseAlphaLinks {
+    font-size: 16px;
+    font-weight: bold;
+    font-family: verdana, arial, helvetica, sans-serif;
+    color: #000000;
+    text-align: center;
+    }
+.BrowseClassificationEntry {
+    font-size: 12px;
+    font-family: verdana, arial, helvetica, sans-serif;
+    color: #000000;
+    margin-left: 0px;
+    margin-right: 0px;
+    margin-top: 2px;
+    margin-bottom: 2px;
+    }
+.BrowseResourceEntry {
+    font-size: 12px;
+    font-family: verdana, arial, helvetica, sans-serif;
+    color: #000000;
+    margin-left: 0px;
+    margin-right: 0px;
+    margin-top: 2px;
+    margin-bottom: 2px;
+    }
+
+/* dates for front page areas, not currently used */
+.dates {
+    font-size: 13px;
+    padding: 5px;
+    font-family: verdana, arial, helvetica, sans-serif;
+    color: #000544;
+    font-weight: bold;
+    }
+
+/* copyright information at bottom of each page */
+.TopNBottom	{
+    font-family: verdana, arial, helvetica, sans-serif;
+    font-size: 11px;
+    color: #333333
+    }
+
+/* links in forum topic area */    
+a.topic	{
+    font-family: verdana, arial, helvetica, sans-serif;
+    padding: 4px;
+    font-weight: bold;
+    font-size: 14px
+    }
+
+/* bellow are styles governing the display of search results */
+.Index {
+    font-family: verdana, arial, helvetica, sans-serif;
+    font-size: 12px;
+    }
+
+.Title {
+    font-family: verdana, arial, helvetica, sans-serif;
+    font-size: 13px;
+    font-weight: bold;
+    }
+
+.PublicationDate {
+    font-family: verdana, arial, helvetica, sans-serif;
+    font-size: 11px;
+    font-weight: bold;
+    }
+
+.ResultsBody {
+    font-family: verdana, arial, helvetica, sans-serif;
+    font-size: 12px;
+    }
+
+.URL {
+    font-family: verdana, arial, helvetica, sans-serif;
+    font-size: 12px;
+    margin: 7px;
+    color: #555555;
+    }
+
+/* forum Styles */    
+.Forum th, .ForumTable th, th.ForumThColor
+{
+	color: white;
+	font-size: 11px;
+	font-weight: bold;
+	text-align: left;
+	font-family: arial, helvetica, sans-serif;
+	margin: 0px;
+}
+
+.ForumThColor, .ForumTable td.ForumThColor
+{
+	background-color: #660000;
+}
+
+
+.Forum th a, .ForumTable th a, th.ForumThColor a
+{
+	color: white;
+	font-weight: bold;
+	background-color: #600;
+	margin: 0px;
+}
+
+th.light, .ForumTable th.light
+{
+
+	background-color: #930;
+	text-align: center;
+	color: white;
+	font-size: 11px;
+	font-weight: bold;
+	font-family: arial, helvetica, sans-serif;
+	padding: 0px 3px 0px 3px;
+
+}
+
+.ForumTable td, .MessageTable td
+{
+	font-family: arial, helvetica, sans-serif;
+	font-size: 11px;
+	color: #333;
+	vertical-align: top;
+	background-color: #EEE
+}
+
+.ForumTable
+{
+	background-color: white;
+	border: 0px;
+	margin-bottom: 3px;
+}
+
+.MessageTable
+{
+	background-color: white;
+	border: 0px;
+	margin-bottom: 3px;
+	border-color: #930;
+	border-width: 2px 0px 2px 0px;
+	border-style: solid none solid none;
+}
+
+.ForumDescription
+{ 
+	font-size: 12px;
+	line-height: 16px;
+}
+
+.TopicDescription
+{
+	font-size: 12px;
+	line-height: 18px;
+	border-color: #930;
+	border-width: 0px 0px 1px 0px;
+	border-style: none none solid none;
+}
+
+.MessageSubject
+{
+	border-color: #930;
+	border-width: 0px 0px 1px 0px;
+	border-style: none none solid none;
+}
+
+.MessageFoot
+{
+	border-color: #930;
+	border-width: 1px 0px 0px 0px;
+	border-style: solid none none none;
+}
+
+
+a.head
+{
+	font-size: 13px;
+	color: #C30;
+	font-weight: bold;
+}
+
+a.topic
+{
+	font-size: 12px;
+	color: #C30;
+	font-weight: bold;
+}
+
+.ForumDescription a, .TopicDescription a 
+{
+	color: #C30;
+	text-decoration: none;
+}
+
+.MessageBody
+{
+	font-size: 12px;
+	padding: 5px;
+}
+
+
+.DBEditorTable th.FieldSection, th.FieldSection h2
+{
+	background-color: #600;
+	color: white;
+}
+
+.DBEditorTable th, th.DBEth
+{
+	color: white;
+	font-size: 11px;
+	font-weight: bold;
+	text-align: left;
+	font-family: arial, helvetica, sans-serif;
+	background-color: #930;
+	vertical-align: top;
+}
+
+.DBEditorTable th.light, th.light a
+{
+	background-color: #CCC;
+	text-align: left;
+	color: black;
+	font-size: 11px;
+	font-weight: bold;
+	font-family: arial, helvetica, sans-serif;
+	padding: 0px 3px 0px 3px;
+	vertical-align: middle;
+}
+.DBEditorTable td
+{
+	font-family: arial, helvetica, sans-serif;
+	font-size: 11px;
+	color: #333;
+	vertical-align: top;
+	background-color: #EEE;
+}
+
+.DBEditorTable
+{
+	background-color: white;
+	border: 0px;
+	margin-bottom: 3px;
+}
+
+#DBAdd
+{
+	border-top: 2px solid #006;
+	border-bottom: 1px solid #006;
+}
+
+#DBAdd td.divider hr
+{
+	height: 1px;
+	margin: 0px;
+	background-color: #006;
+}
+
+#DBAdd td
+{
+	vertical-align: middle;	
+}
+
+.MDTable
+{
+	background-color: white;
+	border: 0px;
+}
+
+.MDTable td
+{
+	font-family: arial, helvetica, sans-serif;
+	font-size: 12px;
+	color: #222;
+	vertical-align: top;
+	background-color: #f5f5f5;
+}
+
+
+.MDTable th
+{
+	text-align: right;
+	vertical-align: top;
+	font-weight: normal;
+	font-size: 12px;
+	background-color: #EEE;
+}
+
+div.editbutton
+{
+    float: right;
+    width: 15%;
+    margin: 2px;
+    background-color: #f5f5f9;
+    border: 1px solid #c8c6d1;
+}
+
+/* The following will be hidden from IE 5 mac \*/
+div.editbutton { width: auto; }
+/* Now IE 5 mac can see again */ 

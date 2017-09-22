@@ -1,0 +1,171 @@
+# If we wish to exclude bots, we can with:
+
+#User-agent: UserAgentName
+#Disallow:
+
+# And we will, for this one:
+User-agent: NextGenSearchBot
+Disallow: /
+
+#This is to tell Yahoo Slurp to only come back as often as 10 seconds in hopes it will lessen our server loads.
+#User-agent: Slurp
+#Crawl-delay: 10
+
+# HG Sites (sans Consumer, Public, AboutUs, and Products)
+User-agent: *
+Disallow: /Videos/
+Disallow: /Medizine/
+Disallow: /Rmn/
+Disallow: /WebTv/
+Disallow: /Sleepsolution/
+Disallow: /Professional/
+Disallow: /logos/
+Disallow: /geoaccess/
+Disallow: /kgw/
+Disallow: /discoveryhealth/
+Disallow: /hcpc/
+Disallow: /leapfrog/
+Disallow: /Albertsons/
+Disallow: /xmldemo/
+Disallow: /ge/
+Disallow: /IBSYS/
+Disallow: /Hgmain/
+Disallow: /sales/
+Disallow: /W3C/
+Disallow: /qualitynet/
+Disallow: /bcbsmn/
+Disallow: /mbgh/
+Disallow: /Providence/
+Disallow: /qualityguidesuite/
+Disallow: /Hewitt/
+Disallow: /dataselection/
+Disallow: /HGcompany/
+Disallow: /towersperrin/
+Disallow: /apwu/
+Disallow: /Advisen/
+Disallow: /MOO/
+Disallow: /Honeywell/
+Disallow: /HealthSolutions/
+Disallow: /BPM/
+Disallow: /Riverside/
+Disallow: /btauxdir/
+Disallow: /useragreement/
+Disallow: /Towers/
+Disallow: /Christus/
+Disallow: /Physicians/
+Disallow: /IBX/
+
+# Disallow consumer javascript and css folders
+Disallow: /Consumer/styles/
+Disallow: /Consumer/scripts/
+Disallow: /sites/custom/Consumer/styles/
+Disallow: /sites/custom/Consumer/scripts/
+
+# Disallow all the files in the root directory (except for the defaults)
+Disallow: 404_template.html
+Disallow: agent_test.cfm
+Disallow: agreement.cfm
+Disallow: application.cfm
+Disallow: application_down.html
+Disallow: Dispatcher.js
+Disallow: Dispatcher.vbs
+Disallow: DispatcherConferenceCall.js
+Disallow: DispatcherDHP.js
+Disallow: enter.html
+Disallow: enterbut.gif
+Disallow: error.cfm
+Disallow: help.gif
+Disallow: iisstart.asp
+Disallow: localstart.asp
+Disallow: maintenance.cfm
+Disallow: mmc.gif
+Disallow: mqinterconnect.ini
+Disallow: mqinterconnect.lic
+Disallow: mqinterconnect_error.log
+Disallow: mqtriplus.ini
+Disallow: mqtriplus.lic
+Disallow: OnRequestEnd.cfm
+Disallow: ourheafriends.html
+Disallow: pagerror.gif
+Disallow: print.gif
+Disallow: read_me.html
+Disallow: robots.old
+Disallow: rogue_session.cfm
+Disallow: SessionTest.cfm
+Disallow: splash.swf
+Disallow: splash_bottom.swf
+Disallow: splash_bottom_dhp.swf
+Disallow: splash_bottom_phys.swf
+Disallow: splash_bottom_phys2.swf
+Disallow: splash_bottom3.swf
+Disallow: splash_header.swf
+Disallow: warning.gif
+Disallow: web.gif
+Disallow: win2000.gif
+
+# User-agent specific sections:
+
+User-agent: MSNBot
+Disallow: /consumer/
+Disallow: /aboutus/
+Disallow: /Discoveryhealth/
+Disallow: /Employers/
+Disallow: /HospitalExecutives/
+Disallow: /Nhrc/
+Disallow: /Physician/
+Disallow: /Healthplans/
+Disallow: /Businesssolutions/
+Disallow: /Public/
+Disallow: /Products/
+Disallow: /Hcpc/
+Disallow: /Prc/
+Disallow: /Professional/
+Disallow: /Hrc/
+Disallow: /PressRoom/
+Disallow: /InvestorRelations/
+Disallow: /LiabilityInsurers/
+
+# AFTA 2294: Voyager/1.0 addition
+# see http://www.kosmix.com/html/crawler.html
+User-agent: voyager/1.0
+Disallow: /consumer/
+Disallow: /aboutus/
+Disallow: /Discoveryhealth/
+Disallow: /Employers/
+Disallow: /HospitalExecutives/
+Disallow: /Nhrc/
+Disallow: /Physician/
+Disallow: /Healthplans/
+Disallow: /Businesssolutions/
+Disallow: /Public/
+Disallow: /Products/
+Disallow: /Hcpc/
+Disallow: /Prc/
+Disallow: /Professional/
+Disallow: /Hrc/
+Disallow: /PressRoom/
+Disallow: /InvestorRelations/
+Disallow: /LiabilityInsurers/
+
+# kosmix.com's docs unclear as to whether the user-agent 
+# is "voyager" or "voyager/1.0" so including both:
+User-agent: voyager
+Disallow: /consumer/
+Disallow: /aboutus/
+Disallow: /Discoveryhealth/
+Disallow: /Employers/
+Disallow: /HospitalExecutives/
+Disallow: /Nhrc/
+Disallow: /Physician/
+Disallow: /Healthplans/
+Disallow: /Businesssolutions/
+Disallow: /Public/
+Disallow: /Products/
+Disallow: /Hcpc/
+Disallow: /Prc/
+Disallow: /Professional/
+Disallow: /Hrc/
+Disallow: /PressRoom/
+Disallow: /InvestorRelations/
+Disallow: /LiabilityInsurers/
+

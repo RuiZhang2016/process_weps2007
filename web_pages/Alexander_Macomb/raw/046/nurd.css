@@ -1,0 +1,129 @@
+/* Sets the background for the page */
+body { background-color: #888888;
+       background-image: url("images/background.png");
+       background-position: top left;
+       background-repeat: no-repeat;
+       background-attachment: fixed;
+       color: #000000; }
+
+/* Set the link coloring for the page */
+a { color: #000000;
+    text-decoration: underline;
+    background-color: transparent;
+    font-weight: bold; }
+a:hover { color: #000000;
+          text-decoration: underline;
+          background-color: #204080;
+          font-weight: bold; }
+a:active { color: #FFFFFF;
+           text-decoration: none;
+           background-color: #204080;
+           font-weight: bold; }
+
+/* Remove borders around images */
+img { border-width: 0px; }
+
+/* Define a class for the navigation icons */
+.Icon { position: absolute;
+        background-color: #204080;
+        border-width: 1px;
+        border-style: solid;
+        border-color: #000000;
+        padding: 4px; }
+
+/* Make the navigation links image sized */
+.Icon a { width: 128px;
+          height: 128px;
+          display: block;
+          background-position: top left;
+          background-repeat: no-repeat; }
+
+/* Define a class for main content */
+.ContentBox { width: 800px;
+              position: absolute;
+              top: 0px;
+              left: 0px; }
+
+/* Define a class for page headers */
+.PageHeader { background-color: #204080;
+              border-width: 1px;
+              border-style: solid;
+              border-color: #000000;
+              padding: 10px;
+              text-align: center;
+              color: #FFFFFF;
+              font-family: Papyrus, Times New Roman, serif;
+              font-weight: bold;
+              position: relative;
+              margin: 10px; }
+
+/* Define a class for section headers */
+.SectionHeader { background-color: #204080;
+                 border-width: 1px;
+                 border-style: solid;
+                 border-color: #000000;
+                 padding: 10px;
+                 text-align: left;
+                 color: #FFFFFF;
+                 font-family: Papyrus, Times New Roman, serif;
+                 font-weight: bold;
+                 position: relative;
+                 margin: 10px; }
+
+/* Define a class for content sections */
+.Content { background-color: #888888;
+           border-width: 1px;
+           border-style: solid;
+           border-color: #000000;
+           padding: 4px;
+           text-align: left;
+           text-indent: 20px;
+           color: #000000;
+           font-family: Times New Roman, serif;
+           font-weight: normal;
+           position: relative;
+           margin: 10px; }
+		   
+/* Define a class for code blocks */
+.Code { background-color: #888888;
+		border-width: 1px;
+		border-style: solid;
+		border-color: #000000;
+		padding-top: inherit;
+		padding-bottom: inherit;
+		padding-left: 20px;
+		padding-right: 20px;
+		text-align: left;
+		text-indent: 0px;
+		color: #000000;
+		font-family: Courier New, Courier, mono;
+		font-weight: normal;
+		position: relative;
+		margin: 20px; }
+
+/* Define a class for image areas */
+.ImageBox { position: relative;
+            text-align: center;
+            margin: 4px;
+            padding: 0px; }
+
+.ImageBox a:hover { background-color: transparent; }
+
+.ImageBox a:active { background-color: transparent; }
+
+/* Set the position for the main menu link on all pages */
+div#menu { position: fixed;
+           top: 10px;
+           right: 10px; }
+div#menu a { background-image: url("images/menu.png");
+	     background-position: 0px 0px; }
+div#menu a:hover { background-image: url("images/menu.png");
+	     	   background-position: 128px 0px; }
+
+/* Set the position for the info box */
+div#footer { position: fixed;
+             bottom: 10px;
+             right: 10px;
+             font-family: times new roman, serif;
+             font-size: 12pt;
+             text-align: right; }

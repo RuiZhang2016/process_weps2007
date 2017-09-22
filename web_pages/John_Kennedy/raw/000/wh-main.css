@@ -1,0 +1,446 @@
+/*WHITE HOUSE MAIN STYLE SHEET TITLE=main*/
+/********************************************************************/
+
+body {
+	background-color: #FFF;
+	margin: 0;
+	padding: 0;
+}
+
+img, table {
+	border: none;
+}
+
+img.homepage-thumb {
+	padding-right: 5px;
+}
+
+/********************************************************************/
+/*TEXT AND HEADERS*/
+
+table {
+	font-family: arial, verdana, sans-serif;
+	font-size: small;
+}
+h1 {
+	font: bold 16px arial, verdana, sans-serif;
+	color: #039;
+}
+h2 {
+	font: bold 14px arial, verdana, sans-serif;
+	color: #039;
+	margin-bottom: 0;
+}
+
+h3 {
+	font: bold 12px arial, verdana, sans-serif; 
+	color: #06C;
+	margin-bottom: 5px;
+}
+
+.header1 {
+	font: bold 16px arial, verdana, sans-serif;
+	color: #039;
+}
+
+.header2 {
+	font: bold 14px arial, verdana, sans-serif;
+	color: #039;
+	margin-bottom: 0;
+}
+.header3 {
+	font: bold 12px arial, verdana, sans-serif;
+	color: #039;
+	margin-bottom: 0;
+}
+.sm-blk-text {
+	font: 10px arial, verdana, sans-serif;
+	color: #000;
+}
+
+.reg-text {
+	font: 80% arial, verdana, sans-serif;
+	color: #000;
+	background-color: transparent;
+}
+
+.sm-text {
+	font: 10px arial, verdana, sans-serif;
+	color: #333;
+}
+
+#caption {
+	padding: 8px;
+	font: 10px arial, verdana, sans-serif;
+	color: #333;
+	border-bottom: 1px #CCC dotted;
+	border-top: 1px #CCC dotted;
+	background-color: #EFEFEF;
+}
+
+#ramadan-quote {
+	font: bold 10px arial, verdana, sans-serif;
+	color: #000;
+	border: 1px #CCC solid;
+	padding: 5px;
+	background-color: #F9F3EE;
+}
+
+#ramadan-quote p {
+	padding-top: 0;
+	padding-bottom: 5px;
+}
+
+/********************************************************************/
+/*BORDERS*/
+
+td.dotted-brd {
+	border: 1px #CCC solid;
+	padding: 5px;
+	background-color: #F9F3EE;
+}
+
+td.pad-bot {
+	padding-bottom: 10px;
+	background-color: #EFEFEF;
+}
+
+.rule-dot {
+	border-bottom: 1px dotted #CCC;
+	margin: 5px 0 0;
+}
+
+.rule-solid {
+	border-bottom: 1px solid #CCC;
+}
+
+#summit-ph {
+	border: 1px dotted #CCC;
+	background-color: #F0F0F0;
+	padding: 5px;
+}
+
+.dotted-right {
+	border-right: 1px #e8e8e8 dotted;
+	padding-right: 0.50em;
+}
+
+/***********************************************************************/
+/*TABLES*/
+
+table.press {
+	font: 11px arial, verdana, sans-serif;
+	color: #333;
+	background-color: #EFEFEF;
+	width: 200px;
+	border-bottom: 1px #D2D2D2 solid;
+	align: center;
+}
+
+table.press a {
+	color: #039;
+	font: 11px arial, verdana, sans-serif;
+	text-decoration: none;
+}
+
+table.press a:visited {
+	color: #900;
+	text-decoration: none;
+}
+
+table.press a:hover {
+	color: #039; 
+	text-decoration: underline 
+}
+
+table.press a:active {
+	color: #669; 
+	text-decoration: underline 
+}
+	
+table.press td {
+	padding: 3px 5px 8px 5px;
+	/*border-bottom: 1px #CCC solid;*/	
+}
+
+table.press td.last {
+	border-bottom: none;	
+}
+
+#vote table {
+	background: #036 url(/holiday/images/vote-bg.gif) repeat;
+	width: 199px;
+	font: 11px/13px arial, verdana, hevetica, sans-serif;
+	color: #FFF;
+}
+
+/*#vote table td{
+	padding: 7px 3px 3px 10px;
+}*/
+
+#vote table a{
+	color: #fff;
+	cursor: help;
+}
+#main-table #gutter{
+	width: 15px;
+	background: transparent url(/images/vertical2.gif) top left repeat-y;
+}
+
+/********************************************************************/
+/*LISTS AND BULLETS*/
+
+ul.w-pad li {
+	font: 80% arial, verdana, sans-serif;
+	padding-bottom: 5px;
+	margin-left:  -10px;
+}
+
+ul ul.w-pad li {
+	font: 100% arial, verdana, sans-serif;
+	padding-bottom: 5px;
+	margin-left:  -10px;
+}
+/********************************************************************/
+/*WHAT'S NEW */
+
+table#new-masthead {
+	width: 616px;
+	margin-bottom: 1em;
+}
+table#new-masthead td{
+	padding: 0;
+}
+table#main {
+	width: 616px;
+	font: 12px/14px arial, verdana, sans-serif;
+	color: #333;
+}
+table#main td{
+	padding: 5px;
+	vertical-align: middle;
+}
+table#main p#intro{
+	padding-bottom: 10px;
+}
+table#main td.main-img{
+	width: 226px;
+	text-align: center;
+}
+table#main td.description{
+	width: 390px;
+	text-align: left;
+}
+table#main p.goto{
+	padding-top: 5px;
+	margin-top: 5px;
+	text-align: left;
+}
+table#main table.insert{
+	width: 390px;
+	margin-top: 5px;
+	font: 10px/12px arial, verdana, sans-serif;
+	color: #333;
+	text-align: left;
+}
+/*WHITE HOUSE SPORTS*/
+
+div#sports-bnr {
+	width: 594px;
+	height: 104px;
+	background: #FFF url(/sports/images/sports-banner.jpg) no-repeat;
+	padding: 0;
+	margin-bottom: 1em;
+}
+td#right-nav {
+	font: 10px/12px arial, verdana, san-serif;
+	color: #333;
+	padding: 0;
+	vertical-align: top;
+}
+td#right-nav a:link {
+	font: 10px arial, verdana, san-serif;
+	color: #36C;
+	text-decoration: none;
+}
+td#right-nav a:visited {
+	font: 10px arial, verdana, san-serif;
+	color: #933;
+	text-decoration: none;
+}
+td#right-nav a:hover {
+	color: #36C;
+	text-decoration: underline;
+}
+td#right-nav ul {
+	list-style: none outside;
+	margin: 0 5px -5px 0;
+	font: 10px arial, verdana, san-serif;
+	background-color: transparent; 
+}
+td#right-nav li {
+	padding-bottom: 5px;
+}
+.main-header {
+	background-color: #4F6BAE;
+	font: bold 11px Arial, Verdana, sans-serif;
+	width: 375px;
+	text-transform: uppercase;
+	letter-spacing: 2px;
+	text-align: center;
+	color: #FFF;
+	padding: 5px;
+	margin-bottom: 10px;
+	border-bottom: 1px #CCC solid;
+}
+.tab-header {
+	width: 191px;
+	background-color: #4F6BAE;
+	font: bold 11px Arial, Verdana, sans-serif;
+	text-transform: uppercase;
+	letter-spacing: 2px;
+	text-align: center;
+	color: #FFF;
+	border-bottom: 1px #CCC solid;
+	padding: 5px;
+	margin-bottom: 0;
+}
+#videos {
+	width: 191px;
+	background-color: #EEE;	
+	padding: 8px;
+	margin-bottom: 8px;
+	border-bottom: 1px #E8E8E8 solid;
+	border-right: 1px #E8E8E8 solid;
+	border-left: 1px #E8E8E8 solid;	
+}
+#videos img {
+	border: none;
+	display: block;
+	text-align: center;
+	margin-bottom: 5px;
+}
+#more-videos {
+	width: 191px;
+	background-color: #EEE;	
+	padding: 8px;
+	margin-bottom: 8px;
+	border-bottom: 1px #E8E8E8 solid;
+	border-right: 1px #E8E8E8 solid;
+	border-left: 1px #E8E8E8 solid;	
+}
+
+/* * * * * * FOOTER * * * * * */
+#footer {
+	font: x-small, arial, verdana, sans-serif; 
+	text-align: center; 
+	line-height: 20px; 
+	margin: 10px 0;
+	padding: 0;
+}
+	
+/* * * * * * YELLOW BOX PROMO * * * * * */
+
+div#promo-box-yel {
+	float: right;
+	font: 10px arial, verdana, sans-serif;
+	color: #000;
+	width: 225px;
+	margin: 1em;
+	background-color: #FFC;
+	border: 1px #CCC solid;
+}
+div#promo-box-yel img{
+        float: right;
+        padding: 5px;
+}
+
+/* * * * * * LEFT NAVIGATION STYLES * * * * * */
+
+p.more{
+	text-align: right;
+	margin: 0.25em;
+	padding: 0.25em;
+	padding-right: 15px;
+	background: transparent url(/images/arrow-features.gif) right no-repeat;
+}
+
+#leftnavbar-main {
+	width: 115px;
+	padding: 0;
+	margin: 0;
+	font: 10px Arial, Verdana, sans-serif;
+	color: #666;
+	background-color: #fefefe;
+}
+#leftnavbar-main h2 {
+	font: bold 1.1em/1.5em arial, helvetica, sans-serif;
+	color: #666;
+	margin-bottom: 0.50em;
+	padding-top: 0.50em;
+	background: transparent url(/images/dotted-line.gif) bottom left repeat-x;
+}
+#leftnavbar-main h2.first {
+	font: bold 1.1em/1.5em arial, helvetica, sans-serif;
+	color: #666;
+	margin-bottom: 0.50em;
+	padding-top: 0;
+	margin-top: 0;
+	background: transparent url(/images/dotted-line.gif) bottom left repeat-x;
+}
+#leftnavbar-main ul{
+	margin: 0.25em 0;
+	padding: 0.25em 0;
+}
+
+#leftnavbar-main ul li{
+	list-style: none;
+	line-height: 1.5em;
+	padding-left: 0.75em;
+	margin-left: 0;
+	background: transparent url(/images/navbar-bul1.gif) top left no-repeat;
+}
+
+/* * * * * * FEATURE BOXES * * * * * */
+
+.featurebox {
+	width: 290px;
+	padding: 0;
+	margin: 0;
+	font: normal 10px arial, verdana, sans-serif;
+	background-color: #EFEFEF;
+	border-bottom: 1px #CCC solid;
+}
+.featurebox img.banner{
+	width: 290px;
+	height: 25px;
+	padding: 0 0 0.25em 0;
+	margin: 0 0 0.25em 0;
+	background-color: #EFEFEF;
+	border: none;
+}
+
+.featurebox p.release{
+	margin: 0.75em 1em;
+	padding-left: 20px;
+	background: #EFEFEF url(/images/news-eagle.gif) top left no-repeat;
+	
+}
+/* * * * * * * 404 * * * * * * * */
+
+#error-404 {
+	border-collapse: collapse;
+	border: 1px #CCC solid;
+	width: 618px;
+	font: bold 10px arial, verdana, sans-serif;
+	text-align: center;
+}
+#error-404 img {
+	border: none;
+	display: block;
+	margin-top: 0.50em
+}
+
+#error-404 td {
+	padding: 0.33em;
+}

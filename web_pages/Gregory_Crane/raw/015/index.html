@@ -1,0 +1,1739 @@
+
+
+
+
+
+	
+
+
+
+
+
+
+
+
+
+ 		
+  
+
+
+
+		
+<style>
+.note-header-text {font-family: Times, Times New Roman, serif;
+		color:#ff0000; font-size: .95em;
+		margin-left: .75em; margin-right: .75em;}
+</style>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ 	
+	
+		
+		
+		
+					
+			
+				
+				  	
+				
+			
+				
+		    
+		
+		
+		
+		
+		
+		
+		
+	 
+
+
+
+	
+	
+	
+	
+	
+	
+	
+		
+  
+
+
+	
+	
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ 	
+ 	
+	
+
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+   "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+<head>
+<LINK REL=STYLESHEET TYPE="text/css" HREF="http://portal.acm.org/css/dl.css">
+<title>Drudgery and deep thought</title>
+<style type="text/css"><!--
+    body {margin-left: 0em; margin-top: 0}
+    a:link {text-decoration: underline; 	Color: #006699;}
+    a:visited  { color: #990033; text-decoration: underline;}
+    a:hover {color: red; text-decoration: none}
+    a.dLink1:link {color:#336699}
+    a.dLink1:visited {color:#666666}
+	a.isblack:link {text-decoration: underline; 	Color: #000000;}
+    a.isblack:visited  { color: #000000; text-decoration: underline;}
+    a.isblack:hover {color: #000000; text-decoration: none}
+    h1 {font-size: 140%; margin-bottom: 0}
+	ul {margin-top: .25em; list-style-type: disc}
+	ol {margin-top: .25em;}
+	li {padding-bottom: .25em}
+    h2 {color: white; background-color: #069; 
+        font-size: 100%; padding-left: 1em;
+		margin: 0}
+	h3 {color: black; background-color: yellow; 
+    	font-size: 100%;
+		margin: 0}
+	 h4 {color: black; background-color: #99c5e8; 
+        font-size: 100%;
+		margin: 0}
+    hr {color: #39176d;}
+    form {margin-top: 10}
+    form.xrs {margin-top: 0}
+	
+	a {text-decoration: none; }
+	
+	input {font-size: 1em;}
+	.chevron {color: #ff0000;}
+	.light-blue {color:#336699;}
+	.black {color:#000000;}
+	
+	/* ### standard text styles, smallest to largest ### */
+	
+	.footer-link-text {font-family: Arial, Helvetica, sans-serif;
+		color:#336699; font-size: .75em; line-height: 1.33em;
+		text-indent: -.75 em; margin-left: 2em; margin-right: .75em;}
+		
+	.footer-copy-text {font-family: Arial, Helvetica, sans-serif;
+		color:#000000; font-size: .75em; line-height: 1.3em;
+		margin-left: .75em; margin-right: .75em;}
+		
+	.small-link-text {font-family: Arial, Helvetica, sans-serif;
+		color:#000000; font-size: .83em; padding-bottom : 2px;
+	  	padding-top : 2px;}
+
+	.smaller-text {font-family: Arial, Helvetica, sans-serif;
+		color:#000000; font-size: .75em;}		
+	.small-text {font-family: Arial, Helvetica, sans-serif;
+		color:#000000; font-size: .83em;}
+	.medium-text {font-family: Arial, Helvetica, sans-serif;
+		color:#000000; font-size: 1em;}
+	.mediumb-text {font-family: Arial, Helvetica, sans-serif;
+		color:#000000; font-size: 1em; font-weight: bold;}
+	.large-text {font-family: Arial, Helvetica, sans-serif;
+		color:#000000; font-size: 1.3em;}		
+	
+	.list-link-text {font-family: Arial, Helvetica, sans-serif;
+		color:#336699; font-size: .83em; line-height: 1.3em;}
+	.list-link-btext {font-family: Arial, Helvetica, sans-serif;
+		color:#000000; font-size: .83em; line-height: 1.3em;}
+	
+	.searchbox-text {font-family: Arial, Helvetica, sans-serif;
+		color:#000066; font-size: 1em; font-weight: bold;}
+	.footer-header-text {font-family: Arial, Helvetica, sans-serif;
+		color:#000066; font-size: 1em; font-weight: bold;
+		margin-left: .75em; margin-right: .75em;}
+	.medium-link-text {font-family: Arial, Helvetica, sans-serif;
+		color:#000066; font-size: 1em; font-weight: bold; line-height: 1em;
+		text-indent: -1.25em; margin-left: 2em; margin-right: .75em;}
+	
+	
+	.small-copy-text {font-family: Times, Times New Roman, serif;
+		color:#000066; font-size: .75em; line-height: 1.2em;
+		margin-left: .75em; margin-right: .75em;}
+
+	.medium-copy-text {font-family: Times, Times New Roman, serif;
+		color:#000066; font-size: 1em; line-height: 1.2em;
+		margin-left: .75em; margin-right: .75em;}
+	
+	.large-copy-text {font-family: Times, Times New Roman, serif;
+		color:#000066; font-size: 1.3em; line-height: 1.5em;
+		margin-left: .75em; margin-right: .75em;}
+	
+	.medium-header-text {font-family: Times, Times New Roman, serif;
+		color:#ff0000; font-size: 1em;
+		margin-left: .75em; margin-right: .75em;}
+	
+	.large-header-text {font-family: Times, Times New Roman, serif;
+		color:#ff0000; font-size: 1.5em;
+		margin-left: .75em; margin-right: .75em;}
+
+  --></style>
+ 
+<SCRIPT LANGUAGE="JavaScript">
+ /* <!-- Begin
+	if(document.layers || document.all) {
+	a = 1;
+	setInterval("Jump()", 10);
+	}
+	function Jump() {
+	a = a + 1;
+	//self.moveBy((Math.random() * a * 2 - a), (Math.random() * a * 2) - a);
+	}
+//  End --> */
+</script>
+<script type="text/javascript" src="http://portal.acm.org/CFIDE/scripts/cfform.js"></script>
+<script type="text/javascript" src="http://portal.acm.org/CFIDE/scripts/masks.js"></script>
+<script type="text/javascript">
+<!--
+    function  _CF_checkqiksearch(_CF_this)
+    {
+        //reset on submit
+        _CF_error_exists = false;
+        _CF_error_messages = new Array();
+        _CF_error_fields = new Object();
+        _CF_FirstErrorField = null;
+
+        //form element query required check
+        if( !_CF_hasValue(_CF_this['query'], "TEXT", false ) )
+        {
+            _CF_onError(_CF_this, "query", _CF_this['query'].value, "Please enter your Search Criteria");
+            _CF_error_exists = true;
+        }
+
+
+        //display error messages and return success
+        if( _CF_error_exists )
+        {
+            if( _CF_error_messages.length > 0 )
+            {
+                // show alert() message
+                _CF_onErrorAlert(_CF_error_messages);
+                // set focus to first form error, if the field supports js focus().
+                if( _CF_this[_CF_FirstErrorField].type == "text" )
+                { _CF_this[_CF_FirstErrorField].focus(); }
+
+            }
+            return false;
+        }else {
+            return true;
+        }
+    }
+//-->
+</script>
+</head>
+
+
+
+
+
+
+	
+	
+		
+	
+	
+	
+
+
+
+
+
+
+
+	
+
+
+ 
+ 
+
+
+
+
+
+
+
+
+<body bgcolor="#ffffff" onload="window.focus(); ">
+<div align="center">
+<a name="CIT"></a>
+<table border="0" width="85%" cellspacing="0" cellpadding="0">
+<tr>
+<td>
+
+
+	
+		
+				
+				
+					
+				  
+		
+	 
+
+
+
+
+
+
+
+
+		
+
+	
+
+
+
+
+<table border="0" width="100%" cellspacing="0" cellpadding="0">
+	<tr valign="top">
+		<td width="1%" class="small-link-text" align="center"  background="http://portal.acm.org/images/horiz-bar.jpg"><img src="http://portal.acm.org/images/logo_acm_portal2.jpg" alt="ACM Portal" width="263" height="54" border="0" usemap="#PORT">
+			
+				<font color="white">
+				
+					New York University
+				
+				</font>
+			  
+		</td>
+		<td width="99%" align="left" class="small-link-text">
+			<table border="0" cellspacing="0" cellpadding="0">
+			<tr>
+				<td>&nbsp;</td>
+				
+					<td class="small-link-text"><a href="https://campus.acm.org/Public/login_genpubqj.cfm?rdr=http://portal.acm.org/citation.cfm?id=374333&coll=GUIDE&dl=GUIDE&CFID=69092318&CFTOKEN=90224991&ret=1&promo=QJPUB&offering=200&form_type=PUB&CFID=69092318&CFTOKEN=90224991" class="small-link-text">Subscribe</a><span class="small-link-text">&nbsp;(Full Service)</span>&nbsp;&nbsp;&nbsp;</td>
+					<td class="small-link-text"><a href="https://portal.acm.org/poplogin.cfm?dl=GUIDE&coll=GUIDE&want_href=citation%2Ecfm%3Fid%3D374333%26coll%3DGUIDE%26dl%3DGUIDE%26CFID%3D69092318%26CFTOKEN%3D90224991%26ret%3D1&CFID=69092318&CFTOKEN=90224991" class="small-link-text">Register</a><span class="small-link-text">&nbsp;(Limited Service, <font color="Red">Free</font>)</span>&nbsp;&nbsp;&nbsp;</td>
+				
+				<td class="small-link-text" valign="bot">
+					
+					
+		 					<a href="https://portal.acm.org/poplogin.cfm?dl=GUIDE&coll=GUIDE&want_href=citation%2Ecfm%3Fid%3D374333%26coll%3DGUIDE%26dl%3DGUIDE%26CFID%3D69092318%26CFTOKEN%3D90224991%26ret%3D1&CFID=69092318&CFTOKEN=90224991" class="small-link-text">Login</a>
+					
+				</td>			
+			</tr>
+			</table>
+			
+			<table border="0" width="100%" cellspacing="0" cellpadding="0">
+				<form name="qiksearch" action="http://portal.acm.org/results.cfm?coll=GUIDE&amp;dl=GUIDE&amp;CFID=69092318&amp;CFTOKEN=90224991" method="post" target="_self" onsubmit="return _CF_checkqiksearch(this)">
+				<tr>
+					<td height="5"><img src="http://portal.acm.org/images/blanks.gif" width=1 height=1 alt="" border="0"></td>
+				</tr>
+				<input type="hidden" name="parser" value="Internet">
+				<tr>
+					<td class="small-link-text">&nbsp;</td>
+					<td class="small-link-text">
+						
+						  	
+						
+						<b>Search:</b>&nbsp;&nbsp;&nbsp;<input type="Radio" name="whichDL" value="acm" >The ACM Digital Library&nbsp;&nbsp;&nbsp;<input type="Radio" name="whichDL" value="guide" checked>The Guide
+						<br><input name="query" id="query" type="text" size="60"  class="pubdescr"  />&nbsp;&nbsp;
+						<input type="Image" alt="Search" name=Go src="http://portal.acm.org/images/search_small.jpg" border="0">
+					</td>
+				</tr>
+				</form>
+
+			</table>
+			
+		</td>
+	<!-- top nav END -->
+	</tr>
+	</table>
+	<table border="0" cellspacing="0" cellpadding="0">
+	<tr>
+		<td height="12"><img src="http://portal.acm.org/images/blanks.gif" width=1 height=1 alt="" border="0"></td>
+	</tr>
+	</table>
+
+<map name="PORT" > 
+  <area shape="rect" coords="1,1,55,60" href="http://www.acm.org/" alt="ACM Home Page">
+  <area shape="rect" coords="65,1,300,78" href="http://portal.acm.org/portal.cfm?coll=GUIDE&amp;dl=GUIDE&amp;CFID=69092318&amp;CFTOKEN=90224991">
+</map>
+
+	
+
+<table border="0" width="100%" align="left">
+	<col width="40%">
+	<col width="60%">
+	<tr>
+		<td>
+			
+				<a href="http://portal.acm.org/guide.cfm?coll=GUIDE&amp;dl=GUIDE&amp;CFID=69092318&amp;CFTOKEN=90224991"><img src="http://portal.acm.org/images/acm_guide_bar_large2.jpg" width=350 height=25 alt="" border="0"></a>
+			
+		</td>
+ 		<td class="small-text" align="center">
+			<img src="http://portal.acm.org/images/feedback.gif" width="20" height="19" alt="Please provide us with feedback." border="0">&nbsp;<a href="http://portal.acm.org/survey/survey-ci.cfm?CFID=69092318&amp;CFTOKEN=90224991">Feedback</a>&nbsp;&nbsp;<a href="http://portal.acm.org/survey/survey-ci.cfm?CFID=69092318&amp;CFTOKEN=90224991">Report a problem</a>&nbsp;&nbsp;<a href="http://portal.acm.org/survey/survey-general.cfm?CFID=69092318&amp;CFTOKEN=90224991">Satisfaction survey</a>
+		</td>
+	</tr>
+	<tr>
+		<td height="6"><img src="http://portal.acm.org/images/blanks.gif" width=1 height=1 alt="" border="0"></td>
+	</tr>
+</table>
+</td>
+</tr>
+
+
+
+
+<tr>
+	<td colspan="3" valign="top" height="1" background="http://portal.acm.org/images/horiz-bar-long.jpg"></td>
+</tr>
+
+<tr>
+<td class="small-text">
+	<table border="0" width="100%"  cellpadding="2">
+		<col width="1%">
+		<col width="8%">
+		<col width="91%">
+	<tr>
+		<td class="medium-text" colspan="3"><strong>Drudgery and deep thought</strong></td>
+	</tr>
+					
+	
+		<tr valign="top">
+			
+			
+		</tr>
+		
+			<tr valign="top">
+				
+					<td class="small-text"><strong>Full text</strong></td>
+				 
+				<td class="smaller-text" colspan="2" >
+						
+							
+									 <A NAME="FullText" HREF="http://portal.acm.org/ft_gateway.cfm?id=374333&amp;type=html&amp;coll=GUIDE&amp;dl=GUIDE&amp;CFID=69092318&amp;CFTOKEN=90224991" target="_blank"><img src="http://portal.acm.org/images/www.gif" width="16" height="16" alt="html format" border="0" align="texttop">Html</A>
+									 (34&nbsp;KB),
+							
+									 <A NAME="FullText" HREF="http://portal.acm.org/ft_gateway.cfm?id=374333&amp;type=pdf&amp;coll=GUIDE&amp;dl=GUIDE&amp;CFID=69092318&amp;CFTOKEN=90224991" target="_blank"><img src="http://portal.acm.org/images/pdf_logo.gif" width="16" height="16" alt="pdf format" border="0" hspace="1" align="texttop">Pdf</A>
+									 (290&nbsp;KB)
+							
+						   
+				</td>
+			</tr>
+		
+
+		<tr valign="top">
+			<td class="small-text"><strong>Source</strong></td>
+			<td class="small-text" colspan="2">
+			
+								
+										
+											
+											
+										
+											
+											
+										
+											
+											
+												
+										
+											
+											
+											
+												
+											
+											
+												
+											
+											
+													
+													
+													
+												    
+													
+														
+														
+															
+													
+														
+														
+														
+														
+														
+														<SPAN class="mediumb-text">Communications of the ACM </span>
+																			<a href="http://portal.acm.org/toc.cfm?id=J79&amp;type=periodical&amp;coll=GUIDE&amp;dl=GUIDE&amp;CFID=69092318&amp;CFTOKEN=90224991" target="_self" class="small-link-text">archive</a><br>
+														
+															 <span class="small-text"> Volume 44 ,&nbsp; Issue 5 &nbsp;(May 2001)</span>
+															 					  <a href="http://portal.acm.org/toc.cfm?id=374308&amp;type=issue&amp;coll=GUIDE&amp;dl=GUIDE&amp;CFID=69092318&amp;CFTOKEN=90224991" target="_self" class="small-link-text">table of contents</a><br>
+															 <span class="small-text"> </span>
+														   
+													
+												 
+										
+								
+		
+
+		
+		<div class="medium-text">
+			
+			
+			
+		</div>
+		
+		
+		    
+			
+			
+		
+
+			
+			
+			<div class="small-text">
+				 Pages: 34 - 40&nbsp;&nbsp;
+			</div>
+					
+			
+			
+			
+				<div class="small-text">
+					Year of Publication:&nbsp;2001
+				</div>
+			
+					
+			
+				<div class="small-text">
+				
+					
+						
+						
+							
+							
+						  
+					  
+					ISSN:0001-0782
+				</div>
+				
+
+			
+			
+				
+					
+					
+					
+				
+					
+					
+					
+				
+					
+					
+					
+				
+			
+			
+		
+			 
+			  	
+			 
+			 
+		
+			
+				
+			</td>
+		</tr>
+		
+		
+		
+			<tr valign="top">
+				<td class="small-text">							
+										  	<strong>Authors</strong>
+										
+				</td>
+				
+				
+					
+					
+				<td colspan="2">
+				<div class="authors">
+					<table cellpadding="0" cellspacing="0">		
+					
+							<tr>
+								<td class="small-text">
+									<a href="http://portal.acm.org/results.cfm?query=author%3APP14139468&amp;querydisp=author%3AGregory%20Crane&amp;coll=GUIDE&amp;dl=GUIDE&amp;CFID=69092318&amp;CFTOKEN=90224991" target="_self">Gregory Crane</a>
+ 									
+								</td>
+								<td class="small-text">
+									
+										<small>&nbsp;Tufts Univ., Medford, MA</small>
+										
+								</td>
+							</tr>
+					
+							<tr>
+								<td class="small-text">
+									<a href="http://portal.acm.org/results.cfm?query=author%3AP244432&amp;querydisp=author%3ARobert%20F%2E%20Chavez&amp;coll=GUIDE&amp;dl=GUIDE&amp;CFID=69092318&amp;CFTOKEN=90224991" target="_self">Robert F. Chavez</a>
+ 									
+								</td>
+								<td class="small-text">
+									
+										<small>&nbsp;Perseus Digital Library, Medford, MA</small>
+										
+								</td>
+							</tr>
+					
+							<tr>
+								<td class="small-text">
+									<a href="http://portal.acm.org/results.cfm?query=author%3AP316430&amp;querydisp=author%3AAnne%20Mahoney&amp;coll=GUIDE&amp;dl=GUIDE&amp;CFID=69092318&amp;CFTOKEN=90224991" target="_self">Anne Mahoney</a>
+ 									
+								</td>
+								<td class="small-text">
+									
+										<small>&nbsp;Perseus Digital Library, Medford, MA</small>
+										
+								</td>
+							</tr>
+					
+							<tr>
+								<td class="small-text">
+									<a href="http://portal.acm.org/results.cfm?query=author%3AP316834&amp;querydisp=author%3AThomas%20L%2E%20Milbank&amp;coll=GUIDE&amp;dl=GUIDE&amp;CFID=69092318&amp;CFTOKEN=90224991" target="_self">Thomas L. Milbank</a>
+ 									
+								</td>
+								<td class="small-text">
+									
+										<small>&nbsp;Perseus Digital Library, Medford, MA</small>
+										
+								</td>
+							</tr>
+					
+							<tr>
+								<td class="small-text">
+									<a href="http://portal.acm.org/results.cfm?query=author%3AP137963&amp;querydisp=author%3AJeffrey%20A%2E%20Rydberg%2DCox&amp;coll=GUIDE&amp;dl=GUIDE&amp;CFID=69092318&amp;CFTOKEN=90224991" target="_self">Jeffrey A. Rydberg-Cox</a>
+ 									
+								</td>
+								<td class="small-text">
+									
+										<small>&nbsp;Univ. of Missouri, Kansas City</small>
+										
+								</td>
+							</tr>
+					
+							<tr>
+								<td class="small-text">
+									<a href="http://portal.acm.org/results.cfm?query=author%3APP14038693&amp;querydisp=author%3ADavid%20A%2E%20Smith&amp;coll=GUIDE&amp;dl=GUIDE&amp;CFID=69092318&amp;CFTOKEN=90224991" target="_self">David A. Smith</a>
+ 									
+								</td>
+								<td class="small-text">
+									
+										<small>&nbsp;Perseus Digital Library, Medford, MA</small>
+										
+								</td>
+							</tr>
+					
+							<tr>
+								<td class="small-text">
+									<a href="http://portal.acm.org/results.cfm?query=author%3AP316476&amp;querydisp=author%3AClifford%20E%2E%20Wulfman&amp;coll=GUIDE&amp;dl=GUIDE&amp;CFID=69092318&amp;CFTOKEN=90224991" target="_self">Clifford E. Wulfman</a>
+ 									
+								</td>
+								<td class="small-text">
+									
+										<small>&nbsp;Perseus Digital Library, Medford, MA</small>
+										
+								</td>
+							</tr>
+					
+					</table>	
+				</div>
+				</td>
+			</tr>
+			
+			
+		
+		
+			
+		
+		
+		
+		
+			
+			
+			
+			
+				
+					<tr valign="top">
+						<td class="small-text"><strong>Publisher</strong></td>
+						<td colspan="2">
+							<div class="publishers">
+								
+								
+								
+								
+								
+								
+									
+									
+									  	ACM Press &nbsp;
+									
+									
+										<small> New York, NY, USA </small>
+									
+								
+							</div>
+						</td>
+					</tr>
+				
+			
+		
+		
+		
+		
+		
+		
+		
+		
+		</table>
+		
+		
+		
+		
+		
+		
+		
+ 
+ 		
+</td>
+</tr>
+
+
+<tr>
+<td>
+
+<!-- third main table: main content START -->
+	<table border="0" width="100%" cellspacing="0" cellpadding="0">
+	<tr>
+		<td height="6"><img src="http://portal.acm.org/images/blanks.gif" width=1 height=1 alt="" border="0"></td>
+	</tr>
+	<tr>
+		<td colspan="4" valign="top" height="1" background="http://portal.acm.org/images/horiz-bar-long.jpg"></td>
+	</tr>
+	<tr>
+		<td height="6"><img src="http://portal.acm.org/images/blanks.gif" width=1 height=1 alt="" border="0"></td>
+	</tr>
+
+	
+
+	<tr valign="top">
+	<!-- buttons -->
+		<td width="100%" colspan="4">
+	    <table border="0" cellspacing="0" cellpadding="0" width="100%">
+		<col width="22%">
+	    <col width="78%">
+		<tr>
+			<td class="small-text"><b>Additional Information:</b></td>
+			<td>
+			<p class="small-text">
+				
+					<a href="citation.cfm%3Fid=374333&amp;coll=GUIDE&amp;dl=GUIDE&amp;CFID=69092318&amp;CFTOKEN=90224991&amp;ret=1.1.html#supp">appendices and supplements</a>&nbsp;&nbsp;
+				
+				
+				
+					<a href="citation.cfm%3Fid=374333&amp;coll=GUIDE&amp;dl=GUIDE&amp;CFID=69092318&amp;CFTOKEN=90224991&amp;ret=1.1.html#references">references</a>&nbsp;&nbsp;
+				
+				
+					<a href="citation.cfm%3Fid=374333&amp;coll=GUIDE&amp;dl=GUIDE&amp;CFID=69092318&amp;CFTOKEN=90224991&amp;ret=1.1.html#citings">citings</a>&nbsp;&nbsp;
+				
+				
+				
+					<a href="citation.cfm%3Fid=374333&amp;coll=GUIDE&amp;dl=GUIDE&amp;CFID=69092318&amp;CFTOKEN=90224991&amp;ret=1.1.html#IndexTerms">index terms</a>&nbsp;&nbsp;
+				
+				
+				
+						<a href="citation.cfm%3Fid=374333&amp;coll=GUIDE&amp;dl=GUIDE&amp;CFID=69092318&amp;CFTOKEN=90224991&amp;ret=1.1.html#collab">collaborative colleagues</a>&nbsp;&nbsp;
+				
+				
+					<a href="citation.cfm%3Fid=374333&amp;coll=GUIDE&amp;dl=GUIDE&amp;CFID=69092318&amp;CFTOKEN=90224991&amp;ret=1.1.html#peers">peer to peer</a>&nbsp;&nbsp;
+				
+				</p>
+			</td>
+		</tr>
+		</table>
+		</td>
+	</tr>
+	<tr>
+		<td height="6"><img src="http://portal.acm.org/images/blanks.gif" width=1 height=1 alt="" border="0"></td>
+	</tr>
+	
+	<tr valign="top">
+	<!-- buttons -->
+		<form name="popbinder">
+		<td width="100%" colspan="4">
+		
+		<table border="0" cellspacing="0" cellpadding="2" width="100%" >
+		  <col width="22%">
+		  <col width="78%">
+		  <tr valign="top">
+		  	<td class="small-text"><b>Tools and Actions:</b></td>
+			<td>
+			
+				
+					
+					
+					 
+					 
+					 
+				
+				
+							
+				
+			  
+			
+			<a href="http://portal.acm.org/results.cfm?query=374333&amp;querydisp=Similar%20to%3A%20Drudgery%20and%20deep%20thought&amp;coll=GUIDE&amp;dl=GUIDE&amp;CFID=69092318&amp;CFTOKEN=90224991" target="_self" class="small-link-text">Find similar Articles</a>&nbsp;&nbsp;
+
+			<a href="http://www.reviews.com/reviewer/quickreview/frameset_toplevel.cfm?bib_id=374333" target="reviews" class="small-link-text">Review this Article</a>&nbsp;&nbsp;
+			
+			
+			 	<br><a href="citation.cfm%3Fid=374333&amp;coll=GUIDE&amp;dl=GUIDE&amp;CFID=69092318&amp;CFTOKEN=90224991&amp;ret=1.1.html#" onClick="window.alert('To use this Feature, you must login with your personal ACM Web Account.');" class="small-link-text">
+				Save this Article to a Binder</a><img src="http://portal.acm.org/images/blanks.gif" border="0" name="saved">
+			
+			&nbsp;&nbsp;
+			<span class="small-text">Display Formats:</span>
+			<a href="citation.cfm%3Fid=374333&amp;coll=GUIDE&amp;dl=GUIDE&amp;CFID=69092318&amp;CFTOKEN=90224991&amp;ret=1.1.html#" onClick="window.open('popBibTex.cfm?id=374333&ids=J79.374308.374333&types=periodical.issue.article&reqtype=article&coll=GUIDE&dl=GUIDE&CFID=69092318&CFTOKEN=90224991','BibTex','width=800,height=100,top=100,left=100,scrollbars=Yes,resizable=yes');" class="small-link-text">
+			BibTex</a>&nbsp;
+
+			<a href="citation.cfm%3Fid=374333&amp;coll=GUIDE&amp;dl=GUIDE&amp;CFID=69092318&amp;CFTOKEN=90224991&amp;ret=1.1.html#" onClick="window.open('popendnotes.cfm?id=374333&ids=J79.374308.374333&types=periodical.issue.article&reqtype=article&coll=GUIDE&dl=GUIDE&CFID=69092318&CFTOKEN=90224991','BibTex','width=800,height=100,top=100,left=100,scrollbars=Yes,resizable=yes');" class="small-link-text">
+			EndNote</a>
+
+			
+			 
+				<a href="citation.cfm%3Fid=374333&amp;coll=GUIDE&amp;dl=GUIDE&amp;CFID=69092318&amp;CFTOKEN=90224991&amp;ret=1.1.html#" onClick="window.open('popacmref.cfm?id=374333&ids=J79.374308.374333&types=periodical.issue.article&reqtype=article&coll=GUIDE&dl=GUIDE&CFID=69092318&CFTOKEN=90224991','BibTeX','width=800,height=100,top=100,left=100,scrollbars=Yes,resizable=yes');" class="small-link-text">
+			ACM Ref</a>
+			
+			
+			&nbsp;&nbsp;				
+			
+			</td>
+		</tr>
+		<tr>
+			<td height="10"><img src="http://portal.acm.org/images/blanks.gif" width=1 height=1 alt="" border="0"></td>
+		</tr>
+		
+		<tr valign="top">
+			<td class="small-text"><b>DOI Bookmark:</b></td>
+			<td class="small-text">
+				<small>Use this link to bookmark this Article:&nbsp;</small><a href="http://doi.acm.org/10.1145/374308.374333">http://doi.acm.org/10.1145/374308.374333</a><br><small><a href="http://www.doi.org/">What is a DOI?</a></small>
+			    
+			</td>
+		</tr> 
+		
+		</table>
+		
+		</td>
+		</form>
+	</tr>
+	<tr>
+		<td height="6"><img src="http://portal.acm.org/images/blanks.gif" width=1 height=1 alt="" border="0"></td>
+	</tr>
+	<tr>
+		<td colspan="4" valign="top" height="1" background="http://portal.acm.org/images/horiz-bar-long.jpg"></td>
+	</tr>
+	<tr>
+		<td height="6"><img src="http://portal.acm.org/images/blanks.gif" width=1 height=1 alt="" border="0"></td>
+	</tr>
+	</table>
+<!-- third main table: main content END -->
+			
+		
+		
+			<br>
+			<div class="abstract">
+			
+			<A HREF="citation.cfm%3Fid=374333&amp;coll=GUIDE&amp;dl=GUIDE&amp;CFID=69092318&amp;CFTOKEN=90224991&amp;ret=1.1.html#CIT"><img name="top" src="http://portal.acm.org/images/arrowu.gif" hspace="10" border="0"></A><SPAN class=heading><A NAME="supp">APPENDICES and SUPPLEMENTS</A></span>
+			
+			  	
+			 
+			 
+				<table>
+				
+				<tr valign="top">
+					<td nowrap>
+						<div class="abstract2">
+						
+									 <A HREF="http://portal.acm.org/supp_gateway.cfm?id=374333&amp;type=pdf&amp;path=%2F380000%2F374333%2Fsupp%2Fp34%2Dcrane%2Ejp%2Epdf&amp;coll=GUIDE&amp;dl=GUIDE&amp;CFID=69092318&amp;CFTOKEN=90224991" target="_blank"><img src="http://portal.acm.org/images/pdf_logo.gif" width="16" height="16" alt="pdf format" border="0" hspace="1" align="texttop">p34-crane.jp.pdf</A>
+									 (95&nbsp;KB),
+						</div>
+					</td>
+					<td>
+						<div class="abstract">
+							
+							<a href="http://portal.acm.org/jpcacm.cfm?CFID=69092318&amp;CFTOKEN=90224991">Japanese CACM Collection  &nbsp;<img src="http://portal.acm.org/img/jpjpo.gif" border="0"></a><br>
+							
+							Requires Asian Language Support in Adobe Reader<BR>
+And Japanese Language Support in your Browser
+						</div>
+					</td>
+					
+				</tr>
+			
+			</table>
+			
+			<br>
+			</div>
+			
+		
+		
+				<p class="abstract"><font color="Red"><b>Warning:</b> The download time has expired please click on the item to try again.</font></p>
+		
+		
+		
+		  	<div class="abstract">
+			
+			
+			  	
+			 
+			 
+			
+			</div>
+		
+			
+		
+			<br>
+			<div class="abstract">
+			
+			<A HREF="citation.cfm%3Fid=374333&amp;coll=GUIDE&amp;dl=GUIDE&amp;CFID=69092318&amp;CFTOKEN=90224991&amp;ret=1.1.html#CIT"><img name="top" src="http://portal.acm.org/images/arrowu.gif" hspace="10" border="0"></A><SPAN class=heading><A NAME="references">REFERENCES</A></span>
+			<p class="abstract"><font color="Red">Note: OCR errors may be found in this Reference List extracted from the full text article.  ACM has opted to expose the complete List rather than only correct and linked references.</font></p>
+			
+			
+			  	
+					
+					
+					 
+					 
+					 
+				
+				
+								
+			  
+			
+			
+				<p class="abstract">
+				  1&nbsp;&nbsp;
+				  
+				  	
+		 			  <a href="http://portal.acm.org/citation.cfm?id=265994&amp;dl=GUIDE&amp;coll=GUIDE&amp;CFID=69092318&amp;CFTOKEN=90224991">
+					 
+				  
+				  Branimir Boguraev , James Pustejovsky, Corpus processing for lexical acquisition, MIT Press, Cambridge, MA, 1996
+				  </a>
+				</p>
+			
+				<p class="abstract">
+				  2&nbsp;&nbsp;
+				  
+				  Crane, G. Designing documents to enhance the performance of digital libraries: Time, space, people, and a digital library of London. D-Lib Mag. 6, 7/8 (July/Aug. 2000); see www.dlib.org/dlib/july00/crane/07crane.html.
+				  
+				</p>
+			
+				<p class="abstract">
+				  3&nbsp;&nbsp;
+				  
+				  	
+		 			  <a href="http://portal.acm.org/citation.cfm?id=336686&amp;dl=GUIDE&amp;coll=GUIDE&amp;CFID=69092318&amp;CFTOKEN=90224991">
+					 
+				  
+				  Gregory Crane , Jeffrey A. Rydberg-Cox, New technology and new roles: the need for &ldquo;corpus editors&rdquo;, Proceedings of the fifth ACM conference on Digital libraries, p.252-253, June 02-07, 2000, San Antonio, Texas, United States
+				  </a>
+				</p>
+			
+				<p class="abstract">
+				  4&nbsp;&nbsp;
+				  
+				  	
+		 			  <a href="http://portal.acm.org/citation.cfm?id=325782&amp;dl=GUIDE&amp;coll=GUIDE&amp;CFID=69092318&amp;CFTOKEN=90224991">
+					 
+				  
+				  Mark Derthick , Steven F. Roth, Data exploration across temporal contexts, Proceedings of the 5th international conference on Intelligent user interfaces, p.60-67, January 09-12, 2000, New Orleans, Louisiana, United States
+				  </a>
+				</p>
+			
+				<p class="abstract">
+				  5&nbsp;&nbsp;
+				  
+				  Eisenstein, E. The Printing Revolution in Early Modern Europe. Cambridge University Press, Cambridge, UK, 1983.
+				  
+				</p>
+			
+				<p class="abstract">
+				  6&nbsp;&nbsp;
+				  
+				  	
+		 			  <a href="http://portal.acm.org/citation.cfm?id=294505&amp;dl=GUIDE&amp;coll=GUIDE&amp;CFID=69092318&amp;CFTOKEN=90224991">
+					 
+				  
+				  Vijay Kumar , Richard Furuta, Visualization of relationships, Proceedings of the tenth ACM Conference on Hypertext and hypermedia : returning to our diverse roots: returning to our diverse roots, p.137-138, February 21-25, 1999, Darmstadt, Germany
+				  </a>
+				</p>
+			
+				<p class="abstract">
+				  7&nbsp;&nbsp;
+				  
+				  Marchionini, G. Evaluating digital libraries: A longitudinal and multifaceted view. Library Trends in press.
+				  
+				</p>
+			
+				<p class="abstract">
+				  8&nbsp;&nbsp;
+				  
+				  Mueller, M. Reading Homer electronically with the TLG, Perseus, and the Chicago Homer. Ariadne 25 (2000); see www.ariadne.ac.uk/ issue25/mueller.
+				  
+				</p>
+			
+				<p class="abstract">
+				  9&nbsp;&nbsp;
+				  
+				  Rydberg-Cox, J. Word co-occurrence and lexical acquisition in ancient Greek texts. Lit. Ling. Comput. 15, 2 (2000), 121-129.
+				  
+				</p>
+			
+				<p class="abstract">
+				  10&nbsp;&nbsp;
+				  
+				  Rydberg-Cox, J., Chavez, R., Mahoney, A., Smith, D., and Crane, G. Knowledge management in the Perseus Digital Library. Ariadne 25 (2000); see www.ariadne.ac.uk/issue25/rydberg-cox.
+				  
+				</p>
+			
+				<p class="abstract">
+				  11&nbsp;&nbsp;
+				  
+				  Smith, D., Rydberg-Cox, J., and Crane, G. The Perseus project: A digital library for the humanities. Lit. Ling. Comput. 15, 1 (2000), 15-25.
+				  
+				</p>
+			
+				<p class="abstract">
+				  12&nbsp;&nbsp;
+				  
+				  	
+		 			  <a href="http://portal.acm.org/citation.cfm?id=669934&amp;dl=GUIDE&amp;coll=GUIDE&amp;CFID=69092318&amp;CFTOKEN=90224991">
+					 
+				  
+				  Yorick Wilks , Roberta Catizone, Can We Make Information Extraction More Adaptive?, Information Extraction: Towards Scalable, Adaptable Systems, p.1-16, January 1999
+				  </a>
+				</p>
+			
+			
+			</div>
+		
+		
+		
+			<br>
+			<div class="abstract">
+			
+			<A HREF="citation.cfm%3Fid=374333&amp;coll=GUIDE&amp;dl=GUIDE&amp;CFID=69092318&amp;CFTOKEN=90224991&amp;ret=1.1.html#CIT"><img name="top" src="http://portal.acm.org/images/arrowu.gif" hspace="10" border="0"></A><SPAN class=heading><A NAME="citings">CITINGS</A>&nbsp;&nbsp;<i>5</i></span>
+			
+			
+			  	
+					
+					
+					 
+					 
+					 
+				
+				
+									
+				
+			  
+			
+			
+				<p class="abstract">
+				
+	 				  <a href="http://portal.acm.org/citation.cfm?id=772838&amp;dl=GUIDE&amp;coll=GUIDE&amp;CFID=69092318&amp;CFTOKEN=90224991">
+				  
+					Jeffrey A. Rydberg-Cox, A prototype multilingual document browser for ancient Greek texts, The New Review of Hypermedia and Multimedia, v.7 n.1, p.103-113, July 30 2002
+				  </a>
+				</p>
+			
+				<p class="abstract">
+				
+	 				  <a href="http://portal.acm.org/citation.cfm?id=564391&amp;dl=GUIDE&amp;coll=GUIDE&amp;CFID=69092318&amp;CFTOKEN=90224991">
+				  
+					David A. Smith, Detecting and Browsing Events in Unstructured text, Proceedings of the 25th annual international ACM SIGIR conference on Research and development in information retrieval, August 11-15, 2002, Tampere, Finland
+				  </a>
+				</p>
+			
+				<p class="abstract">
+				
+	 				  <a href="http://portal.acm.org/citation.cfm?id=996361&amp;dl=GUIDE&amp;coll=GUIDE&amp;CFID=69092318&amp;CFTOKEN=90224991">
+				  
+					Leslie Champeny , Christine L. Borgman , Gregory H. Leazer , Anne J. Gilliland-Swetland , Kelli A. Millwood , Leonard D'Avolio , Jason R. Finley , Laura J. Smart , Patricia D. Mautone , Richard E. Mayer , Richard A. Johnson, Developing a digital learning environment: an evaluation of design and implementation processes, Proceedings of the 4th ACM/IEEE-CS joint conference on Digital libraries, June 07-11, 2004, Tuscon, AZ, USA
+				  </a>
+				</p>
+			
+				<p class="abstract">
+				
+	 				  <a href="http://portal.acm.org/citation.cfm?id=996390&amp;dl=GUIDE&amp;coll=GUIDE&amp;CFID=69092318&amp;CFTOKEN=90224991">
+				  
+					Christine L. Borgman , Gregory H. Leazer , Anne Gilliland-Swetland , Kelli Millwood , Leslie Champeny , Jason Finley , Laura J. Smart, How geography professors select materials for classroom lectures: implications for the design of digital libraries, Proceedings of the 4th ACM/IEEE-CS joint conference on Digital libraries, June 07-11, 2004, Tuscon, AZ, USA
+				  </a>
+				</p>
+			
+				<p class="abstract">
+				
+	 				  <a href="http://portal.acm.org/citation.cfm?id=827150&amp;dl=GUIDE&amp;coll=GUIDE&amp;CFID=69092318&amp;CFTOKEN=90224991">
+				  
+					Gregory Crane , Clifford Wulfman, Towards a cultural heritage digital library, Proceedings of the 3rd ACM/IEEE-CS joint conference on Digital libraries, May 27-31, 2003, Houston, Texas
+				  </a>
+				</p>
+			
+			
+			</div>
+		
+
+		
+			
+			
+			  	
+			 
+			 
+			
+		
+		
+		
+		  	<br>
+			<div class="indterms">
+			
+			<A HREF="citation.cfm%3Fid=374333&amp;coll=GUIDE&amp;dl=GUIDE&amp;CFID=69092318&amp;CFTOKEN=90224991&amp;ret=1.1.html#CIT"><img name="top" src="http://portal.acm.org/images/arrowu.gif" hspace="10" border="0"></A><SPAN class=heading><A NAME="IndexTerms">INDEX TERMS</A></span>
+			
+				
+					<p class="Categories">
+						<SPAN class=heading><A NAME="GenTerms">Primary Classification:</A></span>
+						
+						  	
+						
+						
+						
+							<br>&nbsp;
+							
+							
+								  
+									
+									
+									
+									<b>H.</b>
+									
+									
+									    
+									 
+									<a href="http://portal.acm.org/results.cfm?query=CCS%3AH%2E%2A&amp;coll=GUIDE&amp;dl=GUIDE&amp;CFID=69092318&amp;CFTOKEN=90224991" target="_self">
+									Information Systems</a><br>
+								  
+							
+								  
+									
+									
+										&nbsp;
+									
+									
+										<img src="http://portal.acm.org/images/tree.gif" border="0" height="20" width="20">
+									
+									<b>H.3</b>
+									
+									
+										
+									  
+									<a href="http://portal.acm.org/results.cfm?query=CCS%3A%22H%2E3%22&amp;coll=GUIDE&amp;dl=GUIDE&amp;CFID=69092318&amp;CFTOKEN=90224991" target="_self">
+									 INFORMATION STORAGE AND RETRIEVAL</a><br>
+								  
+							
+						
+					 </p>
+				  
+				
+				  <p class="Categories">
+					<SPAN class=heading><A NAME="GenTerms">Additional&nbsp;Classification:</A></span>
+					 
+					  	
+					 
+					 
+					
+							<br>&nbsp;
+							
+							
+								 
+									
+									
+									 
+									<b>K.</b>
+									
+									    
+									 
+									<a href="http://portal.acm.org/results.cfm?query=CCS%3AK%2E%2A&amp;coll=GUIDE&amp;dl=GUIDE&amp;CFID=69092318&amp;CFTOKEN=90224991" target="_self">
+									Computing Milieux</a><br>
+								 
+							
+								 
+									
+									
+										&nbsp;
+									
+									
+										<img src="http://portal.acm.org/images/tree.gif" border="0" height="20" width="20">
+									 
+									<b>K.3</b>
+									
+										
+									  
+									<a href="http://portal.acm.org/results.cfm?query=CCS%3A%22K%2E3%22&amp;coll=GUIDE&amp;dl=GUIDE&amp;CFID=69092318&amp;CFTOKEN=90224991" target="_self">
+									 COMPUTERS AND EDUCATION</a><br>
+								 
+							
+					
+
+					</p>
+				   
+			
+				
+				<br>
+					<p class="GenTerms">
+						<SPAN class=heading><A NAME="GenTerms">General Terms:</A></span>
+						
+						  	
+						
+						
+						<BR>
+						 
+						
+							
+							<a href="http://portal.acm.org/results.cfm?query=genterm%3A%22Human%20Factors%22&amp;coll=GUIDE&amp;dl=GUIDE&amp;CFID=69092318&amp;CFTOKEN=90224991" target="_self">
+							Human Factors</a>
+							
+						
+					</p>
+				  
+				
+				
+				  		
+						  	
+						
+						
+				
+				
+			
+			</div>
+		 
+		
+		
+				
+		
+			<div class="abstract">
+				
+				<A HREF="citation.cfm%3Fid=374333&amp;coll=GUIDE&amp;dl=GUIDE&amp;CFID=69092318&amp;CFTOKEN=90224991&amp;ret=1.1.html#CIT"><img name="top" src="http://portal.acm.org/images/arrowu.gif" hspace="10" border="0"></A><SPAN class=heading><A NAME="collab">Collaborative Colleagues:</A></span>
+				
+				<table border="0" style="margin-left: 2em" cellpadding="2">
+				
+				
+						<tr valign="top"><td><div class="abstract">Robert F. Chavez:</div></td><td>
+					
+					
+						
+					
+						
+					
+						
+					
+						
+					
+						
+					
+						
+					
+					
+							
+						
+					
+					
+						
+						
+						<div class="abstract">Gregory Crane</div>
+						
+					
+						
+						
+						<div class="abstract">Anne Mahoney</div>
+						
+					
+						
+						
+						<div class="abstract">Thomas L. Milbank</div>
+						
+					
+						
+						
+						<div class="abstract">Jeffrey A. Rydberg-Cox</div>
+						
+					
+						
+						
+						<div class="abstract">David A. Smith</div>
+						
+					
+						
+						
+						<div class="abstract">Clifford E. Wulfman</div>
+						
+					
+						</td>
+						</tr>
+				
+						<tr valign="top"><td><div class="abstract">Anne Mahoney:</div></td><td>
+					
+					
+						
+					
+						
+					
+						
+					
+						
+					
+						
+					
+					
+							
+						
+					
+					
+						
+						
+						<div class="abstract">Robert F. Chavez</div>
+						
+					
+						
+						
+						<div class="abstract">Gregory R. Crane</div>
+						
+					
+						
+						
+						<div class="abstract">Thomas L. Milbank</div>
+						
+					
+						
+						
+						<div class="abstract">Jeffrey A. Rydberg-Cox</div>
+						
+					
+						
+						
+						<div class="abstract">Clifford E. Wulfman</div>
+						
+					
+						</td>
+						</tr>
+				
+						<tr valign="top"><td><div class="abstract">Thomas L. Milbank:</div></td><td>
+					
+					
+						
+					
+						
+					
+						
+					
+						
+					
+					
+							
+						
+					
+					
+						
+						
+						<div class="abstract">Robert F. Chavez</div>
+						
+					
+						
+						
+						<div class="abstract">Anne Mahoney</div>
+						
+					
+						
+						
+						<div class="abstract">Jeffrey A. Rydberg-Cox</div>
+						
+					
+						
+						
+						<div class="abstract">Clifford E. Wulfman</div>
+						
+					
+						</td>
+						</tr>
+				
+						<tr valign="top"><td><div class="abstract">Jeffrey A. Rydberg-Cox:</div></td><td>
+					
+					
+						
+					
+						
+					
+						
+					
+						
+					
+						
+					
+						
+					
+						
+					
+						
+					
+					
+							
+						
+					
+					
+						
+						
+						<div class="abstract">Robert F. Chavez</div>
+						
+					
+						
+						
+						<div class="abstract">Gregory R. Crane</div>
+						
+					
+						
+						
+						<div class="abstract">Daniel Heesch</div>
+						
+					
+						
+						
+						<div class="abstract">Anne Mahoney</div>
+						
+					
+						
+						
+						<div class="abstract">Thomas L. Milbank</div>
+						
+					
+						
+						
+						<div class="abstract">Stefan R&#252;ger</div>
+						
+					
+						
+						
+						<div class="abstract">Lara Vetter</div>
+						
+					
+						
+						
+						<div class="abstract">Clifford E. Wulfman</div>
+						
+					
+						</td>
+						</tr>
+				
+						<tr valign="top"><td><div class="abstract">Clifford E. Wulfman:</div></td><td>
+					
+					
+						
+					
+						
+					
+						
+					
+						
+					
+						
+					
+						
+					
+						
+					
+					
+							
+						
+					
+					
+						
+						
+						<div class="abstract">Robert F. Chavez</div>
+						
+					
+						
+						
+						<div class="abstract">Lawrence M. Fagan</div>
+						
+					
+						
+						
+						<div class="abstract">Ellen A. Isaacs</div>
+						
+					
+						
+						
+						<div class="abstract">Anne Mahoney</div>
+						
+					
+						
+						
+						<div class="abstract">Thomas L. Milbank</div>
+						
+					
+						
+						
+						<div class="abstract">Jeffrey A. Rydberg-Cox</div>
+						
+					
+						
+						
+						<div class="abstract">Bonnie Lynn Webber</div>
+						
+					
+						</td>
+						</tr>
+				
+				</table>
+			</div>
+						
+		
+		
+		
+			<br>
+			<div class="abstract">
+			
+				<A HREF="citation.cfm%3Fid=374333&amp;coll=GUIDE&amp;dl=GUIDE&amp;CFID=69092318&amp;CFTOKEN=90224991&amp;ret=1.1.html#CIT"><img name="top" src="http://portal.acm.org/images/arrowu.gif" hspace="10" border="0"></A><SPAN class=heading><A NAME="peers">Peer to Peer - Readers of this Article have also read:</cite></A></span>
+		<ul type="disc">
+		
+			  
+				
+				 
+				
+			<li>
+			 
+				<A HREF="http://portal.acm.org/citation.cfm?id=4290&amp;dl=GUIDE&amp;coll=GUIDE&amp;CFID=69092318&amp;CFTOKEN=90224991" target="_self">		  	  Data structures for quadtree approximation and compression</a>
+			
+			
+				
+					
+						<b>Communications of the ACM</b>&nbsp;&nbsp;
+					
+					
+						<font size="-1">28,&nbsp;9</font><br>
+					 
+				  
+				
+			
+			
+				
+					Hanan Samet
+				
+				<br>
+			
+			<br>
+			</li>
+		
+			  
+				
+				 
+				
+			<li>
+			 
+				<A HREF="http://portal.acm.org/citation.cfm?id=143680&amp;dl=GUIDE&amp;coll=GUIDE&amp;CFID=69092318&amp;CFTOKEN=90224991" target="_self">		  	  A hierarchical single-key-lock access control using the Chinese remainder theorem</a>
+			
+			
+				
+				  	
+					    <b>Proceedings of the 1992 ACM/SIGAPP Symposium on Applied computing</b><br>
+					
+				   
+				
+			
+			
+				
+					Kim S. Lee
+				
+					, &nbsp;Huizhu Lu
+				
+					, &nbsp;D. D. Fisher
+				
+				<br>
+			
+			<br>
+			</li>
+		
+			  
+				
+				 
+				
+			<li>
+			 
+				<A HREF="http://portal.acm.org/citation.cfm?id=125254&amp;dl=GUIDE&amp;coll=GUIDE&amp;CFID=69092318&amp;CFTOKEN=90224991" target="_self">		  	  The GemStone object database management system</a>
+			
+			
+				
+					
+						<b>Communications of the ACM</b>&nbsp;&nbsp;
+					
+					
+						<font size="-1">34,&nbsp;10</font><br>
+					 
+				  
+				
+			
+			
+				
+					Paul Butterworth
+				
+					, &nbsp;Allen Otis
+				
+					, &nbsp;Jacob Stein
+				
+				<br>
+			
+			<br>
+			</li>
+		
+			  
+				
+				 
+				
+			<li>
+			 
+				<A HREF="http://portal.acm.org/citation.cfm?id=125322&amp;dl=GUIDE&amp;coll=GUIDE&amp;CFID=69092318&amp;CFTOKEN=90224991" target="_self">		  	  Putting innovation to work:&nbsp;adoption strategies for multimedia communication systems</a>
+			
+			
+				
+					
+						<b>Communications of the ACM</b>&nbsp;&nbsp;
+					
+					
+						<font size="-1">34,&nbsp;12</font><br>
+					 
+				  
+				
+			
+			
+				
+					Ellen Francik
+				
+					, &nbsp;Susan Ehrlich Rudman
+				
+					, &nbsp;Donna Cooper
+				
+					, &nbsp;Stephen Levine
+				
+				<br>
+			
+			<br>
+			</li>
+		
+			  
+				
+				 
+				
+			<li>
+			 
+				<A HREF="http://portal.acm.org/citation.cfm?id=123244&amp;dl=GUIDE&amp;coll=GUIDE&amp;CFID=69092318&amp;CFTOKEN=90224991" target="_self">		  	  An intelligent component database for behavioral synthesis</a>
+			
+			
+				
+				  	
+					    <b>Proceedings of the 27th ACM/IEEE conference on Design automation</b><br>
+					
+				   
+				
+			
+			
+				
+					Gwo-Dong Chen
+				
+					, &nbsp;Daniel D. Gajski
+				
+				<br>
+			
+			<br>
+			</li>
+		
+		</ul>
+		
+		</div>
+		
+		
+		
+		
+		
+			
+				
+				
+				
+			
+				
+				
+				
+			
+				
+				
+				
+			
+		
+				
+			
+  	
+
+
+
+
+<br>
+<DIV class=footer-copy-text align="center">
+	
+	The ACM Portal is published by the Association for Computing Machinery. Copyright © 2006 ACM, Inc.<br>
+	<A href="http://portal.acm.org/info/usage.cfm?CFID=69092318&CFTOKEN=90224991">Terms of Usage</A>&nbsp;&nbsp;
+	<A href="http://www.acm.org/serving/acm-privacy.html">Privacy Policy</A>&nbsp;&nbsp;
+	<A href="http://www.acm.org/constitution/code.html">Code of Ethics</A>&nbsp;&nbsp;	  
+	<A href="http://www.acm.org/key_people/">Contact Us</A>
+
+<br><br>
+Useful downloads: 
+<a href="http://www.adobe.com/products/acrobat/readstep2.html"><img src="http://portal.acm.org/images/pdf_logo.gif" width="16" height="16" alt="" border="0"> Adobe Acrobat</a>
+&nbsp;&nbsp;
+<a href="http://www.apple.com/quicktime/download/" target="_blank"><img src="http://portal.acm.org/images/qtlogo.gif" width="16" height="16" alt="" border="0"> QuickTime</a>
+&nbsp;&nbsp;
+<a href="http://www.microsoft.com/windows/windowsmedia/download/default.asp" target="_blank"><img src="http://portal.acm.org/images/wmv.gif" width="16" height="15" alt="" border="0"> Windows Media Player</a>
+&nbsp;&nbsp;
+<a href="http://www.real.com/" target="_blank"><img src="http://portal.acm.org/images/realplayer.gif" width="20" height="18" alt="" border="0"> Real Player</a>
+
+
+</DIV>
+
+</td>
+</tr>
+</table>
+</div>
+
+</body>
+</html>

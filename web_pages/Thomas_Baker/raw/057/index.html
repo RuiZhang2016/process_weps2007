@@ -1,0 +1,767 @@
+<?xml version="1.0" encoding="iso-8859-1"?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "DTD/xhtml1-transitional.dtd">
+<html lang="EN">
+  <head>
+    <style type="text/css">
+      /* Element level classes */
+
+body
+{
+    color: Black;
+    font-size: 12px;
+    font-family: "Bitstream Vera Sans", "Lucida Sans Unicode", "Lucida Grande", Arial;
+    background-color: White;
+    margin: 8px;
+}
+
+td, th
+{
+    color: Black;
+    font-size: 12px;
+    font-family: "Bitstream Vera Sans", "Lucida Sans Unicode", "Lucida Grande", Arial;
+}
+
+img
+{
+    border-width: 0px;
+    vertical-align: middle;
+}
+
+a
+{
+    color: #000099;
+    text-decoration: none;
+}
+a:active
+{
+    color: #FF6600;
+    text-decoration: none;
+}
+a:visited
+{
+    color: #000099;
+    text-decoration: none;
+}
+
+a:hover
+{
+    color: #FF6600;
+}
+
+input[type=text], input[type=password], input[type=file], select
+{
+    background-color: White;
+    color: Black;
+    font-size: 12px;
+    font-family: "Bitstream Vera Sans", "Lucida Sans Unicode", "Lucida Grande", Arial;
+
+    vertical-align: middle;
+
+}
+
+textarea
+{
+    background-color: White;
+    color: Black;
+    font-size: 12px;
+    font-family: Lucida Console, Andale Mono, Courier New, Courier;
+}
+
+input[type=submit]
+{
+    border: 1px dotted #808080;
+    background-color: #EEEEEE;
+    font-size: 12px;
+    font-family: "Bitstream Vera Sans", "Lucida Sans Unicode", "Lucida Grande", Arial;
+    vertical-align: middle;
+}
+
+input
+{
+    vertical-align: middle;
+}
+
+
+/* new styles */
+
+#phorum-index
+{
+    width: 100%;
+    border: 1px solid #808080;
+    border-bottom-width: 0px;
+    text-align: left;
+}
+
+#phorum-index th
+{
+    border-bottom: 1px solid #808080;
+    background-color: #EEEEEE;
+    padding: 3px 0 3px 0;
+}
+
+#phorum-index td
+{
+    font-family: "Bitstream Vera Sans", "Trebuchet MS", Verdana, Arial, sans-serif;
+    background-color: White;
+    padding: 3px 0 3px 0;
+    border-bottom: 1px solid #808080;
+}
+
+#phorum-index th.forum-name
+{
+    font-family: "Bitstream Vera Sans", "Trebuchet MS", Verdana, Arial, sans-serif;
+    font-size: 16px;
+    padding: 3px 0 3px 3px;
+}
+
+#phorum-index th.forum-name a
+{
+    color: Black;
+}
+
+#phorum-index th.forum-threads
+{
+    width: 120px;
+    text-align: center;
+    vertical-align: middle;
+}
+
+#phorum-index th.forum-posts
+{
+    width: 120px;
+    text-align: center;
+    vertical-align: middle;
+}
+
+#phorum-index th.forum-last-post
+{
+    padding: 3px 15px 3px 3px;
+    vertical-align: middle;
+}
+
+#phorum-index td.forum-name
+{
+    font-family: "Bitstream Vera Sans", "Trebuchet MS", Verdana, Arial, sans-serif;
+    font-size: 13px;
+    font-weight: bold;
+    padding: 5px 0 5px 15px;
+}
+
+#phorum-index td.forum-name p
+{
+    font-size: 13px;
+    font-weight: normal;
+    font-family: "Bitstream Vera Sans", "Lucida Sans Unicode", "Lucida Grande", Arial;
+    margin: 0 15px 0 0;
+}
+
+#phorum-index td.forum-name small
+{
+    font-weight: normal;
+    font-family: "Bitstream Vera Sans", "Lucida Sans Unicode", "Lucida Grande", Arial;
+}
+
+#phorum-index td.forum-threads
+{
+    width: 120px;
+    text-align: center;
+}
+
+#phorum-index td.forum-posts
+{
+    width: 120px;
+    text-align: center;
+}
+
+#phorum-index td.forum-last-post
+{
+    width: 120px;
+    padding: 0 15px 0 0;
+}
+
+#phorum-menu-table
+{
+    width: 100%;
+    border-width: 0px;
+}
+
+#phorum-menu
+{
+    padding: 5px 3px 0 0;
+    vertical-align: top;
+    width: 200px;
+}
+
+#phorum-content
+{
+    padding: 5px 0 0 2px;
+    vertical-align: top;
+}
+
+div.phorum-menu
+{
+    font-size: 12px;
+    font-family: "Bitstream Vera Sans", "Lucida Sans Unicode", "Lucida Grande", Arial;
+    background-color: White;
+    border: 1px solid #808080;
+    padding: 3px;
+}
+
+div.phorum-menu ul
+{
+    font-weight: bold;
+    list-style: none;
+    padding: 0;
+    margin: 0 0 10px 0;
+}
+
+div.phorum-menu li
+{
+    font-weight: bold;
+    font-family: Lucida Sans Unicode, Lucida Grande, Arial;
+    font-size: 12px;
+    padding: 0 0 0 15px;
+    margin-top:3px;
+    background-image: url('templates/default/images/square_bullet.png');
+    background-repeat: no-repeat;
+    background-position: 1px 2px;
+}
+
+div.phorum-menu a
+{
+    font-weight: normal;
+    color: #000000;
+}
+
+div.phorum-menu a:hover
+{
+    color: #FF6600;
+}
+
+div.phorum-menu a.phorum-current-page
+{
+    font-weight: bold;
+}
+
+#phorum-post-form ul
+{
+    padding: 0 0 0 20px;
+    margin: 3px 0px 8px 0px;
+    font-size: 11px;
+}
+
+#phorum-post-form li
+{
+    margin-bottom: 3px;
+}
+
+#phorum-attachment-list td
+{
+    font-size: 11px;
+}
+
+    /* Standard classes for use in any page */
+    /* PhorumDesignDiv - a div for keeping the forum-size size */
+    .PDDiv
+    {
+        width: 100%;
+        text-align: left;
+    }
+    /* new class for layouting the submit-buttons in IE too */
+    .PhorumSubmit {
+        border: 1px dotted #808080;
+        color: Black;
+        background-color: #EEEEEE;
+        font-size: 12px;
+        font-family: "Bitstream Vera Sans", "Lucida Sans Unicode", "Lucida Grande", Arial;
+        vertical-align: middle;
+    }
+
+    .PhorumTitleText
+    {
+        float: right;
+    }
+
+    .PhorumStdBlock
+    {
+        font-size: 12px;
+        font-family: "Bitstream Vera Sans", "Lucida Sans Unicode", "Lucida Grande", Arial;
+        background-color: White;
+        border: 1px solid #808080;
+/*        width: 100%; */
+        padding: 3px;
+        text-align: left;
+    }
+
+    .PhorumStdBlockHeader
+    {
+        font-size: 12px;
+        font-family: "Bitstream Vera Sans", "Lucida Sans Unicode", "Lucida Grande", Arial;
+        background-color: #EEEEEE;
+/*        width: 100%; */
+        border-left: 1px solid #808080;
+        border-right: 1px solid #808080;
+        border-top: 1px solid #808080;
+        padding: 3px;
+        text-align: left;
+    }
+
+    .PhorumHeaderText
+    {
+        font-weight: bold;
+    }
+
+    .PhorumNavBlock
+    {
+        font-size: 12px;
+        font-family: Lucida Sans Unicode, Lucida Grande, Arial;
+        border: 1px solid #808080;
+        margin-top: 1px;
+        margin-bottom: 1px;
+/*        width: 100%; */
+        background-color: #EEEEEE;
+        padding: 2px 3px 2px 3px;
+    }
+
+    .PhorumNavHeading
+    {
+        font-weight: bold;
+    }
+
+    A.PhorumNavLink
+    {
+        color: #000000;
+        text-decoration: none;
+        font-weight: normal;
+        font-family: Lucida Sans Unicode, Lucida Grande, Arial;
+        font-size: 12px;
+        border-style: solid;
+        border-color: #EEEEEE;
+        border-width: 1px;
+        padding: 0px 4px 0px 4px;
+    }
+
+    .PhorumSelectedFolder
+    {
+        color: #000000;
+        text-decoration: none;
+        font-weight: normal;
+        font-family: Lucida Sans Unicode, Lucida Grande, Arial;
+        font-size: 12px;
+        border-style: solid;
+        border-color: #EEEEEE;
+        border-width: 1px;
+        padding: 0px 4px 0px 4px;
+    }
+
+    A.PhorumNavLink:hover
+    {
+        background-color: #FFFFFF;
+        font-weight: normal;
+        font-family: Lucida Sans Unicode, Lucida Grande, Arial;
+        font-size: 12px;
+        border-style: solid;
+        border-color: #808080;
+        border-width: 1px;
+        color: #FF6600;
+    }
+
+    .PhorumFloatingText
+    {
+        padding: 10px;
+    }
+
+    .PhorumHeadingLeft
+    {
+        padding-left: 3px;
+        font-weight: bold;
+    }
+
+    .PhorumUserError
+    {
+        padding: 10px;
+        text-align: center;
+        color: Red;
+        font-size: 16px;
+        font-family: "Bitstream Vera Sans", "Trebuchet MS", Verdana, Arial, sans-serif;
+        font-weight: bold;
+    }
+
+    .PhorumOkMsg
+    {
+        padding: 10px;
+        text-align: center;
+        color: DarkGreen;
+        font-size: 16px;
+        font-family: "Bitstream Vera Sans", "Trebuchet MS", Verdana, Arial, sans-serif;
+        font-weight: bold;
+    }
+
+   .PhorumNewFlag
+    {
+        font-family: "Bitstream Vera Sans", "Lucida Sans Unicode", "Lucida Grande", Arial;
+        font-size: 10px;
+        font-weight: bold;
+        color: #CC0000;
+    }
+
+    .PhorumNotificationArea
+    {
+        float: right;
+        border-style: dotted;
+        border-color: #808080;
+        border-width: 1px;
+    }
+
+    /* PSUEDO Table classes                                       */
+    /* In addition to these, each file that uses them will have a */
+    /* column with a style property to set its right margin       */
+
+    .PhorumColumnFloatXSmall
+    {
+        float: right;
+        width: 75px;
+    }
+
+    .PhorumColumnFloatSmall
+    {
+        float: right;
+        width: 100px;
+    }
+
+    .PhorumColumnFloatMedium
+    {
+        float: right;
+        width: 150px;
+    }
+
+    .PhorumColumnFloatLarge
+    {
+        float: right;
+        width: 200px;
+    }
+
+    .PhorumColumnFloatXLarge
+    {
+        float: right;
+        width: 400px;
+    }
+
+    .PhorumRowBlock
+    {
+        background-color: White;
+        border-bottom: 1px solid #F2F2F2;
+        padding: 5px 0px 0px 0px;
+    }
+
+    .PhorumRowBlockAlt
+    {
+        background-color: #EEEEEE;
+        border-bottom: 1px solid #F2F2F2;
+        padding: 5px 0px 0px 0px;
+    }
+
+    /************/
+
+
+    /* All that is left of the tables */
+
+    .PhorumStdTable
+    {
+        border-style: solid;
+        border-color: #808080;
+        border-width: 1px;
+        width: 100%;
+    }
+
+    .PhorumTableHeader
+    {
+        background-color: #EEEEEE;
+        border-bottom-style: solid;
+        border-bottom-color: #808080;
+        border-bottom-width: 1px;
+        color: #000000;
+        font-size: 12px;
+        font-family: Lucida Sans Unicode, Lucida Grande, Arial;
+        font-weight: bold;
+        padding: 3px;
+    }
+
+    .PhorumTableRow
+    {
+        background-color: White;
+        border-bottom-style: solid;
+        border-bottom-color: #F2F2F2;
+        border-bottom-width: 1px;
+        color: Black;
+        font-size: 12px;
+        font-family: "Bitstream Vera Sans", "Lucida Sans Unicode", "Lucida Grande", Arial;
+        height: 35px;
+        padding: 3px;
+    }
+
+    .PhorumTableRowAlt
+    {
+        background-color: #EEEEEE;
+        border-bottom-style: solid;
+        border-bottom-color: #F2F2F2;
+        border-bottom-width: 1px;
+        color: #000000;
+        font-size: 12px;
+        font-family: "Bitstream Vera Sans", "Lucida Sans Unicode", "Lucida Grande", Arial;
+        height: 35px;
+        padding: 3px;
+    }
+
+    table.PhorumFormTable td
+    {
+        height: 26px;
+    }
+
+    /**********************/
+
+
+    /* Read Page specifics */
+
+    .PhorumReadMessageBlock
+    {
+        margin-bottom: 5px;
+    }
+
+   .PhorumReadBodySubject
+    {
+        color: Black;
+        font-size: 16px;
+        font-family: "Bitstream Vera Sans", "Trebuchet MS", Verdana, Arial, sans-serif;
+        font-weight: bold;
+        padding-left: 3px;
+    }
+
+    .PhorumReadBodyHead
+    {
+        padding-left: 5px;
+    }
+
+    .PhorumReadBodyText
+    {
+        font-size: 12px;
+        font-family: "Bitstream Vera Sans", "Lucida Sans Unicode", "Lucida Grande", Arial;
+        padding: 5px;
+    }
+
+    .PhorumReadNavBlock
+    {
+        font-size: 12px;
+        font-family: Lucida Sans Unicode, Lucida Grande, Arial;
+        border-left: 1px solid #808080;
+        border-right: 1px solid #808080;
+        border-bottom: 1px solid #808080;
+/*        width: 100%; */
+        background-color: #EEEEEE;
+        padding: 2px 3px 2px 3px;
+    }
+
+    /********************/
+
+    /* List page specifics */
+
+    .PhorumListSubText
+    {
+        color: #707070;
+        font-size: 10px;
+        font-family: "Bitstream Vera Sans", Arial, sans-serif;
+    }
+
+    .PhorumListPageLink
+    {
+        color: #707070;
+        font-size: 10px;
+        font-family: "Bitstream Vera Sans", Arial, sans-serif;
+    }
+
+    .PhorumListSubjPrefix
+    {
+        font-weight: bold;
+    }
+
+    /********************/
+
+    /* Posting editor specifics */
+
+    .PhorumListModLink, .PhorumListModLink a
+    {
+        color: #707070;
+        font-size: 10px;
+        font-family: "Bitstream Vera Sans", Arial, sans-serif;
+    }
+
+    .PhorumAttachmentRow {
+        border-bottom: 1px solid #EEEEEE;
+        padding: 3px 0px 3px 0px;
+    }
+
+    /********************/
+
+    /* PM specifics */
+
+    .phorum-recipientblock
+    {
+        border: 1px solid black;
+        position:relative;
+        float:left;
+        padding: 1px 1px 1px 5px;
+        margin: 0px 5px 5px 0px;
+        font-size: 11px;
+        background-color: White;
+        border: 1px solid #808080;
+        white-space: nowrap;
+    }
+
+    .phorum-pmuserselection
+    {
+        padding-bottom: 5px;
+    }
+
+    .phorum-gaugetable {
+        border-collapse: collapse;
+    }
+
+    .phorum-gauge {
+        border: 1px solid #808080;
+        background-color: #EEEEEE;
+    }
+
+    .phorum-gaugeprefix {
+        border: none;
+        background-color: white;
+        padding-right: 10px;
+    }
+
+    /********************/
+
+    /* Override classes - Must stay at the end */
+
+    .PhorumNarrowBlock
+    {
+        width: 600px;
+    }
+
+    .PhorumSmallFont
+    {
+        font-size: 11px;
+    }
+
+    .PhorumLargeFont
+    {
+        color: Black;
+        font-size: 16px;
+        font-family: "Bitstream Vera Sans", "Trebuchet MS", Verdana, Arial, sans-serif;
+        font-weight: bold;
+    }
+
+
+    .PhorumFooterPlug
+    {
+        margin-top: 10px;
+        font-size: 10px;
+        font-family: "Bitstream Vera Sans", Arial, sans-serif;
+    }
+
+
+
+    /*   BBCode styles  */
+
+    blockquote.bbcode
+    {
+        font-size: 11px;
+        margin: 0 0 0 10px;
+    }
+
+    blockquote.bbcode div
+    {
+        margin: 0;
+        padding: 5px;
+        border: 1px solid #808080;
+    }
+
+    blockquote.bbcode strong
+    {
+        font-style: italic;
+        margin: 0 0 3px 0;
+    }
+
+    </style>
+          <link rel="alternate" type="application/rss+xml" title="RSS-Feed" href="http://www.pa-roots.org/data/rss.php?31,104464" />
+                <title>PA-Roots Genealogy DataBoards :: Biographies - Lancaster County :: Baker, Thomas &amp; Family</title>
+    <meta name="keywords" content="Genealogy, Family Research, Birth Records, Obituaries, Wills, Deeds, Biographies, Military Records, Pennsylvania Counties, Pennsylvania Genealogy, Pennsylvania History, Genealogy, history, PA,Adams, Allegheny, Armstrong, Beaver, Bedford, Berks, Blair, Bradford, Bucks, Butler, Cambria, Cameron, Carbon, Centre, Chester, Clarion, Clearfield, Clinton, Columbia, Crawford, Cumberland, Dauphin, Delaware, Elk, Erie, Fayette, Forest, Franklin, Fulton, Greene, Huntingdon, Indiana, Jefferson, Juniata, Lackawanna, Lancaster, Lawrence, Lebanon, Lehigh, Luzerne, Lycoming, McKean, Mercer, Mifflin, Monroe, Montgomery, Montour, Northampton&nbsp;, Northumberland, Perry, Philadelphia, Pike, Potter, Schuylkill, Snyder, Somerset, Sullivan, Susquehanna, Tioga, Union, Venango, Warren, Washington, Wayne, Westmoreland, Wyoming, York">
+<meta name="description" content="Source: Biographical Annals of Lancaster Co., PA., 1903 by J. H. Beers &amp;amp;amp; Co., page 496-497. THOMAS BAKER, a retired farmer and surveyor of Colerain township, Lancaster county, was born at Chatham, Chester Co., Pa.. July 13, 1822, son of Lewis and Diana (Jackson) Baker, both of whom were born in Chester county, he in 1790, she a few years later. Mr. Baker traces his ancestry back definitely to Sir Rirhard Baker, who was born in the county of Kent, England, in 1568, and died in February, 1644. He was the author of the &amp;amp;quot;Chronicles of the Kings of England.&amp;amp;quot; ..."/>
+  </head>
+  <body onload=""background="parootsback.gif">
+<p align="center">
+<p align="center">
+<script type="text/javascript"><!--
+google_ad_client = "pub-3928251827338185";
+google_ad_width = 728;
+google_ad_height = 90;
+google_ad_format = "728x90_as";
+google_ad_type = "text_image";
+google_ad_channel ="2873889796";
+//--></script>
+<script type="text/javascript"
+  src="http://pagead2.googlesyndication.com/pagead/show_ads.js">
+</script>
+<p align="center"><a href="http://www.pa-roots.com/"><img border="0" style="border-width: 3px;border-color: #336699" src="http://www.pa-roots.com/graphics/headernew.jpg" alt="PA-Roots - Bringing our past into the future" width="484" height="113"></a></p>
+
+<blockquote>
+    <div align="center">
+      <p><div class="PDDiv">
+                <span class="PhorumTitleText PhorumLargeFont">
+          <a href="http://www.pa-roots.org/data/list.php?31">Biographies - Lancaster County</a>&nbsp;:&nbsp;          PA-Roots Genealogy DataBoards        </span>
+
+        <div class="PhorumFloatingText">Lancaster County Biographies&nbsp;</div>
+<div class="PhorumNavBlock"><span class="PhorumNavHeading PhorumHeadingLeft">Position:</span>&nbsp<a class="PhorumNavLink" href="http://www.pa-roots.org/data/index.php?0">PA-Roots Genealogy DataBoards</a><span class="PhorumNavHeading"> > </span><a class="PhorumNavLink" href="http://www.pa-roots.org/data/index.php?99">Pennsylvania</a><span class="PhorumNavHeading"> > </span><a class="PhorumNavLink" href="http://www.pa-roots.org/data/index.php?100">Counties</a><span class="PhorumNavHeading"> > </span><a class="PhorumNavLink" href="http://www.pa-roots.org/data/index.php?29">Lancaster County</a><span class="PhorumNavHeading"> > </span><a class="PhorumNavLink" href="http://www.pa-roots.org/data/list.php?31">Biographies - Lancaster County</a></div><div class="PhorumNavBlock" style="text-align: left;">
+  <div style="float: right;">
+    <span class="PhorumNavHeading">Goto Thread:</span>&nbsp;<a class="PhorumNavLink" href="http://www.pa-roots.org/data/read.php?31,1059442377,newer">Previous</a>&bull;<a class="PhorumNavLink" href="http://www.pa-roots.org/data/read.php?31,1059442377,older">Next</a>
+  </div>
+  <span class="PhorumNavHeading PhorumHeadingLeft">Goto:</span>&nbsp;<a class="PhorumNavLink" href="http://www.pa-roots.org/data/index.php?29">Forum List</a>&bull;<a class="PhorumNavLink" href="http://www.pa-roots.org/data/list.php?31">Message List</a>&bull;<a class="PhorumNavLink" href="http://www.pa-roots.org/data/posting.php?31">New Topic</a>&bull;<a class="PhorumNavLink" href="http://www.pa-roots.org/data/search.php?31">Search</a>&bull;<a class="PhorumNavLink" href="http://www.pa-roots.org/data/login.php?31">Log In</a></div>
+    <div class="PhorumReadMessageBlock">
+        <div class="PhorumStdBlock">
+              <div class="PhorumReadBodySubject">Baker, Thomas &amp; Family <span class="PhorumNewFlag"></span></div>
+            <div class="PhorumReadBodyHead">Posted by: <strong><a href="http://www.pa-roots.org/data/profile.php?31,169">Millie Mowry</a></strong> (IP Logged)</div>
+      <div class="PhorumReadBodyHead">Date: July 28, 2003 09:32PM</div><br />
+      <div class="PhorumReadBodyText"> Source: Biographical Annals of Lancaster Co., PA., 1903 by J. H. Beers &amp;amp; Co., page 496-497.<br />
+THOMAS BAKER, a retired farmer and surveyor of Colerain township, Lancaster county, was born at Chatham, Chester Co., Pa.. July 13, 1822, son of Lewis and Diana (Jackson) Baker, both of whom were born in Chester county, he in 1790, she a few years later.<br />
+Mr. Baker traces his ancestry back definitely to Sir Rirhard Baker, who was born in the county of Kent, England, in 1568, and died in February, 1644. He was the author of the &amp;quot;Chronicles of the Kings of England.&amp;quot; His son, John Baker, born in 1598, died about 1672. They are first found in the North of England, where they were property owners in the fifteenth century, and in the seven-teenth century were strong supporters of George Fox, and suffered imprisonment under Cromwell. About 1650 representatives of the family were at or near Aylesbury, Buckinghamshire. The first of the family to come to this country was (I) Joseph Baker, born in 1630, son of John, before mentioned. He was of Shropshire, England. With his wife, Mary, he settled in Edgemont township, Delaware Co., Pa., in 1685, upon a large tract of land. He was a representative from Chester county in the Provincial Assembly in the years, 1701, 1703, 1706, 1710, 1711 and 1713. He was a member of the Society of Friends. He died in 1716, and his will, dated Dec. 19, 1714, is in the register's office at Westchester, Pa. His children, all born in England, were: John, Sarah, wife of Thomas Smedley; Robert, and Joseph.<br />
+(II) Joseph Baker (2) son of Joseph, born in 1667, died in 1735. He married Martha Woodward, and they had children as follows: Richard, Aaron, Ann, Susanna, Jane, Jesse, Sarah, Joseph, Rachel, Nehemiah and John.<br />
+(III) Aaron Baker, son of Joseph (2), was born in 1701, and died in 1783. He married Mary Edwards, and they had six children. John married Hannah Pennock in 1747. Mary married Thomas Carrington in 1752. Martha married John Clayton in 1753. Esther married William Chalfant. Aaron is mentioned below. Samuel lived in West Marlboro township, Chester Co., Pa., where he founded a branch of the family.<br />
+(IV) Aaron Baker (2), the great-grandfather of Thomas, was born in 1729, in Chester county where, in 1759, he married Sarah Hayes. They reared the following family: James (who settled near Coatesville, Chester county, where his descendants. still live), Natlian, Elisha, Levi, Joshua, Aaron, John,, Hannah, Mary, Rachel and Sarah.<br />
+(V) Aaron Baker (3), grandfather of Thomas, was born in Chester county in 1767, and died there in 1853. He married Hannah Harland, also a native of Chester county, and their children were as follows. Lewis, the father of Thomas; Reuben, who married Mary Davis; Susanna, wife of William M. Davis; George, who never married; Jacob, who married Lydia Lamborn; Thomas, who married Ann Rakestraw; Samuel, who married Mary Rakestraw; Aaron, who married M. Ottey; Harland who married Hannah Eastburn; and Hannah, unmarried.<br />
+(VI) Lewis Baker, father of Thomas, was born in 1790, in Chester county, and in 1820 married Diana Jackson. They settled near Chatham, Chester county, and were farming people all their lives, becoming quite prosperous, and adhering strictly to the Quaker faith. Mr. Baker died in 1835, leaving his widow and three sons. The sons bought a tract of land in Colerain township, on which Thomas Baker was located, the mother remaining in Chester county, where she died in 1853. Thomas was the eldest child; Lewis, the second son, married Mary Greenfield, and located on a farm near the old homestead in Chester county, where he died in 1846 leaving a widow, who still lives on the old home, Robert A. died when a young man.<br />
+Thomas Baker was well educated in the public schools of Chester county, and for twenty years was a teacher in the public schools of Lancaster and Chester counties, pursuing that profession long after his marriage. In 1840 he commenced to study surveying, preparing for that work under Jonathan Goss, at Unionville Academy, Chester county, and it has been his main occupation during most of his active life. He has surveyed over 650 farms in Lancaster and Chester counties, as welll as land in Virginia, and made his best survey in 1902, when almost eighty years of age.<br />
+Thomas Baker was married in June, 1855, to Miss Eliza, daughter of James and Abigail Jackson, prominent residents of Lancaster county. Mrs Baker was born in Chester county, in May 1834, and was for a number of years a teacher in Lancaster county. Mr. and Mrs. Thomas Baker began married life on a farm in Colerain township, where he erected a brick house and a frame barn. There they remained until 1879, when the present handsome brick house on one quarter of the farm was built, in which they have since resided. He is leading a quiet and retired life, doing, however, some little tasks in surveying. His son Lewis has charge of the farm. Mrs. Baker, while on a visit to her son in Philadelphia, in 1893, took cold, and died in that city, her husband and four children, out of a family of seven born to them, surviving: (1) Abbie, born in 1856, married Howard Brinton, a farmer of Colerain township, and died leaving two sons, Thomas B. and Lewis B. (2) Allison, born in 1858, married Miss Anna Maule, of Colerain township, a daughter of J. Comly and S. Emma Maule, and is living on his farm in Sadsbury township. (3) James E., born in 1859, was graduated from the State Normal School at Millersville, and is now principal of the Friends Central School, Philadelphia; for some twelve years he has followed teaching very successfully. He married Miss Emma MacIntyre, of Philadelphia, and they have had six children: Walter, born in 1886; Ralph, 1888; Jeanetta, 1889 (deceased); Marian, 1891; Edna, 1895; and Eugene, Jr, 1897. (4) Xanthus, born in 1863, married Della Girvin, of Colerain township, and resides on his farm near Union, in that township; they have three children: Arthur, born in 1893; Eliza, 1894; and Victoria, 1896. (5) Lewis, born in 1864, died in childhood. (6) Lydia, born in 1872, died in childhood. (7) Lewis, born in 1870, was a student at the Millersville State Normal, married Miss Kate Girvin, of this county, and they reside at the family homestead, he being manager of his father's farm. He has one son, Richard Veryl, who was born in April, 1897.<br />
+Thomas Baker has always been a Republican. He has never aspired to political station, though he was once elected school director in Colerain township, when it was strongly Democratic. He and his family are devout adherents to the Quaker faith, to which their ancestors have been committed. Mr. Baker and his wife took a trip to Europe, visiting England, Ireland, Scotland, Wales, France and all of the German states, spending much time in many places of interest. Thomas Baker is a man esteemed by his neighbors for his many good qualities and excellent charcter, and in disposition he is a man of warm heart and kindly feeling. He is a man of considerable learning, and is a Latin and French scholar. While in England he purchased a book published (in Latin), which he prizes very highly.<br />
+(There is a picture of Thomas Baker included with this biographical sketch, &amp;amp; it can be optained by contacting the contributor.)</div><br />
+          </div>
+        <div class="PhorumReadNavBlock" style="text-align: left;">
+      <span class="PhorumNavHeading PhorumHeadingLeft">Options:</span>&nbsp;<a class="PhorumNavLink" href="http://www.pa-roots.org/data/read.php?31,104464,104464#REPLY">Reply To This Message</a>&bull;<a class="PhorumNavLink" href="http://www.pa-roots.org/data/read.php?31,104464,104464,quote=1#REPLY">Quote This Message</a>    </div>
+  </div>
+<br /><br />
+<a name="REPLY"></a><div align="center">
+  <div class="PhorumNavBlock PhorumNarrowBlock" style="text-align: left;">
+    <span class="PhorumNavHeading">Goto:</span>&nbsp;<a class="PhorumNavLink" href="http://www.pa-roots.org/data/index.php?29">Forum List</a>&bull;<a class="PhorumNavLink" href="http://www.pa-roots.org/data/list.php?31">Message List</a>&bull;<a class="PhorumNavLink" href="http://www.pa-roots.org/data/search.php?31">Search</a>&bull;<a class="PhorumNavLink" href="http://www.pa-roots.org/data/login.php?31">Log In</a>  </div>
+  <div class="PhorumStdBlock PhorumNarrowBlock">
+              <div class="PhorumFloatingText">Sorry, only registered users may post in this forum.</div>
+              </div>
+</div>
+<p align="center"><b><font face="Arial,Helvetica" size="1"><a href="http://www.pa-roots.com/index.html">Home</a>&nbsp;&nbsp;
+|&nbsp; <a href="http://www.pa-roots.com/about.html">About Us</a>&nbsp;&nbsp; |&nbsp;&nbsp; <a href="http://www.pa-roots.com/aup.html">Acceptable
+Use Policy</a>&nbsp;&nbsp; |&nbsp;&nbsp; <a href="http://www.pa-roots.com/copyright.html">Copyright</a>&nbsp;&nbsp;
+|&nbsp;&nbsp; <a href="http://www.pa-roots.com/contact.html">Contact Us</a>&nbsp;&nbsp; |&nbsp; <a href="http://www.pa-roots.org/data/index.php?878">Help
+Desk</a>&nbsp;&nbsp; |<a href="http://www.pa-roots.com/privacy.html">Privacy</a></font></b></p>
+
+        <div class="PhorumFooterPlug" align="center">
+          This <a href="http://www.phorum.org/">forum</a> powered by <a href="http://www.phorum.org/">Phorum</a>.
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,3043 @@
+/* VB Enhanced banner style */
+
+.enhancedtitleblack {
+	color: #663366;
+	FONT-FAMILY: arial, helvetica,  sans-serif;
+	FONT-SIZE: 16px;
+	FONT-STYLE: normal;
+	FONT-WEIGHT: normal;
+	TEXT-DECORATION: none
+	}
+
+.enhancednameblack {
+	color: #663366;
+	font-family : Arial, sans-serif;
+	font-weight : normal;
+	font-style:normal;
+	font-size : 12px;
+	line-height: 15px;
+	text-decoration: none;
+	}
+
+a.enhancednameblack:link, a.enhancednameblack:active, a.enhancednameblack:visited {
+	color : #663366;
+	font-family : Arial, sans-serif;
+	font-weight : normal ;
+	font-style: normal;
+	font-size : 12px;
+	line-height: 15px;
+	text-decoration: none;
+}
+
+a.enhancednameblack:hover {
+	color: #000000;
+	font-family : Arial, sans-serif;
+	font-weight : normal;
+	font-style:normal;
+	font-size : 12px;
+	line-height: 15px;
+	text-decoration: underline;
+	}
+
+/* Remove borders from all image links */
+a img { border:none}
+
+/* for header tages on book and author pages*/
+h1 { display: inline;}
+h2 { display: inline;}
+h3 { display: inline;}
+
+/*DEFAULT A LINK (no class) */
+a:link{color: #FF6600; text-decoration: none}
+a:active{color: #FF6600; text-decoration: underline}
+a:hover{color: #FF6600; text-decoration: underline}
+a:visited{color: #FF6600; text-decoration: none}
+
+/* FOR BOTD PRICE AND BUY LINK*/
+.botdprice {
+font-size:11px;
+font-family: Tahoma, Helvetica, Geneva, sans-serif;
+font-weight: normal;
+line-height: 13px;
+color: #FF9933;
+}
+
+a.botdbuynow:link {
+font-size:11px;
+font-family: Tahoma, Helvetica, Geneva, sans-serif;
+font-weight: bold;
+line-height: 15px;
+color: #FF6600;
+text-decoration: none;
+border : 1px solid #FF9933;
+padding-left : 3px;
+padding-right:3px;
+}
+
+a.botdbuynow:visited {
+font-size:11px;
+font-family: Tahoma, Helvetica, Geneva, sans-serif;
+font-weight: bold;
+line-height: 15px;
+color: #FF9900;
+text-decoration: none;
+border : 1px solid #FF9933;
+padding-left : 3px;
+padding-right:3px;	
+}
+
+a.botdbuynow:hover {
+font-size:11px;
+font-family: Tahoma, Helvetica, Geneva, sans-serif;
+font-weight: bold;
+line-height: 15px;
+color: #336699;
+text-decoration: none;
+border : 1px solid #FF9933;
+padding-left : 3px;
+padding-right:3px;		
+}
+
+a.botdbuynow:active {
+font-size:11px;
+font-family: Tahoma, Helvetica, Geneva, sans-serif;
+font-weight: bold;
+line-height: 15px;
+color: #FF9900;
+text-decoration: none;
+border : 1px solid #FF9933;
+padding-left : 3px;
+padding-right:3px;
+}
+
+/*Default Font stuff  across all selector types/pages, mainly for default font stuff */
+.contenttitle, .misctext, .hottext, .medtext, .cooltext .copyright, .pageitemtitle,.pageitemsubtitle, .pageitemdetails, .eventtitle, .eventfieldtitle,
+a.pubauthorlink, .pubauthornonlink, .contentleftnavheader, .contentleftnavsection,
+a.contentleftnavsection,  a.sendfriend, a.audioorvideo, a.shoppinglink, 
+.foundbooktilemisc, .foundbooktiledetails, .foundbooktiletitle, .foundbooktileauthor, .foundbooktilemore,
+.searchresultspageindex,.browseitemparent, .browseitemchild, .imgbooktileanchor, .imgbooktilemisctext,
+.themeheader, .themeintro, .pubsetheader, a.enhancedrightnav, a.eventsearchtitle {  font-family: Arial, Helvetica, sans-serif; text-decoration: none}
+
+/* Global classes that span across multiple page types*/
+.contenttitle { font-size: 14px;  line-height: 15px; color: Black; } /* Content Type Title (Synopsis, Bio, etc) */
+.misctext { font-size: 12px; line-height: 15px; color: #000000;  }
+.imgbooktilemisctext { font-size: 12px; line-height: 15px; color: #000000;}
+.hottext { font-size: 12px; line-height: 15px; color: #ff6600;  }
+a.hottext:link { color: #ff6600; }
+a.hottext:active { color: #ff9900; }
+a.hottext:visited { color: #ff9900; }
+a.hottext:hover { color: #ff9900; text-decoration: underline; }
+
+.medtext { font-size: 12px; line-height: 15px; color: #336699;  }
+a.medtext:link { color: #336699; }
+a.medtext:active { color: #6699cc; }
+a.medtext:visited { color: #6699cc; }
+a.medtext:hover { color: #6699cc; text-decoration: underline; }
+
+.cooltext { font-size: 12px; line-height: 15px; color: #333333;  }
+a.cooltext:link { color: #999999; }
+a.cooltext:active { color: #999999; }
+a.cooltext:visited { color: #999999; }
+a.cooltext:hover { color: #999999; text-decoration: underline; }
+
+.hotcolor {color:#ff6600  }
+.medcolor {color:#336699  }
+.coolcolor { color:#333333 }
+
+.eventbgcolor {	background-color: #FF8C00;}
+.eventtitlebgcolor {background-color: #696969;}
+
+.eventtitle {	font-size:12px; line-height: 15px; color:#ffffff}
+.eventfieldtitle {font-size:12px; line-height: 15px;color: #FF8C00;}
+
+.copyright { font-size: 9px; font-style: normal;line-height: 12px;color: Gray; }
+
+/* pageitem descriptors refer to any page where one item is highlighted */
+.pageitemtitle { font-size: 14px; line-height: 15px; color: #336699;  } /* Title on book page, Author name on author page */
+.pageitemsubtitle { font-size: 12px;line-height: 15px;color: #336699; } /* Subtitle on book page */
+.pageitemdetails { font-size: 10px;font-style: normal;line-height: 12px;color: #000000; }
+
+/* Used in multiple pages */
+.sendfriend {  FONT-FAMILY: arial, helvetica,  sans-serif; font-size: 12px; line-height: 15px;  }
+a.sendfriend:link{  FONT-FAMILY: arial, helvetica,  sans-serif; font-size: 12px; line-height: 15px; color: #FF6600;  text-decoration : underline; }
+a.sendfriend:active{  FONT-FAMILY: arial, helvetica,  sans-serif; font-size: 12px; line-height: 15px; color: #FF9900;  text-decoration : underline; }
+a.sendfriend:visited{  FONT-FAMILY: arial, helvetica,  sans-serif; font-size: 12px; line-height: 15px; color: #FF9900;  text-decoration : underline; }
+a.sendfriend:hover{	 FONT-FAMILY: arial, helvetica,  sans-serif; font-size: 12px; line-height: 15px; color: #FF9900; text-decoration : underline; }
+
+/* Shopping Cart Display Page Links */
+a.shopcart { font-size: 12px; line-height: 15px;  }
+a.shopcart:link { color: #FF6600; text-decoration : none;  }
+a.shopcart:active { color: #FF9900; text-decoration : none; }
+a.shopcart:visited { color: #FF9900; text-decoration : none; }
+a.shopcart:hover { color: #FF9900; text-decoration : underline; }
+
+/*Send to A Friend */
+.emailbannerrule { font-family: Arial, Helvetica, sans-serif; background-color: #6699CC}
+.emailbanner { font-family: Arial, Helvetica, sans-serif;  background-color: #ff6600; font-size: 19px;}
+.emailbody{ font-family: Arial, Helvetica, sans-serif; font-size: 12px; color:black}
+.emailheader { font-family: Arial, Helvetica, sans-serif;  font-size: 14px; line-height: 25px; color:black; text-decoration: none;}
+.emailrequired { font-family: Arial, Helvetica, sans-serif;  font-size: 10px; color: #CF002B;}
+.emailtext {  font-family: Arial, Helvetica, sans-serif;  font-size: 12px; line-height: 15px; color:black; text-decoration: none;}
+.emailsmalltext { font-family: Arial, Helvetica, sans-serif;  font-size: 10px; line-height: 15px; color:black; text-decoration: none;}
+
+/*404 Page */
+.body404 { font-family: Arial, Helvetica, sans-serif; font-size: 12px; font-style: normal; line-height: 15px; font-weight: normal; font-variant: normal; text-transform: none; color: #000000; text-decoration: none }
+.link404 { font-family: Arial, Helvetica, sans-serif; font-size: 12px; font-style: normal; line-height: 15px; font-weight: normal; font-variant: normal; text-transform: none; color: #FF6600; text-decoration: none }
+A.link404:link { font-family: Arial, Helvetica, sans-serif; font-size: 12px; font-style: normal; line-height: 15px; font-weight: normal; font-variant: normal; text-transform: none; color: #FF6600; text-decoration: none}
+A.link404:active { font-family: Arial, Helvetica, sans-serif; font-size: 12px; font-style: normal; line-height: 15px; font-weight: normal; font-variant: normal; text-transform: none; color: #FF9900; text-decoration: none }
+A.link404:visited { font-family: Arial, Helvetica, sans-serif; font-size: 12px; font-style: normal; line-height: 15px; font-weight: normal; font-variant: normal; text-transform: none; color: #FF9900; text-decoration: none }
+A.link404:hover { font-family: Arial, Helvetica, sans-serif; font-size: 12px; font-style: normal; line-height: 15px; font-weight: normal; font-variant: normal; text-transform: none; color: #FF9900; text-decoration: underline }
+
+/* shopping basket styles */
+.basketbody { font-family: Arial, Helvetica, sans-serif; font-size: 12px; font-style: normal; line-height: 15px; font-weight: normal; font-variant: normal; text-transform: none; color: #000000; text-decoration: none }
+
+.baskettabletext { font-family: Arial, Helvetica, sans-serif; font-size: 12px; font-style: normal; line-height: 15px;
+font-weight: normal; font-variant: normal; text-transform: none; color: #000000; text-decoration: none }
+
+.baskettableformat { font-family: Arial, Helvetica, sans-serif; font-size: 12px; font-style: normal; line-height: 15px;
+font-weight: bold; font-variant: normal; text-transform: none;  color: #FF9900; text-decoration: none}
+
+.baskettableunitprice { font-family: Arial, Helvetica, sans-serif; font-size: 10px; font-style: normal; line-height: 12px;
+font-weight: normal; font-variant: normal; text-transform: none; color: #000000; text-decoration: none}
+
+.basketabletoptext {font-family: Arial, Helvetica, sans-serif; font-size: 12px; font-style: normal; line-height: 15px; font-weight: normal; font-variant: normal; text-transform: none; color: #FFFFFF; text-decoration: none}
+
+.baskettitle {font-family: Arial, Helvetica, sans-serif; font-size: 24pt; font-style: normal; line-height: 30pt; 
+font-weight: normal; font-variant: normal; color: #000000}
+
+.buttontext {font-family: Arial, Helvetica, sans-serif; font-size: 10px; line-height: 12pt; font-weight: normal; color:#FFFFFF; text-decoration: none}
+a.buttontext {font-family: Arial, Helvetica, sans-serif; font-size: 10px; line-height: 12pt; font-weight: normal; color:#FFFFFF; text-decoration: none}
+.baskettableborder { background:#CCCC99}
+.baskettabletopstrip { background:#6699CC}
+.baskettablebotmstrip { background:#CCCCCC}
+.basketlink1 { font-size: 10px; background:#6699CC}
+.basketstripa { background:#FFFFFF}
+.basketstripb { background:#CCCCCC}
+a.basketlink1:link { color: #6699CC; text-decoration: none }
+a.basketlink1:active { color: #6699CC; text-decoration: none }
+a.basketlink1:visited { color: #6699CC; text-decoration: none }
+a.basketlink1:hover { color: #6699CC; text-decoration: none }
+.basketlink2 { font-size: 10px; background:#FF9900}
+a.basketlink2:link {color: #FF9900; text-decoration: none }
+a.basketlink2:active {color: #FF9900; text-decoration: none }
+a.basketlink2:visited { color: #FF9900; text-decoration: none }
+a.basketlink2:hover { color: #FF9900; text-decoration: none }
+A.basketbooktitle:link {font-family: Arial, Helvetica, sans-serif; font-size: 12px; font-style: normal;
+line-height: 15px; font-weight: bold; font-variant: normal; text-transform: none; color: #000000;
+text-decoration: none}
+
+A.basketbooktitle:active {font-family: Arial, Helvetica, sans-serif; font-size: 12px; font-style: normal;
+line-height: 15px; font-weight: bold; font-variant: normal; text-transform: none; color: #000000; text-decoration: none }
+
+A.basketbooktitle:visited {
+font-family: Arial, Helvetica, sans-serif;
+font-size: 12px;
+font-style: normal;
+line-height: 15px;
+font-weight: bold;
+font-variant: normal;
+text-transform: none;
+color: #000000;
+text-decoration: none
+}
+
+A.basketbooktitle:hover { 
+font-family: Arial, Helvetica, sans-serif;
+font-size: 12px;
+font-style: normal;
+line-height: 15px;
+font-weight: bold;
+font-variant: normal;
+text-transform: none;
+color: #000000;
+text-decoration: underline
+}
+A.basketremove:link { 
+font-family: Arial, Helvetica, sans-serif;
+font-size: 12px;
+font-style: normal;
+line-height: 15px;
+font-weight: normal;
+font-variant: normal;
+text-transform: none;
+color: #FF6600;
+text-decoration: none
+}
+
+A.basketremove:active { 
+font-family: Arial, Helvetica, sans-serif;
+font-size: 12px;
+font-style: normal;
+line-height: 15px;
+font-weight: normal;
+font-variant: normal
+text-transform: none;
+color: #FF9900;
+text-decoration: none
+}
+
+A.basketremove:visited { 
+font-family: Arial, Helvetica, sans-serif;
+font-size: 12px;
+font-style: normal;
+line-height: 15px;
+font-weight: normal;
+font-variant: normal;
+text-transform: none; 
+color: #FF9900; 
+text-decoration: none 
+}
+
+A.basketremove:hover { 
+font-family: Arial, Helvetica, sans-serif;
+font-size: 12px;
+font-style: normal;
+line-height: 15px;
+font-weight: normal;
+font-variant: normal;
+text-transform: none;
+color: #FF9900;
+text-decoration: underline
+}
+A.basketlink:link { 
+font-family: Arial, Helvetica, sans-serif;
+font-size: 12px;
+font-style: normal;
+line-height: 15px;
+font-weight: normal;
+font-variant: normal;
+text-transform: none;
+color: #FF6600;
+text-decoration: none
+}
+
+A.basketlink:active { 
+font-family: Arial, Helvetica, sans-serif;
+font-size: 12px;
+font-style: normal;
+line-height: 15px;
+font-weight: normal;
+font-variant: normal
+text-transform: none;
+color: #FF9900;
+text-decoration: none
+}
+
+A.basketlink:visited { 
+font-family: Arial, Helvetica, sans-serif;
+font-size: 12px;
+font-style: normal;
+line-height: 15px;
+font-weight: normal;
+font-variant: normal;
+text-transform: none; 
+color: #FF9900; 
+text-decoration: none 
+}
+
+A.basketlink:hover { 
+font-family: Arial, Helvetica, sans-serif;
+font-size: 12px;
+font-style: normal;
+line-height: 15px;
+font-weight: normal;
+font-variant: normal;
+text-transform: none;
+color: #FF9900;
+text-decoration: underline
+}
+
+a.shoppinglink { font-size: 14px; line-height: 15px; }
+a.shoppinglink:link { color: #336699 }
+a.shoppinglink:active { color: #6699CC }
+a.shoppinglink:visited { color: #6699CC }
+a.shoppinglink:hover { color: #6699CC;text-decoration: underline }
+
+
+/* NEW SHOPPING BASKET STYLES - 15.07.2005 */
+
+.infolist { 
+	 font-family: Arial, Helvetica, sans-serif; 
+	 font-size: 12px; 
+	 font-style: normal; 
+	 line-height: 15px; 
+	 color: #ff0000; 
+	 text-decoration: none;
+}
+
+#navcontainer { 
+	width: 130px;
+	padding:2px;
+}
+
+
+#navcontainer ul {
+	margin-left: 14px;
+	margin-top:0px;
+	margin-bottom:0px;
+	padding: 0;
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 12px;
+}
+
+
+.keyinfohead { font-family: Arial, Helvetica, sans-serif; font-size: 15px; font-style: normal; line-height: 15px; font-weight: bold; color: #ffffff; text-decoration: none }  
+
+.carddetails{ font-family: Arial, Helvetica, sans-serif; font-size: 11px; font-style: normal; line-height: 15px; font-weight: normal; color: #000000; text-decoration: none }
+
+.basketred { font-family: Arial, Helvetica, sans-serif; font-size: 15px; font-style: normal; line-height: 15px; font-weight: bold;  color: #ff0000; text-decoration: none }
+
+.baskethead { font-family: Arial, Helvetica, sans-serif; font-size: 21px; font-style: normal; line-height: 23px; font-weight: normal; color: #000000; text-decoration: none }
+
+.baskettext { font-family: Arial, Helvetica, sans-serif; font-size: 12px; font-style: normal; line-height: 15px; font-weight: normal; color: #000000; text-decoration: none }
+
+a.baskettext:link { font-family: Arial, Helvetica, sans-serif; font-size: 12px; font-style: normal; line-height: 15px; font-weight: normal; color: #000000; text-decoration: underline }
+
+a.baskettext:active { font-family: Arial, Helvetica, sans-serif; font-size: 12px; font-style: normal; line-height: 15px; font-weight: normal; color: #000000; text-decoration: underline }
+
+a.baskettext:visited { font-family: Arial, Helvetica, sans-serif; font-size: 12px; font-style: normal; line-height: 15px; font-weight: normal; color: #000000; text-decoration: undeline }
+
+a.baskettext:hover { font-family: Arial, Helvetica, sans-serif; font-size: 12px; font-style: normal; line-height: 15px; font-weight: normal; color: #999999; text-decoration: underline }
+
+a.baskettextred:link { font-family: Arial, Helvetica, sans-serif; font-size: 12px; font-style: normal; line-height: 15px; font-weight: normal; color: #ff0000; text-decoration: underline }
+
+a.baskettextred:active { font-family: Arial, Helvetica, sans-serif; font-size: 12px; font-style: normal; line-height: 15px; font-weight: normal; color: #ff0000; text-decoration: underline }
+
+a.baskettextred:visited { font-family: Arial, Helvetica, sans-serif; font-size: 12px; font-style: normal; line-height: 15px; font-weight: normal; color: #ff0000; text-decoration: underline }
+
+a.baskettextred:hover { font-family: Arial, Helvetica, sans-serif; font-size: 12px; font-style: normal; line-height: 15px; font-weight: normal; color: #999999; text-decoration: underline }
+
+.basketunitprice { font-family: Arial, Helvetica, sans-serif; font-size: 10px; font-style: normal; line-height: 12px; font-weight: normal; font-variant: normal; text-transform: none; color: #000000; text-decoration: none}
+
+.baskettoptext {font-family: Arial, Helvetica, sans-serif; font-size: 15px; font-style: normal; line-height: 15px; font-weight: bold;  none; color: #ffffff; text-decoration: none}
+.baskettoptextblack {font-family: Arial, Helvetica, sans-serif; font-size: 15px; font-style: normal; line-height: 15px; font-weight: bold; color: #000000; text-decoration: none}
+
+.basketborder { background:#000000}
+.baskettopstrip { background:#6699cc}
+.basketbotstrip { background:#cccccc}
+
+
+.basketbg { background:#ffffff}
+
+.basketunitprice { font-family: Arial, Helvetica, sans-serif; font-size: 10px; font-style: normal; line-height: 12px; font-weight: normal; font-variant: normal; text-transform: none; color: #000000; text-decoration: none}
+
+.baskettitle {font-family: Arial, Helvetica, sans-serif; font-size: 24pt; font-style: normal; line-height: 30pt; font-weight: normal; font-variant: normal; color: #000000}
+
+.basketunitprice { font-family: Arial, Helvetica, sans-serif; font-size: 10px; font-style: normal; line-height: 12px; font-weight: normal; font-variant: normal; text-transform: none; color: #000000; text-decoration: none}
+
+.baskettoptext {font-family: Arial, Helvetica, sans-serif; font-size: 15px; font-style: normal; line-height: 15px; font-weight: bold;  none; color: #ffffff; text-decoration: none}
+.baskettoptextblack {font-family: Arial, Helvetica, sans-serif; font-size: 15px; font-style: normal; line-height: 15px; font-weight: bold; color: #000000; text-decoration: none}
+
+.basketborder { background:#000000}
+.baskettopstrip { background:#6699cc}
+.basketbotstrip { background:#cccccc}
+
+a.redbutton:link {
+		font-size:11px;
+		font-family: Arial, Tahoma, Helvetica, Geneva, sans-serif;
+		font-weight: bold;
+		line-height: 15px;
+		color: #FF0000;
+		text-decoration: none;
+		border : 1px solid #ff0000;
+		padding-left : 3px;
+		padding-right:3px;
+	}
+
+	a.redbutton:visited {
+		font-size:11px;
+		font-family: Arial, Tahoma, Helvetica, Geneva, sans-serif;
+		font-weight: bold;
+		line-height: 15px;
+		color: #FF0000;
+		text-decoration: none;
+		border : 1px solid #ff0000;
+		padding-left : 3px;
+		padding-right:3px;
+	}
+
+	a.redbutton:hover {
+		font-size:11px;
+		font-family: Arial, Tahoma, Helvetica, Geneva, sans-serif;
+		font-weight: bold;
+		line-height: 15px;
+		color: #999999;
+		text-decoration: none;
+		border : 1px solid #999999;
+		padding-left : 3px;
+		padding-right:3px;		
+	}
+
+	a.redbutton:active {
+		font-size:11px;
+		font-family: Arial, Tahoma, Helvetica, Geneva, sans-serif;
+		font-weight: bold;
+		line-height: 15px;
+		color: #FF0000;
+		text-decoration: none;
+		border : 1px solid #ff0000;
+		padding-left : 3px;
+		padding-right:3px;		
+	}
+	
+a.blackbutton:link {
+		font-size:11px;
+		font-family: Arial, Tahoma, Helvetica, Geneva, sans-serif;
+		font-weight: bold;
+		line-height: 15px;
+		color: #000000;
+		text-decoration: none;
+		border : 1px solid #000000;
+		padding-left : 3px;
+		padding-right:3px;
+	}
+
+a.blackbutton:visited {
+		font-size:11px;
+		font-family: Arial, Tahoma, Helvetica, Geneva, sans-serif;
+		font-weight: bold;
+		line-height: 15px;
+		color: #000000;
+		text-decoration: none;
+		border : 1px solid #000000;
+		padding-left : 3px;
+		padding-right:3px;
+	}
+
+a.blackbutton:hover {
+		font-size:11px;
+		font-family: Arial, Tahoma, Helvetica, Geneva, sans-serif;
+		font-weight: bold;
+		line-height: 15px;
+		color: #999999;
+		text-decoration: none;
+		border : 1px solid #999999;
+		padding-left : 3px;
+		padding-right:3px;		
+	}
+
+a.blackbutton:active {
+		font-size:11px;
+		font-family: Arial, Tahoma, Helvetica, Geneva, sans-serif;
+		font-weight: bold;
+		line-height: 15px;
+		color: #000000;
+		text-decoration: none;
+		border : 1px solid #000000;
+		padding-left : 3px;
+		padding-right:3px;		
+	}
+
+.navactive {
+    font-size : 21px;
+    font-family :  arial, helvetica, sans-serif;
+    font-style : normal;
+    font-weight : normal;
+    color : #000000; 
+    line-height: 23px;
+    text-decoration:none;
+}
+
+.navinactive {
+    font-size : 21px;
+    font-family :  arial, helvetica, sans-serif;
+    font-style : normal;
+    font-weight : normal;
+    color : #b6b6b6; 
+    line-height: 23px;
+    text-decoration:none;
+}
+
+.basketredxsm { 
+font-family: arial, helvetica, sans-serif; 
+text-decoration: none; 
+color:#ff0000;
+font-size: 10px; 
+font-style: normal; 
+line-height:10px;
+}
+
+A.basketredxsm:link { 
+font-family: arial, helvetica, sans-serif; 
+text-decoration: none; 
+color:#ff0000;
+font-size: 10px; 
+font-style: normal; 
+line-height: 10px; 
+}
+
+A.basketredxsm:visited { 
+font-family: arial, helvetica, sans-serif; 
+text-decoration: none; 
+color:#ff0000;
+font-size: 10px; 
+font-style: normal; 
+line-height: 10px; 
+}
+
+A.basketredxsm:hover { 
+font-family: arial, helvetica, sans-serif; 
+text-decoration: none; 
+color:#ff0000;
+font-size: 10px; 
+font-style: normal; 
+line-height: 10px; 
+}
+
+.baskethelp {
+    font-size : 12px;
+    font-family : arial, helvetica, sans-serif;
+    font-style : normal;
+    font-weight : normal;
+    color : #ffffff; 
+    line-height: 15px;
+    text-decoration : underline;
+}
+
+A.baskethelp:link {
+    font-size : 12px;
+    font-family : arial, helvetica, sans-serif;
+    font-style : normal;
+    font-weight : bold;
+    color : #ffffff; 
+    line-height: 15px;
+    text-decoration : underline;
+}
+
+A.baskethelp:visited {
+    font-size : 12px;
+    font-family : arial, helvetica, sans-serif;
+    font-style : normal;
+    font-weight : bold;
+    color : #ffffff; 
+    line-height: 15px;
+    text-decoration : underline;
+}
+
+A.baskethelp:hover {
+    font-size : 12px;
+    font-family : arial, helvetica, sans-serif;
+    font-style : normal;
+    font-weight : bold;
+    color : #999999; 
+    line-height: 15px;
+    text-decoration : underline;
+}
+
+
+.basketsmall {
+    font-size : 11px;
+    font-family :  arial, helvetica, sans-serif;
+    font-style : normal;
+    font-weight : normal;
+    color : #000000; 
+    line-height: 15px;
+    text-decoration:none;
+}
+
+A.basketsmall:link {
+    font-size : 11px;
+    font-family :  arial, helvetica, sans-serif;
+    font-style : normal;
+    font-weight : normal;
+    color : #000000; 
+    line-height: 15px;
+    text-decoration:underline;
+}
+
+A.basketsmall:visited {
+    font-size : 11px;
+    font-family :  arial, helvetica, sans-serif;
+    font-style : normal;
+    font-weight : normal;
+    color : #000000; 
+    line-height: 15px;
+    text-decoration:underline;
+}
+
+A.basketsmall:hover {
+    font-size : 11px;
+    font-family :  arial, helvetica, sans-serif;
+    font-style : normal;
+    font-weight : normal;
+    color : #999999; 
+    line-height: 15px;
+    text-decoration:underline;
+}
+
+.basketlarge {
+    font-size : 15px;
+    font-family : arial, helvetica, sans-serif;
+    font-style : normal;
+    font-weight : normal;
+    color : #000000; 
+    line-height: 18px;
+    text-decoration : none;
+}
+
+A.basketlarge:link {
+    font-size : 15px;
+    font-family : arial, helvetica, sans-serif;
+    font-style : normal;
+    font-weight : normal;
+    color : #000000; 
+    line-height: 18px;
+	text-decoration:underline;
+}
+
+A.basketlarge:visited {
+    font-size : 15px;
+    font-family : arial, helvetica, sans-serif;
+    font-style : normal;
+    font-weight : normal;
+    color : #000000; 
+    line-height: 18px;
+	text-decoration:underline;
+}
+
+A.basketlarge:hover {
+    font-size : 15px;
+    font-family : arial, helvetica, sans-serif;
+    font-style : normal;
+    font-weight : normal;
+    color : #ff0000; 
+    line-height: 18px;
+	text-decoration:underline;
+}
+
+/* NEW ALERT FUNCTIONALITY STYLES  13.08.2005 */
+.alerttd {
+	border : 1px solid #336699;
+	padding : 7px;
+	background-color : #E5EDEF;
+	color : #336699;
+	font-family: Arial, Helvetica, sans-serif; 
+	font-size: 12px; 
+	font-style: normal; 
+	line-height: 15px;
+	font-weight: normal; 
+	font-variant: normal;
+}
+
+.alerttdtitle {
+	color : #003366;
+	font-family: Arial, Helvetica, sans-serif; 
+	font-size: 14px; 
+	font-style: normal; 
+	line-height: 15px;
+	font-weight: normal; 
+	font-variant: normal;
+}
+
+.outofstocktext {
+	color : #336699;
+	font-family: Arial, Helvetica, sans-serif; 
+	font-size: 12px; 
+	font-style: normal; 
+	line-height: 15px;
+	font-weight: normal; 
+	font-variant: normal;
+}
+	
+.alerttable {
+	padding : 10px;
+	background-color : #FFFFFF;
+	color : #336699;
+	font-family: Arial, Helvetica, sans-serif; 
+	font-size: 12px; 
+	font-style: normal; 
+	line-height: 15px;
+	font-weight: normal; 
+	font-variant: normal;
+}
+
+.alertsearchbox {
+	background-color:#FFFFFF;
+	font-family: verdana, geneva, arial, helvetica, sans-serif;
+	font-size: 10px;
+	color: #999999;
+	font-weight: lighter;
+	border: #666666;
+	border-style: solid;
+	border-top-width: 1px;
+	border-right-width: 1px;
+	border-bottom-width: 1px;
+	border-left-width: 1px
+
+}
+
+.resultsalert {
+	color : #FF6600;
+	font-family: Arial, Helvetica, sans-serif; 
+	font-size: 12px; 
+	font-style: normal;
+	font-weight: bold;
+	line-height: 15px;
+	}
+	
+a.resultsalert:link {
+	color : #FF6600;
+	font-family: Arial, Helvetica, sans-serif; 
+	font-size: 12px; 
+	font-style: normal;
+	font-weight: bold;
+	line-height: 15px;
+	text-decoration: underline;
+	}
+
+a.resultsalert:visited {
+	color : #FF6600;
+	font-family: Arial, Helvetica, sans-serif; 
+	font-size: 12px; 
+	font-style: normal;
+	font-weight: bold; 
+	line-height: 15px;
+	text-decoration: underline;
+	}
+
+a.resultsalert:hover {
+	color : #FF9900;
+	font-family: Arial, Helvetica, sans-serif; 
+	font-size: 12px; 
+	font-style: normal;
+	font-weight: bold; 
+	line-height: 15px;
+	text-decoration: underline;
+	}
+	
+a.resultsalert:active {
+	color : #FF6600;
+	font-family: Arial, Helvetica, sans-serif; 
+	font-size: 12px; 
+	font-style: normal;
+	font-weight: bold; 
+	line-height: 15px;
+	text-decoration: underline;
+	}
+
+
+
+/* NEW SHOPPING BASKET STYLES STOP - 15.07.2005 */
+
+a.shoppinglink { font-size: 14px; line-height: 15px; }
+a.shoppinglink:link { color: #336699 }
+a.shoppinglink:active { color: #6699CC }
+a.shoppinglink:visited { color: #6699CC }
+a.shoppinglink:hover { color: #6699CC;text-decoration: underline }
+
+
+/* Content LeftNav descriptors */
+.contentleftnavheader {  font-size:10px;  line-height: 12px;  color: #FFFFFF; background-color:#336699}
+a.contentleftnavheader:link{ font-size:10px;  line-height: 12px;  color: #FFFFFF; background-color:#336699; text-decoration: none}
+a.contentleftnavheader:active{ font-size:10px;  line-height: 12px;  color: #FFFFFF; background-color:#336699; text-decoration: none}
+a.contentleftnavheader:hover{ font-size:10px;  line-height: 12px;  color: #FFFFFF; background-color:#336699; text-decoration: none}
+a.contentleftnavheader:visited{ font-size:10px;  line-height: 12px;  color: #FFFFFF; background-color:#336699; text-decoration: none}
+
+.contentleftnavsection { font-size: 10px;line-height: 12px; color: #000000;  background-color:#E3EDF2}
+a.contentleftnavsection { font-size: 10px;	line-height: 12px; }
+a.contentleftnavsection:link{ font-size: 10px; color: #336699}
+a.contentleftnavsection:active{ font-size: 10px; color: #999999 }
+a.contentleftnavsection:visited{ font-size: 10px; color: #999999 }
+a.contentleftnavsection:hover{ font-size: 10px; color: #999999; text-decoration: underline }
+
+a.audioorvideo { font-size: 12px; line-height: 15px; }
+a.audioorvideo:link { color: #336699 }
+a.audioorvideo:active { color: #6699CC }
+a.audioorvideo:visited { color: #6699CC }
+a.audioorvideo:hover { color: #6699CC;text-decoration: underline }
+
+a.enhancedrightnav { font-family: Arial, Helvetica, sans-serif; text-decoration: none; font-size: 10px; line-height: 12px; }
+a.enhancedrightnav:link {color: #000000}
+a.enhancedrightnav:active {color: #333333}
+a.enhancedrightnav:visited {color: #333333}
+a.enhancedrightnav:hover {color: #333333;text-decoration: underline}
+
+/* homepage and main nav descriptors */
+
+.strapbarheader { 
+font-family: Tahoma, Arial, Helvetica, sans-serif;
+font-size:10px; 
+font-weight:normal;
+line-height:10px;
+color:#FFFFFF;
+text-decoration:none; 
+}
+
+.newsletternavcopy { 
+font-family: Verdana, Arial, Helvetica, sans-serif;
+font-size:10px; 
+font-weight:normal;
+line-height:11px;
+color:#666666;
+text-decoration:none; 
+}
+
+A.todayheadline:link {
+font-family: Tahoma, Arial, Helvetica, sans-serif;
+font-size: 10px;
+line-height: 12px;
+font-style: normal;
+font-weight: normal;
+font-variant: normal;
+text-transform: none;
+color: #FF6600; 
+text-decoration: none
+}
+
+A.todayheadline:active {
+font-family: Tahoma, Arial, Helvetica, sans-serif;
+font-size: 10px;
+line-height: 12px;
+font-style: normal;
+font-weight: normal;
+font-variant: normal;
+text-transform: none;
+color: #FF6600; 
+text-decoration: none
+}
+
+A.todayheadline:visited {
+font-family: Tahoma, Arial, Helvetica, sans-serif;
+font-size: 10px;
+line-height: 12px;
+font-style: normal;
+font-weight: normal;
+font-variant: normal;
+text-transform: none;
+color: #FF6600; 
+text-decoration: none
+}
+
+
+A.todayheadline:hover {
+font-family: Tahoma, Arial, Helvetica, sans-serif;
+font-size: 10px;
+line-height: 12px;
+font-style: normal;
+font-weight: normal;
+font-variant: normal;
+text-transform: none;
+color: #FF6600; 
+text-decoration: underline
+}
+
+.todaysubtext {
+font-family: Arial, Helvetica, sans-serif;
+font-size: 10px;
+line-height: 14px;
+font-style: normal;
+font-weight: normal;
+font-variant: normal;
+text-transform: none;
+color: #999999; 
+text-decoration: none
+}
+
+.bestsellers { 
+font-family: Tahoma, Arial, Helvetica, sans-serif;
+font-size:10px; 
+font-weight:normal;
+line-height:12px;
+color:#6699CC;
+text-decoration:none; 
+}
+
+A.bestsellers:link {
+font-family: Tahoma, Arial, Helvetica, sans-serif;
+font-size: 10px;
+line-height: 12px;
+font-style: normal;
+font-weight: normal;
+font-variant: normal;
+text-transform: none; 
+text-decoration:underline; 
+}
+
+A.bestsellers:active {
+font-family: Tahoma, Arial, Helvetica, sans-serif;
+font-size: 10px;
+line-height: 12px;
+font-style: normal;
+font-weight: normal;
+font-variant: normal;
+text-transform: none;
+text-decoration:underline; 
+}
+
+A.bestsellers:visited {
+font-family: Tahoma, Arial, Helvetica, sans-serif;
+font-size: 10px;
+line-height: 12px;
+font-style: normal;
+font-weight: normal;
+font-variant: normal;
+text-transform: none;
+text-decoration:underline; 
+}
+
+
+A.bestsellers:hover {
+font-family: Tahoma, Arial, Helvetica, sans-serif;
+font-size: 10px;
+line-height: 12px;
+font-style: normal;
+color: #FF9900;
+font-weight: normal;
+font-variant: normal;
+text-transform: none;
+text-decoration:underline; 
+}
+
+.ebestsellers { 
+font-family: Tahoma, Arial, Helvetica, sans-serif;
+font-size:10px; 
+font-weight:normal;
+line-height:12px;
+color:#CC0033;
+text-decoration:none; 
+}
+
+A.ebestsellers:link {
+font-family: Tahoma, Arial, Helvetica, sans-serif;
+font-size: 10px;
+line-height: 12px;
+font-style: normal;
+font-weight: normal;
+font-variant: normal;
+text-transform: none; 
+color:#CC0033;
+text-decoration:underline; 
+}
+
+A.ebestsellers:active {
+font-family: Tahoma, Arial, Helvetica, sans-serif;
+font-size: 10px;
+line-height: 12px;
+font-style: normal;
+font-weight: normal;
+font-variant: normal;
+text-transform: none;
+color:#CC0033;
+text-decoration:underline; 
+}
+
+A.ebestsellers:visited {
+font-family: Tahoma, Arial, Helvetica, sans-serif;
+font-size: 10px;
+line-height: 12px;
+font-style: normal;
+font-weight: normal;
+font-variant: normal;
+text-transform: none;
+color:#CC0033;
+text-decoration:underline; 
+}
+
+
+A.ebestsellers:hover {
+font-family: Tahoma, Arial, Helvetica, sans-serif;
+font-size: 10px;
+line-height: 12px;
+font-style: normal;
+font-weight: normal;
+font-variant: normal;
+text-transform: none;
+color:#CC0033;
+text-decoration:underline; 
+}
+
+ 
+/* Specific items on publication item page (bookpage) */
+.pubauthornonlink { font-size: 12px; line-height: 15px;color: #333333;}
+a.pubauthorlink { font-size: 12px; line-height: 15px;}
+a.pubauthorlink:link{ color: #333333 }
+a.pubauthorlink:active { color: #999999 }
+a.pubauthorlink:visited { color: #999999}
+a.pubauthorlink:hover { color: #999999;text-decoration: underline}
+
+/* Specific elements on foundbooktile (Search/Browse results) */
+.foundbooktiledetails {font-size: 10px;line-height: 12px;color: #333333;}
+.foundbooktilemisc {font-size: 12px; line-height: 15px; color: #000000; }
+
+.foundbooktiletitle {font-size: 12px; line-height: 15px;	font-weight: bold;}
+a.foundbooktiletitle:link { color: #333333 }
+a.foundbooktiletitle:active { color: #999999 }
+a.foundbooktiletitle:visited { color: #999999 }
+a.foundbooktiletitle:hover { color: #999999;text-decoration: underline }
+
+
+.foundbooktileauthor {font-size: 12px; line-height: 15px;}
+a.foundbooktileauthor:link { color: #333333 }
+a.foundbooktileauthor:active {  color: #999999 }
+a.foundbooktileauthor:visited { color: #999999 }
+a.foundbooktileauthor:hover { color: #999999;text-decoration: underline }
+
+.foundbooktilemore { font-size: 12px; line-height: 15px; font-weight: bold; }
+a.foundbooktilemore:link{ color: #FF6600 }
+a.foundbooktilemore:active{ color: #FF9900 }
+a.foundbooktilemore:visited{ color: #FF9900 }
+a.foundbooktilemore:hover{ color: #FF9900;text-decoration: underline}
+
+.searchresultspageindex {	font-size: 10px;	line-height: 12px;	color: #000000;}
+A.searchresultspageindex:link {	font-size: 10px; color: #000000}
+A.searchresultspageindex:active { font-size: 10px; color: #333333;}
+A.searchresultspageindex:visited { font-size: 10px; color: #333333}
+A.searchresultspageindex:hover { font-size: 10px;color: #333333; text-decoration: underline }
+
+.browseitemparent{  font-size: 12px;  line-height: 15px;  color: #336699;}
+A.browseitemparent:link {color: #336699; }
+A.browseitemparent:active {  color: #336699;  }
+A.browseitemparent:visited { color: #336699;  }
+A.browseitemparent:hover { color: #336699; text-decoration: underline }
+
+.browseitemchild{	font-size: 10px;	font-style: normal;	line-height: 12px;	color: #333333;}
+A.browseitemchild:link { font-size: 10px;color: #333333; }
+A.browseitemchild:active { font-size: 10px; color: #333333;  }
+A.browseitemchild:visited { font-size: 10px; color: #333333;  }
+A.browseitemchild:hover { font-size: 10px; color: #333333; text-decoration: underline }
+
+.imgbooktileanchor { font-size: 12px; line-height: 15px; color: #333333;}
+a.imgbooktileanchor:link{ color: #333333; }
+a.imgbooktileanchor:active { color: #999999;  }
+a.imgbooktileanchor:visited { color: #999999;  }
+a.imgbooktileanchor:hover {color: #999999;	text-decoration : underline;}
+
+/* Used on the theme page */
+.themeheader{font-size: 20px;line-height: 22px;	color: #000000;}
+.themeintro{font-size: 12px;line-height: 15px;	color: #000000;}
+.pubsetheader{	font-size: 15px;line-height: 17px;color: #000000;}
+.themerightnav { font-family: Arial, Helvetica, sans-serif; text-decoration: none; font-size: 10px; line-height: 12px;color: #FFFFFF}
+a.themerightnav { font-family: Arial, Helvetica, sans-serif; text-decoration: none; font-size: 10px; line-height: 12px; color: #000000}
+a.themerightnav:link {color: #000000}
+a.themerightnav:active {color: #333333}
+a.themerightnav:visited {color: #333333}
+a.themerightnav:hover {color: #333333;text-decoration: underline}
+
+/* ecard background style class */
+.postcardbg { background-image: url(/static/packages/uk/ecards/gifs/postcard_bk.gif)}
+.ecardformanchor { font-size: 12px; line-height: 15px; color: #666666;text-decoration: none }
+a.ecardformanchor:link { color: #666666; text-decoration : none;  }
+a.ecardformanchor:active { color: #666666; text-decoration : none; }
+a.ecardformanchor:visited { color: #666666; text-decoration : none; }
+a.ecardformanchor:hover { color: #999999; text-decoration : underline; }
+
+/* Specific elements on events page */
+
+.eventsdetails, .eventsdetailslink, .eventstitle, .eventslabellarge, .eventslabelsmall, .eventsdate, .eventsheader, .eventsmore, .eventslink {  font-family: Arial, Helvetica, sans-serif; text-decoration: none}
+
+.eventstitle { font-size: 15px; line-height: 15px; font-weight: bold; color: #666666 }
+
+.eventslabellarge { font-size: 12px; line-height: 12px; font-weight: bold; color: #666666 }
+
+.eventslabelsmall { font-size: 11px; line-height: 12px; font-weight: bold; color: #CC3300 }
+
+.eventsheaderbox { font-size: 12px; line-height: 15px; background:#FF9900 }
+
+.eventsdetailbox { font-size: 12px; line-height: 15px; background:#993366 }
+
+.eventsline { background:#993366}
+
+.eventslink { font-size: 10px; background:#999999; text-align:center; padding-left: 1px;  padding-right: 1px;  padding-top: 1px; padding-bottom: 1px }
+a.eventslink:link { font-size: 10px; color: #000000; text-decoration: none  }
+a.eventslink:active { font-size: 10px; color: #000000; text-decoration: none  }
+a.eventslink:visited { font-size: 10px; color: #000000; text-decoration: none  }
+a.eventslink:hover { font-size: 10px; color: #000000; text-decoration: none }
+
+.eventsdetails { font-size: 11px; line-height: 13px; color: #000000 }
+
+.eventsdetailslink { font-size: 11px; line-height: 13px }
+a.eventsdetailslink:link { font-size: 11px; color: #FF6600; text-decoration: underline }
+a.eventsdetailslink:active { font-size: 11px; color: #FF6600; text-decoration: underline }
+a.eventsdetailslink:visited { font-size: 11px; color: #FF6600; text-decoration: underline }
+a.eventsdetailslink:hover {  font-size: 11px; color: #993300; text-decoration: underline }
+
+.eventsheader { font-size: 12px; line-height: 12px; text-decoration: none; font-weight: bold; color: #FFFFFF }
+a.eventsheader:link { color: #FFFFFF }
+a.eventsheader:active {  color: #9999CC }
+a.eventsheader:visited { color: #FFFFFF }
+a.eventsheader:hover { color: #FFFFFF;text-decoration: underline }
+
+.eventsmore { font-size: 11px; line-height: 12px; text-decoration: none }
+a.eventsmore:link { font-size: 11px; color: #FFFFFF }
+a.eventsmore:active { font-size: 11px; color: #9999CC }
+a.eventsmore:visited { font-size: 11px; color: #FFFFFF }
+a.eventsmore:hover { font-size: 11px; color: #FFFFFF;text-decoration: underline }
+
+.leftnavpos {position:absolute; width:119px; z-index:1; left:10px; top:123px}
+/* styles for elements in the new authorpage developed 05/02 */
+.authortitle { COLOR: #003366; FONT-FAMILY: arial, helvetica,  sans-serif; FONT-SIZE: 16px; FONT-STYLE: normal; FONT-WEIGHT: normal; LINE-HEIGHT: 18px; TEXT-DECORATION: none }
+.strapline { COLOR: #000000; FONT-FAMILY: arial, helvetica,  sans-serif; FONT-SIZE: 14px; FONT-STYLE: italic; FONT-WEIGHT: normal; LINE-HEIGHT: 15px; TEXT-DECORATION: none }
+
+/* below are elements for the parent ISBNs developed 02/05 */
+
+A.bookotherformatanchor:link {
+font-size : 10px;
+line-height: 13px;		
+font-family : Tahoma, Arial, Verdana, helvetica, sans-serif;
+font-style : normal;
+font-weight : bold;
+text-transform: none;
+text-decoration : none;
+color: #333333
+}
+
+A.bookotherformatanchor:active {
+font-family: Tahoma, Arial, Verdana, helvetica, sans-serif;
+font-size: 10px;
+font-style: normal;
+line-height: 13px;
+font-weight: bold;
+text-transform: none;
+color: #333333;
+text-decoration: none
+}
+
+A.bookotherformatanchor:visited {
+font-family: Tahoma, Arial, Verdana, helvetica, sans-serif;
+font-size: 10px;
+font-style: normal;
+line-height: 13px;
+font-weight: bold; 
+text-transform: none;
+color: #333333; 
+text-decoration: none
+}
+
+
+A.bookotherformatanchor:hover {
+font-family: Tahoma, Arial, Verdana, helvetica, sans-serif;
+font-size: 10px;
+font-style: normal;
+line-height: 13px;
+font-weight: bold;
+text-transform: none;
+color: #333333;
+text-decoration: underline
+}
+
+.parentisbnpubtitle {
+font-size : 16px;
+line-height: 18px;		
+font-family : Arial, Tahoma, Verdana, helvetica, sans-serif;
+font-style : normal;
+font-weight : normal;
+color: #003366;	
+}
+
+A.parentisbnformattitle:link {
+font-family: Arial, Tahoma, Verdana, helvetica, sans-serif;
+font-size: 12px;
+font-style: normal;
+line-height: 15px;
+font-weight : bold;
+text-transform: none;
+color: #333333;
+text-decoration : none
+}
+
+A.parentisbnformattitle:active {
+font-family: Arial, Tahoma, Verdana, helvetica, sans-serif;
+font-size: 12px;
+font-style: normal;
+line-height: 15px;
+font-weight: bold;
+text-transform: none;
+color: #333333;
+text-decoration: none
+}
+
+A.parentisbnformattitle:visited {
+font-family: Arial, Tahoma, Verdana, helvetica, sans-serif;
+font-size: 12px;
+font-style: normal;
+line-height: 15px;
+font-weight: bold; 
+text-transform: none;
+color: #333333; 
+text-decoration: none
+}
+
+
+A.parentisbnformattitle:hover {
+font-family: Arial, Tahoma, Verdana, helvetica, sans-serif;
+font-size: 12px;
+font-style: normal;
+line-height: 15px;
+font-weight: bold;
+text-transform: none;
+color: #333333;
+text-decoration: underline
+}
+
+
+
+.parentisbnformat {
+font-family: Arial, Tahoma, Verdana, helvetica, sans-serif;
+font-size: 12px;
+font-style: normal;
+line-height: 15px;
+font-weight : normal;
+text-decoration : none;
+color: #666666;	
+}
+
+
+.searchotherparentisbnformat {
+font-family: Arial, Tahoma, Verdana, helvetica, sans-serif;
+font-size: 12px;
+font-style: normal;
+line-height: 15px;
+font-weight : bold;
+text-decoration : none;
+color: #336699
+}
+
+
+
+/* below are elements for the new book and author pages developed 05/02 */
+
+
+.contentmargin{margin-top:1px;} 
+.topmargin { MARGIN-TOP: 8px }
+.booktitle { COLOR: #003366; FONT-FAMILY: arial, helvetica,  sans-serif; FONT-SIZE: 16px; FONT-STYLE: normal; FONT-WEIGHT: normal; LINE-HEIGHT: 20px; TEXT-DECORATION: none }
+.booksubtitle { COLOR: #003366; FONT-FAMILY: arial, helvetica,  sans-serif; FONT-SIZE: 14px; FONT-STYLE: normal; FONT-WEIGHT: normal; LINE-HEIGHT: 15px; TEXT-DECORATION: none }
+.bookstrapline { COLOR: #000000; FONT-FAMILY: arial, helvetica,  sans-serif; FONT-SIZE: 14px; FONT-STYLE: italic; FONT-WEIGHT: normal; LINE-HEIGHT: 15px; TEXT-DECORATION: none }
+.bookseries { COLOR: #6699CC; FONT-FAMILY: arial, helvetica, sans-serif; FONT-SIZE: 12px; FONT-STYLE: normal; FONT-WEIGHT: normal; LINE-HEIGHT: 15px; TEXT-DECORATION: none }
+A.bookseries:link { COLOR: #6699CC; FONT-FAMILY: arial, helvetica, sans-serif; FONT-SIZE: 12px; FONT-STYLE: normal; FONT-WEIGHT: normal; LINE-HEIGHT: 15px; TEXT-DECORATION: none }
+A.bookseries:active { COLOR: #6699CC; FONT-FAMILY: arial, helvetica, sans-serif; FONT-SIZE: 12px; FONT-STYLE: normal; FONT-WEIGHT: normal; LINE-HEIGHT: 15px; TEXT-DECORATION: none }
+A.bookseries:visited { COLOR: #6699CC; FONT-FAMILY: arial, helvetica, sans-serif; FONT-SIZE: 12px; FONT-STYLE: normal; FONT-WEIGHT: normal; LINE-HEIGHT: 15px; TEXT-DECORATION: none }
+A.bookseries:hover { COLOR: #6699CC; FONT-FAMILY: arial, helvetica, sans-serif; FONT-SIZE: 12px; FONT-STYLE: normal; FONT-WEIGHT: normal; LINE-HEIGHT: 15px; TEXT-DECORATION: none }
+.bookauthor { COLOR: #6699CC; FONT-FAMILY: arial, helvetica, sans-serif; FONT-SIZE: 12px; FONT-STYLE: normal; FONT-WEIGHT: normal; LINE-HEIGHT: 15px; TEXT-DECORATION: underline }
+A.bookauthor:link { COLOR: #6699CC; FONT-FAMILY: arial, helvetica, sans-serif; FONT-SIZE: 12px; FONT-STYLE: normal; FONT-WEIGHT: normal; LINE-HEIGHT: 15px; TEXT-DECORATION: underline }
+A.bookauthor:active { COLOR: #6699CC; FONT-FAMILY: arial, helvetica, sans-serif; FONT-SIZE: 12px; FONT-STYLE: normal; FONT-WEIGHT: normal; LINE-HEIGHT: 15px; TEXT-DECORATION: underline }
+A.bookauthor:visited { COLOR: #6699CC; FONT-FAMILY: arial, helvetica, sans-serif; FONT-SIZE: 12px; FONT-STYLE: normal; FONT-WEIGHT: normal; LINE-HEIGHT: 15px; TEXT-DECORATION: underline }
+A.bookauthor:hover { COLOR: #99CCFF; FONT-FAMILY: arial, helvetica, sans-serif; FONT-SIZE: 12px; FONT-STYLE: normal; FONT-WEIGHT: normal; LINE-HEIGHT: 15px; TEXT-DECORATION: underline }
+
+.bookprice { BACKGROUND-COLOR: #e5eeee; COLOR: #000000; FONT-FAMILY: arial, helvetica,  sans-serif; FONT-SIZE: 12px; FONT-STYLE: normal; FONT-WEIGHT: normal; LINE-HEIGHT: 15px; TEXT-DECORATION: none }
+
+.bookbasket { BACKGROUND-COLOR: #f1f5f5; COLOR: #666666; FONT-FAMILY: arial, helvetica,  sans-serif; FONT-SIZE: 10px; FONT-STYLE: normal; FONT-WEIGHT: normal; LINE-HEIGHT: 15px; TEXT-DECORATION: none }
+a.bookbasket:link { font-family: Arial, Helvetica, sans-serif; font-size: 10px; font-style: normal; line-height: 15px; font-weight: normal; font-variant: normal; text-transform: none; color: #666666; text-decoration: none }
+a.bookbasket:active { font-family: Arial, Helvetica, sans-serif; font-size: 10px; font-style: normal; line-height: 15px; font-weight: normal; font-variant: normal; text-transform: none; color: #666666; text-decoration: none }
+a.bookbasket:visited { font-family: Arial, Helvetica, sans-serif; font-size: 10px; font-style: normal; line-height: 15px; font-weight: normal; font-variant: normal; text-transform: none; color: #666666; text-decoration: none }
+a.bookbasket:hover { font-family: Arial, Helvetica, sans-serif; font-size: 10px; font-style: normal; line-height: 15px; font-weight: normal; font-variant: normal; text-transform: none; color: #666666; text-decoration: none }
+
+
+
+.bookdetails { COLOR: #000000; FONT-FAMILY: arial, helvetica, sans-serif; FONT-SIZE: 10px; FONT-STYLE: normal; LINE-HEIGHT: 12px; TEXT-DECORATION: none }
+.bookcopy { COLOR: #000000; FONT-FAMILY: arial, helvetica, sans-serif; FONT-SIZE: 12px; FONT-STYLE: normal;  FONT-WEIGHT: normal; LINE-HEIGHT: 15px; TEXT-DECORATION: none }
+.keyline { BACKGROUND-COLOR: #999999 }
+.keylinevertical { BACKGROUND-COLOR: #cccccc }
+.ecommercebg1 { BACKGROUND-COLOR: #f1f5f5 }
+.ecommercebg2 { BACKGROUND-COLOR: #f1f5f5 }
+.award { COLOR: #FF6600; FONT-FAMILY: Arial, Helvetica, sans-serif; FONT-SIZE: 12px; FONT-STYLE: normal; LINE-HEIGHT: 15px; TEXT-DECORATION: none }
+.extract { COLOR: #000000; FONT-FAMILY: Arial, Helvetica, sans-serif; FONT-SIZE: 10px; FONT-STYLE: normal; LINE-HEIGHT: 12px; TEXT-DECORATION: none }
+
+
+.interact {
+	COLOR: #FF6600; FONT-FAMILY: Arial, Helvetica, sans-serif; FONT-SIZE: 12px; FONT-STYLE: normal; LINE-HEIGHT: 15px; TEXT-DECORATION: none
+}
+A.interact:link {
+	COLOR: #FF6600; FONT-FAMILY: Arial, Helvetica, sans-serif; FONT-SIZE: 12px; FONT-STYLE: normal; LINE-HEIGHT: 15px; TEXT-DECORATION: none
+}
+A.interact:active {
+	COLOR: #FF6600; FONT-FAMILY: Arial, Helvetica, sans-serif; FONT-SIZE: 12px; FONT-STYLE: normal; LINE-HEIGHT: 15px; TEXT-DECORATION: none
+}
+A.interact:visited {
+	COLOR: #FF6600; FONT-FAMILY: Arial, Helvetica, sans-serif; FONT-SIZE: 12px; FONT-STYLE: normal; LINE-HEIGHT: 15px; TEXT-DECORATION: none
+}
+A.interact:hover {
+	COLOR: #FF6600; FONT-FAMILY: Arial, Helvetica, sans-serif; FONT-SIZE: 12px; FONT-STYLE: normal; LINE-HEIGHT: 15px; TEXT-DECORATION: none
+}
+.mainaward {
+	COLOR: #cccc99; FONT-FAMILY: Arial, Helvetica, sans-serif; FONT-SIZE: 12px; FONT-STYLE: normal; LINE-HEIGHT: 15px; TEXT-DECORATION: none
+}
+
+.contentleftnavdivider {
+	BACKGROUND-COLOR: #cccccc
+}
+.contentleftnavsection2 {
+	BACKGROUND-COLOR: #cccc99; COLOR: #000000; FONT-FAMILY: arial, helvetica, sans-serif; FONT-SIZE: 11px; LINE-HEIGHT: 15px; TEXT-DECORATION: none
+}
+A.contentleftnavsection2:link {
+	BACKGROUND-COLOR: #cccc99; COLOR: #000000; FONT-FAMILY: arial, helvetica, sans-serif; FONT-SIZE: 11px; LINE-HEIGHT: 15px; TEXT-DECORATION: none
+}
+A.contentleftnavsection2:active {
+	BACKGROUND-COLOR: #cccc99; COLOR: #000000; FONT-FAMILY: arial, helvetica, sans-serif; FONT-SIZE: 11px; LINE-HEIGHT: 15px; TEXT-DECORATION: none
+}
+A.contentleftnavsection2:visited {
+	BACKGROUND-COLOR: #cccc99; COLOR: #000000; FONT-FAMILY: arial, helvetica, sans-serif; FONT-SIZE: 11px; LINE-HEIGHT: 15px; TEXT-DECORATION: none
+}
+A.contentleftnavsection2:hover {
+	BACKGROUND-COLOR: #cccc99; COLOR: #000000; FONT-FAMILY: arial, helvetica, sans-serif; FONT-SIZE: 11px; LINE-HEIGHT: 15px; TEXT-DECORATION: none
+}
+.contentleftnavdivider2 {
+	BACKGROUND-COLOR: #ffffff
+}
+.enhancedleftnavdivider {
+	BACKGROUND-COLOR: #ffffff
+}
+.enhancedleftnavsection {
+	COLOR: #000000; FONT-FAMILY: Arial, Helvetica, sans-serif; FONT-SIZE: 11px; FONT-STYLE: normal; LINE-HEIGHT: 15px; TEXT-DECORATION: none
+}
+.enhancedleftnavstatic {
+	COLOR: #ffffff; FONT-FAMILY: Arial, Helvetica, sans-serif; FONT-SIZE: 11px; FONT-STYLE: normal; LINE-HEIGHT: 15px; TEXT-DECORATION: none
+}
+INPUT {
+	 COLOR: #000000; FONT-FAMILY: Arial, Helvetica, sans-serif; FONT-SIZE: 10px
+}
+OPTION {
+	 COLOR: #000000; FONT-FAMILY: Arial, Helvetica, sans-serif; FONT-SIZE: 10px
+}
+SELECT {
+	 COLOR: #000000; FONT-FAMILY: Arial, helvetica, sans-serif; FONT-SIZE: 10px
+}
+.blacksmall {
+	COLOR: #000000; FONT-FAMILY: arial, helvetica, sans-serif; FONT-SIZE: 10px; FONT-STYLE: normal; LINE-HEIGHT: 12px; TEXT-DECORATION: none
+}
+A.blacksmall:link {
+	COLOR: #000000; FONT-FAMILY: arial, helvetica, sans-serif; FONT-SIZE: 10px; FONT-STYLE: normal; LINE-HEIGHT: 12px; TEXT-DECORATION: underline
+}
+A.blacksmall:visited {
+	COLOR: #000000; FONT-FAMILY: arial, helvetica, sans-serif; FONT-SIZE: 10px; FONT-STYLE: normal; LINE-HEIGHT: 12px; TEXT-DECORATION: underline
+}
+A.blacksmall:hover {
+	COLOR: #999999; FONT-FAMILY: arial, helvetica, sans-serif; FONT-SIZE: 10px; FONT-STYLE: normal; LINE-HEIGHT: 12px; TEXT-DECORATION: underline
+}
+.redsmall {
+	COLOR: #ff0000; FONT-FAMILY: arial, helvetica, sans-serif; FONT-SIZE: 10px; FONT-STYLE: normal; LINE-HEIGHT: 12px; TEXT-DECORATION: none
+}
+.bullet {
+	COLOR: #000000; FONT-FAMILY: arial, helvetica, sans-serif; FONT-SIZE: 11px; FONT-STYLE: normal; FONT-WEIGHT: bold; TEXT-DECORATION: none
+}
+
+
+/*NEW SEARCH RESULT STYLES ADDED 0506 */
+
+.resultsstrapmargin { MARGIN-TOP: 5px }
+.resultskeyline {background-color: #999999; LINE-HEIGHT: 15px}
+.resultsheader { COLOR: #003366; FONT-FAMILY: arial, helvetica,  sans-serif; FONT-SIZE: 16px; FONT-STYLE: normal; FONT-WEIGHT: bold; LINE-HEIGHT: 19px; TEXT-DECORATION: none }
+.resultsstrapline { FONT-FAMILY: arial, helvetica,  sans-serif; LINE-HEIGHT: 15px; FONT-SIZE: 12px; COLOR: #000000;}
+
+.resultstitle { COLOR: #333333; FONT-FAMILY: arial, helvetica,  sans-serif; FONT-SIZE: 12px; FONT-STYLE: normal; FONT-WEIGHT: bold; LINE-HEIGHT: 18px; TEXT-DECORATION: none }
+a.resultstitle:link { color: #333333;text-decoration: underline }
+a.resultstitle:active { color: #333333;text-decoration: underline }
+a.resultstitle:visited { color: #333333;text-decoration: underline }
+a.resultstitle:hover { color: #999999;text-decoration: underline }
+.resultssubtitle { COLOR: #000000; FONT-FAMILY: arial, helvetica,  sans-serif; FONT-SIZE: 12px; FONT-STYLE: normal; FONT-WEIGHT: normal; LINE-HEIGHT: 15px; TEXT-DECORATION: none }
+
+.resultscreator  {font-family: Arial, Helvetica, sans-serif; font-size: 12px; line-height: 15px; COLOR: #666666; TEXT-DECORATION: none}
+a.resultscreator:link { color: #666666; TEXT-DECORATION: underline}
+a.resultscreator:active {  color: #666666; TEXT-DECORATION: underline}
+a.resultscreator:visited { color: #666666; TEXT-DECORATION: underline}
+a.resultscreator:hover { color: #999999; TEXT-DECORATION: underline }
+
+.resultslink {font-family: Verdana, Arial, Helvetica, sans-serif; font-size:10px;  line-height: 18px; color:#FF6600;  font-weight: bold; text-decoration:none}
+a.resultslink:link{ color: #FF6600;text-decoration:underline }
+a.resultslink:active{ color: #FF9900;text-decoration:underline }
+a.resultslink:visited{ color: #FF9900;text-decoration:underline }
+a.resultslink:hover{ color: #FF9900;text-decoration:underline}
+
+.resultsauthor { font-family: Arial, Helvetica, sans-serif; COLOR: #000000; FONT-STYLE: normal; FONT-WEIGHT: bold; MARGIN-TOP: 0pt; FONT-SIZE: 12px; LINE-HEIGHT: 15px;}
+a.resultsauthor:link { COLOR: #000000; TEXT-DECORATION: underline }
+a.resultsauthor:active { COLOR: #000000; TEXT-DECORATION: underline }
+a.resultsauthor:visited { COLOR: #000000; TEXT-DECORATION: underline }
+a.resultsauthor:hover { COLOR: #666666; TEXT-DECORATION: underline }
+
+.resultsdetailsbooks { COLOR: #666666; FONT-FAMILY: Tahoma, arial, helvetica,  sans-serif; FONT-SIZE: 9px; LINE-HEIGHT: 12px;}
+a.resultsdetailsbooks:link{ color: #666666;  text-decoration:none}
+a.resultsdetailsbooks:active{ color: #666666;  text-decoration:none }
+a.resultsdetailsbooks:visited{ color: #666666;  text-decoration:none }
+a.resultsdetailsbooks:hover{ color: #FF9900; text-decoration:underline}
+
+.resultsseries { COLOR: #000000; FONT-FAMILY: Arial, Helvetica, sans-serif; FONT-SIZE: 12px; FONT-STYLE: normal; FONT-WEIGHT: normal; LINE-HEIGHT: 15px; TEXT-DECORATION: none }
+a.resultsseries:link{ color: #000000 }
+a.resultsseries:active{ color: #000000 }
+a.resultsseries:visited{ color: #000000 }
+a.resultsseries:hover{ color: #000000; text-decoration:underline}
+
+.resultspricenew { COLOR: #336699; FONT-FAMILY: arial, helvetica,  sans-serif; FONT-SIZE: 12px; line-height:20px; FONT-WEIGHT: bold;}
+.resultsinfo { COLOR: #336699; FONT-FAMILY: arial, helvetica, sans-serif; FONT-SIZE: 12px; FONT-STYLE: normal; FONT-WEIGHT: normal; LINE-HEIGHT: 14px; MARGIN-TOP: 0pt }
+.resultsdetails { COLOR: #333333; FONT-FAMILY: Tahoma, arial, helvetica,  sans-serif; FONT-SIZE: 9px; LINE-HEIGHT: 18px;}
+.resultssort { COLOR: #003366; FONT-FAMILY: arial, helvetica,  sans-serif; FONT-SIZE: 12px; FONT-STYLE: normal; FONT-WEIGHT: normal; LINE-HEIGHT: 15px; TEXT-DECORATION: none }
+.pipe {font-size: 11px;  line-height: 15px; color:#336699 }
+
+
+
+
+
+/*used on browse pubset page*/
+.browsepubsetrefine {FONT-FAMILY: Arial, Helvetica, sans-serif; font-size:11px;  line-height: 12px;  color: #000000; background-color:E3EDF2}
+a.browsepubsetrefine { font-size: 11px; line-height: 12px; text-decoration: none}
+a.browsepubsetrefine:link{ color: #336699; text-decoration: none}
+a.browsepubsetrefine:active{ color: #999999; text-decoration: none}
+a.browsepubsetrefine:visited{ color: #999999; text-decoration: none}
+a.browsepubsetrefine:hover{ color: #999999; text-decoration: underline }
+
+.browsepubsetnav {FONT-FAMILY: Arial, Helvetica, sans-serif; font-size: 11px; 	line-height: 12px; color: #000000;  background-color:#E3EDF2}
+a.browsepubsetnav { font-size: 11px; line-height: 12px; text-decoration: none}
+a.browsepubsetnav:link{ color: #336699; text-decoration: none}
+a.browsepubsetnav:active{ color: #999999; text-decoration: none}
+a.browsepubsetnav:visited{ color: #999999; text-decoration: none}
+a.browsepubsetnav:hover{ color: #999999; text-decoration: underline }
+.browsepubsetspacer {background-color:ffffff}
+
+
+
+/*REVIEW FORM PAGE */
+.reviewtitle {COLOR: #333333; FONT-FAMILY: arial, helvetica,  sans-serif; FONT-SIZE: 16px; FONT-STYLE: normal; FONT-WEIGHT: normal; LINE-HEIGHT: 18px; TEXT-DECORATION: none}
+.reviewcopy {
+COLOR: #000000; FONT-FAMILY: arial, helvetica, sans-serif; FONT-SIZE: 12px; FONT-STYLE: normal; LINE-HEIGHT: 15px; TEXT-DECORATION: none}
+
+A.reviewcopy:link{
+COLOR: #000000; FONT-FAMILY: arial, helvetica, sans-serif; FONT-SIZE: 12px; FONT-STYLE: normal; LINE-HEIGHT: 15px; TEXT-DECORATION: none; FONT-WEIGHT: bold}
+
+A.reviewcopy:visited{
+COLOR: #000000; FONT-FAMILY: arial, helvetica, sans-serif; FONT-SIZE: 12px; FONT-STYLE: normal; LINE-HEIGHT: 15px; TEXT-DECORATION: none; FONT-WEIGHT: bold}
+
+A.reviewcopy:hover{
+COLOR: #000000; FONT-FAMILY: arial, helvetica, sans-serif; FONT-SIZE: 12px; FONT-STYLE: normal; LINE-HEIGHT: 15px; TEXT-DECORATION: none; FONT-WEIGHT: bold}
+
+.reviewdisplay{
+COLOR: #000000; FONT-FAMILY: arial, helvetica, sans-serif; FONT-SIZE: 12px; FONT-STYLE: normal; LINE-HEIGHT: 15px; TEXT-DECORATION: none; FONT-WEIGHT:normal}
+
+.reviewrated{
+COLOR: #000000; FONT-FAMILY: arial, helvetica, sans-serif; FONT-SIZE: 12px; FONT-STYLE: normal; LINE-HEIGHT: 13px; TEXT-DECORATION: none; FONT-WEIGHT: bold}
+
+.reviewdate{
+COLOR: #000000; FONT-FAMILY: arial, helvetica, sans-serif; FONT-SIZE: 12px; FONT-STYLE: normal; LINE-HEIGHT: 15px; TEXT-DECORATION: none; FONT-WEIGHT: normal}
+
+.reviewby{
+COLOR: #000000; FONT-FAMILY: arial, helvetica, sans-serif; FONT-SIZE: 12px; FONT-STYLE: normal; LINE-HEIGHT: 15px; TEXT-DECORATION: none; FONT-WEIGHT: bold}
+.reviewmargin1 {MARGIN-TOP: 0px }
+.reviewmargin2 {MARGIN-TOP: 8px }
+
+.reviewsubmitbutton { font-size: 10px; font-family: arial, helvetica, sans-serif; color: #FFFFFF ;text-decoration: none; background:#FF6600}
+a.reviewsubmitbutton:link { font-size: 10px; font-family: arial, helvetica, sans-serif; color: #FFFFFF ;text-decoration: none; background:#FF6600}
+a.reviewsubmitbutton:active { font-size: 10px; font-family: arial, helvetica, sans-serif; color: #FFFFFF ;text-decoration: none; background:#FF6600}
+a.reviewsubmitbutton:hover { font-size: 10px; font-family: arial, helvetica, sans-serif; color: #FFFFFF ;text-decoration: none; background:#FF6600}
+a.reviewsubmitbutton:visited { font-size: 10px; font-family: arial, helvetica, sans-serif; color: #FFFFFF ;text-decoration: none; background:#FF6600}
+
+/* eWebedit jobs page display */
+.jobs { font-family: Arial, Helvetica, sans-serif; font-size: 12px; font-style: normal; line-height: 15px; font-weight: normal; font-variant: normal; text-transform: none; color: #000000; text-decoration: none }
+a.jobs:link { font-family: Arial, Helvetica, sans-serif; font-size: 12px; font-style: normal; line-height: 15px; font-weight: normal; font-variant: normal; text-transform: none; color: #000000; text-decoration: none }
+a.jobs:active { font-family: Arial, Helvetica, sans-serif; font-size: 12px; font-style: normal; line-height: 15px; font-weight: normal; font-variant: normal; text-transform: none; color: #000000; text-decoration: none }
+a.jobs:visited { font-family: Arial, Helvetica, sans-serif; font-size: 12px; font-style: normal; line-height: 15px; font-weight: normal; font-variant: normal; text-transform: none; color: #000000; text-decoration: none }
+a.jobs:hover { font-family: Arial, Helvetica, sans-serif; font-size: 12px; font-style: normal; line-height: 15px; font-weight: normal; font-variant: normal; text-transform: none; color: #cc00000; text-decoration: underline }
+
+
+
+/*polls display */
+
+.pollquestion
+{
+    font-size : 12px;
+    font-family : arial, helvetica, sans-serif;
+    font-style : normal;
+    font-weight : normal;
+    color : #000000; 
+    line-height: 15px;
+    text-decoration : none;
+}
+
+.pollchoice
+{
+    font-size : 10px;
+    font-family : arial, helvetica, sans-serif;
+    font-style : normal;
+    font-weight : normal;
+    color : #000000; 
+    line-height: 12px;
+    text-decoration : none;
+}
+
+/*registration form styles */
+.sbscrlabelrequired  {font-family: Arial, Helvetica, sans-serif; color:#993333; text-decoration:none; font-size:11px; line-height:15px; font-weight:bold;}
+.sbscrlabelstandard {font-family: Arial, Helvetica, sans-serif; color:#000000; text-decoration:none; font-size:11px; line-height:15px; font-weight:normal;}
+.sbscrlabelchoice {font-family: Arial, Helvetica, sans-serif; color:#000000; text-decoration:none; font-size:11px; line-height:15px; font-weight:normal;}
+.misctext {font-family: Arial, Helvetica, sans-serif; color:#000000; text-decoration:none; font-size:12px; line-height:15px; font-weight:normal;}
+.sbscrlogin {font-family: Arial, Helvetica, sans-serif; color:#000000; text-decoration:none; font-size:12px; line-height:15px; font-weight:normal;}
+
+.servicesconfirmbutton {font-family: Arial, Helvetica, sans-serif; font-size: 11px; line-height: 12px; font-weight: normal; color:#000000; background:#666666 }
+A.servicesconfirmbutton:link { color: #000000; text-decoration : none;  }
+A.servicesconfirmbutton:active { color: #000000; text-decoration : none;  }
+A.servicesconfirmbutton:visited { color:000000; text-decoration : none;  }
+A.servicesconfirmbutton:hover { color:000000; text-decoration : none;  }
+
+/*book and author 07/10/02  */
+.bookbannertitle {
+	COLOR: #FFFFFF; FONT-FAMILY: arial, helvetica,  sans-serif; FONT-SIZE: 16px; FONT-STYLE: normal; FONT-WEIGHT: normal; TEXT-DECORATION: none
+}
+
+a.bookbannertitle:link {	COLOR: #FFFFFF; FONT-FAMILY: arial, helvetica,  sans-serif; FONT-SIZE: 16px; FONT-STYLE: normal; FONT-WEIGHT: normal; TEXT-DECORATION: none;}
+a.bookbannertitle:active {	COLOR: #FFFFFF; FONT-FAMILY: arial, helvetica,  sans-serif; FONT-SIZE: 16px; FONT-STYLE: normal; FONT-WEIGHT: normal; TEXT-DECORATION: none;}
+a.bookbannertitle:visited {	COLOR: #FFFFFF; FONT-FAMILY: arial, helvetica,  sans-serif; FONT-SIZE: 16px; FONT-STYLE: normal; FONT-WEIGHT: normal; TEXT-DECORATION: none;}
+a.bookbannertitle:hover {	COLOR: #FFFFFF; FONT-FAMILY: arial, helvetica,  sans-serif; FONT-SIZE: 16px; FONT-STYLE: normal; FONT-WEIGHT: normal; TEXT-DECORATION: underline;}
+
+a.bookbannertitlered:link {	COLOR: #FF0000; FONT-FAMILY: arial, helvetica,  sans-serif; FONT-SIZE: 16px; FONT-STYLE: normal; FONT-WEIGHT: normal; TEXT-DECORATION: none;}
+a.bookbannertitlered:active {	COLOR: #FF0000; FONT-FAMILY: arial, helvetica,  sans-serif; FONT-SIZE: 16px; FONT-STYLE: normal; FONT-WEIGHT: normal; TEXT-DECORATION: none;}
+a.bookbannertitlered:visited {	COLOR: #FF0000; FONT-FAMILY: arial, helvetica,  sans-serif; FONT-SIZE: 16px; FONT-STYLE: normal; FONT-WEIGHT: normal; TEXT-DECORATION: none;}
+a.bookbannertitlered:hover {	COLOR: #FF0000; FONT-FAMILY: arial, helvetica,  sans-serif; FONT-SIZE: 16px; FONT-STYLE: normal; FONT-WEIGHT: normal; TEXT-DECORATION: underline;}
+
+a.bookbannertitlewht:link {	COLOR: #FFFFFF; FONT-FAMILY: arial, helvetica,  sans-serif; FONT-SIZE: 16px; FONT-STYLE: normal; FONT-WEIGHT: normal; TEXT-DECORATION: none;}
+a.bookbannertitlewht:active {	COLOR: #FFFFFF; FONT-FAMILY: arial, helvetica,  sans-serif; FONT-SIZE: 16px; FONT-STYLE: normal; FONT-WEIGHT: normal; TEXT-DECORATION: none;}
+a.bookbannertitlewht:visited {	COLOR: #FFFFFF; FONT-FAMILY: arial, helvetica,  sans-serif; FONT-SIZE: 16px; FONT-STYLE: normal; FONT-WEIGHT: normal; TEXT-DECORATION: none;}
+a.bookbannertitlewht:hover {	COLOR: #FFFFFF; FONT-FAMILY: arial, helvetica,  sans-serif; FONT-SIZE: 16px; FONT-STYLE: normal; FONT-WEIGHT: normal; TEXT-DECORATION: underline;}
+
+a.bookbannertitleblk:link {	COLOR: #000000; FONT-FAMILY: arial, helvetica,  sans-serif; FONT-SIZE: 16px; FONT-STYLE: normal; FONT-WEIGHT: normal; TEXT-DECORATION: none;}
+a.bookbannertitleblk:active {	COLOR: #000000; FONT-FAMILY: arial, helvetica,  sans-serif; FONT-SIZE: 16px; FONT-STYLE: normal; FONT-WEIGHT: normal; TEXT-DECORATION: none;}
+a.bookbannertitleblk:visited {	COLOR: #000000; FONT-FAMILY: arial, helvetica,  sans-serif; FONT-SIZE: 16px; FONT-STYLE: normal; FONT-WEIGHT: normal; TEXT-DECORATION: none;}
+a.bookbannertitleblk:hover {	COLOR: #000000; FONT-FAMILY: arial, helvetica,  sans-serif; FONT-SIZE: 16px; FONT-STYLE: normal; FONT-WEIGHT: normal; TEXT-DECORATION: underline;}
+
+a.bookbannertitleorg:link {	COLOR: #FF6600; FONT-FAMILY: arial, helvetica,  sans-serif; FONT-SIZE: 16px; FONT-STYLE: normal; FONT-WEIGHT: normal; TEXT-DECORATION: none;}
+a.bookbannertitleorg:active {	COLOR: #FF6600; FONT-FAMILY: arial, helvetica,  sans-serif; FONT-SIZE: 16px; FONT-STYLE: normal; FONT-WEIGHT: normal; TEXT-DECORATION: none;}
+a.bookbannertitleorg:visited {	COLOR: #FF6600; FONT-FAMILY: arial, helvetica,  sans-serif; FONT-SIZE: 16px; FONT-STYLE: normal; FONT-WEIGHT: normal; TEXT-DECORATION: none;}
+a.bookbannertitleorg:hover {	COLOR: #FF6600; FONT-FAMILY: arial, helvetica,  sans-serif; FONT-SIZE: 16px; FONT-STYLE: normal; FONT-WEIGHT: normal; TEXT-DECORATION: underline;}
+
+
+.bookbannerquote {
+	COLOR: #FFFFFF; FONT-FAMILY: arial, helvetica,  sans-serif; FONT-SIZE: 12px; FONT-STYLE: normal; FONT-WEIGHT: bold; LINE-HEIGHT: 14px; TEXT-DECORATION: none
+}
+.bookbannerquoteby {
+	COLOR: #FF9933; FONT-FAMILY: arial, helvetica,  sans-serif; FONT-SIZE: 12px; FONT-STYLE: normal; FONT-WEIGHT: bold; LINE-HEIGHT: 16px; TEXT-DECORATION: none
+}
+
+/*enhanced book and author page 29/10/02 */
+
+.bookbannertitleblack {
+	COLOR: #000000; FONT-FAMILY: arial, helvetica, sans-serif; FONT-SIZE: 16px; FONT-STYLE: normal; FONT-WEIGHT: normal; TEXT-DECORATION: none
+}
+
+.bookbannertitlewhite {
+	COLOR: #FFFFFF; FONT-FAMILY: arial, helvetica, sans-serif; FONT-SIZE: 16px; FONT-STYLE: normal; FONT-WEIGHT: normal; TEXT-DECORATION: none
+}
+
+/*Jobs Page*/
+.jobs{  
+font-family: Arial, Helvetica, sans-serif; 
+font-size: 12px; 
+font-style: normal; 
+line-height: 15px; 
+font-weight: normal; 
+font-variant: normal; 
+text-transform: none; 
+color: #000000; 
+text-decoration: none
+}
+
+/*THEME STYLES 18.12.02*/
+
+.pubsetintro { COLOR: #000000; FONT-FAMILY: arial, helvetica, sans-serif; FONT-SIZE: 12px; FONT-STYLE: normal;  FONT-WEIGHT: normal; LINE-HEIGHT: 15px; TEXT-DECORATION: none ; font-variant: normal; text-transform: none;  }
+
+.themeauthor { COLOR: #6699CC; FONT-FAMILY: arial, helvetica, sans-serif; FONT-SIZE: 12px; FONT-STYLE: normal; FONT-WEIGHT: normal; LINE-HEIGHT: 15px; TEXT-DECORATION: none }
+A.themeauthor:link { COLOR: #6699CC; FONT-FAMILY: arial, helvetica, sans-serif; FONT-SIZE: 12px; FONT-STYLE: normal; FONT-WEIGHT: normal; LINE-HEIGHT: 15px; TEXT-DECORATION: underline }
+A.themeauthor:active { COLOR: #6699CC; FONT-FAMILY: arial, helvetica, sans-serif; FONT-SIZE: 12px; FONT-STYLE: normal; FONT-WEIGHT: normal; LINE-HEIGHT: 15px; TEXT-DECORATION: underline }
+A.themeauthor:visited { COLOR: #6699CC; FONT-FAMILY: arial, helvetica, sans-serif; FONT-SIZE: 12px; FONT-STYLE: normal; FONT-WEIGHT: normal; LINE-HEIGHT: 15px; TEXT-DECORATION: underline }
+A.themeauthor:hover { COLOR: #99CCFF; FONT-FAMILY: arial, helvetica, sans-serif; FONT-SIZE: 12px; FONT-STYLE: normal; FONT-WEIGHT: normal; LINE-HEIGHT: 15px; TEXT-DECORATION: underline }
+
+.themebookprice { COLOR: #999999; FONT-FAMILY: arial, helvetica, sans-serif; FONT-SIZE: 12px; FONT-STYLE: normal; FONT-WEIGHT: normal; LINE-HEIGHT: 15px; TEXT-DECORATION: none }
+
+.themebookdetails { COLOR: #999999; FONT-FAMILY: tahoma, arial, helvetica, sans-serif; FONT-SIZE: 10px; FONT-STYLE: normal; LINE-HEIGHT: 12px; TEXT-DECORATION: none }
+
+.themeintro { COLOR: #000000; FONT-FAMILY: arial, helvetica, sans-serif; FONT-SIZE: 12px; FONT-STYLE: normal;  FONT-WEIGHT: normal; LINE-HEIGHT: 15px; TEXT-DECORATION: none ; font-variant: normal; text-transform: none;  }
+
+.themebody { COLOR: #000000; FONT-FAMILY: arial, helvetica, sans-serif; FONT-SIZE: 12px; FONT-STYLE: normal;  FONT-WEIGHT: normal; LINE-HEIGHT: 15px; TEXT-DECORATION: none ; font-variant: normal; text-transform: none;  }
+
+.themebooktitle { FONT-FAMILY: arial, helvetica,  sans-serif; COLOR: #000000; FONT-SIZE: 12px; FONT-STYLE: normal; FONT-WEIGHT: bold; LINE-HEIGHT: 15px; TEXT-DECORATION: none }
+A.themebooktitle:link { COLOR: #000000; FONT-FAMILY: arial, helvetica, sans-serif; FONT-SIZE: 12px; FONT-STYLE: normal; FONT-WEIGHT: bold; LINE-HEIGHT: 15px; TEXT-DECORATION: underline }
+A.themebooktitle:active { COLOR: #000000; FONT-FAMILY: arial, helvetica, sans-serif; FONT-SIZE: 12px; FONT-STYLE: normal; FONT-WEIGHT: bold; LINE-HEIGHT: 15px; TEXT-DECORATION: underline }
+A.themebooktitle:visited { COLOR: #666666; FONT-FAMILY: arial, helvetica, sans-serif; FONT-SIZE: 12px; FONT-STYLE: normal; FONT-WEIGHT: bold; LINE-HEIGHT: 15px; TEXT-DECORATION: underline }
+A.themebooktitle:hover { COLOR: #666666; FONT-FAMILY: arial, helvetica, sans-serif; FONT-SIZE: 12px; FONT-STYLE: normal; FONT-WEIGHT: bold; LINE-HEIGHT: 15px; TEXT-DECORATION: underline }
+
+.themeecardtitle { COLOR: #666666; FONT-FAMILY: arial, helvetica,  sans-serif; FONT-SIZE: 12px; FONT-STYLE: normal; FONT-WEIGHT: bold; LINE-HEIGHT: 15px; TEXT-DECORATION: none }
+A.themeecardtitle:link { COLOR: #666666; FONT-FAMILY: arial, helvetica, sans-serif; FONT-SIZE: 12px; FONT-STYLE: normal; FONT-WEIGHT: bold; LINE-HEIGHT: 15px; TEXT-DECORATION: none }
+A.themeecardtitle:active { COLOR: #666666; FONT-FAMILY: arial, helvetica, sans-serif; FONT-SIZE: 12px; FONT-STYLE: normal; FONT-WEIGHT: bold; LINE-HEIGHT: 15px; TEXT-DECORATION: none }
+A.themeecardtitle:visited { COLOR: #666666; FONT-FAMILY: arial, helvetica, sans-serif; FONT-SIZE: 12px; FONT-STYLE: normal; FONT-WEIGHT: bold; LINE-HEIGHT: 15px; TEXT-DECORATION: none }
+A.themeecardtitle:hover { COLOR: #666666; FONT-FAMILY: arial, helvetica, sans-serif; FONT-SIZE: 12px; FONT-STYLE: normal; FONT-WEIGHT: bold; LINE-HEIGHT: 15px; TEXT-DECORATION: underline }
+
+.themebooksubtitle { COLOR: #666666; FONT-FAMILY: arial, helvetica,  sans-serif; FONT-SIZE: 12px; FONT-STYLE: normal; FONT-WEIGHT: normal; LINE-HEIGHT: 15px; TEXT-DECORATION: none }
+
+.themebookmediatype { COLOR: #999999; FONT-FAMILY: tahoma, arial, helvetica, sans-serif; FONT-SIZE: 10px; FONT-STYLE: normal; FONT-WEIGHT: bold; LINE-HEIGHT: 12px; TEXT-DECORATION: none }
+
+.thememore {  FONT-FAMILY: tahoma, arial, helvetica, sans-serif; font-size: 11px; font-weight: normal; }
+a.thememore:link{  FONT-FAMILY: tahoma, arial, helvetica, sans-serif; font-size: 11px; font-weight: normal; color: #000000; text-decoration: underline }
+a.thememore:active{  FONT-FAMILY: tahoma, arial, helvetica, sans-serif; font-size: 11px; font-weight: normal; color: #000000; text-decoration: underline }
+a.thememore:visited{  FONT-FAMILY: tahoma, arial, helvetica, sans-serif; font-size: 11px; font-weight: normal; color: #000000; text-decoration: underline }
+a.thememore:hover{  FONT-FAMILY: tahoma, arial, helvetica, sans-serif; font-size: 11px; font-weight: normal; color: #999999; text-decoration: underline}
+
+.themeaddbasket {  FONT-FAMILY: tahoma, arial, helvetica, sans-serif; font-size: 11px; font-weight: bold; }
+a.themeaddbasket:link{  FONT-FAMILY: tahoma, arial, helvetica, sans-serif; font-size: 11px; font-weight: bold; color: #FF6600; text-decoration: underline }
+a.themeaddbasket:active{  FONT-FAMILY: tahoma, arial, helvetica, sans-serif; font-size: 11px; font-weight: bold; color: #FF9900; text-decoration: underline }
+a.themeaddbasket:visited{  FONT-FAMILY: tahoma, arial, helvetica, sans-serif; font-size: 11px; font-weight: bold; color: #FF9900; text-decoration: underline }
+a.themeaddbasket:hover{  FONT-FAMILY: tahoma, arial, helvetica, sans-serif; font-size: 11px; font-weight: bold; color: #FF9900; text-decoration: underline}
+
+.pubsetmore {  FONT-FAMILY: tahoma, arial, helvetica, sans-serif; font-size: 11px; line-height: 15px; font-weight: bold; }
+a.pubsetmore:link{  FONT-FAMILY: tahoma, arial, helvetica, sans-serif; font-size: 11px; line-height: 15px; font-weight: bold; color: #FF6600; text-decoration: none }
+a.pubsetmore:active{  FONT-FAMILY: tahoma, arial, helvetica, sans-serif; font-size: 11px; line-height: 15px; font-weight: bold; color: #FF9900; text-decoration: none }
+a.pubsetmore:visited{  FONT-FAMILY: tahoma, arial, helvetica, sans-serif; font-size: 11px; line-height: 15px; font-weight: bold; color: #FF9900; text-decoration: none }
+a.pubsetmore:hover{  FONT-FAMILY: tahoma, arial, helvetica, sans-serif; font-size: 11px; line-height: 15px; font-weight: bold; scolor: #FF9900; text-decoration: underline}
+
+.bestsellernumber { COLOR: #666666; FONT-FAMILY: arial, helvetica,  sans-serif; FONT-SIZE: 12px; FONT-STYLE: normal; FONT-WEIGHT: bold; LINE-HEIGHT: 15px; TEXT-DECORATION: none }
+
+.themesdivider { BACKGROUND-COLOR: #CCCCCC }
+
+
+/* Quiz styles added for quiz template redesign 18/02/03*/
+
+.quiztitle {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 14px;
+	font-style: normal;
+	line-height: 15px;
+	font-weight: bold;
+	font-variant: normal;
+	text-transform: none;
+	color: #000000;
+	text-decoration: none
+}
+
+
+.quizquestion {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 12px;
+	font-style: normal;
+	line-height: 15px;
+	font-weight: bold;
+	font-variant: normal;
+	text-transform: none;
+	color: #000000;
+	text-decoration: none
+}
+
+.quizintro {  
+font-family: Arial, Helvetica, sans-serif; 
+font-size: 12px; 
+font-style: normal; 
+line-height: 15px; 
+font-weight: normal; 
+font-variant: normal; 
+text-transform: none; 
+color: #000000; 
+text-decoration: none
+}
+
+.quizbody {  
+font-family: Arial, Helvetica, sans-serif; 
+font-size: 12px; 
+font-style: normal; 
+line-height: 15px; 
+font-weight: normal; 
+font-variant: normal; 
+text-transform: none; 
+color: #000000; 
+text-decoration: none
+}
+
+.quizsubmitbutton
+{font-family: Arial, Helvetica, sans-serif; font-size: 11px; line-height: 12pt; font-weight: normal; color:#000000; background:#CCCCCC}
+A.quizsubmitbutton:link { color: #000000; text-decoration : none;  }
+A.quizsubmitbutton:active { color: #000000; text-decoration : none;  }
+A.quizsubmitbutton:visited { color:000000; text-decoration : none;  }
+A.quizsubmitbutton:hover { color:000000; text-decoration : none;  }
+
+/* printer friendly specific styles */
+
+.printerfriendlyprice { COLOR: #000000; FONT-FAMILY: arial, helvetica,  sans-serif; FONT-SIZE: 12px; FONT-STYLE: normal; FONT-WEIGHT: normal; LINE-HEIGHT: 15px; TEXT-DECORATION: none }
+
+
+/* additional styles for static and ewebedit pages */
+
+A.bodylinkorange:link { font-family: Arial, Helvetica, sans-serif; font-size: 12px; font-style: normal; line-height: 15px; font-weight: normal; font-variant: normal; text-transform: none; color: #FF6600; text-decoration: none }
+
+A.bodylinkorange:active { font-family: Arial, Helvetica, sans-serif; font-size: 12px; font-style: normal; line-height: 15px; font-weight: normal; font-variant: normal; text-transform: none; color: #FF9900; text-decoration: none }
+
+A.bodylinkorange:visited { font-family: Arial, Helvetica, sans-serif; font-size: 12px; font-style: normal; line-height: 15px; font-weight: normal; font-variant: normal; text-transform: none; color: #FF9900; text-decoration: none }
+
+A.bodylinkorange:hover { font-family: Arial, Helvetica, sans-serif; font-size: 12px; font-style: normal; line-height: 15px; font-weight: normal; font-variant: normal; text-transform: none; color: #FF9900; text-decoration: underline }
+
+
+.faqheader { font-family: Verdana, Tahoma, Arial, Helvetica, sans-serif; font-size: 11px; font-style: normal; line-height: 15px; font-weight: bold; font-variant: normal; text-transform: uppercase; color: #336699; text-decoration: none }
+.faqsubheader { font-family: Verdana, Tahoma, Arial, Helvetica, sans-serif; font-size: 10px; font-style: normal; line-height: 15px; font-weight: bold; font-variant: normal; text-transform: uppercase; color: #336699; text-decoration: none }
+	
+
+/* styles for great thames read campaign and minisite 0304 */
+
+BODY {
+		background-repeat : no-repeat;
+		background-image : url(images/greatthames_topstrip_bg.jpg);
+		background-position : right 0px;
+	}
+
+.gtrnavlink{
+	font-family: Tahoma, Arial, Helvetica, sans-serif;
+	font-size: 11px;
+	font-style: normal;
+	line-height: 11px;
+	font-weight: normal;
+	font-variant: normal;
+	color: #666666;
+	text-decoration: none;
+}
+	
+A.gtrnavlink:link {
+font-family: Tahoma, Arial, Helvetica, sans-serif;
+font-size: 10px;
+font-style: normal;
+line-height: 12px;
+font-weight: normal;
+font-variant: normal;
+text-transform: none;
+color: #666666; 
+text-decoration: none
+}
+
+A.gtrnavlink:active {
+font-family: Tahoma, Arial, Helvetica, sans-serif;
+font-size: 10px;
+font-style: normal;
+line-height: 12px;
+font-weight: normal;
+font-variant: normal;
+text-transform: none;
+color: #666666;
+text-decoration: none
+}
+
+A.gtrnavlink:visited {
+font-family: Tahoma, Arial, Helvetica, sans-serif;
+font-size: 10px;
+font-style: normal;
+line-height: 12px;
+font-weight: normal; 
+font-variant: normal;
+text-transform: none;
+color: #666666; 
+text-decoration: none
+}
+
+
+A.gtrnavlink:hover {
+font-family: Tahoma, Arial, Helvetica, sans-serif;
+font-size: 10px;
+font-style: normal;
+line-height: 12px;
+font-weight: normal;
+font-variant: normal;
+text-transform: none;
+color: #333333;
+text-decoration: none
+}
+
+A.greatthamesbody:link { 
+font-family: Arial, Helvetica, sans-serif;
+font-size: 12px;
+font-style: normal;
+line-height: 15px;
+font-weight: normal;
+font-variant: normal;
+text-transform: none;
+color: #336699;
+text-decoration: none
+}
+
+A.greatthamesbody:active { 
+font-family: Arial, Helvetica, sans-serif;
+font-size: 12px;
+font-style: normal;
+line-height: 15px;
+font-weight: normal;
+font-variant: normal;
+text-transform: none;
+color: #336699;
+text-decoration: none
+}
+
+A.greatthamesbody:visited { 
+font-family: Arial, Helvetica, sans-serif;
+font-size: 12px;
+font-style: normal;
+line-height: 15px;
+font-weight: normal;
+font-variant: normal;
+text-transform: none; 
+color: #336699; 
+text-decoration: none 
+}
+
+A.greatthamesbody:hover { 
+font-family: Arial, Helvetica, sans-serif;
+font-size: 12px;
+font-style: normal;
+line-height: 15px;
+font-weight: normal;
+font-variant: normal;
+text-transform: none;
+color: #336699;
+text-decoration: underline
+}
+
+/* PENGUIN TOP NAV STYLES FROM NONFRAMED TOP NAV */
+
+a.topnavhighlight:link  {
+		font-family: tahoma, arial, helvetica, verdana, sans-serif;
+		font-size: 11px;
+		color: #000000;
+		text-decoration: none;
+		display: block;
+		width: 100%;
+		background-color:#CCCCCC;
+		padding-top : 3px;
+		padding-bottom : 4px;
+		padding-left : 5px;
+	}
+
+	a.topnavhighlight:visited {
+		font-family: tahoma, arial, helvetica, verdana, sans-serif;
+		font-size: 11px;
+		color: #000000;
+		text-decoration: none;
+		display: block;
+		width: 100%;
+		background-color:#CCCCCC;
+		padding-top : 3px;
+		padding-bottom : 4px;
+		padding-left : 5px;
+	}
+
+	a.topnavhighlight:hover {
+		font-family: tahoma, arial, helvetica, verdana, sans-serif;
+		font-size: 11px;
+		color: #ffffff;
+		background-color:#999999;
+		text-decoration: none;
+		display: block;
+		width: 100%;
+		padding-top : 3px;
+		padding-bottom : 4px;
+		padding-left : 5px;
+	}
+	
+	a.topnavhighlight:active {
+		font-family: tahoma, arial, helvetica, verdana, sans-serif;
+		font-size: 11px;
+		color: #000000;
+		text-decoration: none;
+		display: block;
+		width: 100%;
+		background-color:#CCCCCC;
+		padding-top : 3px;
+		padding-bottom : 4px;
+		padding-left : 5px;
+	}
+	
+	.topnavlink  {
+		font-family: tahoma, arial, helvetica, verdana, sans-serif;
+		font-size: 11px;
+		color: #000000;
+		text-decoration: none;
+		background-color:#FF6600;
+		padding-top : 3px;
+		padding-bottom : 4px;
+		padding-left : 5px;
+		padding-right : 5px;
+	}
+
+a.topnavlink:link  {
+		font-family: tahoma, arial, helvetica, verdana, sans-serif;
+		font-size: 11px;
+		color: #000000;
+		text-decoration: none;
+		background-color:#FF6600;
+		padding-top : 3px;
+		padding-bottom : 4px;
+		padding-left : 5px;
+		padding-right : 5px;
+	}
+
+a.topnavlink:visited {
+		font-family: tahoma, arial, helvetica, verdana, sans-serif;
+		font-size: 11px;
+		color: #000000;
+		text-decoration: none;
+		background-color:#FF6600;
+		padding-top : 3px;
+		padding-bottom : 4px;
+		padding-left : 5px;
+		padding-right : 5px;
+	}
+
+	a.topnavlink:hover {
+		color: #ffffff;
+		text-decoration: none;
+		padding-right : 5px;
+	}
+
+	a.topnavlink:active {
+		font-family: tahoma, arial, helvetica, verdana, sans-serif;
+		font-size: 11px;
+		color: #000000;
+		text-decoration: none;
+		background-color:#FF6600;
+		padding-top : 3px;
+		padding-bottom : 4px;
+		padding-left : 5px;
+		padding-right : 5px;
+	}
+
+	
+	.searchbox {
+		background-color:#FFFFFF;
+		font-family: "verdana", "geneva", "arial", "helvetica", "sans-serif";
+		font-size: 10px;
+		color: #999999;
+		font-weight: lighter;
+		border: #990000;
+		border-style: solid;
+		border-top-width: 1px;
+		border-right-width: 1px;
+		border-bottom-width: 1px;
+		border-left-width: 1px
+
+}
+
+.blacknavcopy
+{
+    FONT-WEIGHT: normal;
+    FONT-SIZE: 11px;
+    COLOR: #000000;
+    FONT-FAMILY: Arial, Helvetica, Verdana, sans-serif;
+    TEXT-DECORATION: none
+}
+
+/* PENGUIN TOP NAV STYLES FROM FRAMED TOP NAV */
+
+.topmenubox
+{
+    Z-INDEX: 1;
+    FONT-FAMILY: Tahoma, Arial, Helvetica, verdana, sans-serif;
+    FONT-SIZE: 11px;
+    FONT-WEIGHT: normal;
+    FONT-STYLE: normal;
+    HEIGHT: 14px;
+    TEXT-ALIGN: left;
+    TEXT-DECORATION: none;
+    COLOR: #000000;
+    CLIP:RECT(0px 130px 18px 0px)
+}
+.topmenutext
+{
+    Z-INDEX: 1;
+    FONT-FAMILY: Tahoma, arial, helvetica, verdana, sans-serif;
+    FONT-SIZE: 11px;
+    FONT-WEIGHT: normal;
+    FONT-STYLE: normal;
+    HEIGHT: 14px;
+    TEXT-ALIGN: left;
+    TEXT-DECORATION: none;
+    COLOR: #000000;
+    CLIP: rect(0px 130px 18px 0px)
+}
+
+.smt
+{
+    Z-INDEX: 1;
+    FONT-FAMILY: Tahoma, arial, helvetica, verdana, sans-serif;
+    FONT-SIZE: 11px;
+    FONT-WEIGHT: normal;
+    FONT-STYLE: normal;
+    TEXT-ALIGN: left;
+    TEXT-DECORATION: none;
+    COLOR: #003366;
+    BACKGROUND-COLOR: #FF6600;
+	
+}
+
+A.menu:link
+{
+    FONT-SIZE: 11px;
+    COLOR: #000000;
+    TEXT-DECORATION: none
+}
+A.menu:visited
+{
+    COLOR: #000000;
+    TEXT-DECORATION: none
+}
+A.menu:hover
+{
+    COLOR: #ffffff;
+    TEXT-DECORATION: none
+}
+A.sm:link
+{
+    COLOR: #000000;
+    BACKGROUND-COLOR: #ff6600;
+    TEXT-DECORATION: none;
+    LAYER-BACKGROUND-COLOR: #ff6600
+}
+A.sm:visited
+{
+    COLOR: #000000;
+    BACKGROUND-COLOR: #ff6600;
+    TEXT-DECORATION: none;
+    LAYER-BACKGROUND-COLOR: #ff6600
+}
+A.sm:hover
+{
+    COLOR: #ffffff;
+    BACKGROUND-COLOR: #ff6600;
+    TEXT-DECORATION: none;
+    LAYER-BACKGROUND-COLOR: #ff6600
+}
+.navcopy
+{
+    FONT-WEIGHT: normal;
+    FONT-SIZE: 10px;
+    COLOR: #000000;
+    FONT-FAMILY: Arial, Helvetica, Verdana, sans-serif;
+    TEXT-DECORATION: none
+}
+.bluenavcopy
+{
+    FONT-WEIGHT: normal;
+    FONT-SIZE: 10px;
+    COLOR: #6699cc;
+    FONT-FAMILY: Arial, Helvetica, Verdana, sans-serif;
+    TEXT-DECORATION: none
+}
+.whitenavcopy
+{
+    FONT-WEIGHT: normal;
+    FONT-SIZE: 10px;
+    COLOR: #ffffff;
+    FONT-FAMILY: Arial, Helvetica, Verdana, sans-serif;
+    TEXT-DECORATION: none
+}
+
+
+
+
+
+
+
+
+/* BELOW follow all site specific descriptors which are NOT used          */
+/* in StoryServer templates.  Below descriptors are only used in static   */
+/* pages                                                                  */
+/*------------------------------------------------------------------------*/
+/*------------------------------------------------------------------------*/
+
+
+
+
+A.set1:link {
+font-family: Arial, Helvetica, sans-serif;
+font-size: 10px; font-style: normal;
+line-height: 12px;
+font-weight: normal;
+font-variant: normal;
+text-transform: none;
+color: #FFFFFF;
+text-decoration: none
+}
+
+A.set1:active {
+font-family: Arial, Helvetica, sans-serif;
+font-size: 10px;
+font-style: normal;
+line-height: 12px;
+font-weight: normal;
+font-variant: normal;
+text-transform: none;
+color: #CCCCCC;
+text-decoration: none
+}
+
+A.set1:visited {
+font-family: Arial, Helvetica, sans-serif;
+font-size: 10px;
+font-style: normal;
+line-height: 12px;
+font-weight: normal;
+font-variant: normal;
+text-transform: none;
+color: #CCCCCC;
+text-decoration: none
+}
+
+A.set1:hover { 
+font-family: Arial, Helvetica, sans-serif;
+font-size: 10px;
+font-style: normal;
+line-height: 12px;
+font-weight: normal;
+font-variant: normal;
+text-transform: none;
+color: #CCCCCC;
+text-decoration: underline
+}
+
+A.set2:link { 
+font-family: Arial, Helvetica, sans-serif;
+font-size: 12px;
+font-style: normal;
+line-height: 15px;
+font-weight: normal;
+font-variant: normal;
+text-transform: none;
+color: #FF6600;
+text-decoration: none
+}
+
+A.set2:visited { 
+font-family: Arial, Helvetica, sans-serif;
+font-size: 12px;
+font-style: normal;
+line-height: 15px;
+font-weight: normal;
+font-variant: normal;
+text-transform: none; 
+color: #FF6600; 
+text-decoration: none 
+}
+
+A.set2:hover { 
+font-family: Arial, Helvetica, sans-serif;
+font-size: 12px;
+font-style: normal;
+line-height: 15px;
+font-weight: normal;
+font-variant: normal;
+text-transform: none;
+color: #FF9900;
+text-decoration: underline
+}
+
+A.set2:active { 
+font-family: Arial, Helvetica, sans-serif;
+font-size: 12px;
+font-style: normal;
+line-height: 15px;
+font-weight: normal;
+font-variant: normal
+text-transform: none;
+color: #FF6600;
+text-decoration: none
+}
+
+A.set3:link { 
+font-family: Arial, Helvetica, sans-serif;
+font-size: 12px;
+font-style: normal;
+line-height: 15px;
+font-weight: normal;
+font-variant: normal;
+text-transform: none;
+color: #336699;
+text-decoration: none 
+}
+
+A.set3:active { 
+font-family: Arial, Helvetica, sans-serif;
+font-size: 12px;
+font-style: normal;
+line-height: 15px;
+font-weight: normal;
+font-variant: normal;
+text-transform: none; 
+color: #6699CC; 
+text-decoration: none
+}
+
+A.set3:visited {
+font-family: Arial, Helvetica, sans-serif;
+font-size: 12px;
+font-style: normal;
+line-height: 15px;
+font-weight: normal; 
+font-variant: normal
+ text-transform: none;
+color: #6699CC;
+text-decoration: none
+}
+
+A.set3:hover {
+font-family: Arial, Helvetica, sans-serif;
+font-size: 12px; 
+font-style: normal;
+line-height: 15px;
+font-weight: normal;
+font-variant: normal;
+text-transform: none;
+color: #6699CC;
+text-decoration: underline
+}
+
+A.set4:link {
+font-family: Arial, Helvetica, sans-serif;
+font-size: 10px;
+font-style: normal;
+line-height: 12px;
+font-weight: normal;
+font-variant: normal;
+text-transform: none;
+color: #000000; 
+text-decoration: underline
+}
+
+A.set4:active {
+font-family: Arial, Helvetica, sans-serif;
+font-size: 10px;
+font-style: normal;
+line-height: 12px;
+font-weight: normal;
+font-variant: normal;
+text-transform: none;
+color: #333333;
+text-decoration: underline
+}
+
+A.set4:visited {
+font-family: Arial, Helvetica, sans-serif;
+font-size: 10px;
+font-style: normal;
+line-height: 12px;
+font-weight: normal; 
+font-variant: normal;
+text-transform: none;
+color: #333333; 
+text-decoration: underline
+}
+
+
+A.set4:hover {
+font-family: Arial, Helvetica, sans-serif;
+font-size: 10px;
+font-style: normal;
+line-height: 12px;
+font-weight: normal;
+font-variant: normal;
+text-transform: none;
+color: #999999;
+text-decoration: underline
+}
+
+A.set5:link {
+font-family: Arial, Helvetica, sans-serif;
+font-size: 12px;
+font-style: normal;
+line-height: 15px;
+font-weight: normal;
+font-variant: normal;
+text-transform: none;
+color: #333333;
+text-decoration: none
+}
+
+A.set5:active {
+ font-family: Arial, Helvetica, sans-serif;
+font-size: 12px;
+font-style: normal;
+line-height: 15px;
+font-weight: normal;
+font-variant: normal;
+text-transform: none;
+color: #999999;
+text-decoration: none 
+}
+
+A.set5:visited {
+font-family: Arial, Helvetica, sans-serif;
+font-size: 12px;
+font-style: normal;
+line-height: 15px;
+font-weight: normal;
+font-variant: normal;
+text-transform: none;
+color: #999999;
+text-decoration: none
+}
+
+A.set5:hover {
+font-family: Arial, Helvetica, sans-serif;
+font-size: 12px;
+font-style: normal;
+line-height: 15px;
+font-weight: normal;
+font-variant: normal;
+text-transform: none;
+color: #999999;
+text-decoration: underline
+}
+
+A.set7:link {
+font-family: Arial, Helvetica, sans-serif;
+font-size: 14px;
+font-style: normal;
+line-height: 15px;
+font-weight: normal;
+font-variant: normal;
+text-transform: none;
+color: #336699;
+text-decoration: none
+}
+
+A.set7:active {
+font-family: Arial, Helvetica, sans-serif;
+font-size: 14px;
+font-style: normal;
+line-height: 15px;
+font-weight: normal;
+font-variant: normal;
+ text-transform: none;
+color: #6699CC;
+text-decoration: none
+}
+
+A.set7:visited {
+font-family: Arial, Helvetica, sans-serif;
+font-size: 14px;
+font-style: normal;
+line-height: 15px;
+font-weight: normal;
+font-variant: normal;
+text-transform: none;
+color: #6699CC;
+text-decoration: none
+}
+
+A.set7:hover {
+font-family: Arial, Helvetica, sans-serif;
+font-size: 14px;
+font-style: normal;
+line-height: 15px;
+font-weight: normal;
+font-variant: normal; 
+text-transform: none;
+color: #6699CC;
+text-decoration: underline;
+}
+
+A.set8:link {
+font-family: Arial, Helvetica, sans-serif;
+font-size: 10px;
+font-style: normal;
+line-height: 15px;
+font-weight: normal;
+font-variant: normal;
+text-transform: none;
+color: #FF6600; 
+text-decoration: underline;
+}
+A.set8:active {
+font-family: Arial, Helvetica, sans-serif;
+font-size: 10px;
+font-style: normal;
+line-height: 15px; 
+font-weight: normal; 
+font-variant: normal;
+text-transform: none;
+color: #FF9900;
+text-decoration: underline;
+}
+
+A.set8:visited {
+font-family: Arial, Helvetica, sans-serif;
+font-size: 10px;
+font-style: normal;
+line-height: 15px;
+font-weight: normal; 
+font-variant: normal;
+text-transform: none;
+color: #FF9900; 
+text-decoration: underline;
+}
+
+A.set8:hover {
+font-family: Arial, Helvetica, sans-serif;
+font-size: 10px; 
+font-style: normal; 
+line-height: 15px;
+font-weight: normal;
+font-variant: normal;
+text-transform: none;
+color: #FF9900;
+text-decoration: underline;
+}
+
+A.set9:link {
+font-family: Arial, Helvetica, sans-serif;
+font-size: 10px;
+font-style: normal;
+line-height: 12px; 
+font-weight: normal;
+font-variant: normal;
+text-transform: none;
+color: #FFFFFF; 
+text-decoration: none
+}
+
+A.set9:active {
+font-family: Arial, Helvetica, sans-serif;
+font-size: 10px;
+font-style: normal;
+line-height: 12px; 
+font-weight: normal; 
+font-variant: normal;
+text-transform: none;
+color: #FFFFFF;
+text-decoration: none
+}
+
+A.set9:visited {
+font-family: Arial, Helvetica, sans-serif;
+font-size: 10px;
+font-style: normal;
+line-height: 12px;
+font-weight: normal;
+font-variant: normal;
+text-transform: none;
+color: #FFFFFF;
+text-decoration: none
+}
+
+A.set9:hover {
+font-family: Arial, Helvetica, sans-serif;
+font-size: 10px; 
+font-style: normal;
+line-height: 12px; 
+font-weight: normal;
+font-variant: normal;
+text-transform: none;
+color: #FFFFFF;
+text-decoration: underline
+}
+
+
+
+A.set11:link { 
+font-family: Arial, Helvetica, sans-serif;
+font-size: 12px;
+font-style: normal;
+line-height: 15px;
+font-weight: normal;
+font-variant: normal;
+text-transform: none;
+color: #cc3366;
+text-decoration: none
+}
+
+A.set11:active { 
+font-family: Arial, Helvetica, sans-serif;
+font-size: 12px;
+font-style: normal;
+line-height: 15px;
+font-weight: normal;
+font-variant: normal;
+text-transform: none;
+color: #cc3366;
+text-decoration: none
+}
+
+A.set11:visited { 
+font-family: Arial, Helvetica, sans-serif;
+font-size: 12px;
+font-style: normal;
+line-height: 15px;
+font-weight: normal;
+font-variant: normal;
+text-transform: none; 
+color: #cc3366; 
+text-decoration: none 
+}
+
+A.set11:hover { 
+font-family: Arial, Helvetica, sans-serif;
+font-size: 12px;
+font-style: normal;
+line-height: 15px;
+font-weight: normal;
+font-variant: normal;
+text-transform: none; 
+color: #cc3366; 
+text-decoration: underline 
+}
+
+.blackmedium {  
+font-family: Arial, Helvetica, sans-serif; 
+font-size: 12px; 
+font-style: normal; 
+line-height: 15px; 
+font-weight: normal; 
+font-variant: normal; 
+text-transform: none; 
+color: #000000; 
+text-decoration: none
+}
+
+
+.blacksmall {
+font-family: Arial, Helvetica, sans-serif;
+font-size: 10px;
+font-style: normal;
+line-height: 12px;
+font-weight: normal; 
+font-variant: normal;
+text-transform: none;
+color: #000000;
+text-decoration: none 
+}
+
+.whitesmall {
+font-family: Arial, Helvetica, sans-serif;
+font-size: 10px;
+font-style: normal;
+line-height: 12px;
+font-weight: normal;
+font-variant: normal;
+text-transform: none;
+color: #FFFFFF;
+text-decoration: none
+}
+
+.whitemedium {
+font-family: Arial, Helvetica, sans-serif;
+font-size: 12px;
+font-style: normal; 
+line-height: 15px;
+font-weight: normal;
+font-variant: normal;
+text-transform: none;
+color: #FFFFFF;
+text-decoration: none
+}
+
+.greymedium {
+font-family: Arial, Helvetica, sans-serif;
+font-size: 12px; 
+font-style: normal;
+line-height: 15px;
+font-weight: normal;
+font-variant: normal;
+text-transform: none;
+color: #333333;
+text-decoration: none
+}
+
+
+
+.greysmall {
+font-family: Arial, Helvetica, sans-serif;
+font-size: 10px;
+font-style: normal;
+line-height: 12px;
+font-weight: normal;
+font-variant: normal;
+text-transform: none;
+color: #666666;
+text-decoration: none
+}
+
+.copyright {
+font-family: Arial, Helvetica, sans-serif;
+font-size: 9px;
+font-style: normal;
+line-height: 12px;
+font-weight: normal;
+font-variant: normal;
+text-transform: none;
+color: #333333;
+text-decoration: none 
+}
+
+
+.orangemedium {
+font-family: Arial, Helvetica, sans-serif;
+font-size: 12px;
+font-style: normal;
+line-height: 15px;
+font-weight: normal;
+font-variant: normal;
+text-transform: none;
+color: #FF6600;
+text-decoration: none
+}
+
+.bluemedium {
+font-family: Arial, Helvetica, sans-serif;
+font-size: 12px; 
+font-style: normal;
+line-height: 15px;
+font-weight: normal;
+font-variant: normal;
+text-transform: none;
+color: #336699;
+text-decoration: none
+}
+
+
+
+
+.blacklarge {
+font-family: Arial, Helvetica, sans-serif;
+font-size: 36pt;
+font-style: normal;
+line-height: 40px;
+font-weight: normal; 
+font-variant: normal;
+text-transform: none;
+color: #000000;
+text-decoration: none
+}
+
+
+
+
+.bluelarge {
+font-family: Arial, Helvetica, sans-serif;
+font-size: 14px;
+font-style: normal;
+line-height: 15px;
+font-weight: normal;
+font-variant: normal;
+text-transform: none;
+color: #336699; 
+text-decoration: none
+}
+
+.bluetext {
+font-family: Arial, Helvetica, sans-serif;
+font-size: 10px;
+font-style: normal;
+line-height: 12px;
+font-weight: normal;
+font-variant: normal;
+text-transform: none;
+color: #006699;
+text-decoration: none
+}
+
+
+
+.title {
+	font-size : 16px;
+	font-family : Arial, Helvetica, sans-serif;
+	font-style : normal;
+	line-height : 17px;
+	color : Black;
+}
+
+.bodyintro {
+	font-size : 12px;
+	font-family : Arial, Helvetica, sans-serif;
+	font-style : normal;
+	font-weight: bold;	
+	line-height : 15px;
+	color : Black;
+}
+	
+.byline {
+	font-size : 12px;
+	font-family : Arial, Helvetica, sans-serif;
+	font-style : italic;
+	line-height : 18px;
+	color : "#336699";	
+}
+
+.rightnav {
+	font-size : 11px;
+	font-family : Arial, Helvetica, sans-serif;
+	font-style : normal;
+	line-height : 14px;
+	color : "#990000";
+}	
+
+
+	
+.toptitle {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 18px;
+  font-style: normal;
+  line-height: 18px;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  color: #000000f;
+  text-decoration: none;
+}
+
+
+
+.toptextbold {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 12px;
+	font-style: normal;
+	line-height: 15px;
+	font-weight: bold;
+	font-variant: normal;
+	text-transform: none;
+	color: #000000;
+	text-decoration: none;
+}
+
+
+/* Depreciated styles from Static pages on 25/11/02 */
+
+
+.navitems { 
+font-family:Arial, Helvetica, sans-serif;
+font-size:10px; 
+font-weight:normal; 
+color:#000000;
+text-decoration:none; 
+}
+
+a.navitems:link { 
+font-family:Arial, Helvetica, sans-serif; 
+font-size:10px; 
+font-weight:normal;
+color:#000000; 
+text-decoration:none; 
+}
+
+a.navitems:active { 
+font-family:Arial, Helvetica, sans-serif; 
+font-size:10px; 
+font-weight:normal; 
+color:#000000;
+text-decoration:none; 
+}
+
+a.navitems:visited {
+font-family:Arial, Helvetica, sans-serif; 
+font-size:10px; 
+font-weight:normal; 
+color:#000000;
+text-decoration:none; 
+}  
+
+A.set6:link {
+font-family: Arial, Helvetica, sans-serif;
+font-size: 14px;
+font-style: normal;
+line-height: 15px;
+font-weight: normal;
+font-variant: normal;
+text-transform: none;
+color: #FF6600;
+text-decoration: none
+}
+
+A.set6:active {
+font-family: Arial, Helvetica, sans-serif;
+font-size: 14px;
+font-style: normal;
+line-height: 15px;
+font-weight: normal;
+font-variant: normal;
+text-transform: none;
+color: #FF9900;
+text-decoration: none
+}
+
+A.set6:visited {
+font-family: Arial, Helvetica, sans-serif;
+font-size: 14px;
+font-style: normal;
+line-height: 15px;
+font-weight: normal;
+font-variant: normal;
+text-transform: none;
+color: #FF9900;
+text-decoration: none
+}
+
+A.set6:hover {
+font-family: Arial, Helvetica, sans-serif;
+font-size: 14px;
+font-style: normal;
+line-height: 15px;
+font-weight: normal;
+font-variant: normal;
+text-transform: none;
+color: #FF9900;
+text-decoration: underline
+}
+
+A.set10:link { 
+font-family: Arial, Helvetica, sans-serif;
+font-size: 12px;
+font-style: normal;
+line-height: 15px;
+font-weight: normal;
+font-variant: normal;
+text-transform: none;
+color: #FFFFFF;
+text-decoration: none
+}
+
+A.set10:active { 
+font-family: Arial, Helvetica, sans-serif;
+font-size: 12px;
+font-style: normal;
+line-height: 15px;
+font-weight: normal;
+font-variant: normal
+text-transform: none;
+color: #FFFFFF;
+text-decoration: none
+}
+
+A.set10:visited { 
+font-family: Arial, Helvetica, sans-serif;
+font-size: 12px;
+font-style: normal;
+line-height: 15px;
+font-weight: normal;
+font-variant: normal;
+text-transform: none; 
+color: #FFFFFF; 
+text-decoration: none 
+}
+
+A.set10:hover { 
+font-family: Arial, Helvetica, sans-serif;
+font-size: 12px;
+font-style: normal;
+line-height: 15px;
+font-weight: normal;
+font-variant: normal;
+text-transform: none;
+color: #FFFFFF;
+text-decoration: underline
+}
+
+A.blank:link { 
+font-family: Arial, Helvetica, sans-serif;
+font-size: 12px;
+font-style: normal;
+line-height: 15px;
+font-weight: normal;
+font-variant: normal;
+text-transform: none;
+text-decoration: none
+}
+
+A.blank:active { 
+font-family: Arial, Helvetica, sans-serif;
+font-size: 12px;
+font-style: normal;
+line-height: 15px;
+font-weight: normal;
+font-variant: normal;
+text-transform: none;
+text-decoration: none
+}
+
+A.blank:visited { 
+font-family: Arial, Helvetica, sans-serif;
+font-size: 12px;
+font-style: normal;
+line-height: 15px;
+font-weight: normal;
+font-variant: normal;
+text-transform: none; 
+text-decoration: none 
+}
+
+A.blank:hover { 
+font-family: Arial, Helvetica, sans-serif;
+font-size: 12px;
+font-style: normal;
+line-height: 15px;
+font-weight: normal;
+font-variant: normal;
+text-transform: none; 
+color: #cc3366; 
+text-decoration: underline 
+}
+
+.orangesmall {
+font-family: Arial, Helvetica, sans-serif;
+font-size: 10px;
+font-style: normal;
+line-height: 12px;
+font-weight: normal;
+font-variant: normal;
+text-transform: none;
+color: #FF6600;
+text-decoration: none
+}
+
+.orangelarge {
+font-family: Arial, Helvetica, sans-serif;
+font-size: 14px; 
+font-style: normal;
+line-height: 15px;
+font-weight: normal;
+font-variant: normal; 
+text-transform: none;
+color: #FF6600;
+text-decoration: none
+}
+
+.toptext {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 12px;
+  font-style: normal;
+  line-height: 15px;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  color: #000000;
+  text-decoration: none;
+}
+
+.top_quote {
+	font-size:12pt; 
+	font-family:arial, helvetica; 
+	font-style : normal;
+	line-height : 14px;
+	color:#ffffff
+	}
+	
+/*Classics Right Nav Poll Styles*/
+.cls_pollquestion
+{
+    font-size : 12px;
+    font-family : tahoma, arial, helvetica, sans-serif;
+    font-style : normal;
+    font-weight : normal;
+    color : #ff6600; 
+    line-height: 15px;
+    text-decoration : none;
+}
+
+.cls_pollchoice
+{
+    font-size : 9px;
+    font-family : tahoma, arial, helvetica, sans-serif;
+    font-style : normal;
+    font-weight : normal;
+    color : #999999; 
+    line-height: 12px;
+    text-decoration : none;
+}
+
+.cls_hottext
+{
+    font-size : 10px;
+    font-family : tahoma, arial, helvetica, sans-serif;
+    font-style : normal;
+    font-weight : normal;
+    color : #000000; 
+    line-height: 15px;
+    text-decoration : none;
+}
+
+a.cls_hottext:link { color: #ff6600; }
+a.cls_hottext:active { color: #ff9900; }
+a.cls_hottext:visited { color: #ff9900; }
+a.cls_hottext:hover { color: #ff9900; text-decoration: underline; }
+
+#cls_content{valign : top;}
+

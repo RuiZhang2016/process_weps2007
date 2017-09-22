@@ -1,0 +1,117 @@
+//----------------------------
+// ImageData
+//----------------------------
+function ImageData( src, alt)
+{
+    this.src = src;
+    this.alt = alt;
+}
+ID = ImageData.prototype;
+
+ID.toString = function()
+{
+    return "{ "+this.src+", "+this.alt+"}";
+}
+
+//----------------------------
+// TabImage
+//----------------------------
+function TabImage( id, unselected, selected, rollover)
+{
+    this.id = id;
+    this.unselected = unselected;
+    this.selected = selected;
+    this.rollover = rollover;
+
+    this.elem = document.getElementById( this.id);
+}
+TI = TabImage.prototype;
+
+TI.set = function( img)
+{
+    elem = document.getElementById( this.id);
+    if ((elem != null) && (img != null))
+    {
+	elem.src = img.src;
+	elem.alt = img.alt;
+    }
+}
+
+TI.unselect = function()
+{    
+    elem = document.getElementById( this.id);    
+    if (elem != null)
+    {
+	this.set( this.unselected);
+	elem.style.cursor = 'pointer';
+    }
+}
+
+TI.select = function()
+{
+    elem = document.getElementById( this.id);    
+    if (elem != null)
+    {
+	this.set( this.selected);
+	elem.style.cursor = 'default';
+    }
+}
+
+TI.rollover = function()
+{
+    this.set( this.rollover);
+}
+
+TI.toString = function()
+{
+    return "{ "+this.id+", "+this.unselected+", "+this.selected+", "+this.rollover+"}";
+}
+
+//----------------------------
+// TabImageGroup
+//----------------------------
+function TabImageGroup()
+{
+    this.selected == null;
+}
+TabImageGroup.prototype = new Hashtable();
+TIG = TabImageGroup.prototype;
+
+TIG.unselectAll = function()
+{
+    uTabs = this.values();
+    for( var i in uTabs)
+    {
+	uTab = uTabs[ i];
+	if ( uTab instanceof TabImage ) {
+		uTab.unselect();
+	}
+    }
+}
+
+TIG.select = function( id)
+{
+    this.unselectAll();
+    this.selected = id;
+    tab = this.get( id);
+    tab.select();
+}
+
+TIG.rollover = function( id)
+{
+    tab = this.get( id);
+    tab.rollover();
+}
+
+TIG.unrollover = function( id)
+{
+    tab = this.get( id);
+    if (this.selected == id)
+    {
+	tab.select();
+    }
+    else
+    {
+	tab.unselect();
+    }
+}

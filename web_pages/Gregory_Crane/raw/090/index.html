@@ -1,0 +1,176 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+
+               
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+	<META name="verify-v1" content="IZi/G7R2q7LBZKp5MM6btW9QXU0DyuNfGtkFIfPiwWs=" />
+</head>
+<head>
+	<meta http-equiv="content-type" content="text/html; charset=ISO-8859-1">
+	<link rel="stylesheet" type="text/css" href="yale.css">
+	<script type="text/javascript" src="fpi-init.js"></script>
+	<script type="text/javascript" src="fpi-writevb.js"></script>
+	<script type="text/javascript" src="fpi-main.js"></script>
+</head>
+
+<body id="yup"><div id="wrapper"><form name=frmMain id=frmMain>
+<!-- HEADER -->
+<table id="header" summary="Yale logo, search box" border="0" cellpadding="0" cellspacing="0"><tr>
+	<td id="home">
+		<a href="http://yalepress.yale.edu/yupbooks/home.asp" title="Home Page"><img src="yale_logo.gif" width="109" height="110" alt="home"></a>
+	</td>
+	<td id="search_widgets" align="left" valign="top">
+		<img class="block" src="search.gif" width="106" height="7" alt="Search For A Book">
+		<select name=selType id=selType tabindex=10>
+			<option value="Keyword" >By Keyword</option>		
+			<option value="Title" >By Title</option>
+			<option value="Author" >By Author</option>
+			<option value="ISBN" >By ISBN</option>
+		</select>
+		<input id=txtCriteria name=txtCriteria value=""
+			style='height:17px;width:250px' tabindex=20 alt="Enter Search Terms" title="[Enter Search Terms]" onkeypress='if (window.event.keyCode==13) {fnSearch();window.event.keyCode=0;}'>
+		<img style='position:relative;top:8px' tabindex=30 src="go.gif" onmouseover="this.src='/yupbooks/images/go_o.gif'" onmouseout="this.src='/yupbooks/images/go.gif'" onclick='fnSearch();'>
+	</td>
+
+	<td id="browse" align="left" valign="top">
+		<label for="subject"><img class="block" src="browse.gif" width="113" height="7" alt="Browse By Subject"></label>
+		<select style='position:relative;top:3px' name="Subject" id="subject" tabindex=40
+			onchange='fnBrowse(this.value);'>
+			<option value=0>&nbsp;</option>
+			<option value=1>Art and Architecture</option><option value=2>Biography                </option><option value=19>Business</option><option value=3>Classics                 </option><option value=20>Economics</option><option value=5>History                  </option><option value=6>Language                 </option><option value=7>Law                      </option><option value=8>Literary Studies         </option><option value=9>Medicine                 </option><option value=10>Performing Arts          </option><option value=11>Philosophy               </option><option value=12>Political Science        </option><option value=13>Psychology               </option><option value=14>Reference                </option><option value=15>Religion                 </option><option value=16>Science                  </option><option value=17>Social Science           </option>
+		</select>
+	</td>
+</tr></table>
+
+<table id="content" summary="Main navigation, book image and specifications, book title and synopsis" border="0" cellpadding="0" cellspacing="0">
+	<tr>
+	
+		<!-- NAVIGATION COLUMN -->
+		<td id="nav" align="left" valign="top"><ul>
+			<li><a href='https://yalepress.yale.edu/YupCart/Cart.asp'><img src="cart.gif" width="186" height="30" alt="Shopping Cart"></a></li>
+			<li style='height:37px;border-bottom:1px solid #DDDDDD'><a href="http://yalepress.yale.edu/yupbooks/newbooks.asp"><FONT SIZE=1><BR></FONT><FONT face="Times" size=2 color="#777777">&nbsp;&nbsp;NEW BOOKS</FONT></a></li>
+			<li style='height:37px;border-bottom:1px solid #DDDDDD'><a href="http://yalepress.yale.edu/yupbooks/onlinecatalogindex.asp"><FONT SIZE=1><BR></FONT><FONT face="Times" size=2 color="#777777">&nbsp;&nbsp;CATALOGS</FONT></a></li>
+			<li style='height:37px;border-bottom:1px solid #DDDDDD'><a href="http://yalepress.yale.edu/yupbooks/newsletter.asp"><FONT SIZE=1><BR></FONT><FONT face="Times" size=2 color="#777777">&nbsp;&nbsp;E-NEWSLETTER</FONT></a></li>
+			<li style='height:37px;border-bottom:1px solid #DDDDDD'><a href="http://yalepress.yale.edu/yupbooks/professors.asp"><FONT SIZE=1><BR></FONT><FONT face="Times" size=2 color="#777777">&nbsp;&nbsp;EXAM COPIES</FONT></a></li>
+			<li style='height:37px;border-bottom:1px solid #DDDDDD'><a href="http://yalepress.yale.edu/yupbooks/seriesindex.asp"><FONT SIZE=1><BR></FONT><FONT face="Times" size=2 color="#777777">&nbsp;&nbsp;SERIES & EDITIONS</FONT></a></li>
+			<li style='height:37px;border-bottom:1px solid #DDDDDD'><a href="http://yalepress.yale.edu/yupbooks/library.asp"><FONT SIZE=1><BR></FONT><FONT face="Times" size=2 color="#777777">&nbsp;&nbsp;FOR LIBRARIANS</FONT></a></li>
+			<li style='height:37px;border-bottom:1px solid #DDDDDD'><a href="http://yalepress.yale.edu/yupbooks/language_home.asp"><FONT SIZE=1><BR></FONT><FONT face="Times" size=2 color="#777777">&nbsp;&nbsp;WORLD LANGUAGES</FONT></a></li>
+			
+					<li><BR><div align=center><img src="free_shipping.jpg"></div></li>			
+					
+					<li><BR><a href="http://yalepress.typepad.com/yalepresslog" target="_blank"><div align=center><img src="bloglogo_small.jpg"></div></a></li>
+					<li><BR><a href="http://yalepress.yale.edu/yupbooks/podcast.asp" ><div align=center><img src="podcast.jpg"></div></a></li>
+					<li><BR><a href="http://yalepress.yale.edu/yupbooks/holiday.asp"><div align=center><img src="hh.jpg"></div></a></li>
+					<li><BR><a href="http://yalepress.yale.edu/yupbooks/yalesale.asp"><div align=center><img src="sale.jpg"></div></a></li>
+					
+					<!--li><BR><a href="/yupbooks/OnlineCatalog.asp?catalog=1098912"><div align=center><img src="/yupbooks/images/flower.jpg"></div></a></li-->
+			<li><BR><a href='http://yalepress.yale.edu/yupbooks/book.asp?isbn=0300107986'><div align=center><img src='quote16.jpg'></div></a></li>
+		</ul>
+
+			
+
+		</td>
+		
+		<td id="mid_col" align="left" valign="top">
+		
+		<!-- PAGE CONTENT -->
+		
+		
+
+
+<script language='Javascript'>
+function fnBrowse(subject)
+{
+	if (subject == 6)
+		window.location="/yupbooks/language_home.asp";
+	else if 
+		(subject > 0) window.location="/yupbooks/browselist.asp?cat_id=" + subject;
+}
+</script>
+
+	<TITLE>Perseus 2.0: Interactive Sources and Studies on Ancient Greece</title>
+	<meta name="title" content="Perseus 2.0: Interactive Sources and Studies on Ancient Greece">
+	<meta name="author" content="Gregory Crane">
+	<meta name="keywords" content="Science, Literary Studies, Art and Architecture, Classics, ">
+
+	<a href='0300080913.jpg'><img width=183 src='0300080913.jpg' border=0></a>
+	<ul id="details"><li id="enlarge"><a href="0300080913.jpg">Enlarge</a></li>
+		<li>	March 2000	<br>	
+	<BR>	<br>
+	ISBN: 0300080913<BR>
+	ISBN-13: 978-0-300-08091-9</li>	<li class="border_off">
+	Multimedia: <STRONG>$160.00</STRONG>&nbsp;tx	</li>
+			
+		<li id="add"><h4>
+			<a href='https://yalepress.yale.edu/YupCart/Cart.asp?prodid=0300080913'>Add to Cart</A>
+		</h4></li>			</UL>
+			<dl id="other_info">
+		<dt id="related_categories">Related Categories</dt>		<dd><a href='http://yalepress.yale.edu/YupBooks/Browselist.asp?cat_id=16'>Science</a><br><a href='http://yalepress.yale.edu/YupBooks/Browselist.asp?cat_id=8'>Literary Studies</a><br><a href='http://yalepress.yale.edu/YupBooks/Browselist.asp?cat_id=1'>Art and Architecture</a><br><a href='http://yalepress.yale.edu/YupBooks/Browselist.asp?cat_id=3'>Classics</a><br></dd><BR>
+				
+
+	</dl>		
+	<p class="note"></p>	
+
+	<p><A style='border:0' href='http://yalepress.yale.edu/YupBooks/bookprinter.asp?isbn=0300080913'>
+		<IMG src='images\printready1.JPG'>
+	</A></p></td>
+
+<td id="right_col" align="left" valign="top">		<h1>Perseus 2.0: Interactive Sources and Studies on Ancient Greece</h1><h2>Platform-Independent Version, Concise Edition</h2>
+	<ul id="credit_notes">
+		<li>Gregory Crane</li>	</ul>
+		<TABLE><TR>			<TD align=center style='display:inline-block;border:1px solid #75A7B9;width:80px;height:15px;background-color:#75A7B9;color:white'>
+				<a href='http://yalepress.yale.edu/YupBooks/reviews.asp?isbn=0300080913'><FONT size=1 color=white>REVIEWS</FONT></a>
+			</TD>
+			
+			
+			
+				<TD align=center style='display:inline-block;border:1px solid #B2B2B2;width:80px;height:15px;background-color:#B2B2B2;color:white'>					<FONT size=1 color=white>CONTENTS</FONT>
+				</TD>							<TD align=center style='display:inline-block;border:1px solid #B2B2B2;width:80px;height:15px;background-color:#B2B2B2;color:white'>					<FONT size=1 color=white>EXCERPTS</FONT>				</TD>			
+			
+				<TD align=center style='display:inline-block;border:1px solid #B2B2B2;width:80px;height:15px;background-color:#B2B2B2;color:white'>					<FONT size=1 color=white>INDEX</FONT>
+				</TD>								<TR></TABLE>	
+
+		<p>
+			</p>
+	<p></p>		
+	<p>			Named for the Hellenic hero who explored the world’s most distant reaches, Perseus is the award-winning digital resource that is revolutionizing the study of ancient Greece. Now available for the first time for PCs and Windows-based computers, Perseus continues to expand the ways in which ancient Greek literature, history, art, and archaeology can be examined.
+
+Perseus 2.0 is the most comprehensive collection of primary sources and supporting reference materials on ancient Greece ever created. It contains over 380 texts in Greek and in translation, representing all of the major authors of the classical period and others, extensive morphological tools, art and archaeology resources, and much more. Superb navigational tools and hypertextual links make searching the resource quick, intuitive, and effective. Widely praised as one of the most innovative education tools ever published, Perseus is an invaluable resource for anyone interested in exploring the ancient world.
+
+System Requirements
+
+Macintosh users:
+PowerPC processor or later
+Mac os system 8 or later
+At least 5 mb of free ram; 10 mb preferred
+3.5 mb of free space on hard disk
+CD-ROM drive
+Color monitor
+
+Windows users:
+Windows 95, 98, or NT™. (May run on Windows 3.x with Win32s.)
+486 PCs and above
+16 MB of total ram
+4 MB of free space on hard disk
+CD-ROM drive
+SVGA or VGA monitor with 256 colors
+
+Major funding is provided by the Annenberg/CPB Project with additional support from Apple Computer, Inc., and the National Endowment for the Arts, as well as the Packard Humanities Institute, Xerox Corporation, Boston University, Bowdoin College, and Harvard University.
+
+Gregory Crane, editor–in–chief of the Perseus Project, is Winnick Family Chair in Technology and Entrepreneurship and professor of classics at Tufts University.
+
+	</p>	<p></p> 		<p></p>
+		<FONT color=gray face=georgia size=1><B>OTHER TITLES BY THIS AUTHOR</B></FONT><HR style='height:1px;color:lightgrey'><A href='http://yalepress.yale.edu/YupBooks/book.asp?isbn=0300059361'><IMG src='0300059361.jpg'></A>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<A href='http://yalepress.yale.edu/YupBooks/book.asp?isbn=0300059396'><IMG src='0300059396.jpg'></A>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<TABLE width='100%'><TR><TD align=right><A href='http://yalepress.yale.edu/YupBooks/SearchResultsTMM.asp?selType=Author&amp;txtCriteria=Gregory%20Crane'>more...</A></TD></TR></TABLE><BR><BR><!-- Last paragraph in section needs the following class applied for bottom border treatment -->
+<p class="last"></p><a href="book.asp%3Fisbn=0300080913.1.html#top" id="top_of_page">TOP</a>		</td>	</tr></table>
+
+<!-- FOOTER --><table id=footer border=0 cellpadding=0 cellspacing=0>	<tr>		<td id="footer_links" align="left" valign="top"><ul>			<li id="about_the_press"><a href="http://yalepress.yale.edu/yupbooks/about.asp">About The Press</a></li>			<li id="contact_the_press"><a href="http://yalepress.yale.edu/yupbooks/contact.asp">Contact The Press</a></li>			<li id="faq"><a href="http://yalepress.yale.edu/yupbooks/faqs.asp">FAQ</a></li>			<li id="ordering_info"><a href="http://yalepress.yale.edu/yupbooks/order.asp">Ordering Information</a></li>			<li id="london"><a href="http://www.yalebooks.co.uk">London Site</a></li>		</ul></td>		<td align="right">			<img src="copyright.gif" width="156" height="14" alt="&copy; 2005 Yale University Press">
+		</td>	</tr></table>
+	
+</form></div></body></html>
+<SCRIPT Language="Javascript">
+function fnSearch()
+{
+	if (document.frmMain.txtCriteria.value != "" && String(document.frmMain.txtCriteria.value) != "undefined")
+		window.location = "/yupbooks/SearchResultsTMM.asp?selType=" + document.frmMain.selType.value + "&txtCriteria=" + document.frmMain.txtCriteria.value;
+}
+</SCRIPT>

@@ -1,0 +1,1213 @@
+var AXIS_X=0;
+var AXIS_Y=1;
+if(window.HTMLElement&&!HTMLElement.prototype.contains){
+HTMLElement.prototype.contains=function(el){
+while(el&&el!=this){
+el=el.parentNode;
+}
+return el!=null;
+};
+}
+var $=function(id){
+return document.getElementById(id);
+};
+var $$=function(_3){
+return new ElementWrapper(_3);
+};
+var ElementWrapper=function(_4){
+if(_4.nodeType==1){
+this.id=_4.id||(_4.id=ElementWrappers.getNewId());
+}else{
+this.id=_4;
+}
+};
+ElementWrapper.prototype={getElement:function(){
+return $(this.id);
+},getId:function(){
+return this.id;
+},getHeight:function(){
+return this.getComputedDimension("height","offsetHeight");
+},getWidth:function(){
+return this.getComputedDimension("width","offsetWidth");
+},getTop:function(){
+return this.getOffset("offsetTop");
+},getLeft:function(){
+return this.getOffset("offsetLeft");
+},getBottom:function(){
+return this.getTop()+this.getHeight();
+},getRight:function(){
+return this.getLeft()+this.getWidth();
+},getOffset:function(_5){
+var el=this.getElement();
+var x=0;
+while(el.offsetParent&&el.offsetParent!=document.documentElement){
+x+=el[_5];
+el=el.offsetParent;
+}
+return x;
+},getComputedStyle:function(_7){
+var el=this.getElement();
+if(document.defaultView&&document.defaultView.getComputedStyle){
+return document.defaultView.getComputedStyle(el,null).getPropertyValue(_7);
+}else{
+if(el.currentStyle){
+return el.currentStyle[_7];
+}else{
+return null;
+}
+}
+},setStyle:function(_8,_9){
+this.getElement().style[_8]=_9;
+},setStyles:function(_10){
+for(var _11 in _10){
+if(_10[_11]!==null){
+this.setStyle(_11,_10[_11]);
+}
+}
+},setOpacity:function(_12){
+if(UserAgent.supports.elementAlphaIEWin){
+this.setStyle("filter","alpha(opacity="+_12+")");
+}else{
+if(UserAgent.supports.elementAlpha){
+this.setStyle("opacity",_12/100);
+}
+}
+},containsClass:function(_13){
+return this.getElement().className.containsClass(_13);
+},addClass:function(_14){
+var el=this.getElement();
+return el.className=el.className.addClass(_14);
+},removeClass:function(_15){
+var el=this.getElement();
+return el.className=el.className.removeClass(_15);
+},swapClass:function(_16,_17){
+return this.getElement().className=this.className.swapClass(_16,_17);
+},getText:function(){
+var el=this.getElement();
+var fc=el.firstChild;
+return el.textContent||el.innerText||(fc&&fc.nodeType==3?fc.nodeValue:null);
+},clearChildren:function(){
+var el=this.getElement();
+while(el.firstChild){
+$$(el.firstChild).remove();
+}
+return el;
+},remove:function(){
+var el=this.getElement();
+EventDispatcher.cleanupElement(el);
+el.parentNode.removeChild(el);
+return el;
+},getAncestorWithClass:function(_19){
+var el=this.getElement();
+while(el&&el.parentNode){
+el=el.parentNode;
+if(el&&el.nodeType==1&&$$(el).containsClass(_19)){
+return el;
+}
+}
+return null;
+},getDescendant:function(_20){
+var els=DomQuery.get("#"+this.getId()+" "+_20);
+return els?els[0]:null;
+},isMouseOver:function(_22,_23){
+if(!_23){
+var _23=0;
+}
+var x=Position.mouseX(_22);
+var y=Position.mouseY(_22);
+return (x<this.getRight()+_23&&x>this.getLeft()-_23&&y<this.getBottom()+_23&&y>this.getTop()-_23);
+},getComputedDimension:function(_25,_26){
+return this.getElement()[_26];
+}};
+var ElementWrappers={idPrefix:"autoId",idCounter:0,getNewId:function(){
+return this.idPrefix+this.getUniqueIdSuffix();
+},getUniqueIdSuffix:function(){
+return this.idCounter++;
+}};
+var Position={viewportW:function(){
+return this.getVPVal("clientWidth")||this.getVPVal("offsetWidth");
+},viewportH:function(){
+return self.innerHeight||this.getVPVal("clientHeight")||this.getVPVal("offsetHeight");
+},scrollLeft:function(){
+return self.pageXOffset||this.getVPVal("scrollLeft");
+},scrollTop:function(){
+return self.pageYOffset||this.getVPVal("scrollTop");
+},pageH:function(){
+return document.body.scrollHeight;
+},pageW:function(){
+return document.body.scrollWidth;
+},mouseX:function(e){
+e=e||window.event;
+return e.pageX||e.clientX+Position.scrollLeft();
+},mouseY:function(e){
+e=e||window.event;
+return e.pageY||e.clientY+Position.scrollTop();
+},getVPVal:function(_28){
+var de=document.documentElement;
+var db=document.body;
+if(de&&de[_28]){
+return de[_28];
+}else{
+if(db&&db[_28]){
+return db[_28];
+}
+}
+return 0;
+}};
+var getElementLeft=function(id){
+return $$(id).getLeft();
+};
+var getElementRight=function(id){
+return $$(id).getRight();
+};
+var getElementBottom=function(id){
+return $$(id).getBottom();
+};
+var getElementTop=function(id){
+return $$(id).getTop();
+};
+var getElementWidth=function(id){
+return $$(id).getWidth();
+};
+var getElementHeight=function(id){
+return $$(id).getHeight();
+};
+var getNode=function(_31){
+return $(_31);
+};
+var killNode=function(id){
+$$(id).remove();
+};
+var swapTextNode=function(_32,_33){
+_32.replaceChild(document.createTextNode(_33),_32.firstChild);
+};
+var grabComputedStyle=function(el,_34){
+return $$(el).getComputedStyle(_34);
+};
+var grabComputedHeight=function(el){
+return $$(el).getHeight();
+};
+var grabComputedWidth=function(el){
+return $$(el).getWidth();
+};
+var getEventTarget=function(evt){
+return evt.srcElement||evt.target;
+};
+var getWindowHeight=function(){
+return Position.viewportH();
+};
+var getWindowDimensions=function(){
+return {width:Position.viewportW(),height:Position.viewportH()};
+};
+var getDocumentScrollAmount=function(){
+return Position.scrollTop();
+};
+var getElementOffsetY=function(_36){
+return $$(_36).getTop();
+};
+var clearRanges=function(_37){
+if(UserAgent.matches.iemac){
+}else{
+if(UserAgent.matches.khtml){
+_37.stopPropagation();
+}else{
+if(document.selection){
+document.selection.empty();
+}else{
+if(window.getSelection()){
+window.getSelection().removeAllRanges();
+}else{
+_37.stopPropagation();
+}
+}
+}
+}
+};
+var getElementMouseCoordinate=function(_38,_39){
+var _40=-1;
+if(!_38){
+var _38=window.event;
+}
+if(_38.offsetX){
+_40=_38.offsetX;
+}else{
+if(_38.layerX){
+return Position.mouseX(_38)-$$(_39).getLeft();
+}
+}
+return _40;
+};
+var getElementOffsetX=function(_41){
+return handleElementOffsetX(_41,true);
+};
+var getPageElementOffsetX=function(_42){
+return handleElementOffsetX(_42,false);
+};
+var handleElementOffsetX=function(_43,_44){
+var _45=0;
+if(_43.offsetLeft!=null){
+_45+=_43.offsetLeft;
+var _46=0;
+while(_43.offsetParent){
+if(_44&&(grabComputedStyle(_43.offsetParent,"position")!="static"||grabComputedStyle(_43.offsetParent,"position")=="absolute")){
+return _45;
+}else{
+_45+=_43.offsetParent.offsetLeft;
+_43=_43.offsetParent;
+}
+}
+}
+return _45;
+};
+var getMouseCoordinates=function(e){
+return {x:Position.mouseX(e),y:Position.mouseY(e)};
+};
+if(!Array.prototype.push){
+Array.prototype.push=function(_47){
+this[this.length]=_47;
+};
+}
+Array.prototype.append=function(_48){
+this.push(_48);
+};
+var Link={imgURL:function(_49){
+var sb=[];
+sb.append(IMAGE_ROOT);
+if(_49.charAt(0)!="/"){
+sb.append(_49);
+}else{
+sb.append(_49.substring(1,_49.length));
+}
+return sb.join("");
+},pageURL:function(_51,_52){
+var sb=[];
+var _53=false;
+sb.append(PAGE_ROOT);
+if(_51.charAt(0)!="/"){
+sb.append(_51);
+}else{
+sb.append(_51.substring(1,_51.length));
+}
+if(_52){
+var _54=false;
+for(var _55 in _52){
+sb.append(_54?"&":"?");
+sb.append(_55);
+sb.append("=");
+sb.append(_52[_55]);
+_54=true;
+}
+}
+return sb.join("");
+},LIST_PARAMETER_DELIMITER:"|",encodeListParameter:function(_56){
+if(typeof _56=="string"){
+_56=[_56];
+}
+var _57=false;
+var _58=[];
+for(var ii=0;ii<_56.length;ii++){
+if(_57){
+_58.append(this.LIST_PARAMETER_DELIMITER);
+}else{
+_57=true;
+}
+_58.append(_56[ii]);
+}
+return _58.join("");
+},VALUE_RESTRICTION_NONE:0,VALUE_RESTRICTION_NUMERIC:1,VALUE_RESTRICTION_ALPHANUMERIC:2,VALUE_RESTRICTION_ALPHANUMERIC_WITH_UNDERSCORE:3,getValueFromUrl:function(url,_61,_62){
+try{
+var _63=url.split("?")[1]+"&";
+var _64=_63.split(_61+"=")[1];
+if(!_62){
+_62=Link.VALUE_RESTRICTION_NONE;
+}
+var _65="";
+switch(_62){
+case Link.VALUE_RESTRICTION_NUMERIC:
+_65="\\d*(?=[&|$|\\?|\\=])";
+break;
+case Link.VALUE_RESTRICTION_ALPHANUMERIC:
+_65="[a-zA-Z\\d]*(?=[&|$|\\?|\\=])";
+break;
+case Link.VALUE_RESTRICTION_ALPHANUMERIC_WITH_UNDERSCORE:
+_65="\\w*(?=[&|$|\\?|\\=])";
+break;
+case Link.VALUE_RESTRICTION_NONE:
+default:
+_65="[^&|$|\\?|\\=]*(?=[&|$|\\?|\\=])";
+break;
+}
+var _66=new RegExp(_65);
+var _67=_66.exec(_64);
+if(_67==null||_67==undefined){
+_67="";
+}
+return _67;
+}
+catch(e){
+return "";
+}
+}};
+var ServerConnectionFactory={getConnection:function(){
+return new ServerConnection();
+},isSupported:function(){
+var s=new ServerConnection();
+var ok=s.hasTransport;
+s=null;
+return (this.isSupported=function(){
+return ok;
+})();
+},tell:function(url,_70){
+if(typeof _70!="undefined"){
+url=url.setUrlAttributes(_70);
+}
+var _71=new Image();
+_71.src=url;
+}};
+function ServerConnection(){
+this.hasTransport=false;
+this.method=ServerConnection.METHOD_GET;
+if(!this.returnType){
+this.returnType=ServerConnection.RETURN_XML;
+}
+this.setTransport();
+}
+ServerConnection.METHOD_GET="GET";
+ServerConnection.METHOD_POST="POST";
+ServerConnection.METHOD_HEAD="HEAD";
+ServerConnection.RETURN_XML="XML";
+ServerConnection.RETURN_TEXT="TEXT";
+ServerConnection.prototype={getNewAXO:function(_72){
+return eval(["(ne","w Ac","tive","XObj","ect('",_72,"'))"].join(""));
+},parameters:{},transportStates:["Uninitialized","Loading","Loaded","Interactive","Complete"],setTransport:function(){
+this.transport=false;
+var _73=this;
+var _74=[function(){
+return _73.getNewAXO("Msxml2.XMLHTTP");
+},function(){
+return _73.getNewAXO("Microsoft.XMLHTTP");
+},function(){
+return new XMLHttpRequest();
+}];
+for(var i=0;i<_74.length;i++){
+try{
+this.transport=_74[i]();
+this.hasTransport=true;
+break;
+}
+catch(e){
+}
+}
+},bindStateChangeHandler:function(){
+var _76=this;
+this.transport.onreadystatechange=function(){
+_76.handleReadyStateChange();
+};
+},handleReadyStateChange:function(){
+var _77=this.transportStates[this.transport.readyState];
+if(_77=="Loaded"||(UserAgent.matches.opera&&_77=="Interactive")){
+this.beginReceiveDataCallback();
+}else{
+if(_77=="Complete"){
+if(this.transport.status=="200"){
+this.successCallback(this.returnType==ServerConnection.RETURN_XML?this.transport.responseXML:this.transport.responseText);
+}else{
+this.failureCallback(this.transport.status,this.url);
+}
+}
+}
+},fixMozillaContentLength:function(){
+if(this.transport&&this.transport.overrideMimeType){
+this.transport.setRequestHeader("Connection","close");
+}
+},execute:function(){
+if(this.transport){
+var _78=null;
+if(this.method==ServerConnection.METHOD_GET){
+this.url=this.url.setUrlAttributes(this.parameters);
+}
+this.transport.open(this.method,this.url,true);
+this.bindStateChangeHandler();
+if(this.method==ServerConnection.METHOD_POST){
+_78="".setUrlAttributes(this.parameters).substring(1);
+this.transport.setRequestHeader("Content-type","application/x-www-form-urlencoded");
+this.fixMozillaContentLength();
+}
+this.transport.send(_78);
+}
+},setParameters:function(_79){
+this.parameters=_79;
+},successCallback:function(){
+},failureCallback:function(_80,url){
+},beginReceiveDataCallback:function(){
+}};
+function Movie(_81){
+if(_81){
+this.importFrom(_81);
+}
+}
+Movie.prototype={id:false,parentID:false,title:false,synopsis:false,rating:false,year:false,genreID:false,genre:false,CMFRate:false,CMURate:false,CMPred:false,CMWgtR:false,rateVal:false,starType:false,starring:[],director:false,friendRate:false,recommended:false,personalMovieData:false,hasBonusDisc:false,has2Discs:false,trkid:false,btnType:false,seriesParent:false,trailerId:false,sid:false,streams:false,price:0,salesItemId:0,getId:function(){
+return this.id;
+},getTitle:function(){
+return this.title;
+},getTrkid:function(){
+return this.trkid||null;
+},getTrailerId:function(){
+return this.trailerId;
+},getSid:function(){
+return this.sid;
+},getSeriesParentId:function(){
+return this.seriesParent;
+},getButtonType:function(){
+return this.btnType||RentButtons.states.ADD;
+},setButtonType:function(_82){
+this.btnType=_82;
+},getMpaaRating:function(){
+return this.rating;
+},getStarType:function(){
+if(!this.starType){
+var _83=RatingWidget.starTypes;
+if(this.CMFRate){
+return this.starType=_83.COMMUNITY||0;
+}
+if(this.CMURate){
+return this.starType=_83.RATED||0;
+}
+return this.starType=_83.PREDICTED||0;
+}
+return this.starType;
+},setStarType:function(_84){
+this.starType=_84;
+},getBitrateToStreamsMap:function(){
+return this.streams;
+},getStreams:function(){
+return this.streams?this.streams.getStreamsArray():null;
+},getFriendRating:function(){
+return this.CMFRate||this.rateVal/10||0;
+},getWidgetRating:function(_85){
+if(!_85){
+_85=this.getStarType();
+}
+var _86=RatingWidget.starTypes;
+var rv=(this.rateVal||0)/10;
+switch(_85){
+case _86.COMMUNITY:
+return this.getFriendRating();
+case _86.RATED:
+return this.CMURate||rv;
+case _86.PREDICTED:
+return this.CMPred||rv;
+default:
+return this.CMWgtR=this.CMWgtR||this.CMFRate||this.CMURate||this.CMPred||rv;
+}
+},setRating:function(_88){
+var _89=this;
+var set=function(key){
+_89[key]=_89.rateVal=_88;
+};
+var _92=RatingWidget.starTypes;
+switch(this.getStarType()){
+case _92.COMMUNITY:
+set("CMFRate");
+break;
+case _92.RATED:
+set("CMURate");
+break;
+case _92.PREDICTED:
+default:
+set("CMPred");
+break;
+}
+},setButtonType:function(bt){
+this.btnType=bt;
+},isRecommended:function(){
+return this.recommended;
+},isFriendRated:function(){
+return this.friendRated;
+},importFrom:function(_94){
+var _95=/&#38;/g;
+for(var _96 in this){
+if(_94[_96]){
+this[_96]=_94[_96]();
+}
+if(typeof this[_96]=="string"){
+this[_96]=this[_96].replace(_95,"&");
+}
+if(this[_96]=="false"){
+this[_96]=false;
+}
+}
+return this;
+}};
+function Person(_97,id){
+this.name=_97;
+this.id=id;
+}
+function PersonalMovieData(){
+}
+PersonalMovieData.prototype={friendReviews:[],ratedPredictors:[],hasFriendReviews:function(_98){
+return this.friendReviewCount(_98)>0;
+},friendReviewCount:function(_99){
+return this.friendReviews.length;
+},hasRatedPredictors:function(){
+return this.ratedPredictors.length>0;
+},ratedPredictorCount:function(){
+return this.ratedPredictors.length;
+},importFrom:function(_100){
+for(var _101 in this){
+_100[_101]&&(this[_101]=_100[_101]());
+}
+}};
+function PersonalMovieDataJSONImporter(json){
+this.json=json;
+}
+PersonalMovieDataJSONImporter.prototype={friendReviews:function(){
+return this.json.friendsCount?new Array(this.json.friendsCount):[];
+},ratedPredictors:function(){
+return this.json.ratedPredictCount?new Array(this.json.ratedPredictCount):[];
+}};
+function SummaryPMDManager(){
+}
+SummaryPMDManager.prototype={dataDisplayed:false,movieData:null,recNode:null,friendNode:null,recText:null,friendText:null,setPersonalMovieData:function(pmd){
+this.movieData=pmd;
+this.dataDisplayed=false;
+},hasNext:function(){
+if(!this.dataDisplayed){
+return this.movieData.hasFriendReviews(true)||this.movieData.hasRatedPredictors();
+}else{
+return false;
+}
+},createContentElements:function(_104){
+$$(_104).clearChildren();
+this.recNode=document.createElement("div");
+var _105=this.recNode.appendChild(document.createElement("img"));
+_105.src=IMAGE_ROOT+"layout/recs/icon_rec.gif";
+_105.style.marginRight="3px";
+this.recNode.appendChild(_105);
+this.recText=document.createTextNode("");
+this.recNode.appendChild(this.recText);
+_104.appendChild(this.recNode);
+this.friendNode=document.createElement("div");
+var _106=this.friendNode.appendChild(document.createElement("img"));
+_106.src=IMAGE_ROOT+"pages/community/friends-glyph-tiny.gif";
+_106.style.marginLeft="9px";
+_106.style.marginRight="6px";
+_106.style.marginTop="2px";
+this.friendNode.appendChild(_106);
+this.friendText=document.createTextNode("");
+this.friendNode.appendChild(this.friendText);
+_104.appendChild(this.friendNode);
+},displayNext:function(_107){
+if(!this.recNode){
+this.createContentElements(_107);
+}
+if(this.movieData.hasRatedPredictors()){
+this.recNode.style.display="block";
+var n=this.movieData.ratedPredictorCount();
+this.recText.nodeValue="Recommended based on "+n+(n==1?" rating":" ratings");
+}else{
+this.recNode.style.display="none";
+}
+if(this.movieData.hasFriendReviews(true)){
+this.friendNode.style.display="block";
+var n=this.movieData.friendReviewCount(true);
+this.friendText.nodeValue="Seen by "+n+" Netflix "+(n==1?"Friend":"Friends");
+}else{
+this.friendNode.style.display="none";
+}
+this.dataDisplayed=true;
+}};
+function RatedPredictor(_109,_110){
+this.title=_109;
+this.stars=_110;
+}
+function MovieJSONImporter(_111){
+if(_111.movie){
+this.movie=_111.movie;
+}else{
+this.movie=_111;
+}
+var _112=this;
+["id","title","hasBonusDisc","has2Discs","parentID","synopsis","year","genre","seriesParent","trkid","btnType","starType","CMURate","CMFRate","CMPred","CMWgtR","rateVal","sid","trailerId","price","salesItemId"].walk(function(key){
+if(!_112[key]){
+_112[key]=_112.makeImporter(key);
+}
+});
+}
+MovieJSONImporter.prototype={makeImporter:function(_113){
+var _114=this.movie;
+return function(){
+return _114[_113];
+};
+},streams:function(){
+var s=this.movie.streams;
+if(window.BitrateToStreamsMap&&s&&s.length>0){
+var btsm=new BitrateToStreamsMap();
+s.walk(function(_116){
+btsm.addStream(i++,_116.url);
+});
+return btsm;
+}else{
+return null;
+}
+},rating:function(){
+return this.movie.mpaa;
+},starring:function(){
+var _117=[];
+if(this.movie.starring){
+for(var ii=0;ii<this.movie.starring.length;ii++){
+var p=this.movie.starring[ii];
+_117.push(new Person(p.name,p.id));
+}
+}
+return _117;
+},director:function(){
+if(this.movie.directors){
+var p=this.movie.directors[0];
+return new Person(p.name,p.id);
+}else{
+return false;
+}
+},friendRate:function(){
+return this.movie.friendsCount||this.movie.friendRate;
+},recommended:function(){
+return this.movie.ratedPredictCount||this.movie.recommended;
+},personalMovieData:function(){
+var pmd=new PersonalMovieData;
+pmd.importFrom(new PersonalMovieDataJSONImporter(this.movie));
+return pmd;
+}};
+function BobTextHandler(id){
+this.element=this.addTextNodeTo(id);
+}
+BobTextHandler.prototype={addTextNodeTo:function(id){
+var _119=document.createTextNode("");
+$(id).appendChild(_119);
+return _119;
+},handle:function(s){
+this.setText(s);
+},setText:function(s){
+this.element.nodeValue=s;
+}};
+function BobCapHandler(id){
+this.element=$(id).firstChild;
+}
+BobCapHandler.prototype=BobTextHandler.prototype;
+function BobSynopsisHandler(id){
+this.element=$(id);
+}
+BobSynopsisHandler.prototype.handle=function(s){
+var _120=s.split("%%~p;");
+var s=[];
+_120.walk(function(para){
+var _122=s.length==0?"span":"p";
+s=s.concat(["<",_122,">",para,"</",_122,">"]);
+});
+this.element.innerHTML=s.join("");
+};
+function BobVisibilityHandler(id){
+this.element=$(id);
+}
+BobVisibilityHandler.prototype={handle:function(s){
+this.setVisible(s);
+},setVisible:function(_123){
+this.element.style.visibility=(_123)?"visible":"hidden";
+}};
+function BobPMDHandler(id){
+this.element=$(id);
+this.initialize();
+}
+BobPMDHandler.prototype={pmdDisplayer:new SummaryPMDManager(),hasContent:false,initialize:function(){
+this.visibilityHandler.parent=this;
+},handle:function(pmd){
+this.pmdDisplayer.setPersonalMovieData(pmd);
+if(this.pmdDisplayer.hasNext()){
+this.pmdDisplayer.displayNext(this.element);
+this.hasContent=true;
+}else{
+this.hasContent=false;
+}
+},visibilityHandler:{handle:function(){
+this.setVisible(this.parent.hasContent);
+},setVisible:function(_124){
+this.parent.element.style.display=(_124)?"block":"none";
+}}};
+var BobContentHandler={initialized:false,shownFlag:false,initialize:function(){
+this.PARENTAL_RATING_ROOT=IMAGE_ROOT+"/pages/parental_ratings/rating_",this.canvas=$("bob");
+this.boxImg=$("bobimg");
+this.detailElements.initialize($("bobstarring").parentNode);
+this.textHandlers={title:new BobCapHandler("bobtitle"),synopsis:new BobSynopsisHandler("bobsynopsis"),year:new BobCapHandler("bobyear"),starring:new BobTextHandler("bobactors"),director:new BobTextHandler("bobdirector"),genre:new BobTextHandler("bobgenre"),rating:new BobTextHandler("bobrating"),personalMovieData:new BobPMDHandler("bobpersonal")};
+this.visibilityHandlers={starring:new BobVisibilityHandler("bobstarring"),director:new BobVisibilityHandler("bobdirecting"),genre:new BobVisibilityHandler("bobgenretbl"),rating:new BobVisibilityHandler("bobratingtbl"),personalMovieData:this.textHandlers.personalMovieData.visibilityHandler};
+this.textHandlers.rating.ratingTypeHandler=new BobTextHandler("bobratingtype");
+$("bobratingtype").style.fontWeight="bold";
+this.textHandlers.rating.handle=function(s,_125){
+if(s.indexOf("TV")!=-1||_125.genre.indexOf("Television")!=-1){
+this.ratingTypeHandler.setText("Rating:");
+}else{
+this.ratingTypeHandler.setText("MPAA:");
+}
+this.setText(s);
+};
+this.textHandlers.starring.handle=function(a){
+if(a.length>0){
+var _127="";
+for(var i=0;i<a.length-1;i++){
+_127+=a[i].name+", ";
+}
+_127+=a[i].name;
+this.setText(_127);
+}
+};
+this.textHandlers.director.handle=function(p){
+p&&this.setText(p.name);
+};
+this.textHandlers.year.handle=function(s){
+this.setText(" ("+s+")");
+};
+this.visibilityHandlers.starring.handle=function(a){
+this.setVisible(a.length>0);
+};
+this.visibilityHandlers.starring.setVisible=function(_128){
+if(_128){
+if(this.rowRemoved){
+BobContentHandler.detailElements.elements[this.element.id]=this.element;
+this.rowRemoved=false;
+}
+}else{
+if(!this.tBody){
+this.tBody=this.element.parentNode;
+}
+if(!this.rowRemoved){
+this.tBody.removeChild(this.element);
+BobContentHandler.detailElements.elements[this.element.id]=null;
+this.rowRemoved=true;
+}
+}
+};
+this.visibilityHandlers.director.setVisible=this.visibilityHandlers.starring.setVisible;
+this.visibilityHandlers.genre.setVisible=this.visibilityHandlers.starring.setVisible;
+this.visibilityHandlers.rating.setVisible=this.visibilityHandlers.starring.setVisible;
+this.visibilityHandlers.director.handle=function(_129){
+this.setVisible(_129&&_129.name.length>0);
+};
+this.initialized=true;
+},display:function(_130,_131){
+if(!this.initialized){
+return false;
+}
+this.movieID=_130.id;
+this.parentID=_130.parentID;
+this.handleBoxshot(_131);
+for(var _132 in _130){
+if(this.textHandlers[_132]){
+this.textHandlers[_132].handle(_130[_132],_130);
+}
+if(this.visibilityHandlers[_132]){
+this.visibilityHandlers[_132].handle(_130[_132]);
+}
+}
+this.detailElements.display();
+if(!this.shownFlag&&(UserAgent.matches.khtml||UserAgent.matches.opera)){
+this.hideContent(_130,_131);
+}
+},handleBoxshot:function(_133){
+if(!_133){
+this.boxImg.style.display="none";
+}else{
+this.boxImg.style.display="inline";
+this.boxImg.src=IMAGE_ROOT+"boxshots/small/"+(this.parentID?this.parentID:this.movieID)+".jpg";
+}
+},preloadBoxshot:function(_134){
+if(!this.preloadBoxshot){
+this.preloadBoxshot=new Image();
+}
+this.preloadBoxshot.src=IMAGE_ROOT+"boxshots/small/"+_134+".jpg";
+},hideContent:function(_135,_136){
+this.handleBoxshot(false);
+for(var k in this.visibilityHandlers){
+this.visibilityHandlers[k].setVisible(false);
+}
+this.detailElements.clear();
+if(!this.shownFlag&&(UserAgent.matches.khtml||UserAgent.matches.opera)){
+var _138=this;
+var _139=function(){
+_138.shownFlag=true;
+_138.display(_135,_136);
+};
+window.setTimeout(_139,2);
+}
+}};
+BobContentHandler.detailElements={initialize:function(_140){
+this.tBody=_140;
+},elements:[],elementIDs:new Array("bobstarring","bobdirecting","bobgenretbl","bobratingtbl"),clear:function(){
+for(var _141 in this.elements){
+this.elements[_141]=null;
+}
+},display:function(){
+for(var i=0;i<this.elementIDs.length;i++){
+if(this.elements[this.elementIDs[i]]){
+this.tBody.appendChild(this.elements[this.elementIDs[i]]);
+}
+}
+}};
+var JSONMovieFetcher={cache:{},getMovie:function(id,_142,_143){
+if(this.cache[id]){
+_142(this.cache[id]);
+}else{
+var sc=ServerConnectionFactory.getConnection();
+sc.url=Link.pageURL("JSON/BobData");
+_143.movieid=id;
+sc.setParameters(_143);
+sc.returnType=ServerConnection.RETURN_TEXT;
+var _145=this;
+sc.successCallback=function(_146){
+_145.handleJSONReturn(_146,_142);
+};
+sc.execute();
+}
+},handleJSONReturn:function(_147,_148){
+var _149=false;
+try{
+var json=eval("("+_147+")");
+if(!json.error){
+var _150=new MovieJSONImporter(json);
+var _151=new Movie();
+_151.importFrom(_150);
+this.cache[_151.id]=_151;
+_149=true;
+}
+}
+catch(e){
+}
+if(_149){
+_148(_151);
+}
+}};
+var BobManager={STYLE_POSITION:1,COUNT_DELIM:"_",BOXSHOT_STATE_DEFAULT:0,BOXSHOT_STATE_NONE:1,BOXSHOT_STATE_DISPLAY:2,STATE_AWAKE:0,STATE_ASLEEP:1,LINKCTR_TEXT:"TXT",LINKCTR_BOXSHOT:"BOX",LINKCTR_TEXT_NEAR_BOXSHOT:"BTX",LINKCTR_MINIQ:"MQI",displayFlag:false,doArrowClick:true,autoBobifyLinks:true,initialize:function(){
+if(!ServerConnectionFactory.isSupported()){
+return;
+}
+this.readyState=BobManager.STATE_AWAKE;
+var _152=this;
+var _153=function(){
+if(_152.hideBobTimer){
+clearTimeout(_152.hideBobTimer);
+_152.hideBobTimer=null;
+}
+};
+var _154=function(evt){
+evt=evt||window.event;
+if(evt.keycode){
+if(evt.keyCode==33||evt.keyCode==34){
+_152.currentScroll=document.body.scrollTop;
+}
+}
+};
+var _155=function(evt){
+evt=evt||window.event;
+if(evt.keycode){
+if(evt.keyCode==33||evt.keyCode==34){
+if(document.body.scrollTop!=_152.currentScroll){
+_152.hideBob();
+}
+}
+}
+};
+with(EventDispatcher){
+addEvent($("bobarrow"),"click",function(){
+if(_152.doArrowClick){
+window.location.href=_152.href;
+}
+});
+addEvent($("bobarrow"),"mouseout",this.hideBob.bindEventListener(this));
+addEvent($("bobarrow"),"mouseover",_153);
+addEvent(document,"keydown",_154);
+addEvent(document,"keyup",_155);
+}
+BobContentHandler.initialize();
+this.autoBobifyLinks&&this.bobifyLinks();
+},setReadyState:function(_156){
+this.readyState=_156;
+if(this.readyState==BobManager.STATE_ASLEEP){
+this.hideBob();
+this.detach();
+}
+},bobifyLinks:function(root){
+if(this.readyState!=BobManager.STATE_AWAKE){
+return;
+}
+root=root&&root.nodeType==1?root:$("page-content");
+var imgs=DomQuery.get("#"+$$(root).getId()+" img[onmouseover]");
+var _159={};
+var _160=/dB\(/;
+imgs.walk(function(img){
+if(_160.test(img.onmouseover.toString())){
+_159[img.id.substring(2,img.id.indexOf(BobManager.COUNT_DELIM))]=true;
+}
+});
+if(_159.length==0){
+return;
+}
+var _162=/(MovieDisplay|DVDPurchaseItem)?.*movieid=(\d+)/;
+var _163=/Read\s?More/;
+var _164=/^Why\s?is\s?this\s?movie/i;
+var _165=/(DVD|Blu\s?ray)/;
+var _166=root.getElementsByTagName("a");
+for(var i=0;i<_166.length;i++){
+var link=_166[i];
+if(link.onmouseover){
+continue;
+}
+if(link.className.containsClass("notebtn")){
+continue;
+}
+if(link.parentNode.className.containsClass("price")){
+continue;
+}
+if(link.parentNode.parentNode.id=="mdpNavigation"){
+continue;
+}
+var _168=$$(link).getId();
+if(DomQuery.get("#"+_168+" img, #"+_168+" table").length>0){
+continue;
+}
+var _169=$$(link).getText();
+if(_169&&(_163.test(_169)||_164.test(_169)||_165.test(_169))){
+continue;
+}
+var _170=link.href.match(_162);
+if(_170!=null){
+var id=_170[2];
+if(_159[id]){
+link.movieid=id;
+EventDispatcher.addEvent(link,"mouseover",this.dB.bindEventListener(this,link,BobManager.BOXSHOT_STATE_NONE));
+continue;
+}
+}
+}
+},bobify:function(_171){
+var _172={boxshotState:BobManager.BOXSHOT_STATE_DEFAULT,linkURL:Link.pageURL("/MovieDisplay").setUrlAttribute("movieid",_171.movieId),doArrowClick:true};
+for(var key in _171){
+_172[key]=_171[key];
+}
+var c=_172.container;
+c.movieid=_172.movieId;
+if(c.db_eid){
+EventDispatcher.removeEvent(c,"mouseover",c.db_eid);
+}
+if(this.readyState==BobManager.STATE_AWAKE){
+var eid=EventDispatcher.addEvent(c,"mouseover",this.dB.bindEventListener(this,c,_172.boxshotState,_172.linkURL,_172.doArrowClick));
+c.db_eid=eid;
+}
+},getURLParams:function(){
+var _175=this.triggerElement.tagName.toLowerCase();
+if(this.triggerElement.movieid){
+var _176={pos:0,ds:"b"};
+_176.linkCtr=_175=="a"?BobManager.LINKCTR_TEXT_NEAR_BOXSHOT:BobManager.LINKCTR_MINIQ;
+}else{
+var _176={pos:this.triggerElement.id.substring(this.triggerElement.id.indexOf(BobManager.COUNT_DELIM)+1),ds:this.triggerElement.id.charAt(BobManager.STYLE_POSITION)};
+_176.linkCtr=_175=="a"?BobManager.LINKCTR_TEXT:BobManager.LINKCTR_BOXSHOT;
+}
+return _176;
+},isShowBoxshot:function(){
+if(this.boxshotState==BobManager.BOXSHOT_STATE_DEFAULT){
+var _177=this.triggerElement.tagName.toLowerCase();
+return _177=="a"||_177=="div";
+}else{
+return this.boxshotState==BobManager.BOXSHOT_STATE_DISPLAY;
+}
+},display:function(_178){
+if(_178!=this.getMovieID()){
+return;
+}
+this.displayFlag=true;
+var _179=this;
+var _180=this.isShowBoxshot();
+var _181=this.getURLParams();
+if(window.isQueue){
+_181.linkCtr+="QUEUE";
+}
+if(this.triggerElement.alt){
+this.triggerElement.altbackup=this.triggerElement.alt;
+this.triggerElement.alt="";
+}
+var _182=function(_183){
+_179.showBobTimer=null;
+if(!BobManager.displayFlag){
+return;
+}
+BobContentHandler.display(_183,_180);
+BobPositioner.setPosition(_179.triggerElement,_179.mouseCoord);
+if((UserAgent.matches.khtml||UserAgent.matches.opera)&&!_179.shownFlag){
+window.setTimeout(function(){
+BobPositioner.setPosition(_179.triggerElement,_179.mouseCoord);
+_179.shownFlag=true;
+},5);
+}
+$("bob").style.visibility="visible";
+};
+if(_180){
+BobContentHandler.preloadBoxshot(_178);
+}
+JSONMovieFetcher.getMovie(_178,_182,_181);
+},detach:function(){
+if(this.triggerElement){
+if(!this.triggerElement.getAttribute("persist_mouseout")&&this.triggerElement.bob_eid){
+EventDispatcher.removeEvent(this.triggerElement,"mouseout",this.triggerElement.bob_eid);
+this.triggerElement.bob_eid=null;
+}
+this.triggerElement=null;
+}
+},attach:function(){
+if(!this.triggerElement.bob_eid){
+this.triggerElement.bob_eid=EventDispatcher.addEvent(this.triggerElement,"mouseout",this.hideBob.bindEventListener(this));
+}
+},dB:function(evt,_184,_185,_186,_187){
+if(!window.d_bobMS||d_bobMS==-1||this.readyState!=BobManager.STATE_AWAKE){
+return;
+}
+if(this.hideBobTimer&&this.triggerElement&&this.triggerElement==_184){
+clearTimeout(this.hideBobTimer);
+this.hideBobTimer=null;
+return;
+}
+this.mouseCoord=getMouseCoordinates(evt);
+this.detach();
+this.triggerElement=_184;
+if(typeof _186=="undefined"){
+this.href=_184.tagName.toLowerCase()=="a"?_184.href:_184.parentNode.href;
+}else{
+this.href=_186;
+}
+this.boxshotState=typeof _185=="undefined"?BobManager.BOXSHOT_STATE_DEFAULT:_185;
+this.doArrowClick=typeof _187=="undefined"?this.href?true:false:_187;
+this.attach();
+var _188=this.getMovieID();
+var _189=this;
+var _190=function(){
+_189.display(_188);
+};
+this.showBobTimer=setTimeout(_190,d_bobMS);
+},getMovieID:function(){
+if(this.triggerElement.movieid){
+return this.triggerElement.movieid;
+}else{
+var id=this.triggerElement.id;
+var _191=id.indexOf(BobManager.COUNT_DELIM);
+return id.substring(2,_191);
+}
+},hideBob:function(){
+if(this.readyState!=BobManager.STATE_AWAKE){
+return;
+}
+this.displayFlag=false;
+if(this.showBobTimer){
+clearTimeout(this.showBobTimer);
+this.showBobTimer=null;
+return;
+}
+var _192=this;
+var _193=function(){
+_192.hideBobTimer=null;
+$("bob").style.visibility="hidden";
+if(_192.triggerElement&&_192.triggerElement.altbackup){
+_192.triggerElement.alt=_192.triggerElement.altbackup;
+}
+BobContentHandler.hideContent();
+};
+this.hideBobTimer=setTimeout(_193,3);
+},destroy:function(){
+this.triggerElement&&(this.triggerElement=null);
+}};
+var BobPositioner={TOP_SHADOW_OFFSET:-10,BOB_BOX_WIDTH:290,MOVIE_TO_ARROW_SPACER:25,DISPLAY_STYLE_DEFAULT:0,DISPLAY_STYLE_LARGE_BOXSHOT:1,DISPLAY_STYLE_TINY_BOXSHOT:2,ARROW_HEIGHT:101,ARROW_HEIGHT_NO_SHADOW:70,LARGE_BOXSHOT_WIDTH:110,MED_BOXSHOT_WIDTH:65,TINY_BOXSHOT_WIDTH:50,TEXT_LINK_BUFFER_WIDTH:50,POSITION_LEFT:0,POSITION_RIGHT:1,MAX_PAGE_LEFT_OFFSET:490,bobId:"bob",arrowId:"bobarrow",arrowImageIds:{UL:"bobarrowulimg",UR:"bobarrowurimg",LL:"bobarrowllimg",LR:"bobarrowlrimg"},setPosition:function(_194,_195){
+this.bobPosition=BobPositioner.POSITION_RIGHT;
+this.triggerElement=_194;
+this.mouseCoordX=_195.x;
+this.mouseCoordY=_195.y;
+this.setTop();
+this.setLeft();
+this.positionArrow();
+},setTop:function(){
+var _196=$$(this.triggerElement).getTop()+BobPositioner.TOP_SHADOW_OFFSET-($$(this.bobId).getHeight()/4);
+$(this.bobId).style.top=_196+"px";
+this.correctForYOverrun(_196);
+},correctForYOverrun:function(_197){
+var _198=0;
+var b=$(this.bobId);
+var _200=$$(b);
+var _201=_200.getTop()-BobPositioner.TOP_SHADOW_OFFSET-Position.scrollTop();
+var _202=Position.viewportH();
+var _203=_201+_200.getHeight();
+if(_203>_202){
+_198=_203-_202-30;
+}
+if(_201-_198<1){
+_198=_201;
+}
+b.style.top=(_197-_198)+"px";
+},getTriggerTop:function(){
+return $$(this.triggerElement).getTop();
+},setLeft:function(){
+var _204=0;
+var _205=this.triggerElement.tagName.toLowerCase();
+if(_205=="a"||_205=="div"){
+_204=Math.max(this.mouseCoordX,0)+BobPositioner.TEXT_LINK_BUFFER_WIDTH;
+if(_204>this.maxLeftPosition()){
+_204-=(BobPositioner.BOB_BOX_WIDTH+BobPositioner.MOVIE_TO_ARROW_SPACER+(1.5*BobPositioner.TEXT_LINK_BUFFER_WIDTH));
+this.bobPosition=BobPositioner.POSITION_LEFT;
+}
+}else{
+var _206=0;
+var _207=this.getBoxshotStyle();
+if(_207==BobPositioner.DISPLAY_STYLE_LARGE_BOXSHOT){
+_206=BobPositioner.LARGE_BOXSHOT_WIDTH;
+}else{
+if(_207==BobPositioner.DISPLAY_STYLE_TINY_BOXSHOT){
+_206=BobPositioner.TINY_BOXSHOT_WIDTH;
+}else{
+_206=BobPositioner.MED_BOXSHOT_WIDTH;
+}
+}
+var _208=$$(this.triggerElement).getLeft();
+_204=_208+BobPositioner.MOVIE_TO_ARROW_SPACER+_206;
+if(_204>this.maxLeftPosition()){
+_204-=(BobPositioner.BOB_BOX_WIDTH+BobPositioner.MOVIE_TO_ARROW_SPACER+_206);
+this.bobPosition=BobPositioner.POSITION_LEFT;
+}
+}
+$(this.bobId).style.left=_204+"px";
+},maxLeftPosition:function(){
+return getPageElementOffsetX($("page-content"))+BobPositioner.MAX_PAGE_LEFT_OFFSET;
+},positionArrow:function(){
+var _209=false;
+var _210=$$(this.bobId);
+var _211=this.getTriggerTop()-_210.getTop();
+var _212=_210.getHeight();
+if(_211<(_212/2)){
+_209=true;
+}else{
+_211-=BobPositioner.ARROW_HEIGHT_NO_SHADOW;
+}
+if(_211+BobPositioner.ARROW_HEIGHT+10>_212){
+_211-=10;
+}
+if(_211<10){
+_211=10;
+}
+$$(this.arrowId).setStyles({top:_211+"px",left:(this.bobPosition==BobPositioner.POSITION_LEFT)?"268px":"-42px"});
+var _213=_209?"U":"L";
+_213+=(this.bobPosition==BobPositioner.POSITION_LEFT)?"R":"L";
+for(var key in this.arrowImageIds){
+$(this.arrowImageIds[key]).style.display=(key==_213)?"block":"none";
+}
+},getBoxshotStyle:function(){
+return this.triggerElement.id.substring(1,2);
+}};
+function primeBOB(){
+EventDispatcher.addEvent(dom,"ready",BobManager.initialize.bindEventListener(BobManager));
+EventDispatcher.addEvent(window,"unload",BobManager.destroy.bindEventListener(BobManager));
+}
+function dB(evt,link){
+BobManager.dB(evt,link);
+}
+

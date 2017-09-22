@@ -1,0 +1,247 @@
+# Dit is de robots.txt van hermes:
+#
+# Jan Kok/000323: robots.txt
+#
+# modify reach of htdig (Jan Kok/(20)000111) / 000920 / 010316
+#
+# (030613) update zonder Allow en wildcards, voor validatie van robots.txt
+#
+User-agent: htdig
+# Allow: /htbin/cwwwi/agenda
+# Allow: /htbin/cwwwi/message
+#
+# Disallow: /htbin/
+#
+# htbin :
+#
+Disallow: /htbin/arie
+Disallow: /htbin/bibl
+Disallow: /htbin/buro
+Disallow: /htbin/chip
+Disallow: /htbin/counter.sh
+# Disallow: /htbin/cwwwi
+Disallow: /htbin/docounter.sh
+Disallow: /htbin/estokhof
+Disallow: /htbin/htdig
+Disallow: /htbin/ins1
+Disallow: /htbin/jacob
+Disallow: /htbin/jankok
+Disallow: /htbin/jpv
+Disallow: /htbin/jurgenv
+Disallow: /htbin/jve
+Disallow: /htbin/leon
+Disallow: /htbin/lute
+Disallow: /htbin/marja
+Disallow: /htbin/markh
+Disallow: /htbin/mas1
+Disallow: /htbin/miente
+Disallow: /htbin/misc
+Disallow: /htbin/miscbeheer
+Disallow: /htbin/pdels
+Disallow: /htbin/pieth
+Disallow: /htbin/renovate
+Disallow: /htbin/sen1
+Disallow: /htbin/uncgi
+Disallow: /htbin/webpr
+#
+# htbin/cwwwi :
+#
+# Disallow: /htbin/cwwwi/agenda
+Disallow: /htbin/cwwwi/bin
+Disallow: /htbin/cwwwi/cwi_gesloten
+Disallow: /htbin/cwwwi/cwionly
+Disallow: /htbin/cwwwi/epilog
+Disallow: /htbin/cwwwi/fadscript
+Disallow: /htbin/cwwwi/frs
+Disallow: /htbin/cwwwi/get_obsolete
+Disallow: /htbin/cwwwi/group.list
+# Disallow: /htbin/cwwwi/message
+Disallow: /htbin/cwwwi/news
+Disallow: /htbin/cwwwi/prolog
+Disallow: /htbin/cwwwi/retrieve
+Disallow: /htbin/cwwwi/src
+Disallow: /htbin/cwwwi/tmp.list
+Disallow: /htbin/cwwwi/uncgi
+#
+Disallow: /intranet/org/FD/
+# Disallow: /cwi/people/
+Disallow: /library/capcas/
+# Disallow: /static/people/
+# Disallow: /statistics/
+# Disallow: /maninfo/
+Disallow: /intranet/maninfo
+# Disallow: /FASE/
+Disallow: /projects/FASE/
+# Allow: /ftp/CWI*
+# Allow: /ftp/Conferences/
+# Disallow: /ftp/
+# Disallow: /pub/CWIreports/
+# Disallow: /cst/
+Disallow: /www.python.org/
+Disallow: /~monet/
+Disallow: /validator.w3.org/
+Disallow: /jigsaw.w3.org/
+Disallow: /htdig/
+# Disallow: /doc/
+Disallow: /?D=A
+Disallow: /?D=D
+Disallow: /?M=A
+Disallow: /?M=D
+Disallow: /?N=A
+Disallow: /?N=D
+Disallow: /?S=A
+Disallow: /?S=D
+# Disallow: /cwi/projects/monet/
+Disallow: /intranet/webmaster/aux
+#
+# Reo Twiki
+# 20060912/Jan Kok ; 20060920
+Disallow: /htbin/reo/ambarsave
+Disallow: /htbin/reo/attach
+Disallow: /htbin/reo/changes
+Disallow: /htbin/reo/edit
+Disallow: /htbin/reo/geturl
+Disallow: /htbin/reo/installpasswd
+Disallow: /htbin/reo/mailnotify
+Disallow: /htbin/reo/manage
+Disallow: /htbin/reo/oops
+Disallow: /htbin/reo/passwd
+Disallow: /htbin/reo/preview
+Disallow: /htbin/reo/rdiff
+Disallow: /htbin/reo/register
+Disallow: /htbin/reo/rename
+Disallow: /htbin/reo/save
+Disallow: /htbin/reo/savemulti
+Disallow: /htbin/reo/search
+Disallow: /htbin/reo/setlib.cfg
+Disallow: /htbin/reo/statistics
+Disallow: /htbin/reo/testenv
+Disallow: /htbin/reo/upload
+# Disallow: /htbin/reo/view
+Disallow: /htbin/reo/viewauth
+Disallow: /htbin/reo/viewfile
+
+# all other robots:
+#
+User-agent: *
+# Allow: /htbin/dsl
+# Allow: /htbin/ins1
+# Allow: /htbin/MetaEnv
+# Allow: /htbin/kuipers
+#
+# Disallow: /htbin/
+#
+# htbin :
+#
+Disallow: /htbin/arie
+Disallow: /htbin/bibl
+Disallow: /htbin/buro
+Disallow: /htbin/chip
+Disallow: /htbin/counter.sh
+Disallow: /htbin/cwwwi
+Disallow: /htbin/docounter.sh
+Disallow: /htbin/estokhof
+Disallow: /htbin/htdig
+# 061015 ccw GET variables might not work, but it's a very resource hungry url
+Disallow: /htbin/ins1/publications?request=hitlist
+Disallow: /htbin/jacob
+Disallow: /htbin/jankok
+Disallow: /htbin/jpv
+Disallow: /htbin/jurgenv
+Disallow: /htbin/jve
+Disallow: /htbin/leon
+Disallow: /htbin/lute
+Disallow: /htbin/marja
+Disallow: /htbin/markh
+Disallow: /htbin/mas1
+Disallow: /htbin/miente
+Disallow: /htbin/misc
+Disallow: /htbin/miscbeheer
+Disallow: /htbin/pdels
+Disallow: /htbin/pieth
+Disallow: /htbin/renovate
+Disallow: /htbin/uncgi
+Disallow: /htbin/webpr
+Disallow: /htbin/www-cst
+#
+Disallow: /intranet/
+Disallow: /org/PD/
+Disallow: /org/CST/FACS-cluster/
+# Reo Twiki
+# 20040816/jpv
+Disallow: /htbin/reo/ambarsave
+Disallow: /htbin/reo/attach
+Disallow: /htbin/reo/changes
+Disallow: /htbin/reo/edit
+Disallow: /htbin/reo/geturl
+Disallow: /htbin/reo/installpasswd
+Disallow: /htbin/reo/mailnotify
+Disallow: /htbin/reo/manage
+Disallow: /htbin/reo/oops
+Disallow: /htbin/reo/passwd
+Disallow: /htbin/reo/preview
+Disallow: /htbin/reo/rdiff
+Disallow: /htbin/reo/register
+Disallow: /htbin/reo/rename
+Disallow: /htbin/reo/save
+Disallow: /htbin/reo/savemulti
+Disallow: /htbin/reo/search
+Disallow: /htbin/reo/setlib.cfg
+Disallow: /htbin/reo/statistics
+Disallow: /htbin/reo/testenv
+Disallow: /htbin/reo/upload
+# Disallow: /htbin/reo/view
+Disallow: /htbin/reo/viewauth
+Disallow: /htbin/reo/viewfile
+# Boid Twiki
+# 20040823/jpv
+Disallow: /htbin/boid/attach
+Disallow: /htbin/boid/changes
+Disallow: /htbin/boid/edit
+Disallow: /htbin/boid/geturl
+Disallow: /htbin/boid/installpasswd
+Disallow: /htbin/boid/mailnotify
+Disallow: /htbin/boid/manage
+Disallow: /htbin/boid/oops
+Disallow: /htbin/boid/passwd
+Disallow: /htbin/boid/preview
+Disallow: /htbin/boid/rdiff
+Disallow: /htbin/boid/register
+Disallow: /htbin/boid/rename
+Disallow: /htbin/boid/save
+Disallow: /htbin/boid/savemulti
+Disallow: /htbin/boid/search
+Disallow: /htbin/boid/setlib.cfg
+Disallow: /htbin/boid/statistics
+Disallow: /htbin/boid/testenv
+Disallow: /htbin/boid/upload
+# Disallow: /htbin/boid/view
+Disallow: /htbin/boid/viewauth
+Disallow: /htbin/boid/viewfile
+# SEN1 Twiki
+# 20041103/jpv
+# No more: Disallow: /htbin/sen1
+Disallow: /htbin/sen1/twiki/bin/attach
+Disallow: /htbin/sen1/twiki/bin/changes
+Disallow: /htbin/sen1/twiki/bin/edit
+Disallow: /htbin/sen1/twiki/bin/fresh
+Disallow: /htbin/sen1/twiki/bin/geturl
+Disallow: /htbin/sen1/twiki/bin/installpasswd
+Disallow: /htbin/sen1/twiki/bin/mailnotify
+Disallow: /htbin/sen1/twiki/bin/manage
+Disallow: /htbin/sen1/twiki/bin/oops
+Disallow: /htbin/sen1/twiki/bin/passwd
+Disallow: /htbin/sen1/twiki/bin/preview
+Disallow: /htbin/sen1/twiki/bin/rdiff
+Disallow: /htbin/sen1/twiki/bin/register
+Disallow: /htbin/sen1/twiki/bin/rename
+Disallow: /htbin/sen1/twiki/bin/save
+Disallow: /htbin/sen1/twiki/bin/savemulti
+Disallow: /htbin/sen1/twiki/bin/search
+Disallow: /htbin/sen1/twiki/bin/setlib.cfg
+Disallow: /htbin/sen1/twiki/bin/statistics
+Disallow: /htbin/sen1/twiki/bin/testenv
+Disallow: /htbin/sen1/twiki/bin/upload
+Disallow: /htbin/sen1/twiki/bin/viewauth
+Disallow: /htbin/sen1/twiki/bin/viewfile
+

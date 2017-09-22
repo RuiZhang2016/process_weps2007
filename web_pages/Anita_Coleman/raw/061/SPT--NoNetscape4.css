@@ -1,0 +1,107 @@
+/* 
+Scout Portal Toolkit No Netscape 4 Stylesheet 
+this style sheet includes styles that must be hidden from Netscape 4.
+the link tag for this sheet in SPT--StandardPageStart.html must include
+the attribute 'media="all"'. Netscape 4 ignores stylesheets for non-screen media
+*/
+
+/*
+    RatingDiv contains the fast user rating graphic and text
+    in PrintResource
+*/
+div.RatingDiv
+{
+    float: right;
+    width: 75px;
+    padding: 0px;
+    font-size: 10px;
+    text-align: right;
+    line-height: 17px;
+    text-decoration: none;
+    margin-top: 6px;
+}
+
+img.inline {display: inline}
+
+/* ------------- Advanced Search Styles -------------------*/
+ul.SPTSavedSearches
+{
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+ul.SPTSavedSearches li
+{
+    display: block;
+    float: left;
+    margin: 3px;
+    padding: 0;
+    border: 1px solid #fb8;
+    background-color: #fffbf8;
+}
+ul.SPTSavedSearches li:hover
+{
+    border: 1px solid #c60;
+}
+ul.SPTSavedSearches li a
+{
+    display: block;
+    width: 150px;
+    text-decoration: none;
+    margin: 2px;
+}
+
+/* ------------ Help Nav ----------------- */
+
+ul.HelpNav
+{
+    list-style: none;
+    width: 180px;
+	border: 1px solid #DDDDDD;
+ 	background: #FFF5E4;
+ 	padding: 0;
+ 	float: left;
+ 	margin: 10px;
+}
+
+ul.HelpNav li
+{
+    display: block;
+    margin: 0;
+    padding: 0;
+    border-bottom: 1px solid #FFF5E4;
+}
+
+ul.HelpNav li:hover, ul.HelpNavLinear li:hover
+{
+    background-color: #FFFBF3;
+}
+
+ul.HelpNav li a, ul.HelpNavLinear li a
+{
+    display: block;
+    font-size: 10px;
+    width: 170px;
+	text-decoration: none;
+    line-height: 12px;
+    color: #666;	
+    margin: 5px;
+	font-weight: bold;
+}
+
+ul.HelpNavLinear
+{
+    list-style: none;
+ 	padding: 0;
+ 	margin: 10px 0 0 10px;
+}
+
+ul.HelpNavLinear li
+{
+    display: block;
+    float: left;
+    margin: 0;
+ 	background: #FFF5E4;
+    padding: 0;
+    border: 1px solid #FFF5E4;
+}

@@ -1,0 +1,587 @@
+
+/********************************************************
+* Global Rules
+********************************************************/
+
+* { margin: 0; padding: 0; outline: none; }
+
+img { border: 0; }
+
+body {
+    background-color: #a0a0a0;
+    font: normal 11px Helvetica Neue, arial, verdana, sans-serif;
+}
+
+hr, .nodisp { display: none; }
+ul { list-style: none; }
+table { font-family: Arial; font-size: 11px; }
+strong { font-weight: bold; }
+
+a, a:link, a:visited {
+    color: #ff0000;
+    text-decoration: underline;
+}
+
+a:hover {
+    color: #333;
+    text-decoration: underline;
+}
+a:focus { -moz-outline: none -moz-mac-focusring; }
+
+#body_replica {
+    width: 100%;
+    background: #a0a0a0 url(http://img.purevolume.com/global/bg_main.gif) repeat-x;
+}
+	body.leaderboard_ad #body_replica { background: #a0a0a0 url(http://img.purevolume.com/global/bg_main_new.gif) repeat-x; }
+
+#container {
+    width:766px;
+    margin: 1em auto;
+    margin-top: 0;
+    text-align: left;
+    position: relative;
+    background: transparent url(http://img.purevolume.com/global/container_bg.gif) repeat-y;
+}
+#container_inner {
+    width: 766px;
+    background: transparent url(http://img.purevolume.com/global/container_inner_bg.gif) no-repeat;
+}
+	body.leaderboard_ad #container_inner { background: url(http://img.purevolume.com/global/container_inner_bg_new.gif) no-repeat; }
+
+div.contain_clear { 
+    position: relative;
+    clear: both;
+}
+
+p.linebreak {
+    padding: 15px 0;
+}
+
+
+/********************************************************
+* Header
+********************************************************/
+
+#header, #logo, #logo h1, #logo a { height: 90px; }
+	body.leaderboard_ad #logo, body.leaderboard_ad #logo h1, body.leaderboard_ad #logo a { height:55px; }
+#header, #header_bottom { margin: 0 3px 0 3px; } 
+
+#header {
+    width: 760px;
+    background: #242424;
+    padding: 0;
+}
+	body.leaderboard_ad #header { height:145px; }
+
+#logo {
+    width: 220px;
+    position: relative;
+    float: left;
+}        
+#logo h1 {
+    width: 220px;
+    text-indent: -9999px;
+    background: transparent url(http://img.purevolume.com/logo.gif) top left no-repeat;
+}
+	body.leaderboard_ad #logo h1 { background: url(http://img.purevolume.com/global/logo_new.gif) top left no-repeat; }
+#logo a {
+    width: 220px;
+    display: block;
+    text-decoration: none;
+}
+
+#headerBanner {
+    vertical-align: middle;
+    position: absolute;
+    right: 16px;
+    top: 14px;
+    text-align: right;
+    width: 468px;
+}
+
+#header_leaderboard {
+	margin: 0 16px;
+	height: 90px;
+}
+
+#header_bottom {
+    width: 760px;
+    height: 5px;
+    background-color: #5C5C5C;
+}
+
+
+/********************************************************
+* Main Nav
+********************************************************/
+
+div#menuwrap {
+    background: transparent url(http://img.purevolume.com/global/menu_bg.gif) no-repeat;
+    padding: 0 3px 0 3px;
+    margin: 0;
+    width: 760px;
+    height: 39px;
+    position: relative;
+}
+
+
+/********************************************************
+* Left
+********************************************************/
+    
+    ul#menu {
+        height: 39px;
+        position: relative;
+    }
+    
+        #menu li.main { display: block;}
+        #menu li.main a.menu_link { height: 34px; display: block; }
+    
+        li#menu_search     { position: absolute; left: 0; }
+        li#menu_browse     { position: absolute; left: 70px; }
+        li#menu_charts     { position: absolute; left: 142px; }
+        li#menu_exclusives { position: absolute; left: 211px; }
+
+            #menu_search a.menu_link, #menu_browse a.menu_link, #menu_charts a.menu_link, #menu_exclusives a.menu_link { background: transparent url(http://img.purevolume.com/global/menu.gif) no-repeat; }
+            
+            #menu_search a.menu_link     { width: 70px; background-position: 0 0; }
+            #menu_browse a.menu_link     { width: 72px; background-position: -70px 0; }
+            #menu_charts a.menu_link     { width: 69px; background-position: -142px 0; }
+            #menu_exclusives a.menu_link { width: 82px; background-position: -211px 0; }
+
+            #menu_search a.menu_link:hover     { background-position: 0 -34px; }
+            #menu_browse a.menu_link:hover     { background-position: -70px -34px; }
+            #menu_charts a.menu_link:hover     { background-position: -142px -34px; }
+            #menu_exclusives a.menu_link:hover { background-position: -211px -34px; }
+    
+    
+/********************************************************
+* Right
+********************************************************/
+    
+    #menuwrap_right { 		
+        position: absolute;
+        top: 0;
+        right: 10px;
+        width: 155px;
+        height: 32px;
+    }
+
+        ul#menu_right {
+            width: 155px;
+            height: 32px;
+        }
+    
+            ul#menu_right li {
+                display: block;
+                float: right;
+            }
+            ul#menu_right li a {
+                height: 32px;
+                display: block;
+            }
+    
+                #menu_right_signup a.menu_link_right { width: 70px; background: transparent url(http://img.purevolume.com/global/menu_right_signup.gif) no-repeat; }
+                #menu_right_my_home a.menu_link_right { width: 70px; background: transparent url(http://img.purevolume.com/global/menu_right_my_home.gif) no-repeat; }
+                #menu_right_my_player a.menu_link_right { width: 23px; background: transparent url(http://img.purevolume.com/profile_listener/note.gif) no-repeat; }
+                #menu_right_login a.menu_link_right { width: 40px; background: transparent url(http://img.purevolume.com/global/menu_right_login.gif) no-repeat; }
+                #menu_right_logout a.menu_link_right { width: 40px; background: transparent url(http://img.purevolume.com/global/menu_right_logout.gif) no-repeat; }
+
+                #menu_right_my_player a.menu_link_right:hover, #menu_right_signup a.menu_link_right:hover, #menu_right_login a.menu_link_right:hover, #menu_right_my_home a.menu_link_right, #menu_right_logout a.menu_link_right:hover { background-position: 0 -32px; }
+
+    #notify {
+        position: absolute;
+        top: 9px;
+        right: 152px;
+        width: 125px;
+        height: 17px;
+    }
+
+        ul#notify_icons {
+            width: 125px;
+            height: 17px;
+            border: 0;
+        }
+
+            ul#notify_icons li {
+                display: block;
+                float: right;
+                width: 40px;
+                height: 17px;
+                padding: 4px 4px 0 16px;
+                margin: 0 5px 0 0;
+                text-align: center;
+                font-weight: bold;
+                font-size: 9px;
+                font-family: verdana, tahoma, arial, sans-serif;
+                line-height: 100%;
+                voice-family: "\"}\"";
+                voice-family: inherit;
+                width: 15px;
+                height: 13px;
+            }
+
+            ul#notify_icons li a, ul#notify_icons li a:visited, ul#notify_icons li a:hover { text-decoration: none; }
+
+            ul#notify_icons li#notify_messages { background: transparent url(http://img.purevolume.com/profile_global/bg_status.gif) 0 0 no-repeat; }
+            ul#notify_icons li#notify_friends { background: transparent url(http://img.purevolume.com/profile_global/bg_status.gif) -35px 0 no-repeat; }
+            ul#notify_icons li#notify_comments { background: transparent url(http://img.purevolume.com/profile_global/bg_status.gif) -70px 0 no-repeat; }
+
+            ul#notify_icons li strong { display: none; }
+            
+  
+
+/********************************************************
+* Standard Messages (such as page not found)
+********************************************************/
+
+div.standard_message, div.error_message {
+    margin-bottom: 25px;
+    background: #eee;
+    border: 2px solid #ccc;
+    padding: 15px;
+}
+
+div.standard_message table td.left, div.error_message table td.left {
+    width: 75px;
+    background: transparent url(http://img.purevolume.com/global/message_standard.gif) left top no-repeat;
+}
+div.error_message table td.left { background: transparent url(http://img.purevolume.com/global/message_error.gif) left top no-repeat; }
+
+div.standard_message table td.right, div.error_message table td.right {
+    padding: 5px 0 12px 0;
+}
+
+div.standard_message span.message_big, div.error_message span.message_big {
+    font-size: 20px;
+    line-height: 75%;
+}
+
+div.standard_message table td p, div.error_message table td p {
+    padding-bottom: 10px;
+}
+
+
+/********************************************************
+* Footer
+********************************************************/
+
+#footer { 
+    width: 766px; 
+    background: transparent url(http://img.purevolume.com/global/footer_bg.gif) bottom center no-repeat; 
+    padding-bottom: 30px; 
+    font-size: 11px; 
+    color: #fff; 
+}
+
+    #footer_links { 
+        width: 720px; 
+        margin-left: 3px; 
+        margin-right: 3px; 
+        padding: 22px 10px 20px 30px; 
+    }
+
+    .footer_col { 
+        width: 180px; 
+        float: left; 
+        line-height: 16px;
+    }
+
+        .footer_col li.menu_header {
+            margin-bottom: 5px;
+        }
+
+        .footer_col a { 
+            color: #ccc; 
+            font-family: arial; 
+            font-size: 11px; 
+            text-decoration: none; 
+        }
+
+        .footer_col a:visited { color: #ccc; text-decoration: none; }
+        .footer_col a:hover { color: #fff; text-decoration: underline; }
+
+#copyright {
+    height: 20px;
+    margin-left: 31px;
+}
+
+    #copyright a, #copyright a:hover {
+        display: block;
+        width: 291px;
+        height: 20px;
+        background: transparent url(http://img.purevolume.com/global/copyright.gif) no-repeat;
+    }
+    #copyright a:hover {
+        background-position: 0 -20px;
+    }
+
+#below_footer {
+    background: #efefef;
+    padding: 10px;
+    border: 2px solid #999;
+    text-align: left;
+    font-size: 11px;
+    width: 740px;
+    margin: 0 auto;
+}
+
+#footer_margin {
+    padding: 20px 0 45px 0;
+    text-align: center;
+    margin: 0 auto;
+    background: #a0a0a0;
+}
+
+
+/********************************************************
+* Form Elements
+********************************************************/
+
+input, select, textarea {
+    width: 98%;
+    font: normal 11px Helvetica Neue, arial, verdana, sans-serif;
+    color: #333;
+    margin: 5px 0 10px 0;
+}
+
+/* Generic Form Rules */
+
+input.pv_checkbox {
+    display: inline;
+    width: 13px;
+    height: 13px;
+    margin: 0 3px;
+    border: 0;
+}
+input.pv_buttons {
+    border: 0;
+    margin: 0;
+    padding: 0;
+    height: 25px;
+}
+textarea.pv_textarea {
+    height: 80px;
+}
+
+/* Standard Sizes */
+
+.pv_standard_xs   { width: 50px; }
+.pv_standard_sm   { width: 100px; }
+.pv_standard_m    { width: 150px; }
+.pv_standard_lg   { width: 200px; }
+.pv_standard_xl   { width: 250px; }
+
+
+/********************************************************
+* Common / Re-occuring Styles
+********************************************************/
+
+div.pvbox_gray, div.pvbox_dkgray {
+    display: block;
+    background: #eee;
+    padding: 13px;
+    margin: 0 0 30px 0;
+}
+div.pvbox_dkgray { background: #d2d2d2; }
+
+div.pvbox_activity, div.pvbox_tips {
+    display: none;
+    border: 5px solid #dadada;
+    background: #f3f3f3;
+    margin: 35px 0;
+    padding: 10px;
+}
+div.pvbox_tips {
+    border: 1px solid #999;
+    background: #ffc;
+}
+
+    p.instructions {
+        font-size: 11px;
+        padding: 0 20px 10px 15px;
+        color: #666;
+        line-height: 14px;
+    }
+    div.pvbox_gray p.instructions {
+        padding: 0;
+        font-size: 11px;
+    }
+    p.instructions em { font-style: normal; }
+
+
+/********************************************************
+Advertisement
+********************************************************/
+
+div.ad_wrapper {
+    width: 300px;
+    text-align: left;
+}
+div.ad_tab {
+    height: 18px;
+    background: transparent url(http://img.purevolume.com/global/ad_tab.gif) no-repeat;
+}
+
+div.ad_tab span {
+    display: none;
+}
+
+div.block_ad {
+    margin-bottom: 15px;
+}
+
+
+/* stragglers */
+table .signup_forms, table .signup_forms_s, table .signup_forms_xs {
+    margin: 0;
+}
+input.signup_create_l, input.btn_login, input.btn_send, a#message_reply {
+    margin: 0;
+    padding: 0;
+    width: 132px;
+    height: 25px;
+}
+input.signup_create_l {
+    width: 142px;
+}
+input.btn_login, input.btn_send, a#message_reply {
+    width: 78px;
+}
+input.signup_checkbox {
+    width: 12px;
+    height: 12px;
+    margin: 0 5px 0 0;
+    padding: 0;
+}
+div#sp_left_signup_artist input.signup_checkbox, div#sp_left_signup_listener input.signup_checkbox {
+    margin: 0 5px 0 7px;
+}
+div#sp_left_login input.signup_checkbox {
+    margin: 0 5px 0 0;
+}
+
+/********************************************************
+* Signups
+********************************************************/
+
+    div#sp_left_login div.pvbox_gray, div#sp_left_report div.pvbox_gray, div#sp_left_search div.pvbox_gray, div#sp_left_browse div.pvbox_gray, div#sp_left_videos div.pvbox_gray {
+        margin: 0 0 15px 0;
+    }
+    div.pvbox_gray p {
+        color: #333;
+        margin: 0;
+        padding: 0;
+        font-size: 12px;
+    }
+    td.signup_left_col {
+        width: 160px;
+    }
+    div#sp_left_report div.pvbox_gray p {
+        margin: 0 0 5px 0;
+    }
+
+    div#sp_left_signup_artist table, div#sp_left_signup_listener table, div#sp_left_login table {
+        width: 100%;
+        margin: 0;
+        padding: 0;
+        border-collapse: collapse;
+    }
+
+    div#artist_url p {
+        font-size: 11px;
+        margin: 15px 0 0 0;
+    }
+    div#artist_url p span {
+        color: #f00;
+    }
+
+    input#signup_create_artist { width: 132px; margin: 0; padding: 0; }
+    input#signup_create_listener { width: 142px; margin: 0; padding: 0; }
+
+    div#sp_left_login table input {
+        margin: 0;
+    }
+
+
+/********************************************************
+* Signups
+********************************************************/
+
+div#my_home_label {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 33px;
+    width: 550px;
+    padding: 10px 0 0 92px;
+    font-size: 11px;
+    color: #747474;
+    background: transparent url(http://img.purevolume.com/profile_global/my_home_label.gif) no-repeat;
+    text-align: left;
+}
+    div#my_home_label a {
+        padding: 2px 3px;
+        background: #e0e0e0;
+        text-decoration: none;
+    }
+    div#my_home_label a:hover {
+        background: #f0f0f0;
+    }
+
+div#label_nav_secondary {
+    position: absolute;
+    top: 10px;
+    right: 0;
+    width: 250px;
+    height: 20px;
+    text-align: right;
+    font-size: 11px;
+}
+
+div#label_backend_nav {
+    position: absolute;
+    top: 35px;
+    right: 0;
+    width: 486px;
+    height: 34px;
+    text-align: left;
+    background: transparent url(http://img.purevolume.com/profile_global/backend_label_nav_bg.gif) no-repeat;
+    font: normal 12px arial, verdana, sans-serif;
+    padding: 10px 0 0 16px;
+    color: #aaa;
+    voice-family: "\"}\"";
+    voice-family: inherit;
+    width: 470px;
+}
+    div#label_backend_nav a {
+        text-decoration: none;
+        color: #333;
+        margin: 0 3px;
+        padding: 3px 5px;
+    }
+    div#label_backend_nav a:hover, div#label_backend_nav a.this_page {
+        text-decoration: none;
+        color: #f00;
+        background: #fff;
+    }
+
+div#label_artists_pulldown {
+    position: absolute;
+    top: 45px;
+    left: 0;
+    width: 210px;
+    height 25px;
+}
+    div#label_artists_pulldown select {
+        margin: 0;
+        padding: 0;
+    }
+
+
+
+
+
+a.bug_link:hover {
+    color: #fff;
+}

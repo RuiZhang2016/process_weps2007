@@ -1,0 +1,224 @@
+/* === based on basic by todd ================ */
+
+/* ============================ general page style ========================== */
+/* ================== for inclusion throughout the site ===================== */
+/* ========================================================================== */
+
+
+/* --- body and container --------------------------------------------------- */
+
+body {
+margin: 0;
+padding: 0;
+background-color:#fff;
+font-family: Geneva, Arial, Helvetica, sans-serif;
+color:#000;
+}
+
+/* --- link colors --------------------------------------------------- */
+
+
+a:link {
+color: #006;
+}
+a:visited {
+color: #369;
+}
+a:hover {
+color: #5C9D97;
+}
+a:active {
+color: #069;
+}
+
+/* --- display hacks -------------------------------------------------------- */
+
+.clear {
+clear:both;
+}
+p.clear {
+margin:0;
+padding:0;
+}
+
+/* ============================ page containers ============================= */
+/* ==== header, leaderboard, sitemenu and footer elements common to site ==== */
+/* ========================================================================== */
+
+/* --- page ----------------------------------------------------------------- */
+
+#container {
+width:765px;
+}
+#group {
+clear:both;
+}
+
+/* --- leaderboard ---------------------------------------------------------- */
+
+#adpos1 {
+margin:0;
+text-align:center;
+font-size:10px;
+padding:.5em;
+}
+
+/* --- header, brandicon ---------------------------------------------------- */
+
+#header {
+margin:0;
+padding:0;
+line-height:30px;
+}
+#header .twocol {
+border-left:1px solid #fff;
+margin:0;
+padding:0;
+}
+#header form {
+margin:0;
+padding:0;
+}
+#header .twocol1 {
+width:200px;
+float:left;
+}
+#header .twocol2 {
+text-align:right;
+float:left;
+}
+#header #logo {
+margin:0;
+padding:10px;
+}
+#header #simplesearch {
+padding:10px 10px 0 0;
+}
+#header .clear, #sitemenu .clear  {
+font-size:1px;
+height:1px;
+line-height:1px;
+}
+
+/* --- sitemenu ------------------------------------------------------------- */
+
+#sitemenu {
+margin:0;
+padding:0;
+height:2em;
+font-size:10px;
+}
+#sitemenu .twocol {
+border-left:1px solid #fff;
+font-family:Verdana, Arial, Helvetica, sans-serif;
+text-transform:uppercase;
+font-weight:bold;
+}
+#sitemenu .twocol1 {
+padding:5px 0 5px 10px;
+float:left;
+}
+#sitemenu .twocol2 {
+padding:5px 10px 5px 0;
+float:right;
+}
+
+/* --- footer --------------------------------------------------------------- */
+
+#footer, #footer .clear, #footer form {
+padding:0;
+margin:0;
+}
+#footermenu {
+margin:0;
+text-align:center;
+font-size:10px;
+padding:10px;
+}
+#group .backtotop {
+padding:.5em;
+display:block;
+text-align:right;
+font-size:10px;
+}
+#footermenu #chroniclemenu {
+float:left;
+padding:.25em 0 0 .75em
+}
+#footermenu #sectionmenu {
+float:left;
+margin:0;
+}
+
+
+
+/* ================================ themes ================================== */
+/* ======== change the header, footer and link colors of your product ======= */
+/* = define $theme in your product type, and switch $brandicon to the match = */
+/* ========================================================================== */
+
+
+/* --- white, simple -------------------------------------------------------- */
+
+body.white #adpos1 {
+background-color:#ddd;
+border-bottom:1px solid #999;
+border-left:8px solid #999;
+}
+body.white #header {
+background-color: #fff;
+border-right:1px solid #ddd;
+border-left:8px solid #ddd;
+}
+body.white #footer #footermenu {
+background-color:#fff;
+border-top: 1px solid #ddd;
+border-bottom:1px solid #ddd;
+border-left:8px solid #ddd;
+}
+body.white #sitemenu {
+background-color: #fff;
+border-top:1px solid #ddd;
+border-right:1px solid #ddd;
+border-bottom:1px solid #ddd;
+border-left: 8px solid #ddd;
+}
+body.white #sitemenu a, body.white #sitemenu a:link, body.white #sitemenu a:visited {
+color:#000;
+}
+body.white #header #simplesearch strong {
+color:#777;
+}
+
+/* --- teal, current default ------------------------------------------------ */
+
+body.teal #adpos1 {
+background-color:#ddd;
+border-bottom:1px solid #999;
+border-left:8px solid #999;
+}
+body.teal #header {
+background-color: #668B8B;
+border-left:8px solid #000;
+}
+body.teal #footer #footermenu {
+background-color:#CCE5E5;
+border-top: 1px solid #777;
+border-bottom:1px solid #777;
+border-left:8px solid #CC3333;
+}
+body.teal #sitemenu {
+background-color: #CCE5E5;
+border-top:1px solid #fff;
+border-bottom:1px solid #777;
+border-left: 8px solid #CC3333;
+}
+body.teal #sitemenu a, body.teal #sitemenu a:link, body.teal #sitemenu a:visited {
+color:#006;
+}
+body.teal #sitemenu a:hover {
+color:#369;
+}
+body.teal #header #simplesearch strong {
+color:#FDFFD4;
+}

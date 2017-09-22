@@ -1,0 +1,313 @@
+body, td {
+	font-size:12px;
+	font-family: Arial, sans-serif;
+	margin:0px;
+}
+
+/* Text Styles */
+small, .small {	font-size: 11px; }
+p { margin:0px; margin-top:16px; line-height:135%; text-align:left; }
+big { font-weight:bold; font-size: 19px; margin: 0px; color: #69b }
+strong { font-weight:bold; color: #69b }
+
+h1 { font:bold 20px arial,sans-serif;}
+h3 { font:bold 15px arial,sans-serif; margin: 0 0 12px 0}
+h4 { 
+	text-transform: uppercase; 
+	padding:0px 20px 5px 0px; 
+	font-weight:normal; 
+	font-size:11px; 
+	color:#b60; 
+	border-bottom:#d95 solid 1px;
+}
+h5 { padding:9px 0; margin:0; font: 12px arial,sans-serif }
+
+/* The main container, holds all the page content. */
+.wrapper {
+	width:770px;
+	margin:0px auto;
+	text-align:left;
+}
+
+.mainContent {
+	background:url('/template/basic/images/back_footer.gif') bottom right no-repeat;
+	padding:10px;
+	padding-left:20px;
+}
+
+.top_bar {width:760px; float:right; background:url('/template/basic/images/corner_right.gif') top right no-repeat #d1e8f3}
+.top_welcome { 
+	float:right;
+	text-align:right;
+	line-height:125%;
+}
+.top_menu {
+	margin-top:40px;
+	float:right;
+}
+.top_back {
+	float:left; 
+	width:770px; 
+	background:url('/template/basic/images/back.gif') top right no-repeat;
+}
+.top_search { border:0; border-top:#ccc solid 1px; width:320px }
+.challenge { line-height:140%; background:url(/template/basic/images/challenge_back.gif) bottom right no-repeat;}
+#pageLinkDiv {
+	text-align:center;
+	margin-top:10px;
+	margin-bottom:10px;
+}
+
+/* Main Content Tables */
+.mainTitle {
+	background-color: #5b7bb0;
+	background-image: url('/template/basic/images/mainTitle.gif');
+	background-repeat: repeat-x;
+	text-align: left;
+	font-weight: bold;
+	font-size:15px;
+	height:25px;
+	line-height:25px;
+	padding:0px;
+	padding-left: 6px;
+	color: #FFF;
+}
+
+.subTitle {
+	font-weight:bold;
+	text-align:center;
+	border-bottom:1px dashed #5b7bb0;
+	line-height:20px;
+	padding:1px;
+	padding-left:0px;
+	font-size:14px;
+	color:#5b7bb0;
+}
+
+.row1 {}
+.row2 {}
+
+.footer { 
+	clear:both; 
+	color:#aaa; 
+	text-align:center; 
+	font-size:10px; 
+	font-family: verdana,sans-serif; 
+	padding:9px 0; 
+	line-height:150%;
+}
+
+/* search results page */
+.resultSearchword {
+	font-weight: bold;
+}
+.resultUnwantedSearchword {
+	font-style:italic;
+	color: #600;
+}
+.resultInfo {
+	font-size: 10pt;
+	color:#666;
+}
+.resultPercent {
+	color:#060;
+}
+
+/* Information messages */
+.infoMessageFailure, .infoMessageWarning, .infoMessageSuccess, .infoMessageInfo {
+	padding:6px;
+	margin-bottom:15px;
+}
+.infoMessageFailure { border:0px solid #FF9999; }
+.infoMessageWarning { border:0px solid #FFCC99; }
+.infoMessageSuccess { border:0px solid #99CC99; }
+.infoMessageInfo	{ border:0px solid #9999FF; }
+
+/* Text styles */
+.editHelp {
+	font-style:italic;
+	font-size:10pt;
+}
+
+/* Link Styles */
+a img {border:none}
+/* icon width can be set to 96px */
+.icon { border:#d0e9f5 solid 1px; float:left;}
+
+a {color:#5a3}
+a:visited {color:#96a}
+a:active,a:hover {color:#69b}
+.b,.b:visited{color:#69b; text-decoration:none}
+.b:hover,.b:active {color:#5a3; text-decoration:underline}
+.g,.g:visited {color:#aaa; text-decoration:none}
+.g:hover,.g:active {color:#5a3; text-decoration:underline}
+
+/*
+ * Special, when viewing a biography made in the rich text editor. 
+ */
+	/* Fix for MS Office style paragraphs (MsoNormal) */
+	.biography p {
+		margin: 0;
+		padding: 0;
+	}
+	
+	/* Fix for MS Office unindented lists */
+	.biography .unIndentedList {
+		margin: 0;
+		padding: 0;
+		list-style-position: inside;
+	}
+	
+	.biography .unIndentedList li {
+		padding: 0;
+	}
+	
+	/* Fix for MS Office UL lists */
+	.biography ul {
+		margin-top: 0;
+		margin-bottom: 0;
+	}
+
+/* Form styles */
+form input {
+	padding:3px; 
+	border:#CCC solid 1px;
+}
+
+form input.large { width:200px; }
+form input.small { width:60px; }
+form input:focus {
+	border:#000000 solid 1px;
+}
+
+form select  {
+	padding:2px; 
+	border:#CCC solid 1px;
+}
+
+form input.image {
+border:0;
+}
+
+form .button {
+	border:1px solid #4a641c;
+	background:#70a316;
+	font-weight:bold;
+	color:#FFF;
+	padding:1px;
+}
+
+/* Horizontal List Menu's */
+.menu {
+	display:table;           
+	padding:0;
+	margin:0 auto;
+	font-family: arial, helvetica, sans-serif;
+	white-space:nowrap;
+	list-style-type:none;
+	padding-right:24px;
+}
+.menu li {
+	display:table-cell;
+}
+* html .menu li {
+	display:inline;
+}
+.menu a, .menu a:visited {
+	display:block;
+	float:left;
+	
+	padding:0px; 
+	margin-right:2px;
+	width:94px;
+	
+	line-height:24px;
+	text-decoration:none;
+	text-align:center;
+	color:#d1e8f3; 
+	
+	background:url('/template/basic/images/tab.gif') bottom center no-repeat #6699bb;
+	border:0px solid #000;
+}
+
+.menu a:hover, .menu a:active {
+	color:#000;
+	background:url('/template/basic/images/tab_hov.gif') bottom center no-repeat #ffe0a5;
+}
+.menu .cur a:hover, .menu .cur a, .menu .cur a:visited, .menu .cur a:active {
+	background:url('/template/basic/images/tab_cur.gif') bottom center no-repeat #d1e8f3;
+	color:#69b;
+	font-weight:bold;
+}
+a.current {
+	color:#fff; 
+	background:#08c;
+	cursor:default;
+}
+.adminMenu a, .adminMenu a:visited {
+	width:auto;
+	background:none;
+	color:#5a3;
+	font-size:10pt;
+	padding-right:15px;
+	padding-left:15px;
+}
+.adminMenu a:hover {
+	background:#CDF;
+	color:#000;
+}
+.adminMenu {
+	border-bottom:1px dashed #5a3;
+	margin:0px;
+	padding:0px;
+	width:100%;
+}
+
+/* Star ratings */
+.ratings {
+	list-style:none;
+	margin: 0px;
+	padding:0px;
+	width: 100px;
+	height: 20px;
+	position: relative;
+	background: url('/template/basic/images/ratingStar.gif') top left repeat-x;		
+}
+.ratings li{
+	padding:0px;
+	margin:0px;
+	/*\*/
+	float: left;
+	/* */	
+}
+.ratings li a{
+	display:block;
+	width:20px;
+	height: 20px;
+	text-decoration: none;
+	text-indent: -9000px;
+	z-index: 20;
+	position: absolute;
+	padding: 0px;
+}
+.ratings li span.currentRating {
+	background: url('/template/basic/images/ratingStar.gif') bottom left repeat-x;
+	display:block;
+	width:20px;
+	height: 20px;
+}
+.ratings li a:hover{
+	background: url('/template/basic/images/ratingStar.gif') center left repeat-x;	
+	z-index: 1;
+	left:0px;
+}
+.ratings a.star1		{left: 0px;}
+.ratings a.star1:hover	{width:20px;}
+.ratings a.star2		{left:20px;}
+.ratings a.star2:hover	{width: 40px;}
+.ratings a.star3		{left: 40px;}
+.ratings a.star3:hover	{width: 60px;}
+.ratings a.star4		{left: 60px;}	
+.ratings a.star4:hover	{width: 80px;}
+.ratings a.star5		{left: 80px;}
+.ratings a.star5:hover	{width: 100px;}

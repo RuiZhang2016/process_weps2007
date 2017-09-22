@@ -1,0 +1,117 @@
+#popupMask {
+	display:none;
+	position:absolute;
+	top:0;
+	left:0;
+	width:100%;
+	height:100%;
+	z-index:200;
+	background-color:#00C;
+	-moz-opacity: 0.05;
+	opacity:.10;
+	filter: alpha(opacity=10);
+}
+#popupContainer {
+	position: absolute;
+	z-index: 201;
+	top: 0px;
+	left: 0px;
+	display:none;
+	padding: 0px;
+}
+#popupInner {
+	border: 1px solid #000000;
+	background-color: #FFFFFF;
+}
+#popupFrame {
+	margin: 0px;
+	width: 100%;
+	height: 100%;
+	position: relative;
+	z-index: 202;
+}
+#popupTitleBar {
+	background-color: #666666;
+	color: #FFFFFF;
+	font-weight: bold;
+	height: 14px;
+	border-bottom: 2px solid #000000;
+	border-top: 1px solid #78A3F2;
+	border-left: 1px solid #78A3F2;
+	border-right: 1px solid #204095;
+	position: relative;
+	z-index: 203;
+}
+#popupTitle {
+	float:left;
+    height:0px;
+}
+#popupControls {
+	float: right;
+	cursor: pointer;
+}
+#popupControls a span {
+	display: block;
+	height: 15px;
+	width: 15px;
+	text-indent: -9000px;
+	background: url('../../img/submodal/close.gif') no-repeat;
+}
+#popupCloseBtn {
+    padding-bottom: 35px;
+    padding-right:1em;
+    padding-left:1em;
+}
+
+#popupCloseBtn .left{
+    font-size:xx-small;
+    font-weight:bold;
+    color:#666666;
+ }
+
+#popupCloseBtn .leftlogo{
+    float:left;
+    background: url('../../img/logo/logo_GS_148x27notag.gif') no-repeat;
+    height:30px;
+    width:160px;
+}
+
+#popupCloseBtn .right{
+    float:right;
+}
+
+#popupCloseBtn .right a span{
+    display: block;
+    height: 20px;
+    width: 116px;
+    text-indent: -9000px;
+    background: url('../../img/button/btn_close_999999.gif') no-repeat;
+}
+
+#stateWidget #popupInner {
+    padding:5px 10px 10px 10px;
+    background-color:#aaccdd;
+    color:#aaccdd;
+    border:none;
+}
+
+#stateWidget #popupInner #popupTitleBar {
+    font-family:"Trebuchet MS", sans-serif;
+    background-color: #aaccdd;
+    color: #fff;
+    font-size: small;
+    height: 1px;
+    position: relative;
+    z-index: 203;
+    border:none;
+    padding: 0;
+    padding-bottom:5px;
+}
+
+#stateWidget #popupControls a span {
+	display: block;
+	height: 16px;
+	width: 16px;
+	text-indent: -9000px;
+	background: url('../../img/submodal/closeblue.gif') no-repeat;
+}

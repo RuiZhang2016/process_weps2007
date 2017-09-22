@@ -1,0 +1,541 @@
+  <html><head><SCRIPT LANGUAGE="javascript" TYPE="text/javascript">window.focus();// button.actions.js
+
+  // 2005.06.16 v1.01 johnp change eCommercial to Video
+  // 2006.01.05 v1.02 johnp drop Download for MLS tours
+  // 2006.01.09 v1.03 johnp add MortgageInfo button
+
+if (document.images) {
+  Audio_on = new Image();
+  Audio_on.src = "";
+  Audio_off = new Image();
+  Audio_off.src = "";
+  Audio_down = new Image();
+  Audio_down.src = "";
+
+  if( "tour.view.php" == "tour.view.ltr.php" ||
+      "tour.view.php" == "mls.view.ltr.php"
+    ) {
+    Close_on = new Image();
+    Close_on.src = "";
+    Close_off = new Image();
+    Close_off.src = "";
+    Close_down = new Image();
+    Close_down.src = "";
+  }
+  else {
+    Enlarge_on = new Image();
+    Enlarge_on.src = "../../images/cc9933.000000/Enlarge.over.gif";
+    Enlarge_off = new Image();
+    Enlarge_off.src = "../../images/cc9933.000000/Enlarge.off.gif";
+    Enlarge_down = new Image();
+    Enlarge_down.src = "../../images/cc9933.000000/Enlarge.click.gif";
+  }
+  
+  Flyer_on = new Image();
+  Flyer_on.src = "../../images/cc9933.000000/Flyer.over.gif";
+  Flyer_off = new Image();
+  Flyer_off.src = "../../images/cc9933.000000/Flyer.off.gif";
+  Flyer_down = new Image();
+  Flyer_down.src = "../../images/cc9933.000000/Flyer.click.gif";
+
+  Map_on = new Image();
+  Map_on.src = "../../images/cc9933.000000/Map.over.gif";
+  Map_off = new Image();
+  Map_off.src = "../../images/cc9933.000000/Map.off.gif";
+  Map_down = new Image();
+  Map_down.src = "../../images/cc9933.000000/Map.click.gif";
+
+  City_Info_on = new Image();
+  City_Info_on.src = "../../images/cc9933.000000/City.over.gif";
+  City_Info_off = new Image();
+  City_Info_off.src = "../../images/cc9933.000000/City.off.gif";
+  City_Info_down = new Image();
+  City_Info_down.src = "../../images/cc9933.000000/City.click.gif";
+
+  if( "tour.view.php" != "mls.view.php" &&
+      "tour.view.php" != "mls.view.ltr.php" ) {
+    Download_Tour_on = new Image();
+    Download_Tour_on.src = "../../images/cc9933.000000/Download.over.gif";
+    Download_Tour_off = new Image();
+    Download_Tour_off.src = "../../images/cc9933.000000/Download.off.gif";
+    Download_Tour_down = new Image();
+    Download_Tour_down.src = "../../images/cc9933.000000/Download.click.gif";
+  }    
+    Mortgage_Info_on = new Image();
+    Mortgage_Info_on.src = "../../images/cc9933.000000/Mortgage_Info.over.gif";
+    Mortgage_Info_off = new Image();
+    Mortgage_Info_off.src = "../../images/cc9933.000000/Mortgage_Info.off.gif";
+    Mortgage_Info_down = new Image();
+    Mortgage_Info_down.src = "../../images/cc9933.000000/Mortgage_Info.click.gif";
+
+  Favorites_on = new Image();
+  Favorites_on.src = "../../images/cc9933.000000/Favorites.over.gif";
+  Favorites_off = new Image();
+  Favorites_off.src = "../../images/cc9933.000000/Favorites.off.gif";
+  Favorites_down = new Image();
+  Favorites_down.src = "../../images/cc9933.000000/Favorites.click.gif";
+
+  Email_Link_on = new Image();
+  Email_Link_on.src = "../../images/cc9933.000000/Email.over.gif";
+  Email_Link_off = new Image();
+  Email_Link_off.src = "../../images/cc9933.000000/Email.off.gif";
+  Email_Link_down = new Image();
+  Email_Link_down.src = "../../images/cc9933.000000/Email.click.gif";
+
+  FloorPlan_on = new Image();
+  FloorPlan_on.src = "../../images/cc9933.000000/FloorPlan.over.gif";
+  FloorPlan_off = new Image();
+  FloorPlan_off.src = "../../images/cc9933.000000/FloorPlan.off.gif";
+  FloorPlan_down = new Image();
+  FloorPlan_down.src = "../../images/cc9933.000000/FloorPlan.click.gif";
+
+  SatelliteView_on = new Image();
+  SatelliteView_on.src = "../../images/cc9933.000000/SatelliteView.over.gif";
+  SatelliteView_off = new Image();
+  SatelliteView_off.src = "../../images/cc9933.000000/SatelliteView.off.gif";
+  SatelliteView_down = new Image();
+  SatelliteView_down.src = "../../images/cc9933.000000/SatelliteView.click.gif";
+
+  Schools_on = new Image();
+  Schools_on.src = "../../images/cc9933.000000/Schools.over.gif";
+  Schools_off = new Image();
+  Schools_off.src = "../../images/cc9933.000000/Schools.off.gif";
+  Schools_down = new Image();
+  Schools_down.src = "../../images/cc9933.000000/Schools.click.gif";
+
+  Video_on = new Image();
+  Video_on.src = "../../images/cc9933.000000/Video.over.gif";
+  Video_off = new Image();
+  Video_off.src = "../../images/cc9933.000000/Video.off.gif";
+  Video_down = new Image();
+  Video_down.src = "../../images/cc9933.000000/Video.click.gif";
+
+  SlideShow_on = new Image();
+  SlideShow_on.src = "../../images/cc9933.000000/SlideShow.over.gif";
+  SlideShow_off = new Image();
+  SlideShow_off.src = "../../images/cc9933.000000/SlideShow.off.gif";
+  SlideShow_down = new Image();
+  SlideShow_down.src = "../../images/cc9933.000000/SlideShow.click.gif";
+}
+
+function turnOn(imageName) {
+  document[imageName].src = eval(imageName + "_on.src");
+}
+function turnOff(imageName) {
+  document[imageName].src = eval(imageName + "_off.src");
+}
+function turnDown(imageName) {
+  document[imageName].src = eval(imageName + "_down.src");
+}
+function turnUp(imageName) {
+  document[imageName].src = eval(imageName + "_on.src");
+}
+
+function Trim(inString) {
+  var retVal = "";
+  var start = 0;
+  while ((start < inString.length) && (inString.charAt(start) == ' ')) {
+    ++start;
+  }
+  var end = inString.length;
+  while ((end > 0) && (inString.charAt(end - 1) == ' ')) {
+    --end;
+  }
+  retVal = inString.substring(start, end);
+  return retVal;
+}
+
+function callTour(page)
+{
+  win = window.open(page, null, 'resizable=yes, scrollbars=yes, toolbar=no, location=no, directories=no, status=no, menubar=no, width=525, height=680, top=5, left=5');
+  win.window.focus();
+  history.go(-1);
+}
+
+function callEnlargeTour(page)
+{
+  win = window.open(page, '_blank', 'resizable=yes, scrollbars=yes, toolbar=no, location=no, directories=no, status=no, menubar=no, width=665, height=650, top=0, left=0');
+  win.window.focus();
+}
+
+function callSlideShow(page)
+{
+  win = window.open(page,'_blank','resizable=yes, scrollbars=yes, toolbar=no, location=no, directories=no, status=no, menubar=no, width=1012, height=600, top=5, left=0');
+  win.window.focus();
+}
+
+function findPosX(obj)
+{
+  var curleft = 0;
+  if (obj.offsetParent)
+  {
+    while (obj.offsetParent)
+    {
+      curleft += obj.offsetLeft;
+      obj = obj.offsetParent;
+    }
+  }
+  else if (obj.x)
+    curleft += obj.x;
+  return curleft;
+}
+
+function findPosY(obj)
+{
+  var curtop = 0;
+  if (obj.offsetParent)
+  {
+    while (obj.offsetParent)
+    {
+      curtop += obj.offsetTop;
+      obj = obj.offsetParent;
+    }
+  }
+  else if (obj.y)
+    curtop += obj.y;
+  return curtop;
+}
+
+function DoResize(obj)
+{
+  var x = 524;
+  var y = findPosY(obj) + 80;
+  
+    if(navigator.appName == "Netscape") // FF MZ NS
+    {
+      popUpWin = window.open(document.location,"","resizeable=yes,toolbar=no,screenx=0,screeny=0,top=0,left=0,location=no,directories=0,status=no,menubar=no,scrollbars=yes");
+      popUpWin.resizeTo(x,y);
+    } // end - FF MZ NS
+  
+    if(navigator.appName == "Microsoft Internet Explorer") // IE OP tour.view
+    {
+     self.resizeTo(x,y); 
+    } // end - IE OP
+  
+  window.focus();
+}
+
+function ck(obj)
+{
+  //alert(navigator.appName);
+  //alert(document.location);
+  //alert(document.location.search);
+  //alert(document.domain);
+  //alert(document.referrer);
+}
+
+</SCRIPT>
+
+
+  <title>Thomas Park Two Level Condo Virtual Tour Powered by Real Tour Vision 1.91</title>
+  
+
+  <style type="text/css">
+    <!--
+    a:link            {color:#FFFFFF; text-decoration:none;}
+    a:active          {color:#FFFFFF; text-decoration:none;}
+    a:visited         {color:#FFFFFF; text-decoration:none;}
+    a:hover           {color:#FFFFFF; text-decoration:none;}
+    -->
+p {
+  background-color: ffffff;
+  color: 000000;
+  font-size: 8pt;
+  font-family: 'verdana,arial,courier';
+  }
+  </style>
+
+  </head>
+
+  <SCRIPT LANGUAGE="javascript" TYPE="text/javascript">
+function openBody()
+{
+  var refbytd = -1;
+  refbytd = 1;
+
+  if( navigator.appVersion.indexOf( "Windows" )!=-1 ) 
+  {
+    if( navigator.appName == "Microsoft Internet Explorer" )
+    {
+      if( refbytd == 0 ) // no onload, for IE OP tour.view
+      {
+        document.write( '<body marginwidth="0" marginheight="0" leftmargin="0" topmargin="0" rightmargin="0" bottommargin="0" bgcolor="0f0f0f" > ');
+      }
+      else // onload, for IE OP tour.display
+      {
+        //ck(footlogo);DoResize(footlogo)
+        document.write( '<body onload="DoResize(footlogo)" marginwidth="0" marginheight="0" leftmargin="0" topmargin="0" rightmargin="0" bottommargin="0" bgcolor="0f0f0f" > ');
+      }
+    }
+    else // onload, for FF MZ NS
+    {
+      document.write( '<body onload="DoResize(footlogo)" marginwidth="0" marginheight="0" leftmargin="0" topmargin="0" rightmargin="0" bottommargin="0" bgcolor="0f0f0f" > ');
+    }
+    
+  }
+  
+  if( navigator.appVersion.indexOf( "Macintosh" )!=-1 ) 
+  {
+    if( navigator.appVersion.indexOf( "Safari" )!=-1 ) 
+    {
+        document.write( '<body marginwidth="0" marginheight="0" leftmargin="0" topmargin="0" rightmargin="0" bottommargin="0" bgcolor="0f0f0f" > ');
+    }
+    if( navigator.appName == "Microsoft Internet Explorer" )
+    {
+        document.write( '<body marginwidth="0" marginheight="0" leftmargin="0" topmargin="0" rightmargin="0" bottommargin="0" bgcolor="0f0f0f" > ');
+    }
+  }
+} // end - function openBody()
+
+  openBody();
+</SCRIPT>
+
+    <table align='center' cellpadding="0" cellspacing="0" width="500">
+      <tr>
+        <td align="center" bgcolor="white">
+                </td>
+      </tr>
+
+      <tr>
+                <td width="500" align="right" height="70" background="cbkileybanner500x70.jpg">
+        
+        <!-- BANNER ROTATION // 2002-05-03 jakep -->
+
+        <script language="javascript">
+
+          function rotate_it() {
+                    } // end - function rotate_it()
+
+        function go_there() {
+          var myHref = new String();
+
+          if(number == 0 || number > banner_count) {
+            number = 1;
+          }
+          myHref = eval( "href" + number );
+          if( myHref.length > 1 ) {
+            window.open( eval( "href" + number ) );
+          }
+        }
+
+        
+        number = 0;
+        rotate_it();
+
+      </script>
+
+      <!-- END - BANNER ROTATION -->
+
+    </td>
+  </tr>
+
+  <tr>
+        <td width="500">
+    <applet archive="../rtv.jar" code="http://ts.rtvpix.com/tour/RE/KiRtv.class" codebase="RE-3182-8HTWW5-02" height="306" width="500">
+    <param name="autoplayyn" value="Y">
+    <param name="spinfoyn" value="N">
+    <param name="rtvxml" value="RE-3182-8HTWW5-02"> 
+    <param name="menutextcolor" value="000000">
+    <param name="menubackcolor" value="cc9933">
+    <param name="titletextcolor" value="cc9933">
+    <param name="titlebackcolor" value="0f0f0f">
+          
+    <a href="http://java.com/en/index.jsp" target="_blank"><img src="NoJava.jpg" alt="Click here to Download Java"></a>
+    </applet>
+    </td>
+  </tr>
+
+    <tr height='20' valign="top" >
+  <td bgcolor="cc9933" height='22'>
+  <table align='center' cellspacing='0' cellpadding='0' width='500' height='22'>
+
+  <tr align='center' height="4" valign="top" width='500'>
+    <td align='center' bgcolor="cc9933" height="4"></td>
+  </tr>
+
+  <tr align='center' height='18' valign="top">
+    <td align='center' bgcolor="cc9933" height='18'>
+
+      <table align='center' cellspacing='0' cellpadding='0' width='500' height='18'><tr valign='top' height='18'><td align='center'>           <!-- ENLARGE button -->
+           <a onClick='callEnlargeTour("http://ts.realtourvision.com/tour/RE/tour.view.ltr.php?utl=RE-3182-8HTWW5-02&opt=");' target='_new' style='cursor: hand'>
+           <IMG
+             onMouseDown="turnDown('Enlarge')"
+             onMouseUp="turnUp('Enlarge')"
+             onMouseOver="turnOn('Enlarge'); window.status='Stop tour scroll and click to View in an Enlarged Size'"
+             onMouseOut="turnOff('Enlarge'); window.status=''"
+             SRC="Enlarge.off.gif" NAME="Enlarge" BORDER="0"
+             ALT="Stop tour scroll and click here to View in an Enlarged Size" />
+           </a>
+            
+            <!-- Flyer button -->
+            
+            <!-- Map button -->
+                          <a onfocus="this.blur();" href='http://maps.yahoo.com/py/maps.py?Pyt=Tmap&addr=48+Thomas+Park+Unit+1&city=South+Boston&state=MA&zip=02127&country=US' target='_new' style='cursor: hand'>
+              <IMG
+                onMouseDown="turnDown('Map')"
+                onMouseUp="turnUp('Map')"
+                onMouseOver="turnOn('Map'); window.status='Click here to View Map to Tour Location'"
+                onMouseOut="turnOff('Map'); window.status=''"
+                SRC="Map.off.gif" NAME="Map" BORDER="0"
+                ALT="Click here to View Map to Tour Location" />
+              </a>
+            
+            <!-- City button -->
+                          <a onfocus="this.blur();" href='http://www.uschamber.com/chambers/chamber_directory.asp?st=MA' target='_new' style='cursor: hand'>
+              <IMG
+                onMouseDown="turnDown('City_Info')"
+                onMouseUp="turnUp('City_Info')"
+                onMouseOver="turnOn('City_Info'); window.status='Click here to View Details about the City'"
+                onMouseOut="turnOff('City_Info'); window.status=''"
+                SRC="City.off.gif" NAME="City_Info" BORDER="0"
+                ALT="Click here to View Details about the City" />
+              </a>
+            
+            <!--  Download button -->
+                       <a onfocus="this.blur();" href="http://togo.rtvpix.com:8080/T2gRip/T2gRip?TID=RE-3182-8HTWW5-02" style='cursor: hand'>
+           <IMG
+             onMouseDown="turnDown('Download_Tour')"
+             onMouseUp="turnUp('Download_Tour')"
+             onMouseOver="turnOn('Download_Tour'); window.status='Click here to Download a Stand-Alone Tour'"
+             onMouseOut="turnOff('Download_Tour'); window.status=''"
+             SRC="Download.off.gif" NAME="Download_Tour" BORDER="0"
+             ALT="Click here to Download a Stand-Alone Tour" />
+           </a>
+            
+            <!-- Email button -->
+                       <a onfocus="this.blur();" href="http://ts.rtvpix.com/tour/RE/tour.view.php?mode=emailTour&amp;email=donna@kiley.com&amp;utl=RE-3182-8HTWW5-02&amp;subject=A%20Virtual%20Tour%20of%20Thomas%20Park%20Two%20Level%20Condo%20-%20MLS%2070388090" style='cursor: hand'>
+           <IMG
+             onMouseDown="turnDown('Email_Link')"
+             onMouseUp="turnUp('Email_Link')"
+             onMouseOver="turnOn('Email_Link'); window.status='Click here to Email a Link to the Tour to a friend'"
+             onMouseOut="turnOff('Email_Link'); window.status=''"
+             SRC="Email.off.gif" NAME="Email_Link" BORDER="0"
+             ALT="Click here to Email a Link to the Tour to a friend" />
+           </a>
+            
+            <!-- FloorPlan button -->
+            
+            <!-- Favorites button -->
+                         <a style='cursor: hand'>
+             <IMG
+               onClick='window.external.AddFavorite("http://ts.realtourvision.com/tour.display.php?utl=RE-3182-8HTWW5-02", document.title); return false'
+               onMouseDown="turnDown('Favorites')"
+               onMouseUp="turnUp('Favorites')"
+               onMouseOver="turnOn('Favorites'); window.status='Click to Add this Tour to your IE Favorites; FF, MZ and NS Ctrl+D; OP Ctrl+T'"
+               onMouseOut="turnOff('Favorites'); window.status=''"
+               SRC="Favorites.off.gif" NAME="Favorites" BORDER="0"
+               ALT="Click to Add this Tour to your IE Favorites; FF, MZ and NS Ctrl+D; OP Ctrl+T" /></a>
+            </td></tr></table><table align='center' cellspacing='0' cellpadding='0' width='500' height='18'><tr valign='top' align='center'><td align='center' >                <!-- Audio button -->
+                                
+                <!-- Mortgage Info button -->
+                                    <a onfocus="this.blur();" href='http://www.realtourvision.com/mortgage/' target='_new' style='cursor: hand'>
+                    <IMG
+                      onMouseDown="turnDown('Mortgage_Info')"
+                      onMouseUp="turnUp('Mortgage_Info')"
+                      onMouseOver="turnOn('Mortgage_Info'); window.status='Click here to view the Mortgage Information!'"
+                      onMouseOut="turnOff('Mortgage_Info'); window.status=''"
+                      SRC="Mortgage_Info.off.gif" NAME="Mortgage_Info" BORDER="0"
+                      ALT="Click here to view the Mortgage Information!" />
+                    </a>
+                
+                <!-- SatelliteView button -->
+                  
+                <!-- Schools button -->
+                                      <a onfocus="this.blur();" href='http://nces.ed.gov/globallocator/index.asp?search=1&state=MA&city=South+Boston&zipcode=02127&miles=10&itemname=&sortby=name&School=1&PrivSchool=1&College=1&Library=1' target='_new' style='cursor: hand'>
+                    <IMG
+                      onMouseDown="turnDown('Schools')"
+                      onMouseUp="turnUp('Schools')"
+                      onMouseOver="turnOn('Schools'); window.status='Click here to find local Schools!'"
+                      onMouseOut="turnOff('Schools'); window.status=''"
+                      SRC="Schools.off.gif" NAME="Schools" BORDER="0"
+                      ALT="Click here to find local Schools!" />
+                    </a>
+                
+                <!-- SlideShow button -->
+                                
+                <!-- Video button -->
+                </td></tr></table>      
+    </td>
+    </tr>
+    </table>
+    
+    </td>
+  </tr>
+    <!-- end new nav bar for audio, tourflyer, cityinfo -->
+
+  <!-- 2004.11.01 MlsInfo support -->
+  <tr valign='top'><td valign='top' width='500'><table align='center' bgcolor='#ffffff' cellpadding='0' cellspacing='0' width='500'><tr width='500'><td colspan='3'><table bgcolor='#ffffff' cellpadding='0' cellspacing='0' width='500'><tr align='center' valign='top' width='500'><td align='center' valign='top'><font style="font-family: verdana,arial,courier; background: #ffffff; color: #000000; font-size: 8pt; font-weight: normal">48 Thomas Park Unit 1, South Boston, MA 02127</font></td></tr></table></td></tr><tr width='500'><td><table bgcolor='#ffffff' cellpadding='0' cellspacing='0' width='140'><tr><td>&nbsp;</td></tr><tr><td>&nbsp;</td></tr><tr><td>&nbsp;</td></tr></table></td><td><table bgcolor='#ffffff' cellpadding='0' cellspacing='0' width='220'><tr><td>&nbsp;</td></tr><tr><td align='right'><font style="font-family: verdana,arial,courier; background: #ffffff; color: #000000; font-size: 8pt; font-weight: normal">MLS Number:&nbsp;</font></td><td align='left'><font style="font-family: verdana,arial,courier; background: #ffffff; color: #000000; font-size: 8pt; font-weight: normal">70388090</font></td></tr><tr><td>&nbsp;</td></tr></table></td><td><table bgcolor='#ffffff' cellpadding='0' cellspacing='0' width='140'><tr><td>&nbsp;</td></tr><tr><td>&nbsp;</td></tr><tr><td>&nbsp;</td></tr></table></td></tr></table></td></tr>  <!-- end - 2004.11.01 MlsInfo support -->
+
+  <tr valign='top'>
+    <td width='500' valign='top'>
+      <table width="100%" bgcolor="#ffffff"cellpadding="0" cellspacing="0" height="100%">
+        <tr valign='top'>
+          <td align="left" valign='top'>
+            <table bgcolor="#ffffff" cellpadding="0" cellspacing="0" height="100%" width="100%">
+              <!-- mls data block (just mls# and zip) ===================================== -->
+              <tr>
+                <td valign="top">
+                <p>
+                  <font face="verdana">
+                  <b>
+                  <br>
+                  </b>
+                  </font>
+                </p>
+                </td>
+              </tr>
+
+              <!-- agency block =========================================================== -->
+              <tr>
+                <td align='left' valign='bottom'><a href='http://www.kiley.com/' target='_new'><img src='cbkiley.jpg' width='180' height='38' border='0'></a></td>              </tr>
+            </table>
+          </td>
+          <!-- agent data block ========================================================= -->
+          <td align="right">
+          <p>
+            <font face="verdana">
+              <b>Donna   Harman</b>&nbsp;&nbsp;<br>617-269-3227&nbsp;&nbsp;<br>707 East Broadway&nbsp;&nbsp;<br>South Boston, MA US 02127&nbsp;&nbsp;<br><a href='http://ts.rtvpix.com/tour/RE/tour.view.php?mode=emailForm&amp;utl=RE-3182-8HTWW5-02&amp;email=donna@kiley.com&amp;subject=A%20Virtual%20Tour%20of%20Thomas%20Park%20Two%20Level%20Condo' class='profile' alt='Email me about this tour!'><font color='#000000'><b>Email</b></font></a>&nbsp;<a onfocus='this.blur();' href='http://www.kiley.com' class='profile' target='_new'><font color='#000000'><b> | &nbsp;Website</b></font></a>&nbsp;&nbsp;<br>              </font>
+            </p>
+            </td>
+            <!-- agent image block ========================================================= -->
+    <td width='3'></td><td align='right' valign='bottom' width='59.76' height='90'><a href='http://ts.rtvpix.com/tour/RE/tour.view.php?mode=emailForm&amp;utl=RE-3182-8HTWW5-02&amp;email=donna@kiley.com&amp;subject=A%20Virtual%20Tour%20of%20Thomas%20Park%20Two%20Level%20Condo' class='profile'><img src='DonnaProfessional.jpg' width='59.76' height='90' border='0' alt='Email me about this tour!'></a></td>          </tr>
+        </table>
+      </td>
+    </tr>
+    <!-- footer block ========================================================= -->
+    <tr>
+      <td bgcolor="cc9933" height="20" width='500'>
+        <table cellpadding="2" cellspacing="0" width="100%">
+          <tr>
+            <td align="center">
+              <table cellpadding="2" cellspacing="0">
+                <tr>
+                                    <!--
+                  <td valign="top" align="left">
+                    <font face="verdana" color="< php print $FG; >" style="font-size: 8pt;">
+                     <a onfocus="this.blur();" href="http://www.TalkinSites.com" target="new">Audio by TalkinSites</a>
+                    </font>
+                  </td>
+            -->      
+                              <td valign="top"><a onfocus="this.blur();" name="footlogo" href="http://ts.rtvpix.com/tour/RE/tour.diag.php?utl=RE-3182-8HTWW5-02" target="new" style='cursor: help'><img src="eyecon.gif" border="0"></a></td>
+<!--
+                  <td><img src="./default/eyecon.gif" border="0"></a></td>
+-->
+                  <td valign="top" align="right">
+                  <font face="verdana" color="000000" style="font-size: 8pt;">
+                  <b>
+                  
+		  <a onfocus="this.blur();" href="http://www.realtourvision.com" target="new">Powered by RealTourVision</a>                  
+                  </b>
+                  </font>
+                  <br><br><br><br><br><br>
+                  </td>
+                </tr>
+              </table>
+            </td>
+          </tr>
+        </table>
+      </td>
+    </tr>
+  </table>
+  </body></html>

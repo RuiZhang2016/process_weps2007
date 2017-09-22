@@ -1,0 +1,950 @@
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    
+
+
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+	<head>
+        <title>
+           Alexander Macomb - Ask for Kids
+        </title>
+        
+
+
+
+
+    
+
+
+
+
+
+
+
+
+	<script type="text/javascript">
+	
+    function _RP(p) {
+        return "http://wzus.askforkids.com/r?t=p&d=us&s=k&c=a&l=dir&o=0&sv=0a30065c&ip=3ecccf2a&id=8CAACBEAAE34A20151F3FA4511BD102A&q=Alexander+Macomb&p=1&qs=0&ac=11&g=473cPPlmRKPrpu" + pob(p);	
+    }
+	
+    function _SP(p) {
+        return "http://wzus.askforkids.com/i/b.html?t=p&d=us&s=k&c=a&l=dir&o=0&sv=0a30065c&ip=3ecccf2a&id=8CAACBEAAE34A20151F3FA4511BD102A&q=Alexander+Macomb&p=1&qs=0&ac=11&g=473cPPlmRKPrpu" + pob(p);
+    }
+    
+    function ptxt(a)
+    {
+        var pt="";
+        if (a.innerHTML) {
+            pt=a.innerHTML;
+            pt=pt.replace(/<\/?[^>]+>/ig, ""); 
+            pt=pt.replace(/&amp;/g, "&"); 
+        }
+        return pt;
+    }
+    
+    function pk(li,p,i) {
+        if(li && li.href) {
+            if (li.wzup) return true;
+            if (!p.u)p.u=li.href;
+            var a=(i)?obj(i):li;
+            if (!p.pt){
+               switch (p.en.toLowerCase()){
+                    case "js":
+                    case "is":
+                        p.pt = p.en.toUpperCase() + " thumbnail";
+                        break;
+                    default :
+                        p.pt = ptxt(a);
+                }
+            }
+            li.href = _RP(p);
+            li.wzup = 1;
+        }
+        return true;
+    }
+	
+	function spk(li,p)
+	{
+        if (li && li.href && p) {
+            if (!p.u)p.u=li.href;
+            if (!p.pt)p.pt=ptxt(li);
+        }
+        return (new Image()).src=_SP(p);
+	}
+    
+    
+
+
+
+
+
+
+
+
+
+    
+    function ct(li, id) {
+        if (li && li.href && id) {
+            if (li.wzup) return true;
+            var url = li.href;
+            //for IE6&7 bug(TRES-3008), when there is @ in the <a/>.innerText, ex. <a href="web%3Fq=Alexander+Macomb&amp;o=0.1.html">x@y</a>, after href is replaced, innerText will also be replaced. Note @xy and xy@ doesn't has the same issue
+            //to save the innerHTML of a tag
+            var oInnerHTML = li.innerHTML;
+            //replace the href attribute
+            li.href = "http://wzus.askforkids.com/r?t=a&d=us&s=k&c=a&ti=1&ai="+enc(id)+"&l=dir&o=0&sv=0a30065c&ip=3ecccf2a&u="+enc(url)+"";
+            //replace back the original text, if it is changed by IE side-effect
+            if(navigator.userAgent.toLowerCase().indexOf('msie') != -1 && li.innerHTML != oInnerHTML){
+                li.innerHTML=oInnerHTML;
+            }
+            li.wzup = 1;
+        }
+        return true;
+    }
+
+    
+    function sct(id,li,im) {
+        if (id){
+            var url="";
+        
+            if (li) {
+                url = ((li.href) ? li.href : li);
+            }
+            var retVal = "http://wzus.askforkids.com/i/b.html?t=a&d=us&s=k&c=a&ti=1&ai="+enc(id)+"&l=dir&o=0&sv=0a30065c&ip=3ecccf2a&u="+enc(url)+"";
+            retVal = retVal + "&rnd="+Math.random().toString(); 
+            if(im) {
+                var img = new Image();
+                img.src = retVal;
+            } else {
+                var img = new Image();
+                img.src = retVal;
+                setTimeout(function(){ img }, 100);
+            }   
+            return retVal;
+        }
+    }
+    
+	function enc(s)
+	{
+        return (typeof encodeURIComponent != "undefined") ? encodeURIComponent(s) : escape(s);
+	}
+
+
+	
+	function obj(id,d)
+	{
+		if (! d) { d=document; }
+		var o=d.getElementById(id);
+		return o; 
+	}
+
+
+function pob(po) {
+    po = po||{};
+
+    // Workaround for IE6.  For URI containing accented characters that are percent encoded, such as "%C3%BC" which represents
+    // the accented 'u', the href attribute in IE6 attempts to interpret the percent encoded string "%C3%BC".  This is all good
+    // and well, except that when the page's encoding is set to UTF-8, IE decodes the string incorrectly.  We therefore
+    // need to use the "escape()" function to undo that incorrect decoding, to return the string back to "%C3%BC".
+    // Note that escape(), though deprecated, is required in this case since its bugginess seems to undo the bugginess of
+    // the href attribute in IE6.  If encodeURI or encodeURIComponent were used, this trick wouldn't work.   Yes, it's quite
+    // ridiculous.  See TRES-410 for more details.  IE7 appears to have fixed this issue.
+    // code would still work with IE7.
+    if (document.all && navigator.userAgent.indexOf("MSIE 6.0") != -1) {
+        po.u = escape(po.u);
+        // Undo the encoding of the ":" in "http:" done by escape()
+        po.u = po.u.replace(/%3A/g, ":");
+        // Undo the encoding of other special characters as well 
+        po.u = po.u.replace(/%3F/g, "?");
+        po.u = po.u.replace(/%3D/g, "=");
+        po.u = po.u.replace(/%26/g, "&");
+        po.u = po.u.replace(/%25/g, "%");
+    }
+
+    return "&en="+h(po.en)+"&io="+h(po.io)+"&ep="+h(po.ep)+"&eo="+h(po.eo)+"&b="+h(po.b)+"&bc="+h(po.bc)+"&br="+h(po.br)+"&tp="+h(po.tp)+"&ec="+h(po.ec)+"&pt="+enc(h(po.pt))+"&ex="+h(po.ex)+"&url="+enc(h(po.url))+"&u="+h(po.u);
+}
+
+function h(v){return (v!=null&&v!='undefined')?v:"";}
+
+function cspk(li,src,io,sp) {
+
+    var en="co";
+    if( src == "ahdict"){en="ah";}
+    if( src == "roget"){en="ro";}
+    if( src == "wiki"){en="wk";}
+    if( src == "col"){en="cb";}
+    if( src == "hmwh"){en="h0";}
+    if( src == "hmff"){en="h1";}
+
+    if( src == "wordnet"){en="wn";}
+    if( src == "wordnetuk"){en="wn";}
+    var p={};
+    p.en=en;
+    p.b="sa";
+    p.tp="d";
+    p.ec="1";
+    if(sp) {
+        spk(li,p);
+    } else {
+        pk(li,p);
+    }
+    return true;
+}
+</script>
+
+
+        
+
+
+
+
+
+
+
+
+
+
+
+<script type="text/javascript">
+
+
+
+
+
+
+
+
+
+
+
+
+
+    
+    
+
+
+
+    
+function fp(li,p,mj,io,lang,ou)   
+{
+    if(li.href)
+    {
+        
+        var fm = li.href.match(/^(http:\/\/www.askforkids.com\/fr\?)u=(.*)$/i);
+        if (fm)
+        {
+            var pt,bpg,url,rdir,d;
+            rdir = fm[1];
+            url = fm[2];
+            d="lang";
+            bpg = "http://www.askforkids.com/web?q=Alexander+Macomb&o=0&l=dir&page=1";
+            if(d) bpg+="&dm="+d;
+                
+            rdir += "u="+url+"&bu="+enc(bpg)+"&q=Alexander+Macomb&o=0&l=dir&qt=0&ac=11";
+            if(d)rdir+="&dm="+d;
+
+            p.url=(ou)?ou:li.href;
+            p.u=rdir;
+        }
+        pk(li,p);    
+    }
+    return true;
+}
+</script>
+
+        
+
+
+	<script type="text/javascript">
+    
+    function _MSP(frm,six,p) {
+        if(frm && frm.elements && frm.elements[six] && frm.elements[six].options && frm.elements[six].type == 'select-one') {
+            var sobj = frm.elements[six];
+            var io = sobj.selectedIndex;
+            var opt = sobj.options[io];
+
+            if (opt.wzup) return;
+            p.io=io;
+            p.u = opt.value; 
+            p.pt = opt.text; 
+
+            opt.value = _RP(p); 
+
+            opt.wzup = 1;
+        }
+        
+        return _SMF(frm);
+    }
+
+    
+    function _SMF(frm)
+    {
+        if (frm) {
+            u = frm.elements["u"];
+            if (u) {
+                self.location = u.value;
+                return false;
+            }
+        }
+        return true;
+    }
+
+   
+    function _SKBF(frm)
+    {
+        if (frm) {
+            furl = frm.action + "?";
+            if (frm.elements) for (k=0; k<frm.elements.length; k++) {
+                elem = frm.elements[k];
+                furl = furl + "&" + elem.name + "=" + escape(elem.value);
+            }
+        }
+        return true;
+    }
+</script>
+
+        
+
+
+
+
+
+
+
+<style type="text/css">
+
+a,address,blockquote,body,caption,center,dd,dir,div,dl,dt,form,h1,h2,h3,h4,h5,h6,input,menu,ol,option,p,select,table,td,th,ul{font-family:Arial,sans-serif;font-size:small;}
+a{cursor:pointer;}
+a,a:active,a.LV:visited{ color: #00C; }
+a:visited  { color: #639; }
+body{ margin:0 10px;}
+form{display:inline;}
+
+.H1{ font-size:small; }
+.H2{ font-size:medium; }
+.H3{ font-size:large; }
+.H1,.H2,.H3 {
+	font-weight:bold;
+	color: #C00;
+}
+
+
+.T1,.T10,.T11,.T12,.T14{
+	font-size:small;
+}
+.T7,.TBG3,.TBG5,.T3,.T5,.T15,.T16{
+    font-size:.85em;
+}
+.TBG2,.TBG4{
+    font-size:1.15em;
+}
+.T2,.T13{
+	font-size:1.1em;
+}
+.T6,.T4{
+	font-size:1.2em;
+}
+.T1,.T3,.T6,.T13,.T15{
+ 	color:#000;
+}
+.T2,.T5,.T14,.T16 {
+	color:#C00;
+}
+.T7,.T11,.T4 {
+	color:#666;
+}
+.T10{
+	color:#393;
+}
+.T12{
+	color:#00C;
+}
+.TBG2,.TBG3{
+	background-color:#C00;
+}
+.TBG4,.TBG5{
+	background-color:#000;
+}
+.TBG2,.TBG3,.TBG4,.TBG5{
+	color:#fff;
+}
+.b {font-weight:bold;}
+
+
+.L3,.L12,.L8,a.L8:visited,.L9,a.L9:visited,.L11,a.L11:visited,
+.L13,a.L13:visited,.L16,a.L16:visited,.L17{  
+	font-size:.85em; 
+}
+.L4{ font-size: 1.2em; }
+.L14,a.L14:visited{
+    font-size:1.1em;                   
+}
+.L5,.L5V:visited{
+	color:#69C;
+}
+a.L17{
+	color:#369;
+}
+a.L18{
+	color:#cc0000;
+    font-weight:bold;
+}
+.L2,.L3,.L4,.L12,.L1,a.L1:visited,a.L1:active,
+.L7,a.L7:visited,a.L7:active,.L16,a.L16:visited,a.L16:active
+{
+    color:#00C;
+}
+.L8,a.L8:visited,a.L8:active,.L15,a.L15:visited,a.L15:active{
+	color:#666;
+}
+.L9,a.L9:visited,a.L9:active,.L13,a.L13:visited,a.L13:active{
+	color:#fff;
+}
+.L10,a.L10:visited,a.L10:active,.L11,a.L11:visited,a.L11:active{
+	color:#C00;
+}
+
+.L1,.L5,.L13,a.L1:visited,a.L1:active,.L6,a.L6:active,
+.L10,a.L10:visited,a.L10:active,.L16,a.L16:visited,a.L16:active,.L17
+{
+    text-decoration:none;               
+}
+a.L1:hover,a.L5:hover,a.L6:hover,a.L10:hover,a.L13:hover,a.L16:hover,a.L17:hover
+{
+    text-decoration:underline;
+}
+a.TBG2:visited,a.TBG3:visited,a.TBG4:visited,a.TBG5:visited{
+    color:#fff;
+}
+
+.B1{ border: #CCC solid 1px;}	
+.B2{ border-bottom: #CCC solid 1px;}	
+.B3 { border: #C00 solid 2px;}	
+.B4 { border-bottom: solid 10px #C00;}	
+
+.B5
+{
+	padding-top:16px;
+	border-bottom: 1px solid #CCC;
+}
+
+
+
+.BG1{ 	background-color:#EAEAEA; }
+.BG2{	background-color:#C00;	}   
+.BG3{	background-color:#FF9;	}   
+.BG4{	background-color:#000;	}   
+.BG5{	background-color:#ECF5FA ;}    
+
+</style>
+
+
+<style type="text/css">
+
+a,address,blockquote,body,caption,center,dd,dir,div,dl,dt,form,h1,h2,h3,h4,h5,h6,input,menu,ol,option,p,select,table,td,th,ul{font-family:Arial;font-size:medium;}
+a,a:active,.L2,.L3,.L4,.L12,a.LV:visited{color:#00F;}
+a:visited  { color: #00F; }
+body{ margin:0 10px;}
+
+
+.T1,.T10,.T11,.T12,.TBG2,.T14{
+	font-size:medium;
+}
+.T3,.T5,.T7,.TBG3{
+	font-size:small;
+}
+.txt{font-size:.75em;}
+.KT1{color:#F90;}
+.KH1{font-size:xx-large;}
+.KH2{font-size:large;}
+.KH1,.KH2,.KH a,.KH a:visited{color:white;font-weight:bold;}
+
+
+.L2,.L3,.L4,.L5,a.L5:visited,.L7,a.L7:visited,.L8,a.L8:visited {
+	text-decoration:underline;
+}
+.L3,.L8,a.L8:visited,.L9,a.L9:visited,.L11,a.L11:visited,.L13,a.L13:visited{
+	font-size:small;
+}
+.al{font-size:1.1em;}
+.lnk,a.lnk:visited,a.lnk:active,.lnkw,a.lnkw:visited,a.lnkw:active{
+    font-size:.75em;
+}
+.lnk,a.lnk:visited,a.lnk:active{color:#00F;}
+.lnkw,a.lnkw:visited,a.lnkw:active{color:#FFF;}
+.w{color:#FFF}
+
+
+.BGK{background-color:#06F;}   
+
+
+</style>
+
+
+        
+
+
+ 
+
+
+
+
+
+
+
+    
+
+
+
+<link href="kids.css" rel="stylesheet" type="text/css"/>
+<style type="text/css">
+#webr{margin-bottom:7px;}
+
+
+
+
+
+</style>
+
+
+        
+    </head>
+	<body>
+    <div class="BGK">
+        
+
+
+
+
+
+
+    <span style="display:none">
+        <img src="http://wzus.askforkids.com/i/i.gif?t=v&d=us&s=k&c=a&l=dir&o=0&sv=0a30065c&p=web&ord=5087211" height=1 width=1 id="SessionTracker"/>
+    </span>
+
+        
+
+
+
+
+
+
+
+
+
+
+<span class="w" style="float:right;padding-right:15px">
+    <a class="lnkw" onmousedown="return ct(this,30033)" target="_top" href="http://sp.askforkids.com/docs/askforkids/help/help.htm">Help</a>
+    &#160;&#183;&#160;
+    <a class="lnkw" onmousedown="return ct(this,30034)" target="_top" href="http://sp.askforkids.com/docs/askforkids/help/contact.htm">Report a Problem</a>
+</span>
+<div style="clear:left">&#160;</div>
+
+        
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<form name="k1" id="k1" target="_top" action="http://www.askforkids.com/web" method="get">
+
+
+
+    <div style="margin:2px;padding:0px;">
+        <table border="0" cellpadding="0" cellspacing="0">
+            <tr>
+                <td rowspan="2" align="right" valign="bottom" style="padding:0 3px 0 20px">
+
+
+
+
+
+
+
+<a href="http://www.askforkids.com?o=0&l=dir" onMouseDown="return ct(this,30733)" class="L8" target="_top">
+<img src="http://sp.askforkids.com/i/askforkids/reply/logo.gif" border="0" alt="Kids" width="190"/></a></td>
+                
+                <td align="right" valign="bottom" style="padding:0 5px 0 0"><img src="http://sp.askforkids.com/i/askforkids/reply/mini_characters.gif" height="45" width="115" border="0" alt="Kids Logo"/></td>
+                <td></td>
+            </tr>
+            <tr>
+                
+                <td valign="top" align="right" style="padding:0 2px 10px 2px;">
+
+
+
+                    <input name="q" type="text" size="40" value="Alexander Macomb" />
+
+                </td>
+                <td valign="top">
+
+                    <input type="submit" value="Search" style="color:#00C;font-weight:bold"/>
+                    <input type="hidden" name="qsrc" value="1" />
+                    <input type="hidden" name="o" value="0" />
+                    <input type="hidden" name="l" value="dir" />
+
+                </td>
+            </tr>
+        </table>
+
+  </div>
+</form>
+
+        <div class="hdr"></div>
+    </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+	
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    
+    
+    
+
+    
+    
+        
+        
+    
+
+    
+    
+    
+    
+        
+        
+            
+        
+    
+
+    
+        <div class="o1" style="margin: 0 0 10px 0">
+            <div class="KT1 B2 mb1"><b>We know the answers to these questions:</b></div>
+            
+            
+                
+                    <div style="margin: 5px 20px">
+                        
+                        <form action="http://www.askforkids.com/web" method="get" target="_top" name="AJ_1246353" onsubmit='return _SKBF(this);'>
+                            
+                            <a class="al b" href="javascript:document.AJ_1246353.submit()"><input type="hidden" name="aj_ques" value="snapshot=kids&kbid=1246353&item1=1246410-1246417" />
+<input type="hidden" name="aj_logid" value="EEC4801B25AF31449A3487271578AC1C" />
+<input type="hidden" name="aj_rank" value="1" />
+<input type="hidden" name="aj_score" value="0.84" />
+Where can I take a tour of the 
+</a><select style='color: #3333cc; font-weight: bold' name="aj_list1">
+<option selected value="1246410-1246417">Alexander</option>
+
+<option value="">----</option>
+<option value="1246410-1246417">Alexander</option>
+<option value="1246410-1246414">Gatchina</option>
+<option value="1246410-1246416">Pavlovsk</option>
+<option value="1246410-1246411">Tsarskoe Selo</option>
+<option value="1246410-1246412">Yelagin</option></select><a class="al b" href="javascript:document.AJ_1246353.submit()">
+ Palace in Russia?</a>
+                            &#160;<input type="submit" value="Go"/>
+                            <input type="hidden" name="s" value="k" />
+                            <input type="hidden" name="en" value="ka" />
+                            <input type="hidden" name="eo" value="0" />
+                            <input type="hidden" name="q" value="Alexander Macomb" />
+                            <input type="hidden" name="o" value="0" />
+                            <input type="hidden" name="qsrc" value="0" />
+                            <input type="hidden" name="io" value="0" />
+                            <input type="hidden" name="qid" value="8CAACBEAAE34A20151F3FA4511BD102A" />
+                            <input type="hidden" name="ac" value="11" />
+                            <input type="hidden" name="flwup" value="1" />
+                            <input type="hidden" name="page" value="1" />
+                            <input type="hidden" name="kbid" value="1246353" />
+                            <input type="hidden" name="dm" value="lang" />
+                            <input type="hidden" name="qt" value="0" />
+                        </form>
+                    </div>
+                
+                
+            
+        </div>
+        <div class="pb"></div>
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    
+    
+
+
+
+    <div class="KT1 B2 mb1">
+        <b>See results from other search engines:</b><br/>
+    </div>
+
+
+    
+    
+    
+    
+    
+    
+    <div class="sec">
+        <div style="line-height:30px;" class="T1">
+            10 matches by <a href="http://www.askforkids.com/fr?u=http%3A%2F%2Fwww.factmonster.com%2F&bu=http%3A%2F%2Fwww.askforkids.com%2Fweb%3Fq%3DAlexander%2BMacomb%26o%3D0&q=Alexander+Macomb&o=0&l=dir&page=1&s=k&ac=11" onmousedown="return ct(this,51097)" target="_top">
+                FactMonster</a>
+        </div>
+        <form action="http://www.askforkids.com/fr" method="get" target="_top" onsubmit="_MSP(this,0,{en:'fm',io:'0',b:'ns',tp:'d',ec:'10'})">
+        <select name="u">
+        
+            
+            <option value="http://www.factmonster.com/ce6/people/A0831026.html">Alexander Macomb</option>
+        
+            
+            <option value="http://www.factmonster.com/ce6/us/A0831027.html">Macomb</option>
+        
+            
+            <option value="http://www.factmonster.com/spot/alexanderhamiltonbio.html">Alexander Hamilton</option>
+        
+            
+            <option value="http://www.factmonster.com/ipd/A0524897.html">Macomb</option>
+        
+            
+            <option value="http://www.factmonster.com/ce6/people/A0803247.html">Alexander of Pherae</option>
+        
+            
+            <option value="http://www.factmonster.com/ce6/people/A0803245.html">Alexander of Aphrodisias</option>
+        
+            
+            <option value="http://www.factmonster.com/edu/colleges/7274/">Macomb Community College</option>
+        
+            
+            <option value="http://www.factmonster.com/ce6/people/A0803231.html">Alexander, in the Bible</option>
+        
+            
+            <option value="http://www.factmonster.com/ce6/world/A0803240.html">Alexander Bay</option>
+        
+            
+            <option value="http://www.factmonster.com/ce6/us/A0803241.html">Alexander City</option>
+        
+        </select>
+        <input type="submit" value="Go"/>
+        <input type="hidden" name="s" value="k"/>
+        <input type="hidden" name="bu" value="http://www.askforkids.com/web?q=Alexander+Macomb&o=0"/>
+        <input type="hidden" name="q" value="Alexander Macomb"/>
+        <input type="hidden" name="o" value="0"/>
+        <input type="hidden" name="qt" value="0"/>
+        <input type="hidden" name="dm" value="lang" />
+        <input type="hidden" name="ac" value="11" />
+        </form>
+    </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+	
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    
+
+    <div style="padding-top:10px">
+        
+
+
+
+
+
+ 
+
+
+
+
+
+
+
+
+
+
+    
+    
+        
+        
+    
+
+<div style="margin:25px 0px 5px 0px;">
+    <span class="txt">&#169; 2007 IAC Search &amp; Media &#160;&#183;&#160; </span><a class="lnk" onmousedown="return ct(this,30025)" href="http://sp.askforkids.com/docs/askforkids/help/privacypolicy.htm">Privacy Policy</a>
+</div>
+
+    </div>
+</html>
+

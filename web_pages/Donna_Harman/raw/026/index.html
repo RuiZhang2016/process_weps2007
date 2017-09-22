@@ -1,0 +1,241 @@
+<html>
+<head>
+
+<title>ASIS Bulletin - Apr/May 1998: Text Retrieval Conferences (TRECs)</title>
+</head>
+<BODY BGCOLOR="#FFFFFF">
+<center>
+<img src="asislogo.gif">
+</center>
+
+<align=left><h1><strong>Special Section</strong></h2>
+
+<h2><strong><FONT COLOR="Green">The Text REtrieval Conferences (TRECs): Providing a Test-Bed for
+Information Retrieval Systems</FONT></h2></strong>
+<B>by Donna Harman</B>
+<BR><hr>
+	
+<p><font color="Green">The Text REtrieval Conference (TREC) workshop series encourages research in
+information retrieval from large text applications by providing a large
+test collection, uniform scoring procedures and a forum for organizations
+interested in comparing their results. Now in its seventh year, the
+conference has become the major experimental effort in the field.
+Participants in the TREC conferences have examined a wide variety of
+retrieval techniques, including methods using automatic thesauri,
+sophisticated term weighting, natural language techniques, relevance
+feedback and advanced pattern matching. The TREC conference series is
+co-sponsored by the National Institute of Standards and Technology (NIST)
+and the Information Technology Office of the Defense Advanced Research
+Projects Agency (DARPA).</font>
+
+<p><font size="+1">I</font>n early 1992, the 25 adventurous research groups participating in TREC-1
+undertook to scale their prototype retrieval systems from searching two
+megabytes of text to searching two gigabytes of text. Large disk drives
+were scarce in 1992, typical research computers were much slower then and
+most groups made Herculean efforts to finish the task. The conference
+itself was enlivened by people telling all the stories that happened along
+the way. But a truly momentous event had occurred: it had been shown that
+the statistical methods used by these various groups were capable of
+handling operational amounts of text and that research on these large test
+collections could lead to new insights in text retrieval.
+<p>	Since then there have been five more TREC conferences, co-sponsored by
+NIST and DARPA, with the latest one (TREC-6) taking place in November of
+1997. The number of participating systems has grown from 25 in TREC-1 to 51
+in TREC-6, including participants from 12 different countries, 21 companies
+and most of the universities doing research in text retrieval. The
+diversity of the participating groups has ensured that TREC represents many
+different approaches to text retrieval, while the emphasis on individual
+experiments evaluated in a common setting has proven to be a major strength
+of TREC.
+<p>	All of the TREC conferences have centered around two main tasks based on
+traditional information retrieval modes: a "routing" task and an "ad hoc"
+task. In the routing task it is assumed that the same questions are always
+being asked, but that new data is being searched. This task is similar to
+that done by news clipping services or by library profiling systems. In the
+ad hoc task, it is assumed that new questions are being asked against a
+static set of data. This task is similar to how a researcher might use a
+library, where the collection is known but the questions likely to be asked
+are unknown.
+<p>	In TREC the routing task is accomplished by using known topics with known
+"right answers" (relevant documents) for those topics, but then using new
+data for testing. The topics consist of natural language text describing a
+user's information need (see <b>The Test Collections</b> below for a sample
+topic). The participants use the training data to produce the "best" set of
+queries (the actual input to the retrieval system), and these queries are
+then tested using new data.
+<p>	The ad hoc task is represented by using known documents, but then creating
+new topics for testing. For both the ad hoc and routing tasks the
+participating groups run 50 test topics against the test documents and turn
+in the top-ranked 1000 documents for each topic. These results are then
+evaluated at NIST, with appropriate performance measures (mainly recall and
+precision) being used for comparison of system results. 
+
+<h3><font color="Green">The Test Collections</font></h3>
+	The creation of a set of large, unbiased test collections has been
+critical to the success of TREC. Like most traditional retrieval
+collections, there are three distinct parts to these collections - the
+documents, the topics and the relevance judgments or "right answers." The
+test collection components are discussed briefly here - for a more complete
+description of the collection, see the TREC-5 conference proceedings
+[Voorhees & Harman 1997].
+<p>	The documents in the current test collections were selected from 11
+different sources: the Wall Street Journal, AP newswires, articles from
+Computer Select disks (Ziff-Davis Publishing), the Federal Register, short
+abstracts from DOE publications, the San Jose Mercury News, U.S. Patents,
+Financial Times, the Congressional Record, the Los Angeles Times and the
+Foreign Broadcast Information Service. There are currently five CD-ROMs
+with approximately one gigabyte of text per disk with only two of these
+used for each TREC, i.e., only two gigabytes of data has generally been
+used in the testing.
+<p>	The topics used in TREC have consistently been the most difficult part of
+the test collection to control. In designing the TREC task, there was a
+conscious decision made to provide "user need" statements rather than more
+traditional queries. Starting in TREC-3, different lengths (and component
+parts) of topics were used in each TREC to explore the effects of topic
+length, such as the use of short titles vs. sentence length descriptions
+vs. full user narratives.
+<p>	The following is one of the topics used in TREC-6.
+<dl>
+	<dt><dd><tt>&lt;num&gt;</tt>&nbsp;&nbsp;&nbsp;&nbsp; Number: 302
+<dd><tt>&lt;title&gt;</tt> Poliomyelitis and Post-Polio
+<dd><tt>&lt;desc&gt;</tt>&nbsp;&nbsp; Description: Is the disease of Poliomyelitis (polio) under control
+in the world?
+<dd><tt>&lt;narr&gt;</tt>&nbsp;&nbsp; Narrative: Relevant documents should contain data on outbreaks of
+the polio disease (large or small scale), medical protection against the
+disease, reports on what has been labeled as "post-polio" problems. Of
+interest would be location of the cases, how severe, as well as what is
+being done in the "post-polio" area.<dd>
+</dl>
+	The relevance judgments are also of critical importance to a test
+collection. For each topic it is necessary to compile a list - as
+comprehensive as possible - of relevant documents. TREC uses a sampling
+method known as pooling that takes the top 100 documents retrieved by each
+system for a given topic and merges them into a pool for relevance
+assessment. This is a valid sampling method since all the systems use
+ranked retrieval methods, with those documents most likely to be relevant
+returned first. The merged list of results is then shown to the human
+assessors, with each topic judged by a single assessor to insure the best
+consistency of judgment. For TREC-6 an average of 1445 documents per topic
+was judged, with about 6% or 92 of these found relevant. 
+
+<h3><font color="Green">TREC Tracks</font></h3>
+	Starting in TREC-4, secondary tasks (tracks) have been added to TREC.
+These tasks have been either related to the main tasks or provide a more
+focused implementation of those tasks. Eight tracks were run inTREC-6:
+
+<dl>
+	<dt><dd>Chinese - <dl>
+	<dt><dd>an ad hoc task with topics and documents in Chinese.<dd>
+</dl>
+
+<dd>Cross-Language - <dl>
+	<dt><dd>an ad hoc task in which some documents were in English,
+some in German and others in French. Each topic was in all three languages,
+and the focus of the track was to retrieve documents that pertain to the
+topic regardless of language.<dd>
+</dl>
+
+<dd>Filtering - <dl>
+	<dt><dd>a task similar to the routing task but one in which the systems
+made a binary decision as to whether the current document should be
+retrieved (as opposed to forming a ranked list).<dd>
+</dl>
+
+<dd>High Precision User Track - <dl>
+	<dt><dd>an ad hoc task in which participants were given
+five minutes per topic to produce a retrieved set using any means desired
+(e.g., through user interaction, completely automatically).<dd>
+</dl>
+
+<dd>Interactive - <dl>
+	<dt><dd>a task used to study user interaction with text retrieval
+systems. In TREC-6 this track examined ways of statistically comparing
+systems running "user-in-the-loop" experiments.<dd>
+</dl>
+
+<dd>NLP - <dl>
+	<dt><dd>an ad hoc task that investigated the contribution natural language
+processing techniques can make to IR systems.<dd>
+</dl>
+
+<dd>Spoken Document Retrieval - <dl>
+	<dt><dd>a "known-item" retrieval task that used 50
+hours of speech "documents" taken from news broadcasts.<dd>
+</dl>
+
+<dd>Very Large Corpus (VLC) - <dl>
+	<dt><dd>an ad hoc task that investigated the ability of
+retrieval systems to handle larger amounts of data. For TREC-6 the corpus
+size was approximately 20 gigabytes.<dd>
+</dl><dd>
+</dl>
+
+<p>	Groups can participate in some or all of the tracks, in addition to
+running the two main tasks. Almost all the tracks had at least 10
+participating groups, with new groups joining TREC to specifically tackle
+some of the tracks.
+
+<h3><font color="Green">TREC Results</font></h3>
+	It is difficult to summarize all the TREC results from six years of work,
+comprising over a thousand major experiments conducted by all the
+participating systems. Each of the conferences has produced a proceedings
+containing papers from all of the participating groups giving the details
+of these experiments. These proceedings additionally have an overview of
+the work, containing some highlights of what was accomplished. 
+<p>	The impact of TREC on text retrieval can be seen in three separate areas: 
+ <ul><li>the impact of the TREC test collections,
+ <li>the impact of the common evaluation forum and the conference itself and 
+ <li>the impact of extending traditional text retrieval research to new areas
+as represented by the tracks.</ul>
+	The test collections, currently five gigabytes in size and containing 350
+topics with relevance judgments, are heavily used throughout the text
+retrieval community. The availability of these collections has allowed
+existing text retrieval research groups in academia to scale their systems
+up to near operational dimensions; additionally it has allowed many new
+research groups to test radically different methods within a realistic
+environment and compare their results with those from more traditional
+methods. Commercial search engines use these collections as one part of
+their in-house performance testing, and companies such as Lexis-Nexis,
+CLARITECH and Verity have reported major improvements based on TREC and its
+collections.
+<p>	The system results in TREC itself show both a steady progression to more
+complex retrieval techniques and the resulting higher performance. Existing
+research groups (such as the Cornell SMART system) report a doubling in
+performance over the six years of TREC, whereas systems new to TREC
+typically double their performance in the first year as they move their
+techniques into current state-of-the-art. The conference itself encourages
+transfer of new methods into many different types of basic search
+techniques. For example, in TREC-2 the OKAPI system from City University,
+London, introduced some new term weighting methods. By TREC-4 these methods
+had been picked up by several groups, including the INQUERY system and a
+modified version of the Cornell SMART system. These groups in turn added to
+the methodology and by TREC-6 most of the other groups had incorporated
+these superior weighting techniques into their own systems.
+<p>	The introduction of the tracks has led to research in new areas of text
+retrieval. The Chinese track and the earlier Spanish track were the first
+(large-scale) formal testing of retrieval systems in languages other than
+English. The Spoken Document track has joined the speech recognition
+community to the text retrieval community. The Cross-Language track, just
+started in TREC-6, exploits the current high interest in cross-language
+retrieval and serves as a testing platform both in the United States and
+Europe.
+<p>	TREC continues to be successful in advancing the state of the art in text
+retrieval, providing a forum for cross-system evaluation using common data
+and evaluation methods and acting as a focal point for discussion of
+methodological questions on how retrieval research evaluation should be
+conducted. TREC-7 is currently underway!! 
+
+<h3><font color="Green">For More Information</font></h3>
+	For more information on TREC, including how to obtain the test
+collections, visit the TREC web site at 
+<center><a href="http://trec.nist.gov">http://trec.nist.gov</a></center>
+<p>This site also contains online versions of the proceedings from past
+conferences and pointers to sources of hard-copy versions of the same. 
+
+	
+<hr>
+<em>Donna Harman is with the National Institute of Standards and Technology in
+Gaithersburg, MD 20899.</em>
+
+</body>
+</html>

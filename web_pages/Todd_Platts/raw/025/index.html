@@ -1,0 +1,381 @@
+
+<!--
+[[html]]
+[[head]]
+[[title]][[%= p_strPageTitle %]][[/title]]
+[[LINK rel="stylesheet" type="text/css" href="/clientSupporterIncludes/styles.css"]]
+[[/head]]
+[[body bgcolor="#FFFFFF" text="#191970" vlink="#CC0033" alink="#6699CC" leftmargin=0 topmargin=0 marginwidth=0 marginheight=0 link="#336633"]]
+[[a name="TopOfPage"]][[/a]]
+[[table width="100%" border="0" cellspacing="0" cellpadding="0" name="Primary"]]
+  [[tr]] 
+    [[td  width="25%" valign="middle" align="center" bgcolor="#191970" rowspan="2"]] 
+      [[!~~- logo ~~-]][[a href="http://www.wacitizenaction.org"]][[img src="http://home.covad.net/~wacitizenaction/_images/WACASM.GIF" alt="Washington Citizen Action Logo" border="0" height="35" width="163"]][[/a]]
+     [[/td]]
+    [[td width="50%" bgcolor="#191970" valign="middle"]]
+      [[div align="center"]][[font face="verdana, Arial, Helvetica, sans-serif" color="#FFFFFF" size="3"]][[br]][[b]]Washington Citizen Action[[/b]][[/font]][[br]]
+        [[font face="Verdana, Arial, Helvetica, sans-serif" color="#FFFFFF" size="1"]][[b]]The State's Largest Grassroots Public Interest Citizen Group[[/b]][[br]][[br]][[/font]][[/div]]
+    [[/td]]
+    [[td width="25%" bgcolor="#191970" align="center" valign="top"]][[font face="Verdana, Arial, Helvetica, sans-serif" size="1"]]&nbsp;[[/font]][[/td]]
+  [[/tr]]
+  [[tr]] 
+    [[td width="50%" valign="middle"]]&nbsp;[[/td]]
+    [[td width="25%" align="center" valign="top" rowspan="3" ]]&nbsp;[[/td]]
+  [[/tr]]
+[[!~~  LEFT NAV~~]]
+  [[tr]] 
+    [[td width="25%" height=500 valign="top" align="center" rowspan="2" bgcolor="#191970"]] 
+      [[table width="94%" border="0" cellspacing="1" cellpadding="3" align="right"]]
+      [[tr bgcolor="#FFFFFF"]] 
+          [[td width="100%"]][[font face="Verdana, Arial, Helvetica, sans-serif" size="1" color="#191970"]][[b]][[a href="http://action.wacitizenaction.org" class=leftNav]]Action Center[[/a]][[/b]][[/font]][[/td]]
+        [[/tr]]
+[[% 	if Application.Contents.Item("bolPAC") then %]]
+			[[tr bgcolor="#CCCCCC"]] 
+          [[td width="100%"]][[a href="/action/login.asp" class="leftNav"]]Login to PAC[[/a]][[/td]]
+        [[/tr]]
+[[% 	end if
+ 	if Application.Contents.Item("bolJoinPage") then %]]
+		[[tr bgcolor="#CCCCCC"]] 
+          [[td width="100%"]][[a href="/join/" class=leftNav]]Join[[/a]][[/td]]
+        [[/tr]]
+[[% 	end if
+ 	if Application.Contents.Item("bolTellAFriend") then %]]
+		[[tr bgcolor="#CCCCCC"]] 
+          [[td width="100%"]][[a href="/tellafriend/" class=leftNav]]Tell a Friend[[/a]][[/td]]
+        [[/tr]]
+[[% 	end if
+	if Application.Contents.Item("bolActivistProfileEditor") then %]]
+		[[tr bgcolor="#CCCCCC"]] 
+          [[td width="100%"]][[a href="/profileeditor/" class=leftNav]]Edit Your Profile[[/a]][[/td]]
+        [[/tr]]
+[[% 	end if %]]
+		[[tr bgcolor="#CCCCCC"]] 
+          [[td width="100%"]][[a href="/action/results.asp" class=leftNav ]]Action Results[[/a]][[/td]]
+        [[/tr]]
+[[% 	if p_bolDisplayList And Not (Request.Servervariables("url") = "/action/index.asp" _
+			And Request.ServerVariables("query_string")&"" [[]] "") then
+		' hide the list on the wac front page %]]
+			[[tr bgcolor="#CCCCCC"]] 
+          [[td width="100%"]][[strong]]Current Actions[[/strong]][[br]][[br]]
+[[% 		set m_objLHRS = Server.CreateObject("ADODB.RecordSet")
+		subGetLiveWebActionItems(m_objLHRS)
+		m_objLHRS.Filter = "ai_status = 3"
+		while Not m_objLHRS.EOF %]]
+		[[a href="/action/index.asp?step=2&item=[[%= m_objLHRS.fields("ai_id").value %]]" class=leftNav]][[%= m_objLHRS.fields("ai_webTitle").value %]][[/a]][[P]]
+[[% 			m_objLHRS.MoveNext
+		wend
+		m_objLHRS.Close : set m_objLHRS = nothing
+	end if %]]
+			[[/td]]
+        [[/tr]]
+         [[tr bgcolor="#CCCCCC"]] 
+          [[td width="100%"]][[font face="Verdana, Arial, Helvetica, sans-serif" size="1" color="#336633"]][[a href="http://home.covad.net/~wacitizenaction/"]]Washington Citizen Action Home[[/a]][[/font]][[/td]]
+        [[/tr]]
+        [[tr bgcolor="#CCCCCC"]] [[SCRIPT LANGUAGE="JavaScript1.1"]]
+[[!~~//Begin Script
+function newPrivacyPolicyWindow() {
+var NewWindow=open('/privacyPolicy.html','PrivacyPolicy','menubar=0,toolbar=0,location=0,directories=0,scrollbars=1,resizable=0,status=0,width=650,height=400,left=100,top=100');
+NewWindow.focus();
+}
+//~~]]
+[[/SCRIPT]]
+          [[td width="100%"]][[font face="Verdana, Arial, Helvetica, sans-serif" size="1" color="#336633"]][[a href="Javascript: newPrivacyPolicyWindow();"]]Privacy Statement[[/a]][[/font]][[/td]]
+        [[/tr]]
+		[[tr bgcolor="#CCCCCC"]] 
+          [[td width="100%"]][[font face="Verdana, Arial, Helvetica, sans-serif" size="1" color="#336633"]][[a href="http://home.covad.net/~wacitizenaction/about/contact.htm"]]Contact Us[[/a]][[/font]][[/td]]
+        [[/tr]]
+        [[tr bgcolor="#CCCCCC"]] 
+          [[td width="100%"]][[font face="Verdana, Arial, Helvetica, sans-serif" size="1" color="#336633"]][[a href="mailto:webmaster@wacitizenaction.org?subject=WCA Web Site"]]Contact Webmaster[[/a]][[/font]][[/td]]
+        [[/tr]]
+
+      [[/table]]
+ 	[[/td]]
+    [[td width="50%" valign="top" align="center" height=1]] &nbsp;[[/td]]
+  [[/tr]]
+  [[tr]] 
+    [[td width="50%" align="left" valign="top"]] 
+          [[table cellpadding="10" cellspacing="0" border="0"]]
+            [[tr]]
+              [[td vAlign="top"]]
+-->
+
+<html>
+<head>
+<title>Legislative Directory</title>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<script language="JavaScript" type="text/JavaScript">
+<!--
+function MM_preloadImages() { //v3.0
+  var d=document; if(d.images){ if(!d.MM_p) d.MM_p=new Array();
+    var i,j=d.MM_p.length,a=MM_preloadImages.arguments; for(i=0; i<a.length; i++)
+    if (a[i].indexOf("#")!=0){ d.MM_p[j]=new Image; d.MM_p[j++].src=a[i];}}
+}
+
+function MM_nbGroup(event, grpName) { //v6.0
+  var i,img,nbArr,args=MM_nbGroup.arguments;
+  if (event == "init" && args.length > 2) {
+    if ((img = MM_findObj(args[2])) != null && !img.MM_init) {
+      img.MM_init = true; img.MM_up = args[3]; img.MM_dn = img.src;
+      if ((nbArr = document[grpName]) == null) nbArr = document[grpName] = new Array();
+      nbArr[nbArr.length] = img;
+      for (i=4; i < args.length-1; i+=2) if ((img = MM_findObj(args[i])) != null) {
+        if (!img.MM_up) img.MM_up = img.src;
+        img.src = img.MM_dn = args[i+1];
+        nbArr[nbArr.length] = img;
+    } }
+  } else if (event == "over") {
+    document.MM_nbOver = nbArr = new Array();
+    for (i=1; i < args.length-1; i+=3) if ((img = MM_findObj(args[i])) != null) {
+      if (!img.MM_up) img.MM_up = img.src;
+      img.src = (img.MM_dn && args[i+2]) ? args[i+2] : ((args[i+1])? args[i+1] : img.MM_up);
+      nbArr[nbArr.length] = img;
+    }
+  } else if (event == "out" ) {
+    for (i=0; i < document.MM_nbOver.length; i++) {
+      img = document.MM_nbOver[i]; img.src = (img.MM_dn) ? img.MM_dn : img.MM_up; }
+  } else if (event == "down") {
+    nbArr = document[grpName];
+    if (nbArr)
+      for (i=0; i < nbArr.length; i++) { img=nbArr[i]; img.src = img.MM_up; img.MM_dn = 0; }
+    document[grpName] = nbArr = new Array();
+    for (i=2; i < args.length-1; i+=2) if ((img = MM_findObj(args[i])) != null) {
+      if (!img.MM_up) img.MM_up = img.src;
+      img.src = img.MM_dn = (args[i+1])? args[i+1] : img.MM_up;
+      nbArr[nbArr.length] = img;
+  } }
+}
+
+//-->
+</script>
+
+<link href="/clientSupporterIncludes/styles.css" rel="stylesheet" type="text/css">
+</head>
+<body  bgcolor="#F6F7DE" link="#003399" vlink="#660066" alink="#3333FF" onLoad="MM_preloadImages('http://www.alleycat.org/images/msg-resources.gif','http://www.alleycat.org/images/msg-marketplace.gif','http://www.alleycat.org/images/msg-action.gif','http://www.alleycat.org/images/msg-about.gif','http://www.alleycat.org/images/home-over.gif','http://www.alleycat.org/images/about-over.gif','http://www.alleycat.org/images/support-over.gif','http://www.alleycat.org/images/action-over.gif','http://www.alleycat.org/images/resources-over.gif','http://www.alleycat.org/images/msg-support.gif','http://www.alleycat.org/images/marketplace-over.gif')">
+<a name="top"></a> 
+<script language="JavaScript" type="text/JavaScript">
+<!--
+function MM_findObj(n, d) { //v4.01
+  var p,i,x;  if(!d) d=document; if((p=n.indexOf("?"))>0&&parent.frames.length) {
+    d=parent.frames[n.substring(p+1)].document; n=n.substring(0,p);}
+  if(!(x=d[n])&&d.all) x=d.all[n]; for (i=0;!x&&i<d.forms.length;i++) x=d.forms[i][n];
+  for(i=0;!x&&d.layers&&i<d.layers.length;i++) x=MM_findObj(n,d.layers[i].document);
+  if(!x && d.getElementById) x=d.getElementById(n); return x;
+}
+
+function MM_changeProp(objName,x,theProp,theValue) { //v6.0
+  var obj = MM_findObj(objName);
+  if (obj && (theProp.indexOf("style.")==-1 || obj.style)){
+    if (theValue == true || theValue == false)
+      eval("obj."+theProp+"="+theValue);
+    else eval("obj."+theProp+"='"+theValue+"'");
+  }
+}
+//-->
+</script>
+<table width="780" border="0" align="center" cellpadding="0" cellspacing="0" style="border-top: 1px solid #FFFFFF; border-right: 1px solid #999999; border-bottom: 1px solid #A7A7A7">
+  <tr> 
+    <td background="http://www.alleycat.org/images/op-3.jpg"><a href="http://www.alleycat.org"><img src="http://www.alleycat.org/images/logo-wh-tr.gif" width="186" height="106" border="0"></a><img src="http://www.alleycat.org/images/msg-action.gif" name="message" width="355" height="106" id="message"></td>
+  </tr>
+  <tr> 
+    <td align="center" bgcolor="#999933" style="border-bottom: 1px solid #666666"><a href="http://www.alleycat.org" target="_top" onClick="MM_nbGroup('down','group1','home','http://www.alleycat.org/images/home-over.gif',1)" onMouseOver="MM_nbGroup('over','home','http://www.alleycat.org/images/home-over.gif','',1)" onMouseOut="MM_nbGroup('out')"><img src="http://www.alleycat.org/images/home.gif" alt="" name="home" width="90" height="20" border="0" onMouseOver="MM_changeProp('message','','src','http://www.alleycat.org/images/text4.gif','IMG')" onload=""></a><a href="http://www.alleycat.org/about.html" target="_top" onClick="MM_nbGroup('down','group1','about','http://www.alleycat.org/images/about-over.gif',1)" onMouseOver="MM_nbGroup('over','about','http://www.alleycat.org/images/about-over.gif','',1)" onMouseOut="MM_nbGroup('out')"><img src="http://www.alleycat.org/images/about.gif" alt="" name="about" width="110" height="20" border="0" onMouseOver="MM_changeProp('message','','src','http://www.alleycat.org/images/msg-about.gif','IMG')" onMouseOut="MM_changeProp('message','','src','http://www.alleycat.org/images/text4.gif','IMG')" onload=""></a><a href="http://www.alleycat.org/support.html" target="_top" onClick="MM_nbGroup('down','group1','support','http://www.alleycat.org/images/support-over.gif',1)" onMouseOver="MM_nbGroup('over','support','http://www.alleycat.org/images/support-over.gif','',1)" onMouseOut="MM_nbGroup('out')"><img src="http://www.alleycat.org/images/support.gif" alt="" name="support" width="110" height="20" border="0" onMouseOver="MM_changeProp('message','','src','http://www.alleycat.org/images/msg-support.gif','IMG')" onMouseOut="MM_changeProp('message','','src','http://www.alleycat.org/images/text4.gif','IMG')" onload=""></a><a href="http://action.alleycat.org" target="_top" onClick="MM_nbGroup('down','group1','action','http://www.alleycat.org/images/action-over.gif',1)" onMouseOver="MM_nbGroup('over','action','http://www.alleycat.org/images/action-over.gif','',1)" onMouseOut="MM_nbGroup('out')"><img src="http://www.alleycat.org/images/action.gif" alt="" name="action" width="150" height="20" border="0" onMouseOver="MM_changeProp('message','','src','http://www.alleycat.org/images/msg-action.gif','IMG')" onload=""></a><a href="http://www.alleycat.org/resources.html" target="_top" onClick="MM_nbGroup('down','group1','resources','http://www.alleycat.org/images/resources-over.gif',1)" onMouseOver="MM_nbGroup('over','resources','http://www.alleycat.org/images/resources-over.gif','',1)" onMouseOut="MM_nbGroup('out')"><img src="http://www.alleycat.org/images/resources.gif" alt="" name="resources" width="110" height="20" border="0" onMouseOver="MM_changeProp('message','','src','http://www.alleycat.org/images/msg-resources.gif','IMG')" onMouseOut="MM_changeProp('message','','src','http://www.alleycat.org/images/text4.gif','IMG')" onload=""></a><a href="http://www.alleycat.org/marketplace.html" target="_top" onClick="MM_nbGroup('down','group1','marketplace','http://www.alleycat.org/images/marketplace-over.gif',1)" onMouseOver="MM_nbGroup('over','marketplace','http://www.alleycat.org/images/marketplace-over.gif','',1)" onMouseOut="MM_nbGroup('out')"><img src="http://www.alleycat.org/images/marketplace.gif" alt="" name="marketplace" width="130" height="20" border="0" onMouseOver="MM_changeProp('message','','src','http://www.alleycat.org/images/msg-marketplace.gif','IMG')" onMouseOut="MM_changeProp('message','','src','http://www.alleycat.org/images/text4.gif','IMG')" onload=""></a></td>
+  </tr>
+</table>
+<table width="780" border="0" align="center" cellpadding="0" cellspacing="0" bgcolor="#CCCC99" style="border-right: 1px solid #999999; border-bottom: 1px solid #666666">
+  <tr> 
+    <td bgcolor="#CCCC99"> <table border="0" align="center" cellpadding="0" cellspacing="8">
+        <tr> 
+          <td><table border="0" cellpadding="0" cellspacing="0" bgcolor="#FFFFFF">
+              <tr> 
+                <td><img src="http://www.alleycat.org/images/hdr-action.gif" width="558" height="37"></td>
+                <td><img src="http://www.alleycat.org/images/hdr-rt-gold.gif" width="199" height="37"></td>
+              </tr>
+              <tr> 
+                <td valign="top" background="http://www.alleycat.org/images/bg-crm-558.gif"><table width="550" border="0" cellspacing="0" cellpadding="10">
+                    <tr> 
+                      <td valign="top"> 
+              
+			<!-- Contents Starts Here -->
+
+<table cellpadding="4" cellspacing="4" border="0">
+	<tr>
+		<td width="100%">
+
+		<h2> Find your Legislators </h2><br>
+
+<p>
+	<table width= border="0" cellpadding="4" align="center" cellspacing="1">
+		<tr>
+			<td  class="dividerbg" colspan="4">
+				<span class=dirHead>Representative&nbsp;Todd&nbsp;Platts&nbsp;&nbsp;(R-PA)&nbsp;
+					19th District
+				</span>
+			</td>
+		</tr>
+		<tr>
+			<td bgcolor=""  colspan="2" width="25%">
+				<img src="http://actioncenterimg.ctsg.com/FL/H/Platts_Todd_198419_1.jpg" width="100" border=0  alt="FL/H/Platts_Todd_198419_1.jpg">
+			</td>
+			
+			<td  width = "33%"  valign="top">
+				<span class=dirSubHead>Capitol Hill Address</span><br>			
+				Representative Todd Platts<br>1032 Longworth HOB <br>Washington, DC  20515-3819<br>Phone:&nbsp;(202) 225-5836<br>Fax:&nbsp;(202) 226-1000<br>
+			</td>
+			
+			<td  bgcolor="" valign="top" width="33%">
+				<span class=dirSubHead>District Address</span><br>Representative Todd Platts<br>22 Chambersburg Street<br>Gettysburg, PA 17325<br>Phone:&nbsp;(717) 338-1919<br>Fax:&nbsp;(717) 334-6314<br>
+			</td>
+			
+		</tr>
+		<tr>
+			<td colspan="4">
+			Email:&nbsp;<A HREF="http://www.house.gov/writerep/">http://www.house.gov/writerep/</A><BR>
+Click here for the legislator's website</a>
+			</td>
+		</tr>
+	</table>
+</p>
+
+<table width= border="0" cellpadding="4" align="center" cellspacing="1">
+	<tr>
+		
+		<td valign=bottom  class = "dividerbg" colspan = 2 width = "100%">
+			<span class=dirHead>
+				Contact/Search Info
+			</span>
+		</td>
+	</tr>
+	<tr>
+	
+		<td  align="left" valign = top>
+			<span class=bodyText>
+				<ul>	
+						
+					<li><a href="http://www.house.gov/writerep/">Write to Representative Todd  Platts </a></li>
+				
+					<li><a href="/action/">Send one of our issue letters to Representative Todd  Platts </a></li>
+				
+					<li>Find other <a href="/legdirectory/Index.asp?step=3b&state=PA"> Legislators in PENNSYLVANIA</a></li>			
+				
+				</ul>
+			</span>
+		</td>
+	</tr>
+
+	<tr>
+		 
+		<td valign = bottom  class = "dividerbg" >
+			<span class=dirHead>Career/Personal Information</span>
+		</td>
+		
+		<td valign = bottom colspan=2  class = "dividerbg">
+			<span class=dirHead>
+			
+				Staff/Committees
+			
+			</span>
+		</td>
+	</tr>
+	<tr>
+	 
+		<td bgcolor = ""  valign = top>
+		
+			<span class=formText>Year First Elected:</span>&nbsp;2000<br>
+		
+			<span class=formText>Re-election Year:</span>&nbsp;2002<br>
+		
+			<span class=formText>Marital Status:</span>&nbsp;Married                                           <br>
+		
+			<span class=formText>Spouse Name:</span>&nbsp;Leslie<br>
+		
+			<span class=formText>Family:</span>&nbsp;T.J. and Kelsey<br>
+		
+		</td>
+	
+		<td  valign="top">
+		
+			<span class=dirSubHead>COMMITTEES</span>
+				<!-- <hr size = 1 noshade> -->
+				<ul style="padding-left:-40px;"><li>House Education and Workforce</li><li>House Government Reform</li><li>House Transportation and Infrastructure</li></ul>
+		</td>
+	</tr>
+</table>
+
+		</td>
+	</tr>
+</table>
+<br>
+<br>
+
+<div align="center">
+<a href="/legdirectory/">Back to Legislative Directory Main Page</a>
+</div>
+
+<br>
+	
+<!--footer starts here -->
+			<P><P><!-- end center text -->
+<br>
+                        </p></td>
+                    </tr>
+                  </table></td>
+                <td valign="top" background="http://www.alleycat.org/images/bg-gold-199.gif"> 
+                  <table width="190" border="0" cellspacing="0" cellpadding="8">
+                    <tr> 
+                      <td>
+<img src="/images/action-image2.jpg" alt="Photo Copyright Alley Cat Allies"><br><br>
+                        <!--<p><a class="nav" href="http://www.alleycat.org/locally.html">Act 
+                          Locally</a></p>
+                        <p><a class="nav" href="http://www.alleycat.org/domore.html">What 
+                          More Can You Do?</a></p>-->
+                        
+
+						<p><a class="nav" href="/action/">Action Center Home</a></p>
+
+						<p class="notNav"><img src="/images/bullet-gray.gif">Find Your Legislators</p>
+
+						<!-- commented out on 2-16-04, rowan -- <p><a class="nav" href="http://www.alleycat.org/locally.html">Act Locally</a></p> -->
+						<p><a class="nav" href="http://www.alleycat.org/releases.html">Press Releases</a></p>
+						<p><a class="nav" href="http://www.alleycat.org/domore.html">What More Can You Do?</a></p>  
+
+						<p><a href="/tellafriend/" class="nav">Tell a Friend</a></p>
+
+						<p><a href="/action/results.asp" class="nav">Action Results</a></p>
+
+                        <p>&nbsp;</p></td>
+                    </tr>
+                </table></td>
+              </tr>
+              <tr> 
+                <td><img src="http://www.alleycat.org/images/btm-crm-558.gif" width="558" height="7"></td>
+                <td><img src="http://www.alleycat.org/images/btm-gold-199.gif" width="199" height="7"></td>
+              </tr>
+              <tr > 
+                <td colspan="2" background="http://www.alleycat.org/images/bg-footer.gif"><p>&nbsp;</p>                  
+				<p class="footer">
+				<a class="footer" href="http://www.alleycat.org/events.html">Events</a>
+				&nbsp;&nbsp;<img src="http://www.alleycat.org/images/yellowdot.gif" width="4" height="4">&nbsp;&nbsp;
+				<a class="footer" href="http://www.alleycat.org/terms.html">Terms of use</a>
+				&nbsp;&nbsp;<img src="http://www.alleycat.org/images/yellowdot.gif" width="4" height="4">&nbsp;&nbsp;
+				<a class="footer" href="http://www.alleycat.org/address.cfm">Change of address</a>
+				&nbsp;&nbsp;<img src="http://www.alleycat.org/images/yellowdot.gif" width="4" height="4">&nbsp;&nbsp;
+				<a class="footer" href="http://www.alleycat.org/glossary.html">Glossary</a> 
+				&nbsp;&nbsp;<img src="http://www.alleycat.org/images/yellowdot.gif" width="4" height="4">&nbsp;&nbsp;
+				<a class="footer" href="http://www.alleycat.org/survey.html">Survey</a> 
+				&nbsp;&nbsp;<img src="http://www.alleycat.org/images/yellowdot.gif" width="4" height="4">&nbsp;&nbsp;
+				<a class="footer" href="http://www.alleycat.org/faqs.html">FAQs</a>
+				&nbsp;&nbsp;<img src="http://www.alleycat.org/images/yellowdot.gif" width="4" height="4">&nbsp;&nbsp;
+				<a class="footer" href="http://www.alleycat.org/feralpower.html">Feral Power!</a></p>
+				<p class="footer">&copy; 2004, Alley Cat Allies
+				&nbsp;&nbsp;<img src="http://www.alleycat.org/images/yellowdot.gif" width="4" height="4">&nbsp;&nbsp;
+				<a class="footer" href="http://www.alleycat.org/response.html">Contact Us</a> </p><br></td>
+              </tr>
+              <tr> 
+                <td colspan="2"><img src="http://www.alleycat.org/images/bottom-footer.gif"></td>
+              </tr>
+            </table></td>
+        </tr>
+      </table></td>
+  </tr>
+</table><p></p>
+</body>
+</html>

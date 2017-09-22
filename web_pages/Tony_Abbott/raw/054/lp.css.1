@@ -1,0 +1,370 @@
+/*
+	CSS files kept in the 'schemes' directory can be used to
+	costumize your K2 installation without having to mess
+	with the core K2 files. This in turn makes it easier to
+	upgrade to new K2 version as well as debug any problems
+	that might occur.
+
+	You select schemes from the K2 Options page in the
+	'Presentation' section of your WordPress administration.
+	
+	Author Name	: Robert Corr
+	Author Site	: http://www.redrag.net/
+	Scheme Name	: Larvatus Prodeo
+	Comments	: For the LP blog
+*/
+
+body {
+    background: #c2afc9; url(lp/bg4.gif);
+margin-top: 20px;
+    }
+    
+#page {
+	/* The entire design is contained within the 'page' id */
+	font-family: 'Lucida Grande', Verdana, Arial, Sans-Serif; Georgia, Times, Times New Roman, serif;
+	font-size: 1.1em;
+	text-align: left;
+	padding: 10px 0 0 0;
+	}
+
+small.metadata {
+font-size: 100%;
+}
+	
+#header {
+	/* Contains the H1 and menu */
+	background-color: #700070;
+	padding-bottom: 160px;
+	}
+	
+#header1 {
+background-color: white;
+}
+
+#header1 h1 {
+    width: 65%;
+    }
+
+#header #headersearch {
+    position: absolute;
+    left: 570px;
+    margin-top: 17px;
+    }
+
+input[type=text], input[type=search], textarea {
+	color: #999;  /* #999 */
+	padding: 2px 0 2px 2px;
+	margin: 0;
+	border: 1px solid #999;
+	}
+
+.livesearchform {
+width: 200px;
+}
+
+#livesearch {
+color: #999;  /* 999  */
+border: 1px solid #999;
+width: 100px;
+}
+
+.LSRow:hover, #LSHighlight, #LSHighlight:hover {
+	background: #ffbbff url('lp/livesearchbghilight.jpg') center repeat-y;	}
+
+
+#footer {
+    border-top: solid 40px #700070;
+    border-bottom: solid 40px white;
+    padding: 20px 30px 0 30px;
+    }
+    
+    
+.primary {
+	/* Contains the main column */
+    min-width: 300px;
+    width: 60%;
+    padding-left: 30px;
+    padding-right: 30px;
+	}
+
+.secondary {
+    font-size: 1.1em;
+    }
+
+#topnote {
+    background-color: #e2cfe9;
+    padding: 10px 15px;
+    margin: 10px 0;
+    }
+
+#topnote em {
+    font-weight: bold;
+    }
+
+.item {
+	/* Each entry is contained within the 'item' class */
+	font-family: 'Lucida Grande', Verdana, Arial, Sans-Serif; Georgia, Times, Times New Roman, serif;
+	}
+
+.primary .item {
+    margin-bottom: 15px;
+	}
+
+
+.primary .item .itemtext {
+	/* The meat and potatoes of every entry */
+	font-family: 'Lucida Grande', Verdana, Arial, Sans-Serif; Georgia, Times, Times New Roman, serif;
+	text-align: left;
+	color: black;
+	}
+
+.secondary {
+	/* Contains the sidebar */
+	}
+
+/*- Headings */
+
+h1, h2, h3, h4 {
+	font-family: Georgia, Times, Times New Roman, serif;
+	color: #700070;
+	}
+
+h1 { /* H1 is used for the title of your blog */
+    margin: 40px 0 0 0;
+   	background: white;
+   	padding-top: 0;
+    }
+
+h1 img {
+    margin-left: 25px;
+    margin-bottom: 10px;
+   	}
+   	
+.primary h2 {
+    
+    }
+
+.secondary h2 { /* Secondary H2 is sidebar headlines */
+
+    }
+
+.primary h3 { /* H3 is entry headlines. */
+    letter-spacing: 0px;
+    }
+.primary h4 { /* H4 is comments and replyform headlines */
+    
+    }
+
+
+
+h2, h2 a, h2 a:visited,
+h3, h3 a, h3 a:visited,
+h4, h4 a, h4 a:visited {
+	color: #700070;
+	}
+
+
+/*- Main Menu in Header */
+
+ul.menu li.current_page_item a {
+    background-color: #bb66bb;
+    color: #700070 !important;
+    }
+ul.menu li.current_page_item a:hover {
+	background: #bb99bb;
+	text-decoration: none;
+	}
+
+
+/*- Primary Contents */
+
+.comments .commentlist li {
+    margin-left: 0;
+    margin-right: 0;
+padding: 10px 20px 10px 10px;
+    }
+.authorcomment {
+background-color: white;
+}
+.comments .commentlist li img.gravatar {
+	float: left;
+	margin: 0 10px 0 0;
+	border: 3px #700070 solid;
+	padding: 2px;
+	}
+
+ol.commentlist {
+margin-bottom: 30px;
+}
+
+.primary img.gravatar {
+	float: left;
+	margin: 3px 0 0 0;
+	border: 3px #700070 solid;
+	padding: 2px;
+	background-color: white;
+    }
+
+.primary .itemhead {
+    display: block;
+    /* background: url(lp/itemheadbg.gif) repeat-y transparent; */
+
+    }
+
+
+    
+.primary .itemhead .exceptgravatar {
+    margin-left: 62px;
+    display: block;
+    }
+
+.primary .itemtext {
+    margin-top: 10px;
+    }
+    
+.comments .commentlist li .commentauthor {
+	font-size: 1.5em;
+	font-weight: bold;
+	letter-spacing: -1px;
+	}
+
+.comments .commentlist .itemtext {
+    margin-left: 70px;
+    }
+	
+.comments .commentlist li.alt {
+    background-color: #ffdeff;
+    }
+
+div.commentdata {
+margin-left: 70px;
+}
+
+
+p.itemfoot {
+	padding-left: 300px;
+    }
+.moretext {
+
+    }
+
+p.itemfoot .metalink {
+	font-size: 1.4em;
+	line-height: 0.3em;
+	letter-spacing: -1px;
+	text-transform: lowercase;
+	}
+
+div.postfooter {
+    border-bottom: 1px #dd99dd solid;
+    padding-bottom: 5px;
+    text-align: right;
+    }
+
+/*- Secondary Contents (sidebar) */
+
+.sb_highlightbox {
+    background-color: #ffdeff;
+    color: #700070;
+    padding-top: 15px;
+    margin-top: 0px;
+    }
+.sb_highlightbox p {
+    margin-left: 10px;
+    margin-right: 10px;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    margin-top: 0;
+    }
+.sb_highlightbox p.donate {
+    padding-bottom: 0;
+    margin-bottom: -5px;
+    }
+.sb_highlightbox h2 {
+    margin-left: 10px;
+    margin-right: 10px;
+    margin-top: 0px;
+    padding-top: 15px;
+    }
+
+.sb_highlightbox form {
+    margin: -5px 10px 0;
+    padding-bottom: 15px;
+    }
+.sb_highlightbox a {
+    font-weight: bold;
+    }
+
+
+/*- Links */
+
+
+
+
+
+    
+h2 a:hover, h2 span a:hover {
+	color: #bb66bb !important;
+	}
+
+a {
+	color: #700070;
+	text-decoration: none;
+	}
+
+.itemtext a {
+    text-decoration: none;
+    font-weight: bold;
+    }
+
+.itemtext a:visited {
+	color: #700070;
+	}
+.itemfoot a {
+    text-decoration: none !important;
+    }
+.primary .moretext a {
+    text-decoration: none !important;
+    }
+.primary a .moretext {
+    text-decoration: none !important;
+    }
+
+a:hover, a:visited:hover {
+	text-decoration: underline;
+	color: #bb66bb;
+	}
+a img {
+border: 3px solid #700070;
+}
+a:hover img {
+border: 3px #bb66bb solid;
+}	
+h3 a:hover {
+	text-decoration: none !important;
+	}
+
+.primary img.postgrav {
+    float: left;
+    margin: 0 10px 2px 0;
+	border: 3px #700070 solid;
+	padding: 2px;
+	}
+
+.sb_comments li a { font-weight: bold; }
+.sb_comments li small a { font-weight: normal; }
+.sb_comments { font-size: 90%; line-height: 100%; }
+.sb_comments small { font-size: 100%; }
+
+h1 a img { border: none; }
+h1 a:hover img { border: none; }
+
+form#commentform textarea,
+form#commentform input {
+color: #333;
+}
+
+form#commentform textarea:focus,
+form#commentform input:focus {
+color: #333;
+}

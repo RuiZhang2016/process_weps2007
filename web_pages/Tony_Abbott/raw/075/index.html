@@ -1,0 +1,366 @@
+<?xml version="1.0" encoding="iso8859-1"?>
+<!DOCTYPE html PUBLIC "-//W3c//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+<title>Australian Labor Party: Tony Abbott's Shameful Record</title>
+<link rel="stylesheet" href="layout.css" type="text/css" media="all" title="Graphical" />
+<script type="text/javascript" language="javascript">
+<!--
+function MM_preloadImages() { //v3.0
+ var d=document; if(d.images){ if(!d.MM_p) d.MM_p=new Array();
+   var i,j=d.MM_p.length,a=MM_preloadImages.arguments; for(i=0; i<a.length; i++)
+   if (a[i].indexOf("#")!=0){ d.MM_p[j]=new Image; d.MM_p[j++].src=a[i];}}
+}
+
+function MM_swapImgRestore() { //v3.0
+  var i,x,a=document.MM_sr; for(i=0;a&&i<a.length&&(x=a[i])&&x.oSrc;i++) x.src=x.oSrc;
+}
+
+function MM_findObj(n, d) { //v4.01
+  var p,i,x;  if(!d) d=document; if((p=n.indexOf("?"))>0&&parent.frames.length) {
+    d=parent.frames[n.substring(p+1)].document; n=n.substring(0,p);}
+  if(!(x=d[n])&&d.all) x=d.all[n]; for (i=0;!x&&i<d.forms.length;i++) x=d.forms[i][n];
+  for(i=0;!x&&d.layers&&i<d.layers.length;i++) x=MM_findObj(n,d.layers[i].document);
+  if(!x && d.getElementById) x=d.getElementById(n); return x;
+}
+
+function MM_swapImage() { //v3.0
+  var i,j=0,x,a=MM_swapImage.arguments; document.MM_sr=new Array; for(i=0;i<(a.length-2);i+=3)
+   if ((x=MM_findObj(a[i]))!=null){document.MM_sr[j++]=x; if(!x.oSrc) x.oSrc=x.src; x.src=a[i+2];}
+}
+function popup(url,width,height)
+{
+	var left = 0; 
+	var top = 0;
+	if(width==null)
+	{
+		var width=640;
+	}
+	if(height==null)
+	{
+		var height=480;
+	}
+	
+	if (typeof( window.innerWidth ) == 'number') {
+	// non-IE...
+		left = (window.innerWidth-width)/2;
+		top = (window.innerHeight-height)/2;
+	} else if (document.documentElement && 
+			  ( document.documentElement.clientWidth || document.documentElement.clientHeight )) {
+	// IE 6+ in 'standards compliant mode'...
+		left = (document.documentElement.clientWidth - width) / 2;
+		top = (document.documentElement.clientHeight - width) / 2;
+	} else if( document.body && ( document.body.clientWidth || document.body.clientHeight ) ) {
+    // IE 4 compatible...
+		left = (document.body.clientWidth - width) / 2;
+		top = (document.body.clientHeight - width) / 2;
+	}
+
+	eval("var pup = window.open('"+url+"', 'pupwin', 'toolbar=0,scrollbars=1,location=0,statusbar=0,menubar=0,resizable=0,width="+width+",height="+height+",left = "+left+",top = "+top+"');");
+}
+function toggle_enews(input,type)
+{
+	if(type=='focus')
+	{
+		if(input.value=='your@email')
+		{
+			input.value='';
+		}
+	}
+	else
+	{
+		if(input.value=='')
+		{
+			input.value='your@email';
+		}
+	}
+}
+function toggle_search(input,type)
+{
+	if(type=='focus')
+	{
+		if(input.value=='Site Search')
+		{
+			input.value='';
+		}
+	}
+	else
+	{
+		if(input.value=='')
+		{
+			input.value='Site Search';
+		}
+	}
+}
+function addbookmark(title,url)
+{
+	if (window.sidebar)
+	{
+		window.sidebar.addPanel(title, url,"");
+	} 
+	else if(document.all)
+	{
+		window.external.AddFavorite( url, title);
+	}
+	else if(window.opera && window.print)
+	{
+		return true;
+	}
+}
+function setActiveStyleSheet(title)
+{
+	var i, a, main;
+	for(i=0;(a = document.getElementsByTagName("link")[i]);i++)
+	{
+		if(a.getAttribute("rel").indexOf("style") != -1 && a.getAttribute("title"))
+		{
+			a.disabled = true;
+			if(a.getAttribute("title") == title) a.disabled = false;
+		}
+	}
+}
+// Function: getTarget
+// Args: e : the event object
+//
+// Output: the target object of the event fired.
+// Description: A cross browser get target function.
+function getTarget(e) {
+	if (!window.event) {
+		el = e.target;
+	} else {
+		el = event.srcElement;
+	}
+	return(el);
+}
+// Function: addEvent
+// Args: elm : the object to add the event to
+//	 evType: the event type to fire
+//	 fn : the function to call when event is fired
+//	 useCapture:  N/A
+//
+// Output: none
+// Description:  A cross-browser event handling for IE5+, NS6 and Mozilla 
+function addEvent(elm, evType, fn, useCapture) {
+ 
+  if (elm.addEventListener) { 
+    elm.addEventListener(evType, fn, useCapture); 
+    return true; 
+  } else if (elm.attachEvent) { 
+    var r = elm.attachEvent('on' + evType, fn); 
+    EventCache.add(elm,evType,fn);
+    return r; 
+  } else {
+    elm['on' + evType] = fn;
+  }
+}
+// Function: removeEvent
+// Args: elm : the object to remove the event from
+//	 evType: the event type to fire
+//	 fn : the function to remove from the event handler
+//	 useCapture:  N/A
+//
+// Output: none
+// Description:  A cross-browser event handling for IE5+, NS6 and Mozilla 
+function removeEvent(elm, evType, fn, useCapture)
+{
+	if (elm.removeEventListener) {
+		elm.removeEventListener(evType, fn, useCapture); 
+	}
+	else if (elm.attachEvent)
+	{ 
+		var r = elm.detachEvent('on' + evType, fn);
+		return r;
+	}
+	else
+	{
+    		elm['on' + evType] = '';
+	}
+}
+function getEl(id)
+{
+	var obj;
+	if(document.all&&document.all[id])
+	{
+		obj=document.all[id];
+	}
+	else if(document.layers&&document.layers[id])
+	{
+		obj=document.layers[id];
+	}
+	else if (document.getElementById&&document.getElementById(id))
+	{
+		obj=document.getElementById(id);
+	}
+	return(obj);
+}
+function getElLeft(el)
+{
+    var nLeftPos = el.offsetLeft;          // initialize var to store calculations
+    var eParElement = el.offsetParent;     // identify first offset parent element  
+    while (eParElement != null)
+    {                                            // move up through element hierarchy
+        nLeftPos += eParElement.offsetLeft;      // appending left offset of each parent
+        eParElement = eParElement.offsetParent;  // until no more offset parents exist
+    }
+    return nLeftPos;                             // return the number calculated
+}
+function getElTop(el)
+{
+    var nTopPos = el.offsetTop;            // initialize var to store calculations
+    var eParElement = el.offsetParent;     // identify first offset parent element  
+    while (eParElement != null)
+    {                                            // move up through element hierarchy
+        nTopPos += eParElement.offsetTop;        // appending top offset of each parent
+        eParElement = eParElement.offsetParent;  // until no more offset parents exist
+    }
+    return nTopPos;                              // return the number calculated
+}
+-->
+</script>
+<meta http-equiv="content-type" content="text/html; charset=iso-8859-1" />
+<meta http-equiv="cache-control" content="max-age=300" />
+<meta name="author" content="ALP National Secretariat" />
+<meta name="robots" content="index,follow" />
+<meta name="MSSmartTagsPreventParsing" content="true" />
+<meta name="description" content="Tony Abbott's Shameful Record" />
+<meta name="keywords" content="" />
+<link rel="shortcut icon" href="favicon.ico" />
+</head>
+<body onload="MM_preloadImages('/images/tpl/icon_email_f2.gif','/images/tpl/icon_print_f2.gif','/images/tpl/icon_text_f2.gif','/images/tpl/icon_bookmark_f2.gif');">
+<div id="header">
+<table width="100%" border="0" cellpadding="0" cellspacing="0" title="Header Table">
+<tr>
+	<td width="130" align="center"><a href="http://www.alp.org.au/index.php"><img src="logo_left_cnr.gif" alt="ALP Logo" /></a></td>
+	<td width="100%">
+		<table border="0" cellpadding="0" cellspacing="0" width="100%">
+		<tr style="background-image:url(/images/tpl/alp_montage_repeat.jpg);background-repeat:repeat-x;height:122px;">
+		<td style="background-image:url(/images/tpl/alp_montage.jpg);background-repeat:no-repeat;" width="100%">&nbsp;</td>
+		</tr>
+		<tr style="background-color:#000000;height:20px;">
+		<td>
+			<form id="searchform" action="http://www.alp.org.au/search.php" method="get">
+			<table border="0" cellpadding="0" cellspacing="0" width="100%">
+			<tr>
+			<td id="hnav" align="left">
+				<ul>
+<li><a href="http://www.alp.org.au/" title="ALP home page">&nbsp;&nbsp;&nbsp;&nbsp;Home&nbsp;&nbsp;</a></li>
+<li><a href="http://www.alp.org.au/about/index.php" style="padding-left:10px;" title="About the Federal Labor Party">About the ALP&nbsp;&nbsp;</a></li>
+<li><a href="http://www.alp.org.au/people/index.php" style="padding-left:10px;" title="Members and Senators">ALP people&nbsp;&nbsp;</a></li>
+<li><a href="http://www.alp.org.au/policy/index.php" style="padding-left:10px;" title="Labor's policy principles">Policy&nbsp;&nbsp;</a></li>
+<li><a href="http://www.alp.org.au/media/index.php" style="padding-left:10px;" title="Latest News from the ALP">News&nbsp;&nbsp;</a></li>
+<li><a href="http://eherald.alp.org.au" style="padding-left:10px;" title="Labor eHerald">ALP journal&nbsp;&nbsp;</a></li>
+</ul>
+			</td>
+			<td nowrap="nowrap" align="right">
+				<input type="text" name="keywords" value="Site Search" onfocus="toggle_search(this,'focus');" onblur="toggle_search(this,'blur');" class="searchinput" /><input type="image" src="go_button.png" alt="Search" style="height:15px;vertical-align:middle;margin:0px 10px 0px 5px;" />
+				
+			</td>
+			</tr>
+			</table>
+			</form>
+		</td>
+		</tr>
+		</table>
+	</td>
+</tr>
+</table>
+
+</div>
+<div id="wrapper">
+<div id="contentwrap">
+<div id="content">
+<div id="locationbar">
+<a href="http://www.alp.org.au/" title="Home">Home</a>&nbsp;&gt;&nbsp;<a href="http://www.alp.org.au/media/" title="News">News</a>&nbsp;&gt;&nbsp;Tony Abbott's Shameful Record</div>
+<h2>Tony Abbott's Shameful Record</h2><table border="0" cellpadding="0" cellspacing="0" width="100%" style="margin-bottom:10px;"><tr><td width="99%"><img src="roxonn.jpg" alt="Nicola Roxon - Shadow Minister for Health" style="border:3px double #004b97;margin-right:5px" /><br /><strong><a href="http://www.alp.org.au/people/vic/roxon_nicola.php">Nicola Roxon</a></strong></td></tr></table><h3>Media Statement - 23rd January 2007</h3><p>Shadow Health Minister Nicola Roxon today condemned Tony Abbott&rsquo;s shameful record, and questioned John Howard&rsquo;s decision to leave him in the Health portfolio.<br />
+<br />
+&ldquo;Tony Abbott has consistently failed to address some of the biggest challenges facing the Australian health system,&rdquo; Ms Roxon said.<br />
+<br />
+&ldquo;Quality healthcare is increasingly unaffordable for millions of Australian families, we have a shortage of doctors, dentists and nurses, and Mr Abbott refuses to take responsibility for any of it.<br />
+<br />
+&ldquo;I&rsquo;m surprised Mr Howard doesn&rsquo;t think the health of Australian families is important enough to replace Mr Abbott with somebody more competent &ndash; or simply more interested,&rdquo; said Ms Roxon.<br />
+<br />
+&ldquo;People should never have to think about whether they can afford to go to the doctor. But sadly, under the Howard Government, they have to do exactly that.<br />
+<br />
+&ldquo;Health prices are increasing faster each year than the general inflation rate.<br />
+<br />
+&ldquo;At the same time, there are simply not enough doctors and nurses in this country. Every Australian must be able to get help when they need it &ndash; but that&rsquo;s just not the case right now.<br />
+<br />
+&ldquo;And to make matters worse, Tony Abbott has consistently failed to take responsibility for any of these issues. He is always playing the blame game &ndash; blaming doctors, blaming the States, blaming anybody but himself.&rdquo;<br />
+<br />
+Ms Roxon challenged the Minister to take responsibility for the problems facing Australia&rsquo;s health system.<br />
+<br />
+&ldquo;I challenge Tony Abbott to bring health costs down, to start fixing the workforce crisis, and to end the blame game.&rdquo;<br />
+<br /></p></div>
+</div>
+
+<div id="left">
+	<div id="innerleft">
+		<div class="lhsheading">
+<img src="lhs_arrow.png" align="top" alt="Get Involved" />
+<a href="http://www.alp.org.au/action/index.php" title="Get Involved">ALP Network</a>
+</div>
+<ul>
+<li><a href="http://www.alp.org.au/action/contact.php" title="Contact the ALP" >Contact</a></li>
+<li><a href="http://www.alp.org.au/action/feedback.php" title="Provide feedback to the ALP" >Feedback</a></li>
+<li><a href="http://www.alp.org.au/action/donate.php" title="Assist the ALP to build for the future" target="_blank">Donate</a></li>
+<li><a href="http://www.alp.org.au/action/join.php" title="Play a constructive part in the ALP and Australia" >Join</a></li>
+<li><a href="http://www.alp.org.au/media/rss.php" title="Get the ALP RSS News Feed" >RSS Feed</a></li>
+<li><a href="http://www.alp.org.au/help.php" title="Tips for getting the best from the ALP'S WWW site" >Help</a></li>
+</ul>
+<div class="lhsheading">
+<img src="lhs_arrow.png" align="top" alt="The ALP Web" />
+<a href="http://www.alp.org.au/about/index.php" title="The ALP Web">ALP Web</a>
+</div>
+<ul>
+<li><a href="http://www.alp.org.au/platform/index.php" title="ALP National Platform and Constitution 200" >National Platform and Constitution</a></li>
+<li><a href="http://www.alp.org.au/features/npc.php" title="National Policy Committee - Labor's National Policy Dialogue" >National Policy Committee</a></li>
+<li><a href="http://www.alp.org.au/action/links.php" title="Links to all branches of the ALP and other sites of interest" >States, Territories and other Links</a></li>
+<li><a href="http://www.alp.org.au/laborherald/index.php" title="The national journal of the ALP" >Labor eHerald</a></li>
+<li><a href="http://www.chifley.org.au/index.php" title="Public policy debate and progressive thinking in Australia." target="_blank">Chifley Research Centre</a></li>
+<li><a href="http://lwn.alp.org.au/index.php" title="The peak women's organisation of the ALP." target="_blank">Labor Women's Network</a></li>
+<li><a href="http://www.alpabroad.org/" title="ALP overseas" target="_blank">Australian Voters Abroad</a></li>
+</ul>
+		<div class="lhsheading">
+		<img src="lhs_arrow.png" alt="ALP Enews" /><a href="http://www.alp.org.au/action/enews/index.php">ALP e-News</a>
+		</div>
+		<div id="enews">
+			To receive regular updates<br />
+			<form id="enewsform" action="http://www.alp.org.au/action/enews/index.php" method="post">
+			<input type="hidden" name="task" value="fast_signup" />
+			Email Address:<br />
+	
+			<input type="text" class="enewsinput" name="email" value="your@email" onfocus="toggle_enews(this,'focus');" onblur="toggle_enews(this,'blur');" /><input type="image" src="go_button.png" alt="Signup" style="margin-top:3px;" />
+			</form>
+		</div>
+	</div>
+</div>
+
+<div id="right">
+	<div id="navtools">
+	<a href="http://www.alp.org.au/emailpage.php?url=/media/0107/ms231.php" onmouseout="MM_swapImgRestore()" onmouseover="MM_swapImage('Image1','','/images/tpl/icon_email_f2.gif',1)">
+	<img src="icon_email.gif" alt="Email link to a friend" id="Image1" /></a>
+	<a href="http://www.alp.org.au/media/0107/ms231.php?print=on" onmouseout="MM_swapImgRestore()" onmouseover="MM_swapImage('Image2','','/images/tpl/icon_print_f2.gif',1)"><img src="icon_print.gif" alt="Printable Version" id="Image2" /></a>
+	<a href="http://www.alp.org.au/media/0107/ms231.php?tv=on" onmouseout="MM_swapImgRestore()" onmouseover="MM_swapImage('Image3','','/images/tpl/icon_text_f2.gif',1)"><img src="icon_text.gif" alt="Text Version" id="Image3" /></a>
+	<a href="ms231.php.1.html#" onmouseout="MM_swapImgRestore()" onmouseover="MM_swapImage('Image4','','/images/tpl/icon_bookmark_f2.gif',1)" onclick="addbookmark('ALP: Tony Abbott\'s Shameful Record','http://www.alp.org.au/media/0107/ms231.php');"><img src="icon_bookmark.gif" alt="Bookmark this site" id="Image4" /></a>
+	</div>
+		<div id="rhsfeatures">
+	<a href="http://www.alp.org.au/action/krshadowmin.php" title="Shadow Ministry, Parliamentary Secretaries and Whips"><img src="rhs_ministry_rudd.gif" alt="Shadow Ministry, Parliamentary Secretaries and Whips" /></a>
+<a href="http://www.alp.org.au/features/conferenceinfo.php" title="ALP National Conference"><img src="rhs_icon_44nat_con.jpg" alt="ALP National Conference" /></a>
+<a href="http://www.alp.org.au/policy/index.php" title="Labor's policy principles"><img src="rhs_policy.gif" alt="Labor's policy principles" /></a>
+<a href="http://www.alp.org.au/action/waste_watch.php" title="Billions wasted by the Howard Government"><img src="wastewatch_button.jpg" alt="Billions wasted by the Howard Government" /></a>
+<a href="http://www.chifley.org.au/index.php" title="Chifley Research Centre"><img src="side_chifley.jpg" alt="Chifley Research Centre" /></a>
+<a href="http://eherald.alp.org.au/enews/index.php" title="Subscribe for free to the ALP's national journal"><img src="rhs_subscribe_e_nat.jpg" alt="Subscribe for free to the ALP's national journal" /></a>
+	</div>
+</div>
+
+</div>
+<div id="footer">
+	<div id="bottomhnav">
+		<a href="http://www.alp.org.au/" title="ALP home page">Home</a>&nbsp;|&nbsp;<a href="http://www.alp.org.au/about/index.php" title="About the Federal Labor Party">About the ALP</a>&nbsp;|&nbsp;<a href="http://www.alp.org.au/people/index.php" title="Members and Senators">ALP people</a>&nbsp;|&nbsp;<a href="http://www.alp.org.au/policy/index.php" title="Labor's policy principles">Policy</a>&nbsp;|&nbsp;<a href="http://www.alp.org.au/media/index.php" title="Latest News from the ALP">News</a>&nbsp;|&nbsp;<a href="http://eherald.alp.org.au" title="Labor eHerald">ALP journal</a>	</div>
+	<div id="authorised">
+		Authorised by Tim Gartrell, 19 National Circuit, Barton ACT 2600.<br />Legal Issues - <a href="http://www.alp.org.au/help.php#legal">Privacy, Credits, Copyright, Disclaimer</a>
+	</div>
+</div>
+
+</body>
+</html>

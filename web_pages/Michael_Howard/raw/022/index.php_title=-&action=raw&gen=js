@@ -1,0 +1,429 @@
+/* generated javascript */var skin = 'monobook';
+var stylepath = '/skins';/* MediaWiki:Monobook */
+/* <pre><nowiki> */
+
+/* </nowiki></pre>
+==Notes and links==
+A useful reference is the code in
+http://www.sourcewatch.org/skins/common/wikibits.js
+
+==Tooltips and access keys==
+<pre><nowiki> */
+
+ta = new Object();
+ta['pt-userpage'] = new Array('.','My user page');
+ta['pt-anonuserpage'] = new Array('.','The user page for the ip you\'re editing as');
+ta['pt-mytalk'] = new Array('n','My talk page');
+ta['pt-anontalk'] = new Array('n','Discussion about edits from this ip address');
+ta['pt-preferences'] = new Array('','My preferences');
+ta['pt-watchlist'] = new Array('l','The list of pages you\'re monitoring for changes.');
+ta['pt-mycontris'] = new Array('y','List of my contributions');
+ta['pt-login'] = new Array('o','You are not required to log in - however, you must log in to edit.'); 
+ta['pt-remotereg'] = new Array('','Create new account');
+ta['pt-anonlogin'] = new Array('o','You are encouraged to log in, it is not mandatory however.');
+ta['pt-logout'] = new Array('o','Log out');
+ta['ca-talk'] = new Array('t','Discussion about the content page');
+ta['ca-edit'] = new Array('e','You can edit this page. Please use the preview button before saving.');
+ta['ca-addsection'] = new Array('+','Add a comment to this discussion.');
+ta['ca-viewsource'] = new Array('e','This page is protected. You can view its source.');
+ta['ca-history'] = new Array('h','Past versions of this page.');
+ta['ca-protect'] = new Array('=','Protect this page');
+ta['ca-delete'] = new Array('d','Delete this page');
+ta['ca-undelete'] = new Array('d','Restore the edits done to this page before it was deleted');
+ta['ca-move'] = new Array('m','Move this page');
+ta['ca-nomove'] = new Array('','You don\'t have the permissions to move this page');
+ta['ca-watch'] = new Array('w','Add this page to your watchlist');
+ta['ca-unwatch'] = new Array('w','Remove this page from your watchlist');
+ta['search'] = new Array('f','Search this wiki');
+ta['p-logo'] = new Array('','Main Page');
+ta['n-mainpage'] = new Array('z','Visit the Main Page');
+ta['n-portal'] = new Array('','About the project, what you can do, where to find things');
+ta['n-currentevents'] = new Array('','Find background information on current events');
+ta['n-recentchanges'] = new Array('r','The list of recent changes in the wiki.');
+ta['n-randompage'] = new Array('x','Load a random page');
+ta['n-help'] = new Array('','The place to find out.');
+ta['n-sitesupport'] = new Array('','Support us');
+ta['t-whatlinkshere'] = new Array('j','List of all wiki pages that link here');
+ta['t-recentchangeslinked'] = new Array('k','Recent changes in pages linked from this page');
+ta['feed-rss'] = new Array('','RSS feed for this page');
+ta['feed-atom'] = new Array('','Atom feed for this page');
+ta['t-contributions'] = new Array('','View the list of contributions of this user');
+ta['t-emailuser'] = new Array('','Send a mail to this user');
+ta['t-upload'] = new Array('u','Upload images or media files');
+ta['t-specialpages'] = new Array('q','List of all special pages');
+ta['ca-nstab-main'] = new Array('c','View the content page');
+ta['ca-nstab-user'] = new Array('c','View the user page');
+ta['ca-nstab-media'] = new Array('c','View the media page');
+ta['ca-nstab-special'] = new Array('','This is a special page, you can\'t edit the page itself.');
+ta['ca-nstab-wp'] = new Array('a','View the project page');
+ta['ca-nstab-image'] = new Array('c','View the image page');
+ta['ca-nstab-mediawiki'] = new Array('c','View the system message');
+ta['ca-nstab-template'] = new Array('c','View the template');
+ta['ca-nstab-help'] = new Array('c','View the help page');
+ta['ca-nstab-category'] = new Array('c','View the category page');
+
+/* </nowiki></pre>
+==Collapsible section support==
+<pre><nowiki> */
+
+addOnloadHook(createCollapsibleSectionLinks);
+
+/* Hook function for onload.
+   Added by User:Neoconned 26 Oct 06.
+   Adds support for up to 5 collapsible sections in each page.
+   Contributors can create these via Template:CollapsibleSectionLead
+   and Template:CollapsibleSectionBody.
+   Manually numbering them in this way is clumsy but the best solution for
+   now, given the lack of a getElementByClass method in the DOM.
+*/
+function createCollapsibleSectionLinks() {
+	addToggleDivLink('collapsibleSectionLead1','collapsibleSectionBody1','toggleCSLink1');
+	addToggleDivLink('collapsibleSectionLead2','collapsibleSectionBody2','toggleCSLink2');
+	addToggleDivLink('collapsibleSectionLead3','collapsibleSectionBody3','toggleCSLink3');
+	addToggleDivLink('collapsibleSectionLead4','collapsibleSectionBody4','toggleCSLink4');
+	addToggleDivLink('collapsibleSectionLead5','collapsibleSectionBody5','toggleCSLink5');
+}
+
+/* Adds a toggle visibility link to parentDivId, which toggles the
+   visibility of divToToggleId.
+   Added by User:Neoconned 26 Oct 06.
+   Adapted from
+   http://www.sourcewatch.org/skins/common/wikibits.js:showTocToggle()
+*/
+function addToggleDivLink(parentDivId,divToToggleId,toggleLinkId) {
+	if (document.createTextNode) {
+		// Uses DOM calls to avoid document.write + XHTML issues
+
+		var linkHolder = document.getElementById(parentDivId)
+		if (!linkHolder)
+			return;
+
+		var outerSpan = document.createElement('span');
+		outerSpan.className = 'toctoggle';
+
+		var toggleLink = document.createElement('a');
+		toggleLink.id = toggleLinkId;
+		toggleLink.className = 'internal';
+		toggleLink.href = 'javascript:toggleAnyDiv(\'' + divToToggleId + '\')';
+		toggleLink.appendChild(document.createTextNode('Click to view/hide'));
+
+		outerSpan.appendChild(document.createTextNode('['));
+		outerSpan.appendChild(toggleLink);
+		outerSpan.appendChild(document.createTextNode(']'));
+
+		linkHolder.appendChild(document.createTextNode(' '));
+		linkHolder.appendChild(outerSpan);
+	}
+}
+
+
+/* Function to toggle visibility of an arbitrary div.
+   Added by User:Neoconned 26 Oct 06.
+   Source: http://www.friendsofed.com/samples/1590594304.pdf page 150. */
+function toggleAnyDiv(targetId) {
+	if (document.getElementById)
+	{
+		target = document.getElementById(targetId);
+
+		if (target.style.display == "none")
+		{
+			target.style.display = "block";
+		}
+		else
+		{
+			target.style.display = "none";
+		}
+	}
+}
+
+/* </nowiki></pre>
+==Kanana==
+<pre><nowiki> */
+
+addOnloadHook(kananaTestIfEnabled);
+var kananaCheckboxes = new Array();
+var kananaCodes = new Array();
+
+var kananaItems = new Array();
+var kananaItemCodes = new Array();
+
+/* Hook function for onload.
+   Added by User:Neoconned 27 Oct 06.
+   Tests for the presence of a 'magic DIV' to determine whether to use
+   Kanana on this page or not. The only overhead for non-Kanana pages is
+   this test.
+*/
+function kananaTestIfEnabled() {
+	if (document.getElementById)
+	{
+		target = document.getElementById('kananaOn');
+		if (target)
+		{
+			kananaInitialize();
+		}
+	}
+}
+
+function kananaInitialize()
+{
+	var spans = document.getElementsByTagName("span");
+	var noOfSpans = spans.length;
+	for (i = 0; i < noOfSpans; i++)
+	{
+		if ( spans[i].id.indexOf('kananaCheckbox') != -1)
+		{
+			kananaInitializeCheckbox( spans[i] );
+		}
+	}
+
+	var divs = document.getElementsByTagName("div");
+	var noOfDivs = divs.length;
+	for (i = 0; i < noOfDivs; i++)
+	{
+		if ( divs[i].id.indexOf('kananaItem') != -1)
+		{
+			kananaInitializeItem( divs[i] );
+		}
+	}
+}
+
+function kananaInitializeCheckbox(checkboxContainer)
+{
+	var cb = document.createElement("input");
+	cb.type = "checkbox"; // set type
+	cb.checked = cb.defaultChecked = false;
+	cb.onclick = kananaRefresh;
+	checkboxContainer.appendChild(cb);
+
+	var iCheckboxCount = kananaCheckboxes.length;
+
+	kananaCheckboxes[iCheckboxCount] = cb;
+
+	var startIdx = "kananaCheckbox_".length;
+	var endIdx = checkboxContainer.id.length;
+	kananaCodes[iCheckboxCount] =
+	  checkboxContainer.id.substring(startIdx,endIdx);
+
+	// Temp feature for debugging - display codes next
+	// to their associated checkboxes
+	/*
+	var temp = kananaCodes[iCheckboxCount];
+	checkboxContainer.appendChild(document.createTextNode(temp));
+	checkboxContainer.appendChild(document.createTextNode(' '));
+	checkboxContainer.appendChild(document.createTextNode(startIdx));
+	checkboxContainer.appendChild(document.createTextNode(' '));
+	checkboxContainer.appendChild(document.createTextNode(endIdx));
+	*/
+}
+
+function kananaInitializeItem(itemDiv)
+{
+	var iItemCount = kananaItems.length;
+	kananaItems[iItemCount] = itemDiv;
+
+	var startIdx = "kananaItem_".length;
+	var endIdx = itemDiv.id.length;
+        var sRHS = itemDiv.id.substring(startIdx,endIdx);
+
+	var secondUnderscoreIndex = sRHS.indexOf("_");
+	startIdx = secondUnderscoreIndex+1;
+        endIdx = sRHS.length;
+
+	kananaItemCodes[iItemCount] =
+	  ":" + sRHS.substring(startIdx,endIdx) + ":";
+
+	// Trace out extracted code for debugging purposes
+	// var temp = "***" + kananaItemCodes[iItemCount] + "***";
+	// itemDiv.appendChild(document.createTextNode(temp));
+}
+
+/* Update which categories of information are displayed on the page
+   when the reader changes the selected categories. */
+function kananaRefresh()
+{
+	var selectedCodes = new Array();
+
+	// Determine which item codes are enabled
+	for (i=0; i<kananaCheckboxes.length; i++)
+	{
+		var cb = kananaCheckboxes[i];
+		if (cb.checked)
+		{
+			var nextIdx = selectedCodes.length;
+
+			// To save time, bracket the code with colons here
+			selectedCodes[nextIdx] = ":" + kananaCodes[i] + ":";
+		}
+	}
+
+	// Now run through the items and ensure only those ones that
+	// match the selected codes are visible
+
+	for (i=0; i<kananaItems.length; i++)
+	{
+		var itemCodes = kananaItemCodes[i];
+
+		var bDisplayItem = true;
+		for (j=0; ((j<selectedCodes.length) && bDisplayItem); j++)
+		{
+			if (itemCodes.indexOf(selectedCodes[j])==-1)
+			{
+				bDisplayItem = false;
+
+				// Debugging code
+				// var sErr = itemCodes + " doesn't contain " +
+				//	selectedCodes[j];
+				// alert(sErr);
+			}
+		}
+
+		var div = kananaItems[i];
+		if (bDisplayItem)
+			div.style.display = "block";
+		else
+			div.style.display = "none";
+	}
+}
+
+
+/* </nowiki></pre>
+==Edit summary stuff==
+<pre><nowiki> */
+
+// Adapted from:
+//http://en.wikipedia.org/wiki/Wikipedia:WikiProject_User_scripts/Scripts/Force_edit_summary
+
+// The original value of the edit summary field is stored here
+var editsummOriginalSummary = new String();
+
+// A global ref to the dropdown with canned edit summaries
+var editsummDropdown = null;
+
+function editsummInitialize()
+{
+    // TEMPORARY - check window title while testing this code
+    // and only do anything if it's the sandbox or a sample CP page
+    // var wt = document.title;
+    // if ((wt.indexOf('Sandbox')==-1) && (wt.indexOf('Mitch McCon')==-1))
+    // {
+    //     return;
+    // }
+
+    if(!/&action=edit/.test(window.location.href) && !/&action=submit/.test(window.location.href)) return;
+    if(/&section=new/.test(window.location.href)) return;
+    if(!document.forms.editform) return;
+    document.forms.editform.wpSave.onclick = editsummForceSummary;
+
+    // Save the original value of the edit summary field
+    editsummOriginalSummary = document.forms.editform.wpSummary.value;
+
+    // For convenience, add a dropdown box with some canned edit
+    // summaries to the form.
+
+    var dropdown = document.createElement("select");
+    dropdown.onchange = new Function("editsummOnCannedSummarySelected()");
+
+    editsummAddOptionToDropdown(dropdown,"");
+    editsummAddOptionToDropdown(dropdown,"add categories");
+    editsummAddOptionToDropdown(dropdown,"add category");
+    editsummAddOptionToDropdown(dropdown,"add citation");
+    editsummAddOptionToDropdown(dropdown,"add external link");
+    editsummAddOptionToDropdown(dropdown,"add internal link");
+    editsummAddOptionToDropdown(dropdown,"add ref");
+    editsummAddOptionToDropdown(dropdown,"add section");
+    editsummAddOptionToDropdown(dropdown,"create redirect page");
+    editsummAddOptionToDropdown(dropdown,"create stub article");
+    editsummAddOptionToDropdown(dropdown,"delete external link");
+    editsummAddOptionToDropdown(dropdown,"delete internal link");
+    editsummAddOptionToDropdown(dropdown,"fix broken link");
+    editsummAddOptionToDropdown(dropdown,"fix grammar");
+    editsummAddOptionToDropdown(dropdown,"fix punctuation");
+    editsummAddOptionToDropdown(dropdown,"fix spelling");
+    editsummAddOptionToDropdown(dropdown,"make existing text into link (wikify)");
+    editsummAddOptionToDropdown(dropdown,"make link into plain text (dewikify)");
+    editsummAddOptionToDropdown(dropdown,"move section");
+    editsummAddOptionToDropdown(dropdown,"move unrefd material to talk page");
+    editsummAddOptionToDropdown(dropdown,"new article");
+    editsummAddOptionToDropdown(dropdown,"remove repetition");
+    editsummAddOptionToDropdown(dropdown,"reorder links");
+    editsummAddOptionToDropdown(dropdown,"start article");
+
+    var insertBeforeThis = document.forms.editform.wpSummary.nextSibling;
+    var theParent = insertBeforeThis.parentNode;
+    theParent.insertBefore(dropdown,insertBeforeThis);
+
+    // Store a global ref to it
+    editsummDropdown = dropdown;
+}
+
+function editsummAddOptionToDropdown(dropdown,optionText)
+{
+    var option = document.createElement("option");
+    var optionTextNode = document.createTextNode(optionText);
+    option.appendChild(optionTextNode);
+    dropdown.appendChild(option);
+}
+
+// There's a cross-browser issue when accessing the selected text:
+// *In Firefox you can use: selectObj.value
+// *In IE, you have to use: selectObj.options[selectObj.selectedIndex].text
+// *The latter method also works in Firefox
+function editsummOnCannedSummarySelected()
+{
+    var idx = editsummDropdown.selectedIndex;
+    var canned = editsummDropdown.options[idx].text;
+
+    var newSummary = editsummOriginalSummary;
+    if (newSummary.length!=0) newSummary += " - ";
+    newSummary += canned;
+    document.forms.editform.wpSummary.value = newSummary;
+}
+
+function editsummForceSummary()
+{
+    if(!document.forms.editform.wpSummary.value.replace(/^(?:\/\\*.*\\*\/)? *(.*) *$/,'$1'))
+    {
+        alert("Please supply a meaningful summary of this edit");
+        document.forms.editform.wpSummary.focus();
+        return false;
+    }
+
+    // An edit summary has been supplied. So now do the SW/CP auto-prefixing.
+
+    editsummAddSubProjectPrefix();
+
+    return true;
+}
+
+// Prefix the edit summary with "SW" or "CP"
+// depending on whether it's a SourceWatch or Congresspedia page.
+// To determine this, look for a link to "Template:Congresspedia"
+// on the edit page.
+function editsummAddSubProjectPrefix()
+{
+    // Using the document.links array and the href prop seems to give
+    // the best cross-browser results.
+    var allAnchors = document.links;
+    if (allAnchors)
+    {
+        var prefix = "SW: ";
+        for (i = 0; i < allAnchors.length; i++)
+        {
+             var anchorHref = allAnchors[i].href;
+             if (anchorHref)
+             {
+                 if (anchorHref.indexOf('Template:Congresspedia') != -1)
+                 {
+                    prefix = "CP: ";
+                 }
+             }
+        }
+
+        document.forms.editform.wpSummary.value =
+            prefix + document.forms.editform.wpSummary.value;
+    }
+}
+
+addOnloadHook(editsummInitialize);
+
+/* </nowiki></pre> */

@@ -1,0 +1,392 @@
+<html>
+  <head>
+    <title>Tenth International Workshop on Combinatorial Image Analysis</title>
+    <link rel="stylesheet" type="text/css" href="styles.css">
+  </head>
+  <body class="indexBody">
+    <table class="indexTable" width="100%">
+      <!-- the following table row spans two columns and contains the header -->
+      <tr>
+        <td colspan="2" class="conferenceHeader">
+                <table border="0" width="100%" cellspacing="4" cellpadding="0">
+      <tr><td valign="top">
+	<td>
+		<img src="cvu_logo.gif">
+	</td>
+      <td align="center" width="100%">
+         <font SIZE="+1">IWCIA - Tenth International Workshop on<br> 
+         Combinatorial Image Analysis</font><br>
+	<font SIZE="-1" FACE="arial"
+	  <b>Organized by the University of Auckland</b>&nbsp;-&nbsp;
+	  1 - 3  December 2004, Auckland, New Zealand
+<br>
+	<a href="http://www.iapr.org/">Sponsored by IAPR</a> 
+	</font>
+       </font>  
+      </td>
+      </tr>
+      </table>
+        </td>
+      </tr>
+      <!-- the following table row contains the menu and the main content page -->
+      <tr>
+        <!-- the following table data cell contains the menu  --> 
+        <td class="menu" width="1px" valign="top" rowspan="2"><table width="150" class="">
+  <tr><td class="menuItem" onclick="menuItemClick(false,'content/index.htm',true);" onmouseover="window.status='Go to the home page'; return true;"><a  href="javascript:menuItemClick(false,'content/index.htm',true);" style="text-decoration: none" onmouseover="window.status='Go to the home page'; return true;">Welcome</a></td></tr>
+  <tr><td class="menuItem" onclick="menuItemClick(false,'content/CommitteeMembersPage.php',false);" onmouseover="window.status='Members of the IWCIA Committee'; return true;"><a  href="javascript:menuItemClick(false,'content/CommitteeMembersPage.php',false);" style="text-decoration: none" onmouseover="window.status='Members of the IWCIA Committee'; return true;">Committee Members</a></td></tr>
+  <tr><td class="menuItem" onclick="menuItemClick(false,'content/sponsors.html',false);" onmouseover="window.status='View our Sponsors'; return true;"><a  href="javascript:menuItemClick(false,'content/sponsors.html',false);" style="text-decoration: none" onmouseover="window.status='View our Sponsors'; return true;">Sponsors</a></td></tr>
+</table><form name="menuform" method="post" action="http://www.citr.auckland.ac.nz/~IWCIA04/index.php">
+  <input type="hidden" name="RQDOC" value="">
+  <input type="hidden" name="USER" value="">
+  <input type="hidden" name="PASSWORD" value="">  
+</form>
+<script language="javascript">
+  <!-- hide !
+
+  // ensure logout after timeout period
+  setTimeout("menuItemClick(false,'content/index.htm',false)",10 * 60000);
+
+  function menuItemClick(isExternalPage,documentURI,authenticationRequired) {
+    // alert('called');
+    if (isExternalPage) {
+      var externalWindow = window.open(documentURI,"externalWindow","width=600,height=480,status=yes,resizable=yes,scrollbars=yes,menubar=yes,toolbar=yes");
+    }
+    else
+    {
+      // alert(documentURI);
+      document.menuform.RQDOC.value = documentURI;
+      document.menuform.submit();
+    }
+  }
+
+  // -->
+</script>
+<noscript>
+<p>This menu will not function properly unless you activate JavaScript on your browser!</p> 
+</noscript>
+        
+                <center>
+		<p><a href="http://www.iapr.org/"><img border=0 src="logo_iapr.gif"></a></p>
+		<p><a href="http://www.citr.auckland.ac.nz/research/profiles/cvu/ivcnz.php"><img border=0 src="ivcnz.gif"></a></p>
+		<p><a href="http://www.auckland.ac.nz/"><img border=0 src="auckland.gif"></a></p>
+		<p><a href="http://www.citr.auckland.ac.nz/"><img border=0 src="citr-logo-small.gif"></a></p>
+		<p><a href="http://www.springer.de/comp/lncs/index.html/"><img border=0 src="lncs-logo.gif"></a></p>
+		<p><a href="http://www.rsnz.org"><img border=0 src="rsnzlogo.gif"></a></p>
+		</center>
+        </td>
+        <!-- the following table data cell contains the main content page -->
+        <td class="" valign="top">
+          <html>
+	<head>
+		<title>Tenth International Workshop on Combinatorial Image Analysis</title>
+		<link rel="stylesheet" type="text/css" href="styles.css">
+	</head>
+	<body class="indexBody" onload="startShow()">
+		<SCRIPT LANGUAGE="JavaScript"> 
+  <!-- Begin 
+  var timeDelay = 10000; // change delay time in seconds 
+  var Pix = new Array (
+    "images/slideshow/34.gif",
+    "images/slideshow/35.gif",
+    "images/slideshow/36.gif",
+    "images/slideshow/37.gif",
+    "images/slideshow/38.gif",
+    "images/slideshow/39.gif",
+    "images/slideshow/40.gif",
+    "images/slideshow/41.gif",
+    "images/slideshow/42.gif",    
+    "images/slideshow/43.gif",
+    "images/slideshow/44.gif",
+    "images/slideshow/45.gif",
+    "images/slideshow/46.gif",
+    "images/slideshow/47.gif",
+    "images/slideshow/48.gif",
+    "images/slideshow/49.gif",
+    "images/slideshow/50.gif",
+    "images/slideshow/51.gif",
+    "images/slideshow/52.gif",
+    "images/slideshow/53.gif",
+    "images/slideshow/54.gif",
+    "images/slideshow/02.gif",
+	"images/slideshow/03.gif",
+    "images/slideshow/04.gif",
+    "images/slideshow/05.gif",
+    "images/slideshow/06.gif",
+    "images/slideshow/07.gif",
+    "images/slideshow/08.gif",
+    "images/slideshow/09.gif",
+    "images/slideshow/10.gif",
+    "images/slideshow/11.gif",
+    "images/slideshow/12.gif",    
+    "images/slideshow/13.gif",
+    "images/slideshow/14.gif",
+    "images/slideshow/15.gif",
+    "images/slideshow/16.gif",
+    "images/slideshow/17.gif",
+    "images/slideshow/18.gif",
+    "images/slideshow/19.gif",
+    "images/slideshow/20.gif",
+    "images/slideshow/21.gif",
+    "images/slideshow/22.gif",
+    "images/slideshow/23.gif",
+    "images/slideshow/24.gif",
+    "images/slideshow/25.gif",
+    "images/slideshow/26.gif",
+    "images/slideshow/27.gif",
+    "images/slideshow/28.gif",
+    "images/slideshow/29.gif",
+    "images/slideshow/30.gif",
+    "images/slideshow/31.gif",
+    "images/slideshow/32.gif",
+	"images/slideshow/33.gif"
+	                  ); 
+  var howMany = Pix.length;  
+  var PicCurrentNum = 0; 
+  var PicCurrent = new Image(); 
+  PicCurrent.src = Pix[PicCurrentNum]; 
+	function startShow() { 
+		setInterval("slideshow()", timeDelay); 
+	} 
+	function slideshow() { 
+		PicCurrentNum++; 
+		if (PicCurrentNum == howMany) { 
+			PicCurrentNum = 0; 
+		} 
+		PicCurrent.src = Pix[PicCurrentNum]; 
+		document["SlideShow"].src = PicCurrent.src; 
+	} // End --> 
+		</SCRIPT>
+		<a name="top">
+			<table class="indexTable" width="100%">
+				<!-- the following table data cell contains the main content page -->
+				<td class="" valign="top">
+					<table cellSpacing="1" cellPadding="2" border="0" width="100%">
+						<tr>
+							<td colSpan="1" width="100%" border="0" bgColor="#bbbbbb">
+								<font size="+1"><a name="welcome">The Conference</font>
+							</td>
+						</tr>
+						<tr>
+							<td align="left" valign="middle">
+								<p><font face="Arial"> Welcome to the web page of the 10th International Workshop on 
+										Combinatorial Image Analysis. Prior meetings took place in Paris (France, 
+										1991), Ube (Japan, 1992), Washington DC (USA, 1994), Lyon (France, 1995), 
+										Hiroshima (Japan, 1997), Madras (India, 1999), <a href="http://mat.gsia.cmu.edu/DMANET/archive/0124.html">
+											Caen</a> (France, 2000), <a href="http://euclid.cs.qc.edu/iwcia/">Philadelphia</a>
+										(USA, 2001), and <a href="http://math.unipa.it/~iwcia/htm/welcome2.htm">Palermo</a>
+									(Italy, 2003). 
+								This 10th edition was held in <a href="http://www.aucklandnz.com/">Auckland</a>
+								(New Zealand, 01-03 December 2004), at <a href="http://www.auckland.ac.nz/">The 
+									University of Auckland</a>.				
+					            Besides three invited talks, there were 55 accepted papers at IWCIA 2004 (out
+					           of 88 submissions for this conference).<p>
+					            
+					            <b><a href="http://www.citr.auckland.ac.nz/~IWCIA04/content/program.pdf">PROGRAM OF IWCIA'04</a></b> (pdf file, 408 KB).<p>
+					             <hr>
+					           
+								
+							    The IWCIA'04 conference events started with a pre-conference boat trip 
+								to <a href="http://www.waiheke.co.nz/index1.htm">
+									Waiheke Island</a> on 30 November. The trip included 
+								a bus tour on Waiheke island and a lunch at "Stonyridge" (one of the island's 
+								wineyards). 
+ 						        Conference reception was on 30 November 6pm-8pm at 
+								the <a href="http://www.cs.auckland.ac.nz/">
+							    Computer Science</a> building of The University of Auckland (city campus).
+   							    The conference took place at <a href="http://www.citr.auckland.ac.nz/">CITR</a>
+								at <a href="http://www.tamaki.auckland.ac.nz/">Tamaki campus</a>.
+								Conference excursion and dinner was on Thursday afternoon and 
+								evening, with <a href="http://www.pacificislandtravel.com/new_zealand/about_destin/wineries_auckland.asp">
+								wine tasting</a>, a visit of the wild west coast at 
+								<a href="http://www.muriwai.com/">Muriwai</a>, and
+								dinner at Markovina vineyard, including a show of the Cook Island Dancers.</p>
+								
+								Participants may send more of their pictures to the IWCIA'04 organizers to be
+								included into the slide show below.</p>
+																    																		
+								<hr>
+								<img name="SlideShow" border="0" src="01.gif">
+								<hr>
+									
+								
+								The proceedings are <b>
+								<a href="http://www.springerlink.com/app/home/issue.asp?wasp=e2eygmqvrm7jrmrrvbfk&referrer=backto&backto=journal,5,1768;linkingpublicationresults,1:105633,1;&absoluteposition=21#A21">volume 3322 within the LNCS series</b></a>.
+								The IWCIA steering committee decided about the 11th edition which is planed to be in May 2006 at
+								Humboldt University, Berlin/Germany, co-chaired by Ralf Reulke (Humboldt), Ulrich Eckhardt (Hamburg University), 
+								and Konrad Polthier (Zuse Institute, Berlin).
+								</p>
+								
+								
+									<hr>
+									<tr>
+										<td colSpan="1" width="100%" border="0" bgColor="#bbbbbb">
+											<font size="+1"><a name="committee">Referees for Submitted Papers</font>
+										</td>
+									</tr>
+									<tr>
+										<td align="left" valign="middle">
+											<!--<h4>
+Program Committee
+</h4> -->
+											<ul>
+												<li>
+												Eric Andres (University of Poitiers, France)
+												<li>
+												Tetsuo Asano (JAIST, Japan)
+												<li>
+												Jacky Baltes (University of Manitoba, Canada)
+												<li>
+												Reneta Barneva (State University of New York, USA)
+												<li>
+												Gilles Bertrand (ESIEE, France)
+												<li>
+												Gunilla Borgefors (Swedish University of Agricultural Sciences, Sweden)
+												<li>
+												Valentin Brimkov (Fairmont State University, USA)
+												<li>
+												Thomas Buelow (Philips, Germany)
+												<li>
+												Cristian Calude (The University of Auckland, New Zealand)
+												<li>
+												Jean-Marc Chassery (TIMC-IMAG, France)
+												<li>
+												Chia-Yen Chen (The University of Auckland, New Zealand)
+												<li>
+												David Coeurjolly (Lyon University , France)
+												<li>
+												Marston Conder (The University of Auckland, New Zealand)
+												<li>
+												Isabelle Debled-Rennesson (Technopole de Nancy-Brabois, France)
+												<li>
+												Patrice Delmas (The University of Auckland, New Zealand)
+												<li>
+												Ulrich Eckhardt (Hamburg University, Germany)
+												<li>
+												Vito di Gesu (University of Palermo, Palermo)
+												<li>
+												Allan Hanbury (TU Wien, Austria)
+												<li>
+												Gabor Herman (City University of New York, USA)
+												<li>
+												Atsushi Imiya (Chiba University, Japan)
+												<li>
+												Katsushi Inoue (Yamaguchi University, Japan)
+												<li>
+												Kazuhiko Kawamoto (Tokyo Institute of Technology, Japan)
+												<li>
+												Nahum Kiryati (Tel Aviv University, Israel)
+												<li>
+												Christer Kiselman (Uppsala University, Sweden)
+												<li>
+												Reinhard Klette (The University of Auckland, New Zealand)
+												<li>
+												T. Yung Kong (City University of New York, USA)
+												<li>
+												Vladimir Kovalevski (TFH Berlin, Germany)
+												<li>
+												Ryszard Kozera (University of Western Australia, Australia)
+												<li>
+												Walter Kropatsch (TU Wien, Austria)
+												<li>
+												Attila Kuba (University of Szeged, Hungary)
+												<li>
+												Longin Jan Latecki (Temple University, USA)
+												<li>
+												Bruce MacDonald (The University of Auckland, New Zealand)
+												<li>
+												Mattias Moell (Forestry Research Rotorua, New Zealand)
+												<li>
+												Kenichi Morita (Hiroshima University, Japan)
+												<li>
+												Ingela Nystr&ouml;m (Uppsala University, Sweden)
+												<li>
+												Ralf Reulke (Humboldt University, Germany)
+												<li>
+												Jos B.T.M. Roerdink (Groningen University, The Netherlands)
+												<li>
+												Christian Ronse (Strasbourg University, France)
+												<li>
+												Bodo Rosenhahn (The University of Auckland, New Zealand)
+												<li>
+												Robin Strand (Uppsala University, Sweden)
+												<li>
+												Mohamed Tajine (Strasbourg University, France)
+												<li>
+												Garry Tee (The University of Auckland, New Zealand)
+												<li>
+												Klaus Voss (Jena University, Germany)
+												<li>
+												Tiangong Wei (The University of Auckland, New Zealand)
+												<li>
+												Joachim Weickert (Saarland University, Germany)
+												<li>
+												Gerhard Woeginger (University of Twente, The Netherlands)
+												<li>
+												Qi Zang (The University of Auckland, New Zealand)
+												<li>
+												Jovisa Zunic (Exeter University, U.K.)
+											</ul>
+											<h4>
+												Program Chairs / Principal Organizers
+											</h4>
+											<ul>
+												<li>
+												Reinhard Klette (The University of Auckland, New Zealand)
+												<li>
+												Jovisa Zunic (Exeter University, UK)
+											</ul>
+											<h4>
+												Scientific Secretariat (The University of Auckland, New Zealand)
+											</h4>
+											<ul>
+												<li>
+												Patrice Delmas
+												<li>
+												Gisela Klette
+											</ul>
+											<h4>
+												Organizers (The University of Auckland, New Zealand)
+											</h4>
+											<ul>
+												<li>
+												Penny Barry
+												<li>
+												Cliff Hawkins
+												<li>
+												Reinhard Klette (chair)
+												<li>
+												Cecilia Lourdes
+											</ul>
+										</td>
+									</tr>
+									<tr valign="top">
+										<td align="left" valign="middle">
+											<font color="#000000" size="-1pt">
+												<a href="index.html#top">Top of page</a>
+											</font>
+										</td>
+									</tr>
+					</table>
+					&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 
+					&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 
+					&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 
+					&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 
+					&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 
+					&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 
+					&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 
+					&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 
+					&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 
+					&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 
+					&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 
+					&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 
+					&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 
+					&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+				</td>
+				</tr>
+			</table>
+	</body>
+</html>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;         </td>
+      </tr>
+    </table>
+  </body>
+</html>

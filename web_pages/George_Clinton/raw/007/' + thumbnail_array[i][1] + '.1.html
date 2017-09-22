@@ -1,0 +1,205 @@
+<html><!-- SERVER::music7 --><head><title>Yahoo! Music</title><script language="javascript">
+		document.domain = "yahoo.com";
+	
+		function getCookie(name) {
+		  var arg = name + '=';
+		  var alen = arg.length;
+		  var clen = document.cookie.length;
+		  var i = 0;
+		  while (i < clen) {
+		    var j = i + alen;
+		    if (document.cookie.substring(i, j) == arg)
+			 {
+				  var endstr = document.cookie.indexOf(";", j);
+				  if (endstr == -1)
+				    endstr = document.cookie.length;
+				  return unescape(document.cookie.substring(j, endstr));
+			  }
+			  i = document.cookie.indexOf(' ', i) + 1;
+		     if (i == 0) break;
+		  }
+		  return null;
+		}
+				
+		function hasApp()
+		{
+			var vals = String(getCookie('LYC')).split("&");
+			for (var i = 0; i < vals.length; i++)
+			{
+				var keyval = vals[i].split("=");
+				if (keyval[0] == "l_lc")
+			    	{
+					var lcvals = keyval[1].split("_");
+					return (lcvals[3] == "1");
+				}
+				else if (keyval[0] == "lc")
+				{
+					var lcvals = keyval[1].split(",");
+					return (lcvals[3] == "1");
+				}
+			}
+			
+			return (getCookie('lcApp') == "1");
+		}
+			
+		function launchRadio (clientStationID, playlistType, playlistModifier, djID, otherParams) {
+		
+			var windowName = self.name;
+			if (windowName == '') {
+				windowName = 'LaunchRadioTarget';
+				self.name = windowName;
+			}
+
+			var path = 'http://radio.launch.yahoo.com/radio/player/';
+			var qs = 'clientID=1&clientStationID=' + clientStationID + '&p=' + playlistType + '&m=' + playlistModifier + '&d=' + djID;
+			if (arguments[4] != null) qs += '&' + arguments[4];
+			/*
+			if (hasApp())
+				window.top.location = path + 'createLCP.asp?appmode=0&closeWarning=0&' + qs;
+			else
+			*/
+			
+			
+					var failURL = "http://music.yahoo.com/launchcast/relaunch.asp?p=" + playlistType + "&m=" + playlistModifier + "&d=" + djID + ( (arguments[4] != null) ? "&op=" + escape(arguments[4]) : "");
+					radioWin = CommonWindowOpener.openWindow(path + 'default.asp?' + qs, 'playerWindow', 'HEIGHT=365,WIDTH=491', failURL);
+					// radioWin = window.open(path + 'default.asp?' + qs, 'playerWindow', 'HEIGHT=365,WIDTH=491');
+				
+		}
+
+		function playSample(sampleID, skinID)
+		{
+			
+					alert("Sorry, the sample is unable to be played");
+				
+		}
+	</script><script language="javascript" src="http://us.music1.yimg.com/music.yahoo.com/common/includes/js/common_derived_js.asp"></script><script language="javascript">
+      
+      function common_videoplayer_transition_getCookie(c_name)
+      {
+      if (document.cookie.length>0)
+      {
+      var c_start=document.cookie.indexOf(c_name + "=")
+      if (c_start!=-1)
+      {
+      c_start=c_start + c_name.length+1
+      c_end=document.cookie.indexOf(";",c_start)
+      if (c_end==-1) c_end=document.cookie.length
+      return unescape(document.cookie.substring(c_start,c_end));
+      }
+      }
+      return "";
+      }
+      if (typeof YAHOO.YMusic_Domains.cosmosvideo == 'undefined') YAHOO.YMusic_Domains.cosmosvideo =	"http://video.music.yahoo.com"; //just in case common_derived.asp does not load
+      var COMMON_VIDEOPLAYER_TRANSITION_UA = navigator.userAgent.toLowerCase();
+      var COMMON_VIDEOPLAYER_TRANSITION_USECOSMOS = ( parseInt(common_videoplayer_transition_getCookie('cosmos')) == 1 || COMMON_VIDEOPLAYER_TRANSITION_UA.indexOf('mac') > -1 );
+      // turn off cosmos here:
+      //var COMMON_VIDEOPLAYER_TRANSITION_USECOSMOS = false;
+      
+    </script><script language="javascript">
+		var part = 'http://music.yahoo.com';
+		var section = 'homeMenu';
+		var rdDomain = "http://us.rd.yahoo.com";
+		var srv = 'http://music.yahoo.com';
+		var img_path = 'http://us.music1.yimg.com/music.yahoo.com/common/resources/skins/us/';
+		var sta = 0;
+		var guest = 1;
+		var sid = '791000013';
+	</script><style type="text/css">
+			.ygmapls { font-family:Verdana;	color:#9999CC; font-size:10px; }
+			.ygmapls:hover {	color:#9999CC; }
+		</style>
+<link rel="stylesheet" type="text/css" href="common_styles.css"></head><body style="margin:0; padding:0;" bgcolor="#333366" text="#FFFFFF" link="#000000" alink="#FF9900" vlink="#000000" ><script language="javascript" src="http://music.yahoo.com/common/includes/js/common_header.js"></script><div id="nav">
+<div id="headr"><script language="JavaScript" type="text/javascript" src="http://adserver.yahoo.com/a?f=791000013&amp;p=lnchcom&amp;l=HEADR&amp;c=r&amp;at=content%3D%22ros%22&amp;xg=unknown&amp;xy=2003"></script><noscript><iframe src="http://adserver.yahoo.com/a?f=791000013&amp;p=lnchcom&amp;l=HEADR&amp;c=h&amp;at=content%3D%22ros%22&amp;xg=unknown&amp;xy=2003&amp;bg=" width="" height="" marginwidth="0" marginheight="0" hspace="0" vspace="0" frameborder="0" scrolling="no"></iframe></noscript></div>
+<div id="navbody">
+<div id="leftLogoRegular"><a href="http://music.yahoo.com" target="_top"><img src="http://music.yahoo.com/common/resources/skins/us/LAUNCH_hdr_gradient_left.jpg" border="0" alt="Yahoo! Music"></a></div>
+<div id="rightLinks"><a href="http://music.yahoo.com" target="_top">Yahoo! Music Home</a>&nbsp;&nbsp;<a href="http://help.yahoo.com/l/us/yahoo/music/index.html" target="_top">Help</a>&nbsp;&nbsp;</div>
+<div class="userInfo"><b><a href="'&#32;+&#32;thumbnail_array[i][1]&#32;+&#32;'.1.html#" onclick="document.location='http://login.yahoo.com/config/login?.src=launch&amp;.done=' + escape(parent.document.location);">Sign In</a></b><div class="userInfo2">[New User? <a href="'&#32;+&#32;thumbnail_array[i][1]&#32;+&#32;'.1.html#" onclick="document.location='http://edit.yahoo.com/config/eval_register?.src=launch&amp;.intl=us&amp;.done=' + escape('http://music.yahoo.com') + '/registration/process.asp%3Fn%3D1%26dest%3D' + escape(escape(parent.document.location));" style="color:#CCF;">Sign Up</a>]</div>
+</div>
+<div class="clearright"></div>
+<div id="searchbox1">
+<form name="ArtistSearch" target="_top" method="get" action="http://search.music.yahoo.com/search/" style="display:inline; position:relative; top:5px; padding:3px; margin:0;"><select name="m"><option value="all">All</option>
+<option value="artist">Artists</option>
+<option value="album">Albums</option>
+<option value="song">Songs</option>
+<option value="video">Videos</option></select><input type="text" name="p" size="13"><input type="image" src="http://us.music1.yimg.com/music.yahoo.com/common/resources/skins/us/btn_go.gif" border="0" style="position:relative; top:5px;"></form>
+</div>
+<div id="searchbox2"><img src="http://us.music1.yimg.com/music.yahoo.com/common/resources/skins/us/search_launch.gif" style="line-height:0; font-size:0; margin:0; padding:0;"></div>
+<div class="clearright"></div>
+<div id="top_nav"><script language="javascript">top_nav();</script></div>
+</div><script language="javascript">menu();</script><div id="navFooter"></div>
+</div>
+<div style="position:absolute; top:0; right:0;"><script language="Javascript">
+		var uni = Math.round(Math.random() * 32768);
+		document.write('<img alt="" width="1" height="1" src="http://launch.adserver.yahoo.com/l?S=791000013:Z/rand=' + uni + '/cookie=1">');
+	</script><script LANGUAGE="JavaScript">
+			
+				var pm_tagname    = "universalTag.txt";
+				var pm_tagversion = "1.4";
+				var pm_accountid  = "SC9D78OQONK1GM2B78CVG78KJ4";
+				var pm_scripthost = "srv.perf.overture.com";
+				var pm_customargs = "";
+				var pm_querystr = "?" + "ver=" + pm_tagversion + "&aid=" + pm_accountid + pm_customargs;
+				var pm_tag = "<SCR" + "IPT LANGUAGE='JavaScript' " + "SRC=//" + pm_scripthost + "/collweb/ScriptServlet" + pm_querystr + "></SCR" + "IPT>";
+				document.write(pm_tag);
+			
+			</script></div>
+<div style="position:absolute; top:0; left:0; z-index:10000;"><script language="JavaScript" type="text/javascript" src="http://adserver.yahoo.com/a?f=791000013&amp;p=lnchcom&amp;l=FAD&amp;c=r&amp;at=content%3D%22ros%22&amp;xg=unknown&amp;xy=2003"></script><noscript><iframe src="http://adserver.yahoo.com/a?f=791000013&amp;p=lnchcom&amp;l=FAD&amp;c=h&amp;at=content%3D%22ros%22&amp;xg=unknown&amp;xy=2003&amp;bg=" width="2" height="1" marginwidth="0" marginheight="0" hspace="0" vspace="0" frameborder="0" scrolling="no"></iframe></noscript></div>
+<table cellpadding="0" cellspacing="0" border="0" width="770">
+<tr>
+<td align="center" height="400"><table cellpadding="0" cellspacing="1" border="0" width="350" bgcolor="#FFFFFF">
+<tr>
+<td bgcolor="#333366" align="center"><table cellpadding="10" cellspacing="0" border="0" width="338">
+<tr>
+<td align="center" style="font-family:arial"><b>404 File Not Found</b><br><br><font size="-1" color="CCCCFF">
+						The page you have requested is unavailable or no longer exists.<br><br>
+						Please check the spelling of the URL, back up, or go directly to the <a href="http://music.yahoo.com/" style="color:FFFFFF">Yahoo! Music homepage</a>. If you continue to have problems, please contact <a href="http://help.yahoo.com/help/us/launch/" style="color:FFFFFF">Yahoo! Help</a>.
+						</font>
+</td>
+</tr>
+</table></td>
+</tr>
+</table></td>
+</tr>
+</table>
+<table cellpadding="0" cellspacing="0" border="0" width="770" bgcolor="#000000">
+<tr>
+<td height="4" bgcolor="#333366" colspan="3"><spacer type="block" height="4"></spacer></td>
+</tr>
+<tr>
+<td width="130" align="center" valign="top"><br></td>
+<td width="510" align="center"><br><table cellpadding="2" cellspacing="0" border="0">
+<tr>
+<td align="center"><p class="cmft"><b class="cmftb">Yahoo! Music: </b>&nbsp;<a href="http://music.yahoo.com/launchcast/" target="_top" class="cmft">LAUNCHcast Radio</a> - <a href="http://music.yahoo.com/musicvideos/" target="_top" class="cmft">Music Videos</a> - <a href="http://us.rd.yahoo.com/launch/hp/footer/musicservices/evt=32741/*http://music.yahoo.com/unlimited/" target="_top" class="cmft">Music Services</a> - <a href=" http://music.yahoo.com/artist/" target="_top" class="cmft">Artists</a> - <a href="http://music.yahoo.com/" target="_top" class="cmft">more</a>...</p></td>
+</tr>
+<tr>
+<td align="center"><p class="cmft"><b class="cmftb">Yahoo! Music Worldwide: </b>&nbsp;<a href="http://au.launch.yahoo.com/" target="_top" class="cmft">Australia &amp; NZ</a> - <a href="http://br.music.yahoo.com/" target="_top" class="cmft">Brazil</a> - <a href="http://ca.music.yahoo.com/" target="_top" class="cmft">Canada</a> - <a href="http://fr.music.yahoo.com/" target="_top" class="cmft">France</a> - <a href="http://de.music.yahoo.com/" target="_top" class="cmft">Germany</a> - <a href="http://it.launch.yahoo.com/" target="_top" class="cmft">Italy</a><br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="http://es.music.yahoo.com/" target="_top" class="cmft">Spain</a> - <a href="http://uk.music.yahoo.com/" target="_top" class="cmft">UK &amp; Ireland</a> - <a href="http://espanol.launch.yahoo.com/" target="_top" class="cmft">Yahoo! Telemundo Music</a><br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="http://kr.music.yahoo.com/" target="_top" class="cmft">Korea</a> - <a href="http://music.yahoo.co.jp" target="_top" class="cmft">Japan</a> - <a href="http://cn.music.yahoo.com/" target="_top" class="cmft">China</a> - <a href="http://tw.music.yahoo.com/" target="_top" class="cmft">Taiwan</a> - <a href="http://hk.music.yahoo.com/" target="_top" class="cmft">Hong Kong</a></p></td>
+</tr>
+<tr>
+<td align="center"><p class="cmft"><b class="cmftb">Yahoo! Entertainment: </b>&nbsp;<a href="http://movies.yahoo.com/" target="_top" class="cmft">Movies</a> - <a href="http://tv.yahoo.com/" target="_top" class="cmft">TV</a> - <a href="http://games.yahoo.com/" target="_top" class="cmft">Games</a> - <a href="http://astrology.yahoo.com/" target="_top" class="cmft">Astrology</a> - <a href="http://www.yahoo.com/" target="_top" class="cmft">more</a>...</p></td>
+</tr>
+<tr>
+<td align="center"><p class="cmft"><br><b><a href="http://us.rd.yahoo.com/launch/Footer/YMU/evt=34309/*http://music.yahoo.com/unlimited/" class="cmft">Yahoo! Music Unlimited</a>: Access over 2 million songs - try it free!</b></p></td>
+</tr>
+<tr>
+<td align="center"><p class="cmft"><br><b><a href="http://music.yahoo.com/rss/" class="cmft">Add to My Yahoo!/RSS</a>: Get feeds for Yahoo! Music top songs, albums and videos.</b></p></td>
+</tr>
+<tr>
+<td align="center"><p class="cmft"><br><b><a href="http://us.rd.yahoo.com/launch/Footer/AlertOptin/evt=32807/*http://music.yahoo.com/musicengine/optin/" class="cmft">Yahoo! New Music Alert</a>: Stay current with the newest albums and song releases.</b></p></td>
+</tr>
+<tr>
+<td align="center"><p class="cmft"><br><b><a href="http://us.rd.yahoo.com/launch/hp/footer/optin/evt=8984/*http://login.yahoo.com/config/login?.done=http%3a//subscribe.yahoo.com/subscribe%3f.lid=S:396500006%26.optin=mus%26.src=launch%26.done=http%3a//music.yahoo.com/&amp;.src=launch&amp;.intl=us" class="cmft">Yahoo! Music Backstage</a>: Get the hottest artists, music videos, photos, charts, + more!</b></p></td>
+</tr>
+<tr>
+<td align="center"><p class="cmft"><br><b><a href="http://music.yahoo.com/partner" class="cmft" target="_new">Yahoo! Music Partner Program</a></b></p></td>
+</tr>
+</table>
+</td>
+<td width="130" valign="bottom" align="left"></td>
+</tr>
+<tr>
+<td width="770" colspan="3" align="center"><br><p class="cmft">
+							Copyright © 2006 Yahoo! Inc. All Rights Reserved.<br><a href="http://privacy.yahoo.com/privacy/us/music/index.html" target="_top" class="cmft">Privacy Policy</a> - <a href="http://docs.yahoo.com/info/terms/" target="_top" class="cmft">Terms of Service</a> - <a href="http://docs.yahoo.com/info/copyright/copyright.html" target="_top" class="cmft">Yahoo! Copyright/IP Policy</a> - <a href="http://help.yahoo.com/help/us/launch" target="_top" class="cmft">Help</a><br><br></p>
+</td>
+</tr>
+</table>
+<div style="position:absolute; bottom:0; right:0;"><script language="JavaScript" type="text/javascript" src="http://adserver.yahoo.com/a?f=396500006&amp;p=lnchcom&amp;l=FOOT9&amp;c=r&amp;at=content%3D%22ros%22&amp;xg=unknown&amp;xy=2003"></script><noscript><iframe src="http://adserver.yahoo.com/a?f=396500006&amp;p=lnchcom&amp;l=FOOT9&amp;c=h&amp;at=content%3D%22ros%22&amp;xg=unknown&amp;xy=2003&amp;bg=" width="1" height="1" marginwidth="0" marginheight="0" hspace="0" vspace="0" frameborder="0" scrolling="no"></iframe></noscript></div><script language="javascript" src="http://music.yahoo.com/common/includes/js/common_launchapplication.js"></script></body></html>

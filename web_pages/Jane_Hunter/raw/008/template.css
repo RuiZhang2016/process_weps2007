@@ -1,0 +1,130 @@
+/********************** PLEASE NOTE ****************************/
+/*                                                             */
+/* Please follow the directions above each section. They will  */
+/* let you know what changes or additions can be made          */
+/* IMPORTANT: Please ensure you are familiar with CSS protocol */
+/* before making ANY CHANGES                                   */
+/*                                                             */
+/***************************************************************/
+
+
+/****************** Site constant tags *************************/
+/*                                                             */
+/* The tags below are NOT to be modified, deleted or added to. */
+/* Doing so will result in deviation from the UQ template.     */
+/*                                                             */
+/***************************************************************/
+
+body			{ background: #FFFFFF; margin: 1px; font-size : 70%; }
+td.toplinks		{ background-color: #367FCC; }
+td.header		{ background-image: url("/_templates/itee-v4/images/header-background.gif"); background-repeat: repeat; }
+td.searchbar		{ font-size: 95%; height: 21px; background-image: url("/_templates/itee-v4/images/gradient.gif"); background-repeat: repeat; }
+td.feedback		{ font-size: 90%; height: 19px; background-color: #BDC2C2; color: #FFF; border-top: 1px solid #FFF; }
+td.feedback a		{ color: #FFF; }
+input.searchbutton	{ vertical-align: bottom; }
+.quicklink		{ font-size: 11px; width: 180px; background-color: #F3F8E4; }
+#breadcrumb 		{ background-color: #FAFAFA; border: 1px #E4E4E4 solid;	padding: 2px; margin-left: 10px; margin-right: 10px; }
+#content		{ padding: 2px; margin-left: 10px; margin-right: 10px; }
+#relatedlink		{ background-color: #FAFAFA; border: 1px #E4E4E4 solid; padding: 2px; margin-left: 0px; margin-right: 10px; font-family: Arial, Verdana, Helvetica, Sans-Serif; font-size: 14px; color: #333; }
+font,th,td,p		{ font-family: Verdana, Arial, Helvetica, sans-serif; }
+input,textarea,select	{ font-family: Verdana, Arial, Helvetica, sans-serif; font-size: 100%; }
+.footer 		{ font-size: 85%; color: #999999; }
+.searchbar		{ margin: 0px; }
+
+
+/********************* Link Colour *****************************/
+/*                                                             */
+/* To make a change to the link colour and mouseover/hover     */
+/* state of the link text, please change the color in BOTH     */
+/* tags below if required.                                     */
+/*                                                             */
+/***************************************************************/
+
+a:link,a:active,a:visited	{ color: #0033CC; text-decoration: none; }
+a:hover				{ color: #0033CC; text-decoration: underline; }
+
+/* Homepage Structural CSS */
+td.menu				{ background-color: #E7ECEF; }
+#menu-header			{ background-color: #A1BD41; padding: 5px; font-weight: bold; color: #FFF; text-align: center; border-bottom: 1px solid #8A8B8B; font-family: Arial, Verdana, Sans-Serif; }
+.content-header			{ background-color: #828D8D; padding: 5px; padding-left: 15px; font-weight: bold; color: #FFF; border-left: 1px solid #FFF; border-bottom: 1px solid #737373; font-family: Arial, Verdana, Sans-Serif; }
+.green-header			{ color: #8BA13F; font-family: 'Trebuchet MS', Arial, Verdana, Sans-Serif; font-size: 150%; line-height: 24px; }
+table.content-links		{ padding: 10px; padding-left: 25px; }
+td.content-links		{ color: #4C4C4C; line-height: 15px; font-size: 11px; }
+td.content-links a		{ color: #4C4C4C; }
+td.content-links a:visited	{ color: #4C4C4C; }
+
+/* Homepage Feature */
+table.feature		{ background-color: #BDD17A; border-top: 1px solid #FFF; border-bottom: 1px solid #FFF; }
+td.feature-pic		{ background-color: #BDD17A; border-right: 1px solid #FFF; }
+td.feature-intro	{ background-image: url("/_templates/itee-v4/images/feature-background.gif"); background-repeat: no-repeat; background-position: left; font-size: 120%; font-weight: normal; padding-left: 15px; font-family: 'Trebuchet MS', Arial, Verdana, Sans-Serif; }
+
+/* Homepage Highlights */
+div.highlight table	{ border-bottom: 1px solid #A6A6A6; border-right: 1px solid #A6A6A6; border-top: 1px solid #FFF; height: 65px; padding-left: 15px; color: #333; }
+
+.mainblockpart  { width: 100%; }
+
+/* Navigation Menu Tags - Do not modify these */
+/*JK*
+table.navtable				{ width: 190px; }
+#button					{ width: 190px; padding: 2px; padding-left: 0px; }
+#button ul				{ list-style: none; margin: 3px; padding: 0px; }
+*/
+/* #button li				{ border: 1px solid #DFDFDF; line-height: 11px; margin: 1px; } */
+/* #button li.unselected a			{ font-family: Verdana, Arial, Helvetica, sans-serif; font-size: 11px; text-decoration: none; background-color: #FFFFFF; color: #000000; padding: 4px 5px 4px 5px; display: block; width: 95%; } */
+/*JK*
+#button li				{ border: 1px solid #DFDFDF; line-height: 12px; margin: 1px; }
+#button li.unselected a			{ font-family: Verdana, Arial, Helvetica, sans-serif; font-size: 11px; text-decoration: none; color: #000000; padding: 4px 5px 4px 14px; display: block; width: 162px; background: #FFFFFF url("/_templates/itee-v4/images/arrowz.gif") left top no-repeat; }
+html>body #button li.unselected a	{ width: auto; }
+*/
+
+table.navtable				{ width: 191px; padding: 0px; border: 0px; border-spacing: 0px; margin: 0px; border-collapse: collapse; }
+table.navtable tr td		{ padding: 0px; }
+#button					{ padding: 2px; padding-left: 0px; }
+#button ul				{ list-style: none; margin: 3px; padding: 0px; }
+#button li				{ border: 1px solid #DFDFDF; line-height: 11px; margin: 1px; }
+#button li.unselected a			{ display: block; padding-left: 16px; text-indent: -11px; font-family: Verdana, Arial, Helvetica, sans-serif; font-size: 11px; text-decoration: none; background-color: #FFFFFF; color: #000000; padding-top: 5px; padding-right: 4px; padding-bottom: 5px; }
+html>body #button li.unselected a	{ width: auto; }
+/* */
+
+/******************** Navigation Menu **************************/
+/*                                                             */
+/* The Navigation Menu on all new templates are CSS controlled */
+/* Only ONE element of the menu can be modified (below)        */
+/* i.e. the colour of the mouseover/hover state.               */
+/*                                                             */
+/***************************************************************/
+
+#button li a:hover	{ background-color: #F3F8E4; color: #000; }
+
+
+/***************** Content (Level 2) Pages ********************/
+/*                                                            */
+/* Please DO NOT modify any of these tags. They are separate  */
+/* from the constant tags (above) as they serve their purpose */
+/* in only the content (Level 2) pages.                       */
+/*                                                            */
+/**************************************************************/
+
+.content-image		{ border-top: 1px solid #FFF; border-bottom: 1px solid #FFF; }
+#breadcrumb		{ background-color: #FAFAFA; border: 1px #E4E4E4 solid; padding: 5px; margin-left: 10px; margin-right: 10px; }
+#content		{ padding: 2px; padding:20px; padding-left: 10px; font-size: 100%; }
+td.contentheader	{ font-family: Arial, Verdana, Helvetica, Sans-Serif; font-size: 160%; font-weight: bold; color: #333; }
+#content		{ font-size: 12px; }
+
+/* Related Links */
+.related-header		{ border-top: 1px solid #FFF; }
+td.related-link 	{ background-color: #EEF6E7; border-bottom: 1px solid #FFF; padding-top: 5px; padding-bottom: 5px; }
+
+/* Quick Links */
+/*JK*#quick-links		{ margin-left:5px; }*/
+#quick-links		{ margin-left: 5px; margin-right: 8px; }
+#quick-links table	{ width: 180px; border-collapse: collapse; background-color: #EEF6E7; background-image: url("/_templates/itee-v4/images/quick-links-table.gif"); }
+#quick-links th		{ width: 180px; padding: 5px; text-align: center; font-weight: bold; color: #FFF; font-family: Arial, Verdana, Sans-Serif; background-image: url("/_templates/itee-v4/images/quick-links-th.gif"); }
+#quick-links a		{ width: 150px; padding: 5px; text-decoration: none; display: block; }
+#quick-links a:hover	{ background-color: #EEFFEE; }
+#quick-links td.ql-l	{ width: 25px; text-align: right; }
+#quick-links td.ql-m	{ width: 150px; text-align: left; }
+#quick-links td.ql-r	{ width: 5px; text-align: center; }
+#quick-links td.ql-b	{ width: 180px; height: 17px; text-align: center; background-image: url("/_templates/itee-v4/images/quick-links-bottom.gif"); }
+a.authreq		{ /*color: #F00;*/ }
+a.authreq:hover		{ color: #F88; }

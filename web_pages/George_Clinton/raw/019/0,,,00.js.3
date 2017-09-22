@@ -1,0 +1,72 @@
+
+var tm=(new Date()).getTime();
+var _ad_skuarray=new Array();
+var _ad_skuarray2=new Array();
+var _ad_elemarray=new Array();
+var _ad_imgarray=new Array();
+var d=document.getElementById('__PageBody__');
+function disabled_bt() {self.status="Out of Stock"; return false;}
+function disabled_status() {self.status="Out of Stock"; return true;}
+function disabled_status2() {self.status=""; return true;}
+function test_event() {alert('test');}
+
+if(!d||d==null||typeof(d)=="undefined") {d=self.document;}
+var idx=0;
+var skustr="";
+
+//var _ad_ahreflist=d.getElementsByTagName('a');
+var _ad_ahreflist=new Array();
+var ahreflength=_ad_ahreflist.length;
+
+for( var i=0; i<ahreflength; i++ )
+{
+	var n=_ad_ahreflist[i].id;
+	if(n!=''&&n.charAt(0)=='_'&&n.indexOf("__aecsku__")==0)
+	{
+		newn=n.replace('__aecsku__','');
+		newn=newn.replace('/','%2F');
+
+		_ad_skuarray.push("DTL_LCC" + (idx++) + "=" + newn);
+		_ad_skuarray2.push(newn);
+ _ad_elemarray.push(_ad_ahreflist[i]);
+	}
+}
+_ad_ahreflist=d.getElementsByTagName('span');
+ahreflength=_ad_ahreflist.length;
+for( var i=0; i<ahreflength; i++ )
+{
+	var n=_ad_ahreflist[i].id;
+	if(n!=''&&n.charAt(0)=='_'&&n.indexOf("__aecsku__")==0)
+	{
+		newn=n.replace('__aecsku__','');
+		newn=newn.replace('/','%2F');
+
+		_ad_skuarray.push("DTL_LCC" + (idx++) + "=" + newn);
+		_ad_skuarray2.push(newn);
+		
+ _ad_elemarray.push(_ad_ahreflist[i]);
+	}
+}
+_ad_ahreflist=d.getElementsByTagName('img');
+ahreflength=_ad_ahreflist.length;
+for( var i=0; i<ahreflength; i++ )
+{
+	var n=_ad_ahreflist[i].id;
+	if(n!=''&&n.charAt(0)=='_'&&n.indexOf("__aecsku__")==0)
+	{
+ _ad_imgarray.push(_ad_ahreflist[i]);
+	}
+}
+
+DTL_WMSID=new Array("");
+DTL_SCID=new Array("");
+DTL_PRICE_RULEID=new Array("");
+DTL_PRICE_ONSALE=new Array("");
+DTL_PRICE_MSRP=new Array("");
+DTL_PRICE_SP=new Array("");
+
+if (_ad_skuarray.length>0) {
+ 
+document.writeln('<sc' + 'ript type="text/javascript" language="javascript" src="http://appsvr.thestore24.com/cgi-bin/webaec.aspx?Format=javascript&Type=product_info&GetPrice=on&Conf=artistdirect&' + _ad_skuarray.join("&") + '"></scr' + 'ipt>');
+	}
+

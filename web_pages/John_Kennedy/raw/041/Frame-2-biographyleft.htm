@@ -1,0 +1,68 @@
+<html>
+<head>
+<title> </title>
+<link rel="stylesheet" href="master.css">
+<script language="JavaScript" src="user.js"></script>
+<script language="JavaScript">
+<!--
+
+function newImage(arg) {
+	if (document.images) {
+		rslt = new Image();
+		rslt.src = arg;
+		return rslt;
+	}
+}
+
+function changeImages() {
+	if (document.images && (preloadFlag == true)) {
+		for (var i=0; i<changeImages.arguments.length; i+=2) {
+			document[changeImages.arguments[i]].src = changeImages.arguments[i+1];
+		}
+	}
+}
+
+var preloadFlag = false;
+function preloadImages() {
+	if (document.images) {
+		left_02_over = newImage("26/images/left-02_over.gif");
+		left_03_over = newImage("26/images/left-03_over.gif");
+		left_04_over = newImage("26/images/left-04_over.gif");
+		left_05_over = newImage("26/images/left-05_over.gif");
+		left_06_over = newImage("26/images/left-06_over.gif");
+		left_07_over = newImage("26/images/left-07_over.gif");
+		preloadFlag = true;
+	}
+}
+
+// -->
+</script>
+</head>
+<body  bgcolor=#FFFFFF topmargin=0 leftmargin=0 marginheight=0 marginwidth=0 background="bg_left.jpg"><script language="JavaScript">preloadImages();</script>
+<table border=0 cellpadding=0 cellspacing=0 bgcolor="#000000">
+  <tr>
+    <td> <img src="left-01.gif" width=141 height=15></td>
+  </tr>
+  <tr>
+    <td>
+      <table border=0 cellpadding=0 cellspacing=0 background="spacer.gif">
+        <!-- Start buttons section --><tr><td> <a href="http://www.johnkennedy.com/home.html"
+			   onMouseOver="changeImages('/home.html', '26/images/01b.gif'); return true;"
+			   onMouseOut="changeImages('/home.html', '26/images/01a.gif'); return true;" target="_parent"> 
+            <img name="/home.html" src="01a.gif" width=141 height=19 border=0></a></td></tr><tr><td> <a href="biography.html"
+			   onMouseOver="changeImages('/biography.html', '26/images/left-03_over.gif'); return true;"
+			   onMouseOut="changeImages('/biography.html', '26/images/left-03.gif'); return true;" target="_parent"> 
+            <img name="/biography.html" src="left-03.gif" width=141 height=19 border=0></a></td></tr><tr><td> <a href="http://www.johnkennedy.com/contributeonline.html"
+			   onMouseOver="changeImages('/contributeonline.html', '26/images/left-04_over.gif'); return true;"
+			   onMouseOut="changeImages('/contributeonline.html', '26/images/left-04.gif'); return true;" target="_parent"> 
+            <img name="/contributeonline.html" src="left-04.gif" width=141 height=19 border=0></a></td></tr><tr><td><img name="spacer" src="spacer.gif" width=141 height=19 border=0></td></tr><tr><td><img name="spacer" src="spacer.gif" width=141 height=19 border=0></td></tr><tr><td><img name="spacer" src="spacer.gif" width=141 height=19 border=0></td></tr><!-- End buttons section -->
+      </table>
+    </td>
+  </tr>
+  <tr>
+    <td> <img src="motif03.jpg" width=141 height=230></td>
+  </tr>
+</table>
+<!-- Template Design by Network Solutions, LLC  -->
+</body>
+</html>

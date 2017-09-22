@@ -1,0 +1,426 @@
+body {
+	margin : 0px;
+	background-color : white;
+  text-align : center;
+	width : 100%;
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+}
+
+img {
+  border : none;
+  }
+
+form {
+  display : inline;
+  }
+
+#mainTable {
+	color: #1a1a1a;
+  padding : 0px;
+	text-align : right;
+	margin-left : auto;
+	margin-right : auto;
+	margin-top : 1px;
+	}
+
+#mainTable a {
+  text-decoration : none;
+  color : #162F82;
+
+  }
+
+#mainTable a:hover {
+  text-decoration : underline;
+  }
+
+.headerOuter {
+  background-repeat : repeat-x;
+  color : #777;
+  font-size : 13px;
+  padding : 0px;
+  margin : 0px;
+  }
+
+.headerInner {
+  margin-bottom : 3px;
+	padding : 4px 3px 2px 3px;	
+  }
+ 
+.textInput {
+  font-size : 9px;
+  width : 120px;
+  }
+
+/* navCell */
+
+#nav, #nav ul { /* all lists */
+	padding: 0;
+	margin: 0;
+	list-style: none;
+	line-height: 1;
+	font-size: 12px;
+	color: #909090;
+	z-index: 999;
+	text-align: left;
+  }
+
+#navCell #nav a {
+	display : block;
+  text-decoration : none;
+	color : white;
+	margin-left : 5px;
+}
+
+#nav li { /* all list items */
+	float : left;
+}
+
+#nav li ul { /* second-level lists */
+  margin-top : 1px;
+	padding-top: 1px;
+	position: absolute;
+	width: 203px;
+	left: -999em;
+}
+
+#nav li ul li {
+	text-indent: 0;
+	width: 200px;
+	padding: 5px 0px;
+}
+
+#nav li ul li a {
+	color : white;
+  }
+
+#navCell #nav li ul li a:hover {
+	text-decoration: underline;
+}
+
+#nav li:hover ul,
+#nav li.sfhover ul { /* lists nested under hovered list items */
+	left: auto;
+}
+
+#search {
+  width : 181px;
+  margin-right : 1px;
+  vertical-align : middle;
+  text-align : center;
+  }
+
+#nav #news,
+#nav #nyclife,
+#nav #music,
+#nav #film,
+#nav #arts,
+#nav #people,
+#nav #classifieds {
+  width : 101px;
+  margin-right : 1px;
+  }
+  
+#mainTable #navCell #nav #aboutus {
+  width : 101px;
+  }
+
+#mainTable #navCell #nav li.navItem {
+  height : 25px;
+  background: #838FB4 url('/images/header_mod/bg_blue_reverse.gif') no-repeat;
+  line-height : 24px;
+  font-size : 15px;
+  }
+
+#mainTable #navCell #nav .subnav {
+  background: #838FB4 url('/images/header_mod/nav_li.gif') no-repeat;
+  }
+  
+/* left box */
+
+#mainTable #leftCell {
+  padding-top : 8px;
+  text-align : left;
+  vertical-align : top;
+  }
+
+#mainTable #leftCell .box .headerInner a {
+	color : #777777;
+	}
+
+#mainTable #leftCell .box {
+  border : 1px solid #cccccc;
+	margin-bottom : 10px;
+	padding-bottom : 5px;
+	}
+
+#mainTable #leftCell .box .item {
+  font-size : 9px;
+  color : #1a1a1a;
+	line-height : 13px;
+	margin : 8px 0px;
+	padding : 0px 6px;
+	}
+
+#mainTable #leftCell .box .item a {
+  font-size : 11px;
+	line-height : 16px;
+	}
+
+#mainTable #leftCell .box .item b {
+  color : #5a5a5a;
+  font-weight : normal;
+  }
+	
+#mainTable #leftCell .box .item .more a {
+  font-size : 10px;
+  color : #1a1a1a;
+	}
+
+
+
+/* blogs - left box */
+
+#mainTable #leftCell .box#blogs {
+overflow:hidden;
+	}
+
+#mainTable #leftCell .box#blogs .item .title a {
+	font-size : 11px;
+	color : #3a3a3a;
+	}
+
+#mainTable #leftCell .box#blogs .item .text a {
+	font-size : 9px;
+	}
+
+#mainTable #leftCell .box#blogs .item .date {
+  font-size : 9px;
+	line-height : 12px;
+	}
+
+
+#mainTable #leftCell .box .headerOuter {
+  border-bottom : 1px solid #cccccc;
+  background: url('/images/header_mod/bg_grey.gif');
+  background-repeat : repeat-x;
+  color : #777;
+  }
+
+#mainTable #leftCell .promotionsWrapper {
+  margin-bottom: 0px;
+  background : rgb(76, 98, 142);
+  color : white;
+	font-size: 10px;
+	font-weight: bold;
+	padding: 4px;
+	line-height : 14px;
+	}
+
+#mainTable #leftCell .promotionsWrapper a {
+  color : #fff;
+  }
+  
+#mainTable #leftCell #promotionsContent {
+  font-size : 10px;
+  padding : 0 3px;
+  line-height : 13px;
+  border: 1px solid rgb(76, 98, 142);
+  margin-bottom: 0px; 
+  }
+
+#mainTable #leftCell #promotionsContent b {
+  font-size : 11px;
+  color : #ababab;
+  }
+  
+/* center cell */
+
+#mainTable #centerCell {
+  vertical-align : top;
+  }
+
+/* right box */
+
+#mainTable #rightCell {
+  padding-top : 8px;
+  vertical-align : top;
+  text-align : left;
+  }
+
+/* right cell */
+
+#mainTable #rightCell .box {
+  width : 300px;
+  margin-top : 8px;
+  border : 1px solid #d0d0d0; 
+  text-align : left;
+  }
+  
+#mainTable #rightCell .box#adTop {
+  border : none;
+  }
+
+#mainTable #rightCell .box#adBottom {
+  border : none;
+  }
+
+#mainTable #rightCell .box#advertise {
+  border : 1px solid #cccccc;
+	padding : 3px;
+	width : 294px;
+	text-align : center;
+	font-size : 18px;
+  }
+
+#mainTable #rightCell .box#newsletter form {
+	margin-left : 0px;
+	}
+
+#mainTable #rightCell .box#newsletter .top {
+	text-align : center;
+	padding : 4px;
+	}
+
+#mainTable #rightCell .box#newsletter .bottom {
+	text-align : center;
+	font-size : 12px;
+	padding : 4px;
+	margin-top : -4px;
+	}
+
+#mainTable #rightCell .box#newsletter .top .inputBox {
+  width: 100px;
+	background-color : #ffffff;
+	color : #777777;
+	font-family : Verdana;
+	font-size : 12px;
+	}
+
+#mainTable #rightCell .box .headerOuter {
+  border-bottom : 1px solid #cccccc;
+  background: url('/images/header_mod/bg_grey.gif');
+  background-repeat : repeat-x;
+  color : #777;
+  }
+
+#mainTable #rightCell #class_search_box {
+	position : relative;
+	padding : 0px;
+	font-size : 10px;
+  text-decoration : none;
+	width : 300px;
+	border : 1px solid #506FA3;
+  }
+
+#mainTable #rightCell #classadboxtop {
+	padding : 3px;
+	text-align : left;
+	background-color : #506FA3;
+  }
+
+#mainTable #rightCell #classadboxtop a {
+	font-weight : normal;
+  text-decoration : none;
+	color : white;
+  }
+
+#mainTable #rightCell .vbar {
+	border-left : 1px solid #ccc;
+  }
+
+#mainTable #rightCell #bpNavTitle {
+	text-align : center;
+	padding : 3px;
+	font : bold 11px Verdana;
+	background-color : #fcc;
+  }
+
+#mainTable #rightCell #bpNavCounts {
+	width : 100%;
+	}
+	
+#mainTable #rightCell #bpNavCounts a {
+  text-decoration : none;
+  font-weight : normal;
+  }
+	
+#mainTable #rightCell #bpNavCounts a:hover {
+  text-decoration : underline;
+  }
+
+#mainTable #rightCell #bpNavCounts td {
+	font : bold 10px Verdana;
+	border-top : 1px solid #ccc;
+  }
+
+#mainTable #rightCell .smallNotice {
+	color : #999;
+	text-align : right;
+	padding : 4px;
+	border-top : 1px solid #ccc;
+	font-weight : normal;
+	font-size : 9px;
+  }
+
+#mainTable #rightCell #print2Web {
+  width : 300px;
+  padding : 3px 0px;
+  border : 1px solid #cccccc;
+  margin-top : 8px;
+  font-size : 12px;
+  text-align : left;
+  }
+
+#mainTable #rightCell #print2Web div {
+  padding-right : 4px;
+  margin-bottom : -8px;
+  }
+
+#mainTable #rightCell #print2Web b {
+  font-size : 14px;
+  }
+
+#mainTable #rightCell #print2Web a {
+  text-decoration : none;
+  }
+
+#mainTable #rightCell #print2Web a:hover {
+  text-decoration : underline;
+  }
+
+#mainTable #rightCell #clubAds {
+	margin : 8px 0px;	
+	}
+
+#mainTable #rightCell #clubAds table {
+	background : #4e4e4e;
+	color : white;
+	text-align : center;
+	font-size : 12px;
+	margin-bottom : 8px;
+	}
+
+#mainTable #rightCell #clubAds table .links {
+	padding : 4px 0px;
+	}
+
+#mainTable #rightCell #clubAds table .links .link {
+	padding : 0px 20px;
+	}
+
+#mainTable #rightCell #clubAds table a {
+	color : #F19431;
+	}
+
+
+/* footer */
+
+#mainTable #centerCell #footer {
+  text-align : center;
+  font-size : 10px;
+  margin-bottom : 8px;
+}
+
+div#blogToggle, div#podToggle {
+display: none;
+}

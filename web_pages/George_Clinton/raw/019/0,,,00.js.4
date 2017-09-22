@@ -1,0 +1,67 @@
+if (typeof(DTL_LCC)!='undefined'&&DTL_LCC) {
+	var retarraylength=DTL_LCC.length;
+
+	if(typeof(_ad_elemarray)!='undefined'&&_ad_elemarray) {
+		var _ad_elemarraylength=_ad_elemarray.length;
+ for( var i=0; i<_ad_elemarraylength; i++ ) {
+
+			if_error = ((DTL_ERR[i]==3)||(DTL_SCID[i]=="67"&&DTL_AVAIL[i]!="IS"))? 1:0;
+ if( if_error ) {
+ } else {
+ _ad_elemarray[i].innerHTML="&#36;"+DTL_PRICE[i];
+			}
+		}
+	}
+
+	if(typeof(_ad_imgarray)!='undefined'&&_ad_imgarray) {
+		var j=0;
+		var _ad_imgarraylength=_ad_imgarray.length;
+ for( var i=0; i<_ad_imgarraylength; i++ ) {
+			iid=_ad_imgarray[i].id;
+			iid=iid.replace('__aecsku__','');
+			if_error = -1;
+			for( var j=i; j<_ad_imgarraylength; j++ ) {
+				if( DTL_LCC[j]==iid ) {
+
+				if_error = ((DTL_ERR[i]==3)||(DTL_SCID[i]=="67"&&DTL_AVAIL[i]!="IS"))? 1:0;
+ break;
+				}
+			}
+			if ( if_error==1 ) {
+				isrc=_ad_imgarray[i].src;
+ _ad_imgarray[i].src=isrc.replace('add-cart.gif','outofstock.gif');
+				_ad_imgarray[i].alt="Out of Stock";
+				_ad_imgarray[i].onclick=disabled_bt;
+				_ad_imgarray[i].oncontextmenu=disabled_bt;
+				_ad_imgarray[i].onmouseover=disabled_status;
+				_ad_imgarray[i].onmouseout=disabled_status2;
+				_ad_imgarray[i].onmousedown=disabled_status;
+				_ad_imgarray[i].onmouseup=disabled_status2;
+				_ad_imgarray[i].style.cursor="default";
+				bparent=_ad_imgarray[i].parentNode;
+				bparent.onclick=disabled_bt;
+				bparent.oncontextmenu=disabled_bt;
+				bparent.onmouseover=disabled_status;
+				bparent.onmouseout=disabled_status2;
+				bparent.onmousedown=disabled_status;
+				bparent.onmouseup=disabled_status2;
+				bparent.href="#";
+				bparent.style.cursor="default";
+			} else if ( if_error==0 ) {
+				isrc=_ad_imgarray[i].src;
+				if ( DTL_AVAIL[j]=="SO" ) {
+ _ad_imgarray[i].src=isrc.replace('add-cart.gif','sp-order.gif');
+				} else if ( DTL_AVAIL[j]=="BO" ) {
+
+					_ad_imgarray[i].src=isrc.replace('add-cart.gif','bk-order.gif');
+ } else if ( DTL_AVAIL[j]=="PO" ) {
+
+					_ad_imgarray[i].src=isrc.replace('add-cart.gif','pre-order.gif');
+ } else {
+ //in stock
+				}
+			}
+		}
+	}
+}
+

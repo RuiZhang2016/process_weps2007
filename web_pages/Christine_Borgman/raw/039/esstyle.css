@@ -1,0 +1,198 @@
+/* Main Table Setup Incluidng Date Number Fonts, Size and Color */
+.mainTable {
+	background-color: #FFFFFF;
+	border: 1px solid #003366;
+	width: 175px;
+ }
+
+.navTable {
+	background-color: #FFFFFF;
+	border: 0px solid #FFFFFF;
+	width: 175px;
+ }
+ .navTable a:link {
+ 	text-decoration:none;}
+ .navTable a:visited {
+ 	text-decoration:none;}
+	
+
+.navTableText {
+    font-family: Geneva, Verdana, Arial, sans-serif; 
+	font-size: 9px; 
+	font-weight: Normal;
+	text-decoration: none;
+	color: #003366;
+	}
+
+/* Month and Year Row Setup */
+.monthYearRow {
+    line-height: 17pt;
+	background-color: #FFFFFF;
+	text-align: center;
+	vertical-align: middle;
+	background-image:   url("monthBg.gif");
+	}
+
+/* Month and Year Text Setup */
+.monthYearText {
+	font-family: Geneva, Verdana, Arial, sans-serif;
+	font-size: 13px;
+	font-weight: Bold;
+	color: #252216;
+	}
+
+/* Day Names Row Setup */
+.dayNamesRow {
+    line-height: 11pt;
+	background-color: #F5F4D3;
+	text-align: center;
+	vertical-align: middle;
+	}
+
+/* Day Name Setup */
+.dayNamesText {
+    font-family: Geneva, Verdana, Arial, sans-serif; 
+	font-size: 10px; 
+	font-weight: Bold; 
+	color: #433D27;
+	background-image:   url("dayBg.gif");
+	}
+
+/* Alignments, Font Face, Size and Color for Date Numbers and Row Height */
+.rows {
+	font-family: Geneva, Verdana, Arial, sans-serif;
+	font-size: 10px;
+	color: #433D27;
+    line-height: 15pt;
+	text-align: center;
+	vertical-align: middle;
+	}
+
+/* Color of Today's Date */
+.today {
+	color: #CF0000;
+    }
+
+/* Pop-up Events Setup */
+.popupDate {
+    font-family: Geneva, Verdana, Arial, sans-serif; 
+	font-size: 10px;
+	font-weight: bold;
+	color: #FFFFFF;
+	text-align: left;
+	background-color: #336699;
+	}
+
+.popupEventTitle {
+	font-family: Geneva, Verdana, Arial, sans-serif;
+	font-size: 10px;
+	color: #000000;
+	font-weight: bold;
+	background-color: #B6CEE7;
+	border: 1px solid #ACC8E3;
+	padding: 2px;
+}
+
+.popupEventTime {
+    font-family: Geneva, Verdana, Arial, sans-serif; 
+	font-size: 10px; 
+	color: #000000;
+	font-weight: normal;
+	background-color: #BED3E9;
+	border: 1px dashed #E9EFF5;
+	padding: 1px;
+}
+
+.popupEventDescription {
+    font-family: Geneva, Verdana, Arial, sans-serif; 
+	font-size: 10px; 
+	color: #000000;
+	font-weight: normal;
+	background-color: #CADCEE;
+	border: 1px solid #BFD5EA;
+	padding: 2px;
+}
+
+
+.popupEventDate {
+    font-family: Geneva, Verdana, Arial, sans-serif; 
+	font-size: 10px; 
+	color: #446B93;
+	text-align: center;
+	vertical-align: middle;
+	background-color: #E9EFF5;
+	border: 1px solid #E2EAF1;
+	padding: 1px;
+	}
+
+.popupEnd {
+    font-family: Geneva, Verdana, Arial, sans-serif; 
+	font-size: 10px; 
+	color: #A4A4A4;
+	}
+
+.popupCopyright {
+    font-family: Geneva, Verdana, Arial, sans-serif; 
+	font-size: 10px; 
+	color: #CCCCCC;
+	}
+
+.popupClose {
+    font-family: Geneva, Verdana, Arial, sans-serif; 
+	font-size: 10px;
+	color: #FFFFFF;
+	text-align: right;
+	background-color: #336699;
+	}
+
+.popupCloseBrackets {
+    font-family: Geneva, Verdana, Arial, sans-serif; 
+	font-size: 10px; 
+	color: #000000;
+	text-align: right;
+	background-color: #336699;
+	}
+/*
+---------------------------------------------------------------------------
+The classes below determine how the calendar background markings will look.
+---------------------------------------------------------------------------
+
+Remove the "background-image..." lines to remove graphics as table cell background images.
+
+If you do use images, change the "background-color..." to a similar color to that
+of your image. This will help persons with slow connections to see the event markings.
+
+You can optionally remove the "background-color..." lines to only use graphics.
+
+*/
+
+/* Normal Cell Background (date number with no event markings) */
+.s2 {
+	background-image:    url("cdef.gif");
+	background-color: #EEEEEE;
+	}
+/* Empty Cell Background (empty cells with no date numbers) */
+.s20 {
+	background-image:    url("cdef5.gif");
+	background-color: #EBEBEB;
+	}
+/* Mark Start Cell Background (usually a slashed graphic to show availability or solid for events) */
+.s21 {
+	background-image:    url("cdef2.gif");
+	background-color: #F5E0D8;
+	}
+/* Mark Solid Cell Background (solid marked event date background) */
+.s22 {
+	background-image:    url("cdef2.gif");
+	background-color: #F5E0D8;
+	}
+/* Mark End Cell Background (usually a slashed graphic to show availability or solid for events) */
+.s23 {
+	background-image:    url("cdef2.gif");
+	background-color: #F5E0D8;
+	}
+/* Mark End/Start Cell Background (usually a slashed graphic to show availability or solid for events) */
+.s24 {
+	background-image:    url("cdef2.gif");
+	background-color: #F5E0D8;
+	}

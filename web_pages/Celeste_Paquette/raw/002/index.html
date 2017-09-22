@@ -1,0 +1,248 @@
+<html>
+
+	<head>
+		
+		<meta http-equiv="content-type" content="text/html;charset=iso-8859-1">
+		<meta name="Capitol News Service" content="Florida's News">
+		<title>Welcome to Capitol News Service </title>
+		<csscriptdict>
+			<script><!--
+CSStopExecution = false;
+CSInit = new Array;
+function CSScriptInit() {
+if(typeof(skipPage) != "undefined") { if(skipPage) return; }
+idxArray = new Array;
+for(var i=0;i<CSInit.length;i++)
+	idxArray[i] = i;
+CSAction2(CSInit, idxArray);
+}
+CSAg = window.navigator.userAgent; CSBVers = parseInt(CSAg.charAt(CSAg.indexOf("/")+1),10);
+function IsIE() { return CSAg.indexOf("MSIE") > 0;}
+function CSIEStyl(s) { return document.all.tags("div")[s].style; }
+function CSNSStyl(s) { return CSFindElement(s,0); }
+function CSFindElement(n,ly) { if (CSBVers < 4) return document[n];
+	var curDoc = ly ? ly.document : document; var elem = curDoc[n];
+	if (!elem) { for (var i=0;i<curDoc.layers.length;i++) {
+		elem = CSFindElement(n,curDoc.layers[i]); if (elem) return elem; }}
+	return elem;
+}
+function CSClickReturn () {
+	var bAgent = window.navigator.userAgent; 
+	var bAppName = window.navigator.appName;
+	if ((bAppName.indexOf("Explorer") >= 0) && (bAgent.indexOf("Mozilla/3") >= 0) && (bAgent.indexOf("Mac") >= 0))
+		return true; // dont follow link
+	else return false; // dont follow link
+}
+function CSButtonReturn () {
+	var bAgent = window.navigator.userAgent; 
+	var bAppName = window.navigator.appName;
+	if ((bAppName.indexOf("Explorer") >= 0) && (bAgent.indexOf("Mozilla/3") >= 0) && (bAgent.indexOf("Mac") >= 0))
+		return false; // follow link
+	else return true; // follow link
+}
+CSIm = new Object();
+function CSIShow(n,i) {
+	if (document.images) {
+		if (CSIm[n]) {
+			var img = (!IsIE()) ? CSFindElement(n,0) : document[n];
+			if (img && typeof(CSIm[n][i].src) != "undefined") {img.src = CSIm[n][i].src;}
+			if(i != 0)
+				self.status = CSIm[n][3];
+			else
+				self.status = " ";
+			return true;
+		}
+	}
+	return false;
+}
+function CSILoad(action) {
+	im = action[1];
+	if (document.images) {
+		CSIm[im] = new Object();
+		for (var i=2;i<5;i++) {
+			if (action[i] != '') { CSIm[im][i-2] = new Image(); CSIm[im][i-2].src = action[i]; }
+			else CSIm[im][i-2] = 0;
+		}
+		CSIm[im][3] = action[5];
+	}
+}
+CSStopExecution = false;
+
+function CSAction(array) { 
+	return CSAction2(CSAct, array);
+}
+function CSAction2(fct, array) { 
+	var result;
+	for (var i=0;i<array.length;i++) {
+		if(CSStopExecution) return false; 
+		var actArray = fct[array[i]];
+		if(actArray == null) return false; 
+		var tempArray = new Array;
+		for(var j=1;j<actArray.length;j++) {
+			if((actArray[j] != null) && (typeof(actArray[j]) == "object") && (actArray[j].length == 2)) {
+				if(actArray[j][0] == "VAR") {
+					tempArray[j] = CSStateArray[actArray[j][1]];
+				}
+				else {
+					if(actArray[j][0] == "ACT") {
+						tempArray[j] = CSAction(new Array(new String(actArray[j][1])));
+					}
+				else
+					tempArray[j] = actArray[j];
+				}
+			}
+			else
+				tempArray[j] = actArray[j];
+		}			
+		result = actArray[0](tempArray);
+	}
+	return result;
+}
+CSAct = new Object;
+
+// --></script>
+		</csscriptdict>
+		<csactiondict>
+			<script><!--
+CSInit[CSInit.length] = new Array(CSILoad,/*CMP*/'Button14',/*URL*/'../headerGFX/todaysnewsover.jpg',/*URL*/'',/*URL*/'','');
+CSInit[CSInit.length] = new Array(CSILoad,/*CMP*/'Button13',/*URL*/'../headerGFX/newsarchives.jpg',/*URL*/'../headerGFX/newsarchivesover.jpg',/*URL*/'','');
+CSInit[CSInit.length] = new Array(CSILoad,/*CMP*/'Button18',/*URL*/'../headerGFX/mvweek.jpg',/*URL*/'../headerGFX/mvweekover.jpg',/*URL*/'','');
+CSInit[CSInit.length] = new Array(CSILoad,/*CMP*/'Button12',/*URL*/'../headerGFX/storyideas.jpg',/*URL*/'../headerGFX/storyideasover.jpg',/*URL*/'','');
+CSInit[CSInit.length] = new Array(CSILoad,/*CMP*/'Button11',/*URL*/'../headerGFX/production.jpg',/*URL*/'../headerGFX/productionover.jpg',/*URL*/'','');
+CSInit[CSInit.length] = new Array(CSILoad,/*CMP*/'Button10',/*URL*/'../headerGFX/weather.jpg',/*URL*/'../headerGFX/weatherover.jpg',/*URL*/'','');
+CSInit[CSInit.length] = new Array(CSILoad,/*CMP*/'Button9',/*URL*/'../headerGFX/clients.jpg',/*URL*/'../headerGFX/clientsover.jpg',/*URL*/'','');
+CSInit[CSInit.length] = new Array(CSILoad,/*CMP*/'Button8',/*URL*/'../headerGFX/search.jpg',/*URL*/'../headerGFX/searchover.jpg',/*URL*/'','');
+CSInit[CSInit.length] = new Array(CSILoad,/*CMP*/'Button15',/*URL*/'../headerGFX/4pmscripts.jpg',/*URL*/'../headerGFX/4pmscriptsover.jpg',/*URL*/'','');
+CSInit[CSInit.length] = new Array(CSILoad,/*CMP*/'Button7',/*URL*/'../headerGFX/audioclips.jpg',/*URL*/'../headerGFX/audioclipsover.jpg',/*URL*/'','');
+CSInit[CSInit.length] = new Array(CSILoad,/*CMP*/'Button6',/*URL*/'../headerGFX/videoclips.jpg',/*URL*/'../headerGFX/videoclipsover.jpg',/*URL*/'','');
+CSInit[CSInit.length] = new Array(CSILoad,/*CMP*/'Button4',/*URL*/'../headerGFX/newslinks.jpg',/*URL*/'../headerGFX/newslinksover.jpg',/*URL*/'','');
+CSInit[CSInit.length] = new Array(CSILoad,/*CMP*/'Button17',/*URL*/'../headerGFX/Home.jpg',/*URL*/'../headerGFX/Homeover.jpg',/*URL*/'','');
+CSInit[CSInit.length] = new Array(CSILoad,/*CMP*/'Button5',/*URL*/'../headerGFX/government.jpg',/*URL*/'../headerGFX/governmentover.jpg',/*URL*/'','');
+CSInit[CSInit.length] = new Array(CSILoad,/*CMP*/'Button3',/*URL*/'../headerGFX/contactus.jpg',/*URL*/'../headerGFX/contactusover.jpg',/*URL*/'','');
+CSInit[CSInit.length] = new Array(CSILoad,/*CMP*/'Button',/*URL*/'../headerGFX/employment.jpg',/*URL*/'../headerGFX/employmentover.jpg',/*URL*/'','');
+CSInit[CSInit.length] = new Array(CSILoad,/*CMP*/'Button2',/*URL*/'../headerGFX/staffinfo.jpg',/*URL*/'../headerGFX/staffinfoover.jpg',/*URL*/'','');
+CSInit[CSInit.length] = new Array(CSILoad,/*CMP*/'Button16',/*URL*/'../headerGFX/bottombar.jpg',/*URL*/'',/*URL*/'','');
+
+// --></script>
+		</csactiondict>
+	</head>
+
+	
+<body background="../headerGFX/paperBKGD.jpg" topmargin="0" leftmargin="0" marginwidth="0" marginheight="0" onload="CSScriptInit();">
+		<table cool width="607" height="637" border="0" cellpadding="0" cellspacing="0" gridx="16" showgridx usegridx gridy="16" showgridy usegridy>
+			<tr height="1" cntrlrow>
+				<td width="1" height="1"></td>
+				<td width="606" height="1"><spacer type="block" width="606" height="1"></td>
+			</tr>
+			<tr height="636">
+				<td width="1" height="636"><spacer type="block" width="1" height="636"></td>
+				<td width="606" height="636" colspan="1" rowspan="1" valign="top" align="left" xpos="0">
+					<table border="0" cellpadding="0" cellspacing="0" width="606">
+						<tr>
+							<td colspan="2"><img height="84" width="605" src="../headerGFX/Header.jpg"></td>
+						</tr>
+						<tr>
+							<td width="170"><csobj w="164" h="24" t="Button"><a href="todaysnews.html" onmouseover="return CSIShow(/*CMP*/'Button14',1)" onmouseout="return CSIShow(/*CMP*/'Button14',0)" onclick="return CSButtonReturn()"><img src="../headerGFX/todaysnewsover.jpg" width="164" height="24" name="Button14" border="0"></a></csobj></td>
+							<td rowspan="22" align="left" valign="top"> 
+
+
+<!-- EDITING SECTION  ---------------------------------->
+
+<font size=+1 face="ARIAL, HELVETICA"><br>
+<!--------------------------------------- TITLE -------------->
+<center>
+Florida Nurses
+</b>
+<br> 
+by <a href="mailto:langley@flanews.com">Victoria Langley</a>
+<i><br><br> <font size=-2> Wednesday December 12th, 2001</font></i>
+<!--------------------------------------- TITLE -------------->
+</center>
+ <br><font size=-1 face="ARIAL, HELVETICA">
+
+<dd> The Florida Nurses Association says nurse practitioners should be able to provide some narcotic prescriptions that right now only doctors are allowed to prescribe.  The nurses gathered in the state capitol today to rally support for a bill that would let the nurse practitioners prescribe controlled substances like painkillers.  The nurse practitioners say especially in nursing homes where doctors visits are infrequent, there needs to be someone on hand to alleviate patients' discomfort, and some doctors agree.  
+
+<dd>
+One bill supporter Dr. Celeste Paquette commented,  "I just recently had an aunt die a very painful death with a large leg ulcer that needed amputation but she was in heart failure and really in her demise anyway so she needed a lot of pain medication.  And the physician came once a month to the nursing home, and some of her other partners could have come more frequently and adjusted that medication but it was always a battle and that's not right." </b></i><dd>
+
+<dd> Nurse practitioners say they can't even prescribe some cough syrups under the current law.    41 other states allow nurse practitioners to write the prescriptions.   A proposal to give nurse practitioners in Florida the ability to prescribe controlled substances has failed to make it out of committee at the state capitol for the past nine years.
+
+<!--------------------------------------- COPY --------------->
+</font>
+
+
+<!-- END EDITING SECTION  ------------------------------------------------>
+
+
+</td> 
+						</tr>
+						<tr>
+							<td width="170"><csobj w="164" h="24" t="Button" ht="../headerGFX/newsarchivesover.jpg"><a href="newsarchives.html" onmouseover="return CSIShow(/*CMP*/'Button13',1)" onmouseout="return CSIShow(/*CMP*/'Button13',0)" onclick="return CSButtonReturn()"><img src="../headerGFX/newsarchives.jpg" width="164" height="24" name="Button13" border="0"></a></csobj></td>
+						</tr>
+						<tr>
+							<td width="170"><csobj w="163" h="25" t="Button" ht="../headerGFX/mvweekover.jpg"><a href="mvweekly.html" onmouseover="return CSIShow(/*CMP*/'Button18',1)" onmouseout="return CSIShow(/*CMP*/'Button18',0)" onclick="return CSButtonReturn()"><img src="../headerGFX/mvweek.jpg" width="163" height="25" name="Button18" border="0"></a></csobj></td>
+						</tr>
+						<tr>
+							<td width="170"><csobj w="163" h="25" t="Button" ht="../headerGFX/storyideasover.jpg"><a href="storyideas.html" onmouseover="return CSIShow(/*CMP*/'Button12',1)" onmouseout="return CSIShow(/*CMP*/'Button12',0)" onclick="return CSButtonReturn()"><img src="../headerGFX/storyideas.jpg" width="163" height="25" name="Button12" border="0"></a></csobj></td>
+						</tr>
+						<tr>
+							<td width="170"><img height="35" width="163" src="../headerGFX/Services.jpg"></td>
+						</tr>
+						<tr>
+							<td width="170"><csobj w="164" h="25" t="Button" ht="../headerGFX/productionover.jpg"><a href="http://www.videoflorida.com/" onmouseover="return CSIShow(/*CMP*/'Button11',1)" onmouseout="return CSIShow(/*CMP*/'Button11',0)" onclick="return CSButtonReturn()"><img src="../headerGFX/production.jpg" width="164" height="25" name="Button11" border="0"></a></csobj></td>
+						</tr>
+						<tr>
+							<td width="170"><csobj w="164" h="25" t="Button" ht="../headerGFX/weatherover.jpg"><a href="weather.html" onmouseover="return CSIShow(/*CMP*/'Button10',1)" onmouseout="return CSIShow(/*CMP*/'Button10',0)" onclick="return CSButtonReturn()"><img src="../headerGFX/weather.jpg" width="164" height="25" name="Button10" border="0"></a></csobj></td>
+						</tr>
+						<tr>
+							<td width="170"><csobj w="163" h="25" t="Button" ht="../headerGFX/clientsover.jpg"><a href="clients.html" onmouseover="return CSIShow(/*CMP*/'Button9',1)" onmouseout="return CSIShow(/*CMP*/'Button9',0)" onclick="return CSButtonReturn()"><img src="../headerGFX/clients.jpg" width="163" height="25" name="Button9" border="0"></a></csobj></td>
+						</tr>
+						<tr>
+							<td width="170"><csobj w="163" h="25" t="Button" ht="../headerGFX/searchover.jpg"><a href="search.html" onmouseover="return CSIShow(/*CMP*/'Button8',1)" onmouseout="return CSIShow(/*CMP*/'Button8',0)" onclick="return CSButtonReturn()"><img src="../headerGFX/search.jpg" width="163" height="25" name="Button8" border="0"></a></csobj></td>
+						</tr>
+						<tr>
+							<td width="170"><csobj w="163" h="25" t="Button" ht="../headerGFX/4pmscriptsover.jpg"><a href="4pmscripts.html" onmouseover="return CSIShow(/*CMP*/'Button15',1)" onmouseout="return CSIShow(/*CMP*/'Button15',0)" onclick="return CSButtonReturn()"><img src="../headerGFX/4pmscripts.jpg" width="163" height="25" name="Button15" border="0"></a></csobj></td>
+						</tr>
+						<tr>
+							<td width="170"><img height="35" width="164" src="../headerGFX/multimedia.jpg"></td>
+						</tr>
+						<tr>
+							<td width="170"><csobj w="164" h="25" t="Button" ht="../headerGFX/audioclipsover.jpg"><a href="audioclips.html" onmouseover="return CSIShow(/*CMP*/'Button7',1)" onmouseout="return CSIShow(/*CMP*/'Button7',0)" onclick="return CSButtonReturn()"><img src="../headerGFX/audioclips.jpg" width="164" height="25" name="Button7" border="0"></a></csobj></td>
+						</tr>
+						<tr>
+							<td width="170"><csobj w="163" h="25" t="Button" ht="../headerGFX/videoclipsover.jpg"><a href="videoclips.html" onmouseover="return CSIShow(/*CMP*/'Button6',1)" onmouseout="return CSIShow(/*CMP*/'Button6',0)" onclick="return CSButtonReturn()"><img src="../headerGFX/videoclips.jpg" width="163" height="25" name="Button6" border="0"></a></csobj></td>
+						</tr>
+						<tr>
+							<td width="170"><img height="34" width="163" src="../headerGFX/links.jpg"></td>
+						</tr>
+						<tr>
+							<td width="170"><csobj w="163" h="25" t="Button" ht="../headerGFX/newslinksover.jpg"><a href="newlinks.html" onmouseover="return CSIShow(/*CMP*/'Button4',1)" onmouseout="return CSIShow(/*CMP*/'Button4',0)" onclick="return CSButtonReturn()"><img src="../headerGFX/newslinks.jpg" width="163" height="25" name="Button4" border="0"></a></csobj></td>
+						</tr>
+						<tr>
+							<td width="170"><csobj w="164" h="25" t="Button" ht="../headerGFX/Homeover.jpg"><a href="../index.html" onmouseover="return CSIShow(/*CMP*/'Button17',1)" onmouseout="return CSIShow(/*CMP*/'Button17',0)" onclick="return CSButtonReturn()"><img src="../headerGFX/Home.jpg" width="164" height="25" name="Button17" border="0"></a></csobj></td>
+						</tr>
+						<tr>
+							<td width="170"><csobj w="164" h="25" t="Button" ht="../headerGFX/governmentover.jpg"><a href="government.html" onmouseover="return CSIShow(/*CMP*/'Button5',1)" onmouseout="return CSIShow(/*CMP*/'Button5',0)" onclick="return CSButtonReturn()"><img src="../headerGFX/government.jpg" width="164" height="25" name="Button5" border="0"></a></csobj></td>
+						</tr>
+						<tr>
+							<td width="170"><img height="35" width="164" src="../headerGFX/aboutus.jpg"></td>
+						</tr>
+						<tr>
+							<td width="170"><csobj w="163" h="25" t="Button" ht="../headerGFX/contactusover.jpg"><a href="contactus.html" onmouseover="return CSIShow(/*CMP*/'Button3',1)" onmouseout="return CSIShow(/*CMP*/'Button3',0)" onclick="return CSButtonReturn()"><img src="../headerGFX/contactus.jpg" width="163" height="25" name="Button3" border="0"></a></csobj></td>
+						</tr>
+						<tr>
+							<td width="170"><csobj w="164" h="24" t="Button" ht="../headerGFX/employmentover.jpg"><a href="employment.html" onmouseover="return CSIShow(/*CMP*/'Button',1)" onmouseout="return CSIShow(/*CMP*/'Button',0)" onclick="return CSButtonReturn()"><img src="../headerGFX/employment.jpg" width="164" height="24" name="Button" border="0"></a></csobj></td>
+						</tr>
+						<tr>
+							<td width="170"><a href="../index.html"><csobj w="164" h="25" t="Button" ht="../headerGFX/staffinfoover.jpg"><a href="staffinfo.html" onmouseover="return CSIShow(/*CMP*/'Button2',1)" onmouseout="return CSIShow(/*CMP*/'Button2',0)" onclick="return CSButtonReturn()"><img src="../headerGFX/staffinfo.jpg" width="164" height="25" name="Button2" border="0"></a></csobj></a></td>
+						</tr>
+						<tr>
+							<td width="170" td height="400"  align="left" valign="top"><a href="../index.html"><font size="2" color="#a11d11" face="Arial,Helvetica,Geneva"><b><csobj w="163" h="16" t="Button"><a href="#" onmouseover="return CSIShow(/*CMP*/'Button16',1)" onmouseout="return CSIShow(/*CMP*/'Button16',0)" onclick="return CSButtonReturn()"><img src="../headerGFX/bottombar.jpg" width="163" height="16" name="Button16" border="0"></a></csobj></b></font></a></td>
+						</tr>
+					</table>
+				</td>
+			</tr>
+		</table>
+	</body>
+
+</html>

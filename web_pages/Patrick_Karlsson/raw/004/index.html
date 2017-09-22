@@ -1,0 +1,1037 @@
+
+<html>
+ 
+ 
+ 
+ <head>
+ 
+ 
+ 
+ <title>Scorecard</title>
+ 
+ <SCRIPT language="JavaScript" SRC="http://www.8a.nu/cragDB/cragScript.js"></SCRIPT> 
+ 
+ <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+ 
+ 
+ <style type="text/css">
+ <!--
+ .tooltiptitle{COLOR: #FFFFFF; TEXT-DECORATION: none; CURSOR: Default; font-family: arial; font-weight: bold; font-size: 8pt}
+ .tooltipcontent{COLOR: #000000; TEXT-DECORATION: none; CURSOR: Default; font-family: arial; font-size: 8pt}
+ #ToolTip{position:absolute; width: 100px; top: 0px; left: 0px; z-index:4; visibility:hidden;}
+ -->
+ </style>
+ <script language = "javascript">
+ <!--
+ 
+ var ie = document.all ? 1 : 0
+ var ns = document.layers ? 1 : 0
+ 
+ if(ns){doc = "document."; sty = ""}
+ if(ie){doc = "document.all."; sty = ".style"}
+ 
+ 
+ 
+ var initialize = 0
+ var Ex, Ey, topColor, subColor, ContentInfo
+ 
+ 
+ if(ie){
+ Ex = "event.x"
+ Ey = "event.y"
+ 
+ topColor = "#808080"
+ subColor = "#C0C0C0"
+ }
+ 
+ if(ns){
+ Ex = "e.pageX"
+ Ey = "e.pageY"
+ window.captureEvents(Event.MOUSEMOVE)
+ window.onmousemove=overhere
+ 
+ topColor = "#808080"
+ subColor = "#C0C0C0"
+ 
+ }
+ 
+ 
+ 
+ function MoveToolTip(layerName, FromTop, FromLeft, e){
+ if(ie){eval(doc + layerName + sty + ".top = "  + (eval(FromTop) + document.body.scrollTop))}
+ if(ns){eval(doc + layerName + sty + ".top = "  +  eval(FromTop))}
+ eval(doc + layerName + sty + ".left = " + (eval(FromLeft) + 15))
+ }
+ 
+ 
+ 
+ 
+ 
+ 
+ function ReplaceContent(layerName){
+ 
+ if(ie){document.all[layerName].innerHTML = ContentInfo}
+ 
+ 
+ if(ns){
+ 
+ with(document.layers[layerName].document) 
+ { 
+    open(); 
+    write(ContentInfo); 
+    close(); 
+ }
+ 
+ }
+ 
+ 
+ }
+ 
+ 
+ 
+ function Activate(){initialize=1}
+ function deActivate(){initialize=0}
+ 
+ 
+ function overhere(e){
+ if(initialize){
+ 
+ MoveToolTip("ToolTip", Ey, Ex, e)
+ eval(doc + "ToolTip" + sty + ".visibility = 'visible'")
+ }
+ 
+ else{
+ MoveToolTip("ToolTip", 0, 0)
+ eval(doc + "ToolTip" + sty + ".visibility = 'hidden'")
+ }
+ 
+ 
+ }
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ function EnterContent(layerName, TTitle, TContent){
+ 
+ ContentInfo = "<table border='0' width='200' cellspacing='0' cellpadding='0'>"+
+ "<tr><td width='100%' bgcolor='#000000'>"+
+ 
+ "<table border='0' width='100%' cellspacing='1' cellpadding='0'>"+
+ "<tr><td width='100%' bgcolor="+topColor+">"+
+ 
+ "<table border='0' width='90%' cellspacing='0' cellpadding='0' align='center'>"+
+ "<tr><td width='100%'>"+
+ 
+ "<font class='tooltiptitle'>&nbsp;"+TTitle+"</font>"+
+ 
+ "</td></tr>"+
+ "</table>"+
+ 
+ "</td></tr>"+
+ 
+ "<tr><td width='100%' bgcolor="+subColor+">"+
+ 
+ "<table border='0' width='90%' cellpadding='0' cellspacing='1' align='center'>"+
+ 
+ "<tr><td width='100%'>"+
+ 
+ "<font class='tooltipcontent'>"+TContent+"</font>"+
+ 
+ "</td></tr>"+
+ "</table>"+
+ 
+ "</td></tr>"+
+ "</table>"+
+ 
+ "</td></tr>"+
+ "</table>";
+ 
+ 
+ ReplaceContent(layerName)
+ 
+ }
+ 
+ //-->
+ </script>
+ 
+ <style type="text/css">
+ 
+ 
+ 
+ a { text-decoration: none }
+ 
+ 
+ 
+ <!--
+ 
+ 
+ 
+ A:link { underline: no; color: #0000FF }
+ 
+ 
+ 
+ A:active { color: #0000FF }
+ 
+ 
+ 
+ A:visited { color: #0000FF }
+ 
+ 
+ 
+ A:hover	{ color: #0000FF; font-weight: none; text-decoration: none;}
+ 
+ 
+ 
+ -->
+ 
+ 
+ 
+ </style></head>
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ <body bgcolor="#FFFFFF" link="#0000FF" vlink="#0000FF" alink="#0000FF" leftmargin="5" onmousemove="overhere()">
+ <div id="ToolTip"></div>
+ 
+ 
+ 
+ <table width="740" border="0" cellspacing="0" cellpadding="0" align="left">
+ 
+ 
+ 
+   <tr>
+ 
+ 
+ 
+     <td> 
+ 
+ 
+ 
+       <table width="100%" border="0" cellspacing="0" cellpadding="0">
+ 
+ 
+ 
+         <tr> 
+ 
+ 
+ 
+           <td width="72%"><font face="Verdana, Arial, Helvetica, sans-serif" size="1"> 
+             <font color="#9999FF"><font face="Verdana, Arial, Helvetica, sans-serif" size="1"><font color="#9999FF"><font color="#CC0000"><font color="#000000"><b>#2048:</b></font></font></font></font><font color="#000000" size="2"> 
+             </font></font> <b><font color="#000000" size="2"> </font></b><font color="#9999FF"><font color="#000000"><b> 
+             </b></font><font color="#CC0000"> </font><font size="1" face="Verdana, Arial, Helvetica, sans-serif"><b><font face="Verdana, Arial, Helvetica, sans-serif" size="1"><b><font color="#000000" size="2"><font color="#CC0000">Patrick 
+             Karlsson</font></font></b></font> </b><font color="#9999FF"><font color="#000000"><b>Uppsala 
+             - Sweden</b></font></font> <b><font size="3" color="#CC0000"></font></b> 
+             <font color="#CC0000"><b>Points</b></font></font></font></font><font face="Verdana, Arial, Helvetica, sans-serif" size="1"> Visited 
+             <img src="http://www.8a.nu/eng/new/counter.php?UserID=2048&PageID=2"> 
+             times. </font></td>
+ 
+           <td width="28%"><font size="1" face="Verdana, Arial, Helvetica, sans-serif"> 
+ 
+             <script language = "Javascript">
+ 
+ 
+ 
+  
+ 
+ 
+ 
+  <!--
+ 
+ 
+ 
+  //
+ 
+ 
+ 
+  function popup(adress){
+ 
+ 
+ 
+  popupwindow=window.open(adress,"newsletter_admin","width=250,height=125,scrollbar=yes,toolbar=no,resizable=yes");
+ 
+ 
+ 
+  }
+ 
+ 
+ 
+  //-->
+ 
+ 
+ 
+  
+ 
+ 
+ 
+  </script>
+ 
+             <a href="JavaScript:popup('http://www.8a.nu/cgi-bin/tip_friend/tip_friend_score.cgi?url=/cgi-bin/scorecard/show.cgi--fragetecken--view--likamed--2048--och--page--likamed--2')"><img src="/eng/pics/tell_a_friend.gif" width="17" height="15" border="0"> 
+ 
+             Tip a friend about this Scorecard</a></font></td>
+ 
+ 
+ 
+         </tr>
+ 
+ 
+ 
+       </table>
+ 
+ 
+ 
+       <font face="Verdana, Arial, Helvetica, sans-serif" size="1"><font color="#9999FF"><font color="#CC0000"> 
+ 
+       </font></font> </font> 
+ 
+       <form method="post" action="/cgi-bin/scorecard/new_user.cgi">
+ 
+       </form>
+ 
+ 
+ 
+       <font face="Verdana, Arial, Helvetica, sans-serif" size="1"> </font> 
+ 
+ 
+ 
+       <table width="100%" border="0" cellspacing="0" cellpadding="0">
+ 
+ 
+ 
+         <tr> 
+ 
+ 
+ 
+           <td width="110" valign="top"> 
+ 
+ 
+ 
+             <table width="100%" border="0" cellspacing="0" cellpadding="1" bgcolor="#000000">
+ 
+ 
+ 
+               <tr> 
+ 
+ 
+ 
+                 <td> 
+ 
+ 
+ 
+                   <table width="100%" border="0" cellspacing="0" cellpadding="0">
+ 
+                   	<!-- Insert Scorecard pic -->
+ 
+ 									 <tr bgcolor="#CCCCFF"> 
+ 
+                       <td height="20"> 
+ 
+                       <IFRAME SRC="http://www.8a.nu/gallery/getScoreCardPic.php?userId=2048"  TITLE="8a.nu" width="122" height="114" marginheight="0" marginwidth="0" FRAMEBORDER=0 SCROLLING=no>
+ 
+                       <!-- Alternate content for non-supporting browsers -->
+ 
+                        Your browser doesn't support iframe, please update browser.
+ 
+                        </IFRAME>
+                   
+ 
+                       </td>
+ 
+                     </tr>
+ 
+                     <tr bgcolor="#000000"> 
+ 
+                      <td><font size="1" face="Verdana, Arial, Helvetica, sans-serif"><img src="pics/pixel_black.gif" width="1" height="1"></font></td>
+ 
+                    </tr>
+ 			
+ 
+ 									<!-- End insert Scorecard pic -->
+ 
+                     
+ 
+ 										<tr bgcolor="#CCCCFF"> 
+ 
+ 
+ 
+                       <td height="20"> 
+ 
+ 
+ 
+                         <div align="center"><font size="1" face="Verdana, Arial, Helvetica, sans-serif"><a href="show.cgi?view=2048&amp;page=1">Routes</a></font></div>
+ 
+ 
+ 
+                       </td>
+ 
+ 
+ 
+                     </tr>
+ 
+ 
+ 
+                     <tr bgcolor="#000000"> 
+ 
+ 
+ 
+                       <td><font size="1" face="Verdana, Arial, Helvetica, sans-serif"><img src="pics/pixel_black.gif" width="1" height="1"></font></td>
+ 
+ 
+ 
+                     </tr>
+ 
+ 
+ 
+                     <tr bgcolor="#CCCCFF"> 
+ 
+ 
+ 
+                       <td height="20"> 
+ 
+ 
+ 
+                         <div align="center"><font size="1" face="Verdana, Arial, Helvetica, sans-serif"><b><font size="3" color="#CC0000">Boulders</font></b></font></div>
+ 
+ 
+ 
+                       </td>
+ 
+ 
+ 
+                     </tr>
+ 
+ 
+ 
+                     <tr bgcolor="#000000"> 
+ 
+ 
+ 
+                       <td><font size="1" face="Verdana, Arial, Helvetica, sans-serif"><img src="pics/pixel_black.gif" width="1" height="1"></font></td>
+ 
+ 
+ 
+                     </tr>
+ 
+ 
+ 
+                     <tr bgcolor="#CCCCFF"> 
+ 
+ 
+ 
+                       <td height="20"> 
+ 
+ 
+ 
+                         <div align="center"><font size="1" face="Verdana, Arial, Helvetica, sans-serif"><a href="show.cgi?view=2048&page=5">Presentation</a></font></div>
+ 
+ 
+ 
+                       </td>
+ 
+ 
+ 
+                     </tr>
+ 
+ 
+ 
+                     <tr bgcolor="#000000"> 
+ 
+ 
+ 
+                       <td><font size="1" face="Verdana, Arial, Helvetica, sans-serif"><img src="pics/pixel_black.gif" width="1" height="1"></font></td>
+ 
+ 
+ 
+                     </tr>
+ 
+ 									
+ 
+ 
+ 
+              
+ 
+ 
+ 
+                     <tr bgcolor="#CCCCFF"> 
+ 
+ 
+ 
+                       <td height="20"> 
+ 
+                         <font size="1" face="Verdana, Arial, Helvetica, sans-serif">
+ 
+                         <div align="center"><a href="http://www.8a.nu/gallery/pictureGalleryView.php?searchPic=1&amp;uId=2048">Picture 
+ 
+                           Gallery</a></div></font>
+ 
+ 
+ 
+                       </td>
+ 
+ 
+ 
+                     </tr>
+ 
+ 
+ 
+                     <tr bgcolor="#000000"> 
+ 
+ 
+ 
+                       <td><font size="1" face="Verdana, Arial, Helvetica, sans-serif"><img src="pics/pixel_black.gif" width="1" height="1"></font></td>
+ 
+ 
+ 
+                     </tr>
+ 
+ 
+ 
+           
+ 											<tr bgcolor="#CCCCFF"> 
+                       <td height="20"> 
+                         <div align="center"><font size="1" face="Verdana, Arial, Helvetica, sans-serif"> <a href="http://www.8a.nu/forum/forumUser.php?action=view&sectionId=3&objectId=2048">Guestbook</a></font></div>
+                       </td>
+                     </tr>
+ 										
+                     <tr bgcolor="#000000"> 
+                       <td><font size="1" face="Verdana, Arial, Helvetica, sans-serif"><img src="pics/pixel_black.gif" width="1" height="1"></font></td>
+                     </tr>
+ 										
+ 										
+ 										
+ 										
+                   <tr bgcolor="#CCCCFF"> 
+ 
+ 
+ 
+                       <td height="20"> 
+ 
+ 
+ 
+                         <div align="center"><font size="1" face="Verdana, Arial, Helvetica, sans-serif"><a href="show.cgi?view=2048&amp;page=2&amp;max_routes=100000&amp;year_from=all">All 
+ 
+                           Time High Score</a></font></div>
+ 
+ 
+ 
+                       </td>
+ 
+ 
+ 
+                     </tr>
+ 
+ 			<tr bgcolor="#000000"> 
+ 
+ 
+ 
+                       <td><font size="1" face="Verdana, Arial, Helvetica, sans-serif"><img src="pics/pixel_black.gif" width="1" height="1"></font></td>
+ 
+ 
+ 
+                     </tr>
+ 
+ 			<tr bgcolor="#CCCCFF"> 
+ 
+                       <td height="20"> 
+ 
+                         <div align="center"><font size="1" face="Verdana, Arial, Helvetica, sans-serif" color="#000000"> 
+                           <a href="http://www.8a.nu/eng/new/diagram.php?UserID=2048&Type=1">Trend 
+                           diagram</a> </font></div>
+ 
+                       </td>
+ 
+                     </tr>
+ 
+                   </table>
+ 
+ 
+ 
+                 </td>
+ 
+ 
+ 
+               </tr>
+ 
+ 
+ 
+             </table>
+ 
+ 
+ 
+             <div align="center"><br>
+ 
+               <br>
+ 
+               <b><font size="1" face="Verdana, Arial, Helvetica, sans-serif">Do 
+ 
+               you also want your own scorecard like</font></b> <font face="Verdana, Arial, Helvetica, sans-serif" size="1"><b><font color="#000000" size="2"><font size="1">Patrick<br>
+ 
+               Karlsson</font></font></b></font> </div>
+ 
+             <form method="post" action="/cgi-bin/scorecard/new_user.cgi">
+ 
+               <div align="center">
+ 
+                 <table width="100%" border="0" cellspacing="0" cellpadding="0">
+ 
+                   <tr> 
+ 
+                     <td width="7%"><font size="1" face="Verdana, Arial, Helvetica, sans-serif"></font></td>
+ 
+                     <td width="93%"> <font size="1" face="Verdana, Arial, Helvetica, sans-serif"> 
+ 
+                       <b>New user e-mail</b> 
+ 
+                       <input type="text" name="email" maxlength="60" size="20" style="font-family: Verdana, Arial, Helvetica;font-size: 7pt; color: #000000">
+ 
+                       <input type="submit" name="Submit3" value="Next step" style="font-family: Verdana, Arial, Helvetica;font-size: 8pt; color: #000000" size="1">
+ 
+                       <input type="hidden" name="langue" value="ENG">
+ 
+                       </font></td>
+ 
+                   </tr>
+ 
+                 </table>
+ 
+               </div>
+ 
+             </form>
+ 
+             <div align="center"> 
+ 
+               <p><font size="1" face="Verdana, Arial, Helvetica, sans-serif"><font face="Verdana, Arial, Helvetica, sans-serif"><b><font color="#CC0000"><a href="http://www.8a.nu/eng/articles/Etikb.shtml">Boulders 
+ 
+                 or <br>
+ 
+                 Boulder problems!?<br>
+ 
+                 </a><br>
+ 
+                 <font size="3">8a.nu</font><br>
+ 
+                 Nu</font>mbers and Letters<br>
+ 
+                 <br>
+ 
+                 Adrenline Beta Crimp Dyno Ethic Freepoint Grigri Hang-dog Isolation 
+ 
+                 Jug Knee-bar Lock-off Mantel Nut Onsight Pinch Quick-draw Redpoint 
+ 
+                 Slab Traverse Undercling View www X Younsters Zone<br>
+ 
+                 </b></font></font> </p>
+ <iframe  SRC="http://www.8a.nu/site2/online/onlineLog.php?incDB=1"  TITLE="8a.nu" width="122" height="20" marginheight="0" marginwidth="0" FRAMEBORDER=0 SCROLLING=no></iframe>
+ 
+               </div>
+ 
+           </td>
+ 
+ 
+ 
+           <td width="30">&nbsp;</td>
+ 
+ 
+ 
+           <td width="600" valign="top"> 
+ 
+             <div align="center"><font size="1" face="Verdana, Arial, Helvetica, sans-serif"> 
+ 
+               <b><font color="#CC0000">Score Based on Top-10:</font> All the boulders from 2003-Sep-26 until 2004-Sep-26</b> 
+ 
+               <a href="show.cgi?view=2048&amp;page=2&amp;max_routes=100000&amp;year_from=all">- 
+ 
+               All Time High Score<br>
+ 
+               </a><b></b> <b></b> <b> </b>Because you have no points, we can't give you a ranking.<br>
+ 
+               <b> </b></font><font size="1" face="Verdana, Arial, Helvetica, sans-serif"> 
+ 
+               <br>
+ 
+               </font><font size="1" face="Verdana, Arial, Helvetica, sans-serif"> 
+ 
+               </font> </div>
+ 
+             <table width="600" border="0" cellspacing="0" cellpadding="0">
+ 
+ 
+ 
+               <tr> 
+ 
+ 
+ 
+                 <td width="35"><font size="1" face="Verdana, Arial, Helvetica, sans-serif"><b>Grade</b></font></td>
+ 
+ 
+ 
+                 <td width="25"> 
+ 
+ 
+ 
+                   <div align="right"><font size="1" face="Verdana, Arial, Helvetica, sans-serif"><img src="pics/speed_3_square.gif" width="10" height="10"></font></div>
+ 
+ 
+ 
+                 </td>
+ 
+ 
+ 
+                 <td width="25"> 
+ 
+ 
+ 
+                   <div align="right"><font size="1" face="Verdana, Arial, Helvetica, sans-serif"><img src="pics/speed_2_square.gif" width="10" height="10"></font></div>
+ 
+ 
+ 
+                 </td>
+ 
+ 
+ 
+                 <td width="25"> 
+ 
+ 
+ 
+                   <div align="right"><font size="1" face="Verdana, Arial, Helvetica, sans-serif"><img src="pics/speed_1_square.gif" width="10" height="10"></font></div>
+ 
+ 
+ 
+                 </td>
+ 
+ 
+ 
+                 <td width="25"> 
+ 
+ 
+ 
+                   <div align="right"><font size="1" face="Verdana, Arial, Helvetica, sans-serif"><img src="pics/speed_4_square.gif" width="10" height="10"></font></div>
+ 
+ 
+ 
+                 </td>
+ 
+ 
+ 
+                 <td width="25"> 
+ 
+ 
+ 
+                   <div align="right"><font size="1" face="Verdana, Arial, Helvetica, sans-serif"><b>Total</b></font></div>
+ 
+ 
+ 
+                 </td>
+ 
+ 
+ 
+                 <td width="440" align="center"><font color="#FFFFFF" size="1" face="Verdana, Arial, Helvetica, sans-serif">.</font></td>
+ 
+ 
+ 
+               </tr>
+ 
+ 
+ 
+               <tr> 
+ 
+ 
+ 
+                 <td colspan="8" bgcolor="#CCCCCC" width="35"><font size="1" face="Verdana, Arial, Helvetica, sans-serif"><img src="../pics/transp.gif" width="1" height="1"></font></td>
+ 
+ 
+ 
+               </tr>
+ 
+ 
+ 
+                	      <tr> 
+                 <td width="35"><font size="1" face="Verdana, Arial, Helvetica, sans-serif"></font></td>
+                 <td width="25"> 
+                   <div align="right"><font size="1" face="Verdana, Arial, Helvetica, sans-serif"></font></div>
+                 </td>
+                 <td width="25"> 
+                   <div align="right"><font size="1" face="Verdana, Arial, Helvetica, sans-serif"></font></div>
+                 </td>
+                 <td width="25"> 
+                   <div align="right"><font size="1" face="Verdana, Arial, Helvetica, sans-serif"></font></div>
+                 </td>
+                  <td width="25"> 
+                   <div align="right"><font size="1" face="Verdana, Arial, Helvetica, sans-serif"></font></div>
+                 </td>
+ 				<td width="25"> 
+                   <div align="right"><font size="1" face="Verdana, Arial, Helvetica, sans-serif">0</font></div>
+                 </td>
+ 				
+                 <td width="440" align="center"> 
+                   <table width="0%" border="0" cellspacing="0" cellpadding="0">
+                     <tr> 
+ 					  <td bgcolor="#B5B5B5" width="0%"><img src="pics/speed_4.gif" width="1" height="15"></td>
+                       <td bgcolor="#CC0000" width="0%"><img src="pics/speed_1.gif" width="1" height="15"></td>
+                       <td bgcolor="#FF9900" width="0%"><img src="pics/speed_2.gif" width="1" height="15"></td>
+                       <td bgcolor="#000000" width="0%"><img src="pics/speed_3.gif" width="1" height="15"></td>
+                       <td bgcolor="#FF9900" width="0%"><img src="pics/speed_2.gif" width="1" height="15"></td>
+                       <td bgcolor="#CC0000" width="0%"><img src="pics/speed_1.gif" width="1" height="15"></td>
+ 					   <td bgcolor="#B5B5B5" width="0%"><img src="pics/speed_4.gif" width="1" height="15"></td>
+                     </tr>
+                   </table>
+                 </td>
+               </tr>
+ 	      <tr> 
+                 <td colspan="8" bgcolor="#CCCCCC"><font size="1" face="Verdana, Arial, Helvetica, sans-serif"><img src="pics/transp.gif" width="1" height="1"></font></td>
+               </tr> 
+ 
+ 
+ 
+               <tr> 
+ 
+ 
+ 
+                 <td width="35"><font size="1" face="Verdana, Arial, Helvetica, sans-serif"><b>Total</b></font></td>
+ 
+ 
+ 
+                 <td width="25"> 
+ 
+ 
+ 
+                   <div align="right"><font size="1" face="Verdana, Arial, Helvetica, sans-serif">0</font></div>
+ 
+ 
+ 
+                 </td>
+ 
+ 
+ 
+                 <td width="25"> 
+ 
+ 
+ 
+                   <div align="right"><font size="1" face="Verdana, Arial, Helvetica, sans-serif">0</font></div>
+ 
+ 
+ 
+                 </td>
+ 
+ 
+ 
+                 <td width="25"> 
+ 
+ 
+ 
+                   <div align="right"><font size="1" face="Verdana, Arial, Helvetica, sans-serif">0</font></div>
+ 
+ 
+ 
+                 </td>
+ 
+ 
+ 
+                 <td width="25">
+ 
+ 
+ 
+                   <div align="right"><font size="1" face="Verdana, Arial, Helvetica, sans-serif">0</font></div>
+ 
+ 
+ 
+                 </td>
+ 
+ 
+ 
+                 <td width="25"> 
+ 
+ 
+ 
+                   <div align="right"><font size="1" face="Verdana, Arial, Helvetica, sans-serif">0</font></div>
+ 
+ 
+ 
+                 </td>
+ 
+ 
+ 
+                 <td width="465" align="center"><font size="1" face="Verdana, Arial, Helvetica, sans-serif"><img src="pics/speed_3_square.gif" width="10" height="10"> 
+ 
+ 
+ 
+                   = Onsight<font color="#FFFFFF">_</font><img src="pics/speed_2_square.gif" width="10" height="10"> 
+ 
+ 
+ 
+                   = Flash<font color="#FFFFFF">_</font><img src="pics/speed_1_square.gif" width="10" height="10"> 
+ 
+ 
+ 
+                   = Redpoint<font color="#FFFFFF">_</font><img src="pics/speed_4_square.gif" width="10" height="10"> 
+ 
+ 
+ 
+                   = Freepoint</font></td>
+ 
+ 
+ 
+               </tr>
+ 
+ 
+ 
+             </table>
+ 
+ 
+ 
+             <font size="1" face="Verdana, Arial, Helvetica, sans-serif"><br>
+ 
+ 
+ 
+             <br>
+ 
+ 
+ 
+             <br>
+ 
+ 
+ 
+             <a href="JavaScript:popup('http://www.8a.nu/cgi-bin/tip_friend/tip_friend_score.cgi?url=/cgi-bin/scorecard/show.cgi--fragetecken--view--likamed--2048--och--page--likamed--1')"><img src="/eng/pics/tell_a_friend.gif" width="17" height="15" border="0"> 
+ 
+ 
+ 
+             Tip a friend</a> about Patrick's scorecard. Your friend will get a 
+ 
+ 
+ 
+             direct link to view this scorecard.<br>
+ 
+ 
+ 
+             <a name="limit"></a><br>
+ 
+ 
+ 
+             </font> 
+ 
+ 
+ 
+             <form method="post" action="show.cgi" name="">
+ 
+ 
+ 
+               <table width="100%" border="0" cellspacing="0" cellpadding="1" bgcolor="#000000">
+                 <tr> 
+                   <td>&nbsp;</td>
+                 </tr>
+               </table>
+ 
+ 
+ 
+               <table width="100%" border="0" cellspacing="0" cellpadding="0">
+ 
+ 
+ 
+                 <tr> 
+ 
+ 
+ 
+                   <td> 
+ 
+ 
+ 
+                     <div align="center"><font size="1" face="Verdana, Arial, Helvetica, sans-serif"><b>____________________________________</b></font></div>
+ 
+ 
+ 
+                   </td>
+ 
+ 
+ 
+                 </tr>
+ 
+ 
+ 
+                 <tr> 
+ 
+ 
+ 
+                   <td> 
+ 
+ 
+ 
+                     <div align="center"><font size="1" face="Verdana, Arial, Helvetica, sans-serif">(c) 
+ 
+ 
+ 
+                       <a href="http://www.positiv.se" target="_blank"><b>Positiv 
+ 
+ 
+ 
+                       webutveckling ab</b></a> 1999-2001</font></div>
+ 
+ 
+ 
+                   </td>
+ 
+ 
+ 
+                 </tr>
+ 
+ 
+ 
+               </table>
+ 
+ 
+ 
+               <font size="1" face="Verdana, Arial, Helvetica, sans-serif"> </font><font size="1" face="Verdana, Arial, Helvetica, sans-serif"> 
+ 
+ 
+ 
+               </font> 
+ 
+ 
+ 
+             </form>
+ 
+ 
+ 
+             
+ 
+ 
+ 
+           </td>
+ 
+ 
+ 
+         </tr>
+ 
+ 
+ 
+       </table>
+ 
+ 
+ 
+     </td>
+ 
+ 
+ 
+   </tr>
+ 
+ 
+ 
+ </table>
+ 
+ 
+ 
+ </body>
+ 
+ 
+ 
+ </html>
+ 
+ 
+ 

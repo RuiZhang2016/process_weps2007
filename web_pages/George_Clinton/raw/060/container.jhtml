@@ -1,0 +1,1438 @@
+
+
+// section setup
+
+	var if_clientCode = "Not-Signed-In";
+	var if_nt_userName = "";
+	var if_nt_login = "0";
+	var if_nt_numMessages = "0";
+	var if_nt_span = "";
+	var if_nt_zyg = "";
+	var if_nt_demo = "";
+	var if_nt_era = "";	
+	var if_nt_bandwidth = "";
+	var sections = "";
+	
+
+/**
+ * SWFObject v1.4.4: Flash Player detection and embed - http://blog.deconcept.com/swfobject/
+ *
+ * SWFObject is (c) 2006 Geoff Stearns and is released under the MIT License:
+ * http://www.opensource.org/licenses/mit-license.php
+ *
+ * **SWFObject is the SWF embed script formerly known as FlashObject. The name was changed for
+ *   legal reasons.
+ */
+if(typeof deconcept=="undefined"){var deconcept=new Object();}
+if(typeof deconcept.util=="undefined"){deconcept.util=new Object();}
+if(typeof deconcept.SWFObjectUtil=="undefined"){deconcept.SWFObjectUtil=new Object();}
+deconcept.SWFObject=function(_1,id,w,h,_5,c,_7,_8,_9,_a,_b){if(!document.getElementById){return;}
+this.DETECT_KEY=_b?_b:"detectflash";
+this.skipDetect=deconcept.util.getRequestParameter(this.DETECT_KEY);
+this.params=new Object();
+this.variables=new Object();
+this.attributes=new Array();
+if(_1){this.setAttribute("swf",_1);}
+if(id){this.setAttribute("id",id);}
+if(w){this.setAttribute("width",w);}
+if(h){this.setAttribute("height",h);}
+if(_5){this.setAttribute("version",new deconcept.PlayerVersion(_5.toString().split(".")));}
+this.installedVer=deconcept.SWFObjectUtil.getPlayerVersion();
+if(c){this.addParam("bgcolor",c);}
+var q=_8?_8:"high";
+this.addParam("quality",q);
+this.setAttribute("useExpressInstall",_7);
+this.setAttribute("doExpressInstall",false);
+var _d=(_9)?_9:window.location;
+this.setAttribute("xiRedirectUrl",_d);
+this.setAttribute("redirectUrl","");
+if(_a){this.setAttribute("redirectUrl",_a);}};
+deconcept.SWFObject.prototype={setAttribute:function(_e,_f){
+this.attributes[_e]=_f;
+},getAttribute:function(_10){
+return this.attributes[_10];
+},addParam:function(_11,_12){
+this.params[_11]=_12;
+},getParams:function(){
+return this.params;
+},addVariable:function(_13,_14){
+this.variables[_13]=_14;
+},getVariable:function(_15){
+return this.variables[_15];
+},getVariables:function(){
+return this.variables;
+},getVariablePairs:function(){
+var _16=new Array();
+var key;
+var _18=this.getVariables();
+for(key in _18){_16.push(key+"="+_18[key]);}
+return _16;},getSWFHTML:function(){var _19="";
+if(navigator.plugins&&navigator.mimeTypes&&navigator.mimeTypes.length){
+if(this.getAttribute("doExpressInstall")){
+this.addVariable("MMplayerType","PlugIn");}
+_19="<" + "embed type=\"application/x-shockwave-flash\" src=\""+this.getAttribute("swf")+"\" width=\""+this.getAttribute("width")+"\" height=\""+this.getAttribute("height")+"\"";
+_19+=" id=\""+this.getAttribute("id")+"\" name=\""+this.getAttribute("id")+"\" ";
+var _1a=this.getParams();
+for(var key in _1a){_19+=[key]+"=\""+_1a[key]+"\" ";}
+var _1c=this.getVariablePairs().join("&");
+if(_1c.length>0){_19+="flashvars=\""+_1c+"\"";}_19+="/>";
+}else{if(this.getAttribute("doExpressInstall")){this.addVariable("MMplayerType","ActiveX");}
+_19="<" + "object id=\""+this.getAttribute("id")+"\" classid=\"clsid:D27CDB6E-AE6D-11cf-96B8-444553540000\" width=\""+this.getAttribute("width")+"\" height=\""+this.getAttribute("height")+"\">";
+_19+="<" + "param name=\"movie\" value=\""+this.getAttribute("swf")+"\" />";
+var _1d=this.getParams();
+for(var key in _1d){_19+="<" + "param name=\""+key+"\" value=\""+_1d[key]+"\" />";}
+var _1f=this.getVariablePairs().join("&");
+if(_1f.length>0){_19+="<" + "param name=\"flashvars\" value=\""+_1f+"\" />";}_19+="<" +"/object>";}
+return _19;
+},write:function(_20){
+if(this.getAttribute("useExpressInstall")){
+var _21=new deconcept.PlayerVersion([6,0,65]);
+if(this.installedVer.versionIsValid(_21)&&!this.installedVer.versionIsValid(this.getAttribute("version"))){
+this.setAttribute("doExpressInstall",true);
+this.addVariable("MMredirectURL",escape(this.getAttribute("xiRedirectUrl")));
+document.title=document.title.slice(0,47)+" - Flash Player Installation";
+this.addVariable("MMdoctitle",document.title);}}
+if(this.skipDetect||this.getAttribute("doExpressInstall")||this.installedVer.versionIsValid(this.getAttribute("version"))){
+var n=(typeof _20=="string")?document.getElementById(_20):_20;
+n.innerHTML=this.getSWFHTML();return true;
+}else{if(this.getAttribute("redirectUrl")!=""){document.location.replace(this.getAttribute("redirectUrl"));}}
+return false;}};
+deconcept.SWFObjectUtil.getPlayerVersion=function(){
+var _23=new deconcept.PlayerVersion([0,0,0]);
+if(navigator.plugins&&navigator.mimeTypes.length){
+var x=navigator.plugins["Shockwave Flash"];
+if(x&&x.description){_23=new deconcept.PlayerVersion(x.description.replace(/([a-zA-Z]|\s)+/,"").replace(/(\s+r|\s+b[0-9]+)/,".").split("."));}
+}else{try{var axo=new ActiveXObject("ShockwaveFlash.ShockwaveFlash.7");}
+catch(e){try{var axo=new ActiveXObject("ShockwaveFlash.ShockwaveFlash.6");
+_23=new deconcept.PlayerVersion([6,0,21]);axo.AllowScriptAccess="always";}
+catch(e){if(_23.major==6){return _23;}}try{axo=new ActiveXObject("ShockwaveFlash.ShockwaveFlash");}
+catch(e){}}if(axo!=null){_23=new deconcept.PlayerVersion(axo.GetVariable("$version").split(" ")[1].split(","));}}
+return _23;};
+deconcept.PlayerVersion=function(_27){
+this.major=_27[0]!=null?parseInt(_27[0]):0;
+this.minor=_27[1]!=null?parseInt(_27[1]):0;
+this.rev=_27[2]!=null?parseInt(_27[2]):0;
+};
+deconcept.PlayerVersion.prototype.versionIsValid=function(fv){
+if(this.major<fv.major){return false;}
+if(this.major>fv.major){return true;}
+if(this.minor<fv.minor){return false;}
+if(this.minor>fv.minor){return true;}
+if(this.rev<fv.rev){
+return false;
+}return true;};
+deconcept.util={getRequestParameter:function(_29){
+var q=document.location.search||document.location.hash;
+if(q){var _2b=q.substring(1).split("&");
+for(var i=0;i<_2b.length;i++){
+if(_2b[i].substring(0,_2b[i].indexOf("="))==_29){
+return _2b[i].substring((_2b[i].indexOf("=")+1));}}}
+return "";}};
+deconcept.SWFObjectUtil.cleanupSWFs=function(){if(window.opera||!document.all){return;}
+var _2d=document.getElementsByTagName("OBJECT");
+for(var i=0;i<_2d.length;i++){_2d[i].style.display="none";for(var x in _2d[i]){
+if(typeof _2d[i][x]=="function"){_2d[i][x]=function(){};}}}};
+deconcept.SWFObjectUtil.prepUnload=function(){__flash_unloadHandler=function(){};
+__flash_savedUnloadHandler=function(){};
+if(typeof window.onunload=="function"){
+var _30=window.onunload;
+window.onunload=function(){
+deconcept.SWFObjectUtil.cleanupSWFs();_30();};
+}else{window.onunload=deconcept.SWFObjectUtil.cleanupSWFs;}};
+if(typeof window.onbeforeunload=="function"){
+var oldBeforeUnload=window.onbeforeunload;
+window.onbeforeunload=function(){
+deconcept.SWFObjectUtil.prepUnload();
+oldBeforeUnload();};
+}else{window.onbeforeunload=deconcept.SWFObjectUtil.prepUnload;}
+if(Array.prototype.push==null){
+Array.prototype.push=function(_31){
+this[this.length]=_31;
+return this.length;};}
+var getQueryParamValue=deconcept.util.getRequestParameter;
+var FlashObject=deconcept.SWFObject;
+var SWFObject=deconcept.SWFObject;
+
+
+
+var isLayer;
+// will look for versions 25 and under -this should last us a few years
+var maxVersion = 25;
+var minVersion = 0;
+var flashVersion = 0;
+var f2,f3,f4,f5,f6,f7,f8 = false;
+var isMacintosh = (navigator.appVersion.indexOf("Mac") >=0) ? true : false;
+var isIE  = (navigator.appVersion.indexOf("MSIE") != -1) ? true : false;
+var isWin = (navigator.appVersion.toLowerCase().indexOf("win") != -1) ? true : false;
+var isOpera = (navigator.userAgent.indexOf("Opera") != -1) ? true : false;
+var isNetscape = (navigator.userAgent.indexOf("Netscape") != -1) ? true : false;
+var isFirefox = (navigator.userAgent.indexOf("Firefox") > -1) ? true : false;
+var isN6 = (document.getElementById && !document.all) ? true : false;
+var isN	= (document.layers) ? true : false;
+var useLayer = (isN || isN6 || isMacintosh) ? true : false ;
+var plat = (window.navigator.userAgent.indexOf("AOL")>=0 || window.navigator.userAgent.indexOf("A.O.L.")>=0)? "AOL" : "norm";
+
+/*************************************************************************/
+if(isIE && isWin){
+	document.write("<" + "SCR" + "IPT LANGUAGE=VBScript> \n");
+    document.write("  Function VBGetSwfVer(i) \n");
+    document.write("    on error resume next \n");
+    document.write("    Dim swControl, swVersion \n");
+    document.write("    swVersion = 0 \n");
+    document.write("    set swControl = CreateObject(\"ShockwaveFlash.ShockwaveFlash.\" + CStr(i)) \n");
+    document.write("    if (IsObject(swControl)) then \n");
+    document.write("      swVersion = i //swControl.GetVariable(\"$version\") \n");// disable full activeX object and just return the version primary
+	document.write("      break  \n");
+    document.write("    end if \n");
+    document.write("    VBGetSwfVer = swVersion \n");
+    document.write("End Function \n");
+	document.write("// -->  \n");
+	document.write("<" + "/SCR" + "IPT> \n");
+}
+/************************************************************************/
+// Detect Client Browser type
+function JSGetSwfVer(i) {
+      // NS/Opera version >= 3 check for Flash plugin in plugin array
+      if (navigator.plugins != null && navigator.plugins.length > 0) {
+            if (navigator.plugins["Shockwave Flash 2.0"] || navigator.plugins["Shockwave Flash"]) {
+                  var swVer2 = navigator.plugins["Shockwave Flash 2.0"] ? " 2.0" : "";
+                        var flashDescription = navigator.plugins["Shockwave Flash" + swVer2].description;
+                        descArray = flashDescription.split(" ");
+                        tempArrayMajor = descArray[2].split(".");
+                        versionMajor = tempArrayMajor[0];
+                  if ( descArray[3] != "" ) {
+                        tempArrayMinor = descArray[3].split("r");
+                  } else {
+                        tempArrayMinor = descArray[4].split("r");
+                  }
+                        versionMinor = tempArrayMinor[1] > 0 ? tempArrayMinor[1] : 0;
+                        flashVer = parseFloat(versionMajor + "." + versionMinor);
+            } else {
+                  flashVer = -1;
+            }
+      }
+      // MSN/WebTV 2.6 supports Flash 4
+      else if (navigator.userAgent.toLowerCase().indexOf("webtv/2.6") != -1) flashVer = 4;
+      // WebTV 2.5 supports Flash 3
+      else if (navigator.userAgent.toLowerCase().indexOf("webtv/2.5") != -1) flashVer = 3;
+      // older WebTV supports Flash 2
+      else if (navigator.userAgent.toLowerCase().indexOf("webtv") != -1) flashVer = 2;
+      // Can't detect in all other cases
+      else { flashVer = -1; }
+      return flashVer;
+}
+
+if (isIE && isWin && !isOpera) {
+	for (i = maxVersion; i > 0; i--) {
+      	flashVersion = VBGetSwfVer(i);
+	  	if (flashVersion) { break };
+	} 
+} else {
+      flashVersion = JSGetSwfVer(maxVersion);
+	  flashVersion = Math.floor(flashVersion);// just return the version primary
+}
+
+
+
+	var extraVals = '';
+	extraVals = extraVals==""?extraVals:"&"+extraVals;
+	var if_nt_Screen_Attr = screen.height + "x" + screen.width + "x" + screen.colorDepth;
+	var if_nt_Flash = flashVersion;
+
+	
+
+	var docURL = document.location + "";
+
+	
+			var partsParts = window.location.pathname;
+		
+
+	var if_nt_url= escape(partsParts);
+	
+	
+	var mep1;
+	function setMep1(str){
+		mep1 = str;
+	}
+	setMep1(sections + "&pageName=" + "&if_nt_login=" + if_nt_login + "&if_clientCode=" + if_clientCode + "&if_nt_userName=" + if_nt_userName + "&if_nt_bandwidth=" + if_nt_bandwidth + "&if_nt_Screen_Attr=" + if_nt_Screen_Attr + "&if_nt_zyg=" + if_nt_zyg + "&if_nt_span=" + if_nt_span + "&if_nt_demo=" + if_nt_demo + "&if_nt_era=" + if_nt_era + "&if_nt_Flash=" + if_nt_Flash + extraVals);
+
+	
+
+	var bc="&if_nt_Browser_Combination=" + escape(window.navigator.userAgent);
+	var Site=''; var if_SiteID='';
+
+
+	
+
+
+		
+
+
+// script type="text/javascript" src="/shared/scripts/rep_object.js"
+
+function fireRepObjectCallAlert(argFunc){
+	var img = new Image();
+	var scs = "http://viarnd.112.2o7.net/b/ss/viarnd/1/EMAIL?pageName=Rep_Obj - function: " + argFunc + " - " + window.location;
+	img.src = scs;
+}
+
+/****************************
+* ReportingCall Global Vars *
+*****************************/
+var repObjectVersion = 2.03;
+var defaultCall="";
+var defaultDelimiter = "&";
+var GETs = new Array(null);
+var section_0 = new Array("gateway","portal","tab","area","sec_0","section_0");
+var section_zeros = section_0.join("");
+
+//if(document.ePingI)defaultCall=document.ePingI.src;
+//else if(typeof(repImg)!='undefined')defaultCall=repImg.src;
+if(typeof mep1 != "undefined") defaultCall = mep1;
+
+/****************************
+* ReportingCall Constructor *
+*****************************/
+function ReportingCall(call,d) {
+   var pagename;
+   var gateway;
+   var url;
+   var loginstatus;
+   var login;
+   var zyg;
+   var era;
+
+	var d_lmt = arguments.length==1?defaultDelimiter:d;
+	var bits = call.split(d_lmt);
+	for(var i in bits){
+		if(i==0){
+			this.host=bits[i];
+			this.path = new Object();
+		}else{
+			av = bits[i].split("=");
+			if (av[1]=="") continue;
+			else this[av[0]] = av[1] + "";
+         if(section_zeros.indexOf(av[0])){
+            for (var j in section_0){
+               if(this[section_0[j]]){
+                  this.path[section_0[j]] = this[section_0[j]] + "";
+               }
+            }
+         }
+			if (av[0].indexOf("section_")>=0){
+				this.path[av[0]] = av[1] + "";
+			}
+		}
+	}
+	this.getPropCount = getPropCount;
+	this.objectToString = objectToString;
+	this.origin = this.objectToString(this.path)+(this.pageName?this.pageName:"");
+	this.joinProps = joinProps;
+	this.getValue = getValue;
+	this.getProps = getProps;
+	this.setProps = setProps;
+	this.clearProps = clearProps;
+	this.cleanArgs = cleanArgs;
+}
+//new ReportingCall(defaultCall);
+
+/************************
+* ReportingCall Methods *
+*************************/
+ReportingCall.prototype.setPropsFromString = function(str,d) {
+		fireRepObjectCallAlert("ReportingCall.setPropsFromString(\"str\",\"d\")")
+		var d_lmt = d?d:",";
+		var strg = this.cleanArgs(str);
+		var avs = strg.split(d_lmt);
+		var props = new Array();
+		for(var i=0; i<avs.length; i++){
+			props[i] = avs[i].split("=");
+		}
+		for(var i=0; i<props.length; i++){
+			if(props[i][1] == "null" || props[i][1] == ""){
+				this.deleteRepProps(props[i][0]);
+			}
+			else{
+				this.setRepProps(props[i][0] + "=" + props[i][1]);
+			}
+		}
+	
+}
+
+ReportingCall.prototype.setRepProps = function() {
+	fireRepObjectCallAlert("ReportingCall.setRepProps()")
+	if (arguments.length==0)
+		return;
+	else
+		var avs = new Array();
+	for (var i=0; i < arguments.length; i++) {
+		avs[i] = arguments[i].split("=");
+		this.setProps(avs[i][0],avs[i][1]);
+		this.setPathParts(avs[i][0] + "=" + avs[i][1]);
+	}
+}
+
+ReportingCall.prototype.deleteRepProps = function() {
+	fireRepObjectCallAlert("ReportingCall.deleteRepProps()")
+	if (arguments.length==0){
+		return;
+	}else{
+		for(var i=0; i<arguments.length; i++){
+			delete this[arguments[i]];
+			var path = this.getPath();
+			delete path[arguments[i]];
+		}
+	}
+}
+
+ReportingCall.prototype.getPath = function() {
+	return this.path;
+}
+
+
+ReportingCall.prototype.setPathParts = function(arg) {
+	if(arguments.length == 0){
+		return;
+	}else{
+		if(arg.indexOf(".")>=0){
+			var pg = arg.split('=');
+			this.setProps('pageName',pg[1]);
+		}else if(arg.indexOf("section_")>=0){
+			this.setPath(arg);
+		}else{
+			for(var i=0; i<section_0.length; i++){
+				if(arg.indexOf(section_0[i])>=0)
+					this.setPath(arg);
+			}
+		}
+	}
+}
+
+ReportingCall.prototype.setPath = function(arg) {
+	if(arguments.length == 0){
+		return;
+	}else{
+		var path = this.getPath();
+		for(var i=0; i<arguments.length; i++){
+			avs = arguments[i].split("=");
+			if(avs[1] == "null"){
+				this.deleteRepProps(avs[0]);
+			}else{
+				this.setProps(avs[0],avs[1]);
+				path[avs[0]] = avs[1];
+			}
+		}
+	}
+}
+
+ReportingCall.prototype.resetPath = function(arg) {
+	var sec_0 = "section_0";
+	var pth = arguments.length == 0?this.origin:arg;
+	for (var j in section_0){
+		if(this[section_0[j]])
+			sec_0 = section_0[j];
+	}
+	if(pth.indexOf("/")==0) pth = pth.substring(1);
+	if(pth.lastIndexOf("/") == (pth.length-1)) pth = pth.slice(0, pth.length-1);
+	var or = pth.split("/");
+	this.clearProps(this.getPath());
+	for (var i in or){
+		if (i == 0){
+			this.setRepProps(sec_0 + "=" + or[i]);
+		}else{
+			this.setRepProps("section_" + i + "=" + or[i]);
+		}
+	}
+	var props = this.getProps();
+	var xSecs = new Array();
+	for (i in props) {
+		if (props[i].indexOf("section_")>=0)
+		xSecs[xSecs.length] = props[i];
+	}
+	for (j in xSecs) {
+		if (this.path[xSecs[j]])
+			continue;
+		else
+			delete this[xSecs[j]];
+	}
+}
+
+ReportingCall.prototype.pathToString = function(mode){
+	var pathParts = new Array();
+	var thisPath = this.getPath();
+	var sortedPath = new Object();
+	for (var i in thisPath) {	
+		if(i.toString().indexOf("_")==-1) pathParts[0] = [i, thisPath[i]];
+		else pathParts[i.toString().substring(i.toString().indexOf("_")+1)] = [i, thisPath[i]];
+	}
+	for (var j = 0, k = 0; j < pathParts.length; j++) {
+		if (typeof(pathParts[j]) == 'undefined') continue;
+		sortedPath[pathParts[j][0]] = pathParts[j][1];
+		++k;
+	}
+	var strPath = this.objectToString(sortedPath);
+	if (mode == "h") { strPath = strPath.substring(0, strPath.length-1); }
+	else if (mode == "p") { strPath = "/" + strPath; }
+	else { strPath = strPath; }
+   if(strPath.indexOf("//")!=-1){
+      strPath = strPath.replace(new RegExp("/+","g"));
+   }
+
+	return strPath;
+
+}
+
+ReportingCall.prototype.toString = function(d) {
+	var d_lmt = arguments.length == 0?",":d;
+	var meth = new Array();
+	var prop = "";
+	var c = 0;
+	for(var p in this){
+		if (p == "path"){
+			prop += "path: " + this.objectToString(this[p]) + d_lmt;
+			continue;
+		}
+		if (typeof this[p] == "function")
+			meth[c++] = p;
+		else
+			prop += p + ": " + this[p] + d_lmt;
+	}
+	for(i in meth){
+		prop += "METHOD: " + meth[i] + d_lmt; 
+	}
+	return prop;
+}
+
+ReportingCall.prototype.makeFullCall = function() {
+	// Deprecated. Left here for legacy implementations.
+	return;
+}
+
+ReportingCall.prototype.makeTaxCall = function() {
+	// Deprecated. Left here for legacy implementations.
+	return;
+}
+
+ReportingCall.prototype.getQueryVals = function(){
+	var qsStr = document.location.search;
+	var qsEmpty = "";
+	if((typeof(qsStr)!='undefined')&&(qsStr!=null)){
+		qsStr=qsStr.replace(/\?/,"");
+		qsStr=qsStr.replace(/\&/g,"|");
+		return unescape(qsStr);
+	}else return qsEmpty;
+}
+
+/************************
+* Utility methods used  *
+* indirectly by the     *
+* ReportingCall object. *
+*************************/
+function joinProps(prim, second, d) {
+	var delim= d?d:"|";
+	var aggregate="";
+	if(prim)aggregate=prim;else return aggregate;
+	if(second)aggregate+=delim+second;
+	return aggregate;
+}
+
+function objectToString(o,d) {
+	var d_lmt = d?d:"/";
+	var str = "", pCnt = this.getPropCount(this[o]), cnt = 1;
+	for(var i in o){
+		d_lmt = cnt==pCnt?"":d_lmt;
+		str += o[i] + d_lmt;
+		cnt++;
+	}
+	return(str);
+}
+
+function getPropCount(o){
+	if (arguments.length == 0)
+		return false;
+	var pCount = 0;
+	for(var i in this[o]){
+		pCount++
+	}
+	return pCount;
+}
+
+function getValue(prop) {
+	return this[prop];
+}
+
+function getProps() {
+	var avs = new Array();
+	for (var av in this){
+		if(typeof this[av] == "function") continue;
+		avs[avs.length] = av;
+	}
+	return avs;
+}
+
+function setProps (a,v) {
+	if(v == "null"){
+		delete this[a];
+	}else{
+		this[a] = v;
+	}
+}
+
+function clearProps (o) {
+	for (var i in o) {
+		delete o[i];
+	}
+}
+
+function cleanArgs (s) {
+	var str = s.replace(/\s/g, "");
+	return str;
+}
+
+/****************************
+* Error handling for        *
+* reporting calls.          *
+*****************************/
+function mtvi_catchError(e) {
+	var er = {message:'c21', name:'c22', stack:'c23'};
+	var img = new Image();
+	var scs = "http://viarnd.112.2o7.net/b/ss/viarnd/1/EMAIL?pageName=JS_ER-" + window.location;
+	for(var i in e){
+		if(typeof er[i] != 'undefined')
+			scs += "&" + er[i] + "=" + e[i];
+	}
+	img.src = scs;
+}
+/********************************
+* data integrity implementation *
+*********************************/
+
+function cleanData(a_dataVal,a_safePropNames){
+	var retVal=a_dataVal;
+	if(typeof(a_dataVal)!='object'){
+		a_dataVal+="";//if the data is not an object, make it a string !!!NEEDS TO BEE FIXED, CONVERTS BOOLEAN INTO STRINGS!!!
+		retVal=cleanString(a_dataVal);//clean that string
+	}
+	else if(typeof(a_safePropNames)=='object'){//if the data is object and the array of safe name properties of this object is passed as array
+		for(var i in a_dataVal){
+			for(var j in a_safePropNames){//find any matching object data property name against the safe list and clean up the value of it
+				if(a_safePropNames[j].toLowerCase()==i.toLowerCase()) a_dataVal[i]=cleanData(a_dataVal[i],a_safePropNames);
+			}
+		}
+		retVal=a_dataVal;
+	}
+	return retVal;
+}
+
+function cleanString(a_stringVal){
+	var retVal=a_stringVal;
+	retVal=retVal.replace(/ /g, '_');//replace all spaces with underscores
+	var tempArray=retVal.split(".");//split the string by periods
+	var tempRetVal="";
+	for(var i in tempArray){
+		tempArray[i]=tempArray[i].replace(/\W/g, '');//remove all non-alphanumeric characters from each split part
+		tempRetVal+=tempArray[i]+".";//put period back
+	}
+	retVal=tempRetVal.substring(0,tempRetVal.length-1);//remove last extra period
+	while(retVal.charAt(0) == ('_') ){
+		retVal = retVal.substring(1);//trim all leading underscores
+	}
+	while(retVal.charAt(retVal.length-1) == ('_') ){
+		retVal = retVal.substring(0,retVal.length-1);//trim all trailing underscores
+	}
+	while(/__/.test(retVal)==true){//test for double underscores
+		retVal=retVal.replace(/__/g, '_');//replace all current double underscores with one underscore
+	}
+	return retVal.toLowerCase();//change all to lower case string
+}
+
+
+		
+				<!-- omni_instantiate -->
+
+
+var omniCall = new ReportingCall(defaultCall);
+
+var mtv_dloc = window.location.toString();
+var mtv_query = window.location.search.toString();
+var mtv_dlocParts = mtv_dloc.split("/");
+var ocp = omniCall.pageName?omniCall.pageName:"";
+var ogt = omniCall.gateway?omniCall.gateway:"";
+if(ogt=="asm")omniCall.asm=true;
+
+
+
+var mtvnParams = new Object();
+var qStr = window.location.search.toString();
+if(qStr != ''){
+	qStr = qStr.substring(1);
+	var prms = qStr.split('&');
+	for(i in prms){
+		prms[i] = prms[i].split('=');
+		mtvnParams[prms[i][0]] = prms[i][1];
+	}
+}
+
+
+
+
+
+if(document.referrer.indexOf("yahoo")>=0){
+	omniCall.partner = "yahoo";
+}
+
+
+
+
+
+
+try{
+//	MTVi.reporting.PartnerSearch.setTerms("");
+//	omniCall.partnerSearch=MTVi.reporting.PartnerSearch.getKeywords();
+	omniCall.partnerSearch=MTVi.reporting.PartnerSearch.get("");
+}catch(e){}
+
+
+
+
+
+
+
+	
+
+
+
+
+
+
+
+if ( (ogt == "overdrive") && (omniCall.section_1 == "main")) {
+	omniCall.deleteRepProps('section_1');
+}
+
+if ( (ogt == "overdrive") && (omniCall.section_1 == "about" || ocp == "feedback.jhtml" || ocp == "thanks.jhtml" || omniCall.section_1 == "install") ) {
+	omniCall.channel  = null;
+}
+
+if ( (ogt == "overdrive") && (ocp == "index.jhtml")){
+	omniCall.channel  = null; 
+}
+
+if (mtvnParams.deepLink)
+	omniCall.deepLink = mtvnParams.deepLink;
+
+if (ocp.indexOf("display_") >= 0){
+		omniCall.OD_rollUp = "DETECT_PAGE";
+		omniCall.channel  = null;
+}
+
+
+if ( omniCall.section_2 == "ma05" && !omniCall.section_3 ) {
+	omniCall.resetPath('/onair/movieawards/ma05/home/index.jhtml');
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- end omni_instantiate -->
+
+				/* if a channel property has been explicitly set, use it - otherwise, use gateway. */
+
+function getChannel() {
+	var retVal="";
+   try {
+	if (omniCall.channel === null) retVal="";
+	else if (omniCall.channel != null) retVal= omniCall.channel;
+	else if (omniCall.gateway) retVal=omniCall.gateway;
+   }catch(e){
+	   mtvi_catchError(e);
+   }
+	return retVal;
+}
+
+
+// if a hier property has been explicitly set, use it - otherwise, use the pathToString() method.
+function getHierarchy() {
+   var h;
+   if (typeof omniCall.hier == 'undefined'){
+      h = omniCall.pathToString('h')+'/'+omniCall.pageName;
+   } else {
+      h = omniCall.hier;
+   }
+
+   h = h.replace(new RegExp("#VID:","g"),"/VID/");
+
+   try {
+      h = h.replace(new RegExp("/+","g"),"/");
+   } catch(e){
+	   mtvi_catchError(e);
+   }
+
+   if(h.substring(0,1) == "/"){
+      h = h.substring(1);
+   }
+   return h;
+
+}
+
+function getPageName(){
+
+   var pn;
+   try {
+      path = omniCall.pathToString('p');
+      if(typeof path == "undefined"){
+         path = "";
+      }
+      if(path == "undefined"){
+         path = "";
+      }
+      pn = path + omniCall.pageName;
+      pn = pn.replace(new RegExp("/+","g"),"/");
+   }catch(e){
+		mtvi_catchError(e);
+   }
+   return pn;
+}
+
+var s_pageName=getPageName();
+var s_server="";
+var s_channel=getChannel();
+var s_pageType="";
+var s_prop1=omniCall.artist?unescape(omniCall.artist):"";//cleanData(unescape(omniCall.artist)):"";
+var s_prop2=omniCall.album?unescape(omniCall.album):"";
+var s_prop3=omniCall.getQueryVals();
+//var s_prop4=omniCall.if_nt_login?omniCall.if_nt_login:"not_logged_in";
+var s_prop5=omniCall.if_nt_zyg?omniCall.if_nt_zyg:"";
+var s_prop6=omniCall.if_nt_span?omniCall.if_nt_span:"";
+var s_prop7=omniCall.if_nt_demo?omniCall.if_nt_demo:"";
+var s_prop8="";/* FBML Grid - assigned in /relaunch/sitewide/scripts/SPERF.js */
+var s_prop9=omniCall.boardName?omniCall.boardName:"";
+var s_prop10="";// OD Content Area - assigned in /overdrive/scripts/SPERF.js
+var s_prop11="";/* Votes / Entries - dynamically assigned */
+var s_prop12=omniCall.if_nt_vidOrigin?omniCall.if_nt_vidOrigin:"";
+var s_prop13="";/* video label */
+var s_prop14="";/* Available */
+var s_prop15="";/* Available */
+var s_prop16=omniCall.partner?omniCall.partner:"";
+var s_prop17=omniCall.intCmp?omniCall.intCmp:"";
+var s_prop18=omniCall.story?unescape(omniCall.story):"";
+var s_prop19=omniCall.storyDate?omniCall.storyDate:"";
+var s_prop20="";/* Available */
+var s_prop21=omniCall.OD_rollUp?omniCall.OD_rollUp:"";
+var s_prop22=omniCall.rollUp?omniCall.rollUp:"";
+var s_prop23=omniCall.deepLink?omniCall.deepLink:"";
+var s_prop24=omniCall.if_nt_bandwidth?omniCall.if_nt_bandwidth:"";
+var s_prop25=omniCall.if_nt_Flash?omniCall.if_nt_Flash:"";
+var s_prop26=omniCall.rssTraffic?omniCall.rssTraffic:"";
+var s_prop27="";/* Available */
+var s_prop28="";/* Available */
+var s_prop29="";/* Available */
+var s_prop30="";/* Available */
+var s_prop31="";//* siteFormat - assigned in /relaunch/sitewide/scripts/SPERF.js */
+/* E-commerce Variables */
+var s_campaign="";
+var s_hier1="";
+var s_hier2=getHierarchy();
+var s_hier3="";
+var s_hier4=omniCall.partnerSearch;
+var s_hier5="";
+var s_state="";
+var s_zip="";
+var s_events="";
+var s_products="";
+var s_purchaseID="";
+var s_eVar1="";
+var s_eVar2="";
+var s_eVar3="";
+var s_eVar4="";
+var s_eVar5="";
+
+/************************ ADDITIONAL FEATURES ************************
+     Dynamic Account Selection
+     Plugins
+*/
+var s_dynamicAccountSelection=true;
+if (typeof asmSuites == "undefined") asmSuites = "";
+var s_account=omniCall.asm?"viamtvasmprod" + asmSuites:"viamtvcom";
+var s_dynamicAccountList=omniCall.asm?"viamtvasmdev=mtv-d,mtv-q":"devviamtv=mtv-d,mtv-q";
+var s_linkInternalFilters="javascript:,mtv.com,mtvi.com,";
+try{
+	if(window.location.toString().indexOf("mtv2/ontv/atr")!=-1){
+		s_account="MTV2";
+		s_dynamicAccountList="MTV2Dev=mtv2-d,mtv2-q";
+		s_linkInternalFilters="javascript:,mtv2.com";
+	}
+	if(window.location.toString().indexOf("mtvu/music/woodie_awards/2006")!=-1){
+		s_account="mtvu";
+		s_dynamicAccountList="mtvudev=mtvu-d,mtvu-q";
+		s_linkInternalFilters="javascript:,mtvu.com";
+	}	
+}catch(e){}
+
+//* Account Config *//
+try{
+	MTVi.reporting.Config={
+		account: s_account,
+		dynamic: true,
+		list: s_dynamicAccountList,
+		filters: s_linkInternalFilters
+	};
+}catch(e){}
+
+/************************** CONFIG SECTION **************************
+	You may add or alter any code config here.                       
+	Specify the Report Suite ID(s) to track here
+*/
+
+/* E-commerce Config */
+var s_currencyCode="USD";
+var s_eVarCFG="";
+/* Link Tracking Config */
+var s_trackDownloadLinks=true;
+var s_trackExternalLinks=true;
+var s_trackInlineStats=true;
+/* linkInternalFilter moved to individual omni_config.js files JRRIII 12/04*/
+var s_linkDownloadFileTypes="exe,zip,wav,mp3,mov,mpg,avi,wmv,doc,pdf,xls";
+var s_linkLeaveQueryString=false;
+var s_linkTrackVars="s_eVar2,s_events,s_prop8";
+var s_linkTrackEvents="None";
+/* Plugin Config */
+var s_usePlugins=true;
+function s_doPlugins() {
+	/* Add calls to plugins here */
+	/* External Campaigns */ 
+	s_vp_getCGI('s_campaign','extcmp');
+	/* Internal campaigns */
+	s_vp_getCGI('s_eVar1','intcmp');
+	/* Internal Search Terms */
+	//s_vp_getCGI('s_eVar1','');
+	//s_vp_getCGI('s_eVar2','searchterm');
+	//s_vp_getCGI('s_eVar3','searchtype');
+}
+
+/************************** PLUGINS SECTION *************************/
+/* You may insert any plugins you wish to use here.                 */
+/*
+ * Plugin: Get Plugin Modified Value
+ */
+function s_vp_getValue(vs)
+	{var k=vs.substring(0,2)=='s_'?vs.substring(2):vs;return s_wd[
+	's_vpm_'+k]?s_wd['s_vpv_'+k]:s_gg(k)}
+/*
+ * Plugin: Get Query String CGI Variable Value
+ */
+function s_vp_getCGI(vs,k)
+	{var v='';if(k&&s_wd.location.search){var q=s_wd.location.search,
+	qq=q.indexOf('?');q=qq<0?q:q.substring(qq+1);v=s_pt(q,'&',s_cgif,
+	k)}s_vpr(vs,v)}function s_cgif(t,k){if(t){var te=t.indexOf('='),
+	sk=te<0?t:t.substring(0,te),sv=te<0?'True':t.substring(te+1);if(
+	sk==k)return s_epa(sv)}return ''}
+/*
+ * Plugin: Get Value From Cookie
+ */
+function s_vp_getCookie(vs,k)
+	{s_vpr(vs,s_c_r(k))}
+/*
+ * Plugin Utilities v2.0 (Required For All Plugins)
+ */
+function s_vpr(vs,v){if(s_wd[vs])s_wd[vs]=s_wd[vs];else s_wd[vs]=''
+if(vs.substring(0,2) == 's_')vs=vs.substring(2);s_wd['s_vpv_'+vs]=v
+s_wd['s_vpm_'+vs]=1}function s_dt(tz,t){var d=new Date;if(t)d.setTime(
+t);d=new Date(d.getTime()+(d.getTimezoneOffset()*60*1000))
+return new Date(Math.floor(d.getTime()+(tz*60*60*1000)))}
+function s_vh_gt(k,v){var vh='|'+s_c_r('s_vh_'+k),vi=vh.indexOf('|'+v
++'='),ti=vi<0?vi:vi+2+v.length,pi=vh.indexOf('|',ti),t=ti<0?'':
+vh.substring(ti,pi<0?vh.length:pi);return t}function s_vh_gl(k){var
+vh=s_c_r('s_vh_'+k),e=vh?vh.indexOf('='):0;return vh?(vh.substring(0,
+e?e:vh.length)):''}function s_vh_s(k,v){if(k&&v){var e=new Date,st=
+e.getTime(),y=e.getYear(),c='s_vh_'+k,vh='|'+s_c_r(c)+'|',t=s_vh_gt(k,
+v);e.setYear((y<1900?y+1900:y)+5);if(t)vh=s_rep(vh,'|'+v+'='+t+'|','|'
+);if(vh.substring(0,1)=='|')vh=vh.substring(1);if(vh.substring(
+vh.length-1,vh.length)=='|')vh=vh.substring(0,vh.length-1);vh=v
++'=[PCC]'+(vh?'|'+vh:'');s_c_w(c,vh,e);if(s_vh_gt(k,v)!='[PCC]')
+return 0;vh=s_rep(vh,'[PCC]',st);s_c_w(c,vh,e)}return 1}
+
+				/* this is a deprecated file as of 2004.12.28
+ * PLEASE DO NOT REFER TO IT IN YOUR CODE
+ * refer to /global/reporting/scripts/omni_functions.js instead */
+
+function sendAnalyticsEvent(str){ 
+	ns=s_account;
+	if(str!=null) ns+=","+str;
+	void(s_gs(ns));
+}
+
+function sendLinkEvent(str,lnkname){
+	ns=s_account;
+	if(str!=""&&str!=null) ns+=","+str;
+	s_linkType="o";
+	s_lnk=true;
+	s_linkName=lnkname;
+	void(s_gs(ns));
+}
+
+function sendReportingCall(ro){
+	if(ro){
+		if(ro.setOverrides)	omniSetOverrides(ro.setOverrides);
+	} void(sendAnalyticsEvent(""));
+}
+
+function sendLinkCall(linkName, ro){
+	if(ro){
+		if(ro.setOverrides)	omniSetOverrides(ro.setOverrides);
+		alert( omniSetOverrides(ro.setOverrides) );
+	} void(sendLinkEvent("", linkName));
+}
+
+function omniSetOverrides(or){
+	for(var i in or){
+		this[i] = or[i];
+     	//eval(i + "=or[i];");
+	}
+}
+
+				
+				
+					
+					
+			
+
+adObject = new Object();
+adObject.iframeList = new Array();
+
+function changeIframe(arg,passThru){
+	if (passThru != "" || passThru !=null) {
+		passThru = "?"+passThru;
+		}
+		else {
+		passThru = "";
+		}
+	if (arg == "all" || arg == "" || arg==null) {
+		for (var i=0;i<adObject.iframeList.length;i++) {
+			adObject.iframeList[i][0].src = adObject.iframeList[i][2]+passThru;
+			}
+		}
+	else {
+		arg = arg*1;
+		if (adObject.iframeList[arg] != null) {
+			adObject.iframeList[arg][0].src = adObject.iframeList[arg][2]+passThru;
+			}
+	}
+}
+
+function ads(id,type,adLocation) {
+	var numberOfiframeAds  =  adObject.iframeList.length;
+	adObject.iframeList[numberOfiframeAds] = new Array();
+	adObject.iframeList[numberOfiframeAds][0] = document.getElementById(id)
+	adObject.iframeList[numberOfiframeAds][1] = type;
+	adObject.iframeList[numberOfiframeAds][2] = adLocation;
+	}
+var detectionObject = new Object();
+
+detectionObject.output = function (text) {
+	document.write(text);
+}; 
+
+detectionObject.WMPVer = "unknown";       // Set to WMP version string detected
+detectionObject.HasWMP = false;          // True if either WMP v6.4 or v7+ found
+detectionObject.HasWMP64 = false;        // True if WMP v6.4 found
+detectionObject.HasWMP7 = false;         // True if WMP v7+ (8, 9) found
+
+detectionObject.GetBrowser =  function() {
+   var agt=navigator.userAgent.toLowerCase();
+   if( ((agt.indexOf("msie") != -1) && (agt.indexOf("opera") == -1)) )
+       this.browser =  "IE";
+   else if( ((agt.indexOf('mozilla')!=-1) && (agt.indexOf('spoofer')==-1)
+         && (agt.indexOf('compatible') == -1) && (agt.indexOf('opera')==-1)
+         && (agt.indexOf('webtv')==-1) && (agt.indexOf('hotjava')==-1)) )
+        this.browser = "Netscape";
+   else
+        this.browser = "unknown";
+}
+
+
+detectionObject.AddDownloadLink =  function(MajorVer)
+{
+ if (!(MajorVer) || MajorVer=="unknown" || parseInt(MajorVer)<9)
+  { 
+	  this.ouput('You do not have the latest Windows Media Player version. Please click the button below to get it.<BR><A HREF="http://windowsmedia.com/download" target="_new"><IMG SRC="http://www.microsoft.com/windows/windowsmedia/images/Download_88x31_static.gif" WIDTH="88" HEIGHT="31" BORDER="0" ALT="Get Windows Media Player" VSPACE="7"></A>');
+  } 
+}
+
+detectionObject.AddOKMessage =  function(MajorVer){
+   this.output('You have Windows Media Player version ' + MajorVer);
+}
+
+detectionObject.isNSPluginInstalled =  function(){
+  if (navigator.mimeTypes && 
+      navigator.mimeTypes["application/x-mplayer2"] && 
+      navigator.mimeTypes["application/x-mplayer2"].enabledPlugin)
+  {
+    return true;
+  }  else  {
+    return false;
+  }
+}
+
+
+
+detectionObject.writeEmbedCode =  function(){
+	var mediaWidth = 320;
+	var mediaHeight = 240;
+	var classid = "6BF52A52-394A-11d3-B153-00C04F79FAA6";
+	var mediaUrl = "http://www.mtvu.com/global/apps/mediaplayer/asxmaker.jhtml?clipids=1750400&site_type=music&asx_intro_slate=http://www.mtvu.com/sitewide/videoplayer/images/mtvu_video.gif&asx_outro_slate=http://www.mtvu.com/sitewide/videoplayer/images/mtvu_video.gif&section_0=music&section_1=playlist&section_2=&adPth=/adsetup/home/&hasVideoIntro=false&hasVideoOutro=false&vid=52756&introkeyvalues=music:intro&x=x.asx";
+	html = '<object id="player" \n';
+	html += ' width="' + mediaWidth + '" \n';
+	html += ' height="' + mediaHeight + '" \n';
+	//html += ' codebase="http://activex.microsoft.com/activex/controls/mplayer/en/nsmp2inf.cab#Version=7,0,0,1954" \n';
+	html += ' classid="CLSID:' + classid + '" \n';
+	html += ' standby="Loading Windows Media Player components..." \n';
+	html += ' type="application/x-oleobject">\n';
+	html += ' <par' + 'am name="URL" value="' + mediaUrl + '">\n';
+	html += ' <par' + 'am name="uiMode" value="full">\n';
+	html += ' <par' + 'am name="autoStart" value="true">\n'; 
+	html += ' <par' + 'am name="enableContextMenu" value="false">\n'; 
+	html += ' <embed id="player" \n';
+	html += ' name="player" \n';
+	html += ' src="' + mediaUrl + '" \n';
+	html += ' type="application/x-mplayer2" \n';
+	html += ' width="' + mediaWidth + '" \n';
+	html += ' height="' + mediaHeight + '" \n';
+	html += ' ShowControls="1" \n';
+	html += ' ShowStatusBar="1" \n';
+	html += ' AutoSize="false" \n';
+	html += ' EnableContextMenu="0" \n';
+	html += ' DisplaySize="0" \n';
+	html += ' pluginspage="http://www.microsoft.com/windows/windowsmedia/" \n';
+	html += ' AutoStart="true">\n';
+	html += ' </embed>\n'; 
+	html += '</object>';
+	document.write(html);
+}
+
+
+detectionObject.detect =  function () {
+	this.GetBrowser();
+	this.isNSPluginInstalled();
+		
+	if(this.browser == "IE"){
+		if (WMP7.URL != undefined) {
+			this.WMPVer = WMP7.versionInfo; // Has 7.0+ (e.g 8.x, 9.x)
+			this.HasWMP = true;
+		} else if( WMP64.FileName != undefined) {
+			this.WMPVer="6.4";
+			this.HasWMP = true;
+		} else if (WMP7.URl == undefined){
+			this.WMPVer=0;
+			this.HasWMP=false;
+		}
+	}
+}
+
+
+	function writeTestWMPObjects() {
+		if(navigator.userAgent.toLowerCase().indexOf('macintosh')==-1){	
+			document.write('<OBJECT classid=CLSID:22d6f312-b0f6-11d0-94ab-0080c74c7e95  codebase="../../#Version=6,4,5,715" height=1 id=WMP64 width=1 VIEWASTEXT></OBJECT>');
+			document.write('<OBJECT classid=CLSID:6BF52A52-394A-11d3-B153-00C04F79FAA6  codebase="../../#Version=7,0,0,1954" height=1 id=WMP7 width=1 VIEWASTEXT></OBJECT>')
+		}else{
+			//write dummy objects to fail gracefully;
+			document.write('<OBJECT height=1 id=WMP64 width=1 VIEWASTEXT></OBJECT>');
+			document.write('<OBJECT height=1 id=WMP7 width=1 VIEWASTEXT></OBJECT>')
+		}
+	}
+	writeTestWMPObjects();
+
+
+
+
+detectionObject.detect();
+//detectionObject.GetBrowser();     // Returns either "IE" or "Netscape"
+
+if (detectionObject.HasWMP) {
+	var fullVersion  = detectionObject.WMPVer.toString();
+	var versionString = detectionObject.WMPVer.toString().split(".");
+	var majorVersion = versionString[0]; // Returns Windows Media Player major version #
+	var minorVersion = versionString[1]; // Returns Windows Media Player minor version #
+} else {
+	var fullVersion,versionString,majorVersion,minorVersion = null
+}
+
+var mozillaPlug = detectionObject.isNSPluginInstalled();
+
+detectionObject.getDetails = function () {
+	var buff= "Full Version= " + fullVersion + "\n" + 
+			"Major Version= " + majorVersion + "\n" + 
+			"Minor Version= " + minorVersion + "\n" + 
+			"Browser : " + detectionObject.browser + "\n>" + 
+			"mozillaPlug : " +detectionObject.mozillaPlug + "\n";
+
+	return buff;
+}; 
+
+if (detectionObject.browser=="IE" && parseInt(majorVersion)>=9)  {
+	//detectionObject.writeEmbedCode()	
+	detectionObject.ok = true;
+}  else if (detectionObject.isNSPluginInstalled()) {
+	detectionObject.ok = true;
+} else {
+	detectionObject.ok = false;
+}		
+
+
+detectionObject.onError = function () {
+	alert('No Media');
+}; 
+
+
+/*
+	Synthetic Page and Event Reporting Framework (SPERF)
+	----------------------------------------------------
+	for use when reporting is desired for things that don't exist as/in a real web 
+	page (e.g. HTML). this code makes use of Omniture's Site Catalyst reporting 
+	product and creates 'page' or 'link' events for the requested event_id.
+
+	use as follows:
+		REPORTING.makeCall('simple_event');
+		REPORTING.makeCall('complex_event', { key1 : 'value1', key2 : 'value2' });
+*/
+var grdFlg = 0;
+
+var REPORTING = {
+	events : { },
+	makeCall : function() { }
+};
+
+// called by the app
+REPORTING.makeCall = function (event_id, data_object) {
+	// bail out if event_id is unknown
+	if (typeof(this.events[event_id]) == "undefined") return false;
+
+	// setup page variables
+	this.events[event_id].populateData(data_object);
+	this.events[event_id].setPageVariables();
+
+	// send page event
+	if (this.events[event_id].event_type == "PAGE") {
+		// zero-out link event stuff
+		s_linkType = "";
+		s_lnk = "";
+
+		// set pagename and URL stuff
+		s_pageName = this.events[event_id].generatePageName();
+		s_pageURL = this.events[event_id].generatePageURL();
+
+		s_hier2 = (s_pageURL.charAt(0) == "/") ? s_pageURL.substring(1, s_pageURL.length) : s_pageURL;
+		s_hier2 = (s_hier2.charAt(s_hier2.length) == "/") ? s_hier2.substring(0, s_hier2.length - 1) : s_hier2;
+		
+		s_gs(s_account.toLowerCase());
+
+	// send link event
+	} else if (this.events[event_id].event_type == "LINK") {
+	
+		s_pageName = this.events[event_id].generatePageName();
+		s_linkType = "o";
+		s_lnk = s_co(s_wd); // this is no good
+		s_hier2 = "";
+		s_gs(s_account.toLowerCase());
+
+	// unknown event type
+	} else {
+		return false;
+	}
+
+	// reset data for next call
+	this.events[event_id].clearPageVariables();
+
+	return true;
+} // END: makeCall()
+
+
+function ReportingEvent(event_type, page_name_function, page_url_function, page_variable_function) {
+	this.event_type = event_type; // "PAGE" or "LINK"
+
+	this.generatePageName = page_name_function;
+	this.generatePageURL = page_url_function;
+	this.setPageVariables = page_variable_function;
+
+	this.data = {}; // holds a copy of the data passed in (for use by methods of this object)
+} // END: ReportingEventType()
+
+
+ReportingEvent.prototype.populateData = function(data) {
+	//var safePropNames2Clean=new Array("artist");
+	for (var i in data) this.data[i] = data[i];//cleanData(data[i],safePropNames2Clean);
+}; // END: populateData()
+
+
+ReportingEvent.prototype.clearPageVariables = function() {
+	this.data = { }; // reset data passed in by app
+
+	s_pageName = s_pageURL = s_events = s_prop1 = s_prop21 = s_prop31 = "";
+	s_linkTrackVars="None";
+
+}; // END: clearPageVariables()
+
+// =============================================================================
+
+REPORTING.events['fbml_pv'] = new ReportingEvent(
+	"PAGE",
+
+	function() { // generatePageName()
+		var fbmlParams;
+		var fbmlVid = "";
+		var pth = new Array();
+		for (i in this.data){
+			if (typeof this.data[i] != "object")
+				pth.push(this.data[i]);
+			else fbmlParams = this.data[i];
+		}
+		if(typeof pth[pth.length-1] == "undefined") pth.pop();
+		if(typeof fbmlParams["videoVals"] != "undefined")
+			fbmlVid = fbmlParams["videoVals"];
+		// Akamai GUID
+		var guid = new Image(); guid.src = "/global/guid/index.jhtml";
+		
+		return "/" + pth.join('/') + fbmlVid;
+	},
+
+	function() { // generatePageURL()
+		var pth = new Array();
+		for (i in this.data){
+			if (typeof this.data[i] != "object")
+				pth.push(this.data[i]);
+		}
+		if(typeof pth[pth.length-1] == "undefined") pth.pop();
+		return pth.join('/');
+	},
+
+	function() { // setPageVariables()
+		if (this.data['pageName'] == "index.jhtml") grdFlg = 0;
+		else grdFlg += 1;
+		if (grdFlg > 1) s_prop8 = "";
+		s_channel = this.data['section_0'];
+		for (i in this.data){
+			if(typeof this.data[i] == "object"){
+				s_prop1 = typeof this.data[i]['artist']!='undefined'?this.data[i]['artist']:"";
+				s_prop4 = typeof this.data[i]['login']!='undefined'?this.data[i]['login']:"";
+				s_prop5= typeof this.data[i]['zyg']!='undefined'?this.data[i]['zyg']:"";
+				s_prop6= typeof this.data[i]['span']!='undefined'?this.data[i]['span']:"";
+				s_prop7= typeof this.data[i]['demo']!='undefined'?this.data[i]['demo']:"";
+				s_prop12 = typeof this.data[i]['vidOrigin']!='undefined'?this.data[i]['vidOrigin']:"";
+				s_prop16 = typeof this.data[i]['partner']!='undefined'?this.data[i]['partner']:"";
+				s_prop17 = typeof this.data[i]['source']!='undefined'?this.data[i]['source']:"";
+				s_prop18 = typeof this.data[i]['story']!='undefined'?this.data[i]['story']:"";
+				s_prop19 = typeof this.data[i]['storyDate']!='undefined'?this.data[i]['storyDate']:"";
+				s_prop22 = typeof this.data[i]['rollUp']!='undefined'?this.data[i]['rollUp']:"";
+				s_prop24 = typeof this.data[i]['bps']!='undefined'?this.data[i]['bps']:"";
+				s_prop25 = typeof this.data[i]['fla']!='undefined'?this.data[i]['fla']:"";
+				s_prop31 = typeof this.data[i]['siteFormat']!='undefined'?this.data[i]['siteFormat']:"";
+
+				s_eVar2 = typeof this.data[i]['searchterm']!='undefined'?this.data[i]['searchterm']:"";
+				s_eVar3 = typeof this.data[i]['searchtype']!='undefined'?this.data[i]['searchtype']:"";
+				s_eVar4 = typeof this.data[i]['failedsearchterm']!='undefined'?this.data[i]['failedsearchterm']:"";
+
+            if(typeof this.data[i]['votes']!= 'undefined'){
+               if(typeof this.data[i]['gamename']!= 'undefined'){
+                  s_prop11= this.data[i]['gamename'] + " : " + this.data[i]['votes']; 
+               } else {
+                  s_prop11= 'unknown gamename' + " : " + this.data[i]['votes']; 
+               }
+            } 
+
+            if(typeof this.data[i]['gamename']!= 'undefined'){
+               s_prop22= this.data[i]['gamename']; 
+            }
+
+			}
+		}
+		return;
+	}
+); // END: fbml_pv
+
+
+REPORTING.events['fbml_grid'] = new ReportingEvent(
+	"LINK",
+
+	function() { // generatePageName()
+		var clkThru = typeof this.data['clickthru']!='undefined'?this.data['clickthru']:"";
+		return clkThru;
+	},
+
+	function() { // generatePageURL()
+		return;
+	},
+
+	function() { // setPageVariables()
+		var paneSz = typeof this.data['sz']!='undefined'?this.data['sz']:"SIZE_UNSPECIFIED";
+		var panePos = typeof this.data['pos']!='undefined'?this.data['pos']:"POSITION_UNSPECIFIED";
+		var paneSec = typeof this.data['area']!='undefined'?this.data['area']:"AREA_UNSPECIFIED";
+		s_linkName = paneSec + " : " + paneSz + " : " + panePos;
+		return;
+	}
+); // END: fbml grid
+
+REPORTING.events['fbml_lev'] = new ReportingEvent(
+	"LINK",
+
+	function() { // generatePageName()
+		var clkThru = typeof this.data['clickthru']!='undefined'?this.data['clickthru']:"";
+		return clkThru;
+	},
+
+	function() { // generatePageURL()
+		return;
+	},
+
+	function() { // setPageVariables()
+		s_linkName = this.data['lev'];
+		return;
+	}
+); // END: fbml grid
+
+
+
+var clientEnvironmentVars = "fla=" + flashVersion + ";bps=" + if_nt_bandwidth;
+if(location.search.indexOf('testmode=on')!=-1)
+	clientEnvironmentVars += ";testmode=on";
+
+var numkeys = 7;
+var keyvals = new Array(numkeys);
+var keynames = new Array(numkeys);
+var allkeys = "";
+
+keynames[0] = "zyg";
+keynames[1] = "span";
+keynames[2] = "demo";
+keynames[3] = "era";
+keynames[4] = "clientCode";
+keynames[5] = "login";
+keynames[6] = "userName";
+
+keyvals[0] = if_nt_zyg;
+keyvals[1] = if_nt_span;
+keyvals[2] = if_nt_demo;
+keyvals[3] = if_nt_era;
+keyvals[4] = if_clientCode;
+keyvals[5] = if_nt_login;
+keyvals[6] = if_nt_userName;
+
+if (keyvals[4] == "Not-Signed-In"){ keyvals[4] = ""; }
+
+for (var i=0; i<numkeys; i++){
+	if (keyvals[i].length != 0){
+		allkeys = allkeys + keynames[i] + "=" + keyvals[i] + ";";
+	}
+}
+
+var personalizationVars = allkeys;
+
+var siteVersion = "FBML";

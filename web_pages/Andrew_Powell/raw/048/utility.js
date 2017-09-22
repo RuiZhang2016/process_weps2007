@@ -1,0 +1,1 @@
+function clearDefault(input) {	if (input.defaultValue==input.value) input.value = ""}function restoreDefault(input) {	if (input.value== "" ) input.value = input.defaultValue}

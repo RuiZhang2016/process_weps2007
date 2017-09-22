@@ -1,0 +1,1091 @@
+/*** BUG - DO NOT DELETE THIS LINE ***/
+
+html
+{ /* include a scrollbar at all times to remove that ugly 'shift' */
+  /* don't need this anymore as we have enough content on most pages
+  OVERFLOW: -moz-scrollbars-vertical;
+  OVERFLOW-Y: scroll;
+  OVERFLOW-X: scroll;*/
+}
+
+
+body
+{ font-family: arial, verdana, geneva, helvetica, sans-serif;
+  font-size: 8pt;
+  margin: 10px;
+  background: #eee;
+  color: #444;
+  text-align: center;
+}
+
+td, th
+{ font-family: arial, verdana, geneva, helvetica, sans-serif;
+  font-size: 8pt;
+  color: #444;
+}
+
+
+h1, h2, h3, h4, h5
+{ color: #339;
+  margin: 0px;
+  padding-bottom: 10px;
+}
+
+h1
+{ font-size: 200%;
+  padding-bottom: 5px;
+  margin-bottom: 5px;
+  width: 100%;
+  border-bottom: 1px solid #777;  
+}
+
+h2
+{ font-size: 160%;
+}
+
+h3
+{ font-size: 110%;
+}
+
+a
+{ text-decoration: none;
+}
+
+a:link 
+{ color: #003399;
+}
+
+img
+{ border: none;
+}
+
+p
+{ margin: 0px;
+  padding-bottom: 10px;
+}
+
+big
+{ color: #a33;
+  font-size: 8pt;
+}
+
+em
+{ color: #a33;
+  font-size: 120%;
+}
+
+b.red
+{ color: #f00;
+}
+
+div.quote
+{ border-left: 5px solid #ccc;
+  padding-left: 10px;
+  font-size: 80%;
+}
+
+
+/*
+ * create a flat looking inputs on request
+ */
+form
+{ margin: 0px;
+  padding: 0px;
+}
+
+/* used for spacing on some forms */
+img.flat
+{ WIDTH: 200px;
+  HEIGHT: 1px;
+}
+
+input.flat
+{ BORDER: 1px solid #999;
+  WIDTH: 200px;
+  PADDING: 0px 3px;
+  FONT-FAMILY: arial, verdana, geneva, helvetica, sans-serif;
+  FONT-SIZE: 8pt;
+}
+
+input.listingbutton
+{ BORDER: 1px solid #999;
+  WIDTH: 200px;
+  FONT-FAMILY: arial, verdana, geneva, helvetica, sans-serif;
+  FONT-SIZE: 12pt;
+}
+
+input.flat:hover
+{ BORDER: 1px solid #444;
+}
+
+input.flat:disabled:hover
+{ BORDER: 1px solid #999;
+}
+
+input.flat:focus
+{ BACKGROUND: #eee;
+}
+
+textarea.flat, textarea.flatwide
+{ BORDER: 1px solid #999;
+  WIDTH: 200px;
+  HEIGHT: 100px;
+  FONT-FAMILY: arial, verdana, geneva, helvetica, sans-serif;
+  FONT-SIZE: 8pt;
+}
+
+textarea.flatwide
+{ WIDTH: 400px;
+}
+
+textarea.flat:hover, textarea.flatwide:hover
+{ BORDER: 1px solid #444;
+}
+
+textarea.flat:focus, textarea.flatwide:focus
+{ BACKGROUND: #eee;
+}
+
+select.flat, select.flatwide
+{ BORDER: 1px solid #999;
+  MIN-WIDTH: 200px;
+  FONT-FAMILY: arial, verdana, geneva, helvetica, sans-serif;
+  FONT-SIZE: 8pt;
+}
+
+select.flatwide
+{ WIDTH: 400px;
+}
+
+
+input.button
+{ BORDER: 1px solid #999;
+  FONT-FAMILY: arial, verdana, geneva, helvetica, sans-serif;
+  FONT-SIZE: 8pt;
+}
+
+input.button:hover
+{ BORDER: 1px solid #444;
+}
+
+
+
+
+/*
+ * setup the look and feel for the placeclick site
+ */
+div#container
+{ width: 850px;
+  margin: 0px auto;
+  text-align: left;
+}
+
+div#header
+{ margin-bottom: 10px;
+  margin-top: 10px;
+  width: 850px;
+}
+
+div#headerwrapper
+{ padding: 5px 10px;
+  border: 1px solid #ccc;
+}
+
+div#header a.blogtitle
+{ color: #fff;
+  font-size: 200%;
+  font-weight: bold;
+}
+
+div.homepagecat
+{ 
+  padding-left: 0px; 
+  margin: 0px; font-size: 150%; 
+  font-weight: bold; 
+  padding-bottom: 5px;
+  padding-top: 25px;
+}
+
+div.searchresult
+{ 
+  padding-left: 0px; 
+  margin: 0px; font-size: 150%; 
+  font-weight: bold; 
+  padding-bottom: 5px;
+  padding-top: 25px;
+}
+
+div.searchcontent
+{ 
+  padding-left: 20px; 
+  margin: 0px; font-size: 80%; 
+  font-weight: normal; 
+  width: 550px;
+  padding-bottom: 0px;
+  padding-top: 5px;
+}
+
+div.homepagemenu
+{ 
+  margin: 0px; font-size: 100%; 
+  font-weight: bold; 
+  padding: 2px;
+  padding-left: 10px; 
+  border-bottom: 1px solid #ddd;
+}
+
+
+div#blogtopbar
+{ margin-bottom: 10px;
+  padding: 0px 10px;
+  height: 25px;
+}
+
+
+div#ads
+{ margin-bottom: 10px;
+  border: 1px solid #ccc;
+}
+
+
+div#header h1
+{ padding: 20px 0px;
+  font-size: 300%;
+  border-bottom: none;
+}
+
+div#breadcrumbs
+{ background: #def;
+  margin-bottom: 10px;
+  border: 1px solid #ccc;
+}
+
+div#breadcrumbs a
+{ font-weight: bold;
+  color: #008;
+}
+
+
+div#googleads
+{ width: 180px;
+}
+
+div#googleadswrapper
+{ background: #fff;
+  text-align: center;
+  border: 1px solid #ccc;
+  padding: 10px;
+}
+
+div#googleads a:visited
+{ color: #039;
+}
+
+
+div#topright
+{ width: 370px;
+}
+
+div#toprightwrapper
+{ background: #fff;
+  text-align: center;
+  border: 1px solid #ccc;
+}
+
+div#endpost
+{
+} 
+  
+div#endpostwrapper
+{ background: #fff;
+  border-top: 1px solid #ccc;
+  padding: 5px;
+  text-align: center;
+} 
+
+
+div#glinks
+{ width: 848px;
+  margin-bottom: 10px;
+}
+
+div#glinkswrapper
+{ padding: 5px;
+  background: #fff;
+  border: 1px solid #ccc;
+  text-align: center;
+}
+
+
+div#orblebox
+{ width: 370px;
+  background: #58a;
+  text-align: center;
+  border: 1px solid #ccc;
+}
+
+div#googleads h3
+{ padding: 5px 0px;
+}
+
+div#googleads input.flat
+{ width: 120px;
+}
+
+div#googleads p
+{ padding: 5px 0px;
+}
+
+div#menucol
+{ width: 180px;
+}
+
+div#menucolwrapper
+{ background: #fff;
+  text-align: center;
+  border: 1px solid #ccc;
+  padding: 10px;
+}
+
+div#menucol h3
+{ padding: 5px 0px;
+}
+
+div#menucol input.flat
+{ width: 120px;
+}
+
+div#menucol p
+{ padding: 5px 0px;
+}
+
+
+div#content
+{ width:660px;
+}
+
+div#contentwrapper
+{ background: #fff;
+  border: 1px solid #ccc;
+  padding: 10px;
+}
+
+
+div#blogcontent
+{ width:470px;
+}
+
+div#blogcontentwide
+{ width:660px;
+}
+
+div#blogcontentwrapper
+{ background: #fff;
+  border: 1px solid #ccc;
+  padding: 10px;
+}
+ 
+
+div#blogtitleimage
+{ width:850px;
+  background: #fff;
+  border: 1px solid #ccc;
+}
+
+div#blogads
+{ width:850px;
+  background: #eef;
+  float: center;
+  text-align: center;
+  margin-bottom: 10px;
+  padding-top: 5px;
+  padding-bottom: 10px;
+  border: 1px solid #ccc;
+}
+
+div#blogadsborder
+{ background: #eef;
+  float: center;
+  text-align: center;
+  border: 1px solid #ccc;
+}
+
+div#widecontent
+{ background: #fff;
+  margin-bottom: 10px;
+  border: 1px solid #ccc;
+}
+
+div#main
+{ margin-bottom: 10px;
+}
+
+
+div#footer
+{ 
+}
+
+div#footerwrapper
+{ background: #def;
+  border: 1px solid #ccc;
+  padding: 5px;
+  text-align: center;
+}
+
+div#footer a
+{ font-weight: bold;
+  color: #444;
+}
+
+
+div#blogbottombar
+{ background-color: #fff;
+  color: #eee;
+  height: 50px;
+}
+
+div#blogbottombarwrapper
+{ padding: 10px 5px;
+  text-align: center;
+}
+
+div#blogbottombar a
+{ font-weight: bold;
+  color: #444;
+}
+
+
+
+
+
+
+/*
+ * style for placeclick listings
+ */
+div.listing, div.business, div.classified, div.event, div.eventsummary, div.frontbox
+{ margin-bottom: 20px;
+  border: 1px solid #ccc;
+}
+
+div.listing, div.business
+{ border-color: #7ad;
+}
+
+div.classified
+{ border-color: #c44;
+}
+
+div.event, div.eventsummary
+{ border-color: #6a6;
+}
+
+div.frontbox
+{ border-color: #888;
+}
+
+div.title
+{ color: #fff;
+  font-size: 160%;
+  text-decoration: none;
+  border-bottom: 1px solid #777;
+  border-right: 1px solid #777;
+  /*width: 85%;*/
+  margin-bottom: 5px;
+  padding: 2px 5px;
+  cursor: pointer;
+}
+
+div.front_box table.community
+{ /*width: 90%;*/
+}
+
+div.front_box a
+{ font-size: 120%;
+  color: #000;
+}
+
+div.front_box_footer
+{ font-size: 120%;
+  color: #000;
+}
+
+div.premium, div.businesspremium
+{ margin-bottom: 40px;
+  border: 1px solid #d72;
+}
+
+div.tpagepremium, div.businesspremiumtpage
+{ border: 1px solid #d72;
+}
+
+div#listing_header, div#listing_content, div#listing_footer, div#box_header, div#box_footer
+{ padding: 5px;
+}
+
+div#box_content
+{ padding: 0px;
+}
+
+div#box_content_title
+{ padding: 3px;
+  text-align: left;
+  font-weight: bold;
+  font-size: 130%;
+}
+
+div#box_content
+{ text-align: left; 
+  height: 200px; 
+  overflow: hidden;
+}
+
+
+div#box_footer
+{ padding: 4px;
+  text-align: center; 
+  background: #ddd; 
+  height: 15px;
+  overflow:hidden;
+}
+
+div#box_line_one
+{ text-align: left;
+  background: #fff;
+  padding-left: 5px; 
+  padding-right: 5px; 
+}
+
+div#box_line_two
+{ text-align: left;
+  background: #fff;
+  padding-left: 5px; 
+  padding-right: 5px; 
+}
+
+div#listing_header
+{ color: #fff;
+  font-weight: bold;
+}
+
+div#box_header
+{ color: #fff;
+  font-weight: bold;
+  font-size: 120%;
+  text-align: center;
+  padding: 2px;
+}
+
+div#listing_header a
+{ color: #fff;
+}
+
+div#box_header a
+{ color: #fff;
+}
+
+div#listing_header span#listing_title
+{ float: left;
+  font-weight: bold;
+}
+
+div#listing_header span#listing_website
+{ float: right;
+}
+
+div#listing_content
+{ background: #fff;
+  filter: alpha(opacity=80);
+  opacity: 0.8;
+ -moz-opacity: 0.8;
+}
+
+div#listing_footer span
+{ padding-left: 5px;
+}
+
+div.listing div#listing_header, div.business div#listing_header
+{ border-bottom: 1px solid #7ad;
+  background: #7ad;
+}
+
+div.premium div#listing_header, div.businesspremium div#listing_header
+{ border-bottom: 1px solid #d72;
+  background: #d72;
+}
+
+div.classified div#listing_header
+{ border-bottom: 1px solid #c44;
+  background: #c44;
+}
+
+div.event div#listing_header
+{ border-bottom: 1px solid #6a6;
+  background: #6a6;
+}
+
+div.frontbox div#box_header
+{ border-bottom: 1px solid #ddf;
+  background: #ddf;
+}
+
+div#classifieds
+{ margin-bottom: 20px;
+}
+
+div#classifieds h3
+{ background: #c44;
+  color: #fff;
+  margin-bottom: 10px;
+  padding: 2px;
+}
+
+div#classifieds p
+{ margin: 0px 10px;
+}
+
+
+
+div#business-listings-summary div
+{ padding: 3px;
+}
+
+div#business-listings-summary span.title
+{ font-weight: bold;
+  font-size: 120%;
+}
+
+
+
+div.shortcuts
+{ font-weight: bold;
+  font-size: 120%;
+  text-align: center;
+  background: #eee;
+  border: 1px solid #ccc;
+}
+
+table.summary th
+{ background: #ace;
+  padding: 5px;
+}
+
+table.summary div.title
+{ font-weight: bold;
+  font-size: 120%;
+}
+
+
+
+
+div.linkbox div
+{ padding: 5px;
+}
+
+div.linkbox div#linkboxheader
+{ color: #fff;
+  font-weight: bold;
+}
+
+
+div.message
+{ background: #eee;
+  margin-bottom: 20px;
+  border: 1px solid #ccc;
+  padding: 2px;
+}
+
+table#categorymenu div.message, div#menucol div.message, div#googleads div.message
+{ background: #eee url('/abcimages/message_bg.gif') bottom center repeat-x;
+}
+
+div.errmessage
+{ background: #fdd;
+  margin-bottom: 20px;
+  border: 1px solid #ccc;
+}
+
+
+/*
+ * style for email form
+ */
+div#email_form, div#form
+{ background: #def;
+  border: 1px solid #ccc;
+  background: #def url('/abcimages/large_form_bg.gif') top center repeat-x;
+}
+
+div#email_form div, div#form div
+{ padding: 5px 0px;
+}
+
+div#postfields div
+{ padding: 2px 0px;
+}
+
+div#email_form div span.field, div#form div span.field, div#email_form div span.hfield, div#form div span.hfield, div#postfields div span.field
+{ width: 130px;
+  float: left;
+  font-weight: bold;
+  margin-right: 10px;
+}
+
+div#email_form div span.fieldvalue, div#form div span.fieldvalue, div#postfields div span.fieldvalue
+{ display: block;
+  margin-left: 140px;
+  font-style: italic;
+}
+
+div#email_form div span.hfield, div#form div span.hfield
+{ color: #800;
+}
+
+div#form div.type
+{ background: #eee;
+  margin-bottom: 30px;
+  border: 1px solid #ccc;
+}
+
+div#form div.type span.field
+{ width: 120px;
+}
+
+div.tpagepreview
+{ background: #eee;
+  margin-bottom: 20px;
+  border: 1px solid #ccc;
+}
+
+div#profile_container div.element, div#postfields_container div.element, div#profile_container div.elementselected, div#postfields_container div.elementselected
+{ padding: 5px;
+  border: 1px solid #ddd;
+  background: #eee;
+  margin: 10px 0px;
+}
+
+div#profile_container div.elementselected, div#postfields_container div.elementselected
+{ background: #fed;
+}
+
+div#profile_container div.element:hover, div#postfields_container div.element:hover, div#profile_container div.elementselected:hover, div#postfields_container div.elementselected:hover
+{ border-color: #aaa;
+}
+
+
+div.profile
+{ background: #def;
+  margin-bottom: 20px;
+  border: 1px solid #ccc;
+  padding: 2px;
+  background: #def url('/abcimages/large_form_bg.gif') top center repeat-x;
+}
+
+div.formprofile
+{ background: #def;
+  margin-bottom: 20px;
+  border: 1px solid #aaa;
+  padding: 2px;
+  background: #def url('/abcimages/large_form_bg.gif') top center repeat-x;
+}
+
+table#categorymenu div.profile, div#menucol div.profile, div#googleads div.profile
+{ background: #def url('/abcimages/profile_bg.gif') bottom center repeat-x;
+  padding: 2px 5px;
+}
+
+dl.profile
+{ margin-top: 20px;
+}
+
+dl.profile dt
+{ padding: 8px;
+  background: #eee;
+  font-weight: bold;
+  border: 1px dotted #ccc;
+}
+
+dl.profile dd
+{ padding: 5px;
+  background: #fff;
+  margin-left: 0px;
+  margin-bottom: 20px;
+  border: 1px dotted #ccc;
+  border-top: none;
+}
+
+td.friend
+{ border: 1px dotted #ccc;
+}
+
+td.friend:hover
+{ background: #eee;
+}
+
+
+/* markup toolbar style */
+div.markup-toolbar
+{ padding: 0px;
+  text-align: center;
+}
+
+div.markup-toolbar select.select
+{ font-family: arial, verdana, geneva, helvetica, sans-serif;
+  font-size: 8pt;
+}
+
+div.markup-toolbar img.button
+{ height: 20px;
+  width: 21px;
+  background-color: #eee;
+  border: 1px solid #ccc;
+}
+
+div.markup-toolbar img.button:hover
+{ border: 1px solid #999;
+}
+
+
+/*colors*/
+body
+{ background: #eee;
+}
+
+
+div#headerwrapper
+{ background: #58a;
+}
+
+
+div#blogtopbar
+{ background-color: #fff;
+  color: #eee;
+}
+
+div#blogtopbar td
+{ color: #fff;
+}
+
+div#blogtopbar a
+{ color: #222;
+  font-weight: bold;
+}
+
+
+div#ads
+{ background: white;
+}
+
+h1 a
+{ color: #b23;
+}
+
+h1 a:hover
+{ color: #c34;
+}
+
+h2
+{ color: #f60;
+}
+
+h3
+{ color: #339;
+}
+
+
+div.communitymenu
+{ padding: 0px 10px;
+}
+
+div.communitymenu h5.more
+{ border-top: 1px solid #ccc;
+  margin: 0px 5px;
+  padding: 5px 0px;
+}
+
+
+div#messages div#title
+{ background: #eee;
+}
+
+div#messages div.unviewed
+{ background: #ffd;
+}
+
+div#messages div.unviewed div#title
+{ background: #eec;
+}
+
+
+.error
+{ color: #800;
+}
+
+
+table#categorymenu
+{ margin-left: 10px;
+}
+
+table#categorymenu div.message, table#categorymenu div.profile
+{ padding: 0px;
+  margin: 0px;
+}
+
+table#categorymenu div.message a, table#categorymenu div.profile a
+{ font-weight: bold;
+  color: #444;
+  display: block;
+  padding: 3px;
+}
+
+table#categorymenu div.message a:hover, table#categorymenu div.profile a:hover
+{ color: #000;
+  background: #def url('/abcimages/profile_bg.gif') bottom center repeat-x;
+}
+
+table#categorymenu div.message a.toggle, table#categorymenu div.profile a.toggle
+{ padding: 2px 0px 4px 0px;
+}
+
+
+table.data
+{ border: 1px solid #ccc;
+}
+
+table.data td
+{ text-align: center;
+  padding: 5px;
+}
+
+table.data tr.em td
+{ font-weight: bold;
+  border-top: 1px solid #ccc;
+  background: #eee;
+}
+
+table.data tr.red td
+{ color: red;
+}
+
+table.data th
+{ font-size: 14px;
+  padding: 5px 10px;
+  border-bottom: 1px solid #ccc;
+  background: #eee;
+}
+
+
+table.datah
+{ border: 1px solid #ccc;
+}
+
+table.datah td
+{ text-align: left;
+  padding: 5px;
+}
+
+table.datah tr.em td
+{ font-weight: bold;
+  border-top: 1px solid #ccc;
+  background: #eee;
+}
+
+table.datah th
+{ font-size: 14px;
+  text-align: right;
+  padding: 5px 10px;
+  border-right: 1px solid #ccc;
+  background: #eee;
+}
+
+
+table.graph
+{ border: 1px solid #ccc;
+}
+
+table.graph th
+{ font-size: 16px;
+  padding: 5px;
+  margin-bottom: 5px;
+  background: #eee;
+  border-bottom: 1px solid #ccc;
+}
+
+table.graph td
+{ padding: 5px;
+}
+
+table.graph td.label
+{ padding: 5px;
+  text-align: right;
+  border-right: 1px solid #ccc;
+}
+
+table.graph td div
+{ float: left;
+  background: #def url('/abcimages/graph_bg.gif') bottom center repeat-x;
+  padding: 1px 0px;
+  text-align: right;
+}
+
+table.graph td div.zero
+{ background: #f00 url('/abcimages/graph_zero_bg.gif') bottom center repeat-x;
+}
+
+table.graph td div span
+{ margin: 0px 5px;
+  font-weight: bold;
+}
+
+
+table.members
+{ border-top: 1px solid #ccc;
+  width: 80%;
+  margin: 0px auto;
+}
+
+table.members th, table.members td
+{ padding: 5px;
+  text-align: left;
+  border-bottom: 1px solid #ccc;
+}
+
+table.members th
+{ background: #eee;
+}
+
+
+ul#blogmembers
+{ margin: 0px;
+  padding: 0px;
+  text-align: justify;
+  overflow: none;
+}
+
+ul#blogmembers li
+{ list-style-type: none;
+  display: block;
+  margin: 2px 0px;
+  padding: 0px;
+}
+
+ul#blogmembers li a img
+{ margin: 0px 3px -7px 5px;
+  margin: 0px 3px -7px 5px;
+  background-color: white;
+}
+
+ul#blogmembers li a
+{ display: block;
+  margin: 0px 0px 0px 0px;
+  padding: 5px 7px 10px 0px;
+}
+
+ul#blogmembers li a:hover
+{ text-decoration: none;
+  background-color: #def;
+}	
+
+
+ul.lifloatleft li
+{ float: left;
+  margin: 0px 15px;
+}

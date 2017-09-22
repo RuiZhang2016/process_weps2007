@@ -1,0 +1,1 @@
+function displayWindow(url, width, height) {        var Win = window.open(url,"displayWindow",'width=' + width + ',height=' + height + ',resizable=0,scrollbars=yes,menubar=no,status=no,left=0,top=0' );}

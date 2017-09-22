@@ -1,0 +1,651 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+<title>ED75100: Marie Doe, Plaintiff/Respondent, v. Miles, Inc., Defendant/Appellant.</title>
+<script language="JavaScript" type="text/javascript">
+<!-- 
+document._domino_target = "_self";
+function _doClick(v, o, t) {
+  var url="/courts/pubopinions.nsf/0/4877f108d603c659862568e40072b134?OpenDocument&Click=" + v;
+  if (o.href != null)
+    o.href = url;
+  else {
+    if (t == null)
+      t = document._domino_target;
+    window.open(url, t);
+  }
+
+}
+// -->
+</script>
+</head>
+<body text="#000000" bgcolor="#ffffff">
+
+<form action="">
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<title>Missouri Judiciary Header</title>
+</head>
+<script language="javascript">
+// +++ Error handling +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+	function stopError() {
+		// do nothing if encounter an error
+		return true;
+		}
+	// This will supress all client error messages
+	// Be sure to comment this next line out when working on any javascript on this page
+	window.onerror = stopError;
+	
+	function contactWindow() {
+		window.open ('http://www.courts.mo.gov/index.nsf/ContactsPage?ReadForm', 'newwindow', config='height=293,width=580, toolbar=no, menubar=no, scrollbar=no,resizable=no, location=no, directories=no, status=no')
+		}
+	function goAppellate() {
+	var value = " ";
+	for(var i = 0; i < document.forms[0].Appellate.options.length; i++)
+		if (document.forms[0].Appellate.options[i].selected){
+		value = document.forms[0].Appellate.options[i].value;
+		document.forms[0].Circuit.value="0"
+			if ((value == "0") || (value == "999")){
+				// User didn't select a valid option
+				alert("You must select a value before linking to this content.")
+			}
+			if (value == "EAP"){
+				// Eastern Appellate
+				location.href="http://www.courts.mo.gov/appellate/index.nsf/4C7529CAEA2586AD86256480004ECAEC/722A1213FE276B59862568B0006E8110?OpenDocument"
+				}
+			if (value == "WAP"){
+				// Western Appellate
+				location.href="http://www.courts.mo.gov/appellate/index.nsf/4C7529CAEA2586AD86256480004ECAEC/489D5FC426EC9BB0862568B0006E8115?OpenDocument"
+			}
+			if (value == "SAP"){
+				// Southern Appellate
+				location.href="http://www.courts.mo.gov/appellate/index.nsf/4C7529CAEA2586AD86256480004ECAEC/0CFB94985E6FEC46862568B0006E8111?OpenDocument"
+			}
+		}
+	}	
+function goCircuit() {
+	var value = " ";
+	for(var i = 0; i < document.forms[0].Circuit.options.length; i++)
+		if (document.forms[0].Circuit.options[i].selected){
+		value = document.forms[0].Circuit.options[i].value;
+		document.forms[0].Appellate.value="0"
+			if ((value == "0") || (value == "999")) {
+				// User didn't select a valid option
+				alert("You must select a value before linking to this content.")
+			}
+			else if (value == "Jackson") {
+				location.href="http://www.16thcircuit.org/"
+			}
+			else if (value == "St. Louis County") {
+				location.href="http://www.stlouisco.com/circuitcourt/"
+			}
+			else if (value == "Benton") {
+				location.href="http://www.positech.net/~dcourt/"
+			}
+			else if (value == "Dallas") {
+				location.href="http://www.positech.net/~dcourt/"
+			}
+			else if (value == "Hickory") {
+				location.href="http://www.positech.net/~dcourt/"
+			}
+			else if (value == "Polk") {
+				location.href="http://www.positech.net/~dcourt/"
+			}
+			else if (value == "Webster") {
+				location.href="http://www.positech.net/~dcourt/"
+			}			
+					else	{
+						location.href="http://www.courts.mo.gov/circuits/index.nsf/" + "County+" + "/+" + value + "/$first?OpenDocument"
+						}
+			}
+		}
+</script>
+<div align="center"><center>
+<table border="0" cellpadding="0" cellspacing="0" width="100%">
+    <tr>
+        <td align="center" valign="top" width="12%">
+ 	<a href="http://www.courts.mo.gov/index.nsf"><font color="#0F1175" size="1" face="Arial,Helvetica"><strong>Judiciary</strong></font></a></td>
+        <td align="center" valign="top" width="12%">
+	<a href="http://www.courts.mo.gov/sup/index.nsf"><font
+        color="#0F1175" size="1" face="Arial,Helvetica"><strong>Supreme Court</strong></font></a></td>
+        <td align="center" valign="top" width="23%"><font color="#0F1175" size="1"
+        face="Arial,Helvetica">
+        <select name="Appellate" size="1" style="font-family: Arial, Helvetica; font-size: 8pt; font-weight: regular">
+            <option selected value="0">Court of Appeals</option>
+<!--            <option>- - - - - - - - - - - -</option>  -->
+            <option value="EAP">Eastern District</option>
+            <option value="WAP">Western District</option>
+            <option value="SAP">Southern District</option>
+        </select>
+        </strong></font><a href="javascript:goAppellate()"><font
+        color="#0F1175" size="1" face="Arial,Helvetica">[GO!]</font></a></td>
+        <td align="center" valign="top" width="25%"
+        bgcolor="FFFFFF"><font color="#0F1175" size="1"
+        face="Arial,Helvetica">
+        <select name="Circuit" size="1" style="font-family: Arial, Helvetica; font-size: 8pt; font-weight: regular">
+          <option value="0" selected >Circuit Courts</option>
+<!--                        <option value="999">- - - - - - - - - - - - - - - -</option> -->
+                        <option value="Adair">Adair County | 02</option>
+                        <option value="Andrew">Andrew County | 05</option>
+                        <option value="Atchison">Atchison County | 04</option>
+                        <option value="Audrain">Audrain County | 12</option>
+                        <option value="Barry">Barry County | 39</option>
+                        <option value="Barton">Barton County | 28</option>
+                        <option value="Bates">Bates County | 27</option>
+                        <option value="Benton">Benton County | 30</option>
+                        <option value="Bollinger">Bollinger County | 32</option>
+                        <option value="Boone">Boone County | 13</option>
+                        <option value="Buchanan">Buchanan County | 05</option>
+                        <option value="Butler">Butler County | 36</option>
+ <option value="Caldwell">Caldwell County | 43</option>
+<option value="Callaway">Callaway County | 13</option>
+<option value="Camden">Camden County | 26</option>
+<option value="Cape Girardeau">Cape Girardeau County | 32</option>
+<option value="Carroll">Carroll County | 08</option>
+<option value="Carter">Carter County | 37</option>
+<option value="Cass">Cass County | 17</option>
+<option value="Cedar">Cedar County | 28</option>
+<option value="Chariton">Chariton County | 09</option>
+<option value="Christian">Christian County | 38</option>
+<option value="Clark">Clark County | 01</option>
+<option value="Clay">Clay County | 07</option>
+<option value="Clinton">Clinton County | 43</option>
+<option value="Cole">Cole County | 19</option>
+<option value="Cooper">Cooper County | 18</option>
+<option value="Crawford">Crawford County | 42</option>
+<option value="Dade">Dade County | 28</option>
+<option value="Dallas">Dallas County | 30</option>
+<option value="Daviess">Daviess County | 43</option>
+<option value="DeKalb">DeKalb County | 43</option>
+<option value="Dent">Dent County | 42</option>
+<option value="Douglas">Douglas County | 44</option>
+<option value="Dunklin">Dunklin County | 35</option>
+<option value="Franklin">Franklin County | 20</option>
+<option value="Gasconade">Gasconade County | 20</option>
+<option value="Gentry">Gentry County | 04</option>
+<option value="Greene">Greene County | 31</option>
+<option value="Grundy">Grundy County | 03</option>
+<option value="Harrison">Harrison County | 03</option>
+<option value="Henry">Henry County | 27</option>
+<option value="Hickory">Hickory County | 30</option>
+<option value="Holt">Holt County | 04</option>
+<option value="Howard">Howard County | 14</option>
+<option value="Howell">Howell County | 37</option>
+<option value="Iron">Iron County | 42</option>
+<option value="Jackson">Jackson County | 16</option>
+<option value="Jasper">Jasper County | 29</option>
+<option value="Jefferson">Jefferson County | 23</option>
+<option value="Johnson">Johnson County | 17</option>
+<option value="Knox">Knox County | 02</option>
+<option value="Laclede">Laclede County | 26</option>
+<option value="Lafayette">Lafayette County | 15</option>
+<option value="Lawrence">Lawrence County | 39</option>
+<option value="Lewis">Lewis County | 02</option>
+<option value="Lincoln">Lincoln County | 45</option>
+<option value="Linn">Linn County | 09</option>
+<option value="Livingston">Livingston County | 43</option>
+<option value="Macon">Macon County | 41</option>
+<option value="Madison">Madison County | 24</option>
+<option value="Maries">Maries County | 25</option>
+<option value="Marion">Marion County | 10</option>
+<option value="McDonald">McDonald County | 40</option>
+<option value="Mercer">Mercer County | 03</option>
+<option value="Miller">Miller County | 26</option>
+<option value="Mississippi">Mississippi County | 33</option>
+<option value="Moniteau">Moniteau County | 26</option>
+<option value="Monroe">Monroe County | 10</option>
+<option value="Montgomery">Montgomery County | 12</option>
+<option value="Morgan">Morgan County | 26</option>
+<option value="New Madrid">New Madrid County | 34</option>
+<option value="Newton">Newton County | 40</option>
+<option value="Nodaway">Nodaway County | 04</option>
+<option value="Oregon">Oregon County | 37</option>
+<option value="Osage">Osage County | 20</option>
+<option value="Ozark">Ozark County | 44</option>
+<option value="Pemiscot">Pemiscot County | 34</option>
+<option value="Perry">Perry County | 32</option>
+<option value="Pettis">Pettis County | 18</option>
+<option value="Phelps">Phelps County | 25</option>
+<option value="Pike">Pike County | 45</option>
+<option value="Platte">Platte County | 06</option>
+<option value="Polk">Polk County | 30 </option>
+<option value="Pulaski">Pulaski County | 25</option>
+<option value="Putnam">Putnam County | 03</option>
+<option value="Ralls">Ralls County | 10</option>
+<option value="Randolph">Randolph County | 14</option>
+<option value="Ray">Ray County | 08</option>
+<option value="Reynolds">Reynolds County | 42</option>
+<option value="Ripley">Ripley County | 36</option>
+<option value="Saline">Saline County | 15</option>
+<option value="Schuyler">Schuyler County | 01</option>
+<option value="Scotland">Scotland County | 01</option>
+<option value="Scott">Scott County | 33</option>
+<option value="Shannon">Shannon County | 37</option>
+<option value="Shelby">Shelby County | 41</option>
+<option value="Ste. Genevieve">Ste. Genevieve County | 24</option>
+<option value="Stoddard">Stoddard County | 35</option>
+<option value="Stone">Stone County | 39</option>
+<option value="St. Charles">St. Charles County | 11</option>
+<option value="St. Clair">St. Clair County | 27</option>
+<option value="St. Francois">St. Francois County | 24</option>
+<option value="St. Louis City">St. Louis City | 22</option>
+<option value="St. Louis County">St. Louis County | 21</option>
+<option value="Sullivan">Sullivan County | 09</option>
+<option value="Taney">Taney County | 38</option>
+<option value="Texas">Texas County | 25</option>
+<option value="Vernon">Vernon County | 28</option>
+<option value="Warren">Warren County | 12</option>
+<option value="Washington">Washington County | 24</option>
+<option value="Wayne">Wayne County | 42</option>
+<option value="Webster">Webster County | 30</option>
+<option value="Worth">Worth County | 04</option>
+<option value="Wright">Wright County | 44</option>
+       </select> 
+       </strong></font><a href="javascript:goCircuit()"><font
+        color="#0F1175" size="1" face="Arial,Helvetica">[GO!]</font></a><br></td>
+       <td align="center" valign="top" width="15%"><a href="http://www.courts.mo.gov/osca/index.nsf?OpenDatabase">
+<font color="#0F1175" size="1" face="Arial,Helvetica"><strong>Courts Administrator</strong></font></a></td>
+        <td align="center" valign="top" width="10%">
+<a href="javascript:contactWindow()"showLayerNumber(307)" onMouseOut="showLayerNumberReturn(101)">
+		<font color="#0F1175" size="1" face="Arial,Helvetica"><strong>Contact Us</a>
+	<br>
+<!--
+	<a href="http://www.courts.mo.gov/courts/mjsearch.nsf/$$Search" >
+		<font color="#0F1175" size="1" face="Arial,Helvetica"><strong>Search</a>
+-->
+	<!--
+		<br>
+		<a href="http://www.courts.mo.gov/courts/WebSiteMap.nsf/sitemap?OpenView" >
+		<font color="#0F1175" size="1" face="Arial,Helvetica">Site Map</a>
+	-->
+      </tr>
+</table></center></div></html>
+<br>
+<b><i><font color="#ff0000">This slip opinion is subject to revision and may not reflect the final opinion adopted by the Court.</font></i></b><div align="center"><br>
+<b><font size="7" face="Brush Script">Opinion</font></b><br>
+<font size="7" face="Brush Script">Missouri Court of Appeals Eastern District</font></div><br>
+<br>
+<b><font color="#0000ff">Case Style:  </font></b><b>Marie Doe, Plaintiff/Respondent, v. Miles, Inc., Defendant/Appellant.</b><br>
+<br>
+<b><font color="#0000ff">Case Number:  </font></b><b>ED75100</b><br>
+<br>
+<b><font color="#0000ff">Handdown Date:  </font></b><b>05/23/2000</b><br>
+<br>
+<b><font color="#0000ff">Appeal From:  </font></b><b>Circuit Court of the City of St. Louis, Hon. Thomas C. Grady</b><br>
+<br>
+<b><font color="#0000ff">Counsel for Appellant:  </font></b><b>Terry Lueckenhoff, Geoffrey R.W. Smith, Duncan Barr and William Dodero</b><br>
+<br>
+<b><font color="#0000ff">Counsel for Respondent:  </font></b><b>James P. Holloran and Jan Adams</b><br>
+<br>
+<b><font color="#0000ff">Opinion Summary:  </font></b><br>
+<font color="#008000">Miles, Inc. appeals from a judgment on a jury verdict in this wrongful death case pursued by the mother of decedent Damian Doe.  Damian was a hemophiliac who died of conditions related to Acquired Immune Deficiency Syndrome after being infected with Human Immunodeficiency Virus through use of Mile's Factor VIII concentrate.  </font><br>
+<b><font color="#008000">TRANSFERRED TO THE MISSOURI SUPREME COURT.</font></b><br>
+<b><u><font color="#008000">Division Four holds</font></u></b><b><font color="#008000">: </font></b><font color="#008000"> </font><br>
+<font color="#008000">The trial court erred in submitting the implied warranty claim because the mother did not show Damian's use of Mile's factor concentrate to stop uncontrollable bleeding was distinct from the ordinary use of factor concentrate.  Even if the elements of an implied warranty claim were satisfied, the mother could not meet the requirements of Missouri's Blood Shield Statute in that there was no evidence the HIV defect in the factor concentrate was detectable during the relevant time, which must be established to support liability based on a failure reasonably to use scientific techniques and procedures to remove that defect.  </font><br>
+<font color="#008000">The trial court also erred in submitting the negligent failure to warn claim.  The mother did not establish proximate cause because there was no evidence Damian's treating physician lacked substantially the same knowledge of the AIDS or HIV risk as an adequate warning from Miles would have communicated.  </font><u><font color="#008000">See</font></u><font color="#008000"> </font><u><font color="#008000">Doe v. Alpha Therapeutic Corp.</font></u><font color="#008000">, 3 S.W.3d 404 (Mo. App. E.D. 1999).  </font><br>
+<br>
+<br>
+<b><font color="#0000ff">Citation:  </font></b><b></b><br>
+<b><font color="#0000ff"><br>
+Opinion Author:  </font></b><b>PER CURIAM</b><br>
+<br>
+<b><font color="#0000ff">Opinion Vote:  </font></b><b>TRANSFERRED TO THE MISSOURI SUPREME COURT.  Crandall, P.J., Hoff, J., and Pudlowski, S.J., concur.</b><br>
+<br>
+<b><font color="#0000ff">Opinion:</font></b><br>
+<br>
+Miles, Inc. (Miles)<font color="#ff0000">(FN1)</font> appeals from a judgment entered upon a jury verdict in this wrongful death case pursued by Marie Doe (Marie), mother of decedent Damian Doe (Damian).<font color="#ff0000">(FN2)</font> We transfer the case to the Missouri Supreme Court pursuant to Rule 83.02.<font color="#ff0000">(FN3)</font><br>
+From review of the record on appeal, which consists of eight volumes of trial transcript, twenty-five volumes of depositions, one legal file, one supplemental legal file, and numerous exhibits, it is undisputed that:  Damian was a hemophiliac.<font color="#ff0000">(FN4)</font> Hemophilia is a disease in which blood does not clot normally.  Damian had Hemophilia A, which meant he was missing a clotting blood protein referred to as Factor VIII.  Miles is engaged in the business of processing, distributing, or selling a product, called a factor concentrate, that may be administered to replace missing blood proteins.  Damian began using Mile's Factor VIII concentrate in 1980.  Between August 1983 and May 1984, Damian was infected with the Human Immunodeficiency Virus (HIV) through the use of Mile's Factor VIII concentrate.  Damian subsequently contracted Acquired Immune Deficiency Syndrome (AIDS) and died in 1995 from AIDS-related conditions.    <br>
+Upon Damian's death, Marie pursued against Miles wrongful death claims based on negligence and breach of implied warranty.  In relevant part Marie alleged Miles was liable for selling factor concentrate in 1983 and 1984 that was contaminated with viruses causing disease and death without warning of the risk of contracting HIV through use of the factor concentrate and after it was technologically feasible to remove the viruses.  Marie alleged this negligence and breach of implied warranty caused or contributed to cause Damian &quot;[a] permanent destruction of his immune system . . . which . . . ultimately result[ed] in his death&quot;; [t]remendous pain and suffering and severe physical and mental disabilities; &quot;[g]reat emotional anguish&quot;; loss of income; and extraordinary medical expenses.           <br>
+Specifically, with respect to the negligence claim, Marie alleged Miles owed Damian &quot;a duty to exercise ordinary and reasonable care for his safety in manufacturing, processing, marketing, distribut[ing], and [selling] Factor VIII [concentrate],&quot; and breached that duty by negligently committing one or more of the following acts:
+<ul>
+<ul>(a)  market[ing] a product for human consumption which it knew or should have known would infect consumers with the AIDS virus because it solicited blood donors from a segment of the population known to have a high incidence of contracting the AIDS virus and used said donors' blood to manufacture Factor VIII [concentrate];<br>
+<br>
+(b)  fail[ing] to adequately warn [Marie] about the risk of contracting AIDS through injection and infusion of Factor VIII [concentrate];<br>
+<br>
+(c)  fail[ing] to provide adequate quality control or quality assurance in the manufacturing, processing, marketing, distribution, and sale of Factor VIII [concentrate];<br>
+<br>
+(d)  fail[ing] to adequately screen donors through written questions and [oral] questions in an environment which is conducive to candid answers in order to detect donors at high risk of carrying the AIDS virus;<br>
+<br>
+(e)  fail[ing] to medically examine donors by qualified medical personnel to determine if donors have symptoms indicating they are at high risk for carrying the AIDS virus;<br>
+<br>
+(f)  fail[ing] to test the blood ultimately used to manufacture Factor VIII [concentrate] to determine it if [sic] was fit for consumption[;]<br>
+<br>
+(g)  fail[ing] to heat treat the Factor VIII [concentrate] sold to [Marie] in such a manner as to reduce the risk of contracting AIDS; [or]<br>
+<br>
+(h)  fail[ing] to withdraw the product from the market place.<br>
+</ul>
+</ul>
+With respect to the warranty claim, Marie alleged Miles breached an implied warranty because:  she reasonably relied on Mile's judgment that its Factor VIII concentrate &quot;was fit for infusion into [Damian's] body&quot;; &quot;[t]he defect in [Mile's] Factor VIII [concentrate] could have been detected and/or removed by reasonable use of scientific procedures or techniques&quot;; Miles &quot;knew or should have known of the use for which the product was purchased&quot;; and &quot;[w]hen sold to [Marie] the product was not fit for such use.&quot;  <br>
+In answering the negligence and breach of implied warranty claims, Miles admitted only that it was a corporation that processed, distributed or sold Factor VIII concentrate and that Factor VIII concentrate &quot;is prescribed for and used by persons having a disease known as hemophilia A.&quot;  Otherwise, Miles denied liability and set forth fourteen affirmative defenses, including that:  at all times, Miles &quot;conformed its conduct to the state of scientific knowledge, common and accepted procedure in the field, and the state of the art with regard to Factor VIII [concentrate]&quot;; the &quot;claims are barred by the learned intermediary doctrine&quot;; and the &quot;claims are barred by virtue of applicable Blood Shield Statutes, including [Section] 431.069 [RSMo 1978].&quot;<font color="#ff0000">(FN5)</font><br>
+	At trial, Marie presented evidence, including:  (1) the videotaped deposition of Damian; (2) the videotaped deposition of Donald Francis, M.D., D.Sc., who during the relevant time was Assistant Director for Medical Science at the Centers for Disease Control (CDC); (3) the videotaped deposition of Bruce Evatt, M.D., who during the relevant time was with the CDC's Center of Infectious Diseases, specifically the division encompassing immunology, pathology and hematology; (4) the testimony of John Bouhasin, M.D., a pediatric hematologist who treated Damian until he was approximately twenty years old; (5) the videotaped deposition of Wilhelm Schaeffler, who during the relevant time was president of Mile's predecessor and then vice president of Miles; (6) the videotaped deposition of Shoachi Wada, Ph.D., who worked in Mile's laboratory from 1964 until 1984; (7) the videotaped deposition of David Aronson, who worked for the United States Food and Drug Administration (FDA) during the relevant time period; (8) the videotaped deposition of Pete Fernandes, Ph.D., who worked at Mile's laboratory from June 1976 until April 1980; (9) the videotaped deposition of Amy L. Does, who worked at Mile's laboratory beginning in 1978; (10) the videotaped deposition of Ralph Rousell, M.D., who worked in Mile's Biological Research and Development Department, beginning in 1979; (11) the videotaped deposition of Victor J. Cabasso, ScD., who was Director of Microbiology Research for Miles from 1972 until 1980; (12) the videotaped deposition of W. Thomas London, M.D., an internist, who specializes in epidemiology, with a focus on the Hepatitis B virus and liver cancer; (13) the videotaped deposition of Frank Putnam, Ph.D.., a biochemist; and (14) the testimony of Marie, Damian's mother.  In defense, Miles presented:  (1) the testimony of Milton Mozen, Ph.D., a biochemist who was employed by Miles since 1967 and worked on Factor VIII concentrate during the relevant time period; (2) the testimony of Kenneth Mann, a biochemist who is a professor of chemical biochemistry; (3) the videotaped deposition of Dr. Evatt; (4) the testimony of Paul Vincent Holland, M.D., the medical director of a not-for-profit community blood center; and (5) Louis Aledort, M.D., who is board certified in internal medicine and hematology and was one of the two medical co-directors of the National Hemophilia Foundation (NHF) from 1968 through 1983.     <b> </b>       <b> </b>           <br>
+The trial court denied Mile's motions for directed verdict at the close of Marie's case and at the close of all the evidence.  The approximately three-week jury trial resulted in a $1.4 million general verdict in favor of Marie and against Miles.  The trial court entered judgment in accordance with that verdict, and subsequently denied the motion for judgment notwithstanding the verdict or in the alternative for a new trial filed by Miles.  This appeal followed.
+<ul>
+<ul>On appeal, Miles contends the trial court erred in:  <br>
+</ul>
+</ul>
+(I)  failing to grant Miles a directed verdict or judgment notwithstanding the verdict on Marie's warranty claim because Marie failed to make a submissible case in that she failed to introduce evidence:  (a) the factor concentrate was used for a particular purpose, other than its ordinary purpose; (b) Marie relied on Miles to select a suitable product; or (c) Miles could have removed HIV from the factor concentrate by reasonable use of scientific techniques and procedures, as required by Missouri's Blood Shield Statute, Section 431.069;  <br>
+(II)  submitting Instruction No. 7 because it inaccurately states the law of implied warranty of fitness for a particular purpose as modified by the learned intermediary doctrine in that (a) it did not require the jury to find the learned intermediary (Damian's treating physician, Dr. Bouhasin) relied on Mile's skill to choose the appropriate medicine and (b) there was no evidence to support the submission;<br>
+(III)  failing to grant Miles a directed verdict or judgment notwithstanding the verdict on Marie's negligence claim because Marie failed to make a submissible case in that she failed to introduce (a) evidence of any material scientific fact known to Miles and unknown to Damian's treating physician (Dr. Bouhasin) and (b) evidence that any failure to warn was the proximate cause of Marie's damages;<br>
+(IV)  submitting Instruction No. 9 because it improperly states the law in that:  (a) it fails to specify that Miles, as provider of a prescription drug, has a duty to warn solely the learned intermediary treating physician of the risks of using the prescription drug; (b) it is an improper modification of an applicable Missouri Approved Instruction (MAI); and (c) it fails to submit the issue of common law negligent failure to warn; and <br>
+(V)  admitting into evidence the Institute of Medicine (IOM) Report because (a) it was admitted without proper foundation; (b) it invaded the province of the jury to decide the ultimate issues of liability in that no witness authenticated the report or testified it was authoritative; (c) the report was an unverified out-of-court statement not subject to cross examination; and (d) the report purported to reach conclusions on the ultimate issues of liability before the jury.<div align="center"><u>IMPLIED WARRANTY</u></div>In point one, Miles challenges the failure of the trial court to grant a motion for directed verdict or motion for judgment notwithstanding the verdict on Marie's breach of implied warranty claim. <br>
+Both a motion for directed verdict and a motion for judgment notwithstanding the verdict, present the same issue:  whether plaintiff made a submissible case.  <u>King v. Unidynamics Corp.</u>, 943 S.W.2d 262, 267 (Mo. App. E.D. 1997).  Whether there is sufficient evidence to submit a case to the jury is a question of law.  <u>Id</u>.; <u>Steward v. Goetz</u>, 945 S.W.2d 520, 528 (Mo. App. E.D. 1997).<br>
+&quot;To make a submissible case a plaintiff must present substantial evidence to establish each element of her claim.&quot;  <u>Spring v. Kansas City Area Transp. Auth.</u>, 873 S.W.2d 224, 225 (Mo. banc 1994).  In ascertaining whether a plaintiff made a submissible case, we view the evidence in the light most favorable to the plaintiff, giving the plaintiff the benefit of all reasonable inferences and disregarding all contrary evidence.  <u>Stalcup v. Orthotic &amp; Prosthetic Lab, Inc.</u>, 989 S.W.2d 654, 657 (Mo. App. E.D. 1999). <b> </b>We do not, however, &quot;supply missing evidence or give the plaintiff the benefit of unreasonable, speculative, or forced inferences.&quot;  <u>Steward</u>, 945 S.W.2d at 528.<b>  </b>Moreover, we keep in mind that &quot;[a] party is bound by the uncontradicted testimony of that party's own witnesses, including that elicited on cross-examination.&quot;  <u>Id</u>.<br>
+If the jury can only determine the question of liability &quot;by resorting to conjecture and surmise, plaintiff has failed to make a submissible case.&quot;  <u>Stalcup</u>, 989 S.W.2d at 657.  A verdict in favor of a defendant may be directed or granted on a post-trial motion for judgment notwithstanding the verdict &quot;if reasonable minds could not differ as to the proper verdict.&quot;  <u>King</u>, 943 S.W.2d at 267.  Additionally, a claim should not be submitted to the jury if the plaintiff has not produced substantial evidence on an essential element of the claim.  <u>Fabricor, Inc. v. E.I. DuPont de Demours &amp; Co.</u>, Nos. WD53668, WD53669, WD53735, 2000 WL 342694, *18 (Mo. App. W.D. Apr. 4, 2000).   <br>
+With respect to the breach of implied warranty claim, Miles argues the warranty of fitness for a particular purpose, as codified in Section 400.2-315, was the implied warranty claim submitted to the jury.  That claim, Miles first urges, requires Marie to prove Miles knew of a particular purpose to which Marie was going to put the factor concentrate, as distinct from the factor concentrate's ordinary purpose.  Miles contends Marie did not establish one of the elements of this claim because Factor VIII concentrate is only licensed by the FDA to replace Factor VIII in a patient with hemophilia and there was no evidence that Damian's doctor used the product for any particular purpose other than its ordinary purpose.    <br>
+Marie counters that she could submit this implied warranty claim under either common law principles or the statutory provision; she submitted it under common law principles; and under the common law there is no requirement that she establish a particular purpose, as distinguished from the product's ordinary purpose.  Marie cites only <u>Price Bros. Lithographic Co. v. American Packing Co.</u>, 381 S.W.2d 830 (Mo. banc 1964), in support of the latter  argument.  To the extent a statutory implied warranty provision applies, Marie contends the Missouri Blood Shield Statute<font color="#ff0000">(FN6)</font> allows her to submit her breach of implied warranty claim under either the implied warranty of merchantability, Section 400.2-314, or the implied warranty of fitness for a particular purpose, Section 400.2-315.  Comment 2 to Section 400.2-315, however, requires submission, Marie argues, under the implied warranty of fitness for a particular purpose when &quot;there is a choice&quot; between those two implied warranties.  Moreover, Marie urges, because the Factor VIII concentrate has only one purpose, &quot;it would be factually impossible to prove&quot; a particular purpose distinct from its ordinary purpose.  Finally, as to this part of point one, Marie notes:  
+<ul>
+<ul>[E]ven if this court were to find that Marie had the burden to prove the elements of breach of implied warranty of merchantability as set out in MAI 25.08, Marie <b><u>proved the ordinary purpose</u></b> for which the product was used, replacement of the Factor VIII protein in Damian's blood. . . .  Thus, [Miles] cannot show prejudice.  <br>
+</ul>
+</ul>
+<b>	</b>The jury instruction submitting the implied warranty claim to the jury<font color="#ff0000">(FN7)</font> was based on MAI 25.03,<font color="#ff0000">(FN8)</font> which is for a claim of breach of the implied warranty of fitness for a particular purpose.  Both the common law of Missouri and a Missouri statute first adopted in 1963 provide for such a warranty.  <u>See</u>, <u>e.g.</u>, <u>State ex rel. Jones Store Co. v. Shain</u>, 179 S.W.2d 19 (Mo. banc 1944); Section 400.2-315.  Assuming <u>arguendo</u> that Marie could choose either the common law principles or a statute as a basis for this claim, we conclude either basis requires a showing the seller undertook to furnish the product for a particular purpose known to the seller and the buyer relied on the seller's judgment.  <u>Shain</u>, 179 S.W.2d at 21; Section 400.2-315.  Moreover, either basis requires a showing the &quot;particular purpose&quot; is &quot;a special purpose as distinguished from the ordinary use of the article in question.&quot;  <u>Shain</u>, 179 S.W.2d at 21; <u>see</u> <u>also</u> Section 400.2-315 cmt. 2 Mo. Stat. Ann. (Vernon 1994).<br>
+In <u>Shain</u>, the Missouri Supreme Court found no implied warranty of fitness for a particular purpose, referred to as an implied warranty of suitability, arose when plaintiff purchased from defendant retailer a woman's blouse that irritated plaintiff's skin.  <u>Shain</u>, 179 S.W.2d at 22, 20.  Specifically, the Supreme Court noted:  
+<ul>
+<ul>In the case at bar, the intended use by plaintiff was not a special one.  The blouse in question was made by the manufacturer and offered for sale by the retailer for the obvious purpose that it be worn by a woman. . . . [H]armful ingredients in the blouse would make the garment undesirable for use by the plaintiff, but no more so than for the use of any other woman.  Her use was an ordinary use, and not special.<br>
+</ul>
+</ul>
+<u>Id</u>. at 21-22. <br>
+Marie's reliance on <u>Price Bros. Lithographic Co.</u>, <u>supra</u>, does not alter our determination that, under the common law, a plaintiff pursuing a claim for breach of the warranty of fitness for a particular purpose must show the article or product was manufactured for buyer's particular purpose, rather than for the article's or product's ordinary purpose.  The Missouri Supreme Court in that case stated:  
+<ul>
+<ul>When an article is ordered from the manufacturer or producer thereof <u>to be produced for a particular use or purpose</u>, this seller knowing the use to which it is to be put, and the article is produced and sold for that use, there is an implied warranty the article is fit for that use where the buyer relies, and under the circumstances had reason to rely, on the seller's experience, skill and judgment.<br>
+</ul>
+</ul>
+<u>Price Bros. Lithographic Co.</u>, 381 S.W.2d at 835 (emphasis added).  Thus, the Missouri Supreme Court there recognized the necessity that the product or article be produced for a particular use or purpose before this common law implied warranty arises.  <br>
+The relevant state statutory provision also requires a non-ordinary use of the good before the implied warranty of fitness for a particular purpose arises.  The statute provides: 
+<ul>
+<ul>Where the seller at the time of contracting has reason to know <u>any particular purpose for which the goods are required</u> and that the buyer is relying on the seller's skill or judgment to select or furnish suitable goods there is unless excluded or modified under section 400.2-316 an implied warranty that the goods shall be fit for such purpose.<font color="#ff0000">(FN9)</font><br>
+</ul>
+</ul>
+Section 400.2-315 (emphasis added) (footnote added).  Official Comment 2 to Section 2-315 of the Uniform Commercial Code (UCC) as adopted by Missouri states in relevant part:
+<ul>
+<ul> A &quot;particular purpose&quot; differs from the ordinary purpose for which the goods are used in that it envisages a specific use by the buyer which is peculiar to the nature of his business whereas the ordinary purposes for which goods are used are those envisaged in the concept of merchantability and go to uses which are customarily made of the goods in question.  For example, shoes are generally used for the purpose of walking upon ordinary ground, but a seller may know that a particular pair was selected to be used for climbing mountains. <br>
+</ul>
+</ul>
+Section 400.2-315 cmt. 2 Mo. Stat. Ann. (Vernon 1994).  The statutory implied warranty of merchantability provision states in relevant part:
+<ul>
+<ul>(1) Unless excluded or modified (section 400.2-316), a warranty that the goods shall be merchantable is implied in a contract for their sale if the seller is a merchant with respect to goods of that kind. . . .  <br>
+<br>
+(2) Goods to be merchantable must be at least such as . . . <br>
+<br>
+*     *     *<br>
+<br>
+	(c) are fit for the ordinary purposes for which such goods are used. <br>
+</ul>
+</ul>
+Section 400.2-314.<br>
+While the Official Comments to the UCC do not have &quot;the force of statutory language enacted by the legislature, [they] are a permissible and persuasive aid in determining legislative intent.&quot;  <u>Groppel Co. v. U.S. Gypsum Co.</u>, 616 S.W.2d 49, 57 n.7 (Mo. App. E.D. 1981).  We find this Comment persuasive in interpreting Section 400.2-315.  The perspective set forth in the Comment is supported by other authorities.  Williston says: 
+<ul>
+<ul>The warranty of fitness for a particular purpose arises when the buyer intends to use the goods for a particular purpose other than the purpose for which the good was produced and the seller knows that the buyer is relying on the seller's skill and judgment.  The test employed to determine whether a warranty for a particular purpose exists is whether the use of the purchased good differs sufficiently from the customary use of the good by others; if so, then a warranty for a particular purpose exists.<br>
+</ul>
+</ul>
+Section 19-2 of Williston on Sales at 153-54 (5th ed.) (footnotes omitted). <br>
+	Moreover, the Southern District has noted a distinction exists between the statutory warranties of merchantability and fitness for a particular purpose.  <u>Surface v. Kelly</u>, 912 S.W.2d 646 (Mo. App. S.D. 1995).  In that case, plaintiff had purchased nine ostriches for resale and breeding.  <u>Id</u>. at 647, 649.  After receiving the birds, plaintiff filed a lawsuit against sellers for breach of the implied warranty of fitness for a particular purpose under Section 400.2-315 RSMo 1986.<font color="#ff0000">(FN10)</font> <u>Id</u>. at 647.  On appeal the Southern District held there was no implied warranty of fitness for a particular purpose because a contract for sale of livestock had to have a written statement of such a warranty and no such statement was in the contract for sale of the ostriches.  <u>Id</u>. at 649-51.  Before arriving at this decision, the Southern District noted:  &quot;It is questionable that plaintiff's statement to defendants that he wanted to buy four-month-old ostriches to raise for resale and to hatch eggs stated a particular purpose for which [Section] 400.2-315 imposed an implied warranty of fitness.  Arguably, this would be an ordinary use rather than a particular purpose for which the ostriches were being acquired.&quot;  <u>Id</u>. at 649.<font color="#ff0000">(FN11)</font> <br>
+Having considered the language in Missouri's statutory provisions for the implied warranty of fitness for a particular purpose and the implied warranty of merchantability, Comment 2 to Section 400.2-315, the Missouri case law regarding the implied warranty of fitness for a particular purpose both prior to and after enactment of Section 400.2-315, and case law from other jurisdictions having statutory implied warranty provisions similar to Missouri's,<font color="#ff0000">(FN12)</font> we conclude a breach of the implied warranty of fitness for a particular purpose may not be established without substantial evidence that the article or product was bought for a purpose that was special or &quot;particular&quot; to the buyer and distinct from the article's or product's ordinary purpose.  <br>
+We further conclude the fact the product has only one purpose does not<b> </b>satisfy this element of this claim.  For instance, in <u>Shain</u>, the apparently singular purpose of the purchased item, a woman's blouse, was not sufficient to satisfy this aspect of the common law implied warranty of fitness for a particular purpose.  <u>Shain</u>, 179 S.W.2d at 21-22.  With respect to the statutory implied warranty of fitness for a particular purpose, the United States District Court for the District of Maine addressed this issue in light of the terms of Maine's statute and a breach of warranty claim against the manufacturer of an acetabular cup used in a hip replacement procedure.  <u>Porter v. Pfizer Hosp. Prods. Group, Inc.</u>, 783 F.Supp. 1466, 1473 (D. Me. 1992).  Maine's statute is nearly identical to Missouri's.<font color="#ff0000">(FN13)</font> The court concluded the statute required the artificial hip replacement patient to introduce evidence he had a particular purpose &quot;distinct from the ordinary purposes for which a patient seeks an artificial hip&quot; to establish a claim of breach of implied warranty of fitness for a particular purpose against the manufacturer.  <u>Id</u>.  Because &quot;[p]laintiff's evidence and argument simply dealt with the ordinary purpose for which artificial hips are implanted:  restoring normal hip function to the extent possible,&quot; the court found plaintiff had failed to prove an element required to demonstrate breach of that warranty.  <u>Id</u>. at 1473, 1474.<font color="#ff0000">(FN14)</font><br>
+We similarly conclude Marie has failed to prove this element of her claim for breach of the implied warranty of fitness for a particular purpose.  Our review of the evidence on this issue, in the light most favorable to Marie and exclusive of contradictory evidence, reveals only that Damian used Mile's Factor VIII concentrate for its ordinary purpose, to provide a blood clotting factor that he was missing when he was bleeding.  Specifically, the record shows Mile's Factor VIII concentrate was administered to Damian in 1983 and 1984 only on occasions when he was suffering a bleed that would not stop through means other than administration of blood or a blood product providing him with Factor VIII, such as Factor VIII concentrate.  There is no indication of record that this was an experimental use or a use by Damian, either on his own, at the request of Marie, or at the suggestion of the treating physician, that was distinct from the ordinary or usual use of Factor VIII concentrate.  <br>
+Marie's argument that she had to submit her implied warranty claim based on the implied warranty of fitness for a particular purpose in light of Comment 2 to Section 400.2-315 is not persuasive.  The part of that comment on which Marie relies states:  
+<ul>
+<ul>The provisions of this Article on the cumulation and conflict of express and implied warranties must be considered on the question of inconsistency between or among warranties.  In such a case any question of fact as to which warranty was intended by the parties to apply must be resolved in favor of the warranty of fitness for particular purpose as against all other warranties except where the buyer has taken upon himself the responsibility of furnishing the technical specifications.<br>
+</ul>
+</ul>
+Section 400.2-315 cmt. 2 Mo. Stat. Ann. (Vernon 1994).  We find no inconsistency between the implied warranties of merchantability and of fitness for a particular purpose under the circumstances here.  The evidence did not establish a purpose or use of the Factor VIII concentrate other than its ordinary use.  Therefore, of these two implied warranties, only the implied warranty of merchantability could have applied.  Absent an inconsistency between or among potentially applicable warranties, Comment 2 does not <u>require</u> submission of a claim of breach of the implied warranty of fitness for a particular purpose.<br>
+	Because Mile's Factor VIII concentrate was purchased and used for its ordinary purpose, and for no particular use other than its ordinary use, Marie did not satisfy an element of her claim for breach of the implied warranty of fitness for a particular purpose.  Therefore, that claim should not have been submitted to the jury; and the trial court erred in not granting a directed verdict or judgment notwithstanding the verdict in favor of Miles on this claim.<br>
+	Even assuming <u>arguendo</u> there was evidence to support a breach of implied warranty claim, the requirements of Missouri's Blood Shield Statute, Section 431.069, cannot be met.<font color="#ff0000">(FN15)</font> Marie's theory of liability was that Miles could have removed the then-undetectable HIV by heat treatment of the factor concentrate, which treatment was then being tried to reduce or eliminate the presence of one or more hepatitis viruses in the blood product.  This is a &quot;serendipity theory&quot; in the sense that it focuses on the availability of scientific procedures or techniques to remove a detectable, stable hepatitis virus, which would serendipitously also remove the undetectable, less stable HIV.<font color="#ff0000">(FN16)</font> We conclude this theory may not be a basis of liability under this statute.<br>
+	To interpret a statute, 
+<ul>
+<ul>we must ascertain the legislature's intent from the language used, give effect to that intent if possible and consider the words used in their plain and ordinary meaning. . . . In determining the legislature's intent, we must examine the words used in the statute, the context in which the words are used and the problem the legislature sought to address with the statute's enactment. . . . We must construe the statute in light of the purposes the legislature intended to accomplish and the evils it intended to cure. <br>
+</ul>
+</ul>
+<u>Wilson v. Director of Revenue</u>, 873 S.W.2d 328, 329 (Mo. App. E.D. 1994) (citations omitted).<br>
+Miles urges Missouri's Blood Shield Statute eliminates a strict liability cause of action in the provision of a blood product and essentially requires proof of negligence.     <br>
+The United States District Court for the Eastern District of Missouri has determined that Missouri's Blood Shield Statute precluded a &quot;strict products liability&quot; claim pursued by a patient against the supplier of blood used in transfusions during surgery in December 1983 and September 1984.  <u>Smith v. Paslode</u>, 799 F.Supp. 960, 972-73 (E.D. Mo. 1992), <u>aff'd in part, rev'd in part on other grounds</u>, 7 F.3d 116 (8th Cir. 1993).  The patient, and his wife, alleged the patient had contracted HIV from the blood transfusions.  <u>Id</u>. at 964.  The court determined a strict products liability claim could not be pursued because the statute makes the provision of blood a service, not a sale.  <u>Id</u>. at 972-73.  We agree with that analysis.  As the court in <u>Smith</u> noted, one of the elements of a strict products liability claim, is a showing the product was sold.  <u>Fahy v. Dresser Indus., Inc.</u>, 740 S.W.2d 635, 637 (Mo. banc 1987), <u>cert. denied</u>, 485 U.S. 1022 (1988).  Due to the legislative determination in Missouri's Blood Shield Statute that the provision of a blood product for introduction into a human being is a service rather than a sale, Marie may not pursue a strict products liability claim against Miles, who is a procurer, processor, or distributor of such a product.  <br>
+To the extent the statute permits implied warranty claims, the court in <u>Smith</u> concluded no such claim was available to the plaintiffs, and the defendant procurer of the blood was entitled to summary judgment on those claims, because it was undisputed that &quot;HIV was not isolated until the spring of 1984[,]. . . . no test existed in 1983 and 1984 which could detect or remove HIV[, and] . . . [t]he test to detect AIDS was developed in March 1985.&quot;  <u>Smith</u>, 799 F.Supp. at 973.  The record in the case now before us establishes the same circumstances as to the period between August 1983 and May 1984, the period relevant to Damian's infection with HIV.  Accordingly, we similarly conclude Marie cannot establish a breach of the implied warranty of merchantability under Missouri's Blood Shield Statute.      <br>
+Marie distinguishes <u>Smith</u> on the grounds the case did not address the statutory exception for removal of HIV, because whole blood was at issue there and it is undisputed that &quot;whole blood cannot be heated to eliminate viruses.&quot;  We are not persuaded by this distinction where the alleged defect was not even detectable during the relevant time period; otherwise, a form of strict liability against a blood product manufacturer, processor, or distributor for a blood product containing undetectable yet potentially removable defects is created.  Such liability is clearly contrary to the legislative intent shown in Missouri's Blood Shield Statute. We conclude the defect at least has to be detectable before a failure to remove the defect may permit a claim for a breach of implied warranty of merchantability or fitness for a particular purpose under Missouri's Blood Shield Statute.  Because Marie is<b> </b>not<b> </b>basing Mile's liability for breach of an implied warranty on the failure reasonably to use scientific procedures or techniques to detect, and not to remove, a defect in its blood product, we do not address such a theory of liability under this statute. <br>
+Alternatively, this statute requires a plaintiff to establish negligence with respect to the use of the scientific procedures and techniques, before an implied warranty claim may be pursued against Miles, and we conclude that negligence cannot be established where the defect was not detectable.  Both parties refer us to a decision of the Florida Court of Appeals construing a statutory provision, Section 672.316(5) Fla. Stat.,<font color="#ff0000">(FN17)</font> that is nearly identical to the one at issue here, <u>Williamson v. Memorial Hosp.</u>, 307 So.2d 199 (Fla. App. 1975).<font color="#ff0000">(FN18)</font> In that case the Florida Court of Appeals found Florida's Blood Shield Statute makes the provision of blood a service, not a sale; and concluded &quot;[t]he implication of the statute, of course, is that if the defect is detectable or removable through the reasonable use of scientific procedures or techniques, then upon such a showing a plaintiff may recover&quot; under an implied warranty theory.  <u>Id</u>. at 201.  The Florida Court of Appeals further determined:
+<ul>
+<ul>the statute establishes what may be termed a hybrid implied warranty of fitness which departs from the concept of strict liability or liability without fault ordinarily ascribed to such warranty and instead establishes a criteria for recovery which is ordinarily understood by lawyers and judges to be cognizable in negligence.<br>
+</ul>
+</ul>
+<u>Id</u>.  <u>Accord</u> <u>Ray v. Cutter Laboratories</u>, 754 F.Supp 193, 195 (M.D. Fla. 1991) (noting Florida's &quot;'blood shield' statute establishes a negligence criteria for recovery&quot;).<font color="#ff0000">(FN19)</font> We agree with the analysis in <u>Williamson</u>.  Due to the &quot;reasonable use&quot; phrase in the statute, negligence is required to establish either of the implied warranty claims available under Missouri's Blood Shield Statute.<br>
+	We also conclude Marie is not able to establish breach of a duty for negligence under the circumstances of this case.  <u>See</u> <u>Jaime v. St. Joseph Hosp. Foundation</u>, 853 S.W.2d 604, 615 (Tex. App. 1993).  In that medical malpractice case, which was based on a patient's contamination with AIDS from a blood transfusion in December 1982, the Texas Court of Appeals affirmed entry of summary judgment in favor of the hospital supplying the blood in relevant part because there was no evidence the hospital breached a duty.  <u>Id</u>.  The court rejected a serendipity theory as a basis of liability.  <u>Id</u>. at 614-15.  Specifically, the court found that:
+<ul>
+<ul>[the patient argued] given what science <u>now</u> knows about AIDS, we can say that <u>if</u> hospitals had only employed the hepatitis tests in December of 1982, they would have screened out up to 88 percent of the AIDS tainted blood, albeit through serendipity. . . .<br>
+<br>
+. . . [The patient] presented no evidence to suggest [the hospital] lagged behind other hospitals, or that, as a whole the industry was negligent by not utilizing the hepatitis tests to screen for AIDS.  [The patient] offers only the personal opinion of one expert, based on hindsight, that he thought the standards should have been different and he would have liked to see the test performed.  Such speculative and conclusory testimony is inadequate to defeat the [h]ospital's competent summary judgment evidence. . . .  Because the [h]ospital conclusively demonstrated that in December of 1982, it had no duty to perform the surrogate hepatitis tests in order to screen for AIDS, the summary judgment was proper.<br>
+</ul>
+</ul>
+<u>Id</u>.  <br>
+While those circumstances are not identical to those presented by this case, a similar basis of liability is presented here, and that basis, grounded on the serendipitous removal of HIV through a heat treatment procedure used to remove a different virus, cannot establish Mile's breach of duty for purposes of a negligence theory of liability.  Our record shows that before the fall of 1984, heat treatment of factor concentrates was used only in an effort to eliminate hepatitis viruses.  Damian had been diagnosed with and treated for hepatitis by the age of four.  The record further shows that not until the fall of 1984 was there a report of a study that heat treatment of factor concentrates eliminated HIV.  Shortly thereafter, Medical and Scientific Advisory Council (MASAC) first recommended using only heat treated factor concentrates.  It was not until March 1985 that the test to detect HIV was licensed by the FDA.  As a result, we find under the circumstances of this case, Marie cannot establish Mile's breach of duty, for the implied warranty claim under Missouri's Blood Shield Statute because during the relevant time period it was not known that HIV could be eliminated through the heat treatment of factor concentrates. <br>
+In light of this decision, we will not address point two, which focuses on the verdict directing instruction given to the jury for this claim.<div align="center"><u>NEGLIGENT FAILURE TO WARN</u></div>In point three, Miles challenges the failure of the trial court to grant a motion for directed verdict or motion for judgment notwithstanding the verdict on Marie's negligent failure to warn claim.  Specifically, Miles urges the learned intermediary defense modifies the common law duty to warn in prescription medicine cases, such as this one; Marie's evidence showed the treating physician was aware of the risk of AIDS from use of factor concentrate; and the evidence did not establish Miles knew of any fact unknown to that physician.  Moreover, Miles argues, Marie did not introduce evidence that any failure to warn was the proximate cause of any damages.    <br>
+Marie responds that the learned intermediary defense does not apply here because Miles failed to provide an adequate warning to the treating doctors; Miles published and sent directly to its customers magazines regarding its product's risks and benefits, including a special AIDS issue containing false and misleading information regarding the risk of AIDS; Miles withheld from doctors the information it received from the CDC regarding the significance of the risk of AIDS; and the treating physician was told the risk was &quot;minimal&quot; and no change in factor concentrate treatment should occur.  Additionally, Marie contends Miles did not meet its burden of proof for this affirmative defense. <br>
+The principles of appellate review applicable to Mile's first point on appeal also apply to this point.  For a negligence claim, a plaintiff 
+<ul>
+<ul>must establish four elements:  1) that defendant had a legal duty to conform to a certain standard of conduct to protect others against unreasonable risks; 2) that duty was breached; 3) proximate causation existed between the breach/conduct and the resulting injury, and 4) actual damages to the plaintiff.<br>
+</ul>
+</ul>
+<u>Smith v. DH Stores, Inc.</u>, 900 S.W.2d 12, 13 (Mo. App. E.D. 1995).  <br>
+We recently decided the learned intermediary doctrine applied and prevented the establishment of proximate cause for failure to warn claims of hemophiliac patients who alleged they were contaminated with HIV after treatment with Factor VIII concentrate manufactured by Alpha Therapeutic Corporation (Alpha).  <u>Doe v. Alpha Therapeutic Corp.</u>, 3 S.W.3d 404, 410-11, 419-21 (Mo. App. E.D. 1999).  In that case, the exposures to Alpha's Factor VIII concentrate occurred for one patient from 1980 until nearly the end of 1984; for another patient from 1980 through 1983; and for the other patient from 1978 through 1984.  <u>Id</u>. at 408.  Dr. Bouhasin treated two of the patients.  <u>Id</u>. at 416.  The case was submitted to the jury, in part, on failure to warn claims and on Alpha's learned intermediary defense with respect to those claims.  <u>Id</u>. at 418.  After denial of their motion for new trial, the plaintiffs appealed from the judgment in favor of Alpha.  <u>Id</u>.  We affirmed.  <u>Id</u>. at 423. <br>
+With respect to the learned intermediary doctrine, we first found &quot;the only issues preserved for our review [are] whether there is evidence which supports the giving of the learned intermediary instruction and whether the instruction was in accord with Missouri law.&quot;  <u>Id</u>. at 419.  We concluded &quot;Missouri courts adhere to the learned intermediary doctrine . . . and [hold] that in cases involving manufacturers of prescription drugs, the manufacturer has 'a duty to properly warn the doctor of the dangers involved and it is incumbent upon the manufacturer to bring the warning home to the doctor.' <u>Krug v. Sterling Drug, Inc.</u>, 416 S.W.2d 143, 146 (Mo. 1967).&quot;  <u>Alpha</u>, 3 S.W.3d at 419.  Furthermore, we stated:
+<ul>
+<ul>The learned intermediary doctrine provides that the failure of a drug manufacturer to provide the physician with an adequate warning of the risks associated with a prescription product is &quot;not the proximate cause of a patient's injury if the prescribing physician had independent knowledge of the risk that the adequate warnings should have communicated.&quot; . . . Thus, <u>the causal link between a patient's injury and the alleged failure to warn is broken when the prescribing physician had substantially the same knowledge as an adequate warning from the manufacturer that should have been communicated to him.</u><br>
+</ul>
+</ul>
+<u>Id</u>. at 420 (citations omitted and emphasis added).  Upon reviewing the record, we found the patients' treating physicians 
+<ul>
+<ul>were aware of the risks of AIDS associated with the use of blood products, specifically factor concentrates, when they prescribed them to [the patients].  Further, they independently possessed substantially the same knowledge of the risk of AIDS associated with blood products that Alpha possessed.  <u>Because their treating physicians were already aware of the risk of AIDS associated with Factor VIII concentrates, Alpha's alleged failure to provide an adequate warning cannot be the proximate cause of plaintiffs' injuries.</u> <br>
+</ul>
+</ul>
+<u>Id</u>. at 421 (citation omitted and emphasis added).  <br>
+	Here, the evidence and its reasonable inferences, viewed in a light favorable to Marie, indicate:  Dr. Bouhasin, a board certified pediatric hematologist, treated Damian from 1970 until 1990.  When Damian was two, Dr. Bouhasin diagnosed him as having classical severe hemophilia, with less than one percent of Factor VIII.  Dr. Bouhasin initially prescribed cryoprecipitate<font color="#ff0000">(FN20)</font> to treat Damian's bleeding but, in 1973, began to prescribe Factor VIII concentrate<font color="#ff0000">(FN21)</font> for Damian's bleeds.  Due to Damian's high level of inhibitors,<font color="#ff0000">(FN22)</font> Damian did not self-administer the Factor VIII concentrate but went to a hospital for its administration.  By age four, Damian was diagnosed and treated for hepatitis B, unrelated to use of Miles Factor VIII concentrate.       <br>
+Dr. Bouhasin discussed the treatment of children with their parents.  Marie relied on Dr. Bouhasin for guidance and followed his advice in treating Damian's hemophilia.  To keep current, Dr. Bouhasin read as much as possible, including regularly reading medical journals focusing on hematology and pediatrics, the <u>New England Journal of Medicine</u>, and material from the National Institutes of Health and the CDC.  Dr. Bouhasin also read the Bulletins and <u>Hemophilia Newsnotes</u> (<u>Newsnotes</u>) issued by the NHF.   <br>
+Although there were reports in 1981 of cases of the now-identified AIDS disease, the first reports of that disease in hemophiliacs occurred in July 1982.  By letter, dated July 9, 1982, from an Assistant Surgeon General who was also the Director of the CDC, to manufacturers of factor concentrates, including Miles, the CDC described the occurrence of AIDS in hemophiliac patients, with a statement that:  &quot;[a]lthough the cause of this immune dysfunction is unknown, the possibility of a transmissible agent has been suggested, and concern about possible transmission through blood products has been raised.&quot;  Additionally, a <u>Newsnotes</u>, dated July 14, 1982, stated, under the caption &quot;<u>HEMOPHILIA PATIENT ALERT</u> #1,&quot; that the CDC reported 
+<ul>
+<ul>three hemophiliacs had developed rare and unusual infections associated with a condition in which there is a decrease in the body's ability to combat disease.  These three cases represent an unusually high rate of this disorder and may have developed as a result of an unknown potentially immuno-suppressive agent.  One hypothesis that is being investigated by [the] CDC is that the agent may be a virus transmitted similar to the hepatitis virus by blood or blood products.<br>
+<br>
+It is important to note that at this time the <u>risk</u> of contracting this immunosuppressive agent is <u>minimal</u> and [the] CDC is not recommending any change in blood product use.<br>
+<br>
+. . . [The] NHF will keep you informed, but once again, [the] CDC is not advising a change in treatment regimen at this time.<br>
+<div align="center"><u>IMPORTANT</u> </div><div align="center">REMEMBER, [THE] CDC IS NOT ADVISING A <br>
+CHANGE IN TREATMENT REGIMEN AT<br>
+THIS TIME. . . .</div>
+<ul>
+<ul></ul>
+</ul>
+</ul>
+</ul>
+The July 16, 1982, Morbidity and Mortality Weekly Report (MMWR) issued by the CDC provided further details of the three cases referenced in the <u>Newsnotes</u>, including information that each of the three patients, who were from Colorado, New York, and Ohio, had severe hemophilia, had received Factor VIII concentrate, and had not received concentrate from the same lot.  In an editorial note accompanying this report, the CDC stated:
+<ul>
+<ul>  <b> </b>   	The clinical and immunologic features these three patients share are strikingly similar to those recently observed among certain individuals from the following groups:  homosexual males, heterosexuals who abuse IV drugs, and Haitians who recently entered the United States. . . . Although the cause of the severe immune dysfunction is unknown, the occurrence among the three hemophiliac cases suggests the possible transmission of an agent through blood products.  <br>
+</ul>
+</ul>
+ 	While Dr. Bouhasin testified he did not see the CDC's July 1982 report in 1982, he did speak personally with Dr. Dale Lawrence, who was at the CDC, in October 1982.  Dr. Lawrence told Dr. Bouhasin the CDC was concerned that this disease was transmissible through blood and &quot;the most likely theory was that AIDS was caused by a virus, and that it could be transmitted like hepatitis, through blood products.&quot;  Dr. Bouhasin testified he knew there was a potential that AIDS was transmitted by blood from his October 1982 discussions with Dr. Lawrence.  Dr. Bouhasin chose, however, to continue using factor concentrates because the NHF's MASAC thought few hemophiliac patients were affected by this disease and that was borne out by the few number of reported cases in hemophiliac patients.   <br>
+	By the end of 1982, the CDC had confirmed four more AIDs cases in hemophiliac patients.  In its <u>Newsnotes</u>, dated December 9, 1982, the NHF stated:  
+<ul>
+<ul>It is important to note, that while there is insufficient data to directly link the spread of AIDS to concentrates, there is an increased concern that AIDS may be transmitted through blood products.  <br>
+<br>
+<u>It is NHF's point of view that patients and parents should be aware of the potential risks. . . .</u><br>
+</ul>
+</ul>
+Later that month, the NHF issued a medical bulletin stating in part:
+<ul>
+<ul>There is an increased concern that AIDS may be transmitted through blood products.  Patients and parents should be aware of the potential risks.  There is no conclusive evidence that cryoprecipitate or fresh frozen plasma will reduce the risk of AIDS.  We feel, however, that this is no time to introduce concentrates to patients who have never used them before, except when there is an overriding medical indication.  Examples of patients who have not, and therefore, should not be introduced to concentrates at this time are as follows:<br>
+<br>
+	--  newborn infants (through age 4);<br>
+<br>
+	--  newly diagnosed cases of hemophilia; and <br>
+<br>
+	--  those with mild disease.<br>
+<br>
+At this time, the NHF AIDS Task Force does not recommend a change in treatment to those who have received concentrates in therapy.  And, by all means, one should not withhold the use of clotting factor therapy when needed.<br>
+</ul>
+</ul>
+A multi-agency Public Health Task Group established through the United States Department of Health and Human Services, and including representatives of the NHF, met on January 4, 1983, to &quot;consider the risks and consequences of AIDS for hemophilia patients, for concentrate manufacturers, and for physicians.&quot;  After this meeting, Dr. Francis, of the CDC, sent a memorandum to other CDC personnel, in which he stated, in part, that if certain T-cell data &quot;collected to date are reflective of pre-AIDS, 1/3 to ½ of hemophiliacs might already be exposed.&quot;  While Dr. Bouhasin testified he did not know Dr. Francis made such a statement, there is no indication this in-house memorandum was available to Miles.  Therefore, there is no indication that Miles knew about this opinion during the relevant time. <br>
+After a meeting in mid-January 1983, the MASAC issued a medical bulletin and a press release setting forth its recommendations.  Those recommendations, included not giving Factor VIII concentrate to those who had not previously used it, for instance, newborn infants, newly diagnosed hemophilia patients, and those with clinically mild hemophilia.  The MASAC also noted &quot;[t]here is still insufficient data to develop specific recommendations with respect to preferred blood product use . . . in the treatment of severe hemophilia.&quot;  <b> </b><br>
+	At this time, Dr. Bouhasin followed the NHF's and its MASAC's recommendations to continue treating with Factor VIII concentrate those patients previously treated with that concentrate and not to use factor concentrates in the treatment of patients having mild hemophilia, those recently diagnosed with hemophilia, or newborns.  Dr. Bouhasin was also advising patients about the minimal nature of the risk of contracting HIV through use of factor concentrates.  <br>
+In March 1983, John Hink of Miles, sent an in-house memorandum to other Miles personnel, in which he reported on the American Blood Resources Association meeting that had been held March 10th and 11th.  In relevant part Hink reported that Dr. Evatt, of the CDC, was &quot;convinced that the degree of epidemic [was] much greater than indicated by <u>results</u> <u>reported</u>,&quot; stated &quot;[a]bout ½ [of the] hemophili[a]c population [was] perceived to have abnormal T cell function,&quot; and expected &quot;50% to come down with AIDS.&quot;<br>
+In May 1983 Miles published a special AIDS issue of its <u>ECHO</u> publication, in which Dr. Evatt's reported March 1983 statement was not mentioned.  Instead, at page 6, this publication reported &quot;[t]here is no evidence to support that AIDS is transmitted in either cryoprecipitate or concentrate, although it is possible.&quot;     <br>
+Marie mentioned she received some issues of <u>ECHO</u>, however, she did not read them and, in particular, she did not remember receiving the special AIDS issue.    There is no indication Dr. Bouhasin received or read that issue.  <br>
+From August 1983 through May 1984, Dr. Bouhasin prescribed Mile's Factor VIII concentrate for Damian's bleeds.    <br>
+The discovery of HIV was reported in a publication in April or May 1984.  The first test to detect HIV was licensed for use in March 1985. <br>
+Dr. Bouhasin agreed with a statement by Dr. Evatt of the CDC that the level of risk of blood products infecting hemophiliacs with HIV was unknown from July 1982 through the spring of 1984.<b>  </b><br>
+There is no indication of record that during the relevant time period Miles had knowledge of the risk of contracting HIV from blood or blood products that was superior to Dr. Bouhasin's knowledge.  The record fails to establish that during the relevant time period Dr. Bouhasin was not aware of the then-available information regarding the risk of infecting a hemophiliac patient with HIV through use of blood products such as factor concentrates.  Thus, Marie has not established proximate causation, one of the essential elements of her negligent failure to warn claim.     <br>
+To the extent Marie relies on Mile's knowledge of Dr. Evatt's March 1983 opinion as demonstrating Miles had knowledge superior to that of Dr. Bouhasin, we conclude knowledge of that statement was not enough to support a finding of proximate cause.  The record does not establish that the statements, if made as reported, were an official position of the CDC, the NHF, the MASAC, or similar scientific entity, or were based on reliable data, studies, or published scientific information.  In <u>Doe v. Miles Laboratories, Inc. Cutter Laboratories Div.</u>, 927 F.2d 187 (4th Cir. 1991), the United States Court of Appeals for the Fourth Circuit applied Maryland law and upheld the entry of summary judgment in favor of Miles in a case arising out of use of its Factor IX concentrate.  The Fourth Circuit found, in relevant part, 
+<ul>
+<ul>The evidence shows that at the time the [Factor IX concentrate] was administered to [the non-hemophiliac patient in September 1983] the risk that AIDS was transmissible through blood was merely a <u>possibility</u>.  In fact, appellants have presented no evidence indicating that there existed in 1983 a medical consensus that AIDS was transmissible by blood. . . .   <br>
+<br>
+. . . If pharmaceutical companies were required to warn of every suspected risk that could <u>possibly</u> attend the use of a drug, the consuming public would be so barraged with warnings that it would undermine the effectiveness of these warnings.  Hence, we find that the risks <u>then</u> known to be associated with the use of [the Factor IX concentrate] were not explicit enough to expect Miles to have known or foreseen them in September of 1983.  Accordingly, because our finding involves no issue of material fact, we affirm the finding of the district court that no warning was necessary to inform the prospective user of the then-suspected risk attending the use of [the Factor IX concentrate].    <br>
+</ul>
+</ul>
+<u>Id</u>. at 194.  As the court was in that case, we are persuaded that a prescription product manufacturer's warning is not necessitated by one professional's opinion.  Thus, the fact Miles may have learned of Dr. Evatt's March 1983 opinion is not enough on its own to establish Miles knew something Dr. Bouhasin did not know for purposes of proximate cause.<br>
+<b>	</b>To the extent Marie argues there is an exception to the learned intermediary doctrine where a prescription drug manufacturer engages in advertising directly to the<b> </b>consumer, we find that, even if such an exception exists under Missouri law, it is inapplicable here.  There is no evidence that the manufacturer engaged in marketing through mass media such as television, radio, or general circulation news or other media.  Rather, the record establishes that Miles periodically published and distributed to its hemophiliac patients and physicians, among others, a magazine called <u>ECHO</u>.  Importantly, Marie testified that, while she may have glanced at these magazines, she did not read them.  Marie also testified she never received the special AIDS issue of <u>ECHO</u>, however she did read this issue just prior to trial.  Nor is there evidence that Dr. Bouhasin received and read that issue of <u>ECHO</u>.  In light of this record, we will not further address Marie's exception argument.<br>
+	We conclude the trial court erred in not granting a directed verdict or judgment notwithstanding the verdict in favor of Miles on Marie's negligent failure to warn claim because the record shows she failed to present substantial evidence establishing proximate causation, an element of that claim.  In light of this conclusion, we will not address point four, which focuses on the verdict directing instruction given to the jury for this claim, or point five which challenges the admission into evidence of the IOM report.<br>
+	Because this case deals with areas of first impression including implied warranty and application of the Missouri Blood Shield Statute, and has statewide importance, we order the cause transferred to the Missouri Supreme Court pursuant to Rule 83.02.<br>
+<b><u>Footnotes</u></b><b>:</b><br>
+<b>FN1.  </b><font color="#ff0000">Miles has also been known and referred to:  as Cutter Laboratories, Inc. or Cutter, and as Bayer Corporation.</font><br>
+<b>FN2.  </b><font color="#ff0000">This lawsuit was originally filed in 1993 by Damian as a four-count product liability action against five defendants.  Count I was a &quot;negligence/alternate liability&quot; claim, which the trial court found was not &quot;a viable theory under Missouri law.&quot;  Count II was a negligence claim.  Count III was a &quot;fraudulent and/or negligent misrepresentation&quot; claim, which was withdrawn.  Count IV was a &quot;breach of implied warranty&quot; claim.</font><br>
+<br>
+<font color="#ff0000">	After Damian's death, Damian's mother, Marie, and stepfather, Roy, were substituted as plaintiffs.     </font><br>
+<b>	</b><font color="#ff0000">The trial court entered summary judgment in favor of three defendants.  Thereafter, Marie and Roy dismissed without prejudice their claims against a fourth defendant and Roy voluntarily dismissed his claims without prejudice.    </font><br>
+<br>
+<font color="#ff0000">	These actions left for jury trial only the negligence claim in Count II and the breach of implied warranty claim in Count IV pursued by Marie against only one defendant, Miles, for Damian's wrongful death. </font><br>
+<br>
+<b>FN3. </b><b><font color="#ff0000"> </font></b><font color="#ff0000">Marie's Motion for Leave of Court to Re-File Supplemental Legal File is granted.  Mile's Motion to Strike Marie's refiled Supplemental Legal File and the Affidavit of Scott F. Lubeck in the Appendix to Marie's Brief is denied.  Mile's Motion to Disregard False and Misleading Statements Contained in Marie's Brief, or in the alternative, to Strike Marie's Brief is denied.</font><br>
+<br>
+<b>FN4. </b><b><font color="#ff0000"> </font></b><font color="#ff0000">Hemophiliacs may have uncontrolled internal or external bleeding, caused either by trauma or spontaneously in the absence of any indication of trauma.</font><br>
+<br>
+<b>FN5.  </b><font color="#ff0000">Unless otherwise indicated, all subsequent statutory citations are to RSMo 1978. </font><br>
+<b>FN6. </b><b><font color="#ff0000"> </font></b><font color="#ff0000">That statute is Section 431.069 and provides:</font><br>
+
+<ul>
+<ul><font color="#ff0000">The procurement, processing, distribution or use of whole blood, plasma, blood products, blood derivatives and other human tissues, . . . for the purpose of injecting, transfusing or transplanting any of them into the human body is declared to be, for all purposes, the rendition of a service by every person, firm, or corporation participating therein and, whether or not any remuneration is paid therefor, is declared not to be a sale of such whole blood, plasma, blood products, blood derivatives or other tissues, bones or organs for any purpose subsequent to enactment of this section.  It is further declared that any implied warranties of merchantability and fitness for a particular purpose shall not be applicable as to a defect that cannot be detected or removed by reasonable use of scientific procedures or techniques.  Nothing herein shall relieve any person, firm or corporation from negligence.    </font><br>
+</ul>
+</ul>
+<font color="#ff0000">This statute was first enacted in 1971.  </font><br>
+<br>
+<b>FN7. </b><b><font color="#ff0000"> </font></b><font color="#ff0000">Instruction No. 7 was the verdict director for the implied warranty claim and stated:</font><br>
+
+<ul>
+<ul><font color="#ff0000">Your verdict must be for plaintiff Marie if you believe:</font><br>
+<br>
+<font color="#ff0000">First, defendant [Miles] sold the factor concentrate, and</font><br>
+<br>
+<font color="#ff0000">Second, defendant [Miles] then knew or should have known of the use for which the factor concentrate was purchased, and</font><br>
+<br>
+<font color="#ff0000">Third, plaintiff Marie reasonably relied upon [Mile's] judgment that the factor concentrate was fit for such use, and</font><br>
+<br>
+<font color="#ff0000">Fourth, when sold by [Miles], the factor concentrate was not fit for such use because it contained the human immunodeficiency virus (HIV) which causes the acquired immune deficiency syndrome (AIDS), and </font><br>
+<br>
+<font color="#ff0000">Fifth, when the factor concentrate containing HIV was sold by defendant, HIV could have been removed by reasonable use of scientific procedures or techniques, and</font><br>
+<br>
+<font color="#ff0000">Sixth, as a direct result of the factor concentrate being unfit for the use for which it was purchased, Damian died. </font><br>
+</ul>
+</ul>
+<b>FN8.  </b><font color="#ff0000">That instruction is titled &quot;[1980 Revision] Verdict Directing -- Breach of Common Law Implied -- Warranty of Fitness for a Particular Purpose Under Uniform Commercial Code&quot; and provides:</font><br>
+<br>
+<font color="#ff0000">Your verdict must be for plaintiff if you believe:</font><br>
+
+<ul>
+<ul><font color="#ff0000">First, defendant sold the (</font><u><font color="#ff0000">describe the article or product</font></u><font color="#ff0000">), and </font><br>
+<br>
+<font color="#ff0000">Second, defendant then knew or should have known of the use for which the (</font><u><font color="#ff0000">describe the article or product</font></u><font color="#ff0000">) was purchased, and</font><br>
+<br>
+<font color="#ff0000">Third, plaintiff reasonably relied upon defendant's judgment that the (</font><u><font color="#ff0000">describe the article or product</font></u><font color="#ff0000">) was fit for such use, and </font><br>
+<br>
+<font color="#ff0000">Fourth, when sold by defendant, the (</font><u><font color="#ff0000">describe the article or product</font></u><font color="#ff0000">) was not fit for such use, and</font><br>
+<br>
+<font color="#ff0000">Fifth, within a reasonable time after plaintiff knew or should have known the product was not fit for such use, plaintiff gave defendant notice thereof, and </font><br>
+<br>
+<font color="#ff0000">Sixth, as a direct result of (</font><u><font color="#ff0000">describe the article or product</font></u><font color="#ff0000">) being unfit for such use, plaintiff was damaged. </font><br>
+<br>
+<font color="#ff0000">[unless you believe plaintiff is not entitled to recover by reason of Instruction Number _____ (</font><u><font color="#ff0000">here insert number of affirmative defense instruction</font></u><font color="#ff0000">)].</font><br>
+</ul>
+</ul>
+<font color="#ff0000">MAI 25.03 (1996) (references to Notes on Use (1980 Revision) omitted). </font><br>
+<br>
+<b>FN9.  </b><font color="#ff0000">No one here contends any arguably applicable warranty is excluded or modified.</font><br>
+<br>
+<b>FN10.  </b><font color="#ff0000">This version of the statute is identical to the 1978 version of the statute.</font><br>
+<br>
+<b>FN11.  </b><u><font color="#ff0000">See</font></u><font color="#ff0000"> </font><u><font color="#ff0000">also</font></u><font color="#ff0000"> </font><u><font color="#ff0000">Ferguson v. Alfred Schroeder Dev. Co.</font></u><font color="#ff0000">, 658 S.W.2d 62, 65, 66 (Mo. App. E.D. 1983) (noting distinction between ordinary purpose for statutory implied warranty of merchantability and particular purpose for statutory implied warranty of fitness for a particular purpose when addressing a jury instruction given in a case arising out of the sale of a newly constructed home to which those warranties did not apply). </font><br>
+<br>
+<b>FN12.  </b><font color="#ff0000">Some courts hold there must be a showing of a purpose distinct from the article's or product's ordinary purpose to establish a claim for breach of the statutory implied warranty of fitness for a particular purpose to arise.  </font><u><font color="#ff0000">See</font></u><font color="#ff0000">, </font><u><font color="#ff0000">e.g.</font></u><font color="#ff0000">, </font><u><font color="#ff0000">Lowe v. Sporicidin Int'l</font></u><font color="#ff0000">, 47 F.3d 124, 132 (4th Cir. 1995) (applying Maryland law); </font><u><font color="#ff0000">Crosbyton Seed Co. v. Mechura Farms</font></u><font color="#ff0000">, 875 S.W.2d 353, 365 (Tex. App. 1994) (applying Texas law); </font><u><font color="#ff0000">Bond v. Nibco, Inc.</font></u><font color="#ff0000">, 623 A.2d 731, 736 (Md. Ct. Spec. App. 1993) (applying Maryland law); </font><u><font color="#ff0000">Lorfano v. Dura Stone Steps, Inc.</font></u><font color="#ff0000">, 569 A.2d 195, 197 (Me. 1990) (applying Maine law); </font><u><font color="#ff0000">Crysco Oilfield Servs., Inc. v. Hutchison-Hayes Int'l, Inc.</font></u><font color="#ff0000">, 913 F.2d 850, 852-54 (10th Cir. 1990) (applying Oklahoma law); </font><u><font color="#ff0000">International Petroleum Servs., Inc. v. S &amp; N Well Serv., Inc.</font></u><font color="#ff0000">, 639 P.2d 29, 36-37 (Kan. 1982) (applying Kansas law); </font><u><font color="#ff0000">Hannon v. Original Gunite Aquatech Pools, Inc.</font></u><font color="#ff0000">, 434 N.E.2d 611, 616 (Mass. 1982) (applying Massachusetts law); </font><u><font color="#ff0000">Recreatives, Inc. v. Myers</font></u><font color="#ff0000">, 226 N.W.2d 474, 478 (Wis. 1975) (applying Wisconsin law); </font><u><font color="#ff0000">Janssen v. Hook</font></u><font color="#ff0000">, 272 N.E.2d 385, 388 (Ill. App. 1971) (applying Illinois law). </font><br>
+<br>
+<font color="#ff0000">Other courts hold that when the particular purpose of the product or article is its normal or ordinary purpose, a buyer may pursue a claim for breach of the implied warranty of fitness for a particular purpose.  </font><u><font color="#ff0000">See</font></u><font color="#ff0000">, </font><u><font color="#ff0000">e.g.</font></u><font color="#ff0000">, </font><u><font color="#ff0000">Soaper v. Hope Indus., Inc.</font></u><font color="#ff0000">, 424 S.E.2d 493, 495 (S.C. 1992) (applying South Carolina law and concluding that under such circumstances these two implied warranties &quot;merge and are cumulative, such that a plaintiff may proceed upon either theory&quot;); </font><u><font color="#ff0000">Great Dane Trailer Sales, Inc. v. Malvern Pulpwood, Inc.</font></u><font color="#ff0000">, 785 S.W.2d 13, 17 (Ark. 1990) (applying Arkansas law) (these two implied warranties merge &quot;[i]f the particular purpose for which goods are to be used coincides with their general functional </font><font color="#ff0000">use .</font><font color="#ff0000"> . .&quot;).     </font><br>
+<br>
+<b>FN13. </b><b><font color="#ff0000"> </font></b><font color="#ff0000"> The relevant Maine statutory provision states:</font><br>
+
+<ul>
+<ul><font color="#ff0000">Where the seller at the time of contracting has reason to know any particular purpose for which the goods are required and that the buyer is relying on the seller's skill or judgment to select or furnish suitable goods there is unless excluded or modified under section 400.2-316, an implied warranty that the goods shall be fit for such purpose.</font><br>
+</ul>
+</ul>
+<font color="#ff0000">11 M.R.S.A. Section 2-315, as quoted in </font><u><font color="#ff0000">Porter</font></u><font color="#ff0000">, 783 F.Supp. at 1473.</font><br>
+<br>
+<b>FN14.  </b><font color="#ff0000">Other courts have come to similar conclusions.  For instance, the United States Court of Appeals for the Tenth Circuit concluded plaintiff failed to make a claim for breach of the implied warranty of fitness for a particular purpose with respect to &quot;shale shakers&quot; that are used in oil fields and &quot;have only one possible use,&quot; because the evidence disclosed plaintiff used them in the &quot;normal, general manner.&quot;  </font><u><font color="#ff0000">Crysco Oilfield Servs., Inc.</font></u><font color="#ff0000">, 913 F.2d at 853.  Additionally, the Texas Court of Appeals found plaintiff buyers of chemically treated sorghum seed failed to establish an element of such a claim in that they failed to show a &quot;particular purpose&quot; or &quot;a use that is peculiar to the buyer's business&quot; and different from the seed's ordinary purpose to produce a commercial cash crop.  </font><u><font color="#ff0000">Crosbyton Seed Co.</font></u><font color="#ff0000">, 875 S.W.2d at 365.    </font><br>
+<br>
+<b>FN15. </b><b><font color="#ff0000"> </font></b><font color="#ff0000">Because we find Marie is not able to establish the requirements of the Blood Shield Statute, which applies to either implied warranty claim, we will not further address her contention Miles was not prejudiced by the failure to submit a claim for breach of the implied warranty of merchantability.</font><br>
+<br>
+<b>FN16.  </b><font color="#ff0000">The United States Court of Appeals for the Seventh Circuit described this theory as follows:  &quot;if the defendants did not do enough to protect hemophiliacs from the risk of Hepatitis B, they are liable to hemophiliacs for any consequences -- including infection by the more dangerous and at the time completely unknown AIDS virus--that proper measures against Hepatitis B would, all unexpectedly, have averted.&quot;  </font><u><font color="#ff0000">In re Rhone-Poulenc Rorer, Inc.</font></u><font color="#ff0000">, 51 F.3d 1293, 1301 (7th Cir.), </font><u><font color="#ff0000">cert. denied</font></u><font color="#ff0000">, 516 U.S. 867 (1995).  In reversing certification of a nationwide class of hemophiliac patients infected with HIV by use of factor concentrates, the court noted this serendipity theory &quot;dispenses . . . with proof of foreseeability, even though a number of states, in formulating their tests for negligence, incorporate the foreseeability of the risk into the test.&quot;  </font><u><font color="#ff0000">Id</font></u><font color="#ff0000">.   </font><br>
+<br>
+<b>FN17.  </b><font color="#ff0000">That statute provides:</font><br>
+
+<ul>
+<ul><font color="#ff0000">The procurement, processing, storage, distribution, or use of whole blood, plasma, blood products, and blood derivatives for the purpose of injecting or transfusing the same, or any of them, into the human body for any purpose whatsoever is declared to be the rendering of a service by any person participating therein and does not constitute a sale, whether or not any consideration is given therefor; and the implied warranties of merchantability and fitness for a particular purpose are not applicable as to a defect that cannot be detected or removed by a reasonable use of scientific procedures or techniques. </font><br>
+</ul>
+</ul>
+<font color="#ff0000">Section 672.316(5) Fla. Stat. as quoted in </font><u><font color="#ff0000">Williamson</font></u><font color="#ff0000">, 307 So.2d at 201.  </font><br>
+<br>
+<b>FN18. </b><b><font color="#ff0000"> </font></b><font color="#ff0000">Idaho also has a nearly identical statutory provision, Section 39-3702 Idaho Statutes, but we have not been directed to or located any case construing this part of the statute.  </font><br>
+<br>
+<b>FN19.  </b><u><font color="#ff0000">But</font></u><font color="#ff0000"> </font><u><font color="#ff0000">see</font></u><font color="#ff0000"> </font><u><font color="#ff0000">Raskin v. Community Blood Centers of South Florida, Inc.</font></u><font color="#ff0000">, 699 So. 2d 1014 (Fla. App. 1997) (disagreeing with </font><u><font color="#ff0000">Williamson</font></u><font color="#ff0000"> to the extent that case may be read as requiring allegations and proof of negligence by the blood supplier in the performance of scientific procedures or techniques), </font><u><font color="#ff0000">review denied without opin</font></u><font color="#ff0000">., 707 So.2d 1124 (Fla. 1998).   </font><br>
+<br>
+<b>FN20.  </b><font color="#ff0000">Cryoprecipitate became available in the early 1960's to treat hemophilia.  Essentially this is a frozen blood product made from one donor's plasma, the liquid portion of blood containing numerous proteins.  Its use was beneficial because, compared to the whole blood or plasma that had previously been used to treat bleeding in a hemophiliac patient, it contained a higher concentration of Factor VIII, and decreased the amount of liquid and proteins given to a patient.</font><br>
+<br>
+<b>FN21. </b><b><font color="#ff0000"> </font></b><font color="#ff0000">Factor concentrates are made by pooling plasma from more than one donor, in numbers ranging from hundreds to thousands of donors, extracting the Factor VIII from the pooled plasma, and then freeze-drying the Factor VIII for distribution to patients as a powder, which may be reconstituted for use anywhere.  This blood product had certain advantages over prior therapies, including the lack of a need for a freezer, portability, decreased volume administered to the patient, more specific dosage capability, and easier and faster administration. The disadvantage of this product was a marked increase in the incidence of post-transfusional hepatitis.</font><br>
+<br>
+<b>FN22.  </b><font color="#ff0000">In general these are antibodies produced by the body in reaction to the introduction of the factor concentrate or cryoprecipitate because the body does not recognize the protein being infused as a cell protein and the body tends to protect itself, so it destroys the foreign substance or, in this instance, the new blood protein.</font><br>
+<br>
+<b><font color="#0000ff">Separate Opinion:</font></b><br>
+None<br>
+<br>
+<br>
+<b><i><font color="#ff0000">This slip opinion is subject to revision and may not reflect the final opinion adopted by the Court.</font></i></b><div align="center"><img src="/courts/pubopinions.nsf/79a4030c07e2e3c7862568aa006dbe00/$Body/0.7E?OpenElement&amp;FieldElemFormat=gif" width="761" height="11" alt=""></div><b><font size="2"><!-- --></font></b><script language="javascript">
+function contactWindow() {
+	window.open ('http://www.courts.mo.gov/index.nsf/ContactsPage?ReadForm', 'newwindow', config='height=293,width=580, toolbar=no, menubar=no, scrollbar=no,resizable=no, location=no, directories=no, status=no')
+	}
+</script>
+<p align="center">
+<a href="http://www.courts.mo.gov/index.nsf"><font size="2" color="black">Judiciary</font></a>
+<font size="2"> | </font>
+<a href="http://www.courts.mo.gov/sup/index.nsf"><font size="2" color="black">Supreme Court</font></a>
+<font size="2"> | </font>
+<a href="http://www.courts.mo.gov/appellate/index.nsf/9DFD92495509F13F8625681F0079FD11/E3A84CB150BE1C9B862568B0006E914A?OpenDocument"><font size="2" color="black">Court of Appeals</font></a>
+<font size="2"> | </font>
+<a href="http://www.courts.mo.gov/circuits/index.nsf"><font size="2" color="black">Circuit Courts</font></a>
+<br>
+<a href="http://www.courts.mo.gov/osca/index.nsf"><font size="2" color="black">Office of State Courts Administrator</font></a>
+<font size="2"> | </font>
+<a href="http://www.courts.mo.gov/index.nsf/516C7664FDA1528A862565EC00504473/ACEA6436191BE423862564CE004BA8A0?OpenDocument"><font size="2" color="black">Statewide Court Automation</font></a>
+<br>
+<a href="http://casenet.courts.mo.gov"><font size="2" color="black">Case.net</font></a>
+<font size="2"> | </font>
+<a href="http://www.courts.mo.gov/courts/pubopinions.nsf"><font size="2" color="black">Court Opinions</font></a>
+<font size="2"> | </font>
+<a href="http://www.courts.mo.gov/pressrel.nsf?OpenDatabase"><font size="2" color="black">Newsroom</font></a>
+<font size="2"> | </font>
+<a href="http://www.courts.mo.gov/index.nsf/516C7664FDA1528A862565EC00504473/491ADB253AB92E51862564CE0050B48D?OpenDocument"><font size="2" color="black">Related Sites</font></a>
+<font size="2"> | </font>
+<a href="http://www.courts.mo.gov/osca/index.nsf/0689B8C101EB734C86256555007E179D/7C249C3EBF64852B86256EA00058346F?OpenDocument"><font size="2" color="black">Court Forms</font></a>
+<br>
+<a href="javascript:contactWindow()"><font size="2" color="black">Contact Us</font></a>
+<font size="2"> | </font>
+<!--
+<a href="http://www.courts.mo.gov/courts/mjsearch.nsf/$$Search"><font size="2" color="black">Search</font></a>
+-->
+<!--
+<font size="2"> | </font>
+<a href="http://www.courts.mo.gov/courts/WebSiteMap.nsf/sitemap?OpenView"><font size="2" color="black">Site Map</font></a>
+-->
+</p>
+</center>
+
+</form>
+</body>
+</html>

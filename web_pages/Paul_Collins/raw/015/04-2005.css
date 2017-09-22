@@ -1,0 +1,285 @@
+/* ********** LAYOUT STYLES ********** 	
+	Skeleton lifted from the 3-col content first code, by Paul O'Brien
+	http://www.pmob.co.uk/temp/3colfixedtest_sourcenone.htm
+	Resident Sitepoint CSS Guru Extraordinaire. Thanks Paul!
+	http://www.pmob.co.uk/ 
+*/ 
+
+/* commented backslash hack v2 \*/ 
+html, body { height:100%; } 
+/* end hack */ 
+
+body { padding:0; margin:0; }
+#outer {height:100%;min-height:100%;margin-left:170px;margin-right:170px;margin-bottom:-52px;}
+html>body #outer{ height:auto; } /*for mozilla as IE treats height as min-height anyway*/
+#header { 
+	position: absolute; top: 0; left: 0; width: 100%; height: 70px; overflow: hidden; color: #eee;
+}
+#left {
+	position:relative;/*ie needs this to show float */ width: 170px; float: left;
+	margin-left:-169px;/*must be 1px less than width otherwise won't push footer down */
+}
+* html #left {padding-bottom:52px ;margin-right:-3px;}/*fix gap in ie next to float and clear footer because we've moved float too far left*/
+#right {
+	position: relative;/*ie needs this to show float */ width: 170px; float: right;
+	margin-right: -169px;/*must be 1px less than width otherwise won't push footer down */
+}
+* html #right {padding-bottom:52px ;margin-right:-170px;}/* stop float drop in ie */
+#footer { width:100%; clear:both; height:50px; position:relative; }
+* html #footer {/*only ie gets this style*/
+	\height:52px;/* for ie5 */
+	he\ight:50px;/* for ie6 */
+}
+#clearheader{height:72px;}/*needed to make room for header*/
+#clearfooter{clear:both;height:50px;}/*needed to make room for footer*/
+* > html #clearfooter {float:left;width:100%;}
+div,p  {margin-top:0}/*clear top margin for mozilla*/
+* html #center {height:1%;margin-bottom:12px}/* combat IE's 3 pixel jog */
+#center { float:right;width:100%;position:relative;margin: 0 -0.5%;padding-bottom: 3em;}
+.outerwrap { float: left; width: 99%; }
+/* ********** LAYOUT STYLES ********** */
+
+body { 
+	font: small verdana, sans-serif; color: #000000;
+	background: #DFDFDF url(../images/2005/bg.gif) repeat-y left top;
+}
+
+#header {
+	background: #000; border-top: 1px solid #000; border-bottom: 1px solid #000;
+}
+
+#outer { 
+	font: normal 100%/1.5em Verdana, sans-serif; color: #000;
+	border-left: 1px solid #5A6267; border-right: 1px solid #666666;
+	background: #fefefe url(../images/2005/outerBg2.gif) repeat-y left top;
+}
+
+a img { border: none; }
+a { color: #073B7F; font-weight: bold; text-decoration: none; }
+a:hover { text-decoration: underline; }
+a:visited { color: #886D8f; }
+a.amz, a.amz:visited, a.amz:active { 
+	color: #9f3e13; text-decoration: underline; font-family: verdana, sans-serif; 
+}
+a.amz:hover { color: #000; }
+cite a.amz { font-style: normal; }
+a.notes {
+	font: xx-small verdana, sans-serif; margin: 2px; border: 1px solid #ddd;
+	background: #eee; color: #000; text-decoration: underline;
+}
+
+cite, .amz { font-variant: small-caps; }
+
+p { padding: .3em 1.8em .3em 1.9em; }
+
+#center h1 { 
+	padding: .2em .3em .3em; color: #000; margin: .7em 1em .4em;
+	font: lighter 1.5em "Lucida Grande", "Lucida Sans Unicode", verdana, sans-serif;  
+	border-top: 3px double #ccc; border-bottom: 3px double #ccc; background: transparent;
+}
+h2, h3, h4 { font: bold 1.2em/1.2em Arial, sans-serif; padding-left: 1.4em; margin: 1.2em 0 .2em 0; }
+h3 { font-size: 1.1em; padding-left: 1.6em; }
+h4 { font-size: 1em; padding-left: 1.6em; }
+
+ul.lImg { margin: 2em 5em; padding: 0px; font-size: .9em; }
+ul.lImg li { list-style-image: url(../images/ul.gif); }
+ul.lImg li ul li { list-style-image: none; margin-left: -.8em; }
+
+blockquote {
+	border-top: 1px solid #ddd; border-bottom: 1px solid #ddd; 
+	color: #333; padding: .4em .2em; background: #f9f9f9;
+	margin: 2em 3em; font: 1em/1.7em "Trebuchet MS", sans-serif;
+}
+blockquote h5 { font: bold 1em verdana, sans-serif; }
+blockquote dl { padding: 10px 20px 10px 0px; }
+blockquote blockquote { font: .85em verdana, sans-serif; border: none; border-left: 1px solid #ddd; }
+
+ol { padding: 1em 4.5em; margin: 0; }
+
+dl.dlOutline { margin: 2em 3em; }
+dl.dlOutline dt {
+	font-weight: bold; border-bottom: 1px solid #eee;
+	display: block; padding: 4px;
+}
+dl.dlOutline dd {
+	padding: .5em 0; margin: 0;
+	border-top: 1px inset #fff;
+	position: relative;
+}
+
+.dropCap span {
+  float: left; /*This allows the text to "stack up" to the right of the large font*/
+  margin: -8px 3px 0px -3px; /*set margins based on the font used*/
+  padding: 0; font: bold 5.3em/1.06em Times, serif; color: #666666;
+  /*font: bold 4em/.9em "Trebuchet MS", Trebuchet, Verdana, Arial, Helvetica, sans-serif;*/
+}
+* html .dropCap span { margin-right: 0; /*because of IE's float bug*/ }
+
+hr { height: 1px; color: #eee; background: #ddd; border: none; width: 93%; }
+
+.imgRight, .imgRightNoBorder {
+	float: right; clear: right; margin: 3px 0px 10px 10px; position: relative;
+	border: 1px solid #000;
+}
+.imgRightNoBorder { border: none; }
+
+.pageSubTitles, .cite {
+	padding: .5em 1.9em; text-align: right; font-size: .86em; color: #666666;
+}
+
+.mir { letter-spacing : -1000em; }
+/* Just for Opera, but hide from MacIE */
+/*\*/html>body .mir { letter-spacing : normal; text-indent : -999em; overflow : hidden;}
+/* End of hack */
+h1.icaLogo { padding: 0; margin: 0; }
+h1.icaLogo a { width:412px; height: 70px; display: block; background: url(../images/2005/newLogo4.jpg) no-repeat; }
+
+.diagram { text-align: center; margin: 2em auto; color: #666666; }
+.diagram .title {
+	border: none; text-align: left;
+	font: bold 1em verdana, sans-serif;
+}
+
+#whois {
+	background: #441C20 url(../images/whois.jpg) center no-repeat; 
+	height: 183px; width: auto; margin: 1em 2.1em;
+}
+
+dl.normal { margin: 1em 2em; }
+dl.normal dt { font-variant: small-caps; }
+
+#dlBoxesWrap { margin: 1em; text-align: center; }	
+dl.boxes { 
+	border: 1px solid #eee; background: #fff; text-align: center; padding: 1em; 
+	margin: 1em .5em; font-size: 1em; text-align: left;
+}
+.boxes dt { font-weight: bold; }
+.boxes dt img { border: 1px solid #eee; }
+.boxes dd { margin: 0 .4em; padding: 0; }
+.boxes dd ul { margin: 0 1em; padding: 0px; }
+
+div.aInnerDiv, .meditationRoom {
+	float: right; width: 180px;
+	border-top: 1px solid #eee; 
+	border-bottom: 1px solid #eee; 
+	margin: 2em 1em; font-size: .86em;
+}
+.meditationRoom { width: 250px; }
+div.aInnerDiv div, .meditationRoom div { margin: auto; text-align: center;  }
+div.aInnerDiv div h3, .meditationRoom div h3 { margin: 1em 1em 1em 0; }
+.meditationRoom div ol, .meditationRoom div p { text-align: left; }
+
+#st { margin: 1em 2em; }
+#st td, #st th { font-size: .9em; vertical-align: top;}
+#st td, #st th { padding: .4em; background: #fff; border: 1px solid #ddd; }
+#st th { background: #eee; }
+
+#articleOptions {
+	width: 98%; border-top: 1px solid #ddd; 
+	text-align: center; margin: 0 auto; font-size: .86em;
+}
+div.left { float: left; text-align: left; padding: 4px 1em; }
+div.right { float: right; text-align: right; padding: 4px 1em; }
+
+#navlist, #extLinks {
+	padding: 0; margin: 0 2px;
+	font: bold .85em Verdana, sans-serif;
+	width: 162px;
+}
+#navlist li, #extLinks li {
+	list-style-type: none; margin: 0;
+	border-bottom: 1px solid #000;
+}
+#navlist li a, #extLinks a {
+	display: block; height: 1%; text-decoration: none;
+	padding: 0.2em 0.5em 0.27em 0.75em; color: #D0DDE7;
+	background: #5A6267
+}
+#navlist li a:hover, #extLinks a:hover { 
+	color: #eee; background: #7D4125;
+}
+#extLinks { font: .76em/1em Verdana, sans-serif; background: #3C4347; margin-top: -2px; }
+#extLinks li { border: none; }
+#extLinks a { background: transparent; color: #FFEFC0; font-weight: normal; }
+#extLinks a:hover { background: #000; }
+#left h4 {
+	color: #eee; background: #000; font-size: .86em; padding: .2em .4em .2em .7em;
+	border-top: 1px solid #777; border-bottom: 1px solid #777;
+}
+
+body#home a#homenav, body#nwo a#nwonav, body#nam a#namnav, body#para a#paranav, 
+body#commentary a#commentarynav, body#news a#newsnav, body#links #linksnav, 
+body#about #aboutnav, body#contact #contactnav { 
+	background: #000;
+}
+
+#googleAds { text-align: center; margin: 1.3em auto; }
+
+#right { font: .85em/1.2em Verdana, sans-serif; }
+#right p, #subscribe, #right .amzBooks {
+	margin: .6em 4px .6em 7px; padding: .8em;
+	background: #f9f9f9 url(../images/2005/quotesBg.gif) left repeat-y; border: 1px solid #333;
+}
+#wAmzH { padding: .6em 4px .6em 7px; }
+#right .amzBooks { font-size: .9em; }
+#right .amzBooks img { float: left; margin: 2px 4px 4px; } 
+#right .amzBooks hr { clear: left; }
+#right p.auth { text-align: center; background: #F4F4ED; border: 1px solid #000; }
+#right p.auth a.amz img { border: 3px double #999; }
+#right p.auth a.amz:hover img { border: 3px double #333; }
+#subscribe { 
+	padding: .5em 0 .5em .8em;
+	background: #F4F4ED url(../images/2005/subscribeBg.gif) left repeat-y;  
+}
+#subscribe div { 
+	background: transparent url(../images/2005/newsletter.gif) 94% 0 no-repeat; position: relative;
+	padding: 0; margin: 0;
+}
+#subscribe label { display: block; font-size: .86em; }
+#eMail { 
+	width: 110px; font: .9em verdana, sans-serif; margin: .4em 0 .2em; padding: 0;
+	background: #E8E5D3; color: #333; border: 1px solid #666666; height: 1.4em;
+}
+#mailSubmit { border: 1px solid #999; margin: 0; }
+
+.gooRight { 
+	text-align: center; margin: .6em 4px .6em .7em; border: 1px solid #000;
+	background: #F4F4ED url(../images/2005/subscribeBg.gif) left repeat-y;
+}
+.gooRight div {
+	 padding: .8em;
+}
+
+/*
+input[type="text"]:hover, textarea:hover, #eMail:hover { border-color: #000; }
+input[type="text"]:focus, textarea:focus, #eMail:focus {
+	border-color: #bf0906; color: #000; background: #eee;
+}*/
+
+#footer {
+	border-top: 1px solid #000; border-bottom: 1px solid #000;
+	background-color: #595D5F; color: #fff; text-align: center; font-size: 11px;
+}
+span.designed { font-weight: bold; }
+span.designed a, span.designed a:active,span.designed a:visited,span.designed a:hover{
+	color: #FFEFC0; text-decoration: underline;
+}
+#footer a:hover { color: #fff; text-decoration: none; border-bottom: 1px solid #999; }
+#top { float: right; margin: 6px 10px; width: 48px; height: 22px; }
+#footer p { margin-top: 7px; }
+
+/*----- ATOM-Z SEARCH BUTTON AND FORM INPUT STYLE -----*/
+#Illuminati-02 { position: absolute; top: 23px; right: 10px; }
+.input {
+	background: #ccc; color: #333; font: bold .86em verdana, sans-serif; border: 2px solid #666666;
+}
+.searchBut  {
+	font: bold .86em verdana, sans-serif; background: #666666;
+	color: #fff; border: 1px solid #000; padding: .13em;
+}/*....................................................*/
+
+@media tty {
+ i{content:"\";/*" "*/}}@m;
+ @import 'ie5styles.css'; /*";}
+}/* */
+

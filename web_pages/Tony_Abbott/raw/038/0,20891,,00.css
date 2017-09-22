@@ -1,0 +1,206 @@
+@import url("/css/ninnbar/0,20908,,00.css");
+@import url("/css/base/0,20887,,00.css");
+@import url("/css/layout/0,20888,,00.css");
+@import url("/css/section-common/0,20889,,00.css");
+@import url("/css/legacy-storypage/0,20950,,00.css");
+
+
+/* Story page specific */
+
+.encompass {
+margin-top:1em;
+clear: both; /* to fix busted pages in motoring section */
+}
+
+h1 {
+background:none !important;
+margin:0;
+font-size: 1.6em;
+}
+h2.lead-par {
+font-size:1em;
+font-weight:300;
+margin: 5px 0 0 0;
+}
+
+strong.story-from {
+font-weight:300;
+font-size:0.86em;
+font-family:arial, sans-serif;
+}
+
+.article-info {
+margin: 0 0 11px 0 !important;
+padding:0;
+clear: both;
+display: block;
+font-size:0.92em;
+color:#5a5a5a;
+}
+.article-info ul {
+list-style-type: none;
+}
+.byline cite {
+font-style: normal;
+}
+.pub-date {
+font-style: italic;
+}	
+
+table#image-container.minor, 
+table#image-container.minor tr, 
+table#image-container.minor td {
+float:right;
+}
+
+#top-story-caption {
+display:block;
+font-size:0.86em;
+font-family:arial, sans-serif;
+padding:0 5px 0 5px;
+margin:-11px 0 0 0;
+text-align:left;
+}
+
+table#image-container.minor #top-story-caption {
+margin:0;
+}
+
+/* = toolbars
+----------- */
+
+#storytools {
+clear: both;
+height: 19px;
+padding-top: 7px;
+margin-bottom: 11px;
+font-size: 0.92em;
+border-top: 1px solid #ccc;
+}
+#storytools p.font-size {
+height: 19px;
+display: block;
+width: 107px;
+float: right;
+position: relative;
+padding: 0;
+margin: 0 0 15px 0;
+line-height: normal;
+}
+#storytools p.send-to {
+height: 19px;
+display: block;
+width: 154px;
+float: right;
+position: relative;
+padding: 0 0 0 10px;
+margin: 0 15px 0 0;
+line-height: normal;
+}
+#storytools p a,
+#storytools p a:hover {
+border:none !important;
+text-decoration:none !important;
+}
+a.size-up {
+position: absolute;
+bottom: 0;
+right: 24px;
+display: block;
+height: 19px;
+width: 20px;
+background: url("/images/iconset-articletools.gif") 0 0 no-repeat;
+text-indent: -9999px;
+}
+a.size-up:hover {
+background-position: -25px 0;
+}
+a.size-down {
+position: absolute;
+bottom: 0;
+right: 0;
+display: block;
+height: 19px;
+width: 20px;
+background: url("/images/iconset-articletools.gif") 0 -33px no-repeat;
+text-indent: -9999px;
+}
+a.size-down:hover {
+background-position: -25px -33px;
+}
+a#send-print {
+position: absolute;
+bottom: 0;
+right: 28px;
+display: block;
+height: 19px;
+width: 20px;
+background: url("/images/iconset-articletools.gif") 0 -66px no-repeat;
+text-indent: -9999px;
+}
+a#send-print:hover {
+background-position: -25px -66px;
+}
+a#send-email {
+position: absolute;
+bottom: 0;
+right: 0;
+display: block;
+height: 19px;
+width: 20px;
+background: url("/images/iconset-articletools.gif") 0 -99px no-repeat;
+text-indent: -9999px;
+}
+a#send-email:hover {
+background-position: -25px -99px;
+}
+
+/* blogs */
+
+#postComment {
+	width:100%;
+	margin-bottom:15px;
+}
+
+#postComment td {
+	padding:5px 0px 5px 12px;
+	background:#EEEEEE;
+	font-weight:bold;
+}	
+
+#postComment td em {
+	color:red;
+}
+
+#postComment td.leftside {
+	padding-right:0px;
+	width:40%;
+}
+
+#comment_form input {
+	width:210px;
+	border:1px solid #9DB7CC;
+}
+
+#comment_form textarea {
+	font-family:arial;
+}
+
+#postComment #commentHdr td {padding:0px;} 
+
+#tbcontent {
+	margin:0px 0px 15px 0px;
+}
+
+/* IE legacy version fixes - leave at end */
+
+@media tty {
+   i{content:"";/*" "*/}}@m; @import '/css/ie55/0,20954,,00.css'; /*";}
+   }/* */
+
+@media tty {
+   i{content:"";/*" "*/}}; @import '/css/ie50/0,20955,,00.css'; {;}/*";}
+   }/* */
+
+   
+   

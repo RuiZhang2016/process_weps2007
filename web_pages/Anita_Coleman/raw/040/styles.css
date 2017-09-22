@@ -1,0 +1,833 @@
+/* Stylesheet for Kesytone Service Systems */
+
+/* Color Palette */
+/*
+Mauve Lt   #CDA9BA
+Mauve Md   #A36685
+Mauve Dk   #915572
+Violet Lt  #A9A1C1
+Violet Md  #7F71A2
+Violet Dk  #6E6092
+Violet VDk	#544283
+*/
+
+body {
+background-color:#fff;
+margin:0;
+padding:0;
+}
+
+a {font:11px/1.6 verdana,geneva,arial,sans-serif; color:#000000;}
+a:link {font:11px/1.6 verdana,geneva,arial,sans-serif; color:#7F71A2; text-decoration:underline;}
+a:visited {font:11px/1.6 verdana,geneva,arial,sans-serif; color:#999999;}
+a:hover {font:11px/1.6 verdana,geneva,arial,sans-serif; color:#7F71A2; text-decoration:none;} 
+
+td,p{font:11px/1.6 verdana,geneva,arial,sans-serif; color:#000000;}
+
+h2 {font:bold 24px/.8em georgia, 'new york', times, timesNR, serif; color:#6E6092;}
+h3 {font:bold 24px/28px georgia, 'new york', times, timesNR, serif; color:#6E6092;}
+
+ul {
+	margin-top:.5em;
+}
+ul ul {
+	margin-top:.5em;
+	margin-bottom:1em;
+}
+li {
+	margin-bottom:.5em;
+}
+dl {
+	margin-top:.5em;
+}
+dt {
+	font-weight:bold;
+	/*margin-top:.6em;*/
+	padding-top:.6em;
+}
+dd {
+	margin-bottom: .5em;
+}
+fieldset {
+	padding:15px;
+}
+legend {
+	border:1px solid #ccc;
+	padding: 0 5px;
+	font-weight:bold;
+	color:White;
+	font-size:1.2em;
+	background:#915572;
+}
+
+#promoAd {
+width:140px;
+margin-top:0;
+}
+
+#photoAndQuote {
+width:276px;
+float:right;
+margin:5px 0 20px 20px;
+}
+#photoAndQuote .quote {
+margin-top:20px;
+}
+
+#beslanInfoLink { /* located on welcome.php */
+	border:1px solid #6E6092; 
+	background-color:#CDA9BA; 
+	text-align:center; 
+	padding:10px; 
+	font-weight:bold; 
+	color:white;
+}
+
+#beslanInfoLink a:visited {
+ color:#7F71A2;
+}
+
+
+.bodyText {font:11px/1.6 verdana,geneva,arial,sans-serif; color:#000000;}
+.bodyText a:link {font:11px/1.6 verdana,geneva,arial,sans-serif; color:#7F71A2; text-decoration:underline;}
+.bodyText a:visited {font:11px/1.6 verdana,geneva,arial,sans-serif; color:#999999;}
+.bodyText a:hover {font:11px/1.6 verdana,geneva,arial,sans-serif; color:#7F71A2; text-decoration:none;}
+
+.bodyBold {font:bold 11px/1.6 verdana,geneva,arial,sans-serif; color:#000000;}
+.bodyBold a:link {font:bold 11px/1.6 verdana,geneva,arial,sans-serif; color:#7F71A2; text-decoration:underline;}
+.bodyBold a:visited {font:bold 11px/1.6 verdana,geneva,arial,sans-serif; color:#999999;}
+.bodyBold a:hover {font:bold 11px/1.6 verdana,geneva,arial,sans-serif; color:#7F71A2; text-decoration:none;}
+
+.bodyBoldWhite {font:bold 11px/1.6 verdana,geneva,arial,sans-serif; color:#FFFFFF;}
+
+.breadcrumbs {font:9px verdana,geneva,arial,sans-seriff; color:#7F71A2;}
+.breadcrumbs a:link {font:9px verdana,geneva,arial,sans-seriff; color:#7F71A2; text-decoration:underline;}
+.breadcrumbs a:visited {font:9px verdana,geneva,arial,sans-seriff; color:#7F71A2;}
+.breadcrumbs a:hover {font:9px verdana,geneva,arial,sans-seriff; color:#7F71A2; text-decoration:none;}
+
+.caption {font:9px verdana,geneva,arial,sans-seriff; color:#7F71A2;}
+
+.continued {font:9px verdana,geneva,arial,sans-seriff; color:#7F71A2;}
+
+.dottedLineBtm {border-bottom:1px dashed #7F71A2;}
+.dottedLineTop {border-top:1px dashed #7F71A2;}
+
+.footer {font:9px/1.5 verdana,geneva,arial,sans-serif; color:#7F71A2;}
+.footer a:link {font:9px/1.5 verdana,geneva,arial,sans-serif; color:#7F71A2; text-decoration:underline;}
+.footer a:visited {font:9px/1.5 verdana,geneva,arial,sans-serif; color:#7F71A2;}
+.footer a:hover {font:9px/1.5 verdana,geneva,arial,sans-serif; color:#7F71A2; text-decoration:none;}
+
+.footerDivider {font:9px/1.5 verdana,geneva,arial,sans-serif; color:#85335C;}
+
+.jobTitle {font:15px verdana,geneva,arial,sans-serif;
+font-weight:bold;
+color:#7F71A2;
+padding:0;
+margin:0;
+}
+
+.mainPhoto {margin:5px 0px 20px 20px;}
+
+.newPages {font:11px/1.2 verdana,geneva,arial,sans-serif; color:#000000;}
+.newPages a:link {font:11px/1.2 verdana,geneva,arial,sans-serif; color:#7F71A2; text-decoration:underline;}
+.newPages a:visited {font:11px/1.2 verdana,geneva,arial,sans-serif; color:#999999;}
+.newPages a:hover {font:11px/1.2 verdana,geneva,arial,sans-serif; color:#7F71A2; text-decoration:none;}
+
+.photoRight {
+ margin:5px 0px 20px 20px;
+	float:right;
+}
+
+.photoLeft {
+ margin:5px 20px 20px 0px;
+	float:left;
+}
+
+.quote {font:bold 14px/2 verdana,geneva,arial,sans-serif; color:#A36685;}
+
+.quoteName {font:bold italic 14px/2 verdana,geneva,arial,sans-serif; color:#A36685;}
+
+.secNav {font:bold 11px/1.2 verdana,geneva,arial,sans-serif; color:#7F71A2; text-decoration:none;}
+ a.secNav:link {font:bold 11px/1.2 verdana,geneva,arial,sans-serif; color:#7F71A2; text-decoration:none;}
+ a.secNav:visited {font:bold 11px/1.2 verdana,geneva,arial,sans-serif; color:#7F71A2;}
+ a.secNav:hover {font:bold 11px/1.2 verdana,geneva,arial,sans-serif; color:#7F71A2; text-decoration:underline;}
+
+.secNavSmall {font:9px verdana,geneva,arial,sans-serif; color:#7F71A2; text-decoration:none;}
+ a.secNavSmall:link {font:9px verdana,geneva,arial,sans-serif; color:#7F71A2; text-decoration:none;}
+ a.secNavSmall:visited {font:9px verdana,geneva,arial,sans-serif; color:#7F71A2;}
+ a.secNavSmall:hover {font:9px verdana,geneva,arial,sans-serif; color:#7F71A2; text-decoration:underline;}
+
+.smallText {font:9px/1.2 verdana,geneva,arial,sans-seriff; color:#7F71A2;}
+ a.smallText:link {font:9px/1.2 verdana,geneva,arial,sans-serif; color:#7F71A2; text-decoration:underline;}
+ a.smallText:visited {font:9px/1.2 verdana,geneva,arial,sans-serif; color:#7F71A2}
+ a.smallText:hover {font:9px/1.2 verdana,geneva,arial,sans-serif; color:#7F71A2; text-decoration:none;}
+
+.subhead {font:bold 11px/1.2 verdana,geneva,arial,sans-serif; color:#A36685;}
+ a.subhead:link {font:bold 11px/1.2 verdana,geneva,arial,sans-serif; color:#A36685; text-decoration:underline;}
+ a.subhead:visited {font:bold 11px/1.2 verdana,geneva,arial,sans-serif; color:#A36685;}
+ a.subhead:hover {font:bold 11px/1.2 verdana,geneva,arial,sans-serif; color:#A36685; text-decoration:none;}
+
+.subheadViolet {font:bold 11px/1.2 verdana,geneva,arial,sans-serif; color:#6E6092;}
+ a.subheadViolet:link {font:bold 11px/1.2 verdana,geneva,arial,sans-serif; color:#6E6092; text-decoration:underline;}
+ a.subheadViolet:visited {font:bold 11px/1.2 verdana,geneva,arial,sans-serif; color:#6E6092;}
+ a.subheadViolet:hover {font:bold 11px/1.2 verdana,geneva,arial,sans-serif; color:#6E6092; text-decoration:none;}
+
+.subtitle {font:bold 20px/1.1 georgia,'new york',times,timesNR,serif; color:#A36685;}
+
+#thumbnails td {border:1px solid #A36685; text-align:center;}
+#thumbnails .thumbLabel {background-color:#A36685; color:#fff;}
+#thumbnails .thumbLabel a {color:#fff;text-decoration:none;}
+#thumbnails .thumbLabel a:hover {text-decoration:underline;}
+#thumbnails .thumbRowSpacer{border:none; height:30px;}
+
+.title {font:bold 20px/1.1 georgia,'new york',times,timesNR,serif; color:#7F71A2;}
+
+
+
+
+
+.subtitleBox {
+border:1px solid #A36685;
+background-color:#CDA9BA;
+}
+
+
+/*********************************
+ PAWSABILITIES
+*********************************/
+#pawsabilities-info p.subhead {
+margin-bottom:5px;
+
+}
+#pawsabilities-info ul {
+margin-top:0;
+}
+#pawsabilities-info ul li {
+
+}
+
+table#pawsabilities-hotels {
+	width:560px;
+	padding:5px;
+	border:1px solid #ccc;
+	background-color:#efefef;
+	color:#000;
+}
+table#pawsabilities-hotels th {
+background-color:#915572;
+color:#fff;
+padding:4px;
+line-height:normal;
+}
+table#pawsabilities-hotels td {
+padding:4px;
+line-height:normal;
+border-bottom:1px solid #ccc;
+}
+table#pawsabilities-hotels td span.hotel-name {
+font-weight:bold;
+font-size:1.2em;
+}
+table#pawsabilities-hotels td.distances {
+border-bottom:2px solid #000;
+}
+table#pawsabilities-hotels td.distances span.label-distances {
+font-weight:bold;
+}
+table#pawsabilities-hotels .col_1 {
+width:200px;
+text-align:left;
+}
+table#pawsabilities-hotels .col_2,
+table#pawsabilities-hotels .col_3,
+table#pawsabilities-hotels .col_4,
+table#pawsabilities-hotels .col_5 {
+width:70px;
+text-align:center;
+}
+.link-glyph {
+	font-weight:bold;
+	color:#f00;
+}
+div#sponsorship-opportunities h2,
+div#vendors h2 {
+width:100%;
+font-family:verdana,arial,helvetica,sans-serif;
+letter-spacing: .8em;
+	padding:5px;
+	background-color:#A36685;
+	color:#fff;
+	font-size:1.2em;
+	margin-top:20px;
+}
+div#sponsorship-opportunities h3,
+div#vendors h3 {
+font-family:verdana,arial,helvetica,sans-serif;
+	background-color:#fff;
+	color:#000;
+	font-size:1.0em;
+	margin-bottom:0;
+	padding-bottom:0;
+}
+div#sponsorship-opportunities ul,
+div#vendors ul {
+margin-top:0;
+}
+div#vendors p {
+margin-top:0;
+padding-top:0;
+	margin-bottom:8px;
+	padding-bottom:8px;
+}
+
+/*** RALLY OBEDIENCE TRIALS ***/
+div#rally-obedience-info h2 {
+width:100%;
+font-family:verdana,arial,helvetica,sans-serif;
+letter-spacing: .5em;
+	padding:5px 5px 5px 10px;
+	background-color:#A36685;
+	color:#fff;
+	font-size:1.2em;
+	margin-top:30px;
+}
+div#rally-obedience-info h3 {
+font-family:verdana,arial,helvetica,sans-serif;
+	background-color:#fff;
+	color:#915572;
+	font-size:1.1em;
+	margin-bottom:0;
+	padding-bottom:0;
+}
+div#rally-obedience-info h3 + p{
+	margin-top:0;
+}
+
+
+#breedFunMatch h4, #obedienceShowGo h4, #agilityRunThrus h4 {
+font:bold 11px verdana,geneva,arial,sans-serif; 
+color:#000000; 
+padding:0; 
+margin:0;
+}
+#breedFunMatch .formDivider, #obedienceShowGo .formDivider, #agilityRunThrus .formDivider {
+border-top:1px dotted #A36685; 
+padding:5px 5px; 
+margin:0 0 0 0; 
+height:1px;
+}
+
+/* Freestyle Dancing With Dogs */
+div#freestyle-dancing-with-dogs-info h2 {
+/*width:100%;*/
+font-family:verdana,arial,helvetica,sans-serif;
+letter-spacing: .5em;
+	padding:5px 5px 5px 10px;
+	background-color:#A36685;
+	color:#fff;
+	font-size:1.2em;
+	margin-top:30px;
+}
+div#freestyle-dancing-with-dogs-info h3 {
+font-family:verdana,arial,helvetica,sans-serif;
+	background-color:#fff;
+	color:#915572;
+	font-size:1.1em;
+	margin-bottom:0;
+	padding-bottom:0;
+}
+div#freestyle-dancing-with-dogs-info h3 + p {
+	margin-top:0;
+}
+
+/* Keystone Dock Dogs */
+div#keystone-dock-dogs h2 {
+font-family:verdana,arial,helvetica,sans-serif;
+letter-spacing: .5em;
+	padding:5px 5px 5px 10px;
+	background-color:#A36685;
+	color:#fff;
+	font-size:1.2em;
+	margin-top:30px;
+}
+
+/* Canine Good Citizen */
+div#canine-good-citizen h2 {
+font-family:verdana,arial,helvetica,sans-serif;
+letter-spacing: .5em;
+	padding:5px 5px 5px 10px;
+	background-color:#A36685;
+	color:#fff;
+	font-size:1.2em;
+	margin-top:30px;
+}
+
+/* Pawsablities sponsors */
+#sponsor-logo-group {
+text-align:center;
+width:270px;
+margin:0 auto;
+}
+.sponsor-logo {
+border:1px solid #ccc;
+padding:10px;
+margin-bottom:10px;
+}
+.sponsor-logo img {
+
+}
+
+/* PawsAbilities Request Form */
+form#getInvolved {
+	width:100%;
+}
+form#getInvolved label {
+	font-weight:bold;
+}
+form#getInvolved span.required {
+	color:Red;
+}
+form#getInvolved table td {
+	padding:5px;
+}
+form#getInvolved table td.lbl {
+	text-align: right;
+}
+form#getInvolved table td.inp {
+	text-align: left;
+}
+form#getInvolved div#volunteers  {
+margin-top:12px;
+padding:15px;
+border:1px solid #ccc;
+background:#f3f3f3;
+}
+form#getInvolved div#volunteers h4  {
+padding:2px 5px;
+margin:-15px -15px 10px -15px;
+color:#fff;
+background:#915572;
+font-size:1.2em;
+}
+form#getInvolved div#volunteers dl dt {
+color:#915572;
+}
+form#getInvolved div#volunteers dl dd dl dt {
+color:#000;
+}
+
+/* PawsAbilities Schedule of Events */
+div#paws-schedule-of-events {
+	border:1px solid #ccc;
+	padding:20px 20px 10px 20px;
+	margin-bottom:0;
+}
+div#paws-schedule-of-events h3 {
+	font:bold 1.2em verdana,arial,sans-serif;
+	padding:5px 5px 5px 20px;
+	margin:-20px -20px 0 -20px;
+	background:#6E6092;
+	color:#fff;
+}
+div#paws-schedule-of-events table {
+margin:10px 0 50px;
+	border-collapse:collapse;
+}
+div#paws-schedule-of-events td {
+	border-top:1px solid #ccc;
+	border-bottom:1px solid #ccc;
+	border-collapse:collapse;
+	padding:3px;
+	vertical-align: text-top;
+}
+div#paws-schedule-of-events td.time {
+	text-align:right;
+	width:60px;
+}
+div#paws-schedule-of-events td.event {
+	padding-left:10px;
+}
+div#paws-schedule-of-events th {
+	text-align:left;
+}
+
+
+.formDivider {
+border-top:1px dotted #A36685; 
+padding:0; 
+margin:0; 
+height:1px;
+}
+
+/*********************************
+SSD PUPPY SHOWER
+**********************************/
+#puppyShowerTD {
+background-image:url(../images/ssd/puppyShower/pawPrints.gif);
+background-repeat:repeat;
+}
+
+#puppyShowerPics {width:560px;}
+#puppyShowerPics td {border:1px solid #A36685; text-align:center; padding:15px; margin:0px;}
+#puppyShowerPics img {border:1px solid #A36685;}
+#puppyShowerPics .thumbRowSpacer{border:none; height:30px;}
+
+
+
+/***************************
+CHOCOLATEFEST 
+*****************************/
+
+div.chocfest { /* located on welcome.php */ 
+text-align: center;
+background: #291364;
+border:1px solid #7F71A2; 
+margin-right:30px;
+padding:5px 0 0 0;
+}
+.chocfestLink {
+	background-color:#291364; 
+	color:white;
+}
+.chocfestLink a { /* located on welcome.php */ 
+	font-weight:bold; 
+	border:0px;
+}
+
+.chocfestLink a:link { /* located on welcome.php */ 
+	font-weight:bold; 
+}
+.chocfestLink a:visited { /* located on welcome.php */ 
+	font-weight:bold; 
+	color:white;
+}
+.chocfestLink a:hover { /* located on welcome.php */ 
+}
+.chocfestLink a:active { /* located on welcome.php */ 
+
+}
+
+
+/*******************************
+ KEYSTONE eTIMES PORTAL 
+ ********************************/
+#eTimesPortalContent h1 {
+font-size:13px;
+color:#6E6092; 
+font-weight: bold;
+}
+#eTimesPortalContent h2 {
+ font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: 12px;
+	color:#915572;
+	padding:0;
+	margin:10px 0 0 0;
+}
+#eTimesPortalContent .photoRight {
+float:right;
+border:1px solid #000;
+margin:5px 0 5px 10px;
+}
+#eTimesPortalContent .photoLeft {
+float:left;
+border:1px solid #000;
+margin:5px 10px 5px 0;
+}
+#eTimesPortalContent a {
+color:#915572;
+}
+#eTimesPortalContent a:link {
+text-decoration: underline;
+}
+#eTimesPortalContent a:visited {
+color:#915572;
+}
+#eTimesPortalContent a:hover {
+text-decoration: none;
+}
+#eTimesPortalContent a:active {
+
+}
+#eTimesPortalContent hr {
+ color: #7F71A2;
+	border-top:2px dotted;
+}
+#eTimesPortalContent #inThisIssue {
+margin-bottom:30px;
+padding:10px;
+border:1px solid #7F71A2;
+}
+#eTimesPortalContent #inThisIssue p {
+padding:0; 
+margin:0 0 5px 0;
+}
+#eTimesPortalContent #inThisIssue p.inThisIssueTitle {
+background-color:#6E6092;
+color:#fff;
+font-weight:bold;
+padding:5px;
+margin:-10px -10px 10px -10px;
+}
+
+/********************************
+ EMPLOYMENT OPPORTUNITIES 
+********************************/
+table#agency-services {
+
+}
+table#agency-services th {
+	padding:5px 10px;
+	color:#fff;
+	background:#A36685;
+	text-align:left;
+}
+table#agency-services td {
+	padding:10px;
+	vertical-align: top;
+	border-top:1px solid #ccc;
+}
+
+
+/*************************
+	HIGHLIGHT BOX
+	(For Mental Retardation landing page)
+*************************/
+.highlight-box {
+	border: 1px solid #96061C;
+	background-image:url(/images/gradient_bgd_1.gif); 
+	background-repeat:repeat-x;
+	background-position: top;
+	padding: 20px;
+	margin:0 0 20px 0;
+}
+.heading-bar {
+	padding:5px 20px;
+	margin:10px 0px 0px 0px;
+	background-color: #6E80CE;
+	border-top: 1px solid #1A2875;
+	border-right: 1px solid #1A2875;
+	border-left: 1px solid #1A2875;
+	color: #1A2875;
+	font-size:.8em;
+	font-weight:bold;
+	text-align:left;
+	font-family: verdana,arial,sans-serif;
+}
+
+/**************************************
+ KCFS RESOURCE LIBRARY 
+ **************************************/
+.resource-library-topic-links  {
+	float:left;
+	margin:0 30px 20px 0;
+	padding:0 20px 0 0;
+	border-right:1px solid #ccc;
+}
+.resource-library-topic-links li {
+list-style: none;
+line-height:normal;
+padding:0 0 10px 0;
+}
+.resource-library-topic-links li a {
+color:#544283;
+background-color:#fff;
+}
+.resource-library-topic-links li a:link {
+color:#544283;
+background-color:#fff;
+}
+.resource-library-topic-links li a:visited {
+color:#915572;
+background-color:#fff;
+}
+.resource-library-topic-links li a:hover {
+color:#544283;
+background-color:#fff;
+text-decoration:none;
+}
+.resource-library-topic-links li a:active {
+color:#544283;
+background-color:#fff;
+}
+#resource-library-table {
+	
+}
+#resource-library-table th {
+	padding:5px;
+	text-align:left;
+	color:#fff;
+	background-color:#544283;
+}
+#resource-library-table td {
+	padding:5px;
+	vertical-align: top;
+	border-top:1px solid #ccc;
+	line-height:normal;
+}
+#resource-library-table td.topic-title {
+	font:bold 14px Verdana,arial,helvetica,sans-serif;
+	color:#915572;
+	background-color:#fff;
+	padding-top:20px;
+}
+#resource-library-table td.link-to-top-td {
+	text-align:right;
+	vertical-align: bottom;
+}
+a.link-to-top {
+font-size:14px;
+	color:#544283;
+	background-color:#eee;
+	text-decoration:none;
+	margin:0 0 2px 0;
+	padding:1px 4px;
+	line-height:normal;
+	border:1px solid #ccc;
+}
+a.link-to-top:link {
+	color:#544283;
+	background-color:#eee;
+	
+}
+a.link-to-top:visited {
+	color:#544283;
+	background-color:#eee;
+}
+a.link-to-top:hover {
+	color:#544283;
+	background-color:#ddd;
+}
+a.link-to-top:active {
+	color:#544283;
+	background-color:#eee;
+}
+
+/* ***************************
+	 KEYSTONE INSTITUTE 
+***************************** */
+/* Used in schedule of events */
+div.ki-event-month {
+	letter-spacing: 2.0em;
+	font-size:.8em;
+	font-weight: bold;
+	color:#666;
+	background-color:#ccc;
+	padding:2px 2px 2px 8px;
+	margin-top:30px;
+}
+div.ki-event-pod {
+margin:10px 0 10px 0;
+padding:10px 0;
+border-bottom:1px solid #ccc;
+}
+div.ki-event-pod h2 {
+font-size:1.0em;
+font-family: Verdana, Arial, Helvetica, sans-serif;
+line-height:normal;
+color:#A36685;
+background-color:#fff;
+margin:0 0 8px 0;
+padding:0;
+}
+div.ki-event-pod img.new-workshop,
+div.ki-event-pod img.new-pro-dev-workshop {
+float:left;
+margin:0 15px 10px 0;
+}
+div.ki-event-pod p.ki-event-date,
+div.ki-event-pod p.ki-event-location,
+div.ki-event-pod p.ki-event-time,
+div.ki-event-pod p.ki-event-prerequisite,
+div.ki-event-pod p.ki-event-general {
+margin:3px 0;
+padding:0;
+line-height:normal;
+}
+div.ki-event-pod p.ki-event-date span.label-date,
+div.ki-event-pod p.ki-event-location span.label-location,
+div.ki-event-pod p.ki-event-time span.label-time,
+div.ki-event-pod p.ki-event-prerequisite span.label-prerequisite,
+div.ki-event-pod p.ki-event-general span.label-general {
+font-weight:bold;
+}
+div.ki-event-pod div.ki-event-description p  {
+margin:8px 0;
+padding:0;
+}
+/* Event Facility */
+div.ki-facility-pod {
+margin:10px 0 10px 0;
+padding:10px 0;
+border-bottom:1px solid #ccc;
+}
+div.ki-facility-pod h2 {
+font-size:1.1em;
+font-family: Verdana, Arial, Helvetica, sans-serif;
+line-height:normal;
+color:#A36685;
+background-color:#fff;
+margin:0 0 8px 0;
+padding:0;
+}
+div.ki-facility-pod p.ki-facility-address,
+div.ki-facility-pod p.ki-facility-travel-time,
+div.ki-facility-pod p.ki-facility-directions,
+div.ki-facility-pod p.ki-facility-general {
+margin:3px 0;
+padding:0;
+line-height:1.4em;
+}
+div.ki-facility-pod p.ki-facility-address span.label-address,
+div.ki-facility-pod p.ki-facility-travel-time span.label-travel-time,
+div.ki-facility-pod p.ki-facility-directions span.label-directions,
+div.ki-facility-pod p.ki-facility-general span.label-general  {
+font-weight:bold;
+}
+
+/*** Sidebar ***/
+div#sidebar-group {
+	float:right;
+	margin:0 0 20px 20px;
+	width:202px;
+}
+div.ki-event-sidebar {
+	border:1px solid #ccc;
+	width:200px;
+	background-color:#efefef;
+}
+div.ki-event-sidebar div.ki-event-pod {
+	padding:10px;
+	margin:0;
+}
+div.ki-event-sidebar div.ki-event-pod ul {
+	padding: 0 10px 0 20px;
+	margin:0;
+	line-height:normal;
+}
+div.ki-event-sidebar div.ki-event-pod ul li {
+	margin:6px 0;
+	font-weight: bold;
+}
+div.ki-event-sidebar h1 {
+margin:0;
+font-size: 1.0em;
+line-height:normal;
+padding:5px;
+background-color:#544283;
+color:#fff;
+text-align:center;
+}
+div.ki-event-sidebar div.ki-event-pod h2 {
+font-size:1.0em;
+font-family: Verdana, Arial, Helvetica, sans-serif;
+line-height:normal;
+color:#fff;
+background-color:#a36685;
+margin:0 0 8px 0;
+padding:3px;
+}
+div.ki-event-sidebar div.ki-event-pod p {
+	line-height:normal;
+}
+
+

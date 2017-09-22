@@ -1,0 +1,347 @@
+/*DHTML Menu */
+
+TABLE.tabs {
+	width: 392px;
+	margin: 0; padding: 0; border: 0;
+}
+TABLE.tabs371 {
+	width: 371px; height: 25px;
+	margin: 0; padding: 0; border: 0;
+	background: transparent url(/images/everest/layout/bg_tabs371.gif) no-repeat bottom left;
+}
+/* 3 tab structure */
+TABLE.tabs371_3 {
+	width: 371px; height: 25px;
+	margin: 0; padding: 0; border: 0;
+	background: transparent url(/images/everest/layout/bg_tabs371.gif) no-repeat bottom left;
+}
+/* 3 tab structure */
+TABLE.tabs206 {
+	width: 206px; height: 25px;
+	margin: 0; padding: 0; border: 0;
+	background: url(/images/everest/layout/bg_tabs206.gif) no-repeat bottom left;
+}
+
+TABLE.tabs TD,  TABLE.tabs371 TD, TABLE.tabs371_3 TD, TABLE.tabs206 TD {
+	margin: 0; border: 0; padding: 0;
+	text-align: center; vertical-align: middle;
+}
+
+TABLE.tabs371 TD.left_curve {
+	width: 7.5px;
+}
+TABLE.tabs371_3 TD.left_curve {
+	width: 7.5px;
+}
+TABLE.tabs206 TD.left_curve {
+	width: 6px;
+}
+
+TD.mid_off A:link, TD.mid_off A:visited, 
+TD.mid_off A:hover, 
+TD.mid_off A:active, TD.right_off A:link, TD.right_off A:visited, 
+TD.right_off A:hover, 
+TD.right_off A:active, TD.left_off A:link, TD.left_off A:visited, 
+TD.left_off A:hover, 
+TD.left_off A:active, 
+TD.tt580_l_off A:link, TD.tt580_l_off A:visited, TD.tt580_l_off A:hover, TD.tt580_l_off A:active,
+TD.tt580_mid_off A:link, TD.tt580_mid_off A:visited, TD.tt580_mid_off A:hover, TD.tt580_mid_off A:active,
+TD.tt580_r_off A:link, TD.tt580_r_off A:visited, TD.tt580_r_off A:hover, TD.tt580_r_off A:active {
+	color: #42413C;
+	text-decoration : none;
+}
+TD.bt580_r_off A:link, TD.bt580_r_off A:visited,
+TD.bt580_l_off A:link, TD.bt580_l_off A:visited,
+TD.bt580_mid_off A:link, TD.bt580_mid_off A:visited {
+	color: #42413C;
+	text-decoration : none;
+	font-size: 9px;
+}
+TD.bt580_r_on A:link, TD.bt580_r_on A:visited,
+TD.bt580_l_on A:link, TD.bt580_l_on A:visited,
+TD.bt580_mid_on A:link, TD.bt580_mid_on A:visited {
+	color: #D34803;
+	text-decoration : none;
+	font-size: 9px;
+	font-weight: bold;
+}
+TD.mid_on A:link, TD.mid_on A:visited, 
+TD.mid_on A:hover, 
+TD.mid_on A:active, TD.right_on A:link, TD.right_on A:visited, 
+TD.right_on A:hover, 
+TD.right_on A:active, TD.left_on A:link, TD.left_on A:visited, 
+TD.left_on A:hover, 
+TD.left_on A:active,
+TD.tt580_mid_on A:link, TD.tt580_mid_on A:visited, TD.tt580_mid_on A:hover, TD.tt580_mid_on A:active,
+TD.tt580_r_on A:link, TD.tt580_r_on A:visited, TD.tt580_r_on A:hover, TD.tt580_r_on A:active,
+TD.tt580_l_on A:link, TD.tt580_l_on A:visited, TD.tt580_l_on A:hover, TD.tt580_l_on A:active {
+	color: #42413c;
+	font-weight : bold;
+	text-decoration : none;
+}
+
+
+TABLE.tabs TD.left_on A SPAN, TABLE.tabs TD.mid_on A SPAN, TABLE.tabs TD.right_on A SPAN, 
+TABLE.tabs371 TD.left_on A SPAN, TABLE.tabs371 TD.mid_on A SPAN, TABLE.tabs371 TD.right_on A SPAN,
+TABLE.tabs206 TD.left_on A SPAN, TABLE.tabs206 TD.mid_on A SPAN, TABLE.tabs206 TD.right_on A SPAN,
+TABLE.topTabs580 TD.tt580_l_on A SPAN, TABLE.topTabs580 TD.tt580_mid_on A SPAN, TABLE.topTabs580 TD.tt580_r_on A SPAN {
+	color: #D34803;
+	font-weight : bold;
+}
+
+ 
+TABLE.tabs371_3 TD.left_on A SPAN, TABLE.tabs371_3 TD.mid_on A SPAN, TABLE.tabs371_3 TD.right_on A SPAN {
+	font-size: 10px;
+	color: #D34803;
+	font-weight : bold;
+}
+
+TABLE.tabs A.titleGray:link, TABLE.tabs A.titleGray:visited, TABLE.tabs A.titleGray:hover, TABLE.tabs A.titleGray:active,
+TABLE.tabs371 A.titleGray:link, TABLE.tabs371 A.titleGray:visited, TABLE.tabs371 A.titleGray:hover, TABLE.tabs371 A.titleGray:active,
+TABLE.tabs371_3 A.titleGray:link, TABLE.tabs371_3 A.titleGray:visited, TABLE.tabs371_3 A.titleGray:hover, TABLE.tabs371_3 A.titleGray:active,
+TABLE.tabs206 A.titleGray:link, TABLE.tabs206 A.titleGray:visited, TABLE.tabs206 A.titleGray:hover, TABLE.tabs206 A.titleGray:active
+{
+	color: #42413C;
+}
+TABLE.tabs A.titleOrange:link, TABLE.tabs A.titleOrange:visited, TABLE.tabs A.titleOrange:hover, TABLE.tabs A.titleOrange:active,
+TABLE.tabs371 A.titleOrange:link, TABLE.tabs371 A.titleOrange:visited, TABLE.tabs371 A.titleOrange:hover, TABLE.tabs371 A.titleOrange:active,
+TABLE.tabs371_3 A.titleOrange:link, TABLE.tabs371_3 A.titleOrange:visited, TABLE.tabs371_3 A.titleOrange:hover, TABLE.tabs371_3 A.titleOrange:active,
+TABLE.tabs206 A.titleOrange:link, TABLE.tabs206 A.titleOrange:visited, TABLE.tabs206 A.titleOrange:hover, TABLE.tabs206 A.titleOrange:active
+{
+	color: #D34803;
+}
+TABLE.tabs TD.left_off,  TABLE.tabs TD.left_on {
+	background:url(/images/everest/layout/tab_left_on.gif) no-repeat top left;
+	width: 124px;
+	position: relative; z-index: 100;
+}
+TABLE.tabs TD.left_off {
+	background:url(/images/everest/layout/tab_left_off.gif) no-repeat top left;
+}
+TABLE.tabs371 TD.left_off,  TABLE.tabs371 TD.left_on {
+	background:url(/images/everest/layout/tab371_left_on.gif) no-repeat top left;
+	width: 89px;
+	position: relative; z-index: 100;
+}
+TABLE.tabs371 TD.left_off {
+	background:url(/images/everest/layout/tab371_left_off.gif) no-repeat top left;
+}
+
+/* 3 tab structure */
+TABLE.tabs371_3 TD.left_off,  TABLE.tabs371_3 TD.left_on {
+	background:url(/images/everest/layout/tab371_3_left_on.gif) no-repeat top left;
+	width: 120px;
+	position: relative; z-index: 100;
+}
+TABLE.tabs371_3 TD.left_off {
+	background:url(/images/everest/layout/tab371_3_left_off.gif) no-repeat top left;
+}
+/* 3 tab structure */
+
+TABLE.tabs206 TD.left_off,  TABLE.tabs206 TD.left_on {
+	background:url(/images/everest/layout/tab206_left_on.gif) no-repeat top left;
+	width: 64px;
+	position: relative; z-index: 100;
+}
+TABLE.tabs206 TD.left_off {
+	background:url(/images/everest/layout/tab206_left_off.gif) no-repeat top left;
+}
+TABLE.tabs TD.mid_off,  TABLE.tabs TD.mid_on, .mid_on {
+	background:url(/images/everest/layout/tab_mid_on.gif) no-repeat top left;
+	width: 123px;
+	position: relative; z-index: 100;
+}
+TABLE.tabs TD.mid_off {
+	background:url(/images/everest/layout/tab_mid_off.gif) no-repeat top left;
+}
+
+TABLE.tabs371 TD.mid_off,  TABLE.tabs371 TD.mid_on, .mid_on {
+	background:url(/images/everest/layout/tab371_mid_on.gif) no-repeat top left;
+	width: 89px;
+	position: relative; z-index: 100;
+}
+TABLE.tabs371 TD.mid_off {
+	background:url(/images/everest/layout/tab371_mid_off.gif) no-repeat top left;
+}
+
+/* 3 tab structure */
+TABLE.tabs371_3 TD.mid_off,  TABLE.tabs371_3 TD.mid_on {
+	background:url(/images/everest/layout/tab371_3_mid_on.gif) no-repeat top left;
+	width: 120px;
+	position: relative; z-index: 100;
+}
+TABLE.tabs371_3 TD.mid_off {
+	background:url(/images/everest/layout/tab371_3_mid_off.gif) no-repeat top left;
+}
+/* 3 tab structure */
+
+TABLE.tabs206 TD.mid_off,  TABLE.tabs206 TD.mid_on, .mid_on {
+	background:url(/images/everest/layout/tab206_mid_on.gif) no-repeat top left;
+	width: 64px;
+	position: relative; z-index: 100;
+}
+TABLE.tabs206 TD.mid_off {
+	background:url(/images/everest/layout/tab206_mid_off.gif) no-repeat top left;
+}
+
+TABLE.tabs TD.right_off,  TABLE.tabs TD.right_on {
+	background:url(/images/everest/layout/tab_right_on.gif) no-repeat top left;
+	width: 124px;
+	position: relative; z-index: 100;
+}
+TABLE.tabs TD.right_off {
+	background:url(/images/everest/layout/tab_right_off.gif) no-repeat top left;
+}
+
+TABLE.tabs371 TD.right_off,  TABLE.tabs371 TD.right_on {
+	background:url(/images/everest/layout/tab371_right_on.gif) no-repeat top left;
+	width: 89px;
+	position: relative; z-index: 100;
+}
+TABLE.tabs371 TD.right_off {
+	background:url(/images/everest/layout/tab371_right_off.gif) no-repeat top left;
+}
+
+/* 3 tab structure */
+TABLE.tabs371_3 TD.right_off,  TABLE.tabs371_3 TD.right_on {
+	background:url(/images/everest/layout/tab371_3_right_on.gif) no-repeat top left;
+	width: 120px;
+	position: relative; z-index: 100;
+}
+TABLE.tabs371_3 TD.right_off {
+	background:url(/images/everest/layout/tab371_3_right_off.gif) no-repeat top left;
+}
+/* 3 tab structure */
+
+TABLE.tabs206 TD.right_off,  TABLE.tabs206 TD.right_on {
+	background:url(/images/everest/layout/tab206_right_on.gif) no-repeat top left;
+	width: 66px;
+	position: relative; z-index: 100;
+}
+TABLE.tabs206 TD.right_off {
+	background:url(/images/everest/layout/tab206_right_off.gif) no-repeat top left;
+}
+
+.chapter DIV {
+	display : none;
+	margin-left : 6px;
+	padding-top : 5px;
+	height : 81px;
+	overflow : hidden;
+}
+.tabContainer {
+	margin-bottom : 9px;
+}
+.tabs_bottom_curve P {
+	float: right;
+	margin-right: 10px;
+}
+DIV.tabs_bottom_curve {
+	width: 392px; height: 23px; 
+	background: transparent url(/images/everest/layout/tabs_bottom_curve.gif) no-repeat; text-align:right;
+}
+DIV.tabs_bottom_curve IMG {
+	display: inline;
+	vertical-align: text-bottom;
+}
+
+
+.chapter {
+	background-color : #fff; 
+	width : 392px; 
+	height :90px; 
+	background: transparent url(/images/everest/layout/tabs_content_bg_tile.gif) repeat-y;
+}
+
+
+/* page links */
+
+
+.pageMenu {
+	margin-right : 6px;
+}
+
+
+.pageMenu A {
+	font-size : 9px;
+}
+
+
+.pageMenu A.r0 {
+	text-decoration : underline;
+	color : #d34803;
+
+}
+.pageMenu A.r1 {
+	text-decoration : none;
+	color : #3f3f3f;
+	font-weight : bold;	
+}
+
+TABLE.slider TD {
+	text-align: center;
+	font-size: 9px; 
+	line-height: 11px;
+	color: #000;
+	padding-right: 6px;
+	vertical-align:top;
+	width : 97px;
+	overflow : hidden;
+	padding-top:9px;
+	
+}
+
+TABLE.slider TD A, TABLE.slider TD A:link, TABLE.slider TD A:visited {
+	color: #000;
+	text-decoration: none;	
+}
+
+TABLE.slider TD A:hover, TABLE.slider TD A:active {
+	text-decoration: underline;
+}
+
+
+
+TABLE.slider TD IMG {
+	display : inline;
+	text-align :center;
+}
+
+.tabs_bottom_curve DIV {
+	margin-right : 4px;
+	text-align : right;
+	padding-top : 3px;
+}
+
+.tabs_bottom_curve DIV IMG {
+	display: inline;
+	padding: 0; 
+	margin-right : 3px; 
+	border: 0;
+	vertical-align : bottom;
+}
+
+/* Styles for Tab Header - the 'pill' that sits on top of tabs */
+TABLE.tabHeader {
+	margin: 0; padding: 0; border: 0;
+}
+TABLE.tabHeader TD.title {
+	background: url(/images/everest/layout/tab_header_bg.gif) repeat-x; 
+	vertical-align:middle; text-align:center; 
+	padding: 0 3px;
+}
+TABLE#tabhdrMorebooks {
+	float: right; 
+}
+TABLE.tabHdrContainer_206 {
+	width: 206px;
+}
+TABLE#moreBooksBy OL {
+	margin: 5px 0 0 25px;
+}
+TABLE#moreBooksBy LI {
+	font-size: 9px; line-height: 11px;
+}
+TABLE#moreBooksBy OL LI IMG {
+	display: inline;
+}

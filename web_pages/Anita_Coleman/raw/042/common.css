@@ -1,0 +1,249 @@
+/**
+ * common.css
+ * Based on the default common.css supplied with OJS; heavily modified by Adam Mikeal <adam@tamu.edu> January 2006.
+ */
+
+/**
+ * Common HTML elements
+ */
+
+body { margin: 0; padding: 0; background-color: #fff; color: #05192C; font-family: Verdana,Arial,Helvetica,sans-serif; font-size: 11px; }
+
+div { }
+
+h2 { font-weight: normal; font-size: 22px; color: #041A55; padding-bottom: 5px; border-bottom: 1px solid #BE1621; }
+h3 { font-weight: bolder; font-size: 18px; color: #05192C; }
+h4 { font-weight: bolder; font-size: 1.4em; color: #BE1621; }
+h5 { font-weight: normal; font-size: 1.2em; color: #BE1621; }
+
+table { border: 0; border-spacing: 0; font-size: 1.0em; }
+
+form { margin: 0; padding: 0 10px; }
+
+a { text-decoration: underline; }
+a:link { color: #537BA2; }
+a.plain { text-decoration: none; }
+
+ul { margin: 0.25em 0 0.75em 0; padding: 0 0 0 2.5em; }
+
+tt { font-size: 1.25em; }
+
+label { }
+label.error { color: #900; }
+
+input.textField, 
+select.selectMenu, 
+textarea.textArea, 
+input.uploadField { background-color: #F0F0E8; color: #000; border-top: 2px solid #666; border-left: 2px solid #666; border-bottom: 2px solid #E8E8E1; border-right: 2px solid #E8E8E1; }
+
+input.button { padding-left: 0.5em; padding-right: 0.5em; background-color: #E8E8E1; font-size: 1em; }
+
+input.defaultButton { background-color: #375; color: #FBFBF3; font-weight: bold; }
+
+
+/**
+ * Main layout elements
+ */
+
+#container { width: 100%; }
+
+#header { padding: 0; margin: 0; height: 78px; background-color: #d8e6f4; background-image: url(http://www.tdl.org/images/header.jpg); background-repeat: repeat-x; }
+#header img { border: none; }
+
+#logo { padding: 0; margin: 23px 0 0 19px; }
+
+#metalinks { font-size: 10px; font-weight: bold; position: absolute; top: 50px; right: 10px; padding-right: 5px;}
+#metalinks a { color: #0C3F71; text-transform: uppercase; text-decoration: none; }
+
+#dropdown1 {
+	position:absolute;
+	width: 180px;
+	height: auto;
+	padding-right: 10px;
+	z-index: 5;
+	left: 9px;
+	top: 130px;
+	background-image: url(http://www.tdl.org/images/sub_nav_bkgd.png);
+	visibility: hidden;
+}
+#dropdown2 {
+	position:absolute;
+	width: 130px;
+	height: auto;
+	padding-right: 10px;
+	z-index: 5;
+	left: 100px;
+	top: 130px;
+	background-image: url(http://www.tdl.org/images/sub_nav_bkgd.png);
+	visibility: hidden;
+}
+
+
+#breadcrumb { clear: both; padding: 0; margin: 0; background-color: #2b5c8c; color: #fff; }
+#breadcrumb p { padding: 5px 25px; margin: 0; font-family: Verdana,Sans-serif; font-size: 10px; }
+#breadcrumb a { color: #fff; text-decoration: none; }
+#breadcrumb a.current { font-weight: bold; }
+
+#mainmenu { float: left; margin: 0; width: 100%; background-color: #97A9C0; line-height: normal; border: 1px solid white; border-width: 1px 0px; }
+#mainmenu ul { margin: 0; padding: 0; list-style: none; }
+#mainmenu ul li	{ margin: 0; padding: 0; display: inline; color: white; text-transform: uppercase; }
+#mainmenu ul li.current { background-color: #97A9C0; }
+#mainmenu ul li a { float: left; color: white; background-color: #0C3F71; border-right: 1px solid white; margin: 0px; padding: 8px 26px; text-decoration: none; }
+#mainmenu ul li a:hover { background-color: #2B5C8C; }
+#mainmenu li ul { display: none; list-style: none; top: 25px; left: 0 }
+/*
+#mainmenu li:hover ul { display: block; }
+#mainmenu li ul li { display: block; }
+/**/
+
+#body { clear: both; margin: 25px; }
+
+
+#footer { clear: both; padding: 1.5em 2em 0.5em 25px; background-color: #d8e6f4; }
+#footer #content { margin: 0; font-family: Arial,Sans-serif; font-size: 10px; color: #666; }
+#footer div.debugStats { font-size: 0.6em; }
+
+
+
+
+#main { position: relative; margin-right: 245px; min-width: 400px; padding: 5px 0 30px; }
+
+#maincontent { margin: 0; padding: 0; padding-top: 0.5em; }
+
+
+/**
+ * Navigation bar
+ */
+
+#navbar { margin-right: 0; padding: 2.2em 0 0.5em; border-bottom: 1px solid #97A9C0; }
+#navbar ul { list-style: none; border: 0px dashed red; padding: 0; margin: 0; }
+#navbar ul li { display: inline; padding: 0 10px 0 0; margin: 0 }
+#navbar li a {	padding: 5px 10px; background: #97A9C0; color: #1A2F57; text-decoration: none; text-transform: uppercase; font-size: 0.9em; font-weight: bolder; }
+
+
+/**
+ * Sidebar
+ */
+#sidebar { float: right; width: 225px; min-width: 150px; margin: 0 0 0 45px; padding: 1em 0em 1em 0em; border: 0px dashed red; }
+#sidebar div.block { font-size: 1em; padding-bottom: 1.5em; }
+#sidebar div.block span.blockTitle { display: block; margin: 0.5em 0; font-weight: bold; letter-spacing: 0.1em; text-transform: uppercase; border-bottom: 1px solid #BE1621; }
+#sidebar div.block span.blockSubtitle {	display: block; padding: 0; }
+#sidebar input.textField, 
+#sidebar select.selectMenu, 
+#sidebar input.button { font-size: 1em; }
+
+
+/**
+ * Additional text styles
+ */
+
+span.disabled,
+label.disabled { color: #666; }
+
+a.action, a.file { text-transform: uppercase; }
+a.icon { text-decoration: none; }
+a.icon:hover { background: none; }
+
+span.instruct { }
+span.heading { text-transform: uppercase; }
+span.highlight { border-bottom: 1px dotted #000; }
+
+.nowrap { white-space: nowrap; }
+
+.toc-entry h4 { padding: 0; margin: 20px 0 0 0; }
+.toc-entry h4 a { font-weight: bolder; color: #1A2F57; text-decoration: none; }
+.toc-entry h4 a:hover { text-decoration: underline; }
+.toc-entry .authors { padding: 0; margin: 0; font-size: 120%; color: #666; }
+.toc-entry .abstract { padding: 10px 50px 0 20px; margin: 0; }
+.toc-entry .galleys { padding: 10px 0; margin: 0; font-weight: bold; }
+
+#content #front-matter #author-info { text-align: center; }
+#content #front-matter #author-info strong { font-size: 1.2em; font-weight: bolder; }
+#content,
+#contents,
+#back-matter { font-family: Georgia,Times,Serif; font-size: 120%; line-height: 140%; }
+#content pre, { font-size: normal; line-height: normal; }
+#content tt { font-size: 100%; }
+#content .figure { text-align: center; color: #666; margin: 10px auto; }
+#content .figure pre { text-align: left; }
+#content caption { caption-size: top; width: auto; }
+
+#content table,
+#contents table { border: 1px solid #000; border-collapse: collapse; border-spacing: 3; }
+#content th,
+#contents th, { text-align: center; font-weight: bold; border: 1px solid #000; padding: 3px 10px; background: #ddd; }
+#content tr, #content td, 
+#contents tr, #contents td, { border: 1px solid #000; padding: 3px 5px; }
+
+
+
+/**
+ * Table styles
+ */
+
+table.info { }
+table.info td { padding: 0; padding-bottom: 0.5em; padding-right: 0.5em; }
+table.listing { }
+table.listing td { padding: 0.25em 0.5em 0.25em 0.5em; }
+table.listing tr.heading td, 
+table.listing td.heading, 
+table.info td.heading { font-size: 0.85em; text-transform: uppercase; font-weight: normal; line-height: 120%; padding: 0.75em 0.5em 1em 0.5em; }
+table.info td.heading { padding-left: 0; }
+table.listing td.nodata, 
+table.info td.nodata { text-align: center; font-style: italic; }
+table.listing td.headseparator { border-top: 1px dotted #000; font-size: 0.1em; line-height: 1%; }
+table.listing td.endseparator { border-top: 1px dotted #000; font-size: 0.25em; line-height: 10%; }
+table.listing td.separator, 
+table.info td.separator { border-top: 1px dotted #DDDDD0; font-size: 0.1em; line-height: 1%; }
+table.data { }
+table.data tr { }
+table.data td { padding-bottom: 0.25em; }
+table.data td.label { padding-right: 1em; }
+table.data td.value { }
+table.data td.separator { padding: 0.5em; font-size: 0.1em; line-height: 1%; }
+table.data td.heading { padding-left: 0; padding-right: 0; }
+
+
+/**
+ * Form-specific elements
+ */
+
+span.formRequired { color: #333; font-size: 0.9em; }
+span.formError { color: #900; font-weight: bold; font-size: 1em; }
+ul.formErrorList { color: #900; }
+
+
+/**
+ * Other organizational elements
+ */
+ 
+ul.menu {
+	margin: 0;
+	padding: 0;
+	border-top: 1px dotted black;
+}
+
+ul.menu li {
+	margin: 0;
+	padding: 0;
+	padding-right: 1.5em;
+	display: inline;
+}
+
+ul.menu li.current {
+	font-weight: bold;
+}
+
+ul.menu a {
+	font-size: 0.95em;
+	text-transform: uppercase;
+	text-decoration: none;
+}
+
+ul.steplist { margin: 0; padding: 0; list-style-type: decimal; }
+ul.steplist li { margin: 0; padding: 0; font-size: 0.85em; padding-right: 0.5em; display: inline; text-transform: uppercase; }
+ul.steplist li.current { font-weight: bold; }
+ul.steplist a { text-decoration: none; }
+ul.plain { list-style-type: none; padding-left: 1.5em; }
+
+div.separator { width: 100%; margin-top: 1em; margin-bottom: 1em; padding: 0; border-bottom: 1px dotted #000; font-size: 0.5em; line-height: 25%; }

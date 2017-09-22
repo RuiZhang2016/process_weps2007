@@ -1,0 +1,914 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<title>The New York Times: Search</title>
+<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+<link rel="stylesheet" type="text/css" href="http://graphics8.nytimes.com/css/search/search.css">
+<style type="text/css">@import url(http://graphics8.nytimes.com/css/search/pageType/searchResult_h.css);</style>
+<script src="http://graphics8.nytimes.com/js/Tacoda_AMS_DDC_Header.js"></script><script src="http://graphics8.nytimes.com/js/fileit.js" type="text/javascript"></script><script type="text/javascript">
+
+function resortSubmit(sort) {
+
+		resortURL = "http://query.nytimes.com/search/query?query=&d=&o=&v=&c=&n=10&dp=0&daterange=full&sort=" + sort;
+	
+	document.location.href = resortURL;
+}
+function searchWithinSubmit() {
+	day = new Date();
+	id = day.getTime();
+
+		searchWithinURL = "http://query.nytimes.com/search/query?query=&d=&o=&v=&c=&n=10&dp=0&daterange=full&sort=newest&srchst=sw&tr=2017760";
+	
+	eval("page" + id + " = window.open(searchWithinURL, '" + id + "', 'toolbar=0,scrollbars=0,location=0,statusbar=0,menubar=0,resizable=1,width=320,height=190,left = 362,top = 292.5');");
+	return false;
+
+}
+
+function refinement(label,number,url) { 	
+	this.label = label;
+	this.number = number;
+	this.url = url;
+}
+var sectionArray =  new Array();
+
+sectionArray[sectionArray.length] = new refinement("New York and Region", "509513", "http://query.nytimes.com/search/query?query=&n=10&dp=0&sort=newest&daterange=full&d=nytdsection%2b&o=e%2b&v=New York and Region%2b&c=a%2b");
+		
+sectionArray[sectionArray.length] = new refinement("Opinion", "324754", "http://query.nytimes.com/search/query?query=&n=10&dp=0&sort=newest&daterange=full&d=nytdsection%2b&o=e%2b&v=Opinion%2b&c=a%2b");
+		
+sectionArray[sectionArray.length] = new refinement("Arts", "238224", "http://query.nytimes.com/search/query?query=&n=10&dp=0&sort=newest&daterange=full&d=nytdsection%2b&o=e%2b&v=Arts%2b&c=a%2b");
+		
+sectionArray[sectionArray.length] = new refinement("Business", "229187", "http://query.nytimes.com/search/query?query=&n=10&dp=0&sort=newest&daterange=full&d=nytdsection%2b&o=e%2b&v=Business%2b&c=a%2b");
+		
+sectionArray[sectionArray.length] = new refinement("Sports", "182591", "http://query.nytimes.com/search/query?query=&n=10&dp=0&sort=newest&daterange=full&d=nytdsection%2b&o=e%2b&v=Sports%2b&c=a%2b");
+		
+sectionArray[sectionArray.length] = new refinement("World", "148085", "http://query.nytimes.com/search/query?query=&n=10&dp=0&sort=newest&daterange=full&d=nytdsection%2b&o=e%2b&v=World%2b&c=a%2b");
+		
+sectionArray[sectionArray.length] = new refinement("U.S.", "128825", "http://query.nytimes.com/search/query?query=&n=10&dp=0&sort=newest&daterange=full&d=nytdsection%2b&o=e%2b&v=U.S.%2b&c=a%2b");
+		
+sectionArray[sectionArray.length] = new refinement("Style", "102424", "http://query.nytimes.com/search/query?query=&n=10&dp=0&sort=newest&daterange=full&d=nytdsection%2b&o=e%2b&v=Style%2b&c=a%2b");
+		
+sectionArray[sectionArray.length] = new refinement("Books", "99826", "http://query.nytimes.com/search/query?query=&n=10&dp=0&sort=newest&daterange=full&d=nytdsection%2b&o=e%2b&v=Books%2b&c=a%2b");
+		
+sectionArray[sectionArray.length] = new refinement("Health", "94102", "http://query.nytimes.com/search/query?query=&n=10&dp=0&sort=newest&daterange=full&d=nytdsection%2b&o=e%2b&v=Health%2b&c=a%2b");
+		
+sectionArray[sectionArray.length] = new refinement("Corrections", "90325", "http://query.nytimes.com/search/query?query=&n=10&dp=0&sort=newest&daterange=full&d=nytdsection%2b&o=e%2b&v=Corrections%2b&c=a%2b");
+		
+sectionArray[sectionArray.length] = new refinement("Washington", "85719", "http://query.nytimes.com/search/query?query=&n=10&dp=0&sort=newest&daterange=full&d=nytdsection%2b&o=e%2b&v=Washington%2b&c=a%2b");
+		
+sectionArray[sectionArray.length] = new refinement("Movies", "68342", "http://query.nytimes.com/search/query?query=&n=10&dp=0&sort=newest&daterange=full&d=nytdsection%2b&o=e%2b&v=Movies%2b&c=a%2b");
+		
+sectionArray[sectionArray.length] = new refinement("Magazine", "66795", "http://query.nytimes.com/search/query?query=&n=10&dp=0&sort=newest&daterange=full&d=nytdsection%2b&o=e%2b&v=Magazine%2b&c=a%2b");
+		
+sectionArray[sectionArray.length] = new refinement("Front Page", "66119", "http://query.nytimes.com/search/query?query=&n=10&dp=0&sort=newest&daterange=full&d=nytdsection%2b&o=e%2b&v=Front Page%2b&c=a%2b");
+		
+sectionArray[sectionArray.length] = new refinement("Technology", "64697", "http://query.nytimes.com/search/query?query=&n=10&dp=0&sort=newest&daterange=full&d=nytdsection%2b&o=e%2b&v=Technology%2b&c=a%2b");
+		
+sectionArray[sectionArray.length] = new refinement("Week in Review", "51131", "http://query.nytimes.com/search/query?query=&n=10&dp=0&sort=newest&daterange=full&d=nytdsection%2b&o=e%2b&v=Week in Review%2b&c=a%2b");
+		
+sectionArray[sectionArray.length] = new refinement("Theater", "36317", "http://query.nytimes.com/search/query?query=&n=10&dp=0&sort=newest&daterange=full&d=nytdsection%2b&o=e%2b&v=Theater%2b&c=a%2b");
+		
+sectionArray[sectionArray.length] = new refinement("Dining and Wine", "33948", "http://query.nytimes.com/search/query?query=&n=10&dp=0&sort=newest&daterange=full&d=nytdsection%2b&o=e%2b&v=Dining and Wine%2b&c=a%2b");
+		
+sectionArray[sectionArray.length] = new refinement("Science", "29323", "http://query.nytimes.com/search/query?query=&n=10&dp=0&sort=newest&daterange=full&d=nytdsection%2b&o=e%2b&v=Science%2b&c=a%2b");
+		
+sectionArray[sectionArray.length] = new refinement("Obituaries", "28020", "http://query.nytimes.com/search/query?query=&n=10&dp=0&sort=newest&daterange=full&d=nytdsection%2b&o=e%2b&v=Obituaries%2b&c=a%2b");
+		
+sectionArray[sectionArray.length] = new refinement("Education", "27422", "http://query.nytimes.com/search/query?query=&n=10&dp=0&sort=newest&daterange=full&d=nytdsection%2b&o=e%2b&v=Education%2b&c=a%2b");
+		
+sectionArray[sectionArray.length] = new refinement("Travel", "26713", "http://query.nytimes.com/search/query?query=&n=10&dp=0&sort=newest&daterange=full&d=nytdsection%2b&o=e%2b&v=Travel%2b&c=a%2b");
+		
+sectionArray[sectionArray.length] = new refinement("Real Estate", "25887", "http://query.nytimes.com/search/query?query=&n=10&dp=0&sort=newest&daterange=full&d=nytdsection%2b&o=e%2b&v=Real Estate%2b&c=a%2b");
+		
+sectionArray[sectionArray.length] = new refinement("Automobiles", "8547", "http://query.nytimes.com/search/query?query=&n=10&dp=0&sort=newest&daterange=full&d=nytdsection%2b&o=e%2b&v=Automobiles%2b&c=a%2b");
+		
+sectionArray[sectionArray.length] = new refinement("Editors' Notes", "3794", "http://query.nytimes.com/search/query?query=&n=10&dp=0&sort=newest&daterange=full&d=nytdsection%2b&o=e%2b&v=Editors' Notes%2b&c=a%2b");
+		
+sectionArray[sectionArray.length] = new refinement("Job Market", "1779", "http://query.nytimes.com/search/query?query=&n=10&dp=0&sort=newest&daterange=full&d=nytdsection%2b&o=e%2b&v=Job Market%2b&c=a%2b");
+		
+sectionArray[sectionArray.length] = new refinement("Home and Garden", "1", "http://query.nytimes.com/search/query?query=&n=10&dp=0&sort=newest&daterange=full&d=nytdsection%2b&o=e%2b&v=Home and Garden%2b&c=a%2b");
+		
+sectionArray[sectionArray.length] = new refinement("The Public Editor", "1", "http://query.nytimes.com/search/query?query=&n=10&dp=0&sort=newest&daterange=full&d=nytdsection%2b&o=e%2b&v=The Public Editor%2b&c=a%2b");
+		
+function sortDescending(a, b) {
+	if (a.label > b.label) {
+		return -1;
+	}
+	if (a.label < b.label) {
+		return 1;
+	}
+	return 0;
+}
+function sortAscending(a, b) {
+	if (a.label < b.label) {
+		return -1;
+	}
+	if (a.label > b.label) {
+		return 1;
+	}
+	return 0;
+}
+var sectionArraySorted = new Array();
+for (count = 0; count < sectionArray.length; count++){
+	sectionArraySorted[count] = sectionArray[count];       
+}
+sectionArraySorted.sort(sortAscending);
+
+
+
+function pop_me_up2(pURL,name,features){
+	var new_window = window.open(pURL,name,features);
+	new_window.focus();
+}
+
+function moreLess(howMany,divId,arrayName,refinementName,pipe,showLess) {
+	end = (howMany < eval(arrayName).length) ? (howMany) : eval(arrayName).length;
+	moreLink = (howMany < eval(arrayName).length) ? true : false;
+	if(showLess) {
+		lessLink = (howMany > 5) ? true : false;
+	}
+	else lessLink = false;
+	if (divId == 'topicsBottomDiv') {
+		add = "<li class=\"header\">by <strong>Topic</strong></li>";
+	}
+	else if (divId == 'sectionsBottomDiv') {
+		add = "<li class=\"header\">by <strong>Section</strong></li>";
+	}
+	else add = "";
+	for (var i=0; i<end; i++) {
+		add += "<li><a href=\"" + eval(arrayName)[i].url + "\" title=\"" +eval(arrayName)[i].label+ "\">" + eval(arrayName)[i].label + "</a> <span class=\"refineNumber\">(" + eval(arrayName)[i].number +")</span></li>";
+	}
+
+
+	if (moreLink) {
+		add += "<li><img src="query%3Fsrchst=nyt&amp;&amp;srcht=a&amp;srchr=n%252F\&quot;http:%252Fgraphics8.nytimes.com%252Fimages%252Fnew_search%252Ficon_more.gif\&quot;.1.html" border=\"0\" class=\"icon\">&nbsp;<a href="http://query.nytimes.com/search/%5C%22#\"" onclick=\"moreLess(" + (howMany+5) + ",'" +divId+ "','" +arrayName+ "','" +refinementName+ "'," +pipe+ "," +showLess+ "); return false;\" title=\"More " +refinementName+ "\">More " +refinementName+ "</a></li>";
+	}
+	if (lessLink) {
+		if (showLess) {
+			add += "<li><img src="query%3Fsrchst=nyt&amp;&amp;srcht=a&amp;srchr=n%252F\&quot;http:%252Fgraphics8.nytimes.com%252Fimages%252Fnew_search%252Ficon_close.gif\&quot;.1.html" border=\"0\" class=\"icon\">&nbsp;<a href="http://query.nytimes.com/search/%5C%22#\"" onclick=\"moreLess(" + (howMany-5) + ",'" +divId+ "','" +arrayName+ "','" +refinementName+ "'," +pipe+ "," +showLess+ "); return false;\" title=\"Less " +refinementName+ "\">Less " +refinementName+ "</a> </li>";
+		}
+	}
+
+	document.getElementById(divId).innerHTML = add;
+}
+function writeSections(howMany,arrayName,refinementName) {
+	end = (howMany < eval(arrayName).length) ? (howMany) : eval(arrayName).length;
+	add = "";
+	for (var i=0; i<end; i++) {
+		if (i % 7 == 0) {
+			add += "<div class=\"srchDefineContainer\">";
+			add += "<ul class=\"srchSearchDefine\">";
+		}
+		add += "<li><a href="http://query.nytimes.com/search/%5C%22%22" + eval(arrayName)[i].url + "\" title=\"" +eval(arrayName)[i].label+ "\">" + eval(arrayName)[i].label + "</a> (" + eval(arrayName)[i].number +")</li>";
+		if ((i % 7 == 6) || (i == (end-1))) {
+			add += "</ul>";
+			add += "</div>";
+		}
+	}
+	document.write(add);
+}
+function writeSectionSpotlights(howMany,arrayName) {
+	end = (howMany < eval(arrayName).length) ? (howMany) : eval(arrayName).length;
+	add = "";
+	for (var i=0; i<end; i++) {
+
+		add += "<a href="http://query.nytimes.com/search/%5C%22http://query.nytimes.com/search/query?query=&amp;d=nytdsection%2b&amp;o=e%2b&amp;v=%22" + eval(arrayName)[i].label + "%2b&c=a%2b&n=10\" title=\"" +eval(arrayName)[i].label+ "\">" + eval(arrayName)[i].label + "</a>";
+
+		if (i!=(end-1)) {
+			add += " | ";
+		}	
+	}
+	document.write(add);
+}
+
+
+
+function loadAll() {
+
+	showAdvancedTop();
+	
+		hideDateDropTop();
+	
+		showAdvancedBottom();
+		
+			hideDateDropBottom();
+		
+	return false;	
+}
+	var cur_lyr;	// holds id of currently visible layer
+	function swapLayers(id) {
+  		if (cur_lyr) hideLayer(cur_lyr);
+  		showLayer(id);
+  		cur_lyr = id;
+		}
+
+	function showLayer(id) {
+  	var lyr = getElemRefs(id);
+  	if (lyr && lyr.css) lyr.css.display = "block";
+	}
+
+	function hideLayer(id) {
+  	var lyr = getElemRefs(id);
+  	if (lyr && lyr.css) lyr.css.display = "none";
+	}
+
+	function getElemRefs(id) {
+	var el = (document.getElementById)? document.getElementById(id): (document.all)? document.all[id]: (document.layers)? getLyrRef(id,document): null;
+	if (el) el.css = (el.style)? el.style: el;
+	return el;
+	}
+
+	// get reference to nested layer for ns4
+	// from old dhtmllib.js by Mike Hall of www.brainjar.com
+	function getLyrRef(lyr,doc) {
+	if (document.layers) {
+		var theLyr;
+		for (var i=0; i<doc.layers.length; i++) {
+	  	theLyr = doc.layers[i];
+			if (theLyr.name == lyr) return theLyr;
+			else if (theLyr.document.layers.length > 0) 
+	    	if ((theLyr = getLyrRef(lyr,theLyr.document)) != null)
+					return theLyr;
+	  }
+		return null;
+  		}
+	}
+</script><script type="text/javascript">
+function checkType(frm) {
+	if (frm.daterange[6].checked) {
+		frm.srcht.value = "a";
+	}
+	return true;
+}
+
+function showDateDropTop() {
+	show('panel3');
+	return false;
+}
+function hideDateDropTop() {
+	hide('panel3');
+	return false;
+}
+function showAdvancedTop() {
+	show('panel2');
+	show('panel3');
+	return false;
+}
+function hideAdvancedTop() {
+	hide('panel2');
+	hide('panel3');
+	document.mainFormTop.hdlquery.value = "";
+	document.mainFormTop.bylquery.value = "";
+	return false;
+}
+
+function showDateDropBottom() {
+	show('panel5');
+	return false;
+}
+function hideDateDropBottom() {
+	hide('panel5');
+	return false;
+}
+function showAdvancedBottom() {
+	show('panel4');
+	show('panel5');
+	return false;
+}
+function hideAdvancedBottom() {
+	hide('panel4');
+	hide('panel5');
+	document.mainFormBottom.hdlquery.value = "";
+	document.mainFormBottom.bylquery.value = "";
+
+	return false;
+}
+
+
+//toggles layer visibility on and off
+function show(id) {
+	document.getElementById(id).style.display = "block";
+}
+function hide(id) {
+	document.getElementById(id).style.display = "none";
+}
+function linkbox(url, winName) {
+	window.open(url, winName, "location=yes,directories=yes,menubar=yes,toolbar=yes,status=yes,resizable=yes,scrollbars=yes");
+}
+</script>
+</head>
+<body onload="loadAll();">
+<a name="top"></a><div id="srchHeader">
+<div class="nytLogo"><a href="http://www.nytimes.com/"><IMG src="http://graphics8.nytimes.com/images/new_search/logo_sm.gif" width="123" height="20" border="0" alt="The New York Times"></a></div>
+<div class="nytLogin"><ul>
+<li class="noLink">
+<a href="http://www.nytimes.com/auth/login">Log In</a>&nbsp;&nbsp;-&nbsp;</li>
+<li class="noLink"><a href="http://www.nytimes.com/regi">Register Now</a></li>
+<li class="noLink">&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;</li>
+<li>
+<a href="http://www.nytimes.com">Home</a>&nbsp;&nbsp;-&nbsp;</li>
+<li>
+<a href="http://www.nytimes.com/ref/membercenter/help/siteindex.html">Site Index</a>&nbsp;&nbsp;-&nbsp;</li>
+<li>
+<a href="http://www.nytimes.com/membercenter/faq/search.html">Search Tips</a>&nbsp;&nbsp;-&nbsp;</li>
+<li><a href="http://www.nytimes.com/membercenter/sitehelp.html">Help</a></li>
+</ul></div>
+<div class="bottomBorder"></div>
+</div>
+<a name="top"></a><form action="http://query.nytimes.com/search/query" onSubmit="return checkType(this);" method="get" name="mainFormTop" enctype="application/x-www-form-urlencoded">
+<input type="hidden" name="frow" value="0"><input type="hidden" name="n" value="10"><input type="hidden" name="srcht" value="s"><div id="srchSearchTop">
+<div id="yourSearch">
+<span class="yourSearchText"><strong>Your Search:</strong></span><span class="searchInput"><input type="text" size="40" class="searchTextbox" name="query" value=""><select name="srchst" size="1" class="searchCat" align="absmiddle"><option value="nyt">NYT Archive Since 1981</option>
+<option value="p"> NYT Archive 1851-1980</option>
+<option value="g">Google/Web</option>
+<option value="m">Multimedia</option>
+<option value="nycks">NYC Guide</option>
+<option value="ref">Answers.com/Reference</option></select><input type="image" name="submit" src="http://graphics8.nytimes.com/images/article/search_button.gif" border="0" value="sub" align="absmiddle" class="searchSubmit"></span>
+</div>
+<div class="advanced"><table cellpadding="0" width="70"><tr><td valign="top">
+<a href="query%3Fsrchst=nyt&amp;&amp;srcht=a&amp;srchr=n%252F\&quot;http:%252Fgraphics8.nytimes.com%252Fimages%252Fnew_search%252Ficon_more.gif\&quot;.1.html#top" onClick="showAdvancedTop();">Advanced</a><br>
+</td></tr></table></div>
+<div class="sponSearch"></div>
+<br clear="all">
+</div>
+<div id="panel2"><table id="advancedSearch">
+<tr>
+<td class="headline">Headline:</td>
+<td class="searchTextboxHeadline">
+<input type="text" name="hdlquery" value="" align="absmiddle"> (Optional) <span class="small"><a href="query%3Fsrchst=nyt&amp;&amp;srcht=a&amp;srchr=n%252F\&quot;http:%252Fgraphics8.nytimes.com%252Fimages%252Fnew_search%252Ficon_more.gif\&quot;.1.html#top" onClick="hideAdvancedTop();">Hide Advanced</a></span>
+</td>
+</tr>
+<tr>
+<td class="author">Author:</td>
+<td class="searchTextboxHeadline">
+<input type="text" name="bylquery" value="" align="absmiddle"> (Optional)</td>
+</tr>
+</table></div>
+<div id="dateRange">
+<span class="dateText">Date Range:</span>&nbsp;<input TYPE="radio" NAME="daterange" VALUE="today" onClick="hideDateDropTop();">Today<input TYPE="radio" NAME="daterange" VALUE="site1week" onClick="hideDateDropTop();">Past 7 Days<input TYPE="radio" NAME="daterange" VALUE="past30days" onClick="hideDateDropTop();">Past 30 Days<input TYPE="radio" NAME="daterange" VALUE="past90days" onClick="hideDateDropTop();">Past 90 Days<input TYPE="radio" NAME="daterange" VALUE="past365days" onClick="hideDateDropTop();">Past Year<input TYPE="radio" NAME="daterange" VALUE="full" checked onClick="hideDateDropTop();">Since 1981<input TYPE="radio" NAME="daterange" VALUE="period" onClick="showDateDropTop();">Custom Date Range&nbsp;&nbsp;&nbsp;<a href="http://query.nytimes.com/search/query?srchst=p" title="1851-1980">1851-1980</a>
+</div>
+<div id="panel3"><div id="dateRangeAdvanced">
+<span class="dateRangeText">From:</span><select name="mon1" size="1" class="searchCat1" align="absmiddle" onchange="document.mainFormTop.daterange[6].checked='true';"><OPTION SELECTED VALUE="01">January</OPTION>
+<OPTION VALUE="02">February</OPTION>
+<OPTION VALUE="03">March</OPTION>
+<OPTION VALUE="04">April</OPTION>
+<OPTION VALUE="05">May</OPTION>
+<OPTION VALUE="06">June</OPTION>
+<OPTION VALUE="07">July</OPTION>
+<OPTION VALUE="08">August</OPTION>
+<OPTION VALUE="09">September</OPTION>
+<OPTION VALUE="10">October</OPTION>
+<OPTION VALUE="11">November</OPTION>
+<OPTION VALUE="12">December</OPTION></select><select name="day1" size="1" class="searchCat2" align="absmiddle" onchange="document.mainFormTop.daterange[6].checked='true';"><OPTION SELECTED VALUE="01">1</OPTION>
+<OPTION VALUE="02">2</OPTION>
+<OPTION VALUE="03">3</OPTION>
+<OPTION VALUE="04">4</OPTION>
+<OPTION VALUE="05">5</OPTION>
+<OPTION VALUE="06">6</OPTION>
+<OPTION VALUE="07">7</OPTION>
+<OPTION VALUE="08">8</OPTION>
+<OPTION VALUE="09">9</OPTION>
+<OPTION VALUE="10">10</OPTION>
+<OPTION VALUE="11">11</OPTION>
+<OPTION VALUE="12">12</OPTION>
+<OPTION VALUE="13">13</OPTION>
+<OPTION VALUE="14">14</OPTION>
+<OPTION VALUE="15">15</OPTION>
+<OPTION VALUE="16">16</OPTION>
+<OPTION VALUE="17">17</OPTION>
+<OPTION VALUE="18">18</OPTION>
+<OPTION VALUE="19">19</OPTION>
+<OPTION VALUE="20">20</OPTION>
+<OPTION VALUE="21">21</OPTION>
+<OPTION VALUE="22">22</OPTION>
+<OPTION VALUE="23">23</OPTION>
+<OPTION VALUE="24">24</OPTION>
+<OPTION VALUE="25">25</OPTION>
+<OPTION VALUE="26">26</OPTION>
+<OPTION VALUE="27">27</OPTION>
+<OPTION VALUE="28">28</OPTION>
+<OPTION VALUE="29">29</OPTION>
+<OPTION VALUE="30">30</OPTION>
+<OPTION VALUE="31">31</OPTION></select><select name="year1" size="1" class="searchCat3" align="absmiddle" onchange="document.mainFormTop.daterange[6].checked='true';"><OPTION VALUE="2007">2007</OPTION>
+<OPTION VALUE="2006">2006</OPTION>
+<OPTION VALUE="2005">2005</OPTION>
+<OPTION VALUE="2004">2004</OPTION>
+<OPTION VALUE="2003">2003</OPTION>
+<OPTION VALUE="2002">2002</OPTION>
+<OPTION VALUE="2001">2001</OPTION>
+<OPTION VALUE="2000">2000</OPTION>
+<OPTION VALUE="1999">1999</OPTION>
+<OPTION VALUE="1998">1998</OPTION>
+<OPTION VALUE="1997">1997</OPTION>
+<OPTION VALUE="1996">1996</OPTION>
+<OPTION VALUE="1995">1995</OPTION>
+<OPTION VALUE="1994">1994</OPTION>
+<OPTION VALUE="1993">1993</OPTION>
+<OPTION VALUE="1992">1992</OPTION>
+<OPTION VALUE="1991">1991</OPTION>
+<OPTION VALUE="1990">1990</OPTION>
+<OPTION VALUE="1989">1989</OPTION>
+<OPTION VALUE="1988">1988</OPTION>
+<OPTION VALUE="1987">1987</OPTION>
+<OPTION VALUE="1986">1986</OPTION>
+<OPTION VALUE="1985">1985</OPTION>
+<OPTION VALUE="1984">1984</OPTION>
+<OPTION VALUE="1983">1983</OPTION>
+<OPTION VALUE="1982">1982</OPTION>
+<OPTION VALUE="1981" SELECTED>1981</OPTION></select><span class="dateRangeTextTo">to</span><select name="mon2" size="1" class="searchCat1" align="absmiddle" onchange="document.mainFormTop.daterange[6].checked='true';"><OPTION VALUE="01">January</OPTION>
+<OPTION SELECTED VALUE="02">February</OPTION>
+<OPTION VALUE="03">March</OPTION>
+<OPTION VALUE="04">April</OPTION>
+<OPTION VALUE="05">May</OPTION>
+<OPTION VALUE="06">June</OPTION>
+<OPTION VALUE="07">July</OPTION>
+<OPTION VALUE="08">August</OPTION>
+<OPTION VALUE="09">September</OPTION>
+<OPTION VALUE="10">October</OPTION>
+<OPTION VALUE="11">November</OPTION>
+<OPTION VALUE="12">December</OPTION></select><select name="day2" size="1" class="searchCat2" align="absmiddle" onchange="document.mainFormTop.daterange[6].checked='true';"><OPTION VALUE="01">1</OPTION>
+<OPTION VALUE="02">2</OPTION>
+<OPTION VALUE="03">3</OPTION>
+<OPTION VALUE="04">4</OPTION>
+<OPTION VALUE="05">5</OPTION>
+<OPTION VALUE="06">6</OPTION>
+<OPTION VALUE="07">7</OPTION>
+<OPTION VALUE="08">8</OPTION>
+<OPTION VALUE="09">9</OPTION>
+<OPTION VALUE="10">10</OPTION>
+<OPTION VALUE="11">11</OPTION>
+<OPTION VALUE="12">12</OPTION>
+<OPTION VALUE="13">13</OPTION>
+<OPTION SELECTED VALUE="14">14</OPTION>
+<OPTION VALUE="15">15</OPTION>
+<OPTION VALUE="16">16</OPTION>
+<OPTION VALUE="17">17</OPTION>
+<OPTION VALUE="18">18</OPTION>
+<OPTION VALUE="19">19</OPTION>
+<OPTION VALUE="20">20</OPTION>
+<OPTION VALUE="21">21</OPTION>
+<OPTION VALUE="22">22</OPTION>
+<OPTION VALUE="23">23</OPTION>
+<OPTION VALUE="24">24</OPTION>
+<OPTION VALUE="25">25</OPTION>
+<OPTION VALUE="26">26</OPTION>
+<OPTION VALUE="27">27</OPTION>
+<OPTION VALUE="28">28</OPTION>
+<OPTION VALUE="29">29</OPTION>
+<OPTION VALUE="30">30</OPTION>
+<OPTION VALUE="31">31</OPTION></select><select name="year2" size="1" class="searchCat3" align="absmiddle" onchange="document.mainFormTop.daterange[6].checked='true';"><OPTION VALUE="2007" SELECTED>2007</OPTION>
+<OPTION VALUE="2006">2006</OPTION>
+<OPTION VALUE="2005">2005</OPTION>
+<OPTION VALUE="2004">2004</OPTION>
+<OPTION VALUE="2003">2003</OPTION>
+<OPTION VALUE="2002">2002</OPTION>
+<OPTION VALUE="2001">2001</OPTION>
+<OPTION VALUE="2000">2000</OPTION>
+<OPTION VALUE="1999">1999</OPTION>
+<OPTION VALUE="1998">1998</OPTION>
+<OPTION VALUE="1997">1997</OPTION>
+<OPTION VALUE="1996">1996</OPTION>
+<OPTION VALUE="1995">1995</OPTION>
+<OPTION VALUE="1994">1994</OPTION>
+<OPTION VALUE="1993">1993</OPTION>
+<OPTION VALUE="1992">1992</OPTION>
+<OPTION VALUE="1991">1991</OPTION>
+<OPTION VALUE="1990">1990</OPTION>
+<OPTION VALUE="1989">1989</OPTION>
+<OPTION VALUE="1988">1988</OPTION>
+<OPTION VALUE="1987">1987</OPTION>
+<OPTION VALUE="1986">1986</OPTION>
+<OPTION VALUE="1985">1985</OPTION>
+<OPTION VALUE="1984">1984</OPTION>
+<OPTION VALUE="1983">1983</OPTION>
+<OPTION VALUE="1982">1982</OPTION>
+<OPTION VALUE="1981">1981</OPTION></select>
+</div></div>
+</form>
+<div id="srchMain">
+<div id="container"><div id="srchContent">
+<form name="sortForm"><div id="sortBy">
+<span class="sortLeft"><span class="sortText">Sort by: 
+					<a href="query%3Fsrchst=nyt&amp;&amp;srcht=a&amp;srchr=n%252F\&quot;http:%252Fgraphics8.nytimes.com%252Fimages%252Fnew_search%252Ficon_more.gif\&quot;.1.html#" onClick="resortSubmit('closest');">Closest Match</a>&nbsp;|&nbsp;<strong>Newest First</strong>&nbsp;|&nbsp;<a href="query%3Fsrchst=nyt&amp;&amp;srcht=a&amp;srchr=n%252F\&quot;http:%252Fgraphics8.nytimes.com%252Fimages%252Fnew_search%252Ficon_more.gif\&quot;.1.html#" onClick="resortSubmit('oldest');">Oldest First</a></span></span><span class="sortRight"><span class="sortText">1 - 10 of 2,017,760 Results</span></span><div id="sortBySpacer"></div>
+</div></form>
+<ol class="srchSearchResult" start="1">
+<li>
+<h3>
+<a href="http://select.nytimes.com/2007/02/14/sports/baseball/14roberts.html"><img src="http://graphics8.nytimes.com/images/section/timesselect/ts_icon.gif" border="0" class="icon" title="Article available with TimesSelect subscription or for purchase" alt="Article available with TimesSelect subscription or for purchase"></a>&nbsp;<a href="http://select.nytimes.com/2007/02/14/sports/baseball/14roberts.html" title="Sometimes Moving on Has to Hurt">Sometimes Moving on Has to Hurt</a>
+</h3>
+<p class="summary">Uncertainty is causing a stir among those Yankees with rings. The absence of Bernie Williams has left some wondering, who is next to feel like a castoff?...<a href="http://select.nytimes.com/2007/02/14/sports/baseball/14roberts.html?showabstract=1" style="color:#6e6e6e;">View free preview</a></p>
+<div class="details">February 14, 2007
+								-  <span class="byline">By SELENA ROBERTS</span>&nbsp;<span class="byline">(NYT)</span> -  <span class="section">Sports</span>
+									-  <span class="section">News</span>
+</div>
+</li>
+<li>
+<h3>
+<a href="http://select.nytimes.com/2007/02/14/opinion/14friedman.html"><img src="http://graphics8.nytimes.com/images/section/timesselect/ts_icon.gif" border="0" class="icon" title="Article available with TimesSelect subscription or for purchase" alt="Article available with TimesSelect subscription or for purchase"></a>&nbsp;<a href="http://select.nytimes.com/2007/02/14/opinion/14friedman.html" title="Putin Pushes Back">Putin Pushes Back</a>
+</h3>
+<p class="summary">Just when we need to be getting Russia&#8217;s help, we&#8217;re getting its revenge....<a href="http://select.nytimes.com/2007/02/14/opinion/14friedman.html?showabstract=1" style="color:#6e6e6e;">View free preview</a></p>
+<div class="details">February 14, 2007
+								-  <span class="byline">By THOMAS L. FRIEDMAN</span>&nbsp;<span class="byline">(NYT)</span> -  <span class="section">Opinion</span>
+									-  <span class="section">Op-Ed</span>
+</div>
+</li>
+<li>
+<h3>
+<a href="http://select.nytimes.com/2007/02/14/opinion/14dowd.html"><img src="http://graphics8.nytimes.com/images/section/timesselect/ts_icon.gif" border="0" class="icon" title="Article available with TimesSelect subscription or for purchase" alt="Article available with TimesSelect subscription or for purchase"></a>&nbsp;<a href="http://select.nytimes.com/2007/02/14/opinion/14dowd.html" title="Obama, Legally Blonde?">Obama, Legally Blonde?</a>
+</h3>
+<p class="summary">Barack Obama poses for the cover of Men&#8217;s Vogue and then gets huffy when people don&#8217;t treat him as Hannah Arendt....<a href="http://select.nytimes.com/2007/02/14/opinion/14dowd.html?showabstract=1" style="color:#6e6e6e;">View free preview</a></p>
+<div class="details">February 14, 2007
+								-  <span class="byline">By MAUREEN DOWD</span>&nbsp;<span class="byline">(NYT)</span> -  <span class="section">Opinion</span>
+									-  <span class="section">Op-Ed</span>
+</div>
+</li>
+<li>
+<h3>
+<a href="http://select.nytimes.com/2007/02/14/nyregion/14towns.html"><img src="http://graphics8.nytimes.com/images/section/timesselect/ts_icon.gif" border="0" class="icon" title="Article available with TimesSelect subscription or for purchase" alt="Article available with TimesSelect subscription or for purchase"></a>&nbsp;<a href="http://select.nytimes.com/2007/02/14/nyregion/14towns.html" title="Armed With Chocolate, and Peace of Mind">Armed With Chocolate, and Peace of Mind</a>
+</h3>
+<p class="summary">A popular candy store in Paramus, N.J., geared up for a day of panic buying ahead of Valentine&#8217;s Day and a snowstorm....<a href="http://select.nytimes.com/2007/02/14/nyregion/14towns.html?showabstract=1" style="color:#6e6e6e;">View free preview</a></p>
+<div class="details">February 14, 2007
+								-  <span class="byline">By PETER APPLEBOME</span>&nbsp;<span class="byline">(NYT)</span> -  <span class="section">New York and Region</span>
+									-  <span class="section">News</span>
+</div>
+</li>
+<li>
+<h3><a href="http://www.nytimes.com/2007/02/14/world/middleeast/14yemen.html" title="30 Migrants Drown Off Coast of Yemen">30 Migrants Drown Off Coast of Yemen</a></h3>
+<p class="summary">A group of Somali and Ethiopian migrants was trying to reach the Arabian peninsula when their boat capsized off Yemen....</p>
+<div class="details">February 14, 2007
+								-  <span class="byline">By THE ASSOCIATED PRESS</span>&nbsp;<span class="byline">(NYT)</span> -  <span class="section">World</span>
+									-  <span class="section">News</span>
+</div>
+</li>
+<li>
+<h3><a href="http://www.nytimes.com/2007/02/14/world/middleeast/14sadr.html" title="U.S. Says Powerful Iraqi Cleric Is Living in Iran">U.S. Says Powerful Iraqi Cleric Is Living in Iran</a></h3>
+<p class="summary">Officials suggested that the Shiite cleric Moktada al-Sadr might have fled Iraq to avoid being captured or killed during the U.S. crackdown....</p>
+<div class="details">February 14, 2007
+								-  <span class="byline">By MARK MAZZETTI</span>&nbsp;<span class="byline">(NYT)</span> -  <span class="section">World</span>
+									-  <span class="section">News</span>
+</div>
+</li>
+<li>
+<h3><a href="http://www.nytimes.com/2007/02/14/world/middleeast/14lebanon.html" title="Bombs Kill 3 in Lebanon on Day Before Memorial">Bombs Kill 3 in Lebanon on Day Before Memorial</a></h3>
+<p class="summary">It was the first attack directed at ordinary civilians, not public figures, since the end of the civil war in 1990....</p>
+<div class="details">February 14, 2007
+								-  <span class="byline">By MICHAEL SLACKMAN</span>&nbsp;<span class="byline">(NYT)</span> -  <span class="section">World</span>
+									-  <span class="section">News</span>
+</div>
+</li>
+<li>&nbsp;<ul><li class="searchResultPic"><table class="searchPicHolder" cellspacing="0"><tr>
+<td class="picHolder" valign="top" width="81"><a href="http://www.nytimes.com/2007/02/14/world/middleeast/14iraq.html"><img src="http://graphics8.nytimes.com/images/2007/02/14/world/14iraq.751x.jpg" border="0" alt="Iraqis Announce New Crackdown Across Baghdad" title="Iraqis Announce New Crackdown Across Baghdad"></a></td>
+<td valign="top">
+<h3><a href="http://www.nytimes.com/2007/02/14/world/middleeast/14iraq.html" title="Iraqis Announce New Crackdown Across Baghdad">Iraqis Announce New Crackdown Across Baghdad</a></h3>
+<p class="summary">The plan is a surprising and highly challenging new effort to reverse the tide of sectarian cleansing that has left the capital bloodied and Balkanized.... </p>
+<div class="details">February 14, 2007
+									-  <span class="byline">By MARC SANTORA</span>&nbsp;<span class="byline">(NYT)</span> -  <span class="section">World</span>
+									-  <span class="section">News</span>
+</div>
+</td>
+</tr></table></li></ul>
+</li>
+<li>
+<h3><a href="http://www.nytimes.com/2007/02/14/world/europe/15russiasumm.html" title="Putin Says Russia Would Consider Gas Alliance">Putin Says Russia Would Consider Gas Alliance</a></h3>
+<p class="summary">A summary of top stories in Russian newspapers on Wednesday....</p>
+<div class="details">February 14, 2007
+								-  <span class="byline">Compiled by MICHAEL SCHWIRTZ and PAVEL RUMYANTSEV</span>&nbsp;<span class="byline">(NYT)</span> -  <span class="section">World</span>
+									-  <span class="section">News</span>
+</div>
+</li>
+<li>
+<h3><a href="http://www.nytimes.com/2007/02/14/world/europe/14slovakia.html" title="Slovak Church Plans to Review Its Past 50 Years">Slovak Church Plans to Review Its Past 50 Years</a></h3>
+<p class="summary">The announcement came just days after reports that the archbishop of Bratislava had worked for the Czech secret police during the Communist era....</p>
+<div class="details">February 14, 2007
+								-  <span class="byline">By AGENCE FRANCE-PRESSE</span>&nbsp;<span class="byline">(NYT)</span> -  <span class="section">World</span>
+									-  <span class="section">News</span>
+</div>
+</li>
+</ol>
+<div class="searchWebResults">
+<strong>
+					Page 
+					</strong><strong>1</strong> | <a href="http://query.nytimes.com/search/query?query=&amp;srchst=nyt&amp;d=&amp;o=&amp;v=&amp;c=&amp;sort=newest&amp;n=10&amp;dp=0&amp;daterange=full&amp;frow=10">2</a> | <a href="http://query.nytimes.com/search/query?query=&amp;srchst=nyt&amp;d=&amp;o=&amp;v=&amp;c=&amp;sort=newest&amp;n=10&amp;dp=0&amp;daterange=full&amp;frow=20">3</a> | <a href="http://query.nytimes.com/search/query?query=&amp;srchst=nyt&amp;d=&amp;o=&amp;v=&amp;c=&amp;sort=newest&amp;n=10&amp;dp=0&amp;daterange=full&amp;frow=30">4</a> | <a href="http://query.nytimes.com/search/query?query=&amp;srchst=nyt&amp;d=&amp;o=&amp;v=&amp;c=&amp;sort=newest&amp;n=10&amp;dp=0&amp;daterange=full&amp;frow=40">5</a> | <a href="http://query.nytimes.com/search/query?query=&amp;srchst=nyt&amp;d=&amp;o=&amp;v=&amp;c=&amp;sort=newest&amp;n=10&amp;dp=0&amp;daterange=full&amp;frow=50">6</a> | <a href="http://query.nytimes.com/search/query?query=&amp;srchst=nyt&amp;d=&amp;o=&amp;v=&amp;c=&amp;sort=newest&amp;n=10&amp;dp=0&amp;daterange=full&amp;frow=60">7</a> | <a href="http://query.nytimes.com/search/query?query=&amp;srchst=nyt&amp;d=&amp;o=&amp;v=&amp;c=&amp;sort=newest&amp;n=10&amp;dp=0&amp;daterange=full&amp;frow=70">8</a> | <a href="http://query.nytimes.com/search/query?query=&amp;srchst=nyt&amp;d=&amp;o=&amp;v=&amp;c=&amp;sort=newest&amp;n=10&amp;dp=0&amp;daterange=full&amp;frow=80">9</a> | <a href="http://query.nytimes.com/search/query?query=&amp;srchst=nyt&amp;d=&amp;o=&amp;v=&amp;c=&amp;sort=newest&amp;n=10&amp;dp=0&amp;daterange=full&amp;frow=90">10</a> | <a href="http://query.nytimes.com/search/query?query=&amp;srchst=nyt&amp;d=&amp;o=&amp;v=&amp;c=&amp;sort=newest&amp;n=10&amp;dp=0&amp;daterange=full&amp;frow=10">Next &raquo;</a></div>
+<div class="clearing">&nbsp;</div>
+<div id="srchBottomMain">
+<h4>Refine Your 2017760 Search Results
+				 by Section
+			</h4>
+<div id="bottomContainer"><div id="srchBottomContent">
+<script type="text/javascript">
+			writeSections(50,'sectionArraySorted','Sections');
+			</script><div id="srchAppagBottom"><div class="searchWeb"></div></div>
+</div></div>
+</div>
+</div></div>
+<div id="srchCcol">
+<script type="text/javascript" language="JavaScript">	 
+		function google_radlink_request_done(radlinks) {	 
+			var s = "";	 
+			if (radlinks.length == 0) {	 
+				return;	 
+			}	 
+			s += '\n<div id="sponsoredLinksC">\n';	 
+			s += '\n<div class="sponsLinksWhat"><a href="javascript:pop_me_up2(\'http://www.nytimes.com/ref/membercenter/faq/linkingqa17.html\',\'420400\',\'width=420,height=400,scrollbars=yes,toolbars=no,resizable=no\');">Related Ads</a></div>\n';	 
+			for (i = 0; i < radlinks.length; ++i) {	 
+					 
+				s += '<div class="ad">&raquo; <a href="http://query.nytimes.com/search/query?srchst=r&term=' + 	 
+					 
+				radlinks[i].term + '&google_ad_channel=sitesearch&google_ad_client=ca-nytimes_radlinks_js&google_page_url=' + escape(window.location) + '">  ' + radlinks[i].term + 
+				'</a></div>\n';	 
+			}	 
+			s += '\n<div class="sponsLinksWhat"><a href="javascript:pop_me_up2(\'http://www.nytimes.com/ref/membercenter/faq/linkingqa17.html\',\'420400\',\'width=420,height=400,scrollbars=yes,toolbars=no,resizable=no\');">What are Related Ads?</a></div>\n';	 
+			s += '</div>\n';	 
+			document.write(s);	 
+		}	 
+		
+		google_ad_channel= 'sitesearch';	 
+		google_ad_output = 'js';	 
+		google_ad_client = 'ca-nytimes_radlinks_js';	 
+		google_safe = 'high';	 
+		google_num_radlinks = '5';	 
+		google_max_num_ads = '0';	 
+		google_max_radlink_len = '23';	 
+		google_kw_type = 'broad';	 
+		google_ad_width= '180';	 
+		google_ad_height = '180';	 
+			 
+		google_kw = '';	 
+			 
+		</script><script type="text/javascript" language="JavaScript" src="http://pagead2.googlesyndication.com/pagead/show_ads.js"></script><div id="alertMe">
+<a href="query%3Fsrchst=nyt&amp;&amp;srcht=a&amp;srchr=n%252F\&quot;http:%252Fgraphics8.nytimes.com%252Fimages%252Fnew_search%252Ficon_more.gif\&quot;.1.html#" onClick="return furlItNoPop('The New York Times:  Search', document.location.href, '', document.referrer,'nytf1');" class="blue">Save this Search to your Times File</a>&nbsp;<a href="query%3Fsrchst=nyt&amp;&amp;srcht=a&amp;srchr=n%252F\&quot;http:%252Fgraphics8.nytimes.com%252Fimages%252Fnew_search%252Ficon_more.gif\&quot;.1.html#" onClick="return furlItNoPop('The New York Times:  Search', document.location.href, '', document.referrer,'nytf1');"><img src="http://graphics8.nytimes.com/images/article/functions/icon_save.gif" border="0"></a>
+</div>
+</div>
+<div class="clearing">&nbsp;</div>
+</div>
+<a name="bottom"></a><form action="http://query.nytimes.com/search/query?" onSubmit="return checkType(this);" method="get" name="mainFormBottom" enctype="application/x-www-form-urlencoded">
+<input type="hidden" name="frow" value="0"><input type="hidden" name="n" value="10"><input type="hidden" name="srcht" value="s"><div id="srchSearchBottom">
+<div id="yourSearch">
+<span class="yourSearchText"><strong>Your Search:</strong></span><span class="searchInput"><input type="text" size="40" class="searchTextbox" align="absmiddle" name="query" value=""><select name="srchst" size="1" class="searchCat" align="absmiddle"><option value="nyt">NYT Archive Since 1981</option>
+<option value="p"> NYT Archive 1851-1980</option>
+<option value="g">Google/Web</option>
+<option value="m">Multimedia</option>
+<option value="nycks">NYC Guide</option>
+<option value="ref">Answers.com/Reference</option></select><input type="image" name="submit" src="http://graphics8.nytimes.com/images/article/search_button.gif" border="0" value="sub" align="absmiddle" class="searchSubmit"></span>
+</div>
+<div class="advanced"><table cellpadding="0" width="70"><tr><td valign="top">
+<a href="query%3Fsrchst=nyt&amp;&amp;srcht=a&amp;srchr=n%252F\&quot;http:%252Fgraphics8.nytimes.com%252Fimages%252Fnew_search%252Ficon_more.gif\&quot;.1.html#bottom" onClick="showAdvancedBottom();">Advanced</a><br>
+</td></tr></table></div>
+<br clear="all">
+</div>
+<div id="panel4"><table id="advancedSearch">
+<tr>
+<td class="headline">Headline:</td>
+<td class="searchTextboxHeadline">
+<input type="text" name="hdlquery" value="" align="absmiddle"> (Optional) <span class="small"><a href="query%3Fsrchst=nyt&amp;&amp;srcht=a&amp;srchr=n%252F\&quot;http:%252Fgraphics8.nytimes.com%252Fimages%252Fnew_search%252Ficon_more.gif\&quot;.1.html#bottom" onClick="hideAdvancedBottom();">Hide Advanced</a></span>
+</td>
+</tr>
+<tr>
+<td class="author">Author:</td>
+<td class="searchTextboxHeadline">
+<input type="text" name="bylquery" value="" align="absmiddle"> (Optional)</td>
+</tr>
+</table></div>
+<div id="dateRange">
+<span class="dateText">Date Range:</span>&nbsp;<input TYPE="radio" NAME="daterange" VALUE="today" onClick="hideDateDropBottom();">Today<input TYPE="radio" NAME="daterange" VALUE="site1week" onClick="hideDateDropBottom();">Past 7 Days<input TYPE="radio" NAME="daterange" VALUE="past30days" onClick="hideDateDropBottom();">Past 30 Days<input TYPE="radio" NAME="daterange" VALUE="past90days" onClick="hideDateDropBottom();">Past 90 Days<input TYPE="radio" NAME="daterange" VALUE="past365days" onClick="hideDateDropBottom();">Past Year<input TYPE="radio" NAME="daterange" VALUE="full" checked onClick="hideDateDropBottom();">Since 1981<input TYPE="radio" NAME="daterange" VALUE="period" onClick="showDateDropBottom();">Custom Date Range&nbsp;&nbsp;&nbsp;<a href="http://query.nytimes.com/search/query?srchst=p" title="1851-1980">1851-1980</a>
+</div>
+<div id="panel5"><div id="dateRangeAdvanced">
+<span class="dateRangeText">From:</span><select name="mon1" size="1" class="searchCat1" align="absmiddle" onchange="document.mainFormBottom.daterange[6].checked='true';"><OPTION SELECTED VALUE="01">January</OPTION>
+<OPTION VALUE="02">February</OPTION>
+<OPTION VALUE="03">March</OPTION>
+<OPTION VALUE="04">April</OPTION>
+<OPTION VALUE="05">May</OPTION>
+<OPTION VALUE="06">June</OPTION>
+<OPTION VALUE="07">July</OPTION>
+<OPTION VALUE="08">August</OPTION>
+<OPTION VALUE="09">September</OPTION>
+<OPTION VALUE="10">October</OPTION>
+<OPTION VALUE="11">November</OPTION>
+<OPTION VALUE="12">December</OPTION></select><select name="day1" size="1" class="searchCat2" align="absmiddle" onchange="document.mainFormBottom.daterange[6].checked='true';"><OPTION SELECTED VALUE="01">1</OPTION>
+<OPTION VALUE="02">2</OPTION>
+<OPTION VALUE="03">3</OPTION>
+<OPTION VALUE="04">4</OPTION>
+<OPTION VALUE="05">5</OPTION>
+<OPTION VALUE="06">6</OPTION>
+<OPTION VALUE="07">7</OPTION>
+<OPTION VALUE="08">8</OPTION>
+<OPTION VALUE="09">9</OPTION>
+<OPTION VALUE="10">10</OPTION>
+<OPTION VALUE="11">11</OPTION>
+<OPTION VALUE="12">12</OPTION>
+<OPTION VALUE="13">13</OPTION>
+<OPTION VALUE="14">14</OPTION>
+<OPTION VALUE="15">15</OPTION>
+<OPTION VALUE="16">16</OPTION>
+<OPTION VALUE="17">17</OPTION>
+<OPTION VALUE="18">18</OPTION>
+<OPTION VALUE="19">19</OPTION>
+<OPTION VALUE="20">20</OPTION>
+<OPTION VALUE="21">21</OPTION>
+<OPTION VALUE="22">22</OPTION>
+<OPTION VALUE="23">23</OPTION>
+<OPTION VALUE="24">24</OPTION>
+<OPTION VALUE="25">25</OPTION>
+<OPTION VALUE="26">26</OPTION>
+<OPTION VALUE="27">27</OPTION>
+<OPTION VALUE="28">28</OPTION>
+<OPTION VALUE="29">29</OPTION>
+<OPTION VALUE="30">30</OPTION>
+<OPTION VALUE="31">31</OPTION></select><select name="year1" size="1" class="searchCat3" align="absmiddle" onchange="document.mainFormBottom.daterange[6].checked='true';"><OPTION VALUE="2007">2007</OPTION>
+<OPTION VALUE="2006">2006</OPTION>
+<OPTION VALUE="2005">2005</OPTION>
+<OPTION VALUE="2004">2004</OPTION>
+<OPTION VALUE="2003">2003</OPTION>
+<OPTION VALUE="2002">2002</OPTION>
+<OPTION VALUE="2001">2001</OPTION>
+<OPTION VALUE="2000">2000</OPTION>
+<OPTION VALUE="1999">1999</OPTION>
+<OPTION VALUE="1998">1998</OPTION>
+<OPTION VALUE="1997">1997</OPTION>
+<OPTION VALUE="1996">1996</OPTION>
+<OPTION VALUE="1995">1995</OPTION>
+<OPTION VALUE="1994">1994</OPTION>
+<OPTION VALUE="1993">1993</OPTION>
+<OPTION VALUE="1992">1992</OPTION>
+<OPTION VALUE="1991">1991</OPTION>
+<OPTION VALUE="1990">1990</OPTION>
+<OPTION VALUE="1989">1989</OPTION>
+<OPTION VALUE="1988">1988</OPTION>
+<OPTION VALUE="1987">1987</OPTION>
+<OPTION VALUE="1986">1986</OPTION>
+<OPTION VALUE="1985">1985</OPTION>
+<OPTION VALUE="1984">1984</OPTION>
+<OPTION VALUE="1983">1983</OPTION>
+<OPTION VALUE="1982">1982</OPTION>
+<OPTION VALUE="1981" SELECTED>1981</OPTION></select><span class="dateRangeTextTo">to</span><select name="mon2" size="1" class="searchCat1" align="absmiddle" onchange="document.mainFormBottom.daterange[6].checked='true';"><OPTION VALUE="01">January</OPTION>
+<OPTION SELECTED VALUE="02">February</OPTION>
+<OPTION VALUE="03">March</OPTION>
+<OPTION VALUE="04">April</OPTION>
+<OPTION VALUE="05">May</OPTION>
+<OPTION VALUE="06">June</OPTION>
+<OPTION VALUE="07">July</OPTION>
+<OPTION VALUE="08">August</OPTION>
+<OPTION VALUE="09">September</OPTION>
+<OPTION VALUE="10">October</OPTION>
+<OPTION VALUE="11">November</OPTION>
+<OPTION VALUE="12">December</OPTION></select><select name="day2" size="1" class="searchCat2" align="absmiddle" onchange="document.mainFormBottom.daterange[6].checked='true';"><OPTION VALUE="01">1</OPTION>
+<OPTION VALUE="02">2</OPTION>
+<OPTION VALUE="03">3</OPTION>
+<OPTION VALUE="04">4</OPTION>
+<OPTION VALUE="05">5</OPTION>
+<OPTION VALUE="06">6</OPTION>
+<OPTION VALUE="07">7</OPTION>
+<OPTION VALUE="08">8</OPTION>
+<OPTION VALUE="09">9</OPTION>
+<OPTION VALUE="10">10</OPTION>
+<OPTION VALUE="11">11</OPTION>
+<OPTION VALUE="12">12</OPTION>
+<OPTION VALUE="13">13</OPTION>
+<OPTION SELECTED VALUE="14">14</OPTION>
+<OPTION VALUE="15">15</OPTION>
+<OPTION VALUE="16">16</OPTION>
+<OPTION VALUE="17">17</OPTION>
+<OPTION VALUE="18">18</OPTION>
+<OPTION VALUE="19">19</OPTION>
+<OPTION VALUE="20">20</OPTION>
+<OPTION VALUE="21">21</OPTION>
+<OPTION VALUE="22">22</OPTION>
+<OPTION VALUE="23">23</OPTION>
+<OPTION VALUE="24">24</OPTION>
+<OPTION VALUE="25">25</OPTION>
+<OPTION VALUE="26">26</OPTION>
+<OPTION VALUE="27">27</OPTION>
+<OPTION VALUE="28">28</OPTION>
+<OPTION VALUE="29">29</OPTION>
+<OPTION VALUE="30">30</OPTION>
+<OPTION VALUE="31">31</OPTION></select><select name="year2" size="1" class="searchCat3" align="absmiddle" onchange="document.mainFormBottom.daterange[6].checked='true';"><OPTION VALUE="2007" SELECTED>2007</OPTION>
+<OPTION VALUE="2006">2006</OPTION>
+<OPTION VALUE="2005">2005</OPTION>
+<OPTION VALUE="2004">2004</OPTION>
+<OPTION VALUE="2003">2003</OPTION>
+<OPTION VALUE="2002">2002</OPTION>
+<OPTION VALUE="2001">2001</OPTION>
+<OPTION VALUE="2000">2000</OPTION>
+<OPTION VALUE="1999">1999</OPTION>
+<OPTION VALUE="1998">1998</OPTION>
+<OPTION VALUE="1997">1997</OPTION>
+<OPTION VALUE="1996">1996</OPTION>
+<OPTION VALUE="1995">1995</OPTION>
+<OPTION VALUE="1994">1994</OPTION>
+<OPTION VALUE="1993">1993</OPTION>
+<OPTION VALUE="1992">1992</OPTION>
+<OPTION VALUE="1991">1991</OPTION>
+<OPTION VALUE="1990">1990</OPTION>
+<OPTION VALUE="1989">1989</OPTION>
+<OPTION VALUE="1988">1988</OPTION>
+<OPTION VALUE="1987">1987</OPTION>
+<OPTION VALUE="1986">1986</OPTION>
+<OPTION VALUE="1985">1985</OPTION>
+<OPTION VALUE="1984">1984</OPTION>
+<OPTION VALUE="1983">1983</OPTION>
+<OPTION VALUE="1982">1982</OPTION>
+<OPTION VALUE="1981">1981</OPTION></select>
+</div></div>
+</form>
+<div class="taragram">Linguistic Search Technologies by Teragram Corporation</div>
+<div id="nytFooter"><div class="footerContainer"><ul>
+<li><a class="footer" href="http://www.nytimes.com/ref/membercenter/help/copyright.html">Copyright 2007</a></li>
+<li>
+<a class="footer" href="http://www.nytco.com/">The New York Times Company</a> | </li>
+<li>
+<a class="footer" href="http://www.nytimes.com/ref/membercenter/help/privacy.html">Privacy Policy</a> | </li>
+<li><a class="footer" href="http://www.nytimes.com/membercenter/formh.html">Contact Us</a></li>
+</ul></div></div>
+
+		<!-- SiteCatalyst code version: G.6.
+		Copyright 1997-2004 Omniture, Inc. More info available at
+		http://www.omniture.com --><script language="JavaScript"><!--
+		var s_account="nytsearch,nytimesglobal"
+		var s_pageName="Search > Articles 1996-Present"
+		var s_server=""
+		var s_channel="search"
+		var s_formOnPage=""
+		var s_pageType=""
+		var s_prop1="search results"
+		var s_prop2=""
+		var s_prop3=""
+		var s_prop4=""
+		var s_prop5=""
+		var s_prop6="sitesearch1"
+		var s_prop7=""
+		var s_prop8=""
+		var s_prop9=""
+		var s_prop10=""
+		var s_prop12=""
+		var s_prop13=""
+		var s_prop14=""
+		var s_prop15=""
+		var s_prop16=""
+		var s_prop17=""
+		var s_prop18=""
+		var s_prop19=""
+		var s_prop20=""
+		var s_campaign=""
+		var s_state=""
+		var s_zip=""
+		var s_events=""
+		var s_products=""
+		var s_purchaseID=""
+		var s_eVar1=""
+		var s_eVar2=""
+		var s_eVar3=""
+		var s_eVar4=""
+		var s_eVar5=""
+		var s_eVar6=""
+		var s_eVar7=""
+		var s_eVar8=""
+		var s_eVar9=""
+		var s_eVar10=""
+		var s_code=' '//--></script>
+		<script language="JavaScript" src="http://graphics8.nytimes.com/js/s_code_combined.js"></script>
+		<script language="JavaScript"><!-- 
+		var s_wd=window,s_tm=new Date;if(s_code!=' '){s_code=s_dc(
+		s_account);if(s_code)document.write(s_code)}else
+		document.write('<im'+
+		'g src="http://std.o.nytimes.com/b/ss/'+s_account+'/1/G.6--FB/s'+s_tm.getTime()+'?[AQB]'
+		+'&j=1.0&[AQE]" height="1" width="1" border="0" alt="" />')
+		//--></script><script language="JavaScript"><!-- 
+		if(navigator.appVersion.indexOf('MSIE')>=0)document.write(unescape('%3C')+'\!-'+'-')
+		//--></script><noscript><img 
+		src="http://std.o.nytimes.com/b/ss/nytsearch/1/G.6--NS/0" 
+		height="1" width="1" border="0" alt="" /></noscript><!--/DO NOT REMOVE/-->
+		<!-- End SiteCatalyst code version: G.6. -->
+		
+			
+
+			
+		<!-- Start UPT call -->
+		<img height="1" width="3" border=0 src="http://up.nytimes.com/?d=0/13/&t=5&s=0&ui=&r=http%3a%2f%2fquery%2enytimes%2ecom%2fsearch%2fquery%3fppds%3dper%26v1%3dLODGE%252C%2bDAVID%26sort%3dnewest&u=query%2enytimes%2ecom%2fsearch%2fquery%3fsrchst%3dnyt%26%26srcht%3da%26srchr%3dn%2f%5c%22http%3a%2fgraphics8%2enytimes%2ecom%2fimages%2fnew%5fsearch%2ficon%5fmore%2egif%5c%22">
+		<!-- End UPT call -->
+	
+		
+
+	<script type="text/javascript">
+	var regstatus="non-registered";
+	var dcsvid="";
+	var gDomain="wt.o.nytimes.com";
+	var gDcsId="dcs94nlu900000kr6jvydpa7y_2q9p";
+	var gTrackEvents=0;
+	var gFpc="WT_FPC";
+	/*<![CDATA[*/
+	if(document.cookie.indexOf(gFpc+"=")==-1){document.write("<scr"+"ipt type='text/javascript' src='"+"http"+(window.location.protocol.indexOf('https:')==0?'s':'')+"://"+gDomain+"/"+gDcsId+"/wtid.js"+"'><\/scr"+"ipt>");}
+	/*]]>*/
+	</script>
+	<script src="http://graphics8.nytimes.com/js/analytics/wt.js" type="text/javascript"></script>
+	<noscript>
+	<img alt="DCSIMG" id="DCSIMG" width="1" height="1" src="http://wt.o.nytimes.com/dcs94nlu900000kr6jvydpa7y_2q9p/njs.gif?dcsuri=/nojavascript&amp;WT.js=No">
+	</noscript>
+
+	
+
+		<script language="Javascript">Tacoda_AMS_DDC_addPair("t_section","Search")</script>
+		<script language="Javascript">Tacoda_AMS_DDC_addPair("site","nytimes.com")</script>
+		<script language="JavaScript">Tacoda_AMS_DDC("http://te.nytimes.com/tte/blank.gif","1.0")</script>	
+		<IMG SRC="http://query.nytimes.com/adx/bin/clientside/2af42d41Q2Fj!4Q5Dy)2_Q7DQ2BQ24Q20)Q25a4LzQ7DULQ24_Q20z" height="1" width="3">
+</body>
+</html>
+

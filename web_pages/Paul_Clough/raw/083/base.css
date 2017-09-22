@@ -1,0 +1,265 @@
+/* ------------------------------------------------------
+   Kick off styles
+   ------------------------------------------------------ */
+a:link			{	color:	#900; text-decoration: none;	}
+a:visited		{	color:	#900; text-decoration: none;	}
+a:hover 		{	color: 	#900; text-decoration: underline;	} 
+a:active 		{	color: 	#900;	}
+
+body {
+	background: #CCC url(../images/tartan_bkgd.jpg);
+	margin: 0;
+	padding: 0;
+	
+}
+
+img	{ border: 0px; }
+
+body, td, th {
+	font: normal 11px/15px Verdana, sans-serif; 
+	font-family:		Verdana, sans-serif;
+	color: 				#555;
+}
+
+
+#wrapper {
+	background: white;
+
+}
+
+
+
+#auxnav {
+	background: #900;
+	font: normal 9px Verdana, sans-serif;
+	margin: 0;
+}
+
+#auxnav td {
+	color: white;
+	padding: 4px 2px;
+	text-align: justify;
+}
+
+#auxnav form {
+	display: inline;
+}
+
+#auxnav td input {
+	vertical-align: bottom;
+}
+
+/* ------------------------------------------------------
+   Footer
+   ------------------------------------------------------ */
+
+#footer {
+	margin-top: 0;
+	margin-bottom: 26px;
+}
+
+#footer td {
+	text-align: center;
+	font: normal 9px/12px Verdana, sans-serif;
+	color: #777;
+	padding-top: 4px;
+}
+
+#footer .nav td {
+	background-color: #900;
+	padding-top: 6px;
+	padding-bottom: 6px;
+}
+
+
+
+#footer a:link, #footer a:visited {
+	text-decoration: none;
+}
+
+#footer .nav a:hover { text-decoration: underline; }
+
+#footer .nav a:link, #footer .nav a:visited {
+	display: block;
+	margin-left: 10px;
+	margin-right: 10px;
+	color: #ffffff;
+}
+
+#footer img {
+	border: none;
+}
+
+#footer #copyright {
+	padding-top: 5px;
+	padding-bottom: 5px;
+}
+
+/* ------------------------------------------------------
+   Horizontal Navigation
+   ------------------------------------------------------ */
+
+   
+.navItem a, .navItem a:visited {
+	color: #FFFFFF;
+	font: bold 12px Verdana, sans-serif;
+	display: block;
+	background: #900;
+	text-align: center;
+	margin: 0;
+	text-decoration: none;
+	padding: 10px 5px;
+}
+
+.navItem a.mainNavItem, .navItem a:visited.mainNavItem,
+.navItem a:hover.mainNavItem, .navItem a:active.mainNavItem {
+	display: block;
+	color: #999;
+	background: transparent;
+	padding: 0;
+	margin: 0;
+	text-align: left;
+	font: normal 24px Helvetica, Arial,  sans-serif;
+	padding-top: 6px;
+	text-decoration: none;
+}
+
+a.regNavItem, a:visited.regNavItem {
+	color: #FFFFFF;	
+}
+
+a:hover.regNavItem, a:active.regNavItem {
+	background: #888;
+	color: #FFFFFF;
+}
+
+a.selectedNavItem, a:visited.selectedNavItem,
+a:hover.selectedNavItem, a:active.selectedNavItem {
+	background:#900;
+}
+
+
+/* ------------------------------------------------------
+   Side Navigation
+   ------------------------------------------------------ */
+
+#sideNav { 
+	margin: 0px;
+	margin-top: 6px;
+	margin-bottom:	100px;
+	text-align: left;
+ }
+  
+#sideNav ul, #sideNav li {
+	display: block;
+	font-weight: bold;
+	padding: 0;
+	margin: 0;
+	list-style-type: none;
+}
+
+#sideNav a {
+	
+	/* background: transparent url(../images/list-more.gif) 235px 4px no-repeat; */
+}
+
+#sideNav a.leaf {
+	background: transparent;
+}
+
+#sideNav a:link, #sideNav a:visited {
+	color: #900;
+	 text-decoration: none; 
+	/* background: transparent url(../images/list-more.gif) 235px 4px no-repeat; */
+}
+
+#sideNav li a:link.selected, #sideNav li a:visited.selected {
+	color: #777;
+	font-weight: bold;
+}
+
+#sideNav li {
+	padding: 0;
+	padding-top: 6px;
+	padding-bottom: 6px;
+	margin: 0;
+	border-bottom: 1px solid #ddd;
+}
+
+#sideNav li li {
+	font-weight: normal;
+	border-bottom: none;
+	padding-top: 5px;
+	padding-bottom: 0px;
+	padding-left: 15px;
+	background: transparent url(../images/list-marker.gif) 2px 6px no-repeat;
+}
+
+
+
+
+	
+/* ------------------------------------------------------
+   Secondary Link Styles
+   ------------------------------------------------------ */
+
+a.secondarylink {	
+				font-size: 			9px;
+				line-height:		11px;
+				color: 				#066;
+				display:			block;
+				text-indent:		0px;
+				margin-top: 		3px;
+				margin-bottom: 		0px;
+				margin-left: 		7px;
+				margin-right: 		0px;
+				padding-left:		0px;
+				padding-right:		0px;
+				padding-top:		0px;
+				padding-bottom:		2px;	
+				}
+
+a.secondarylink:visited, a.secondarylink:hover  {	color: 	#066;	}
+
+
+a.navigate, a.navigate:visited {	color: 	#066; font-size:  10px;	}
+
+a.book, a.book:visited {	font-weight: bold; color: 	#FFF; font-size:  11px;	}
+
+
+			
+
+/* ------------------------------------------------------
+   Three column styles
+   ------------------------------------------------------ */
+		
+.secondarycols	{
+				padding-bottom:		0px;
+				}		
+			
+/* ------------------------------------------------------
+   Comment tag
+   ------------------------------------------------------ */
+
+blockquote				{
+				display:			block;
+				font: 				bold 12px/15px Verdana, sans-serif;
+				color:				#000;
+				background-color:	#FF0;
+				padding:			6px;
+				margin-bottom:		10px;
+				margin-top:			5px;
+				margin-left:		20px;
+				width:				370px;
+				}				
+/* ------------------------------------------------------
+   Front Page News
+   ------------------------------------------------------ */
+   
+   #news1,#news2,#news3,#news4,#news5 {
+                display: none; }			
+				
+				
+				
+				
+				

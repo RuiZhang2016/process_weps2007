@@ -1,0 +1,802 @@
+/*global*/
+html {
+	margin:0px;
+	padding:0px;
+}
+body {
+	background-color:#FFFFFF;
+	color:#000000;
+	font-family:Arial, Helvetica, sans-serif;
+	font-weight:normal;
+	text-decoration:none;
+	font-size:75%;
+	margin:0px;
+	padding:0px;
+	border: 0;
+}
+a img {
+	border:none;
+	margin:0px;
+	padding:0px;
+}
+a{
+	color: #3366CC;
+}
+h1, h2, h3, h4, h5, h6, p, div {
+	margin: 0px;
+	padding: 0px;
+}
+td{
+	font-family: Arial, Helvetica, sans-serif;
+	font-weight: normal;
+	font-size: 75%;
+	color: #000000;
+
+}
+/*module template 1*/
+.mod1{
+	width: 100%;
+	border: 1px solid #CCCCCC;
+}
+.mod1Head{
+	height: 35px;
+	background-image: url(../images/bgMod1Head.gif);
+	padding-top: 0px;
+	text-transform: uppercase;		
+	font-size: 60%;
+}
+.mod1HeadGrn{
+	height: 35px;
+	background-image: url(../images/bgMod1HeadGrn.gif);
+	padding-top: 0px;
+	text-transform: uppercase;		
+	font-size: 60%;
+}
+.mod1HeadRed{
+	height: 35px;
+	background-image: url(../images/bgMod1HeadRed.gif);
+	padding-top: 0px;
+	text-transform: uppercase;		
+	font-size: 60%;
+}
+.mod1Body{
+	border-top: 1px solid #CCCCCC;
+	padding-left: 18px;
+	padding-top: 18px;
+	padding-bottom: 18px;
+	padding-right: 18px;
+}
+.mod1BodyHpLive{
+	height:55px;
+}
+.mod1Body h3{
+	font-size: 100%;
+	font-weight: bold;
+}
+/*module template 2*/
+.mod2{
+	width: 100%;
+}
+.mod2Head{
+	padding-top: 0px;
+	padding-bottom: 12px;
+	text-transform: uppercase;
+	border-bottom: 1px dashed #CCCCCC;
+	font-size: 60%;
+}
+.mod2Body{
+	padding-left: 34px;
+	padding-top: 18px;
+	padding-bottom: 18px;
+	padding-right: 18px;
+}
+.mod2Body h1{
+	font-size: 105%;
+	font-weight: bold;
+	margin: 0px auto 0px auto;
+	font-style: italic;
+}
+.mod2ReviewTitle {
+        font-size: 105%;
+        font-weight: bold;
+        margin: 0px auto 0px auto;
+        font-style: italic;
+}
+
+.mod2Body h3{
+	font-size: 100%;
+	font-weight: bold;
+	margin: 0px auto 0px auto;
+	color: #000000;
+}
+.mod2 h1{
+	color: #CCCC33;
+	font-size: 165%;
+	font-weight: bold;
+	padding-top:10px;
+	padding-bottom:10px;
+}
+/*module template 3*/
+.mod3{
+	width: 100%;
+	border: 1px solid #CCCCCC;
+}
+.mod3Head{
+	background-image: url(../images/bgMod3Head.gif);
+	text-transform: uppercase;		
+	color: #000000;
+	font-size: 60%;
+}
+.mod3Body{
+	background-image: url(../images/bgMod3Body.gif);
+	padding: 13px 15px 13px 15px;
+	color: #000000;
+}
+.mod3BodyLower{
+	background-image: url(../images/bgMod3Head.gif);
+	padding: 13px 15px 13px 15px;
+	color: #000000;
+}
+.mod3Body a, .mod3BodyLower a{
+	color: #3366CC;
+}
+.mod3Body h1, .mod3BodyLower h1{
+	font-size: 100%;
+	font-weight: bold;
+	margin: 0px auto 0px auto;
+}
+/*module template 4*/
+.mod4Head{
+	padding-bottom: 5px;
+	text-transform: uppercase;
+	border-bottom: 1px dashed #CCCCCC;
+	font-size: 60%;
+}
+.mod4TrkList{
+	margin-top: 5px;
+	margin-left: 5px;
+	margin-right: 5px;
+}
+.mod4Track{
+	border-bottom: 1px solid #3366CC;
+}
+.mod4Track a{
+	text-decoration: none;
+}
+.mod4Dl{
+	width:25px;
+}
+.mod4DlAll{
+	padding-top: 9px;
+}
+/*module template 5*/
+.mod5{
+	width: 100%;
+	border: 1px solid #CCCCCC;
+}
+.mod5Head{
+	height: 35px;
+	background-image: url(../images/bgMod1Head.gif);
+	padding-top: 0px;
+	text-transform: uppercase;		
+	font-size: 60%;
+}
+.mod5Head2{
+	text-transform: uppercase;		
+	font-size: 60%;
+}
+.mod5Body{
+	border-top: 1px solid #CCCCCC;
+	padding-left: 0px;
+	padding-top: 0px;
+	padding-bottom: 0px;
+	padding-right: 0px;
+}
+.mod5Body h3{
+	font-size: 100%;
+	font-weight: bold;
+}
+#discog .cLft{
+	width:50%;
+	padding-left:12px;	
+	padding-right:6px;
+}
+#discog .cRgt{
+	width:50%;
+	padding-left:6px;		
+	padding-right:12px;	
+}
+#discog h1{
+	color: #FF3300;
+	font-size: 100%;
+	font-weight: normal;
+	padding-top: 10px;
+	padding-left:12px;	
+	padding-bottom: 10px;	
+}
+#discog .dashedDiv{
+	border-top: 1px dashed #CCCCCC;	
+}
+#discog .more{
+	padding-right:12px;	
+	padding-top: 10px;
+	padding-bottom: 10px;	
+}
+#justIn .cLft{
+	width:50%;
+	padding-left:12px;	
+	padding-right:6px;
+}
+#justIn .cRgt{
+	width:50%;
+	padding-left:6px;		
+	padding-right:12px;	
+	border-left: 1px dashed #CCCCCC;	
+}
+#justIn .more{
+	padding-right:12px;	
+	padding-top: 10px;
+	padding-bottom: 10px;	
+}
+#album{
+	width:100%;
+}
+#album .art{
+	width:72px;
+	padding-bottom: 20px;
+}
+#album2{
+	width:200px;
+}
+#album2 .art{
+	width:72px;
+	padding-bottom: 0px;
+}
+#album2 .info{
+	width:128px;
+	padding-bottom: 0px;
+}
+#album2 .rev{
+	width:100%;
+	padding-top: 10px;
+	padding-bottom: 20px;
+}
+#album2 .rev strong{
+	font-size: 145%;
+	font-weight:normal;
+}
+.art{
+	width:68px;
+	padding-bottom: 15px;
+}
+/*module template 6*/
+.mod6{
+	width: 100%;
+	border: 1px solid #CCCCCC;
+}
+.mod6Head{
+	height: 37px;
+	background-color: #EDEDED;
+	padding-top: 0px;
+	padding-left: 14px;
+	padding-right: 14px;
+	border-bottom: 1px solid #CCCCCC;
+}
+.mod6SubHead{
+	height: 24px;
+	background-color: #F0F6FC;
+	padding-top: 0px;
+	padding-left: 14px;
+	padding-right: 14px;
+}
+.mod6Body{
+	border-top: 1px solid #CCCCCC;
+	padding-left: 0px;
+	padding-right: 0px;
+}
+.mod6SubHead strong{
+	color: #ff3300;
+	font-weight:normal;
+}
+/*module template 7*/
+.mod7{
+	width: 315px;
+  	background:url(../images/bgDottedArrow.gif) right bottom no-repeat;
+}
+.mod7More{
+	height: 23px;
+}
+#album3{
+	width:100%;
+}
+#album3 .naArt{
+	width:85px;
+	padding-left: 10px;
+	padding-right: 0px;
+	padding-bottom: 0px;
+}
+#album3 .naInfo{
+	width:230px;
+	padding-bottom: 0px;
+}
+#album3 .naRev{
+	width:100%;
+	padding-left: 10px;
+	padding-right: 0px;
+	padding-top: 0px;
+	padding-bottom: 5px;
+}
+#album3 .naRev strong{
+	font-size: 145%;
+	font-weight:normal;
+}
+/*module template 88*/
+.mod88{
+	width: 100%;
+	border: 1px solid #CCCCCC;
+}
+.mod88Head{
+	background-image: url(../images/bgMod3Head.gif);
+	text-transform: uppercase;		
+	color: #000000;
+}
+.mod88Body{
+	background-image: url(../images/bgMod3Body.gif);
+	padding: 13px 0px 13px 0px;
+	color: #000000;
+}
+.mod88BodyMid{
+	background-image: url(../images/bgMod3Head.gif);
+	padding: 10px 0px 5px 0px;
+	color: #000000;
+}
+.mod88BodyMidImg{
+	background-image: url(../images/bgMod3Head.gif);
+	padding: 13px 0px 0px 0px;
+	color: #000000;
+}
+.mod88Body a, .mod88BodyMid a{
+	color: #3366CC;
+}
+.mod88Body h1, .mod88BodyMid h1{
+	font-size: 100%;
+	font-weight: bold;
+	margin: 0px auto 0px auto;
+}
+.mod88BodyLower{
+	background-color: #777777;
+	padding: 13px 5px 13px 0px;
+	color: #ffffff;
+}
+.mod88BodyLower a{
+	color: #FFFF00;
+}
+.mod88BodyLower em{
+	color: #FF6666;
+}
+.hpLoginText{
+	font-size: 75%;
+	font-weight: bold;
+	color: #ffffff;
+	font-style: italic;
+	padding-top: 12px;
+	padding-bottom: 12px;
+}
+.pagination{
+	color: #cccccc;
+}
+.pagination a{
+	color: #ff3300;
+}
+.refineHead{
+	text-transform: uppercase;
+	color: #666666;	
+}
+.refineHead strong{
+	color: #000000;	
+	font-weight:normal;
+}
+#listRefine .rowOdd{
+	background-color: #ffffff;
+}
+#listRefine .rowEven{
+	background-color: #F7F7F7;
+}
+#listRefine .cArt{
+	width: 134px;
+	color: #ff3300;
+	padding-top: 3px;
+	padding-bottom: 3px;
+	padding-left: 14px;
+	padding-right: 14px;
+	vertical-align: top;
+}
+#listRefine .cAlb{
+	width: 188px;
+	color: #ff3300;
+	padding-top: 3px;
+	padding-bottom: 3px;
+	padding-left: 14px;
+	padding-right: 14px;
+	border-right: 1px dashed #CCCCCC;	
+	vertical-align: top;
+}
+#listRefine .cSty{
+	color: #ff3300;
+	padding-top: 3px;
+	padding-bottom: 3px;
+	padding-left: 14px;
+	padding-right: 14px;
+	border-left: 1px dashed #CCCCCC;	
+	vertical-align: top;
+}
+#listRefine .cLab{
+	width: 89px;
+	color: #ff3300;
+	padding-top: 3px;
+	padding-bottom: 3px;
+	padding-left: 14px;
+	padding-right: 14px;
+	border-left: 1px dashed #CCCCCC;	
+	vertical-align: top;
+}
+#listRefine .lArt{
+	width: 68px;
+}
+#listRefine .lPhones{
+	width: 20px;
+}
+#listRefineFoot .pagination{
+	padding-right: 14px;
+	padding-top: 3px;
+	padding-bottom: 3px;
+}
+/* header */
+#header{
+	color: #E1E1E1;
+}
+#msg strong, #msg a{
+	color: #FFFF00;
+	font-weight:normal;
+}
+#nav{
+	float:right;
+	padding:0px 0px 0px 0px;
+	border: 1px solid red;
+}
+#nav a{
+	color: #E1E1E1;
+	text-decoration:none;
+}
+/* search bar */
+.search{
+	line-height: 14px;
+}
+.srchBar{
+	background-image:url(../images/bgSrchBar.jpg);
+}
+/* footer */
+.footer{
+	text-align:left;
+	width:688px;
+	color:#ffffff;
+	font-family: Arial, Helvetica, sans-serif;
+	font-weight: bold;
+	font-size: 70%;
+	}
+
+.footerSmall{
+
+	color:#CCCCCC;
+	font-size: 60%;
+}
+.footerSmall a{
+	color:#CCCCCC;
+	text-decoration: none;
+}
+.footerSmall a:hover {
+	text-decoration: underline;
+}
+
+/* bread crumb */
+.breadcrumb{
+	width:746px;
+	text-align: left;
+	padding-top:10px;
+	padding-bottom:10px;
+}
+.breadcrumb a{
+	color:#3366CC;
+}
+
+  /*image dropshadows*/
+/*.ds1, .ds2, .ds3 {
+  	display:inline-table;
+  }*/
+.ds1 {
+  	float:left;
+  	background:url(../images/albShadow.gif) right bottom no-repeat;
+  }
+.ds2 {
+  	background:url(../images/albCornerBl.gif) -4px 100% no-repeat;;
+  }
+.ds3 {
+  	padding:0 5px 5px 0;
+  	background:url(../images/albCornerTr.gif) 100% -4px no-repeat;;
+  }
+.ds3 img {
+  	display:block;
+  }
+
+.ds4 {
+  	float:left;
+  	padding:0 2px 2px 0;
+  	background:url(../images/albArtShadowSm.gif) right bottom no-repeat;
+  }
+.ds4 img{
+  	border: 1px solid #999999;
+  }
+
+/* page layout templates */
+/* album page */
+#layout1{  
+	padding-top:23px;
+}
+#layout1 .colRgt{
+	width:320px;
+	padding-left:30px;
+}
+/* artist page */
+#layout2 .colRgt{
+	width:182px;
+	padding-left:22px;
+}
+/* genre page */
+#layout3 .colLft{
+	width:128px;
+}
+#layout3 .colRgt{
+	width:136px;
+}
+#layout3 .colMid{
+	padding-right:18px;
+	padding-left:18px;
+}
+/* refine page */
+#layout4 .cLft{
+	width:134px;
+	padding-right:18px;
+}
+/* label page */
+#layout5 .colLft{
+	width:128px;
+}
+#layout5 .colRgt{
+	width:136px;
+}
+#layout5 .colMid{
+	padding-right:18px;
+	padding-left:18px;
+}
+#layout5 .colMid h1{
+	color: #CCCC33;
+	font-size: 165%;
+	font-weight: bold;
+	padding-top:10px;
+	padding-bottom:10px;
+}
+/* home page */
+#layout6 .colLft{
+	width:145px;
+}
+#layout6 .colRgt{
+	width:240px;
+}
+#layout6 .colMid{
+	width:315px;
+	padding-right:25px;
+	padding-left:21px;
+}
+#layout7 .colLft{
+	width:485px;
+}
+#layout7 .colRgt{
+	padding-left:23px;
+}
+
+/* genre page elements */  
+.genFeat{
+	border-top:1px dashed #cccccc;
+}
+.featImg{
+	width: 186px;
+	padding-top: 13px;
+	padding-right: 13px;
+}
+.featInfo{
+	line-height: 150%;
+	padding-top: 13px;
+	padding-left: 13px;
+	border-left:1px dashed #cccccc;
+}
+.featInfo strong{
+	font-size: 145%;
+	font-weight:normal;
+}
+  
+/* album & artist page elements */  
+.img{
+	width:170px;
+	padding-bottom: 10px;
+}
+.info{
+	padding-bottom: 10px;
+}
+.catalogInfo{
+	padding-bottom: 10px;
+	padding-left: 4px;
+}
+.catalogInfo a {
+	color: #000000;
+	text-decoration: none;
+}
+.catalogInfo a:hover {
+	text-decoration: underline;
+}
+.catalogInfo strong {
+	font-weight: normal;
+	color: #666666;
+}
+
+.name,.smallName{
+	font-weight:bold;
+	color: #ff3300;
+}
+.name {
+	font-size: 145%;
+}
+.dotsDiv{ 
+	background:  url('/images/bg-dots.gif') repeat-x center;
+}
+.reviewSm{
+	line-height: 150%;
+	padding-top:10px;
+	padding-bottom: 10px;
+}
+.reviewSm strong{
+	font-size: 145%;
+	font-weight:normal;
+}
+.reviewLg{
+	font-size: 75%;
+	line-height: 150%;
+	padding-bottom: 15px;
+}
+.reviewLg strong{
+	font-size: 100%;
+	font-weight:normal;
+}
+.reviewLg h1{
+	font-size: 100%;
+	font-weight:bold;
+}
+
+/* album page - track list */
+#trkHead{
+  	background:url(../images/bgTrkListHead.gif);
+	border-top: 1px solid #CBDCD8;
+	border-left: 1px solid #CBDCD8;
+	border-bottom: 1px solid #999999;
+	border-right: 1px solid #999999;
+}
+#trkList .rowOdd{
+background-color:#F1F1F1;
+}
+#trkList .rowEven{
+background-color:#F9F9F9;
+}
+#trkList .colSong{
+	border-left: 1px dashed #999999;
+	border-right: 1px dashed #999999;
+	padding-left:10px;
+	padding-right:10px;
+}
+#trkList .colLen{
+	/* border-left: 1px dashed #999999; -- removed because I removed popular track column */
+	border-right: 1px dashed #999999;
+}
+#trkList .colDl{
+	border-left: 1px dashed #999999;
+	border-right: 1px solid #999999;
+}
+.colNum{
+	width:50px;
+}
+.colPop{
+	width:54px;
+}
+.colLen{
+	width:48px;
+}
+.colListen{
+	width:48px;
+}
+.colDl{
+	width:85px;
+}
+
+/* pager */
+.pager a, .pagerCurrentPage
+{
+	padding: 2px 5px 2px 5px;
+	text-decoration: none;
+}
+
+.pager .pagerCurrentPage
+{	
+    	color: #000000;
+	font-size: 130%;
+	font-weight: bold;
+}
+.pager .pagerBreak {
+	color: #000000;
+}
+.pager a {
+	margin: 1px;
+}
+
+.pager a:hover
+{
+	border-width: 1px;
+    	border-style: solid;
+    	border-color: #CCCCCC;
+	margin: 0px;
+}
+
+img.icon {
+	margin-right: 5px;
+}
+.taf {
+	margin-left: -2px;
+}
+.rate, .rateh, .ratepro {font: 9px Arial, Verdana, Sans-Serif; color: #999999; padding: 3px 0;}
+ 
+.rateh img {margin-right: 4px; margin-bottom: 1px; vertical-align: middle;}
+ 
+.ratepro img {margin: 2px 0px 2px 0px; vertical-align: middle;}
+
+img.listen {
+	vertical-align: middle;
+	margin-right: 3px;
+	width: 14px;
+	height: 11px;
+	}
+
+.trunc {
+	text-overflow:ellipsis; /*IE only */
+	overflow:hidden;
+	white-space:nowrap;
+}
+
+.pointer {
+  cursor: pointer;
+}
+
+/*for not in country error message */
+div.error	{
+	margin: 10px 0;
+	padding: 4px 10px;
+	background-image: url(/images/ctlg/album/exclamation_mark.png); 
+	background-repeat: no-repeat;
+	background-position: 0 50%;
+	color: #f00;
+	text-align: left;
+	}
+
+/* to remove accounts.css from album_error, label_error, and artist_error jsp */
+
+.accountTitle {
+	font-size: 170%;
+	color: #666666;
+	font-weight: bold;
+}

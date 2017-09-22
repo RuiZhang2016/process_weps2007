@@ -1,0 +1,399 @@
+<HTML>
+<HEAD>
+   <TITLE>Baker Knight</TITLE>
+   <X-CLARIS-WINDOW TOP=48 BOTTOM=738 LEFT=18 RIGHT=850>
+   <X-CLARIS-REMOTESAVE SERVER="ftp.bakerknight.com" USER=bakerknight DIR="/home/bakerknight/www/" FILE="">
+   <X-CLARIS-TAGVIEW MODE=minimal>
+<META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=iso-8859-1"><script language="JavaScript1.2">// Drop-in content box- By Dynamic Drive
+// For full source code and more DHTML scripts, visit http://www.dynamicdrive.com
+// This credit MUST stay intact for use
+
+var ie=document.all
+var dom=document.getElementById
+var ns4=document.layers
+var calunits=document.layers? "" : "px"
+
+var bouncelimit=32 //(must be divisible by 8)
+var direction="up"
+
+function initbox(){
+if (!dom&&!ie&&!ns4)
+return
+crossobj=(dom)?document.getElementById("dropin").style : ie? document.all.dropin : document.dropin
+scroll_top=(ie)? truebody().scrollTop : window.pageYOffset
+crossobj.top=scroll_top-250+calunits
+crossobj.visibility=(dom||ie)? "visible" : "show"
+dropstart=setInterval("dropin()",50)
+}
+
+function dropin(){
+scroll_top=(ie)? truebody().scrollTop : window.pageYOffset
+if (parseInt(crossobj.top)<100+scroll_top)
+crossobj.top=parseInt(crossobj.top)+40+calunits
+else{
+clearInterval(dropstart)
+bouncestart=setInterval("bouncein()",50)
+}
+}
+
+function bouncein(){
+crossobj.top=parseInt(crossobj.top)-bouncelimit+calunits
+if (bouncelimit<0)
+bouncelimit+=8
+bouncelimit=bouncelimit*-1
+if (bouncelimit==0){
+clearInterval(bouncestart)
+}
+}
+
+function dismissbox(){
+if (window.bouncestart) clearInterval(bouncestart)
+crossobj.visibility="hidden"
+}
+
+function truebody(){
+return (document.compatMode && document.compatMode!="BackCompat")? document.documentElement : document.body
+}
+
+
+window.onload=initbox</script>
+</HEAD>
+<BODY BGCOLOR="#FFFFFF" LINK="#FFFFFF" ALINK="#FFFFFF" VLINK="#FFFFFF" BACKGROUND="bakeback.jpg" leftmargin=0 topmargin=0 marginwidth=0 marginheight=0>
+<P><TABLE BORDER=0 CELLSPACING=0 CELLPADDING=0 WIDTH="100%" bordercolor="#000000">
+   <TR>
+      <TD WIDTH=104>
+         <P><IMG SRC="spacer.gif" WIDTH=102 HEIGHT=1 ALIGN=bottom></P>
+      </TD>
+      <TD WIDTH="20%">
+         <P><IMG SRC="spacer.gif" WIDTH=127 HEIGHT=1 ALIGN=bottom></P>
+      </TD>
+      <TD WIDTH=22>
+         <P><IMG SRC="spacer.gif" WIDTH=100 HEIGHT=1 ALIGN=bottom></P>
+      </TD>
+      <TD WIDTH="47%">
+         <P><IMG SRC="spacer.gif" WIDTH=411 HEIGHT=1 ALIGN=bottom></P>
+      </TD>
+   </TR>
+   <TR>
+      <TD COLSPAN=4>
+         <P><IMG SRC="top.gif" WIDTH=740 HEIGHT=34 ALIGN=bottom></P>
+      </TD>
+   </TR>
+   <TR BGCOLOR="#000000">
+      <TD COLSPAN=3>
+         <P><IMG SRC="button_bar1.gif" WIDTH=320 HEIGHT=29 ALIGN=bottom></P>
+      </TD>
+      <TD WIDTH="47%">
+         <P><A HREF="http://www.bakerknight.com/credits.html"><FONT SIZE="-2" FACE="Arial Black" COLOR="#FFFFFF">|Credits</FONT></A><FONT SIZE="-2" FACE="Arial Black" COLOR="#FFFFFF">
+         | </FONT><A HREF="http://www.bakerknight.com/jukeboxpreview.html"><FONT SIZE="-2" FACE="Arial Black" COLOR="#FFFFFF">Jukebox</FONT></A><FONT SIZE="-2" FACE="Arial Black" COLOR="#FFFFFF">
+         | </FONT><A HREF="http://www.bakerknight.com/kudos.html"><FONT SIZE="-2" FACE="Arial Black" COLOR="#FFFFFF">Kudos</FONT></A><FONT SIZE="-2" FACE="Arial Black" COLOR="#FFFFFF">
+         | </FONT><A HREF="http://www.bakerknight.com/knightmares.html"><FONT SIZE="-2" FACE="Arial Black" COLOR="#FFFFFF">Knightmares</FONT></A><FONT SIZE="-2" FACE="Arial Black" COLOR="#FFFFFF">
+         | </FONT><A HREF="http://www.bakerknight.com/songsoncd.html"><FONT SIZE="-2" FACE="Arial Black" COLOR="#FFFFFF">Buy
+         The CD</FONT></A><FONT SIZE="-2" FACE="Arial Black" COLOR="#FFFFFF">
+         | |</FONT><A HREF="http://www.bakerknight.com/albumorder.html"><FONT SIZE="-2" FACE="Arial Black" COLOR="#FFFFFF">Contact</FONT></A><FONT SIZE="-2" FACE="Arial Black" COLOR="#FFFFFF">
+         | </FONT><A HREF="http://www.bakerknight.com/fanmag.html"><FONT SIZE="-2" FACE="Arial Black" COLOR="#FFFFFF">Dino</FONT></A><FONT SIZE="-2" FACE="Arial Black" COLOR="#FFFFFF">
+         | |</FONT><A HREF="http://www.bakerknight.com/tuesday.html"><FONT SIZE="-2" FACE="Arial Black" COLOR="#FFFFFF">Tuesday</FONT></A><FONT SIZE="-2" FACE="Arial Black" COLOR="#FFFFFF">
+         | </FONT><A HREF="mailto:mag13phantoms@yahoo.com"><FONT SIZE="-2" FACE="Arial Black" COLOR="#FFFFFF">email</FONT></A><FONT SIZE="-2" FACE="Arial Black" COLOR="#FFFFFF">|
+         </FONT><A HREF="http://www.bakerknight.com/qa.html"><FONT SIZE="-2" FACE="Arial Black" COLOR="#FFFFFF">Q/A</FONT></A><FONT SIZE="-2" FACE="Arial Black" COLOR="#FFFFFF">
+         | </FONT><A HREF="http://www.bakerknight.com/knightbook.html"><FONT SIZE="-2" FACE="Arial Black" COLOR="#FFFFFF">New
+         Book</FONT></A><FONT SIZE="-2" FACE="Arial Black" COLOR="#FFFFFF">
+         | </FONT><A HREF="http://www.bakerknight.com/snapshots.html"><FONT SIZE="-2" FACE="Arial Black" COLOR="#FFFFFF">Snapshots</FONT></A><FONT SIZE="-2" FACE="Arial Black" COLOR="#FFFFFF">
+         |</FONT></P>
+      </TD>
+   </TR>
+   <TR>
+      <TD COLSPAN=4 NOWRAP HEIGHT=2>
+         <CENTER><TABLE BORDER=0 CELLSPACING=0 CELLPADDING=0>
+            <TR>
+               <TD WIDTH=704>
+                  <P></P>
+               </TD>
+               <TD>
+                  <P></P>
+               </TD>
+            </TR>
+         </TABLE>
+          <IMG SRC="newheadline.gif" WIDTH=747 HEIGHT=80 X-CLARIS-USEIMAGEWIDTH ALIGN=bottom></CENTER>
+      </TD>
+   </TR>
+   <TR>
+      <TD WIDTH=104>
+         <CENTER><TABLE BORDER=0 CELLSPACING=4 CELLPADDING=0 WIDTH="57%" HEIGHT=119>
+            <TR>
+               <TD>
+                  <CENTER><FONT COLOR="#000000"><IMG SRC="elvis75.jpg" WIDTH=104 HEIGHT=145 BORDER=1 ALIGN=bottom></FONT></CENTER>
+               </TD>
+            </TR>
+            <TR>
+               <TD>
+                  <CENTER><FONT COLOR="#000000"><IMG SRC="rick2.jpg" WIDTH=104 HEIGHT=139 BORDER=1 ALIGN=bottom></FONT></CENTER>
+               </TD>
+            </TR>
+            <TR>
+               <TD>
+                  <CENTER><FONT COLOR="#000000"><IMG SRC="dinodino.jpg" WIDTH=104 HEIGHT=135 BORDER=1 ALIGN=bottom></FONT></CENTER>
+               </TD>
+            </TR>
+            <TR>
+               <TD>
+                  <CENTER><FONT COLOR="#000000"><IMG SRC="franka.jpg" WIDTH=104 HEIGHT=149 BORDER=1 ALIGN=bottom></FONT></CENTER>
+               </TD>
+            </TR>
+            <TR>
+               <TD>
+                  <CENTER><FONT COLOR="#000000"><IMG SRC="sammydavisa.jpg" WIDTH=104 HEIGHT=156 BORDER=1 ALIGN=bottom></FONT></CENTER>
+               </TD>
+            </TR>
+            <TR>
+               <TD>
+                  <CENTER><FONT COLOR="#000000"><IMG SRC="paulmc.jpg" WIDTH=104 HEIGHT=144 BORDER=1 ALIGN=bottom></FONT></CENTER>
+               </TD>
+            </TR>
+            <TR>
+               <TD>
+                  <CENTER><FONT COLOR="#000000"><IMG SRC="perrycomoa.jpg" WIDTH=104 HEIGHT=155 BORDER=1 ALIGN=bottom></FONT></CENTER>
+               </TD>
+            </TR>
+            <TR>
+               <TD>
+                  <CENTER><FONT COLOR="#000000"><IMG SRC="jlla.jpg" WIDTH=104 HEIGHT=145 BORDER=1 ALIGN=bottom></FONT></CENTER>
+               </TD>
+            </TR>
+            <TR>
+               <TD>
+                  <CENTER><FONT COLOR="#000000"><IMG SRC="hanka.jpg" WIDTH=104 HEIGHT=130 BORDER=1 ALIGN=bottom></FONT></CENTER>
+               </TD>
+            </TR>
+            <TR>
+               <TD>
+                  <CENTER><FONT COLOR="#000000"><IMG SRC="gilleygil.jpg" WIDTH=104 HEIGHT=125 BORDER=1 ALIGN=bottom></FONT></CENTER>
+               </TD>
+            </TR>
+            <TR>
+               <TD>
+                  <P>&nbsp;</P>
+                  
+                  <P></P>
+               </TD>
+            </TR>
+            <TR>
+               <TD>
+                  <P>&nbsp;</P>
+                  
+                  <P></P>
+               </TD>
+            </TR>
+            <TR>
+               <TD>
+                  <P>&nbsp;</P>
+               </TD>
+            </TR>
+            <TR>
+               <TD>
+                  <P></P>
+               </TD>
+            </TR>
+            <TR>
+               <TD>
+                  <P></P>
+               </TD>
+            </TR>
+            <TR>
+               <TD>
+                  <P></P>
+               </TD>
+            </TR>
+         </TABLE>
+          &nbsp;</CENTER>
+      </TD>
+      <TD VALIGN=top COLSPAN=3>
+         <DL>
+            <DT><CENTER>&nbsp;<A HREF="http://www.bakerknight.com/bakerpromo.rm"><IMG SRC="playsong.gif" WIDTH=104 HEIGHT=20 X-CLARIS-USEIMAGEWIDTH X-CLARIS-USEIMAGEHEIGHT ALIGN=bottom></A>&nbsp;&nbsp;
+            
+            <P><FONT COLOR="#37A8F3"><IMG SRC="bakecomp7.jpg" WIDTH=504 HEIGHT=360 BORDER=2 ALIGN=bottom></FONT></P></CENTER></DT>
+         </DL>
+         
+         <CENTER><FONT SIZE="-1" COLOR="#000066"><TABLE BORDER=0 CELLSPACING=0 CELLPADDING=0 WIDTH="65%">
+            <TR>
+               <TD>
+                  <P><FONT SIZE="-1" COLOR="#000066"><B>We go to the
+                  grave of our loved one saying, "a man has passed
+                  away." But angels throng about him, saying "A Man
+                  Is Born."</B></FONT></P>
+                  
+                  <P><FONT SIZE="-1" COLOR="#000066"><B>Indeed, the
+                  angels are now shouting such for Baker Knight,
+                  known as the "songwriter's songwriter" by industry
+                  greats and fans alike. His music has been recorded
+                  and played by a list of luminaries that reads like
+                  the Who's Who of both early and contemporary
+                  music.</B></FONT></P>
+                  
+                  <P><FONT SIZE="-1" COLOR="#000066"><B>His songs
+                  have been recorded by over 40 recording artists
+                  beginning in 1958 when Rick Nelson recorded his
+                  classic hit, "Lonesome Town." Rick went on to
+                  record 21 more songs penned by the mind and soul of
+                  this "songwriter's songwriter."</B></FONT></P>
+                  
+                  <P><FONT SIZE="-1" COLOR="#000066"><B>Most
+                  recently, Paul McCartney recorded "Lonesome Town"
+                  and included it on his "Run Devil Run" album, which
+                  was released in 1999. Paul went even further,
+                  singing "Lonesome Town" at a ceremony in London,
+                  England, as a tribute to his late wife, Linda. He
+                  also performed it on the television show, "Live
+                  from the Cavern," a British club where the
+                  legendary Beatles got their sea
+                  legs.</B></FONT></P>
+                  
+                  <P><FONT SIZE="-1" COLOR="#000066"><B>One Baker
+                  Knight fan said it best. "Heartbreak Hotel" is
+                  located in "Lonesome Town."</B></FONT></P>
+                  
+                  <P><FONT SIZE="-1" COLOR="#000066"><B>Born Thomas
+                  Baker Knight, Jr. in Birmingham, Alabama, July 4,
+                  1933, this lauded songwriter lived in several
+                  cities throughout the South, spending the majority
+                  of his childhood in Birmingham where he attended
+                  high school. Upon graduation he served three years
+                  in the Air Force (where he learned to play the
+                  guitar) and on his return to his roots, spent a
+                  year at the University of Alabama. Unable to afford
+                  the expense of college he attended an art school in
+                  Birmingham and became a technical illustrator and
+                  draftsman.</B></FONT></P>
+                  
+                  <P><FONT SIZE="-1" COLOR="#000066"><B>When Elvis
+                  appeared on the music scene in 1956, Baker and some
+                  musician friends were so moved by his music and the
+                  music of several other artists, including BB King
+                  and Bo Diddley, they formed a rock &amp; roll band,
+                  "Baker Knight and the Knightmares."</B></FONT></P>
+                  
+                  <P><FONT SIZE="-1" COLOR="#000066"><B>Within a year
+                  the band developed a huge following in the
+                  Birmingham area and one day, as fortune would have
+                  it, the proverbial "Hollywood agent" came to town.
+                  He liked the band and signed them up. They recorded
+                  several songs but one of them stood out, "Bring My
+                  Cadillac Back," written by Knight.</B></FONT></P>
+                  
+                  <P><FONT SIZE="-1" COLOR="#000066"><B>It started
+                  climbing the charts, selling 40,000 records in just
+                  two weeks. But the song was removed from the radio
+                  play lists because the then "powers that be" felt
+                  it was a free commercial for
+                  Cadillac.</B></FONT></P>
+                  
+                  <P><FONT SIZE="-1" COLOR="#000066"><B>Nothing
+                  seemed to come together after that. The band
+                  members drifted away and Baker headed West to Los
+                  Angeles to catch his yet defined
+                  star.</B></FONT></P>
+                  
+                  <P><FONT SIZE="-1" COLOR="#000066"><B>Armed with
+                  his guitar and an $80 nest egg, Baker pounded the
+                  pavement but to no avail. It was then that he wrote
+                  perhaps his most defining song, "Lonesome Town." It
+                  was his comment on being lost in a crowd, lovelorn,
+                  and all alone in Hollywood. Things would get much
+                  worse. Baker Knight was down to his last 36 cents.
+                  "Thirty-six pennies in a glass," he recalls.
+                  "Nowhere to run. Nowhere to hide."</B></FONT></P>
+                  
+                  <P><FONT SIZE="-1" COLOR="#000066"><B>But fate
+                  would soon intervene. "I was introduced to Ricky
+                  Nelson (who was a full-fledged teenage idol at the
+                  time) by a mutual friend," Baker tells. "I played a
+                  few songs for him, and much to my surprise, his
+                  manager called two days later and told me Ricky
+                  wanted to record two of the songs. They offered me
+                  a $2,000 advance, which was unexpected but most
+                  welcome at the time, considering I was flat
+                  broke."</B></FONT></P>
+                  
+                  <P><FONT SIZE="-1" COLOR="#000066"><B>Ricky
+                  recorded "Lonesome Town" and "I Got A Feeling"
+                  shortly thereafter and in the late fall of 1958
+                  both songs were at the top of the Billboard Charts.
+                  "Lonesome Town" was at #6 and "I Got A Feeling"
+                  came in at #11. Ricky went on to record a total of
+                  22 songs written by Baker.</B></FONT></P>
+                  
+                  <P><FONT SIZE="-1" COLOR="#000066"><B>Thereafter,
+                  Baker continued to write songs, many of which were
+                  recorded by the industry's elite, including Frank
+                  Sinatra, Elvis Presley, and Mickey Gilley, whose
+                  rendition of Baker's "Don't The Girls All Get
+                  Prettier At Closing Time" won the Academy of
+                  Country Music's "Song of the Year" award. He has
+                  the distinction of having a Two Million Performance
+                  song and three One Million Performance songs to his
+                  credit.</B></FONT></P>
+                  
+                  <P><FONT SIZE="-1" COLOR="#000066"><B>Baker, who
+                  lived in his hometown of Birmingham, Alabama, is
+                  survived by his daughter, Tuesday Lynn Knight, an
+                  actress and jewelry designer who lives in Studio
+                  City, CA., and a son, Thomas Baker Knight III, a
+                  doctor of veterinary medicine and an award winning
+                  taxidermist who resides in Cantonment, Florida (He
+                  also plays guitar and bass).</B></FONT></P>
+                  
+                  <P></P>
+               </TD>
+            </TR>
+         </TABLE>
+          </FONT>
+         
+         <P><TABLE BORDER=2 BGCOLOR="#000066" CELLPADDING=2 WIDTH="45%">
+            <TR>
+               <TD>
+                  <DL>
+                     <DT><CENTER><FONT SIZE="+1" COLOR="#FFFFFF"><B>Our
+                     Guestbook is Now
+                     Closed.</B></FONT></CENTER></DT>
+                     
+                     <DT><CENTER><FONT COLOR="#FFFFFF"><B>Thank You
+                     For Your Continued
+                     Prayers!</B></FONT></CENTER></DT>
+                  </DL>
+               </TD>
+            </TR>
+         </TABLE>
+         </P>
+         
+         <P><TABLE BORDER=3 BGCOLOR="#9999CC" CELLPADDING=2 WIDTH="14%">
+            <TR>
+               <TD WIDTH=592>
+                  <CENTER><IMG SRC="Count.cgi%3Fdf=bakerknight%252Fcounter_Bakes.dat" X-CLARIS-USEIMAGEWIDTH X-CLARIS-USEIMAGEHEIGHT ALIGN=bottom></CENTER>
+               </TD>
+            </TR>
+         </TABLE>
+         </P>
+         
+         <P>&nbsp; &nbsp;</P>
+         
+         <P><TABLE BORDER=0 CELLSPACING=0 CELLPADDING=0 WIDTH="28%">
+            <TR>
+               <TD>
+                  <DL>
+                     <DT><CENTER><FONT SIZE="-2" FACE="Arial Narrow">Baker's
+                     site designed by the</FONT></CENTER></DT>
+                     
+                     <DT><CENTER><A HREF="http://www.perucciferraiuolo.com"><FONT COLOR="#000000"><IMG SRC="wg2.gif" WIDTH=122 HEIGHT=33 X-CLARIS-USEIMAGEWIDTH X-CLARIS-USEIMAGEHEIGHT ALIGN=bottom></FONT></A></CENTER></DT>
+                     
+                     <DT><CENTER><FONT SIZE="-2" COLOR="#000000">on
+                     April 03, 2003</FONT></CENTER></DT>
+                  </DL>
+               </TD>
+            </TR>
+         </TABLE>
+         </P></CENTER>
+      </TD>
+   </TR>
+</TABLE>
+</P>
+</BODY>
+</HTML>

@@ -1,0 +1,298 @@
+/* created 07 January 2004 Bryan Roseberry */
+/* moved content from xns.css for organization */
+/* edited 14 January 2004 Bryan Roseberry */
+
+/* -------------------------- hotel addendum ------------------------------- */
+
+table.hotelListing {
+	margin: 1em 4%;
+	border: solid 2px #6699CC; /* 216221*/
+	background-color: #6699CC;/* 216221*/
+}
+
+table.hotelListing caption {
+	font-size: 1.2em;
+	font-weight: bold;
+	margin: auto;
+	padding: 1em 0 2px 0;
+}
+
+table.hotelListing thead {
+	/*background-color: #397B39;*/
+	background-color: #8DB7E1;
+	color: #000;
+	font-style: italic;
+}
+
+table.hotelListing tr th {
+	padding: 0.5em;
+}
+
+table.hotelListing tr td {
+	padding: 5px;
+	padding-top: 3px ! important;
+	margin: 2px;
+}
+
+table.hotelListing tr.odd {
+	background-color: #BDD7F1;
+}
+
+table.hotelListing tr.even, table.hotelListing tr.main {
+	background-color: #E5ECF4;
+}
+
+table.hotelListing tr.main {
+	font-size: 1.1em ! important;
+	background-color: #fff;
+}
+
+table.hotelListing tr th.uno, table.hotelListing tr td.uno  {
+	width: 35% ! important;
+}
+
+table.hotelListing tr td.uno {
+	/*padding-bottom: 10px ! important;
+	padding-left: 15px ! important;*/
+}
+
+table.hotelListing tr th.dos, table.hotelListing tr td.dos  {
+	width: 9% ! important;
+	text-align: center;
+}
+
+table.hotelListing tr th.tres, table.hotelListing tr td.tres  {
+	width: 30% ! important;
+}
+
+table.hotelListing tr td span.hotelName {
+	font-weight: bold;
+	margin-bottom: 0px;
+}
+
+
+table.hotelListing tr td div.pics {
+   display: block;
+   text-align: center;
+   width: 115px;
+   float: left;
+margin-top: 6px;
+}
+
+div.oneA, div.oneB, div.oneC, div.oneD {
+	display: block;
+	margin-right: 0;
+	padding: 5px;
+}
+
+div.oneA { margin-left: 115px; }
+div.oneB { margin-left: 115px; }
+div.oneC { margin-left: 115px; }
+div.oneD { margin-left: 115px; }
+
+/* ------------------------ Speaker Bio Addendum ---------------------------- */
+
+div#speakTitleTest, div#speakBodyTest {
+	display: block;
+	position: relative;
+	width: 96%;
+	margin: auto;
+}
+
+div#speakTitleTest {
+	z-index: 10;
+	background-color: #eef;
+	height: 153px; /* image hack to insure that the image is retained within the DIV */
+}
+	
+div#speakBodyTest {
+	z-index: 9;
+	padding: 1em 0;
+}
+
+div#speakTitleTest p span {
+	/*display: block;*/
+}
+
+/* ------------------------ Speaker Registration Form Addendum -------------- */
+
+span.regCategory {
+	font-weight: bold;
+	font-size: 1.1em;
+}
+
+span.regFormName {
+	font-weight: bold;
+}	
+
+/* ----------------------- Attendee Registration Form Addendum -------------- */
+
+span.requiredFF {
+	color: #c33;
+}
+
+table.hotelListing tbody.centering {
+	text-align: center;
+}
+
+table.hotelListing tr#desThree {
+	visibility: visible;
+}
+
+/* ----------------------- Links table CSS ---------------------------------- */
+
+table.linksTable {
+	border: 0;
+	width: 96%;
+	text-align: center;
+	 margin-bottom: 1em;
+    margin-top: 1em;
+    padding: 0 10px;
+}
+
+table.linksTable tr td p { /* spacing bug in IE */
+	margin-left: 0;
+}
+
+table.linksTable tr td img.linkIcon {
+	border: 0;
+	width: 150px;
+	height: 70px;
+	padding: 0 0 0 10px;
+	margin: 2px 0;
+	text-align: center;
+}
+
+table.linksTable tr td a:hover img {
+	background-color: #fff ! important;
+}
+
+table.linksTable tr.odd td a:hover img {
+	background-color: #eef ! important;
+}
+
+
+table.linksTable tr.odd td img.linkIcon {
+	margin: 0;
+}
+
+table.linksTable tr td.linksLeft {
+	width: 120px;
+}
+
+/* -------------------- Index page table for sponsors ---------------------*/
+
+table.newIndex {
+	border: 0;
+	background-color: #fff;
+}
+
+table.newIndex tr td, table.newIndex tr {
+	padding-top: 0;
+	margin: 0;
+}
+
+td.sponsorSide {
+	width: 25%;
+}
+
+td.sponsorSide p {
+	margin: auto;
+	text-align: center;
+}
+
+div#mpso {
+	display: block;
+	position: relative;
+	margin: 4em 15px 0 15px;
+	padding: 10px;
+	border: solid 1px #69c;
+	background-color: #fff;
+	width: 190px;
+}
+
+img.mpsImg {
+	border: 0;
+	display: block;
+	left: 0;
+	width: 150px;
+	height: 70px;
+	margin: 0 5px;
+}
+
+h4.sponTitle {
+	color: #000;
+	font-size: 0.9em;
+	font-style: normal;
+	font-weight: bold;
+	margin: 2px 0;
+	padding-bottom: 1em;
+}
+
+div#UMH {
+	display: block;
+	position: relative top;
+	margin: 0 0 0 0;
+	padding: 8px;
+}
+
+div.newIndexBox {
+	display: block;
+	position: relative;
+    background-color: #E5ECF4;
+    border: solid 1px #69c;
+    margin: 0.5em 5%;
+    padding: 0 ! important;
+}
+
+div.newIBW {
+	display: block;
+	position: relative;
+    background-color: #ffc;
+    border: solid 1px #69c;
+    margin: 0.5em 5%;
+}
+
+div.newIBW ul, div.newIBW p, div.newIBW ul li {
+	padding: 0px ! important;
+}
+
+div.newIndexBox p, div.newIBW p {
+	text-align: left ! important;
+}
+
+/* -------------------------- Post-Conference Photos page - photos.html --------------- */
+
+div.photosDiv {
+	width: 760px; 
+	margin: auto; 
+	position: relative; 
+	border: 2px #fff solid;
+	clear: both;
+}
+
+h4.photosSubTitle {
+	margin: 1.5em; 
+	text-align: center;
+}
+
+h4.photosParaImg {
+	text-align: center;
+	clear: both;
+}
+
+/* ------------------------- Newsroom 2 column CSS ------------------ */
+
+div.twoColLH, div.twoColRH {
+	width: 92%;
+	border: solid 1px #69c;
+	padding: 7px;
+}
+
+div.twoColLH {
+	margin: 0 5px 0 15px;
+}
+
+div.twoColRH {
+	margin: 0 15px 0 5px;
+}

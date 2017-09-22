@@ -1,0 +1,362 @@
+
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN" >
+<HTML>
+	<HEAD>
+		<title>The Spokesman-Review.com</title>
+		<link Rel="stylesheet" href="https://secure1.spokesmanreview.com/mainstyle.css" Type="text/css">
+		<meta http-equiv="Pragma" content="no-cache">
+		<meta http-equiv="Cache-Control" content="no-cache">
+		<meta http-equiv="Expires" content="0">
+		<meta name="GENERATOR" Content="Microsoft Visual Studio .NET 7.1">
+		<meta name="CODE_LANGUAGE" Content="C#">
+		<meta name="vs_defaultClientScript" content="JavaScript">
+		<meta name="vs_targetSchema" content="http://schemas.microsoft.com/intellisense/ie5">
+		<link href="https://secure1.spokesmanreview.com/onlinesub/includes/master.css" type="text/css" rel="stylesheet">
+		<link rel="stylesheet" href="https://secure1.spokesmanreview.com/ccistyle.css" type="text/css">
+		<script language="javascript" type="text/javascript">
+					
+			document.onkeypress =
+			function checkKP()
+			{
+				checkKeyPress();
+			}
+			
+			
+			function CheckSubmit(e)
+			{
+				if(!e) e = window.event;
+				
+				// still don't have anything (happens on some browsers after the good one went)
+				if (!e) return;
+				
+				var key = ( typeof(e.which) == 'number')?e.which:e.keyCode;
+				if(key == 13) // If enter key was pressed in one of MY textboxes...  Login!
+				{
+					ClickLogin();
+					return false;			
+				}
+				else
+					return true;
+			}
+			
+			function ClickLogin()
+			{
+				document.getElementById("btnLogin").click();
+			}
+		</script>
+	</HEAD>
+	<body MS_POSITIONING="GridLayout" LeftMargin="0" TopMargin="0" bgcolor="#cccccc" Link="#00007f"
+		Vlink="#993333">
+		<form name="form1" method="post" action="login.aspx%3Freferrer=http:%252F%252Fwww.spokesmanreview.com%252Ffeatures%252Fstory.asp%3FID=36855&amp;page=4&amp;ReturnUrl=http:%252F%252Fwww.spokesmanreview.com%252Ffeatures%252Fstory.asp%3FID=36855&amp;page=4.1.html" id="form1">
+<input type="hidden" name="__EVENTTARGET" value="" />
+<input type="hidden" name="__EVENTARGUMENT" value="" />
+<input type="hidden" name="__VIEWSTATE" value="dDwxMDY4NzA3ODkxO3Q8O2w8aTwxPjs+O2w8dDw7bDxpPDA+O2k8OT47PjtsPHQ8O2w8aTwxPjs+O2w8dDxwPHA8bDxUZXh0Oz47bDxUaHVyc2RheSwgRGVjZW1iZXIgMDcsIDIwMDY7Pj47Pjs7Pjs+Pjt0PHA8cDxsPFZpc2libGU7PjtsPG88Zj47Pj47Pjs7Pjs+Pjs+PjtsPGNoa1JlbWVtYmVyZWQ7Pj6/XTeljiHl6EODzvzfFJilmLVrkg==" />
+
+<script language="javascript" type="text/javascript">
+<!--
+	function __doPostBack(eventTarget, eventArgument) {
+		var theform;
+		if (window.navigator.appName.toLowerCase().indexOf("microsoft") > -1) {
+			theform = document.form1;
+		}
+		else {
+			theform = document.forms["form1"];
+		}
+		theform.__EVENTTARGET.value = eventTarget.split("$").join(":");
+		theform.__EVENTARGUMENT.value = eventArgument;
+		theform.submit();
+	}
+// -->
+</script>
+
+			
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN" >
+		<script language="JavaScript" type="text/javascript">
+<!--    
+
+	//document.onkeypress = // disabled and done manually to allow multi-line textboxes to work
+	function checkKeyPress(e)
+	{
+		if(!e)
+		{
+			e = window.event;
+		}
+		
+		if (!e) // still don't have anything (happens on some browsers after the good one went)
+			return;
+		
+		var key = ( typeof(e.which) == 'number')?e.which:e.keyCode;
+		if(key == 13)
+		{
+			handleKP();
+		}
+	}
+		
+	if (document.layers) 
+	{
+		document.captureEvents(Event.KEYPRESS);
+	}
+	
+	if(! document.all && document.getElementById)
+	{
+		document.addEventListener("keypress", checkKeyPress, true);
+	}
+		
+	function handleKP()
+	{
+		//put whatever code you want to execute here 
+		//alert("enter key pressed");
+		//__doPostBack('btnSubmit',''); // cause the normal button to be hit
+		window.event.keyCode = 9;
+		return;
+	}
+
+	function clearText(thefield)
+	{
+		if (thefield.defaultValue==thefield.value)
+		thefield.value = "";
+	} 
+	// Courtesy of SimplytheBest.net (http://simplythebest.net/info/dhtml_scripts.html)
+	function change(html)
+	{
+	DESCRIPTION2.innerHTML=html
+	}
+	function imgswapon(name)
+	{
+		try
+		{
+			if (document.images)
+			{
+				eval("document." + name + ".src = '/images/arrow-on.gif'");
+			}
+		}
+		catch(e)
+		{}
+	}
+	function imgswapoff(name)
+	{
+		try
+		{
+			if (document.images)
+			{
+				eval("document." + name + ".src = '/images/arrow-off.gif'");
+			}
+		}
+		catch(e)
+		{}
+	}
+	function setstat(text)
+	{
+		this.status=text;
+	}
+	function unsetstat()
+	{
+		this.status='';
+	}
+    function promopopup()
+    {
+        window.open("/registration/reginfo.asp?faq=true","promopopup","width=400,height=380,scrollbars,resizable");
+    }
+	
+	// Used by subscriberRegistration.aspx and userProfile.aspx
+	function toggleStateDDL()
+	{
+		var ddlCountry = document.getElementById("ddlCountry");
+		var ddlState = document.getElementById("ddlState");
+		var tbState = document.getElementById("_txtState")
+		
+		/*
+		if (ddlCountry)
+		{
+			if (ddlCountry.selectedIndex == 0) // Hide TB, Show DDL
+			{
+				try
+				{
+					GetCSSObj("_txtState").display = "none";
+					GetCSSObj("ddlState").display = "inline";			
+					
+					// Copy to textbox so client validation works too
+					tbState.value = ddlState.value;
+				}
+				catch(e)
+				{}
+				
+			}
+			else // Hide DDL, Show TB
+			{
+				try
+				{
+					GetCSSObj("_txtState").display = "inline";
+					GetCSSObj("ddlState").display = "none";
+				}
+				catch(e)
+				{}
+			}
+		}*/
+	}
+
+	function GetCSSObj(item)
+	{
+		var cssObj;
+		var B_netscape = (document.layers) ? 1:0; // 1 if netscape &lt; V6
+		var B_ie = (document.all) ? 1:0; // 1 if IE
+		var B_netscape6 = (document.getElementById) ? 1:0; // 1 if nescape &gt;= V6
+
+		if (B_ie)
+		{
+			try
+			{
+				cssObj = eval('document.all.'+item+".style");
+			}
+			catch(e)
+			{}
+		}
+		else if (B_netscape) 
+		{
+			try
+			{
+				cssObj = eval('document.ids.'+item);
+			}
+			catch(e)
+			{}
+		}
+		else if (B_netscape6) 
+		{
+			try
+			{
+				cssObj = document.getElementById(item).style;
+			}
+			catch(e)
+			{}
+		}
+		
+		return cssObj;			
+	}
+//-->
+		</script>
+			<table Border="0" CellSpacing="0" CellPadding="0" bgcolor="#ffffff" align="left" width="100%">
+				<tr>
+					<td>
+						<table Border="0" CellSpacing="0" CellPadding="5" width="640">
+							<tr Valign="top">
+								<td Width="130" bgcolor="#006699" Valign="top">
+									<!-- begin news-side -->
+									<!--include file="../inc/sidenav_oldschool.inc" -->
+									<!--include file="../inc/sidenav_wButton.asp" -->									
+								</td>
+								<td>
+								</td>
+								<td>
+									<table Border="0">
+										<tr Valign="bottom">
+											<td Colspan="5">
+												<table Border="0" width="451">
+													<tr>
+														<td Align="left">
+															<A href="https://secure1.spokesmanreview.com/cover.asp"><IMG src="https://secure1.spokesmanreview.com/images/small-logo.gif" width="200" height="20" border="0">
+															</A>
+														</td>
+														<td Align="right">
+															<font Size="2" Face="Tahoma, Sans-serif">
+																<span id="header_lblDate">Thursday, December 07, 2006</span>
+															</font>
+														</td>
+													</tr>
+												</table>
+											</td>
+										</tr>
+										<tr Valign="top">
+											<td Width="400">
+			
+
+<noscript>
+<font color="#ff1111">You do not have JavaScript Enabled.  You may experience unusual behavior in the site.</font><br><br>
+</noscript>
+
+			<!-- insert body here -->
+			<!----------------------------------------------------------------------------------------------------------------->
+			<!------------------------------------------------START CONTENT---------------------------------------------------->
+			<!----------------------------------------------------------------------------------------------------------------->
+			<!--66.45.170.51-->
+			<table Border="2" CellPadding="2" CellSpacing="0" bgcolor="#e0e0e0" Width="505">
+				<tr>
+					<td>
+						<table Border="0" CellPadding="0" CellSpacing="0" bgcolor="#e0e0e0" Width="500">
+							<tr>
+								<td colspan="2">Enter Login Information</td>
+							</tr>
+							<tr>
+								<td>Email Address
+								</td>
+								<td valign="middle">
+									<input name="txtEmail" type="text" id="txtEmail" onKeyDown="return CheckSubmit(event)" />
+									&nbsp;
+									&nbsp;
+								</td>
+							</tr>
+							<tr>
+								<td>Password
+								</td>
+								<td>
+									<input name="txtPassword" type="password" id="txtPassword" onKeyDown="return CheckSubmit(event)" />
+									&nbsp;
+								</td>
+							</tr>
+							<!--<tr> Not Live yet - 6/5/2006 GCF
+								<td>Remember Me
+								</td>
+								<td>
+									<input id="chkRemembered" type="checkbox" name="chkRemembered" /><label for="chkRemembered">Remember My Login</label>
+									
+								</td>
+							</tr>-->
+							<tr>
+								<td colspan="2">
+									<input type="submit" name="btnLogin" value="Login" onclick="if (typeof(Page_ClientValidate) == 'function') Page_ClientValidate(); " language="javascript" id="btnLogin" />
+									
+								</td>
+							</tr>
+							<tr>
+								<td colspan="2">
+									<a id="lbPassword" href="javascript:__doPostBack('lbPassword','')">Forgot password?  Enter your email address and<script language="javascript">document.write(" click here.");</script></a><noscript>&nbsp;<input type="submit" name="Button01" value="Click Here" onclick="if (typeof(Page_ClientValidate) == 'function') Page_ClientValidate(); " language="javascript" id="Button01" /></noscript>
+								</td>
+							</tr>
+							<tr>
+								<td colspan="2">
+									<a id="lbNewUser" href="javascript:__doPostBack('lbNewUser','')">New User?<script language="javascript">document.write(" Click Here to register.");</script></a><noscript>&nbsp;<input type="submit" name="Button02" value="Click Here to register." onclick="if (typeof(Page_ClientValidate) == 'function') Page_ClientValidate(); " language="javascript" id="Button02" /></noscript>
+								</td>
+							</tr>
+							<tr>
+								<td colspan="2"><hr>
+								</td>
+							</tr>
+							<tr>
+								<td colspan="2">
+									<a id="lbTechSupport" href="javascript:__doPostBack('lbTechSupport','')">The Spokesman-Review Online <script language="javascript">document.write(" Technical Support");</script></a><noscript>&nbsp;<input type="submit" name="Button03" value="Technical Support" onclick="if (typeof(Page_ClientValidate) == 'function') Page_ClientValidate(); " language="javascript" id="Button03" /></noscript>
+								</td>
+							</tr>
+						</table>
+					</td>
+				</tr>
+			</table>
+			<!----------------------------------------------------------------------------------------------------------------->
+			<!--------------------------------------------------END CONTENT---------------------------------------------------->
+			<!----------------------------------------------------------------------------------------------------------------->
+			
+											</td>
+										</tr>
+									</table>
+								</td>
+							</tr>
+						</table>
+					</td>
+				</tr>
+			</table>
+		</form>
+	</body>
+</HTML>
+
+		</form>
+		</P>
+	</body>
+</HTML>

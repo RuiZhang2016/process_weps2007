@@ -1,0 +1,10 @@
+# www.itee.uq.edu.au: some bits should not be indexed
+#
+# CJMP 2003/07/14: ~comp2800/dx no longer exists, disallow removed.
+#
+# CJMP 2003/07/14: robots.txt must always contain at least one disallow,
+#                  so the following was added:
+User-agent: *
+Disallow: /nonexistent/disallowed
+User-agent: *
+Disallow: /cgi-bin/fetch

@@ -1,0 +1,264 @@
+html, body {
+	margin: 0px;
+	padding: 0px;
+}
+
+body {
+	font-family: verdana,arial,helvetica,sans-serif;
+	font-weight: normal;
+	text-align: left;
+	background-color: #FFFFFF;
+	margin-right: 1px;
+}
+
+body.home {
+	background-color: #FFFFFF;
+}
+
+#topbar {
+	padding: 0px;
+	margin: 10px 40px 0 40px;
+	border-bottom: 4px solid #0099FF;
+}
+
+body.home #topbar {
+	margin: 0 0 0 67px;
+}
+
+/* Main NCeSS and ESRC logos */
+#logo {
+	width: 195px;
+	margin-left:5px;
+	float: left;
+}
+#esrc {
+	width:94px;
+	margin-top:5px;
+	margin-right:5px;
+	float:right;
+}
+
+body.home #logo {
+	width: 178px;
+}
+
+/* Sitelinks at top of page */
+#header {
+	float: right;
+	text-align: right;
+	margin: 10px 20px 0px 0px;
+}
+#header ul {
+	list-style: none;
+	margin: 0px 0px 27px 0px;
+}
+#header ul li {
+	display: inline;
+	padding: 0 0.5em;
+	border-left: 1px solid  #003399;
+	font-family: verdana, arial, helvetica, sans-serif;
+	font-size: 0.75em;
+	font-weight: normal;
+	color: #003399;	
+}
+#header ul li  a {
+	color: #003399;	
+	text-decoration: none; 
+}
+
+#header ul li.last{
+	border-right: 1px solid  #003399;
+}
+
+/* for pushing down content and avoiding overlaps due to floats */
+.topspacer {
+	clear:both;
+	height: 2px;
+	padding: 0px;
+	margin: 0px;
+	font-size:0.1em;
+}
+
+/* for pushing down content between topbar and container (404 Error Page) */
+
+body.error .topspacer {
+	height: 25px;
+}
+
+/* ----Container for breadcrumbs, left, right and top nav, main content ----- */
+#container {
+	clear: both;
+	margin: 10px 40px 0px 40px;
+	padding: 0px;
+}
+
+/* Container div on HOME page */
+body.home #container {
+	margin: 0px 0px 0px 0px;
+}
+
+/* ----------------------------LEFT NAVIGATION--------------------------  */
+
+/* The left side bar, holding the left subnav in place */
+#menubar {
+	float: left;
+	width: 220px;
+	margin: 0px 0px 0px 0px;
+	padding: 0px;
+	background-color: #FFFFFF;
+}
+
+body.home #menubar {
+	width: 220px;
+}
+
+
+/* -------------------------MAIN CONTENT AREA------------------------ */
+#content {
+	padding: 1px 0px 10px 5px;
+	margin-left: 220px;
+	background-color: #FFF;
+}
+
+/* ------------ RIGHT Box for calendar and other things ---------- */
+
+#contentRight {
+	float: right;
+	width: 295px;
+	margin: 0px 0px 10px 10px;
+	background-color: #FFF;
+}
+
+#contentRightWiki {
+	float: right;
+	width: 195px;
+	margin: 0px 0px 10px 10px;
+	background-color: #FFF;
+}
+
+#rightBox {
+	float: right;
+	width: 250px;
+	margin: 0px 0px 20px 20px;
+	padding: 0px 10px 10px 10px !important; /* good browsers use this */
+	padding: 10px; /* IE uses this */
+	background-color: #FFF;
+	border: 1px solid #CCCCCC;
+}
+
+#rightButton {
+	float: right;
+	margin: 0px 0px 0px 0px;
+	padding: 0px 0px 10px 5px !important; /* good browsers use this */
+}
+
+#rightArea {
+	float: right;
+	width: 150px;
+	margin: 0px 0px 10px 20px;
+	padding: 10px 10px 10px 10px !important; /* good browsers use this */
+	padding: 10px; /* IE uses this */
+	background-color: #FFF;
+	border: 1px dashed #CCCCCC;
+}
+/* ------------------------- MAIN CONTENT AREA ------------------------ */
+#contentLeft {
+	padding-left: 5px;
+	background-color: #FFF;
+}
+
+/* ------------------ FOOTER ------------------------------  */
+#footwrapper {
+	clear:both;
+	margin: 0px 40px 0px 40px;
+}
+
+/*footer for HOME page */
+body.home #footwrapper {
+	margin-left: 119px;
+}
+
+
+#footer {
+	padding: 10px;
+	border-top: 4px solid #0099FF;
+	margin: 20px 1px 0px 0px;
+}
+#footer ul {
+	display: inline;
+	list-style: none;
+	}
+#footer ul li{
+	display: inline;
+	padding: 0 0.5em;
+	border-left: 1px solid #003399;	
+/*	color: #0099FF;	*/
+
+	font-family: verdana, arial, helvetica, sans-serif;
+	font-size: 0.75em;
+	font-weight: normal;
+	color: #003399;	
+/*	color: #0099FF;	*/
+}	
+
+#footer ul li.last{
+	border-right: 0px none;
+}
+
+#footer ul li.first{
+	border-left: 0px none;
+	margin-left: -50px;
+}
+
+#footer a img {
+	margin-right: 120px;
+}
+
+#footer a:link{
+	font-family: verdana, arial, helvetica, sans-serif;
+	font-weight: normal;
+	color: #003399;	
+/*	color: #0099FF;	*/
+	text-decoration: none; 
+}
+
+#footer a:visited{
+	color: #003399;	
+/*	color: #0099FF;	*/
+	text-decoration: none;
+}
+
+
+/* ---------ASSORTED BITS AND PIECES---------------- */
+/* for pushing down content and avoiding overlaps due to floats */
+.spacer {
+	clear:both;
+	height: 1%;
+	padding: 0px;
+	margin: 0px;
+	font-size:0.1em;
+}
+
+
+/* Skip navation and searchbox label */
+.hide { 
+	position: absolute; 
+	left: -999px; 
+	width: 990px; 
+}  
+
+/* Removes image borders */
+img {border:0;}
+
+
+/* Italic Bug (http://positioniseverything.net/explorer/italicbug-ie.html) */
+/* Also fixes pixel jog bug */
+/* \*/
+* html #content {
+	overflow: hidden;
+	o\verflow: visible;
+	width: 100%;
+	w\idth: auto;
+	he\ight: 1%;
+}
+/* */

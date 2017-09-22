@@ -1,0 +1,241 @@
+.hasSubhead {
+	margin-bottom: 0px;
+	padding-bottom: 0px;
+}
+
+.pageContent {
+	background-color: white;
+	padding: 8px;
+	border: 1px outset #999999;
+}
+.layoutTable {
+	margin: 0px;
+	padding: 0px;
+	position: relative;
+	width: 800;
+	left: 10px;
+}
+.logoBanner {
+	position: relative;
+	left: -1px;
+	top: 0px;
+}
+BODY { 
+	background-color: #fdf7ee;
+	font-family: Verdana, Arial, sans-serif;
+	margin: 0px; 
+	padding: 0px; 
+}
+BODY TD {
+	font-size: 80%;
+}
+H1 {
+	font-size: 125%;
+	color: #3a5104;
+}
+
+
+H2 { 
+	font-size: 100%;
+	color: #3a5104;
+	margin-top: 0px;
+	padding-top: 3px;	 	
+	padding-left: 0px;
+	padding-bottom: 0px;
+}
+
+H6 {
+	font-size: 80%;
+	font-weight: normal; 
+	color: #3a5104;
+}
+
+
+A { text-decoration: underline; }
+
+.courier { font-family: Courier; }			
+
+P	 {
+			List-Style-Type : Decimal ;
+			Font-Family : Verdana, Arial ;
+			Color : #000000
+		}
+
+OL	 {
+			Font-Family : Arial, Helvetica ;
+			Color : #000000
+		}
+UL	 {
+			List-Style-Type : Disc ;
+			Font-Family : Verdana, Arial ;
+			Color : #000000
+		}
+
+LI	 {
+			Font-Family : Verdana, Arial ;
+			Color : #000000
+		}
+:link	 {
+			Font-Family : Verdana, Arial ;
+			Color : #01574a
+		}
+:active	 {	Font-Family : Verdana, Arial ;
+			Color : #01574a
+		}
+:visited	 {
+			Font-Family : Verdana, Arial ;
+			Color : #01574a
+		}
+
+TD A:link {
+Color : #002435;
+}
+
+TD A:visited {
+Color : #002435;
+
+}
+
+TD A:active092e40{
+Color : #002435;
+}
+
+
+.contentlink	 { 			
+Color : #01574a 		}  
+
+.contentlink:link	 { 			
+Color : #01574a 		}  
+
+.contentlink:visited { 			
+Color : #01574a 		}  
+
+.contentlink:active { 			
+Color : #01574a 		}  
+   
+
+/* ---------------- DLESE OPML Tree Menus styles ---------------- */
+
+/* Page content TABLE (two-column table with tree on left, text on right): */
+.dlese_treeMenuTable, .dlese_treeMenuPageContentTable {
+	position: absolute; 
+	top: 0px; 
+	border: 0px; 
+	margin: 0px;
+	padding: 0px;
+	height: 100%;
+	border-collapse: collapse;
+}
+/* Tree Menu TD: */
+.dlese_treeMenuTableCellMenu {
+	vertical-align: top;
+	background-color: #dccfb8;
+	padding-top: 0px;
+	padding-right: 1px;
+	margin-right: 1px;
+	padding-left: 0px;
+}
+/* Page body content TD: */
+.dlese_treeMenuTableCellText {
+	vertical-align: top;
+	width: 99%;
+	padding-left: 0px;
+	margin-left: 10px;
+	padding-right: 8px;
+	margin-right: 8px;
+	padding-top: 0px;
+	margin-top: 0px;
+}
+.dlese_treeMenuTableCellText H1,H2,H3,H4,H5,H6,P,.dlese_topLink { 
+	margin-left: 10px; padding-left: 0px; 
+}
+.dlese_treeMenuTableCellText TABLE { 
+	margin-left: 10px; padding-left: 0px; 
+}
+/* The entire tree is wrapped in a DIV as this: */
+.dlese_treeMenu {
+	padding: 0px;
+	margin: 0px;
+	position: relative;
+	top: 1px;
+}
+/* Each menu entry is rendered as its own TABLE: */
+.dlese_treeMenuTables {
+	padding: 0px;
+	margin: 0px;
+	border: 0px;
+}
+.dlese_treeMenuTables TD {
+	padding: 0px;
+	margin: 0px;
+}
+/* All labels (TR of the entry TABLE): */
+.dlese_treeMenuLabels {
+	color: #223901;
+	font-weight: bold;
+	margin: 0px; 
+	padding: 0px;
+	font-size: 95%;
+}
+/* All label text: */
+.dlese_treeMenuLabelText {
+	margin-left: 1px;
+	margin-right: 3px;
+	margin-top: 4px;
+	margin-bottom: 3px;
+	line-height: 98%;
+	padding-left: 1px;
+}
+/* Link unvisited/visited/hover colors: */
+.dlese_treeMenuLabels A:link {
+	color: #762e01;
+	text-decoration: none;
+}
+.dlese_treeMenuLabels A:visited {
+	color: #762e01;
+	text-decoration: none;
+}
+.dlese_treeMenuLabels A:hover {
+	color: #762e01;
+	text-decoration: none;
+}
+/* Top-level labels (rows): */
+.dlese_treeMenuTopLabels .dlese_treeMenuLabelText {
+	font-weight: bold;
+}
+/* Sub-menu labels (rows): */
+.dlese_treeMenuSubLabels {
+	/* font-family: Arial narrow; UNCOMMENT FOR SKINNY TEXT */
+	font-weight: normal;
+	background-color: #faf3e7;
+}
+/* Current page label (row): */
+.dlese_treeMenuSelectedLabel {
+	color: #762e01;
+	background-color: #ffffff;
+}
+/* Image (transparent GIF) icons: */
+.dlese_treeMenuIcons {
+	width: 9px;
+	height: 100%;
+}
+/* Icons indent from left edge: */
+.dlese_treeMenuIconsIndent {
+	margin-left: 5px;
+}
+/* Horizontal rule images: */
+.dlese_treeMenuHR {
+	width: 95%;
+	height: 7px;
+	padding-top: 0px;
+	margin-top: 0px;
+	padding-bottom: 0px;
+	margin-bottom: 0px;
+}
+/* Indenting lines before a HR: */
+.dlese_treeMenuHRLines {
+	width: 9px;
+	height: 7px;
+}
+
+

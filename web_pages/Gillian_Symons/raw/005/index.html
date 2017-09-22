@@ -1,0 +1,823 @@
+ 
+
+<!-- FileName="Connection_cf_dsn.htm" "" -->
+<!-- Type="CFDSN" -->
+<!-- Catalog="" -->
+<!-- Schema="" -->
+<!-- HTTP="true" -->
+
+
+
+
+<html>
+<head>
+
+ 
+<title>Lady Margaret Hall </TITLE>
+<!--Development and Alumni Relations by http://www.lmh.ox.ac.uk//-->
+<meta name="Description" content="Lady Margaret Hall (LMH) is a College of Oxford University,Oxford UK with 550 undergraduate and graduate students">
+<meta name="Keywords" content="LMH,Lady Margaret Hall,LMHBC,Lady Margaret Day,Lady Margaret Beaufort,Oxford University,University of Oxford,Adrian Thomas,Viala,Grafen,Belton,Brading,Doig,Burrows,Childs,Kennedy,Hudson,McLaren,Pennington,Davison,Anthony Smith,Fall,Fraser,Mills,Benazir Bhutto,Benjamin Morgan,Huffman,Kendall,Catherine Joy Slater,Westropp,Gerrard,Dobson,Redman,Holmes,Quigley,David Andrews,Barnes,Macdonald,Quick,DM Stewart,Duncan Stewart,Howarth,Douglas Gray,Mary Jacobus,Edward Nye,Eglantyne Jebb ,Eileen Wyatt,Elizabeth Mackenzie,Elizabeth Wordsworth,Ewan McKendrick,Fiona Spensley,Frances Lannon,Gabrielle Stoy,Garry Brown,Cameron,Garnett,Hart,Nicholson,Bell,Peele,Lord,Barr,Robbins Landon,Jane Day,Sanders,Montagu,Bailey,Day,Boudreau,Barnes,Campbell,Lady Florey,Matthews,Turner-Warwick,Ord,Warner,Birch,MacRobert,Moore,Smieton,Warnock,Matthew Kelly,Royden,Shrimpton,Currie,Neville-Jones,Probert Smith,Penelope Smith,Bide,Dyson,Hainsworth,Watson,Reidar Due,Jenkyns,Adlington,Griffiths,Stevens,Fiddian,Romila Thapar,Heilbron,Rosemary Murray,Chilver,Sam West,Hogg,Schroeder,Browne,Price,Enchelmaier,Sujata Manohar,Reynolds,Wollenberg,Suzelle Smith,Herring,Wedgwood,Duffield,Hicken,Starr Foundation Fellow,Clore Foundation,Simor,Sanger,Crawford,Johnstone,Murphy,SCF,Save the Children,Monson,McNair Scott,Perry,Levene,Diana Guy,Sutherland,Gardens,Fothergill,Deneke,Beaufort Society,womens college,WildCRU,Talbot Research Fellow,Heron Allen Scholarship,Gordon Millburn Research,Florey Research,McIver,Brown Book,LMH News,Oxford Originals,LMH Anthology">
+<meta name="ROBOTS" content="index, follow">
+<meta name="Revisit-after" content="15 day">
+<meta name="author" CONTENT="Networks newmedia - http://www.networks.co.uk">
+<meta name="robots" CONTENT="all">
+<meta name="Reply-To" content="http://www.lmh.ox.ac.uk/">
+<meta name="Resource-Type" content="Document">
+<meta name="Distribution" content="Global">
+<meta name="Rating" content="Safe For Kids">
+<meta name="Copyright" content="©2002 Lady Margaret Hall">
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+<meta http-equiv="Content-Language" content="en-us">
+<meta name="Generator" content="Macromedia Ultadev - coldfusion">
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<!-- Fireworks 4.0  Dreamweaver 4.0 target.  Created Mon Oct 15 11:09:46 GMT+0100 (GMT Daylight Time) 2001-->
+<script language="JavaScript">
+<!--
+function MM_swapImage() { //v3.0
+  var i,j=0,x,a=MM_swapImage.arguments; document.MM_sr=new Array; for(i=0;i<(a.length-2);i+=3)
+   if ((x=MM_findObj(a[i]))!=null){document.MM_sr[j++]=x; if(!x.oSrc) x.oSrc=x.src; x.src=a[i+2];}
+}
+function MM_swapImgRestore() { //v3.0
+  var i,x,a=document.MM_sr; for(i=0;a&&i<a.length&&(x=a[i])&&x.oSrc;i++) x.src=x.oSrc;
+}
+
+function MM_preloadImages() { //v3.0
+ var d=document; if(d.images){ if(!d.MM_p) d.MM_p=new Array();
+   var i,j=d.MM_p.length,a=MM_preloadImages.arguments; for(i=0; i<a.length; i++)
+   if (a[i].indexOf("#")!=0){ d.MM_p[j]=new Image; d.MM_p[j++].src=a[i];}}
+}
+
+function MM_findObj(n, d) { //v4.0
+  var p,i,x;  if(!d) d=document; if((p=n.indexOf("?"))>0&&parent.frames.length) {
+    d=parent.frames[n.substring(p+1)].document; n=n.substring(0,p);}
+  if(!(x=d[n])&&d.all) x=d.all[n]; for (i=0;!x&&i<d.forms.length;i++) x=d.forms[i][n];
+  for(i=0;!x&&d.layers&&i<d.layers.length;i++) x=MM_findObj(n,d.layers[i].document);
+  if(!x && document.getElementById) x=document.getElementById(n); return x;
+}
+//-->
+
+<!--
+// for all date displays
+//by Bill Sanders. billsanders@yahoo.com
+//submitted and displayed at www.a1javascripts.com
+today = new Date();
+year = (today.getFullYear) ? today.getFullYear() : today.getYear();
+month = today.getMonth();
+switch (month) {
+			 case 0 : month = "Jan"; break;
+			 case 1 : month = "Feb"; break;
+			 case 2 : month = "Mar"; break;
+                         case 3 : month = "Apr"; break;
+			 case 4 : month = "May"; break;
+			 case 5 : month = "Jun"; break;
+			 case 6 : month = "Jul"; break;
+			 case 7 : month = "Aug"; break;
+			 case 8 : month = "Sep"; break;
+			 case 9 : month = "Oct"; break;
+			 case 10 : month = "Nov"; break;
+			 case 11 : month = "Dec"; break;
+			 }
+date = today.getDate();
+day = today.getDay();
+switch (day) {
+			 case 0 : day = "Sunday"; break;
+			 case 1 : day = "Monday"; break;
+			 case 2 : day = "Tuesday"; break;
+			 case 3 : day = "Wednesday"; break;
+			 case 4 : day = "Thursday"; break;
+			 case 5 : day = "Friday"; break;
+			 case 6 : day = "Saturday"; break;
+			 }
+hours = today.getHours();
+  if (hours<12)  greeting = 'Good morning!';
+	if (hours<18 && hours>11)  greeting = 'Good afternoon!';
+	if (hours<20 && hours>17)  greeting = 'Good evening!';
+	if (hours>19)  greeting = 'Good evening!  (working late?)';
+hour = (hours>12) ? (hours-12) : hours;
+halfDay = (hours>11 && hours<24) ? 'pm' : 'am';
+minutes = today.getMinutes();
+dayStr =  day+ ', ' +date+ '&nbsp;' +month+ ',&nbsp;' +year;
+timeStr = (minutes<10) ? hour+ ':0' +minutes+ ' ' +halfDay : hour+ ':' +minutes+ ' ' +halfDay;
+
+// -->
+</script>
+<link rel="stylesheet" href="../stylie.css" type="text/css">
+</head>
+<body bgcolor="#FFFFFF" text="#000000" leftmargin="0" topmargin="0" marginwidth="0" marginheight="0" onLoad="MM_preloadImages('../images/a_login_on.gif')">
+
+<script language="JavaScript">
+<!--
+function MM_swapImgRestore() { //v3.0
+  var i,x,a=document.MM_sr; for(i=0;a&&i<a.length&&(x=a[i])&&x.oSrc;i++) x.src=x.oSrc;
+}
+
+function MM_preloadImages() { //v3.0
+  var d=document; if(d.images){ if(!d.MM_p) d.MM_p=new Array();
+    var i,j=d.MM_p.length,a=MM_preloadImages.arguments; for(i=0; i<a.length; i++)
+    if (a[i].indexOf("#")!=0){ d.MM_p[j]=new Image; d.MM_p[j++].src=a[i];}}
+}
+
+function MM_findObj(n, d) { //v4.0
+  var p,i,x;  if(!d) d=document; if((p=n.indexOf("?"))>0&&parent.frames.length) {
+    d=parent.frames[n.substring(p+1)].document; n=n.substring(0,p);}
+  if(!(x=d[n])&&d.all) x=d.all[n]; for (i=0;!x&&i<d.forms.length;i++) x=d.forms[i][n];
+  for(i=0;!x&&d.layers&&i<d.layers.length;i++) x=MM_findObj(n,d.layers[i].document);
+  if(!x && document.getElementById) x=document.getElementById(n); return x;
+}
+
+function MM_swapImage() { //v3.0
+  var i,j=0,x,a=MM_swapImage.arguments; document.MM_sr=new Array; for(i=0;i<(a.length-2);i+=3)
+   if ((x=MM_findObj(a[i]))!=null){document.MM_sr[j++]=x; if(!x.oSrc) x.oSrc=x.src; x.src=a[i+2];}
+}
+//-->
+</script>
+<table width="100%" border="0" cellspacing="0" cellpadding="0">
+  <tr> 
+    <td width="70" align="left" valign="top"><img src="../images/header-heads.jpg" width="70" height="60" border="0"></td>
+    <td width="355" align="left" valign="top"><a href="http://www.ox.ac.uk" target="_blank"><img src="../images/header-lmh.gif" width="355" height="60" alt="Oxford University" border="0"></a></td>
+    <td background="../images/header-empty.gif" align="left" valign="top" width="100%"><img src="../images/header-empty.gif" width="*" height="60" alt="Lady Margaret Hall" border="0"></td>
+    <td width="61" align="right" valign="top"><img src="../images/header-shield.gif" width="61" height="60" border="0"></td>
+  </tr>
+  <tr> 
+    <td rowspan="2" align="left" valign="top"><img src="../images/header-legs.jpg" width="70" height="68" border="0"></td>
+    <td rowspan="2" align="left" valign="top"><img src="../images/header-hall.jpg" width="355" height="68" border="0"></td>
+    <td colspan="2" background="../images/header-dots.gif" height="17"><img src="../images/header-dots.gif" width="263" height="17"></td>
+  </tr>
+  <tr> 
+    <td colspan="2" bgcolor="#000033" align="left" valign="middle" height="51"> 
+      <script language="JavaScript1.2">
+/*
+
+Cross browser marquee script- 
+
+© Dynamic Drive (www.dynamicdrive.com)
+
+For full source code, installation instructions,
+
+100's more DHTML scripts, and Terms Of
+
+Use, visit dynamicdrive.com
+
+*/
+
+
+
+
+
+//Specify the marquee's width (in pixels)
+
+var marqueewidth=300
+
+//Specify the marquee's height (in pixels, pertains only to NS)
+
+var marqueeheight=20
+
+//Specify the marquee's scroll speed (larger is faster)
+
+var speed=3
+
+//Specify the marquee contents
+
+var marqueecontents='<font face="Verdana" size="2" color="#6d6f7f"><b><a href = ../news/news-headlines.html?ID=69 class=link1>Job Vacancy - Development Office Assistant...     </a><a href = ../news/news-headlines.html?ID=67 class=link1>Events progamme for the autumn...     </a><a href = ../news/news-headlines.html?ID=66 class=link1>Seminar - Canada Seminar 14 October 2004...     </a><a href = ../news/news-headlines.html?ID=65 class=link1>Recognition of Distinction...     </a><a href = ../news/news-headlines.html?ID=62 class=link1>Richard Jenkyns Elected Public Orator...     </a>... </b></font>'
+
+
+
+if (document.all)
+
+document.write('<marquee scrollAmount='+speed+' style="width:'+marqueewidth+'">'+marqueecontents+'</marquee>')
+
+
+
+function regenerate(){
+
+window.location.reload()
+
+}
+
+function regenerate2(){
+
+if (document.layers){
+
+setTimeout("window.onresize=regenerate",450)
+
+intializemarquee()
+
+}
+
+}
+
+
+
+function intializemarquee(){
+
+document.cmarquee01.document.cmarquee02.document.write('<nobr>'+marqueecontents+'</nobr>')
+
+document.cmarquee01.document.cmarquee02.document.close()
+
+thelength=document.cmarquee01.document.cmarquee02.document.width
+
+scrollit()
+
+}
+
+
+
+function scrollit(){
+
+if (document.cmarquee01.document.cmarquee02.left>=thelength*(-1)){
+
+document.cmarquee01.document.cmarquee02.left-=speed
+
+setTimeout("scrollit()",100)
+
+}
+
+else{
+
+document.cmarquee01.document.cmarquee02.left=marqueewidth
+
+scrollit()
+
+}
+
+}
+
+
+
+window.onload=regenerate2
+
+</script>
+      <ilayer width=&{marqueewidth}; height=&{marqueeheight}; name="cmarquee01"> 
+      <layer name="cmarquee02"></layer>
+      </ilayer>
+    </td>
+  </tr>
+</table>
+<table width="100%" border="0" cellspacing="0" cellpadding="0">
+  <tr> 
+    <td bgcolor="#000033" height="1" align="left" valign="top"><img src="../images/spacer.gif" width="1" height="1"></td>
+  </tr>
+  <tr> 
+    <td bgcolor="#DBC08C" height="1" align="left" valign="top"><img src="../images/spacer.gif" width="1" height="1"></td>
+  </tr>
+  <tr> 
+    <td bgcolor="#6D6F7F"> 
+      
+<table width="100%" border="0" cellspacing="0" cellpadding="4">
+  <tr align="center" valign="middle"> 
+    <td  width="2%" class="flatcontent"><a href="../index.html" class="nav">HOME</a></td>
+    <td  width="0%"> 
+      <table width="1" border="0" cellspacing="0" cellpadding="0" bgcolor="c0ac89" height="20">
+        <tr> 
+          <td><img src="../images/spacer.gif"></td>
+        </tr>
+      </table>
+    </td>
+    <td  width="8%" class="flatcontent"><a href="../news/news-headlines.html" class="nav">COLLEGE 
+      NEWS</a></td>
+    <td  width="0%"> 
+      <table width="1" border="0" cellspacing="0" cellpadding="0" bgcolor="c0ac89" height="20">
+        <tr> 
+          <td><img src="../images/spacer.gif"></td>
+        </tr>
+      </table>
+    </td>
+    <td  width="3%" class="flatcontent"><a href="../collegelife/history.html" class="nav">COLLEGE 
+      LIFE</a></td>
+    <td  width="0%"> 
+      <table width="1" border="0" cellspacing="0" cellpadding="0" bgcolor="c0ac89" height="20">
+        <tr> 
+          <td><img src="../images/spacer.gif"></td>
+        </tr>
+      </table>
+    </td>
+    <td  width="7%" class="flatcontent"><a href="../admissions/whylmh.html" class="nav">UNDERGRADUATE 
+      ADMISSIONS</a></td>
+    <td  width="0%"> 
+      <table width="1" border="0" cellspacing="0" cellpadding="0" bgcolor="c0ac89" height="20">
+        <tr> 
+          <td><img src="../images/spacer.gif"></td>
+        </tr>
+      </table>
+    </td>
+    <td  width="5%" class="flatcontent"><a href="../admissions/graduate-study.html" class="nav">GRADUATE 
+      ADMISSIONS</a></td>
+    <td  width="0%"> 
+      <table width="1" border="0" cellspacing="0" cellpadding="0" bgcolor="c0ac89" height="20">
+        <tr> 
+          <td><img src="../images/spacer.gif"></td>
+        </tr>
+      </table>
+    </td>
+    <td  width="3%" class="flatcontent"><a href="../alumni/alumni.html" class="nav">ALUMNI</a></td>
+    <td  width="0%"> 
+      <table width="1" border="0" cellspacing="0" cellpadding="0" bgcolor="c0ac89" height="20">
+        <tr> 
+          <td><img src="../images/spacer.gif"></td>
+        </tr>
+      </table>
+    </td>
+    <td  width="5%" class="flatcontent"><a href="../conferences/overview.html" class="nav">CONFERENCES</a></td>
+    <td  width="0%"> 
+      <table width="1" border="0" cellspacing="0" cellpadding="0" bgcolor="c0ac89" height="20">
+        <tr> 
+          <td><img src="../images/spacer.gif"></td>
+        </tr>
+      </table>
+    </td>
+    <td  width="4%" class="flatcontent"><a href="../location/location.html" class="nav">LOCATION</a></td>
+    <td  width="0%"> 
+      <table width="1" border="0" cellspacing="0" cellpadding="0" bgcolor="c0ac89" height="20">
+        <tr> 
+          <td><img src="../images/spacer.gif"></td>
+        </tr>
+      </table>
+    </td>
+    <td  width="4%" class="flatcontent"><a href="../collegetour/collegetour.html" class="nav">COLLEGE 
+      TOUR</a></td>
+    <td  width="0%"> 
+      <table width="1" border="0" cellspacing="0" cellpadding="0" bgcolor="c0ac89" height="20">
+        <tr> 
+          <td><img src="../images/spacer.gif"></td>
+        </tr>
+      </table>
+    </td>
+    <td  width="2%" class="flatcontent"><a href="../sitemap/sitemap.html" class="nav">SITE 
+      MAP</a></td>
+    <td  width="0%"> 
+      <table width="1" border="0" cellspacing="0" cellpadding="0" bgcolor="c0ac89" height="20">
+        <tr> 
+          <td><img src="../images/spacer.gif"></td>
+        </tr>
+      </table>
+    </td>
+    <td  width="19%" class="flatcontent"><a href="../contact/contactus.html" class="nav">CONTACT 
+      US</a></td>
+  </tr>
+</table>
+
+    </td>
+  </tr>
+  <tr> 
+    <td bgcolor="#DBC08C" height="1" align="left" valign="top"><img src="../images/spacer.gif" width="1" height="1"></td>
+  </tr>
+  <tr> 
+    <td bgcolor="#000033"><img src="../images/transparent.gif" width="1" height="6"></td>
+  </tr>
+  <tr> 
+    <td bgcolor="#6D6F7F"><img src="../images/transparent.gif" width="1" height="4"></td>
+  </tr>
+</table>
+<table border="0" cellspacing="1" cellpadding="5" bgcolor="#6D6F7F" width="100%">
+  <tr> 
+    <td class="cellheader" width="213" align="left" valign="top">Alumni area 
+      
+<!--login 
+<table width="194" border="0" cellspacing="0" cellpadding="1">
+        <tr> 
+          <td class="smallprint">Surname</td>
+          <td> 
+            <input type="text" name="surname" class="formed" size="10">
+          </td>
+          <td>&nbsp;</td>
+        </tr>
+        <tr> 
+          <td class="smallprint">Password</td>
+          <td> 
+            <input type="password" name="password" class="formed" size="10">
+          </td>
+          <td><a href="#" onMouseOut="MM_swapImgRestore()" onMouseOver="MM_swapImage('login','','../images/a_login_on.gif',1)"><img name="login" border="0" src="../images/a_login_off.gif" width="37" height="18"></a></td>
+        </tr>
+      </table>-->
+    </td>
+    <td bgcolor="#EBEBEB">&nbsp;&nbsp;&nbsp;<a href="alumni.html" class="link3">Alumni Home </a> 
+      &nbsp;| &nbsp;<a href="news-headlines.html" class="link3">Latest News </a> 
+      &nbsp;|&nbsp;&nbsp;<a href="events.html" class="link3">Events</a>&nbsp;&nbsp;| 
+      &nbsp;<a href="update.html" class="link3">Update Your Details</a> &nbsp;| 
+      &nbsp;<a href="member.html" class="link3">Member Search </a> <!--login&nbsp;| &nbsp;<a href="comingsoon.html" class="link3">Register 
+      Here </a>&nbsp;&nbsp;| &nbsp;<a href="comingsoon.html" class="link3">How to Give</a> 
+      &nbsp;| &nbsp;<a href="comingsoon.html" class="link3">Development Program</a>--></td>
+  </tr>
+</table>
+
+<table width="100%" border="0" cellspacing="0" cellpadding="0">
+  <tr> 
+    <td background="../images/circles.gif" height="196" align="left" valign="top" width="194">      
+<script language="JavaScript">
+<!--
+function MM_swapImgRestore() { //v3.0
+  var i,x,a=document.MM_sr; for(i=0;a&&i<a.length&&(x=a[i])&&x.oSrc;i++) x.src=x.oSrc;
+}
+//-->
+</script>
+<img src="../images/circle_alumni.jpg" width="194" height="196" border="0"><img src="../images/transparent.gif" width="194" height="1"> 
+<table width="90%" border="0" cellspacing="0" cellpadding="3" align="center">
+  <tr> 
+    <td width="6">&nbsp;</td>
+    <td class="leftsubnav" width="149" colspan="2">&nbsp;</td>
+  </tr>
+  <tr> 
+    <td width="6">&nbsp;</td>
+    <td class="flatcontentbold" width="149" colspan="2">Site Search </td>
+  </tr>
+  <form name="form1" method="post" action="../searchresults.html">
+    <tr align="left" valign="middle"> 
+      <td width="6"><img src="../images/bullet.gif" width="6" height="10"></td>
+      <td class="leftsubnav" width="74"> 
+        <input type="text" name="criteria" class="flatcontent" size="18">
+      </td>
+      <td class="leftsubnav" width="75" align="left"> 
+        <input type=image src="../images/goup.gif" name="go" onMouseOut="MM_swapImgRestore()" onMouseOver="MM_swapImage('go','','../images/godown.gif',1)" border=0 width="21" height="18" alt="GO!">
+        <input type="hidden" name="startrow" value="1">
+        <input type="hidden" name="maxrows" value="10">
+        <input type="hidden" name="pageend" value="10">
+      </td>
+    </tr>
+  </form>
+  <tr> 
+    <td width="6">&nbsp;</td>
+    <td width="149" colspan="2">&nbsp;</td>
+  </tr>
+  <tr> 
+    <td>&nbsp;</td>
+    <td colspan="2" align="left" valign="middle"><a href="http://forms.countyweb.co.uk/cgi-bin/textonly.pl" class="link1">TEXT 
+      ONLY VERSION</a> <br>
+    </td>
+  </tr>
+  <tr> 
+    <td>&nbsp;</td>
+    <td colspan="2" align="left" valign="middle" class="flatcontent"> 
+      <script language="JavaScript" type="text/javascript">
+<!--
+document.writeln(' ' +dayStr+ '.<br>\ ' +timeStr+ '.<br>');
+// -->
+</script>
+    </td>
+  </tr>
+  <tr> 
+    <td colspan="3" height="16"><img src="../images/transparent.gif" width="1" height="16"></td>
+  </tr>
+</table>
+</td>
+    <td align="left" valign="top" width="100%"> 
+      <table width="100%" border="0" cellspacing="0" cellpadding="0">
+        <tr> 
+          <td width="28" height="16"><img src="../images/transparent.gif" width="2" height="16"></td>
+          <td width="2" height="16"><img src="../images/transparent.gif" width="2" height="10"></td>
+          <td width="100%" height="16">&nbsp;</td>
+        </tr>
+        <tr> 
+          <td width="28"><img src="../images/transparent.gif" width="28" height="1"></td>
+          <td background="../images/dots.gif" width="2"><img src="../images/dots.gif" width="2" height="321"></td>
+          <td width="100%" align="left" valign="top"> 
+            <table width="100%" border="0" cellspacing="0" cellpadding="18">
+              <tr> 
+                <td align="left" valign="top"> 
+                  <p class="pagetitle">Who's coming?</p>
+                  <table border="0" cellspacing="1" cellpadding="6" bgcolor="#6D6F7F">
+				  	 
+                    <tr valign="top"> 
+                      <td class="tablecell-SubMain" nowrap align="center"><b>GAUDY 125:  DINNER FOR YEARS 1954-1978</b></td>
+                    </tr>
+					 
+					
+					<tr valign="top"> 
+                      <td class="tablecell-BasicNormal" width="75%" bgcolor="FFFFFF" align="center">Confirmed so far:<br>
+1953<br>
+Mrs Margaret Hodgson (Wise)<br>
+1954<br>
+Mrs Margaret Bonfiglioli (Slater)<br>
+Mrs Juliet Campbell (Collings)<br>
+Mrs Janet Court (Pearce)<br>
+Mrs Jane Darwin (Christie)<br>
+Rev&#39;d Jean Mayland (Goldstraw)<br>
+Mrs Susan Monaghan (Pyke)<br>
+Mrs Jennifer North (Barratt)<br>
+Mrs Valerie St Johnston (Paget)<br>
+1955<br>
+Miss Ann Ferguson <br>
+Mrs Margaret Fielden (Salter)<br>
+Mrs Greta Flitcroft (Seckerson)<br>
+The Hon Mrs Anne Grant<br>
+Dr Margaret Harvey<br>
+Mrs Jean Heald (Hawkins)<br>
+Mrs Helen Hough (Lanyon)<br>
+Mrs Mimi Howes (Khedouri) <br>
+Sylvia, Countess of Limerick (Lush)<br>
+Mrs Jennifer Maclean (Thompson)<br>
+Mrs Susan Meads (Gladstone)<br>
+Mrs Mavis Page (Jacques) <br>
+Mrs Antonia Pulsford (Hellersh) <br>
+Dr Susan Rose (Latham)<br>
+Mrs Margaret Sanders (Wild)<br>
+Mrs Gillian Symons (Horley)<br>
+Lady Winifred Tumim (Borthwick)<br>
+Mrs Margaret Ullman (Crosfield)<br>
+Mrs Delyn Watt (Ingram)<br>
+1956<br>
+Mrs Helen Braverman (Pollard)<br>
+Dr Serena Davidson<br>
+Dr Patricia Howard (Lowe)<br>
+Mrs Susan Loewe (Diamond)<br>
+Mrs Anne Seakins (Fazackerley)<br>
+Dr Jill Welbourne (Gardner)<br>
+1957<br>
+Mrs Lucy Archer (Erith)<br>
+Mrs Jill Eddison (Hill-Walker)<br>
+Mrs Prue Fuller (Martin) <br>
+Mrs Jennifer Gregory (Bryne) <br>
+Mrs Sylvia Harris (Baggs) <br>
+Dr Janet Momsen (Henshall)<br>
+Miss Elizabeth Morhange <br>
+Dr Margaret Rothwell<br>
+Mrs Christine Stone (Gregory)<br>
+1958<br>
+Mrs Virginia Allport (Watson) <br>
+Mrs Gwen Coley (Barker) <br>
+Mrs Valerie Cooke (Arnold) <br>
+Mrs Joanna Greenfield (Lloyd)<br>
+Mrs Ann Hale (Record)<br>
+Ms Deborah Lavin<br>
+Mrs Elizabeth Parkinson (Burnside) <br>
+Mrs Joan Rudd (Bower) <br>
+Mrs Anne Simor (Crowe)<br>
+Mrs Susan Treggiari (Franklin) <br>
+1959<br>
+Mrs Anne Davie (Chisholm)<br>
+Mrs Catherine Delano-Smith (Smith)<br>
+Mrs Ann Fletcher (Leslie) <br>
+Mrs Margaret Gardiner (Goolden)<br>
+Ms Gay Gervin<br>
+Mrs Mary Haynes (Lambert)<br>
+Mrs Ann Machin (Hailes)<br>
+Mrs Marian Postgate (Thorne)<br>
+Mrs Janet Robbins (Thomson)<br>
+Dr Mary Elizabeth Rogers<br>
+Mrs Emma Shackle (Richmond)<br>
+Mrs Christine Theodoulou (Stockham)<br>
+Mrs Rosemary Whitley (Calvert) <br>
+1960<br>
+Dr Nadia Abu-Zahra<br>
+Mrs Diana Allan (Cotton)<br>
+Mrs Susan Bhaumik (Smith)<br>
+Lady Clare Blatherwick (Crompton) <br>
+Mrs Christine Considine (Maney)<br>
+Mrs Renee Grassby (Roberts) <br>
+Mrs Carol Harris (Brown) <br>
+Mrs Marion Jackson (Slattery)<br>
+Dr Virge James (Taul)<br>
+Mrs Zohra Jibb (Hussain)<br>
+Mrs Jenny Maddick (Smith)<br>
+Mrs Alison Meredith (Wightman) <br>
+Mrs Jancis Rees (Taylor) <br>
+Miss Anna Truelove<br>
+Mrs Theresa Wills (Verschoyle)<br>
+1961<br>
+Dr Diana Bowder (Gilbert)<br>
+Mrs Meredith Hooper (Rooney)<br>
+Mrs Wendy Jennings (Stallworthy)<br>
+Mrs Deborah Land (Murdoch)<br>
+Dr Tao Tao Liu-Sanders (Liu)<br>
+Ms Penelope Newsome<br>
+Miss Victoria Sandborn<br>
+Mrs Mary St Clayre (Greve)<br>
+Mrs Gillian Swanson (Dymond)<br>
+Mrs Joanna Watson (King)<br>
+Mrs Anne Willitts (Pasmore)<br>
+Mrs Jennifer Woodhouse (Street)<br>
+1962<br>
+Mrs Carole Bigland (Seymour-Jones)<br>
+Mrs Virginia Conybeare (Morgan)<br>
+Mrs Diana Guy (Eade)<br>
+Mrs Jacqueline Khan (Rutherfurd)<br>
+Mrs Mary Knight (Daplyn)<br>
+Mrs Marion Michell (Cutler)<br>
+Mrs Penny Neary (Warren)<br>
+Dr Diana Nicoll (Morgan)<br>
+Miss Carol Stewart <br>
+Miss Alice Wakefield<br>
+Mrs Veronica Warner (Smith) <br>
+Miss Margaret Winterbourne <br>
+Miss Sarah Worster <br>
+Dr Vivien Wylie (Ault)<br>
+1963<br>
+Miss Elizabeth Allen<br>
+Mrs Pam De Wit (Busby) <br>
+Mrs Tessa Dunstan (Fripp)<br>
+Ms Isabel Hitchman<br>
+Mrs Jenny Jennings (Hodgson)<br>
+Dr Sheila Peskett<br>
+1964<br>
+Mrs Jean Boettcher (Snewing)<br>
+Mrs Therese Chapman (Roxby Bott)<br>
+Mrs Marilyn Checkley (Evans)<br>
+Mrs Bronwen Fair (Peters)<br>
+Mrs Susan Gregory (Yarker)<br>
+Mrs Anne Muers (Packwood)<br>
+Mrs Sue Phillips (Beal)<br>
+Dr Meg Rogers<br>
+Mrs Joanna Shepherd (Basten)<br>
+Ms Susan Sherwin-White<br>
+Dr Catherine Slater (Phillips)<br>
+Mrs Christine Shuttleworth (Arrowsmith)<br>
+Rev&#39;d Christine Whittaker<br>
+1965<br>
+Mrs Eira Davis (Picton)<br>
+Miss Dorcas Fowler <br>
+Mrs Annette Haworth (Dyer)<br>
+Mrs Joanna Heseltine (Symonds)<br>
+Mrs Adrienne Rosen (Batchelor)<br>
+Miss P Cecilia Storr<br>
+Mrs Ann-Margaret Walton (Willis)<br>
+Miss Araminta Wordsworth<br>
+1966<br>
+Ms Helen Ash<br>
+Mrs Katherine Ford (Horrocks)<br>
+Miss Deirdre Fordham<br>
+Professor Daphne Hampson<br>
+Mrs Rosalie Kerr (Kersten)<br>
+Mrs Joanna Lane (Price)<br>
+Miss Frances Low<br>
+Mrs Mary Riggs (Howell)<br>
+Ms Susannah Ross<br>
+Dr Christine Swinson (Hallam)<br>
+1967<br>
+Mrs Jill Menghetti (Munn)<br>
+Dr Janet Montefiore<br>
+Ms June Rodgers<br>
+Miss Elizabeth Stuart<br>
+Mrs Emma Tristram (Fisher)<br>
+1968<br>
+Mrs Sue Alego (Repard)<br>
+Mrs Judith Cook (Morton)<br>
+Miss Jean Cooper<br>
+Dr Jennifer Fisken (Street)<br>
+Mrs Liz Gibson (Sarson)<br>
+Ms Paula Griffiths<br>
+Mrs Kathie Lauder (Crook)<br>
+Mrs Anne Roberts (Conybeare)<br>
+Mrs Elizabeth Rothwell (Johnson)<br>
+Prof Sarah Stewart-Brown<br>
+1969<br>
+Mrs Faith Boardman (Mills)<br>
+Miss Sue Budgen<br>
+Mrs Rachel Cartland (Howard)<br>
+Mrs Christine Coleman (Abel)<br>
+Mrs Jane Cooper (Merriott)<br>
+Dr Elaine Drage (Collier)<br>
+Mrs Ingrid Lawrie (Gilbert)<br>
+Mrs Susan Macdonald (Yates)<br>
+Mrs Linda Montgomery (Merrall)<br>
+Mrs Alison Moore (Sale)<br>
+Mrs Victoria Neumark-Jones (Neumark)<br>
+Miss Anna Pope<br>
+Mrs Sally Seber (Tyrrill)<br>
+Miss Mary Sellers<br>
+Mrs Anne Shearer (Williams)<br>
+Ms Sue Taylor<br>
+1970<br>
+Mrs Sheila Bridge (Street)<br>
+Mrs Anita Brown (Wood)<br>
+Mrs Margaret Cawkwell (Hetherington)<br>
+Mrs Caroline Charras-Wheeler (Wheeler)<br>
+Ms Janet Clayton<br>
+Mrs Kathleen Cooke (Collins)<br>
+Mrs Mary Dejevsky (Peake)<br>
+Miss Jane Douglas<br>
+Mrs Sheila Dunleavy (Squire)<br>
+Mrs Gillian Fielden (Funnell)<br>
+Mrs Marna Gowan (Williams)<br>
+Mrs Irene Jones (Gerrard)<br>
+Mrs Rita Kleppmann (Evans)<br>
+Mrs Joanna Leech (Kitchin)<br>
+Mrs Mary Smith (Streatfeild)<br>
+Mrs Elizabeth Thom (Mardall)<br>
+Mrs Mary Trenouth (Holliday)<br>
+1971<br>
+Mrs Bryony Allen (Batchelor)<br>
+Miss Diana Coles<br>
+Mrs Elizabeth Croft (Cohen)<br>
+Mrs Frances Cui (Healey)<br>
+Miss Paula Grayson<br>
+Ms Jenny Griffiths (Hind)<br>
+Mrs Joan Link (Willmott)<br>
+Mrs Sue Scott (Dean)<br>
+Dr Jacqueline Smith<br>
+Mrs Mary Stafford (Swatman)<br>
+Mrs Sarah Tyerman (Wallis)<br>
+1972<br>
+Mrs Matilda Cockbain (Ellis)<br>
+Mrs Margaret Fergusson (Wookey)<br>
+Miss Monica Fisher (Pring-Mill)<br>
+Ms Laura Harris<br>
+Ms Naseem Jumabhoy<br>
+Miss Wendy Proctor<br>
+Ms Veronica Zundel<br>
+1973<br>
+Dr Rosemary Drake<br>
+Dr Jonquil Drinkwater<br>
+Ms Catherine Ebenezer<br>
+Mrs Shaan Everson (Akester)<br>
+Ms Georgina Ferry<br>
+Dr Lindsay Gee<br>
+Dr Hashima Hasan<br>
+Mrs Penny Macleod (Bingham)<br>
+Dr Joanna McGrath (Collicutt)<br>
+Dr Gianetta Rands<br>
+Mrs Elizabeth Salzman (Nibbs)<br>
+Mrs Alysoun Stewart (Henschel)<br>
+Miss Elisabeth Tooms<br>
+Mrs Elizabeth Walker (Low)<br>
+Dr Rose Walker<br>
+Miss Anne Willcocks<br>
+1974<br>
+Mrs Janian Aldridge (Bennett)<br>
+Ms Jo Andrews<br>
+Mrs Michelle Banks (Roche)<br>
+Ms Alison Gomm<br>
+Mrs Elizabeth Reid (Avery) <br>
+1975<br>
+Mrs Ysanne Burns (Jones)<br>
+Mrs Sarah Craigs (Jonason)<br>
+Mrs Carol De Lusignan (Gilchrist)<br>
+Miss Gillian Downing<br>
+Ms Susan Morris<br>
+1976<br>
+Mrs Gretchen Alvis (Capes)<br>
+Dr Nicola Devlin<br>
+Dr Catherine Hawkins<br>
+Mrs Julie Shelton (Boendermaker)<br>
+Professor Elizabeth Tanner<br>
+Dr Alison Vigers (Ball)<br>
+Miss Rosemary Zolynski<br>
+1977<br>
+Mrs Caroline Barnes (Twells)<br>
+Dr Carolyn Carr (Jones)<br>
+Mrs Vivien Fleck (Taylor)<br>
+Mrs Anne Fry (Macinnes)<br>
+Mrs Alison Hardwick (Douglas)<br>
+Rev&#39;d Pat Hawkins<br>
+Mrs Lise Hopwood (Halliwell)<br>
+Mrs Joanna Horrocks (Smart)<br>
+Miss Judith Ingham<br>
+Mrs Jennifer James (Harris)<br>
+Miss Alison Kenney<br>
+Miss Barbara Moore<br>
+Ms Hunada Nouss<br>
+Miss Emma Slessenger<br>
+Ms Loraine Watson<br>
+1978<br>
+Ms Bridget Butt<br>
+Ms Sallyanne Houlton<br>
+Mrs Eleanor Sturge (Wareham)<br>
+Mrs Jennifer West (Woodward)<br>
+1980<br>
+Mrs Katherine Reece-Thomas (Reece)<br></td>
+                    </tr>
+					
+					
+					
+                    <tr valign="top"> 
+                      <td class="tablecell-BasicNormal" width="75%" bgcolor="#FFFFFF" align="center"><a href="https://www.ladymargarethall.co.uk/alumni/events_booking.html?event=27" class="link2">GO 
+                        TO BOOKING FORM</a></td>
+                    </tr>
+                  </table>
+                  
+                </td>
+              </tr>
+            </table>
+          </td>
+        </tr>
+        <tr> 
+          <td width="28"><img src="../images/transparent.gif" width="1" height="16"></td>
+          <td width="2"><img src="../images/transparent.gif" width="2" height="10"></td>
+          <td width="100%"><img src="../images/transparent.gif" width="100%" height="1"></td>
+        </tr>
+      </table>
+    </td>
+  </tr>
+</table>
+<table width="100%" border="0" cellspacing="0" cellpadding="0">
+  <tr> 
+    <td background="../images/footer.gif" width="10" bgcolor="#CBB282" height="13" align="left" valign="top"><img src="../images/transparent.gif" width="10" height="13"></td>
+    <td background="../images/footer.gif" width="100%" bgcolor="#CBB282" align="left" valign="middle" class="smallprint" height="13"><img src="../images/transparent.gif" width="10" height="13"></td>
+    <td background="../images/footer.gif" align="right" valign="bottom" width="35" bgcolor="#CBB282" height="13"><img src="../images/transparent.gif" width="10" height="13"></td>
+  </tr>
+  <tr> 
+    <td width="10" bgcolor="#CBB282"><img src="../images/transparent.gif" width="10" height="40"></td>
+    <td width="100%" bgcolor="#CBB282" align="left" valign="middle"> <span class="smallprint"><font face="Verdana, Arial, Helvetica, sans-serif" size="1">If 
+      you cannot find the information you are looking for or have any comments, 
+      suggestions or require help with the site please <a href="mailto:development@lmh.ox.ac.uk?subject=LMH website">CLICK 
+      HERE</a>.<br>
+      Unless stated otherwise, all text and images are protected by copyright 
+      Lady Margaret Hall.</font></span></td>
+    <td align="right" valign="bottom" width="35" bgcolor="#CBB282"><img src="../images/footershield.gif" width="35" height="31" alt="Lady Margaret Hall" border="0"></td>
+  </tr>
+  <tr> 
+    <td width="10" bgcolor="#CBB282" height="99%">&nbsp;</td>
+    <td width="100%" bgcolor="#CBB282" align="left" valign="middle" class="smallprint" height="99%">&nbsp;</td>
+    <td align="right" valign="bottom" width="35" bgcolor="#CBB282" height="99%">&nbsp;</td>
+  </tr>
+</table>
+</body>
+</html>

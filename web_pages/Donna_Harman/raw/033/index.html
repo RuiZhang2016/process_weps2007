@@ -1,0 +1,80 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+"http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<title>IRVulnerability</title>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+</head>
+
+<body leftmargin="0" topmargin="0" marginwidth="0" marginheight="0">
+<p align="left"><font face="Geneva, Arial, Helvetica, san-serif"><img src="NRRCARDA_banner603.jpg" width="820" height="135" border="0" align="top" usemap="#MapMap"></font>
+  <map name="MapMap">
+    <area shape="rect" coords="127,76,189,96" href="http://nrrc.mitre.org/NRRC/workshops.htm">
+    <area shape="rect" coords="208,79,258,96" href="http://nrrc.mitre.org/NRRC/schedule.htm">
+    <area shape="rect" coords="558,79,636,96" href="http://nrrc.mitre.org/NRRC/speaker_series.htm">
+    <area shape="rect" coords="271,79,343,96" href="http://nrrc.mitre.org/NRRC/publications.htm">
+    <area shape="rect" coords="362,79,396,96" href="http://nrrc.mitre.org/NRRC/arda.htm">
+    <area shape="rect" coords="420,79,455,94" href="http://nrrc.mitre.org/NRRC/nrrc.htm">
+    <area shape="rect" coords="474,79,544,94" href="http://nrrc.mitre.org/NRRC/committees.htm">
+    <area shape="rect" coords="702,78,737,95" href="http://nrrc.mitre.org/index.htm">
+    <area shape="rect" coords="759,78,788,95" href="http://nrrc.mitre.org/NRRC/workshop03/">
+</map>
+<hr>
+<p align="center"><strong><font face="Geneva, Arial, Helvetica, san-serif">
+  <map name="MapMapMap">
+    <area shape="rect" coords="126,76,188,96" href="http://nrrc.mitre.org/NRRC/workshop03/workshops.htm">
+    <area shape="rect" coords="208,78,258,95" href="http://nrrc.mitre.org/NRRC/workshop03/schedule.htm">
+    <area shape="rect" coords="558,79,636,96" href="http://nrrc.mitre.org/NRRC/workshop03/speaker_series.htm">
+    <area shape="rect" coords="271,79,343,96" href="http://nrrc.mitre.org/NRRC/workshop03/publications.htm">
+    <area shape="rect" coords="362,79,396,96" href="http://nrrc.mitre.org/NRRC/workshop03/arda.htm">
+    <area shape="rect" coords="419,79,454,94" href="http://nrrc.mitre.org/NRRC/workshop03/nrrc.htm">
+    <area shape="rect" coords="474,79,544,94" href="http://nrrc.mitre.org/NRRC/workshop03/committees.htm">
+    <area shape="rect" coords="702,78,737,95" href="http://nrrc.mitre.org/NRRC/index.htm">
+    <area shape="rect" coords="759,78,788,95" href="http://nrrc.mitre.org/NRRC/workshop03/">
+  </map>
+  </font></strong></p>
+  <table width="750" border="0">
+    <tr>
+      <td width="6">&nbsp;</td>
+      <td width="734"><p align="center"><font size="2"><strong><font face="Geneva, Arial, Helvetica, san-serif">2003 ARDA Workshop</font></strong></font></p>
+        <p align="left"><font size="2" face="Geneva, Arial, Helvetica, san-serif">Title: <strong>Towards More Reliable Information Retrieval Technology </strong><em><a href="http://nrrc.mitre.org/NRRC/workshop03/IRVulnerability.pdf">(pdf version)</a> </em></font></p>
+        <p align="left"><font size="2" face="Geneva, Arial, Helvetica, san-serif"><strong>Leader: </strong><a href="mailto:donna.harman@nist.gov&nbsp;">Donna Harman</a>, National Institute of Standards and Technology (NIST)</font></p>
+        <p><font size="2" face="Geneva, Arial, Helvetica, san-serif"><strong>Workshop Team</strong></font></p>
+        <p><font size="2" face="Geneva, Arial, Helvetica, san-serif">Donna Harman, NIST Team Lead), Chris Buckley, SABIR, Jamie Callan, Carnegie Mellon University, Charlie Clarke, University of Waterloo, Andres Corrada-Emmanuel, University of Massachusetts , Amherst, David Evans, Clarivoyance Corporation, Warren Greiff, MITRE. Andy MacFarlane, City University, Tomek Strzalkowski, University of Albany </font></p>
+        <p><font size="2" face="Geneva, Arial, Helvetica, san-serif"><strong>Problem</strong></font></p>
+        <p><font size="2" face="Geneva, Arial, Helvetica, san-serif">For many years the standard approach to question answering, or searching for information, has involved information retrieval systems. These systems were initially Boolean systems, requiring major effort from the users, but new systems allow natural language input for questions and return ranked lists of documents.</font></p>
+        <p><font size="2" face="Geneva, Arial, Helvetica, san-serif">Whereas the question answering (QA) task has evolved beyond just the ranked list approach to answers, the QA systems depend on the information retrieval (IR) technology at two different stages. First, the IR technology is needed to make the initial cut at finding the information from many gigabytes of text. Most of the QA systems use heavy amounts of NLP technology and therefore use IR technology to narrow the pool of potential information to 100 or 200 documents before doing more intensive processing. But a second, and equally important, need of IR systems is to provide a fallback position for questions that are beyond the current abilities of the QA systems. Having a ranked list of documents is clearly better than having nothing!</font></p>
+        <p><font size="2" face="Geneva, Arial, Helvetica, san-serif">Current IR systems generally provide a set of reasonable results for the QA systems to work with. However results from these systems are unpredictable in that there are occasional failures. Even more important for the AQUAINT program, these systems are unpredictable to the system researchers; that is, the systems cannot reliably customize output on a per question basis. This leads to lower precision in the top set of documents for some questions, and radical variance in performance using different retrieval technologies for the same input question.</font></p>
+        <p><font size="2" face="Geneva, Arial, Helvetica, san-serif"><strong>Approach</strong></font></p>
+        <p><font size="2" face="Geneva, Arial, Helvetica, san-serif">The ability to predict how to customize an IR system on a per query basis has been an unrealized dream for many years. Techniques such as pseudo-relevance feedback work well on average, but fail for some queries. The use of stemming (in English) does not generally improve performance ON AVERAGE but has dramatic improvements/degradations on a per query basis. So the problem being proposed for this workshop is known to be a very hard problem.</font></p>
+        <p><font size="2" face="Geneva, Arial, Helvetica, san-serif">The approach we plan to use is to recruit a small group of researchers, each with a different IR system that uses different technology. Then put these people and their systems through a 6-week focused study of the problem. We would use the 150 questions (topics) from the last three years of the TREC ad hoc task, along with the documents used in that task. The topics would be appropriately subsetted for training and testing so that probably one-third of them would never be examined manually but only used for final testing. Earlier TREC material could also be used.</font></p>
+        <p><font size="2" face="Geneva, Arial, Helvetica, san-serif">What is envisioned (and has been discussed by potential participants) is to start on a very focused question: how to predict when pseudo-relevance feedback will improve results and what are the appropriate parameters for each system. The various groups would work at least 2 weeks on this problem. This work would involve making appropriate runs, separately and jointly performing failure analysis, and then testing hypotheses based on this analysis.</font></p>
+        <p><font size="2" face="Geneva, Arial, Helvetica, san-serif">In the second two-week session, the groups would look at a small number of topics and address the question: what are the pieces of information that the system must learn in order to perform well on the topics? Is this information available from just the query, or from \world knowledge&quot;, or does it need to be explicitly gotten from the user by the system, or can it be gotten implicitly from the user? Some groups would use facet analysis in order to better \understand&quot; the query and tune the results to the various types of linguistic structure implied by that facet analysis.</font></p>
+        <p><font size="2" face="Geneva, Arial, Helvetica, san-serif">It is less clear what the third two-week session will involve. Depending on the earlier results, the third two-week session could be a continuation of the second session; further exploring the issues of \needed information&quot; for a topic, but concentrating more on how that information could be obtained. Some groups could look at whether given the knowledge that a particular type of information is needed, can we get that information from a set of known relevant documents (routing/filtering/relevance feedback). Alternatively follow-on work could involve extending the results beyond the TREC data to other types of data or working with “users” in an interactive testing mode.</font></p>
+        <p><font size="2" face="Geneva, Arial, Helvetica, san-serif">The overall structure of all sessions will be individual and joint failure analysis using the assembled expertise, and then task forces of several groups/systems addressing the particular issues that come up in the failure analysis. The focus will be on multiple participants working on multiple problems together rather than individual participants working separately on problems and putting them together at the end.</font></p>
+        <p><font size="2" face="Geneva, Arial, Helvetica, san-serif"><strong>Workshop Duration and Format</strong></font></p>
+        <p><font size="2" face="Geneva, Arial, Helvetica, san-serif">This workshop would run for 6-weeks in June, July and August. This is the proposed schedule.</font></p>
+        <ul>
+          <li><font size="2" face="Geneva, Arial, Helvetica, san-serif">June 16-27 (two weeks) </font></li>
+          <li><font size="2" face="Geneva, Arial, Helvetica, san-serif">break for week of July 4th </font></li>
+          <li><font size="2" face="Geneva, Arial, Helvetica, san-serif">July 7-18th (two weeks) </font></li>
+          <li><font size="2" face="Geneva, Arial, Helvetica, san-serif">break for 2 weeks, including SIGIR meeting </font></li>
+          <li><font size="2" face="Geneva, Arial, Helvetica, san-serif">August 4-15 (two weeks) </font></li>
+        </ul>
+        <p><font size="2" face="Geneva, Arial, Helvetica, san-serif"><strong>Deliverables</strong></font></p>
+        <ul>
+          <li><font size="2" face="Geneva, Arial, Helvetica, san-serif">Set of algorithms/guidelines for information retrieval systems that enable customization for specific questions and sets of data </font></li>
+          <li><font size="2" face="Geneva, Arial, Helvetica, san-serif">Series of papers reporting on the results with the goal of providing guidance to non-participating IR systems </font></li>
+          <li><font size="2" face="Geneva, Arial, Helvetica, san-serif">Suite of failure analysis tools and metrics that will be made available to the community through NIST </font></li>
+          <li><font size="2" face="Geneva, Arial, Helvetica, san-serif">Installation and cross-comparison of 6-10 leading IR research and commercial systems </font></li>
+          <li><font size="2" face="Geneva, Arial, Helvetica, san-serif">Monthly progress reports </font></li>
+          <li><font size="2" face="Geneva, Arial, Helvetica, san-serif">Final paper </font></li>
+        </ul>
+        <p>&nbsp; </p>
+        <p>&nbsp;</p></td>
+    </tr>
+  </table>
+  <p align="center">&nbsp; </p>
+<blockquote>&nbsp;</blockquote>
+</body>
+</html>

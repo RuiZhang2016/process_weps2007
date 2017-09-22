@@ -1,0 +1,82 @@
+/*
+common/searchbar style
+pfagan 11/2006   
+*/
+
+/* with the searchbar in effect, simplesearch needs to be hidden ------------ */
+
+#container #simplesearch {
+display:none;
+}
+
+/* searchbar  --------------------------------------------------------------- */
+
+#searchbar { 
+clear:both;
+margin:0;
+border-right:1px solid #ccc;
+border-bottom:1px solid #999;
+border-left:8px solid #ccc;
+background: #eee url(/templates/types/common/style/bkg-searchbar-lightgreyfade.gif); 
+padding:0;
+font-size:10px;
+font-family:Verdana, Arial, Helvetica, sans-serif;
+}
+
+
+#searchbar .row {
+float:left;
+width: 480px;
+padding:0 0 5px 0;
+font-weight:bold;
+color:#555;
+}
+#searchbar form {
+margin:0;
+padding:0;
+}
+#searchbar input.entry {
+border:1px solid #666;
+margin:0 0 0 6px;
+}
+#searchbar input.button {
+margin:6px 0 -6px 5px;
+}
+#searchbar .option {
+margin:0 0 0 10px;
+}
+#searchbar .option input {
+margin:2px 5px -2px 0;
+}
+#searchbar #googlelogosm {
+margin:0 0 -6px 2px;
+padding:0;
+}
+#searchbar input.entry {
+width:173px;
+}
+
+
+#searchbar .login {
+float:right;
+width: 200px;
+height:25px;
+padding:10px 10px 0 0;   
+font-size: 11px;
+font-weight:normal;
+text-align:right;
+}
+#searchbar .login a {
+text-decoration: none;
+}
+
+
+#group #searchbar { /* legacy */
+margin:0 0 11px 0;
+}
+
+
+#group #homepageheader #searchbar {
+border-left:none;
+margin:0;
+}

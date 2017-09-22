@@ -1,0 +1,696 @@
+<!doctype html public "-//W3C//DTD HTML 4.0 Transitional//EN">
+
+<html>
+<head>
+<title>AskOxford: Search Results</title>
+<meta http-equiv="content-type" content="text/html; charset=ISO-8859-1"-->
+
+<meta name="author" content="www.askoxford.com">
+<meta name="distribution" content="global">
+<meta name="ROBOTS" content="index,follow">
+<meta name="REVISIT-AFTER" content="1 week">
+<meta name="DCSext.LastUpdateDate" content="Sat, 27 Jan 2001 10:37:42 GMT" />
+<meta name="DCSext.Author" content="Kay Celtel" />
+<meta name="DCSext.ItemID" content="10173681" />
+<meta name="DCSext.SiteID" content="4994" />
+<meta name="DCSext.ItemTypeName" content="Search Results" />
+<meta name="DCSext.View" content="dict" />
+
+<link rel="SHORTCUT ICON" href="favicon.ico">
+<link rel="stylesheet" type="text/css" href="phasetwo.css">
+<!-- the former inline stylesheet has been moved to the external file askoxford.css -->
+<script language="JavaScript" type="text/javascript">
+<!-- hide me
+function getCookie(label) {
+	var labelLen = label.length
+	var cLen = document.cookie.length
+	var i = 0
+	var cEnd
+	while (i < cLen) {
+		var j = i + labelLen
+		if(document.cookie.substring(i,j) == label) {
+			cEnd = document.cookie.indexOf(";",j)
+			if (cEnd == -1) {
+				cEnd = document.cookie.length
+			}
+			return unescape(document.cookie.substring(j+1,cEnd))
+		}
+		i++
+	}
+	return " "
+}
+// show me-->
+</script><!-- SET COOKIE -->
+<script language = "JavaScript" type="text/javascript">
+<!-- hide me
+function setCookie(name, value, expires, path, domain, secure) {
+	var path = "/"
+	var expires = new Date()
+	var oneYearFromNow =  expires.getTime() + (365 * 24 * 60 * 60 * 1000)
+	expires.setTime(oneYearFromNow)
+	document.cookie = name + "=" +escape (value) + 
+	((expires) ? "; expires=" + expires.toGMTString() : "") +
+	((path) ? "; path=" + path : "") +
+	((domain) ? "; domain=" + domain : "") +
+	((secure) ? "; secure" : "");
+}
+// show me-->
+</script><script language="Javascript"  type="text/javascript">
+function killCookie(name, path, domain) {
+  var theValue = getCookie(name); // We need the value to kill the cookie
+  if(theValue) {
+      document.cookie = name + '=' + theValue + '; expires=Fri, 13-Apr-1970 00:00:00 GMT' + ((path)?';path=' + path:'') + ((domain)?';domain=' + domain:''); // set an already-expired cookie
+  }
+} // killCookie
+</script>
+<script language="JavaScript" type="text/javascript">
+function switchLocation(name,value,expires,path,domain,secure) {
+killCookie("Country") // get rid of the old version of this cookie to avoid duplication
+setCookie(name, value, expires, path, domain, secure);
+
+	var re = /\?.*/
+	var url = document.URL.replace(re, "")                          // remove query string
+	var paths = url.split("/")
+	var region = getCookie("Country")
+	var query = location.search;
+
+// ### Special Cases ###
+// these are just some special cases to restrict navigation
+// they only apply when somebody switches to an alternate view from a restricted page
+
+
+if ( (paths[4] == "countdown")  && (region == "get") ) {
+	location = "/wordgames/" + "?view=" + getCookie(name) // redirect to wordgames menu
+	return true
+}
+
+if ( (paths[4] == "name") && (region == "get") ) {
+	location = "/worldofwords/" + "?view=" + getCookie(name) // redirect to worldofwords menu
+	return true
+}
+
+if ( (paths[3] == "shoponline") && (region == "get") ) {
+	location = "/shoponline-us/" + "?view=" + getCookie(name) // redirect us users to us catalogue
+	return true
+}
+
+if ( (paths[3] == "shoponline-us") && (region == "uk") ) {
+	location = "/shoponline/" + "?view=" + getCookie(name) // redirect us users to us catalogue
+	return true
+}
+
+if (paths[3] == "results") {
+	location = document.URL
+	return true
+}
+
+
+// ### end of Special Cases ###
+
+location = url + "?view=" + getCookie(name)
+
+}
+</script><script language="Javascript" type="text/javascript" src="switchtouk.js"></script><script language="JavaScript" type="text/javascript">
+<!--
+function MM_swapImgRestore() { //v3.0
+  var i,x,a=document.MM_sr; for(i=0;a&&i<a.length&&(x=a[i])&&x.oSrc;i++) x.src=x.oSrc;
+}
+
+function MM_preloadImages() { //v3.0
+  var d=document; if(d.images){ if(!d.MM_p) d.MM_p=new Array();
+    var i,j=d.MM_p.length,a=MM_preloadImages.arguments; for(i=0; i<a.length; i++)
+    if (a[i].indexOf("#")!=0){ d.MM_p[j]=new Image; d.MM_p[j++].src=a[i];}}
+}
+
+function MM_findObj(n, d) { //v4.0
+  var p,i,x;  if(!d) d=document; if((p=n.indexOf("?"))>0&&parent.frames.length) {
+    d=parent.frames[n.substring(p+1)].document; n=n.substring(0,p);}
+  if(!(x=d[n])&&d.all) x=d.all[n]; for (i=0;!x&&i<d.forms.length;i++) x=d.forms[i][n];
+  for(i=0;!x&&d.layers&&i<d.layers.length;i++) x=MM_findObj(n,d.layers[i].document);
+  if(!x && document.getElementById) x=document.getElementById(n); return x;
+}
+
+function MM_swapImage() { //v3.0
+  var i,j=0,x,a=MM_swapImage.arguments; document.MM_sr=new Array; for(i=0;i<(a.length-2);i+=3)
+   if ((x=MM_findObj(a[i]))!=null){document.MM_sr[j++]=x; if(!x.oSrc) x.oSrc=x.src; x.src=a[i+2];}
+}
+//-->
+</script><script language="JavaScript" type="text/javascript">
+<!--
+function MM_jumpMenu(targ,selObj,restore){ //v3.0
+  eval(targ+".location='"+selObj.options[selObj.selectedIndex].value+"'");
+  if (restore) selObj.selectedIndex=0;
+}
+
+function MM_findObj(n, d) { //v4.0
+  var p,i,x;  if(!d) d=document; if((p=n.indexOf("?"))>0&&parent.frames.length) {
+    d=parent.frames[n.substring(p+1)].document; n=n.substring(0,p);}
+  if(!(x=d[n])&&d.all) x=d.all[n]; for (i=0;!x&&i<d.forms.length;i++) x=d.forms[i][n];
+  for(i=0;!x&&d.layers&&i<d.layers.length;i++) x=MM_findObj(n,d.layers[i].document);
+  if(!x && document.getElementById) x=document.getElementById(n); return x;
+}
+
+function MM_jumpMenuGo(selName,targ,restore){ //v3.0
+  var selObj = MM_findObj(selName); if (selObj) MM_jumpMenu(targ,selObj,restore);
+}
+//-->
+</script></head><!--START GetGlobal | Body > Global Navigation-->
+
+<body bgcolor="#ffffff" text="#ff0000" leftmargin="0" topmargin="0">
+<script language="JavaScript1.1" type="text/javascript" src="http://www.oup.com/scripts/common/dcs_tag.js" ></script>
+<!--table width="757"><tr><td>
+<a href="/announcement/">Announcement: Web Site Performance, 2 March 2005</a>
+</td></tr></table-->
+
+
+<!-- check for a country cookie - if one is not present create a uk cookie thereby making 'uk' the 'default' view -->
+<SCRIPT LANGUAGE="JavaScript">
+<!--
+var ccvalue = getCookie("Country");
+if (ccvalue != "uk" && ccvalue != "get") {
+setCookie("Country", "uk");
+} 
+// -->
+</SCRIPT>
+<!-- end of code creating a default uk cookie -->
+
+<!-- MAIN TABLE 1 STARTS -->
+<table class="back" width="100%" cellpadding="0" cellspacing="0" border="0">
+	<tr>
+		<td align="left" valign="top">
+		<!-- start nested for background reasons start -->
+		<table width="100%" cellpadding="0" cellspacing="0" border="0">
+			<tr>
+				<td width="365" height="87" align="left" valign="middle"><a href="http://www.askoxford.com/"><img src="logo_new.gif" width="365" height="87" border="0" alt="AskOxford Logo"></a></td>
+				<td width="100%" align="left" valign="top"><img src="spc.gif" width="1" height="86" border="0" alt="Space"></td>
+				<td align="right" valign="bottom">
+				<!-- start nested for dark blue area-->
+				<table cellpadding="0" cellspacing="0" border="0">
+					<tr>
+						<td colspan="3" align="left" valign="top"><img src="spc.gif" width="1" height="20" border="0" alt="Space"></td>
+					</tr>
+					<tr>
+						<td align="left" valign="top"><img src="spc.gif" width="36" height="38" border="0" alt="Space"></td>
+						<td align="left" valign="bottom"><img src="home4.gif" width="86" height="38" border="0" alt="Home"></td>
+						<td rowspan="2" align="left" valign="bottom">
+
+<!--SEARCH TOOL-->
+<script language="JavaScript" type="text/javascript">
+//<!--
+
+function makeSearch(form) {
+	var searchPath = "/results/"
+
+	var list = document.forms.searchtool.pulldown
+	var inString =  list.options[list.selectedIndex].value
+	var outString = inString.split(",")
+	var branch = outString[0]
+	var view = outString[1]
+	var search = outString[2]
+	var keyword = document.forms.searchtool.keyword.value
+
+	if (branch == 'uk') {
+		searchPath = "http://www.oup.co.uk/searchresults";
+		var search = searchPath + "?searchType="+view+"&searchStart="+search+"&keywords="+keyword;
+	}
+	else
+	{
+		searchPath = "http://www.askoxford.com/results";
+		var search = searchPath + "?view=" + view + search + "=" + keyword + "&branch=" + branch + "&textsearchtype=exact";
+	}
+	location = search
+}
+//-->
+</script>
+						<!-- Start nested for search box - light blue -->
+                             <!--form name="searchtool" id="searchtool" onSubmit="makeSearch(); return false"-->
+							<table bgcolor="#375DA4" cellpadding="0" cellspacing="0" border="0">
+							<form name="searchtool" id="searchtool" onSubmit="makeSearch(); return false">
+							<input type="hidden" name="textsearchtype" value="exact">
+								<tr>
+									<td colspan="6" bgcolor="#000033" align="right" valign="top"><img src="spc.gif" width="1" height="10" border="0" alt="Space"></td>
+								</tr>
+
+								<tr>
+									<td align="center" valign="top"><img src="ltbtop2.gif" width="28" height="28" border="0" alt="Top "></td>
+									<td align="center" valign="bottom"><img src="search3.gif" width="47" height="16" border="0" alt="Search"></td>
+									<td bgcolor="#375DA4" align="center" valign="middle"><input name="keyword" id="keyword" type="text" size="15" class="searchbox"></td>
+									<td rowspan="2" align="center" valign="middle"><img src="spc.gif" width="10" height="1" border="0" alt="Space"></td>
+									<td rowspan="2" align="center" valign="middle"><input type="image" src="go.gif" width="46" height="46" border="0" alt="Go"></td>
+									<td rowspan="2"  align="center" valign="middle"><img src="spc.gif" width="8" height="1" border="0" alt="Space"></td>
+								</tr>
+
+							<tr>
+								<td align="left" valign="bottom"><img src="ltbbot2.gif" width="28" height="28" border="0" alt="Bottom"></td>
+								<td align="left" valign="bottom"><img src="spc.gif" width="1" height="28" border="0" alt="Space"></td>
+								<td align="left" valign="middle">
+
+                                <!-- COMPONENT WITH SELECTION HERE -->
+								<select name="pulldown" id="pulldown" size="1" class="dropbox">
+								<option value=",searchresults,&freesearch">Entire AskOxford Site</option>
+								<option value="10147222,searchresults,&freesearch">Ask the Experts</option>
+								<option value="13842570,dict,&freesearch">English dictionary</option>
+								<option value="14123648,quot,&freesearch">Quotations dictionary</option>
+								<option value="10148044,names,&freesearch">First Names dictionary</option>
+								<option value="uk,AKQuickCatalogue,1">Entire UK Book Catalogue</option>
+								</select>
+                               <!-- END SELECTION COMPONENT -->
+                                  </td>
+						   </tr>
+                        </form>
+					</table>
+                    
+							<!-- End nested for search box - light blue -->
+						</td>
+					</tr>
+
+					<tr>
+						<td align="right" valign="bottom"><img src="dkcurvelow.gif" width="36" height="28" border="0" alt="Curve low"></td>
+						<td bgcolor="#000033" align="left" valign="bottom"><img src="blue.gif" width="86" height="28" border="0" alt="Blue"></td>
+					</tr>
+				</table>
+                
+				<!-- end nested for dark blue area-->
+			</td>
+		</tr>
+</table>
+
+<!-- end nested for background reasons end -->
+</td>
+</tr>
+</table>
+
+<!-- MAIN TABLE 1 ENDS -->
+
+
+<!-- ++++++++++++++++++++++++++++++++++++++++++++++++++++++ -->
+
+
+<table width="100%" bgcolor="#000033" cellpadding="0" cellspacing="0" border="0">
+	<tr>
+		<td height="12" align="left" valign="middle"><img src="spc.gif" width="1" height="12" border="0" alt="Space"></td>
+	</tr>
+</table>
+
+<table width="100%" bgcolor="#000033" cellpadding="0" cellspacing="0" border="0">
+	<tr>
+		<td align="right" valign="middle"><img src="spc.gif" width="24" height="1" border="0" alt="Space"></td>
+		<td align="left" valign="bottom">
+			<table bgcolor="#000033" cellspacing="0" cellpadding="0" border="0">
+				<tr>
+					<td align="left" valign="middle">
+<!-- -->
+<!-- Global Navigation Starts -->
+<!-- -->
+
+<div class="topnav"><small>
+
+<a href="http://www.askoxford.com/?view=">HOME</a>&nbsp;&middot;&nbsp;
+
+<!-- COUNTRY COOKIE: -->
+<a href="http://www.askoxford.com/shoponline-us/?view=">SHOP</a>&nbsp;&middot;&nbsp;
+
+
+<a href="http://www.askoxford.com/education/?view=">EDUCATION</a>&nbsp;&middot;&nbsp;
+
+<a href="http://www.askoxford.com/pressroom/?view=">PRESS ROOM</a>&nbsp;&middot;&nbsp;
+
+<a href="http://www.askoxford.com/contactus/?view=">CONTACT US</a>&nbsp;&middot;&nbsp;
+
+</small></div>
+<div class="subnav"><small>
+
+<a href="http://www.askoxford.com/asktheexperts/?view=">ASK THE EXPERTS</a>&nbsp;&middot;&nbsp;
+
+<a href="http://www.askoxford.com/betterwriting/?view=">BETTER WRITING</a>&nbsp;&middot;&nbsp;
+
+<a href="http://www.askoxford.com/worldofwords/?view=">WORLD OF WORDS</a>&nbsp;&middot;&nbsp;
+
+<a href="http://www.askoxford.com/wordgames/?view=">GAMES</a>&nbsp;&middot;&nbsp;
+
+<a href="http://www.askoxford.com/globalenglish/?view=">GLOBAL ENGLISH</a>&nbsp;&middot;&nbsp;
+
+<a href="http://www.askoxford.com/languages/?view=">FOREIGN LANGUAGES</a>
+
+</small></div>
+
+
+
+					</td>
+				</tr>
+			</table>
+		</td>
+		<td align="right" valign="middle">
+
+
+<table width="100%" bgcolor="#000033" cellpadding="0" cellspacing="0" border="0">
+	<tr>
+		<td align="center" valign="middle">
+			<div class='WHITE'><small><!--small-->SELECT VIEW<!--/small--></small></div>
+		</td>
+		<td align="left" valign="middle">
+			<table width="100%" bgcolor="#000033" cellpadding="0" cellspacing="0" border="0">
+				<tr>
+					<td>
+						<img src="spc.gif" width="15" border="0" alt="Space">
+					</td>
+
+					<td>
+						<a href="javascript:switchLocation('Country', 'uk')"><img src="uk_dark_corners.gif" width="34" height="21" border="0" alt="UK and the Rest of the World"></a>
+					</td>
+					<td>
+						<img src="spc.gif" width="5" border="0" alt="Space">
+					</td>
+		
+					<td>
+						<a href="javascript:switchLocation('Country', 'get')"><img src="us_dark_corners.gif" width="34" height="21" border="0" alt="USA"></a>
+					</td>
+					<td>
+						<img src="spc.gif" width="5" border="0" alt="Space">
+					</td>
+		
+				</tr>
+			</table>
+		</td>
+	</tr>
+	<tr>
+		<td align="middle" colspan="2">
+
+		</td>
+	</tr>
+</table>
+
+
+
+		</td>
+	</tr>
+</table>
+
+<table bgcolor="#000033" width="100%" cellpadding="0" cellspacing="0" border="0">
+	<tr>
+		<td width="24" align="left" valign="top"><img src="left_up.gif" width="24" height="19" border="0" alt="Space"></td>
+		<td height="8" align="left" valign="middle"><img src="spc.gif" width="1" height="8" border="0" alt="Space"></td>
+	</tr>
+</table>
+<!-- GetGlobal | ::PAGE START:: ::: END :: --><!-- GetGlobal | Body > Content Table Start -->
+
+  <table width="100%" cellpadding="0" cellspacing="0" border="0">
+    <tr> 
+      <td align="left" valign="top"><br>
+        <!-- start main left content --><!-- Pulls in header graphic based on branch-->
+<table width="100%" cellpadding="0" cellspacing="0" border="0">
+<tr>
+<td rowspan="3" width="35" height="1" align="left" valign="top"><img src="spc.gif" width="35" height="1" border="0"></td>
+<td><img src="results.gif"></td></td>
+</tr>
+<tr>
+<td>
+<br>
+<br />
+<p><!-- server language="Perl">
+
+if ($request{'extension'}{'view'} eq 'dict') {
+	print qq[
+	<a href="/dictionaries/compact_oed/">Compact Oxford English Dictionary Search</a><br \><br \>
+	];
+}
+if ($request{'extension'}{'view'} eq 'name') {
+	print qq[
+	<a href="/dictionaries/name_dict/">Concise Dictionary of First Names Search</a><br \><br \>
+	];
+}
+if ($request{'extension'}{'quot'} eq 'quot') {
+	print qq[
+	<a href="/dictionaries/quotation_dict/">Little Oxford Dictionary of Quotations Search</a><br \><br \>
+	];
+}
+
+</server -->
+
+
+		<span style="text-transform: capitalize; font-weight: bold; color: #000099;">Alexander Macomb, Sr.</span><br >2 results found in the Compact Oxford English Dictionary - <a href="http://www.askoxford.com/dictionaries/compact_oed/">Perform another search</a>
+
+
+
+		<br />Page 1 of 1
+		<br /><br />
+		
+		<br /><br />
+				<div style="border-bottom: 1px dotted gray; padding: 5px; color: #000099;">
+
+					1
+ 
+					<a href="http://www.askoxford.com/concise_oed/sr"><span style="text-transform: capitalize;">Sr</span></a>
+
+					<br />
+
+					<span style="font-size: smaller; color: #999999;">English dictionary entry</span>
+
+				</div>
+
+
+			
+				<div style="border-bottom: 1px dotted gray; padding: 5px; color: #000099;">
+
+					2
+ 
+					<a href="http://www.askoxford.com/concise_oed/srx"><span style="text-transform: capitalize;">sr</span></a>
+
+					<br />
+
+					<span style="font-size: smaller; color: #999999;">English dictionary entry</span>
+
+				</div>
+
+
+			
+</p>
+<br />
+<br /><!-- Breadcrumb navigation and end of main left content-->
+</td></tr>
+<tr>
+<td align="left" valign="top">
+<!-- /results-->
+</td>
+</tr>
+</table>
+<!-- END MAIN TABLE -->
+<!-- end main left content -->
+</td>
+<td width="212" align="right" valign="top">
+		<!-- start rightnav - sidecurve -->
+			<table width="100%" cellpadding="0" cellspacing="0" border="0">
+				<tr>
+					<td align="left" valign="top"><img src="spc.gif" width="1" height="10" border="0" alt=""></td>
+					<td width="24" align="right" valign="top"><img src="curve_down.gif" width="24" height="19" border="0" alt=""></td>
+				</tr>
+			</table>
+		<!-- end rightnav - sidecurve -->
+
+
+
+		<!-- start main rightnav -->
+			<table width="25%" cellpadding="0" cellspacing="0" border="0">
+				<tr>
+					<td rowspan="7" align="left" valign="top"><img src="spc.gif" width="19" height="1" border="0" alt=""></td>
+					<td colspan="2" align="right" valign="top"><img src="dotted_top.gif" width="192" height="21" border="0" alt=""></td>
+				</tr>
+
+				<tr>
+					<td background="v_dotted.gif" rowspan="2" align="left" valign="top"><img src="spc.gif" width="1" height="1" border="0" alt=""></td>
+					<td align="left" valign="top"><img src="spc.gif" width="191" height="1" border="0" alt=""></td>
+				</tr>
+
+				<tr>
+					<td align="right" valign="top"><!-- SEARCH RESULTS - LOCAL NAVIGATION - REGION NEUTRAL -->
+<table border="0" height="100%" width="100%" align=left">
+
+<tr>
+<td>&nbsp;</td>
+<td align="left" valign="top"><img src="spc.gif" width="5" height="10" border="0" alt=""></td>
+<td>&nbsp;</td>
+</tr>
+<tr>
+<td width="20" align="center" valign="top"><img src="spc.gif" width="20" height="3" border="0" alt=""><br>
+<div align="center"><img src="redcircle.gif" name="smallred"></div></td>
+<td><h2 class="blue"><a href="http://www.askoxford.com/asktheexperts/">Ask The Experts</a></h2></td>
+</tr>
+<tr>
+<td width="20" align="center" valign="top"><img src="spc.gif" width="20" height="3" border="0" alt=""><br>
+<div align="center"><img src="redcircle.gif" name="smallred"></div></td>
+<td><h2 class="blue"><a href="http://www.askoxford.com/betterwriting/">Better Writing</a></h2></td>
+</tr>
+<tr>
+<td width="20" align="center" valign="top"><img src="spc.gif" width="20" height="3" border="0" alt=""><br>
+<div align="center"><img src="redcircle.gif" name="smallred"></div></td>
+<td><h2 class="blue"><a href="http://www.askoxford.com/worldofwords/">World of Words</a></h2></td>
+</tr>
+<tr>
+<td width="20" align="center" valign="top"><img src="spc.gif" width="20" height="3" border="0" alt=""><br>
+<div align="center"><img src="redcircle.gif" name="smallred"></div></td>
+<td><h2 class="blue"><a href="http://www.askoxford.com/wordgames/">Games</a></h2></td>
+</tr>
+<tr>
+<td width="20" align="center" valign="top"><img src="spc.gif" width="20" height="3" border="0" alt=""><br>
+<div align="center"><img src="redcircle.gif" name="smallred"></div></td>
+<td><h2 class="blue"><a href="http://www.askoxford.com/globalenglish/">Global English</a></h2></td>
+</tr>
+<tr>
+<td width="20" align="center" valign="top"><img src="spc.gif" width="20" height="3" border="0" alt=""><br>
+<div align="center"><img src="redcircle.gif" name="smallred"></div></td>
+<td><h2 class="blue"><a href="http://www.askoxford.com/languages/">Foreign Languages</a></h2></td>
+</tr>
+
+
+</table>
+
+</td>
+				</tr>
+
+				<tr>
+					<td colspan="2" align="right" valign="top"><img src="links_divider.gif" width="192" height="73" border="0" alt="links"></td>
+				</tr>
+
+				<tr>
+					<td height="100%" background="v_dotted.gif" rowspan="2" align="left" valign="top"><img src="spc.gif" width="1" height="1" border="0" alt="Space"></td>
+					<td align="left" valign="top"><img src="spc.gif" width="191" height="1" border="0" alt=""></td>
+				</tr>
+
+				<tr>
+					<td align="left" valign="top">
+<!-- START LINKS CONTENT TABLE START -->
+<table border="0" cellpadding="0" cellspacing="0" width="100%">	
+<tbody><tr>
+	<td align="left" valign="top"><img src="spc.gif" alt="Space" border="0" height="1" width="5"></td>
+	<td align="center" valign="middle" width="20"><img src="redarrow.gif" alt="Redarrow" border="0" height="12" width="20"></td>
+	<td align="left" valign="middle"><div class="blue"><b><small><a href="http://www.askoxford.com/shoponline/">AskOxford Shop</a></small></b></div></td>
+	<td align="left" valign="top"><img src="spc.gif" alt="Space" border="0" height="1" width="5"></td>
+</tr>
+<tr>
+	<td colspan="4" align="left" valign="top"><img src="spc.gif" alt="Space" border="0" height="10" width="5"></td>
+</tr>
+<tr>
+	<td align="left" valign="top"><img src="spc.gif" alt="Space" border="0" height="1" width="5"></td>
+	<td align="center" valign="middle" width="20"><img src="redarrow.gif" alt="Redarrow" border="0" height="12" width="20"></td>
+	<td align="left" valign="middle"><div class="blue"><b><small><a href="http://www.askoxford.com/links/">External Web Links</a></small></b></div></td>
+	<td align="left" valign="top"><img src="spc.gif" alt="Space" border="0" height="1" width="5"></td>
+</tr>
+<tr>
+	<td colspan="4" align="left" valign="top"><img src="spc.gif" alt="Space" border="0" height="10" width="5"></td>
+</tr>
+<tr>
+	<td align="left" valign="top"><img src="spc.gif" alt="Space" border="0" height="1" width="5"></td>
+	<td align="center" valign="middle" width="20"><img src="redarrow.gif" alt="Redarrow" border="0" height="12" width="20"></td>
+	<td align="left" valign="middle"><div class="blue"><b><small><a href="http://www.oup.com/">OUP Website</a></small></b></div></td>
+	<td align="left" valign="top"><img src="spc.gif" alt="Space" border="0" height="1" width="5"></td>
+</tr>
+<tr>
+	<td colspan="4" align="left" valign="top"><img src="spc.gif" alt="Space" border="0" height="10" width="5"></td>
+</tr>
+<tr>
+	<td align="left" valign="top"><img src="spc.gif" alt="Space" border="0" height="1" width="5"></td>
+	<td align="center" valign="middle" width="20"><img src="redarrow.gif" alt="Redarrow" border="0" height="12" width="20"></td>
+	<td align="left" valign="middle"><div class="blue"><b><small><a href="http://www.oup.co.uk/oxed/dictionaries/">Children's Dictionaries</a></small></b></div></td>
+	<td align="left" valign="top"><img src="spc.gif" alt="Space" border="0" height="1" width="5"></td>
+</tr>
+<tr>
+	<td colspan="4" align="left" valign="top"><img src="spc.gif" alt="Space" border="0" height="10" width="5"></td>
+</tr>
+<tr>
+	<td align="left" valign="top"><img src="spc.gif" alt="Space" border="0" height="1" width="5"></td>
+	<td align="center" valign="middle" width="20"><img src="redarrow.gif" alt="Redarrow" border="0" height="12" width="20"></td>
+	<td align="left" valign="middle"><div class="blue"><b><small><a href="http://www.oup.com/elt/catalogue/general/dictionaries/">ELT Dictionaries</a></small></b></div></td>
+	<td align="left" valign="top"><img src="spc.gif" alt="Space" border="0" height="1" width="5"></td>
+</tr>
+<tr>
+	<td colspan="4" align="left" valign="top"><img src="spc.gif" alt="Space" border="0" height="10" width="5"></td>
+</tr>
+<tr>
+	<td align="left" valign="top"><img src="spc.gif" alt="Space" border="0" height="1" width="5"></td>
+	<td align="center" valign="middle" width="20"><img src="redarrow.gif" alt="Redarrow" border="0" height="12" width="20"></td>
+	<td align="left" valign="middle"><div class="blue"><b><small><a href="http://www.oup.com/online/">Oxford Online</a></small></b></div></td>
+	<td align="left" valign="top"><img src="spc.gif" alt="Space" border="0" height="1" width="5"></td>
+</tr>
+<tr>
+	<td colspan="4" align="left" valign="top"><img src="spc.gif" alt="Space" border="0" height="10" width="5"></td>
+</tr>
+</tbody></table><!-- END LINKS CONTENT TABLE -->
+					</td>
+				</tr>
+
+				<tr>
+					<td align="left" valign="top"><img src="spc.gif" width="1" height="1" border="0" alt="Space"></td>
+					<td align="left" valign="top"><img src="local_dotted_bot.gif" width="185" height="1" border="0" alt="dotted"></td>
+				</tr>
+			</table>
+		<!-- LOCAL NAVIGATION TABLE 3 ENDS -->
+<!-- END BODY/NAV HOLDER -->
+<!-- end main rightnav -->
+		</td>
+	</tr>
+</table><!-- GetGlobal | Body > Content Table End -->
+        <!-- end main rightnav -->
+      <!--/td-->
+    <!--/tr-->
+  <!--/table-->
+  <!-- START PAGE FOOTER -->
+<table width="100%" cellpadding="0" cellspacing="0" border="0">
+	<tr>
+		<td width="24" align="left" valign="top"><img src="curve_up.gif" width="24" height="19" border="0" alt="CurveUp"></td>
+	</tr>
+</table>
+
+<table width="100%" cellpadding="0" cellspacing="0" border="0">
+	<tr>
+		<td width="100%" bgcolor="#000033" align="left" valign="top"><img src="blue.gif" width="1" height="10" border="0" alt="Blue"></td>
+		<td width="24" align="right" valign="top"><img src="right_down.gif" width="24" height="19" border="0" alt="RightDown"></td>
+	</tr>
+</table>
+
+<!-- START DOTTED BG -->
+<table width="100%" cellpadding="0" cellspacing="0" border="0">
+  	<tr>
+		<td rowspan="3" align="left" valign="top">
+		  <a href="http://affiliates.babylon.com/z/722/CD583/" target="_blank"><img src="http://affiliates.babylon.com/42/583/722" alt="Oxford Dictionaries included in Dictionary and Translation software by Babylon" border="0"></a>
+	   </td>
+		<!--<td rowspan="3" align="left" valign="top">
+			<a href="http://www.oxfordonline.com/subscribe"><img src="/images/interface/oxfordonline_banner.gif" width="468" height="60" border="0" alt="Oxford Online"></a>
+			<a href="http://www.oxforddnb.com/"><img src="/images/interface/ODNB_banner.gif" width="468" height="60" border="0" alt="Oxford Dictionary of National Biography"></a>
+		</td>-->
+		<td colspan="3" background="h_dotted.gif" width="100%" align="left" valign="top"><img src="spc.gif" width="1" height="1" border="0" alt="Space"></td>
+	</tr>
+
+	<tr>
+    	<td width="10" align="left" valign="top"><img src="v_dotted2.gif" width="1" height="58" border="0" alt="Dotted"></td>
+		<td width="100%" align="left" valign="top">
+		<table width="100%" cellspacing="0" cellpadding="0" border="0">
+			<tr>
+				<td width="10" align="left" valign="middle"><img src="spc.gif" width="10" height="1" border="0" alt="Space"></td>
+			    <td align="left" valign="middle"><div class="blue"><small><small><a href="http://www.askoxford.com/contactus/privacy">PRIVACY POLICY AND LEGAL NOTICE</a>&nbsp;&nbsp;Content and Graphics &copy; Copyright&nbsp;&nbsp;Oxford University Press, 
+				2007.&nbsp;&nbsp;All rights reserved.&nbsp;&nbsp;&nbsp;&nbsp;</small></small></div></td>
+			    <td width="10" align="left" valign="middle"><img src="spc.gif" width="10" height="1" border="0" alt="Space"></td>
+			    <td align="right" valign="middle"><a href="http://www.oup.com/"><img src="oup_logo.gif" width="109" height="58" border="0" alt="Oxford University Press"></a></td>
+			</tr>
+			</table>
+		</td>
+		<td width="10" align="right" valign="top"><img src="v_dotted2.gif" width="1" height="58" border="0" alt="dotted"></td>
+	</tr>
+	<tr>
+    	<td colspan="3" background="h_dotted.gif"><img src="spc.gif" width="10" height="1" border="0" alt="Space"></td>
+	</tr>
+</table>
+<!-- END DOTTED BG -->
+
+<table bgcolor="#000033" width="100%" cellpadding="0" cellspacing="0" border="0">
+	<tr>
+		<!-- <td width="24" align="left" valign="top"><img src="/images/phase_2/left_up.gif" width="24" height="19" border="0" alt="LeftUp"></td> -->
+		<td height="18" align="left" valign="middle"><img src="spc.gif" width="1" height="18" border="0" alt="Space"></td>
+	</tr>
+</table>
+<!-- END PAGE FOOTER -->
+
+
+<br>
+
+</body>
+</html>

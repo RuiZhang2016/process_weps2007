@@ -1,0 +1,39 @@
+/*  Hide navigation and non-printworthy elements */
+#search_tagline, #search_form, #search_box, #alpha_nav, #top_nav, #nav, #leaderboard, #sidebar {
+	float: none;
+	display: none;
+}
+
+
+/*  Put the logo back in the page flow */
+#logo {
+	position: relative;
+	top: 0;
+	left: 0;
+	display: block;
+}
+
+/* Expand the column width - save paper! */
+#container, #content {
+	float: none;
+	width: 80%;
+}
+
+/* Hide the 4 good links */
+.person_info {
+	display: none;
+}
+
+/* Show the vitals */
+#vitals {
+	display: block;
+	visibility: visible;
+	margin: 20px 0 0 0;
+	padding; 0;
+}
+
+/* Convert white text to black */
+#content .person_info h2 {
+	color: #000;
+}
+

@@ -1,0 +1,214 @@
+//////////////////////////////////////////////////////////////////////////////
+// configuration
+//
+var delay         = 30000;  // shrink time in ms
+var cookie_prefix = 'tqb_'; // session cookie prefix
+
+//////////////////////////////////////////////////////////////////////////////
+// minimal detection for placement, layer handling
+// http://www.webreference.com/tools/browser/javascript.html
+//
+var is_minor = parseFloat(navigator.appVersion.toLowerCase());
+var is_major = parseInt(is_minor);
+var ie4      = document.all;
+var ie5      = document.all && document.getElementById && (is_major == 5);
+var ns4      = document.layers;
+var ns6      = document.getElementById && !document.all; 
+
+//////////////////////////////////////////////////////////////////////////////
+// extract team_id from URL
+//
+var url_parts = self.location.pathname.split('/');
+if (url_parts[1].charAt(0) == '~') {
+  team_id = url_parts[1].substring(1, url_parts[1].length);
+} else if (url_parts[1].match(/^[0-9]{2}[a-zA-Z]{3}$/)) {
+  team_id = url_parts[1] + '/' + url_parts[2];
+} else {
+  team_id = url_parts[1];
+} // if
+
+//////////////////////////////////////////////////////////////////////////////
+// banner content
+//
+var bannerHtml = "<div id=tq_b_div><div id=tq_b_min><a href=http://thinkquest.org/ target=_new><img src=http://library.thinkquest.org/banner/lib/tq02.gif alt=\"ThinkQuest\" width=91 height=26 border=0></a><a href="http://library.thinkquest.org/banner/%5C%22javascript:;%5C%22" onMouseDown=\"maximizeBanner()\";><img src=http://library.thinkquest.org/banner/lib/max.gif width=12 height=12 border=0 style=\"margin-bottom: 7px; margin-right: 4px\"></a><a href="http://library.thinkquest.org/banner/%5C%22javascript:;%5C%22" onClick=\"closeBanner()\";><img src=http://library.thinkquest.org/banner/lib/close.gif width=12 height=12 border=0 style=\"margin-bottom: 7px;\"></a></div><div id=tq_b_max><a href=http://thinkquest.org/ target=_new><img src=http://library.thinkquest.org/banner/lib/tq01.gif alt=\"ThinkQuest\" width=126 height=30 border=0></a><img src=http://library.thinkquest.org/banner/s1.gif width=7 height=1><div id=tq_b_content><div class=tq_b_content_links><a href=http://thinkquest.org/library/site.html?team_id=" + team_id + " target=_new>About This Site &gt;</a><br/><a href=http://thinkquest.org/library/ target=_new>Library &gt;</a><br/><a href=http://thinkquest.org/support/faqlibrary.htm target=_new>FAQ &gt;</a><br/></div><div class=tq_b_image><a href=http://thinkquest.org/library/ target=_new><img src=http://library.thinkquest.org/banner/lib/library_ad.jpg width=128 height=120 alt=\"thinkquest\" border=0></a></div><div class=tq_b_content_oef><a href=http://thinkquest.org/ target=_new><img src=http://library.thinkquest.org/banner/lib/oef.gif width=126 height=46 alt=\"Oracle Education Foundation\" border=0></a></div><div class=tq_b_content_smlinks><a href=http://thinkquest.org/privacy.shtml target=_new>Privacy Policy</a><br/><a href=http://thinkquest.org/termsofuse.shtml target=_new>Terms of Use</a></div><div class=tq_b_content_buttons><a href="http://library.thinkquest.org/banner/%5C%22javascript:;%5C%22" onMouseDown=\"minimizeBanner()\";><img src=http://library.thinkquest.org/banner/lib/min.gif width=12 height=12 border=0 style=\"margin-right: 4px\"></a><a href="http://library.thinkquest.org/banner/%5C%22javascript:;%5C%22" onClick=\"closeBanner()\";><img src=http://library.thinkquest.org/banner/lib/close.gif width=12 height=12 border=0></a></div></div></div>";
+
+//////////////////////////////////////////////////////////////////////////////
+// closeBanner, minimizeBanner, maximizeBanner
+//
+function closeBanner() {
+  hideLayer('tq_b_min');
+  hideLayer('tq_b_max');
+  hideLayer('tq_b_div');
+  setCookie(team_id, 'none');
+}
+
+function minimizeBanner() {
+  hideLayer('tq_b_max');
+  setCookie(team_id, 'min');
+}
+
+function maximizeBanner() {
+  showLayer('tq_b_max');
+  setCookie(team_id, '');
+}
+
+//////////////////////////////////////////////////////////////////////////////
+// layer display
+//
+function hideLayer(divId) {
+  if (ns4) {
+    document.layers[divId].visibility = "hide";
+  } else if (ns6 || ie5) {
+    document.getElementById(divId).style.visibility = "hidden";
+  } else {
+    document.all[divId].style.visibility = "hidden";
+  }
+}
+
+function showLayer(divId) {
+  if (ns4) {
+    document.layers[divId].visibility = "show";
+  } else if (ns6 || ie5) {
+    document.getElementById(divId).style.visibility = "visible";
+  } else {
+    document.all[divId].style.visibility = "visible";
+  }
+}
+
+//////////////////////////////////////////////////////////////////////////////
+// cookies
+//
+function setCookie(name, value) {
+  document.cookie = cookie_prefix + name + "=" + escape(value) + "; path=/";
+}
+
+function getCookie(name) {
+  var dc = document.cookie;
+  var prefix = cookie_prefix + name + "=";
+  var begin = dc.indexOf("; " + prefix);
+  if (begin == -1) {
+    begin = dc.indexOf(prefix);
+    if (begin != 0) return null;
+  } else {
+    begin += 2;
+  }
+  var end = document.cookie.indexOf(";", begin);
+  if (end == -1) {
+    end = dc.length;
+  }
+  return unescape(dc.substring(begin + prefix.length, end));
+}
+
+//////////////////////////////////////////////////////////////////////////////
+// width and position
+//
+function findX() {
+  var x = 0;
+  if (self.innerWidth){
+    x = self.innerWidth; // ns
+  } else if (document.documentElement && document.documentElement.clientHeight) {
+    x = document.documentElement.clientWidth; // ie6 strict
+  } else if (document.body) {
+    x = document.body.clientWidth; // other ie
+  } 
+  return x;
+}
+
+function findY() {
+  var y = 0;
+  if (self.innerHeight) {
+    y=self.innerHeight; // ns
+  }
+  else if (document.documentElement && document.documentElement.clientHeight) {
+    y = document.documentElement.clientHeight; // ie6 strict
+  } else if (document.body) {
+    y = document.body.clientHeight; // other ie
+  }
+  return y;
+}
+
+function setPos(divId) {
+  posL = findX() - 136; // 128 bar width, 8 padding
+
+  if (ns4) {
+    posL='8';
+    document.layers[divId].visibility = "show";
+    document.layers[divId].left = posL;
+  } else if (ie5 || ns6) {
+    posL = findX() - 156; // 128 bar width, 8 padding, 20 scrollbar
+    document.getElementById(divId).style.visibility = "visible";
+    document.getElementById(divId).style.left = posL;
+  } else {
+    document.all[divId].style.visibility = "visible";
+    document.all[divId].style.left = posL;
+  }
+}
+
+function reloadPage(init) {
+  if (init == true) {
+    document.pgW = findX();
+    onresize = reloadPage;
+  } else if (window.innerWidth != document.pgW || document.body.offsetWidth != document.pgW) {
+    setPos('tq_b_div');
+    setPos('tq_b_min');
+    setPos('tq_b_max');
+  }
+}
+
+//////////////////////////////////////////////////////////////////////////////
+// frame testing
+//
+function isFrameset() {
+  test = (frames.length > 0) ? true : false;
+  return test; 
+}
+
+function inFrame() {
+  test = (parent.frames.length != 0) ? true : false;
+  return test;
+}
+
+function checkFrame() {
+  test = (findX() > 400 && findY() > 300) ? true : false;
+  return test;
+}
+
+//////////////////////////////////////////////////////////////////////////////
+// content output
+//
+function writeDiv() {
+  if (!isFrameset()) {
+    if (inFrame()) {
+      if (checkFrame()) {
+	document.write(bannerHtml);
+	setPos('tq_b_div');
+	setPos('tq_b_min');
+	setPos('tq_b_max');
+	reloadPage(true);
+      }
+    } else {
+      document.write(bannerHtml);
+      setPos('tq_b_div');
+      setPos('tq_b_min');
+      setPos('tq_b_max');
+      reloadPage(true);
+    }
+  }
+}
+
+// output based on cookie value 
+//
+var cookie_value = getCookie(team_id);
+if (cookie_value != 'none') {
+  writeDiv();
+}
+if (cookie_value == 'min') {
+  hideLayer('tq_b_max');
+}
+
+// set delayed minimizer
+//
+if (checkFrame()) {
+  setTimeout("hideLayer('tq_b_max')", delay);
+}
+<!-- ThinkQuest Banner --></object></layer></div></span></style></noscript></table></script></applet><link href="banner.css" rel="stylesheet" type="text/css"><script language="javascript" src="banner.html"></script>

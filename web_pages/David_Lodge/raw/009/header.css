@@ -1,0 +1,64 @@
+#ddimagetabs{
+	background-color: #003399;
+
+}
+
+#ddimagetabs a{
+display: block;
+font: 14px Verdana, Arial, Helvetica;
+font-weight: bold;
+color: white; /*font color */
+width: 86px; /*width of tab image */
+height: 18px; /*height of tab image */
+float: left;
+display: inline;
+margin-left: 1px; /*spacing between tabs */
+padding: 2px 10px 1px 10px;
+background-image:url(bluetab.jpg); /*URL to tab image */
+background-repeat: no-repeat;
+text-align: center;
+}
+
+
+#tabcontentcontainer{
+width:100%; /*width of 2nd level content*/
+height:20px; /*height of 2nd level content. Set to largest's content height to avoid jittering.*/
+background-color: #4b82cc;
+}
+
+.tabcontent{
+display:none;
+}
+
+#tabcontentcontainer a{
+display: block;
+text-decoration: none;
+font: 14px Arial, Geneva, Helvetica, sans-serif;
+color: white; /*font color */
+float: left;
+display: inline;
+margin-left: 4px; /*spacing between tabs */
+padding: 2px 8px 2px 8px; /* vertical offset of tab text from top of tab*/
+background-image:url(bluetab.jpg); /*URL to tab image */
+background-repeat: no-repeat;
+text-align: center;
+}
+
+#tabcontentcontainer a:hover, #tabcontentcontainer a.current{
+background-image:url(bluetabover.jpg); /*URL to tab image onmouseover */
+background-color: #FFF;
+color: #000;
+}
+
+
+.logotable {
+  margin: 0px;
+  padding: 0px;
+  text-align: right;
+ 	border-top-width: 1px;
+	border-right-width: 1px;
+	border-bottom-width: 1px;
+	border-left-width: 1px;
+	border-style: double;
+	border-color: #333366;
+}

@@ -1,0 +1,421 @@
+<HTML>
+<HEAD>
+<title>welcome to linux-terminalserver.org</title>
+
+  <META NAME="description" CONTENT="terminalserver, website for managers and engineers interested in re-centralizing their organizations IT">
+  <META NAME="keywords" CONTENT="Serverbased_Computing,  Low_TCO, Security ">
+  <META NAME="page-topic" CONTENT="Linux-Terminalserver">
+  <META NAME="author" CONTENT="Bernd Kretschmer">
+  <META NAME="publisher" CONTENT="Bernd Kretschmer">
+  <META NAME="copyright" CONTENT="Bernd Kretschmer">
+  <META NAME="audience" CONTENT="">
+  <META NAME="robots" CONTENT="INDEX,FOLLOW">
+  <META http-equiv="content-language" content="eng">
+</HEAD>
+
+<BODY BGCOLOR="white">
+<H3> table of contents</H3>
+
+<P >Foreword by James Burnes</P>
+<BR>
+<P >Foreword by the authors</P>
+<BR>
+<P >1 Overview</P>
+<P >1.1 Linux terminalserver in a nutshell</P>
+<P >1.1.1 Threats and Ways Out</P>
+<P >1.1.2 Concept</P>
+<P >1.1.3 Heterogeneous IT Structures</P>
+<P >1.1.4 Multiple Choices instead of Boxed Product</P>
+<P >1.1.5 Technical details</P>
+<P >1.2 Audience / Target Group</P>
+<P >1.2.1 Managers / Decision Makers</P>
+<P >1.2.2 Administrators</P>
+<P >1.3 About the Authors</P>
+<P >1.4 Your Individual Way through the Book</P>
+<BR>
+<P >2. Introduction to Linux Terminal Services</P>
+<P >2.1 Linux Terminalserver in a nutshell</P>
+<P >2.1.1 Threats of Decentral Desktop Monocultures</P>
+<P >2.1.2 Ways out of the Threat</P>
+<P >2.1.3 Concept</P>
+<P >2.1.4 Heterogeneous IT Structures</P>
+<P >2.1.5 Multiple Choices instead of Boxed Product</P>
+<P >2.2 Alternative Concepts for Recentralized Desktops</P>
+<P >2.3 Pragmatic Concepts Using Open Source</P>
+<P >2.3.1 Variety instead of Monocultures</P>
+<P >2.3.2 Central Management of Desktops and Applikations</P>
+<P >2.3.3 Extending the Life Cycle of Proprietary Applikations</P>
+<P >2.3.4 License Agreements and Renewal Cycles</P>
+<P >2.4 Eventful History of the Desktop</P>
+<P >2.4.1 Traditional Terminalserver Solutions</P>
+<P >2.4.2 Chaotic Decentralisation by PC Proliferation</P>
+<P >2.4.3 Recentralisation with Windows</P>
+<P >2.5 Every Linux Computer is a Terminalserver</P>
+<P >2.5.1 Exporting and Mounting Filesystems</P>
+<P >2.5.2 Exporting the Graphical X-Desktop</P>
+<P >2.5.3 Accessing the X-Desktop from Windows</P>
+<P >2.5.4 Future Prospects</P>
+<P >2.6 Operational Concepts</P>
+<P >2.6.1 Acquisition/Initial Costs</P>
+<P >2.6.2 Operating Costs</P>
+<P >2.6.3 Ecobalance</P>
+<P >2.7 Linux Thin Client Projects</P>
+<BR>
+
+<P >3 Developers, Consultants, and Multiplicators</P>
+<P >3.1 Overview</P>
+<P >3.1.1 No Pain, No Progress</P>
+<P >3.1.2 Supporting Technologies</P>
+<P >3.1.3 Developers of Terminalserver's Basic Technology</P>
+<P >3.1.4 Consultants and Multiplicators for Linux Terminalserver</P>
+<P >3.2 Developers of Bootproms</P>
+<P >3.2.1 Dirk Koeppen and Bootix</P>
+<P >3.2.2 Gero Kuhlmann and Netboot</P>
+<P >3.2.3 Markus Gutschke &amp; Ken Yap and Etherboot</P>
+<P >3.3 Developers of Integration Solutions</P>
+<P >3.3.1 Dirk von Suchodoletz and Linux Net PCs</P>
+<P >3.3.2 Cajus Pollmeier and GOto</P>
+<P >3.3.3 James McQuillan and LTSP</P>
+<P >3.3.4 Diego Torres Milano and PXES</P>
+<P >3.3.5 Miles Roper and ThinStation</P>
+<P >3.4 Developers of WAN Solutions</P>
+<P >3.4.1 Gian Filippo Pinzari and NoMachine</P>
+<P >3.4.2 Michael Kropfberger and X-Ray</P>
+<P >3.5 Consultants for Linux Terminalservices</P>
+<P >3.5.1 Alfred Schroeder and Gonicus</P>
+<P >3.5.2 Karl Heinz Heggen: Solutions for doctor's practices</P>
+<P >3.6 Multiplicators for Linux Terminalservices</P>
+<P >3.6.1 Martin Herwg: LTSP for schools</P>
+<P >3.6.2 Andries Jan-Albert Venter: Openlab</P>
+<P >3.6.3 Silverio Carugo: Didasca and Lazarus</P>
+<P ><BR>
+</P>
+<P >4. Linux Terminalservices - Basics</P>
+<P >4.1 Functional Overview</P>
+<P >4.2 Hard- and Software Layout for Terminalservices</P>
+<P >4.2.1 General Thoughts</P>
+<P >4.2.2 Required Software</P>
+<P >4.2.3 Server Layout</P>
+<P >4.2.4 RAID Systems</P>
+<P >4.3 The Network File System</P>
+<P >4.3.1 Overview</P>
+<P >4.3.2 Two Implementations</P>
+<P >4.3.3 Starting the Service</P>
+<P >4.3.4 NFS and the Portmapper</P>
+<P >4.3.5 Configuring NFS Exports</P>
+<P >4.4 Domain Name Service</P>
+<P >4.4.1 Name Resolving with Linux</P>
+<P >4.4.2 /etc/hosts</P>
+<P >4.4.3 DNS - Introduction</P>
+<P >4.4.4 DNS - Konfiguration of BIND</P>
+<P >4.5 Dynamic Host Configuration Protocol</P>
+<P >4.5.1 Tasks and Mode of Operation</P>
+<P >4.5.2 Different Implementations</P>
+<P >4.5.3 First Example</P>
+<P >4.5.4 Starting the Service</P>
+<P >4.5.5 Configuration Variables</P>
+<P >4.5.6 Complex Scenarios</P>
+<P >4.5.7 User Defined Options and Vendor Options</P>
+<P >4.5.8 Complex DHCP Set Ups</P>
+<P >4.6 Minimal FTP (TFTP)</P>
+<P >4.7 X.11 Services</P>
+<P ><BR>
+</P>
+<P >4.8 Display Manager</P>
+<P >4.8.1 XDM - The X.11 Display Manager</P>
+<P >4.8.2 KDM - KDE's reincarnation of XDM</P>
+<P >4.8.3 GDM - GNOME's Display Manager</P>
+<P >4.8.4 Trouble Shooting</P>
+<P >4.9 X.11 Font Server</P>
+<P ><BR>
+</P>
+<P >5 Integrating Linux Diskless Clients</P>
+<P >5.1 Integrating Thin Clients into
+Networks</P>
+<P >5.2 Local Authentification using
+Central Services</P>
+<P >5.3 The traditional Solution: NIS</P>
+<P >5.3.1 Overview and Introduction</P>
+<P >5.3.2 NIS Programs</P>
+<P >5.3.3 The NIS Server</P>
+<P >5.3.4 The NIS Client</P>
+<P >5.3.5 Conclusions</P>
+<P >5.4 PAM - Authentification Authority</P>
+<P >5.4.1 Overview</P>
+<P >5.4.2 Ideas and Concepts of PAM</P>
+<P >5.4.3 How it Works</P>
+<P >5.4.4 Files and Directories</P>
+<P >5.4.5 The Configuration Files</P>
+<P >5.4.6 A Module for each Purpose</P>
+<P >5.4.7 Example Configuration</P>
+<P >5.4.8 Security and Snares</P>
+<P >5.5 Central User Management using LDAP</P>
+<P >5.5.1 Overview and Introduction</P>
+<P >5.5.2 The LDAP Data Model</P>
+<P >5.5.3 The LDAP Protocol</P>
+<P >5.6 LDAP and Linux</P>
+<P >5.6.1 Server and Client Programs</P>
+<P >5.6.2 A Simple Configuration</P>
+<P >5.7 Automounter</P>
+<P >5.7.1 Overview</P>
+<P >5.7.2 Mode of Operation</P>
+<P >5.7.3 Configuration Files</P>
+<P >5.7.4 Application Scenarios</P>
+<P ><BR>
+</P>
+<P >6. Bootconcepts for Clients</P>
+<P >6.1 Overview and Introduction</P>
+<P >6.2 Client and Server Applications</P>
+<P >6.2.1 Local Applications from
+Terminalservers</P>
+<P >6.2.2 Serverbased Applications</P>
+<P >6.3 Operating Systems for Terminals</P>
+<P >6.4 Thin Clients and Fat Clients</P>
+<P >6.4.1 Full-equipped Desktop PCs and Notebooks</P>
+<P >6.4.2 Terminals for Serverbased
+Applications</P>
+<P >6.4.3 Net PCs</P>
+<P >6.5 Overview of Bootmethods</P>
+<P >6.5.1 Linux Bootserver</P>
+<P >6.5.2 Kontron WebasDisk</P>
+<P >6.5.3 iBoot based on iSCSI</P>
+<P >6.5.4 Running Windows 2000/XP-PCs from Virtual Disks</P>
+<P >6.6 Bootproms, PXE Boot and BIOS Extensions</P>
+<P >6.6.1 Different Bootconcepts</P>
+<P >6.6.2 Layout and Task of the Boot Software</P>
+<P >6.7 Etherboot</P>
+<P >6.7.1 Overview</P>
+<P >6.7.2 Configuration</P>
+<P >6.7.3 Compilation</P>
+<P >6.7.4 MKnbi or MKelf</P>
+<P >6.7.5 Multi Boot Adaptations</P>
+<P >6.7.6 Dual Booting with Etherboot and
+Windows Boot Loader</P>
+<P >6.7.7 Conclusion</P>
+<P >6.8 PXE and Syslinux</P>
+<P >6.8.1 Overview</P>
+<P >6.8.2 Syslinux and PXElinux</P>
+<P >6.8.3 Configuration of PXElinux</P>
+<P >6.8.4 Comparing PXE with other Boot Software</P>
+<P >6.9 Installing Boot Software</P>
+<P >6.10 Market Overview for End Devices</P>
+<P >6.10.1 Flashrom Terminals</P>
+<P >6.10.2 PCs as Terminals for Serverbased
+Applications</P>
+<P >6.10.3 PCs as Thin Clients for Local
+Applications</P>
+<P ><BR>
+</P>
+<P >7 Linux Net PCs with DXS</P>
+<P >7.1 Overview and Introduction</P>
+<P >7.1.1 The Idea of Linux Net PCs</P>
+<P >7.1.2 Application Area of Linux Net PCs</P>
+<P >7.1.3 History of Development</P>
+<P >7.1.4 Linux Net PCs' Third Generation</P>
+<P >7.1.5 Other Projects with Linux Thin Clients</P>
+<P >7.2 Installation</P>
+<P >7.2.1 The Bootserver</P>
+<P >7.2.2 Installation Package</P>
+<P >7.2.3 General Installation</P>
+<P >7.2.4 Installing for the First Time</P>
+<P >7.2.5 Installation by Copying</P>
+<P >7.2.6 Updates and Supplements</P>
+<P >7.3 Mode of Operation</P>
+<P >7.3.1 Configuration</P>
+<P >7.3.2 Writeable and Read-Only Directory Trees</P>
+<P >7.3.3 Alternatives and Future Developments</P>
+<P >7.3.4 The Boot Procedure</P>
+<P >7.4 Trouble Shooting and Debugging</P>
+<P >7.5 Success Stories</P>
+<P >7.5.1 High School in Borken</P>
+<P >7.5.2 University of Goettingen</P>
+<P >7.5.3 Dermatological Praxis Dr. Wolf in Mosbach</P>
+<P >7.5.4 Center of Sports Medicine Freiburg</P>
+<P ><BR>
+</P>
+<P ><BR>
+</P>
+<P ><BR>
+</P>
+<P >8 Linux X Terminals using GOto</P>
+<P >8.1 Thin Client Concepts Basics</P>
+<P >8.2 Specialties of the GOto Project</P>
+<P >8.3 General Requirements</P>
+<P >8.3.1 Etherboot / PXE</P>
+<P >8.3.2 Network Infrastructure</P>
+<P >8.3.3 Linux Boot Kernel</P>
+<P >8.4 Installing and Configuring the Boot Server</P>
+<P >8.4.1 Name Server</P>
+<P >8.4.2 LDAP Server</P>
+<P >8.4.3 Apache and GOsa</P>
+<P >8.4.4 TFTP</P>
+<P >8.4.5 DHCP</P>
+<P >8.4.6 PXE</P>
+<P >8.4.7 NFS</P>
+<P >8.4.8 GOto</P>
+<P >8.5 Configuring the Application Server</P>
+<P >8.5.1 Setting Up NFS Mounts</P>
+<P >8.5.2 Configuring the Display Manager</P>
+<P >8.6 Configuration of the Thin Clients</P>
+<P >8.7 Local Periphery</P>
+<P >8.7.1 Floppy Disks and CD-ROMs</P>
+<P >8.7.2 Printer</P>
+<P >8.7.2 Scanner</P>
+<P >8.8 Local Applications</P>
+<P >8.9 Future Development</P>
+<P >8.10 Success Stories</P>
+<P >8.10.1 Berndes Cookware</P>
+<P >8.10.2 Henkel, an Insurance Company</P>
+<P >8.10.3 Institute of Animal Science</P>
+<P ><BR>
+</P>
+<P >W Linux Terminal Server Project LTSP</P>
+<P > (in german language on this website)</P>
+<P ><BR>
+</P>
+<P >W LTSP</P>
+<P >W.1 The Thin Client Concept of LTSP</P>
+<P >W.2 Sample Setup</P>
+<P >W.3. Configuration of the Boot Server</P>
+<P >W.3.1 Installation of LTSP</P>
+<P >W.3.2 Installation of the Boot-Kernel</P>
+<P >W.3.3 Name Server</P>
+<P >W.3.4 DHCP Server</P>
+<P >W.3.5 TFTP Server</P>
+<P >W.3.6 NFS Server</P>
+<P >W.3.7 Test</P>
+<P >W.4 Configuration of the Application Server</P>
+<P >W.5 Configuration of the Thin Clients</P>
+<P >W.6 Local Peripherical Devices</P>
+<P >W.6.1 Printers</P>
+<P >W.6.1.1 Configuration of Thn Clients
+als PrintServers</P>
+<P >W.6.1.2 Printer Installation on the
+Application Server</P>
+<P >W.7 Local Applications</P>
+<P >W.8 Advanced Issues</P>
+<P >W.8.1 Kernels for LTSP</P>
+<P >W9 Success stories</P>
+<P >W.9.1 Berufsbildende Schulen Bochum</P>
+<P >W.9.2 Realschule Alpen</P>
+<P >W.9.3 William Sword</P>
+<P >W.9.4 Turtle and Hughes</P>
+<P ><BR>
+</P>
+<P >9	Terminal Services in WANs</P>
+<P >9.1 Introduction and overview</P>
+<P >9.2	X.11</P>
+<P >9.2.1 X.11 in WAN and LAN</P>
+<P >9.3 Compression, LBX and X.fast</P>
+<P >9.4 VNC</P>
+<P >9.4.1 VNC Overview</P>
+<P >9.4.2 Installation and Configuration of VNC Server</P>
+<P >9.4.3 Installation and Configuration of VNC Client</P>
+<P >9.4.4 Increasing the security of VNC Clients</P>
+<P >9.4.5 Integration of VNC in KDE</P>
+<P >9.4.6 Benefits and limits of VNC</P>
+<P >9.5. Tarantella</P>
+<P >9.5.1 Benefits for Customers</P>
+<P >9.5.2 Installation of Tarantella on
+Servers and Clients</P>
+<P >9.5.3 Login and Operation</P>
+<P >9.5.4 Printing</P>
+<P >9.5.5 Further Information</P>
+<P >9.6 Citrix Metaframe for Unix</P>
+<P >9.7 Thin X.11 with Nomachine NX</P>
+<P >9.7.1 Platforms and basic Functionality of NX</P>
+<P >9.7.2 Security via SSL</P>
+<P >9.7.3 Cooperations, Projects and Licensing</P>
+<P >9.7.4 Demo Tour</P>
+<P >9.7.5 NX Scenarios</P>
+<P >9.8  Multimedia Session Management with X-Ray</P>
+<P >9.8.1 Management of Graphical sessions</P>
+<P >9.8.2 Management of Multimedia Sessions</P>
+<P >9.8.3 User Administration</P>
+<P >9.9 Customer Stories</P>
+<P >9.9.1 Otto Egelhof GmbH &amp; Co.</P>
+<P >9.9.2 NoMaschine NX at European
+Electronique</P>
+<P ><BR>
+</P>
+<P >10 Server Based Linux Applications</P>
+<P >10.1 Graphical User interfaces for Linux</P>
+<P >10.1.1 KDE</P>
+<P >10.1.2 Gnome</P>
+<P >10.1.3 IceWM</P>
+<P >10.2 Text, Spread Sheets etc.</P>
+<P >10.2.1 Overview</P>
+<P >10.2.2 OpenOffice.org and StarOffice</P>
+<P >10.2.3 Office Applications of the KDE Project</P>
+<P >10.3 Browsers</P>
+<P >10.3.1 Overview</P>
+<P >10.3.2 Mozilla</P>
+<P >10.3.3 Konqueror</P>
+<P >10.3.4 Opera</P>
+<P >10.4.5 Lynx</P>
+<P >10.4. Mail-Clients</P>
+<P >10.4.1 Mozilla Messenger</P>
+<P >10.4.2 Evolution</P>
+<P >10.4.3 KMail and Kroupware</P>
+<P ><BR>
+</P>
+<P >11 Windows for Linux Diskless Clients</P>
+<P >11.1 Introduction and Market Overview</P>
+<P >11.2 Windows via VNC</P>
+<P >11.3 Windows Terminalservers</P>
+<P >11.3.1 Windows Terminalservices vial
+Linux Clients and Rdesktop</P>
+<P >11.3.2 Windows Terminalservices via HOBLink JWT and UWT</P>
+<P >11.3.3 Thinsoft RDP Client WinConnect</P>
+<P >11.3.4 Windows Terminalservices with Local Clients</P>
+<P >11.3.5 Windows Terminalservices via Linux Terminalservers</P>
+<P >11.4 Windows Terminalservers with Citrix Metaframe</P>
+<P >11.4.1 Linux Client for Citrix Metaframe</P>
+<P >11.4.2 ICA-Clients on Linux Clients or on Linux Terminalservers</P>
+<P >11.5 Windows Terminalservers with Tarantella</P>
+<P >11.6 Windows in VMWare Envirnoments</P>
+<P >11.6.1 VMWare Product Family</P>
+<P >11.6.2 VMWare Basics</P>
+<P >11.6.3 The virtual PC</P>
+<P >11.6.4 VMWare on Linux Hosts</P>
+<P >11.6.5 Installation of a Virtual Machine for an Client-OS</P>
+<P >11.6.6. Script-support for Automatic Installation</P>
+<P >11.6.7 Configuration of a Guest-OS</P>
+<P >11.6.8 Application Scenarios and pros/cons</P>
+<P >11.7. Windows Environments with Netraverse Win4Lin</P>
+<P >11.7.1 Win4Lin on Linux Net PCs</P>
+<P >11.7.2 Win4Lin Terminalserver on Linux Terminalservers</P>
+<P >11.8 Windows Interfaces through Wine</P>
+<P >11.9 Windows Interfaces with Crossover Office</P>
+<P >11.9.1 Basics</P>
+<P >11.9.2 CrossOver Office on Linux NetPCs
+and Linux Terminalservers</P>
+<P ><BR>
+</P>
+<P >12 Host access with Linux Diskless
+Clients</P>
+<P >12.1 Challenges, market and products</P>
+<P >12.1.1 Web to Host Solutions</P>
+<P >12.1.2 Linux Clients vs. Java Applets</P>
+<P >12.2. Connecting to AS/400 with tn5250</P>
+<P >12.2.1 Installation, Configuration and
+Start</P>
+<P >12.2.2 Integration</P>
+<P >12.2.3 User Experiences</P>
+<P >12.3 Connecting to S/390 with x3270
+emulations</P>
+<P ><BR>
+</P>
+<P >Appendix</P>
+<P ><BR>
+</P>
+<P >Glossary</P>
+<P ><BR>
+</P>
+<P >Literature</P>
+<P ><BR>
+</P>
+<P >Index</P>
+
+</BODY>
+</HTML>

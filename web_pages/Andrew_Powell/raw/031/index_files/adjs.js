@@ -1,0 +1,5 @@
+var phpadsbanner = '';
+
+phpadsbanner += '<'+'script type="text/javascript"><'+'!--\ngoogle_ad_client = "pub-8364350995539875";\ngoogle_ad_width = 300;\ngoogle_ad_height = 250;\ngoogle_ad_format = "300x250_as";\ngoogle_ad_type = "text";\n//2007-02-02: catalogue-overview, tag-overview, label-overview\ngoogle_ad_channel = "4073027658+4417879899+0718013740";\ngoogle_color_border = "E9EBEF";\ngoogle_color_bg = "E9EBEF";\ngoogle_color_link = "605C5B";\ngoogle_color_text = "605C5B";\ngoogle_color_url = "605C5B";\n//--><'+'/script>\n<'+'script type="text/javascript"\n  src="http://pagead2.googlesyndication.com/pagead/show_ads.js">\n<'+'/script><'+'div id="beacon_14379" style="position: absolute; left: 0px; top: 0px; visibility: hidden;"><'+'img src=\'http://campaign.indieclick.com/adlog.php?bannerid=14379&amp;clientid=5922&amp;zoneid=450&amp;source=&amp;block=0&amp;capping=0&amp;cb=c520036baded76f279aa64a35be1471c\' width=\'0\' height=\'0\' alt=\'\' style=\'width: 0px; height: 0px;\'><'+'/div>';
+
+document.write(phpadsbanner);

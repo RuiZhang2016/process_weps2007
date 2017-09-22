@@ -1,0 +1,570 @@
+ 
+
+			
+
+						
+
+
+
+
+
+<script language="javascript">
+function OpenLargeWindow(imageid,x,y,s) {
+    maxwidth=600;
+	maxheight=400;
+
+ 	if ((x > maxwidth) && (y > maxheight)) {
+    	y = y + 34;
+		xsizepercent = maxwidth / x;
+		ysizepercent = maxheight / y;
+		if (xsizepercent > ysizepercent) {
+			x = x * xsizepercent;
+			y = y * xsizepercent;	
+			window.open("enlarge_image.cfm?SiteID=" + s + "&IMAGE_ID=" + imageid,imageid,"width=" + x + ",height=" + y + ",resizable=yes,status=no,scrollbars=yes,titlebar=0");
+		}
+		else {
+			x = x * ysizepercent;
+			y = y * ysizepercent;	
+			window.open("enlarge_image.cfm?SiteID=" + s + "&IMAGE_ID=" + imageid,imageid,"width=" + x + ",height=" + y + ",resizable=yes,status=no,scrollbars=yes,titlebar=0");
+		}
+	}
+	else if (x > maxwidth) {
+		y = y + 34;
+		sizepercent = maxwidth / x;
+		x = x * sizepercent;
+		y = y * sizepercent;
+       	window.open("enlarge_image.cfm?SiteID=" + s + "&IMAGE_ID=" + imageid,imageid,"width=" + x + ",height=" + y + ",resizable=yes,status=no,scrollbars=yes,titlebar=0");
+    }
+	else if (y > maxheight) {
+		y = y + 34;
+		sizepercent = maxheight / y;
+		x = x * sizepercent;
+		y = y * sizepercent;
+        window.open("enlarge_image.cfm?SiteID=" + s + "&IMAGE_ID=" + imageid,imageid,"width=" + x + ",height=" + y + ",resizable=yes,status=no,scrollbars=yes,titlebar=0");
+    }
+	else {
+		y = y + 34;
+ 		window.open("enlarge_image.cfm?SiteID=" + s + "&IMAGE_ID=" + imageid,imageid,"width=" + x + ",height=" + y + ",scrollbars=no,titlebar=no");
+    }
+}
+</script>
+<!--Server: 120-->
+<html>
+<head>
+<title>Madison Energy Advisors - Oil and gas property sales</title>
+<meta name="description" content="Energy marketplace for buying and selling of oil and gas producing properties, or researching exploration prospects. Perform research, conduct due diligence, and execute secure transactions.">
+<meta name="keywords" content="property auction for sale oil and gas Madison Energy producing mineral rich land OGJexchange energy marketplace EBCO asset management exploration sealed bid online live English auction sale process petroleum and electric power e-commerce solution OJGexchange glp Pennwell PennEnergy pennNET">
+<META NAME="ROBOTS" CONTENT="NOARCHIVE"> 
+
+
+<!--startclickprintexclude-->
+
+	
+	
+	
+		
+	
+	
+	
+	
+
+	
+
+
+
+<!-- BEGIN WEBSIDESTORY CODE v9.0.0 -->
+<!-- COPYRIGHT 1997-2003 WEBSIDESTORY, INC. ALL RIGHTS RESERVED. U.S.PATENT No. 6,393,479 B1. Privacy notice at: http://websidestory.com/privacy -->
+<script language="JavaScript" type="text/javascript">
+var _acct="DM51062885FE84EN3"; 	//account number(s)
+var _pn="news_display.cfm"; 	//page name(s)
+var _mlc="/news/adnew";	//multi-level content category
+var _seg=""; // visitor segmentation
+var _cmp=""; // campaign id
+var _gp="";  // campaign goal
+var _cmpn="";// campaign id in query
+var _gpn=""; // campaign goal in query
+var _fnl=""; // funnels
+var _pec=""; // error codes
+var _fv="";  // form validation function name
+var _dcmp="";// dynamic campaign id
+var _dcmpn="";//dynamic campaign id in query
+var _hra=""; // response attribute
+var _hcn=""; // conversion
+var _hcv=""; // conversion value
+var _hlt=""; // lead tracking
+var _hla=""; // lead attribute
+var _hqsr="";// response attribute in referral query
+var _hqsp="";// response attribute in query
+var _hc1=""; // custom 1
+var _hc2=""; // custom 2
+var _hc3=""; // custom 3
+var _hc4=""; // custom 4
+var _ci="";  //customer id
+var _cp="null";//campaign
+var _cpd="";//campaign domain
+var _pndef="title";	//default page name
+var _ctdef="full"; 	//default content category
+var _dlf="n"; // download filter
+var _elf="n"; // exit link filter
+var _dft="n"; // download file tracker variable, set to y to use the name reference
+var _epg="n"; // event page identifier
+var _vpc="090000"; //page code version
+var _gn="ehg-pennwell.hitbox.com"; //gateway name
+function $a(v){return escape(v)};
+var _sv=10,_bn=navigator.appName,_mn="we36",_bv=parseInt(navigator.appVersion),_rf=$a(document.referrer),_bnN=(_bn=="Netsc"+"ape");
+function $ii(a,b,c){return a.indexOf(b,c?c:0)};
+if($ii(_bn,"Microsoft")==0)_bn="MSIE";
+if(_bn=="MSIE"&&_bv==2)_bv=3;
+function $is(a,b, c){return b>a.length?"":a.substring(b,c!=null?c:a.length)};
+function $l(a,b){return(a=="/")?a:(($ii(a,"/")?"/":"")+(a.lastIndexOf("/")==b?$is(a,0,b):a)) };
+function $n(a,b){return(a==""|| a=="/")?"/": $is( a,(_ctdef!="full")?a.lastIndexOf("/",b-2):$ii(a,"/"),b)};
+function $o(a,b,c){ var d=location.pathname,e=$is(d,d.lastIndexOf("/")+1);if(a&&b==c){return(_pndef == "title" &&document.title!=""&&document.title!=location&&(_bnN&&$ii(document.title,"http")<0))?document.title:e?e:_pndef}else{return b==c?$n(d,d.lastIndexOf("/")): $l( b,b.length-1)}};
+function $p(a,b,c,d){return ""+(c>-1?$o(b,$is(a,0,c),d)+";"+$p($is(a,c+1),b,$ii($is(a,c+1),";")):$o(b,a,d))};
+_mlc=$p(_mlc,0, $ii( _mlc, ";"), "CONTEN"+"T+CAT"+"EGORY");_pn=$p(_pn,1,$ii(_pn,";"),"PUT+PA" + "GE+NAME+HERE") 
+</script>
+<script language="javascript1.1" type="text/javascript">_sv=11</script>
+<script language="javascript1.1" type="text/javascript" defer src="/js/hbe.js"></script>
+<script language="javascript" type="text/javascript"> 
+
+if( _sv+0<11 ){ if( ( document.cookie)&&
+$ii(document.cookie,"CP=")>-1){_ce="y"}else{document.cookie="CP=null*; path=/;"+
+(_cpd!=""?(" domain=."+_cpd+"; "):"")+"expires=Wed, 1 Jan 2020 00:00:00 GMT";if(
+($ii(document.cookie,"CP="))+0>-1){_ce="y"}else{_ce="n"}}if((_rf==null)||( _rf==
+""))_rf="bookmark"; document.write( "<img src='"+( location.protocol== 'https:'?
+'https://':'http://') + _gn+"/HG?hc="+_mn+"&hb="+$a(_acct)+"&n="+$a(_pn)+(_bnN?(
+"&bn="+$a(_bn)):"")+ "&ce="+ _ce + "&ss=na&sc=na&dt=" + (new Date()).getHours()+
+"&sv="+_sv+"&con=&vcon="+$a(_mlc)+"&epg="+_epg+"&hv=6&cd=1&pl=&hp=u&cy=u&ja=na"+
+"&ln=na&cp="+$a(_cp)+ "&seg="+ _seg+ "&dcmp="+$a(_dcmp)+"&cmp="+_cmp+"&gp="+_gp+
+"&fnl="+$a(_fnl)+"&pec="+$a(_pec)+"&ra="+$a(_hra)+"&gn="+$a(_hcn)+"&ld="+$a(_hlt
+)+"&la="+$a(_hla)+"&cv="+$a(_hcv)+"&c1="+$a(_hc1)+"&c2="+$a(_hc2)+"&c3="+$a(_hc3
+)+"&c4="+$a(_hc4)+"&customerid="+$a(_ci)+"&rf="+_rf+"' border=0 height=1 widt"+
+"h=1>")}if(_bnN&&_bv==4)document.write("<\!"+"--")
+
+</script>
+
+<noscript>
+<img src="http://ehg-pennwell.hitbox.com/HG?hc=we36&cd=1&hv=6&ce=u&hb=DM51062885FE84EN3&n=news_display.cfm&vcon=/news/adnew&seg=&cmp=&gp=&fnl=&pec=&dcmp=&ra=&gn=&ld=&la=&cv=&c1=&c2=&c3=&c4=&customerid=vpc=090000n" border="0" width="1" height="1" />
+</noscript>
+<!--//-->
+<!-- END WEBSIDESTORY CODE  -->
+
+
+
+<!--endclickprintexclude-->
+
+
+<link href="/js/ogjpe_css.css" rel="STYLESHEET" type="text/css">
+<script type="text/javascript" language="JavaScript1.1">
+<!--
+	if (navigator.appName == "Microsoft Internet Explorer")
+	{ document.write('<link href=\"/js/ogjpe-ie.css\" rel=\"STYLESHEET\" type=\"text/css\">');
+	}
+	else
+	{ document.write('<link href=\"/js/ogjpe-ns.css\" rel=\"STYLESHEET\" type=\"text/css\">');
+	}
+//-->	
+</script>
+<script language="javascript">
+<!--
+	if (document.images)       {
+		tab1on = new Image(117,18); tab1on.src = "http://images.pennnet.com/ogjpe/tabs/ogjp_ogje_tabs_on_01.gif";
+		tab2on = new Image(108,18); tab2on.src = "http://images.pennnet.com/ogjpe/tabs/ogjp_virtdatarm_tabs_on_02.gif";
+		tab3on = new Image(112,18); tab3on.src = "http://images.pennnet.com/ogjpe/tabs/ogjp_equip_tabs_on_03.gif";
+		tab4on = new Image(121,18); tab4on.src = "http://images.pennnet.com/ogjpe/tabs/ogjp_ogjonline_tabs_on_04.gif";
+				
+        tab1off = new Image(117,18); tab1off.src = "http://images.pennnet.com/ogjpe/tabs/ogjp_ogje_tabs_off_01.gif";
+		tab2off = new Image(108,18); tab2off.src = "http://images.pennnet.com/ogjpe/tabs/ogjp_virtdatarm_tabs_off_02.gif";
+		tab3off = new Image(112,18); tab3off.src = "http://images.pennnet.com/ogjpe/tabs/ogjp_equip_tabs_off_03.gif";
+		tab4off = new Image(121,18); tab4off.src = "http://images.pennnet.com/ogjpe/tabs/ogjp_ogjonline_tabs_off_04.gif";
+	}
+		
+	function img_on(tabName) {
+        if (document.images) {
+        	tabOn = eval("tab" + tabName + "on.src");
+        	document ["tab" + tabName].src = tabOn;
+		}
+	}
+
+	function img_off(tabName) {
+        if (document.images) {
+        	tabOff = eval("tab" + tabName + "off.src");
+        	document ["tab" + tabName].src = tabOff;
+    	}    
+    }
+//-->
+</script>
+</head>
+
+<body topmargin=0 leftmargin=0 marginwidth=0 marginheight=0>
+<table width="780" cellpadding=0 cellspacing=0 border=0>
+<tr>
+	<td width="1" height="1" bgcolor="#FFFFFF"><img src="http://images.pennnet.com/ogjpe/misc/blank_spacer.gif" width="1" height="1"></td>
+	<td align="right" colspan=3 bgcolor="#FFFFFF">
+	<table border=0 cellpadding=0 cellspacing=0 width="778">
+		<tr>
+		    <td valign="bottom" align="left" width="320"><font class="tagline">&nbsp;Madison Energy - transaction advisors for oil and gas</font></td>
+			<td valign="bottom" align="right" width="117"><a href="http://www.ogjexchange.com/" onMouseOver="img_on('1')" onMouseOut="img_off('1')"><img src="http://images.pennnet.com/ogjpe/tabs/ogjp_ogje_tabs_off_01.gif" border=0 width="117" height="18" name="tab1"></a></td>
+			<td valign="bottom" align="right" width="108"><a href="/vdr/vdr_home.cfm" onMouseOver="img_on('2')" onMouseOut="img_off('2')"><img src="http://images.pennnet.com/ogjpe/tabs/ogjp_virtdatarm_tabs_off_02.gif" border=0 width="108" height="18" name="tab2"></a></td>
+			<td valign="bottom" align="right" width="112"><a href="http://www.globalequipmentexchange.com/" onMouseOver="img_on('3')" onMouseOut="img_off('3')"><img src="http://images.pennnet.com/ogjpe/tabs/ogjp_equip_tabs_off_03.gif" border=0 width="112" height="18" name="tab3"></a></td>
+			<td valign="bottom" align="right" width="121"><a href="http://ogj.pennnet.com" onMouseOver="img_on('4')" onMouseOut="img_off('4')"><img src="http://images.pennnet.com/ogjpe/tabs/ogjp_ogjonline_tabs_off_04.gif" border=0 width="121" height="18" name="tab4"></a></td>		
+		</tr>
+	</table>
+	</td>
+	<td width="1" height="1" bgcolor="#FFFFFF"><img src="http://images.pennnet.com/ogjpe/misc/blank_spacer.gif" width="1" height="1"></td>
+</tr>
+<tr>
+	<td width="1" height="1" bgcolor="#000000"><img src="http://images.pennnet.com/ogjpe/misc/blank_spacer.gif" width="1" height="1"></td>
+	<td width="141" height="1" bgcolor="#000000"><img src="http://images.pennnet.com/ogjpe/misc/blank_spacer.gif" width="141" height="1"></td>
+	<td width="494" height="1" bgcolor="#000000"><img src="http://images.pennnet.com/ogjpe/misc/blank_spacer.gif" width="494" height="1"></td>
+	<td width="143" height="1" bgcolor="#000000"><img src="http://images.pennnet.com/ogjpe/misc/blank_spacer.gif" width="143" height="1"></td>
+	<td width="1" height="1" bgcolor="#000000"><img src="http://images.pennnet.com/ogjpe/misc/blank_spacer.gif" width="1" height="1"></td>
+</tr>
+<tr>
+	<td width="1" height="1" bgcolor="#000000"><img src="http://images.pennnet.com/ogjpe/misc/blank_spacer.gif" width="1" height="1"></td>
+	<td colspan=3 height="79" bgcolor="#890107"><a href="/home.cfm"><img src="http://images.pennnet.com/ogjpe/headers/ogjp_masthead.jpg" width="778" height="79" border=0></a></td>
+	<td width="1" height="1" bgcolor="#000000"><img src="http://images.pennnet.com/ogjpe/misc/blank_spacer.gif" width="1" height="1"></td>
+</tr>
+<tr>
+	<td width="1" height="1" bgcolor="#000000"><img src="http://images.pennnet.com/ogjpe/misc/blank_spacer.gif" width="1" height="1"></td>
+	<td width="141" valign="top" align="right" bgcolor="#890107">
+	
+
+<table border=0 cellpadding=0 cellspacing=0 width="100%">
+<tr>
+<td valign="top" align="left" width="100%" colspan=3>
+<img src="http://images.pennnet.com/ogjpe/leftnav/ogjp_leftnav_bleed_01.gif" width="141" height="161"><br>
+<br>
+</td>
+</tr>
+<tr>
+<td width="3"><img src="http://images.pennnet.com/ogjpe/misc/blank_spacer.gif" width="3" height="1"></td>
+<td valign="top" align="left">
+	<font class="leftnav"><b>Property Exchange</b></font><br>
+	<table border=0 cellspacing=0 cellpadding=0 width="100%">
+		<tr>
+		<td width="5"><img src="http://images.pennnet.com/ogjpe/misc/blank_spacer.gif" width="5" height="5"></td>
+		<td>
+		
+		
+
+		
+			<A href="/deals/historical_transactions.cfm" class="leftnav">Historical Transactions</a><br>
+		
+				
+			</td>
+		</tr>
+	</table>
+	<br>
+	<A href="/about/about_main.cfm" class="leftnav"><b>About Us</b></a><br>
+	<table border=0 cellspacing=0 cellpadding=0 width="100%">
+		<tr>
+		<td width="5"><img src="http://images.pennnet.com/ogjpe/misc/blank_spacer.gif" width="5" height="5"></td>
+		<td>
+		
+		<A href="/news/news_main.cfm?Section=Presr" class="leftnav">News</a><br>
+		<A href="/about/office_locations.cfm" class="leftnav">Office Locations</a><br>
+		
+		<A href="/about/faq.cfm" class="leftnav">FAQs</a><br>
+		<A href="/speeches/speeches_main.cfm" class="leftnav">Speeches</a><br>
+		<a href="http://downloads.pennnet.com/ogjpe/reports/wmr.pdf" class="leftnav">Weekly Market Review</a><br>
+		
+		<a href="http://downloads.pennnet.com/ogjpe/reports/qpp.pdf" class="leftnav">Quarterly Pricing Poll</a><br>
+		<A href="/about/contact_us.cfm" class="leftnav">Contact Us</a><br>
+		</td>
+		</tr>
+	</table>
+	<br>
+	<font class="leftnav"><b>Other Communities</b></font><br>
+	<table border=0 cellspacing=0 cellpadding=0 width="100%">
+		<tr>
+		<td width="5"><img src="http://images.pennnet.com/ogjpe/misc/blank_spacer.gif" width="5" height="5"></td>
+		<td>
+		<A href="http://ogj.pennnet.com" class="leftnav" target="new">Oil&Gas Journal Online</a><br>
+		<A href="http://os.pennnet.com" class="leftnav" target="new">Offshore</a><br>
+		<A href="http://pe.pennnet.com" class="leftnav" target="new">Power Engineering</a><br>
+		<A href="http://www.pennwell-store.com" class="leftnav" target="new">Energy Bookstore</a><br>
+		<A href="http://www.courageandvalor.org/home.cfm" class="leftnav" target="new">Courage and Valor Foundation</a><br>
+		</td>
+		</tr>
+	</table>
+</td>
+<td width="3"><img src="http://images.pennnet.com/ogjpe/misc/blank_spacer.gif" width="3" height="1"></td>
+</tr>
+</table>
+<br>
+<br>
+	</td>
+	<td valign="top" align="middle" width="494" bgcolor="#FFFFFF">
+
+<table border="0" cellpadding="0" cellspacing="0" width="100%">
+	<tr>
+		<td valign="top" align="left">
+			
+			<table border="0" cellpadding="0" cellspacing="0" width="100%" height="49">
+				<tr>
+					<td valign="top" align="left" width="13" height="49" bgcolor="#FFFFFF">
+						<img src="http://images.pennnet.com/ogjpe/leftnav/ogjp_leftnav_bleed_02.jpg" width="11" height="88">
+					</td>
+					<td valign="top" align="left" width="322" height="49" bgcolor="#FFFFFF">
+						<font class="date">Saturday, September 25, 2004</font><br>
+						<br>
+						
+							<img src="http://images.pennnet.com/ogjpe/headers/adnews_hdr.gif" width="250" height="39"><br>
+						
+					</td>
+				</tr>
+			</table>
+			
+			<table border="0" cellpadding="0" cellspacing="0" width="100%">
+				<tr>
+					<td width="5" bgcolor="#FFFFFF"><img src="http://images.pennnet.com/ogjpe/misc/blank_spacer.gif" width="5" height="1"></td>
+					<td valign="top" align="left" bgcolor="#FFFFFF">
+					<table border=0 cellpadding=0 cellspacing=0 width=100%>
+												
+							
+							
+											
+							
+							
+	
+									
+							
+							<tr>
+								<td align=center><font class="title">Sentra And Toro Announce Completion Of Plan Of Arrangement And Property Acquisition</font><br><br></td>
+							</tr>
+							<tr>
+								<td><font class="date">Sep-10-2003</font><br><br></td>
+							</tr>
+							
+						
+							
+							
+							
+							
+						
+							
+							
+							<tr>
+								<td>
+								
+									CALGARY, ALBERTA--Sentra Resources Corporation ("Sentra") and Toro Energy Inc. ("Toro") announced today that they have completed their previously announced statutory plan of arrangement (the "Arrangement") pursuant to which Sentra acquired all of the issued and outstanding common shares of Toro. The Arrangement was overwhelmingly approved by securityholders of both Sentra and Toro at special meetings of the securityholders of both companies held on September 9, 2003. The final order of the Court of Queen's Bench of Alberta approving the Arrangement was also granted on September 9, 2003.
+								
+								</td>
+							</tr>
+							<tr>
+								<td>&nbsp;</td>
+							</tr>
+							
+							<tr>
+								<td>
+								
+									In connection with the Arrangement, the Toronto Stock Exchange (the "TSX") has conditionally approved the listing of the Sentra common shares under the trading symbol "SRA". Upon Sentra satisfying the TSX's listing conditions, the TSX will issue a bulletin announcing the commencement of trading of the Sentra common shares. Following listing on the TSX, application will be made to delist the Toro common shares from the TSX Venture Exchange.
+								
+								</td>
+							</tr>
+							<tr>
+								<td>&nbsp;</td>
+							</tr>
+							
+							<tr>
+								<td>
+								
+									In connection with the Arrangement, Sentra is pleased to welcome Christina M. Fehr and Donald J. Rowden, former directors of Toro, to the Sentra Board of Directors. Ms. Fehr and Mr. Rowden join the existing Board of Directors of Sentra consisting of Uldis Upitis, Gerald M. Deyell, Q.C., Carl-Martin Nagel and Daniel M. Weingeist.
+								
+								</td>
+							</tr>
+							<tr>
+								<td>&nbsp;</td>
+							</tr>
+							
+							<tr>
+								<td>
+								
+									The issued and outstanding share capital of Sentra is currently comprised of 21,161,807 common shares, 1,401,749 options to acquire common shares and 133,028 warrants to acquire common shares. All of the warrants will expire 90 days from the date hereof and 541,749 of the options will expire 30 days from the date hereof.
+								
+								</td>
+							</tr>
+							<tr>
+								<td>&nbsp;</td>
+							</tr>
+							
+							<tr>
+								<td>
+								
+									Concurrently with the closing of the Arrangement, Sentra completed the previously announced acquisition of complementary working interests in oil and gas properties owned by private company vendors that had conducted joint venture operations with Toro. This acquisition has increased Sentra's working interest by 30% in the assets of Toro in the Peace River Arch area of Alberta and British Columbia.
+								
+								</td>
+							</tr>
+							<tr>
+								<td>&nbsp;</td>
+							</tr>
+							
+							<tr>
+								<td>
+								
+									Sentra is a junior oil and gas exploration company actively engaged in the exploration, development and acquisition of crude oil and natural gas. Current production is approximately 1000 - 1100 boe/d, weighted 70% towards natural gas, with an additional estimated 500 boe/d of oil and natural gas currently being tied in from properties located at Valhalla and Knobhill.
+								
+								</td>
+							</tr>
+							<tr>
+								<td>&nbsp;</td>
+							</tr>
+							
+							<tr>
+								<td>
+								
+									FORWARD-LOOKING STATEMENTS
+								
+								</td>
+							</tr>
+							<tr>
+								<td>&nbsp;</td>
+							</tr>
+							
+							<tr>
+								<td>
+								
+									Certain statements contained in this news release that are not based on historical facts are "forward- looking statements" and are prospective. These statements may appear in a number of different places in this news release and can be identified by words such as "estimates", "projects", "expects", "intends", "believes", "plans", or their negatives or other comparable words. Forward- looking statements include statements regarding the outlook for Sentra's future operations, plans and statements about future market conditions, supply and demand conditions, forecasts of future costs and expenditures, and other expectations, intentions and plans that are not historical fact. Such forward-looking statements are subject to risks, uncertainties and other factors which could cause actual results to differ materially from future results expressed or implied by such forward- looking statements. Many of these factors are beyond the control of Sentra. Consequently, all forward- looking statements made in this news release are -qualified by this cautionary statement and there can be no assurance those actual results or developments anticipated will be realized.
+								
+								</td>
+							</tr>
+							<tr>
+								<td>&nbsp;</td>
+							</tr>
+							
+							<tr>
+								<td>
+								
+									<br>--------------------------------------------------------------------------------<br>Contact:
+								
+								</td>
+							</tr>
+							<tr>
+								<td>&nbsp;</td>
+							</tr>
+							
+							<tr>
+								<td>
+								
+									Sentra Resources Corporation<br>Uldis Upitis<br>Chairman, President and Chief Executive Officer<br>Phone: (403) 537-9943<br>or<br>Larry Petropoulos<br>Executive Vice President and Chief Operating Officer<br>Phone: (403) 537-9948
+								
+								</td>
+							</tr>
+							<tr>
+								<td>&nbsp;</td>
+							</tr>
+							
+							<tr>
+								<td>
+								
+									Neither the Toronto Stock Exchange nor the TSX Venture Exchange has approved or disapproved of the information contained herein.
+								
+								</td>
+							</tr>
+							<tr>
+								<td>&nbsp;</td>
+							</tr>
+							
+							<tr>
+								<td>
+								
+									Source: Sentra Resources Corporation
+								
+								</td>
+							</tr>
+							<tr>
+								<td>&nbsp;</td>
+							</tr>
+							
+	
+							 
+							
+						
+	
+							
+							
+						
+					
+					</table>
+					<br>
+					<br>
+					</td>
+					<td width="5" bgcolor="#FFFFFF"><img src="http://images.pennnet.com/ogjpe/misc/blank_spacer.gif" width="5" height="1"></td>
+				</tr>
+			</table>
+		</td>
+	</tr>
+</table>
+
+
+
+	</td>
+	<td width="143" valign="top" align="left" bgcolor="#CC9933">
+		<table border=0 cellpadding=0 cellspacing=0 width="100%">
+		<tr>
+		<td valign="top" align="middle" colspan=3>
+		
+		</td>
+		</tr>
+		<tr>
+		<td width="5"><img src="http://images.pennnet.com/ogjpe/misc/blank_spacer.gif" width="5" height="1"></td>
+		<td valign="top" align="left">
+		
+		<center><a href="/news/news_oilgas.cfm"><img src="http://images.pennnet.com/ogjpe/headers/oilgasnews_subhdr.gif" width="101" height="26" border=0></a></center>
+		<br>
+		
+			<a href="/news/news_display.cfm?Section=NEWS&ArticleID=212651" class="news">DOE releasing SPR oil to Shell Trading, Placid Refining</a><br>
+			<font class="small">Sep-24-2004 (03:25 PM)</font><br>
+			<img src="http://images.pennnet.com/ogjpe/misc/blank_spacer.gif" width="133" height="10"><br>
+		
+			<a href="/news/news_display.cfm?Section=NEWS&ArticleID=212614" class="news">MARKET WATCH<br>Crude futures prices continue to climb</a><br>
+			<font class="small">Sep-24-2004 (12:00 PM)</font><br>
+			<img src="http://images.pennnet.com/ogjpe/misc/blank_spacer.gif" width="133" height="10"><br>
+		
+			<a href="/news/news_display.cfm?Section=NEWS&ArticleID=212545" class="news">MARKET WATCH<br>Unexpectedly low US inventories escalate crude futures price</a><br>
+			<font class="small">Sep-23-2004 (03:13 PM)</font><br>
+			<img src="http://images.pennnet.com/ogjpe/misc/blank_spacer.gif" width="133" height="10"><br>
+		
+			<a href="/news/news_display.cfm?Section=NEWS&ArticleID=212505" class="news">ChevronTexaco, Gazprom studying possible joint projects</a><br>
+			<font class="small">Sep-23-2004 (10:26 AM)</font><br>
+			<img src="http://images.pennnet.com/ogjpe/misc/blank_spacer.gif" width="133" height="10"><br>
+		
+			<a href="/news/news_display.cfm?Section=NEWS&ArticleID=212468" class="news">Worldwide upstream spending rose 9% last year, analyst say</a><br>
+			<font class="small">Sep-22-2004 (02:58 PM)</font><br>
+			<img src="http://images.pennnet.com/ogjpe/misc/blank_spacer.gif" width="133" height="10"><br>
+		
+		<table width="100%" border=0 cellpadding=0 cellspacing=0>
+			<tr>
+				<td align="right"><b><a href="/news/news_oilgas.cfm" class="news"><b>...MORE</b></a></td>
+			</tr>
+		</table>	
+		<br>
+		<br>	
+		</td>
+		<td width="5"><img src="http://images.pennnet.com/ogjpe/misc/blank_spacer.gif" width="5" height="1"></td>
+		</tr>
+		</table>
+	</td>
+	<td width="1" height="1" bgcolor="#000000"><img src="http://images.pennnet.com/ogjpe/misc/blank_spacer.gif" width="1" height="1"></td>
+</tr>
+<tr>
+<td width="1" bgcolor="#000000"><img src="http://images.pennnet.com/ogjpe/misc/blank_spacer.gif" width="1" height="1"></td>
+<td colspan=3>
+	<table width="100%" valign="top" align="left" cellpadding=0 cellspacing=0 border=0>
+		<tr>
+		<td width="141"><a href="http://www.pennenergy.com"><img src="http://images.pennnet.com/ogjpe/footers/footer_01.jpg" width="141" height="34" border=0></a></td>
+		<td width="637" background="http://images.pennnet.com/ogjpe/footers/footer_02.jpg" align="right" valign="middle"><a href="/home.cfm" class="footer">HOME</a>  &nbsp;<font class="footer">|</font>&nbsp; <a href="/about/privacy_policy.cfm" class="footer">PRIVACY POLICY</a> &nbsp;<font class="footer">|</font>&nbsp; <a href="/about/contact_us.cfm" class="footer">CONTACT US</a>&nbsp;&nbsp;</td>
+		</tr>
+	</table>
+</td>
+<td width="1" bgcolor="#000000"><img src="http://images.pennnet.com/ogjpe/misc/blank_spacer.gif" width="1" height="1"></td>
+</tr>
+<tr>
+<td colspan=5 bgcolor="#000000"><img src="http://images.pennnet.com/ogjpe/misc/blank_spacer.gif" width="780" height="1"></td>
+</tr>
+<tr>
+<td colspan=5 height=25 align=center valing=middle><font class=small>Copyright &copy; 2004 -PennWell Corporation. All rights reserved.</font></td>
+</tr>
+</table>
+</body>
+</html>

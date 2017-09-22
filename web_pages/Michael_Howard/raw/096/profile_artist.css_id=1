@@ -1,0 +1,854 @@
+/************************************************
+
+PureVolume Artist Profile CSS
+skin: Skin Name
+author: Ryan Sims
+
+************************************************/
+
+
+/************************************************
+* GLOBAL
+************************************************/
+
+* { padding: 0; margin: 0; border: 0; }
+body {
+    text-align: center;        /* Centers the layout in Win IE 5 */
+}
+p, h2, h4 {
+    font-family: Arial, Verdana, Tahoma, sans;
+}
+
+#profile_container a, #profile_container a:visited {
+    font-family: Arial, Verdana, Tahoma, sans;
+    text-decoration: underline;
+    
+}
+#profile_container a:hover {
+    text-decoration: none;
+}
+
+
+/************************************************
+* MAIN DEFINITIONS
+************************************************/
+
+
+/* NOTE - THIS IS LIKELY NOT NEEDED
+#profile {
+    position: relative;
+    margin: 0 auto;
+    width: 770px;
+    text-align: center;
+    background: transparent url(/images/artist_profile/bg.gif) repeat-y;
+}
+*/
+
+#profile {
+    position: relative;
+    width: 770px;
+}
+
+#artist {
+    padding: 6px 0 0 0;
+}
+
+#pro_admin_view, #pro_admin_edit {
+    position: relative;
+    display: block;
+    height: 60px;
+    background: transparent url(http://img.purevolume.com/holder-admintoolbar_view.gif) no-repeat;
+}
+#pro_admin_edit {
+    height: 130px;
+    background: transparent url(http://img.purevolume.com/holder-admintoolbar_edit.gif) no-repeat;
+}
+    #pro_admin_view a, #pro_admin_edit a {
+        display: block;
+        height: 100%;
+        width: 100%;
+    }
+
+#pro_Content {
+    display: block;
+    height: auto;
+}
+    #pro_BreathingMethod {
+        position: relative;
+        width: 465px;
+        text-align: left;
+        margin-bottom: 30px;
+    }
+        #pro_Campfire {
+            display: block;
+            background: transparent url(http://img.purevolume.com/profile_artist/transatlantic/campfire_bg.gif) no-repeat top;
+            text-align: left;
+            /* padding: 25px; */ 
+        }
+
+        #pro_Campfire_Comments
+        {
+            display: block;
+            background: transparent url(http://img.purevolume.com/profile_artist/transatlantic/campfire_comments_bg.gif) no-repeat top;
+            text-align: left;
+            margin-top:15px;
+        }
+
+        #pro_Campfire_Comments table tr td img
+        {
+            border: solid 1px #333;
+            padding: 2px;
+        }
+        #pro_Campfire_Comments table tr td
+        {
+            padding: 7px 10px 7px 0px;
+        }
+
+        #pro_Marquis1, #pro_Marquis2, #pro_Marquis3, #pro_Marquis4, #pro_Marquis5 {
+            padding: 25px;
+        }
+
+        #pro_Campfire div.Marquis_content {
+           overflow: auto;
+           overflow-x: auto !important;
+           overflow-y: hidden !important;
+           width: 415px;
+        }
+
+        div.Marquis_content input {
+            width: auto;
+            border: 2px solid #ccc;
+            padding: 3px;
+            margin: 3px;
+        }
+        
+        #pro_Marquis2, #pro_Marquis3, #pro_Marquis4, #pro_Marquis5 { display: none; }
+        #pro_Footer {
+            display: block;
+            height: 94px;
+            margin: 15px 0 0 0;
+            padding: 25px 0 0 0;
+            text-align: left;
+            background: transparent url(http://img.purevolume.com/profile_artist/transatlantic/footer_bg.gif) no-repeat;
+            voice-family: "\"}\"";
+            voice-family: inherit;
+            height: 54px;
+        }
+    #pro_Extras {
+        position: relative;
+        margin: 0;
+        text-align: left;
+        voice-family: "\"}\"";
+        voice-family: inherit;
+        width: 250px;
+    }
+        #pro_Mini {
+            display: block;
+            background: url(http://img.purevolume.com/profile_artist/transatlantic/mini_bg.gif) no-repeat top;
+            text-align: left;
+            padding: 20px 20px 10px 20px;
+        }
+        #pro_Mini2, #pro_Mini3 { display: none; }
+        #pro_Skinny {
+            display: block;
+            background: url(http://img.purevolume.com/profile_artist/transatlantic/skinny_bg.gif) no-repeat top;
+            text-align: left;
+            padding: 20px 20px 10px 20px;
+        }
+        #pro_Skinny2, #pro_Skinny3 { display: none; }
+#pro_Campfire_end {
+    height: 6px;
+    border: 0;
+    background: transparent url(http://img.purevolume.com/profile_artist/transatlantic/campfire_end.gif) no-repeat;
+}
+
+#pro_Mini_Skinny_end {
+    
+    height: 6px; 
+    width: 250px; 
+    background: transparent url(http://img.purevolume.com/profile_artist/transatlantic/extras_end.gif) no-repeat;
+    margin-bottom: 15px;
+}
+
+.cleaner {
+    clear: both;
+    height: 1px;
+    font-size: 1px;
+    border: none;
+    background: transparent;
+    visibility: hidden;
+}
+
+
+/************************************************
+* TYPOGRAPHY
+************************************************/
+
+div#artist h2, div#album_spot h2 {
+    visibility: hidden;
+    font-size: 22px;
+    text-transform: uppercase;
+    padding: 30px 0 0 0;
+    width: 480px;
+}
+div#album_spot h2 {
+    visibility: visible;
+    display: block;
+    padding: 0;
+    line-height: 120%;
+}
+    div#album_spot h2#album_name {
+        color: #fff;
+        font-size: 20px;
+        padding: 30px 0 0 0;
+    }
+    div#album_spot h2#album_artist_name {
+        color: #999;
+        font-size: 12px;
+        font-weight: normal;
+    }
+
+    div#video_spot h2#video_name {
+        line-height: 100%;
+        font-size: 22px;
+        font-weight: bold;
+        color: #fff;
+        display: block;
+    }
+    div#video_spot h2#video_artist_name {
+        color: #aaa;
+        font-size: 12px;
+        font-weight: normal;
+        line-height: 140%;
+        text-transform: none;
+    }
+    
+h4 {
+    font-size: 13px;
+    text-transform: uppercase;
+    margin: 0 0 10px 0;
+    padding: 0 0 4px 0;
+    border-bottom: 1px dotted #BBB;
+}
+
+.shows_page td {
+    font-size: 11px;
+    color: #777;
+    padding: 8px 5px;
+}
+
+td.shows_legend {
+    font-size: 9px;
+    color: #777;
+    border-bottom: 1px solid #DCDCDC;
+    text-align: left;
+}
+
+#pro_Fans a, #pro_Friends a { color: #333; }
+
+h5 { display: none; }
+#pro_Campfire p,
+#pro_Campfire_Comments p
+{
+    font-size: 11px;
+    line-height: 140%;
+    margin: 0 0 15px 0;
+    color: #222;
+}
+#pro_Campfire p.bb_blogs, #pro_Campfire p.bb_shows { margin: 0; }
+.shows_page strong {
+    color: #222;
+}
+
+.extras_tbl a { text-decoration: none; }
+.extras_tbl a:hover { text-decoration: underline; }
+
+#pro_Skinny em {
+    font-style: normal;
+    display: block;
+    color: #777;
+}
+#pro_Footer p {
+    font-size: 10px;
+    margin: 0 25px;
+    line-height: 140%;
+    color: #444;
+}
+#pro_Footer p a { font-weight: bold; }
+
+#profile_album_container #profile_section_1_left p {
+    font-size: 11px;
+    color: #ccc;
+    line-height: 150%;
+    padding: 0 10px;
+}
+#profile_album_container #profile_section_1_left p strong, #profile_album_container #profile_section_1_right p strong {
+    color: #fff;
+}
+#profile_album_container #profile_section_1_left p.header_notes, #profile_album_container #profile_section_1_right p.header_notes {
+    color: #fff;
+    font-size: 16px;
+    margin: 40px 0 5px 0;
+}
+
+
+/************************************************
+* TABS
+************************************************/
+
+/* 4+ Button Tabs */
+ul#pro_NavTabs {
+    padding: 0;
+    margin: 0;
+    border: 0;
+    list-style-type: none;
+    height: 25px;
+    width: 455px;
+}
+ul#pro_PlayerTabs {
+    padding: 0;
+    margin: 0;
+    border: 0;
+    list-style-type: none;
+    height: 25px;
+    width: 439px;
+}
+/*ul#pro_PlayerTabs { padding-left: 167px; }*/
+ul#pro_NavTabs li, ul#pro_PlayerTabs li {
+    display: block;
+    float: left;
+    padding: 0;
+    margin: 0;
+    border: none;
+}
+ul#pro_NavTabs li a, ul#pro_NavTabs li a:visited, ul#pro_PlayerTabs li a, ul#pro_PlayerTabs li a:visited {
+    display: block;
+    width: 91px;
+    height: 25px;
+    border: none;
+}
+/* Nav */
+ul#pro_NavTabs li a.tab_billboard, ul#pro_NavTabs li a#tab_billboard { background: transparent url(http://img.purevolume.com/profile_artist/transatlantic/tabs1.gif) 0px 0px no-repeat; }
+ul#pro_NavTabs li a.tab_photos, ul#pro_NavTabs li a#tab_photos { background: transparent url(http://img.purevolume.com/profile_artist/transatlantic/tabs1.gif) -91px 0px no-repeat; }
+ul#pro_NavTabs li a.tab_blog, ul#pro_NavTabs li a#tab_blog { background: transparent url(http://img.purevolume.com/profile_artist/transatlantic/tabs1.gif) -182px 0px no-repeat; }
+ul#pro_NavTabs li a.tab_shows, ul#pro_NavTabs li a#tab_shows { background: transparent url(http://img.purevolume.com/profile_artist/transatlantic/tabs1.gif) -273px 0px no-repeat; }
+ul#pro_NavTabs li a.tab_merch, ul#pro_NavTabs li a#tab_merch { background: transparent url(http://img.purevolume.com/profile_artist/transatlantic/tabs1.gif) -364px 0px no-repeat; }
+
+ul#pro_NavTabs li a.tab_billboard:hover, ul#pro_NavTabs li a.tab_billboard_on, ul#pro_NavTabs li a#tab_billboard:hover, ul#pro_NavTabs li a#tab_billboard_on { background: transparent url(http://img.purevolume.com/profile_artist/transatlantic/tabs1.gif) 0px -25px no-repeat; }
+ul#pro_NavTabs li a.tab_photos:hover, ul#pro_NavTabs li a.tab_photos_on, ul#pro_NavTabs li a#tab_photos:hover, ul#pro_NavTabs li a#tab_photos_on { background: transparent url(http://img.purevolume.com/profile_artist/transatlantic/tabs1.gif) -91px -25px no-repeat; }
+ul#pro_NavTabs li a.tab_blog:hover, ul#pro_NavTabs li a.tab_blog_on, ul#pro_NavTabs li a#tab_blog:hover, ul#pro_NavTabs li a#tab_blog_on { background: transparent url(http://img.purevolume.com/profile_artist/transatlantic/tabs1.gif) -182px -25px no-repeat; }
+ul#pro_NavTabs li a.tab_shows:hover, ul#pro_NavTabs li a.tab_shows_on, ul#pro_NavTabs li a#tab_shows:hover, ul#pro_NavTabs li a#tab_shows_on { background: transparent url(http://img.purevolume.com/profile_artist/transatlantic/tabs1.gif) -273px -25px no-repeat; }
+ul#pro_NavTabs li a.tab_merch:hover, ul#pro_NavTabs li a.tab_merch_on { background: transparent url(http://img.purevolume.com/profile_artist/transatlantic/tabs1.gif) -364px -25px no-repeat; }
+
+/* Player */
+ul#pro_PlayerTabs li a.tab_playlist { background: transparent url(http://img.purevolume.com/profile_artist/transatlantic/tabs5.gif) 0px 0px no-repeat; }
+ul#pro_PlayerTabs li a.tab_albums { background: transparent url(http://img.purevolume.com/profile_artist/transatlantic/tabs5.gif) -91px 0px no-repeat; }
+ul#pro_PlayerTabs li a.tab_videos { background: transparent url(http://img.purevolume.com/profile_artist/transatlantic/tabs5.gif) -182px 0px no-repeat; }
+ul#pro_PlayerTabs li a.tab_playlist:hover, ul#pro_PlayerTabs li a.tab_playlist_on { background: transparent url(http://img.purevolume.com/profile_artist/transatlantic/tabs5.gif) 0px -25px no-repeat; }
+ul#pro_PlayerTabs li a.tab_albums:hover, ul#pro_PlayerTabs li a.tab_albums_on { background: transparent url(http://img.purevolume.com/profile_artist/transatlantic/tabs5.gif) -91px -25px no-repeat; }
+ul#pro_PlayerTabs li a.tab_videos:hover, ul#pro_PlayerTabs li a.tab_videos_on { background: transparent url(http://img.purevolume.com/profile_artist/transatlantic/tabs5.gif) -182px -25px no-repeat; }
+
+/* 3 Button Tabs */
+ul#pro_MiniTabs, ul#pro_SkinnyTabs {
+    border: none;
+    list-style-type: none;
+    height: 25px;
+    width: 243px;
+}
+ul#pro_MiniTabs li, ul#pro_SkinnyTabs li {
+    display: block;
+    float: left;
+    padding: 0;
+    margin: 0;
+    border: none;
+}
+ul#pro_MiniTabs li a, ul#pro_MiniTabs li a:visited, ul#pro_SkinnyTabs li a, ul#pro_SkinnyTabs li a:visited {
+    display: block;
+    width: 81px;
+    height: 25px;
+    border: none;
+}
+/* Mini */
+ul#pro_MiniTabs li a.tab_stats { background: transparent url(http://img.purevolume.com/profile_artist/transatlantic/tabs2.gif) 0px 0px no-repeat; }
+ul#pro_MiniTabs li a.tab_label { background: transparent url(http://img.purevolume.com/profile_artist/transatlantic/tabs2.gif) -81px 0px no-repeat; }
+ul#pro_MiniTabs li a.tab_related { background: transparent url(http://img.purevolume.com/profile_artist/transatlantic/tabs2.gif) -162px 0px no-repeat; }
+ul#pro_MiniTabs li a.tab_stats:hover, ul#pro_MiniTabs li a.tab_stats_on { background: transparent url(http://img.purevolume.com/profile_artist/transatlantic/tabs2.gif) 0px -25px no-repeat; }
+ul#pro_MiniTabs li a.tab_label:hover, ul#pro_MiniTabs li a.tab_label_on { background: transparent url(http://img.purevolume.com/profile_artist/transatlantic/tabs2.gif) -81px -25px no-repeat; }
+ul#pro_MiniTabs li a.tab_related:hover, ul#pro_MiniTabs li a.tab_related_on { background: transparent url(http://img.purevolume.com/profile_artist/transatlantic/tabs2.gif) -162px -25px no-repeat; }
+
+/* Skinny */
+ul#pro_SkinnyTabs li a.tab_fans { background: transparent url(http://img.purevolume.com/profile_artist/transatlantic/tabs3.gif) 0px 0px no-repeat; }
+ul#pro_SkinnyTabs li a.tab_friends { background: transparent url(http://img.purevolume.com/profile_artist/transatlantic/tabs3.gif) -81px 0px no-repeat; }
+ul#pro_SkinnyTabs li a.tab_comments { background: transparent url(http://img.purevolume.com/profile_artist/transatlantic/tabs3.gif) -162px 0px no-repeat; }
+ul#pro_SkinnyTabs li a.tab_artists { background: transparent url(http://img.purevolume.com/profile_artist/transatlantic/tabs3.gif) -243px 0px no-repeat; }
+ul#pro_SkinnyTabs li a.tab_fans:hover, ul#pro_SkinnyTabs li a.tab_fans_on { background: transparent url(http://img.purevolume.com/profile_artist/transatlantic/tabs3.gif) 0px -25px no-repeat; }
+ul#pro_SkinnyTabs li a.tab_friends:hover, ul#pro_SkinnyTabs li a.tab_friends_on { background: transparent url(http://img.purevolume.com/profile_artist/transatlantic/tabs3.gif) -81px -25px no-repeat; }
+ul#pro_SkinnyTabs li a.tab_comments:hover, ul#pro_SkinnyTabs li a.tab_comments_on { background: transparent url(http://img.purevolume.com/profile_artist/transatlantic/tabs3.gif) -162px -25px no-repeat; }
+ul#pro_SkinnyTabs li a.tab_artists:hover, ul#pro_SkinnyTabs li a.tab_artists_on { background: transparent url(http://img.purevolume.com/profile_artist/transatlantic/tabs3.gif) -243px -25px no-repeat; }
+
+
+
+ul#fans_container_new,
+ul#friends_container_new
+{
+    margin: 0px;
+}
+
+ul#fans_container_new li,
+ul#friends_container_new li
+{
+    width: 105px;
+    margin: 0 0 10px 0;
+    float: left;
+    text-align: center;
+    font: 10px/14px arial;
+}
+
+ul#friends_container_new li
+{
+    height: 135px;
+}
+
+ul#friends_container_new li b
+{
+    padding-top: 5px;
+}
+
+ul#fans_container_new li img,
+ul#friends_container_new li img
+{
+    border: solid 1px #ccc;
+    padding: 2px;
+}
+
+/* Icon Tabs */
+
+    ul#pro_IconTabs li.tab1 a { background: transparent url(http://img.purevolume.com/profile_artist/transatlantic/tabs4.gif) 0 0 no-repeat; }
+    ul#pro_IconTabs li.tab2 a { background: transparent url(http://img.purevolume.com/profile_artist/transatlantic/tabs4.gif) -49px 0 no-repeat; }
+    ul#pro_IconTabs li.tab3 a { background: transparent url(http://img.purevolume.com/profile_artist/transatlantic/tabs4.gif) -98px 0 no-repeat; }
+    ul#pro_IconTabs li.tab4 a { background: transparent url(http://img.purevolume.com/profile_artist/transatlantic/tabs4.gif) -147px 0 no-repeat; }
+
+    ul#pro_IconTabs li.tab1 a:hover { background-position: 0 -45px; }
+    ul#pro_IconTabs li.tab2 a:hover { background-position: -49px -45px; }
+    ul#pro_IconTabs li.tab3 a:hover { background-position: -98px -45px; }
+    ul#pro_IconTabs li.tab4 a:hover { background-position: -147px -45px; }
+
+    ul#pro_IconTabs li.tab2_on a { background: transparent url(http://img.purevolume.com/profile_artist/transatlantic/tabs4.gif) -49px -90px no-repeat; }
+    ul#pro_IconTabs li.tab3_on a { background: transparent url(http://img.purevolume.com/profile_artist/transatlantic/tabs4.gif) -98px -90px no-repeat; }
+    ul#pro_IconTabs li.tab2_on a, ul#pro_IconTabs li.tab3_on a { cursor: default; }
+
+
+/************************************************
+* TABLES
+************************************************/
+
+table { border-collapse: collapse; }
+.bandinfo, .extras_tbl, .extras_tbl2 {
+    width: 276px;
+    margin: 0 10px;
+    font: normal 10px Arial, Verdana, Tahoma, sans;
+    line-height: 120%;
+    voice-family: "\"}\"";
+    voice-family: inherit;
+    width: 256px;
+}
+
+.extras_tbl {
+    width: 210px;
+    margin: 0 0 7px 0;
+}
+.extras_tbl2 {
+    width: 210px;
+    margin: 0;
+}
+td.leftcol, td.leftcol_alt {
+    text-align: left;
+    vertical-align: top;
+    padding: 2px 0;
+}
+td.leftcol strong, td.leftcol_alt strong { color: #777; }
+#pro_Skinny td.leftcol, #pro_Skinny td.leftcol_alt { vertical-align: middle; }
+td.pixcol, td.pixcol_alt {
+    width: 56px;
+    height: 46px;
+    padding: 8px;
+    voice-family: "\"}\"";
+    voice-family: inherit;
+    width: 40px;
+    height: 30px;
+}
+
+td.pixcol img, td.pixcol_alt img {
+    width: 40px;
+    height: 35px;
+}
+
+#pro_Photo td.leftcol {
+    width: 100%;
+    font-weight: bold;
+    font-family: tahoma, verdana, arial, sans-serif;
+    color: #111;
+}
+#pro_Photo td.leftcol em {
+    font-weight: normal;
+    font-style: normal;
+    font-family: arial, helvetica, verdana, sans-serif;
+    color: #111;
+}
+#pro_Mini td { padding: 4px; }
+td.rightcol, td.rightcol_alt {
+    text-align: right;
+    vertical-align: top;
+    padding: 2px 0;
+}
+.bandinfo a, .bandinfo a:visited { font-weight: bold; }
+
+td.rightcol { width: 80px; }
+
+a.graylinx, a:visited.graylinx { color: #333; }
+
+td.leftcol, td.leftcol_alt, td.rightcol, td.rightcol_alt { color: #111; }
+td.leftcol_alt, td.rightcol_alt, td.pixcol_alt, tr.row_alt  { background: #EAEAEA; }
+
+.shows_page td { color: #222; }
+.songheader { background: #FFF; }
+
+#pro_Player_admin #pro_Songs { font: normal 9px Arial, Verdana, Tahoma, sans; }
+    .songs_list {
+        height: 17px;
+        padding-top: 4px;
+        border: 1px #DCDCDC solid;
+        border-left: 0;
+        border-bottom: 0;
+    }
+    .songs1 { background: #F3F3F3; }
+    .songs2 { background: #FFF; }
+    /*li.songs1:hover, li.songs2:hover { background: #e6e6e6; }*/
+    .song_c1 { padding: 0 0 0 9px; }
+    ul#pro_Songs { margin-top: 0; padding-top: 0; width: 409px;}
+
+
+/************************************************
+* BACKEND STYLES
+************************************************/
+
+.adminbuttons, .songheader {
+    position: relative;
+    width: 100%;
+    height: 37px;
+    text-align: right;
+}
+.songheader {
+    height: 29px;
+}
+.stickright {
+    position: absolute;
+    left: 0;
+    top: 0;
+}
+ul#pro_Songs {
+    border: 0;
+    list-style-type: none;
+}
+
+ul#pro_Songs li {
+    padding: 0;
+    margin: 0;
+    border: 0;
+}
+span.dragpush { padding: 0; font-weight: bold;}
+
+
+/************************************************
+* MISCELLANEOUS DEFs
+************************************************/
+
+.hide { display: none; }
+.dragit {
+    
+    cursor: move;
+    margin: 0;
+    padding: 0 5px 0 5px;
+    vertical-align: middle;
+}
+#continue_to_profile a:hover {
+    color: #fff;
+    text-decoration: none;
+}
+img.album_art {
+    border: 1px solid #3b3b3b;
+}
+img.album_buynow {
+    margin: 20px 0 100px 10px;
+}
+
+h6.next, h6.next_off { background: transparent url(http://img.purevolume.com/profile_artist/transatlantic/next.gif) no-repeat; }
+h6.prev, h6.prev_off { background: transparent url(http://img.purevolume.com/profile_artist/transatlantic/prev.gif) no-repeat; }
+h6.next_off, h6.prev_off { background-position: 0 -15px; cursor: default; }
+
+
+#pro_Polaroid img, p.marquis_photos img                     { border: 1px solid #CCC; background: #FFF; }
+
+
+
+/*--------------------------------------------------------------------
+ARTIST PROFILE VER 2
+--------------------------------------------------------------------*/
+
+/************************************************
+* Profile Globals
+************************************************/
+
+.profile_right {
+    float: right;
+}
+
+.profile_dummy {
+    width: 1px;
+    float: left;
+}
+
+.clearfix {
+    clear: both;
+    height: 1px;
+}
+
+
+/************************************************
+* Profile Miscellaneous
+************************************************/
+
+#profile_container, #profile_album_container, #profile_video_container {
+    position: relative;
+    width: 760px;
+    margin: 0 3px 0 3px;
+    padding-top: 15px;
+}
+#profile_album_container, #profile_video_container {
+    background: #191919;
+}
+#profile_video_container {
+    padding-top: 0;
+}
+
+#pro_endcap {
+    display: block;
+    position: relative;
+    height: 20px;
+    background: transparent url(http://img.purevolume.com/profile_artist/endcap.gif) no-repeat bottom;
+    margin: 0 -20px;
+}
+#pro_Campfire input, #pro_Campfire select {
+    width: auto;
+}
+#random_profile_jump {
+    display: block;
+    position: relative;
+    height: 81px;
+    background: transparent url(http://img.purevolume.com/profile_artist/random_profile_jump.gif) no-repeat;
+    margin: 0;
+}
+    #random_profile_jump select {
+        position: absolute;
+        top: 34px;
+        left: 329px;
+        margin: 0;
+        padding: 0;
+    }
+    #random_profile_jump input {
+        position: absolute;
+        top: 34px;
+        left: 535px;
+        margin: 0;
+        padding: 0;
+        width: auto;
+    }
+
+
+/************************************************
+* Profile Header
+************************************************/
+
+#profile_header, #album_header, #video_header {
+    position: relative;
+    display: block;
+    text-align: left;
+    height: 80px;
+    background: transparent url(http://img.purevolume.com/profile_artist/transatlantic/header.gif) no-repeat center;
+    padding: 0 0 0 25px;
+}
+#album_header {
+    background: transparent url(http://img.purevolume.com/profile_artist/header_album.gif) no-repeat center;
+}
+#video_header {
+    background: #191919 url(http://img.purevolume.com/profile_artist/video_default_bg.jpg) no-repeat top center;
+    height: 640px;
+    padding: 0 25px;
+    text-align: center;
+}
+
+#video_spot {
+    padding: 50px 0 30px 0;
+}
+
+/************************************************
+* Profile Section 1
+************************************************/
+
+#profile_section_1 {
+    position: relative;
+    width: 730px;
+    margin: 0 15px 15px 15px;
+}
+#profile_album_container #profile_section_1 { 
+    margin-bottom: 0;
+}
+#profile_album_container {
+    border-bottom: 1px solid #3b3b3b;
+}
+
+    #profile_section_1_left {
+        float: left;
+        width: 276px;
+        height: 278px;
+    }
+    #profile_album_container #profile_section_1_left {
+        height: auto;
+        background: transparent url(http://img.purevolume.com/profile_artist/disc_reflection.gif) no-repeat;
+    }
+        #profile_section_1_left_container {
+            width: 276px;
+            height: 278px;
+        }
+    #profile_section_1_right {
+        width: 439px;
+        height: 278px;
+    }
+    #profile_album_container #profile_section_1_right {
+        height: 407px;
+        background: transparent url(http://img.purevolume.com/artist_profile/album_player_reflection.gif) no-repeat;
+    }
+        #profile_section_1_right_container {
+            width: 439px;
+            height: 278px;
+        }
+#pro_Photo {
+    width: 276px;
+    height: 268px;
+    padding-top: 10px;
+    background: transparent url(http://img.purevolume.com/profile_artist/transatlantic/photo_bg.gif) no-repeat;
+}
+    #pro_Polaroid {
+        display: block;
+        margin: 0 10px 10px 10px;
+        text-align: center;
+        overflow: hidden;
+    }
+        #pro_Polaroid img, p.marquis_photos img {
+            padding: 4px;
+        }
+#pro_Player, #pro_Player_admin, #pro_Player_label {
+    display: block;
+    width: 454px;
+    height: 278px;
+    margin: 0;
+    voice-family: "\"}\"";
+    voice-family: inherit;
+    width: 439px;
+}
+#pro_Player_admin { background: transparent url(http://img.purevolume.com/profile_artist/transatlantic/player_bg.gif) bottom no-repeat; }
+#pro_Player_label { background: transparent url(http://img.purevolume.com/profile_artist/player_label_soon.jpg) bottom no-repeat; }
+    #pro_Player1, #pro_Player2, #pro_Player3 {
+        display: block;
+        margin: 15px 0 0 15px;
+        padding: 0 15px 0 0;
+        height: 235px;
+    }
+    #pro_Player2, #pro_Player3 { display: none; }
+    
+    .song_overflow {
+        overflow: auto;
+        height: 155px;
+        width: 409px;
+    }
+
+
+/************************************************
+* Profile Section 2
+************************************************/
+ 
+#profile_section_2 {
+    width: 760px;
+}
+
+#profile_section_2 .no_content {
+    font-style: italic;
+    padding-bottom: 35px;
+}
+    #profile_section_2_left {
+        float: left;
+        padding-left: 15px;
+        width: 465px;
+    }
+        #profile_section_2_left_container {
+            width: 465px;
+        }
+    #profile_section_2_right {
+        width: 250px;
+        padding: 0 15px 0 14px;
+    }
+        #profile_section_2_right_container {
+            width: 250px;
+        }
+
+
+/************************************************
+* Photo Viewer
+************************************************/
+
+div#photo_viewer {
+    position: relative;
+    width: 680px;
+    height: 720px;
+    margin: 0 auto;
+    text-align: center;
+    background: transparent url(http://img.purevolume.com/profile_artist/bg_photoviewer.gif) no-repeat;
+}
+
+div#photo_header {
+    display: block;
+    padding: 20px 0 12px 0;
+    font-size: 11px;
+}
+    table#photo_caption {
+        width: 640px;
+        height:50px; 
+        background: #C6C6C6;
+        border-collapse: collapse;
+    }
+        table#photo_caption td {
+            vertical-align: middle;
+            text-align: center;
+        }
+div#photo_smallthumbs {
+    position: absolute;
+    top: 609px;
+    left: 35px;
+    width: 616px;
+    height: 82px;
+    text-align: left;
+    overflow: auto;
+}
+    div#photo_overflow a {
+        margin: 0 12px 0 0;
+    }
+    div#photo_overflow {
+        height: 57px;
+    }
+
+
+
+
+
+
+

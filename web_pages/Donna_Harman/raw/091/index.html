@@ -1,0 +1,434 @@
+<HTML>
+<HEAD>
+<TITLE>HPCC Projects at NIST</TITLE>
+</HEAD>
+
+<BODY BACKGROUND="bg.gif" VLINK="#CC3299">
+<CENTER>
+<IMG SRC="hpcc.gif" ALT="High Performance Computing and Communications:"><BR>
+<H1>A Sampler of NIST Projects</H1>
+</CENTER>
+
+<HR NOSHADE>
+This page summarizes some of the
+<A HREF="http://www.hpcc.gov/">High Performance Computing and Communications</A>
+projects underway at the 
+<A HREF="http://www.nist.gov/">National Institute of Standards and Technology</A>
+(NIST).
+
+<A NAME="TOC"><HR NOSHADE>
+<H2>Table of Contents</H2></A>
+
+<UL>
+<LI><A HREF="index.html#Hardware">HARDWARE, NETWORKING</A>
+     <UL>
+     <LI><A HREF="index.html#MultiKron">MultiKron Performance Instrumentation for MIMD Computers</A>
+     <LI><A HREF="index.html#ATM">Modeling and Performance Evaluation of ATM Network Protocols</A>
+     </UL>
+<LI><A HREF="index.html#Software">SOFTWARE</A>
+     <UL>
+     <LI><A HREF="index.html#S-tool">Sensitivity Analysis Tool for Tuning Parallel Code</A>
+     <LI><A HREF="index.html#PADE">Parallel Applications Development Environment</A>
+     <LI><A HREF="index.html#Sparse">Portable and Adaptable High Performance Sparse Matrix Software</A>
+     <LI><A HREF="index.html#GAMS">Guide to Available Mathematical Software</A>
+     </UL>
+<LI><A HREF="index.html#DigiLibs">DIGITAL LIBRARIES</A>
+     <UL>
+     <LI><A HREF="index.html#Spoken">Spoken Natural Language Interface to Library Catalogs</A>
+     <LI><A HREF="index.html#Z39.50">New Modular Client/Server for Information Retrieval Via Z39.50</A>
+     <LI><A HREF="index.html#Scan">Segmenting Scanned Complex Scientific Documents</A>
+     </UL>
+<LI><A HREF="index.html#Manufacturing">MANUFACTURING</A>
+     <UL>
+     <LI><A HREF="index.html#AMSANT">Advanced Manufacturing Systems and Networking Testbed</A>
+     <LI><A HREF="index.html#APs">Application Protocols for Process Plant Industries</A>
+     </UL>
+<LI><A HREF="index.html#Applications">SCIENTIFIC APPLICATIONS</A>
+     <UL>
+     <LI><A HREF="index.html#GAMESS">Algorithms and Software for Condensed Phase Quantum Chemistry</A>
+     <LI><A HREF="index.html#Photoassociation">Complete Photoassociation Spectrum of Ultracold Atoms</A>
+     <LI><A HREF="index.html#Condensates">Structure of Atomic Bose-Einstein Condensates</A>
+     <LI><A HREF="index.html#Fluorescence">Ab-initio Simulation of X-ray Fluorescence Spectra</A>
+     </UL>
+</UL>
+
+<P><A NAME="Hardware"><HR NOSHADE>
+<CENTER><H1>HARDWARE, NETWORKING</H1></CENTER></A>
+
+<A NAME="MultiKron"><HR NOSHADE>
+<H2>MultiKron Performance Instrumentation for MIMD Computers</H2></A>
+
+<P>
+  MultiKron is NIST's performance instrumentation chip for MIMD computers.  Its
+  features have been incorporated into newer, high end commercial computers to
+  assist designers in understanding machine bottlenecks. Recently, new MultiKron
+  chips were successfully prototyped and SBus MultiKron toolkits were developed
+  and released, allowing researchers to obtain hands-on experience with the
+  chip without designing and building a hardware interface for their computer.
+</P>
+
+<P><I>Keywords</I>  : performance analysis
+<BR><I>Details</I>  : <A HREF="http://www.multikron.nist.gov/multikron">
+                               http://www.multikron.nist.gov/multikron</A>
+<BR><I>Contact</I>  : Dr. Alan Mink 
+                      (<A HREF="mailto:amink@nist.gov">amink@nist.gov</a>)
+
+<P><A HREF="index.html#TOC">[Back to Table of Contents]</A>
+
+<P><A NAME="ATM"><HR NOSHADE>
+<H2>Modeling and Performance Evaluation of ATM Network Protocols</H2></A>
+
+<P>
+NIST is participating in the development of protocols for Asynchronous Transfer
+Mode (ATM) networks.  NIST uses its network simulation and formal modeling tools
+to verify the completeness of protocols being developed by the ATM Forum and to
+evaluate the performance of the protocols.  These protocols include traffic
+management for the Available Bit Rate service, network routing and call control
+for the private network-to-network interfaces.
+</P>
+
+<P><I>Keywords</I> : networks, asynchronous transfer mode
+<BR><I>Details</I>  : <A HREF="http://isdn.ncsl.nist.gov/">
+                               http://isdn.ncsl.nist.gov/</A>
+<BR><I>Contact</I>  : Dr. David Su 
+                      (<A HREF="mailto:david.su@nist.gov">david.su@nist.gov</A>)
+
+<P><A HREF="index.html#TOC">[Back to Table of Contents]</A>
+
+<P><A NAME="Software"><HR NOSHADE>
+<CENTER><H1>SOFTWARE</H1></CENTER></A>
+
+<A NAME="S-tool"><HR NOSHADE>
+<H2>Sensitivity Analysis Tool for Tuning Parallel Code</H2></A>
+
+<P>
+  S-Check, a new performance tool offering code-tuning information hitherto
+  unavailable on parallel systems, has been released.  S-Check includes
+  mathematically sound estimates of program sensitivities to code changes and
+  to code interactions.  Unlike conventional means, S-Check's estimates
+  accurately indicate where parallel code is best improved.
+</P>
+
+<P><I>Keywords</I> : software tools, performance analysis
+<BR><I>Details</I>  : <A HREF="http://www.scheck.nist.gov/scheck">
+                               http://www.scheck.nist.gov/scheck</A>
+<BR><I>Contact</I>  : Dr. Gordon Lyon 
+                      (<A HREF="mailto:gordon.lyon@nist.gov">gordon.lyon@nist.gov</A>)
+
+<P><A HREF="index.html#TOC">[Back to Table of Contents]</A>
+
+<P><A NAME="PADE"><HR NOSHADE>
+<H2>Parallel Applications Development Environment</H2></A>
+
+<P>
+  The construction of parallel software applications for heterogenous virtual
+  machines requires extensive bookkeeping that can distract the programmer from
+  the real challenges of parallel algorithm development.  To simplify these
+  tasks, researchers at NIST have produced the Parallel Applications
+  Development Environment (PADE).  PADE provides an integrated framework for
+  managing all phases of the development of applications based on the PVM
+  message-passing library, including editing, file transfer, compilation,
+  execution, and performance monitoring.  The package consists of an intuitive
+  graphical user interface, a suite of PVM utilities, and documentation.
+</P>
+
+<P><I>Keywords</I> : software tools, PVM, message passing
+<BR><I>Details</I>  : <A HREF="http://math.nist.gov/pade/">
+                               http://math.nist.gov/pade/</A>
+<BR><I>Contact</I>  : Dr. Charles Clark 
+                      (<A HREF="mailto:charles.clark@nist.gov">charles.clark@nist.gov</A>)
+
+<P><A HREF="index.html#TOC">[Back to Table of Contents]</A>
+
+<P><A NAME="Sparse"><HR NOSHADE>
+<H2>Portable and Adaptable High Performance Sparse Matrix Software</H2></A>
+
+<P>
+  NIST researchers are exploiting object-oriented data abstraction techniques
+  to develop software for sparse matrix computations which achieve new levels
+  of portability, adaptability and maintainability for scientific software.
+  The packages released this year, IML++ (iterative methods library) and
+  SparseLib++, both written in C++, have demonstrated both good performance and
+  portability across a wide range of machine architectures.
+</P>
+
+<P><I>Keywords</I> : mathematical software, linear algebra
+<BR><I>Details</I>  : <A HREF="http://math.nist.gov/pozo/iml++.html">
+                               http://math.nist.gov/pozo/iml++.html</A>
+<BR><I>Contact</I>  : Dr. Roldan Pozo 
+                      (<A HREF="mailto:roldan.pozo@nist.gov">roldan.pozo@nist.gov</A>)
+
+<P><A HREF="index.html#TOC">[Back to Table of Contents]</A>
+
+<P><A NAME="GAMS"><HR NOSHADE>
+<H2>Guide to Available Mathematical Software</H2></A>
+
+<P>
+  The Guide to Available Mathematical Software is a successful working example
+  of a digital library of reusable mathematical software for computational
+  science and engineering.  The system catalogs nearly 10,000 software
+  components using a detailed tree-structured problem-oriented classification
+  system.  The WWW service attracted more than 100,000 users in the last year.
+</P>
+
+<P><A HREF="http://math.nist.gov/hpcc/blue97/gams.gif">[<I>Image</I>]</A> :
+Accessing math software using problem-oriented classification.
+
+<P><I>Keywords</I> : digital libraries, mathematical software
+<BR><I>Details</I>  : <A HREF="http://math.nist.gov/gams/">
+                               http://math.nist.gov/gams/</A>
+<BR><I>Contact</I>  : Dr. Ronald Boisvert 
+                      (<A HREF="mailto:boisvert@nist.gov">boisvert@nist.gov</A>)
+
+<P><A HREF="index.html#TOC">[Back to Table of Contents]</A>
+
+<P><HR NOSHADE>
+<A NAME="DigiLibs"><CENTER><H1>DIGITAL LIBRARIES</H1></CENTER></A>
+
+<A NAME="Spoken"><HR NOSHADE>
+<H2>Spoken Natural Language Interface to Library Catalogs</H2></A>
+
+<P>
+  A prototype system which allows a person to search for bibliographic ("card
+  catalog") information in library systems using spoken natural language has
+  been developed.  The project demonstrates feasibility of using such
+  interfaces for information services without reliance on keyboards and menus,
+  and serves as a testbed for exploring issues that arise in integrating large
+  vocabulary continuous speech recognition and understanding into information
+  technology systems.
+</P>
+
+<P><I>Keywords</I> : digital libraries, catalogs, natural language processing
+<BR><I>Contact</I>  : Dr. David Pallett 
+                      (<A HREF="mailto:dpallett@nist.gov">dpallett@nist.gov</A>)
+
+<P><A HREF="index.html#TOC">[Back to Table of Contents]</A>
+
+<P><A NAME="Z39.50"><HR NOSHADE>
+<H2>New Modular Client/Server for Information Retrieval Via Z39.50</H2></A>
+
+<P>
+NIST has released Z39.50/PRISE, a public domain network-based indexing and
+retrieval system.  The release contains (a) a basic UNIX client and server
+which run over the Internet to support search and retrieval of information
+accessible via the Z39.50 ANSI/NISO standard protocol, and (b) an indexer and
+search engine (PRISE).  The server architecture isolates the search engine from
+the details of the Z39.50 protocol thus minimizing the effort needed to
+interface the server to natural language search engines other than PRISE.
+Users input simple queries, such as a sentence or a phrase and retrieve lists
+of records ranked in order of likely relevance.  Ranking is based on the
+matches between the words the user inputs and the words in the text records or
+documents, with appropriate statistical weighting.
+</P>
+
+<P><A HREF="http://math.nist.gov/hpcc/blue97/prise.jpeg">[<I>Image</I>]</A> :
+The Z39.50/PRISE GUI graphical user interface.
+
+<P><I>Keywords</I> : digital libraries, information retrieval
+<BR><I>Details</I>  : <A HREF="http://potomac.ncsl.nist.gov/~over/zp1/main.html">
+                               http://potomac.ncsl.nist.gov/~over/zp1/main.html</A>
+<BR><I>Contact</I>  : Donna Harman 
+                      (<A HREF="mailto:donna.harman@nist.gov">donna.harman@nist.gov</A>)
+
+<P><A HREF="index.html#TOC">[Back to Table of Contents]</A>
+
+<P><A NAME="Scan"><HR NOSHADE>
+<H2>Segmenting Scanned Complex Scientific Documents</H2></A>
+
+<P>
+  A system to automatically segment scanned images of complex scientific and
+  technical documents into text, mathematics, and graphics has been developed
+  as an initial step in the process of converting paper archives into a digital
+  library.  The primary segmentation uses connected components to form zones,
+  which are then classified using OCR techniques. The system is being tested on
+  the 23,000 pages of images in NIST Special Database 20.  This test sample was
+  also prepared and released as part of the project.
+</P>
+
+<P><A HREF="http://math.nist.gov/hpcc/blue97/docseg.gif">[<I>Image</I>]</A> :
+Processing stages in document segmentation :  <I>rotation correction</I>, in
+which skewed text is horizontally aligned, <I>decomposition</I>, which
+demarcates text, math and graphics regions, <I>line isolation</I>, which marks
+lines of text within paragraphs, and finally, <I>character segmentation</I>,
+which breaks lines and words into distinct letters prior to computer
+recognition.
+
+<P><I>Keywords</I> : digital libraries,  document analysis, image processing
+<BR><I>Details</I>  : <A HREF="ftp://sequoyah.ncsl.nist.gov/">
+                               ftp://sequoyah.ncsl.nist.gov/</A>
+<BR><I>Contact</I>  : Charles Wilson 
+                      (<A HREF="mailto:charles.wilson@nist.gov">charles.wilson@nist.gov</A>)
+
+<P><A HREF="index.html#TOC">[Back to Table of Contents]</A>
+
+<P><A NAME="Manufacturing"><HR NOSHADE>
+<CENTER><H1>MANUFACTURING</H1></CENTER></A>
+
+<A NAME="AMSANT"><HR NOSHADE>
+<H2>Advanced Manufacturing Systems and Networking Testbed </H2></A>
+<P>
+  An Advanced Manufacturing Systems And Networking Testbed (AMSANT) for
+  developing and demonstrating integration methods, performing remote testing
+  with industry collaborators, and disseminating research information to US
+  industry is now operational at NIST.  AMSANT establishes an open and unbiased
+  experimental computing and communication facility for testing draft
+  application protocols for data exchange standards and for the integration
+  activities for computerized systems of various manufacturing industries.
+</P>
+
+<P><A HREF="http://math.nist.gov/hpcc/blue97/amsant6.gif">[<I>Image</I>]</A> : An overview of AMSANT.
+<BR><A HREF="http://math.nist.gov/hpcc/blue97/shop2.gif">[<I>Image</I>]</A> : Simulation of a virtual production facility.
+
+<P><I>Keywords</I> : manufacturing, data exchange standards, application protocols
+<BR><I>Details</I>  : <A HREF="http://elib.cme.nist.gov/fasd/projhome.html">
+                               http://elib.cme.nist.gov/fasd/projhome.html</A>
+<BR><I>Contact</I>  : Mark Luce 
+                      (<A HREF="mailto:mark.luce@nist.gov">mark.luce@nist.gov</A>)
+
+<P><A HREF="index.html#TOC">[Back to Table of Contents]</A>
+
+<P><A NAME="APs"><HR NOSHADE>
+<H2>Application Protocols for Process Plant Industries</H2></A>
+
+<P>
+  NIST is working with the process plant industries (e.g. pharmaceutical,
+  chemical, power generation, engineering and construction) and related
+  information technology vendors to develop, test, and demonstrate information
+  exchange standards based on ISO 10303, commonly referred to as STEP, STandard
+  for the Exchange of Product Model Data.  Collaboration with the PlantSTEP
+  consortium, for example, has lead to the first such application protocol for
+  the process plant industries, ISO 10303-227, now under review by TC184/SC4.
+</P>
+
+<A HREF="http://math.nist.gov/hpcc/blue97/trdmodel.gif">[<I>Image</I>]</A> : Model of a process plant.
+
+<P><I>Keywords</I> : process plant industries, data exchange standards, protocols
+<BR><I>Details</I>  : <A HREF="http://www.bfrl.nist.gov/pubs/sum52.html">
+                               http://www.bfrl.nist.gov/pubs/sum52.html</A>
+<BR><I>Contact</I>  : Mark Palmer 
+                      (<A HREF="mailto:mark.palmer@nist.gov">mark.palmer@nist.gov</A>)
+
+<P><A HREF="index.html#TOC">[Back to Table of Contents]</A>
+
+<P><A NAME="Applications"><HR NOSHADE>
+<CENTER><H1>SCIENTIFIC APPLICATIONS</H1></CENTER></A>
+
+<A NAME="GAMESS"><HR NOSHADE>
+<H2>Algorithms and Software for Condensed Phase Quantum Chemistry</H2></A>
+
+<P>
+  A new version of the Generalized Atomic and Molecular Software System
+  (GAMESS) has been developed that includes special algorithms for the
+  inclusion of discrete and continuum solvent models.  GAMESS is a quantum
+  chemistry software package distributed freely by Iowa State University.  The
+  new version, developed in collaboration with NIST, incorporates
+  recently-developed "effective fragment potential" methods for studying
+  chemistry in the condensed phase.  This new capability, coupled to high-
+  performance parallel computing technology, extends the applicability of
+  quantum chemistry methods to more complex model systems.
+</P>
+
+<P><I>Keywords</I> : advanced software, quantum chemistry
+<BR><I>Details</I>  : <A HREF="http://indigo15.carb.nist.gov/hpcc/hpcc.html">
+                               http://indigo15.carb.nist.gov/hpcc/hpcc.html</A>
+<BR><I>Contact</I>  : Dr. Walter J. Stevens 
+                      (<A HREF="mailto:walter.stevens@nist.gov">walter.stevens@nist.gov</A>)
+
+<P><A HREF="index.html#TOC">[Back to Table of Contents]</A>
+
+<P><A NAME="Photoassociation"><HR NOSHADE>
+<H2>Complete Photoassociation Spectrum of Ultracold Atoms</H2></A>
+
+<P>
+  Physicists at NIST are using the IBM SP2 to determine the photoassociation
+  spectrum of ultracold sodium atoms in a laser trap.  The photoassociation
+  spectrum contains information on the long-range interaction between atoms,
+  which is needed to understand collision processes in atomic Bose-Einstein
+  condensates.  The calculations required the determination of thousands of
+  inner eigenvectors of a matrix of order 40,000.  The calculation also leads
+  to a highly accurate value of the Na 3s-3p transition probability, supporting
+  results of ab-initio calculations that presently disagree with experimental
+  values inferred from lifetime measurements.
+</P>
+  
+<P><A HREF="http://math.nist.gov/hpcc/blue97/spectrum.gif">[<I>Image</I>]</A> :
+Theoretical Na_2 spectrum below the P_(1/2)+S asymptote
+
+<P><I>Keywords</I> : molecular structure and dynamics
+<BR><I>Contact</I>  : Dr. Paul Julienne 
+                      (<A HREF="mailto:paul.julienne@nist.gov">paul.julienne@nist.gov</A>)
+
+<P><A HREF="index.html#TOC">[Back to Table of Contents]</A>
+
+<P><A NAME="Condensates"><HR NOSHADE>
+<H2>Structure of Atomic Bose-Einstein Condensates</H2></A>
+
+<P>
+  In mid 1995 several groups reported the observation of Bose-Einstein
+  condensation in samples of ultracold trapped atoms.  This opens up
+  possibilities for controlled production of macroscopic quantum states, with
+  applications in quantum computing and the development of a coherent source of
+  deBroglie radiation (the "atom laser").  Theoretical efforts at NIST, in
+  collaboration with groups at Georgia Southern University and Oxford
+  University, have developed techniques for computing the structure and
+  excitation spectrum of atomic Bose-Einstein condensates using a nonlinear
+  Schroedinger technique.  These have reproduced many observed features, and
+  have provided guidance for new experiments.
+</P>
+
+<P><I>Keywords</I> : computational quantum physics
+<BR><I>Details</I>  : <A HREF="http://amo.phy.gasou.edu/bec.html">
+                               http://amo.phy.gasou.edu/bec.html</A>
+<BR><I>Contact</I>  : Dr. Charles Clark 
+                      (<A HREF="mailto:charles.clark@nist.gov">charles.clark@nist.gov</A>)
+
+<P><A HREF="index.html#TOC">[Back to Table of Contents]</A>
+
+<P><A NAME="Fluorescence"><HR NOSHADE>
+<H2>Ab-initio Simulation of X-ray Fluorescence Spectra</H2></A>
+
+<P>
+  Detailed understanding of the electronic structures of materials must be
+  inferred from various forms of spectroscopy. One of the most powerful
+  experimental techniques is x-ray emission spectroscopy, which provides
+  symmetry- and site-specific information on the density of electronic states.
+  Working in collaboration with experimentalists at the Advanced Light Source
+  (Lawrence Berkeley Laboratory), NIST theorists are developing ab initio
+  methods for modeling x-ray emission spectra of various systems.  Excellent
+  agreement with experiment has been obtained for the first system studied in
+  detail, graphite.
+  Calculations involved search for an optimal basis spanning electron band
+  states constructed from up to 3000 plane waves.  A reduced basis set of size
+  60 enabled calculations to be performed with 100-fold speedup without loss of
+  accuracy.  Since spectra are accumulations of very many spectral features,
+  their summation could be efficiently formed using parallel computing.
+</P>
+
+<P><A HREF="http://math.nist.gov/hpcc/blue97/xray.gif">[<I>Image</I>]</A> :
+Comparison of <IT>ab initio</IT> electronic structure
+calculation with recent experimental data.
+
+<P><I>Keywords</I> : electronic structure of materials
+<BR><I>Contact</I>  : Dr. Eric Shirley 
+                      (<A HREF="mailto:eric.shirley@nist.gov">eric.shirley@nist.gov</A>)
+
+
+<P><A HREF="index.html#TOC">[Back to Table of Contents]</A>
+
+<P><HR NOSHADE>
+
+<P>
+For further information about the HPCC program at NIST, contact 
+Dr. Frederick C. Johnson 
+(<A HREF="mailto:fjohnson@cam.nist.gov">fjohnson@cam.nist.gov</A>).
+</P>
+
+<P>This page was developed by 
+Dr. Ronald F. Boisvert
+(<A HREF="mailto:boisvert@nist.gov">boisvert@nist.gov</A>).
+
+<P>Last change : <I>December 13, 1995</I>
+</P>
+
+</BODY>
+</HTML>

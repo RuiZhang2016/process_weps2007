@@ -1,0 +1,290 @@
+#
+# robots.txt for http://www.wikipedia.org/ and friends
+#
+# Please note: There are a lot of pages on this site, and there are
+# some misbehaved spiders out there that go _way_ too fast. If you're
+# irresponsible, your access to the site may be blocked.
+#
+
+# advertising-related bots:
+User-agent: Mediapartners-Google*
+Disallow: /
+
+# Wikipedia work bots:
+User-agent: IsraBot
+Disallow:
+
+User-agent: Orthogaffe
+Disallow:
+
+# Crawlers that are kind enough to obey, but which we'd rather not have
+# unless they're feeding search engines.
+User-agent: UbiCrawler
+Disallow: /
+
+User-agent: DOC
+Disallow: /
+
+User-agent: Zao
+Disallow: /
+
+# Some bots are known to be trouble, particularly those designed to copy
+# entire sites. Please obey robots.txt.
+User-agent: sitecheck.internetseer.com
+Disallow: /
+
+User-agent: Zealbot
+Disallow: /
+
+User-agent: MSIECrawler
+Disallow: /
+
+User-agent: SiteSnagger
+Disallow: /
+
+User-agent: WebStripper
+Disallow: /
+
+User-agent: WebCopier
+Disallow: /
+
+User-agent: Fetch
+Disallow: /
+
+User-agent: Offline Explorer
+Disallow: /
+
+User-agent: Teleport
+Disallow: /
+
+User-agent: TeleportPro
+Disallow: /
+
+User-agent: WebZIP
+Disallow: /
+
+User-agent: linko
+Disallow: /
+
+User-agent: HTTrack
+Disallow: /
+
+User-agent: Microsoft.URL.Control
+Disallow: /
+
+User-agent: Xenu
+Disallow: /
+
+User-agent: larbin
+Disallow: /
+
+User-agent: libwww
+Disallow: /
+
+User-agent: ZyBORG
+Disallow: /
+
+User-agent: Download Ninja
+Disallow: /
+
+#
+# Sorry, wget in its recursive mode is a frequent problem.
+# Please read the man page and use it properly; there is a
+# --wait option you can use to set the delay between hits,
+# for instance.
+#
+User-agent: wget
+Disallow: /
+
+#
+# The 'grub' distributed client has been *very* poorly behaved.
+#
+User-agent: grub-client
+Disallow: /
+
+#
+# Doesn't follow robots.txt anyway, but...
+#
+User-agent: k2spider
+Disallow: /
+
+#
+# Hits many times per second, not acceptable
+# http://www.nameprotect.com/botinfo.html
+User-agent: NPBot
+Disallow: /
+
+# A capture bot, downloads gazillions of pages with no public benefit
+# http://www.webreaper.net/
+User-agent: WebReaper
+Disallow: /
+
+# Don't allow the wayback-maschine to index user-pages
+#User-agent: ia_archiver
+#Disallow: /wiki/User
+#Disallow: /wiki/Benutzer
+
+#
+# Friendly, low-speed bots are welcome viewing article pages, but not
+# dynamically-generated pages please.
+#
+# Inktomi's "Slurp" can read a minimum delay between hits; if your
+# bot supports such a thing using the 'Crawl-delay' or another
+# instruction, please let us know.
+#
+User-agent: *
+Disallow: /w/
+Disallow: /trap/
+Disallow: /wiki/Especial:Search
+Disallow: /wiki/Especial%3ASearch
+Disallow: /wiki/Special:Random
+Disallow: /wiki/Special%3ARandom
+Disallow: /wiki/Special:Search
+Disallow: /wiki/Special%3ASearch
+Disallow: /wiki/Spesial:Search
+Disallow: /wiki/Spesial%3ASearch
+Disallow: /wiki/Spezial:Search
+Disallow: /wiki/Spezial%3ASearch
+Disallow: /wiki/Specjalna:Search
+Disallow: /wiki/Specjalna%3ASearch
+Disallow: /wiki/Speciaal:Search
+Disallow: /wiki/Speciaal%3ASearch
+Disallow: /wiki/Speciaal:Random
+Disallow: /wiki/Speciaal%3ARandom
+Disallow: /wiki/Speciel:Search
+Disallow: /wiki/Speciel%3ASearch
+Disallow: /wiki/Speciale:Search
+Disallow: /wiki/Speciale%3ASearch
+Disallow: /wiki/Istimewa:Search
+Disallow: /wiki/Istimewa%3ASearch
+Disallow: /wiki/Toiminnot:Search
+Disallow: /wiki/Toiminnot%3ASearch
+#ar
+Disallow: /wiki/%D8%AE%D8%A7%D8%B5:Search
+Disallow: /wiki/%D8%AE%D8%A7%D8%B5%3ASearch
+# de:
+# http://bugzilla.wikimedia.org/show_bug.cgi?id=4937
+# sensible deletion and meta user discussion pages:
+Disallow: /wiki/Wikipedia:L%C3%B6schkandidaten/
+Disallow: /wiki/Wikipedia:Löschkandidaten/
+Disallow: /wiki/Wikipedia:Vandalensperrung/
+Disallow: /wiki/Wikipedia:Benutzersperrung/
+Disallow: /wiki/Wikipedia:Vermittlungsausschuss/
+Disallow: /wiki/Wikipedia:Administratoren/Probleme/
+Disallow: /wiki/Wikipedia:Adminkandidaturen/
+Disallow: /wiki/Wikipedia:Qualitätssicherung/
+Disallow: /wiki/Wikipedia:Qualit%C3%A4tssicherung/
+# Search- and random-page
+Disallow: /wiki/Spezial:Suche
+Disallow: /wiki/Special:Suche
+Disallow: /wiki/Spezial:Zufällige_Seite
+Disallow: /wiki/Spezial:Zuf%C3%A4llige_Seite
+Disallow: /wiki/Special:Zufällige_Seite
+Disallow: /wiki/Special:Zuf%C3%A4llige_Seite
+# Folks get annoyed when VfD discussions end up the number 1 google hit for
+# their name. See bugzilla bug #4776
+# en:
+Disallow: /wiki/Wikipedia:Articles_for_deletion/
+Disallow: /wiki/Wikipedia%3AArticles_for_deletion/
+Disallow: /wiki/Wikipedia:Votes_for_deletion/
+Disallow: /wiki/Wikipedia%3AVotes_for_deletion/
+Disallow: /wiki/Wikipedia:Pages_for_deletion/
+Disallow: /wiki/Wikipedia%3APages_for_deletion/
+Disallow: /wiki/Wikipedia:Miscellany_for_deletion/
+Disallow: /wiki/Wikipedia%3AMiscellany_for_deletion/
+Disallow: /wiki/Wikipedia:Miscellaneous_deletion/
+Disallow: /wiki/Wikipedia%3AMiscellaneous_deletion/
+Disallow: /wiki/Wikipedia:Copyright_problems
+Disallow: /wiki/Wikipedia%3ACopyright_problems
+# fi:
+# http://bugzilla.wikimedia.org/show_bug.cgi?id=8695
+Disallow: /wiki/Wikipedia:Poistettavat_sivut
+Disallow: /wiki/K%C3%A4ytt%C3%A4j%C3%A4:
+Disallow: /wiki/Käyttäjä:
+Disallow: /wiki/Keskustelu_k%C3%A4ytt%C3%A4j%C3%A4st%C3%A4:
+Disallow: /wiki/Keskustelu_käyttäjästä:
+Disallow: /wiki/Wikipedia:Yll%C3%A4pit%C3%A4j%C3%A4t/
+Disallow: /wiki/Wikipedia:Ylläpitäjät/
+# fr:
+Disallow: /wiki/Wikip%C3%A9dia:Pages_%C3%A0_supprimer/
+#he
+Disallow: /wiki/%D7%9E%D7%99%D7%95%D7%97%D7%93:Search
+Disallow: /wiki/%D7%9E%D7%99%D7%95%D7%97%D7%93%3ASearch
+#hu
+Disallow: /wiki/Speci%C3%A1lis:Search
+Disallow: /wiki/Speci%C3%A1lis%3ASearch
+#ja
+Disallow: /wiki/%E7%89%B9%E5%88%A5:Search
+Disallow: /wiki/%E7%89%B9%E5%88%A5%3ASearch
+#ru
+Disallow: /wiki/%D0%A1%D0%BF%D0%B5%D1%86%D0%B8%D0%B0%D0%BB%D1%8C%D0%BD%D1%8B%D0%B5:Search
+Disallow: /wiki/%D0%A1%D0%BF%D0%B5%D1%86%D0%B8%D0%B0%D0%BB%D1%8C%D0%BD%D1%8B%D0%B5%3ASearch
+# ja:
+# https://bugzilla.wikimedia.org/show_bug.cgi?id=5239
+Disallow: /wiki/Wikipedia:%E5%89%8A%E9%99%A4%E4%BE%9D%E9%A0%BC/
+Disallow: /wiki/Wikipedia%3A%E5%89%8A%E9%99%A4%E4%BE%9D%E9%A0%BC/
+Disallow: /wiki/Wikipedia:%E5%88%A9%E7%94%A8%E8%80%85%E3%83%9A%E3%83%BC%E3%82%B8%E3%81%AE%E5%89%8A%E9%99%A4%E4%BE%9D%E9%A0%BC
+Disallow: /wiki/Wikipedia%3A%E5%88%A9%E7%94%A8%E8%80%85%E3%83%9A%E3%83%BC%E3%82%B8%E3%81%AE%E5%89%8A%E9%99%A4%E4%BE%9D%E9%A0%BC
+# pt:
+# https://bugzilla.wikimedia.org/show_bug.cgi?id=5394
+Disallow: /wiki/Wikipedia:Páginas_para_eliminar/
+Disallow: /wiki/Wikipedia:P%C3%A1ginas_para_eliminar/
+Disallow: /wiki/Wikipedia%3AP%C3%A1ginas_para_eliminar/
+Disallow: /wiki/Wikipedia_Discussão:Páginas_para_eliminar/
+Disallow: /wiki/Wikipedia_Discuss%C3%A3o:P%C3%A1ginas_para_eliminar/
+Disallow: /wiki/Wikipedia_Discuss%C3%A3o%3AP%C3%A1ginas_para_eliminar/
+# zh:
+# https://bugzilla.wikimedia.org/show_bug.cgi?id=5104
+Disallow: /wiki/Wikipedia:删除投票/侵权
+Disallow: /wiki/Wikipedia:%E5%88%A0%E9%99%A4%E6%8A%95%E7%A5%A8/%E4%BE%B5%E6%9D%83
+Disallow: /wiki/Wikipedia:删除投票和请求
+Disallow: /wiki/Wikipedia:%E5%88%A0%E9%99%A4%E6%8A%95%E7%A5%A8%E5%92%8C%E8%AF%B7%E6%B1%82
+Disallow: /wiki/Category:快速删除候选
+Disallow: /wiki/Category:%E5%BF%AB%E9%80%9F%E5%88%A0%E9%99%A4%E5%80%99%E9%80%89
+Disallow: /wiki/Category:维基百科需要翻译的文章
+Disallow: /wiki/Category:%E7%BB%B4%E5%9F%BA%E7%99%BE%E7%A7%91%E9%9C%80%E8%A6%81%E7%BF%BB%E8%AF%91%E7%9A%84%E6%96%87%E7%AB%A0
+# it - http://bugzilla.wikimedia.org/show_bug.cgi?id=5545
+Disallow: /wiki/Wikipedia:Pagine_da_cancellare
+Disallow: /wiki/Wikipedia%3APagine_da_cancellare
+Disallow: /wiki/Wikipedia:Utenti_problematici
+Disallow: /wiki/Wikipedia%3AUtenti_problematici
+Disallow: /wiki/Wikipedia:Vandalismi_in_corso
+Disallow: /wiki/Wikipedia%3AVandalismi_in_corso
+Disallow: /wiki/Wikipedia:Amministratori
+Disallow: /wiki/Wikipedia%3AAmministratori
+Disallow: /wiki/Wikipedia:Proposte_di_cancellazione_semplificata
+Disallow: /wiki/Wikipedia%3AProposte_di_cancellazione_semplificata
+Disallow: /wiki/Categoria:Da_cancellare_subito
+Disallow: /wiki/Categoria%3ADa_cancellare_subito
+Disallow: /wiki/Wikipedia:Sospette_violazioni_di_copyright
+Disallow: /wiki/Wikipedia%3ASospette_violazioni_di_copyright
+Disallow: /wiki/Categoria:Da_controllare_per_copyright
+Disallow: /wiki/Categoria%3ADa_controllare_per_copyright
+# added 2007-01-12
+Disallow: /wiki/Progetto:Rimozione_contributi_sospetti
+Disallow: /wiki/Progetto%3ARimozione_contributi_sospetti
+Disallow: /wiki/Categoria:Da_cancellare_subito_per_violazione_integrale_copyright
+Disallow: /wiki/Categoria%3ADa_cancellare_subito_per_violazione_integrale_copyright
+Disallow: /wiki/Progetto:Cococo
+Disallow: /wiki/Progetto%3ACococo
+Disallow: /wiki/Discussioni_progetto:Cococo
+Disallow: /wiki/Discussioni_progetto%3ACococo
+# pl.wikipedia.org
+# http://bugzilla.wikimedia.org/show_bug.cgi?id=8067
+Disallow: /wiki/Wikipedia:Strony_do_usuni%C4%99cia
+Disallow: /wiki/Wikipedia%3AStrony_do_usuni%C4%99cia
+Disallow: /wiki/Wikipedia:Do_usuni%C4%99cia
+Disallow: /wiki/Wikipedia%3ADo_usuni%C4%99cia
+Disallow: /wiki/Wikipedia:SDU/
+Disallow: /wiki/Wikipedia%3ASDU/
+Disallow: /wiki/Wikipedia:Strony_podejrzane_o_naruszenie_praw_autorskich
+Disallow: /wiki/Wikipedia%3AStrony_podejrzane_o_naruszenie_praw_autorskich
+
+# en.wikinews:
+# https://bugzilla.wikimedia.org/show_bug.cgi?id=5340
+Disallow: /wiki/Portal:Prepared_stories/
+Disallow: /wiki/Portal%3APrepared_stories/
+
+## *at least* 1 second please. preferably more :D
+## we're disabling this experimentally 11-09-2006
+#Crawl-delay: 1

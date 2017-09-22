@@ -1,0 +1,366 @@
+/* HTML Defined Elements */
+
+body {
+  font-family: Verdana, Arial, Helvetica, sans-serif;
+  color: #454545;
+  margin-top: 0;
+  background-image: url(/manta/images/background.gif);
+}
+
+h4 {
+  color: #6084c8;
+  font-family: sans-serif; 
+}
+
+/* Pseudo-Classes */
+  /* NONE - this is for things like A:visited and such */
+
+/* Pseudo-Elements */
+  /* NONE - this is for things like the first letter or line of a paragraph and such */
+
+/* Left Navigation Links */
+
+
+/* HTML Element Classes */
+
+a.help { 
+  font-size: 11px; 
+  font-style: normal; 
+  line-height: 16px; 
+  font-weight: normal; 
+  vertical-align: middle; 
+  color: #CC0000; 
+  text-decoration: none; 
+}
+
+a.textlink, a.searchResultLink { 
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: 11px;
+	color: #666666;
+	font-weight: normal;
+	text-decoration: underline;
+}
+
+.textTitles {
+  font-size: 14px;
+  line-height: 18px;
+  font-weight: bold;
+  color: #006699;
+  text-decoration: none;
+}
+
+.pieceTitles {
+  font-size: 12px;
+  line-height: 18px;
+  font-weight: bold;
+  color: #006699;
+  text-decoration: none;
+}
+
+.itemTitles {
+  font-size: 16px;
+  line-height: 18px;
+  font-weight: 900;
+  color: #639200;
+  text-decoration: none;
+}
+
+a.captionlink { 
+  font-size: 10px; 
+  font-style: normal; 
+  line-height: 16px; 
+  font-weight: normal; 
+  vertical-align: middle; 
+  color: #CC0000; 
+  text-decoration: none;
+}
+
+a.titlelink { 
+  font-size: 14px; 
+  font-style: normal; 
+  line-height: 18px; 
+  font-weight: bold; 
+  vertical-align: middle; 
+  color: #CC0000; 
+  text-decoration: none;
+}
+
+a.topiclink {
+  font-size: 12px;
+  font-style: normal; 
+  line-height: 18px; 
+  font-weight: bold; 
+  vertical-align: middle; 
+  color: #006699; 
+  text-decoration: none;
+}
+
+a.alphaLink { 
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: 9px;
+	color: #666666;
+	font-weight: normal;
+	text-decoration: underline;
+}
+
+/* Non-Element Classes */
+table.MainTable {
+  vertical-align: top; 
+  width: 760px;
+  /*width: 100%;*/
+  padding: 0px;
+  margin: 0px;
+  background-color: #ffffff;
+}
+
+table.table_middle {
+  vertical-align: top; 
+  background-color: #ffffff;
+  /*width: 620px;*/
+}
+
+table.td_middle {
+  vertical-align: top;
+  background-color: #ffffff;
+}
+
+table.table_middle td.td_middle {
+  /* have to use this instead of td.td_middle because comsite2.pl applies td_middle class twice! */
+  padding-left: 10px;
+  padding-right: 10px;
+  padding-top: 0px;
+	background-color: #ffffff;
+	width: 100%;
+}
+
+td.td_left {
+  vertical-align: top; 
+  background-color: #ffffff; 
+  margin-top: 0px;
+  width: 175px;
+}
+
+table.td_left {
+  vertical-align: top; 
+  background-color: #ffffff;
+  margin-top: 0px;  
+}
+
+td.td_middle {
+  vertical-align: top; 
+}
+
+td.td_right {
+	/*width: 187px;*/
+	background-color: #ffffff;
+}
+
+.table_cc_list_outer {}
+
+table.table_cc_list_inner {
+  vertical-align: top; 
+  border: 2px solid white;
+}
+
+table.table_cc_list_inner td {
+  width: 200 ;
+}
+
+/* content map stylization */
+
+.seocm_range, .seocm_report { font-size: 12px }
+
+.td_left_seo{
+	/*background-color: orange;*/
+  margin: 0px;
+  /*margin-top: -1px;*/
+  /*width: 187px;*/
+}
+
+/* google adsense stuff */
+.googleAdText_search { font-size: 10px; font-style: normal; font-weight: normal; color: #000000; text-decoration: none; }
+.googleAdLink_search { font-size: 10px; text-decoration: none; }
+.googleAdLink_search_dnb { font-size: 10px; font-weight: bold; color: #004D94; text-decoration: none; }
+
+/* misc */
+
+.searchResultTitle { font-size: 12px; line-height: 15px; font-weight: bold; color: #004D94; text-decoration: none; }
+/*.searchResultLink { font-size: 12px; line-height: 15px; text-decoration: none; }*/
+.searchResultListing { font-size: 10px; line-height: 11px; }
+.searchResultListingLink { font-size: 10px; line-height: 11px; color: #004D94; text-decoration: none;}
+.detaillink { color: #990000; }
+.text                { font-size: 11px; font-style: normal; font-weight: normal; line-height: 16px; text-align: left; vertical-align: middle; color: #000000; text-decoration: none; }
+.embedText	     { font-size: 9px; font-style: normal; font-weight: normal; line-height: 10px; }
+.textCartItem        { font-size: 13px; line-height: 18px; font-weight: bold; color: #006699; text-decoration: none; }
+.textCartParentItem  { font-size: 13px; line-height: 18px; font-weight: bold; color: #006699; text-decoration: none; }
+.summaryText         { font-size: 12px; line-height: 22px; font-weight: normal; color: #000000; left: auto; top: auto ; text-decoration: none; }
+.pageheading         { font-size: 16px; font-style: normal; font-weight: bold; line-height: 20px; text-align: justify; vertical-align: top; color: #345575; left: auto; top: auto ; text-decoration: none; }
+td.pageheading2, p.pageheading2         { font-size: 16px; font-style: normal; font-weight: bold; line-height: 20px;  color: #A4A4A4; text-decoration: none; padding: 10px;}
+table.pageheading2	{border: 3px solid #F4F4F4;}
+.sectionheading      { font-size: 14px; font-style: normal; font-weight: bold; line-height: 20px; /*text-align: justify;*/ vertical-align: top; color: #345575; left: auto; top: auto ; text-decoration: none; }
+.captionText         { font-size: 10px; font-style: normal; line-height:12px; font-weight: normal; color: #000000; left: auto; top: auto ; text-decoration: none; }
+
+
+.caption	{
+  font-size: 9px;
+  font-style: normal;
+  line-height: 12px;
+  font-weight: normal;
+  color: #000000;
+  background-color: #efefef;
+  left: auto;
+  top: auto;
+  text-decoration: none;
+  padding: 2px;
+  border: 3px solid #ffffff;
+}
+
+/* The following are the style for order list displaying TOC in description page */
+ol.toc_level1
+{
+	/*default -- you can set it to none for no number*/
+  list-style-type: decimal;  
+}
+ol.toc_level2
+{
+  list-style-type: lower-roman; 
+}
+ol.toc_level3
+{
+  list-style-type: upper-alpha;
+}
+ol.toc_level4up
+{
+  list-style-type: disc; 
+}
+/* End of ol style */
+
+table.transactions td.item { font-size: 11px; color: 000000; background-color: c0ddfa }
+table.transactions td.subtotal { font-size: 11px; color: 000000; background-color: cccccc }
+table.transactions td.total { font-size: 11px; color: 000000; background-color: dddddd }
+
+.browse_level_1 {
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: 11px;
+	color: #345575;
+	font-weight: bold;
+}
+
+.alpha_listing {
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: 11px;
+	color: #345575;
+	font-weight: bold;
+}
+
+td.crumbs
+{
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: 9px;
+	color: #666666;
+	font-weight: normal;
+	text-decoration: none;
+	vertical-align: top;
+	margin: 5 10 5 10;
+}
+
+a.crumbLink
+{
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: 9px;
+	color: #666666;
+	font-weight: normal;
+	text-decoration: underline;
+}
+
+a.crumbLink:hover
+{
+	color: #345575;
+}
+
+.crumbText
+{
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: 9px;
+	color: #666666;
+	font-weight: normal;
+}
+
+/*.crumbText           { font-size: 10px; font-style: normal; font-weight: normal; line-height: 13px; text-align: left; */
+
+.itemprice
+{
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: 12px;
+	font-weight: bold;
+	color: #000000;
+	text-decoration: none;
+	text-align: left;
+}
+
+.itempriceheading
+{
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: 12px;
+	font-weight: normal;
+	color: #000000;
+	text-decoration: none;
+	text-align: left;
+}
+
+.itemsamplelink
+{
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: 11px;
+	font-weight: bold;
+	text-decoration: underline;
+}
+
+.itemtype
+{
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: 12px;
+	font-weight: bold;
+	color: #000000;
+	text-decoration: none;
+	text-align: left;
+}
+
+.itemtypeheading
+{
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: 12px;
+	font-weight: normal;
+	color: #000000;
+	text-decoration: none;
+	text-align: left;
+}
+
+.pageheadingcopy
+{
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: 11px;
+	color: #666666;
+	font-weight: normal;
+	text-decoration: none;
+	margin: 0;
+	padding: 0;
+}
+
+table.smartpagination
+{ 
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: 10px;
+	color: #666666;
+	font-weight: normal;
+	text-decoration: none;
+}
+
+a.smartpaginationPageNumberLink, a.smartpaginationPrevNextLink
+{ 
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: 9px;
+	color: #666666;
+	font-weight: normal;
+	text-decoration: underline;
+}

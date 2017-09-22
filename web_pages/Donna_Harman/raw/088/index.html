@@ -1,0 +1,445 @@
+<HTML>
+<HEAD>
+<META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=windows-1252">
+<META NAME="Generator" CONTENT="Microsoft Word 97">
+<TITLE>An Analysis of the Role of Grammatical Categories</TITLE>
+</HEAD>
+<BODY LINK="#0000ff">
+
+<B><FONT SIZE=5><P ALIGN="CENTER">An Analysis of the Role of Grammatical Categories</P>
+<P ALIGN="CENTER">  in  a Statistical Information Retrieval System<SUP>*</P>
+</B></SUP></FONT><FONT SIZE=4><P ALIGN="CENTER">Nina Wacholder, Judith L. Klavans and David Kirk Evans</P>
+</FONT><P ALIGN="CENTER">{nina, klavans, devans}@cs.columbia.edu</P>
+<FONT SIZE=2><P ALIGN="CENTER">&nbsp;</P>
+</FONT><B><P>Paper ID Code:</B> 098</P>
+<B><P>Submission type:</B> Thematic Session (Exploring the Limits of Shallow Parsing)</P>
+<B><P>Topic Area:</B> information retrieval (IR), shallow parsing, grammatical categories</P>
+<B><P>Word Count:</B> 3000</P>
+<B><P>Under consideration for other conferences (specify)?</B> No</P>
+<FONT SIZE=2><P><A NAME="_Ref441822405"></P>
+<OL>
+
+</FONT><B><FONT SIZE=4><LI>Abstract</LI>
+</B></FONT><P ALIGN="JUSTIFY">The hypothesis of this research is that words of certain grammatical categories, such as nouns, make a greater contribution to the effectiveness of IR systems than do words from other categories.  We have performed an experiment that clearly shows that nouns, and surprisingly, adjectives play an important role in raising precision.  Our results are a strong indication that even in statistical IR systems in which all grammatical categories are weighted equally, different parts of speech in the documents have measurably different effects on the performance of the IR system.</P>
+<B><FONT SIZE=4><LI>Overview</LI>
+</B></FONT><P ALIGN="JUSTIFY">The extent to which linguistic phenomena affect the performance of information retrieval (IR) systems is an ongoing subject of debate in the computational linguistics community.  The research that we describe in this paper attempts to shed light on this problem by addressing the following question: to what extent do individual grammatical categories  contribute to the performance of a statistical information retrieval  system?  We consider the four open class lexical categories–nouns, verbs, adjectives and adverbs–and one structural category–noun phrases.  Each of these categories can be reliably identified by shallow parsing techniques. </P>
+<P ALIGN="JUSTIFY">The motivation for our work arises from the fact that the value of shallow linguistic information for the performance of statistical IR systems is still a controversial subject.  This is in contrast with other areas of natural language processing (NLP) such as information extraction and statistical parsing where it is becoming increasingly clear that the goal is to achieve the optimal balance between statistical and linguistic information (Abney 1996; Collins 1997).</P>
+<P ALIGN="JUSTIFY">The hypothesis of this research is that words of certain grammatical categories, such as nouns, make a greater contribution to the effectiveness of IR systems than do words from other categories. To test this hypothesis, we took a test corpus from Ziff-Davis articles on the TIPSTER CD-ROM (TREC 1994), tagged the entire corpus for part-of-speech and parsed the tagged text to identify noun phrases (NPs).  We then manipulated each document to create two different types: (1) <I>extended versions</I> are produced by adding to the original full text document a set of words belonging to a grammatical category that could be expected to improve retrieval; and (2) <I>reduced versions</I> are produced by filtering the full text so that only words belonging to a particular grammatical category remain in the document.  We then ran SMART (Salton 1988), a publicly available statistical system frequently used as a baseline in IR experiments, over all of these documents.  To compare the results of each run, we use precision and recall, the standard IR metrics, plus a new ranking metric we developed to analyze more closely the results for particular documents and queries (see Section 4.3).   </P>
+<P ALIGN="JUSTIFY">We found that at all levels of recall, versions that had been reduced to noun phrases (NPs), or more specifically to a list of keywords that were part of NPs, performed  better than the baseline, even though the number of words in the version were reduced from the full text version.  Our experiment therefore shows that the information in keywords consisting primarily of adjectives and nouns does in fact contribute more to the content of the documents and to the success of IR systems than do other categories, at least in the SMART system which we used as the baseline for a typical tf*idf system.  </P>
+<P ALIGN="JUSTIFY">We also found one other surprising result: versions consisting only of adjectives outperformed versions consisting of the other lexical categories, including versions consisting of Ns, by an average of 404% precision and 140% recall.  The large differences in precision and recall may be due, in part, to our relatively small test corpus of 12.2MB. We will confirm these results by enlarging the corpus for the final version of the paper.  These results are a strong indication that  even in statistical IR systems in which all grammatical categories are weighted equally, different parts of speech in the documents do have measurably different effects on the success of the IR system.  This suggests that a formula which assigns different weights to words in NPs than to other categories might produce better results, in terms of precision and recall, than does a retrieval algorithm which assigns an equal weight to all index terms.  Alternatively, in environments where storage needs take priority over processing needs, reduced versions of documents can stored. </P>
+
+<B><FONT SIZE=4><LI>NLP in Statistical IR</LI>
+</B></FONT><P ALIGN="JUSTIFY"></P>
+<P ALIGN="JUSTIFY">Due to the pressures of efficiency and performance, the most successful IR systems to date are based primarily on statistical methods. Statistically motivated IR systems, such as Cornell University’s SMART system, reduce documents to word vectors by removing stopwords, stemming the remaining words to form word-like strings frequently called keywords, and counting occurrences of keywords in documents relative to the frequency of the keywords in the larger corpus (this approach is frequently referred to as tf*idf)  (Salton 1988).  As a consequence of processing demands, these systems on the whole ignore linguistic information.  When a document is indexed, closed-class words such as determiners and conjunctions are discarded because they occur too frequently to be useful in distinguishing  relevant documents.  In most systems, word stems are indexed instead of full words, with the result that distinctions among parts-of-speech contributed by the final letters of the words are lost.  </P>
+<P ALIGN="JUSTIFY">As the speed and efficiency of shallow parsers has increased, the appreciation of the role of shallow parsing in NLP has also grown.  As a result, there have recently been challenges to the ‘no linguistic information’ approach to IR.  For example,  (Hull 1996), (Zhai 1997) and (Jacquemin et al. 1997) have suggested that phrases improve retrieval results.  In fact, (Strzalkowski et al. 1996) report that  "in large databases, such as TIPSTER, the use of phrasal terms is not just desirable, it becomes necessary&quot;.  On the other hand,  (Mitra et al 1997) and (Kraaj and Pohlman1998) have shown limited results.  Exploration of the role of linguistically-motivated information in IR is the primary motivation for the existence of the natural language processing (NLP) track in the Text Retrieval Conferences (TREC) competition ((Harman 1993), (Voorhees and Harman 1997)), which was added to TREC-4 in 1995.  This track provides a forum for formally investigating the role of linguistically-motivated processing in IR.</P>
+<P ALIGN="JUSTIFY">Phrases have received considerable attention as a unit that appears likely to improve results and that are now relatively easy to identify in statistical or rule-based systems. In this paper, we use the term ‘phrases’ to refer to linguistically motivated text sequences which fulfill certain syntactic and semantic requirements: in particular, they have a head and modifiers correctly ordered with respect to each other.  We distinguish these syntactically-grounded phrases from &quot;statistical phrases&quot;, sequences of repeated non-stop words occurring in a corpus over some threshold (Mitra et al. 1997).  </P>
+<P ALIGN="JUSTIFY">Because previous work has extended the full-text of documents with NPs (e.g. Mitra et al. 1997), we also do this in our experiment.  However, in order to focus specifically on the effect of grammatical categories in distinguishing documents, we also chose to do something that to the best of our knowledge has not been done before: create versions of documents in which all words not belonging to the grammatical category of interest were eliminated. We expected that reducing documents would lower precision and recall, but our prediction was incorrect: our results revealed that reducing documents is a promising technique. </P>
+<B><FONT SIZE=4><LI>Comparing the contribution of grammatical categories</LI>
+<OL>
+
+</FONT><LI>The linguistic categories </LI>
+</B><P ALIGN="JUSTIFY">If grammatical categories play different roles in distinguishing the content of documents for IR purposes, the two categories  most likely to be useful are nouns (Ns) and Noun Phrases (NPs).  Nouns are generally believed to contribute most to the ‘aboutness’ of a document because they denote concrete entities or specific concepts; noun phrases (NPs) are the phrasal extensions of nouns.  We have based our work on previous findings on the role of nouns and noun phrases in identifying significant topics in full-text documents ((Wacholder 1998), (Klavans and Wacholder 1998)). </P>
+<P ALIGN="JUSTIFY">&#9;To measure the contribution that Ns and NPs make to document retrieval, we created an extended version of each full-text (FT) document in which NPs were concatenated to the FT document so that words in NPs were ranked more highly.  For the sake of comparison, we created four additional  versions of each document, in which the FT was reduced respectively to nouns (Ns), adjectives (JJs), verbs (VBs) and adverbs (RBs). Table 1 shows the effect of these modifications on the size of the document and the test corpus.</P>
+<P ALIGN="JUSTIFY"></P>
+<TABLE BORDER CELLSPACING=1 CELLPADDING=7 WIDTH=617>
+<TR><TD WIDTH="20%" VALIGN="TOP">
+<B><FONT SIZE=1><P ALIGN="JUSTIFY">Document Version</B></FONT></TD>
+<TD WIDTH="20%" VALIGN="TOP">
+<B><FONT SIZE=1><P ALIGN="CENTER">Avg# of Words per Document</B></FONT></TD>
+<TD WIDTH="20%" VALIGN="TOP">
+<B><FONT SIZE=1><P ALIGN="CENTER">Percentage of FT</B></FONT></TD>
+<TD WIDTH="20%" VALIGN="TOP">
+<B><FONT SIZE=1><P ALIGN="CENTER">Size of Test Corpus in MBs</B></FONT></TD>
+<TD WIDTH="20%" VALIGN="TOP">
+<B><FONT SIZE=1><P ALIGN="CENTER">Percentage of FT</B></FONT></TD>
+</TR>
+<TR><TD WIDTH="20%" VALIGN="TOP">
+<FONT SIZE=1><P>Full-text (FT)</FONT></TD>
+<TD WIDTH="20%" VALIGN="TOP">
+<FONT SIZE=1><P ALIGN="CENTER">469.9</FONT></TD>
+<TD WIDTH="20%" VALIGN="TOP">
+<FONT SIZE=1><P ALIGN="CENTER">100%</FONT></TD>
+<TD WIDTH="20%" VALIGN="TOP">
+<FONT SIZE=1><P ALIGN="CENTER">12.2</FONT></TD>
+<TD WIDTH="20%" VALIGN="TOP">
+<FONT SIZE=1><P ALIGN="CENTER">100%</FONT></TD>
+</TR>
+<TR><TD WIDTH="20%" VALIGN="TOP">
+<FONT SIZE=1><P>Full-text+Adjs+Ns Phrases (FT+NP)   </FONT></TD>
+<TD WIDTH="20%" VALIGN="TOP">
+<FONT SIZE=1><P ALIGN="CENTER">814.7</FONT></TD>
+<TD WIDTH="20%" VALIGN="TOP">
+<FONT SIZE=1><P ALIGN="CENTER">174%</FONT></TD>
+<TD WIDTH="20%" VALIGN="TOP">
+<FONT SIZE=1><P ALIGN="CENTER">20.3</FONT></TD>
+<TD WIDTH="20%" VALIGN="TOP">
+<FONT SIZE=1><P ALIGN="CENTER">166%</FONT></TD>
+</TR>
+<TR><TD WIDTH="20%" VALIGN="TOP">
+<FONT SIZE=1><P>Adjs+Ns (NP)</FONT></TD>
+<TD WIDTH="20%" VALIGN="TOP">
+<FONT SIZE=1><P ALIGN="CENTER">347.9</FONT></TD>
+<TD WIDTH="20%" VALIGN="TOP">
+<FONT SIZE=1><P ALIGN="CENTER">51%</FONT></TD>
+<TD WIDTH="20%" VALIGN="TOP">
+<FONT SIZE=1><P ALIGN="CENTER">8.1</FONT></TD>
+<TD WIDTH="20%" VALIGN="TOP">
+<FONT SIZE=1><P ALIGN="CENTER">66%</FONT></TD>
+</TR>
+<TR><TD WIDTH="20%" VALIGN="TOP">
+<FONT SIZE=1><P>Nouns (N)</FONT></TD>
+<TD WIDTH="20%" VALIGN="TOP">
+<FONT SIZE=1><P ALIGN="CENTER">193.3</FONT></TD>
+<TD WIDTH="20%" VALIGN="TOP">
+<FONT SIZE=1><P ALIGN="CENTER">41%</FONT></TD>
+<TD WIDTH="20%" VALIGN="TOP">
+<FONT SIZE=1><P ALIGN="CENTER">6.6</FONT></TD>
+<TD WIDTH="20%" VALIGN="TOP">
+<FONT SIZE=1><P ALIGN="CENTER">54%</FONT></TD>
+</TR>
+<TR><TD WIDTH="20%" VALIGN="TOP">
+<FONT SIZE=1><P>Adjs (JJ)</FONT></TD>
+<TD WIDTH="20%" VALIGN="TOP">
+<FONT SIZE=1><P ALIGN="CENTER">37.5</FONT></TD>
+<TD WIDTH="20%" VALIGN="TOP">
+<FONT SIZE=1><P ALIGN="CENTER">8%</FONT></TD>
+<TD WIDTH="20%" VALIGN="TOP">
+<FONT SIZE=1><P ALIGN="CENTER">3.8</FONT></TD>
+<TD WIDTH="20%" VALIGN="TOP">
+<FONT SIZE=1><P ALIGN="CENTER">31%</FONT></TD>
+</TR>
+<TR><TD WIDTH="20%" VALIGN="TOP">
+<FONT SIZE=1><P>Advs  (RB)</FONT></TD>
+<TD WIDTH="20%" VALIGN="TOP">
+<FONT SIZE=1><P ALIGN="CENTER">18.4</FONT></TD>
+<TD WIDTH="20%" VALIGN="TOP">
+<FONT SIZE=1><P ALIGN="CENTER">4%</FONT></TD>
+<TD WIDTH="20%" VALIGN="TOP">
+<FONT SIZE=1><P ALIGN="CENTER">3.4</FONT></TD>
+<TD WIDTH="20%" VALIGN="TOP">
+<FONT SIZE=1><P ALIGN="CENTER">28%</FONT></TD>
+</TR>
+<TR><TD WIDTH="20%" VALIGN="TOP">
+<FONT SIZE=1><P>Verbs  (VB)</FONT></TD>
+<TD WIDTH="20%" VALIGN="TOP">
+<FONT SIZE=1><P ALIGN="CENTER">67.0</FONT></TD>
+<TD WIDTH="20%" VALIGN="TOP">
+<FONT SIZE=1><P ALIGN="CENTER">14%</FONT></TD>
+<TD WIDTH="20%" VALIGN="TOP">
+<FONT SIZE=1><P ALIGN="CENTER">4.1</FONT></TD>
+<TD WIDTH="20%" VALIGN="TOP">
+<FONT SIZE=1><P ALIGN="CENTER">34%</FONT></TD>
+</TR>
+</TABLE>
+
+<B><P><A NAME="_Ref440096448">Table 1</A>: Size of test corpora</P>
+</B><P ALIGN="JUSTIFY">If all categories contribute equally, we would expect that reduced documents would reduce effectiveness of IR systems proportionately to the reduction in size. </P>
+<B><LI>Experimental method</LI>
+</B><P ALIGN="JUSTIFY">For our experiment, we created a 12.2 MB test corpus consisting of 3431 Ziff-Davis documents from Volume 2 of the TREC CD-ROMs (TREC 1994).  We used Mitre’s Alembic Workbench (Aberdeen et al. 1995) to tag these documents with part-of-speech, and we used a manually constructed set of regular expressions to identify a complete list of candidate significant topics in full-text in order to identify NPs and heads of NPs from the tagged text (Wacholder 1998, Evans 1999).</P>
+<P>&#9;Our queries consisted of TREC topics 1-150, unmodified except that the words <I>relevant </I>and <I>query </I>were removed, as were sentences  which explicitly referred to topics excluded from the search goal.  44 of the 150 queries had one or more relevant articles in the test corpus; for those 44 queries, the median number of relevant documents per query was 5 and the average 9.2.   Since we were interested in comparing results across different corpora with the same query, we did not perform automatic or manual query expansion. </P>
+<P ALIGN="JUSTIFY">We used SMART (Version 11) as our search engine.  Since SMART reduces each document to a list of words, our experiment actually measures the contribution of keywords, rather than phrases.  In evaluating our results, we used TREC relevance judgements as our gold standard.  Since the TREC judgements are binary–relevant or not relevant (or unjudged and assumed not relevant)–we assume that the optimal system would retrieve those documents which had been judged as relevant before any documents which had been judged irrelevant.  Since we were only interested in a comparison of the contribution of various grammatical categories, we did not worry about optimizing the absolute precision and recall levels for any given category.</P>
+<LI><A NAME="_Ref441849369"><B>The DFI Evaluation Metric</A></LI></OL>
+
+</B><P ALIGN="JUSTIFY"><IMG SRC="http://www1.cs.columbia.edu/~devans/papers/acl1999/Image3.gif" WIDTH=212 HEIGHT=81>Because TREC relevance judgements take the form of ‘relevant’ or ‘not relevant’ (or not judged and assumed not relevant) (Harman 1993), we use a new metric that measures distance from perfection while taking into account rank of retrieval.  We call this the &quot;Distance from Ideal&quot; or DFI metric.  An ideal run retrieves N relevant documents in some order 1, 2, 3, ..., N-1, N, where N is the number of relevant documents.  Since a run that returns all N documents in any order is considered perfect, we do not have to worry about a &quot;best&quot; ranking.  To compare the other runs to the ideal run, we sum the cardinality of the relevant documents actually retrieved in a run.  To compensate for the fact that sums for queries with more relevant documents will be much greater than for queries for which fewer documents have been judged relevant, we divide the sum of the cardinality of the documents retrieved by the sum of the cardinality of the documents that would be retrieved in an ideal run.</P>
+<P ALIGN="JUSTIFY"></P>
+<P ALIGN="JUSTIFY">&nbsp;</P>
+<I><P ALIGN="JUSTIFY">R</I> is the set of relevant documents that were retrieved, rank(<I>r</I>) is the rank at which document <I>r</I> was retrieved, and <I>t</I> is the total number of relevant documents for the query.  Intuitively, the final score measures how much worse a particular run did than the ideal run.  An ideal run produces a result of 1; for example, for a query for which three documents have been judged relevant, the DFI metric is ((1+2+3) / (1+2+3)).  The larger the score, the farther the result is from the ideal. </P>
+<P ALIGN="JUSTIFY">This formula helps to bring all values within the same order of magnitude, although the maximum value of the DFI metric is still dependent upon the maximum number of relevant documents according to the gold standard.   It compensates for one factor that contributes to topic difficulty: a topic with fewer relevant articles in the corpus is more difficult than a topic with more relevant topics.</P>
+<LI></A><B><FONT SIZE=4>The primary role of nouns and adjectives in a statistical IR system</LI>
+</B></FONT><P ALIGN="JUSTIFY">The results of this experiment confirm the important role that nouns and adjectives play in the performance of a statistical IR system.   In Section 5.1, we show that SMART performs as well on NP versions of the document, which on average are about 33% smaller in terms of file size than the FT versions, as it does on the FT versions.  More surprisingly, the NP corpus outperforms the FT corpus by an average of 23% precision and 5% recall.  In Section 5.2, we show that the JJ corpus, in which documents were reduced only to adjectives, outperforms all three other lexical categories.  For example, in terms of precision, JJs outperform Ns by 30%, RBs by 288% and VBs by 573%. To confirm these surprising results, we use the DFI ranking metric to analyze in more detail the performance of the different runs on specific queries and documents.</P>
+<B><FONT SIZE=2><P>&nbsp;</P>
+<OL>
+
+<LI><A NAME="_Ref440164432"></FONT>The primary role of NPs</A></LI>
+<FONT SIZE=2><P>&nbsp;</P>
+</B></FONT><P ALIGN="JUSTIFY">Table 2 shows that the recall rate for the NP corpus was virtually identical to the recall level for both FT and the extended corpus FT+NP.  Even though the precision level overall was low for all runs, in part because we performed no query expansion, the precision level was 23% higher than that of the FT and 17% higher than that of the FT+NP, as shown in Table 2. </P>
+
+<TABLE BORDER CELLSPACING=1 CELLPADDING=7 WIDTH=334>
+<TR><TD WIDTH="29%" VALIGN="TOP">&nbsp;</TD>
+<TD WIDTH="24%" VALIGN="TOP">
+<B><FONT SIZE=2><P ALIGN="CENTER">FT</B></FONT></TD>
+<TD WIDTH="24%" VALIGN="TOP">
+<B><FONT SIZE=2><P ALIGN="CENTER">FT+</P>
+<P ALIGN="CENTER">NP</B></FONT></TD>
+<TD WIDTH="24%" VALIGN="TOP">
+<B><FONT SIZE=2><P ALIGN="CENTER">NP</B></FONT></TD>
+</TR>
+<TR><TD WIDTH="29%" VALIGN="TOP">
+<B><FONT SIZE=2><P ALIGN="CENTER">Average R</B></FONT></TD>
+<TD WIDTH="24%" VALIGN="TOP">
+<FONT FACE="Arial" SIZE=2><P ALIGN="CENTER">0.57093</FONT></TD>
+<TD WIDTH="24%" VALIGN="TOP">
+<FONT FACE="Arial" SIZE=2><P ALIGN="CENTER">0.60088</FONT></TD>
+<TD WIDTH="24%" VALIGN="TOP">
+<FONT FACE="Arial" SIZE=2><P ALIGN="CENTER">0.60088</FONT></TD>
+</TR>
+<TR><TD WIDTH="29%" VALIGN="TOP">
+<B><FONT SIZE=2><P ALIGN="CENTER">Average P</B></FONT></TD>
+<TD WIDTH="24%" VALIGN="TOP">
+<FONT FACE="Arial" SIZE=2><P ALIGN="CENTER">0.04492</FONT></TD>
+<TD WIDTH="24%" VALIGN="TOP">
+<FONT FACE="Arial" SIZE=2><P ALIGN="CENTER">0.05251</FONT></TD>
+<TD WIDTH="24%" VALIGN="TOP">
+<FONT FACE="Arial" SIZE=2><P ALIGN="CENTER">0.05539</FONT></TD>
+</TR>
+<TR><TD WIDTH="29%" VALIGN="TOP">
+<B><FONT SIZE=2><P ALIGN="CENTER">% Increase over FT R</B></FONT></TD>
+<TD WIDTH="24%" VALIGN="TOP">
+<FONT FACE="Arial" SIZE=2><P ALIGN="CENTER">----</FONT></TD>
+<TD WIDTH="24%" VALIGN="TOP">
+<FONT FACE="Arial" SIZE=2><P ALIGN="CENTER">5%</FONT></TD>
+<TD WIDTH="24%" VALIGN="TOP">
+<FONT FACE="Arial" SIZE=2><P ALIGN="CENTER">5%</FONT></TD>
+</TR>
+<TR><TD WIDTH="29%" VALIGN="TOP">
+<B><FONT SIZE=2><P ALIGN="CENTER">% Increase over FT P</B></FONT></TD>
+<TD WIDTH="24%" VALIGN="TOP">
+<FONT FACE="Arial" SIZE=2><P ALIGN="CENTER">----</FONT></TD>
+<TD WIDTH="24%" VALIGN="TOP">
+<FONT FACE="Arial" SIZE=2><P ALIGN="CENTER">17%</FONT></TD>
+<TD WIDTH="24%" VALIGN="TOP">
+<FONT FACE="Arial" SIZE=2><P ALIGN="CENTER">23%</FONT></TD>
+</TR>
+</TABLE>
+
+<B><P ALIGN="JUSTIFY"><A NAME="_Ref441824840">Table 2</A>: Average Recall (R) and Precision (P) for </P>
+<P ALIGN="JUSTIFY">FT+NP and NP, compared to FT</P>
+</B><P ALIGN="JUSTIFY">&nbsp;</P>
+<P ALIGN="JUSTIFY">These results show that enhancing the FT corpus with adjectives and nouns is less effective than reducing the corpus to only adjectives and nouns. The NP version came in first place, although the results for the average performance on the DFI metric were fairly close, as shown in Table 3.  The FT had the lowest performance by this measure.</P>
+
+<TABLE BORDER CELLSPACING=1 CELLPADDING=7 WIDTH=295>
+<TR><TD WIDTH="23%" VALIGN="TOP">
+<P>Version</TD>
+<TD WIDTH="19%" VALIGN="TOP">
+<P>FT</TD>
+<TD WIDTH="22%" VALIGN="TOP">
+<P>FT+NP</TD>
+<TD WIDTH="18%" VALIGN="TOP">
+<P>NP</TD>
+<TD WIDTH="18%" VALIGN="TOP">
+<P>TIES</TD>
+</TR>
+<TR><TD WIDTH="23%" VALIGN="TOP">
+<P>Avg. score</TD>
+<TD WIDTH="19%" VALIGN="TOP">
+<P>40.5</TD>
+<TD WIDTH="22%" VALIGN="TOP">
+<P>39</TD>
+<TD WIDTH="18%" VALIGN="TOP">
+<P>37.17</TD>
+<TD WIDTH="18%" VALIGN="TOP">
+<P>NA</TD>
+</TR>
+<TR><TD WIDTH="23%" VALIGN="TOP">
+<P>Wins</TD>
+<TD WIDTH="19%" VALIGN="TOP">
+<P>6</TD>
+<TD WIDTH="22%" VALIGN="TOP">
+<P>4</TD>
+<TD WIDTH="18%" VALIGN="TOP">
+<P>26</TD>
+<TD WIDTH="18%" VALIGN="TOP">
+<P>8</TD>
+</TR>
+</TABLE>
+
+<B><P><A NAME="_Ref440085522"><A NAME="_Ref440165727">Table 3</A>: Average score and number of wins per run for the DFI metric (lower is better)</A></P>
+
+</B><P ALIGN="JUSTIFY">When we tallied the winner of the set of runs for each query based on the DFI metric, as also shown in Table 3, we were surprised to find that the NP corpus had by far the most wins, 24 out of 44. </P>
+<P ALIGN="JUSTIFY">The NP category by far outperformed all of the other categories in terms of winning run, with 26 out of a total of 44.  While FT performed the worst, it is not surprising that it was outperformed by FT+NP, which is a superset of the FT category.  They both contain all of the information in the documents that are in the FT corpus, and have additional words which result in a re-weighting of the words.  What is surprising is that the NP category, which is a subset of the FT category, performs remarkably well even though it uses a reduced word space. </P>
+<P ALIGN="JUSTIFY">Overall, these results confirm the importance of Ns and JJs in a statistical IR system.  Although these results have significance for the statistically-based IR systems, they are expected from a linguistic point of view.  In the next section, we discuss a result which is more linguistically surprising—the outperformance by JJ of other lexical classes except N.</P>
+<LI><A NAME="_Ref440088078"><B>The importance of adjectives</A></LI></OL>
+
+</B><P ALIGN="JUSTIFY">Table 4 shows that the JJ versions of the documents outperform all three lexical categories categories, including Ns and NPs, in terms of precision and recall. </P>
+<FONT SIZE=2></FONT>
+<TABLE BORDER CELLSPACING=1 CELLPADDING=7 WIDTH=540>
+<TR><TD WIDTH="16%" VALIGN="TOP">&nbsp;</TD>
+<TD WIDTH="14%" VALIGN="TOP">
+<B><FONT SIZE=2><P ALIGN="CENTER">FT</B></FONT></TD>
+<TD WIDTH="14%" VALIGN="TOP">
+<B><FONT SIZE=2><P ALIGN="CENTER">NP</B></FONT></TD>
+<TD WIDTH="14%" VALIGN="TOP">
+<B><FONT SIZE=2><P ALIGN="CENTER">JJ</B></FONT></TD>
+<TD WIDTH="14%" VALIGN="TOP">
+<B><FONT SIZE=2><P ALIGN="CENTER">NN</B></FONT></TD>
+<TD WIDTH="14%" VALIGN="TOP">
+<B><FONT SIZE=2><P ALIGN="CENTER">RB</B></FONT></TD>
+<TD WIDTH="14%" VALIGN="TOP">
+<B><FONT SIZE=2><P ALIGN="CENTER">VB</B></FONT></TD>
+</TR>
+<TR><TD WIDTH="16%" VALIGN="TOP">
+<B><FONT SIZE=2><P>Average P</B></FONT></TD>
+<TD WIDTH="14%" VALIGN="TOP">
+<FONT FACE="Arial" SIZE=2><P ALIGN="CENTER">0.04492</FONT></TD>
+<TD WIDTH="14%" VALIGN="TOP">
+<FONT FACE="Arial" SIZE=2><P ALIGN="CENTER">0.05539</FONT></TD>
+<TD WIDTH="14%" VALIGN="TOP">
+<FONT FACE="Arial" SIZE=2><P ALIGN="CENTER">0.13557</FONT></TD>
+<TD WIDTH="14%" VALIGN="TOP">
+<FONT FACE="Arial" SIZE=2><P ALIGN="CENTER">0.03489</FONT></TD>
+<TD WIDTH="14%" VALIGN="TOP">
+<FONT FACE="Arial" SIZE=2><P ALIGN="CENTER">0.03013</FONT></TD>
+<TD WIDTH="14%" VALIGN="TOP">
+<FONT FACE="Arial" SIZE=2><P ALIGN="CENTER">0.02013</FONT></TD>
+</TR>
+<TR><TD WIDTH="16%" VALIGN="TOP">
+<B><FONT SIZE=2><P>Average R</B></FONT></TD>
+<TD WIDTH="14%" VALIGN="TOP">
+<FONT FACE="Arial" SIZE=2><P ALIGN="CENTER">0.57093</FONT></TD>
+<TD WIDTH="14%" VALIGN="TOP">
+<FONT FACE="Arial" SIZE=2><P ALIGN="CENTER">0.60088</FONT></TD>
+<TD WIDTH="14%" VALIGN="TOP">
+<FONT FACE="Arial" SIZE=2><P ALIGN="CENTER">0.55512</FONT></TD>
+<TD WIDTH="14%" VALIGN="TOP">
+<FONT FACE="Arial" SIZE=2><P ALIGN="CENTER">0.42818</FONT></TD>
+<TD WIDTH="14%" VALIGN="TOP">
+<FONT FACE="Arial" SIZE=2><P ALIGN="CENTER">0.20868</FONT></TD>
+<TD WIDTH="14%" VALIGN="TOP">
+<FONT FACE="Arial" SIZE=2><P ALIGN="CENTER">0.16932</FONT></TD>
+</TR>
+</TABLE>
+
+<B><P><A NAME="_Ref441852754"><A NAME="_Ref441852784">Table 4</A>: Average Recall (R) and Precision (P) for FT and for the reduced corpora over 10 levels of target Precision</A></P>
+</B><P ALIGN="JUSTIFY">The JJ version also outperforms FT in terms of precision.</P>
+<P ALIGN="JUSTIFY">Table 5 shows the increase in precision and recall of the JJ corpus over the other lexical categories.</P>
+<P ALIGN="JUSTIFY"></P>
+<TABLE BORDER CELLSPACING=1 CELLPADDING=2 WIDTH=269>
+<TR><TD WIDTH="25%" VALIGN="TOP" HEIGHT=16><P></P></TD>
+<TD WIDTH="25%" VALIGN="TOP" HEIGHT=16>
+<B><FONT FACE="Arial" SIZE=2><P>NN</B></FONT></TD>
+<TD WIDTH="25%" VALIGN="TOP" HEIGHT=16>
+<B><FONT FACE="Arial" SIZE=2><P>RB</B></FONT></TD>
+<TD WIDTH="25%" VALIGN="TOP" HEIGHT=16>
+<B><FONT FACE="Arial" SIZE=2><P>VB</B></FONT></TD>
+</TR>
+<TR><TD WIDTH="25%" VALIGN="TOP" HEIGHT=16>
+<B><FONT FACE="Arial" SIZE=2><P>% inc P</B></FONT></TD>
+<TD WIDTH="25%" VALIGN="TOP" HEIGHT=16>
+<FONT FACE="Arial" SIZE=2><P ALIGN="RIGHT">288%</FONT></TD>
+<TD WIDTH="25%" VALIGN="TOP" HEIGHT=16>
+<FONT FACE="Arial" SIZE=2><P ALIGN="RIGHT">350%</FONT></TD>
+<TD WIDTH="25%" VALIGN="TOP" HEIGHT=16>
+<FONT FACE="Arial" SIZE=2><P ALIGN="RIGHT">573%</FONT></TD>
+</TR>
+<TR><TD WIDTH="25%" VALIGN="TOP" HEIGHT=16>
+<B><FONT FACE="Arial" SIZE=2><P>% inc R</B></FONT></TD>
+<TD WIDTH="25%" VALIGN="TOP" HEIGHT=16>
+<FONT FACE="Arial" SIZE=2><P ALIGN="RIGHT">30%</FONT></TD>
+<TD WIDTH="25%" VALIGN="TOP" HEIGHT=16>
+<FONT FACE="Arial" SIZE=2><P ALIGN="RIGHT">166%</FONT></TD>
+<TD WIDTH="25%" VALIGN="TOP" HEIGHT=16>
+<FONT FACE="Arial" SIZE=2><P ALIGN="RIGHT">228%</FONT></TD>
+</TR>
+</TABLE>
+
+<B><P ALIGN="JUSTIFY"><A NAME="_Ref441822419">Table 5</A>: Increase in precision and recall of JJ corpus over RB, NN, and VB corpora</P>
+<P ALIGN="JUSTIFY">&nbsp;</P>
+</B><P ALIGN="JUSTIFY">These percentages are high in part because of the small number of documents actually relevant to the query; nevertheless they are strong indicators of the potential importance of adjectives.  Figure 1 shows the high performance of the JJ version with respect to precision relative to other versions. </P>
+<P ALIGN="JUSTIFY"><IMG SRC="http://www1.cs.columbia.edu/~devans/papers/acl1999/Image4.gif" WIDTH=375 HEIGHT=257></P>
+<P ALIGN="JUSTIFY"></P>
+<P ALIGN="JUSTIFY">&#9;</P>
+<P ALIGN="JUSTIFY"></P>
+<P ALIGN="JUSTIFY">&nbsp;</P>
+<P ALIGN="JUSTIFY">&nbsp;</P>
+<P ALIGN="JUSTIFY">These results were further upheld in evaluation by the DFI metric.  </P>
+<P ALIGN="JUSTIFY"></P>
+<P ALIGN="JUSTIFY">&nbsp;</P>
+<TABLE BORDER CELLSPACING=1 CELLPADDING=7 WIDTH=449>
+<TR><TD WIDTH="15%" VALIGN="TOP">
+<P ALIGN="CENTER">Corpus</TD>
+<TD WIDTH="12%" VALIGN="TOP">
+<P ALIGN="CENTER">FT</TD>
+<TD WIDTH="12%" VALIGN="TOP">
+<P ALIGN="CENTER">NP</TD>
+<TD WIDTH="12%" VALIGN="TOP">
+<P ALIGN="CENTER">N</TD>
+<TD WIDTH="11%" VALIGN="TOP">
+<P ALIGN="CENTER">VB</TD>
+<TD WIDTH="12%" VALIGN="TOP">
+<P ALIGN="CENTER">JJ</TD>
+<TD WIDTH="12%" VALIGN="TOP">
+<P ALIGN="CENTER">RB</TD>
+<TD WIDTH="12%" VALIGN="TOP">
+<P ALIGN="CENTER">TIES</TD>
+</TR>
+<TR><TD WIDTH="15%" VALIGN="TOP">
+<P ALIGN="CENTER">Avg. score</TD>
+<TD WIDTH="12%" VALIGN="TOP">
+<P ALIGN="CENTER">40.5</TD>
+<TD WIDTH="12%" VALIGN="TOP">
+<P ALIGN="CENTER">37.17</TD>
+<TD WIDTH="12%" VALIGN="TOP">
+<P ALIGN="CENTER">55.17</TD>
+<TD WIDTH="11%" VALIGN="TOP">
+<P ALIGN="CENTER">75</TD>
+<TD WIDTH="12%" VALIGN="TOP">
+<P ALIGN="CENTER">38.83</TD>
+<TD WIDTH="12%" VALIGN="TOP">
+<P ALIGN="CENTER">75</TD>
+<TD WIDTH="12%" VALIGN="TOP">
+<P ALIGN="CENTER">NA</TD>
+</TR>
+<TR><TD WIDTH="15%" VALIGN="TOP">
+<P ALIGN="CENTER">Wins</TD>
+<TD WIDTH="12%" VALIGN="TOP">
+<P ALIGN="CENTER">1</TD>
+<TD WIDTH="12%" VALIGN="TOP">
+<P ALIGN="CENTER">14</TD>
+<TD WIDTH="12%" VALIGN="TOP">
+<P ALIGN="CENTER">11</TD>
+<TD WIDTH="11%" VALIGN="TOP">
+<P ALIGN="CENTER">4</TD>
+<TD WIDTH="12%" VALIGN="TOP">
+<P ALIGN="CENTER">10</TD>
+<TD WIDTH="12%" VALIGN="TOP">
+<P ALIGN="CENTER">0</TD>
+<TD WIDTH="12%" VALIGN="TOP">
+<P ALIGN="CENTER">4</TD>
+</TR>
+</TABLE>
+
+<B><P>Table 6: Results per run for the DFI metric</P>
+</B><P ALIGN="JUSTIFY">Only the NP version outperformed the JJ version in average score; both the NP version and the N version outperformed the JJ version in terms of  number of wins out of the 44 queries.  These results show that adjectives play an unexpectedly important role in the identification of relevant documents by a statistical IR system.</P>
+<B><FONT SIZE=4><LI>Analysis</LI></OL>
+
+</B></FONT><P ALIGN="JUSTIFY">The results of our experiment show the following: </P>
+
+<UL>
+<P ALIGN="JUSTIFY"><LI>Reducing documents to JJs and Ns, the open-class components of NPs, results in a slight improvement of the performance of a statistical IR system.  </LI></P></UL>
+
+
+<UL>
+<P ALIGN="JUSTIFY"><LI>Adjectives play a very important role in distinguishing relevant documents from irrelevant ones.  </LI></P></UL>
+
+<P ALIGN="JUSTIFY">In the full version of this paper, we will explore the properties of IR systems and the data that lie behind these findings.  This discussion will include careful analysis of the reasons that that adjectives and nouns play such an important role in particular queries and documents.  We believe that this experiment upholds the central importance of NPs to the aboutness of documents and also sheds new light on the contribution of modifiers and heads of NPs.  In addition we will consider the possibility that words from other categories besides adjectives and nouns actually impair results in a statistical IR system </P>
+<P ALIGN="JUSTIFY">To be sure that the results of this experiment scale up, we will incorporate additional documents into this experiment for the full version of this paper.  In addition to more articles from the Ziff-Davis corpus, we will use documents from several other corpora on the TIPSTER CD-ROM.  This will allow us to determine whether grammatical categories play different roles in different corpora.</P>
+<P ALIGN="JUSTIFY">In future work, we plan to perform similar experiments with phrases qua phrases, where the order of the words is retained, so that for example, <I>soup chicken</I> is distinguished from <I>chicken soup</I>.  By comparing these results with results of the work described in this paper, we hope to shed light on the role of shallow parsing in IR systems in particular and in NLP in general. </P>
+<OL>
+
+<B><FONT SIZE=4><LI>References</LI></OL>
+<DIR>
+<DIR>
+
+</B></FONT><P>Aberdeen, John, John Burger, David Day, Lynette Hirschman, Patricia Robinson and Marc Vilain (1995) "MITRE: Description of the Alembic System as Used for MUC-6<I>". Proceedings of the Sixth Message Understanding Conference (MUC-6)</I>, November 1995.</P>
+<P>Abney, Steven (1996) &quot;Statistical methods and linguistics&quot;, In<I> The Balancing Act: Combining Symbolic and Statistical Approaches to Language</I>, edited by Judith L. Klavans and Philip Resnik, MIT Press, Cambridge, MA</P>
+<P>Arampatzis, A.T., T. Tsoris, C.H.A. Koster and Th. P. Van der Weide (1998) "Ph(r)ase-based information retrieval", Information Processing &amp; Management 34(6):693-707.</P>
+<P>Collins ``Three Generative, Lexicalised Models for Statistical Parsing'' <I>Proceedings of the 1997 ACL Conference</I>, Madrid, Spain. </P>
+<P>Evans, David Kirk (1999) &quot;LinkIT Documentation&quot;,  Technical Report, Department of Computer Science, Columbia University, ms.</P>
+<P>Harman, Donna, (1995) &quot;Overview of the fourth Text Retrieval Conference (TREC-4)&quot;, <I>Proceedings of the Fourth TREC Conference (TREC 4)</I>. Available at: <A HREF="http://trec.nist.gov/pubs/trec4/overview.ps">http://trec.nist.gov/pubs/trec4/</A>.</P>
+<P>Harman, Donna, (1993) &quot;Overview of the second Text Retrieval Conference (TREC-2)&quot;, T<I>he Second Text Retrieval Conference (TREC-2)</I>, National Institute of Standards and Technology Special Publication 500-215, Gaithersberg, MD.  Available at http://trec.nist.gov/pubs/trec2/papers/txt/01.txt</P>
+<P>Hull, David A., Gregory Grefenstte, B. Maximilian Schulze, Eric Gaussier, Hinrich Schutxe and Jan O. Pederson (1996) &quot;Xerox TREC-5 Site Report: Routing, Filtering, NLP and Spanish Tracks&quot;, <I>Proceedings of the Fifth Text REtrieval Conference (TREC 5)</I>, edited by Ellen Voorhees and Donna Harman, November 1996.  NIST Special Publication 500-238, Department of Commerce National Institute of Standards.  Available at <A HREF="http://trec.nist.gov/pubs.html">http://trec.nist.gov/pubs.html</A></P>
+<P>Jacquemin, Christian, Judith L. Klavans, and Evelyne Tzoukermann (1997) &quot;Expansion of multi-word terms for indexing and retrieval using morphology and syntax&quot;, <I>Proceedings of the Thirty-fifth Annual Meeting of the Association for Computational Linguistics</I>, ACL, Barcelona, Spain, July 7-10, 1997.</P>
+<P>Klavans, Judith and Nina Wacholder (1998) &quot;Automatic identification of significant topics in domain-independent full text documents&quot;, <I>Proceedings of Workshop on Information and Data Management</I>, March 29-31, 1998, Washington DC.</P>
+<P>Kraaj, Wessel and Ren&eacute;e Pohlmann (1998) &quot;Comparing the Effect of Syntactic vs. Statistical Phrase Indexing Strategies for Dutch&quot;, <I>Proceedings of the Second European Conference on Research and Advanced Technology for Digital Libraries</I>, edited by C. Nikolaou &amp; C. Stephanidis, September 1998.    </P>
+<P>Mitra, Mantra, Chris Buckley, Amit Singhal and Claire Cardie (1997) &quot;An analysis of statistical and syntactic phrases&quot;, <I>Proceedings of the Fifth RIAO Conference: Computer-assisted Information Searching on the Internet</I>, 200-214. Available at: http://simon.cs.cornell.edu/home/cardie/#3. </P>
+<P>Salton, Gerard (1988) <I>Automatic Text Processing</I>, Addison Wesley, Reading, MA.</P>
+<P>Strzalkowski, Tomek (1995) Natural language information retrieval<I>, Information Processing &amp; Management</I> 31(3):397-417</P>
+<P>Strzalkowski, Tomek, Louise Guthrie, Jussi Karlgren, Jim Leistensnider, Fang Lin, Jose Perez-Carballo, Troy Straszheirm, Jim Wang and Jon Wilding (1996) &quot;Natural Language Information Retrieval: TREC-5 Report&quot;, <I>Proceedings of the Fifth Text REtrieval Conference (TREC 5)</I>, edited by Ellen Voorhees and Donna Harman, November 1996.  NIST Special Publication 500-238, Department of Commerce National Institute of Standards.  Available at <A HREF="http://trec.nist.gov/pubs.html">http://trec.nist.gov/pubs.html</A></P>
+<P>Text Research Collection (TREC) Volume 2 (revised March 1994), available from the Linguistic Data Consortium.</P>
+<P> Voorhees, Ellen M. and Donna Harman (1997) &quot;Overview of the Sixth Text Retrieval Conference (TREC-6)&quot;; NIST Special Publication 500-240.  Available at: http://trec.nist.gov/pubs.html.</P>
+<P>Wacholder, Nina (1998) &quot;Simplex NPs clustered by head: a method for identifying significant topics in a document&quot;, Proceedings of Workshop on the Computational Treatment of Nominals, edited by Federica Busa, Inderjeet Mani and Patrick Saint-Dizier, pp.70-79. COLING-ACL, October 16, 1998, Montreal.  </P>
+<P>Zhai, Chengziang (1997) &quot;Fast statistical parsing of noun phrases for document indexing&quot;, <I>Proceedings of the Fifth Conference on Applied Natural Language Processing</I>, Association for Computational Linguistics, Washington D.C., March 31-April 1, 1997</P>
+<FONT SIZE=2></DIR>
+</DIR>
+</FONT></BODY>
+</HTML>

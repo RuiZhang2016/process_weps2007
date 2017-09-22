@@ -1,0 +1,788 @@
+/* st: Main Text */
+.st {
+ font-weight: normal;
+ font-style: normal;
+ text-decoration: none;
+ text-align: left;
+ vertical-align: top;
+}
+BODY {
+ font-weight: normal;
+ font-style: normal;
+ text-decoration: none;
+ text-align: left;
+}
+IMG { border-width: 0; }
+BODY {
+ background-image: url(background2.jpg);
+ margin: 0 4px 0 .5em;
+ padding: 0;
+ height: 100%;
+}
+HTML {
+ height: 100%;
+}
+#border {
+ background-image: url(border.jpg);
+ background-repeat: repeat-y;
+ left: 0;
+ min-height: 100%;
+ height:expression("100%");
+ padding-left: 150px;
+ position: absolute;
+ top: 0;
+}
+/* Header: Header */
+.Header {
+ border-width: 0px;
+ border-style: solid;
+ border-color: #c0c0c0;
+ text-align: center;
+ color: #000000;
+ padding-left: 2px;
+ padding-right: 2px;
+ padding-top: 2px;
+ padding-bottom: 2px;
+}
+/* hs1: Heading Option 1 */
+.hs1 {
+ font-family: arial,helvetica;
+ font-size: 120%;
+ font-weight: bold;
+ font-style: normal;
+}
+/* hs2: Heading Option 2 */
+.hs2 {
+ font-family: arial,helvetica;
+ font-size: 100%;
+ font-weight: bold;
+ font-style: normal;
+}
+/* hs3: Heading Option 3 */
+.hs3 {
+ font-family: arial,helvetica;
+ font-size: 80%;
+ font-weight: normal;
+ font-style: italic;
+}
+/* bp: Button Position */
+.bp {
+ text-align: center;
+}
+/* sn: Name: Subject */
+.sn {
+ font-family: arial,helvetica;
+ font-size: 120%;
+ font-weight: bold;
+ font-style: normal;
+}
+/* nt: Name: Title */
+.nt {
+ font-weight: normal;
+ font-style: normal;
+}
+/* ng: Name: Given */
+.ng {
+ font-weight: normal;
+ font-style: normal;
+}
+/* ns: Name: Surname */
+.ns {
+ font-weight: bold;
+ font-style: normal;
+ font-variant: normal;
+}
+/* nu: Name: Suffix */
+.nu {
+ font-weight: normal;
+ font-style: normal;
+}
+/* pid: Exhibit: Image DIV */
+.pid {
+ float: left;
+ border-width: 1px;
+ border-style: solid;
+ border-color: #c0c0c0;
+ background-color: #ffffff;
+ text-align: center;
+ padding-left: 4px;
+ padding-right: 4px;
+ padding-top: 4px;
+ padding-bottom: 4px;
+ margin-left: 2px;
+ margin-right: 2px;
+ margin-top: 2px;
+ margin-bottom: 2px;
+}
+/* pic: Exhibit: Image Caption */
+.pic {
+ font-family: sans-serif;
+ font-size: 75%;
+ font-weight: normal;
+ font-style: normal;
+ text-align: Center;
+}
+/* id: Exhibit: Linked Image DIV */
+.id {
+ border-width: 1px;
+ border-style: solid;
+ border-color: #c0c0c0;
+ background-color: #ffffff;
+ text-align: center;
+ padding-left: 4px;
+ padding-right: 4px;
+ padding-top: 4px;
+ padding-bottom: 4px;
+ margin-left: 2px;
+ margin-right: 2px;
+ margin-top: 2px;
+ margin-bottom: 2px;
+ display: table; width: 0;
+}
+/* ic: Exhibit: Linked Image Caption */
+.ic {
+ font-family: sans-serif;
+ font-weight: bold;
+ font-style: normal;
+ text-align: Center;
+}
+/* ptd: Exhibit: Text DIV */
+.ptd {
+ border-width: 1px;
+ border-style: solid;
+ border-color: #c0c0c0;
+ background-color: #ffffff;
+ text-align: left;
+ padding-left: 4px;
+ padding-right: 4px;
+ padding-top: 4px;
+ padding-bottom: 4px;
+ margin-left: 2px;
+ margin-right: 2px;
+ margin-top: 2px;
+ margin-bottom: 2px;
+}
+/* ptc: Exhibit: Text Caption */
+.ptc {
+ font-family: sans-serif;
+ font-size: 75%;
+ font-weight: normal;
+ font-style: normal;
+ text-align: Left;
+}
+/* sed: Exhibit: Source DIV */
+.sed {
+ font-weight: normal;
+ font-style: normal;
+ text-align: left;
+ background-color: #ffffff;
+ border-width: 1px;
+ border-style: solid;
+ border-color: #c0c0c0;
+ padding-left: 4px;
+ padding-right: 4px;
+ padding-top: 4px;
+ padding-bottom: 4px;
+ margin-left: 2px;
+ margin-right: 2px;
+ margin-top: 2px;
+ margin-bottom: 2px;
+ display: table; width: 0;
+}
+/* sec: Exhibit: Source Exhibit Caption */
+.sec {
+ font-family: sans-serif;
+ font-size: 75%;
+ font-weight: normal;
+ font-style: normal;
+ text-align: Left;
+ border-width: 0px;
+ border-style: solid;
+ border-color: #c0c0c0;
+ padding-left: 1px;
+ padding-right: 1px;
+ padding-top: 1px;
+ padding-bottom: 1px;
+}
+/* grid: Grid */
+.grid {
+ border-width: 0px;
+ border-style: solid;
+ border-color: #c0c0c0;
+ border-spacing: 1px;
+ border-collapse: collapse;
+ margin-left: 0px;
+ margin-right: 0px;
+ margin-top: 0px;
+ margin-bottom: 0px;
+ padding-left: 0px;
+ padding-right: 0px;
+ padding-top: 0px;
+ padding-bottom: 0px;
+}
+/* g1: Grid Column 1 */
+.g1 {
+ border-width: 0px;
+ border-style: solid;
+ border-color: #c0c0c0;
+ padding-left: 0px;
+ padding-right: 0px;
+ padding-top: 0px;
+ padding-bottom: 0px;
+ text-decoration: none;
+ text-align: left;
+ vertical-align: top;
+ width: 8em;
+}
+/* g2: Grid Column 2 */
+.g2 {
+ border-width: 0px;
+ border-style: solid;
+ border-color: #c0c0c0;
+ padding-left: 0px;
+ padding-right: 0px;
+ padding-top: 0px;
+ padding-bottom: 0px;
+ text-decoration: none;
+ text-align: center;
+ vertical-align: top;
+ width: 7em;
+}
+/* g3: Grid Column 3 */
+.g3 {
+ border-width: 0px;
+ border-style: solid;
+ border-color: #c0c0c0;
+ padding-left: 0px;
+ padding-right: 0px;
+ padding-top: 0px;
+ padding-bottom: 0px;
+ text-decoration: none;
+ text-align: left;
+ vertical-align: top;
+}
+/* footing: Footing */
+.footing {
+ font-weight: normal;
+ font-style: italic;
+ text-align: center;
+}
+/* listtitle: List Title */
+.listtitle {
+ font-size: 100%;
+ font-weight: bold;
+ font-style: normal;
+ text-align: center;
+ color: #000000;
+ background-color: none;
+ background-image: none;
+ border-width: 0px;
+ border-style: solid;
+ padding-left: 0px;
+ padding-right: 0px;
+ padding-top: 0px;
+ padding-bottom: 0px;
+}
+/* quote: Quote */
+.quote {
+ font-style: italic;
+ white-space: pre;
+ padding-left: 40px;
+ padding-right: 40px;
+}
+/* SUP: Superscripts */
+SUP {
+ font-size: 80%;
+ font-weight: normal;
+ font-style: normal;
+ text-decoration: none;
+ vertical-align: text-top;
+}
+/* cith: Citation Header */
+.cith {
+ font-weight: normal;
+ font-style: normal;
+ clear: both;
+ margin-bottom: 0;
+}
+/* citl: CITation List */
+.citl {
+ margin-top: 0;
+}
+/* citi: Citation Item */
+.citi {
+ font-weight: normal;
+ font-style: normal;
+}
+OL.citl LI {
+ font-weight: normal;
+ font-style: normal;
+}
+.charindex {
+ text-align: Center;
+}
+/* charindex A: Surname Character Index */
+.charindex A {
+ font-weight: bold;
+ font-style: normal;
+ color: #000000;
+ background-color: #c0c0c0;
+ border-width: 3px;
+ border-style: solid;
+ border-color: #808080;
+ text-decoration: none !important;
+ line-height: 2;
+ padding: .1em .4em .1em .4em;
+ font-size: 110%;
+}
+/* Pop-Up Pedigree window BODY tag */
+.pupbody {
+ margin:0;
+ background-color: #ffffff;
+}
+/* pupsubject: PUP Subject */
+.pupsubject {
+ font-weight: normal;
+ font-style: normal;
+ background-image: none;
+}
+/* pupfemale: PUP Female */
+.pupfemale {
+ font-weight: normal;
+ font-style: normal;
+ background-color: #ffcccc;
+ background-image: none;
+}
+/* pupmale: PUP Male */
+.pupmale {
+ font-weight: normal;
+ font-style: normal;
+ background-color: #b0e0e6;
+ background-image: url(background2.jpg);
+}
+.placeindex {}
+/* placeouter: Place Index Outer */
+.placeouter {
+ font-weight: bold;
+ font-style: normal;
+ text-decoration: none;
+ text-align: left;
+ margin-top: .4em;
+ margin-left: 0em;
+}
+DIV.placeindex DIV {
+ font-weight: bold;
+ font-style: normal;
+ text-decoration: none;
+ text-align: left;
+ margin-top: .4em;
+ margin-left: 0em;
+
+}
+/* placeinner: Place Index Inner */
+.placeinner {
+ font-weight: lighter;
+ font-style: normal;
+ text-decoration: none;
+ text-align: left;
+ margin-top: .1em;
+ margin-left: 2em;
+}
+DIV.placeindex DIV DIV {
+ font-weight: lighter;
+ font-style: normal;
+ text-decoration: none;
+ text-align: left;
+ margin-top: .1em;
+ margin-left: 2em;
+
+}
+DIV.placeindex A:visited, DIV.placeindex A:link, DIV.placeindex A:active {
+ color: #0000ff;
+}
+/* cf: Chart Frame */
+.cf {
+ position: relative;
+ font-family: arial,helvetica;
+ font-weight: bold;
+ font-style: normal;
+ text-align: center;
+ border-width: 3px;
+ border-style: outset;
+}
+/* cbp: Chart Box Properties */
+.cbp {
+ border-width: 1px;
+ border-style: solid;
+ padding: 2px;
+}
+/* csb: Chart Subject Box */
+.csb {
+ position: absolute;
+ font-family: arial,helvetica;
+ font-size: 10pt;
+ font-weight: bold;
+ font-style: normal;
+ text-align: center;
+ color: #000000;
+ background-color: #ffffff;
+ overflow: hidden;
+ border-width: 1px;
+ border-style: solid;
+ padding: 2px;
+}
+.csa {}
+A.csa:link {
+ color: #000000;
+ font-weight: Bold;
+ text-decoration: underline;
+}
+A.csa:visited {
+ color: #000000;
+ font-weight: Bold;
+ text-decoration: underline;
+}
+A.csa:active {
+ color: #000000;
+ font-weight: Bold;
+ text-decoration: underline;
+}
+/* cfb: Chart Female Box */
+.cfb {
+ position: absolute;
+ font-family: arial,helvetica;
+ font-size: 10pt;
+ font-weight: normal;
+ font-style: normal;
+ text-align: center;
+ color: #000000;
+ background-color: #ffcccc;
+ overflow: hidden;
+ border-width: 1px;
+ border-style: solid;
+ padding: 2px;
+}
+.cfa {}
+A.cfa:link {
+ color: #000000;
+ font-weight: Normal;
+ text-decoration: underline;
+}
+A.cfa:visited {
+ color: #000000;
+ font-weight: Normal;
+ text-decoration: underline;
+}
+A.cfa:active {
+ color: #000000;
+ font-weight: Normal;
+ text-decoration: underline;
+}
+/* cmb: Chart Male Box */
+.cmb {
+ position: absolute;
+ font-family: arial,helvetica;
+ font-size: 10pt;
+ font-weight: normal;
+ font-style: normal;
+ text-align: center;
+ color: #000000;
+ background-color: #99c3d3;
+ overflow: hidden;
+ border-width: 1px;
+ border-style: solid;
+ padding: 2px;
+}
+.cma {}
+A.cma:link {
+ color: #000000;
+ font-weight: Normal;
+ text-decoration: underline;
+}
+A.cma:visited {
+ color: #000000;
+ font-weight: Normal;
+ text-decoration: underline;
+}
+A.cma:active {
+ color: #000000;
+ font-weight: Normal;
+ text-decoration: underline;
+}
+/* cub: Chart Unknown Gender Box */
+.cub {
+ position: absolute;
+ font-family: arial,helvetica;
+ font-size: 10pt;
+ font-weight: normal;
+ font-style: normal;
+ text-align: center;
+ color: #000000;
+ background-color: #ff6347;
+ background-image: none;
+ overflow: hidden;
+ border-width: 1px;
+ border-style: solid;
+ padding: 2px;
+}
+.cua {}
+A.cua:link {
+ color: #000000;
+ font-weight: Normal;
+ text-decoration: underline;
+}
+A.cua:visited {
+ color: #000000;
+ font-weight: Normal;
+ text-decoration: underline;
+}
+A.cua:active {
+ color: #000000;
+ font-weight: Normal;
+ text-decoration: underline;
+}
+/* cspb: Chart Spouse Box */
+.cspb {
+ position: absolute;
+ font-family: arial,helvetica;
+ font-size: 10pt;
+ font-weight: normal;
+ font-style: normal;
+ text-align: center;
+ color: #000000;
+ background-color: #cccccc;
+ background-image: none;
+ overflow: hidden;
+ border-width: 1px;
+ border-style: solid;
+ padding: 2px;
+}
+.cspa {}
+A.cspa:link {
+ color: #000000;
+ font-weight: Normal;
+ text-decoration: underline;
+}
+A.cspa:visited {
+ color: #000000;
+ font-weight: Normal;
+ text-decoration: underline;
+}
+A.cspa:active {
+ color: #000000;
+ font-weight: Normal;
+ text-decoration: underline;
+}
+/* cdb: Chart Duplicate Box */
+.cdb {
+ position: absolute;
+ font-family: arial,helvetica;
+ font-size: 10pt;
+ font-weight: normal;
+ font-style: normal;
+ text-align: center;
+ color: #000000;
+ background-color: #db7093;
+ background-image: none;
+ overflow: hidden;
+ border-width: 1px;
+ border-style: solid;
+ padding: 2px;
+}
+.cda {}
+A.cda:link {
+ color: #000000;
+ font-weight: Normal;
+ text-decoration: underline;
+}
+A.cda:visited {
+ color: #000000;
+ font-weight: Normal;
+ text-decoration: underline;
+}
+A.cda:active {
+ color: #000000;
+ font-weight: Normal;
+ text-decoration: underline;
+}
+/* cdt: Chart Dates */
+.cdt {
+ font-size: 8pt;
+ font-weight: normal;
+ font-style: normal;
+}
+/* connector: Connectors */
+.connector {
+ border-width: 1px;
+ border-style: solid;
+ border-color: #808080;
+}
+.cct {
+ font-size: 1px;
+ position: absolute;
+ border-top: 1px solid #808080;
+}
+.ccl {
+ font-size: 1px;
+ position: absolute;
+ border-left: 1px solid #808080;
+}
+.cctl {
+ font-size: 1px;
+ position: absolute;
+ border-top: 1px solid #808080;
+ border-left: 1px solid #808080;
+}
+.cctlr {
+ font-size: 1px;
+ position: absolute;
+ border-top: 1px solid #808080;
+ border-left: 1px solid #808080;
+ border-right: 1px solid #808080;
+}
+.cctlb {
+ font-size: 1px;
+ position: absolute;
+ border-top: 1px solid #808080;
+ border-left: 1px solid #808080;
+ border-bottom: 1px solid #808080;
+}
+.cclb {
+ font-size: 1px;
+ position: absolute;
+ border-left: 1px solid #808080;
+ border-bottom: 1px solid #808080;
+}
+/* tlcf: Timeline Chart Frame */
+.tlcf {
+ position: relative;
+ font-size: 1px;
+ margin: 0;
+ padding: 0;
+ border-width: 3px;
+ border-style: outset;
+}
+.tlap { /* timeline-absolute-position */
+ position: absolute;
+ font-size: 1px;
+}
+.tlrp { /* timeline-relative-position */
+ position: relative;
+ font-size: 1px;
+}
+/* tlpt: Timeline Person Text */
+.tlpt {
+ position: absolute;
+ font-family: verdana;
+ font-size: medium;
+ font-weight: bold;
+}
+/* tlvt: Timeline Event Text */
+.tlvt {
+ position: absolute;
+ font-family: verdana;
+ font-size: small;
+ font-weight: normal;
+ font-style: italic;
+}
+/* tlg: Timeline Grid Line */
+.tlg {
+ position: absolute;
+ font-size: 1px;
+ width: 3px;
+ border-left-width: 1px;
+ border-color: #c0c0c0;
+ border-left-style: dotted;
+}
+/* tlsl: Timeline Scale Line */
+.tlsl {
+ position: absolute;
+ font-size: 1px;
+ border-color: #808080;
+ border-top-width: 3px;
+ border-top-style: solid;
+}
+/* tltt: Timeline Tick Tall */
+.tltt {
+ position: absolute;
+ font-size: 1px;
+ border-color: #808080;
+ border-left-width: 3px;
+ border-left-style: solid;
+}
+/* tlts: Timeline Tick Thin */
+.tlts {
+ position: absolute;
+ font-size: 1px;
+ border-color: #808080;
+ border-left-width: 3px;
+ border-left-style: solid;
+}
+/* tlst: Timeline Scale Text */
+.tlst {
+ position: absolute;
+ text-align: center;
+ font-family: arial,helvetica;
+ font-size: small;
+ font-weight: bold;
+ font-style: normal;
+}
+/* u1: User Style 1 */
+.u1 {
+ font-weight: normal;
+ font-style: normal;
+ font-variant: normal;
+ text-align: left;
+ text-decoration: none;
+ border-width: 0px;
+ border-style: solid;
+ padding-left: 0px;
+ padding-right: 0px;
+ padding-top: 0px;
+ padding-bottom: 0px;
+ margin-left: 0px;
+ margin-right: 0px;
+ margin-top: 0px;
+ margin-bottom: 0px;
+}
+/* u2: User Style 2 */
+.u2 {
+ font-weight: normal;
+ font-style: normal;
+ font-variant: normal;
+ text-align: left;
+ text-decoration: none;
+ border-width: 0px;
+ border-style: solid;
+ padding-left: 0px;
+ padding-right: 0px;
+ padding-top: 0px;
+ padding-bottom: 0px;
+ margin-left: 0px;
+ margin-right: 0px;
+ margin-top: 0px;
+ margin-bottom: 0px;
+}
+/* u3: User Style 3 */
+.u3 {
+ font-weight: normal;
+ font-style: normal;
+ font-variant: normal;
+ text-align: left;
+ text-decoration: none;
+ border-width: 0px;
+ border-style: solid;
+ padding-left: 0px;
+ padding-right: 0px;
+ padding-top: 0px;
+ padding-bottom: 0px;
+ margin-left: 0px;
+ margin-right: 0px;
+ margin-top: 0px;
+ margin-bottom: 0px;
+}
+/* Navigational Links */
+.nav {
+}
+.nav:link, .nav:active, .nav:visited {
+}

@@ -1,0 +1,183 @@
+
+	<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+	"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<title>Open Journal Systems</title>
+	<meta name="description" content="" />
+	<meta name="keywords" content="" />
+	<script type="text/javascript" src="http://www.tdl.org/includes/jscript.js"></script>
+	
+	<link rel="stylesheet" href="common.css" type="text/css" />
+			<script type="text/javascript" src="general.js"></script>
+	<script type="text/javascript" src="tdl.js"></script>
+	
+</head>
+
+<body>
+<div id="container">
+
+<div id="header">
+
+	<a href="http://www.tdl.org/"><img id="logo" src="http://www.tdl.org/images/logo.gif" alt="Texas Digital Library" title="Texas Digital Library" /></a>
+	
+	<div id="metalinks">
+		<a href="javascript:openHelp('http://journals.tdl.org/robotstxt/help/view/user/topic/000001')">Journal Help</a>
+		|
+		<a href="http://www.tdl.org/sitemap.html">Site Map</a>
+	</div>
+	
+</div>
+
+<div id="breadcrumb">
+   <p>
+	<a href="http://www.tdl.org/">Home</a> &gt; 
+	<a href="http://journals.tdl.org/">Journals</a> &gt; 
+			<a href="robots.txt.1.html" class="current">Open Journal Systems</a>
+   </p>
+</div>
+
+<div id="mainmenu">
+	<ul>
+		<li><a href="http://www.tdl.org/about/" onmouseover="MM_hideAllDrops('1'); MM_showHideLayers('hidedropdown','0','show','dropdown1','9','show');" class="main_nav_text">about</a>
+			<ul id="dropdown1">
+				<li><a href="http://www.tdl.org/about/about.html" class="sub_nav_text">About the TDL</a></li>
+				<li><a href="http://www.tdl.org/about/institutions.html" class="sub_nav_text">Participating Institutions</a></li>
+				<li><a href="http://www.tdl.org/about/steering.html" class="sub_nav_text">Steering Committee</a></li>
+				<li><a href="http://www.tdl.org/about/working.html" class="sub_nav_text">Metadata Working Group</a></li>
+				<li><a href="http://www.tdl.org/about/staff.html" class="sub_nav_text">Staff</a></li>
+			</ul>
+		</li>
+		<li><a href="http://www.tdl.org/projects/" onmouseover="MM_hideAllDrops('2'); MM_showHideLayers('hidedropdown','0','show','dropdown2','100','show');" class="main_nav_text">projects</a>
+			<ul id="dropdown2">
+				<li><a href="http://journals.tdl.org" class="sub_nav_text">Journal</a></li> 
+				<li><a href="http://repositories.tdl.org" class="sub_nav_text">Repository</a></li>
+			</ul>
+		</li>
+		<li><a href="http://www.tdl.org/services/" onmouseover="MM_hideAllDrops('3');" class="main_nav_text">services</a></li>
+		<li><a href="http://www.tdl.org/news/" onmouseover="MM_hideAllDrops('4');" class="main_nav_text">news</a></li>
+		<li><a href="http://www.tdl.org/contact/" onmouseover="MM_hideAllDrops('5');" class="main_nav_text">contact us</a></li>
+	</ul>
+</div>
+
+
+<div id="body">
+
+<div id="sidebar">
+	
+<!--
+<div class="block">
+	<a href="javascript:openHelp('http://journals.tdl.org/robotstxt/help/view/user/topic/000001')">Journal Help</a>
+</div>
+-->
+
+<div class="block">
+	<span class="blockTitle">User</span>
+		<form method="post" action="http://journals.tdl.org/robotstxt/login/signIn">
+	<table>
+	<tr>
+		<td><label for="sidebar-username">Username</label></td>
+		<td><input type="text" id="sidebar-username" name="username" value="" size="12" maxlength="32" class="textField" /></td>
+	</tr>
+	<tr>
+		<td><label for="sidebar-password">Password</label></td>
+		<td><input type="password" id="sidebar-password" name="password" value="" size="12" maxlength="32" class="textField" /></td>
+	</tr>
+	<tr>
+		<td colspan="2"><input type="checkbox" id="remember" name="remember" value="1" /> <label for="remember">Remember me</label></td>
+	</tr>
+	<tr>
+		<td><input type="submit" value="Sign In" class="button" /></td>
+	</tr>
+	</table>
+	</form>
+	</div>
+
+
+	
+<div class="block">
+	<span class="blockTitle">Journal Content</span>
+	
+	<span class="blockSubtitle">Search</span>
+	<form method="get" action="http://journals.tdl.org/robotstxt/search/results">
+		<input type="text" id="query" name="query" size="15" maxlength="255" value="" class="textField" /> 
+		<br />
+		<select name="searchField" size="1" class="selectMenu">
+				<option label="All" value="">All</option>
+<option label="Authors" value="1">Authors</option>
+<option label="Title" value="2">Title</option>
+<option label="Abstract" value="4">Abstract</option>
+<option label="Index terms" value="120">Index terms</option>
+<option label="Full Text" value="128">Full Text</option>
+
+		</select> 
+		<br />
+		<input type="submit" value="Search" class="button" />
+	</form>
+	
+	<br />
+	
+	</div>
+
+
+
+</div>
+
+<div id="main">
+
+<div id="navbar">
+	<ul>
+		<li><a href="http://journals.tdl.org/robotstxt/about">About</a></li>
+		<li><a href="http://journals.tdl.org/robotstxt/search">Search</a></li>
+
+	
+			<li><a href="http://journals.tdl.org/robotstxt/login">Login</a></li>
+		<li><a href="http://journals.tdl.org/robotstxt/user/register">Register</a></li>
+	
+	</ul>
+</div>
+
+<h2>Open Journal Systems</h2>
+
+<div id="maincontent">
+<br />
+
+<p>The Texas Digital Library's location for hosted scholarly content, including peer-reviewed journals, conference proceedings, and other institution-published scholarly content.</p>
+
+<br />
+
+<h3>Journal of Digital Information</h3>
+
+<p>Publishing papers on the management, presentation and uses of information in digital environments, JoDI is a peer-reviewed Web journal supported by Texas A&M University Libraries.</p>
+
+<p><a href="http://journals.tdl.org/jodi" class="action">View Journal</a> | <a href="http://journals.tdl.org/jodi/issue/current" class="action">Current Issue</a> | <a href="http://journals.tdl.org/jodi/user/register" class="action">Register</a></p>
+
+
+
+
+</div>
+</div>
+</div>
+
+<div id="breadcrumb">
+   <p>
+        <a href="http://www.tdl.org/">Home</a> &gt;
+        <a href="http://journals.tdl.org/">Journals</a> &gt;
+<!--    <a href="http://journals.tdl.org/robotstxt">Home</a> &gt;  -->
+                <a href="robots.txt.1.html" class="current">Open Journal Systems</a>
+   </p>
+</div>
+
+<div id="footer">
+	<div id="content">
+		<p>
+			&copy; Copyright 2006 Texas Digital Library. All Rights Reserved.
+		</p>
+			</div>
+</div>
+
+</div>
+</body>
+</html>

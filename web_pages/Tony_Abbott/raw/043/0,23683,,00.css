@@ -1,0 +1,778 @@
+@import url("/couriermail/css/base/0,23673,,00.css");
+@import url("/couriermail/css/skin/0,23672,,00.css");
+@import url("/couriermail/css/common/0,23674,,00.css");
+ 
+/*
+    
+
+	index ->	
+			Adspace
+			Content rows and panels
+			Feedback form
+			Blockquote
+*/
+
+
+/* common & overrides */
+
+body.story .content-section {
+border:none !important;
+}
+
+.content-panel {
+background:#fff;
+}
+
+#guide {margin:0 0 20px 0;}
+
+/* fix paragraph spacing - bottom margin only */
+body.story p {
+margin:0 0 1em 0 !important;
+}
+
+body.story h4 {
+font-size:1em;
+line-height:1.3;
+margin-bottom:1em;
+}
+
+body.story .right-content-column h4 {
+margin-bottom:0;
+
+}
+
+body.story ul.article-link-list {
+border: 1px solid #d7d2d2;
+border-top:0;
+padding:7px 11px 11px 8px;
+margin:0 0 7px 0;
+}
+
+body.story ul.article-link-list.no-border{
+border:0 !important;
+}
+
+body.story .right-content-column ul.article-link-list {
+border:0 !important;
+padding:0;
+margin:0;
+}
+
+body.story ul.article-link-list li {
+padding:0 0 0 10px;
+}
+
+body.story ul.article-link-list li.list-segment,
+body.story ul.article-link-list li.foot-note {
+background-image:none;
+margin:5px 0 0 -10px;
+}
+
+body.story ul.article-link-list li.foot-note {
+font-size:0.92em;
+}
+
+
+body.story ul.article-link-list li h3 {
+font-size:1em;
+background: transparent url("http://www.news.com.au/couriermail/images/horizontal-dots-4d4d4d.gif") bottom left repeat-x;
+}
+
+body.story .bordered {
+background:#fff;
+border:1px solid #cac8af;
+border-top:none;
+margin:2px 0 20px 0;
+padding:9px;
+float:left;
+width:728px;
+width:709px;
+overflow:hidden;
+height:auto;
+}
+
+body.story .article-title {
+width:100%;
+}
+
+body.story .article-header {
+padding:0;
+margin-bottom:8px;
+_margin-bottom:0;
+}
+
+body.story .article-header.double {
+margin-bottom:20px!important;
+}
+
+/*author-double override*/
+
+.author-double {
+height:72px !important;
+overflow:visible !important;
+width:729px;
+}
+
+body.story #master-wrap .author-double .article-toolbar.top {
+margin:0 !important;
+padding: 0;
+font-size: 0.92em;
+clear:both;
+position:absolute;
+top:40px;
+right:0;
+}
+
+body.story .article-header h1, body.story h2.sub-lead {
+display:block;
+width:100%;
+background: transparent url("http://www.news.com.au/couriermail/images/horizontal-dots-4d4d4d.gif") bottom left repeat-x;
+padding:0 0 5px 0;
+}
+
+body.story h2.sub-lead {
+font-size:1.46em;
+width:auto;
+}
+
+body.story .variant-sub-content {
+margin:0;
+background: #fff url("http://www.news.com.au/couriermail/images/bg-category-header.gif") 0 0 no-repeat;
+height:18px;
+color:#fff;
+}
+
+h3.category-header {
+background:#e4f0f6 url("http://www.news.com.au/couriermail/images/bg-your-say.gif") repeat-x bottom left;;
+padding: 5px 0 5px 35px;
+width: auto;
+font-size: 1.5em;
+font-weight: bold!important;
+}
+
+body.story h1.no-border {
+display:block;
+width:auto;
+border:0;
+padding:0 0 1px 0;
+background-image: none;
+color: #1B73A4;
+}
+
+body.story p.author {
+display:block;
+margin:5px 0 0 0 !important;
+font-size:0.92em;
+}
+
+.comment-panel {
+border: 1px solid #ccc;
+border-width: 0 0 1px 0;
+margin: 0 0 10px 0;
+}
+
+body.story p.published-date, body.story p.posted-by {
+display:block;
+margin:0 !important;
+font-size:0.92em;
+}
+
+body.story p.posted-by {
+text-align:right;
+margin:8px 0 !important;
+}
+
+body.story p.posted-by span {
+font-weight:700;
+}
+
+body.story .article-source {
+margin:-58px 0 0 0;
+
+}
+
+
+
+body.story p.bureau {
+margin:4px 0 20px 0 !important;
+display:block;
+font-size:0.92em;
+font-weight:700; 
+font-style:italic;
+}
+
+
+body.story dl.movie-rating {
+padding:8px 8px 0 8px;
+_padding:8px;
+margin:0;
+border:1px solid #d7d2d2;
+}
+
+body.story dl.movie-rating dd {
+font-weight:300;
+margin-bottom:8px;
+_height: 1px;
+}
+
+body.story dl.movie-rating ul {
+border:0;
+margin:0;
+padding:0;
+}
+
+
+
+body.story #image-lead {margin:0 0 16px 0;_margin-bottom:10px;}
+
+body.story #image-lead p {
+text-align:left;
+padding:2px 10px 2px 10px;
+background:#ebebe9;
+font:10px/1.3 normal Tahoma, sans-serif;
+margin:0;
+_margin-top:-3px !important;
+}
+
+body.story #image-lead.full-size {
+text-align:center;
+width:100%;
+}
+
+body.story #image-lead.full-size table {
+width:1%;
+text-align:left;
+margin:0 auto 0 auto;
+overflow:hidden;
+border-collapse:collapse;
+}
+
+body.story #image-lead.full-size table tr, 
+body.story #image-lead.full-size table td {
+padding:0;
+margin:0;
+}
+
+body.story #image-lead.full-size table p {
+margin:-1px 0 0 0 !important;
+_margin:-4px 0 0 0 !important;
+border-top:1px solid #fff;
+}
+
+
+
+.send-photo {
+font-size:0.92em;
+border:1px solid #d7d2d2;
+background:#fff;
+margin:11px 0 4px 0;
+_margin:2px 0 4px 0;
+padding:0;
+}
+
+.send-photo div {
+background:#e4f0f6 url("http://www.news.com.au/couriermail/images/send-photo-bg.gif") 0 0 no-repeat;
+height:80px;
+overflow:hidden;
+padding:0 0 0 45px;
+}
+
+
+.send-photo div p {
+display:block;
+height:80px;
+padding:7px;
+border-left:1px solid #fff;
+}
+
+.sms-photo {
+clear:left;
+margin-top:0.76em;
+display:block;
+}
+
+
+.send-photo .launch {font-size:1em;}
+
+h2.your-say {
+background:#fff url("http://www.news.com.au/couriermail/images/bg-our-your-say.gif") 0 0 no-repeat;
+height:32px;
+line-height:32px;
+color:#000;
+font-size:1.4em;
+padding:0;
+margin:0;
+width:719px;
+width:729px;
+text-indent:40px;
+}
+
+body.story h2.strap-head,
+body.story h2.strap-head-alt{
+font-size:1em !important;
+
+}
+
+.foot-sponsor-area {
+clear:both;
+float:right;
+width:90px;
+height:22px;
+background:#96bcd4;
+margin:20px 0 5px 0;
+_margin:0 !important;
+text-align:center;
+}
+
+div.end-story, hr.end-story-content,
+hr.end-commented-story {
+clear:both;
+height:0;
+margin:0;
+padding:0;
+border:none;
+visibility:hidden;
+}
+
+div.end-story {
+visibility:visible;
+height:1px;
+background: transparent url("http://www.news.com.au/couriermail/images/horizontal-dots-4d4d4d.gif") top left repeat-x;
+_margin-bottom:-10px;
+}
+
+
+hr.end-commented-story {
+margin:10px 0;
+_margin:5px 0;
+}
+
+hr.end-story-content {
+visibility:hidden;
+border:none;
+}
+
+.news-text-block {clear:both;}
+
+.news-text-link {
+display:block;
+clear:left;
+font-size:0.92em;
+background:#e4f0f6;
+line-height:2em;
+padding:0 10px 0 10px;
+clear:both;
+}
+
+/* =Adspace
+----------- */
+
+.adspace-300x600, .adspace-300x600 {
+margin-bottom: 0;
+}
+
+.adspace-wrap {
+margin-top:0 !important;
+margin-bottom: 20px;
+}
+
+.story-sponsor {
+position:absolute;
+right:10px;
+margin:-20px 0 0 0;
+width:89px;
+height:22px;
+}
+
+
+
+/* =Toolbars
+----------- */
+
+body.story .article-toolbar {
+background:transparent !important;
+float:right;
+font-size: 0.92em;
+}
+
+body.story .article-toolbar.top {
+margin:-26px 0 0 0;
+padding:0;
+padding-bottom: 5px;
+margin-bottom: 0;
+_margin-bottom: -12px;
+font-size: 0.92em;
+clear:both;
+position:relative;
+_top:-25px;
+}
+
+body.story .article-toolbar a,
+body.story .article-toolbar a:focus,
+body.story .article-toolbar a:active,
+body.story .article-toolbar a:-moz-any-link:focus {
+outline: none;
+}
+
+/*no clear:both*/
+body.story .article-toolbar.top-alt { 
+padding-bottom: 5px;
+margin-bottom: 0;
+font-size: 0.92em;
+position:relative;
+_top:-25px;
+}
+
+body.story .article-toolbar.bottom {
+clear: both;
+height: 19px;
+padding-top: 7px;
+margin-bottom: 11px;
+_padding-bottom:7px;
+}
+
+
+.article-toolbar p.font-size {
+height: 19px;
+display: block;
+width: 98px;
+float: left;
+position: relative;
+padding: 0;
+margin: 0 15px 0 0;
+line-height: normal;
+}
+
+.article-toolbar p.send-to {
+height: 19px;
+display: block;
+width: 135px;
+float: left;
+position: relative;
+padding: 0 0 0 10px;
+margin: 0 15px 0 0;
+line-height: normal;
+}
+
+.article-toolbar p a,
+.article-toolbar p a:hover {
+border:none !important;
+text-decoration:none !important;
+}
+
+a.size-up {
+position: absolute;
+bottom: 0;
+right: 24px;
+display: block;
+height: 19px;
+width: 20px;
+background: url("http://www.news.com.au/couriermail/images/iconset-articletools.gif") 0 0 no-repeat;
+text-indent: -9999px;
+}
+
+a.size-up:hover {
+background-position: -25px 0;
+}
+
+a.size-down {
+position: absolute;
+bottom: 0;
+right: 0;
+display: block;
+height: 19px;
+width: 20px;
+background: url("http://www.news.com.au/couriermail/images/iconset-articletools.gif") 0 -33px no-repeat;
+text-indent: -9999px;
+}
+
+a.size-down:hover {
+background-position: -25px -33px;
+}
+
+a.send-print{
+position: absolute;
+bottom: 0;
+right: 0;
+display: block;
+height: 19px;
+width: 20px;
+background: url("http://www.news.com.au/couriermail/images/iconset-articletools.gif") 0 -66px no-repeat;
+text-indent: -9999px;
+}
+
+a.send-print:hover {
+background-position: -25px -66px;
+}
+
+a.send-email {
+position: absolute;
+bottom: 0;
+right: 28px;
+display: block;
+height: 19px;
+width: 20px;
+background: url("http://www.news.com.au/couriermail/images/iconset-articletools.gif") 0 -99px no-repeat;
+text-indent: -9999px;
+}
+
+a.send-email:hover{
+background-position: -25px -99px;
+}
+
+/* =Content Rows and Panels
+----------- */
+
+.article-subcontent {
+float: right;
+padding-top:4px;
+}
+
+.left-content-column {
+padding-bottom: 0;
+margin-bottom: 0;
+}
+
+.content-division {
+padding-bottom: 10px;
+margin-top:10px !important;
+_position:relative;
+_top:10px;
+}
+
+.movie-rating-story {
+background:#f1f1e5;
+border:1px solid #b5ad87;
+font-size:.9em;
+padding:4px;
+margin-bottom:12px;
+}
+
+.movie-rating-story .rating {
+width:80px;
+
+}
+
+.movie-rating-story dfn {
+float:right;
+}
+
+.movie-rating-story span {
+float:left;
+}
+
+
+.movie-rating-story p.by-line {
+color:#494639;
+float:left;
+margin-bottom:0 !important;
+
+}
+
+.movie-rating-story p.from-link{
+float:right;
+margin-bottom:0 !important;
+}
+
+.movie-rating-story p.from-link img {
+margin:0 0 -4px 0;
+}
+
+/* =Story Links
+----------- */
+.content-panel-storylinks {
+float:none;
+margin: 0 0 16px 0;
+padding:0;
+border:0;
+}
+
+.content-panel-storylinks .article-link-list {
+padding-bottom:2px !important;
+}
+
+	
+
+/* =Feedback Form
+----------- */
+
+#dailyPoll {
+background:#e4f0f6 url("http://www.news.com.au/couriermail/images/bg-content-e4f0f6.gif") bottom left no-repeat;
+width:340px;
+padding:0 4px 0 5px;
+}
+
+#recent-poll p {
+padding:0 7px 0 7px !important;
+margin:0;
+}
+
+
+/* =Blockquote
+----------- */
+
+.article blockquote {
+width: 313px;
+margin: 20px auto;
+padding-top: 2px;
+border-top:1px solid #dadada;
+border-bottom:1px solid #dadada;
+line-height:1.3;
+}
+
+.article blockquote h3 {
+background: none;
+color: #000;
+font-size: 1.16em;
+}
+
+.article blockquote em, .article blockquote small {
+font-size: 0.92em;
+}
+
+.article blockquote em {
+font-weight: bold;
+}
+
+.article blockquote small {
+padding-bottom: 8px;
+display: block;
+}
+
+
+
+/* =blockquote your say 
+------------ */
+
+blockquote.archived-comment {
+padding: 0 0 8px 0;
+_padding: 0;
+margin: 0 0 10px 0; 
+width: 350px;
+border:0;
+border-bottom:1px solid #dadada;
+}
+
+blockquote.archived-comment cite {
+float:right;
+color:#333;
+font-style:normal;
+font-size:0.92em;
+display:block;
+text-align:right;
+margin:-8px 0 0 0;
+padding:2px;
+width:100%;
+background:#fcfcfc;
+}
+
+
+blockquote.archived-comment.last {border:0;}
+
+
+/* =blockquote your say 
+------------ */
+
+a.more-comments {
+display:block;
+background:#D5EBF6 url("http://www.news.com.au/couriermail/images/icon-arrow.gif") right 4px no-repeat;
+text-align:right;
+height:17px;
+line-height:17px;
+font-size:0.92em;
+padding:0 15px 0 0;
+margin:1px 0 15px 0;
+}
+
+h3.your-say-info {
+font-size:1em;
+margin:0;
+padding:0 0 2px 0;
+border-bottom:1px solid #bedbe9;
+}
+
+h3.submit-feedback {
+font-size:1em;
+margin:0;
+padding:0 0 2px 0;
+background:#fff url("http://www.news.com.au/couriermail/images/horizontal-dots-4d4d4d.gif") bottom left repeat-x;
+}
+
+blockquote.recent-comment {
+margin:0;
+border-top:2px solid #fff;
+border-bottom:1px solid #bedbe9;
+background:#f1f8fb url("http://www.news.com.au/couriermail/images/close-quote-bg.gif") top right no-repeat;
+padding:12px 125px 12px 25px;
+}
+
+blockquote.recent-comment p {
+width:551px;
+}
+
+blockquote.recent-comment cite {
+font-size:0.92em;
+color:#000;
+font-style:normal;
+float:right;
+}
+
+/* misc */
+body.story .arrow-link-end {
+background: transparent url("http://www.news.com.au/couriermail/images/icon-arrow.gif") no-repeat 100% 3px;
+padding-right:12px;
+}
+
+body.story .arrow-box-link-end {
+background: transparent url("http://www.news.com.au/couriermail/images/icon-boxed-solid-arrow.gif") no-repeat 100% 1px;
+padding-right:16px;
+}
+
+a.commented-story {
+background: url("http://www.news.com.au/couriermail/images/li-bg-headline-strap-list.gif") 0 3px no-repeat;
+padding:0 0 0 14px;
+margin:0 0 0 4px;
+}
+
+/*common*/
+
+.article-header h1 {
+font-size: 1.5em;
+}
+
+.article-header {
+padding-bottom: 15px;
+margin-top: 2px; 
+margin-bottom: 15px; 
+_margin-bottom:-5px !important;
+position: relative; 
+background: url(/images/bg-dotted-line.gif) bottom repeat-x;
+}
+
+.article-title {
+float: left;
+}
+
+.article-source {
+font-size: 0.85em; 
+float: right; 
+line-height: normal; 
+margin-top: 20px;
+}
+
+.article-source p {
+margin: 0; padding: 0;
+}
+
+.article p {
+margin-bottom: 20px;
+}
+
+
+
+p.author {font-size: 0.85em; font-weight:700; font-style:italic; margin-bottom: 0;height:1.2em;}
+p.published-date {font-size: 0.85em; margin-bottom: 0;}
+
+
+
+	

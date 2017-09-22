@@ -1,0 +1,944 @@
+/* layout divs */
+
+body {
+    margin: 10px 0px 10px 8px;
+    background-color: #FFFFFF;
+    color: #000000;
+    width: 780px;
+    position: relative;
+    display: block;
+    float: left;
+}
+
+.contentWrapper {
+    float: left;
+    position: relative;
+    width: 780px;
+}
+
+.header, .footerbottom, .footertop {
+    background-color: #336699;
+    width: 760px;
+    clear: both;
+    color: #FFFFFF;
+    float: left;
+    clear: both;
+}
+
+.footertop {
+    background-color: #FF9933;
+    border-bottom: 1px solid #D6E0EB;
+    margin: 8px 0px 0px 0px;
+    padding: 0px;
+    height: 3px;
+    clear: both;
+}
+
+.footerbottom {
+    width: 600px;
+    margin: 0px;
+    clear: both;
+    padding: 8px 80px 8px 80px;
+    float: left;
+}
+
+* html .footerbottom {
+    width: 760px;
+}
+
+.contentBody {
+    clear: both;
+    float: left;
+    margin: 0px;
+    padding: 0px;
+    width: 780px;
+}
+
+.leftcol {
+    clear: left;
+}
+
+.leftcol, .rightcol, .centercol {
+    margin: 0px 15px 0px 0px;
+    float: left;
+    overflow: hidden;
+    position: relative;
+}
+
+.leftcol, .rightcol, .section {
+    width: 170px;
+}
+
+.centercol {
+    width: 390px;
+}
+
+.section, .sectionleft, .sectionright {
+    width: 180px;
+    padding-bottom: 0px;
+    margin-bottom: 0px;
+}
+
+.sectionleft {
+    float: left;
+}
+
+.sectionright {
+    float: right;
+}
+
+/* end layout divs */
+
+div.homebox p, div.homebox td, div.homebox, div.homehighlight {
+    font-size: 11px;
+}
+
+div.homebox, div.homehighlight{
+    margin: 8px 0 8px 0;
+    padding: 8px 8px 14px 8px;
+    float: left;
+    overflow: hidden;
+    position: relative;
+}
+
+div.homebox {
+    border: 1px solid #BCD1E3;
+    border-top: 3px solid #BCD1E3;
+}
+
+div.leftcol div.homebox, div.rightcol div.homebox {
+    width: 150px;
+}
+
+div.leftcol div.homehighlight, div.rightcol div.homehighlight {
+     width: 170px;
+}
+
+div.centercol div.homebox {
+    width: 370px;
+}
+
+* html div.leftcol div.homebox, * html div.rightcol div.homebox, * html div.leftcol div.homehighlight, * html div.rightcol div.homehighlight {width: 170px;} /* hack for IE/Win */
+* html div.centercol div.homebox {
+    width: 390px;
+}
+
+
+div.homebox img { 
+    margin: 0px 6px 0px 0px;
+    float: left;
+    border: none;
+    clear: none;
+}
+
+div.homebox ul { /* lists with orange arrow bullets */
+    list-style-image: url(/bcom/images/ebolc05_home_arrow_orange_sm.gif);
+    clear: both;
+    padding-left: 15px;
+    margin-left: 0px;
+    margin-top: 0px;
+    float: left;
+    margin-bottom: 0px;
+    width: 90%;
+}
+
+div.homebox ul li {
+    margin-left: 0px;
+    padding-left: 0px;
+    float: left:
+    display: block;
+    margin-bottom: 2px;
+}
+
+div.homebox h2, div.homehighlight h2 {
+    margin: 0px;
+    padding: 0px;
+    font-weight: bolder;
+    color: #336699;
+    font-size: 16px;
+}
+
+
+div.homebox h2 {
+    margin-bottom: 7px;
+}
+
+div.homebox h2 img, div.homehighlight h2 img {
+    margin: 0px;
+    border: 0px;
+    padding: 0px;
+    float: left;
+}
+
+* html div.homehighlight h2 img {margin-left: -3px;} /* hack for IE/Win */
+
+
+div.homebox h3, div.homehighlight h3 {
+    font-weight: bold;
+    font-size: 12px;
+    font-style: italic;
+    margin-bottom: 5px;
+}
+
+div.homebox h3 img {
+    margin-top: 10px;
+}
+
+div.homebox h4, div.homehighlight h4 {
+    font-weight: normal;
+    font-size: 12px;
+}
+
+div.homehighlight { /*  yellow homepage boxes */
+    border: 0;
+    padding: 0;
+    width: 170px;
+}
+
+div.homestudentcenter, div.homehighlightcontent {
+    margin: 0px;
+    padding: 7px;
+    border: 1px solid #F9D9AB;
+    border-top: none;
+    clear: both;
+    float: left;
+}
+
+div.homestudentcenter {
+    background: transparent url(/bcom/images/ebolc05_home_sc_bg.gif) repeat-y top left;
+    border-left: none;
+    border-right: none;
+    padding: 16px 8px 8px 32px;
+    clear: both;
+    width: 130px;
+}
+
+*html div.homestudentcenter {
+    width: 170px;
+    padding-top: 26px;
+    padding-bottom: 18px;
+}
+
+div.homestudentcenter, div.homestudentcenter p {
+    line-height: 12px;
+}
+
+div.homecontent, div.homefeaturecontent { /* homepage content that goes inside homeboxes */
+    clear: both;
+    padding: 0px;
+    margin: 0px;
+}
+
+*html div.homefeaturecontent {
+    margin-bottom: -20px;
+}
+div.rightcol  div.homecontent, div.leftcol div.homecontent, div.leftcol div.homefeaturecontent  {
+    width: 150px;
+}
+
+*html div.leftcol div.homehighlightcontent, *html div.rightcol div.homehighlight {
+    width: 170px;
+}
+                                                                                
+                                                                                
+div.rightcol  div.homehighlightcontent, div.leftcol div.homehighlightcontent {
+    width: 154px;
+}
+
+
+div.centercol div.homecontent, div.scroller, div.centercol div.homefeaturecontent  {
+    background-color: #FFFFFF; /* so that IE doesn't display jagged text */
+    width: 370px;
+}
+
+a.homeLink, a.homeLinkBold, a.homeFeaturesArchive, ul.homeFeatureLinks li a { /* homepage links with orange arrows */
+    background: #FFFFFF url(/bcom/images/ebolc05_home_arrow_orange_sm.gif) no-repeat 0px 5px;
+    padding-left: 10px;
+}
+
+a.homeLinkBold, a.homeFeaturesArchive, ul.homeFeatureLinks li a {  /* bold links with orange arrows */
+    font-weight: bold;
+}
+
+a.homeFeaturesArchive {
+    font-style: italic;
+    float: left;
+    clear: left;
+    width: 100px;
+    margin-top: 5px;
+}
+
+div.homebox ul.homeFeatureLinks {
+    float: left;
+    margin: 8px 0px 0px 0px;
+    padding: 0px;
+    list-style-type: none;   
+    list-style-image: none;
+    width: 360px;
+    clear: none;
+}
+
+*html div.homebox ul.homeFeatureLinks {
+    width: 370px;
+    clear: both;
+}
+
+div.homebox ul.homeFeatureLinks li {
+    font-weight: bold;
+    float: left;
+    margin-right: 10px;
+}
+
+*html div.homebox ul.homeFeatureLinks li a {
+    display: block;
+    float: left;
+    white-space: nowrap;
+}
+
+div.homeFeatureNav {
+    margin: 5px 0px 0px 0px;
+    height: 13px;
+    width: 60px;
+    float: right;
+    clear: none;
+}
+
+div.homeFeatureNav a.back {
+    background: transparent url(/bcom/images/ebolc05_home_feature_back.gif) no-repeat left top;
+    width: 13px;
+    height: 13px;
+    display: block;
+    float: left;
+    clear: none;
+    margin-right: 5px;
+}
+
+div.homeFeatureNav a.back:hover {
+    background: transparent url(/bcom/images/ebolc05_home_feature_back_ro.gif) no-repeat left top;
+}
+
+div.homeFeatureNav a.pause {
+    background: transparent url(/bcom/images/ebolc05_home_feature_pause.gif) no-repeat left top;
+    width: 12px;
+    height: 13px;
+    display: block;
+    float: left;
+    clear: none;
+    margin-right: 5px;
+}
+
+div.homeFeatureNav a.pause:hover {
+    background: transparent url(/bcom/images/ebolc05_home_feature_pause_ro.gif) no-repeat left top;
+}
+
+div.homeFeatureNav a.forward {
+    background: transparent url(/bcom/images/ebolc05_home_feature_fwd.gif) no-repeat left top;
+    width: 13px;
+    height: 13px;
+    display: block;
+    float: left;
+    clear: none;
+}
+
+div.homeFeatureNav a.forward:hover {
+    background: transparent url(/bcom/images/ebolc05_home_feature_fwd_ro.gif) no-repeat left top;
+}
+
+*html div.homeFeatureNav {
+    margin: 30px 10px 0px -50px;
+}
+
+h2.homeFeatureTitle {
+    margin: 0px 0px 10px 0px;
+    display: block;
+    clear: none;
+    line-height: 16px;
+    background-color: #FFFFFF; /* so that IE doesn't display jagged text */
+}
+
+/*Features Archive*/
+
+.featuresTop{
+width:556px;
+float:right;
+margin-left:50px;
+}
+
+* html div.featuresTop {
+    width: 556px;
+    margin-left:25px;
+}
+
+.featuresCategory{
+ width: 380px;
+ float:left;
+ margin-left: 50px;
+}
+
+.featuresArticle{
+    margin: 8px 0 8px 0;
+    padding: 8px 8px 14px 8px;
+    float: left;
+    overflow: hidden;
+    width: 380px;
+    margin-bottom: 10px; 
+    font-size:12;
+    border: 1px solid #BCD1E3;
+    border-top: 3px solid #BCD1E3;
+  clear:none;
+
+}
+
+.featuresArticle img {
+     float:left;
+     margin: 5px 5px 5px 5px;
+  }
+
+.featuresArticle h2{ 
+ margin: 0px;
+    padding: 0px;
+    font-weight: bolder;
+    color: #336699;
+    font-size: 16px;
+    margin-bottom: 7px;
+}
+
+.featuresArticle ul {
+ float: left;
+    margin: 8px 0px 0px 0px;
+    padding: 0px;
+    list-style-type: none;   
+    list-style-image: none;
+    width: 360px;
+    clear: none;
+
+   
+}
+
+.featuresArticle li{
+      font-weight: bold;          
+      padding-left: 5px;      
+      float:left;
+      list-style-type: none;
+      list-style-image: none;
+}
+
+.featuresArticle li a {
+  display: block;
+    float: left;
+    white-space: nowrap;
+    background: transparent url(/bcom/images/ebolc05_home_arrow_orange_sm.gif) no-repeat 0px 5px;
+    padding-left: 10px;
+}
+
+.trendsFragment {
+        width:146px;
+        float:right;
+        font-size:12;
+        margin-left:10px;
+        margin-top: -15px;
+}
+
+.trendsFragment ul li {
+        font-size:12;
+}
+
+.recentTrendsLabel {
+  text-align: left;  
+  font-size: 12px;
+  font-weight: bold;
+  font-style: italic;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  float:right;
+  width: 146px;
+  padding-left: 10px; 
+  background: transparent url(/bcom/images/ebolc05_home_arrow_orange_sm.gif) no-repeat  0px 5px;
+}
+
+.recentTrendsDottedLine {
+  float: right;
+  width: 146px;
+  height: 2px;
+  margin-top: 5px;
+  background: transparent url(/bcom/images/ebolc05_home_greydots_368w.gif) no-repeat  0px 0px;
+}
+
+
+
+.featuresBrowseContent {
+    width: 606px;
+}
+
+#featuresBrowseheader {
+    width: 556px; 
+    margin-top: 20px; 
+    margin-left: 50px; 
+    margin-bottom: 40px;
+    border-bottom: 2px solid #336699;
+    font-size: 16px;
+    font-weight: bold;
+}
+
+#featuresBrowseContentBody {
+    width: 556px; 
+    margin-top: 20px; 
+    margin-left: 50px; 
+    margin-bottom: 40px;
+}
+
+.featuresCategoryTitle {
+    text-align: left;
+    border-bottom: 1px solid #BCD1E3;
+    width: 556px;
+    font-size: 14px;
+    font-style: italic;
+    font-weight:bold;
+    margin: 0px;
+    padding: 0px;
+    float: left;
+    clear: both;
+    margin-top: 10px;
+}
+
+.featuresMoreLink {
+    text-align: right;
+    width: 556px;
+    font-size: 11px;
+    margin-bottom: 10px;
+    float: left;
+    clear: both;
+}
+
+.featuresToc {
+    width: 556px;
+    clear: both;
+    margin-bottom: 20px;
+    float: left;
+}
+
+.featureThumb {
+    clear: none;
+    width: 273px;
+    padding-right: 5px;
+}
+
+
+/* END Features Archive Pieces */
+
+#quiz h4 {
+    margin: 5px 0 5px 0;
+}
+
+
+#choices {
+      list-style-type: none;   
+      list-style-image: none;
+      margin: 0 0 5px 0;
+      padding-left: 0px;
+      float: left;
+      clear: both;
+}
+
+#choices li label, #choices li input, #choices li {
+    float: left;
+    display: block;
+}
+
+#choices li {
+    width: 100%;
+}
+
+#choices li label {
+    margin-top: 2px;
+}
+
+#choices li {
+    clear: both;
+    padding-left: 0px;
+    margin-left: 0;
+}
+
+#photoquiz {
+    padding-bottom: 0px;
+    margin-bottom: 0px;
+}
+ 
+#photoquiz img {
+    border: solid 1px #515151;
+    clear: both;
+    float: left;
+}
+
+#photoquestion {
+    float: left;
+    clear: both;
+    width: 120px;
+    padding-bottom: 0px;
+    margin-bottom: 0px;
+}
+
+.clear {
+    clear: both;
+}
+
+.dottedrule {
+    background: transparent url(/bcom/images/ebolc05_home_greydots_368w.gif) repeat-x;
+    margin: 10px auto 10px auto;
+    height: 2px;
+    border: 0 none;
+    clear: both;
+    float: left;
+}
+
+#footerlinks {
+    background: transparent url(/bcom/images/ebolc05_ftr_thistle.gif) no-repeat;
+    padding-left: 50px;
+    margin: 0px auto 0px auto;
+    text-align: left;
+    width: 555px;
+    font-size: 10px;
+    float: left;
+    height: 60px;
+} 
+
+* html #footerlinks { /* hack for IE/pc */
+    height: 65px;
+}
+
+#footerlinks a img {
+    border: none;
+    margin-bottom: -2px;
+}
+
+#footerlinks p {
+    font-size: 10px;
+    margin: 0px;
+    padding: 0px;
+    line-height: 12px;
+}
+
+.footerbottom a.footer:link, .header a:link { color: #FFFFFF; text-decoration: none }
+.footerbottom a.footer:visited, .header a:visited { color: #FFFFFF; text-decoration: none }
+.footerbottom a.footer:hover, .header a:hover { color: #CCFF66; text-decoration: none }
+
+.header img {
+    border: none;
+}
+
+#headerTop {
+    float: left;
+    clear: both;
+    width: 760px;
+}
+
+#bcomLogo {
+    float: left;
+}
+
+#cobrandcontent {
+    width: 135px;
+    float: left;
+    clear: none;
+    padding: 0px;
+    margin: 5px 0px 5px 10px;
+    color: #FFFFFF;
+}
+
+#welcome {
+    float: right;
+    height: 21px;
+    width: 290px;
+    margin: 10px 10px 10px 10px;
+    padding: 0px;
+    font-weight: bold;
+    overflow: hidden;
+    background: transparent url(/bcom/images/ebolc05_hdr_login_slice.gif) repeat-x;
+}
+
+#welcome a {
+    float: right;
+    background: transparent url(/bcom/images/ebolc05_hdr_login_r.gif) no-repeat top right;
+    padding: 2px 10px 0px 10px;
+    height: 21px;
+    margin: 0px;
+}
+
+#welcomeText {
+    float: left;
+    background: transparent url(/bcom/images/ebolc05_hdr_login_l.gif) no-repeat top left;
+    font-size: 14px;
+    font-style: italic;
+    padding: 2px 10px 0px 20px;
+    height: 21px;
+    margin: 0px;
+}
+
+#headerMiddle {
+    background-color: #000000;
+    border: 1px solid #7698BB;
+    color: #A8A8A8;
+    margin: 0px;
+    padding: 0px 2px 2px 0px;
+    height: 13px;
+    width: 756px;
+    float: left;
+    clear: both;
+}
+
+*html #headerMiddle {
+    width: 760px;
+}
+
+#headerTagline {
+    float: left;
+    margin: 1px 0px 0px 0px;
+}
+
+#headerLinks {
+    float: right;
+    font-size: 10px;
+    font-weight: bold;
+    text-align: right;
+    margin: 0px;
+    padding: 0px;
+    width: 520px;
+    height: 13px;
+	white-space: nowrap;
+	overflow: visible;
+}
+
+*html #headerLinks {
+    margin-right: 5px;
+}
+
+#headerBottom {
+    clear: both;
+    float: left;
+    height: 30px;
+    width: 760px;
+    padding: 0px 0px 2px 0px;
+    margin: 0px;
+}
+
+*html #headerBottom {
+    width: 760px;
+}
+
+#headerBottom form {
+    float: left;
+    height: 25px;
+    display: block;
+    margin: 3px 0px 0px 0px;
+    padding: 0px;
+    width: 425px;
+}
+#headerBottom form img {
+    margin: 0px 0px 0px 10px;
+    vertical-align: middle;
+}
+
+#headerBottom form input {
+    height: 22px;
+    margin: 0px;
+    vertical-align: middle;
+}
+
+#headerBottom form select {
+    height: 20px;
+    margin: 0px 0px 0px 0px;
+    vertical-align: middle;
+    width: 145px;
+}
+
+#headerBrowse {
+    float: right;
+    width: 300px;
+    text-align: right;
+    height: 13px;
+    margin: 5px 10px 7px 10px;
+    padding: 0px;
+}
+
+*html #headerBrowse {
+    margin-top: 7px;
+}
+
+#headerBrowse img {
+    vertical-align: middle;
+}
+
+.quoteText {
+   font-size: 13px;
+}
+
+/* override styles in britannica2.css */
+
+div.articleBody {
+    width: 550px;
+}
+
+*html div.articleBody {
+    width: 600px;
+}
+
+/* /override styles in britannica2.css */
+
+
+div.homefeatures form input[type="text"] {
+   width: 125px; font-size: 10px;
+}
+
+
+/* nations styling */
+ 
+div.nationsLeftColumn { width: 450px; float: left; clear: none; padding-left: 10px; padding-right: 10px; padding-bottom: 10px; padding-top: 10px }
+* html div.nationsLeftColumn { width: 470px; float: left; clear: none; padding-left: 10px; padding-right: 10px; padding-bottom: 10px; padding-top: 10px }
+div.nationsLeftInternal { width: 428px }
+* html div.nationsLeftInternal { 448px }
+
+div.nationsRightColumn { width: 280px; float: left; clear: none; padding-right: 10px; padding-bottom: 10px; padding-top: 40px; }
+* html div.nationsRightColumn { width: 290px; float: left; clear: none; padding-right: 10px; padding-bottom: 10px; padding-top: 40px; }
+
+div.nationsRightInternal { width: 258px }
+* html div.nationsRightInternal { width: 258px }
+
+.normalFontSize { font-size: 12px; clear: both; float: left }
+
+div.nationsContent { padding-bottom: 20px; clear: both }
+ 
+.nationsContentHeader { color: white; font-style: italic; font-size: 14px; font-weight: bold }
+.nationsBiggerBolderItalic { font-size: 13px; font-weight: bold; font-style: italic }
+ 
+div.nationsContentBody { border-left: 1px solid #CCCCCC; border-right: 1px solid #CCCCCC; border-bottom: 1px solid #CCCCCC; clear: both; float: left}
+
+div.tenPxPad { padding: 10px; clear: both; float: left}
+div.tinyWhiteBorder { border: 1px solid white; clear: both; float: left }
+
+div.nationsYirSelector { width: 70px; border-right: #7BA3C7 solid 1px; clear: none; float: left }
+div.nationsYirBox { width: 347px; padding-left: 10px; clear: none; float: left}
+* html div.nationsYirBox {  width: 340px; padding-left: 10px; clear: none; float: left }
+div.nationsTocSelector { width: 130; border-right: #7BA3C7 solid 1px; clear: none; float: left}
+div.nationsEbFirstPara { width: 287px; padding-left: 10px; clear: none; float: left }
+* html div.nationsEbFirstPara {  width: 280px; padding-left: 10px; clear: none; float: left }
+
+div.ebnationsHighlightedSelectorBox { background: #7BA3C7; color: white; width: 100% }
+
+#ebcountryNameHeader { border-bottom: 3px solid #7BA3C7; width: 450px; height: 30px }
+#countryThumb { align: left; vertical-alignment: top; clear: none; float: left; padding-top: 10px; padding-bottom: 10px; width: 110px }
+#countryFeatureStats { clear: none; float: left; width: 340px }
+div.statTerm { padding-top: 10px; }
+#ftnotes { font-size: 10px }
+div.ebcontinueLink { width: 100%; text-align: right; padding-top: 10px; font-style: italic; }
+
+div ul.topicMap {
+  list-style-type: none;
+  padding: 0px;
+}
+
+.ebNationsHeaderLeft { 
+	background: url(/bcom/images/ebolc06_cntry_hdrcap_left.gif) no-repeat;
+	height: 20px;
+	float: left;
+	width: 8px;	
+	background-color: #FFFFFF; 
+	margin:0px; 
+}
+
+.ebNationsHeaderCenter {
+   background-color: #7BA3C7;
+   margin: 0px; 
+   float: left;
+}
+
+.ebNationsHeaderRight {
+	background: transparent url(/bcom/images/ebolc06_cntry_hdrcap_right.gif) no-repeat;
+	height: 20px;
+	float: right;			
+	width: 8px;
+	margin: 0px; 
+	clear: none;
+	background-color: #FFFFFF;
+}
+
+.ebNationsHeader {
+	background-color: #7BA3C7;
+	margin: 0px; padding: 0px;
+	float: left;
+	clear: both;	
+	width: 100%;	
+}	
+
+/* SEO Index Page styles */
+
+.seoIndexEntry {
+    width: 100%;
+    border: none;
+    padding: 0px;
+    margin: 0px;
+    font-size: 10pt !important;
+}
+
+*html .seoIndexEntry {
+    float: left;
+    display: block;
+    clear: both;
+}
+
+.seoIndexEntry .artcopy {
+    font-size: 10pt !important;  
+}
+
+.seoFlag {
+    font-size: 10pt !important;
+    margin-top: 10px;
+    margin-bottom: 10px;  
+}
+
+h2{
+	margin: 0px;
+    padding: 0px;
+	border: 0px;
+	clear:none;
+}
+
+.seoIndexEntry .umbrella {	
+}
+
+.seoIndexEntry ul{
+    margin-top: 10px;
+    margin-bottom: 10px;
+    list-style-type: none; 
+    margin-left: 15px;
+    padding: 0px;   
+}
+
+.seoIndexEntry ul li a, .seoFlag a {
+    font-size: 10pt !important;    
+}
+
+.hookGist, .articleGist, .umbrellaHookGist {
+   margin-left: 15px;	
+   font-size: 10pt !important;
+}
+
+.umbrellaHookGist {
+   margin-left: 30px;	
+}
+
+.articleGist a, .hookGist a, .umbrellaHookGist a {
+	color: #000000;
+    text-decoration: none;
+    font-weight: normal;
+}
+
+.idxBrowseLinks {
+  text-align: center;
+  width: 475px;
+  float: left;
+  margin: 0px;
+  padding: 0px;
+  font-weight: bold;  
+}
+
+/*  End SEO Index Page styles */

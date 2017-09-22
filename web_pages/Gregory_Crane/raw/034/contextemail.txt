@@ -1,0 +1,69 @@
+function echeck(str) {
+
+		var at="@"
+		var dot="."
+		var errorStr = 'Your email address does not appear to be valid.  Please correct it and resubmit.'
+		var lat=str.indexOf(at)
+		var lstr=str.length
+		var ldot=str.indexOf(dot)
+		if (str.indexOf(at)==-1){
+		   alert(errorStr)
+		   return false
+		}
+
+		if (str.indexOf(at)==-1 || str.indexOf(at)==0 || str.indexOf(at)==lstr){
+		   alert(errorStr)
+		   return false
+		}
+
+		if (str.indexOf(dot)==-1 || str.indexOf(dot)==0 || str.indexOf(dot)==lstr){
+		    alert(errorStr)
+		    return false
+		}
+
+		 if (str.indexOf(at,(lat+1))!=-1){
+		    alert(errorStr)
+		    return false
+		 }
+
+		 if (str.substring(lat-1,lat)==dot || str.substring(lat+1,lat+2)==dot){
+		    alert(errorStr)
+		    return false
+		 }
+
+		 if (str.indexOf(dot,(lat+2))==-1){
+		    alert(errorStr)
+		    return false
+		 }
+		
+		 if (str.indexOf(" ")!=-1){
+		    alert(errorStr)
+		    return false
+		 }
+
+ 		 return true					
+	}
+
+function ValidateForm(){
+	var emailID=document.Signup.email
+
+	if ((emailID.value==null)||(emailID.value=="")){
+		alert("Please enter your email address.")
+		emailID.focus()
+		return false
+	}
+	if (echeck(emailID.value)==false){
+		emailID.value=""
+		emailID.focus()
+		return false
+	}
+
+	if (document.Signup.interests[0].checked == false &&
+	    document.Signup.interests[1].checked == false && 
+	    document.Signup.interests[2].checked == false  ){
+		alert("Please choose at least one topic.")
+		return false
+	}
+
+	return true
+ }

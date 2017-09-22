@@ -1,0 +1,260 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN" "http://www.w3.org/TR/REC-html40/loose.dtd">
+<html>
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<!doctype html public "-//w3c//dtd html 4.0 transitional//en">
+<html>
+<head>
+   <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+   <meta name="GENERATOR" content="Mozilla/4.7 [en] (Win98; U) [Netscape]">
+   <title>ABC Ontology and Model: Lagoze and Hunter: JoDI</title>
+
+<style  type="text/css">
+<!--
+
+p.navigation {
+  font: 10pt Sans-serif,Helvetica,Arial;
+}
+
+a.navigation {
+  text-decoration: none;
+  color: #2222EE;
+}
+// -->
+
+</style>
+</head>
+<body background="goldbackground.gif" bgcolor="#FFFFFF" text="#000000">
+<a name="top"></A>
+<a href="http://jodi.tamu.edu/"><IMG border=0 src="sm-jodi.gif" alt="JoDI"></A><A href="http://jodi.tamu.edu/?vol=new"><IMG border=0 align=top src="New_papers.gif" alt="New papers"></A><A href="http://jodi.tamu.edu/?vol=all&papers=no"><IMG border=0 align=top src="Past_issues.gif" alt="Past issues"></A><A href="http://jodi.tamu.edu/?vol=all"><IMG border=0 align=top src="Index_of_papers.gif" alt="Index of papers"></A><IMG align=top src="end.gif" alt="">
+<table>
+<tr>
+<td width="40"><IMG src="spacer.gif" alt=""></td>
+<td width="100%">
+
+<P class="navigation"><A class="navigation" href="http://jodi.tamu.edu/">Journal of Digital Information</A>, <A class="navigation" href="http://jodi.tamu.edu/?vol=2&iss=2">Volume 2 Issue 2</A><br>Article No. 77, 2001-11-06<br>
+To cite this paper please include the details above in the full reference
+<BR>Themes: <A class="navigation" href="http://jodi.tamu.edu/?theme=a">Digital libraries</A>, <A class="navigation" href="http://jodi.tamu.edu/?theme=d">Information discovery</A><BR>
+<br><b>Peer reviewed paper</b></P><p class="navigation"><a class="navigation" href="http://jodi.ecs.soton.ac.uk/Articles/v02/i02/Lagoze/?printable=1">Printable version</a> available.</p>
+
+<center>
+<h1>
+The ABC Ontology and Model</h1></center>
+
+<center><font size=+1>Carl Lagoze and Jane Hunter</font>*
+<br>Cornell University, Ithaca, NY
+<br>Email: <a href="mailto:lagoze@cs.cornell.edu">lagoze@cs.cornell.edu</a>
+<br>*DSTC Pty, Ltd, Brisbane, Australia
+<br>Email: <a href="mailto:jane@dstc.edu.au">jane@dstc.edu.au</a>
+<br><b>Key features</b> <a href="index.html#references">References</a>&nbsp;
+<hr WIDTH="100%"><b>This is a summary version of the paper</b>. The authoritative
+full-text is available as <a href="http://jodi.ecs.soton.ac.uk/Articles/v02/i02/Lagoze/lagoze-final.pdf">PDF</a>
+(18 pages, 215 kb). Download latest PDF viewer&nbsp;<a href="http://www.adobe.com/prodindex/acrobat/readstep.html"><img SRC="acrobat.gif" BORDER=0 height=31 width=88></a>
+<hr WIDTH="100%"></center>
+
+<table ALIGN=RIGHT BORDER=0 CELLSPACING=10 CELLPADDING=2 WIDTH="30%" BGCOLOR="#EEEEEE" >
+<tr>
+<td>
+<h3>
+Contents</h3>
+
+<ul>
+<li>
+<font size=-1>1 Introduction</font></li>
+
+<li>
+<font size=-1>2 Purpose and Scope of the ABC Model</font></li>
+
+<ul>
+<li>
+<font size=-1>Origins</font></li>
+
+<li>
+<font size=-1>Targeted Objects</font></li>
+
+<li>
+<font size=-1>Intended Use and Users</font></li>
+</ul>
+
+<li>
+<font size=-1>3 Narrative Overview of the ABC</font></li>
+
+<br><font size=-1>Model</font>
+<ul>
+<li>
+<font size=-1><i>Temporality</i> Category</font></li>
+
+<li>
+<font size=-1><i>Actuality</i> Category</font></li>
+
+<li>
+<font size=-1><i>Abstraction</i> Category</font></li>
+</ul>
+
+<li>
+<font size=-1>4 ABC Classes and Properties</font></li>
+
+<ul>
+<li>
+<font size=-1>Classes</font></li>
+
+<li>
+<font size=-1>Properties</font></li>
+</ul>
+
+<li>
+<font size=-1>5 ABC Modeling Experiments and</font></li>
+
+<br><font size=-1>Examples</font>
+<ul>
+<li>
+<font size=-1>Children’s Book</font></li>
+
+<li>
+<font size=-1>Dinosaur Bone</font></li>
+
+<li>
+<font size=-1>Birth</font></li>
+
+<li>
+<font size=-1>AMOL Vase Example</font></li>
+</ul>
+
+<li>
+<font size=-1>6 Searching over the model</font></li>
+
+<li>
+<font size=-1>7 Future work and Conclusions</font></li>
+
+<li>
+<font size=-1>8 Acknowledgements</font></li>
+
+<li>
+<font size=-1>References</font></li>
+
+<li>
+<font size=-1>Appendix A ABC Model Expressed as an RDF Schema</font></li>
+
+<li>
+<font size=-1>Appendix B ABC Class Hierarchy with Property Relationships</font></li>
+
+<li>
+<font size=-1>Appendix C Charlie and the Chocolate Factory Model</font></li>
+
+<li>
+<font size=-1>Appendix D Dinosaur Bone Example</font></li>
+
+<li>
+<font size=-1>Appendix E Birth Example</font></li>
+
+<li>
+<font size=-1>Appendix F AMOL Vase Example</font></li>
+</ul>
+</td>
+</tr>
+</table>
+
+<h3>
+<b>Abstract</b></h3>
+<font size=-1>This paper describes the latest version of the ABC metadata
+model. This model has been developed within the Harmony international digital
+library project to provide a common conceptual model to facilitate interoperability
+between metadata ontologies from different domains. This updated ABC model
+is the result of collaboration with the CIMI consortium whereby earlier
+versions of the ABC model were applied to metadata descriptions of complex
+objects provided by CIMI museums and libraries. The result is a metadata
+model with more logically grounded time and entity semantics. Based on
+this model we have been able to build a metadata repository of RDF descriptions
+and a search interface which is capable of more sophisticated queries than
+less-expressive, object-centric metadata models will allow.</font>
+<br><font size=-1><b>Keywords</b>: Metadata, Modeling, Ontologies</font>
+<h2>
+Acknowledgement</h2>
+The work described in this paper has been carried out within the Harmony
+International Digital Library Project. It has been funded by NSF Grant
+9905955, JISC Grant 9906 and the Cooperative Research Centre for Enterprise
+Distributed Systems Technology (DSTC) through the Australian Federal Government’s
+CRC Programme. The authors wish to acknowledge the valuable contributions
+made to this work by Dan Brickley and Libby Miller from ILRT.
+<h3>
+<a NAME="references"></a><b><font size=+2>References</font></b></h3>
+[1] AMOL RDF Record, 2001. <a href="http://metadata.net/harmony/amol.rdf">http://metadata.net/harmony/amol.rdf</a>
+<br>[2] AMOL Vase Description, 2001. <a href="http://www.metadata.net/harmony/amol.html">http://www.metadata.net/harmony/amol.html</a>
+<br>[3] CIDOC Conceptual Reference Model Special Interest Group, <a href="http://cidoc.ics.forth.gr/">http://cidoc.ics.forth.gr/</a>
+<br>[4] CIMI ABC Modeling Examples, 2001. <a href="http://metadata.net/harmony/cimi_modelling.htm">http://metadata.net/harmony/cimi_modelling.htm</a>
+<br>[5] CIMI Consortium, 2001. <a href="http://www.cimi.org">http://www.cimi.org</a>
+<br>[6] Dublin Core Metadata Element Set, Version 1.1, 1999. <a href="http://www.dublincore.org/documents/dces/">http://www.dublincore.org/documents/dces/</a>
+<br>[7] Dublin Core Metadata Initiative. <a href="http://dublincore.org">http://dublincore.org</a>
+<br>[8] Dublin Core Qualifiers, 2000. <a href="http://purl.org/DC/documents/rec/dcmes-qualifiers-20000711.htm">http://purl.org/DC/documents/rec/dcmes-qualifiers-20000711.htm</a>
+<br>[9] “Functional Requirements for Bibliographic Records,” International
+Federation of Library Associations and Institutions, March 1998. <a href="http://www.ifla.org/VII/s13/frbr/frbr.pdf">http://www.ifla.org/VII/s13/frbr/frbr.pdf</a>
+<br>[10] The Harmony Project. <a href="http://metadata.net/harmony">http://metadata.net/harmony</a>
+<br>[11] Images and Metadata Records Provided by CIMI Members for Harmony/CIDOC
+CRM Museum Interoperability Research, 2001. <a href="http://archive.dstc.edu.au/CIMI/">http://archive.dstc.edu.au/CIMI/</a>
+<br>[12] INDECS: Interoperability of Data in E-Commerce Systems. <a href="http://www.indecs.org/">http://www.indecs.org/</a>
+<br>[13] RDF: Image Metadata, 2001. <a href="http://swordfish.rdfweb.org/discovery/2001/03/demos/image.html">http://swordfish.rdfweb.org/discovery/2001/03/demos/image.html</a>
+<br>[14] Semantic Web Activity: Resource Description Framework (RDF), 2001.
+<a href="http://www.w3.org/RDF">http://www.w3.org/RDF</a>
+<br>[15] Arms, W. Y. (2000) <i>Digital Libraries</i> (Cambridge, MA.: MIT
+Press), p. 208
+<br>[16] Baker, T. (2000) “A Grammar of Dublin Core”. <i>D-Lib Magazine</i>,
+Vol. 6, No. 10. <a href="http://www.dlib.org/dlib/october00/baker/10baker.html">http://www.dlib.org/dlib/october00/baker/10baker.html</a>
+<br>[17] Bearman, D., G. Rust, S. Weibel, E. Miller, and J. Trant (1999)
+“A Common Model to Support Interoperable Metadata. Progress report on reconciling
+metadata requirements from the Dublin Core and INDECS/DOI Communities”.
+D-Lib Magazine, Vol. 5, January. <a href="http://www.dlib.org/dlib/january99/bearman/01bearman.html">http://www.dlib.org/dlib/january99/bearman/01bearman.html</a>
+<br>[18] Bearman, D. and J. Trant (1997) “Electronic Records Research Working
+Meeting May 28-30, 1997, A Report from the Archives Community”. <i>D-Lib
+Magazine</i>. <a href="http://www.dlib.org/dlib/july97/07bearman.html">http://www.dlib.org/dlib/july97/07bearman.html</a>
+<br>[19] Booch, G., J. Rumbaugh, and I. Jacobson (1999) <i>The unified
+modeling language user guide </i>(Reading, MA.: Addison-Wesley)
+<br>[20] Brickley, D. and R. V. Guha (2000) “Resource Description Framework
+(RDF) Schema Specification”. World Wide Web Consortium, W3C Candidate Recommendation
+CR-rdf-schema-20000327, March 27. <a href="http://www.w3.org/TR/rdf-schema">http://www.w3.org/TR/rdf-schema</a>
+<br>[21] Brickley, D., J. Hunter, and C. Lagoze (1999) “ABC: A Logical
+Model for Metadata Interoperability”. Harmony Project, Working Paper. <a href="http://www.ilrt.bris.ac.uk/discovery/harmony/docs/abc/abc_draft.html">http://www.ilrt.bris.ac.uk/discovery/harmony/docs/abc/abc_draft.html</a>
+<br>[22] Doerr, M. and J. Hunter (2001) DELOS Working Group on Ontology
+Harmonization: Full report from the first meeting at CNR Rome. <a href="http://metadata.net/harmony/Rome_Full_Rep_V2.doc">http://metadata.net/harmony/Rome_Full_Rep_V2.doc</a>
+<br>[23] Gorman, M. (1989) The concise AACR2, 1988 revision (Chicago: American
+Library Association)
+<br>[24] Hunter, J. (2001) “MetaNet - A Metadata Term Thesaurus to Enable
+Semantic Interoperability Between Metadata Domans”. <i>Journal of Digital
+Information</i>, Vol. 1, No. 8. <a href="http://jodi.ecs.soton.ac.uk/Articles/v01/i08/Hunter/">http://jodi.ecs.soton.ac.uk/Articles/v01/i08/Hunter/</a>
+<br>[25] Hunter,&nbsp; J. and D. James (2000) “Application of an Event-Aware
+Metadata Model to an Online Oral History Archive”. <i>ECDL 2000</i>, Lisbon.
+<a href="http://archive.dstc.edu.au/RDU/staff/jane-hunter/OralHistory/paper.html">http://archive.dstc.edu.au/RDU/staff/jane-hunter/OralHistory/paper.html</a>
+<br>[26] Hunter, J. and C. Lagoze (2001) “Combining RDF and XML Schemas
+to Enhance Interoperability Between Metadata Application Profiles”. <i>WWW10</i>,
+Hong Kong. <a href="http://www.cs.cornell.edu/lagoze/papers/HunterLagozeWWW10.pdf">http://www.cs.cornell.edu/lagoze/papers/HunterLagozeWWW10.pdf</a>
+<br>[27] ICOM/CIDOC Documentation Standards Group, CIDOC Conceptual Reference
+Model, 1998. <a href="http://cidoc.ics.forth.gr/">http://cidoc.ics.forth.gr/</a>
+<br>[28] Lagoze, C. (2000) “Business Unusual; How 'event awareness' may
+breathe life into the catalog”. Bicentennial Conference on Bibliographic
+Control in the New Millennium, Library of Congress, Washington, DC. <a href="http://lcweb.loc.gov/catdir/bibcontrol/lagoze_paper.html">http://lcweb.loc.gov/catdir/bibcontrol/lagoze_paper.html</a>
+<br>[29] Lagoze, C. (2001) “Keeping Dublin Core Simple: Cross Domain Discovery
+or Resource Description?” <i>D-Lib Magazine</i>, Vol. 7, No. 1. <a href="http://www.dlib.org/dlib/january01/lagoze/01lagoze.html">http://www.dlib.org/dlib/january01/lagoze/01lagoze.html</a>
+<br>[30] Lagoze, C., J. Hunter, and D. Brickley (2000) “An Event-Aware
+Model for Metadata Interoperability”. <i>ECDL 2000</i>, Lisbon. <a href="http://archive.dstc.edu.au/RDU/staff/jane-hunter/harmony/harmony_ECDL2000.zip">http://archive.dstc.edu.au/RDU/staff/jane-hunter/harmony/harmony_ECDL2000.zip</a>
+<br>[31] Lassila, O. and R. R. Swick (1999) “Resource Description Framework:
+(RDF) Model and Syntax Specification”. World Wide Web Consortium, W3C Proposed
+Recommendation PR-rdf-syntax-19990105, January. <a href="http://www.w3.org/TR/PR-rdf-syntax/">http://www.w3.org/TR/PR-rdf-syntax/</a>
+<br>[32] McCarthy, J. (1968) “Programs with common sense”. In <i>Semantic
+Information Procession</i>, edited by M. Minsky (MIT Press), pp. 403-418
+<br>[33] Miller, L. (2000) RDF querying using Squish. <a href="http://swordfish.rdfweb.org/rdfquery/">http://swordfish.rdfweb.org/rdfquery/</a>
+<br>[34] Perkins, J. (2000) ABC/Harmony CIMI Collaboration Project Description.
+<a href="http://www.cimi.org/public_docs/Harmony_long_desc.html">http://www.cimi.org/public_docs/Harmony_long_desc.html</a>
+<br>[35] Peterson, J. L. (1981) <i>Petri net theory and the modeling of
+systems</i> (Englewood Cliffs, N.J: Prentice-Hall)
+<br>[36] Sowa, J. F. (2001) Conceptual Graphs. <a href="http://www.bestweb.net/~sowa/cg/">http://www.bestweb.net/~sowa/cg/</a>
+<p>
+<hr WIDTH="100%">
+<center>The authoritative full-text is available as <a href="http://jodi.ecs.soton.ac.uk/Articles/v02/i02/Lagoze/lagoze-final.pdf">PDF</a>
+(18 pages, 215 kb). Download latest PDF viewer&nbsp;<a href="http://www.adobe.com/prodindex/acrobat/readstep.html"><img SRC="acrobat.gif" BORDER=0 height=31 width=88></a>
+<hr WIDTH="100%"></center>
+</TD>
+</TR>
+</TABLE>
+<P>
+<A href="index.html#top"><IMG border=0 src="Top_of_page.gif" alt="Top of page"></A><A href="http://jodi.tamu.edu/?vol=new"><IMG border=0 align=top src="New_papers.gif" alt="New papers"></A><A href="http://jodi.tamu.edu/?vol=all&papers=no"><IMG border=0 align=top src="Past_issues.gif" alt="Past issues"></A><A href="http://jodi.tamu.edu/?vol=all"><IMG border=0 align=top src="Index_of_papers.gif" alt="Index of papers"></A><IMG align=top src="end.gif" alt="">
+</BODY>
+</html>

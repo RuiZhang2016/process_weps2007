@@ -1,0 +1,56 @@
+<html>
+<head>
+<script type="text/javascript">
+var items = new Array(20);
+items[0]='<li><a href="http://jobs.guardian.co.uk/browse/secretarial/pa/vacancy-WCruit181095.html?gusrc=gu_jobs_box_politics">Languagematters: Japanese-speaking Financial Manager</a>';
+items[1]='<li><a href="http://jobs.guardian.co.uk/browse/health/nursing/vacancy-StaffNurse9279.html?gusrc=gu_jobs_box_politics">StaffNurse.com: Domiciliary Care Nurse</a>';
+items[2]='<li><a href="http://jobs.guardian.co.uk/browse/secretarial/pa/vacancy-itsr92268.html?gusrc=gu_jobs_box_politics">TAY ASSOCIATES LIMITED: PA to Chief Executive, West End (ST6536)</a>';
+items[3]='<li><a href="http://jobs.guardian.co.uk/browse/health/nursing/vacancy-StaffNurse8908.html?gusrc=gu_jobs_box_politics">StaffNurse.com: Senior Support Worker - Kent</a>';
+items[4]='<li><a href="http://jobs.guardian.co.uk/browse/volunteers/general/vacancy-w90523.html?gusrc=gu_jobs_box_politics">MEDIA TRUST: Internships and volunteering opportunities</a>';
+items[5]='<li><a href="http://jobs.guardian.co.uk/browse/marketing-and-pr/communications/vacancy-itsr90305.html?gusrc=gu_jobs_box_politics">AF SELECTION: PR Account Manager</a>';
+items[6]='<li><a href="http://jobs.guardian.co.uk/browse/charities/disability/vacancy-itsr90801.html?gusrc=gu_jobs_box_politics">NFP RESOURCING: Head of Fundraising</a>';
+items[7]='<li><a href="http://jobs.guardian.co.uk/browse/education/academic/vacancy-BBean1293697513.html?gusrc=gu_jobs_box_politics">Mark Education Ltd: ICT</a>';
+items[8]='<li><a href="http://jobs.guardian.co.uk/browse/marketing-and-pr/pr/vacancy-1265260.html?gusrc=gu_jobs_box_politics">BORDER AND IMMIGRATION AGENCY - HOME OFFICE: Regional Press Officers</a>';
+items[9]='<li><a href="http://jobs.guardian.co.uk/browse/marketing-and-pr/general/vacancy-rco91761.html?gusrc=gu_jobs_box_politics">FISHTANK SOLUTIONS: Online Marketing Manager</a>';
+items[10]='<li><a href="http://jobs.guardian.co.uk/browse/senior-executive/general/vacancy-1264464-2.html?gusrc=gu_jobs_box_politics">DESIGN AND ARTISTS COPYRIGHT SOCIETY: Director of Services</a>';
+items[11]='<li><a href="http://jobs.guardian.co.uk/browse/finance/banking/vacancy-itsr89762.html?gusrc=gu_jobs_box_politics">FreshMinds: Business Development Executive - Private Equity</a>';
+items[12]='<li><a href="http://jobs.guardian.co.uk/browse/courses/postgraduate/vacancy-1265287-8.html?gusrc=gu_jobs_box_politics">KING\'S COLLEGE LONDON: COURSE: MRes Environment, Society & Politics</a>';
+items[13]='<li><a href="http://jobs.guardian.co.uk/browse/health/nursing/vacancy-HealthJobsUK1575890205.html?gusrc=gu_jobs_box_politics">Chesterfield Royal Hospital NHS FoundationTrust: Health Care Assistant (Band 2) - Surgical Specialties</a>';
+items[14]='<li><a href="http://jobs.guardian.co.uk/browse/health/mental-health/vacancy-StaffNurse11423.html?gusrc=gu_jobs_box_politics">StaffNurse.com: Charge Nurse Eating Disorder</a>';
+items[15]='<li><a href="http://jobs.guardian.co.uk/browse/health/nursing/vacancy-StaffNurse9524.html?gusrc=gu_jobs_box_politics">StaffNurse.com: Support Worker</a>';
+items[16]='<li><a href="http://jobs.guardian.co.uk/browse/retail/general/vacancy-iGrasp10147-24058.html?gusrc=gu_jobs_box_politics">First Choice: Travel Sales Advisor - Northampton Hypermarket</a>';
+items[17]='<li><a href="http://jobs.guardian.co.uk/browse/education/academic/vacancy-BBean0239212871.html?gusrc=gu_jobs_box_politics">Mark Education Ltd: MFL Teacher</a>';
+items[18]='<li><a href="http://jobs.guardian.co.uk/browse/health/general/vacancy-WCruit173489.html?gusrc=gu_jobs_box_politics">Windsor Recruitment: HEALTHCARE ASSISTANT</a>';
+items[19]='<li><a href="http://jobs.guardian.co.uk/browse/health/nursing/vacancy-StaffNurse11956.html?gusrc=gu_jobs_box_politics">StaffNurse.com: Nursery Nurse</a>';
+var first_random_index = Math.round(Math.random()*18);
+if (first_random_index == 19) {
+	first_random_index++;
+}
+
+var second_random_index = Math.round(Math.random()*18);
+if (second_random_index == first_random_index) {
+	second_random_index = 19;
+}
+
+var third_random_index = Math.round(Math.random()*17);
+if (third_random_index == first_random_index) {
+	third_random_index = 20;
+}
+
+try {
+	var jobslistDiv = top.document.getElementById('jobslist');
+} catch (e) {
+        document.domain = "guardian.co.uk";
+	jobslistDiv = top.document.getElementById('jobslist');
+}
+
+var innerHTML = '<ul>';
+if ( items[first_random_index]) {innerHTML = innerHTML + items[first_random_index]}
+if ( items[second_random_index]) {innerHTML = innerHTML + items[second_random_index]}
+if ( items[third_random_index]) {innerHTML = innerHTML + items[third_random_index]}
+innerHTML = innerHTML + '</ul>';
+
+jobslistDiv.innerHTML = innerHTML;
+</script>
+</head>
+</html>

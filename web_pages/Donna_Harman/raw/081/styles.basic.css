@@ -1,0 +1,37 @@
+/*
+	styles.basic.css
+
+	this files exists to set a standard for the way certain important tags are used throughout the site.
+	in addition, for browsers that understand only minimal CSS, it only styles the tags of the page, to 
+	allow very basic coloring.
+
+7/6/06: modified by Justin to fix up content styling
+7/11/06: further dp additions for content restyling
+7/19/06: incorporations of DP punchlist 4
+8/10/06: .FeaturedJobs block moved to styles.common.template.css
+8/29/06: Changed default link color for consistency across site
+
+*/
+
+BODY { background: #E2E1DE; }
+BODY.Popup { background: #FFF; }
+
+H1, H2, H3, H4, H5, H6 { margin: 0; padding: 0; }
+H1 { font-size: 120%; }
+H2 { font-size: 110%; }
+H3 { font-size: 100%; }
+H4 { font-size: 90%; }
+H5 { font-size: 75%; }
+H6 { font-size: 75%; }
+
+P { margin-top: 0; font-size: 75%; }
+
+DL DD P,
+UL LI P,
+OL LI P { font-size: 100% !important; }
+
+A { color: #2E6D8F; }
+
+FORM { margin: 0; padding: 0; }
+
+.SectionMarker A { color: #333; }

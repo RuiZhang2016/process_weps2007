@@ -1,0 +1,718 @@
+/*** MSDNMag ***/
+
+/*** sidebars ***/
+
+DIV.clsMSDNHeader
+{
+	text-transform: uppercase;
+	color: white;
+	font-size: 36px;
+	font-family: 'Franklin Gothic Demi' , 'Franklin Gothic Demi Cond', 'Arial Black', Lucida Sans, Verdana;
+	padding-right: 0px;
+	padding-left: 0px;
+	padding-bottom: 0px;
+	padding-top: 0px;
+	margin: 0px;
+}
+
+DIV.clsSideBox
+{
+	margin:5px 0px 5px 0px;
+	padding:0px;
+	background-color:#eeeeee;
+	position:relative;
+}
+
+DIV.clsSideBar
+{
+	z-index:1;
+	margin:0px;
+	cursor:pointer;
+	padding:5px;
+	background-color:#3366cc;
+	color:#ffffff;
+}
+
+DIV.clsFigBar
+{
+	margin:5px 0px -10px 0px;
+	padding:5px;
+	background-color:#3366cc;
+	color:#ffffff;
+}
+
+body
+{
+background-color:#ffffff;
+color:#000000;
+font-family:verdana,arial,helvetica;
+margin:0px;
+padding:0px;
+}
+
+/*** Containers ***/
+
+DIV.clsDocBody
+{
+padding:0px 0px 10px 10px;
+font-size:68%;
+margin:0px 10px 0px 0px;
+}
+
+TD.clsDocBody
+{
+border-right:1px solid #999999;
+padding:0px 10px 10px 10px;
+font-size:68%;
+margin:0px;
+}
+
+TD.clsContainer
+{
+border-right:1px solid #999999;
+padding:0px 10px 10px 10px;
+font-size:68%;
+margin:0px;
+}
+
+DIV.clsFigDiv
+{
+font-size:68%;
+margin:10px;
+padding:0px;
+}
+
+DIV.clsPrint
+{
+font-size:68%;
+margin:0px;
+padding:10px;
+}
+
+/*** Common Elements ***/
+
+P
+{
+text-indent:1em;
+margin:0em;
+line-height:1.5em;
+}
+
+P.clsNoIndent
+{
+text-indent:0em;
+}
+
+P.clsDropCap
+{
+	text-indent:0em;
+}
+
+P.clsDropCap:first-letter
+{
+	font-size: 180%;
+	color: #cc3300;
+	font-weight:bold;
+	float:left;
+	padding:5px 5px 5px 0px;
+}
+
+
+P.clsQA
+{
+	text-indent:0em;
+}
+
+P.clsQA:first-letter
+{
+	font-size:110%;
+	font-weight:bold;
+	color: #cc3300;
+}
+
+UL, OL
+{
+margin-top: 5px;
+margin-bottom: 5px;
+margin-left: 25px;
+}
+
+LI
+{
+
+}
+
+TD 
+{
+font-size:68%;
+vertical-align:top;
+}
+
+TH
+{
+font-size:68%;
+FONT-WEIGHT: bold;
+background-Color:#99ccff;
+}
+
+PRE, PRE.clsCode
+{
+font-size:110%;
+font-family:'courier new',courier,serif;
+background:#EEEEEE;
+	padding: 10px 15px 10px 25px;
+
+	margin-bottom: 1em;
+
+
+
+}
+
+BLOCKQUOTE
+{
+line-height:1em;
+margin-top:1em;
+margin-bottom:1em;
+}
+
+/*** article headers ***/
+
+.clsDeck
+{
+padding:2px 5px 0px 5px;
+}
+
+SPAN.clsSum
+{
+COLOR: #000080;
+FONT-WEIGHT: bold;
+float:left;
+margin-top:2px;
+}
+
+DIV.clsBeta
+{
+margin: 3px 0px 0px 0px;
+padding:5px;
+background-color:#3366cc;
+color:#ffffff;
+FONT-SIZE: 90%;
+position:relative;
+z-index:1;
+}
+
+DIV.clsFamiliar {padding:3px;}
+
+DIV.clsDownload
+{
+padding:3px 3px 3px 0px;
+margin: 0px 0px 3px 0px;
+}
+
+SPAN.clsLevel
+{
+padding:0px 5px 0px 5px;
+color: #999999;
+}
+
+DIV.clsLevel
+{
+padding:3px;
+background-color:#3366cc;
+color: #ffffff;
+}
+
+SPAN.pd {COLOR: #008080;}
+
+DIV.pd
+{
+COLOR: #008080;
+float:left;
+}
+
+/*** InfoBox ***/
+
+DIV.clsInfoBox
+{
+background-color:#3366cc;
+margin:5px 0px 0px 0px;
+padding:5px;
+}
+
+LI.clsInfoBox
+{
+margin-bottom:0.2em;
+}
+
+DIV.clsDiscuss {margin:0px 20px 0px 0px;}
+
+/*** article body ***/
+
+.articletext
+{
+line-height:1.5em;
+vertical-align:top;
+}
+
+SPAN.dropcap
+{
+FONT-SIZE: 250%;
+COLOR: #cc3300;
+FONT-WEIGHT: bold;
+}
+
+DIV.dropcap
+{
+FONT-SIZE: 250%;
+COLOR: #cc3300;
+FONT-WEIGHT: bold;
+float:left;
+margin:0px 2px 2px 0px;
+padding: 0px;
+vertical-align:top;
+LINE-HEIGHT: 1em;
+}
+
+SPAN.QAcap
+{
+FONT-SIZE: 140%;
+COLOR: #cc3300;
+FONT-WEIGHT: bold;
+}
+
+A.clsWhite, A.clsWhite:visited, A.clsWhite:hover 
+{color:#ffffff;}
+
+SPAN.clsSmWhite
+{
+FONT-SIZE: 80%;
+color:#ffffff;
+}
+
+.clsSubhead
+{
+COLOR: #008080;
+FONT-WEIGHT: bold;
+FONT-SIZE: 115%;
+}
+
+SPAN.clsSmHead
+{
+color:#cc3300;
+FONT-WEIGHT:bold;
+FONT-SIZE:120%;
+text-transform : uppercase;
+}
+
+DIV.clsBio 
+{
+FONT-SIZE: 90%;
+LINE-HEIGHT: 1.2em;
+background-color:#cccccc;
+padding:5px;
+margin:0px 0px 5px 0px;
+}
+
+SPAN.clsBio 
+{
+FONT-SIZE: 90%;
+LINE-HEIGHT: 1.2em;
+}
+
+.clsGloss
+{
+color:#000080;
+FONT-WEIGHT:bold;
+}
+
+.clsBlue {color:blue;}
+.clsRed {color:red;}
+.clsGreen {color:green;}
+.clsInfo {FONT-SIZE: 90%;}
+.clsSmall {FONT-SIZE: 90%;}
+
+/*** default pages ***/
+
+DIV.clsContents
+{
+margin:0px;
+padding:0px 10px 10px 10px;
+width:595px;
+}
+
+DIV.clsInfoBar
+{
+background-color:#cc3300;
+height:18px;
+padding:3px 10px 3px 10px;
+margin:0px 0px 10px 5px;
+}
+
+TD.clsFeatures
+{
+padding:0px 0px 0px 5px;
+}
+
+TD.clsColumns
+{
+width:50%;
+padding:5px 10px 0px 0px;
+}
+
+P.clsHeadline
+{
+text-indent:-10px;
+padding-left:20px;
+LINE-HEIGHT: 1.2em;
+margin-bottom:6px;
+}
+
+SPAN.clsLND
+{
+COLOR: #008080;
+}
+
+SPAN.st 
+{
+FONT-WEIGHT: bold;
+FONT-SIZE: 110%;
+}
+
+DIV.Columns
+{
+color:#008080;
+font-weight:bold;
+font-size:160%;
+border-bottom:2px solid #008080;
+margin:20px 0px 5px 5px;
+}
+
+HR.clsBlue {color:#3399cc;}
+HR.clsGray {color:#999999;}
+
+/*** Figure Tags ***/
+
+.clsCap
+{
+FONT-WEIGHT:bold;
+color:#000080
+}
+
+.clsCaptxt {color:#000080}
+
+.clsFigs {FONT-WEIGHT:bold;}
+.clsField {FONT-WEIGHT:bold;}
+.clsFigure {FONT-WEIGHT:bold;}
+
+/*** Eyebrow ***/
+
+A.small
+{
+font-size: 95%;
+text-decoration:underline;
+}
+
+DIV.eyebrow {margin:5px 0px 3px 10px;}
+
+DIV.smalleyebrow 
+{
+margin:10px;
+font-size:68%;
+line-height:1.2em;
+}
+
+/*** MSDN Online ***/
+
+A {color:#003399;}
+A:visited {color:#660099;}
+A:hover {color:#FF3300;}
+
+H1
+{
+font-size:165%;
+margin:0px;
+}
+
+H2
+{
+font-size:125%;
+margin:0px;
+}
+
+H3
+{
+font-size:115%;
+margin:0px;
+}
+
+H4, H5, H6
+{
+font-size:100%;
+margin:0px;
+}
+
+HR
+{
+color:#CCCCCC;
+height:1px;
+}
+
+/*** Index ***/
+
+.unsorted
+{
+border-bottom:solid 1px #999999;
+border-right:solid 1px #999999;
+border-left:solid 1px #ffffff;
+border-top:solid 1px #ffffff;
+background-color:#cccccc;
+cursor:hand;
+font-size:68%;
+font-family:Verdana;
+}
+
+.unsorted a
+{
+text-decoration:none;
+font-weight:bold;
+}
+
+.unsorted a:link {color:#000000;}
+.unsorted a:visited {color:#000000;}
+.unsorted a:hover {color:#FF3300;}
+
+.sorted
+{
+border-bottom:solid 1px #cccccc;
+border-right:solid 1px #cccccc;
+border-left:solid 1px #666666;
+border-top:solid 1px #666666;
+background-color:#999999;
+background-image: url(/msdnmag/images/dingbats/arrow-up.gif);
+background-position: center right;
+background-repeat:no-repeat; 
+cursor:hand;
+font-size:68%;
+font-family:Verdana;
+}
+
+.sorted a
+{
+text-decoration:none;
+font-weight:bold;
+}
+
+.sorted a:link {color:#ffffff;}
+.sorted a:visited {color:#ffffff;}
+.sorted a:hover {color:#FF3300;}
+
+.sortedDESC
+{
+border-bottom:solid 1px #cccccc;
+border-right:solid 1px #cccccc;
+border-left:solid 1px #666666;
+border-top:solid 1px #666666;
+background-color:#999999;
+background-image: url(/msdnmag/images/dingbats/arrow-down.gif);
+background-position: center right;
+background-repeat:no-repeat; 
+cursor:hand;
+font-size:68%;
+font-family:Verdana;
+}
+
+.sortedDESC a
+{
+text-decoration:none;
+font-weight:bold;
+}
+
+.sortedDESC a:link {color:#ffffff;}
+.sortedDESC a:visited {color:#ffffff;}
+.sortedDESC a:hover {color:#FF3300;}
+
+.filters
+{
+background-color:#99ccff;
+padding-left:12px;
+font-size:75%;
+font-family:Tahoma;
+border:solid 1 #cccccc;
+height:30px;
+color:#000000;
+vertical-align:middle;
+}
+
+.filters a
+{
+font-size:100%;
+font-family:Tahoma;
+color:#ffffff;
+}
+
+.filters a:visited {color:#ffffff;}
+
+.recenttitle
+{
+filter:progid:DXImageTransform.Microsoft.Gradient(GradientType=1, StartColorStr='#FF003399', EndColorStr='#FF6699CC');
+padding-left:8px;
+height:24px;
+font-weight:bold;
+color:#ffffff;
+font-size:68%;
+font-family:Verdana;
+vertical-align:middle;
+background-color:#003399;
+}
+
+.recentcell
+{
+border:solid 1px #cccccc;
+font-size:68%;
+font-family:Verdana;
+}  
+
+.recentselect {font-size:95%;}
+.recentspecial {border-right:solid 1px #cccccc;}
+
+.recentbutton
+{
+font-size:95%;
+margin-left: -5px;
+padding-left: 1px;
+}
+
+/*** Home ***/
+h4.First
+{
+margin-bottom:5px;
+}
+
+P.listClass
+{
+margin-bottom:5px;
+}
+P.listClass P
+{
+font-size:80%;
+text-indent:0px;
+}
+
+SPAN.headlineInfo
+{
+font-size:80%;
+}
+
+DIV.functionbar
+{
+background-color:#cc3300;
+height:18px;
+width:428px;
+padding:3px 10px 3px 10px;
+margin:0px 0px 20px 0px;
+}
+
+SPAN.functionbar
+{
+float:left;
+COLOR: #ffffff;
+FONT-WEIGHT: bold;
+FONT-SIZE: 110%;
+text-transform : uppercase;
+}
+
+SPAN.functionbartext 
+{
+float:right;
+FONT-SIZE: 80%;
+COLOR: #ffffff;
+}
+
+DIV.TopRatedBar
+{
+background-color:#336699;
+width:428px;
+height:14px;
+padding:3px 0px 3px 10px;
+margin-bottom:5px;
+COLOR: #ffffff;
+FONT-WEIGHT: bold;
+FONT-SIZE: 110%;
+}
+
+SPAN.TopSub
+{
+FONT-WEIGHT:bold;
+COLOR:red
+}
+
+DIV.clsTopRated
+{
+margin-top:5px;
+font-size:90%;
+}
+
+DIV.MoreLink
+{
+font-size:80%;
+}
+
+DIV.clsAuthor
+{
+color:#008080;
+margin-bottom:3px;
+}
+
+DIV.RNavHeadRed
+{
+background-color:#cc3300;
+width:140px;
+padding:3px 5px 3px 5px;
+COLOR: #ffffff;
+FONT-WEIGHT: bold;
+FONT-SIZE: 110%;
+}
+
+DIV.RNavHeadBlue
+{
+background-color:#336699;
+width:140px;
+padding:3px 5px 3px 5px;
+COLOR: #ffffff;
+FONT-WEIGHT: bold;
+FONT-SIZE: 110%;
+}
+
+DIV.RNavBody
+{
+background-color:#DFF0FC;
+width:140px;
+padding:5px 5px 10px 5px;
+margin-bottom:5px;
+FONT-SIZE: 90%;
+}
+
+/*** FixMenuforStrict ***/
+.mnpQuickSearch
+{
+	padding: 5px 3px 7px 5px;
+}
+/***
+.mnpMenuRow
+{
+	font-size:80%;
+}
+***/
+
+/*** InLineCode ***/
+
+
+DIV.clsInLineCodeBlock {
+
+font-size:90%;
+font-family:'courier new',courier,serif;
+line-height:1em;
+background:#EEEEEE;
+padding:5pt;
+
+}

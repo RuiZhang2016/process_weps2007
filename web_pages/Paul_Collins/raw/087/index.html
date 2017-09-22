@@ -1,0 +1,292 @@
+ 
+
+   <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<title>Albums by Paul Collins - Rate Your Music</title>
+
+	<link rel="stylesheet" href="http://rateyourmusic.com/css/def.css" type="text/css"/>
+	<link rel="shortcut icon" href="http://rateyourmusic.com/favicon.ico" type="image/x-icon"/>
+   <meta name="description" content="Rate Your Music is an online community of people who love music.  Catalog, rate, tag, and review your music.  List and review the concerts you've attended, and track upcoming shows.   When you rate your music, the site's music/social recommender can recommend similar music and users with similar music taste. " />
+   <meta name="keywords" content="Paul Collins, band, artist, discography, albums, singles, ep, bootleg, video, compilation, lists, concert listings, shows, venues" />
+</head>
+
+<body>
+<div id="wrapper">
+
+<div id="top">
+<h1 class="replace" id="logo"> </h1>
+</div>
+
+
+	<div id="navtop"><ul>
+		<li><a title="Front Page"  href="http://rateyourmusic.com/" ><img src="http://rateyourmusic.com/images/rstar.gif" alt="" />rym</a></li>
+		<li><a title="Find Music"   href="http://rateyourmusic.com/find/" >find</a></li>
+		<li><a title="Rate, Review, Catalog, and Tag your Music"  href="http://rateyourmusic.com/go/" >go!</a></li>
+		<li><a title="Message Boards and Member Directory"    href="http://rateyourmusic.com/community/" >community</a></li>
+
+		<li><a  href="http://rateyourmusic.com/account/login"  >log in / sign up</a></li>          <li><a href="http://rateyourmusic.com/donate/" title="Support Rate Your Music" >$</a></li>		
+	</ul>
+
+	<form method="get" action="http://rateyourmusic.com/search">
+		<fieldset id="searchbox"><input id="searchfield" type="text" maxlength="80" name="searchterm"/>
+		<select  id="searchlist" name="searchtype">
+			<option value="a" selected="selected" >Artist</option>
+			<option value="l"  >Release</option>
+			<option value="t"  >List</option>
+			<option value="v" >Review</option>
+			<option value="genre" >Genre</option>
+			<option value="u" >User</option>
+			<option value="b" >Label</option>
+		</select>
+		<input id="searchgo" type="submit" value="&gt;"/>
+		</fieldset>
+	</form>
+
+</div>
+
+<!-- trick --><div style="clear:both;"></div>
+
+
+<!-- ~~~~~~~~ begin content ~~~~~~~~~~~~~~~ -->
+
+<div id="content">
+
+   
+ <div id="tagger1" class="tagger">
+
+
+    <img src="http://rateyourmusic.com/images/shadow.png"  />
+      <div class="tagger_content">
+         <div style="padding:12px;">
+            <div class="medium" style="padding:5px;">Genre</div>
+         <div class="clear" ></div>
+         <div id="tagger_header" class="tagger_header"><b>Selected Genres (click a genre to remove/add it)</b></div>
+         <div id="list_on" class="tagger_list" >
+
+          <div class="tag_on" id="tagger_on">
+          <div class="clear"></div>
+            <hr noshade="noshade" />                  
+         </div>
+
+            <div class="clear"></div>
+          <div id="tagger_off"> 
+            <div class="clear"></div>
+
+          </div>
+         </div>
+
+          <div  class="tagger_add">
+            <form onSubmit="tag_add(); return false;"> 
+               <input type="hidden" id="tagger_assoc_id" name="tagger_assoc_id" value="0" />
+               <input type="hidden" id="tagger_type"     name="tagger_type"     value="" />
+               <input type="hidden" id="tagger_context"  name="tagger_context"  value="" />
+                   Add New Genre: <input type="text" size="25" name="newtag" id="newtag" /><a class="smallbutton" onClick="tag_add(); return false;" href="javascript:void(0)">add</a>
+            </form>
+         </div>
+         <div class="clear" ></div>
+              <div  style="text-align:right"><a class="smallbutton" href="javascript:cancelTags();">Cancel</a> <a  class="button" href="javascript:saveTags();">Save</a></div>
+         </div>
+      </div>
+   
+   </div><script type="text/javascript">
+   var token = '0';
+
+   function showIssues ( album_id ) {
+
+      did('issueLink' + album_id).href = 'javascript:void(0);' ;
+      sendRequest ('ShowIssues|0|' + album_id);
+
+   }
+   
+   function toggleDiv(div_id) {
+      var yVisible = document.getElementById(div_id).style.display == 'none';
+      var el = document.getElementById(div_id + '_btn');
+      if ( el ) 
+      {
+         el.innerHTML = yVisible ? '&lt;&lt; hide' : 'show &gt;&gt;';
+      }
+      if ( document.getElementById(div_id) ) { document.getElementById(div_id).style.display = yVisible ? '' : 'none'};
+      if ( document.getElementById(div_id) ) { document.getElementById(div_id).style.display = yVisible ? '' : 'none'};
+   }
+   function showLegend(event, fShow) { 
+     var fl = document.getElementById('legend');
+   
+     var pageX, pageY;
+   
+     if (event.pageX) {
+         pageX = event.pageX;
+     } else { 
+         pageX = event.clientX + document.documentElement.scrollLeft;
+     }
+     if (event.pageY )
+     {
+         pageY = event.pageY + 20;
+     } else {  
+         pageY = event.clientY +  document.documentElement.scrollTop + 20;
+     }
+   
+     fl.style.top = pageY + 'px';
+     fl.style.left = pageX+ 'px';
+     fl.style.visibility= fShow ? 'visible' : 'hidden';  
+   }
+
+</script>
+ 
+ <script type="text/javascript" src="http://rateyourmusic.com/sourced/basereq.js"></script>
+
+ <script type="text/javascript" src="http://rateyourmusic.com/sourced/tagger.js"></script>
+<div class="legend" id="legend">
+
+Weighted Rating
+<div class="abmrat">&nbsp;</div>
+<br />
+Popularity
+<div class="abmpop">&nbsp;</div>
+<br />
+Not Enough Data
+<div class="abmratg">&nbsp;</div>
+<br /></div><div style="display:none;" id="band_info">Paul Collins : Band / Artist info</div><table><tr><td style="vertical-align:top;"><div class="profileh" style="margin:0px;padding:0px;">
+       <b class="rtop1" ><b class="r1"></b> <b class="r2"></b> <b class="r3"></b> <b class="r4"></b></b>
+         <div class="profilehir" style="text-align:center;"  ><span class="dropheader"><span style="color:black;font-size:30px;font-family:Trebuchet MS;">Paul Collins</span></span></div>
+      </div>
+      <div class="profileb" style="margin:0px;padding:0px">
+       <div style="padding:10px;"><table><tr><td style="vertical-align:top;width:180px;">
+
+      	<div class="or_card_frame">
+      	<b class="rtop"><b class="r1"></b> <b class="r2"></b> <b class="r3"></b> <b class="r4"></b></b>
+      		<a href="http://rateyourmusic.com/release/album/paul_collins/from_town_to_town/"><img style="border:0px;" width="150" alt="From Town to Town" title="From Town to Town" src="&#104;&#116;&#116;&#112;&#58;&#47;&#47;&#115;&#116;&#97;&#116;&#105;&#99;&#46;&#114;&#97;&#116;&#101;&#121;&#111;&#117;&#114;&#109;&#117;&#115;&#105;&#99;&#46;&#99;&#111;&#109;&#47;&#97;&#108;&#98;&#117;&#109;&#95;&#105;&#109;&#97;&#103;&#101;&#115;&#47;&#115;&#49;&#52;&#56;&#56;&#49;&#48;&#46;&#106;&#112;&#103;" /></a> 	
+            <span class="card_link"><em><a title="[Album148810]" href="http://rateyourmusic.com/release/album/paul_collins/from_town_to_town/" class="card_link_bg">From Town to Town</a></em><br /><span class="card_small">(1993)</span></span>
+          
+      	<b class="rbottom"><b class="r4"></b> <b class="r3"></b> <b class="r2"></b> <b class="r1"></b></b>
+      	</div><br /><br /><div class="clear"> </div><div style="padding-left:45px;">  <script type="text/javascript"><!--
+google_ad_client = "pub-7116019216064530";
+google_alternate_ad_url = "http://rateyourmusic.com/misc/altad";
+google_ad_width = 160;
+google_ad_height = 90;
+google_ad_format = "160x90_0ads_al";
+google_ad_type = "text";
+google_ad_channel ="5293375411";
+google_color_border = "EEEEEE";
+google_color_link = "0000FF";
+google_color_bg = "EEEEEE";
+google_color_text = "666666";
+google_color_url = "2222FF";
+//--></script>
+<script type="text/javascript"
+  src="http://pagead2.googlesyndication.com/pagead/show_ads.js">
+</script></div>
+ </td><td  style="vertical-align:top;">
+    <div style="text-align:right"><span class="shortcut">shortcut: [Artist35827]</span></div><div class="clear"> </div>
+   <div style="float:left;"><table class="mbgen"><tr><td>Genres <a class="ratingbutton" href="javascript:void(0);" onClick="showTag(event, 35827, 'a', 'g', 1);">set</a></td><td><div id="artist_genre"><a href="http://rateyourmusic.com/genre/"></a></div></td></tr><tr><td> &nbsp; </td><td colspan="1"><div style="clear:both;text-align:left;">  <script type="text/javascript"><!--
+google_ad_client = "pub-7116019216064530";
+google_alternate_ad_url = "http://rateyourmusic.com/misc/altad";
+google_ad_width = 468;
+google_ad_height = 60;
+google_ad_format = "468x60_as";
+google_ad_type = "text";
+google_ad_channel ="5799336637";
+google_color_border = "f8f8f8";
+google_color_link = "000099";
+google_color_bg = "f8f8f8";
+google_color_text = "000000";
+google_color_url = "000000";
+//--></script>
+<script type="text/javascript"
+  src="http://pagead2.googlesyndication.com/pagead/show_ads.js">
+</script></div></td></tr></table></td></tr></table><div style="text-align:right;" class="smallgray"><br />[<a href="http://rateyourmusic.com/artist/profile_ac?artist_id=35827">Edit profile</a>]</div>
+       </div>
+
+       <b class="rbottom1"><b class="r4"></b> <b class="r3"></b> <b class="r2"></b> <b class="r1"></b></b>
+      </div><div class="clear"> </div><div class="profileh" style="margin:0px;padding:0px;">
+       <b class="rtop1" ><b class="r1"></b> <b class="r2"></b> <b class="r3"></b> <b class="r4"></b></b>
+         <div class="profilehir" style=""  ><span class="dropheader"><a href="http://rateyourmusic.com/artist/paul_collins/shows">shows</a></span></div>
+      </div>
+      <div class="profileb" style="margin:0px;padding:0px">
+       <div style="padding:10px;">
+      <div class="venuebox" style="width:350px;margin: 0 0 0 auto;text-align:right;">
+               <a href="http://rateyourmusic.com/artist/paul_collins/shows/-7">Past week</a> |
+               <a href="http://rateyourmusic.com/artist/paul_collins/shows/14">Next 14 days</a> |
+               Next 30 days 
+            
+               <br /><div class="clear"> </div> 
+               <div id="year_box">By Year: <a class="smallbutton" href="http://rateyourmusic.com/artist/paul_collins/shows/2006">2006</a> </div></div><div class="clear"> </div><table class="mbgen"> </table>
+       </div>
+
+       <b class="rbottom1"><b class="r4"></b> <b class="r3"></b> <b class="r2"></b> <b class="r1"></b></b>
+      </div></table> </script><div class="profileh" style="margin:0px;padding:0px;">
+       <b class="rtop1" ><b class="r1"></b> <b class="r2"></b> <b class="r3"></b> <b class="r4"></b></b>
+         <div class="profilehir" style=""  ><span class="dropheader"></span></div>
+      </div>
+      <div class="profileb" style="margin:0px;padding:0px">
+       <div style="padding:10px;"><h4 style="text-align:center;">Back to <a href="http://rateyourmusic.com/artist/paul_collins/">Paul Collins</a></h4>
+       </div>
+
+       <b class="rbottom1"><b class="r4"></b> <b class="r3"></b> <b class="r2"></b> <b class="r1"></b></b>
+      </div><div class="clear"> </div>
+
+
+<!-- ~~~~~~~~ end content ~~~~~~~~~~~~~~~ -->
+
+
+<!--trick--><div style="clear:both;"></div>
+</div>
+<div id="navbottom">
+<ul>
+	<li><a href="http://rateyourmusic.com/listen/all">Artists on RYM</a></li>
+	<li><a href="http://rateyourmusic.com/faq/">FAQ</a></li>
+	<li><a href="http://rateyourmusic.com/chat/">Chat</a></li>
+	<li><a href="http://rateyourmusic.com/tos">Terms of Service</a></li>
+	<li><a href="http://rateyourmusic.com/privacy">Privacy</a></li>
+	<li><a href="http://rateyourmusic.com/suggestions">Contact/Feedback</a></li>
+	<li><a href="http://rateyourmusic.com/help/">Help</a></li>
+</ul>
+
+<address>&copy; 2000 - 2006 rateyourmusic.com s.202</address>
+
+</div>
+</div>
+<script src="http://www.google-analytics.com/urchin.js" type="text/javascript">
+</script>
+<script type="text/javascript">
+_uacct = "UA-59057-1";
+urchinTracker();
+</script>
+</body>
+</html>
+ 
+ 
+
+
+<!-- ~~~~~~~~ end content ~~~~~~~~~~~~~~~ -->
+
+
+<!--trick--><div style="clear:both;"></div>
+</div>
+<div id="navbottom">
+<ul>
+	<li><a href="http://rateyourmusic.com/listen/all">Artists on RYM</a></li>
+	<li><a href="http://rateyourmusic.com/faq/">FAQ</a></li>
+	<li><a href="http://rateyourmusic.com/chat/">Chat</a></li>
+	<li><a href="http://rateyourmusic.com/tos">Terms of Service</a></li>
+	<li><a href="http://rateyourmusic.com/privacy">Privacy</a></li>
+	<li><a href="http://rateyourmusic.com/suggestions">Contact/Feedback</a></li>
+	<li><a href="http://rateyourmusic.com/help/">Help</a></li>
+</ul>
+
+<address>&copy; 2000 - 2006 rateyourmusic.com s.202</address>
+
+</div>
+</div>
+<script src="http://www.google-analytics.com/urchin.js" type="text/javascript">
+</script>
+<script type="text/javascript">
+_uacct = "UA-59057-1";
+urchinTracker();
+</script>
+</body>
+</html>
+ 
+ 

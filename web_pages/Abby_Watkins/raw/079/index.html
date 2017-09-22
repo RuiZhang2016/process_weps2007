@@ -1,0 +1,417 @@
+<HTML>
+<HEAD>
+
+<STYLE>
+BODY
+{scrollbar-face-color: #ffffff; scrollbar-shadow-color: #000000; 
+scrollbar-highlight-color: #ffffff; scrollbar-3dlight-color: #ffffff; 
+scrollbar-darkshadow-color: #ffffff; scrollbar-track-color: #cccccc; 
+scrollbar-arrow-color: #00ffff}
+</STYLE>
+<TITLE>COLONY</TITLE>
+<META http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<style type="text/css">  
+#divUpControl{position:absolute; width:275; left:175; top:106; z-index:1; text-align: right} 
+#divDownControl{position:absolute; width:275; left:175; top:385; z-index:1; text-align: right} 
+#divContainer{position:absolute; width:275; height:259; overflow:hidden; top:126; left:175; clip:rect(0,275,259,0); visibility:hidden} 
+#divContent{position:absolute; top:0; left:0} 
+.mainwelcome {  font-family: Arial, Helvetica, sans-serif; font-size: 12pt; font-style: normal; font-weight: bold; color: #000000; text-transform: uppercase}
+.feature {  font-family: Arial, Helvetica, sans-serif; font-size: x-small; font-style: normal; font-weight: normal; color: #333333; text-transform: uppercase}
+</style>
+<script language="JavaScript">
+<!--
+
+
+
+
+
+// begin absolutely positioned scrollable area object scripts 
+function verifyCompatibleBrowser(){ 
+    this.ver=navigator.appVersion 
+    this.dom=document.getElementById?1:0 
+    this.ie5=(this.ver.indexOf("MSIE 5")>-1 && this.dom)?1:0; 
+    this.ie4=(document.all && !this.dom)?1:0; 
+    this.ns5=(this.dom && parseInt(this.ver) >= 5) ?1:0; 
+ 
+    this.ns4=(document.layers && !this.dom)?1:0; 
+    this.bw=(this.ie5 || this.ie4 || this.ns4 || this.ns5) 
+    return this 
+} 
+bw=new verifyCompatibleBrowser() 
+ 
+ 
+var speed=50 
+ 
+var loop, timer 
+ 
+function ConstructObject(obj,nest){ 
+    nest=(!nest) ? '':'document.'+nest+'.' 
+    this.el=bw.dom?document.getElementById(obj):bw.ie4?document.all[obj]:bw.ns4?eval(nest+'document.'+obj):0; 
+    this.css=bw.dom?document.getElementById(obj).style:bw.ie4?document.all[obj].style:bw.ns4?eval(nest+'document.'+obj):0; 
+    this.scrollHeight=bw.ns4?this.css.document.height:this.el.offsetHeight 
+    this.clipHeight=bw.ns4?this.css.clip.height:this.el.offsetHeight 
+    this.up=MoveAreaUp;this.down=MoveAreaDown; 
+    this.MoveArea=MoveArea; this.x; this.y; 
+    this.obj = obj + "Object" 
+    eval(this.obj + "=this") 
+    return this 
+} 
+function MoveArea(x,y){ 
+    this.x=x;this.y=y 
+    this.css.left=this.x 
+    this.css.top=this.y 
+} 
+ 
+function MoveAreaDown(move){ 
+	if(this.y>-this.scrollHeight+objContainer.clipHeight){ 
+    this.MoveArea(0,this.y-move) 
+    if(loop) setTimeout(this.obj+".down("+move+")",speed) 
+	} 
+} 
+function MoveAreaUp(move){ 
+	if(this.y<0){ 
+    this.MoveArea(0,this.y-move) 
+    if(loop) setTimeout(this.obj+".up("+move+")",speed) 
+	} 
+} 
+ 
+function PerformScroll(speed){ 
+	if(initialised){ 
+		loop=true; 
+		if(speed>0) objScroller.down(speed) 
+		else objScroller.up(speed) 
+	} 
+} 
+ 
+function CeaseScroll(){ 
+    loop=false 
+    if(timer) clearTimeout(timer) 
+} 
+var initialised; 
+function InitialiseScrollableArea(){ 
+    objContainer=new ConstructObject('divContainer') 
+    objScroller=new ConstructObject('divContent','divContainer') 
+    objScroller.MoveArea(0,0) 
+    objContainer.css.visibility='visible' 
+    initialised=true; 
+} 
+// end absolutely positioned scrollable area object scripts
+//-->
+</script>
+<link rel="stylesheet" href="../old_site/_notes/colony_design.css" type="text/css">
+<script language="JavaScript">
+<!--
+function MM_reloadPage(init) {  //reloads the window if Nav4 resized
+  if (init==true) with (navigator) {if ((appName=="Netscape")&&(parseInt(appVersion)==4)) {
+    document.MM_pgW=innerWidth; document.MM_pgH=innerHeight; onresize=MM_reloadPage; }}
+  else if (innerWidth!=document.MM_pgW || innerHeight!=document.MM_pgH) location.reload();
+}
+MM_reloadPage(true);
+// -->
+</script>
+<link rel="stylesheet" href="colony_design.css" type="text/css">
+</HEAD>
+
+<BODY bgcolor="#FFFFFF" topmargin="0" link="#CC0000" leftmargin="0">
+<table width="53%" border="0" cellspacing="0" cellpadding="0">
+  <tr> 
+    <td width="80%"><img src="../imgs/cly_head_credits.gif" width="266" height="72"></td>
+  </tr>
+  <tr> 
+    <td width="80%" class="cny_text" height="125"><span class="highlight">Y Space 
+      and the 2002 Next Wave Festival would like to thank everyone who has supported 
+      the creation of Colony. </span><br>
+      <br>
+      <img src="../imgs/cly_dotpoint.gif" width="5" height="5"> <a href="http://www.vicartscentre.com.au/" target="_blank">Victorian 
+      Arts Centre</a><br>
+      <img src="../imgs/cly_dotpoint.gif" width="5" height="5"> <a href="http://www.ten.com.au" target="_blank">Network 
+      Ten</a><br>
+      <img src="../imgs/cly_dotpoint.gif" width="5" height="5"> Myer Foundation<br>
+      <img src="../imgs/cly_dotpoint.gif" width="5" height="5"> <a href="http://www.riggerous.com" target="_blank">Riggerous</a><br>
+      <img src="../imgs/cly_dotpoint.gif" width="5" height="5"> <a href="http://www.vertigo.net.au" target="_blank">Vertigo</a> 
+      <br>
+      &middot; <a href="http://www.ausbell.com" target="_blank">Ausbell</a><br>
+      <img src="../imgs/cly_dotpoint.gif" width="5" height="5"> <a href="http://www.thomasduryea.com.au" target="_blank">Thomas 
+      Duryea Consulting</a><br>
+      &middot; <a href="http://unityindiversityevents.alphalink.com.au" target="_blank">Cosmic 
+      Harmony Foundation</a> <br>
+    </td>
+  </tr>
+  <tr> 
+    <td width="80%" class="cny_heading" height="5"><img src="../imgs/cly_mainpxl.gif" width="553" height="3"></td>
+  </tr>
+  <tr> 
+    <td height="1403" class="cny_text"> 
+      <table width="100%" border="0" cellspacing="0" cellpadding="0">
+        <tr> 
+          <td width="26%" height="153" class="cny_creditbold">Jillian Pearce <br>
+            Abby Watkins <br>
+            Elena Vereker <br>
+            Dave Corbet <br>
+            Enga Lokey <br>
+            Nicola Woolford <br>
+            Tobie Coggle <br>
+            Tom Andrews <br>
+            Nicole Skeltys (B(if)tek) <br>
+            Mark Gardiner <br>
+            Students of MLC <br>
+            Danielle Mulchay <br>
+            Fairfield Primary School</td>
+          <td width="74%" height="153" class="cny_credit">Director/choreographer<br>
+            Assistant Choreographer<br>
+            Assistant Director<br>
+            Angel<br>
+            Angel<br>
+            Angel<br>
+            Angel<br>
+            Angel<br>
+            Composer: Aerial Performance<br>
+            Composer: sound installation<br>
+            sound installation<br>
+            sound installation<br>
+            Message Flag installation</td>
+        </tr>
+        <tr> 
+          <td width="26%" class="cny_credit"><img src="../imgs/cly_creditpage_trans.gif" width="230" height="5"></td>
+          <td width="74%" class="cny_credit">&nbsp;</td>
+        </tr>
+        <tr> 
+          <td width="26%" class="cny_credit" height="57"><span class="cny_creditbold">Steven 
+            Richardson <br>
+            Tracey Wall <br>
+            Catherine Rafferty <br>
+            Bianca vander Neut <br>
+            Katelyn B <br>
+            Gillian Howell <br>
+            Bill Coleby (Coleby Consulting) </span><br>
+          </td>
+          <td width="74%" class="cny_credit" height="57">Producer / Next Wave 
+            CEO<br>
+            Production Manager<br>
+            Production Assistant<br>
+            Production Assistant/Kiosk coordinator<br>
+            Production Assistant<br>
+            Music/Schools liason<br>
+            Risk Management</td>
+        </tr>
+        <tr> 
+          <td width="26%" class="cny_credit">&nbsp;</td>
+          <td width="74%" class="cny_credit">&nbsp;</td>
+        </tr>
+        <tr> 
+          <td width="26%" class="cny_creditbold" height="121">Phil Lethlean <br>
+            John O'Donnell (Funktion-one) <br>
+            Tony Harding <br>
+            Craig Boyes <br>
+            Cathy Kowalewski <br>
+            Adam Gardener <br>
+            Chris Sanders <br>
+            John Hicks <br>
+            Sally Hitchcock <br>
+            Anita Crosbie <br>
+            Andrew Conn</td>
+          <td width="74%" class="cny_credit" height="121">Lighting Designer<br>
+            Sound Designer<br>
+            Stage Manager<br>
+            LX operator<br>
+            follow spot operator<br>
+            follow spot operator<br>
+            follow spot operator<br>
+            follow spot operator<br>
+            follow spot operator<br>
+            volunteer<br>
+            LX rigger</td>
+        </tr>
+        <tr> 
+          <td width="26%" class="cny_credit">&nbsp;</td>
+          <td width="74%" class="cny_credit">&nbsp;</td>
+        </tr>
+        <tr> 
+          <td width="26%" class="cny_credit" height="39"><span class="cny_creditbold">Colony 
+            Surveillance Camera <br>
+            Ian Corcoran <br>
+            Matt Walsh <br>
+            Jason Bird <br>
+            Edmund Chiu (4micate) </span><br>
+          </td>
+          <td width="74%" class="cny_credit" height="39">Front Porch Productions<br>
+            Concept<br>
+            Programmer<br>
+            Technician<br>
+            angel website</td>
+        </tr>
+        <tr> 
+          <td width="26%" class="cny_credit">&nbsp;</td>
+          <td width="74%" class="cny_credit">&nbsp;</td>
+        </tr>
+        <tr> 
+          <td width="26%" class="cny_credit" height="90"><span class="cny_creditbold">Helen 
+            Bird (Riggerous) <br>
+            Ryan Taplin (Riggerous) <br>
+            Bob Sturrok <br>
+            Geoff Little (vertigo) <br>
+            Jeremy Ballanger (vertigo) <br>
+            Ronnie Sammit (vertigo) <br>
+            Justine McGee (Vertigo) <br>
+            Rhinehart Grussler (Vertigo) <br>
+            Brendan Kendall(Vertigo) <br>
+            Simon Baird(Vertigo) </span><br>
+          </td>
+          <td width="74%" class="cny_credit" height="90">Aerial Rigging Director<br>
+            Aerial Performance rigger<br>
+            spire engineer<br>
+            Director of Operarions: Rigging Installation<br>
+            Senior Operations Manager: Rigging Installation<br>
+            Project Manager Rigging Installation<br>
+            rigging installation<br>
+            rigging installation<br>
+            rigging installation<br>
+            rigging installation</td>
+        </tr>
+        <tr> 
+          <td width="26%" class="cny_credit">&nbsp;</td>
+          <td width="74%" class="cny_credit">&nbsp;</td>
+        </tr>
+        <tr> 
+          <td width="26%" class="cny_creditbold" height="22">Jason Parmington 
+            (Mothers Art) <br>
+            Laurel Frank <br>
+            Adrienne Chisholm <br>
+            Ian Corcoran (desengano design)</td>
+          <td width="74%" class="cny_credit" height="22">wing design and construction<br>
+            Angel wings<br>
+            Costumes<br>
+            digital imaging tech</td>
+        </tr>
+        <tr> 
+          <td width="26%" class="cny_credit">&nbsp;</td>
+          <td width="74%" class="cny_credit">&nbsp;</td>
+        </tr>
+        <tr> 
+          <td width="26%" class="cny_credit" height="20"><span class="cny_creditbold">Annie 
+            Winter <br>
+            Margot Storm <br>
+            Mase Mason <br>
+            Rhiannon McIntosh</span><br>
+          </td>
+          <td width="74%" class="cny_credit" height="20">Day site manager<br>
+            Roof support/overnight<br>
+            Ground support/overnight<br>
+            Production Assistant</td>
+        </tr>
+        <tr> 
+          <td width="26%" class="cny_credit">&nbsp;</td>
+          <td width="74%" class="cny_credit">&nbsp;</td>
+        </tr>
+        <tr> 
+          <td width="26%" class="cny_credit" height="130"><span class="cny_creditbold">Rebecca 
+            Jones <br>
+            Durham Ritchie (Bytecraft) <br>
+            Michael Filipponi (Citiwide) <br>
+            Bill Coleby <br>
+            Dan Karalus <br>
+            Daniela Raulli <br>
+            Jason Bond <br>
+            Matt Walsh <br>
+            Tobie Coggle <br>
+            Ian Vernon (Cinerama) <br>
+            Annie Mc Millan <br>
+            Mick and Vikki Clarke <br>
+            (Airborn Kites) <br>
+            Kate Rhodes <br>
+            Ian deGruchy <br>
+            Christian Thompson </span><br>
+          </td>
+          <td width="74%" class="cny_credit" height="130">Caterer<br>
+            LX/cable supplier<br>
+            civil contracting/barriers<br>
+            Risk management consultant<br>
+            Film crew<br>
+            Film crew<br>
+            schematics<br>
+            website tech<br>
+            Angel stamp design<br>
+            Angel stamps manufacture<br>
+            First Aid Instructor<br>
+            Angel Kite<br>
+            <br>
+            curator<br>
+            Tech director<br>
+            Visual Artist</td>
+        </tr>
+        <tr> 
+          <td width="26%" class="cny_credit">&nbsp;</td>
+          <td width="74%" class="cny_credit">&nbsp;</td>
+        </tr>
+        <tr> 
+          <td width="26%" class="cny_credit" height="173"><span class="highlight">VACT</span><br>
+            <span class="cny_creditbold">Bernadette Dalton <br>
+            Craig Buckingham <br>
+            Darren Golding <br>
+            Graham Jasper <br>
+            Jamie Henson <br>
+            Jim Grayson <br>
+            Joseph Hester <br>
+            John Arthur <br>
+            Natalie Fitzgerald <br>
+            Paul Broderick<br>
+            Ralph Brinkmann <br>
+            Terry Francis <br>
+            Ark Pouthowaits <br>
+            Fiona Bennie <br>
+            Paul Chierego <br>
+            Nick <br>
+            Ian Anger (Direct Access)</span></td>
+          <td width="74%" class="cny_credit" height="173"><br>
+            information services<br>
+            safety &amp; security services<br>
+            Operations manager/sound production<br>
+            VAC programming<br>
+            operations manager<br>
+            facilities<br>
+            OHS sytems<br>
+            OHS safety manager<br>
+            online coordinator 
+            <p>Operations/facilities Manager<br>
+              Account manager/presenter services<br>
+              props<br>
+              Gallery manager<br>
+              Tech coordinator<br>
+              sound<br>
+              VACT rigging contractor</p>
+          </td>
+        </tr>
+        <tr> 
+          <td width="26%" class="cny_credit">&nbsp;</td>
+          <td width="74%" class="cny_credit">&nbsp;</td>
+        </tr>
+        <tr> 
+          <td width="26%" class="cny_credit"><span class="cny_creditbold">Anton 
+            Hazel (Australian Bells)<br>
+            Airbourne Kites<br>
+            Nathan Powles<br>
+            Intouch<br>
+            Johnson Audio<br>
+            Kathmandu<br>
+            Kites4kids<br>
+            MFB<br>
+            Mooks<br>
+            Circus Oz<br>
+            NICA<br>
+            Renta2Way<br>
+            Richomd FB<br>
+            Lisa Bennett at Spider Eye<br>
+            Owen Lloyd at ADACS cameras</span><br>
+          </td>
+          <td width="74%" class="cny_credit">&nbsp;</td>
+        </tr>
+      </table>
+    </td>
+  </tr>
+  <tr> 
+    <td width="80%" class="cny_text">&nbsp;</td>
+  </tr>
+</table>
+
+</BODY>
+</HTML>

@@ -1,0 +1,858 @@
+<html>
+<head>
+<title>Population Connection : Features</title>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<link rel="stylesheet" href="../stylesheets/main.css" type="text/css">
+<script language="JavaScript">
+<!--
+
+<!--
+// -->
+
+function MM_findObj(n, d) { //v4.01
+  var p,i,x;  if(!d) d=document; if((p=n.indexOf("?"))>0&&parent.frames.length) {
+    d=parent.frames[n.substring(p+1)].document; n=n.substring(0,p);}
+  if(!(x=d[n])&&d.all) x=d.all[n]; for (i=0;!x&&i<d.forms.length;i++) x=d.forms[i][n];
+  for(i=0;!x&&d.layers&&i<d.layers.length;i++) x=MM_findObj(n,d.layers[i].document);
+  if(!x && d.getElementById) x=d.getElementById(n); return x;
+}
+
+function P7_autoLayers() { //v1.2 by PVII
+ var g,b,k,f,args=P7_autoLayers.arguments;
+ var a = parseInt(args[0]);if(isNaN(a))a=0;
+ if(!document.p7setc) {p7c=new Array();document.p7setc=true;
+  for (var u=0;u<10;u++) {p7c[u] = new Array();}}
+ for(k=0; k<p7c[a].length; k++) {
+  if((g=MM_findObj(p7c[a][k]))!=null) {
+   b=(document.layers)?g:g.style;b.visibility="hidden";}}
+ for(k=1; k<args.length; k++) {
+  if((g=MM_findObj(args[k])) != null) {
+   b=(document.layers)?g:g.style;b.visibility="visible";f=false;
+   for(j=0;j<p7c[a].length;j++) {
+    if(args[k]==p7c[a][j]) {f=true;}}
+  if(!f) {p7c[a][p7c[a].length++]=args[k];}}}
+}
+//-->
+</script>
+<script language="JavaScript">
+<!--
+function MM_reloadPage(init) {  //Updated by PVII. Reloads the window if Nav4 resized
+  if (init==true) with (navigator) {if ((appName=="Netscape")&&(parseInt(appVersion)==4)) {
+    document.MM_pgW=innerWidth; document.MM_pgH=innerHeight; onresize=MM_reloadPage; }}
+  else if (innerWidth!=document.MM_pgW || innerHeight!=document.MM_pgH) location.reload();
+}
+MM_reloadPage(true);
+
+function P7_ReDoIt() { //v1.21 by PVII
+ if(document.layers) {MM_reloadPage(false);}
+}
+
+function P7_Snap() { //v2.62 by PVII
+  var x,y,ox,bx,oy,p,tx,a,b,k,d,da,e,el,args=P7_Snap.arguments;a=parseInt(a);
+  for (k=0; k<(args.length-3); k+=4)
+   if ((g=MM_findObj(args[k]))!=null) {
+    el=eval(MM_findObj(args[k+1]));
+    a=parseInt(args[k+2]);b=parseInt(args[k+3]);
+    x=0;y=0;ox=0;oy=0;p="";tx=1;da="document.all['"+args[k]+"']";
+    if(document.getElementById) {
+     d="document.getElementsByName('"+args[k]+"')[0]";
+     if(!eval(d)) {d="document.getElementById('"+args[k]+"')";if(!eval(d)) {d=da;}}
+    }else if(document.all) {d=da;} 
+    if (document.all || document.getElementById) {
+     while (tx==1) {p+=".offsetParent";
+      if(eval(d+p)) {x+=parseInt(eval(d+p+".offsetLeft"));y+=parseInt(eval(d+p+".offsetTop"));
+      }else{tx=0;}}
+     ox=parseInt(g.offsetLeft);oy=parseInt(g.offsetTop);var tw=x+ox+y+oy;
+     if(tw==0 || (navigator.appVersion.indexOf("MSIE 4")>-1 && navigator.appVersion.indexOf("Mac")>-1)) {
+      ox=0;oy=0;if(g.style.left){x=parseInt(g.style.left);y=parseInt(g.style.top);
+      }else{var w1=parseInt(el.style.width);bx=(a<0)?-5-w1:-10;
+      a=(Math.abs(a)<1000)?0:a;b=(Math.abs(b)<1000)?0:b;
+      x=document.body.scrollLeft + event.clientX + bx;
+      y=document.body.scrollTop + event.clientY;}}
+   }else if (document.layers) {x=g.x;y=g.y;var q0=document.layers,dd="";
+    for(var s=0;s<q0.length;s++) {dd='document.'+q0[s].name;
+     if(eval(dd+'.document.'+args[k])) {x+=eval(dd+'.left');y+=eval(dd+'.top');break;}}}
+   if(el) {e=(document.layers)?el:el.style;
+   var xx=parseInt(x+ox+a),yy=parseInt(y+oy+b);
+   if(navigator.appName=="Netscape" && parseInt(navigator.appVersion)>4){xx+="px";yy+="px";}
+   if(navigator.appVersion.indexOf("MSIE 5")>-1 && navigator.appVersion.indexOf("Mac")>-1){
+    xx+=parseInt(document.body.leftMargin);yy+=parseInt(document.body.topMargin);
+    xx+="px";yy+="px";}e.left=xx;e.top=yy;}}
+}
+
+function MM_preloadImages() { //v3.0
+  var d=document; if(d.images){ if(!d.MM_p) d.MM_p=new Array();
+    var i,j=d.MM_p.length,a=MM_preloadImages.arguments; for(i=0; i<a.length; i++)
+    if (a[i].indexOf("#")!=0){ d.MM_p[j]=new Image; d.MM_p[j++].src=a[i];}}
+}
+
+function MM_swapImage() { //v3.0
+  var i,j=0,x,a=MM_swapImage.arguments; document.MM_sr=new Array; for(i=0;i<(a.length-2);i+=3)
+   if ((x=MM_findObj(a[i]))!=null){document.MM_sr[j++]=x; if(!x.oSrc) x.oSrc=x.src; x.src=a[i+2];}
+}
+
+function MM_swapImgRestore() { //v3.0
+  var i,x,a=document.MM_sr; for(i=0;a&&i<a.length&&(x=a[i])&&x.oSrc;i++) x.src=x.oSrc;
+}
+//-->
+</script>
+
+
+<!-- Important for Usage:  For variable sites change the width of the table named Main to 100%; and change the width of the TD contain the table named TabsTable to 100% -->
+
+
+ 
+</head>
+<body bgcolor="#FFFFFF" text="#000000" onResize="P7_ReDoIt();P7_Snap('LearnMoreTab','LearnMoreCloser',0,0,'LearnMoreTab','LearnMoreDD',0,70,'EducationTab','EducationDD',0,0,'EducationTab','EducationDD',0,0,'LegislationTab','LegislationDD',0,0,'LegislationTab','LegislationCloser',0,0,'logo','SwapImageLeft',0,0,'logo','SwapImageRight',0,0,'TakeActionTab','TakeActionDD',0,0,'TakeActionTab','TakeActionCloser',0,0,'JoinOrGiveTab','JoinOrGiveCloser',0,0,'JoinOrGiveTab','JoinOrGiveDD',0,0)" onLoad="MM_preloadImages('../images/learn_more_on.gif','../images/education_on.gif','../images/legislation_on.gif','../images/take_action_on.gif','../images/join_or_give_on.gif')">
+<div id="LearnMoreDD" style="position:absolute; left:15px; top:143px; width:175px; height:75; z-index:2; visibility: hidden"> 
+  <table width="175" border="0" cellspacing="0" cellpadding="1">
+    <tr> 
+      <td bgcolor="#000000">
+        <table width="173" border="0" cellspacing="0" cellpadding="0" bgcolor="#000000" height="75">
+          <tr> 
+            <td class="GlobalNavMenuOption" bgcolor="#FFFFFF"><a href="../Reports_Publications/Publications/">Publications</a></td>
+          </tr>
+          <tr> 
+            <td class="GlobalNavMenuOption"><img src="../images/spacer.gif" width="1" height="1"></td>
+          </tr>
+          <tr> 
+            <td class="GlobalNavMenuOption" bgcolor="#FFFFFF"><a href="../Reports_Publications/Reports/report209.html">Fact&nbsp;Sheets</a></td>
+          </tr>
+          <tr> 
+            <td class="GlobalNavMenuOption"><img src="../images/spacer.gif" width="1" height="1"></td>
+          </tr>
+          <tr> 
+            <td class="GlobalNavMenuOption" bgcolor="#FFFFFF"><a href="../Factoids/">Factoids</a></td>
+          </tr>
+        </table>
+      </td>
+    </tr>
+  </table>
+</div>
+<div id="LearnMoreCloser" style="position:absolute; left:71px; top:36px; width:225px; height:125px; z-index:1; visibility: hidden"><a href="javascript:;" onMouseOut="MM_swapImgRestore()" onMouseOver="P7_autoLayers(0)"><img src="../images/spacer.gif" width="225" height="125" border="0"></a></div>
+<div id="EducationDD" style="position:absolute; left:295px; top:297px; width:175px; z-index:2; height: 0px; visibility: hidden"> 
+  <table width="175" border="0" cellspacing="0" cellpadding="1">
+    <tr> 
+      <td bgcolor="#000000">
+        <table width="173" border="0" cellspacing="0" cellpadding="0" bgcolor="#000000">
+          <tr> 
+            <td class="GlobalNavMenuOption" bgcolor="#FFFFFF"><a href="http://www.populationeducation.org">Population 
+              Education<br>
+              <br>
+              Our award winning program for teachers and students. <img src="../images/small_right_arrow.gif" border="0"></a></td>
+          </tr>
+        </table>
+      </td>
+    </tr>
+  </table>
+</div>
+<div id="EducationCloser" style="position:absolute; left:275px; top:215px; width:225px; height:125px; z-index:1; visibility: hidden"><a href="javascript:;" onMouseOver="P7_autoLayers(0)" onMouseOut="MM_swapImgRestore()"><img src="../images/spacer.gif" width="225" height="125" border="0"></a></div>
+<div id="LegislationDD" style="position:absolute; left:71px; top:298px; width:175px; z-index:2; visibility: hidden"> 
+  <table width="175" border="0" cellspacing="0" cellpadding="1">
+    <tr> 
+      <td bgcolor="#000000">
+        <table width="173" border="0" cellspacing="0" cellpadding="0" bgcolor="#000000">
+          <tr> 
+            <td class="GlobalNavMenuOption" bgcolor="#FFFFFF"><a href="http://capwiz.com/zpg/home/">Legislative 
+              Action Center<br>
+              <br>
+             Our complete guide to legislation, elected officials, 
+              issues, and elections. <img src="../images/small_right_arrow.gif" border="0"></a></td>
+          </tr>
+        </table>
+      </td>
+    </tr>
+  </table>
+</div>
+<div id="LegislationCloser" style="position:absolute; left:223px; top:404px; width:100px; height:125px; z-index:1; visibility: hidden"><a href="javascript:;" onMouseOver="P7_autoLayers(0);MM_swapImgRestore()"><img src="../images/spacer.gif" width="225" height="175" border="0"></a></div>
+<div id="SwapImageRight" style="position:absolute; left:755px; top:328px; width:100px; height:70px; z-index:3; visibility: hidden"><a href="javascript:;" onMouseOver="MM_swapImgRestore();P7_autoLayers(0)"><img src="../images/spacer.gif" width="185" height="70" border="0"></a></div>
+<div id="SwapImageLeft" style="position:absolute; left:902px; top:230px; width:100px; height:70px; z-index:3; visibility: hidden"><a href="javascript:;" onMouseOver="MM_swapImgRestore();P7_autoLayers(0)"><img src="../images/spacer.gif" width="200" height="70" border="0"></a></div>
+<div id="TakeActionDD" style="position:absolute; left:272px; top:270px; width:175px; height:75px; z-index:2; visibility: hidden"> 
+  <table width="175" border="0" cellspacing="0" cellpadding="1">
+    <tr> 
+      <td bgcolor="#000000">
+        <table width="173" border="0" cellspacing="0" cellpadding="0" bgcolor="#000000" height="75">
+          <tr> 
+            <td class="GlobalNavMenuOption" bgcolor="#FFFFFF"><a href="../Get_Involved/Projects/">Programs</a></td>
+          </tr>
+          <tr> 
+            <td class="GlobalNavMenuOption"><img src="../images/spacer.gif" width="1" height="1"></td>
+          </tr>
+          <tr> 
+            <td class="GlobalNavMenuOption" bgcolor="#FFFFFF"><a href="../Action_Alerts/">Action 
+              Alerts </a></td>
+          </tr>
+          <tr> 
+            <td class="GlobalNavMenuOption"><img src="../images/spacer.gif" width="1" height="1"></td>
+          </tr>
+          <tr> 
+            <td class="GlobalNavMenuOption" bgcolor="#FFFFFF"><a href="https://www.populationconnection.org/Get_Involved/becomingmember.html">Become 
+              a Member</a></td>
+          </tr>
+        </table>
+      </td>
+    </tr>
+  </table>
+</div>
+<div id="TakeActionCloser" style="position:absolute; left:535px; top:201px; width:225px; height:125px; z-index:1; visibility: hidden"><a href="javascript:;" onMouseOver="P7_autoLayers(0);MM_swapImgRestore()"><img src="../images/spacer.gif" width="225" height="125" border="0"></a></div>
+<div id="JoinOrGiveDD" style="position:absolute; left:286px; top:199px; width:175px; height:75px; z-index:2; visibility: hidden"> 
+  <table width="175" border="0" cellspacing="0" cellpadding="1">
+    <tr> 
+      <td bgcolor="#000000">
+        <table width="173" border="0" cellspacing="0" cellpadding="0" bgcolor="#000000" height="75">
+          <tr> 
+            <td class="GlobalNavMenuOption" bgcolor="#FFFFFF"><a href="https://www.populationconnection.org/Get_Involved/donate.html">Make 
+              a Donation</a></td>
+          </tr>
+          <tr> 
+            <td class="GlobalNavMenuOption"><img src="../images/spacer.gif" width="1" height="1"></td>
+          </tr>
+          <tr> 
+            <td class="GlobalNavMenuOption" bgcolor="#FFFFFF"><a href="https://www.populationconnection.org/Get_Involved/becomingmember.html">Join 
+              Us </a></td>
+          </tr>
+          <tr> 
+            <td class="GlobalNavMenuOption"><img src="../images/spacer.gif" width="1" height="1"></td>
+          </tr>
+          <tr> 
+            <td class="GlobalNavMenuOption" bgcolor="#FFFFFF"><a href="https://www.populationconnection.org/Catalog/">Catalog 
+              of Products</a></td>
+          </tr>
+        </table>
+      </td>
+    </tr>
+  </table>
+</div>
+<div id="JoinOrGiveCloser" style="position:absolute; left:120px; top:251px; width:225px; height:125px; z-index:1; visibility: hidden"><a href="javascript:;" onMouseOver="MM_swapImgRestore();P7_autoLayers(0)"><img src="../images/spacer.gif" width="225" height="125" border="0"></a></div>
+<!-- Search Google --><form name="google" method="get" action="http://www.google.com/custom">
+        <table border="0" cellspacing="0" cellpadding="0" align="center" name="Main">
+    <tr> 
+      <td colspan="2"><a href="javascript:;" onMouseOver="P7_autoLayers(0);MM_swapImgRestore()"><img src="../images/spacer.gif" width="750" height="10" border="0"></a> 
+    <tr> 
+      <td align="center" valign="middle" width="175" height="70"> 
+        <div align="left"><a href="../index.html" onMouseOver="P7_autoLayers(0);MM_swapImgRestore()"><img src="../images/populationconnectionlogo.gif" width="175" height="70" vspace="0" hspace="0" border="0" name="logo"></a></div>
+      </td>
+      			<td align="left"> 
+        			<table border="0" cellspacing="0" cellpadding="0" align="left" name="TabTable">
+          <tr> 
+            <td width="80" height="70"><a href="../learnmore.html" onMouseOver="P7_Snap('LearnMoreTab','LearnMoreCloser',-25,70,'LearnMoreTab','LearnMoreDD',0,70,'LearnMoreTab','SwapImageLeft',-200,0,'LearnMoreTab','SwapImageRight',80,0);P7_autoLayers(0,'LearnMoreDD','LearnMoreCloser','SwapImageRight','SwapImageLeft');MM_swapImage('LearnMoreTab','','../images/learn_more_on.gif',1)"><img src="../images/learn_more_off.gif" width="80" height="70" name="LearnMoreTab" border="0"></a></td>
+            <td width="80" height="70"><a href="../takeaction.html" onMouseOver="P7_Snap('TakeActionTab','TakeActionCloser',-25,70,'TakeActionTab','TakeActionDD',0,70,'TakeActionTab','SwapImageLeft',-200,0,'TakeActionTab','SwapImageRight',80,0);P7_autoLayers(0);P7_autoLayers(0,'SwapImageRight','SwapImageLeft','TakeActionDD','TakeActionCloser');MM_swapImage('TakeActionTab','','../images/take_action_on.gif',1)"><img src="../images/take_action_off.gif" width="80" height="70" border="0" name="TakeActionTab"></a></td>
+            <td width="80" height="70"><a href="../joinorgive.html" onMouseOver="P7_Snap('JoinOrGiveTab','JoinOrGiveDD',0,70,'JoinOrGiveTab','JoinOrGiveCloser',-25,70,'JoinOrGiveTab','SwapImageLeft',-200,0,'JoinOrGiveTab','SwapImageRight',80,0);P7_autoLayers(0);MM_swapImage('JoinOrGiveTab','','../images/join_or_give_on.gif',1);P7_autoLayers(0,'SwapImageRight','SwapImageLeft','JoinOrGiveDD','JoinOrGiveCloser')"><img src="../images/join_or_give_off.gif" width="80" height="70" name="JoinOrGiveTab" border="0"></a></td>
+            <td width="80" height="70"><a href="http://www.populationeducation.org/" onMouseOver="P7_Snap('EducationTab','EducationCloser',-25,70,'EducationTab','EducationDD',0,70,'EducationTab','SwapImageLeft',-200,0,'EducationTab','SwapImageRight',80,0);P7_autoLayers(0);P7_autoLayers(0,'EducationDD','EducationCloser','SwapImageRight','SwapImageLeft');MM_swapImage('EducationTab','','../images/education_on.gif',1)"><img src="../images/education_off.gif" width="80" height="70" name="EducationTab" border="0"></a></td>
+            <td width="80" height="70"><a href="http://capwiz.com/zpg/home/" onMouseOver="P7_Snap('LegislationTab','LegislationCloser',-25,70,'LegislationTab','LegislationDD',0,70,'LegislationTab','SwapImageLeft',-200,0,'LegislationTab','SwapImageRight',80,0);P7_autoLayers(0);P7_autoLayers(0,'LegislationDD','LegislationCloser','SwapImageRight','SwapImageLeft');MM_swapImage('LegislationTab','','../images/legislation_on.gif',1)"><img src="../images/legislation_off.gif" width="80" height="70" name="LegislationTab" border="0"></a></td>
+            <td> 
+              <table border="0" cellspacing="0" cellpadding="0">
+                <tr> 
+                  <td rowspan="2" height="70" bgcolor="#000000"><img src="../images/spacer.gif" width="1" height="70"></td>
+                  <td bgcolor="#000000" height="1"><img src="../images/spacer.gif" width="1" height="1"></td>
+                  <td rowspan="2" width="10"><img src="../images/searchtab.gif" width="13" height="70"></td>
+                </tr>
+                <tr> 
+                  <td height="100%" bgcolor="#CCCCCC"> 
+                    <table width="100%" border="0" cellspacing="0" cellpadding="0" bgcolor="#cccccc">
+                      <tr> 
+                        <td class="GlobalNavSearch" align="right" bgcolor="#CECFCE">&nbsp;Search:&nbsp;</td>
+                        <td class="GlobalNavSearchOptions" nowrap bgcolor="#cccccc" valign="top"> 
+                          <input type=text name=q size=10 maxlength=255 value="">
+                          <input type=submit name=sa value="Go">
+			  <INPUT type=hidden name=cof VALUE="GIMP:red;T:Black;ALC:Red;L:http://www.populationconnection.org/images/populationconnectionlogo_large.gif;GFNT:CCCCCC;LC:Blue;BGC:#FFFFFF;AH:center;VLC:Purple;GL:0;S:http://www.populationconnection.org;GALT:666666;AWFID:903588bf3f32e7be;">
+                          
+                        </td>
+                      </tr>
+                      <tr> 
+                        <td class="GlobalNavSearchOptions" valign="top" bgcolor="#CCCCCC" colspan="2"> 
+                          <input type=radio name=sitesearch value="populationconnection.org" checked>
+                          Population&nbsp;Connection<br>
+                          <input type=radio name=sitesearch value="">
+                          Search&nbsp;WWW&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="http://www.google.com"><img src="../images/google.gif" width="36" height="12" border="0" align="absmiddle"></a></td>
+                      </tr>
+                    </table>
+                  </td>
+                </tr>
+              </table>
+            </td>
+          </tr>
+        </table>
+      			</td>
+    </tr>
+    <tr bgcolor="#000000"> 
+      <td colspan="2"><img src="../images/spacer.gif" width="1" height="1"></td>
+    </tr>
+    <tr> 
+      <td colspan="2"> 
+        <table width="100%" border="0" cellspacing="0" cellpadding="5" bgcolor="#EEEEEE">
+          <tr> 
+            					<td nowrap class="GlobalNavSecondaryNav" bgcolor="#eeeeee"><a href="../" class="GlobalNavSecondaryNav">Home</a> &nbsp;::&nbsp;&nbsp;<a href="../About_Us/" class="GlobalNavSecondaryNav">About 
+              Us</a> &nbsp;::&nbsp;&nbsp;<a href="../Contact_Us/" class="GlobalNavSecondaryNav">Contact Us</a> &nbsp;::&nbsp;&nbsp;<a href="../sitemap.html" class="GlobalNavSecondaryNav">Site Map</a></td>
+            <td nowrap align="right" class="GlobalNavPopulationCounters" bgcolor="#eeeeee"><b>Population</b>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;World: 
+              6,433,803,716
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;US: 294,180,296</td>
+          </tr>
+        </table>
+      </td>
+    </tr>
+    <tr bgcolor="#000000"> 
+      <td colspan="2"><img src="../images/spacer.gif" width="1" height="1"></td>
+    </tr>
+    </form>
+  </table>
+
+ 
+ 
+ <div align="center">
+<table width="725" border="0" cellpadding="0" cellspacing="0">
+<tr><td width="520">&nbsp;</td><td width="10">&nbsp;</td><td width="195">&nbsp;</td></tr><tr valign="top">
+	<td CLASS="HomePageSectionTitle">November - Representatives-Elect</td>
+	<td rowspan="3"><img src="../gfx/dot.gif" width="10" height="10"></td>
+	<td><img src="../gfx/dot.gif" width="170" height="10"></td>
+</tr>
+<tr valign="top">
+	<td><hr noshade size="1">
+<font size="2">11/17/2000</font><br><br>
+<font face="Arial,Helvetica"><font color="#00376F"><font size=+3>Profiles</font></font></font>
+<table CELLSPACING=0 CELLPADDING=3 COLS=2 WIDTH="100%" >
+<tr>
+<td ALIGN=RIGHT WIDTH="5%"><b><font face="Arial,Helvetica"><font color="#00376F"><font size=+4>4</font></font></font></b></td>
+
+<td><b><font face="Arial,Helvetica"><font color="#008000"><font size=+1>New
+Member Positions on Key Issues</font></font></font></b></td>
+</tr>
+</table>
+
+<p>These positions, in general, are based either on candidate statements,
+or on endorsements, by organizations such as Planned Parenthood, NARAL,
+Republican National Coalition for Life, Susan B. Anthony List, Sierra Club,
+League of Conservation Voters, and Friends of the Earth.  This table
+is intended for educational purposes only and is not an endorsement of
+any candidate or party. In order to help this list grow, Population Connection is asking
+that you <a href="mailto:becky@populationconnection.org">send an e-mail</a> to us with corrections,
+or additions to the profiles of the candidates in your district. 
+Copies of position statements or word of endorsements are especially appreciated.
+<br> 
+<table BORDER=3 CELLSPACING=3 CELLPADDING=3 >
+<tr>
+<td> </td>
+
+<td></td>
+
+<td></td>
+
+<td></td>
+</tr>
+
+<tr>
+<td> </td>
+
+<td></td>
+
+<td></td>
+
+<td></td>
+</tr>
+
+<tr>
+<td><b>New House Members</b></td>
+
+<td><b>Pro-Choice</b></td>
+
+<td><b>Pro-Enviro.</b></td>
+
+<td></td>
+</tr>
+
+<tr>
+<td></td>
+
+<td></td>
+
+<td></td>
+
+<td></td>
+</tr>
+
+<tr>
+<td>AZ 01: Jeff Flake (R)</td>
+
+<td>N</td>
+
+<td></td>
+
+<td></td>
+</tr>
+
+<tr>
+<td>AR 04: Michael Ross (D)</td>
+
+<td></td>
+
+<td>N</td>
+
+<td></td>
+</tr>
+
+<tr>
+<td>CA 15: Mike Honda (D) pick-up</td>
+
+<td>Y</td>
+
+<td>Y</td>
+
+<td></td>
+</tr>
+
+<tr>
+<td>CA 27: Adam Schiff (D) pick-up</td>
+
+<td>Y</td>
+
+<td>Y</td>
+
+<td></td>
+</tr>
+
+<tr>
+<td>CA 31: Hilda Solis (D) pick-up</td>
+
+<td>Y</td>
+
+<td>Y</td>
+
+<td></td>
+</tr>
+
+<tr>
+<td>CA 36: Jane Harman (D) pick-up</td>
+
+<td>Y</td>
+
+<td>Y</td>
+
+<td></td>
+</tr>
+
+<tr>
+<td>CA 48: Darrell Issa (R)</td>
+
+<td>N</td>
+
+<td></td>
+
+<td></td>
+</tr>
+
+<tr>
+<td>CA 49: Susan Davis (D)</td>
+
+<td>Y</td>
+
+<td></td>
+
+<td></td>
+</tr>
+
+<tr>
+<td>CT 02: Robert Simmons (R) pick-up</td>
+
+<td></td>
+
+<td></td>
+
+<td></td>
+</tr>
+
+<tr>
+<td>FL 04: Ander Crenshaw (R)</td>
+
+<td>N</td>
+
+<td></td>
+
+<td></td>
+</tr>
+
+<tr>
+<td>FL 08: Ric Keller (R)</td>
+
+<td>N</td>
+
+<td></td>
+
+<td></td>
+</tr>
+
+<tr>
+<td>FL 12: Adam Putnam (R)</td>
+
+<td>N</td>
+
+<td></td>
+
+<td></td>
+</tr>
+
+<tr>
+<td>FL 22: winner not declared</td>
+
+<td></td>
+
+<td></td>
+
+<td></td>
+</tr>
+
+<tr>
+<td>ID 01: C.L. Otter (R)</td>
+
+<td></td>
+
+<td></td>
+
+<td></td>
+</tr>
+
+<tr>
+<td>IL 10: Mark Steve Kirk (R)</td>
+
+<td>N</td>
+
+<td>N</td>
+
+<td></td>
+</tr>
+
+<tr>
+<td>IL 15: Timothy Johnson (R)</td>
+
+<td>N</td>
+
+<td></td>
+
+<td></td>
+</tr>
+
+<tr>
+<td>IN 02: Mike Pence (R)</td>
+
+<td>N</td>
+
+<td></td>
+
+<td></td>
+</tr>
+
+<tr>
+<td>IN 07: Brian Kerns (R)</td>
+
+<td></td>
+
+<td></td>
+
+<td></td>
+</tr>
+
+<tr>
+<td>MI 08: Michael Rogers (R) pick-up</td>
+
+<td>N</td>
+
+<td>N</td>
+
+<td></td>
+</tr>
+
+<tr>
+<td>MN 02: Mark Kennedy (R)</td>
+
+<td>N</td>
+
+<td></td>
+
+<td></td>
+</tr>
+
+<tr>
+<td>MN 04: Betty McCollum (D)</td>
+
+<td>Y</td>
+
+<td>Y</td>
+
+<td></td>
+</tr>
+
+<tr>
+<td>MO 01: William Clay (D)</td>
+
+<td>Y</td>
+
+<td>Y</td>
+
+<td></td>
+</tr>
+
+<tr>
+<td>MO 02: Todd Akin (R)</td>
+
+<td>N</td>
+
+<td></td>
+
+<td></td>
+</tr>
+
+<tr>
+<td>MO 06: Samuel Graves (R)</td>
+
+<td></td>
+
+<td></td>
+
+<td></td>
+</tr>
+
+<tr>
+<td>MT 01: Dennis Rehberg (R)</td>
+
+<td>N</td>
+
+<td>N</td>
+
+<td></td>
+</tr>
+
+<tr>
+<td>NE 03: Thomas Osborne (R)</td>
+
+<td>N</td>
+
+<td></td>
+
+<td></td>
+</tr>
+
+<tr>
+<td>NJ 07: Michael Ferguson (R)</td>
+
+<td>N</td>
+
+<td></td>
+
+<td></td>
+</tr>
+
+<tr>
+<td>NJ 12: winner not declared</td>
+
+<td></td>
+
+<td></td>
+
+<td></td>
+</tr>
+
+<tr>
+<td>NY 01: Felix Grucci (R) pick-up</td>
+
+<td></td>
+
+<td></td>
+
+<td></td>
+</tr>
+
+<tr>
+<td>NY 02: Steve Israel (D) pick-up</td>
+
+<td></td>
+
+<td>Y</td>
+
+<td></td>
+</tr>
+
+<tr>
+<td>OH 12: Patrick Tiberi (R)</td>
+
+<td>N</td>
+
+<td>N</td>
+
+<td></td>
+</tr>
+
+<tr>
+<td>OK 02: Brad Carson (D) pick-up</td>
+
+<td></td>
+
+<td>Y</td>
+
+<td></td>
+</tr>
+
+<tr>
+<td>PA 04: Melissa Hart (R)</td>
+
+<td></td>
+
+<td></td>
+
+<td></td>
+</tr>
+
+<tr>
+<td>PA 19: Todd Platts (R)</td>
+
+<td></td>
+
+<td></td>
+
+<td></td>
+</tr>
+
+<tr>
+<td>RI 02: James Langevin (D)</td>
+
+<td>N</td>
+
+<td></td>
+
+<td></td>
+</tr>
+
+<tr>
+<td>SC 01: Henry Brown (R)</td>
+
+<td></td>
+
+<td></td>
+
+<td></td>
+</tr>
+
+<tr>
+<td>TX 07: John Culberson (R)</td>
+
+<td>N</td>
+
+<td></td>
+
+<td></td>
+</tr>
+
+<tr>
+<td>UT 02: James Matheson (D) pick-up</td>
+
+<td></td>
+
+<td>Y</td>
+
+<td></td>
+</tr>
+
+<tr>
+<td>VA 01: Jo Ann Davis (R)</td>
+
+<td>N</td>
+
+<td></td>
+
+<td></td>
+</tr>
+
+<tr>
+<td>VA 02: Edward Schrock (R)</td>
+
+<td>N</td>
+
+<td></td>
+
+<td></td>
+</tr>
+
+<tr>
+<td>VA 07: Eric Cantor (R)</td>
+
+<td></td>
+
+<td></td>
+
+<td></td>
+</tr>
+
+<tr>
+<td>WA 02: Richard Larsen (D) pick-up</td>
+
+<td>Y</td>
+
+<td>Y</td>
+
+<td></td>
+</tr>
+
+<tr>
+<td>WV 02: Shelley Moore Capito (R) pick-up</td>
+
+<td>N</td>
+
+<td></td>
+
+<td></td>
+</tr>
+
+<tr>
+<td> </td>
+
+<td></td>
+
+<td></td>
+
+<td></td>
+</tr>
+</table>
+
+<p>This table is intended for educational purposes only and is not an endorsement
+of any candidate or party.
+	</font></td>
+
+	<td><hr noshade size="1">
+		<p><font size="2" face="Helvetica,Arial"><a href="./">Feature Archive</a></p>
+			</td>
+</tr>
+<tr><td colspan="3" valign="top">&nbsp;</td></tr>
+<tr bgcolor="#666666"><td colspan="3" valign="top"><img src="../images/spacer.gif" width="725" height="1"></td></tr>
+<tr>
+	<td width="520" valign="top">
+	<table width="520" border="0" cellspacing="5" cellpadding="5">
+	<tr valign="top">
+		<td class="BodyCopy"><b>Population Connection</b><br>
+		1400 16th Street NW, Suite 320<br>
+		Washington, D.C. 20036</td>
+		<td class="BodyCopy"><p>Main: 202-332-2200<br>
+		Fax: 202-332-2302<br>
+		Toll Free: 1-800-POP-1956<br>
+		<a href="mailto:info@populationconnection.org">info@populationconnection.org</a></p></td>
+	</tr>
+	</table>
+	</td>
+	<td><img src="../images/spacer.gif" width="10" height="1"></td>
+	<td width="195" valign="top" class="GlobalNavSecondaryNav"> 
+	<table width="100%" border="0" cellspacing="3" cellpadding="3">
+	<tr valign="top">
+		<td><a href="../Security.html"><img src="../images/small_right_arrow.gif" width="6" height="6" border="0" vspace="4"></a></td>
+		<td class="ContentLink" width="100%"><a href="../Security.html" class="ContentLink">Security Policy</a></td>
+	</tr>
+	<tr valign="top">
+		<td height="17"><a href="Privacy.html"><img src="../images/small_right_arrow.gif" width="6" height="6" border="0" vspace="4"></a></td>
+		<td class="ContentLink" width="100%" height="17"><a href="../Privacy.html" class="GlobalNavSecondaryNavLink">Privacy Policy</a></td>
+	</tr>
+	</table>
+	</td>
+</tr>
+<tr>
+	<td width="520" valign="top"><img src="../images/spacer.gif" width="520" height="15" border="0"></td>
+	<td><img src="../images/spacer.gif" width="10" height="15" border="0"></td>
+	<td width="195" valign="top" class="GlobalNavSecondaryNav"><img src="../images/spacer.gif" width="195" height="15"></td>
+</tr>
+</table>
+</div></body></html>

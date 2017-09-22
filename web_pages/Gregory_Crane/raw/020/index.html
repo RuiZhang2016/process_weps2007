@@ -1,0 +1,364 @@
+<html>
+<head>
+<meta name="keywords"
+content="Diane Villani, contemporary prints, editions, fine art, Gregory Crane">
+<script language="JavaScript">
+
+
+
+
+<!-- Begin
+browserName = navigator.appName;
+browserVer = parseInt(navigator.appVersion);
+ns3up = (browserName == "Netscape" && browserVer >= 3);
+ie4up = (browserName.indexOf("Microsoft") >= 0 && browserVer >= 4);
+function doPic(imgName) {
+if (ns3up || ie4up) {
+imgOn = ("" + imgName);
+document.mainpic.src = imgOn;
+}
+}
+// End -->
+
+
+
+
+</script><!--BEGIN Pop-up Windows Script------------------------------------------>
+<script language="JavaScript">
+<!--
+// Copyright 1999 - 2002 by Ray Stott, Pop-up Windows Script ver 2.0
+// OK to use if this copyright is included
+// Script is available at http://www.crays.com/jsc
+
+var popWin = null // use this when referring to pop-up window
+var winCount = 0
+var winName = "popWin"
+function openPopWin(winURL, winWidth, winHeight, winFeatures, winLeft, winTop){
+var d_winLeft = 20 // default, pixels from screen left to window left
+var d_winTop = 20 // default, pixels from screen top to window top
+winName = "popWin" + winCount++ //unique name for each pop-up window
+closePopWin() // close any previously opened pop-up window
+if (openPopWin.arguments.length >= 4) // any additional features?
+winFeatures = "," + winFeatures
+else
+winFeatures = ""
+if (openPopWin.arguments.length == 6) // location specified
+winFeatures += getLocation(winWidth, winHeight, winLeft, winTop)
+else
+winFeatures += getLocation(winWidth, winHeight, d_winLeft, d_winTop)
+popWin = window.open(winURL, winName, "width=" + winWidth
++ ",height=" + winHeight + winFeatures)
+}
+function closePopWin(){ // close pop-up window if it is open
+if (navigator.appName != "Microsoft Internet Explorer"
+|| parseInt(navigator.appVersion) >=4) //do not close if early IE
+if(popWin != null) if(!popWin.closed) popWin.close()
+}
+function getLocation(winWidth, winHeight, winLeft, winTop){
+return ""
+}
+//-->
+</script>
+<script language="JavaScript1.2"> // for Netscape 4+ and IE 4+
+<!--
+function getLocation(winWidth, winHeight, winLeft, winTop){
+var winLocation = ""
+if (winLeft < 0)
+winLeft = screen.width - winWidth + winLeft
+if (winTop < 0)
+winTop = screen.height - winHeight + winTop
+if (winTop == "cen")
+winTop = (screen.height - winHeight)/2 - 20
+if (winLeft == "cen")
+winLeft = (screen.width - winWidth)/2
+if (winLeft>0 & winTop>0)
+winLocation = ",screenX=" + winLeft + ",left=" + winLeft
++ ",screenY=" + winTop + ",top=" + winTop
+else
+winLocation = ""
+return winLocation
+}
+//-->
+</script><!--END Pop-up Windows Script------------------------------------------->
+<meta http-equiv="content-type" content="text/html;charset=iso-8859-1">
+<meta name="generator" content="Adobe GoLive 4">
+<title>Diane Villani Editions: Artist | Publications: Gregory Crane</title>
+<csscriptdict></csscriptdict>
+<script><!--
+CSStopExecution = false;
+CSInit = new Array;
+function CSScriptInit() {
+idxArray = new Array;
+for(var i=0;i<CSInit.length;i++)
+idxArray[i] = i;
+CSAction2(CSInit, idxArray);
+}
+CSAg = window.navigator.userAgent; CSBVers = parseInt(CSAg.charAt(CSAg.indexOf("/")+1),10);
+function IsIE() { return CSAg.indexOf("MSIE") > 0;}
+function CSIEStyl(s) { return document.all.tags("div")[s].style; }
+function CSNSStyl(s) { return CSFindElement(s,0); }
+function CSFindElement(n,ly) { if (CSBVers < 4) return document[n];
+var curDoc = ly ? ly.document : document; var elem = curDoc[n];
+if (!elem) { for (var i=0;i<curDoc.layers.length;i++) {
+elem = CSFindElement(n,curDoc.layers[i]); if (elem) return elem; }}
+return elem;
+}
+function CSButtonReturn () {
+var bAgent = window.navigator.userAgent;
+var bAppName = window.navigator.appName;
+if ((bAppName.indexOf("Explorer") >= 0) && (bAgent.indexOf("Mozilla/3") >= 0) && (bAgent.indexOf("Mac") >= 0))
+return false; // follow link
+else return true; // follow link
+}
+CSIm = new Object();
+function CSIShow(n,i) {
+if (document.images) {
+if (CSIm[n]) {
+var img = (!IsIE()) ? CSFindElement(n,0) : document[n];
+if (img && typeof(CSIm[n][i].src) != "undefined") {img.src = CSIm[n][i].src;}
+if(i != 0)
+self.status = CSIm[n][3];
+else
+self.status = " ";
+return true;
+}
+}
+return false;
+}
+function CSILoad(action) {
+im = action[1];
+if (document.images) {
+CSIm[im] = new Object();
+for (var i=2;i<5;i++) {
+if (action[i] != '') { CSIm[im][i-2] = new Image(); CSIm[im][i-2].src = action[i]; }
+else CSIm[im][i-2] = 0;
+}
+CSIm[im][3] = action[5];
+}
+}
+CSStopExecution = false;
+function CSAction(array) {
+return CSAction2(CSAct, array);
+}
+function CSAction2(fct, array) {
+var result;
+for (var i=0;i<array.length;i++) {
+if(CSStopExecution) return false;
+var actArray = fct[array[i]];
+var tempArray = new Array;
+for(var j=1;j<actArray.length;j++) {
+if((actArray[j] != null) && (typeof(actArray[j]) == "object") && (actArray[j].length == 2)) {
+if(actArray[j][0] == "VAR") {
+tempArray[j] = CSStateArray[actArray[j][1]];
+}
+else {
+if(actArray[j][0] == "ACT") {
+tempArray[j] = CSAction(new Array(new String(actArray[j][1])));
+}
+else
+tempArray[j] = actArray[j];
+}
+}
+else
+tempArray[j] = actArray[j];
+}
+result = actArray[0](tempArray);
+}
+return result;
+}
+CSAct = new Object;
+// --></script><csactiondict></csactiondict>
+<script><!--
+CSInit[CSInit.length] = new Array(CSILoad,/*CMP*/'exhibitions',/*URL*/'../images/02-03-off.gif',/*URL*/'../images/02-03-on.gif',/*URL*/'','Inventory of recently acquired prints');
+CSInit[CSInit.length] = new Array(CSILoad,/*CMP*/'inventory',/*URL*/'../images/02-04-off.gif',/*URL*/'../images/02-04-on.gif',/*URL*/'','Complete inventory and prices');
+CSInit[CSInit.length] = new Array(CSILoad,/*CMP*/'gallery',/*URL*/'../images/02-05-off.gif',/*URL*/'../images/02-05-on.gif',/*URL*/'','Information about the gallery');
+// --></script>
+</head>
+<body onunload="closePopWin()" bgcolor="#ffffff">
+<bgcolor ="white" link="#990033" alink="#666633" vlink="#000066"
+leftmargin="0" topmargin="0" marginheight="0" marginwidth="0"
+onload="CSScriptInit();"> </bgcolor>
+<table border="0" cellpadding="0" cellspacing="0" width="100%">
+<tbody>
+<tr bgcolor="#990033">
+<td width="640"><img src="01.gif" usemap="#01b43106ef"
+border="0" height="39" width="640"> <map name="01b43106ef">
+<area href="http://www.villanieditions.com/index.htm" coords="112,6,398,32" shape="rect"
+alt="Diane Villani Home">
+</map>
+</td>
+<td><br>
+</td>
+</tr>
+<tr bgcolor="#990033">
+<td width="640"><img src="spacer.gif" height="26"
+width="116"><a href="http://www.villanieditions.com/artists_pub/ap_index.html"><img src="02-02-on.gif"
+alt="Artists | Publications" border="0" height="26" width="107"></a><csobj
+w="69" h="26" t="Button" ht="../images/02-03-on.gif"><a
+href="http://www.villanieditions.com/inventory/ra_index.html"
+onmouseover="return CSIShow(/*CMP*/'exhibitions',1)"
+onmouseout="return CSIShow(/*CMP*/'exhibitions',0)"
+onclick="return CSButtonReturn()"><img src="02-03-off.gif"
+name="exhibitions" border="0" height="26" width="69"></a></csobj><csobj
+w="65" h="26" t="Button" ht="../images/02-04-on.gif"><a
+href="http://www.villanieditions.com/inventory/in_index.html"
+onmouseover="return CSIShow(/*CMP*/'inventory',1)"
+onmouseout="return CSIShow(/*CMP*/'inventory',0)"
+onclick="return CSButtonReturn()"><img src="02-04-off.gif"
+name="inventory" border="0" height="26" width="65"></a></csobj><csobj
+w="51" h="26" t="Button" ht="../images/02-05-on.gif"><a
+href="http://www.villanieditions.com/gallery/ga_index.html"
+onmouseover="return CSIShow(/*CMP*/'gallery',1)"
+onmouseout="return CSIShow(/*CMP*/'gallery',0)"
+onclick="return CSButtonReturn()"><img src="02-05-off.gif"
+name="gallery" border="0" height="26" width="51"></a></csobj><img
+src="02-06.gif" alt="editions" border="0" height="26"
+width="232"></td>
+<td><br>
+</td>
+</tr>
+<tr>
+<td width="640">
+<table border="0" cellpadding="0" cellspacing="0">
+<tbody>
+<tr>
+<td><img src="spacer.gif" height="50" width="20"></td>
+<td><img src="spacer.gif" height="20" width="95"></td>
+<td valign="bottom"><a href="http://www.villanieditions.com/artists_pub/ap_index.html"><img
+src="artisthd.gif" alt="Artist | Publications" border="0"
+height="26" width="146"></a></td>
+</tr>
+</tbody>
+</table>
+</td>
+<td><br>
+</td>
+</tr>
+<tr>
+<td width="540">
+<center>
+<p>&nbsp;</p>
+</center>
+<table border="0" cellpadding="0" cellspacing="0">
+<tbody>
+<tr>
+</tr>
+</tbody>
+</table>
+&nbsp;<br>
+<table style="text-align: left; width: 640px; height: 58px;"
+border="0" cellpadding="2" cellspacing="2">
+<tbody>
+<tr>
+<td style="vertical-align: top;"> <img
+src="spacer.gif" height="26" width="100">
+<br>
+</td>
+<td style="vertical-align: top;"> <br>
+</td>
+<td style="vertical-align: top;"><span
+style="font-weight: bold;">Gregory Crane</span><small><br><br>
+<a href="http://www.villanieditions.com/inventory/in_index.html#crane">List of available prints by this artist.</a><br>
+<br>
+To inquire about any of these works or to request additional images,
+please email us at <a href="mailto:staff@villanieditions.com">staff@villanieditions.com.</a><br>
+</small></td>
+<td style="vertical-align: top;"><small><br>
+<br>
+<br>
+Selected images:
+</small><br>
+<br>
+<br>
+<br>
+</td>
+<td style="vertical-align: top;"><br>
+</td>
+<td style="vertical-align: top;"><br>
+</td>
+</tr>
+<tr>
+<td style="vertical-align: top;">
+<br>
+</td>
+<td style="vertical-align: top;">
+<br>
+</td>
+<td style="vertical-align: top;">
+<br>
+<small>Gregory Crane <br>
+American, born 1951<br><br>
+<u>Selected solo exhibitions</u><br>
+2004<br>
+Hirschl & Adler Modern, NYC<br><br>
+2000<br>
+List Gallery, Swarthmore College, Swarthmore, PA<br><br>
+1998<br>
+Cheryl Pelavin Fine Art, NYC<br><br>
+<u>Selected collections</u><br>
+Museum of the City of New York<br>
+Joshua P. Smith, Washington DC<br>
+MIT List Visual Center<br>
+JP Morgan & Co., NY<br>
+Chase Manhattan Bank, NY
+</small>
+</td>
+<td style="vertical-align: top;"><img src="crane001a.jpg" style="border-style: none"><br>
+</td>
+<td style="vertical-align: top;"><br>
+</td>
+<td style="vertical-align: top;"><br>
+</td>
+</tr>
+<tr>
+<td style="vertical-align: top;"><br>
+</td>
+<td style="vertical-align: top;"><br>
+</td>
+<td style="vertical-align: top;"><br>
+</td>
+<td style="vertical-align: top;">
+</td>
+<td style="vertical-align: top;"><br>
+</td>
+<td style="vertical-align: top;"><br>
+</td>
+</tr>
+</tbody>
+</table>
+<br>
+</td>
+</tr>
+<tr>
+<td><br>
+</td>
+</tr>
+<tr>
+<td><br>
+</td>
+<td width="276">
+<table border="0" cellpadding="0" cellspacing="0" width="100%">
+<tbody>
+<tr>
+<td colspan="2">&nbsp; </td>
+<td>&nbsp; </td>
+</tr>
+</tbody>
+</table>
+</td>
+</tr>
+<tr>
+<td><br>
+</td>
+<td width="276">
+<p><font color="#990033" face="Arial,Helvetica" size="2"><br>
+</font></p>
+<p>&nbsp; </p>
+</td>
+</tr>
+</tbody>
+</table>
+</body>
+</html>
+
+

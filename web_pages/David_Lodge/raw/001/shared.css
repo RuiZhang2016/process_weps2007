@@ -1,0 +1,146 @@
+/* 	BC shared styles - all the structural styles are in /archimedes/bcgui/includes/arts/styles/ */
+
+	body {margin:0;background-color:white;}
+	form {margin:0;}
+	p,td,input,li,textarea {font-family:verdana,arial,helvetica,sans-serif;font-size:11px;margin:0px;line-height:1.4em;}
+	a {text-decoration:none;color:#992564}
+	a:hover {text-decoration:none;color:#949091}
+	.minilink {text-decoration:none;color:#FFFFFF;font-size:6px;}
+
+/* 	Site specific styles*/
+
+
+	table,h3,h4,h5,h6,form {margin:0px;}
+	ul {margin-top:0px;margin-bottom:0px;margin-left:20px;}
+	h1,.h1 { margin: 20px 0px 10px 0px;font-family:verdana,arial,helvetica,sans-serif;font-size:18px;margin:0px;line-height:1.4em;color: #949091 ; text-transform: uppercase ;} 
+	h2,h3,h4,.h2,.h3,.h4 {font-family:verdana,arial,helvetica,sans-serif;font-size:14px;line-height:1.4em;color:#949091;text-transform:uppercase;} 
+	h4,.h4 {font-size:12px;color:#000000;} 
+	h5,.h5 { font-size:13px ; color: #949091 ; text-decoration: none ; margin:0px; line-height:1.4em;} 
+	h6,.h6 { font-family:verdana,arial,helvetica,sans-serif;font-size:11px;margin: 0px 0px 3px 0px;line-height:1.3em;color: #949091 ; font-weight: bold ;text-transform: uppercase} 
+	select {font-family:verdana,arial,helvetica,sans-serif;font-size:11px;margin:0px;line-height:1.4em;}
+
+/* resolve netscape issue Used by the British Council at the foot of the page */ 
+
+	.contenttextfull{ font-size:100% ; font-family: Verdana ; color: #949091 ; text-decoration: none ; } 
+	.contenttextfull A { font-weight : bold; text-decoration: none ; color: #992564 ; } 
+	.contenttextfull A:hover { font-weight : bold; text-decoration: underline ; color: #992564 ; } 
+
+
+
+/* Subnav */ 
+
+	.subnavRow {text-align:left;padding-top:2px;padding-bottom:2px;margin-left:5px;}
+	.subnavTopLevelItem, .subnavTopLevelActive, .subnavTopLevelCurrentPage,.subnavItem, .subnavActive, .subnavCurrentPage {font-family:verdana,arial,helvetica,sans-serif;font-size:11px;margin: 0px 0px 3px 0px;line-height:1.3em;color: #949091 ; font-weight: bold ;text-transform: uppercase}
+	.subnavTopLevelItem:hover, .subnavTopLevelActive:hover, .subnavTopLevelCurrentPage:hover,.subnavItem:hover, .subnavActive:hover, .subnavCurrentPage:hover {color:#4BACA0;text-decoration:underline;}
+	.subnavTopLevelItem, .subnavTopLevelActive, .subnavTopLevelCurrentPage, .subnavCurrentPage {color:#000000;text-decoration:underline ;}
+	.subnavTopLevelCurrentPage,.subnavCurrentPage {color:#000000;}
+	/* .subnavSeparator {background-image:URL(/images/subnav_separator.gif);} */
+
+
+
+/*  Used by the British Council statement and links to Freedom of Information, etc at the foot of the page */
+		
+	.footertext,.copyright {font-size:10px; font-family: Verdana ; color: #000000 ; text-decoration: none ; } 
+	.footertext A,.copyright A { font-weight : bold; text-decoration: none ; color: #992564 ; } 
+	.footertext A:hover,.copyright A:hover { font-weight : bold; text-decoration: underline ; color: #992564 ; } 
+	.copyright,.copyright A {color:#949091;}
+	
+/*  Used by David here and there */
+
+	.small { border: 0px; padding: 0px; font-family: verdana,arial,helvetica; font-size: 9px; font-weight: normal; }
+	.fidget { font-size: 9px;color: #949091; line-height:1.3em;}
+
+
+/*  Used by wysiwyg editor */
+		
+	.pic {margin: 0px 10px 6px 0px;}
+	.picR {margin: 0px 0px 6px 10px;}
+	.picFull { margin: 0px; }
+
+
+/*	buttons and lists */
+	
+	.bc_buttonText {font-size:11px;font-family: Verdana;color: #949091;text-decoration: none;text-transform:uppercase;}
+	.bc_buttonText:hover {text-decoration: underline;color: #000000 ; }
+	.bc_buttonTextLowercase {font-size:11px;font-family: Verdana;color: #949091;text-decoration: none ;}
+	.bc_buttonTextLowercase:hover {text-decoration: underline;color: #000000;}
+	.bc_listItemContent {font-size:11px;font-family:Verdana;color:#000000;text-decoration:none;}
+	.bc_color2 {color:#949091;}
+	.bc_lozengeItemText,.lozengetext2 {font-size:11px;font-family:verdana;font-weight:bold;color:#FFFFFF;text-decoration:none;text-transform:uppercase;}
+	.bc_lozengeItemText:hover,.lozengetext2:hover {font-size:11px;font-family:verdana;font-weight:bold;color:#FFFFFF;text-decoration:underline;text-transform:uppercase;}
+	
+
+/* bc sidenav */
+
+	.bc_sideNavHeading {font-family:verdana,arial,helvetica,sans-serif;font-size:14px;color:#C4C5C4;text-transform:uppercase;}
+	
+
+/*	feature box */
+
+	.bc_featureBoxLabel {font-family:verdana;font-size:11px;color:#FFFFFF;font-weight:bold;text-decoration:none;}
+	.bc_featureBoxLabel:hover {color:#FFFFFF;text-decoration:underline;}
+	.bc_featureBoxContentText {font-family:verdana;font-size:11px;color:#000000;}
+	
+
+
+/*	styles for SimpleArtsGUI */
+
+	.smallButton {color:white;font-size:9px;height:16px;background-color:#3366CC;border-top:1px solid #A1C0E0;border-left:1px solid #A1C0E0;border-bottom:1px solid #36506B;border-right:1px solid #36506B;}
+	.login {font-size:11px;color:#000099;}
+	.loginField {font-size:9px;border:1px solid silver;height:14px;}
+	.red {color:red;}
+	.black {color:#000000;}
+	.gray {color:#949091;}
+	.f {font-size:11px;}
+	.fl {color:#949091;font-style:italic;}
+	.fnote {font-family:verdana,arial,helvetica;font-size:10px;line-height:1.4em;color:949091;font-style:italic;}
+	.noDec {color:black;text-decoration:none;}
+	.noDec:hover {color:black;text-decoration:underline;}
+	.small {font-size:9px;}
+	.smallGray {font-size:9px;color:gray;}
+	.smallSilver {font-family:verdana,arial,helvetica;font-size:9px;color:#333333;}
+	.smallBlue {font-size:9px;color:#000099;}
+	.smallRed {font-size:9px;color:red;}
+
+
+/*	styles used in FL apps */
+
+
+	.aBtn,.aBtnDisabled {
+		text-align:center;
+		font-family: Verdana;
+		font-style:normal;
+		font-size:11px;
+		font-weight:normal;
+		color :#000000;
+		text-decoration:none;
+		background-color :#EEEEEE;
+		padding:2px;
+		border-top:1px solid #CACACA;
+		border-left:1px solid #CACACA;
+		border-bottom:1px solid #999999;
+		border-right:1px solid #999999;
+		padding-left:3px;
+		padding-right:3px;
+	}
+	
+	.aBtn:hover {
+		color :#000000;
+		background-color:#E6E6E6;
+		border-top:1px solid #999999;
+		border-left:1px solid #999999;
+		border-bottom:1px solid #CACACA;
+		border-right:1px solid #CACACA;
+	}
+	
+	.aBtnDisabled,.aBtnDisabled:hover {
+		color:silver;
+	}
+
+
+.caption {font-size:10px;color:gray;}
+
+/*	flgui object adapted for bcgui */
+
+.nbtntxt {font-family:verdana,arial,helvetica,sans-serif;font-size:10px;color:black;text-decoration:none;line-height:1em;padding:0px;}
+.nbtntxt:hover {color:#992564;}

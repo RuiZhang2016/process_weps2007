@@ -1,0 +1,71 @@
+<head><title>Testing neighborhoods by Patrick Karlsson</title></head>
+<body bgcolor="#ffffff">
+<h1>Testing neighborhoods by Patrick Karlsson</h1>
+<a href="/epipost/sci.stat.math/dwunbrauskal/3F253895.E82F87EF@cb.uu.se">reply to this message</a><br>
+<a href="/epipost/sci.stat.math">post a message on a new topic</a><br>
+Back to <a href="/epigone/sci.stat.math/dwunbrauskal">messages on this topic</a><br>
+Back to <a href="/epigone/sci.stat.math">sci.stat.math</a><br>
+ | <a href="/epigone/sci.stat.math/dwunbrauskal/p11div0sh47er4r03ef04lu2ojtc8n4f2u@4ax.com">next &gt;&gt;</a>
+<br>
+<hr><pre>
+<b>Subject:</b>      Testing neighborhoods
+<b>Author:</b>       Patrick Karlsson &lt;<a href="mailto:patrick@cb.uu.se">patrick@cb.uu.se</a>&gt;
+<b>Organization:</b> Centre for Image Analysis, Uppsala University
+<b>Date:</b>         Mon, 28 Jul 2003 16:52:05 +0200
+
+Hi,
+
+This is a question about hypothesis testing (I think).
+
+Place n two colored dots randomly in two dimensions x and y. E.g., first
+randomly place a red dot, then a green, then a red, and so on until all
+n dots are placed. For every dot we then look at the nearest neighbor
+(euclidean metric) to see what color it is. Assume that a dot can only
+have one nearest neighbor. We are left with a vector v of length n,
+where the elements v_i are 0 (red) or 1 (green) depending on the nearest
+neighbor color of dot i.
+
+Given a vector v, how can I test for randomness of the color of the
+nearest neighbors?
+
+At first glance I just performed a Chi2 test (1 d.f. and significance
+0.05), with the hypothesis that p_red=0.5 and p_green=0.5. It said that
+I could not reject the hypothesis. But ...
+
+... are the samples (elements of v) really independent. Couldn't one
+reason that if dot v_i's nearest neighbor is v_j, then v_j's nearest
+neighbor probably is v_i. Wouldn't this (suggested) relationship point
+to a depency between dots?
+
+If it isn't already obvious, statitistics isn't my field of expertise,
+so I would be truly happy if somebody could tell me how I should try to
+solve this problem.
+
+// Patrick Karlsson
+
+PS. Please tell me if my problem description is unclear, and I will try
+to improve it.
+
+--
+
+P a t r i c k  K a r l s s o n
+Graduate Student in Cell Image Analysis
+
+Centre of Image Analysis
+Uppsala University
+Lägerhyddsvägen 3
+S-752 37 UPPSALA
+SWEDEN
+
++46 18 471 70 04 (Phone)
++46 73 915 61 98 (Cellular)
++46 18  55 34 47 (Fax)
+patrick@cb.uu.se (E-mail)
+www.cb.uu.se     (WWW)
+
+
+
+</pre>
+<hr>
+<a href="/">The Math Forum</a>
+</body>

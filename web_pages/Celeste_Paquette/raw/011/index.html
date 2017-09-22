@@ -1,0 +1,592 @@
+
+
+<SCRIPT LANGUAGE="JavaScript">
+
+// function to change the URL form a form combo box
+
+// 600x400 window, no toolbars
+function comboBoxNav(brandSelect)
+ {
+        if (brandSelect.options[brandSelect.selectedIndex].value != "null")
+		 {
+                var theIndex=brandSelect.selectedIndex;
+	                window.open(brandSelect.options[theIndex].value, '' ,'width=600, height=400, left=25, top=45, menubar=no, status=no, location=no, toolbar=no, scrollbars=no, resizable=yes' ) ; 
+        }
+}
+// 800x550 full function window
+function comboBoxNavFull(brandSelect)
+ {
+        if (brandSelect.options[brandSelect.selectedIndex].value != "null")
+		 {
+                var theIndex=brandSelect.selectedIndex;
+	                window.open(brandSelect.options[theIndex].value, '' ,'width=800, height=550, left=25, top=25, location=yes, directories=yes, status=yes, menubar=yes, scrollbars=yes, resizable=yes' ) ; 
+        }
+}
+
+//opens in same window needs variable pagename defined in combobox
+// USE FOR LOCAL PAGES ONLY (non-HR pages should open in new window)
+function comboBoxNavSame(brandSelect)
+ {
+        if (brandSelect.options[brandSelect.selectedIndex].value != "null")
+		 {
+                var theIndex=brandSelect.selectedIndex;
+				window.location = 'index.cfm?page='+(brandSelect.options[theIndex].value);
+				
+        }
+}
+
+//great for forms, opens without favorite buttons
+function popUp(url) {
+sealWin=window.open(url,"win",'toolbar=0,location=0,directories=0,status=1,menubar=1,scrollbars=1,resizable=1,width=600,height=300');
+self.name = "mainWin";
+}
+
+//opens with favoriate buttons, without toolbar
+function openPopup(url,width,height,scroll,name){
+window.open(url,name,"menubar=no,status=no,resizable=yes,location=no,width=" + width + ",height=" + height + ",toolbar=yes,scrollbars=" + scroll);
+}
+
+
+
+
+</SCRIPT>
+
+
+<HTML>
+<HEAD>
+   <TITLE>FSU Human Resources - 2001 Davis Winners</TITLE>
+
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+
+<link rel="stylesheet" href="../finadmin.css">
+</head>
+
+<body bgcolor="#ffffff" background="../images/image003.jpg" leftmargin="0" topmargin="0" marginwidth="0" marginheight="0" link="#660000" vlink="#660000" alink="#660000" onLoad=""><!--These templates Have designed for the easiest possible use by F & A developers, but that does not mean I have thought of everything. If you have questions, concerns, or problems about how to use these templates PLEASE do not hesitate to contact me (Ian Gottesman) by phone 644-2591 or E-mail gottesma@acns.fsu.edu. Good Luck! -->
+<table width="100%" border="0" cellspacing="0" cellpadding="0" height="15%">
+	<tr> 
+	    <td bgcolor="#cccc99" width="67" valign="bottom"><a href="http://www.fsu.edu"><IMG height=19 alt="FSU Torches" src="../images/sliced_torch_01.jpg" width =67 border=0 ></a></td>
+	    
+		<td bgcolor="#cccc99" height="19" width="99%" valign="center"><a href="http://www.fsu.edu"><IMG height=19 alt="Florida State University " src  ="../images/fsu.gif" width=133 border=0 ></a></td>
+	</tr>
+	<tr>
+	    <td bgcolor="#000000" width="67"><a href="http://www.fsu.edu"><IMG height=3 alt="" src="../images/sliced_torch_02.jpg" width=67 border=0></a></td>
+	    <td height="2" bgcolor="#000000" width="99%"><IMG height=3 alt="" src="../images/trans_shim.gif" width=1></td>
+	</tr>
+	<tr>
+    
+		<td bgcolor="#660000" width="67" height="60" valign="top"><a href="http://www.fsu.edu"><IMG height=36 alt="" src="../images/sliced_torch_03.jpg" width=67 border=0></a>
+		</td>
+    
+		<td bgcolor="#660000" height="37" valign="center" align="left"><a href="http://www.vpfa.fsu.edu"><IMG height=36 alt="Finance and Administration Florida State University" hspace   =0 src="../images/fna_title2.gif" width=133 align=left border=0 ></a>
+			<table border="0" width="100%" cellpadding="0" cellspacing="0">
+				<tr>
+					<td width="8"><IMG height=8 alt="" src="../images/trans_shim.gif" width=10></td>
+					<td colspan="2"><!-- This table is for the address information in the header please make sure you include the top class so that you get that off white colored text in your header -->
+						<table width="100%" border="0" cellspacing="0" cellpadding="0">
+							<tr>
+								<td width="41%"><span class="top">Human Resources<br>
+								6200 A University Center<br>
+								Tallahassee, Florida 32306-2410 </span>
+								</td>
+								<td width="59%"> <span class="top">
+								              &nbsp;Phone: (850) 644-6034<BR>
+								              &nbsp;&nbsp;&nbsp;&nbsp;Fax: (850) 644-7033<br>
+											  Jobline: (850) 645-JOBS  
+											  </span>
+								</td>
+							</tr>
+						</table>
+					</td>
+					<td width="13"><IMG height=8 alt="" src="../images/trans_shim.gif" width=10></td>
+				</tr>
+			</table> 
+	      </td>
+	  </tr>
+</table><!-- This table is for the Body & Navigation information of the site -->
+<table width="100%" border="0" cellspacing="0" cellpadding="0"><!-- This row is for spacing -->
+	<tr>
+		<td width="200">&nbsp;</td>
+		<td width="10">&nbsp;</td>
+		<td width="*">&nbsp;</td>
+		<td width="10">&nbsp;</td>
+	</tr>
+	<tr>
+		<td width="200" valign="top"><!-- Begin Navigation Table -->
+			<table width="200" border="0" cellspacing="5" cellpadding="0">
+				<tr> 
+			       	<td><div align="left"><BR><BR>
+						<p><h5><A href="../../homepage.htm">Human Resources Home</A></h5>
+			          
+						<table>
+						<TR>
+							<td></td>
+							<td><!-- Use Navbar class for any text in the navigation bar. That is because the navbar text 			will not expand when the font sized is changed to overlap the bar incorrectly -->
+							<p>
+							   <span class="navbar"><A href="../admin/homepage.html">Administration</A></span></p>
+							<p><span class="navbar"><A href="../../class/homepage.html">Classification</A></span></p>
+							<p><span class="navbar"><A href="../../comp/homepage.html">Compensation/<br>Attendance &amp; Leave</A></span></p>
+							<p><span class="navbar"><A href="../../ode/homepage.html">Diversity Enhancement/<br>ADA</A></span></p>
+							<p><span class="navbar"><A href="../../elro/homepage.html">Employee/Labor Relations</A></span></p>
+							<p><span class="navbar"><A href="../../empsugg/homepage.html"><STRONG>Employee Suggestion</STRONG></A></span></p>
+							<p><span class="navbar"><A href="../../employ/homepage.html">Employment &amp; Recruitment</A></span></p>
+							<p><span class="navbar"><A href="../../insben/homepage.html">Insurance &amp; Benefits</A></span></p>
+							<p><span class="navbar"><A href="../../systems/homepage.html">Systems/HRMS</A></span></p>
+							<p><span class="navbar"><A href="../../train/homepage.htm">Training &amp; Development</A></span></p>
+							<p><span class="navbar"><h6>&nbsp;&nbsp; Additional Links</h6></span>
+							<p><span class="navbar"><A href="../other/forms.html">HR Forms Index</A></span>
+							<p><span class="navbar"><a href="http://www.vpfa.fsu.edu/policies/personnel/index.html">Policies and Procedures</a></span>
+                  <DIV></DIV></td></TR></table></div>
+							</td>
+						</tr>
+			    <tr align="right" valign="top"> 
+			        <td><div align="left"><span class="navbar">Last Updated:&nbsp;10/6/2000<br>
+						<a href="http://www.fsu.edu/misc/copyright.shtml">© 2000 FSU</a><br>
+						<A href="mailto:mschaefer@admin.fsu.edu"><span class="navbar">mschaefer@admin.fsu.edu</A><br>
+						<BR>
+			 			<A title="Link to the Disclaimer for this web site" href="disclaimer.html" ><span class="navbar">Disclaimer<br></A></span>
+			            <P></P>
+						</div></SPAN></SPAN>
+					</td>
+				</tr>
+						</table><!-- End Navigation Table -->
+			<br><br>
+					</td>
+		<td width="10">&nbsp;</td>
+		<td width="*" valign="top">
+			<table cellspacing="4" align="center">
+				<tr>
+					<td><h3>2001 Davis Winners
+</h3><img src="../images/spear.gif" width="496" height="41" alt="" border="0"></td>
+					<td align="middle">&nbsp;</td>
+					<td><br></td>
+				</tr>
+				<tr>
+					<td>
+					
+<table width="100%">
+	<tr>
+	<td width="5%">&nbsp;</td>
+	<td width="90%">
+	
+		<table border="0" cellpadding="0" cellspacing="0">
+		
+		<h4>Notable Individual Awards-$300</h4>
+		
+		
+		This team designed, developed and implemented a comprehensive electronic personnel management system
+		based on specific departmental needs.  The system includes electronic initiation of personnel actions, 
+		approval process, and initiation of university personnel documents.  The system collects data that assists in 
+		managing human resources, personnel budgets, and accomplishing periodic and unique reports regarding staffing/human 
+		resources.<br><br>
+		
+			
+				<a href="2001winners.cfm?PicNum=1" title="View Picture of winners">View Picture</a><br>
+				
+					
+		
+		
+		
+		
+		<h4>Notable Work Unit Awards-$600</h4>
+		
+		
+		By combining the University's electronic requisition/purchase order system, Greets, with RightFax software,
+		the University provided viewing of all procurement documents on one central Web site, including satellite
+		areas.  This eliminated the necessity to transport and file thousands of purchase orders, receiving reports
+		and other documents.<br><br>
+		
+			
+				<a href="2001winners.cfm?PicNum=2" title="View Picture of winners">View Picture</a><br>
+					
+				
+		
+		<h4>Plaques</h4>
+		<strong>Online Active Appointment Report</strong>
+		What were formally printed reports are now made available in
+		an online format.  They are available sooner, do not have to be picked up/returned, save paper,
+		are more flexible and easier to use.  The team leveraged the technologies and ideas used to create
+		the 2000 Davis Productivity Award winner with a web based system that uses DB2 tables, 
+		the REXX programming language and HTML. <br>
+		No Picture-Annie Hayes, Leslie Fennel, Rick Beyer, Allison Golden<br><br>
+		
+		<strong>Online Housing Application</strong>
+		The development of the on-line housing application process by 
+		integrating web technologies to the existing housing information system, has brought customer 
+		and staff convenience, improved customer service, and cost savings to University Housing.<br>
+		No Picture-Brian Buckner, Jason Lammert, Pete McNally, Sue Mahoney, Bill Hinchcliffe, Frank Cuevas<br><br>
+		
+		<strong>Tracking System for Parking Permits</strong>
+		Created an inventory and tracking system for parking 
+		permits, by writing new software.  Permits are now associated with a person, providing the
+		ability to know the location and status at any time; automate renewals for faculty/staff; ease
+		transfer between vehicles; insure correct issuance by type; and allow citation payment before 
+		posting to accounts receivable.<br>
+		No Picture-Angela Gaskins<br><br>
+		
+		
+		<strong>Going Above and Beyond Work Responsibilities</strong> 
+		Mr. Wirth's achievement is his ability and dedication to going above and beyond 
+		the call of duty for his job and the university by learning all the different positions 
+		in his office and making himself available to work in all of the different areas at any time.<br>
+		
+			
+				<a href="2001winners.cfm?PicNum=3" title="View Picture of winners">View Picture</a><br>
+					
+				<br><br>
+		
+		
+						
+		<strong>Automated Parking Permit System</strong>- Expanded the annual renewal process to a 5-7-renewal cycle.
+		The industry standard is to renew employee parking permits each year, but with advanced computer
+		technology and removable metal taglets this process has eliminated the need to register the owner's
+		vehicle and process a new parking permit each fall.<br>
+		
+			
+				<a href="2001winners.cfm?PicNum=4" title="View Picture of winners">View Picture</a><br>
+					
+				
+		<br>
+		
+		
+			
+		<strong>Online Budget Management System</strong>- Development & implementation of an on-line program
+		budget management & reporting system which eliminated duplicate transaction entry & provided
+		improved program budgeting, accounting, control, accountability and reporting, by developing a 
+		database which accesses, retrieves and manipulates data downloaded daily from the FSU Data 
+		Warehouse.<br>
+		
+			
+				<a href="2001winners.cfm?PicNum=5" title="View Picture of winners">View Picture</a><br>
+					
+				<br><br>
+		
+		<h4>Certificates of Commendation</h4>
+		
+				
+		<strong>Distribution/Delivery Services</strong>-The most important aspect of this project was to improve the 
+		accuracy of mail sorting and the timely delivery of mail.  Mail delivery and general operations
+		were targeted for review and creative initiatives were implemented to improve the distribution
+		process.  Courier routes were configured and mail codes assigned according to location.  The mail
+		codes were assigned according to location on the route.<br>
+		
+			
+				<a href="2001winners.cfm?PicNum=6" title="View Picture of winners">View Picture</a><br>
+					
+				<br><br>
+		
+		
+				
+		<strong>Presorting of Mail</strong>-Offered a presort operation to agencies which allows them to achieve
+		United States Postal Service (USPS) postage discounts.  FSU Postal Service invested in a
+		Multi-Line Character Optical Reader (MLOCR) and set up a presort service to barcode,
+		sort and deliver first class mail ready to be mailed by the USPS.  <br>
+		
+			
+				<a href="2001winners.cfm?PicNum=7" title="View Picture of winners">View Picture</a><br>
+					
+				<br><br>
+		
+		
+			
+		<strong>Forwarding of Mail</strong>-Modernized the student forwarding process which resulted in more timely
+		processing of forwarding information, more time to provide necessary services to students, and a
+		reduction in the lines usually associated with the process.  By utilizing bubble sheet forms completed
+		by students, the forms are scanned into the database, conforming to standards of the USPS.<br>
+		
+			
+				<a href="2001winners.cfm?PicNum=8" title="View Picture of winners">View Picture</a><br>
+					
+				 <br><br>
+		
+		
+				
+		<strong>Tracking System</strong>-Eliminated the manual processing of packages and accountable mail while
+		improving service to students and departments and increasing accountability by taking an
+		existing program utilized by private industry and modifying the program to accommodate
+		students, faculty, staff, and departmental database.<br>
+		
+			
+				<a href="2001winners.cfm?PicNum=9" title="View Picture of winners">View Picture</a><br>
+					
+				<br><br>
+		
+		<strong>Transition Team 2001</strong>
+		Assigned the task of assuring that good customer service not only 
+		continue but improve during the time it takes to develop a new financial aid system, through 
+		the coordination of the Transition Team 2001, current procedures were dissected to identify
+		problems and make recommendations for improvement.<br>
+		No Picture-Carolyn Blakely, Gail Rogers, Lisa Stewart, Marilyn Smith, Calvin Dirickson, Ida Sue Johnson, 
+		Willie Wideman, Joyce Thomas, Rick Wells, Darryl Marshall<br><br>
+		
+		
+		
+		<strong>FSU Web Redesign</strong>-The FSU Web committee redesigned FSU's main web site.  The information
+		architecture allows users to find information in less time and with greater ease, and also ensures the
+		web site is in full compliance with ADA regulations.<br>
+		
+			
+				<a href="2001winners.cfm?PicNum=10" title="View Picture of winners">View Picture</a><br>
+					
+				<br><br>
+		
+		
+			
+		<strong>Email Accounts/Receivable Billing Statements-</strong> Created new software and modified existing
+		software which converted billing statements to e-mail which reduced the need for mass printing 
+		and mailing of special forms; reduced delivery time and cost; provided a link to the financial
+		information screen living students more and easier payment options and greatly reduced man 
+		hours freeing staff for other duties.<br>
+		
+			
+				<a href="2001winners.cfm?PicNum=11" title="View Picture of winners">View Picture</a><br>
+					
+				<br><br>
+		
+		
+		
+			
+		<strong>FSUCard Autodebit</strong>-Rewrote the FSUcard auto debit process by creating new software and a 
+		webpage, replacing a manual process for paying by debit card with an automated electronic funds
+		transfer on a prearranged schedule.<br>
+		
+			
+				<a href="2001winners.cfm?PicNum=12" title="View Picture of winners">View Picture</a><br>
+					
+				<br><br>
+		
+		
+		
+	 			
+		<strong>Web Based Electronic Check Processing</strong>-Modified the web based credit card payment system 
+		to allow payment by electronic check, along with automating the process for returned e-checks 
+		reducing the processing time from 18 days to 5 days.  Also provided students more and faster 
+		payment options, especially for distance learning students.<br>
+		
+			
+				<a href="2001winners.cfm?PicNum=13" title="View Picture of winners">View Picture</a><br>
+					
+				<br><br>
+		
+		
+			
+		<strong>Exit Interviews</strong>-Entered into a public/private co-venture with collegexit.com allowing students to complete 
+		federally mandated exit interviews for federal loans on the web.<br>
+		
+			
+				<a href="2001winners.cfm?PicNum=14" title="View Picture of winners">View Picture</a><br>
+					
+				<br><br>
+		
+		
+		
+		<strong>Financial Aid Online Status Inquiry Team</strong>- Nominees designed, developed and implemented a
+		web-based online inquiry accessed through the university's website that enables prospective and
+		current students to check the status and amounts or their financial aid awards from any computer
+		having access to the Internet.	<br>
+		
+			
+				<a href="2001winners.cfm?PicNum=15" title="View Picture of winners">View Picture</a><br>
+					
+					<br><br>
+		
+		
+		
+		<strong>Registrar's Online Academic Certification Request</strong>- Nominees developed and implemented, 
+		using state-of-the-art systems engineering tools, a web-based e-form that allows enrolled students
+		to submit online requests for certification of the enrolled and academic status to the Registrar's Office.<br>
+		
+			
+				<a href="2001winners.cfm?PicNum=16" title="View Picture of winners">View Picture</a><br>
+					
+				<br><br>
+		
+		
+				
+		<strong>Juvenile Justice Educational Enhancement Program</strong>- A team of researchers & educators with
+		a commitment to high quality education outcomes in juvenile justice facilities developed a 
+		comprehensive database to be used for program and student outcomes, which allows JJEEP to
+		identify, monitor and evaluate educational delivery standards for all students assigned to Dept. 
+		of Juvenile Justice programs.<br>
+		
+			
+				<a href="2001winners.cfm?PicNum=17" title="View Picture of winners">View Picture</a><br>
+					
+				<br><br>
+		
+		
+				
+		<strong>Online Tracing System</strong>-The creation of an online tracing system, using a file maker preoperational
+		database, that not only made critical schedule information available to customers through the web but
+		also reduced the workload of the program assistant.<br>
+		
+			
+				<a href="2001winners.cfm?PicNum=18" title="View Picture of winners">View Picture</a><br>
+					
+				<br><br>
+		
+		
+			
+		<strong>BOR Reporting System</strong>-Automation of annual BOR Institute and Center Report which eliminated 
+		hundreds of hours of manual records sorting, condensing and calculation of annual FTE's by 
+		developing a database system which accesses, retrieves, and manipulates data downloaded from the
+		FSU Data Warehouse.<br>
+		
+			
+				<a href="2001winners.cfm?PicNum=19" title="View Picture of winners">View Picture</a><br>
+					
+				<br><br>
+		
+		
+				
+		<strong>Enterprise Decision Support Team</strong>-The Data Services section of AIS at FSU has implemented databases, a suite 
+		of tools, support & training for customers using both warehouse and real-time operational data to support
+		their daily work.  This was done by using existing tools, techniques and resources to build the databases,
+		create documentation and support infrastructure and begin authorizing access to the data from off the shelf
+		software tools.<br>
+		
+			
+				<a href="2001winners.cfm?PicNum=20" title="View Picture of winners">View Picture</a><br>
+					
+				<br><br>
+		
+		
+		
+		<strong>Information Studies Information System</strong>-Development of a comprehensive database system combining student, staff, and 
+		program information for the school of Information studies, this system allows the School to maximize university 
+		knowledge and resources while flexibly developing customized application for specific university audiences.  This 
+		was accomplished by required study of the existing processes of the School of Information Studies, followed by an 
+		ongoing dialog with EDS regarding the use and availability of University data.<br>
+		
+			
+				<a href="2001winners.cfm?PicNum=21" title="View Picture of winners">View Picture</a><br>
+					
+				<br><br>
+		
+	
+		<strong>Electronic Travel Team</strong>
+		The Electronic Travel system provides a web-based process for requesting and documenting travel events by integrating 
+		several leading-edge technologies making it flexible, user-friendly and efficient.<br>
+		
+			
+				<a href="2001winners.cfm?PicNum=22" title="View Picture of winners">View Picture</a><br>
+					
+				<br><br>
+		
+		
+					
+		<strong>Sponsored Research Services Unit</strong>-The Sponsored Research Services Office increased the quality, 
+		quantity and timeliness of services through efforts that reduced employee turnover; reversed a growing 
+		backlog of workload; and reduced administrative processing layers by reclassifying and restructuring 
+		positions thus providing direct service to faculty and removed a layer of administrative review from 
+		our processes resulting in elimination of backlogged workload and a greater and improved level of service.<br>
+		
+			
+				<a href="2001winners.cfm?PicNum=23" title="View Picture of winners">View Picture</a><br>
+					
+				<br><br>
+		
+		
+			
+		<strong>Higher Education Management Tranining Program</strong>-FSU created a graduate recruitment and training 
+		program that maintains quality service delivery to its customers, the students, simultaneously addressing 
+		workforce demographics and future staffing needs.  An F&A committee selects and trains 2 applicants 
+		every 6 months.  Rotation through strategic units provides global business function understanding.<br>
+		
+			
+				<a href="2001winners.cfm?PicNum=24" title="View Picture of winners">View Picture</a><br>
+					
+				<br><br>
+		
+		
+		
+		<strong>Back to Basics Advisor Training Workshop</strong>- The Back to Basics Advisor Training Workshops was a week
+		long program designed for new and experienced academic advisors at FSU.  Twenty-four workshops were
+		presented on topics such as Academic policy and procedures, Student Retention, Advising students with
+		disabilities, the Values of a Liberal Arts Education and Technology in Advising.  Advisors from across campus
+		came together to learn how they could improve student achievement and better facilitate student success at FSU.<br>
+		
+			
+				<a href="2001winners.cfm?PicNum=25" title="View Picture of winners">View Picture</a><br>
+					
+				<br><br>
+		
+		
+		
+			
+		<strong>F&A Web Redesign Committee</strong>
+		F&A redesigned all F&A departmental web sites (23 total) to obtain a common look that is recognizably 
+		FSU yet still performs an essential duty --SERVICE-- but providing valuable information to our customers.  
+		The design provides a clear, concise and consistent method of navigation through our web sites.<br>
+		
+			
+				<a href="2001winners.cfm?PicNum=26" title="View Picture of winners">View Picture</a><br>
+					
+				<br><br>
+		
+		<h4>Honorable Mention</h4>
+		
+		
+		
+				
+		<strong>FSU Influenza Vaccine Outreach Campaign</strong>
+		To promote campus and community wellness, the staff
+		of Thagard Student Health Center assisted by students from FSU School of Nursing conducted a 
+		campus outreach program to deliver flu vaccine to FSU students, faculty and staff.  At 22 different 
+		locations on campus, Thagard staff held 36 clinics, and for the first time the vaccine was free of charge to students.<br>
+		
+			
+				<img src="images/Flu Campaign Crew.jpg" width="480" height="320" alt="" border="0"><br>
+				<a href="2001winners.cfm#PicNum27" title="Close Picture of winners">Close Picture</a><br>
+				Left to right: Front Row-Debra Cole. Second Row-Mary Ellen Poore, Wendy Metts, Denise Robinson, Lesley Sacher, 
+		Lane Curington, Celeste Paquette. Back Row:  Linda Palmer, Nate Nicholson, Christopher Duke, Ron Simmons, Angelia Wood,
+		 Harriet Jackson, Kozen Jefferson, Pete Peterson, Diane Nicholson, Victoria Cofie
+					
+				<br><br>
+		
+		
+		
+				
+		<strong>Printing and Mailing Services Team</strong>
+		The merging of two separate and substantial different operations 1.) printing 
+		and copying 2.) outgoing standard mail and presort, into a single unit has allowed the University a seamless one stop 
+		print communication & distribution system that saves time and money.<br>
+		
+			
+				<a href="2001winners.cfm?PicNum=28" title="View Picture of winners">View Picture</a><br>
+					
+				<br><br>
+		
+		
+		
+				
+		<strong>Customer Satisfaction Survey Committee</strong>
+		A Survey Team, from OTC, devised a customer satisfaction 
+		survey to assess the level of departmental telecommunications service to the FSU community.  Results 
+		from 247 faculty'staff respondents were complied and an implementation plan devised to provide increased
+		customer service throughout the University community.<br>
+		
+			
+				<a href="2001winners.cfm?PicNum=29" title="View Picture of winners">View Picture</a><br>
+					
+				<br><br>
+
+</table>	
+
+	</td>
+	<td width="5%">&nbsp;</td>
+	</tr>
+</table>
+					
+					
+
+					
+					</td>
+				</tr>
+			</table>
+		<HR><div align="center"><A HREF="http://www.cast.org/bobby/" TITLE="Bobby's Home Page"><IMG height=33 alt="Bobby Approved (v 3.1)" src  ="../images/approved_sm.gif" width=88 border=0 ></A>&nbsp;&nbsp;&nbsp;&nbsp;<a href="http://www.wgbh.org/ncam" title="Link to CPB/WGBH National Center for Accessible Media"><IMG height=50 alt="Web Access Symbol (for people with disabilities)" src  ="../images/access_75.gif" width=54 border=0 ></a></div>
+		</td>
+		<td width="10">&nbsp;</td>
+				</tr>    
+			</table><!-- End Body Table -->
+</body>
+</html>

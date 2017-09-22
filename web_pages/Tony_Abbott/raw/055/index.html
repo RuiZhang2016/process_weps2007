@@ -1,0 +1,753 @@
+
+
+
+
+
+	<script>
+	<!--
+		function checkTheImage(whichImage)
+		{
+			if (whichImage.src.indexOf('t4_image') > 0)
+			{
+				whichImage.src = whichImage.src.replace(/t4_image/, "full_image")
+			}
+		}
+	//	-->
+	</script>
+
+		<html xmlns="http://www.w3.org/1999/xhtml">
+		<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-15" />
+			<title>The Secrets of Droon (Unabridged) -- Tony Abbott</title>
+			<meta name="description" content="The Secrets of Droon is an ongoing epic saga published for listeners who enjoy fantasy at its most exciting and engaging....">
+
+
+			<meta name="keywords" content="audiobook player, audiobook mp3, audible player, audiobooks, audible">
+			<link rel="stylesheet" type="text/css" href="main.css">
+			<link rel="stylesheet" type="text/css" href="navigation.css">
+			<link rel="stylesheet" type="text/css" href="search.css">
+			<link rel="stylesheet" type="text/css" href="content.css">
+			<link rel="stylesheet" type="text/css" href="home.css">
+			<link rel="stylesheet" type="text/css" href="menu.css">
+			<link rel="stylesheet" type="text/css" href="tables.css">
+			<link rel="stylesheet" type="text/css" href="landingPages.css">
+			<link rel="stylesheet" type="text/css" href="tabbing.css">
+
+			<script src="menu.js" type="text/javascript"></script>
+			<script src="rollover.js" language="javascript"></script>
+		 <script src="mbox.js"  language="JavaScript1.2"></script>
+
+
+		</head>
+
+		<style>
+			#content_columns {
+				background: #B6CA64 url(/clear.gif) no-repeat top left;
+			}
+			#btn_getADevice { display:none; }
+			
+			
+			
+			
+
+			.pad10top { padding-top:10px; padding-right:10px; padding-left:10px; padding-bottom:10px; margin-left:5px; }
+			.pad10mid { padding-bottom:10px; padding-right: 15px; padding-left: 15px; }
+			.pad10bot { padding-bottom:10px; margin-left : 5px; }
+			.pad4shuffle { padding-top:15px; padding-left:30px; padding-right:10px; padding-bottom:10px; }
+			.divider { border-bottom: 1px solid #ccc; padding: 5px; }
+			.left { padding-top : 10px;	padding-left: 10px;	}
+			.right { padding-top: 10px; padding-left:10px;	}
+			.legal { padding-top: 15px; font-size:82%; }
+			IMG.inline { display: inline; }
+			SPAN.headerOrange { color: #D53F1A; font-size: 14px; font-weight: bold; }
+			h1.t2 { font-family: Verdana,Arial,sans-serif; font-size: 120%; color: #334d55; margin: 0px; padding: 0px;	}
+			h2.t2 { font-family: Arial, sans-serif; font-size: 114%; color: #666666; margin: 0px; padding: 0px; }
+			h3.t2 { font-family: Arial,sans-serif; font-size: 100%; color: #334d55; margin: 0px; padding: 0px;	}
+			a.t2 {	color: #006699;	text-decoration: none; }
+			a:link.t2 { color: #D53F1A; text-decoration: none;	}
+			a:visited.t2 { color: #D53F1A;	text-decoration: none; }
+			a:hover.t2 { color: #D53F1A;	text-decoration: underline;	}
+			.mbrHeader { color: #000; font-size: 17px; padding: 8px 5px 0 10px; }
+			.mbrHeader2 { color: #000; font-size: 17px; padding: 8px 5px 0 28px; }
+			.showDetailsHeader {padding: 8px 5px 5px 28px;}
+			.mbrOfferDetailDesc { color: #000; padding: 5px 5px 5px 37px; }
+
+			/* productPromo2.jsp styles */
+			#mainContainer {
+				border-style:solid;
+				border-color:#c0c0c0;
+				border-width:1px;
+				margin:8 0 0 0;
+				padding:0;
+				width: 475;
+				/* position: relative; */
+			}
+			.shortRegContainer {
+				padding: 0 0 0 10;
+				margin: 0 0 0 0;
+				width: 240px;
+				left: 20px;
+			}
+			.leftContainer {
+				float: left;
+				width: 257px;
+				top: -6px;
+				left: 0px;
+				z-index: 1;
+				padding: 0 0 0 15;
+				position: relative;
+				/* border-style:dashed; border-width:1px; border-color:#c0c0c0; */
+			}
+			.rightContainer {
+				text-align:center;
+				width:200px;
+				height: 200px;
+				float: right;
+				top: 7px;
+				left: -20px;
+				position: relative;
+				/* border-style:dashed; border-width:1px; border-color:#c0c0c0; */
+			}
+			.topContainer {
+				clear: both;
+				text-align: center;
+				font-family: arial, verdana;
+				font-size: 178%;
+				padding: 0 0 5 0;
+			}
+			.bottomContainer {
+				clear:both;
+				position: relative;
+				width: 467px;
+				text-align: center;
+				font-weight: bold;
+				padding: 3 0 18 0;
+			}
+			.offerDisclaimer {
+				font-size: 88%;
+				padding: 3 0 4 0;
+			}
+			.productPromoFooter {
+				padding: 0 0 0 10;
+			}
+			.productPromoPrint {
+				padding: 10 10 5 10;
+			}
+			/* Positioning for books displayed */
+			.topLeft {
+				position: absolute;
+				top: 0; left: 0;
+				clip: rect(0, 95px, 95px, 0);
+			}
+			.topRight {
+				position: absolute;
+				top: 0; left: 107;
+				clip: rect(0, 95px, 95px, 0);
+			}
+			.bottomLeft {
+				position: absolute;
+				top: 103; left: 0;
+				clip: rect(0, 95px, 95px, 0);
+			}
+			.bottomRight {
+				position: absolute;
+				top: 103; left: 107;
+				clip: rect(0, 95, 95, 0);
+			}
+			
+			DIV.spaced {padding: 5 0 5 0; font-size: 88%;}
+			DIV.learnNano {font-weight: bold; padding: 8 0 5 0;}
+		</style>
+
+		<script>
+		function validateShortRegFields()
+		{
+			var addr = document.shortReg.email.value;
+			if (document.shortReg.firstName.value == "")
+			{
+				alert("Please enter your first name.");
+				document.shortReg.firstName.focus();
+				return false;
+			}
+			if (document.shortReg.lastName.value == "")
+			{
+				alert("Please enter your last name.");
+				document.shortReg.lastName.focus();
+				return false;
+			}
+			if (addr == '') {
+			   alert('Please enter your email address.');
+			   document.shortReg.email.focus();
+			   return false;
+			}
+			var invalidChars = '\/\'\\ ";:?!()[]\{\}^|*';
+			for (i=0; i<invalidChars.length; i++) {
+			   if (addr.indexOf(invalidChars.charAt(i),0) > -1) {
+			      alert('Email address contains invalid characters');
+			      document.shortReg.email.focus();
+			      return false;
+			   }
+			}
+			for (i=0; i<addr.length; i++)
+			{
+			   if (addr.charCodeAt(i)>127) {
+			      alert("Email address contains non ascii characters.");
+			      document.shortReg.email.focus();
+			      return false;
+			   }
+			}
+			var atPos = addr.indexOf('@',0);
+			if (atPos == -1) {
+			   alert('Please enter a valid email address.');
+			   document.shortReg.email.focus();
+			   return false;
+			}
+			if (atPos == 0) {
+			   alert('Please enter a valid email address.');
+			   document.shortReg.email.focus();
+			   return false;
+			}
+			if (addr.indexOf('@', atPos + 1) > - 1) {
+			   alert('Please enter a valid email address.');
+			   document.shortReg.email.focus();
+			   return false;
+			}
+			if (addr.indexOf('.', atPos) == -1) {
+			   alert('Please enter a valid email address.');
+			   document.shortReg.email.focus();
+			   return false;
+			}
+			if (addr.indexOf('@.',0) != -1) {
+			   alert('Please enter a valid email address.');
+			   document.shortReg.email.focus();
+			   return false;
+			}
+			if (addr.indexOf('.@',0) != -1){
+			   alert('Please enter a valid email address.');
+			   document.shortReg.email.focus();
+			   return false;
+			}
+			if (addr.indexOf('..',0) != -1) {
+			   alert('Please enter a valid email address.');
+			   document.shortReg.email.focus();
+			   return false;
+			}
+			return true;
+		}
+		</script>
+
+		<script language=javascript>
+<!--
+
+			
+			function lpURL(a,b)	
+			{
+				var cookie = 0;
+		 		var the_myserver = 'http://www.audible.com';
+				var the_cgiinfo = '/adbl';
+				var the_linkstring = '?BV_SessionID=@@@@1151435623.1171470881@@@@&BV_EngineID=cccgaddkehjkhjhcefecekjdffidfjl.0';
+				
+				if (cookie == 9)  
+					the_linkstring = "?BV_UseBVCookie=Yes";
+					
+				if(b)
+			 		self.location.href = the_myserver + the_cgiinfo + a + the_linkstring + b;	 					 		
+				else
+					self.location.href = the_myserver + the_cgiinfo + a + the_linkstring;		
+			}
+		
+		//-->
+</script>
+	
+
+		<script>	
+
+		function popUpJSP(a,b,c)
+		{
+			window.open('http://www.audible.com/adbl'+a+'?BV_UseBVCookie=Yes' + b,'sample',c);
+		}
+		</script>	
+
+
+		<body>
+			<div id="contentContainer">
+				<script>
+var the_myserver1 = 'http://www.audible.com';
+//alert(the_myserver1);
+var the_cgiinfo1 = '/adbl';
+var the_linkstring1 = 'BV_SessionID=@@@@1151435623.1171470881@@@@&BV_EngineID=cccgaddkehjkhjhcefecekjdffidfjl.0';
+var cookie1 = 0;
+
+function linkURL(a,b)	{
+	if (cookie1 == 9)  
+		the_linkstring1 = "BV_UseBVCookie=Yes";
+ 		//alert(the_myserver1 + the_cgiinfo1 + a + the_linkstring1 + b);
+		if(b)
+	 				self.location.href = the_myserver1 + the_cgiinfo1 + a + "?"+ the_linkstring1 + "&"+ b;
+			else
+					self.location.href = the_myserver1 + the_cgiinfo1 + a + "?"+the_linkstring1;
+		}
+</script>
+<script src="mbox.js"  language="JavaScript1.2"></script>
+
+<!-- top nav $Id:  -->
+<table cellspacing="0" id="user_messaging"><!-- Begin vetically expandable/collapsable user messaging table -->
+	<tr><td colspan="4"><img src="top_green_on_gray_curve.gif" alt="" width="770" height="5" /></td></tr>
+	<tr>
+		<td class="curve"><img src="top_left_green_on_gray_curve.gif" alt=" " width="17" height="12" /></td>
+		<td class="w_496"></td>
+		<td id="message">
+
+		<table cellspacing="0" id="message_content" style="display: none"><!-- Toggle style element display: block to display: none per messaging -->
+				<tr><td><img src="usr_msg_top_curve.gif" width="240" height="2"  /></td></tr>
+				<tr>
+					<td>
+						<div class="alert"><p></p></div><!-- Use the 'alert' class to add the asterix -->
+						<!--<div class="promo"><p><a href="">20% off all titles today, members</a></p></div>-->
+					</td>
+				</tr>
+				<tr><td class="bot_curve"><img src="usr_msg_bot_curve.gif" width="240" height="2"  /></td></tr>
+		</table>
+
+		<table cellspacing="0" id="edu_login" style="display:block;"><!-- Toggle style element display: block to display: none per login required scenario -->
+			<tr>
+				<td>
+					<div id="MemberLogin" class="orangeLink"><span class="black bold">Member Login:</span>&nbsp;<a href="http://www.audible.com/adbl/store/eLoginForgotPassword.jsp?BV_SessionID=@@@@1151435623.1171470881@@@@&BV_EngineID=cccgaddkehjkhjhcefecekjdffidfjl.0" class="s9">forgot password?</a></div>
+			 	     <form action="https://www.audible.com/adbl/site/login.jsp" method="post">
+					 <input type=hidden name="BV_SessionID" value="@@@@1151435623.1171470881@@@@">
+<input type=hidden name="BV_EngineID" value="cccgaddkehjkhjhcefecekjdffidfjl.0">
+
+			 	     &nbsp;<label for="UserName">Username</label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+			 	     <label for="Password">Password</label><br/>
+					 <input name=username type="text"  id="UserName" value="" size=15>
+					 <input name=password type=password id="Password" value="" size=15>
+					 <input type="hidden" name="action" value="Login" >
+					 <input type="image" name="action" value="Login" alt="Go" src="btn_go_greenBg.gif" border=0 align=absmiddle>
+					</form>
+				</td>
+			</tr>
+		</table>
+
+		</td>
+		<td class="curve"><img src="top_rgt_green_on_gray_curve.gif" alt=" " width="17" height="12" /></td>
+	</tr>
+</table><div id="utility_links_and_personal_info">
+	<!-- absolutly position microphone image -->
+	<img src="microphone.gif" class="micPosition" width="61" height="49" alt="" />
+	<!-- /absolutly position microphone image -->
+	<!-- Begin Utility Links Div -->
+
+	<table cellspacing="0" id="logo">
+		<tr>
+
+				<td id="audible_logo"><a href="http://www.audible.com/adbl/site/homepage/AnonHome.jsp?BV_SessionID=@@@@1151435623.1171470881@@@@&BV_EngineID=cccgaddkehjkhjhcefecekjdffidfjl.0&state=0"><img src="audibledotcom.gif" alt="Audible.com - audio that speaks to you wherever you are"  class="inline" /></a><a href="CJProduct.jsp%3FproductID=BK_LILI_000203.1.html#skipnav"></a></td>
+
+			<td class="utility_links">
+				<ul id="utility_links">
+
+				</ul>
+			</td>
+			
+<td id="user_info">
+<div>
+
+	
+</div>
+</td>
+
+ 		</tr>
+	</table>
+
+</div>
+
+ <!-- End Utility Links Div -->
+<div id="primeNav_landing"><!-- Open cotainer holding primary nav, secondary nav, and Cart -->
+	<div id="primeNavLandingContainer_landing">
+			<div id="primary_nav_bar_landing"><!-- Begin Primary Nav -->
+			<!-- Primary Nav Bar / Logic required to display either TABLE#signed_in or TABLE#anon -->
+			<!-- Primary Nav Bar / Additional logic required per template type to server either a linked button with rollovers,
+			or a non linked button -->
+
+			<table cellspacing="0" id="signed_in" >
+				<tr>
+
+				<td id="btn_home"><a id=link_home href="http://www.audible.com/adbl/store/CJProduct.jsp?BV_SessionID=@@@@1151435623.1171470881@@@@&BV_EngineID=cccgaddkehjkhjhcefecekjdffidfjl.0" onmouseover="roll('home',0);"
+						onmouseout="roll('home',1);"><img src="home_off.gif" alt="Home" width="53" height="25" name="home" id="home" /></a></td>
+
+				<td id="btn_browse"><a id=link_browse href="http://www.audible.com/adbl/store/CJProduct.jsp?BV_SessionID=@@@@1151435623.1171470881@@@@&BV_EngineID=cccgaddkehjkhjhcefecekjdffidfjl.0&switch=browse" onmouseover="roll('browse',0);"
+						onmouseout="roll('browse',1);"><img src="browse_off.gif" alt="Browse Audio" width="105" height="25" name="browse" id="browse" /></a></td>
+
+				<td id="btn_mbrBenefits"><a id=link_mbrBenefits href="http://www.audible.com/adbl/store/CJProduct.jsp?BV_SessionID=@@@@1151435623.1171470881@@@@&BV_EngineID=cccgaddkehjkhjhcefecekjdffidfjl.0&switch=benefits" onmouseover="roll('memberBenefits',0);"
+						onmouseout="roll('memberBenefits',1);"><img src="memberBenefits_off.gif" alt="Member Benefits" width="129" height="25" name="memberBenefits" id="memberBenefits" /></a></td>
+
+				<td id="btn_howAudibleWorks"><a id=link_howAudibleWorks href="http://www.audible.com/adbl/store/CJProduct.jsp?BV_SessionID=@@@@1151435623.1171470881@@@@&BV_EngineID=cccgaddkehjkhjhcefecekjdffidfjl.0&switch=moreInfo" onmouseover="roll('howAudibleWorks',0);"
+						onmouseout="roll('howAudibleWorks',1);"><img src="howAudibleWorks_off.gif" alt="How Audible Works" width="140" height="25" name="howAudibleWorks" id="howAudibleWorks" /></a></td>
+
+				<td id="btn_getADevice"><a id=linkGetADevice href="http://www.audible.com/adbl/store/CJProduct.jsp?BV_SessionID=@@@@1151435623.1171470881@@@@&BV_EngineID=cccgaddkehjkhjhcefecekjdffidfjl.0&switch=device" onmouseover="roll('getADevice',0);"
+						onmouseout="roll('getADevice',1);"><img src="getADevice_off.gif" alt="Get A Device" width="105" height="25" name="getADevice" id="getADevice" /></a></td>
+
+
+				</tr>
+			</table>
+			</div><!-- End Primary Nav -->
+		</div>
+		<table cellspacing="0" id="emptycart"  border=0>
+		<tr><td></td></tr>
+		</table>
+		<table cellspacing="0" id="secondaryNavWrapper" border=0>
+ 		<tr>
+			<td id="light_green_bg">&nbsp;</td>
+			<td id="secondaryNav">
+ 				<ul class="secondaryNav">
+
+				<!--	<li><a href="<%=getURLString('/site/listOfLists/NewReleases/newReleases.jsp')%>">New Releases</a></li>
+					<li><a href="<%=getURLString('/site/listOfLists/BestSellers/bestSellersList.jsp')%>">Best Sellers</a></li>
+					<li><a href="<%=getURLString('/site/listOfLists/AwardWinners/awardWinners.jsp')%>">Award Winners</a></li>
+					<li><a href="<%=getURLString('/site/listOfLists/JustAdded/justAdded.jsp')%>">Just Added</a></li>
+					<li><a href="<%=getURLString('/site/listOfLists/ListOfLists.jsp')%>">The List of Lists</a></li>-->
+					<!-- <li style="display: inline; margin: 0; padding: 0 15px 0 0; border: 0;"><a href="">The List of Lists</a></li> -->  <!-- List wraps per Audible's request -->
+
+				<li>&nbsp;</li>
+
+ 				</ul>
+			</td>
+			<td id="light_green_bg2"></td>
+		</tr>
+		<tr>
+			<td id="bottom" colspan="2"></td>
+		</tr><!-- This may need to be a semi transparent pixel or something to show the ipod lines -->
+	</table>
+</div><!-- Open cotainer holding primary nav, secondary nav, and Cart -->
+
+
+
+<script>
+<!-- SC Variable Definitions -->
+	var scVars = new Object();
+	scVars.pageName = "";
+	scVars.channel  = "";
+</script>
+
+				<table id="content_columns" cellspacing="0" border=0>
+				<tr><td colspan=2></td></tr>
+
+
+	<tr>
+
+	<!-- Indigo Canadian Dollar Conversion value -->
+
+
+
+
+
+	<style>
+		ul.rightside {margin: 0 0 0 25; list-style-type: disc; padding: 5px 0 0 0;}
+		ul.rightside li {padding: 0 0 5px 0;}
+		.middle-right { width: 219; background-color: #E6E9CF; padding: 5 0 0 0;}
+		.title {font-family: arial, verdana; font-size: 125%; font-weight: bold; }
+		.desc {font-family: arial, veranda; font-size: 115%; font-weight: bold; padding: 0 0 8 0;}
+		.small {font-size: 88%;}
+		.theheader {background-image: url('/images/everest/landing/t4/top_bkgd.jpg'); background-repeat: repeat-x; position: relative; left: 10px; width: 753px; top: -3; padding: 5px 0 5px 0;}
+		.topheader { font-family: verdana,arial; font-size: 195%; font-weight: bold; text-align: center;}
+		.topsubheader { font-family:verdana,arial; font-size: 175%; font-style: italic; text-align: center; }
+		.centeredButton { text-align:center; margin:0 auto; position: relative; top: -10px;}
+		.centeredButton2 { text-align:center; margin-top:0px; margin-bottom:0px; padding:0px;position: relative; top: -5px;}
+		#tabletop {
+			width: 220px;
+			margin:0 auto;
+			text-align: center;
+		}
+		#tablebottom {
+			width: 200px;
+			margin:0 auto;
+			text-align: center;
+		}
+		.centeredImage {text-align:center;  margin-top:0px; margin-bottom:0px;}
+	</style>
+
+	<map name="works">
+		<area shape=rect coords=109,5,159,31 href="http://www.audible.com/adbl/entry/offers/productPromo2.jsp?BV_SessionID=@@@@1151435623.1171470881@@@@&BV_EngineID=cccgaddkehjkhjhcefecekjdffidfjl.0&switch=moreInfo" alt="How it works">
+	</map>
+
+	<td colspan=2>
+ 
+		<div class="mboxDefault">
+				<div class="theheader">
+					<div class="topheader">Listen to books, magazines, newspapers &amp; radio shows.</div>
+					<div class="topsubheader">Download now in digital audio.</div>
+		
+				</div>
+		</div>
+		<script language='JavaScript1.2'>
+		mboxCreate('T4_Header','ActionCode=ANONAUDW0378WS010202');
+		</script>
+ 
+	</td>
+</tr>
+<tr>
+	<td class="left" >
+		<table border=0 cellspacing=0 cellpadding=0>
+			<tr> 
+				<td></td>
+			</tr>
+		</table>
+
+		<table class="white515_header" cellspacing="0">
+		<tr>
+			<td>
+	  	<div id="expandable_label"><!-- label not needed  --></div>
+			</td>
+		</tr>
+		</table>
+
+		<table class="white515" cellspacing=0 cellpadding=0 border=0>
+		<tr>
+			<td>
+			<div class="pad10top">
+				<table border=0 align=center>
+				<tr valign=top>
+					<td align=center>
+						<table border=0>
+						<tr>
+							<td style="width:195px;">
+
+								<div style="text-align:center; margin:0 auto;"><img class='inline' src="t4_image.jpg" alt="" border=0 onError="checkTheImage(this)"></div>
+								
+								<div style="text-align:center; margin:0 auto; padding: 10px;"><a href="javascript:popUpJSP('/site/openplayer.jsp','&popUp=false&productID=BK_LILI_000203&title=The Secrets of Droon (Unabridged)','width=310,height=120')"><img class='inline'	src="listen_sample.gif" alt="Listen to a Sample" border=0></a></div>
+								<div style="text-align:center; margin:0 auto; padding: 10px;"></div>
+							</td>
+							<td style="padding-left: 8px;">
+								<div class="title">The Secrets of Droon (Unabridged)</div>
+								Tony Abbott<br><br>
+								<font color='red'><b>List Price: <strike>$18.00</strike></b></font><br>
+								<b>Our Price</b>: $12.60<br><br>
+
+											<table border=0 cellpadding=0 cellspacing=0 width=258 bgcolor="DFDFDF" align=center>
+												<tr>
+													<td><img src="white_ul_corner.gif" alt="" border=0></td>
+													<td style=""><img src="clear.gif" width=234 height=1 border=0></td>
+													<td><img src="white_ru_corner.gif" alt="" border=0></td>
+												</tr>
+												<tr>
+													<td></td>
+													<td>
+														<div class="mboxDefault">
+														<div class="centeredImage">
+														<img class="inline" src="twoways.gif" alt="There are two ways to buy!" border=0 vspace=4>
+													</div>
+
+														<table border=0 cellpadding=0 cellspacing=0 width=220 id="tabletop" align=center>
+															<tr>
+																<td><img src="grey_lu_corner.gif" alt="" border=0></td>
+																<td bgcolor=#F3F3F3 style="border-top-style:solid;border-top-width:1px;border-color:#9E9E9E;"><img src="clear.gif" width=200 height=1 border=0></td>
+																<td><img src="grey_ru_corner.gif" alt="" border=0></td>
+															</tr>
+															<tr>
+																<td bgcolor=#F3F3F3 style="border-left-style:solid;border-left-width:1px;border-color:#9E9E9E;"><img src="clear.gif" width=1></td>
+																<td bgcolor=#F3F3F3 style="text-align: center;padding: 0 0 10 0;">
+
+																	<b>Become a member for $9.95 a year and get this free!</b>
+
+																</td>
+																<td bgcolor=#F3F3F3 style="border-right-style:solid;border-right-width:1px;border-color:#9E9E9E;"><img src="clear.gif" width=1></td>
+															</tr>
+															<tr>
+																<td><img  src="grey_ll_corner.gif" alt="" border=0></td>
+																<td bgcolor=#F3F3F3 style="border-bottom-style:solid;border-bottom-width:1px;border-color:#9E9E9E;"><img src="clear.gif" height=1></td>
+																<td><img  src="grey_rl_corner.gif" alt="" border=0></td>
+															</tr>
+														</table>
+
+														<div class="centeredButton"><a href="http://www.audible.com/adbl/entry/offers/productPromo2.jsp?BV_SessionID=@@@@1151435623.1171470881@@@@&BV_EngineID=cccgaddkehjkhjhcefecekjdffidfjl.0&submitWhichStep=2"><img class="inline" src="learnmore.gif" alt="Learn More" border=0 style="padding:6 0"></a></div>
+														<div class="centeredButton2"><img class="inline" src="or.jpg" alt="" vspace=4></div>
+														</div>
+														<script language='JavaScript1.2'>
+														mboxCreate('T4_Button1','ActionCode=ANONAUDW0378WS010202','profile.prodId=BK_LILI_000203');
+														</script> 
+														<table border=0 cellpadding=0 cellspacing=0 width=200 id="tablebottom" align=center>
+															<tr>
+																<td><img src="grey_lu_corner.gif" alt="" border=0></td>
+																<td bgcolor=#F3F3F3 style="border-top-style:solid;border-top-width:1px;border-color:#9E9E9E;"><img src="clear.gif" width=178 height=1 border=0></td>
+																<td><img src="grey_ru_corner.gif" alt="" border=0></td>
+															</tr>
+															<tr>
+																<td bgcolor=#F3F3F3 style="border-left-style:solid;border-left-width:1px;border-color:#9E9E9E;"><img src="clear.gif" width=1></td>
+																<td bgcolor=#F3F3F3 style="text-align: center;padding: 0 0 10 0;">
+																<b>Purchase now for $12.60</b>
+
+																</td>
+																<td bgcolor=#F3F3F3 style="border-right-style:solid;border-right-width:1px;border-color:#9E9E9E;"><img src="clear.gif" width=1></td>
+															</tr>
+															<tr>
+																<td><img src="grey_ll_corner.gif" alt="" border=0></td>
+																<td bgcolor=#F3F3F3 style="border-bottom-style:solid;border-bottom-width:1px;border-color:#9E9E9E;"><img src="clear.gif" height=1></td>
+																<td><img src="grey_rl_corner.gif" alt="" border=0></td>
+															</tr>
+														</table>														
+
+															<div class="centeredButton"><a href="https://www.audible.com/adbl/site/offers/AccountCreation.jsp?BV_SessionID=@@@@1151435623.1171470881@@@@&BV_EngineID=cccgaddkehjkhjhcefecekjdffidfjl.0&skipStep=1&itemList=BK_LILI_000203"><img class=inline src="addtocart.gif" alt="Add to cart" border=0></a></div>															
+															
+													</td>
+													<td></td>
+												</tr>
+												<tr>
+													<td><img src="white_ll_corner.gif" alt="" border=0></td>
+													<td></td>
+													<td><img src="white_rl_corner.gif" alt="" border=0></td>
+												</tr>
+											</table>
+						</td>
+						</tr>
+						</table>
+					</td>
+				</tr>
+				<tr>
+					<td colspan=2>
+						<hr style="height: 1px; color: #000000; "><br>
+						<div class="desc">Description</div>
+						<div class="small">Audio Length:  3 hours and 11 min.</div>
+							<div class="small">Average Customer Rating:
+<img class=inline style="vertical-align:middle" src="star_on.gif" alt="Average Customer Rating 3.8"><img class=inline style="vertical-align:middle" src="star_on.gif" alt="Average Customer Rating 3.8"><img class=inline style="vertical-align:middle" src="star_on.gif" alt="Average Customer Rating 3.8"><img class=inline style="vertical-align:middle" src="star_half.gif" alt="Average Customer Rating 3.8"><img class=inline style="vertical-align:middle" src="star_off.gif" alt="Average Customer Rating 3.8"></div>
+						<div class='small'>Version:  Unabridged</div>
+						<br>
+						The Secrets of Droon is an ongoing epic saga published for listeners who enjoy fantasy at its most exciting and engaging. This much-lauded series was cited by the American Booksellers Association as one of the top ten works to read while waiting for the next Harry Potter, and finally makes its audio debut. Fast, whimsical action, engaging characters, and surprising, imaginative situations are the hallmarks of <I>The Secrets of Droon</I>, one of the best-selling series for its age group.<P>
+<I>The Hidden Stairs and the Magic Carpet: Book 1</I><br>
+A hidden door. A magical staircase. Discover the World of Droon with Eric, Julie, and Neal.<P>
+<I>Journey to the Volcano Palace: Book 2</I><br>
+The nasty Lord Sparr has stolen a magic jewel from Eric, Julie, and Neal's friend Princess Keeah. The jewel is in Lord Sparr's secret palace, which is in a volcano!<P>
+<I>The Mysterious Island: Books 3</I><br>
+Eric, Julie, and Neal are sailing with Princess Keeah and suddenly they are caught in the middle of a magical ocean storm. And they are shipwrecked on an island that belongs to one of Lord Sparr's witches.<br><br>
+						&#169;1999 Robert T. Abbott; (P)2004 Random House, Inc. Imagination Studios, an imprint of Random House Audio Publishing Group<br>	<br>
+					</td>
+				</tr>
+				</table>
+			</div>
+			</td>
+			<td class="dropShadow"><!-- nothing here --></td>
+		</tr>
+		</table>
+
+		<table cellspacing="0" class="white515-2">
+		<tr>
+			<td><img src="bottombar.gif" /></td>
+		</tr>
+		</table>
+	</td>
+	<td class="right">
+	<div class="mboxDefault">
+			<div style="padding-right: 5px;">
+	
+				<div><img src="whychoose.gif"></div>
+				<div class="middle-right"><ul class="rightside"><li>Largest selection, with more than <b>30,000</b> titles to choose from</li><li>Compatible with over 190 digital audio devices, including the <b>Apple&reg; iPod&reg;</b></li><li>Audiobooks as <b>low as $9.58 each!</b></li></ul></div>
+				<div><img src="howitworks.gif" usemap=#works></div>
+	
+			</div>
+	</div>
+	<script language='JavaScript1.2'>
+	mboxCreate('T4_RightArea','ActionCode=ANONAUDW0378WS010202');
+	</script> 
+ 
+	</td>
+
+	</tr>
+				<tr><td colspan="2" id="bottomCurve"><img src="bot_column_container_curve_noSearchCol.gif"></td></tr>
+				</table>
+				<!-- footer $Id: -->
+
+<p class="footer">
+		<strong>
+		<a href="http://www.audible.com/adbl/store/aboutAudible.jsp?BV_SessionID=@@@@1151435623.1171470881@@@@&BV_EngineID=cccgaddkehjkhjhcefecekjdffidfjl.0">Meet Audible</a>&nbsp;|&nbsp;
+		<a href="http://www.audible.com/adbl/store/jobs.jsp?BV_SessionID=@@@@1151435623.1171470881@@@@&BV_EngineID=cccgaddkehjkhjhcefecekjdffidfjl.0">Work at Audible</a>&nbsp;|&nbsp;
+		<a href="http://www.audible.com/adbl/store/contactUs.jsp?BV_SessionID=@@@@1151435623.1171470881@@@@&BV_EngineID=cccgaddkehjkhjhcefecekjdffidfjl.0">Contact Us</a>&nbsp;|&nbsp;
+		<a href="http://www.audible.com/adbl/store/reviewsAccolades.jsp?BV_SessionID=@@@@1151435623.1171470881@@@@&BV_EngineID=cccgaddkehjkhjhcefecekjdffidfjl.0">Reviews &amp; Awards</a>&nbsp;|&nbsp;
+		<a href="http://www.audible.com/helpcenter">Customer Support</a>&nbsp;|&nbsp;
+		<a href="http://www.audible.com/adbl/store/sitemap.jsp?BV_SessionID=@@@@1151435623.1171470881@@@@&BV_EngineID=cccgaddkehjkhjhcefecekjdffidfjl.0">Site Map</a>	
+		<br />
+		<a href="http://phx.corporate-ir.net/phoenix.zhtml?c=87484&p=irol-irhome">Investor Relations</a>&nbsp;|&nbsp;
+		<a href="http://www.audible.com/adbl/store/press/pressRoom.jsp?BV_SessionID=@@@@1151435623.1171470881@@@@&BV_EngineID=cccgaddkehjkhjhcefecekjdffidfjl.0">Press Releases</a>&nbsp;|&nbsp;
+		<a href="http://www.audible.com/adbl/store/affiliatesNew/index.jsp?BV_SessionID=@@@@1151435623.1171470881@@@@&BV_EngineID=cccgaddkehjkhjhcefecekjdffidfjl.0&Type=AffiliatePage">Audible Affiliate Program</a>&nbsp;|&nbsp;
+		<a href="http://www.audible.com/adbl/store/sitePage.jsp?BV_SessionID=@@@@1151435623.1171470881@@@@&BV_EngineID=cccgaddkehjkhjhcefecekjdffidfjl.0&Type=AudibleatWorkMainPageDeviceChoice">Corporate Programs</a>&nbsp;|&nbsp;
+		<!--a href="<%=getURLString('/fundraising/index.jsp')%>">Community Programs</a-->
+		<a href="http://www.audible.com/catalog">A-Z Catalog</a>
+		</strong>
+		<br />
+		Audible International: <a href="http://www.audible.fr/">France</a>&nbsp;|&nbsp;
+		<a href="http://www.audible.de/">Germany</a>&nbsp;|&nbsp;
+		<a href="http://www.audible.co.uk/">United Kingdom</a>
+		<br />
+		<a href="http://www.audible.com/adbl/store/rssFeed.jsp?BV_SessionID=@@@@1151435623.1171470881@@@@&BV_EngineID=cccgaddkehjkhjhcefecekjdffidfjl.0">RSS</a>&nbsp;|&nbsp;
+		<a href="http://www.audible.com/adbl/site/podcasts/LearnMorePodcast.jsp?BV_SessionID=@@@@1151435623.1171470881@@@@&BV_EngineID=cccgaddkehjkhjhcefecekjdffidfjl.0">Podcasting</a>&nbsp;|&nbsp;
+		<a href="http://www.audible.com/adbl/store/audibleAirPalm.jsp?BV_SessionID=@@@@1151435623.1171470881@@@@&BV_EngineID=cccgaddkehjkhjhcefecekjdffidfjl.0">Wireless</a>&nbsp;|&nbsp;
+		<a href="http://www.audible.com/adbl/store/audibletogo.jsp?BV_SessionID=@@@@1151435623.1171470881@@@@&BV_EngineID=cccgaddkehjkhjhcefecekjdffidfjl.0">Software</a> 
+		<br />
+		<br />
+		Recommendations powered by:<img style="display:inline" src="loomia_badge_small.gif" width="41" height="12" border=0>
+		<br />
+		<br />
+		&#169; Copyright 1997 - 2007 Audible, Inc &nbsp;|&nbsp; <a href="http://www.audible.com/adbl/faqs/terms.jsp?BV_SessionID=@@@@1151435623.1171470881@@@@&BV_EngineID=cccgaddkehjkhjhcefecekjdffidfjl.0">Legal Notices</a>&nbsp;|&nbsp;
+		<a href="http://www.audible.com/adbl/store/privacy.jsp?BV_SessionID=@@@@1151435623.1171470881@@@@&BV_EngineID=cccgaddkehjkhjhcefecekjdffidfjl.0&Type=policy">Privacy Policy</a>
+		 
+</p>
+<!-- /footer -->
+<!-- im-e03-00 -->
+  
+
+<!-- SCRIPT NAME : store/bottomStuffSiteCatalyst.jsp -->
+
+<!-- SiteCatalyst code version: G.2.
+Copyright 1997 - 2003 Omniture, Inc. More info available at
+http://www.omniture.com --><script language="JavaScript"><!--
+/* You may give each page an identifying name, server, and channel on
+the next lines. */
+var s_pageName="/store/CJProduct.jsp"; 		/* Page Name */
+var s_server="" 					/* Server Name */
+var s_channel=""; 		/* Sub Category Name */
+var s_pageType="timeout.html" 				/* Error Page or Page Not Found */
+var s_prop1="ANONAUDW0378WS010202_Audible.com_Old Default Anon Source Code"; 			/* Action Code */
+var s_prop2=""; 			/* Category Name */
+var s_prop3="Anon";			/* Visitor Type - Anon, Regd, Cust, ALst, Comp */
+var s_prop4="";			/* Site Page - Type/Option Selected by Visitor */
+var s_prop5="/store/CJProduct.jsp|ANONAUDW0378WS010202_Audible.com_Old Default Anon ";                /* Action Code Pathing with Page Names */
+/* E-commerce Variables */
+var s_campaign="ANONAUDW0378WS010202_Audible.com_Old Default Anon Source Code";		/* Action Code */
+var s_state="";			/* State */
+var s_zip="";			/* Zip Code */
+var s_events="";			/* Current Visitor Event - Add, Remove, Purchase, etc. */
+var s_products="";			/* Current Product(s) processed by Visitor */
+var s_purchaseID="";		/* Order Number */
+var s_eVar1="Anon";                      /* Visitor Type - Regd, Cust, ALst, Comp */
+var s_eVar2="";                   /* Last Navigation Category */
+var s_eVar3=""						/* Search Term - keyword, coded in java bottomstuff */
+var s_eVar4=""						/* Listen To Sample - Not Yet Coded */
+var s_eVar5="";                      /* Site Page - Type/Option Selected by Visitor */
+/********* INSERT THE DOMAIN AND PATH TO YOUR CODE BELOW ************/
+/********** DO NOT ALTER ANYTHING ELSE BELOW THIS LINE! *************/
+var s_code=' '//--></script>
+<script language="JavaScript" src="s_code.js"></script>
+<script language="JavaScript"><!--
+
+var s_wd=window,s_tm=new Date;if(s_code!=' '){s_code=s_dc(
+'audiblecom,audibleanonymous');if(s_code)document.write(s_code)}else
+document.write('<im'+'g src="http://audiblecom.112.2O7.net/b/ss/'+'audiblecom,audibleanonymous'+'/1/G.2--FB/s'+s_tm.getTime()+'?[AQB]'
++'&pageName='+escape(s_wd.s_pageName?s_wd.s_pageName:(s_wd.pageName?s_wd.pageName:''))
++'&server='+escape(s_wd.s_server?s_wd.s_server:(s_wd.server?s_wd.server:''))
++'&ch='+escape(s_wd.s_channel?s_wd.s_channel:(s_wd.channel?s_wd.channel:''))
++'&[AQE]" height="1" width="1" border="0" />')
+//--></script><script language="JavaScript"><!--
+if(navigator.appVersion.indexOf('MSIE')>=0)document.write(unescape('%3C')+'\!-'+'-')
+//--></script><noscript><img
+src="http://audiblecom.112.2O7.net/b/ss/audiblecom,audibleanonymous/1/G.2-XPd-S"
+height="1" width="1" border="0" /></noscript><!--/DO NOT REMOVE/-->
+<!-- End SiteCatalyst code version: G.2. -->
+
+
+ 
+<!-- include file = "store/loomia.jsp" --> 
+ 
+
+ 
+			</div>
+		</body>
+		</html>
+
+

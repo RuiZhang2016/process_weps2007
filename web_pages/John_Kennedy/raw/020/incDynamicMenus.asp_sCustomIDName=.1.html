@@ -1,0 +1,125 @@
+
+//<SCRIPT LANGUAGE="JAVASCRIPT">
+/********************************************************************************
+ NAVIGATION SCRIPT - incDynamicMenus.js
+ Version 2.1: Now Supports Multiple Menus (11/02/04)
+ 	created 2/18/04 -scott
+ 	updated 12/27/04 -scott Separated Logic and Settings Variables
+	
+	SET-UP STEPS:
+	1. Update the Position Settings if necessary
+	2. Set up the Image Pre-Loading if necessary (Not a text based Navigation)
+	3. Update the classes for the Main Nav and Sub Menu
+	4. Add the function call to your page to display the Navigation: funCreateNavigation(1)
+		[The parameter here is the NavType. If left blank then assumes 1.]
+
+	copyright 2004 by First MediaWorks [DO NOT USE WITHOUT PERMISSION!]
+*********************************************************************************/
+
+/**** Position Settings ****/
+// Settings are now stored in Arrays. Use Indexes for different NavNumbers
+var gnNumNavigations = 4; // The number of editable navigations. Must have a setting for each in the arrays below
+var gnOffsetHorizontal = new Array(0, 0, 0, 0);
+var gnOffsetVertical = new Array(4, 4, 4, 4);
+var gbMainNavVertical = new Array(false, false, false, false); // Set to false for a top horizontal Main Navigation
+var gsSubMenuSide = new Array("right", "right", "right", "right"); // Set to left to have the Sub-Navs expand to the left.
+var gsTopNavSubAlignment = new Array("left", "left", "left", "left"); // Set to left to have top Nav Sub-menus align
+														//	to the left side if the Main nav Items.
+var gbMainNavIsText = new Array(false, false, false, false); // Set to false to use images with Roll-Overs for main navigation
+var gbHideOnMouseOut = true; // Set to false to show Sub-menus until mouse is clicked
+var gnMaxNavItemsPerLine = new Array(1, 1, 1, 1); // The maximum number of Main Nav items per line for a Horizontal Nav
+
+/**** Sub Nav Width Settings ****/
+var gnSubNavWidth = new Array(169, 169, 169, 169);
+var gsSubNavWidthType = new Array("", "", "", "");	// use "max" to fluctuate width based on the data
+												// use "image" to make the Sub-Menu the same width as the Main Menu Images
+var gnSubNavCharacterWidth = new Array(6.9, 6.9, 6.9, 6.9);	// width in pixels of a single text character (bump up for larger fonts)
+
+
+/**** Style Settings ****/
+/*******************************************
+	** Important Note **
+For Left Navigation, you MUST have a WIDTH 
+specified for navMainNavTable or MainNav.
+And for Top Navigation, specify a HEIGHT 
+for navTopMainNavTable or navTopMainNav.
+*******************************************/
+var gsClassMainNavTable = new Array("navTopMainNavTable", "navTopMainNavTable", "navTopMainNavTable", "navTopMainNavTable");
+var gsClassMainNavItem = new Array("MainNav", "MainNav", "MainNav", "MainNav");
+var gsClassMainNavItemHover = new Array("MainNavHover", "MainNavHover", "MainNavHover", "MainNavHover");
+var gsClassMainNavCell = new Array("MainNavBG", "MainNavBG", "MainNavBG", "MainNavBG");
+var gsClassMainNavCellHover = new Array("MainNavBGHover", "MainNavBGHover", "MainNavBGHover", "MainNavBGHover");
+
+var gsClassSubNavTable = new Array("SubMenuTable", "SubMenuTable", "SubMenuTable", "SubMenuTable");
+var gsClassSubNavItem = new Array("SubMenu", "SubMenu", "SubMenu", "SubMenu");
+var gsClassSubNavItemHover = new Array("SubMenuHover", "SubMenuHover", "SubMenuHover", "SubMenuHover");
+var gsClassSubNavCell = new Array("SubMenuBG", "SubMenuBG", "SubMenuBG", "SubMenuBG");
+var gsClassSubNavCellHover = new Array("SubMenuBGHover", "SubMenuBGHover", "SubMenuBGHover", "SubMenuBGHover");
+
+
+/**** Image Pre-Loading ****/
+// Must Name Array items the same as the image name part
+// Un-Comment and Edit to use Images for Main Nav
+var gAryNavImages = new Array();
+
+function funPreLoadNavImages1(nNavNum) {
+	var nNavIndex = nNavNum-1;
+	gAryNavImages[nNavIndex] = new Array();
+	gAryNavImages[nNavIndex][0] = "onair";
+	for (var i=0; i<gAryNavImages[nNavIndex].length; i++) {
+		eval('NavImg' + nNavNum + '_' + (i+1) + 'On = new Image();');
+		eval('NavImg' + nNavNum + '_' + (i+1) + 'On.src = "/images/nav_' + gAryNavImages[nNavIndex][i] + '_on.gif";');
+		eval('NavImg' + nNavNum + '_' + (i+1) + 'Off = new Image();');
+		
+		eval('NavImg' + nNavNum + '_' + (i+1) + 'Off.src = "/images/nav_' + gAryNavImages[nNavIndex][i] + '_off.gif";');
+		
+	}
+}
+
+function funPreLoadNavImages2(nNavNum) {
+	var nNavIndex = nNavNum-1;
+	gAryNavImages[nNavIndex] = new Array();
+	gAryNavImages[nNavIndex][0] = "news";
+	for (var i=0; i<gAryNavImages[nNavIndex].length; i++) {
+		eval('NavImg' + nNavNum + '_' + (i+1) + 'On = new Image();');
+		eval('NavImg' + nNavNum + '_' + (i+1) + 'On.src = "/images/nav_' + gAryNavImages[nNavIndex][i] + '_on.gif";');
+		eval('NavImg' + nNavNum + '_' + (i+1) + 'Off = new Image();');
+		
+		eval('NavImg' + nNavNum + '_' + (i+1) + 'Off.src = "/images/nav_' + gAryNavImages[nNavIndex][i] + '_off.gif";');
+		
+	}
+}
+function funPreLoadNavImages3(nNavNum) {
+	var nNavIndex = nNavNum-1;
+	gAryNavImages[nNavIndex] = new Array();
+	gAryNavImages[nNavIndex][0] = "watchandlisten";	
+	for (var i=0; i<gAryNavImages[nNavIndex].length; i++) {
+		eval('NavImg' + nNavNum + '_' + (i+1) + 'On = new Image();');
+		eval('NavImg' + nNavNum + '_' + (i+1) + 'On.src = "/images/nav_' + gAryNavImages[nNavIndex][i] + '_on.gif";');
+		eval('NavImg' + nNavNum + '_' + (i+1) + 'Off = new Image();');
+		
+		eval('NavImg' + nNavNum + '_' + (i+1) + 'Off.src = "/images/nav_' + gAryNavImages[nNavIndex][i] + '_off.gif";');
+		
+	}
+}
+function funPreLoadNavImages4(nNavNum) {
+	var nNavIndex = nNavNum-1;
+	gAryNavImages[nNavIndex] = new Array();
+	gAryNavImages[nNavIndex][0] = "extras";
+	for (var i=0; i<gAryNavImages[nNavIndex].length; i++) {
+		eval('NavImg' + nNavNum + '_' + (i+1) + 'On = new Image();');
+		eval('NavImg' + nNavNum + '_' + (i+1) + 'On.src = "/images/nav_' + gAryNavImages[nNavIndex][i] + '_on.gif";');
+		eval('NavImg' + nNavNum + '_' + (i+1) + 'Off = new Image();');
+		
+		eval('NavImg' + nNavNum + '_' + (i+1) + 'Off.src = "/images/nav_' + gAryNavImages[nNavIndex][i] + '_off.gif";');
+		
+	}
+}
+funPreLoadNavImages1(1);
+funPreLoadNavImages2(2);
+funPreLoadNavImages3(3);
+funPreLoadNavImages4(4);
+//
+
+// INCLUDE THE LOGIC
+document.writeln('<scr' + 'ipt language="javascript" src="/jsfiles/incDynamicMenusLogic.js"></scr' + 'ipt>');

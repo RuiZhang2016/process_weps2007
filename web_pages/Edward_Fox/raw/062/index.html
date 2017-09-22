@@ -1,0 +1,33 @@
+var urge_referrer = "[no referrer provided]";
+
+/*************************************************************************
+*	URGE Launch: Launch the URGE player
+*************************************************************************/
+
+function launchUrge (paramString) {
+
+var hash = {};
+var pairs = paramString.split("&");
+for (var i=0;i<pairs.length;i++) {
+if(!pairs[i]) continue;
+var nameValue = pairs[i].split("=");
+var name = nameValue[0];
+var value = pairs[i].substring(name.length+1);
+hash[name] = value;
+}
+
+var url = "http://www.urge.com/launch/?";
+
+if(typeof hash["referrer"] == "undefined")
+hash["referrer"] = urge_referrer;
+
+var query = new Array();
+for(var n in hash) {
+if(hash[n])
+query.push(n+"="+hash[n]);
+}
+
+url += query.join("&");
+
+window.open(url, "launch_urge", "width=300,height=200,toobar=no,status=no,scrollbars=no,resizable=no,location=no");
+}

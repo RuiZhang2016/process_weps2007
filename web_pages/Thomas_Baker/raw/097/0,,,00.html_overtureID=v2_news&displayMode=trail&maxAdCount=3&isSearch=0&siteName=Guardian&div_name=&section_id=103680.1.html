@@ -1,0 +1,64 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head></head>
+<body>
+<script type="text/javascript" language="JavaScript" src="0,,,00.js.3"></script>
+<script type="text/javascript" language="JavaScript" src="0,,,00.html"></script>
+<script type="text/javascript" language="JavaScript">
+	<!--
+	function getQueryVariable(variable) {
+		var query = window.location.search.substring(1);
+		var vars = query.split("&");
+
+		for (var i=0; i<vars.length; i++) {
+			var pair = vars[i].split("=");
+
+			if (pair[0] == variable) {
+				return pair[1];
+			}
+		}
+	}
+
+	var overtureID = getQueryVariable('overtureID');
+	var displayMode = getQueryVariable('displayMode');
+	var maxAdCount = getQueryVariable('maxAdCount');
+	var isSearch = getQueryVariable('isSearch');
+	var siteName = getQueryVariable('siteName');
+	var div_name =  getQueryVariable('div_name');
+	var section_id = getQueryVariable('section_id');
+
+	if (!overtureIsMacIEVersion) {
+            var overtureUrl = buildOvertureURL(overtureID, maxAdCount, 'esp', isProduction());
+             document.writeln('<script type="text/javascript" language="JavaScript" src="' + overtureUrl + '"></' + 'script>');
+             var hotspotsUrl = buildHotspotsURL(overtureID, 0, 'esp', isProduction());
+            document.writeln('<script type="text/javascript" language="JavaScript" src=' + hotspotsUrl + '"></' + 'script>');
+	}
+	// -->
+</script>
+
+<script type="text/javascript" language="JavaScript">
+
+	// if no div name passed, see if we need to use an override or the default
+	if (!div_name) {
+		div_name = check_for_section_setting(section_id);
+	}
+
+	if (!overtureIsMacIEVersion) {
+		if (isSearch == 1) {
+			document.domain = "guardian.co.uk";
+		}
+
+		targetDivID = div_name;
+
+		if (zSr && mapkey) {
+			var overtureDocument = new OvertureDocument(targetDivID);
+			var overtureDataArray = createOvertureDataArray(zSr);
+			renderOvertureDataArray(overtureDataArray, mapkey, isSearch, displayMode);
+			overtureDocument.flush(isSearch);
+		}
+	}
+
+	// -->
+</script>
+</body>
+</html>

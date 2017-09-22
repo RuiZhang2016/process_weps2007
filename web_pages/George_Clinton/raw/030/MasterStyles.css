@@ -1,0 +1,760 @@
+@import "corpservices.css";
+@import "navigation.css";
+@import "local.css";
+@import "home.css";
+@import "header.css";
+@import "left_side_nav.css";
+@import "footer.css";
+@import "content_header.css"; /*for event schedule pages and copy*/
+@import "buyer_guarantee.css";
+@import "subscriptions.css";
+@import "promos.css";
+@import "holiday.css";
+@import "cst.css";	/* For CST Fan2Fan Exchange */
+
+/*****
+	GENERIC STYLES
+		#These are used to set standard styles across
+		#a set of generic elements. For example, the first
+		#declaration removes paddings and margins from all standard tags used throughout the site.
+******/
+table,div,form,h1,h2,h3,h4,h5,h6,td,tr,ul,ol,li,span,dl,dt,dd,p,th {
+	padding: 0px;
+	margin: 0px;
+}
+
+a {
+	color: #336699;
+	text-decoration: none;
+}
+
+a:hover { text-decoration: underline; }
+
+body {
+	font-family: Arial, helvetica, Sans-Serif;
+	font-size: 12px;
+	color: #333333;
+	background-color: #ffffff;
+	text-align: center;
+	margin: 0px auto;
+	height: 100%;
+	background-image: url(bg.gif);
+}
+
+img { border: 0px; }
+
+td,th {
+	font-size: 12px;
+	text-align: left;
+}
+
+li {
+	list-style-type: none;
+	margin: 5px 0px;
+}
+
+hr {
+	background-color: #d2d2d2;
+	padding: 0px;
+	height: 1px;
+	margin: 5px 0px 10px 0px;
+	border: 0px;
+}
+
+/*HEADERS*/
+h1,h2,h3,h4,
+h5,h6,#navigation {
+	font-family: Tahoma, Sans-Serif;
+	font-weight: bold;
+}
+
+h1 {
+	font-size: 20px;
+	font-weight: bold;
+	color: #333333;
+}
+
+h2 {
+	font-size: 18px;
+	font-weight: bold;
+	color: #FF9900;
+}
+
+#featured h2 {
+	font-size: 14px;
+	font-weight: bold;
+	margin-bottom: 2px;
+}
+
+h3 {
+	font-size: 14px;
+	font-weight: bold;
+	color: #666666;
+}
+
+#editors_picks h3,
+#hot_tickets h3,
+#top_five h3,
+#how_it_works strong,
+#featured h3,#featured h2 {
+	color: #FF9900;
+}
+
+h4 {
+	margin: 2px;
+	margin-top: 5px;
+	font-size: 12px;
+}
+/* END HEADERS */
+
+/*** MAIN WRAPPER ***/
+#container {	
+	margin: 0px auto;
+	text-align: left;
+	clear: both;
+	width: 974px;
+	overflow: hidden;
+	background-color: #ffffff;
+	background-image: url(left_side_bar.gif);
+	background-repeat: repeat-y;
+}
+
+/*** MAIN CONTENT ***/
+#main_body {
+	min-height: 1080px;
+	background: url(content_background.gif) no-repeat bottom right;
+	padding-bottom: 40px;
+}
+
+#content {
+	margin: 10px 10px 0px 10px;
+	clear: both;
+}
+
+#content_body {
+	width: 620px;
+	float: left;
+	margin-bottom: 10px;
+}
+
+#content_footer {
+	margin: 0 10px 0 5px;
+	clear: both;
+}
+
+#content_footer p {
+	margin: 10px 10px 10px 0px;
+	line-height: 1.5;
+}
+
+.static_content * { margin: 10px 0px; }
+
+.static_content h2 { margin: 5px 0px 20px 0px; }
+
+/***RIGHT COPY***/
+#right_side_bar {
+	width: 170px;
+	float: right;
+	padding-top: 15px;
+}
+
+#right_side_bar div,#right_side_bar h3,
+#right_side_bar ul,#right_side_bar h2 {	margin: 10px 0px 10px 10px; }
+
+#right_side_bar h2 {
+	font: bold 12px arial,helvetica,sans-serif;
+	color: #333;
+}
+
+#right_side_bar h4 { margin-left: 10px; }
+
+#right_side_bar p img { padding: 10px; }
+
+#breadcrumbs { 
+	text-align: left;
+	clear: both;
+	margin: 5px 10px 5px 10px;
+}
+
+#abbrev {
+	padding: 2px;
+	border: 1px solid black;
+	background: #f5f5f5;
+	color: #666666;
+	text-align: center;
+}
+
+#abbrev table { margin-top: 10px; }
+
+#abbrev td {
+	font-size: 11px;
+	padding: 0px 0px;
+	text-align: left;
+}
+
+#abbrev tr td:first-child {	font-weight: bold; }
+
+#sorry { margin-top: 10px; }
+
+#sorry h3,#sorry p { margin: 10px 0px; }
+
+/*** CLASSES ***/
+.error_message p { margin-bottom: 10px; }
+
+.no_breadcrumbs { margin-top: 10px; }
+
+.view_all {
+	width: 99%;
+	margin: 5px 10px;
+	clear: both;
+}
+
+.page_list li {
+	margin-left: 25px;
+	list-style-type: disc !important;
+}
+
+.view_tickets {
+	background: url(b_viewtickets.gif) no-repeat;
+	width: 98px;
+	height: 21px;
+	display: block;
+}
+
+.view_schedule {
+	background: url(b_viewschedule.gif) no-repeat;
+	width: 112px;
+	height: 21px;
+	display: block;
+}
+
+.add_to_cart {
+	background: url(b_addtocart.gif) no-repeat;
+	width: 98px;
+	height: 21px;
+	display: block;
+}
+
+.category_name,.division h1,.division h3,.division h2 {
+	margin: 0px 0px 10px 0px;
+	width: auto;
+	background: url(category_header.gif) repeat-x;
+	border: 1px solid #d2d2d2;
+	font: bold 14px tahoma,arial,helvetica,sans-serif;
+	padding: 5px;
+	height: 21px;
+	color: #333333;
+}
+
+.no_border td {
+	border: 0!important;
+	padding: 0 !important;
+	margin: 0 !important;
+	height: 15px !important;
+}
+
+.no_border img {
+	height: auto !important;
+	float: none !important;
+	padding: 0px 5px !important;
+}
+
+.submit_button,.clickable,.submitbutton,.sort,
+.view_tickets,.view_schedule,.add_to_cart,#holiday img { cursor: pointer; }
+
+/*****
+	THEATER FRONT DOOR
+		# The theater front door contains different 
+******/
+
+#content.front_door #content_body  {
+	width: 100%;
+}
+
+.theater_by_city {
+	width: 24% !important;
+	float: right;
+	margin: 20px 0px;
+}
+
+.theater_categories {
+	width: 74%;
+	float: left;
+}
+
+.theater_primary_category {
+	margin: 20px 0px;
+	clear: both;
+	width: 100%;
+}
+
+.theater_primary_category ul {
+	float: left;
+	width: 31%;
+	margin-left: 5px;
+}
+
+.theater_secondary_category {
+	width: 66%;
+	float: left;
+	margin: 10px 0px;
+	clear: right;
+}
+
+.theater_secondary_category ul {
+	float: left;
+	width: 48%;
+	margin-left: 5px;
+}
+
+.theater_tertiary_category {
+	width: 33%;
+	float: left;
+	margin: 10px 0px;
+}
+
+.theater_tertiary_category ul,.theater_by_city ul { margin-left: 5px; }
+
+.theater_tertiary_category li,
+.theater_secondary_category li,
+.theater_primary_category li,
+.theater_by_city li {
+	padding: 1px 0px;
+}
+
+.theater_tertiary_category h3,
+.theater_secondary_category h3,
+.theater_primary_category h3,
+.theater_by_city h3 {
+	margin: 0px 20px 0px 0px;
+	padding: 7px 5px;
+	border: 1px solid #d2d2d2;
+	font-size: 12px;
+	height: 17px;	
+}
+
+.theater_primary_category h3 { background: url(primary_theater.gif) no-repeat; }
+
+.theater_secondary_category h3 { background: #ffffff url(secondary_theater.gif) no-repeat; }
+
+.theater_tertiary_category h3 {	background: #ffffff url(tertiary_theater.gif) no-repeat; }
+
+.theater_by_city h3 { background: #ffffff url(city_theater.gif) no-repeat; }
+
+.theater_by_city h3 { margin: 0px 13px 0px 0px; }
+
+/****
+	FEATURED ITEMS
+	# The structural divs containing the 4 featured items on
+	# the front door pages.
+****/
+.featured_item {
+	width: 175px;
+	float: left;
+}
+
+.first_item { margin-right: 40px; }
+
+.featured_item p,.featured_item strong,.featured_item img {
+	margin: 0px 0px;
+	padding: 0px;
+	font-size: 11px;
+}
+
+#main_body {
+	float: right;
+	width: 813px;
+}
+
+.featured_item p {
+	width: 100%;
+	margin: 0px 0px 7px 0px;
+	line-height: 1.3;
+}
+
+.featured_item img {
+	margin: 5px 0px;
+	display: block;
+	border: 1px solid #999999;
+}
+
+.featured_item strong {
+	display: block;
+	clear: both;
+	font-size: 12px;
+	margin: 0px;
+}
+
+/***
+	CATEGORY PAGE 
+		# On Category landing page, the specific styles for the right side 
+		# since the layout is different across the category/subcategory pages.
+***/
+
+.category_content #right_side_bar {
+	width: 270px;
+	border: 1px solid #cccccc;
+	background: #f2f2f2;
+	padding-top: 5px;
+	margin-top: 0px;
+}
+
+.category_content #right_side_bar p { margin: 5px 10px 10px 10px; }
+
+.category_content h1 { margin: 0px; }
+
+.category_content #content_body {
+	width: 511px !important;
+	padding-left: 0px;
+	clear: left;
+}
+
+
+/*** The disclaimer/copyright paragraph in the footer ***/
+.disclaimer 
+{
+	padding: 0px;
+	font-size: 10px;
+}
+
+/*** Generic class for the internal promo box ***/
+.internal_promo {
+	width: 160px !important;
+	margin: 15px 0px;
+	padding: 0px !important;
+	clear: both;
+	border: 1px solid #999999;
+}
+
+.internal_promo img { width: 160px; }
+
+.internal_promo div,.internal_promo h4 {
+	margin: 0px !important;
+	padding: 0px;
+}
+
+/*** 
+	GENERIC TABLE ELEMENTS 
+		# This is to be used for creating a table with a list of things.
+		# For example, the ticket details pages.
+***/
+.list_info { clear: both; }
+
+.list_info .recordcount {
+	clear: right;
+	text-align: right;
+	font: bold 12px arial,helvetica,sans-serif;
+	padding: 5px 0px;
+}
+
+.list_info .sort_filter {
+	float: left;
+	width: 400px;
+	padding: 5px 0px;
+	font: bold 12px arial,helvetica,sans-serif;
+}
+
+.list {	clear: both; }
+
+.list th {
+	height: 30px;
+	padding: 18px 10px 2px 10px;
+	border-top: 1px solid #CCCCCC;
+	border-bottom: 1px solid #CCCCCC;
+	white-space:nowrap;
+	background: #ffffff;
+}
+
+.list th a  {
+	color: #333333;
+	text-decoration: underline;
+}
+
+.list td {
+	height: 53px;
+	clear: both;
+	padding: 0px 5px 0px 5px;
+	border-bottom: 1px solid #CCCCCC;
+	border-right: 1px solid #CCCCCC;
+	background: #ffffff;
+	font-size: 11px;
+	width: auto !important;
+}
+
+
+
+.list td.last {
+	border-right: 0px;
+	margin-top: 5px;
+	clear: right;
+	width: 98px !important;
+}
+
+.alt_row { background: url(alt_row.gif) repeat-x !important; }
+
+.list td.nopadding {
+	padding: 0px 5px;
+	height: 45px;
+	width: auto !important;
+}
+
+.list td h3 {
+	padding: 0px;
+	margin: 0px 0px 0px 5px;
+	white-space: nowrap;
+	display: inline;
+}
+
+.list td h3 img
+{
+	float: none !important;
+	position: relative;
+	top: 5px;
+}
+
+.list p { font-weight: bold; }
+
+.list span { font-size: 11px; }
+
+.list td.recommended {
+	width: 30px !important;
+	padding: 0px 0px 0px 5px;
+	text-align: center;	
+	border-right: 0px !important;
+	margin: 0;
+}
+
+.recommended * {
+	float: none !important;
+	padding: 0;
+	margin: 0;
+	vertical-align: middle;
+}
+
+/*** HOW TO HANDLE PAGING ****/
+.paging {
+	clear: both;
+	margin: 5px 0px;
+	background-color: #f1f5f7;
+	padding: 12px 5px 28px 5px;
+	font-weight: bold; 
+}
+
+.paging .next,.paging .previous,.paging .pages { float: left; }
+
+.paging .next {
+	text-align: right;
+	width: 15%;
+}
+
+.paging .previous {
+	text-align: left;
+	width: 15%;
+}
+
+.paging .pages {
+	text-align: center;
+	width: 70%;
+	font-weight: bold;
+	color: #999999;
+}
+
+/*** GENERIC STRUCTURAL ELEMENTS ***/
+.float_left {
+	float: left;
+	width: 45%;
+}
+
+.float_right { float:right; }
+
+.tright { text-align: right; }
+
+#content_header p.chart_links {
+	text-align:right;
+	width: 165px;
+}
+
+/*** 
+	LEAGUE PAGE COLUMNS 
+		# On the leage page, this styles the lists.
+***/
+
+.column {
+	float: left;
+	width: 33%;
+	margin-bottom: 5px;
+}
+
+.two_column {
+	float: left;
+	width: 49%;
+	margin-bottom: 5px;
+}
+
+.column ul,.two_column ul,.column h4,.two_column h4 {
+	clear: both;
+	margin: 10px 10px;
+}
+
+.column li h4 { margin-left: 0px; }
+
+.division {
+	height: auto;
+	clear: both;
+	margin: 0px 0px 0px 0px;
+}
+
+.theater_concerts {
+	width: 49%;
+	float: left;
+}
+
+.division table,.theater_concerts table { margin: 5px 5px; }
+
+.division td,.theater_concerts td { padding: 2px; }
+
+.category {	margin: 0px 0px; }
+
+.category div {	clear: both; }
+
+.category ul {
+	width: 19%;
+	float: left;
+	margin: 0px 2px 15px 0px;
+}
+
+.category li { margin: 2px 0px; }
+
+.schedule h2 {
+	margin: 5px 0px 5px 0px;
+	padding: 0px 0px;
+	color: #333333;
+}
+
+.home .division h1 {
+	width: 780px !important;
+	background-image: url(localization_header.gif);
+	background-repeat: no-repeat;
+}
+
+.home .division p { margin-bottom:20px; }
+
+.home .division { margin: 0px 0px; }
+
+.home .division .column {
+	width: 19% !important;
+	margin: 5px 0px;
+}
+
+.home .division .column ul { margin: 0px 10px; }
+
+.home .division .column li { margin: 2px; }
+
+.home .division .column h4 { margin: 5px 12px; }
+
+#cobrand_header { background-color: #ffffff; }
+
+#cobrands #header #logo { background: url(empowered-no-shade.gif) no-repeat 10px 10px!important; }
+
+.address {
+	line-height: 1.3;
+	margin: 0px;
+}
+
+.sitemap h2 { margin: -5px 15px 15px 15px; }
+
+.sitemap ul { margin: 0px 30px; }
+
+.sitemap li { list-style-type: disc !important; }
+
+.sitemap li li { list-style-type: circle !important; }
+
+.sitemap li li li { list-style-type: square !important; }
+
+.sitemap li li li li { list-style-type: disc !important; }
+
+.sitemap ul ul { margin: 0px 15px; }
+
+.sitemap ul li a { font-weight: bold; }
+
+.sitemap ul ul li a { font-weight: normal; }
+
+.search_header select { width: 200px; }
+.search_noresults td.last { width: auto !important; }
+
+/* -- ugh, popups -- */
+#popup-container {
+	clear:both;
+	margin:7px auto;
+	background: #FFFFFF;
+	padding: 0;
+	border: #ccc solid 2px;
+	width:635px;
+	text-align:left;
+}
+
+
+#analytics { display: none; }
+
+.boldthis {	font-weight:bold; }
+
+.more-events {
+	float:right;
+	width:270px;	
+}
+
+.landing-buttons {
+	float:left;
+	padding:0 0 0 190px;
+	margin-bottom: 10px;
+}
+
+#home_and_away {
+	clear: both;
+}
+
+#se-right-space {
+	width: 187px;
+	margin-left: 75px;
+}
+
+#se-right-space .adspace {
+	margin: 0px;
+	padding: 0px;
+}
+
+#se-right-space .adspace-copybox {
+	border: 1px solid black;
+	border-top: 0px;
+	padding: 0px;
+	margin: 0px;
+}
+
+#se-right-space .adspace-copybox p {
+	text-align: justify;
+	padding: 5px;
+}
+
+.no_performances {
+	border: 1px solid #336699;	
+	background: #f7f7f7;
+	font-weight: normal;
+	width: 440px;
+}
+
+.no_performances p {
+	padding: 5px;
+}
+
+.search .division h1 {
+	background: url(search_bg.jpg) top left;
+} 
+
+.search #right_side_bar { padding: 0; margin: 0;}
+
+.search #right_side_bar div { margin: 0 0 10px 10px; }
+
+.padded 
+{
+	padding: 5px;	
+}

@@ -1,0 +1,198 @@
+/*************************************************************************
+' Function : CSS defintions for the store.
+' Product  : CandyPress Store Frontend
+' Version  : 2.4
+' Modified : June 2003
+' Copyright: Copyright (C) 2003 CandyPress.Com 
+'            See "license.txt" for this product for details regarding 
+'            licensing, usage, disclaimers, distribution and general 
+'            copyright requirements. If you don't have a copy of this 
+'            file, you may request one at webmaster@candypress.com
+'**************************************************************************/
+
+/* General Tag specifications */
+BODY, B, TD, P     {COLOR: #333333; FONT-FAMILY: Verdana, Arial, Helvetica; FONT-SIZE: 10pt}
+
+/* Info Box WITHOUT Headings */
+.CPbox1            {BACKGROUND-COLOR: #F5F5F5; BORDER: 1px solid #BBC3D3}
+.CPbox1 A:link     {COLOR: #333333; FONT-SIZE: 8pt; FONT-WEIGHT: bold; TEXT-DECORATION: none}
+.CPbox1 A:visited  {COLOR: #333333; FONT-SIZE: 8pt; FONT-WEIGHT: bold; TEXT-DECORATION: none}
+.CPbox1 A:hover    {COLOR: #996666; FONT-SIZE: 8pt; FONT-WEIGHT: bold; TEXT-DECORATION: underline}
+
+/* Info Box WITH Headings ( H = Heading cell ; B = Body cell ) */
+.CPbox2            {BACKGROUND-COLOR: #F0F0E; BORDER: 1px solid #999966}
+.CPbox2H           {BACKGROUND-COLOR: #999966; PADDING: 1px}
+.CPbox2B           {BACKGROUND-COLOR: #F0F0E8}
+.CPbox2B A:link    {COLOR: #333333; FONT-SIZE: 10px; TEXT-DECORATION: none}
+.CPbox2B A:visited {COLOR: #333333; FONT-SIZE: 10px; TEXT-DECORATION: none}
+.CPbox2B A:hover   {COLOR: #996666; FONT-SIZE: 10px; TEXT-DECORATION: underline}
+
+/* Box - Page Headings */
+.CPpageHead {BORDER-BOTTOM: 2px solid #999966; PADDING-BOTTOM: 4px}
+
+/* Box - Page Navigation */
+.CPpageNav {BACKGROUND-COLOR: #F0F0E8}
+
+/* Box - General Headings */
+.CPgenHeadings {BACKGROUND-COLOR: #F0F0E8}
+
+/* Box - Product Image (Home page) */
+.CPhomeImg {BACKGROUND-COLOR: #FFFFFF; BORDER: 0px solid #06334B}
+
+/* Box - Product Description (Home page) */
+.CPhomeDesc {BORDER-BOTTOM: 0px solid #06334B}
+
+/* Horizontal and Vertical lines */
+.CPlines {BACKGROUND-COLOR: #06334B}
+
+/* Product Short Description (Except Detail page) */
+.CPprodDesc {FONT-SIZE: 10pt}
+
+/* Product Short Description (Detail page only) */
+.CPprodDescDet {FONT-SIZE: 10pt}
+
+/* Product Long Description */
+.CPprodDescLong {}
+
+/* Product Detail */
+.CPprodDet {}
+
+/* Product SKU */
+.CPprodSKU {}
+
+/* Product Price - Text Label */
+.CPprodPriceT {COLOR: #06334B}
+
+/* Product Price - Price Value */
+.CPprodPriceV {COLOR: #000066}
+
+/* Product List Price - Text Label */
+.CPprodLPriceT {}
+
+/* Product List Price - Price Value */
+.CPprodLPriceV {TEXT-DECORATION: line-through}
+
+/* Product Sale Price - Text Label */
+.CPprodSPriceT {}
+
+/* Product Sale Price - Price Value */
+.CPprodSPriceV {COLOR: red}
+
+/* Free Shipping text */
+.CPfreeShipMsg {COLOR: #888888}
+
+/* In Stock text */
+.CPinStock {COLOR: #888888}
+
+/* Out of Stock text */
+.CPoutStock {COLOR: red}
+
+/* No Image text */
+.CPnoImgT {COLOR: #800000}
+
+/* Category List */
+.CPcatDescList {}
+
+/* Category Description - No products linked to it */
+.CPcatDesc {}
+
+/* Category Description - Has products linked to it */
+.CPcatDescProd {FONT-WEIGHT: bold}
+
+/* Option Description */
+.CPoptDesc {FONT-STYLE: italic}
+
+/* Option Select box */
+.CPoptSel {FONT-FAMILY: Verdana, Arial, helvetica; FONT-SIZE: 8pt}
+
+/* Option Text box */
+.CPoptTxt {FONT-FAMILY: Verdana, Arial, helvetica; FONT-SIZE: 8pt}
+
+/* ADDED - Version 2.3 */
+
+/* Box - 2, 3 and 4 Column Layout for product list page */
+.CPcolsView {BACKGROUND-COLOR: #F5F5F5; BORDER: 1px solid #CCCCCC}
+.CPcolsView A:link    {COLOR: #000099; TEXT-DECORATION: none}
+.CPcolsView A:visited {COLOR: #000099; TEXT-DECORATION: none}
+.CPcolsView A:hover   {COLOR: #996666; TEXT-DECORATION: underline}
+
+/* System Messages */
+.CPsysMsg    {FONT-SIZE: 10pt}
+.CPsysMsgErr {COLOR: red; FONT-SIZE: 10pt}
+.CPsysMsgURL {FONT-SIZE: 10pt}
+
+/* ADDED - Version 2.4 */
+
+/* Highlights used in search results */
+.CPhighlight {COLOR: #06334B; BACKGROUND-COLOR: #C1CCD2}
+
+a:link { color: #06334B; }
+a:visited { color: #06334B; }
+a:hover { text-decoration: none; }
+a:active { color: #06334B; }
+
+.copyright {
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: 9px;
+	color: #666666;
+}
+.dropDown {
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: 9px;
+	background-color: #F0F0E8;
+	color: #333333;
+	width: 100px;
+}
+.footer {
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: 12px;
+	color: #FFFFFF;
+}
+
+a.footer:link {
+	color: #FFFFFF;
+}
+
+a.footer:visited {
+  color: #FFFFFF;
+}
+
+a.footer:hover {
+	text-decoration: underlined;
+}
+
+a.footer:active {
+	color: #FFFFFF;
+}
+
+
+a.Navigation { font-family: Verdana, Arial, Helvetica, sans-serif; font-size: 12px; color: #06334B; text-decoration: none; }
+.submit {
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: 10px;
+	font-weight: bold;
+	color: #06334B;
+}
+.submit2 {
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: 10px;
+	font-weight: bold;
+	background-color:#999966;
+	width:45px;
+}
+.bodyCopyLink {
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: 12px;
+	color: #06334B;
+}
+.bodyCopyLinkBold {
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: 11px;
+	font-weight: bold;
+	color: #06334B;
+}
+.input {
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: 10px;
+}
+

@@ -1,0 +1,339 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+        "http://www.w3.org/TR/1999/REC-html401-19991224/loose.dtd"><html>
+<head>
+<title>Journey to the Volcano Palace (Secrets o&hellip; by Tony Abbott | LibraryThing </title>
+<meta name="description" content="LibraryThing catalogs yours books online, easily, quickly and for free.">
+<meta name="keywords" content="librarything, library, thing, catalog your books, catalogue your books, book cataloging, library, free book catalog, catalogue">
+<link rel="stylesheet" href="main2.css" type="text/css">
+<link rel="stylesheet" href="newdesign.css" type="text/css">
+<link rel="stylesheet" href="forum5.css" type="text/css">
+<link rel="stylesheet" href="card6.css" type="text/css">
+
+<style type="text/css" media="all">
+
+span.vote
+{
+font-size: 9px;
+font-weight: bold;
+float: right;
+display: inline !important;
+margin-right: 10px;
+}
+
+span.vote a
+{
+color: #CCCCCC !important;
+}
+
+span.vote a.black
+{
+color: black !important;
+}
+
+ol li:hover
+{
+background-color: #EEEEEE;
+}
+
+ol:hover span.vote
+{
+visibility: visible;
+}
+
+span.votereturn
+{
+background-color: white;
+background-image:url(../pics/savingBG-once.gif);
+}
+
+li
+{
+clear: right;
+}
+
+span.count
+{
+font-size: 9px;
+color: gray;
+}
+
+div#relatedtagsarea span.count
+{
+display: none;
+}
+
+div.showcount span.count
+{
+display: inline !important;
+}
+
+div#shownums
+{
+font-size: 10px; 
+color: gray; 
+font-weight: normal;
+margin: 5px 0px 0px 15px;
+}
+
+p.swap
+{
+line-height: 22px;
+}
+
+p.swap b
+{
+margin: 0px 5px 0px 5px;
+font-weight: normal !important;
+}
+
+div.content
+{
+margin: 4px;
+padding: 0px;
+}
+
+div#reviews_loading
+{
+float: right;
+padding: 3px;
+font-weight: bold;
+font-size: 10px;
+background-color: red;
+color: white;
+display: none;
+}
+
+span.sd, span.amazon
+{
+display: inline;
+}
+
+table.blockrecs td
+{
+vertical-align: top;
+padding: 0px 5px 15px 0px;
+}
+
+h3
+{
+margin-top: 10px;
+}
+
+table.blockrecs h2, table.blockrecs h3
+{
+font-size: 11px;
+line-height: 15px;
+margin: 0px !important;
+padding: 0px !important;
+}
+
+table.blockrecs h3
+{
+margin-top: 5px !important;
+font-weight: normal;
+}
+
+</style>
+
+<script src="card5.js" type="text/javascript" language="Javascript"></script>
+<script src="basicajax.js" type="text/javascript" language="Javascript"></script>
+<script src="basics1.js" type="text/javascript" language="javascript"></script>
+
+<script language="javascript">
+
+function shownums()
+{
+showhide("shownums", "none");
+document.getElementById("relatedtagsarea").className="showcount";
+}
+
+function showhide(id, state)
+{
+document.getElementById(id).style.display = state;
+}
+
+function gotoTopic(topic)
+{
+window.location = "/talktopic.php?topic=" + topic;
+}
+
+function show_memberswithbook(work)
+{
+currentid = 'memberswithbook';
+createXMLHttpRequest();
+xmlHttp.onreadystatechange = handleStateChange;
+var URL = "/ajaxinc_userswithabook.php?work="+work;
+xmlHttp.open("GET", URL, true);
+xmlHttp.send(null);
+document.getElementById("memberswithbook").innerHTML = 'Loading...';
+}
+
+function vote(type,work,updown)
+{
+if (updown == 0) { updown = -1; }
+
+currentid = 'v'+type+'_'+work;
+createXMLHttpRequest();
+xmlHttp.onreadystatechange = handleStateChange;
+var URL = "/ajax_vote.php?work="+work+"&vote="+updown;
+xmlHttp.open("GET", URL, true);
+xmlHttp.send(null);
+//document.getElementById(currentid).innerHTML = 'Loading...';
+}
+
+function show_reviews(work)
+{
+currentid = 'reviewsdiv';
+createXMLHttpRequest();
+xmlHttp.onreadystatechange = handleStateChange;
+var URL = "/ajaxinc_bookreviews.php?print=1&work="+work;
+xmlHttp.open("GET", URL, true);
+xmlHttp.send(null);
+document.getElementById("reviews_loading").style.display = 'block';
+}
+
+function scrollto(theid)
+{
+ypos = document.getElementById(theid).offsetTop;
+window.scrollTo(0, ypos);
+}
+
+isbnArray = new Array();
+isbnArray[0] = '0590108417';
+</script>
+</head>
+<body>
+<a name="top"></a>
+<div class="topnav">
+<table cellpadding="0" cellspacing="0" border="0" width="100%">
+<tr valign="bottom">
+<td><a href="http://www.librarything.com" target="_top"><img src="librarything.gif" width="281" height="52" border="0" alt="LibraryThing"></a></td>
+<td align="right"><img src="yourbookshelf.gif" width="228" height="26" border="0" alt="Catalog your books online."></td>
+</tr>
+</table><div class="locationbar">
+	<div class="alignright promotional">
+	Over ten million books on members' bookshelves.
+	</div><a 
+	href="http://www.librarything.com/" target="_top">Home</a><a 
+	href="http://www.librarything.com/suggest.php" target="_top" >Book Suggestions</a><a 
+	href="http://www.librarything.com/users.php" target="_top" >Zeitgeist</a><a 
+	href="http://www.librarything.com/groups_top.php" target="_top">Groups</a><a 
+	href="http://www.librarything.com/talk.php" target="_top">Talk</a><a 
+	href="http://www.librarything.com/search.php" target="_top" >Search</a><a 
+	href="http://www.librarything.com/about.php" target="_top" class="spacer">About</a><a 
+	href="http://www.librarything.com/blog/" target="_top">Blog</a></div></div>
+<div class="content">
+
+<table cellspacing="0" cellpadding="0" border="0" width="100%">
+<tr valign="top">
+<td width="180" rowspan="2" class="left">
+<div class="bookbox bluelink">
+
+<img src="blue1.gif" style="position: absolute; left: 0; top: 0;">
+<img src="blue2.gif" style="position: absolute; right: 0; top: 0;">
+<div id="popup">
+
+<div style="margin-bottom: 5px;">( <a href="javascript:closepopup();">close</a> )</div>
+
+<a href="javascript:findbook(1,1)">Amazon</a> |
+<a href="javascript:findbook(2,1)">Abebooks</a> |
+<a href="javascript:findbook(3,1)">Alibris</a><br>
+<a href="javascript:findbook(4,1)">BookFinder</a> |
+<a href="javascript:findbook(5,1)">Booksense</a><br>
+<a href="javascript:findbook(7,1)">Borders</a> |
+<a href="javascript:findbook(6,-1)">Find in a Library</a>
+
+<img src="nocover.gif.1.html" id="popupcover" onclick="closepopup()" style="margin-top: 10px;">
+
+</div>
+<div id="usercover"><img src="nocover.gif.1.html" id="uclargecover" onclick="closeusercover()">
+<div style="margin-top: 5px;">( <a href="javascript:closeusercover();">close</a> )</div>
+</div><img src="http://images.amazon.com/images/P/0590108417.01._SCMZZZZZZZ_.jpg" 
+		class='topbook' 
+		xonerror='getnocover(this)' 
+		xonload='gotnocover(this)' 
+		id='largecover'><h1>Find At...</h1>
+		<div class="purchasebox">
+		<a href="javascript:findbook(1,0)">Amazon</a> | <a href="javascript:findbook(2,0)">Abebooks</a> |
+		<a href="javascript:findbook(3,0)">Alibris</a><br>
+		<a href="javascript:findbook(4,0)">BookFinder</a> |
+		<a href="javascript:findbook(5,0)">Booksense</a><br>
+		<a href="javascript:findbook(7,0)">Borders</a> | 
+		<a href="javascript:findbook(6,0)">Find in a Library</a>
+		</div><h1>Editions, by Popularity</h1><a href='javascript:select(1,0);'><img 
+			src='http://images.amazon.com/images/P/0590108417.01.THUMBZZZ.jpg' 
+			border=0 class='thumb' 
+			style='margin: 9px 7px 9px 7px;'
+			width='41' height='60'
+			id='d0'></a><p>&nbsp;</p></div>
+</td>
+<td style="height: 5px;">&nbsp;</td>
+<td width="200" rowspan="2" class="cardright" valign="top"><div class="bluelink">
+
+<ul class="menu">
+<li>
+<a href="95332.1.html" onclick="clearSnap()"target="_top">
+<img src="back.gif" width="20" height="20" hspace="5" class="icon"></a>
+<a href="95332.1.html" onclick="clearSnap()"target="_top">back to catalog</a>
+</li><li class="active" onclick="gotoURL('/work/95332')">
+<a href="95332.1.html"><img src="people-lit.gif" alt="social data" width="32" height="24" class="icon" border=0></a>
+<a href="95332.1.html">Social information</a>
+</li><li onclick="gotoURL('/work-info/95332')">
+<a href="http://www.librarything.com/work-info/95332">
+<img src="edit-card.gif" width="30" height="22" class="icon"></a>
+<a href="http://www.librarything.com/work-info/95332">Book information</a>
+</li><li style="margin-top: 20px;" onclick="gotoURL('/work-talk/95332')"><div class="talknum" style="color: gray;">0</div><a href="http://www.librarything.com/work-talk/95332">
+<img src="talk.gif" width="25" height="24" class="icon" style="margin: 0px 3px 0px 0px;"></a>
+<a href="http://www.librarything.com/work-talk/95332">Conversations</a></li><li onclick="gotoURL('/work-swap/95332')" style="margin-bottom: 20px;">
+<a href="http://www.librarything.com/work-swap/95332">
+<img src="swap.gif" width="16" height="20" class="icon" style="margin: 0px 5px 0px 6px;"></a>
+<a href="http://www.librarything.com/work-swap/95332">Swap this book</a> (5/0)</li></ul></td>
+</tr>
+<tr valign="top">
+<td class="middle" valign="top"><div style="margin-top: -10px;">
+<div class="headsummary"><h1 style="font-size: 16px;">Journey to the Volcano Palace (Secrets of Droon, No 2)</h1><h2>by <a href="http://www.librarything.com/author/abbotttony">Tony Abbott</a></h2></div><p onclick="scrollback()"><a href="javascript:scrollto('tags');">tags</a> | <a href="javascript:scrollto('recommendations');">recommendations</a> | <a href="javascript:scrollto('reviews');">0 reviews</a> | <a href="javascript:scrollto('rating');">member ratings</a> | <a href="javascript:scrollto('members');">26 members</a></p><a id="tags" name="tags"></a>
+<h3>Tags used to describe the book</h3>
+<div id="relatedtagsarea"><div class="tags" style="line-height: 25px;">
+<span style="font-size: 12px;"><a href="http://www.librarything.com/tag/%2A" target="_top">*</a><span class="count">(1)</span> </span> 
+<span style="font-size: 12px;"><a href="http://www.librarything.com/tag/279" target="_top">279</a><span class="count">(1)</span> </span> 
+<span style="font-size: 12px;"><b><a href="http://www.librarything.com/tag/420" target="_top">420</a></b><span class="count">(1)</span> </span> 
+<span style="font-size: 12px;"><a href="http://www.librarything.com/tag/adventure" target="_top">adventure</a><span class="count">(1)</span> </span> 
+<span style="font-size: 12px;"><a href="http://www.librarything.com/tag/american" target="_top">american</a><span class="count">(1)</span> </span> 
+<span style="font-size: 12px;"><a href="http://www.librarything.com/tag/amp" target="_top">amp</a><span class="count">(1)</span> </span> 
+<span style="font-size: 12px;"><b><a href="http://www.librarything.com/tag/beginning+reader" target="_top">beginning reader</a></b><span class="count">(1)</span> </span> 
+<span style="font-size: 21px;"><b><a href="http://www.librarything.com/tag/chapter+book" target="_top">chapter book</a></b><span class="count">(3)</span> </span> 
+<span style="font-size: 12px;"><b><a href="http://www.librarything.com/tag/chapter+books" target="_top">chapter books</a></b><span class="count">(1)</span> </span> 
+<span style="font-size: 12px;"><a href="http://www.librarything.com/tag/children" target="_top">children</a><span class="count">(1)</span> </span> 
+<span style="font-size: 23px;"><a href="http://www.librarything.com/tag/childrens" target="_top">childrens</a><span class="count">(4)</span> </span> 
+<span style="font-size: 12px;"><a href="http://www.librarything.com/tag/classroom+library" target="_top">classroom library</a><span class="count">(1)</span> </span> 
+<span style="font-size: 18px;"><a href="http://www.librarything.com/tag/droon" target="_top">droon</a><span class="count">(2)</span> </span> 
+<span style="font-size: 12px;"><b><a href="http://www.librarything.com/tag/f" target="_top">f</a></b><span class="count">(1)</span> </span> 
+<span style="font-size: 25px;"><b><a href="http://www.librarything.com/tag/fantasy" target="_top">fantasy</a></b><span class="count">(8)</span> </span> 
+<span style="font-size: 12px;"><a href="http://www.librarything.com/tag/fiction" target="_top">fiction</a><span class="count">(1)</span> </span> 
+<span style="font-size: 12px;"><a href="http://www.librarything.com/tag/juvenile" target="_top">juvenile</a><span class="count">(1)</span> </span> 
+<span style="font-size: 12px;"><a href="http://www.librarything.com/tag/middle-grade+reader" target="_top">middle-grade reader</a><span class="count">(1)</span> </span> 
+<span style="font-size: 12px;"><a href="http://www.librarything.com/tag/own" target="_top">own</a><span class="count">(1)</span> </span> 
+<span style="font-size: 18px;"><a href="http://www.librarything.com/tag/secrets+of+droon" target="_top">secrets of droon</a><span class="count">(2)</span> </span> 
+<span style="font-size: 18px;"><a href="http://www.librarything.com/tag/series" target="_top">series</a><span class="count">(2)</span> </span> 
+<span style="font-size: 12px;"><a href="http://www.librarything.com/tag/unread" target="_top">unread</a><span class="count">(1)</span> </span> 
+<span style="font-size: 12px;"><a href="http://www.librarything.com/tag/Young+Adult" target="_top">Young Adult</a><span class="count">(1)</span> </span> </div><div id="shownums">(<a href="javascript:shownums()">show numbers</a>)</div></div><a id="recommendations" name="recommendations"></a>
+<h3>From LibraryThing's recommendations machine (<a href="http://www.librarything.com/suggester/95332">see all recommendations</a>)</h3><div id="simlib"><ol><li><a href="http://www.librarything.com/catalog/96338" target="_top">The Mysterious Island</a> by <a href="http://www.librarything.com/author/abbotttony" target="_top">Tony Abbott</a></li><li><a href="http://www.librarything.com/catalog/62147" target="_top">Junie B. Jones and Some Sneaky Peeky Spying</a> by <a href="http://www.librarything.com/author/parkbarbara" target="_top">Barbara Park</a></li><li><a href="http://www.librarything.com/catalog/95743" target="_top">Pirates Past Noon</a> by <a href="http://www.librarything.com/author/osbornemarypope" target="_top">Mary Pope Osborne</a></li><li><a href="http://www.librarything.com/catalog/96286" target="_top">The Knight at Dawn (Magic Tree House, No. 2) (A Stepping Stone Book(TM))</a> by <a href="http://www.librarything.com/author/osbornemarypope" target="_top">Mary Pope Osborne</a></li><li><a href="http://www.librarything.com/catalog/1002679" target="_top">Leprechauns Don't Play Basketball (The Adventures of the Bailey School Kids, #4)</a> by <a href="http://www.librarything.com/author/dadeydebbie" target="_top">Debbie Dadey</a></li><li><a href="http://www.librarything.com/catalog/519682" target="_top">Horrible Harry in Room 2b</a> by <a href="http://www.librarything.com/author/klinesuzy" target="_top">Suzy Kline</a></li><li><a href="http://www.librarything.com/catalog/95814" target="_top">Ramona Forever</a> by <a href="http://www.librarything.com/author/clearybeverly" target="_top">Beverly Cleary</a></li><li><a href="http://www.librarything.com/catalog/695755" target="_top">Secrets Of Droon #01: The Hidden Stairs And The Magic Carpet (Secrets Of Droon)</a> by <a href="http://www.librarything.com/author/abbotttony" target="_top">Tony Abbott</a></li><li><a href="http://www.librarything.com/catalog/544695" target="_top">Pirates Don't Wear Pink Sunglasses (The Adventures of the Bailey School Kids, #9)</a> by <a href="http://www.librarything.com/author/dadeydebbie" target="_top">Debbie Dadey</a></li><li><a href="http://www.librarything.com/catalog/95362" target="_top">Knights of the Kitchen Table</a> by <a href="http://www.librarything.com/author/scieszkajon" target="_top">Jon Scieszka</a></li></ol></div><a id="reviews" name="reviews"></a><h3>Member reviews</h3><p>None.</p><a id="rating" name="rating"></a><h3>Member rating: <img src="s7.gif" style="margin-bottom: -2px;"> (3.25)</h3><table border=0 cellspacing=0 cellpadding=0 class="greenbar" xstyle="border-style: none !important;"><tr><td align='right'>0.5 stars</td><td><img src='gb.gif' height=5 width=0> </td></tr><tr><td align='right'>1 stars</td><td><img src='gb.gif' height=5 width=0> </td></tr><tr><td align='right'>1.5 stars</td><td><img src='gb.gif' height=5 width=0> </td></tr><tr><td align='right'>2 stars</td><td><img src='gb.gif' height=5 width=0> </td></tr><tr><td align='right'>2.5 stars</td><td><img src='gb.gif' height=5 width=0> </td></tr><tr><td align='right'>3 stars</td><td><img src='gb.gif' height=5 width=150> 1</td></tr><tr><td align='right'>3.5 stars</td><td><img src='gb.gif' height=5 width=150> 1</td></tr><tr><td align='right'>4 stars</td><td><img src='gb.gif' height=5 width=0> </td></tr><tr><td align='right'>4.5 stars</td><td><img src='gb.gif' height=5 width=0> </td></tr><tr><td align='right'>5 stars</td><td><img src='gb.gif' height=5 width=0> </td></tr></table><a id="members" name="members"></a>
+<h3>Members who have the book</h3>
+<div class="social">
+<p>26 members have the book in their library.There are 53,913 books more popular.</p><div id='memberswithbook'>( <a href='javascript:show_memberswithbook(95332)'>Show all members</a> )</div></div>
+</div>
+</td>
+</tr>
+</table>
+</div><!--end content-->
+
+<p style="clear: both;">&nbsp;</p>
+
+<script src="http://www.google-analytics.com/urchin.js" type="text/javascript">
+</script>
+<script type="text/javascript">
+_uacct = "UA-1192086-1";
+urchinTracker();
+</script>
+</body>
+</html>

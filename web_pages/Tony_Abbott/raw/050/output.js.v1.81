@@ -1,0 +1,1034 @@
+//
+
+// all string outputs are defined in the object declaration and contained in the format_strs hash:
+
+F.output = {
+	date_strs: {
+		daysA: ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'], 
+		days_abbA: ['SUN', 'MON', 'TUE', 'WED', 'THU', 'FRI', 'SAT'],
+		months_abbA: ['JAN', 'FEB', 'MAR', 'APR', 'MAY', 'JUN', 'JUL', 'AUG', 'SEP', 'OCT', 'NOV', 'DEC'],
+		monthsA: ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December']
+	},
+	
+	format_strs: {
+		remain_here: 'remain here',
+		returnn: 'return',
+		continuing: 'continuing...',
+		and: 'and',
+		ok: 'OK',
+		save: 'Save',
+		save_up: 'SAVE',
+		cancel: 'Cancel',
+		close: 'Close',
+		close_up: 'CLOSE',
+		go_ahead: 'yes, go ahead',
+		no: 'No!',
+		yes_up: 'YES',
+		no_up: 'NO',
+		open_set: 'Open set',
+		continuoo: 'Continue',
+		deletee: 'Delete!',
+		thanks: 'Thanks!',
+		no_thanks: 'No thanks',
+		send_it: 'send it',
+		api_err_generic: 'There was an error:',
+		api_err_changes_not_saved: 'Changes were not saved. There was an error:',
+		unknown_err: 'unknown error',
+		status_sending_msg: 'Sending message...',
+		unsaved_msg: 'You have unsaved changes. Press OK to discard them, or cancel to remain on this page.',
+		too_many_tabs_msg: 'You have too many Organizr tabs open to open a new one. Please close some tabs first, or widen your browser window, if you can.',
+		in_the_findr_batch: 'We\'ve put the batch into the Findr for you (below). All you have to do now is drag photos onto the map!',
+		in_the_findr: 'We\'ve put the photo into the Findr for you (below). All you have to do now is drag it onto the map!',
+		in_the_findr_set: 'We\'ve put the set into the Findr for you (below). All you have to do now is drag photos onto the map!',
+		no_photos: 'We can\'t do that until you have some photos in the batch!',
+		limits_checking: 'Checking group posting limits...',
+		photos_not_added_to_group: '<b>Photos were not added to the group pool.</b>',
+		add_to_set_drag_tip: 'add to <b>%s</b>',
+		see_group_page: 'See the <b><a target="_new" href="/groups/%s/">%s</a></b> group page for more information.',
+		pool_limits_disabled: 'Uploads have been disabled for %s.',
+		loading: 'Loading...',
+		loading_interface: 'Loading interface...',
+		building_interface: 'Building interface...',
+		loading_info: 'Loading photo info...',
+		count_photos: '1 photo',
+		prev_page: 'Previous page',
+		next_page: 'Next page',
+		curr_page: 'Page <b>%s</b> of <b>%s</b>',
+		prev: 'Prev',
+		next: 'Next',
+		save_all: 'SAVE ALL',
+		save_done: 'SAVE AND BE DONE',
+		save_and_go: 'SAVE AND GO TO NEXT PAGE',
+		tag_tip: 'Separate each tag with a space: <i>cameraphone urban moblog</i>. Or to join 2 words together in one tag, use double quotes: <i>"daily commute"</i>.',
+		add_to_favorites: 'Add to favorites',
+		a_favorites: 'A favorite',
+		edit_photo: 'Edit photo',
+		show_detail: 'Show detail',
+		hide_detail: 'Hide detail',
+		view_photo_page: 'View photo page',
+		x_of_y: '<b>%s</b> of <b>%s</b>',
+	
+		pool_limit_day: 'You can only add 1 photo per day to %s.',
+		pool_limit_week: 'You can only add 1 photo per week to %s.',
+		pool_limit_month: 'You can only add 1 photo per month to %s.',
+		pool_limit_ever: 'You can only add 1 photo to %s.',
+		
+		pool_limit_day_plural: 'You can only add %s photos per day to %s.',
+		pool_limit_week_plural: 'You can only add %s photos per week to %s.',
+		pool_limit_month_plural: 'You can only add %s photos per month to %s.',
+		pool_limit_ever_plural: 'You can only add %s photos to %s.',
+		
+		pool_limit_reached: 'You\'ve already added %s. Remove some photos from the pool if you really want to add more.',
+		pool_limit_will_be_reached: 'You tried to add %s photos, and we\'re not sure which of the %s you\'d like to add, so please choose %s or fewer and add those instead. Sorry about that!',
+		pool_limit_will_be_reached_exactly: 'You\'ve already added %s, so adding another %s would exceed that limit.',
+		
+		all_approx: 'All of these photos have approximate dates, which means they can\'t be time shifted.',
+		some_approx: 'NOTE: 1 of the photos in this batch has an approximate date, which means it can\'t be time shifted. We can time shift the others though, if you wish.',
+		some_approx_plural: 'NOTE: %s of the photos in this batch have approximate dates, which means they can\'t be time shifted. We can time shift the others though, if you wish.',
+		
+		shown_above: '(Shown above are the first %s of the %s photos that will be deleted.)',
+		
+		all_unrotateable: 'Apologies, but all of these photos are temporarily un-rotate-able.',
+		some_unrotateable: 'NOTE: 1 of the photos in this batch is temporarily un-rotate-able.<br>We can rotate the others though, if you wish.',
+		some_unrotateable_plural: 'NOTE: %s of the photos in this batch are temporarily un-rotate-able.<br>We can rotate the others though, if you wish.',
+		
+		pool_uploads_disabled: 'Uploads disabled',
+		pool_uploads_throttled_ever: 'Limit: %s in pool',
+		pool_uploads_throttled_day: 'Limit: %s per day',
+		pool_uploads_throttled_week: 'Limit: %s per week',
+		pool_uploads_throttled_month: 'Limit: %s per month',
+		
+		batch_start_changing_dates: 'Changing date for 1 photo...',
+		batch_start_changing_dates_plural: 'Changing date for %s photos...',
+		batch_status_changing_dates: 'Changed dates for 1 of 1 photo...',
+		batch_status_changing_dates_plural: 'Changed dates for %s of %s photos...',
+		batch_end_changing_dates: 'Changed dates for 1 photo.',
+		batch_end_changing_dates_plural: 'Changed dates for %s photos.',
+		
+		batch_start_adding_tags: 'Adding tags to 1 photo...',
+		batch_start_adding_tags_plural: 'Adding tags to %s photos...',
+		batch_status_adding_tags: 'Added tags to 1 of 1 photo...',
+		batch_status_adding_tags_plural: 'Added tags to %s of %s photos...',
+		batch_end_adding_tags: 'Added tags to 1 photo.',
+		batch_end_adding_tags_plural: 'Added tags to %s photos.',
+		
+		batch_start_rotating: 'Rotating 1 photo %s...',
+		batch_start_rotating_plural: 'Rotating %s photos %s...',
+		batch_status_rotating: 'Rotated %s of %s photo %s...',
+		batch_status_rotating_plural: 'Rotated %s of %s photos %s...',
+		batch_end_rotating: 'Rotated %s photo %s.',
+		batch_end_rotating_plural: 'Rotated %s photos %s.',
+		
+		batch_confirm_rotating_plural: 'Are you sure you want to rotate these %s photos %s? It could take a while.',
+		
+		batch_start_deleting: 'Deleting 1 photo...',
+		batch_start_deleting_plural: 'Deleting %s photos...',
+		batch_status_deleting: 'Deleted 1 of 1 photo...',
+		batch_status_deleting_plural: 'Deleted %s of %s photos...',
+		batch_end_deleting: 'Deleted 1 photo.',
+		batch_end_deleting_plural: 'Deleted %s photos.',
+		
+		batch_confirm_deleting: 'You really want to delete this photo? It will be gone forever, and cannot be recovered.',
+		batch_confirm_deleting_plural: 'You really want to delete these %s photos? They will be gone forever, and cannot be recovered.',
+		batch_confirm_deleting2: 'Are you really, really sure you want to delete this photo? It will be gone forever, and cannot ever be recovered.',
+		batch_confirm_deleting2_plural: 'Are you really, really sure you want to delete these %s photos? They will be gone forever, and cannot ever be recovered.',
+		
+		batch_start_changing_perms: 'Changing permissions on 1 photo...',
+		batch_start_changing_perms_plural: 'Changing permissions on %s photos...',
+		batch_status_changing_perms: 'Changed permissions on 1 of 1 photo...',
+		batch_status_changing_perms_plural: 'Changed permissions on %s of %s photos...',
+		batch_end_changing_perms: 'Changed permissions on 1 photo.',
+		batch_end_changing_perms_plural: 'Changed permissions on %s photos.',
+		
+		batch_start_removing_from_group: 'Removing 1 photo from the <b>%s</b> pool...',
+		batch_start_removing_from_group_plural: 'Removing %s photos from the <b>%s</b> pool...',
+		batch_status_removing_from_group: 'Removed %s of %s photo from the <b>%s</b> pool...',
+		batch_status_removing_from_group_plural: 'Removed %s of %s photo from the <b>%s</b> pool...',
+		batch_end_removing_from_group: 'Removed %s photo from the <b>%s</b> pool.',
+		batch_end_removing_from_group_plural: 'Removed %s photos from the <b>%s</b> pool.',
+		
+		batch_start_adding_to_group: 'Adding 1 photo to the <b>%s</b> pool...',
+		batch_start_adding_to_group_plural: 'Adding %s photos to the <b>%s</b> pool...',
+		batch_status_adding_to_group: 'Added %s of %s photo to the <b>%s</b> pool...',
+		batch_status_adding_to_group_plural: 'Added %s of %s photos to the <b>%s</b> pool...',
+		batch_end_adding_to_group: 'Added %s photo to the <b>%s</b> pool.',
+		batch_end_adding_to_group_plural: 'Added %s photos to the <b>%s</b> pool.',
+		batch_end_pending_adding_to_group: 'Submitted %s photo to the <b>%s</b> pool for approval by the group moderator(s).',
+		batch_end_pending_adding_to_group_plural: 'Submitted %s photos to the <b>%s</b> pool for approval by the group moderator(s).',
+		
+		batch_confirm_adding_to_group: 'You are about to add a private photo to a group pool. This means that members of %s will be able to view, comment on, tag and add notes to this photo. Is this OK with you?',
+		batch_confirm_adding_to_group_plural: 'You are about to add some private photos to a group pool. This means that members of %s will be able to view, comment on, tag and add notes to these photos. Is this OK with you?',
+		
+		batch_start_adding_to_set: 'Adding 1 photo to set <b>%s</b>...',
+		batch_start_adding_to_set_plural: 'Adding %s photos to set <b>%s</b>...',
+		batch_status_adding_to_set: 'Added %s of %s photo to set <b>%s</b>...',
+		batch_status_adding_to_set_plural: 'Added %s of %s photo to set <b>%s</b>...',
+		batch_end_adding_to_set: 'Added %s photo to set <b>%s</b>.',
+		batch_end_adding_to_set_plural: 'Added %s photos to set <b>%s</b>.',
+		
+		batch_start_importing_location: 'Importing location for 1 photo...',
+		batch_start_importing_location_plural: 'Importing location for %s photos...',
+		batch_status_importing_location: 'Imported location for 1 of 1 photo...',
+		batch_status_importing_location_plural: 'Imported location for %s of %s photos...',
+		batch_end_importing_location: 'Imported location for 1 photo.',
+		batch_end_importing_location_plural: 'Imported location for %s photos.',
+		
+		batch_start_saving_location: 'Saving location for 1 photo...',
+		batch_start_saving_location_plural: 'Saving location for %s photos...',
+		batch_status_saving_location: 'Saved location for 1 of 1 photo...',
+		batch_status_saving_location_plural: 'Saved location for %s of %s photos...',
+		batch_end_saving_location: 'Saved location for 1 photo.',
+		batch_end_saving_location_plural: 'Saved location for %s photos.',
+		
+		batch_confirm_saving_location: '1 of these %s  photos already has location data. Do you wish to proceed, updating all photos with this new location?',
+		batch_confirm_saving_location_plural: '%s of these %s  photos already have location data. Do you wish to proceed, updating all photos with this new location?',
+		batch_confirm_saving_location_one: 'This photo already has location data. Do you wish to update it?',
+		batch_confirm_saving_location_all: 'These photos already have location data. Do you wish to update them all?',
+		
+		batch_alert_saving_location: '<b>Wait a moment!</b><br><br>  We recommend that you place your photos on the map at a higher accuracy level (zoomed in closer). If you drop your photos here, they won\'t be seen as people zoom in, because it\'s not clear where they were actually taken.<br><br>Are you sure you\'d like to drop your photo/photos here?',
+		
+		batch_start_removing_location: 'Removing location for 1 photo...',
+		batch_start_removing_location_plural: 'Removing location for %s photos...',
+		batch_status_removing_location: 'Removed location for 1 of 1 photo...',
+		batch_status_removing_location_plural: 'Removed location for %s of %s photos...',
+		batch_end_removing_location: 'Removed location for 1 photo.',
+		batch_end_removing_location_plural: 'Removed location for %s photos.',
+		
+		batch_confirm_removing_location: 'Are you sure you want to remove the location data from this photo?',
+		batch_confirm_removing_location_plural: 'Are you sure you want to remove the location data from these %s photos?',
+		
+		batch_start_changing_license: 'Changing license on 1 photo...',
+		batch_start_changing_license_plural: 'Changing license on %s photos...',
+		batch_status_changing_license: 'Changed license on 1 of 1 photo...',
+		batch_status_changing_license_plural: 'Changed license on %s of %s photos...',
+		batch_end_changing_license: 'Changed license on 1 photo.',
+		batch_end_changing_license_plural: 'Changed license on %s photos.',
+		
+		batch_canceling: 'Cancelling batch changes...',
+		batch_canceled_none_affected: 'The batch was cancelled and no photos were affected.',
+		batch_canceled_some_affected: 'The batch was cancelled, but not before %s of %s photos were affected.',
+		
+		add_to_set_added: '<b>1</b> photo has been added to your %s set',
+		add_to_set_added_plural: '<b>%s</b> photos have been added to your %s set',						
+		add_to_set_already_in: '(1 photo was already in the set)',
+		add_to_set_already_in_plural: '(%s photos were already in the set)',					
+		add_to_set_all_in: 'That photo is already in your %s set!',
+		add_to_set_all_in_plural: 'Those photos are all already in your %s set!',
+		open_set_now: 'Would you like to <b>open up that set now</b>?',
+		
+		add_to_group_added: '<b>1</b> photo has been added to the %s pool',
+		add_to_group_added_plural: '<b>%s</b> photos have been added to the %s pool',						
+		add_to_group_not_added: '(1 photo was either already in the pool, or is already in too many groups)',
+		add_to_group_not_added_plural: '(%s photos were either already in the %s pool, or are already in too many groups)',					
+		add_to_group_all_not_added: 'That photo is either already in the %s pool, or is already in too many groups',
+		add_to_group_all_not_added_plural: 'Those photos are either already in the %s pool, or are already in too many groups',
+		
+		geoperms_not_on_map: '1 photo does not appear on the map.',
+		geoperms_not_on_map_plural: '%s photos do not appear on the map.',
+		
+		import_geo_failed: 'Import failed for 1 photo; failures can occur if a photo was already imported to the map, or if it did not have recognizable geotags.',
+		import_geo_failed_plural: 'Import failed for %s photos; failures can occur if a photo was already imported to the map, or if it did not have recognizable geotags.',
+		
+		add_geo_failed: 'Operation failed for 1 photo.',
+		add_geo_failed_plural: 'Operation failed for %s photos.',
+		add_geo_return: '<br><br>Would you like to return to the <a href="/photo.gne?id=%s">photo</a>, or remain on this page?',
+		
+		add_tags_failed: 'Operation failed for 1 photo, which already has %s tags, the maximum number allowed.',
+		add_tags_failed_plural: 'Operation failed for %s photos, which already have %s tags, the maximum number allowed.',
+		
+		too_many_tags: 'You\'ve entered more than %s tags, which is the maximum number allowed.',
+		too_many_tags_plural: 'For the photos below you\'ve entered more than %s tags, which is the maximum number allowed.',
+		cant_save: 'Can\'t save!',
+		
+		remove_from_group_email_prompt: 'Would you like to <b>send FlickrMail to %s</b> explaining why the photo was removed?',		
+		remove_from_group_email_status: 'Sending FlickrMail to: <b>%s</b>',
+		remove_from_group_email_subject: 'Your photo has been removed from the %s pool',
+		remove_from_group_email_body: 'The above photo was removed from the %s group pool.',
+		remove_from_group_email_subject_head: 'subject',
+		remove_from_group_email_body_head: 'body',
+		yes_send_email: 'yes, send email',
+		
+		map_date_invalid: 'You must specify a real date, not in the future, after 1/1/1970, in the format m/d/y (like 12/26/2003)',
+		
+		taken_date_invalid: 'You must specify a real date, not in the future, after 1825, in the format m/d/y (like 12/26/2003)',
+		posted_date_invalid: 'You must specify a real date, not in the future, after the date you joined Flickr (%s), in the format m/d/y (like 12/26/2003)',
+		
+		together_saving_tags: 'Saving tags on %s of 1 photo...',
+		together_saving_tags_plural: 'Saving tags on %s of %s photos...',
+		
+		together_saving_meta: 'Saving title and description on %s of 1 photo...',
+		together_saving_meta_plural: 'Saving title and description on %s of %s photos...',
+		
+		together_saved_tags: 'Saved tags on 1 photo.',
+		together_saved_tags_plural: 'Saved tags on %s photos.',
+		
+		together_saved_meta: 'Saved title and description on 1 photo.',
+		together_saved_meta_plural: 'Saved title and description on %s photos.',
+		
+		together_saved_loading: 'Changes Saved! Loading next page...',
+		together_saved: 'Changes Saved!',
+		
+		together_save_cancelled: 'The save was cancelled.',
+		
+		together_tags_label: 'Tags',
+		together_title_label: 'Title',
+		together_description_label: 'Description',
+		
+		together_need_photos: 'You have to have at least one photo in the batch.',
+		
+		count_photos_plural: '%s photos',
+		count_photos_here: '1 photo here',
+		count_photos_here_plural: '%s photos here',
+		count_photos_worldwide: '1 photo <a href="" onclick="%s">worldwide</a>.',
+		count_photos_worldwide_plural: '%s photos <a href="" onclick="%s">worldwide</a>.',
+		look_worldwide: '<a href="" onclick="%s">Take a look worldwide?</a>',
+		relevant_sort_string: 'View: <strong>Most relevant</strong> &bull; <a href="" onclick="%s">Most recent</a> &bull; <a href="" onclick="%s">Most interesting</a>',
+		interesting_sort_string: 'View: <a href="" onclick="%s">Most recent</a> &bull; <strong>Most interesting</strong>',
+		recent_sort_string: 'View: <strong>Most recent</strong> &bull; <a href="" onclick="%s">Most interesting</a>',
+		
+		no_contacts: 'You have no contacts to choose from',
+		select_contact: 'Select a Contact',
+		no_groups: 'You have no groups to choose from',
+		
+		
+		geotagged_all: 'All geotagged photos',
+		geotagged_from_you: 'Photos taken by you',
+		geotagged_from_user: 'Photos taken by %s',
+		geotagged_from_pool: 'from the %s pool',
+		geotagged_photos_from_pool: 'Photos from the %s pool',
+		geotagged_matching: 'matching "%s"',
+		geotagged_tagged: 'tagged with %a',
+		geotagged_in: 'in %s',
+		geotagged_taken_range: 'taken <nobr>%s - %s</nobr>',
+		geotagged_taken_on: 'taken on <nobr>%s</nobr>',
+		geotagged_taken_on_or_before: 'taken on or before <nobr>%s</nobr>',
+		geotagged_taken_on_or_after: 'taken on or after <nobr>%s</nobr>',
+		geotagged_uploaded_range: 'uploaded <nobr>%s - %s</nobr>',
+		geotagged_uploaded_on: 'uploaded on <nobr>%s</nobr>',
+		geotagged_uploaded_on_or_before: 'uploaded on or before <nobr>%s</nobr>',
+		geotagged_uploaded_on_or_after: 'uploaded on or after <nobr>%s</nobr>',
+		no_matches: 'No matches found for',
+		looking_at: 'You\'re looking at',
+		geotagged_in_set: 'Geotagged photos in the "%s" set from %s',
+		geotagged_one_photo: 'The photo "%s" by %s, and other photos in the area.',
+		
+		
+		
+		
+		
+		
+		
+		upgrade: 'Upgrade your account...',
+		a_gift: 'You can also buy <a id="new_gift_link" href="" onclick="%s">Gift Pro Accounts</a>',
+		another_gift: '<a id="new_gift_link" href="" onclick="%s">Add another Gift Pro Account</a>',
+		will_expire: '(Account will expire on %s)',
+		
+		cant_search: 'Darn! Flickr isn\'t smart enough to search %s (yet!). You can reset the form to search more broadly, or just use the controls below to continue browsing through your photos.',
+		reset_search: 'RESET & SEARCH',
+		keep_browsing: 'KEEP BROWSING',
+
+		less_restrictive_full_text: 'Try changing the privacy filter under "more options" to be less restrictive, or doing a "full text" search',
+		less_restrictive: 'Try changing the privacy filter under "more options" to be less restrictive.',
+		
+		other_than: 'Try searching for something other than "%s".',
+		full_text: 'Try doing a "full text" search.',
+		no_photos_found: 'No photos were found matching your criteria.',
+		
+		how_many_selected: '<b>%s</b> selected',
+		select_all: 'Select all',
+		clear_selection: 'Clear selection',
+		take_a_minute: 'This might take a minute...',
+
+		not_all_saved: 'Not everything was saved!',
+		tags_not_saved: 'Tags were not saved because you entered more than %s tags, which is the maximum number allowed.',
+		
+		
+		replace_tag_confirm: 'Are you sure you want to replace %s with %s?',
+		
+		 
+		tagrs_tag_not_added: 'Tag not added!',		 
+		tagrs_tag_not_deleted: 'Tag not deleted!',
+		tagrs_max_limit: 'Hey! It looks like you\'re trying to add more than %s tags to your photo. Unfortunately, there\'s a limit of %s tags per photo.',
+		tagrs_click_icon_all_public: 'Click this icon to see all public photos tagged with %s',
+		tagrs_delete_this_tag: 'Delete this tag?',
+		tagrs_are_you_sure_delete: 'Are you sure you want to delete the tag %s?\'',
+		tagrs_get_more_your_tags: 'get more of your tags',
+		tagrs_get_all_your_tags: 'get all of your tags',
+		tagrs_tags_not_loaded: 'Tags not loaded!',
+		tagrs_choose_from_tags: 'Choose from your tags',
+
+		too_many_contacts: 'Could not make %s a contact. Sadly, you can only have %s non-reciprocal contacts.',
+
+		slideshow_requires_flash: 'Slide shows require you to have installed Macromedia Flash, which you can do <a style="color:#ccc" href="http://www.macromedia.com/shockwave/download/download.cgi?P1_Prod_Version=ShockwaveFlash">here</a>.',
+		
+		
+		
+		setprint_not_selected_photos: 'You have not selected any photos to print!',
+		setprint_choose_print_size: 'You must choose a print size!',
+		setprint_adding_prints_to_cart: 'adding prints to your cart...',
+		setprint_added_photos: 'We\'ve added <b>%s</b> of the photos you selected to your cart.',
+		setprint_continue_browsing: 'CONTINUE BROWSING',
+		setprint_proceed: 'PROCEED TO CART',
+		setprint_are_you_ready: 'Or are you ready to place your order?',
+		setprint_get_to_cart: 'You can get to your cart anytime by clicking on the cart icon at the top of each page.',
+		setprint_were_errors: 'There were errors adding the photos to your cart:',
+		setprint_no_photos_large_enough: '<b>No photos in this set are really large enough for this size print.</b>',
+		setprint_all_photos_large_enough: '<b>All photos</b> in this set are large enough for this print size.',
+		setprint_x_of_y_large_enough: '<b>%s of %s photos</b> in this set are large enough for this print size.',
+
+
+
+		setorder_set_has_no_photos: 'Hrmm. This set does not appear to have any photos.',
+		setorder_reverting: 'reverting...',
+		setorder_reordering: 're-ordering...',
+		setorder_saving: 'saving...',
+		setorder_order_you_want: 'Is this the ordering you want?',
+		setorder_set_been_reordered: 'Your set has been re-ordered.',
+
+
+
+		pinwin_uploaded_details: 'Uploaded on <a class="Plain" href="/photos/%s/archives/date-posted/%s/%s/%s/" target="_new">%s</a><br>by <a href="/photos/%s/" target="_new" class="Plain"><b>%s</b></a>',
+		pinwin_only_you: 'Only you can see this on the map',
+		pinwin_only_contacts: 'Only contacts can see this on the map',
+		pinwin_only_friends: 'Only friends can see this on the map',
+		pinwin_only_family: 'Only family can see this on the map',
+		pinwin_only_friends_and_family: 'Friends & family see this on the map',
+		pinwin_anyone: 'Anyone can see this location',
+		pinwin_problem_loading_info: 'There was a problem loading the photo info:',
+		pinwin_move_photos_to_location: 'move photo to this location',
+		pinwin_add_to_location: 'add to this location',
+		pinwin_from_user: 'from <a href="/photos/%s/" target="_new" class="Plain" >%s</a>',
+
+
+
+		photo_create_new_one: 'You haven\'t created any<br>photo sets yet. You can<br><a href="" onclick="_ge(\'%s\').show_new_set_form();return false;">create one now</a> if you like.',
+		photo_dont_belong: 'You don\'t belong to any<br>groups yet. You can find<br>and create groups <a href="/groups/">here</a>.',
+		photo_configure_blog_now: 'You haven\'t configured<br>a blog to post to yet.<br>Why not <a href="/blogs_add.gne?extra=photo%s">do that now</a>?',
+		photo_loading_print_options: '<br>Loading print options...<br><br>',
+		photo_printing_services_provided_by: 'Flickr Printing services are provided by EZPrints. When you\'ve finished collecting up the photos you want to print, click on the cart icon to finalize you order.',
+		photo_what_set: 'set',
+		photo_what_group: 'group',
+		photo_what_blog: 'blog',
+		photo_what_print: 'print',
+		photo_loading_what: '<br>loading %ss...<br><br>',
+		photo_create_new_set: 'CREATE NEW SET',
+		photo_title: 'Title:',
+		photo_description: 'Description:',
+		photo_choose_a_set: 'Choose a set below',
+		photo_create_new_set: 'create a new set',
+		photo_create_new_set_ups: 'Create a new set:',
+		photo_choose_a_size: 'Choose a print size & quantity:',
+		photo_choose_a_what: 'Choose a %s below:',
+		photo_must_enter_set_title: 'You must enter a title for the new set. Otherwise, what would it be titled?',
+		photo_private_photo_to_group: 'You are about to add a private photo to a group. This means that members of <b>%s</b> will be able to view, comment on, tag and add notes to this photo. Is this OK with you?',
+		photo_adding_prints_to_cart: 'Adding prints to cart...',
+		photo_removing_photo_from_what: 'Removing photo from %s...',
+		photo_creating_new_what: 'Creating new %s...',
+		photo_adding_photo_to_what: 'Adding photo to %s...',
+		photo_adding_some_errors: 'We\'ve added some prints of <b>%s</b> to your cart, but there were errors adding %s of the prints. The last error was: <b>%s</b><br><br>',
+		photo_added_prints_to_cart: 'We\'ve added these prints of <b>%s</b> to <b><a href="%s">your cart</a></b>:\'',
+		photo_continue_browsing: 'CONTINUE BROWSING',
+		photo_proceed: 'PROCEED TO CART',
+		photo_or_are_you_ready: 'Or are you ready to place your order?',
+		photo_get_to_cart: 'You can get to your cart anytime by clicking on the cart icon at the top of each page.',
+		photo_go_to_cart: 'GO TO CART',
+		photo_errors_adding_prints: 'There were errors adding the prints to your cart. The last error was:',
+		photo_removed_from_set: 'This photo has been removed from your <b><a href="%ssets/%s/">%s</a></b> %s!',
+		photo_removed_from_pool: 'This photo has been removed from the <b><a href="/groups/%s/pool/">%s</a></b> %s.',
+		photo_added_to_set: 'This photo has been added to your <b><a href="%ssets/%s/">%s</a></b> %s.',
+		photo_added_to_pool: 'This photo has been added to the <b><a href="/groups/%s/pool/">%s</a></b> %s.',
+		photo_added_to_pool_pending: 'This photo has been submitted to the <b><a href="/groups/%s/pool/">%s</a></b> %s, and will be visible in the group upon approval by the group moderator(s).',
+		photo_added_to_pool_already_pending: 'This photo has already been submitted to the <b><a href="/groups/%s/pool/">%s</a></b> %s.',
+		photo_adding_disabled: 'Adding photos to %s has been disabled.',
+		photo_limits_1: 'You can only add %s photos to %s. (You\'ve already added %s. Remove a photo from the pool if you really want to add this one.)',
+		photo_limits_2: 'You can only add %s photo to %s. (You\'ve already added %s. Remove a photo from the pool if you really want to add this one.)',
+		photo_limits_3: 'You can only add %s photos per %s to %s. (You\'ve already added %s. Remove a photo from the pool if you really want to add this one.)',
+		photo_limits_4: 'You can only add %s photo per %s to %s. (You\'ve already added %s. Remove a photo from the pool if you really want to add this one.)',
+		photo_see_group_for_info: 'See the <b><a href="/groups/%s/">%s</a></b> %s page for more information.',
+		photo_max_groups: 'This photo is already in the maximum number of groups allowed (the limit is %s groups). To add it to <b>%s</b>, you will first have to remove it from at least one other group.',
+		photo_added_to_set2: 'This photo has been added to a new set titled <b><a href="%s">%s</a></b>.',
+		photo_apologize: 'We do apologize...',
+		photo_first_things_first: 'First things first!',
+		photo_setting_country: 'setting your country...',
+		photo_we_recommend: 'We recommend a minimum photo resolution of %s x %s pixels.',
+		photo_are_you_sure: 'Are you sure you want to remove this photo from <b>%s</b>?',
+		photo_remove_from_set: 'Remove this photo from your %s set',
+		photo_remove_from_pool: 'Remove this photo from the %s pool',
+
+
+
+		photo_notes_rotate: 'Rotating photo...',
+		photo_notes_one_note: 'You can only add one note at a time.',
+		photo_notes_add_notes_here: 'Add your note here.',
+		photo_notes_saving_note: 'Saving new note...',
+		photo_notes_deleting: 'Deleting note...',
+
+
+
+		photo_mini_map_more_photos: 'more photos here',
+		photo_mini_map_view_on_map: 'View %s map',
+
+
+
+		photo_buttons_are_you_sure: 'Are you sure you want to delete this photo? (This cannot be undone.)',
+		photo_buttons_removing: 'Removing from favorites',
+		photo_buttons_adding: 'Adding to favorites',
+
+
+		personmenu_buddyicon: 'can\'t find buddyicon data for NSID',
+		personmenu_contactChangerText1_ff: '%s is marked as <b>friend</b> and <b>family</b>.',
+		personmenu_contactChangerText1_fri: '%s is marked as your <b>friend</b>.',
+		personmenu_contactChangerText1_fam: '%s is marked as <b>family</b>.',
+		personmenu_contactChangerText1_con: '%s is currently your <b>contact</b>.',
+		
+		personmenu_contactChangerText2_ff_m: 'You can remove %s from your list of friends, or remove him from your list of family (in either case he will remain a contact of yours).',
+		personmenu_contactChangerText2_ff_f: 'You can remove %s from your list of friends, or remove her from your list of family (in either case she will remain a contact of yours).',
+		personmenu_contactChangerText2_ff_o: 'You can remove %s from your list of friends, or remove them from your list of family (in either case they will remain a contact of yours).',
+
+		personmenu_contactChangerText2_fri_m: 'You can add %s to your list of <i>family</i>, or remove him as a friend (he will remain a contact of yours).',
+		personmenu_contactChangerText2_fri_f: 'You can add %s to your list of <i>family</i>, or remove her as a friend (she will remain a contact of yours).',
+		personmenu_contactChangerText2_fri_o: 'You can add %s to your list of <i>family</i>, or remove them as a friend (they will remain a contact of yours).',
+
+		personmenu_contactChangerText2_fam_m: 'You can add %s to your list of <i>friends</i>, or remove him from your list of family (he will remain a contact of yours).',
+		personmenu_contactChangerText2_fam_f: 'You can add %s to your list of <i>friends</i>, or remove her from your list of family (she will remain a contact of yours).',
+		personmenu_contactChangerText2_fam_o: 'You can add %s to your list of <i>friends</i>, or remove them from your list of family (they will remain a contact of yours).',
+
+		personmenu_contactChangerText2_con_o: 'You can add %s to your list of <i>friends</i> or <i>family</i> (or both).',
+
+		personmenu_contactChangerText3: 'Or, <a href="#" onclick="icon_removeContact(\'%s\'); return false;">remove</a> %s completely from your contacts.',
+		
+		personmenu_contactChangerText1_notcon: '%s will be <b>added</b> as your contact.',
+		personmenu_contactChangerText2_notcom: 'You can also add %s to your list of <i>friends</i> or <i>family</i>(or both).',
+		personmenu_contactChangerText3_notcon: '<i>Marking them as friend or family is optional. It can also be changed at any time.</i>',
+		
+		personmenu_working: 'Working...',
+		personmenu_success: 'Success',
+		personmenu_failure: 'Failure',
+
+		personmenu_change: 'Change',
+
+		personmenu_updatecontact_ff_m: 'He\'s a friend and family. %s',
+		personmenu_updatecontact_ff_f: 'She\'s a friend and family. %s',
+		personmenu_updatecontact_ff_o: 'They\'re a friend and family. %s',
+
+		personmenu_updatecontact_fri_m: 'He\'s a friend of yours. %s',
+		personmenu_updatecontact_fri_f: 'She\'s a friend of yours. %s',
+		personmenu_updatecontact_fri_o: 'They\'re a friend of yours. %s',
+
+		personmenu_updatecontact_fam_m: 'He\'s family. %s',
+		personmenu_updatecontact_fam_f: 'She\'s family. %s',
+		personmenu_updatecontact_fam_o: 'They\'re family. %s',
+
+		personmenu_updatecontact_con_m: 'He\'s one of your contacts. %s',
+		personmenu_updatecontact_con_f: 'She\'s one of your contacts. %s',
+		personmenu_updatecontact_con_o: 'They\'re one of your contacts. %s',
+
+		personmenu_updatecontact_notcon_m: 'Add him as a contact?',
+		personmenu_updatecontact_notcon_f: 'Add her as a contact?',
+		personmenu_updatecontact_notcon_o: 'Add them as a contact?',
+
+		personmenu_hiyou: 'Hi, you.',
+		personmenu_add_as_contact: 'Add <strong>%s</strong> as a contact?',
+		personmenu_block: 'Block <b>%s</b>',
+		personmenu_unblock: 'Unblock <b>%s</b>',
+
+		personmenu_are_blocking: 'You are blocking %s',
+		personmenu_is_ff: '<strong>%s</strong> is friends and family. %s',
+		personmenu_is_fri: '<strong>%s</strong> is a friend. %s',
+		personmenu_is_fam: '<strong>%s</strong> is family. %s',
+		personmenu_is_con: '<strong>%s</strong> is a contact. %s',
+
+		personmenu_as_ff: '%s counts you as friends and family.',
+		personmenu_as_fri: '%s counts you as a friends.',
+		personmenu_as_fam: '%s counts you as family.',
+		personmenu_as_con: '%s counts you as a contact.',
+
+
+
+
+		one_photo_edit_loading_info: 'Loading photo info...',
+		one_photo_edit_problem_loading: 'There was a problem loading the photo info: %s',
+		one_photo_edit_sets_title: '<b>Sets:</b><br>',
+		one_photo_edit_groups_title: '<br><b>Groups:</b><br>',
+		one_photo_edit_none: '--none--<br>',
+		one_photo_edit_plural_photos: '%s photos',
+		one_photo_edit_single_photo: '1 photo\'',
+		one_photo_edit_limit: 'Limit:',
+		one_photo_edit_no_longer_member: '<i>you no longer belong to this group</i>',
+		one_photo_edit_photo_changed: 'A photo has changed',
+		one_photo_edit_really_delete: 'You really want to delete this photos? It will be gone forever, and cannot be recovered.',
+		one_photo_edit_yes_delete: 'yes, delete',
+		one_photo_edit_no: 'no!',
+		one_photo_edit_deleting: 'Deleting photo...',
+		one_photo_edit_nothing_saved: 'nothing saved',
+		one_photo_edit_saving: 'Saving...',
+
+
+
+
+
+		nextprev_goto_prev: 'Go to the previous photo in the %s',
+		nextprev_goto_next: 'Go to the previous photo in the %s',
+
+
+
+
+		mat_batch_drag_photos: 'Drag photos here to edit them as a batch.',
+		mat_batch_you_can: 'You can then change any photo attributes or create a new set.',
+		mat_batch_photos_no_no: 'You don\'t appear to have uploaded any photos to Flickr...',
+		mat_batch_recently: 'Loading recently uploaded photos from <b>%s</b>...',
+		mat_batch_loading_untagged: 'Loading untagged photos...',
+
+		mat_batch_added_plural: '%s photos were added to the batch!',
+		mat_batch_added_single: '1 photo was added to the batch!',
+		mat_batch_notadded_plural: '%s photos were already in the batch.',
+		mat_batch_notadded_single: '1 photo was already in the batch.',
+
+		mat_batch_photos_already_plural: 'Those photos are already in the batch.',
+		mat_batch_photos_already_single: 'That photo is already in the batch.',
+		mat_batch_add_to_batch: 'add to batch',
+
+
+		mat_groups_msg1: 'You don\'t yet belong to any groups.',
+		mat_groups_msg2: 'Check out the <a class="Plain" target="_new" href="/groups/">Groups page</a> to find out how to<br>create and join groups for sharing photos.',
+		mat_groups_building_interface: 'Building interface for <br>1 of %s groups...',
+		mat_groups_enabling_interface: 'Enabling interface for <br>%s of %s groups...',
+		mat_group_admin: 'You\'re an admin of this group',
+		mat_group_member: 'You\'re a member of this group',
+		mat_group_public: 'This group is public',
+		mat_group_private: 'This group is private',
+		mat_group_photo: 'photo',
+		mat_group_photos: 'photos',
+		mat_group_tuna: 'Configuring Tuna Blaster...',
+		mat_group_photos_plural: '%s photos',
+		mat_group_photos_single: '1 photo',
+		mat_group_wont_work: 'There are unsaved changes, so that won\'t work :)',
+		mat_group_add_to: 'add to <b>%s</b>',
+
+
+
+
+		mat_one_group_loading: 'Loading group...',
+		mat_one_adding_plural: 'Adding photos to pool...',
+		mat_one_adding_single: 'Adding photo to pool...',
+		mat_one_loading_page: '\'Loading page %s...\'',
+		mat_one_msg1: 'You have no photos in this group pool.',
+		mat_one_msg2: '',
+		mat_one_msg3: 'Uploads have been disabled for this group',
+		mat_one_msg4: '',
+		mat_one_msg5: 'Drag photos here to add them to the group pool',
+		mat_one_msg6: 'Drag a photo to the bottom to remove it from the pool.',
+		mat_one_could_not_load: 'could not load set photos: %s',
+		mat_one_photos_already_plural: 'Those photos are already in this group.',
+		mat_one_photos_already_single: 'That photo is already in this group.',
+		mat_one_photos_plural: '%s photos',
+		mat_one_photos_single: '1 photo',
+		mat_one_group_admin: 'You\'re an admin of this group',
+		mat_one_group_member: 'You\'re a member of this group',
+		mat_one_group_public: 'This group is public',
+		mat_one_group_private: 'This group is private',
+		
+		mat_one_open_group_page: 'Open group page',
+		mat_one_show_only_my: 'show only my photos',
+		mat_one_remove_from_pool: 'remove photo from pool',
+		mat_one_are_you_sure: 'Are you sure you want to remove this photo from the <b>%s</b> group pool?<br><br>',
+		mat_one_able_to_send_notes: '(You\'ll be able send a note to <b>%s</b>, the photo\'s owner, on the next screen, if you\'d like.)<br>',
+		mat_one_remove_it: 'remove it',
+
+
+
+
+
+		mat_set_msg1: 'Click the "create new set" button to get started,',
+		mat_set_msg2: 'or drag some photos here to create a new set.',
+		mat_set_reloading_set: 'Reloading sets...',
+		mat_set_already_in_collection: 'that set is already in the collection',
+		mat_set_free: 'Free account holders such as yourself are limited to only 3 sets. Find out how to upgrade to a Pro account <a target="_new" href="/upgrade/">here</a>, so you can have all the sets you like.',
+		mat_set_error: 'There was an error and changes were not saved: %s',
+		mat_set_wont_work: 'There are unsaved changes, so that won\'t work :)',
+		
+		
+		mat_one_set_loading_set: 'Loading set...',
+		mat_one_set_adding_photos_plural: 'Adding photos to set...',
+		mat_one_set_adding_photos_single: '',
+		mat_one_set_msg1: 'Drag photos here to add them to the set',
+		mat_one_set_msg2: 'You can drag them around to re-order them.',
+		mat_one_set_could_not_load: 'could not load set photos: %s',
+		mat_one_set_need_more_photos: 'You need two photos in the set before sorting.',
+		mat_one_set_is_this_right: 'Is this the ordering you want?',
+		mat_one_set_been_added_to_set: 'been added to a new set! Now just give the set a title and description and hit the "save" button. (Or drag some more photos in first!)',
+		mat_one_set_photo_has_plural: '\'The photos have %s',
+		mat_one_set_photo_has_single: '\'The photo has %s',
+		mat_one_set_new_empty_set: 'A new empty set has been created! Now just drag some photos in, give the set a title and description and hit the "save" button.',
+		mat_one_set_added_plural: '%s photos were added to the set!',
+		mat_one_set_added_single: '1 photo was added to the set!',
+		mat_one_set_already_plural: '%s photos were already in the set!',
+		mat_one_set_already_single: '1 photo was already in the set!',
+		mat_one_set_already_plural2: 'Those photos are already in the set.',
+		mat_one_set_already_single2: 'That photo is already in the set.',
+		mat_one_set_photo_in_set: '<b>1</b> photo in the set',
+		mat_one_set_photos_in_set: '<b>%s</b> photos in the set',
+		mat_one_set_sure: 'Do you really want to delete this set? (Don\'t worry, no photos will be deleted.***)',
+		mat_one_set_yes_delete: 'yes, delete',
+		mat_one_set_no: 'no!',
+		mat_one_set_deleting: 'Deleting set...',
+		mat_one_set_not_a_great_name: '\'%s\' is not a great name for a set. Can you think of a better one, friend?',
+		mat_one_set_try: 'I\'ll try',
+		mat_one_set_need_title: 'I can\'t save the set unless you give it a title!',
+		mat_one_set_ok_cheeky: 'ok, cheeky',
+		mat_one_set_saving: 'Saving...',
+		mat_one_set_error: 'There was an error and the set was not deleted: %s',
+		mat_one_set_create_error: 'There was an error and the set was not created: %s',
+		mat_one_set_change_error: 'There was an error and changes were not saved: %s',
+		mat_one_set_photos_error: 'There was an error and photos were not saved: %s',
+		mat_one_set_deleted: 'Set deleted! ',
+		mat_one_set_created: 'Set created! ',
+		mat_one_set_changes_saved: 'Changes saved! ',
+		mat_one_set_has_changed: 'A set has changed',
+		mat_one_set_make_primary: 'make this the primary photo',
+
+
+
+
+		interetpop_msg: 'You are looking at some of the <a href="" id="intrestpop_day_link2">interesting photos from <b><span id ="intrestpop_day_text"></span></b></a>.',
+
+
+
+
+		fumb_drag_x_photos: '%s photos',
+		fumb_drag_move_to_end: 'move to end',
+
+
+
+
+		grouppool_are_you_sure: 'Are you sure you want to remove this photo from the pool?',
+		grouppool_sorry_not_remove: 'Sorry, photo could not be removed from the pool',
+		grouppool_see_all_link_plural: '(<a id="a_see_all" href="/groups/%s/pool/">See all %s photos</a>)',
+		grouppool_see_all_link_single: '(<a id="a_see_all" href="/groups/%s/pool/">See the 1 photo</a>)',
+		grouppool_see_no_link_plural: '(See all %s photos)',
+		grouppool_see_no_link_single: '(See the 1 photo)',
+		grouppool_remove_photo: 'Remove this photo from the pool',
+		grouppool_new: 'NEW',
+		grouppool_from: 'From <a href="/photos/%s/">%s</a>',
+
+
+
+
+		global_working: 'working...',
+		global_unsaved: 'You have unsaved changes.',
+		
+		
+		
+		
+		findr_fewer: 'Fewer options',
+		findr_tagged_with: 'tagged with <b>%s</b>',
+		findr_matching: 'matching <b>%s</b>',
+		findr_loading_photos: 'Loading photos...',
+		findr_no_groups: 'you belong to no groups',
+		findr_select_a_group: 'select a group...',
+		findr_no_sets: 'you have no sets',
+		findr_select_a_set: 'select a set...',
+		findr_untagged: 'untagged photos',
+		findr_geotagged: 'geotagged photos',
+		findr_ungeotagged: 'non-geotagged photos',
+		findr_in_your: 'in your %s',
+		findr_within_set: 'within a set',
+		findr_within_batch: 'within a batch',
+		findr_within_group: 'within a group',
+		
+		findr_of: 'of your photos',
+		findr_not_in_set: 'photos not in a set',
+		findr_in_upload_day: 'photos uploaded on <b>%s</b>',
+		findr_in_set: 'photos in set <b>%s</b>',
+		findr_in_batch: 'photos from a batch',
+		findr_in_group: 'photos in group <b>%s</b>',
+
+
+
+
+
+		insitu_click_to_edit: 'Click to edit',
+		insitu_click_to_add_title: 'click here to add a title',
+		insitu_click_to_add_description: 'click here to add a description',
+		insitu_saving: 'saving...',
+		insitu_unknown_hash: 'unknown hash',
+		insitu_description_error: 'Error: your description was NOT saved.',
+		insitu_error_no_hash: 'ERROR: no hash ob exists for %s',
+		insitu_error_title_not_saved: 'Error: your title was NOT saved. %s',
+
+
+
+
+
+		map_searching: 'Searching',
+		map_prefs: '<h3>Hi. We need to tell you something.</h3><p>When you add your photos to this map, information about<br />where they were taken can be made available.</p><p>Have a think about what you\'d usually be comfortable with,<br />and use the form below to choose a <strong>default</strong> level of privacy<br />for the location information for photos you place on a map.</p><p>(You can change location privacy on a photo-by-photo basis<br />later if you wish.)</p><p><strong>By default, who can see <u>where</u> your photos were taken?</strong></p>',
+		map_only_you: 'Only You',
+		map_f_and_f: 'Your Friends and/or Family',
+		map_fam: 'Your Family',
+		map_fri: 'Your Friends',
+		map_contacts: 'Your Contacts',
+		map_anyone: 'Anyone (%s)',
+		map_set_permission: 'SET DEFAULT PERMISSION',
+		map_saving_prefs: 'Saving preference...',
+		map_recommended: 'Recommended',
+
+
+		map_prefs_saved: '<b>Preference saved!</b><br /><br /><b>%s</b> will be able to see where your photos were taken, but you can change that for any individual photo, or for a batch of photos.',
+		map_msg2: '<br><br>Now, we notice that you have <b>%s</b> photos with geotags... Would you like us to place them on the map for you?',
+		map_yes_place: 'Yes! Place them on the map',
+		map_loading_geotagged: 'Loading geotagged photos...',
+		map_link_to_map: 'Link to this map',
+		map_C_P: 'Copy and paste the URL below:',
+		map_on_page: 'You\'re on page',
+		map_loading: 'Loading the first<br>page of photos...',
+		map_loading_page: 'Loading page...',
+		map_more_than: 'More than %s photos',
+		map_x_photos_here: '%s photos taken here',
+		map_1_photo_here: '1 photo taken here',
+
+
+		global_sure: 'Are you sure?',
+		global_sorry: 'Sorry, photo could not be deleted.',
+
+
+
+
+		xxx: '',
+		xxx: '',
+		xxx: '',
+		xxx: '',
+		xxx: '',
+		xxx: '',
+		xxx: '',
+		xxx: '',
+		xxx: '',
+		xxx: '',
+		xxx: '',
+		xxx: '',
+		xxx: '',
+		xxx: '',
+		xxx: '',
+		xxx: '',
+		xxx: '',
+		
+		
+		
+		
+		see_now_i_dont_need_to_worry_about_commas: 1
+	}
+	
+}
+  
+F.output.sentencise = function(A, tag) {
+	var b_tag = (tag) ? tag : '';
+	var e_tag = (tag) ? tag.replace('<', '<\/') : '';
+	var str = '';
+	
+	for (var i=0; i<A.length;i++) {
+		if (i>0) {
+			if (i == A.length-1) {
+				if (A.length > 2) str+= ','; 
+				str+= ' '+F.output.get('and')+' ';
+			} else {
+				str+= ', ';
+			}
+		
+		}
+		
+		str+= b_tag + A[i] + e_tag;
+	}
+	
+	return str;
+}
+
+// NO USIE THIS ONIE
+F.output.sentencize = function(A) {
+	var str = '<b>';
+	for (var i=0; i<A.length;i++) {
+		str+= A[i];
+		if (i == A.length-1) break;
+		if (i == A.length-2) {
+			str+= '</b> and <b>';
+			continue;
+		}
+		str+= '</b>, <b>';
+	}
+	str+= '</b>';
+	return str;
+}
+
+F.output.dateize = function(y,m,d) {
+	
+	var str = F.output.date_strs.monthsA[m] + ' ' + d + ', ' + y;
+	return str;
+	
+}
+
+// F.output.get is used to retrieve all strings from F.output.format_strs
+
+F.output.get = function(format_id) {
+	
+	// first we have to create a new array because you can't shift() the arguments array :(
+	var new_args = [];
+	for (var i=0;i<arguments.length;i++) {
+		new_args[i] = arguments[i];
+	}
+	
+	// now grab the str to use as a template 
+	var format_id = new_args.shift();
+	var format_str = this.format_strs[format_id];
+	
+	if (!format_str) return format_id+' not a member of F.output.format_strs';
+	
+	new_args.unshift(format_str);
+	
+	return this.sprintf.apply(null, new_args);
+}
+
+// hot sprintf action provided by F.output.sprintf (which can be called directly, if you want to sprintf a string
+// that is not in the F.output.format_strs hash, but that should only be used for debugging and development, since
+// all text output that needs translating MUST be in the F.output.format_strs hash).
+		
+//http://www.vladdy.net/Demos/printf.html	
+/* Function sprintf(format_string,arguments...)
+ * Javascript emulation of the C printf function (modifiers and argument types 
+ *    "p" and "n" are not supported due to language restrictions)
+ *
+ * Copyright 2003 K&L Productions. All rights reserved
+ * http://www.klproductions.com 
+ *
+ * Terms of use: This function can be used free of charge IF this header is not
+ *               modified and remains with the function code.
+ * 
+ * Legal: Use this code at your own risk. K&L Productions assumes NO resposibility
+ *        for anything.
+ ********************************************************************************/
+F.output.sprintf = function(fstring)
+  { var pad = function(str,ch,len)
+      { var ps='';
+        for(var i=0; i<Math.abs(len); i++) ps+=ch;
+        return len>0?str+ps:ps+str;
+      }
+    var processFlags = function(flags,width,rs,arg)
+      { var pn = function(flags,arg,rs)
+          { if(arg>=0)
+              { if(flags.indexOf(' ')>=0) rs = ' ' + rs;
+                else if(flags.indexOf('+')>=0) rs = '+' + rs;
+              }
+            else
+                rs = '-' + rs;
+            return rs;
+          }
+        var iWidth = parseInt(width,10);
+        if(width.charAt(0) == '0')
+          { var ec=0;
+            if(flags.indexOf(' ')>=0 || flags.indexOf('+')>=0) ec++;
+            if(rs.length<(iWidth-ec)) rs = pad(rs,'0',rs.length-(iWidth-ec));
+            return pn(flags,arg,rs);
+          }
+        rs = pn(flags,arg,rs);
+        if(rs.length<iWidth)
+          { if(flags.indexOf('-')<0) rs = pad(rs,' ',rs.length-iWidth);
+            else rs = pad(rs,' ',iWidth - rs.length);
+          }    
+        return rs;
+      }
+    var converters = new Array();
+    converters['c'] = function(flags,width,precision,arg)
+      { if(typeof(arg) == 'number') return String.fromCharCode(arg);
+        if(typeof(arg) == 'string') return arg.charAt(0);
+        return '';
+      }
+    converters['d'] = function(flags,width,precision,arg)
+      { return converters['i'](flags,width,precision,arg); 
+      }
+    converters['u'] = function(flags,width,precision,arg)
+      { return converters['i'](flags,width,precision,Math.abs(arg)); 
+      }
+    converters['i'] =  function(flags,width,precision,arg)
+      { var iPrecision=parseInt(precision);
+        var rs = ((Math.abs(arg)).toString().split('.'))[0];
+        if(rs.length<iPrecision) rs=pad(rs,' ',iPrecision - rs.length);
+        return processFlags(flags,width,rs,arg); 
+      }
+    converters['E'] = function(flags,width,precision,arg) 
+      { return (converters['e'](flags,width,precision,arg)).toUpperCase();
+      }
+    converters['e'] =  function(flags,width,precision,arg)
+      { iPrecision = parseInt(precision);
+        if(isNaN(iPrecision)) iPrecision = 6;
+        rs = (Math.abs(arg)).toExponential(iPrecision);
+        if(rs.indexOf('.')<0 && flags.indexOf('#')>=0) rs = rs.replace(/^(.*)(e.*)$/,'$1.$2');
+        return processFlags(flags,width,rs,arg);        
+      }
+    converters['f'] = function(flags,width,precision,arg)
+      { iPrecision = parseInt(precision);
+        if(isNaN(iPrecision)) iPrecision = 6;
+        rs = (Math.abs(arg)).toFixed(iPrecision);
+        if(rs.indexOf('.')<0 && flags.indexOf('#')>=0) rs = rs + '.';
+        return processFlags(flags,width,rs,arg);
+      }
+    converters['G'] = function(flags,width,precision,arg)
+      { return (converters['g'](flags,width,precision,arg)).toUpperCase();
+      }
+    converters['g'] = function(flags,width,precision,arg)
+      { iPrecision = parseInt(precision);
+        absArg = Math.abs(arg);
+        rse = absArg.toExponential();
+        rsf = absArg.toFixed(6);
+        if(!isNaN(iPrecision))
+          { rsep = absArg.toExponential(iPrecision);
+            rse = rsep.length < rse.length ? rsep : rse;
+            rsfp = absArg.toFixed(iPrecision);
+            rsf = rsfp.length < rsf.length ? rsfp : rsf;
+          }
+        if(rse.indexOf('.')<0 && flags.indexOf('#')>=0) rse = rse.replace(/^(.*)(e.*)$/,'$1.$2');
+        if(rsf.indexOf('.')<0 && flags.indexOf('#')>=0) rsf = rsf + '.';
+        rs = rse.length<rsf.length ? rse : rsf;
+        return processFlags(flags,width,rs,arg);        
+      }  
+    converters['o'] = function(flags,width,precision,arg)
+      { var iPrecision=parseInt(precision);
+        var rs = Math.round(Math.abs(arg)).toString(8);
+        if(rs.length<iPrecision) rs=pad(rs,' ',iPrecision - rs.length);
+        if(flags.indexOf('#')>=0) rs='0'+rs;
+        return processFlags(flags,width,rs,arg); 
+      }
+    converters['X'] = function(flags,width,precision,arg)
+      { return (converters['x'](flags,width,precision,arg)).toUpperCase();
+      }
+    converters['x'] = function(flags,width,precision,arg)
+      { var iPrecision=parseInt(precision);
+        arg = Math.abs(arg);
+        var rs = Math.round(arg).toString(16);
+        if(rs.length<iPrecision) rs=pad(rs,' ',iPrecision - rs.length);
+        if(flags.indexOf('#')>=0) rs='0x'+rs;
+        return processFlags(flags,width,rs,arg); 
+      }
+    converters['s'] = function(flags,width,precision,arg)
+      { var iPrecision=parseInt(precision);
+        var rs = arg;
+        if(rs.length > iPrecision) rs = rs.substring(0,iPrecision);
+        return processFlags(flags,width,rs,0);
+      }
+    converters['a'] = function(flags,width,precision,arg)
+      {
+      	if (arg instanceof Array) return F.output.sentencise(arg, '<b>'); // need to figure out how to insert an indicator as to what tag should be used into the format str
+      	return arg;
+      }
+    farr = fstring.split('%');
+    retstr = farr[0];
+    fpRE = /^([-+ #]*)(\d*)\.?(\d*)([acdieEfFgGosuxX])(.*)$/;
+    for(var i=1; i<farr.length; i++)
+      { fps=fpRE.exec(farr[i]);
+        if(!fps) continue;
+        if(arguments[i]!=null) retstr+=converters[fps[4]](fps[1],fps[2],fps[3],arguments[i]);
+        retstr += fps[5];
+      }
+    return retstr;
+  }
+  
+//writeAPIDebug(F.output.get('tagged_with', ['f','g']));
+
+
+////TIMEs: 0/81/0/1/0/0 - 1171470849545,1171470849545,1171470849626,1171470849626,1171470849627,1171470849627,1171470849627

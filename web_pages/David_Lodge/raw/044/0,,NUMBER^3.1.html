@@ -1,0 +1,56 @@
+<html>
+<head>
+<script type="text/javascript">
+var items = new Array(20);
+items[0]='<li><a href="http://jobs.guardian.co.uk/browse/media/publishing/vacancy-itsr90822.html?gusrc=gu_jobs_box_books">CARRERAS LATHANE: Sales Manager - North West of Home Counties - Sales Manager</a>';
+items[1]='<li><a href="http://jobs.guardian.co.uk/browse/media/publishing/vacancy-1265036-1.html?gusrc=gu_jobs_box_books">GLOBE BUSINESS PUBLISHING LTD: Research & Database Assistant</a>';
+items[2]='<li><a href="http://jobs.guardian.co.uk/browse/media/publishing/vacancy-itsr91237.html?gusrc=gu_jobs_box_books">ABSOLUTE APPOINTMENTS: Media Sales Executives (Entry Level)</a>';
+items[3]='<li><a href="http://jobs.guardian.co.uk/browse/media/publishing/vacancy-itsr90719.html?gusrc=gu_jobs_box_books">CARRERAS LATHANE: Sales Executive - Sales Executive</a>';
+items[4]='<li><a href="http://jobs.guardian.co.uk/browse/media/publishing/vacancy-1265730-1.html?gusrc=gu_jobs_box_books">SMART LEARNING LTD: Programmer/Screen Designer</a>';
+items[5]='<li><a href="http://jobs.guardian.co.uk/browse/media/publishing/vacancy-itsr93293.html?gusrc=gu_jobs_box_books">REILLY PEOPLE: Deputy Ad Manager - Huge B2B Magazine Group</a>';
+items[6]='<li><a href="http://jobs.guardian.co.uk/browse/media/publishing/vacancy-itsr90683.html?gusrc=gu_jobs_box_books">CARRERAS LATHANE: Advertisement Director - Advertisement Director</a>';
+items[7]='<li><a href="http://jobs.guardian.co.uk/browse/media/publishing/vacancy-itsr92689.html?gusrc=gu_jobs_box_books">INSPIRED SELECTION LTD: Development Editor, Human Resources\Employment Law g4448</a>';
+items[8]='<li><a href="http://jobs.guardian.co.uk/browse/media/publishing/vacancy-itsr90433.html?gusrc=gu_jobs_box_books">INSPIRED SELECTION LTD: Senior Publisher, Secondary Key Subjects g4383</a>';
+items[9]='<li><a href="http://jobs.guardian.co.uk/browse/media/publishing/vacancy-itsr92404.html?gusrc=gu_jobs_box_books">MAC PEOPLE: Junior Graphic Designer (4988)</a>';
+items[10]='<li><a href="http://jobs.guardian.co.uk/browse/media/publishing/vacancy-itsr92897.html?gusrc=gu_jobs_box_books">PRICEJAMIESON: Head of Product Development</a>';
+items[11]='<li><a href="http://jobs.guardian.co.uk/browse/media/publishing/vacancy-itsr90213.html?gusrc=gu_jobs_box_books">MAC PEOPLE: Typesetter (8569)</a>';
+items[12]='<li><a href="http://jobs.guardian.co.uk/browse/media/publishing/vacancy-rco91098.html?gusrc=gu_jobs_box_books">FORMULA - WON RECRUITMENT: News & Market Reporter / Editor ? energy information MD2665</a>';
+items[13]='<li><a href="http://jobs.guardian.co.uk/browse/media/publishing/vacancy-1267524-3.html?gusrc=gu_jobs_box_books">PFJ: Sub-Editors B2B & B2C</a>';
+items[14]='<li><a href="http://jobs.guardian.co.uk/browse/media/publishing/vacancy-itsr91676.html?gusrc=gu_jobs_box_books">REAL RECRUITMENT: Marketing Manager - Independent Magazine Publisher</a>';
+items[15]='<li><a href="http://jobs.guardian.co.uk/browse/media/publishing/vacancy-itsr88476.html?gusrc=gu_jobs_box_books">ORCHARD SUITS: Mac Designer, (ACOM6380G)</a>';
+items[16]='<li><a href="http://jobs.guardian.co.uk/browse/media/publishing/vacancy-itsr90886.html?gusrc=gu_jobs_box_books">INSPIRED SELECTION LTD: Commissioning Editor, Primary Education g4402</a>';
+items[17]='<li><a href="http://jobs.guardian.co.uk/browse/media/publishing/vacancy-itsr93365.html?gusrc=gu_jobs_box_books">PENGUIN UK: Marketing Manager</a>';
+items[18]='<li><a href="http://jobs.guardian.co.uk/browse/media/publishing/vacancy-itsr92669.html?gusrc=gu_jobs_box_books">WORKSTATION: Editor</a>';
+items[19]='<li><a href="http://jobs.guardian.co.uk/browse/media/publishing/vacancy-conkers1756077.html?gusrc=gu_jobs_box_books">PFJ/GRC: Associate Editor</a>';
+var first_random_index = Math.round(Math.random()*18);
+if (first_random_index == 19) {
+	first_random_index++;
+}
+
+var second_random_index = Math.round(Math.random()*18);
+if (second_random_index == first_random_index) {
+	second_random_index = 19;
+}
+
+var third_random_index = Math.round(Math.random()*17);
+if (third_random_index == first_random_index) {
+	third_random_index = 20;
+}
+
+try {
+	var jobslistDiv = top.document.getElementById('jobslist');
+} catch (e) {
+        document.domain = "guardian.co.uk";
+	jobslistDiv = top.document.getElementById('jobslist');
+}
+
+var innerHTML = '<ul>';
+if ( items[first_random_index]) {innerHTML = innerHTML + items[first_random_index]}
+if ( items[second_random_index]) {innerHTML = innerHTML + items[second_random_index]}
+if ( items[third_random_index]) {innerHTML = innerHTML + items[third_random_index]}
+innerHTML = innerHTML + '</ul>';
+
+jobslistDiv.innerHTML = innerHTML;
+</script>
+</head>
+</html>

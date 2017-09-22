@@ -1,0 +1,645 @@
+
+BODY {
+    font:normal 68% verdana,arial,helvetica;
+    color:#000000;
+}
+
+DIV.clsDocBody,
+DIV.clsFooter { margin-left:10px; margin-right:10px; margin-top:10px; }
+
+DIV.clsFPfig { font-size:80%; }
+
+TD, TH { font-size:68%; }
+
+A:link { color:#003399; text-decoration:none; }
+A:visited { color:#6699CC; text-decoration:none; }
+A:hover { text-decoration:underline; }
+
+DIV.clsDocBody A:link,
+DIV.clsDocBody A:visited {
+    text-decoration: underline
+}
+
+DIV.clsDocBody SPAN.clsHighlightItems A:link,
+DIV.clsDocBody SPAN.clsHighlightItems A:visited,
+DIV.clsNavTbl A:link, 
+DIV.clsNavTbl A:visited {
+    text-decoration: none;
+}
+
+H2 A:visited,
+H3 A:visited { color:#003399; }
+
+A.clsIncCpyRt {
+    color:#000000;
+    font-size:95%;
+    text-decoration: underline;
+}
+A.clsIncCpyRt:hover { color:#003399; }
+
+A.clsBackTop,
+A.clsBackTop:visited {
+    margin-top:10; margin-bottom:0;
+    padding-bottom:0;
+    font-size:90%;
+    color:#003399;
+    text-decoration: underline;
+}
+
+A.clsBackTop:hover { color:blue; }
+
+P {
+    line-height:1.5em;
+    margin-top:0.5em; margin-bottom:1.0em;
+}
+
+P.clsRef {
+    font-weight:bold;
+    margin-top:12pt; margin-bottom:0em;
+}
+
+
+PRE {
+    background:#EEEEEE;
+    margin-top:1em; margin-bottom:1em; margin-left:0px;
+    padding:5pt;
+}
+
+SPAN.db PRE, SPAN.ci PRE, SPAN.di PRE {
+	background:#EEEEEE;
+	padding-top: 0pt;
+	padding-bottom: 0pt;
+}
+
+PRE.clsCode, CODE.clsText { font-size:110%; font-family:'courier new',courier,serif; }
+
+PRE.clsCCCode { font-size:120%; font-family:'courier new',courier,serif;background:none }
+
+PRE.clsSyntax { font-size:100%; font-family:verdana,arial,helvetica,sans-serif; }
+
+H1 {
+    font:normal 165% verdana,arial,helvetica;
+    margin:5 0;
+    margin-top:0px;
+}
+
+H2 {
+    font:bold 125% verdana,arial,helvetica;
+    margin-top:1em; margin-bottom:0.5em;
+}
+
+H2.clsOsigHead {
+    font-family:arial, helvetica, sans-serif;
+    font-size:125%;
+    margin-top:1em; margin-bottom:0em;
+    color:#3366CC;
+}
+
+H2.clsBlue { color:#336699; }
+
+H3 {
+    font:bold 115% verdana,arial,helvetica;
+    margin-bottom:0.5em;
+}
+
+H4, H5, H6 {
+    font:bold 100% verdana,arial,helvetica;
+    margin-bottom:0.5em;
+}
+
+TABLE.clsNavTbl { margin-left: 10px; }
+TABLE.clsNavTbl TH,
+TABLE.clsNavTbl TD { font-family:verdana,arial,helvetica,sans-serif; font-size:60%; }
+
+TABLE.clsNavTbl TH { padding-bottom:0; }
+
+TABLE.clsTblHomeLeft A,
+TABLE.clsTblHomeLeft A:visited,
+TABLE.clsTblHomeLeft A:hover {
+    font-family:verdana,arial,helvetica,sans-serif; font-size:90%;
+    color:#003399;
+}
+
+TABLE.clsTblHomeLeft A:hover { text-decoration:underline; }
+
+TABLE.clsStd TH {
+    text-align:left; vertical-align:top;
+    background-color:#DDD;
+    padding:2px;
+}
+
+TABLE.clsStd TD {
+    vertical-align:top;
+    background-color:#EEE;
+    padding:2px;
+}
+
+TABLE.clsParamVls,
+TABLE.clsParamVls TD { padding-left:2pt; padding-right:2pt; }
+
+UL { margin-left:17px; margin-top:10px; margin-bottom:10px; }
+
+UL.clsBltBlu { list-style-image:url(/msdn-online/shared/graphics/bulletblue.gif); }
+
+UL.clsBltRed { list-style-image:url(/msdn-online/shared/graphics/bulletred.gif) }
+
+OL { margin-left:25px; margin-top:10px; margin-bottom:10px; }
+
+UL LI {
+    line-height:120%;
+    margin-bottom:0.5em;
+}
+
+UL LI LI { list-style-type: disc; }
+
+
+OL LI { margin-bottom:0.7em; }
+
+INPUT.clsButton { font-weight: bold; color: #ffffff; background-color: #6699cc; margin-top: 10px; margin-left: 5px; }
+
+
+/*** VOICES STYLES ***/
+
+/* Add for gray bar style(6/7/00)*/
+TD.clsGrayBar {padding-left: 18px; border-bottom: 2px inset #CCCCCC; background-color:#CCCCCC}
+
+/* Added to provide left-margin for wrapping tables (3/13)*/
+DIV.clsVoicesBody { margin-left:10px; margin-right:10px }
+TABLE.clsVoicesHead { margin-top:4px }
+
+TD.clsCategory { font: bold 65% verdana,arial,helvetica,sans-serif }
+
+TD.clsVoiceNav {
+    background-image: url("/msdn-online/voices/graphics/background.jpg");
+    padding-top: 4px
+}
+TD.clsVoiceNav DIV {
+    padding-top: 4px;
+    font-size: 90%;
+}
+TD.clsVoiceNav A:visited { color:#003399 }
+TD.clsVoiceNav SPAN.clsLeftNavDot { font: 100%/80% }
+
+TD.clsArchiveTD { padding-left:20px; padding-top:20px }
+TD.clsArchiveTD { font: 68% verdana,arial,helvetica,sans-serif }
+
+H3.clsVoicesHead {
+ padding-top:6px;
+ margin-bottom:1.5em
+}
+
+TD.clsStoryTD, TH.clsStoryTD { padding-top: 4px; padding-right: 6px }
+/* Changed to TD instead of P (3/13) */
+DIV.clsByLine {
+    font-size: 80%;
+    line-height:120%;
+    padding-top: 2px
+}
+SPAN.pubdate, SPAN.pd, SPAN.clsPubdate, TD.clsPubDate, P.clsPubDate { color: #999999 } /*Added TD class (3/13)*/
+
+TABLE.clsCatItems TD.clsPubDate { padding-top: 4px; }
+TABLE.clsCatItems A:link, TABLE.clsCatItems A:visited { text-decoration: none; }
+TD.clsPubDate { padding-top: 10px }
+
+TABLE.clsCatItems { margin-top: 5px }
+TABLE.clsCatItems P {   margin-top:0; margin-bottom:0 }
+
+P.clsPostDate {
+        color:#0099FF;
+}
+
+DIV.clsPullQuote, DIV.clsPullQuote HR {
+    font:normal 110%/140% verdana,arial,helvetica,sans-serif; font-style:italic;
+    padding-bottom:.5em;
+    color:#3366FF;
+}
+
+/*** MINI PORTAL ***/
+TD.clsTDBody SPAN.clsHighlightItem
+{
+    line-height:1.5em;
+}
+
+IMG.clsLstImg { margin-top: -2px; }
+
+SPAN.clsHighlightItem A
+{
+    font-size:120%;
+}
+
+.clsNewsContent
+{
+    display:none;
+}
+
+.clsTab
+{
+    font: bold 65% verdana,arial,helvetica,sans-serif;
+    cursor:hand;
+    color:#FFFFFF;
+    background-color:#3366CC;
+}
+
+.clsTabSelected
+{
+    font: bold 65% verdana,arial,helvetica,sans-serif;
+    cursor:hand;
+    color:#000000;
+    background-color:#99CCFF;
+}
+
+.clsNewsItemTD
+{
+    padding-top:4px;
+}
+
+#idTabs TD.clsTab {
+    background-color: #003366;
+    cursor: hand;
+    border-left: 1px solid #6699CC;
+    border-right: 1px solid #6699CC;
+    border-top: 2px solid #003366;
+    border-bottom: 2px inset #99CCFF;
+}
+
+#idTabs TD.clsTab A, TD.clsTab A:hover, TD.clsTab A:active {
+    font-size:95%;
+    color: #FFFFFF;
+    text-decoration: none;
+}
+
+#idTabs TD.clsTabSelected {
+    border-top: 2px outset #99CCFF;
+    border-left: 2px outset #99CCFF;
+    border-right: 2px outset #99CCFF;
+    background-color: #6699CC;
+}
+
+#idTabs TR.clsTblHead TD {
+    border-top: 2px groove #CCCCCC;
+    border-bottom: 1px outset #CCCCCC;
+}
+
+#idTabs TD.clsTabSelected A, TD.clsTabSelected A:hover, TD.clsTabSelected A:active {
+    font-size:95%;
+    color: #CCFFCC;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+#tabs a.clsTab              { font-size:95%; text-decoration:none; color:#FFFFFF; }
+#tabs a.clsTab:hover        { color:#FFFFFF; }
+#tabs a.clsTab:active       { color:#FFFFFF; }
+#tabs a.clsTab:visited      { color:#FFFFFF; }
+#tabs a.clsTabSelected      { font-size:95%; color: #003399; text-decoration:none; font-weight:bold; }
+#tabs a.clsTabSelected:active   { color:#000000; }
+#tabs a.clsTabSelected:hover    { color:#000000; }
+#tabs a.clsTabSelected:visited  { color:#000000; }
+
+
+/*** EVENTS ***/
+
+TD.clsLToc A, 
+TD.clsLToc A:hover , 
+TD.clsLToc A:visited, 
+TD.clsLToc B{ cursor: hand; color: #003399; text-decoration: none; }
+TD.clsLToc A:hover { text-decoration: underline; }
+SPAN.st { font:100%/120% } /* style from generated code -- can we change class name? */
+
+/*** Glossary ***/
+
+/* I'll see if I can't get rid of some of these
+styles, or make them more universal ***/
+
+UL.clsShowHide LI {  font-weight: bold; padding-top:2px; list-style-image: url(/msdn-online/shared/graphics/plus.gif); cursor: hand; }
+UL.clsShowHide DIV { font-weight: normal; padding-top: 4px; }
+UL.clsShowHide A:visited { color:#003399; }
+
+DIV.clsHide { display: none; }
+UL.clsShowHide LI.clsHide {list-style-image: url(/msdn-online/shared/graphics/plus.gif); }
+DIV.clsShow { display: block;  cursor: text;}
+DIV.clsShow P { line-height:120%;   margin-top:6px; margin-bottom:4px;}
+UL.clsShowHide LI.clsShow {list-style-image: url(/msdn-online/shared/graphics/minus.gif); }
+
+TD.clsBigNav A:visited { color: #003399; }
+TD.clsBigNav A:hover { text-decoration: underline; }
+
+TD.clsBigNav { font-size: 108%; padding: 0 4; cursor: hand; }
+TD.clsBigNavSel { font-size: 108%; cursor: auto; padding: 0 4; }
+
+A#idToggleAll { font-weight:bold; color: #003399; }
+A#idToggleAll IMG { vertical-align:bottom; }
+
+
+/*** DOCTOP ***/
+
+#lnkPrevText, #lnkNextText, #lnkUpText {
+    color:#003399;
+    text-decoration:none;
+    font-family:verdana,arial,helvetica,sans-serif; font-size:7.5pt; font-weight:normal;
+}
+
+DIV.clsBucketBranch {
+    margin:10px;
+    font:italic verdana,arial,helvetica,sans-serif;
+}
+
+DIV.clsBucketBranch A,
+DIV.clsBucketBranch A:link,
+DIV.clsBucketBranch A:active,
+DIV.clsBucketBranch A:visited { text-decoration:none; color:#003399; }
+DIV.clsBucketBranch A:hover { color:blue; }
+
+TD.clsGrayTop
+{
+    color: #003399;
+    font-weight: normal;
+    border-top: solid #CCCCCC 1px;
+    border-bottom: 0;
+    padding: 5px 10px;
+}
+TD.clsRaised
+{
+    border-top: solid #99CCFF 1px;
+    border-bottom: solid #003366 1px;
+    padding: 5px 10px;
+}
+TD.clsDarkRaised
+{
+    border-top: solid #6699CC 1px;
+    border-bottom: solid #000000 1px;
+    padding: 5px 10px;
+}
+TD.clsSunken
+{
+    border-top: solid #003366 1px;
+    border-bottom: solid #99CCFF 1px;
+    padding: 5px 10px;
+}
+TD.clsBBarSunken
+{
+    border-top: solid #003366 1px;
+    border-bottom: solid #99CCFF 1px;
+    padding: 0px 10px;
+}
+TD.clsBBarRaised
+{
+    border-top: solid #99CCFF 1px;
+    border-bottom: solid #000033 1px;
+    padding: 0px 10px;
+}
+TD.clsLightGreen
+{
+    color: #CCFFCC;
+    font-weight: normal;
+    font-style: italic;
+
+}
+TD.clsBtnUp
+{
+    cursor: hand;
+    color: #FFFFFF;
+    font-weight: bold;
+    padding: 0 3;
+    border: outset #99CCFF 2px;
+}
+
+TD.clsBtnDown
+{
+    cursor: hand;
+    color: #FFFFFF;
+    font-weight: bold;
+    padding: 0 3;
+    border: inset #99CCFF 2px;
+}
+
+TD.clsBtnOn
+{
+    background-color: #336699;
+    cursor: hand;
+    color: #FFFFFF;
+    font-weight: bold;
+    padding: 0 3;
+    border: inset #99CCFF 2px;
+}
+
+TD.clsBtnOff
+{
+    color: #FFFFFF;
+    font-weight: bold;
+    padding: 0 3;
+    tab-index: 0;
+    border: solid #6699CC 2px;
+}
+
+TABLE.clsRating TD
+{
+    padding:0;
+    border-top: solid #666666 1px;
+    border-left: solid #666666 1px;
+    border-bottom: solid #CCCCCC 1px;
+    border-right: solid #CCCCCC 1px;
+}
+
+/*** SPECIFIC PAGE ELEMENTS ***/
+
+#pBackTop { display:none; }
+
+TABLE.clsNavLinks A:hover{text-decoration: underline;}
+TABLE.clsNavLinks { clear: both; }
+
+#txtCharCount
+{
+    background-color:white;
+    font-weight:bold;
+    height:1.5em;
+    width:3.7em;
+    border:ridge #CCCCCC 2px;
+    text-align:right;
+    overflow:hidden;
+}
+
+TABLE.clsCmtEntryTbl TD{padding: 3px 10px;}
+
+SPAN.clsLeftNavDot {
+    font-size:115%;
+    color:red;
+    line-height:1;
+}
+
+
+/*** SDK, IE4 ONLY ***/
+
+DIV.clsExpanded, A.clsExpanded {
+    display:inline;
+    color:#003399;
+    width:100%;
+}
+DIV.clsCollapsed, A.clsCollapsed { display:none; }
+SPAN.clsPropattr { font-weight:bold; }
+
+#pStyles,   #pCode, #pSyntax, #pEvents, #pStyles {
+    display:none;
+    text-decoration:underline;
+    cursor:hand;
+}
+
+
+/*** TB2 OVERRIDE ***/
+
+#idToolbar { font-size:10pt; }
+#idToolbar { border-bottom: 1px solid #FFFFFF; }
+#idToolbar A:hover { text-decoration:none; }
+
+
+/*** INDEX-SPECIFIC ***/
+
+A.clsDisabled {
+    text-decoration:none;
+    color:#003399;
+    cursor:text;
+}
+
+A.clsEnabled { cursor:auto; }
+
+SPAN.clsAccess { text-decoration:underline; }
+
+TABLE.clsIndex {
+    padding-left:2pt; padding-right:2pt;
+    margin-top: 17pt;
+}
+
+TABLE.clsIndex TD {
+    margin:3pt;
+    background-color:#EEEEEE;
+}
+
+TR.clsEntry { vertical-align:top; }
+
+TABLE.clsIndex TD.clsLetters {
+    background-color:#CCCCCC;
+    text-align:center;
+}
+
+TD.clsMainHead {
+    background-color:#FFFFFF;
+    vertical-align:top;
+    font-size:145%; font-weight:bold;
+    margin-top:1.35em; margin-bottom:.5em;
+}
+
+UL.clsIndex { margin-left:20pt; margin-top:0pt; margin-bottom:5pt; }
+
+LI OL { padding-bottom: 1.5em }
+
+
+/*** INETSDK-SPECIFIC STYLES ***/
+
+A.clsLeftMenu,
+A.clsLeftMenu:visited {
+    color:#003399;
+    text-decoration:none;
+    font-weight:bold; font-size:8pt;
+}
+
+BUTTON.clsShowme,
+BUTTON.clsShowme5 {
+    font-weight:bold; font-size:11; font-family:arial;
+    width:68; height:23;
+    position:relative; top:2;
+    background-color:#002F90;
+    color:#FFFFFF;
+}
+
+DIV.clsBeta {
+    font-weight:bold;
+    color:red;
+    margin-top:0.5em; margin-bottom:0.5em;
+}
+
+DIV.clsHi
+{
+padding-left:2em;
+text-indent:-2em;
+}
+
+BUTTON.clsShowme, BUTTON.clsShowme5,
+DIV.clsShowme { margin-bottom:.5em; margin-top:.5em; }
+
+SPAN.clsDefValue, TD.clsDefValue { font-weight:bold; font-family:'courier new' }
+
+SPAN.clsLiteral, TD.clsLiteral { font-family:'courier new'; }
+
+SPAN.clsRange, TD.clsRange { font-style:italic; }
+
+SPAN.clsEntryText {
+    line-height:12pt;
+    font-size:8pt;
+}
+
+SPAN.clsHeading {
+    color:#00319C;
+    font-size:11pt; font-weight:bold;
+}
+
+DIV.clsNote {
+    margin-bottom: 4pt;
+    background-color: #EEEEEE;
+}
+
+SPAN.clsFmtLib, SPAN.clsFmtInc, SPAN.clsFmtIDL, SPAN.clsFmtDLL { text-transform:lowercase; }
+
+
+/*** SITE MAP STYLES ***/
+#tblSiteMap DIV { line-height: 120%; }
+
+
+/* TOC-IE4.CSS */
+
+
+#idToc A.clsTocHeading { color:#003399;font-weight:bold; text-decoration:none; }
+#idToc A.clsTocHeading:hover { text-decoration: underline; }
+
+#idToc A.clsTocItem { color: #003399;text-decoration: none; }
+#idToc A.clsTocItem:hover   { text-decoration: underline; }
+
+#idToc A.clsTocItemSelect { font-weight:bold; color:#003399; text-decoration:none; }
+#idToc A.clsTocItemSelect:hover { color:#003399; }
+
+#idToc UL { margin-left:24px; margin-top:0px; margin-bottom:2px; }
+
+#idToc UL UL LI {margin-left:-24px; margin-top:0.1em; }  
+
+#idToc .noexpand { list-style-image: url('/msdn-online/shared/graphics/solid.gif'); }
+#idToc .clsNoExpand { list-style-image: url('/msdn-online/shared/graphics/solid.gif'); }
+
+#idToc .clsShowHide {list-style-image:url('/msdn-online/shared/graphics/plus.gif'); cursor: hand; }
+#idToc .clsShowHideShowing { list-style-image:url('/msdn-online/shared/graphics/minus.gif'); cursor: hand; }
+#idToc UL.clsItemsShow { list-style-image:url('/msdn-online/shared/graphics/arrowstop.gif'); }
+#idToc UL.clsItemsHide { display:none; }
+
+#idToc .clsStyleCheck  { margin-left:15px; margin-top:5px; }
+#idToc .clsStyleText  { margin-left:34px; margin-top:-16px; font-size:10px; cursor:default; }
+
+
+UL.clsItemsShow { margin-top: 5px; }
+UL.clsItemsShow LI { margin-left: -17px; margin-top: 5px;}
+A.clsTocHeading { line-height: 130% }
+UL.clsItemsShow LI A, UL.clsItemsShow A:visited, A.clsTocHeading, A:visited.clsTocHeading  { color: #003399; }
+UL.clsItemsShow LI A:hover, A:hover.clsTocHeading { color:#003399;text-decoration: underline; }
+
+.clsCCActListBG {background:#ffcc66}
+.clsCCRatListBG {background:#99ccff}
+.clsCCRatList, .clsCCActList {background:none}
+
+.clsCCActListText {font-family:verdana,arial,sans serif;font-size:xx-small;color:#003366}
+.clsCCActListHeader {font-family:verdana,arial,sans serif;font-size:x-small;color:#003399}
+.clsCCActListHost {background:none;font-family:verdana,arial,sans serif;font-size:x-small;color:#003399}
+.clsDicta, .clsDesc {padding:6px;font-size:x-small;font-family:verdana,arial}
+DIV.clsDesc SPAN.clsDesc { padding: 0px; }
+.clsCop {font-size:x-small;font-family:verdana,arial;color:#6699cc}
+.clsPrecis  {font-size:x-small;background-color:menu;border-bottom:1px solid threedshadow;border-top:1px solid threedhighlight;color:menutext;font-size:small;font-family:verdana,arial}
+
+.clsCCGeneralHead {width:100%;height:25px;background:#003366;color:#ffffff;padding:2pt;padding-left:6pt;border-top:1px solid #6699cc;font-size:12pt;font-family:verdana,arial,sans serif;font-weight:bold}
+.clsCCGeneralHead2 {width:100%;height:23px;background:#cccccc;color:#003366;padding:2pt;padding-left:6pt;border-top:1px solid #ffffff;border-bottom:1px solid #999999;font-size:10pt;font-weight:bold;font-family:verdana,arial,sans serif}
+

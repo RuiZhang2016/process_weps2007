@@ -1,0 +1,525 @@
+
+
+
+
+<html>
+
+	<!--this is a Article page template-->
+
+	<head>
+	<title>Welcome to The American Presidency</title>
+	<link href="int.css" rel="stylesheet" type="text/css">
+  <meta name="keywords" content="presidents, presidency, politics, history, American history, political history, audio, movies, George Washington, John Adams, Thomas Jefferson, James Monroe, James Madison, John Quincy Adams, Andrew Jackson, Martin Van Buren, James Polk, Zachary Taylor, William Henry Harrison, John Tyler, Franklin Pierce, Millard Fillmore, James Buchanan, Abraham Lincoln, Andrew Johnson, Ulysses S. Grant, Rutherford B. Hayes, Grover Cleveland, Benjamin Harrison, Chester Arthur, William McKinley, Theodore Roosevelt, William Howard Taft, Woodrow Wilson, Warren Harding, Calvin Coolidge, Herbert Hoover, Franklin D. Roosevelt, Harry Truman, Dwight D. Eisenhower, John F. Kennedy, Lyndon B. Johnson, Richard M. Nixon, Gerald Ford, Jimmy Carter, Ronald Reagan, George Bush, Bill Clinton, George W. Bush, Constitution, Congress, Elections, Presidential Programs, Presidential Scandals,  Monuments, Adams, John Agnew, Spiro T., Arthur, Chester A.,  Barkley, Alben,  Breckinridge, John Cabell, Burr, Aaron,  Bush, George H. W.,  Calhoun, John C.,  Cheney, Richard,  Clinton, George, Colfax, Schuyler, Coolidge, Calvin,  Curtis, Charles, Dallas, George Mifflin, Dawes, Charles G., Fairbanks, Charles Warren, Fillmore, Millard,  Ford, Gerald R. Garner, John Nance, Gerry, Elbridge, Gore, Al,  Hamlin, Hannibal, Hendricks, Thomas A., Hobart, Garret A., Humphrey, Hubert H.,  Jefferson, Thomas,  Johnson, Andrew,  Johnson, Lyndon B.,  Johnson, Richard M., King, William Rufus de Vane  Marshall, Thomas R., Mondale, Walter,  Morton, Levi P., Nixon, Richard M.,  Quayle, Dan, Rockefeller, Nelson A.,  Roosevelt, Theodore, Sherman, James Schoolcraft, Stevenson, Adlai Ewing, Tompkins, Daniel D., Truman, Harry S.,  Tyler, John,  Van Buren, Martin,  Wallace, Henry A., Wheeler, William Almon , Wilson, Henry, Adams, Abigail, Bush, Barbara, Bush, Laura, Clinton, Hillary Rodham,  Coolidge, Grace, Ford, Betty, Hayes, Lucy, Johnson, Lady Bird, Lincoln, Mary Todd,  Madison, Dolley,  Onassis, Jacqueline Kennedy,  Reagan, Nancy, Roosevelt, Eleanor,  Washington, Martha,  Wilson, Edith Howard Dean, John Edwards, Richard  Gephardt, John Kerry, Joseph I. Lieberman,  Anderson, John Bayard, Blaine, James Gillespie, Bradley, Bill,  Bryan, William Jennings, , Buchanan, Pat, Cass, Lewis, Clay, Henry,  Davis, John W., Debs, Eugene V.,  Dewey, Thomas E., Dole, Robert J.,  Douglas, Stephen A., Dukakis, Michael, Ferraro, Geraldine,  Frémont, John C., Goldwater, Barry M.,  Greeley, Horace, Hughes, Charles Evans, Kemp, Jack,  La Follette, Robert M.,  Landon, Alf, McCain, John, McClellan, George B., McGovern, George S.,  Nader, Ralph,  Perot, H. Ross,  Smith, Alfred E.,  Stassen, Harold,  Stevenson, Adlai,  Thomas, Norman, Thurmond, Strom,  Tilden, Samuel J., Wallace, George,  Willkie, Wendell L., Bill of Rights, Checks and Balances, Citizenship,  Constitution of the United States Declaration of Independence, Democracy,  Federal Government, Federalist Papers,  Government, Forms of, States' Rights,  Congress of the United States,  House of Representatives of the United States, Senate of the United States, American Party, Anti-Masonic Party, Constitutional Union Party, Democratic Party,  Dixiecrats , Federalist Party, Free Soil Party, Green Parties, Know-Nothing Party, Libertarian Party, Liberty Party, Political Action Committee, Political Convention, Political Parties,  Progressive Party, Prohibition Party, Reform Party (USA), Republican Party, Special-Interest Groups, Whig Party (United States), Absentee Voting, Ballot, Bush-Gore Election 2000, Caucus, Civil Rights and the Civil Rights Movement, Election, Electoral College, Hayes-Tilden Election, League of Women Voters, Opinion Polls, Political Parties,  Primary Election, Public Opinion, Suffrage, Suffrage, Women's, Voting, Voting Machine, Cabinet of the United States,  Impeachment, President of the United States,  Presidential Succession, Veto, Vice President of the United States, White House, Alliance for Progress, Fair Deal, Four Freedoms, Good Neighbor Policy, Great Society, Monroe Doctrine,  New Deal,  New Federalism, Point Four Program, War on Poverty, Credit Mobilier of America, Iran-contra Affair, Teapot Dome, Watergate,  Whiskey Ring, Whitewater Affair, XYZ Affair, Adams National Historic Site, Federal Hall, Ford's Theatre, Franklin D. Roosevelt's Home at Hyde Park, New York, Franklin Delano Roosevelt Memorial, Grant's Tomb, Hermitage, The, Jefferson Memorial, Lincoln Memorial, Monticello, Mount Rushmore,  Mount Vernon, Sagamore Hill, Washington Monument">
+	<meta http-equiv="content-type" content="text/html;charset=ISO-8859-1">		
+
+  <script language="javascript" type="text/javascript">
+    <!-- begin: common.js -->
+
+var myDomain = ".grolier.com";
+
+<!-- begin cookies.js -->
+
+//****************************************************************
+// Cookies -- Yum!
+//****************************************************************
+function Cookie() {
+
+	this.getCookieVal = function(offset) {
+		var endstr = document.cookie.indexOf (";", offset);
+		if (endstr == -1) {
+			endstr = document.cookie.length;
+		}
+		return unescape(document.cookie.substring(offset, endstr));
+	}
+		
+		this.FixCookieDate = function(date) {
+			var base = new Date(0);
+			var skew = base.getTime(); // dawn of (Unix) time - should be 0
+			if (skew > 0)  // Except on the Mac - ahead of its time
+				date.setTime (date.getTime() - skew);
+		}
+
+		this.GetCookie = function(name) {
+			var arg = name + "=";
+			var alen = arg.length;
+			var clen = document.cookie.length;
+			var i = 0;
+			while (i < clen) {
+				var j = i + alen;
+				if (document.cookie.substring(i, j) == arg) {
+					return this.getCookieVal (j);
+				}
+        i = document.cookie.indexOf(" ", i) + 1;
+				if (i == 0) break; 
+			}
+			return null;
+		}
+
+		this.SetCookie = function(name,value,expires,path,domain,secure) {
+			document.cookie = name + "=" + escape (value) +
+				((expires) ? "; expires=" + expires.toGMTString() : "") +
+				((path) ? "; path=" + path : "") +
+				((domain) ? "; domain=" + domain : "") +
+				((secure) ? "; secure" : "");
+		}
+
+		this.SetCookieNoEscape = function(name,value,expires,path,domain,secure) {
+			document.cookie = name + "=" + value +
+				((expires) ? "; expires=" + expires.toGMTString() : "") +
+				((path) ? "; path=" + path : "") +
+				((domain) ? "; domain=" + domain : "") +
+				((secure) ? "; secure" : "");
+		}
+
+
+		this.DeleteCookie = function(name,path,domain) {
+			if (this.GetCookie(name)) {
+				document.cookie = name + "=" +
+					((path) ? "; path=" + path : "") +
+					((domain) ? "; domain=" + domain : "") +
+					"; expires=Thu, 01-Jan-70 00:00:01 GMT";
+			}
+		}
+
+
+		this.isBorderlessUser = function() { 
+			var BLU = this.GetCookie("bless"); 
+			var isBU = (BLU != "" && BLU != null); 
+			//alert("is a borderless user (article):" + BLU + "\nresult = " + isBU); 
+			return isBU; 
+		} 
+
+}
+
+
+theCookie = new Cookie();
+//This is needed to allow the go atlas display the close or back link.
+theCookie.SetCookie("clhref", window.location.href, null, "/", ".grolier.com", null);
+<!-- end cookies.js -->
+<!-- begin popup.js -->
+
+function Popup() {
+  // object variables
+  this._gBlurbWindow;
+
+  // object methods
+
+  // set the focus after checking if the browser supports it
+  this._setFocus = function() {
+    //alert(navigator.userAgent);
+    //MSIE 4.0(1) in particular doesn't like the focus call.
+    if (navigator.userAgent.indexOf("MSIE 4.0") != -1) {
+      return;
+    }
+    if (navigator.userAgent.indexOf("MSIE 4.01") != -1) {
+      return;
+    }
+    this._gBlurbWindow.focus(); 
+  }
+
+		this.loadWindow = function(newLocation) {
+			window.location.href = newLocation;
+		}
+
+		this.loadParent = function(newLocation) {
+		    window.opener.location = newLocation;
+				window.opener.window.focus();	
+		}
+
+		this.loadGrandParent = function(newLocation) {
+			parent.window.opener.window.opener.location = newLocation;
+			parent.window.opener.window.opener.window.focus();
+		}
+
+		this.loadGrandParentAndClose = function(newLocation) {
+			parent.window.opener.window.opener.location = newLocation;
+			parent.window.close();
+			parent.window.opener.window.opener.window.focus();
+		}
+
+		this.loadParentWindowAndClose = function(newLocation) {
+			window.opener.location = newLocation;
+			window.close();
+			window.opener.window.focus();
+		}
+
+		//this function just figures out of a particular option is on or off.
+		this._isAffirmative = function(option) {
+			if (option == "yes" || option  == "on" || option == "true" || option == 1 || option == "1" || option == 'yes' || option == 'on' || option == 'true' || option == '1') {
+				return 1;
+			}
+			else {
+				return 0;
+			}
+		}
+		
+
+		this._newWindow = function(inContentURL, inWidth, inHeight, inWindowName, inResize, inStatusbars, inScrollbars, inMenubar) {
+
+			options = "height=" + inHeight + ",width=" + inWidth;
+
+			//configure resizing option
+			if (this._isAffirmative(inResize) == 1) {
+				options = options + ",resizable=yes";
+			}
+			else {
+				options = options + ",resizable=no";
+			}
+
+			//configure menubar option
+			if (this._isAffirmative(inMenubar) == 1) {
+				options = options + ",menubar=yes";
+			}
+			else {
+				options = options + ",menubar=no";
+			}
+
+			//configure status bar option
+			if (this._isAffirmative(inStatusbars) == 1) {
+				options = options + ",status=yes";
+			}
+			else {
+				options = options + ",status=no";
+			}
+
+			//configure scrollbars option
+			if (this._isAffirmative(inScrollbars) == 1) {
+				options = options + ",scrollbars=yes";
+			}
+			else {
+				options = options + ",scrollbars=no";
+			}
+			
+			//alert(options);
+
+
+			this._gBlurbWindow = window.open(inContentURL, inWindowName, options);
+
+			this._gBlurbWindow.opener = window;
+			this._setFocus();
+
+		}
+
+
+		// this method opens a Blurb Window
+		this.blurbWindow = function(inContentURL, inWidth, inHeight, inWindowName, inResize) {
+
+			//order of parameters: URL, width, height, windowname, resize, statusbars, scrollbars, menubar
+			this._newWindow(inContentURL, inWidth, inHeight, inWindowName, inResize, "yes", "yes", 'yes');
+		}
+
+		
+		// This window doesn't have location or menu bars */
+		this.boxWindow = function(inContentURL, inWidth, inHeight, inWindowName, inResize) {
+			//alert("in boxWindow");
+
+			//order of parameters: URL, width, height, windowname, resize, statusbars, scrollbars, menubar
+			this._newWindow(inContentURL, inWidth, inHeight, inWindowName, inResize, "yes", "yes", "no");
+		}
+		
+
+		// This window doesn't have location or menu bars or status bars
+		this.boxWindowNoStatus = function(inContentURL, inWidth, inHeight, inWindowName, inResize) {
+			alert("in boxWindowNostatus");
+
+			//order of parameters: URL, width, height, windowname, resize, statusbars, scrollbars, menubar
+			this._newWindow(inContentURL, inWidth, inHeight, inWindowName, inResize, "no", "yes", "no");
+		}
+
+}
+
+var thePopup = new Popup();
+
+<!-- end popup.js -->
+<!-- begin browsercheck.js -->
+
+//I'm going to break the rule here and leave this functionality out of the objectification of all javascript.
+
+   DOM = (document.getElementById) ? true : false;
+   NS4 = (document.layers) ? true : false;
+    IE = (document.all) ? true : false;
+   IE4 = IE && !DOM;
+   Mac = (navigator.appVersion.indexOf("Mac") != -1);
+  IE4M = IE4 && Mac;
+ Opera = (navigator.userAgent.indexOf("Opera")!=-1);
+ Konqueror = (navigator.userAgent.indexOf("Konqueror")!=-1);
+
+IsMenu = !Opera && !Konqueror && !IE4M && (DOM || NS4 || IE4);
+
+BrowserString = NS4 ? "NS4" : DOM ? "DOM" : "IE4";
+
+
+<!-- seperator -->
+
+//This code was previously in nsdd623_70.js. I figured this is the perfect place to let this code live on.
+
+var ddnav = navigator.userAgent;
+//alert(navigator.userAgent);
+
+
+//Netscape 6.2.x and Netscape 7.0 have problems loading goatlas 
+//information in the main frame, so I am going to set the document.domain
+//to grolier.com so these browsers can exchange information without causing 
+//potential security flaws.  
+
+if (ddnav.indexOf("Netscape6/6.2") != -1 || ddnav.indexOf("Netscape/7.0") != -1) {
+  document.domain = "grolier.com";
+}
+
+
+<!-- end browsercheck.js -->
+<!-- begin grabselection.js -->
+
+    function setWordLookup(event) {
+        // is this a new version of gecko or safari?
+        if (window.getSelection) {
+            var str = window.getSelection();
+        // is this an older version of gecko? 
+        } else if (document.getSelection) {
+            var str = document.getSelection();
+        // is this ie?
+        } else if (document.selection && document.selection.createRange) {
+            var range = document.selection.createRange();
+            var str = range.text;
+        } else {
+            return;
+        }
+        // cast the text object to a string
+        str = str.toString();
+        // did the user select anything?
+        if (str.length > 0) {
+            // Escape the string so we can match the Spanish characters easier.
+            str = escape(str);
+            /*
+            //Array of character entities to replace.
+            var pattern = new Array("%E1", "%E9", "%ED", "%F1", "%F3", "%FA", "%FC", "%C1", "%C9", "%CD", "%D1", "%D3", "%DA", "%DC");
+            // Array of replacement characters.
+            var replace = new Array("a", "e", "i", "i", "n", "o", "u", "u", "A", "E", "I", "N", "0", "U", "U");
+            // Loop through and replace all Spanish characters.
+            for (var i = 0; i < pattern.length; i++) {
+                str = str.replace(pattern[i], replace[i]);
+            }
+            // Get the first word of the selection.
+            var re = new RegExp('^\\s?\\w+', "g");
+            str = re.exec(str);
+            */
+            // Set the cookie.
+            theCookie.SetCookie("wordlookup", str, null , "/", myDomain);
+        }
+        if (document.layers) {
+            document.routeEvent(event);
+        }
+    }
+                                                                                                                                            
+    if (window.Event) {
+        document.captureEvents(Event.MOUSEUP);
+    }
+
+    document.onmouseup = setWordLookup;
+		
+<!-- end grabselection.js -->
+<!-- end: common.js -->
+  </script>
+
+	</head>
+
+	<body><a name="topOfpage"></a>
+
+	<table border="0" cellpadding="0" cellspacing="0" width="100%">
+		<tr>
+      <td class="ired"><img src="atb_banner.jpg" width="740" height="85" border="0" usemap="#banner_links" alt=""></td>
+    </tr>
+	</table>
+
+  <!-- masthead:begin -->
+
+<script language="javascript" type="text/javascript">
+var Feature = "";
+if(window.event + "" == "undefined") event = null;
+function HM_f_PopUp(){return false};
+function HM_f_PopDown(){return false};
+popUp = HM_f_PopUp;
+popDown = HM_f_PopDown;
+</script>
+
+<map name="banner_links">
+	<area shape="rect" coords="581,4,615,16" href="http://ap.grolier.com/splash">
+	<area shape="rect" coords="74,68,125,83" href="http://ap.grolier.com/browse?type=profiles" alt="Profiles" title="Profiles">
+	<area shape="rect" coords="141,68,359,83" href="http://ap.grolier.com/browse?type=pep" title="The Presidency and Electoral Politics" alt="The Presidency and Electoral Politics">
+	<area shape="rect" coords="374,68,419,83" href="http://ap.grolier.com/staticbp?page=/static/facts_list.html&amp;templatename=/static/ap.html" title="Facts" alt="Facts">
+	<area shape="rect" coords="431,68,481,83" href="http://ap.grolier.com/staticbp?page=/static/media_home.html&amp;templatename=/static/ap.html" title="Media" alt="Media" onMouseOver="popUp('elMenu1',event);" onMouseOut="popDown('elMenu1');">
+	<area shape="rect" coords="494,68,540,83" href="http://ap.grolier.com/staticbp?page=/static/hist_links.html&amp;templatename=/static/ap.html" title="Links" alt="Links">
+	<area shape="rect" coords="553,68,612,83" href="http://ap.grolier.com/quiz" title="Quizzes" alt="Quizzes">
+	<area shape="rect" coords="581,4,615,16" href="http://ap.grolier.com/splash" title="Home" alt="Home">
+	<area shape="rect" coords="623,4,654,16" href="http://ap.grolier.com/staticbp?page=/static/help.html&amp;templatename=/static/ap.html" title="Help" alt="Help">
+	<area shape="rect" coords="664,4,697,16" href="http://ap.grolier.com/staticbp?page=/static/about.html&amp;templatename=/static/ap.html" title="About" alt="About">
+	</map>
+
+<script language="javascript1.2" type="text/javascript" src="HM_LoaderSplash.js">
+</script>
+
+<!-- masthead:end -->
+
+
+
+	<table border="0" cellpadding="0" cellspacing="5" width="100%">	
+	<tr>
+    <td></td>
+	  <td><div class="iright">[Content provided by the <a href="javascript:thePopup.blurbWindow('http://go.grolier.com/go-ol/static/marketing/go_form.html?product=atb', 400, 400, 'whoareyou', 'off');"><b>America the Beautiful</b></a>]</div>
+</td>
+		<td></td>
+	  <td width="150">&nbsp;</td>
+	</tr>
+	
+	<tr><td><img src="shim.gif" alt="" width="5" height="10" border="0"></td>
+	  <td valign="top">
+			<!-- content:begin -->
+    	
+
+<!--gf:atb023b11-->
+<h3><font face="Arial,Helvetica,Geneva,SunSans-Regular" color="#333366"><!-- $TOC HEADING$ --><a name="hd0">John Fitzgerald Kennedy</font></h3>
+<blockquote><font face="Arial,Helvetica,Geneva,SunSans-Regular" color="#333366">
+35th president of the United States (1961<img src="ndash.gif" BORDER="0" ALIGN="BOTTOM" alt="en dash">63) <br><b>Born: </b> May 29, 1917, in Brookline, Massachusetts<br>
+<b>Died: </b> November 22, 1963<br>
+<b>Political Party: </b> Democratic
+</font></blockquote>
+<p><font face="Arial,Helvetica,Geneva,SunSans-Regular" color="#333366">John Fitzgerald Kennedy was the first Roman Catholic president. 
+At age 43, he was also the youngest person ever elected to the office.
+ To many Americans, Kennedy and his wife, Jacqueline Bouvier Kennedy, 
+symbolized youth, culture, and a future filled with promise. 
+Kennedy supported civil rights, the exploration of outer space, and the arts. 
+He initiated the Peace Corps, a volunteer program that invited Americans to come to the aid of people in developing countries. 
+In foreign policy, Kennedy confronted major challenges by the Soviet Union in Cuba and in Berlin.</font></p>
+<h4><font face="Arial,Helvetica,Geneva,SunSans-Regular" color="#333366"><!-- $TOC HEADING$ --><a name="hd1">Early Life</font></h4>
+<p><font face="Arial,Helvetica,Geneva,SunSans-Regular" color="#333366">John F. 
+Kennedy was the second of nine children of Joseph Patrick Kennedy and Rose Fitzgerald Kennedy. 
+John Kennedy graduated from the Choate School (which later became the Choate Rosemary Hall) in 1935 in the middle of his class. 
+He was voted "most likely to succeed" by his classmates. 
+Kennedy attended the London School of Economics (today known as the London School of Economics and Political Science) in England and graduated with honors from Harvard University. 
+He also studied at the Stanford University Graduate School of Business in Palo Alto, California.</font></p>
+<h4><font face="Arial,Helvetica,Geneva,SunSans-Regular" color="#333366"><!-- $TOC HEADING$ --><a name="hd2">War Record</font></h4>
+<p><font face="Arial,Helvetica,Geneva,SunSans-Regular" color="#333366">During World War II, Kennedy joined the U.S. 
+Navy. 
+In 1943, he was commander of a PT (patrol torpedo) boat in the Pacific when a Japanese destroyer sank his boat. 
+Lieutenant Kennedy managed to get the survivors to an island. 
+He swam from island to island, searching for help. 
+Finally, he sent two islanders for aid. 
+He gave them a coconut with a message carved into it. 
+Kennedy received a Purple Heart and the Navy and Marine Corps Medal for his bravery.</font></p>
+<h4><font face="Arial,Helvetica,Geneva,SunSans-Regular" color="#333366"><!-- $TOC HEADING$ --><a name="hd3">Politics, Marriage, and Publishing</font></h4>
+<p><font face="Arial,Helvetica,Geneva,SunSans-Regular" color="#333366">After the war, Kennedy returned home to Massachusetts to take up a political career. 
+He was elected to the U.S. 
+Congress in 1946, and reelected in 1948 and 1950. 
+In 1952, he won a seat in the Senate.</font></p>
+<p><font face="Arial,Helvetica,Geneva,SunSans-Regular" color="#333366">The next year, he married Jacqueline Bouvier. 
+They had three children: Caroline; John, Jr.; and Patrick Bouvier. 
+Patrick died two days after his birth in August 1963. 
+John, Jr., was killed when the plane he was piloting crashed off Martha's Vineyard, Massachusetts, in 1999.</font></p>
+<p><font face="Arial,Helvetica,Geneva,SunSans-Regular" color="#333366">In 1957, John F. 
+Kennedy won the Pulitzer Prize for <i>Profiles in Courage</i>, 
+a collection of essays about political leaders.</font></p>
+<h4><font face="Arial,Helvetica,Geneva,SunSans-Regular" color="#333366"><!-- $TOC HEADING$ --><a name="hd4">The 35th President</font></h4>
+<p><font face="Arial,Helvetica,Geneva,SunSans-Regular" color="#333366">In 1960, Kennedy became the Democratic candidate for president. 
+Lyndon B. 
+Johnson of Texas was his running mate. 
+Kennedy and his Republican opponent, Vice President Richard Nixon, 
+participated in the first televised presidential debates. 
+TV viewers thought Kennedy won the debates, while radio listeners thought Nixon won. 
+On Election Day, Kennedy narrowly won the popular vote. 
+But he won the electoral vote by a wide margin, 303 for Kennedy, 219 for Nixon.</font></p>
+<h4><font face="Arial,Helvetica,Geneva,SunSans-Regular" color="#333366"><!-- $TOC HEADING$ --><a name="hd5">Foreign Affairs</font></h4>
+<p><font face="Arial,Helvetica,Geneva,SunSans-Regular" color="#333366">In his inaugural speech, Kennedy told the nation to "ask not what your country can do for you; ask what you can do for your country."</font></p>
+<p><font face="Arial,Helvetica,Geneva,SunSans-Regular" color="#333366">From the start of his presidency, Kennedy faced many challenges with the Soviet Union. 
+In April 1961, he allowed anti-Communist Cuban exiles to invade Cuba at the Bay of Pigs. 
+They planned to overthrow Cuba's Communist leader, Fidel Castro, but the attempt failed miserably. 
+Although the invasion had been planned before Kennedy took office, he accepted full responsibility for its failure.</font></p>
+<p><font face="Arial,Helvetica,Geneva,SunSans-Regular" color="#333366">Relations with the Soviet Union worsened. 
+In June 1961, Kennedy met with the Soviet leader Nikita Khrushchev. 
+No progress was made, and Khrushchev ordered that a wall be built, separating Communist East Berlin from democratic West Berlin, both of which were situated in Soviet-controlled East Germany. 
+To support the West German people, Kennedy made a visit to city. 
+"<i>Ich bin ein Berliner</i> (I am a Berliner)," he told the cheering West Berliners.</font></p>
+<p><font face="Arial,Helvetica,Geneva,SunSans-Regular" color="#333366">In October 1962, Kennedy faced a very serious challenge from the Soviets. 
+In Cuba, the Soviets had set up missiles pointed at the United States. 
+Kennedy said the missiles must be dismantled. 
+He ordered a blockade of Cuba so Soviet ships with war materials could not reach the island. 
+For 13 days, all the world watched and waited. 
+The greatest fear was the possibility of a nuclear war between two superpowers. 
+Finally, Khrushchev backed down. 
+He said if the United States would promise not to invade Cuba, the Soviets would remove the missiles. 
+The Soviet ships turned back.</font></p>
+<p><font face="Arial,Helvetica,Geneva,SunSans-Regular" color="#333366">In August 1963, the United States and the Soviet Union signed a treaty banning nuclear tests in the Earth's atmosphere.</font></p>
+<h4><font face="Arial,Helvetica,Geneva,SunSans-Regular" color="#333366"><!-- $TOC HEADING$ --><a name="hd6">Domestic Policies</font></h4>
+<p><font face="Arial,Helvetica,Geneva,SunSans-Regular" color="#333366">Kennedy had defeated Nixon by only about 100,000 votes. 
+As a result, the president had a hard time getting Congress to approve his programs. 
+Congress did approve the Peace Corps, Kennedy's volunteer program to help people in poor countries, but would not pass tax cuts or Kennedy's civil-rights bill.</font></p>
+<p><font face="Arial,Helvetica,Geneva,SunSans-Regular" color="#333366">In May 1961, Kennedy promised the American people that the United States would land a man on the Moon by 1969. 
+Although Kennedy did not live to see this, his promise was fulfilled.</font></p>
+<h4><font face="Arial,Helvetica,Geneva,SunSans-Regular" color="#333366"><!-- $TOC HEADING$ --><a name="hd7">Tragedy in Dallas</font></h4>
+<p><font face="Arial,Helvetica,Geneva,SunSans-Regular" color="#333366">In November 1963, Kennedy went to Dallas to meet with leaders of the Democratic Party. 
+Kennedy and his wife rode in a motorcade through the city. 
+At 12:30 <img src="pm.gif" BORDER="0" ALIGN="BOTTOM" alt="P.M., as in the post meridiem">, 
+the president was struck by two bullets. 
+Kennedy was pronounced dead at 1:00 <img src="pm.gif" BORDER="0" ALIGN="BOTTOM" alt="P.M., as in the post meridiem">, 
+and Vice President Lyndon Johnson took the oath of office and became president at 2:38 <img src="pm.gif" BORDER="0" ALIGN="BOTTOM" alt="P.M., as in the post meridiem"> A commission later concluded that the bullets had been fired by a lone gunman, Lee Harvey Oswald.</font></p>
+<p><font face="Arial,Helvetica,Geneva,SunSans-Regular" color="#333366">Millions of people mourned the death of the young president. 
+After Kennedy's death, President Lyndon Johnson was able to push many of Kennedy's programs through the Congress, among them the Civil Rights Act of 1964.</font></p>
+
+<p><font face="Arial,Helvetica, Geneva, SunSans-Regular" color="#333366"><a href='article%3Fassetid=atb023b11&amp;templatename=%252Farticle%252Farticle.html#topOfpage'>Top of Page</a></font></p>
+<!--/gf:atb023b11-->
+
+			<!-- content:end -->
+
+		  <!-- output the related articles links -->
+			<p><b>Related articles:</b><br>
+<a href="http://ap.grolier.com/article?assetid=atb046b03&amp;templatename=/article/article.html">Johnson, Lyndon Baines</a><br>
+<a href="http://ap.grolier.com/article?assetid=atb052b05&amp;templatename=/article/article.html">Onassis, Jacqueline Kennedy</a><br>
+
+	  </td>
+		<td><img src="shim.gif" alt="" width="10" height="10" border="0"></td>
+	
+	  <!--column with article's assets and images-->
+	
+	  <td width="150" class="asset">
+	    <!--the inaugural address goes to a full page, unless there are more than one then you get a popup first with the list to select from -->
+		  <a href="http://ap.grolier.com/article?assetid=apia046&amp;templatename=/article/article.html"><img src="inaugural_btn.gif" width="150" height="17" border="0" alt="Inaugural Address" title="Inaugural Address"></a><br><br>
+			<!-- the picture assets and more button -->
+			<a href="javascript:thePopup.blurbWindow('/picturepopup?productid=atb&assetid=atbp1607&templatename=/article/picturepopup.html',550, 480,'media','yes')"><img src="atbp1607t.jpg" width="150" height="224" border="0" alt="John F. Kennedy" title="John F. Kennedy"></a><br><br>
+<a href="javascript:thePopup.blurbWindow('/picturepopup?productid=atb&assetid=atbp1217&templatename=/article/picturepopup.html',550, 480,'media','yes')"><img src="atbp1217t.jpg" width="150" height="113" border="0" alt="Before Kennedy's Assassination" title="Before Kennedy's Assassination"></a><br><br>
+
+	  </td>
+	</tr>
+  </table>
+				
+	<!-- footer -->
+	<!-- footer:begin -->
+	<!--this table should end all AP pages-->				
+	<table border="0" cellpadding="0" cellspacing="5" width="100%">
+	<tr>
+	<td class="icenter">
+	<img src="stars.gif" alt="" width="450" height="35" border="0"><br>
+	<!--keep the non-breaking spaces here please-->
+	<a href="http://ap.grolier.com/browse?type=profiles">Profiles &nbsp;&nbsp;|&nbsp;&nbsp;</a>
+	<a href="http://ap.grolier.com/browse?type=pep">The Presidency and Electoral Politics &nbsp;&nbsp;|&nbsp;&nbsp;</a>
+	<a href="http://ap.grolier.com/staticbp?page=/static/facts_list.html&amp;templatename=/static/ap.html">Facts &nbsp;&nbsp;|&nbsp;&nbsp;</a> 
+	<a href="http://ap.grolier.com/staticbp?page=/static/media_home.html&amp;templatename=/static/ap.html">Media &nbsp;&nbsp;|&nbsp;&nbsp;</a>
+	<a href="http://ap.grolier.com/staticbp?page=/static/hist_links.html&amp;templatename=/static/ap.html">Links &nbsp;&nbsp;|&nbsp;&nbsp;</a>
+	<a href="http://ap.grolier.com/quiz">Quizzes</a><br>
+	
+	
+	<img src="shim.gif" alt="" width="10" height="20" border="0">
+	<!--keep the non-breaking spaces here please-->
+	<a class="ism" href="http://ap.grolier.com/splash">HOME&nbsp;&nbsp;|&nbsp;&nbsp;</a>
+	<a class="ism" href="http://ap.grolier.com/staticbp?page=/static/help.html&amp;templatename=/static/ap.html">HELP&nbsp;&nbsp;|&nbsp;&nbsp;</a>
+	<a class="ism" href="http://ap.grolier.com/staticbp?page=/static/about.html&amp;templatename=/static/ap.html">ABOUT</a><br><br>
+	<p class="icopyright">Copyright &copy; 2006
+ Scholastic Library Publishing, Inc.  All rights reserved.</p>
+				
+	</td></tr>
+				
+	</table>
+	
+	
+<!-- footer:end -->	
+
+	</body>
+</html>

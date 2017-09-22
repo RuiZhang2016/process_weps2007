@@ -1,0 +1,216 @@
+<!DOCTYPE HTML PUBLIC "-//W3O//DTD W3 HTML 2.0//EN">
+<!Converted with LaTeX2HTML 95 (Thu Jan 19 1995) by Nikos Drakos (nikos@cbl.leeds.ac.uk), CBLU, University of Leeds >
+<HEAD>
+<TITLE> Document Retrieval</TITLE>
+</HEAD>
+<BODY background="marble.jpg">
+<meta name="description" value=" Document Retrieval">
+<meta name="keywords" value="HLTsurvey">
+<meta name="resource-type" value="document">
+<meta name="distribution" value="global">
+<P>
+ <BR> <HR><A NAME=tex2html314 HREF="http://cslu.cse.ogi.edu/HLTsurvey/ch7node5.html"><IMG ALIGN=BOTTOM ALT="next" SRC="next_motif.gif"></A>   <A NAME=tex2html312 HREF="http://cslu.cse.ogi.edu/HLTsurvey/ch7node2.html"><IMG ALIGN=BOTTOM ALT="up" SRC="up_motif.gif"></A>   <A NAME=tex2html306 HREF="http://cslu.cse.ogi.edu/HLTsurvey/ch7node3.html"><IMG ALIGN=BOTTOM ALT="previous" SRC="previous_motif.gif"></A>   <A NAME=tex2html316 HREF="http://cslu.cse.ogi.edu/HLTsurvey/ch7node1.html"><IMG ALIGN=BOTTOM ALT="contents" SRC="contents_motif.gif"></A>       <A HREF="http://cslu.cse.ogi.edu/HLTsurvey/indextop.html"><IMG WIDTH=43 HEIGHT=24 ALIGN=BOTTOM ALT="index" SRC="http://www.cse.ogi.edu/icons//index_motif.gif"></A><BR>
+<B> Next:</B> <A NAME=tex2html315 HREF="http://cslu.cse.ogi.edu/HLTsurvey/ch7node5.html">7.3 Text Interpretation: Extracting </A>
+<B>Up:</B> <A NAME=tex2html313 HREF="http://cslu.cse.ogi.edu/HLTsurvey/ch7node2.html">7 Document Processing</A>
+<B> Previous:</B> <A NAME=tex2html307 HREF="http://cslu.cse.ogi.edu/HLTsurvey/ch7node3.html">7.1 Overview</A>
+<BR> <HR> <P>
+<H1><A NAME=SECTION72>7.2 Document Retrieval</A></H1>
+<P>
+Donna Harman,<IMG  ALIGN=BOTTOM ALT="" SRC="dag.gif"> Peter Sch&#228;uble,<IMG  ALIGN=BOTTOM ALT="" SRC="ddag.gif"> &amp; Alan Smeaton<IMG  ALIGN=BOTTOM ALT="" SRC="dag.gif"><IMG  ALIGN=BOTTOM ALT="" SRC="ddag.gif"><BR> 
+<IMG  ALIGN=BOTTOM ALT="" SRC="dag.gif"> NIST, Gaithersburg, Maryland, USA<BR> <IMG  ALIGN=BOTTOM ALT="" SRC="ddag.gif"> ETH Zurich, Switzerland<BR> <IMG  ALIGN=BOTTOM ALT="" SRC="dag.gif"><IMG  ALIGN=BOTTOM ALT="" SRC="ddag.gif"> Dublin City University, Ireland, UK
+<P>
+Document retrieval<A NAME=136></A> is defined as the matching of some stated
+user query<A NAME=137></A>
+against useful parts of free-text records<A NAME=138></A>.  These records could be any
+type of mainly unstructured text<A NAME=139></A>, such as
+bibliographic records<A NAME=140></A>,
+newspaper articles<A NAME=141></A>, or paragraphs in a manual. User queries
+could range from multi-sentence full descriptions of an information
+need to a few words and the vast majority of retrieval systems currently in
+use range
+from simple Boolean systems<A NAME=142></A>
+through to systems using statistical or natural language processing<A NAME=143></A>.
+Figure <A HREF="ch7node4.html#figharman"><IMG ALIGN=BOTTOM ALT="gif" SRC="cross_ref_motif.gif"></A> illustrates the manner in which documents are retrieved
+from various sources.
+<P><A NAME=147></A><A NAME=figharman></A><IMG  ALIGN=BOTTOM ALT="" SRC="ch7img12.gif">
+<BR><STRONG>Figure:</STRONG> The document retrieval process.<BR>
+<P>
+<P>
+Several events have recently occurred that are having a major effect
+on research in this area.  First, computer hardware is more
+capable of running sophisticated search algorithms against massive
+amounts of data, with acceptable response times.  Second,
+INTERNET access, such as World Wide Web (WWW), brings new search
+requirements from untrained users who demand user-friendly, effective
+text searching systems.  These two events have contributed to create
+an interest in accelerating research to
+produce more effective search methodologies<A NAME=150></A>, including more use
+of natural language<A NAME=151></A> processing techniques.
+<P>
+There has been considerable research in the area of document retrieval
+for over 30 years [<A HREF="http://cslu.cse.ogi.edu/HLTsurvey/ch7node9.html#BelkinCroft87">BC87</A>], dominated by the use of
+statistical methods<A NAME=153></A> to automatically
+match natural language user queries against
+records.  For almost as long there has been interest in using natural
+language processing to enhance single term matching by adding
+phrases [<A HREF="http://cslu.cse.ogi.edu/HLTsurvey/ch7node9.html#Fagan89">Fag89</A>], yet to date natural language processing
+techniques have not significantly improved performance of document retrieval,
+although much effort has been expended in various attempts.  The motivation
+and drive for using natural language processing (NLP)
+in document retrieval is mostly intuitive; users
+decide on the relevance of documents by reading and analyzing them and
+if we can automate document analysis this should help in the process of
+deciding on document relevance.
+<P>
+Some of the research into document retrieval has taken place in the
+ARPA-sponsored TIPSTER project.
+One of the TIPSTER groups, the University of Massachusetts at Amherst,
+experimented with expansion of their state-of-the-art INQUERY retrieval
+system so that it was able to handle the 3--gigabyte test collection.  This
+included research in the use of query structures, document structures, and
+extensive experimentation in the use of phrases [<A HREF="http://cslu.cse.ogi.edu/HLTsurvey/ch7node9.html#BroglioCallan93">BCC93</A>].
+These phrases (usually noun phrases) were found using a
+part-of-speech tagger<A NAME=156></A> and were used either to improve query performance
+or to expand the
+query.  In general, the use of phrases as opposed to the use of single
+terms for retrieval did not significantly improve performance, although
+the use of noun phrases to expand a query shows much more promise.  This
+group has found phrases to be useful in retrieval for smaller collections,
+or for collections in a narrow domain.
+<P>
+A second TIPSTER group using natural language processing techniques
+was Syracuse University.  A new system, the DR-LINK system,
+based on automatically finding conceptual structures for both
+documents and queries, was developed using extensive natural language processing
+techniques such as document structure discovery, discourse analysis,
+subject classification, and complex nominal encapsulation.  This very
+complex system was barely finished by the end of phase I
+[<A HREF="http://cslu.cse.ogi.edu/HLTsurvey/ch7node9.html#LiddyMyaeng94">LM93</A>], but represents the most complex natural language
+processing system ever developed for <A NAME=158></A>.
+<P>
+The TIPSTER project has progressed to a second phase that will involve
+even more collaboration between NLP researchers
+and <A NAME=159></A> experts.  The plan is to develop an architecture
+that will allow standardized communication between document retrieval
+modules (usually statistically based<A NAME=160></A>) and natural language processing
+modules (usually linguistically based<A NAME=161></A>).  The architecture will then be
+used to build several projects that require the use of both types of
+techniques.  In addition to this theme, the TIPSTER phase II project
+will investigate more thoroughly the specific contributions of natural language processing<A NAME=162></A> to enhanced retrieval performance.  Two different
+groups, the University of Massachusetts at Amherst group combined with
+a natural language group at BBN Inc., and a group from New York
+University will perform many experiments that are likely to uncover
+more evidence as to the usefulness of natural language processing in
+document retrieval.
+<P>
+The same collection used for testing in the TIPSTER project has been
+used by a much larger worldwide community of researchers in the series of
+Text REtrieval Conference (TREC) evaluation
+tasks.  Research groups representing very diverse approaches to document
+retrieval
+have taken part in this annual event and many have used NLP
+resources
+like lexicons, dictionaries, thesauri, proper name recognizers and
+databases,  etc.
+One of these groups,  New York University, investigated
+the gains for using more intensive natural language processing on top of
+a traditional statistical retrieval system [<A HREF="http://cslu.cse.ogi.edu/HLTsurvey/ch7node9.html#StrzalkowskiCarballo95">SCM95</A>].
+This group did a complete parse of the 2-Gbyte texts to locate 
+content-carrying terms<A NAME=164></A>, discover relationships between these terms, and
+then use these terms
+to expand or modify the queries.  This entire process is completely
+automatic, and major effort has been put into the efficiency of
+the natural language processing part of the system.  A second group
+using natural language processing was the group from General Electric
+Research and Development Center [<A HREF="http://cslu.cse.ogi.edu/HLTsurvey/ch7node9.html#Jacobs94nist">Jac94</A>].  They used natural
+language processing techniques to extract information from (mostly)
+the training texts.  This information was then used to create manual
+filters for the routing task part of TREC. Another group using
+natural language processing techniques in TREC was CLARITECH
+[<A HREF="http://cslu.cse.ogi.edu/HLTsurvey/ch7node9.html#EvansLefferts94">EL94</A>].  This group used only noun phrases for
+retrieval and built dynamic thesauri<A NAME=167></A> for query expansion for each
+topic using noun phrases found in highly ranked documents.  A group from
+Dublin City University derived tree structures<A NAME=168></A> from texts based on
+syntactic analysis
+and incorporated syntactic ambiguities into the trees
+[<A HREF="http://cslu.cse.ogi.edu/HLTsurvey/ch7node9.html#SmeatonODonnell95">SOK95</A>]. 
+In this case document retrieval
+used a tree-matching algorithm<A NAME=170></A> to rank documents.  Finally, a group from
+Siemens used the WordNet lexical database<A NAME=171></A> as a basis for
+query expansion<A NAME=172></A> [<A HREF="http://cslu.cse.ogi.edu/HLTsurvey/ch7node9.html#Voorhees95trec">VGJL95</A>] 
+with mixed results.
+<P>
+The situation in the U.S. as outlined above is very similar
+to the situation in Europe.  The European Commission's
+Linguistic Research and Engineering (LRE)
+sub-programme funds projects like CRISTAL which is developing a
+multilingual
+interface  to a database of French newspaper stories using NLP techniques
+and RENOS
+which is doing similar work in the legal domain.  The EC-funded
+SIMPR project
+also used morpho-syntactic analysis<A NAME=174></A>
+to identify indexing phrases for text.
+Other European work using NLP is reported in
+[<A HREF="http://cslu.cse.ogi.edu/HLTsurvey/ch7node9.html#Hess92">Hes92</A>,<A HREF="http://cslu.cse.ogi.edu/HLTsurvey/ch7node9.html#Ruge92">Rug92</A>,<A HREF="http://cslu.cse.ogi.edu/HLTsurvey/ch7node9.html#SchwarzThurmair86">ST86</A>,<A HREF="http://cslu.cse.ogi.edu/HLTsurvey/ch7node9.html#ChiaramellaNie90">CN90</A>] and is
+summarized in [<A HREF="http://cslu.cse.ogi.edu/HLTsurvey/ch7node9.html#Smeaton92">Sme92</A>].
+<P>
+Most researchers in the
+information retrieval community believe that retrieval
+effectiveness is easier to improve by means of statistical methods
+than by NLP-based approaches and this is borne out by results, although
+there are exceptions.
+The fact that only a fraction of information retrieval research is based on
+extensive natural
+language processing techniques indicates that NLP techniques do not
+dominate the
+current thrust of information retrieval research as does something like the
+Vector Space Model<A NAME=177></A>.
+Yet NLP resources used in extracting information from text as describes by
+Paul Jacobs in
+section <A HREF="http://cslu.cse.ogi.edu/HLTsurvey/ch7node5.html#secjacobs"><IMG ALIGN=BOTTOM ALT="gif" SRC="cross_ref_motif.gif"></A>, resources like thesauri, lexicons, dictionaries,
+proper name databases,
+are used regularly in information retrieval research.
+It seems therefore that NLP <em>resources</em>
+rather than NLP techniques are having more of an impact on
+document retrieval<A NAME=180></A> effectiveness at present.
+Part of the reason for this is that natural language processing<A NAME=181></A> techniques
+are generally not designed to handle large amounts of text from many
+different domains.
+This is reminiscent of the situation with respect to information extraction
+which likewise is not currently successful in broad domains.
+But information retrieval<A NAME=182></A> systems do need
+to work on broad domains in order to be useful and the way NLP techniques are
+being used in information retrieval research is to attempt to integrate
+them with
+the dominant statistically-based approaches, almost piggy-backing them
+together.  There is, however, an
+inherent granularity mismatch between the statistical techniques used
+in information retrieval and the linguistic techniques used in natural
+language processing.  The statistical techniques attempt to match the rough
+statistical approximation of a record to a query.  Further refinement
+of this process using fine-grained natural language processing techniques
+often adds only noise to the matching process, or fails because of the
+vagaries of language use.  The proper integration of these two techniques
+is very difficult and may be years in coming.  What is needed is the
+development of NLP techniques specifically for document retrieval and
+vice versa the development of document retrieval techniques
+specifically for taking advantage of NLP techniques.
+<P>
+<H2><A NAME=SECTION721>7.2.1 Future Directions</A></H2>
+<P>
+The recommendations for further research are therefore to continue
+to pursue this integration, but with more attention to how to adapt the
+output of current natural language methods to improving information
+retrieval techniques.  Additionally natural language processing techniques
+could be used directly to produce tools for information retrieval, such as
+creating knowledge bases or simple thesauri using data mining.
+<P>
+
+<P>
+<BR> <HR><A NAME=tex2html314 HREF="http://cslu.cse.ogi.edu/HLTsurvey/ch7node5.html"><IMG ALIGN=BOTTOM ALT="next" SRC="next_motif.gif"></A>   <A NAME=tex2html312 HREF="http://cslu.cse.ogi.edu/HLTsurvey/ch7node2.html"><IMG ALIGN=BOTTOM ALT="up" SRC="up_motif.gif"></A>   <A NAME=tex2html306 HREF="http://cslu.cse.ogi.edu/HLTsurvey/ch7node3.html"><IMG ALIGN=BOTTOM ALT="previous" SRC="previous_motif.gif"></A>   <A NAME=tex2html316 HREF="http://cslu.cse.ogi.edu/HLTsurvey/ch7node1.html"><IMG ALIGN=BOTTOM ALT="contents" SRC="contents_motif.gif"></A>      <BR>
+<B> Next:</B> <A NAME=tex2html315 HREF="http://cslu.cse.ogi.edu/HLTsurvey/ch7node5.html">7.3 Text Interpretation: Extracting </A>
+<B>Up:</B> <A NAME=tex2html313 HREF="http://cslu.cse.ogi.edu/HLTsurvey/ch7node2.html">7 Document Processing</A>
+<B> Previous:</B> <A NAME=tex2html307 HREF="http://cslu.cse.ogi.edu/HLTsurvey/ch7node3.html">7.1 Overview</A>
+<BR> <HR> <P>
+</BODY>
